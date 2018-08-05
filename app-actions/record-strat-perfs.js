@@ -118,11 +118,9 @@ module.exports = {
 
         const perms = {
             'next-day': 2,
-            ...(min === 9 && {
-                'second-day': 3,
-                'third-day': 4,
-                'fourth-day': 5
-            })
+            'second-day': 3,
+            'third-day': 4,
+            'fourth-day': 5,
         };
 
         for (let [key, daysBack] of Object.entries(perms)) {
