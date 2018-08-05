@@ -60,6 +60,9 @@ const downUpPerms = [
     [2, 5],
     [6, 12]
 ];
+const upPerms = [1, 2, 3, 4, 5, 6];
+
+
 const playouts = {
 
     ...limitPerms.reduce((acc, limit) => ({
@@ -72,9 +75,10 @@ const playouts = {
         [`limit${down}Down${up}Up`]: limitDownUp(down, up)
     }), {}),
 
-
-    limitUp3: limitUp(3),
-    limitUp5: limitUp(5),
+    ...upPerms.reduce((acc, up) => ({
+        ...acc,
+        [`limitUp${up}`]: limitUp(up)
+    }), {}),
 
     firstGreen: limitUp(0.3),
 
@@ -83,7 +87,7 @@ const playouts = {
         if (!prevBreakdown) return false;
         return v > prevBreakdown + 2;
     }),
-    
+
     alwaysLast: playoutGenerator(null, arr => arr[arr.length - 1]),
     onlyMax: playoutGenerator(null, arr => Math.max(...arr))
 };

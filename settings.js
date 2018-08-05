@@ -16,11 +16,15 @@ const {
 
 
 module.exports = {
+    // important settings
     purchaseAmt: 44,
     forPurchase: [
         '[myRecs-day1-hundredResultCreme]',
         '[august2]'
     ],
+    sellStrategy: 'limitUp3',
+
+    // email
     email: {
         [['chief', 'sm', 'urph', '@', 'gm', 'ail', '.com'].join('')]: [
             ...creme,
