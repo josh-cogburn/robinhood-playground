@@ -45,6 +45,8 @@ const analyzeStrategy = ({
         return breakdowns;
     });
 
+    // console.log(breakdownsByDay, 'breakdownsByDay')
+
     return {
         strategy: strategyName,
         percUp: withoutErrors.filter(a => a.didGoUp).length / withoutErrors.length,

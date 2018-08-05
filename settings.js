@@ -22,7 +22,7 @@ module.exports = {
         '[myRecs-day1-hundredResultCreme]',
         '[august2]'
     ],
-    sellStrategy: 'limitUp3',
+    sellStrategy: 'limit10Down3Up',
 
     // email
     email: {

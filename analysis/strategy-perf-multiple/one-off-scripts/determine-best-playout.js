@@ -29,7 +29,7 @@ const determineBestPlayoutFromMultiOutput = pastPerf => {
     pastPerf.forEach(perf => {
         Object.keys(perf.playouts).forEach(playout => {
             playoutBreakdowns[playout] = (playoutBreakdowns[playout] || []).concat(
-                perf.playouts[playout].avgTrend
+                perf.playouts[playout].hundredResult
             )
         });
     });

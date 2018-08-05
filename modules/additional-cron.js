@@ -3,7 +3,8 @@
 const getTrendAndSave = require('../app-actions/get-trend-and-save');
 const logPortfolioValue = require('../app-actions/log-portfolio-value');
 const { default: recordStratPerfs } = require('../app-actions/record-strat-perfs');
-const sellAllOlderThanTwoDays = require('../app-actions/sell-all-older-than-two-days');
+// const sellAllOlderThanTwoDays = require('../app-actions/sell-all-older-than-two-days');
+const sellAllBasedOnPlayout = require('../app-actions/sell-all-based-on-playout');
 
 // utils
 const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
@@ -69,12 +70,16 @@ const additionalCronConfig = [
         fn: async (Robinhood, min) => {
             await recordStratPerfs(Robinhood, min);
             await stratManager.refreshPastData();
+            await sellAllBasedOnPlayout(Robinhood);
         }
     },
     {
         name: 'record-strat-perfs important!',
         run: [85, 230, 330],
-        fn: recordStratPerfs
+        fn: async (Robinhood, min) => {
+            await recordStratPerfs(Robinhood, min);
+            await sellAllBasedOnPlayout(Robinhood);
+        }
     },
     //sellAllOlderThanTwoDays
     // {
