@@ -208,72 +208,37 @@ const august2 = [
 ];
 
 
-const forPurchase = [
-    '[myRecs-day1-hundredResultCreme]',
-    ...august2
-];
-
-const cheapestPicksEmailObj = [
-    ['And', 're', 'wzouza@', 'gm', 'ail.com'],
-    ['ViperKi', 'ller847', '@a', 'ol.com'],
-    ['Versa', 'cecoffin', 's@gmail.com'],
-    ['K.e', '.ode', 'll@gm', 'ail.com'],
-    ['sambar', 'jon@g', 'ma', 'il.com'],
-    ['Jhar', 'din47491@gma', 'il.com'],
-    ['bxcap', 'one@gma', 'il.com']
-]
-    .map(val => val.join(''))
-    .reduce((acc, val) => ({
-        ...acc,
-        [val]: 'cheapest-picks-chp50--4'
-    }), {});
-
 module.exports = {
-    forPurchase,
-    // purchase: hotStrats,
-    email: {
-        [['chief', 'sm', 'urph', '@', 'gm', 'ail', '.com'].join('')]: [
-            ...creme,
-            ...moderates,
-            ...occasionals,
-            ...occasionalLowCount,
-            ...keepAnEyeOn,
-            ...allShorts
-        ],
-        ...cheapestPicksEmailObj
-    },
-    extras: {
-        'wild n crazy': [
-            'week-swings-tenTo15-1',  // wild
-            'constant-risers-10minute-percUpHighClosePoints-300'  // crazy
-        ],
-        mySpecialSauce,
-        hothot,
-        longtermhot,
-        honorableMentions105,
-        honorableMentions3,
-        myPicks,
-        realOldSchool,
-        twoPicks,
-        morePicks,
-        myListJune27,
-        topPercUpJuly16,
+    'wild n crazy': [
+        'week-swings-tenTo15-1',  // wild
+        'constant-risers-10minute-percUpHighClosePoints-300'  // crazy
+    ],
+    mySpecialSauce,
+    hothot,
+    longtermhot,
+    honorableMentions105,
+    honorableMentions3,
+    myPicks,
+    realOldSchool,
+    twoPicks,
+    morePicks,
+    myListJune27,
+    topPercUpJuly16,
 
-        // multi day
-        creme,
-        moderates,
-        occasionals,
-        occasionalLowCount,
-        keepAnEyeOn,
+    // multi day
+    creme,
+    moderates,
+    occasionals,
+    occasionalLowCount,
+    keepAnEyeOn,
 
-        shorting,
-        secondaryShorting,
-        secondaryLowCountShorting,
-        allShorts,
+    shorting,
+    secondaryShorting,
+    secondaryLowCountShorting,
+    allShorts,
 
 
-        aug2HighCounts,
-        aug2LowCounts,
-        august2
-    }
+    aug2HighCounts,
+    aug2LowCounts,
+    august2
 };

@@ -40,13 +40,15 @@ strategies are mostly "trendFilter"s.  which just take in a Robinhood instance a
 
 when the strategy is run it returns a list of tickers (ie `[AAPL, GOOG, JAGX]`).  These "picks" are saved along with their current trading price in picks-data/[date]/[strategy-name]-[price-perm] as an object with their keys being the minute after opening bell of that particularly run.
 
-the program will actively purchase the strategies saved in strategies-enabled.js.  also the program sells half the holdings of each of the stocks it purchased after 1 day and it sells 100% of the shares after 2 days.
+the program will actively purchase the forPurchase strategies in settings.js.  also the program sells half the holdings of each of the stocks it purchased after 1 day and it sells 100% of the shares after 2 days.
 
 ## configuring
 
 all strategies (modules/*) are enabled to run at various times per day.  they run for every increment of $1-5, $5-10 and $10-15.
 
-strategies-enabled.js determines which strategies are "enabled for purchase"
+settings.js determines which strategies are "enabled for purchase" as well as sent via email
+
+also determines the purchase amount when I strategy is set to forPurchase
 
 ## analytics
 

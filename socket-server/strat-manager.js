@@ -2,7 +2,8 @@ const { lookupTickers } = require('../app-actions/record-strat-perfs');
 const jsonMgr = require('../utils/json-mgr');
 const { CronJob } = require('cron');
 const fs = require('mz/fs');
-const strategiesEnabled = require('../strategies-enabled');
+const manualPMs = require('../pms/manual');
+const settings = require('../settings');
 
 // predictions and past data
 const stratPerfOverall = require('../analysis/strategy-perf-overall');
@@ -247,7 +248,7 @@ const stratManager = {
 
         let strategies = {
 
-            ...strategiesEnabled.extras,
+            ...manualPMs,
 
             // myRecs
             ...Object.keys(myRecs).reduce((acc, val) => ({
@@ -260,11 +261,18 @@ const stratManager = {
 
         console.log('done donezy');
 
+        const flattenStrategiesWithPMs = array =>
+            flatten(
+                array.map(strat =>
+                    strat && strat.startsWith('[')
+                        ? strategies[strat.substring(1, strat.length - 1)]
+                        : strat
+                )
+            );
+
         return {
             ...strategies,
-            forPurchase: flatten(strategiesEnabled.forPurchase.map(strat => {
-                return strat && strat.startsWith('[') ? strategies[strat.substring(1, strat.length - 1)] : strat;
-            }))
+            forPurchase: flattenStrategiesWithPMs(settings.forPurchase),
         };
     },
     async setPastData(stratPerfData) {

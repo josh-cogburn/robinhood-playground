@@ -2,17 +2,13 @@ const fs = require('mz/fs');
 const jsonMgr = require('../utils/json-mgr');
 const lookup = require('../utils/lookup');
 const mapLimit = require('promise-map-limit');
-const { purchase, email } = require('../strategies-enabled');
 const { lookupTickers } = require('./record-strat-perfs');
-
+const { email } = require('../settings');
 const stratManager = require('../socket-server/strat-manager');
 
 const purchaseStocks = require('./purchase-stocks');
 const sendEmail = require('../utils/send-email');
 const tweeter = require('./tweeter');
-
-console.log(purchase, email, 'strategies enabled ');
-
 
 const saveToFile = async (Robinhood, strategy, min, withPrices) => {
 

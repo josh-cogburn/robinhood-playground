@@ -1,6 +1,6 @@
 const limitBuyMultiple = require('./limit-buy-multiple');
 const getMinutesFrom630 = require('../utils/get-minutes-from-630');
-
+const { purchaseAmt } = require('../settings');
 
 const purchaseStocks = async (Robinhood, { stocksToBuy, strategy, multiplier, min }) => {
     const accounts = await Robinhood.accounts();
@@ -8,7 +8,7 @@ const purchaseStocks = async (Robinhood, { stocksToBuy, strategy, multiplier, mi
     const cashAvailable = Number(accounts.results[0].margin_balances.unallocated_margin_cash);
     // const totalAmtToSpend = cashAvailable * ratioToSpend;
 
-    const amountPerBuy = 44 * multiplier;
+    const amountPerBuy = purchaseAmt * multiplier;
     const totalAmtToSpend = Math.min(amountPerBuy, cashAvailable);
     console.log('multiplier', multiplier, 'amountPerBuy', amountPerBuy, 'totalAmtToSpend', totalAmtToSpend);
 
