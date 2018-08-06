@@ -1,4 +1,28 @@
-module.exports = allRoundup => {
+const highestPlayoutFn = (
+    playoutScoreFn,
+    playoutFilter = 'limit'
+) => ({
+    count,
+    playouts
+}) => {
+    let max = Number.NEGATIVE_INFINITY;
+    let limitName;
+    const playoutFilterFn = typeof playoutFilter === 'function'
+        ? playoutFilter
+        : key => key.includes(playoutFilter)
+    Object.keys(playouts)
+        .filter(playoutFilterFn)
+        .forEach(key => {
+            const val = playoutScoreFn(playouts[key], count);
+            if (val > max) {
+                max = val;
+                limitName = key;
+            }
+        });
+    return [max, limitName];    // returns the highest avgTrend limit
+};
+
+const analyzeRoundup = allRoundup => {
     console.log('all round', JSON.stringify(allRoundup, null, 2))
     const createBreakdown = ({
         scoreFn = ({ count, playouts: { onlyMax: { percUp, avgTrend }}}) =>
@@ -48,29 +72,7 @@ module.exports = allRoundup => {
 
 
 
-    const highestPlayoutFn = (
-        playoutScoreFn,
-        playoutFilter = 'limit'
-    ) => ({
-        count,
-        playouts
-    }) => {
-        let max = Number.NEGATIVE_INFINITY;
-        let limitName;
-        const playoutFilterFn = typeof playoutFilter === 'function'
-            ? playoutFilter
-            : key => key.includes(playoutFilter)
-        Object.keys(playouts)
-            .filter(playoutFilterFn)
-            .forEach(key => {
-                const val = playoutScoreFn(playouts[key], count);
-                if (val > max) {
-                    max = val;
-                    limitName = key;
-                }
-            });
-        return [max, limitName];    // returns the highest avgTrend limit
-    };
+
 
     const lowCounts = ({ count }) => count <= maxCount / 2 && count >= 5;
     const upperHalfCounts = ({ count }) => count > maxCount / 2;
@@ -237,4 +239,10 @@ module.exports = allRoundup => {
 
     };
 
+};
+
+
+module.exports = {
+    analyzeRoundup,
+    highestPlayoutFn
 };

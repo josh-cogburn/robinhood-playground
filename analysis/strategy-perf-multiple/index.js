@@ -2,7 +2,7 @@
 const initStratPerfs = require('./init-strat-perfs');
 const calcUniqStrategies = require('./calc-uniq-strategies');
 const analyzeStrategy = require('./analyze-strategy');
-const generateBreakdowns = require('./generate-breakdowns');
+const { analyzeRoundup } = require('./generate-breakdowns');
 
 module.exports = async (Robinhood, daysBack = 2, ...strategies) => {
     console.log('days back', daysBack);
@@ -35,6 +35,6 @@ module.exports = async (Robinhood, daysBack = 2, ...strategies) => {
 
     console.log('done analyzing strategies')
 
-    return suppliedStrategies ? allRoundup : generateBreakdowns(allRoundup);
+    return suppliedStrategies ? allRoundup : analyzeRoundup(allRoundup);
 
 };

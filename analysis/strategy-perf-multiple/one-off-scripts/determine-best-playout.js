@@ -1,6 +1,8 @@
 const fs = require('mz/fs');
 const jsonMgr = require('../../../utils/json-mgr');
 const stratPerfMultiple = require('../index');
+const { highestPlayoutFn } = require('../generate-breakdowns');
+
 const {
     avgArray,
     // percUp,
@@ -24,7 +26,7 @@ const getMostRecentForPurchase = async () => {
 };
 
 
-const determineBestPlayoutFromMultiOutput = pastPerf => {
+const determineSingleBestPlayoutFromMultiOutput = pastPerf => {
     const playoutBreakdowns = {};
     pastPerf.forEach(perf => {
         Object.keys(perf.playouts).forEach(playout => {
@@ -38,12 +40,27 @@ const determineBestPlayoutFromMultiOutput = pastPerf => {
         [key]: avgArray(playoutBreakdowns[key])
     }), {});
     console.log(playoutAggregated);
-}
+};
 
-module.exports = async (Robinhood) => {
-    const strategiesForConsideration = await getMostRecentForPurchase();
+const determineIndividualBestPlayoutsFromMultiOutput = pastPerf => {
+    const scoreFn = ({ hundredResult, percUp, avgTrend, percHitsPositive }, count) =>
+        hundredResult * (3 * percUp) * avgTrend * (3 * percHitsPositive) * count;
+    const playoutFilter = playoutKey => !['alwaysLast', 'onlyMax'].includes(playoutKey);
+    const getHighestPlayout = highestPlayoutFn(
+        scoreFn,
+        playoutFilter
+    );
+    return pastPerf.map(obj => ({
+        strategy: obj.strategy,
+        highestPlayout: getHighestPlayout(obj)[1]
+    }));
+};
+
+module.exports = async (Robinhood, ...strategiesForConsideration) => {
+    strategiesForConsideration = strategiesForConsideration.length ? strategiesForConsideration : await getMostRecentForPurchase();
     console.log(strategiesForConsideration);
     const pastPerf = await stratPerfMultiple(Robinhood, 50, ...strategiesForConsideration);
     console.log(JSON.stringify(pastPerf, null, 2));
-    determineBestPlayoutFromMultiOutput(pastPerf);
+    determineSingleBestPlayoutFromMultiOutput(pastPerf);
+    console.log(JSON.stringify(determineIndividualBestPlayoutsFromMultiOutput(pastPerf), null, 2));
 };
