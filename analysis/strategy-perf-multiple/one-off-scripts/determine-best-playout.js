@@ -9,6 +9,22 @@ const {
     // hundredResult
 } = require('../../../utils/array-math');
 
+
+const considerThesePlayouts = [
+    'limitUp3',
+    'limit7Down3Up',
+    'limit6Down3Up',
+    'limit6Down4Up',
+    'limit1',
+    'limit2',
+    'limit3',
+    'firstGreen',
+    'changeGt4',
+    'changeGt3',
+    'changeGt2'
+];
+
+
 const getMostRecentForPurchase = async () => {
     const getMostRecentDay = async () => {
         let files = await fs.readdir('./json/prediction-models');
@@ -39,17 +55,14 @@ const determineSingleBestPlayoutFromMultiOutput = pastPerf => {
         ...acc,
         [key]: avgArray(playoutBreakdowns[key])
     }), {});
-    console.log(playoutAggregated);
+    // console.log(playoutAggregated);
 };
 
 const determineIndividualBestPlayoutsFromMultiOutput = pastPerf => {
     const scoreFn = ({ hundredResult, percUp, avgTrend, percHitsPositive }, count) =>
-        hundredResult * (3 * percUp) * avgTrend * (3 * percHitsPositive) * count;
-    const playoutFilter = playoutKey => !['alwaysLast', 'onlyMax'].includes(playoutKey);
-    const getHighestPlayout = highestPlayoutFn(
-        scoreFn,
-        playoutFilter
-    );
+        hundredResult * (3 * percUp) * avgTrend * (1 * percHitsPositive) * count;
+    const playoutFilter = playoutKey => considerThesePlayouts.includes(playoutKey);
+    const getHighestPlayout = highestPlayoutFn(scoreFn, playoutFilter);
     return pastPerf.map(obj => ({
         strategy: obj.strategy,
         highestPlayout: getHighestPlayout(obj)[1]
@@ -62,5 +75,5 @@ module.exports = async (Robinhood, ...strategiesForConsideration) => {
     const pastPerf = await stratPerfMultiple(Robinhood, 50, ...strategiesForConsideration);
     console.log(JSON.stringify(pastPerf, null, 2));
     determineSingleBestPlayoutFromMultiOutput(pastPerf);
-    console.log(JSON.stringify(determineIndividualBestPlayoutsFromMultiOutput(pastPerf), null, 2));
+    return determineIndividualBestPlayoutsFromMultiOutput(pastPerf);
 };
