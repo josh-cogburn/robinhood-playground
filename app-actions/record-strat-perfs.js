@@ -120,7 +120,9 @@ module.exports = {
             'next-day': 2,
             'second-day': 3,
             'third-day': 4,
-            'fourth-day': 5,
+            ...(min === 9 && {
+                'fourth-day': 5
+            })
         };
 
         for (let [key, daysBack] of Object.entries(perms)) {
