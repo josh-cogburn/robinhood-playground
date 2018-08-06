@@ -9,7 +9,27 @@ const {
 
 const keyOrder = ['next-day-9', 'next-day-85', 'next-day-230', 'next-day-330', 'second-day-9', 'third-day-9', 'fourth-day-9'];
 
+const runPlayout = (playoutObj, breakdowns) => {
 
+    const { type, fn: playoutFn } = playoutObj;
+
+    const outcomes = breakdowns.map(playoutFn);
+    // console.log(outcomes, 'out');
+    const onlyValues = outcomes
+        .map(o => o.value)
+        .filter(v => Math.abs(v) < 50);
+    const onlyHits = outcomes.filter(o => o.hitFn);
+    return {
+        percUp: percUp(onlyValues),
+        avgTrend: avgArray(onlyValues),
+        hundredResult: hundredResult(onlyValues),
+        ...(type === 'individualFn' && {
+            percHitPlayout: onlyHits.length / outcomes.length,
+            percHitsPositive: onlyHits.filter(o => o.value > 0).length / onlyHits.length,
+        }),
+        // onlyValues: onlyValues.join(', ')
+    };
+};
 
 const analyzeStrategy = ({
     strategyName,
@@ -97,7 +117,7 @@ const analyzeStrategy = ({
 
         playouts: Object.keys(playouts).reduce((acc, k) => ({
             ...acc,
-            [k]: playouts[k](breakdownsByDay)
+            [k]: runPlayout(playouts[k], breakdownsByDay)
         }), {}),
 
 

@@ -17,13 +17,19 @@ const getTrend = require('../utils/get-trend');
 // the magic
 const { sellStrategy } = require('../settings');
 const playouts = require('../analysis/strategy-perf-multiple/playouts');
-const playoutFn = playouts[sellStrategy];
+const { fn: playoutFn } = playouts[sellStrategy];
 
 // utils
-const daysBetween = (firstDate, secondDate) => {
+const getFilesSortedByDate = async jsonFolder => {
+    let files = await fs.readdir(`./json/${jsonFolder}`);
+    return files
+        .map(f => f.split('.')[0])
+        .sort((a, b) => new Date(a) - new Date(b))
+        .reverse();
+};
 
-    // TODO: make it use the daily transaction lookup to calculate
-    var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
+const daysBetween = (firstDate, secondDate) => {
+    var oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
     var diffDays = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay)));
     return diffDays;
 };
@@ -42,27 +48,15 @@ const sellPosition = async (Robinhood, { ticker, quantity }, whySelling) => {
     }
 };
 
-const getAssociatedStrategies = async tickers => {
-
-    const getOrderedTransactions = async () => {
-        let files = await fs.readdir('./json/daily-transactions');
-        let sortedFiles = files
-            .map(f => f.split('.')[0])
-            .sort((a, b) => new Date(a) - new Date(b))
-            .reverse()
-            .slice(0, 15);  // only look within 15 days
-        return sortedFiles;
-    };
+const getAssociatedStrategies = async (tickers, dailyTransactionDates) => {
 
     const withStrategies = [];  // [{ ticker, strategy }]
-
     const withStrategiesIncludesTicker = ticker =>
         withStrategies
             .map(obj => obj.ticker)
             .includes(ticker);
 
-    const files = await getOrderedTransactions();
-    for (let file of files) {
+    for (let file of dailyTransactionDates) {
         // console.log('checking', file, withStrategies);
         const transactions = await jsonMgr.get(`./json/daily-transactions/${file}.json`);
         // console.log(transactions);
@@ -113,20 +107,47 @@ const getStratPerfTrends = async (ticker, buyDate, strategy) => {
 // do it
 
 module.exports = async Robinhood => {
+
+    const dailyTransactionDates = await getFilesSortedByDate('daily-transactions');
+    const pmModelDates = await getFilesSortedByDate('prediction-models');
+    // console.log(dailyTransactionDates, 'dailyTransactionDates');
+    // console.log(pmModelDates, 'pmModelDates');
+
     const nonzero = await detailedNonZero(Robinhood);
-    const withAge = nonzero.map(pos => ({
+    const withStrategies = await getAssociatedStrategies(
+        nonzero.map(pos => pos.symbol),
+        dailyTransactionDates
+    );
+    const combined = nonzero.map(pos => ({
         ...pos,
-        dayAge: daysBetween(new Date(), new Date(pos.updated_at))
+        ...withStrategies.find(obj => obj.ticker === pos.symbol),
+        ticker: pos.symbol
     }));
-    console.log(withAge.length);
+
+    const calcDayAgeFromPosition = pos => {
+        const { date, updated_at } = pos;
+        console.log(date, updated_at, pos.ticker)
+        if (date) {
+            const getIndexFromDateList = dateList => dateList.findIndex(d => d === date);
+            const pmIndex = getIndexFromDateList(pmModelDates);
+            return pmIndex !== -1 ? pmIndex : getIndexFromDateList(dailyTransactionDates);
+        } else {
+            return daysBetween(new Date(), new Date(pos.updated_at));
+        }
+    };
+
+    const withAge = combined.map(pos => ({
+        ...pos,
+        dayAge: calcDayAgeFromPosition(pos)
+    }));
+
+    // console.log(withAge.length);
 
     withAge.forEach(pos => {
-
         console.log(
             pos.symbol,
             pos.dayAge + ' days old'
         );
-
     });
 
     // handle older than four days
@@ -141,15 +162,8 @@ module.exports = async Robinhood => {
 
     // handle under four days check for playout strategy
     const underFourDays = withAge.filter(pos => pos.dayAge < 4);
-    const withStrategies = await getAssociatedStrategies(
-        underFourDays.map(pos => pos.symbol)
-    );
-    const combined = underFourDays.map(pos => ({
-        ...pos,
-        ...withStrategies.find(obj => obj.ticker === pos.symbol)
-    }));
-    // console.log('with strats', combined);
-    for (let pos of combined) {
+    // console.log('underFourDays', underFourDays);
+    for (let pos of underFourDays) {
         // const strategy = await findStrategyThatPurchasedTicker(pos.symbol);
         const breakdowns = await getStratPerfTrends(pos.ticker, pos.date, pos.strategy) || [];
         breakdowns.push(
@@ -159,16 +173,13 @@ module.exports = async Robinhood => {
             )
         );
 
-        const playoutOutput = playoutFn([breakdowns]);
-        const playoutSaysSell = playoutOutput.percHitPlayout > 0;
-        console.log(pos.ticker, breakdowns, 'playoutSaysSell', playoutSaysSell);
-
-        if (playoutSaysSell) {
-            pos.hitPlayout = true;
-        }
+        const { hitFn: hitPlayout } = playoutFn(breakdowns);
+        pos.hitPlayout = hitPlayout;
+        console.log(pos.ticker, breakdowns, 'hitPlayout', hitPlayout);
     }
 
-    await mapLimit(combined.filter(pos => pos.hitPlayout), 3, async pos => {
+    // sell all under 4 days that hit the playoutFn
+    await mapLimit(underFourDays.filter(pos => pos.hitPlayout), 3, async pos => {
         await sellPosition(Robinhood, pos, `hit ${sellStrategy} playout`);
     });
 

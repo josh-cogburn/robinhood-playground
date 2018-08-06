@@ -15,6 +15,8 @@ const {
 } = require('./pms/manual');
 
 
+
+// TODO: flatten list of strategies with PMs for emailObj same way as forPurchase
 module.exports = {
     // important settings
     purchaseAmt: 44,
