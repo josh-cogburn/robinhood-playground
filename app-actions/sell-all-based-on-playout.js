@@ -33,7 +33,7 @@ const getFilesSortedByDate = async jsonFolder => {
 
 const daysBetween = (firstDate, secondDate) => {
     var oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
-    var diffDays = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay)));
+    var diffDays = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime()) / (oneDay)));
     return diffDays;
 };
 
@@ -47,7 +47,7 @@ const sellPosition = async (Robinhood, { ticker, quantity }, whySelling) => {
         );
         console.log(`sold ${quantity} shares of ${ticker} because ${whySelling}`, response);
     } catch (e) {
-        console.log(`error selling because ${whySelling}`, ticker, e);
+        console.log(`error selling ${ticker} because ${whySelling}`, e);
     }
 };
 
@@ -163,19 +163,20 @@ module.exports = async Robinhood => {
     });
 
 
-    // handle under four days check for playout strategy
-    let underFourDays = withAge.filter(pos => pos.dayAge < 4);
+    // handle under four days (but not bought today) check for playout strategy
+    let underFourDays = withAge.filter(pos => pos.dayAge >= 1 && pos.dayAge < 4);
+    if (!underFourDays.length) return;
     const highestPlayouts = await determineSingleBestPlayoutFromMultiOutput(
         Robinhood,
         ...underFourDays.map(pos => pos.strategy)
     );
-    console.log(highestPlayouts, 'highestPlayouts')
+    // console.log(highestPlayouts, 'highestPlayouts')
     underFourDays = underFourDays.map(pos => ({
         ...pos,
         highestPlayout: highestPlayouts.find(obj => obj.strategy === pos.strategy).highestPlayout
     }));
 
-    console.log('underFourDays', underFourDays);
+    // console.log('underFourDays', underFourDays);
     for (let pos of underFourDays) {
         // const strategy = await findStrategyThatPurchasedTicker(pos.symbol);
         const breakdowns = await getStratPerfTrends(pos.ticker, pos.date, pos.strategy) || [];

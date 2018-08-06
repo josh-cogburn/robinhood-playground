@@ -65,7 +65,7 @@ const additionalCronConfig = [
     // },
     // record prev day strat performances,
     {
-        name: 'record-strat-perfs',
+        name: 'record-strat-perfs, refresh past data, and sell all based on playout',
         run: [9],
         fn: async (Robinhood, min) => {
             await recordStratPerfs(Robinhood, min);
@@ -74,7 +74,7 @@ const additionalCronConfig = [
         }
     },
     {
-        name: 'record-strat-perfs important!',
+        name: 'record-strat-perfs, and sell all based on playout',
         run: [85, 230, 330],
         fn: async (Robinhood, min) => {
             await recordStratPerfs(Robinhood, min);
