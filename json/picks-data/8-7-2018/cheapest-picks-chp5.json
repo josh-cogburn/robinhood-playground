@@ -1,0 +1,68 @@
+{
+  "4": [
+    {
+      "ticker": "HMNY",
+      "price": 0.1
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.1155
+    },
+    {
+      "ticker": "SYN",
+      "price": 0.1246
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.125
+    },
+    {
+      "ticker": "IMNP",
+      "price": 0.14
+    }
+  ],
+  "386": [
+    {
+      "ticker": "HMNY",
+      "price": 0.0719
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.115
+    },
+    {
+      "ticker": "SYN",
+      "price": 0.12
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.1355
+    },
+    {
+      "ticker": "GST",
+      "price": 0.1459
+    }
+  ],
+  "-4": [
+    {
+      "ticker": "HMNY",
+      "price": 0.0834
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.1126
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.1152
+    },
+    {
+      "ticker": "SYN",
+      "price": 0.1202
+    },
+    {
+      "ticker": "IMNP",
+      "price": 0.14
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "0": [
+    {
+      "ticker": "NOK",
+      "price": 5.4116
+    }
+  ],
+  "5": [
+    {
+      "ticker": "BKD",
+      "price": 8.54
+    },
+    {
+      "ticker": "NOK",
+      "price": 5.415
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CDE",
+      "price": 6.49
+    },
+    {
+      "ticker": "BKD",
+      "price": 8.66
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CDE",
+      "price": 6.475
+    },
+    {
+      "ticker": "BKD",
+      "price": 8.93
+    }
+  ]
+}

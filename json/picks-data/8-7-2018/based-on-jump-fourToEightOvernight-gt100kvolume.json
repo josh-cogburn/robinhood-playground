@@ -1,0 +1,46 @@
+{
+  "0": [
+    {
+      "ticker": "ODP",
+      "price": 2.66
+    }
+  ],
+  "5": [
+    {
+      "ticker": "ODP",
+      "price": 2.73
+    },
+    {
+      "ticker": "DNR",
+      "price": 4.7
+    }
+  ],
+  "16": [
+    {
+      "ticker": "ODP",
+      "price": 2.765
+    },
+    {
+      "ticker": "DNR",
+      "price": 4.64
+    }
+  ],
+  "30": [
+    {
+      "ticker": "IFMK",
+      "price": 3.33
+    },
+    {
+      "ticker": "ODP",
+      "price": 2.84
+    },
+    {
+      "ticker": "SYN",
+      "price": 0.106
+    },
+    {
+      "ticker": "DNR",
+      "price": 4.69
+    }
+  ]
+}

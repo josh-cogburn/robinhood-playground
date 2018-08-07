@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "CBLI",
+      "price": 2.44
+    },
+    {
+      "ticker": "DNN",
+      "price": 0.51
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CBLI",
+      "price": 2.3801
+    },
+    {
+      "ticker": "DNN",
+      "price": 0.51
+    }
+  ],
+  "16": [
+    {
+      "ticker": "AAME",
+      "price": 2.55
+    },
+    {
+      "ticker": "CBLI",
+      "price": 2.3801
+    }
+  ],
+  "30": [
+    {
+      "ticker": "AAME",
+      "price": 2.6
+    },
+    {
+      "ticker": "CBLI",
+      "price": 2.35
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "10": [
+    {
+      "ticker": "APPS",
+      "price": 1.45
+    },
+    {
+      "ticker": "VIVE",
+      "price": 2.515
+    }
+  ],
+  "300": [
+    {
+      "ticker": "APPS",
+      "price": 1.5
+    },
+    {
+      "ticker": "VIVE",
+      "price": 2.35
+    }
+  ],
+  "380": [
+    {
+      "ticker": "APPS",
+      "price": 1.47
+    },
+    {
+      "ticker": "VIVE",
+      "price": 2.36
+    },
+    {
+      "ticker": "DMPI",
+      "price": 0.5648
+    }
+  ]
+}

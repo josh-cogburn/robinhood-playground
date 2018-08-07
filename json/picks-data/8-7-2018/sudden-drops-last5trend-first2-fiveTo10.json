@@ -1,0 +1,42 @@
+{
+  "32": [
+    {
+      "ticker": "CPIX",
+      "price": 5.51
+    },
+    {
+      "ticker": "CMTA",
+      "price": 8.365
+    }
+  ],
+  "280": [
+    {
+      "ticker": "MOTS",
+      "price": 5.52
+    },
+    {
+      "ticker": "MGTX",
+      "price": 8.4
+    }
+  ],
+  "328": [
+    {
+      "ticker": "ESXB",
+      "price": 8.65
+    },
+    {
+      "ticker": "BKD",
+      "price": 8.18
+    }
+  ],
+  "388": [
+    {
+      "ticker": "OPHC",
+      "price": 5.6
+    },
+    {
+      "ticker": "DFBG",
+      "price": 5.16
+    }
+  ]
+}

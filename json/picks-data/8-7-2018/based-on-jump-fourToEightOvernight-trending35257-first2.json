@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "SYNC",
+      "price": 2.25
+    },
+    {
+      "ticker": "IPAS",
+      "price": 0.3755
+    }
+  ],
+  "5": [
+    {
+      "ticker": "SYNC",
+      "price": 2.309
+    },
+    {
+      "ticker": "IPAS",
+      "price": 0.3755
+    }
+  ],
+  "16": [
+    {
+      "ticker": "SYNC",
+      "price": 2.3
+    },
+    {
+      "ticker": "IPAS",
+      "price": 0.3783
+    }
+  ],
+  "30": [
+    {
+      "ticker": "SYNC",
+      "price": 2.3
+    },
+    {
+      "ticker": "IPAS",
+      "price": 0.3981
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "0": [],
+  "5": [],
+  "16": [
+    {
+      "ticker": "ESV",
+      "price": 7.57
+    },
+    {
+      "ticker": "NE",
+      "price": 6.17
+    },
+    {
+      "ticker": "WTI",
+      "price": 6.945
+    },
+    {
+      "ticker": "ADT",
+      "price": 9.18
+    }
+  ],
+  "30": [
+    {
+      "ticker": "ESV",
+      "price": 7.675
+    },
+    {
+      "ticker": "NE",
+      "price": 6.26
+    },
+    {
+      "ticker": "WTI",
+      "price": 7.04
+    },
+    {
+      "ticker": "ADT",
+      "price": 9.185
+    }
+  ]
+}

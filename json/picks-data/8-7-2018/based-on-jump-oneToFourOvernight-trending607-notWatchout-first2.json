@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "ALSK",
+      "price": 1.92
+    },
+    {
+      "ticker": "CIG",
+      "price": 2.22
+    }
+  ],
+  "5": [
+    {
+      "ticker": "UUUU",
+      "price": 3.39
+    },
+    {
+      "ticker": "ALSK",
+      "price": 1.88
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CHKR",
+      "price": 1.675
+    },
+    {
+      "ticker": "UUUU",
+      "price": 3.36
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CHKR",
+      "price": 1.699
+    },
+    {
+      "ticker": "UUUU",
+      "price": 3.42
+    }
+  ]
+}

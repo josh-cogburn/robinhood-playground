@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "CPIX",
+      "price": 6
+    },
+    {
+      "ticker": "CDE",
+      "price": 6.56
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CPIX",
+      "price": 6
+    },
+    {
+      "ticker": "CDE",
+      "price": 6.5
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CPIX",
+      "price": 6
+    },
+    {
+      "ticker": "NICK",
+      "price": 9.8707
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CPIX",
+      "price": 5.63
+    },
+    {
+      "ticker": "CDE",
+      "price": 6.475
+    }
+  ]
+}

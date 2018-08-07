@@ -1,0 +1,90 @@
+{
+  "0": [
+    {
+      "ticker": "CPIX",
+      "price": 6
+    },
+    {
+      "ticker": "CDE",
+      "price": 6.56
+    },
+    {
+      "ticker": "VTL",
+      "price": 9.05
+    },
+    {
+      "ticker": "MOTS",
+      "price": 6.44
+    },
+    {
+      "ticker": "USLV",
+      "price": 7.8601
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CPIX",
+      "price": 6
+    },
+    {
+      "ticker": "CDE",
+      "price": 6.5
+    },
+    {
+      "ticker": "VTL",
+      "price": 8.85
+    },
+    {
+      "ticker": "MOTS",
+      "price": 6.2968
+    },
+    {
+      "ticker": "USLV",
+      "price": 7.86
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CPIX",
+      "price": 6
+    },
+    {
+      "ticker": "NICK",
+      "price": 9.8707
+    },
+    {
+      "ticker": "CDE",
+      "price": 6.49
+    },
+    {
+      "ticker": "VTL",
+      "price": 8.8
+    },
+    {
+      "ticker": "MOTS",
+      "price": 6.2968
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CPIX",
+      "price": 5.63
+    },
+    {
+      "ticker": "CDE",
+      "price": 6.475
+    },
+    {
+      "ticker": "HHS",
+      "price": 9.79
+    },
+    {
+      "ticker": "VTL",
+      "price": 8.85
+    },
+    {
+      "ticker": "MOTS",
+      "price": 6.2731
+    }
+  ]
+}

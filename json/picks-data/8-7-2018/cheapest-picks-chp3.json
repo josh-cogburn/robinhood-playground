@@ -1,0 +1,44 @@
+{
+  "4": [
+    {
+      "ticker": "HMNY",
+      "price": 0.1
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.1155
+    },
+    {
+      "ticker": "SYN",
+      "price": 0.1246
+    }
+  ],
+  "386": [
+    {
+      "ticker": "HMNY",
+      "price": 0.0719
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.115
+    },
+    {
+      "ticker": "SYN",
+      "price": 0.12
+    }
+  ],
+  "-4": [
+    {
+      "ticker": "HMNY",
+      "price": 0.0834
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.1126
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.1152
+    }
+  ]
+}
