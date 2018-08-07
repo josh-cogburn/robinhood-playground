@@ -1,0 +1,44 @@
+{
+  "77": [
+    {
+      "ticker": "ABCD",
+      "price": 11.775
+    },
+    {
+      "ticker": "WHF",
+      "price": 14.611
+    },
+    {
+      "ticker": "VIIX",
+      "price": 12.56
+    }
+  ],
+  "242": [
+    {
+      "ticker": "TBIO",
+      "price": 10
+    },
+    {
+      "ticker": "RST",
+      "price": 14.7
+    },
+    {
+      "ticker": "GEOS",
+      "price": 13.02
+    }
+  ],
+  "309": [
+    {
+      "ticker": "TBIO",
+      "price": 10.0562
+    },
+    {
+      "ticker": "RST",
+      "price": 14.73
+    },
+    {
+      "ticker": "TORC",
+      "price": 12.01
+    }
+  ]
+}

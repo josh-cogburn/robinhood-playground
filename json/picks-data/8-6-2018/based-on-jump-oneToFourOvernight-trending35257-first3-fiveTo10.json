@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "CAMT",
+      "price": 8.76
+    },
+    {
+      "ticker": "INVE",
+      "price": 5.25
+    },
+    {
+      "ticker": "NTWK",
+      "price": 6
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CAMT",
+      "price": 8.738
+    },
+    {
+      "ticker": "INVE",
+      "price": 5.25
+    },
+    {
+      "ticker": "NTWK",
+      "price": 6
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CAMT",
+      "price": 8.85
+    },
+    {
+      "ticker": "INVE",
+      "price": 5.45
+    },
+    {
+      "ticker": "NTWK",
+      "price": 5.9
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CAMT",
+      "price": 9.15
+    },
+    {
+      "ticker": "INVE",
+      "price": 5.5
+    },
+    {
+      "ticker": "NTWK",
+      "price": 5.9
+    }
+  ]
+}

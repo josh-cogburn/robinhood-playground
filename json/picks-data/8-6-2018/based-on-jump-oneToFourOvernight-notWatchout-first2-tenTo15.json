@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "LAND",
+      "price": 12.2
+    },
+    {
+      "ticker": "ESCA",
+      "price": 13.4
+    }
+  ],
+  "5": [
+    {
+      "ticker": "LAND",
+      "price": 12.32
+    },
+    {
+      "ticker": "ESCA",
+      "price": 13.4
+    }
+  ],
+  "16": [
+    {
+      "ticker": "LAND",
+      "price": 12.5539
+    },
+    {
+      "ticker": "ZYME",
+      "price": 13.46
+    }
+  ],
+  "30": [
+    {
+      "ticker": "LAND",
+      "price": 12.67
+    },
+    {
+      "ticker": "NTRP",
+      "price": 10.2799
+    }
+  ]
+}

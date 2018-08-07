@@ -1,0 +1,90 @@
+{
+  "0": [
+    {
+      "ticker": "CAMT",
+      "price": 8.76
+    },
+    {
+      "ticker": "NTWK",
+      "price": 6
+    },
+    {
+      "ticker": "IBN",
+      "price": 9.15
+    },
+    {
+      "ticker": "DSE",
+      "price": 6.37
+    },
+    {
+      "ticker": "NOA",
+      "price": 7.1852
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CAMT",
+      "price": 8.738
+    },
+    {
+      "ticker": "NTWK",
+      "price": 6
+    },
+    {
+      "ticker": "IBN",
+      "price": 9.16
+    },
+    {
+      "ticker": "DSE",
+      "price": 6.359
+    },
+    {
+      "ticker": "NOA",
+      "price": 7.1852
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CAMT",
+      "price": 8.85
+    },
+    {
+      "ticker": "NTWK",
+      "price": 5.9
+    },
+    {
+      "ticker": "IBN",
+      "price": 9.11
+    },
+    {
+      "ticker": "DSE",
+      "price": 6.339
+    },
+    {
+      "ticker": "NOA",
+      "price": 7.142
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CAMT",
+      "price": 9.15
+    },
+    {
+      "ticker": "NTWK",
+      "price": 5.9
+    },
+    {
+      "ticker": "IBN",
+      "price": 9.08
+    },
+    {
+      "ticker": "DSE",
+      "price": 6.3359
+    },
+    {
+      "ticker": "NOA",
+      "price": 7.1001
+    }
+  ]
+}

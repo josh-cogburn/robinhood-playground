@@ -1,0 +1,38 @@
+{
+  "0": [
+    {
+      "ticker": "TCCO",
+      "price": 5.2
+    },
+    {
+      "ticker": "PTGX",
+      "price": 7.88
+    }
+  ],
+  "5": [
+    {
+      "ticker": "TCCO",
+      "price": 5.5
+    },
+    {
+      "ticker": "PTGX",
+      "price": 7.67
+    }
+  ],
+  "16": [
+    {
+      "ticker": "TCCO",
+      "price": 5.3
+    },
+    {
+      "ticker": "PTGX",
+      "price": 7.98
+    }
+  ],
+  "30": [
+    {
+      "ticker": "PTGX",
+      "price": 8.22
+    }
+  ]
+}

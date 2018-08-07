@@ -1,0 +1,90 @@
+{
+  "0": [
+    {
+      "ticker": "LAND",
+      "price": 12.2
+    },
+    {
+      "ticker": "ESCA",
+      "price": 13.4
+    },
+    {
+      "ticker": "CSS",
+      "price": 14.46
+    },
+    {
+      "ticker": "MTLS",
+      "price": 12.75
+    },
+    {
+      "ticker": "TRMT",
+      "price": 12.83
+    }
+  ],
+  "5": [
+    {
+      "ticker": "LAND",
+      "price": 12.32
+    },
+    {
+      "ticker": "ESCA",
+      "price": 13.4
+    },
+    {
+      "ticker": "CSS",
+      "price": 14.46
+    },
+    {
+      "ticker": "USX",
+      "price": 13.505
+    },
+    {
+      "ticker": "TRMT",
+      "price": 12.83
+    }
+  ],
+  "16": [
+    {
+      "ticker": "LAND",
+      "price": 12.5539
+    },
+    {
+      "ticker": "ZYME",
+      "price": 13.46
+    },
+    {
+      "ticker": "ESCA",
+      "price": 13.4
+    },
+    {
+      "ticker": "CSS",
+      "price": 14.39
+    },
+    {
+      "ticker": "USX",
+      "price": 13.52
+    }
+  ],
+  "30": [
+    {
+      "ticker": "LAND",
+      "price": 12.67
+    },
+    {
+      "ticker": "NTRP",
+      "price": 10.2799
+    },
+    {
+      "ticker": "ZYME",
+      "price": 14.05
+    },
+    {
+      "ticker": "DPK",
+      "price": 12.6658
+    },
+    {
+      "ticker": "FEO",
+      "price": 14.04
+    }
+  ]
+}

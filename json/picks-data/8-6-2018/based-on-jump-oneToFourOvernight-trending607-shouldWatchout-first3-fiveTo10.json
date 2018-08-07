@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "INVE",
+      "price": 5.25
+    },
+    {
+      "ticker": "INSE",
+      "price": 6.9
+    },
+    {
+      "ticker": "BRFS",
+      "price": 6.385
+    }
+  ],
+  "5": [
+    {
+      "ticker": "INVE",
+      "price": 5.25
+    },
+    {
+      "ticker": "INSE",
+      "price": 6.95
+    },
+    {
+      "ticker": "BRFS",
+      "price": 6.36
+    }
+  ],
+  "16": [
+    {
+      "ticker": "INVE",
+      "price": 5.45
+    },
+    {
+      "ticker": "SRAX",
+      "price": 5.2
+    },
+    {
+      "ticker": "INSE",
+      "price": 6.95
+    }
+  ],
+  "30": [
+    {
+      "ticker": "INVE",
+      "price": 5.5
+    },
+    {
+      "ticker": "TSRI",
+      "price": 7.05
+    },
+    {
+      "ticker": "SRAX",
+      "price": 5.09
+    }
+  ]
+}

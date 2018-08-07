@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "MWA",
+      "price": 12.38
+    },
+    {
+      "ticker": "KT",
+      "price": 14.04
+    }
+  ],
+  "40": [
+    {
+      "ticker": "MBI",
+      "price": 10.4
+    },
+    {
+      "ticker": "LFVN",
+      "price": 10.06
+    }
+  ],
+  "100": [
+    {
+      "ticker": "MBI",
+      "price": 10.47
+    },
+    {
+      "ticker": "PSDO",
+      "price": 14.39
+    }
+  ],
+  "200": [
+    {
+      "ticker": "SPNS",
+      "price": 10.6
+    },
+    {
+      "ticker": "KIN",
+      "price": 14
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SPNS",
+      "price": 10.62
+    },
+    {
+      "ticker": "EXPI",
+      "price": 14.9499
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CSPI",
+      "price": 10.79
+    },
+    {
+      "ticker": "EEQ",
+      "price": 10.85
+    }
+  ],
+  "381": [
+    {
+      "ticker": "EEQ",
+      "price": 10.855
+    },
+    {
+      "ticker": "EEP",
+      "price": 11.495
+    }
+  ]
+}

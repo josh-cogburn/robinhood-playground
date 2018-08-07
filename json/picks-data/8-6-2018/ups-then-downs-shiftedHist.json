@@ -1,0 +1,66 @@
+{
+  "10": [
+    {
+      "ticker": "VRML",
+      "price": 0.6726
+    }
+  ],
+  "50": [
+    {
+      "ticker": "VRML",
+      "price": 0.668
+    },
+    {
+      "ticker": "SDT",
+      "price": 1.68
+    }
+  ],
+  "200": [
+    {
+      "ticker": "SDPI",
+      "price": 1.87
+    },
+    {
+      "ticker": "VRML",
+      "price": 0.6513
+    },
+    {
+      "ticker": "SDT",
+      "price": 1.6438
+    }
+  ],
+  "300": [
+    {
+      "ticker": "SDPI",
+      "price": 1.8697
+    },
+    {
+      "ticker": "VRML",
+      "price": 0.645
+    },
+    {
+      "ticker": "SDT",
+      "price": 1.6599
+    }
+  ],
+  "380": [
+    {
+      "ticker": "SDPI",
+      "price": 1.86
+    },
+    {
+      "ticker": "SDT",
+      "price": 1.64
+    }
+  ],
+  "600": [
+    {
+      "ticker": "SDPI",
+      "price": 1.86
+    },
+    {
+      "ticker": "SDT",
+      "price": 1.66
+    }
+  ]
+}

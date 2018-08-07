@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "FIXX",
+      "price": 16.28
+    },
+    {
+      "ticker": "CAPL",
+      "price": 17.8869
+    }
+  ],
+  "40": [
+    {
+      "ticker": "BLFS",
+      "price": 19.19
+    },
+    {
+      "ticker": "OMI",
+      "price": 19.03
+    }
+  ],
+  "100": [
+    {
+      "ticker": "BLFS",
+      "price": 19.14
+    },
+    {
+      "ticker": "OMI",
+      "price": 18.9
+    }
+  ],
+  "200": [
+    {
+      "ticker": "HRTG",
+      "price": 14.995
+    },
+    {
+      "ticker": "OMI",
+      "price": 19.01
+    }
+  ],
+  "260": [
+    {
+      "ticker": "HRTG",
+      "price": 15.03
+    },
+    {
+      "ticker": "OMI",
+      "price": 18.98
+    }
+  ],
+  "351": [
+    {
+      "ticker": "HRTG",
+      "price": 15.0301
+    },
+    {
+      "ticker": "NITE",
+      "price": 17.1
+    }
+  ],
+  "381": [
+    {
+      "ticker": "NITE",
+      "price": 17.65
+    },
+    {
+      "ticker": "OPNT",
+      "price": 16.48
+    }
+  ]
+}

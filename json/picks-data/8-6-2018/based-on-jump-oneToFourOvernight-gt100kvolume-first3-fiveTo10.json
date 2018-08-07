@@ -1,0 +1,54 @@
+{
+  "0": [
+    {
+      "ticker": "S",
+      "price": 5.731
+    },
+    {
+      "ticker": "OPK",
+      "price": 5.98
+    }
+  ],
+  "5": [
+    {
+      "ticker": "IBN",
+      "price": 9.16
+    },
+    {
+      "ticker": "S",
+      "price": 5.81
+    },
+    {
+      "ticker": "OPK",
+      "price": 5.97
+    }
+  ],
+  "16": [
+    {
+      "ticker": "TWI",
+      "price": 7.16
+    },
+    {
+      "ticker": "IBN",
+      "price": 9.11
+    },
+    {
+      "ticker": "SRAX",
+      "price": 5.2
+    }
+  ],
+  "30": [
+    {
+      "ticker": "TWI",
+      "price": 7.22
+    },
+    {
+      "ticker": "CAMT",
+      "price": 9.15
+    },
+    {
+      "ticker": "IBN",
+      "price": 9.08
+    }
+  ]
+}

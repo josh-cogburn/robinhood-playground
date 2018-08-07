@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "MTP",
+      "price": 0.48
+    },
+    {
+      "ticker": "PXS",
+      "price": 0.9114
+    }
+  ],
+  "40": [
+    {
+      "ticker": "PTIE",
+      "price": 1.769
+    },
+    {
+      "ticker": "RXII",
+      "price": 1.598
+    }
+  ],
+  "100": [
+    {
+      "ticker": "PTIE",
+      "price": 1.4391
+    },
+    {
+      "ticker": "AVGR",
+      "price": 1.169
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PTIE",
+      "price": 1.2448
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.1126
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TIS",
+      "price": 2.6273
+    },
+    {
+      "ticker": "CFMS",
+      "price": 0.9382
+    }
+  ],
+  "351": [
+    {
+      "ticker": "TIS",
+      "price": 2.308
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.1116
+    }
+  ],
+  "381": [
+    {
+      "ticker": "TIS",
+      "price": 2.23
+    },
+    {
+      "ticker": "VRML",
+      "price": 0.6226
+    }
+  ]
+}

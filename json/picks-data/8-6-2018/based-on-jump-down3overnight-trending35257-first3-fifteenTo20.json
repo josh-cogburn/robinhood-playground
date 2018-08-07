@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "SMLP",
+      "price": 16.65
+    },
+    {
+      "ticker": "MFGP",
+      "price": 15.39
+    },
+    {
+      "ticker": "REPL",
+      "price": 15.53
+    }
+  ],
+  "5": [
+    {
+      "ticker": "SMLP",
+      "price": 17.05
+    },
+    {
+      "ticker": "MFGP",
+      "price": 15.45
+    },
+    {
+      "ticker": "REPL",
+      "price": 15.53
+    }
+  ],
+  "16": [
+    {
+      "ticker": "SMLP",
+      "price": 16.9295
+    },
+    {
+      "ticker": "MFGP",
+      "price": 15.395
+    },
+    {
+      "ticker": "REPL",
+      "price": 15.53
+    }
+  ],
+  "30": [
+    {
+      "ticker": "SMLP",
+      "price": 16.9
+    },
+    {
+      "ticker": "MFGP",
+      "price": 15.29
+    },
+    {
+      "ticker": "REPL",
+      "price": 16.3
+    }
+  ]
+}

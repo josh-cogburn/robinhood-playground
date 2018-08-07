@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "CNST",
+      "price": 10
+    },
+    {
+      "ticker": "BCS",
+      "price": 9.92
+    }
+  ],
+  "40": [
+    {
+      "ticker": "TBBK",
+      "price": 9.94
+    },
+    {
+      "ticker": "BCS",
+      "price": 9.925
+    }
+  ],
+  "100": [
+    {
+      "ticker": "CSSE",
+      "price": 9.94
+    },
+    {
+      "ticker": "COE",
+      "price": 9.94
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CSSE",
+      "price": 9.95
+    },
+    {
+      "ticker": "COE",
+      "price": 9.6932
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CSSE",
+      "price": 9.93
+    },
+    {
+      "ticker": "DERM",
+      "price": 9.97
+    }
+  ],
+  "351": [
+    {
+      "ticker": "TBIO",
+      "price": 9.83
+    },
+    {
+      "ticker": "CSSE",
+      "price": 9.59
+    }
+  ],
+  "381": [
+    {
+      "ticker": "TBIO",
+      "price": 9.78
+    },
+    {
+      "ticker": "CSSE",
+      "price": 9.45
+    }
+  ]
+}

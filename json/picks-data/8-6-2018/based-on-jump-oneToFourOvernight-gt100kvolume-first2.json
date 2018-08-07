@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "HMNY",
+      "price": 0.0742
+    },
+    {
+      "ticker": "RGSE",
+      "price": 0.342
+    }
+  ],
+  "5": [
+    {
+      "ticker": "HMNY",
+      "price": 0.0738
+    },
+    {
+      "ticker": "RGSE",
+      "price": 0.342
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CRMD",
+      "price": 0.629
+    },
+    {
+      "ticker": "HMNY",
+      "price": 0.102
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CRMD",
+      "price": 0.605
+    },
+    {
+      "ticker": "HMNY",
+      "price": 0.097
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "TCCO",
+      "price": 5.5
+    },
+    {
+      "ticker": "ADRO",
+      "price": 5.4
+    }
+  ],
+  "40": [
+    {
+      "ticker": "PTGX",
+      "price": 8
+    },
+    {
+      "ticker": "TTOO",
+      "price": 5.7893
+    }
+  ],
+  "100": [
+    {
+      "ticker": "PTGX",
+      "price": 8.78
+    },
+    {
+      "ticker": "TTOO",
+      "price": 6.1038
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PTGX",
+      "price": 9.82
+    },
+    {
+      "ticker": "TTOO",
+      "price": 6.21
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TTOO",
+      "price": 6.08
+    },
+    {
+      "ticker": "TSRI",
+      "price": 7.9
+    }
+  ],
+  "351": [
+    {
+      "ticker": "TTOO",
+      "price": 6.1199
+    },
+    {
+      "ticker": "TSRI",
+      "price": 7.75
+    }
+  ],
+  "381": [
+    {
+      "ticker": "TSRI",
+      "price": 8.1
+    },
+    {
+      "ticker": "TTOO",
+      "price": 6.09
+    }
+  ]
+}

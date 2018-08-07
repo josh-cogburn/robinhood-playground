@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "MBOT",
+      "price": 0.625
+    },
+    {
+      "ticker": "EVFM",
+      "price": 2.11
+    }
+  ],
+  "5": [
+    {
+      "ticker": "MBOT",
+      "price": 0.61
+    },
+    {
+      "ticker": "EVFM",
+      "price": 2.11
+    }
+  ],
+  "16": [
+    {
+      "ticker": "MBOT",
+      "price": 0.6114
+    },
+    {
+      "ticker": "EVFM",
+      "price": 2.18
+    }
+  ],
+  "30": [
+    {
+      "ticker": "MBOT",
+      "price": 0.6145
+    },
+    {
+      "ticker": "EVFM",
+      "price": 2.095
+    }
+  ]
+}

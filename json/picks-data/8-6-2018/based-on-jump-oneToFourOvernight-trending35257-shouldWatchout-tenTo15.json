@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "NGL",
+      "price": 12.85
+    },
+    {
+      "ticker": "SECO",
+      "price": 14
+    }
+  ],
+  "5": [
+    {
+      "ticker": "NGL",
+      "price": 12.85
+    },
+    {
+      "ticker": "SECO",
+      "price": 14.0773
+    }
+  ],
+  "16": [
+    {
+      "ticker": "NGL",
+      "price": 12.879
+    },
+    {
+      "ticker": "SECO",
+      "price": 13.92
+    }
+  ],
+  "30": [
+    {
+      "ticker": "NGL",
+      "price": 12.92
+    },
+    {
+      "ticker": "SECO",
+      "price": 14.18
+    }
+  ]
+}
