@@ -180,12 +180,14 @@ module.exports = async Robinhood => {
     for (let pos of underFourDays) {
         // const strategy = await findStrategyThatPurchasedTicker(pos.symbol);
         const breakdowns = await getStratPerfTrends(pos.ticker, pos.date, pos.strategy) || [];
-        breakdowns.push(
-            getTrend(
-                pos.currentPrice,
-                pos.average_buy_price
-            )
-        );
+        if (!breakdowns.length) {
+            breakdowns.push(
+                getTrend(
+                    pos.currentPrice,
+                    pos.average_buy_price
+                )
+            );
+        }
         const playoutToRun = pos.highestPlayout || sellStrategy;
         pos.playoutToRun = playoutToRun;
         const playoutFn = playouts[playoutToRun].fn;
