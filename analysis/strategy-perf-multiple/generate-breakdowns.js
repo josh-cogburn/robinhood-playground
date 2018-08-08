@@ -1,3 +1,6 @@
+const playoutsOfInterest = require('./one-off-scripts/playouts-of-interest');
+
+
 const highestPlayoutFn = (
     playoutScoreFn,
     playoutFilter = 'limit'
@@ -185,7 +188,18 @@ const analyzeRoundup = allRoundup => {
             filterFn: upperHalfCounts,
             scoreFn: highestPlayoutFn(
                 ({ avgTrend }) => avgTrend,
-                playoutKey => playoutKey !== 'onlyMax'
+                playoutKey => [
+                    'alwaysLast',
+                    'onlyMax'
+                ].every(compareKey => playoutKey !== compareKey)
+            )
+        }),
+
+        bestAvgTrendPlayoutsOfInterest: createBreakdown({
+            filterFn: upperHalfCounts,
+            scoreFn: highestPlayoutFn(
+                ({ avgTrend }) => avgTrend,
+                playoutKey => playoutsOfInterest.includes(playoutKey)
             )
         }),
 

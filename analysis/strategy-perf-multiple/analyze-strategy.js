@@ -117,7 +117,7 @@ const analyzeStrategy = ({
             daysDown: daysDown.length,
         }),
 
-        breakdownsByDay,
+        // breakdownsByDay,
 
         playouts: Object.keys(playouts).reduce((acc, k) => ({
             ...acc,

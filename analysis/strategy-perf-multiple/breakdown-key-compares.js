@@ -6,7 +6,7 @@ const dayOrder = [
 ];
 
 const isBreakdownKey = string =>
-    dayOrder.some(day => string.startsWith(day) && string.includes('-day'));
+    string.includes('-day') && dayOrder.some(day => string.startsWith(day));
 
 const compareTwoBreakdowns = (a, b) => {
     const [aDay, _, aMinute] = a.split('-');
