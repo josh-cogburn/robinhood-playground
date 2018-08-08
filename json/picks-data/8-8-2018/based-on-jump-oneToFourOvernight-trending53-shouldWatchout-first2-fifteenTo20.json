@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "GHG",
+      "price": 15.42
+    },
+    {
+      "ticker": "ALDR",
+      "price": 20.85
+    }
+  ],
+  "5": [
+    {
+      "ticker": "GHG",
+      "price": 15.42
+    },
+    {
+      "ticker": "ARWR",
+      "price": 15.75
+    }
+  ],
+  "16": [
+    {
+      "ticker": "GHG",
+      "price": 15.42
+    },
+    {
+      "ticker": "ARWR",
+      "price": 15.73
+    }
+  ],
+  "30": [
+    {
+      "ticker": "GHG",
+      "price": 15.27
+    },
+    {
+      "ticker": "ALDR",
+      "price": 20
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "MOSY",
+      "price": 1.01
+    },
+    {
+      "ticker": "IDXG",
+      "price": 1.0152
+    }
+  ],
+  "40": [
+    {
+      "ticker": "RMTI",
+      "price": 4.73
+    },
+    {
+      "ticker": "CRMD",
+      "price": 0.5487
+    }
+  ],
+  "100": [
+    {
+      "ticker": "RGSE",
+      "price": 0.3335
+    },
+    {
+      "ticker": "TYME",
+      "price": 2.48
+    }
+  ],
+  "200": [
+    {
+      "ticker": "BLNK",
+      "price": 4.08
+    },
+    {
+      "ticker": "EARS",
+      "price": 0.2626
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SRRA",
+      "price": 2.3
+    },
+    {
+      "ticker": "SN",
+      "price": 3.1025
+    }
+  ],
+  "351": [
+    {
+      "ticker": "ASCMA",
+      "price": 2.62
+    },
+    {
+      "ticker": "AMDA",
+      "price": 0.46
+    }
+  ],
+  "381": [
+    {
+      "ticker": "FTK",
+      "price": 2.16
+    },
+    {
+      "ticker": "BLIN",
+      "price": 1.3311
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "10": [
+    {
+      "ticker": "NEON",
+      "price": 0.3674
+    },
+    {
+      "ticker": "PRKR",
+      "price": 0.7
+    },
+    {
+      "ticker": "IMMP",
+      "price": 2.56
+    },
+    {
+      "ticker": "BOXL",
+      "price": 3.5
+    },
+    {
+      "ticker": "SMMT",
+      "price": 2.42
+    }
+  ],
+  "50": [
+    {
+      "ticker": "NEON",
+      "price": 0.3757
+    },
+    {
+      "ticker": "PRKR",
+      "price": 0.68
+    },
+    {
+      "ticker": "IMMP",
+      "price": 2.58
+    },
+    {
+      "ticker": "BOXL",
+      "price": 3.401
+    }
+  ],
+  "200": [
+    {
+      "ticker": "NEON",
+      "price": 0.357
+    },
+    {
+      "ticker": "PRKR",
+      "price": 0.6693
+    },
+    {
+      "ticker": "IMMP",
+      "price": 2.6563
+    },
+    {
+      "ticker": "BOXL",
+      "price": 3.49
+    },
+    {
+      "ticker": "SMMT",
+      "price": 2.377
+    }
+  ],
+  "300": [
+    {
+      "ticker": "NEON",
+      "price": 0.3571
+    },
+    {
+      "ticker": "PRKR",
+      "price": 0.68
+    },
+    {
+      "ticker": "IMMP",
+      "price": 2.6499
+    },
+    {
+      "ticker": "BOXL",
+      "price": 3.4872
+    },
+    {
+      "ticker": "SMMT",
+      "price": 2.3526
+    }
+  ],
+  "380": [
+    {
+      "ticker": "NEON",
+      "price": 0.376
+    },
+    {
+      "ticker": "PRKR",
+      "price": 0.67
+    },
+    {
+      "ticker": "IMMP",
+      "price": 2.66
+    },
+    {
+      "ticker": "BOXL",
+      "price": 3.4884
+    }
+  ]
+}

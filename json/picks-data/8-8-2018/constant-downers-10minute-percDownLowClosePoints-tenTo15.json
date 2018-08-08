@@ -1,0 +1,44 @@
+{
+  "77": [
+    {
+      "ticker": "CBB",
+      "price": 11
+    },
+    {
+      "ticker": "HMI",
+      "price": 10.21
+    },
+    {
+      "ticker": "OMI",
+      "price": 14.542
+    }
+  ],
+  "242": [
+    {
+      "ticker": "CBB",
+      "price": 10.375
+    },
+    {
+      "ticker": "MRT",
+      "price": 10.28
+    },
+    {
+      "ticker": "OMI",
+      "price": 14.75
+    }
+  ],
+  "309": [
+    {
+      "ticker": "CMT",
+      "price": 10.05
+    },
+    {
+      "ticker": "IOVA",
+      "price": 13.675
+    },
+    {
+      "ticker": "MRT",
+      "price": 10.2501
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "DDD",
+      "price": 17.365
+    },
+    {
+      "ticker": "LRN",
+      "price": 18
+    }
+  ],
+  "5": [
+    {
+      "ticker": "DDD",
+      "price": 17.72
+    },
+    {
+      "ticker": "LRN",
+      "price": 18.14
+    }
+  ],
+  "16": [
+    {
+      "ticker": "DDD",
+      "price": 17.85
+    },
+    {
+      "ticker": "LRN",
+      "price": 18.27
+    }
+  ],
+  "30": [
+    {
+      "ticker": "DDD",
+      "price": 17.89
+    },
+    {
+      "ticker": "LRN",
+      "price": 18.58
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "0": [
+    {
+      "ticker": "BSTI",
+      "price": 8.375
+    },
+    {
+      "ticker": "DEPO",
+      "price": 8.3425
+    },
+    {
+      "ticker": "IEC",
+      "price": 4.9472
+    }
+  ],
+  "5": [
+    {
+      "ticker": "BSTI",
+      "price": 8.65
+    },
+    {
+      "ticker": "DEPO",
+      "price": 8.36
+    },
+    {
+      "ticker": "LPL",
+      "price": 9.6197
+    }
+  ],
+  "16": [
+    {
+      "ticker": "BSTI",
+      "price": 9
+    },
+    {
+      "ticker": "DEPO",
+      "price": 8.129
+    },
+    {
+      "ticker": "CMT",
+      "price": 9.9101
+    },
+    {
+      "ticker": "LPL",
+      "price": 9.605
+    }
+  ],
+  "30": [
+    {
+      "ticker": "BSTI",
+      "price": 8.99
+    },
+    {
+      "ticker": "DEPO",
+      "price": 7.87
+    },
+    {
+      "ticker": "CMT",
+      "price": 9.82
+    },
+    {
+      "ticker": "LPL",
+      "price": 9.58
+    },
+    {
+      "ticker": "IEC",
+      "price": 5.07
+    }
+  ]
+}

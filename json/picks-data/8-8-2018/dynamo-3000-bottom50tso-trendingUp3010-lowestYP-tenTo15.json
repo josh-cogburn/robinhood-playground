@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "VEDL",
+      "price": 12.98
+    },
+    {
+      "ticker": "HMI",
+      "price": 10.585
+    }
+  ],
+  "40": [
+    {
+      "ticker": "VEDL",
+      "price": 12.91
+    },
+    {
+      "ticker": "LX",
+      "price": 12.365
+    }
+  ],
+  "100": [
+    {
+      "ticker": "MRAM",
+      "price": 10.14
+    },
+    {
+      "ticker": "CEPU",
+      "price": 11.36
+    }
+  ],
+  "200": [
+    {
+      "ticker": "VEDL",
+      "price": 12.885
+    },
+    {
+      "ticker": "CEPU",
+      "price": 11.43
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CEPU",
+      "price": 11.3
+    },
+    {
+      "ticker": "LX",
+      "price": 12.32
+    }
+  ],
+  "351": [
+    {
+      "ticker": "PRTK",
+      "price": 10.975
+    },
+    {
+      "ticker": "CEPU",
+      "price": 11.09
+    }
+  ],
+  "381": [
+    {
+      "ticker": "PRTK",
+      "price": 10.55
+    },
+    {
+      "ticker": "CEPU",
+      "price": 10.98
+    }
+  ]
+}

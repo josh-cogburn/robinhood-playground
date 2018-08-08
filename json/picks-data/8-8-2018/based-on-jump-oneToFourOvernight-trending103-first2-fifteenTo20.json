@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "OBSV",
+      "price": 15.21
+    },
+    {
+      "ticker": "SUP",
+      "price": 21.25
+    }
+  ],
+  "5": [
+    {
+      "ticker": "OBSV",
+      "price": 14.86
+    },
+    {
+      "ticker": "ARWR",
+      "price": 15.75
+    }
+  ],
+  "16": [
+    {
+      "ticker": "OBSV",
+      "price": 14.86
+    },
+    {
+      "ticker": "ARWR",
+      "price": 15.73
+    }
+  ],
+  "30": [
+    {
+      "ticker": "ALDR",
+      "price": 20
+    },
+    {
+      "ticker": "ARWR",
+      "price": 15.705
+    }
+  ]
+}

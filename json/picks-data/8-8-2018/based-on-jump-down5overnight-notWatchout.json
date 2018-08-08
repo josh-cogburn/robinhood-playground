@@ -1,0 +1,54 @@
+{
+  "0": [
+    {
+      "ticker": "IGLD",
+      "price": 2.32
+    },
+    {
+      "ticker": "AXAS",
+      "price": 2.14
+    }
+  ],
+  "5": [
+    {
+      "ticker": "IGLD",
+      "price": 2.32
+    },
+    {
+      "ticker": "OBCI",
+      "price": 3.45
+    },
+    {
+      "ticker": "AXAS",
+      "price": 2.26
+    }
+  ],
+  "16": [
+    {
+      "ticker": "IGLD",
+      "price": 2.26
+    },
+    {
+      "ticker": "OBCI",
+      "price": 3.45
+    },
+    {
+      "ticker": "AXAS",
+      "price": 2.21
+    }
+  ],
+  "30": [
+    {
+      "ticker": "IGLD",
+      "price": 2.25
+    },
+    {
+      "ticker": "OBCI",
+      "price": 3.45
+    },
+    {
+      "ticker": "AXAS",
+      "price": 2.175
+    }
+  ]
+}

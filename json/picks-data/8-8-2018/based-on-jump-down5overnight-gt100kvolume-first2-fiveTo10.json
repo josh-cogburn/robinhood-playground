@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "EXTR",
+      "price": 5.54
+    },
+    {
+      "ticker": "NIHD",
+      "price": 5.3125
+    }
+  ],
+  "5": [
+    {
+      "ticker": "EXTR",
+      "price": 6
+    },
+    {
+      "ticker": "BSTI",
+      "price": 8.65
+    }
+  ],
+  "16": [
+    {
+      "ticker": "EXTR",
+      "price": 5.8
+    },
+    {
+      "ticker": "BSTI",
+      "price": 9
+    }
+  ],
+  "30": [
+    {
+      "ticker": "EXTR",
+      "price": 5.955
+    },
+    {
+      "ticker": "BSTI",
+      "price": 8.99
+    }
+  ]
+}

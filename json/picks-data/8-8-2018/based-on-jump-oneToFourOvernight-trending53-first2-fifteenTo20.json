@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "OBSV",
+      "price": 15.21
+    },
+    {
+      "ticker": "GHG",
+      "price": 15.42
+    }
+  ],
+  "5": [
+    {
+      "ticker": "OBSV",
+      "price": 14.86
+    },
+    {
+      "ticker": "GHG",
+      "price": 15.42
+    }
+  ],
+  "16": [
+    {
+      "ticker": "OBSV",
+      "price": 14.86
+    },
+    {
+      "ticker": "GHG",
+      "price": 15.42
+    }
+  ],
+  "30": [
+    {
+      "ticker": "GHG",
+      "price": 15.27
+    },
+    {
+      "ticker": "PUMP",
+      "price": 16.74
+    }
+  ]
+}

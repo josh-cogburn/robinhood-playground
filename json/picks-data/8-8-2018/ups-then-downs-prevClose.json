@@ -1,0 +1,72 @@
+{
+  "10": [
+    {
+      "ticker": "SYNC",
+      "price": 2.25
+    }
+  ],
+  "50": [
+    {
+      "ticker": "SYNC",
+      "price": 2.3
+    },
+    {
+      "ticker": "TGC",
+      "price": 1.1
+    },
+    {
+      "ticker": "ARC",
+      "price": 3.14
+    }
+  ],
+  "200": [
+    {
+      "ticker": "LTRX",
+      "price": 3.4
+    },
+    {
+      "ticker": "TGC",
+      "price": 1.06
+    },
+    {
+      "ticker": "SYNC",
+      "price": 2.3
+    },
+    {
+      "ticker": "ARC",
+      "price": 3.0501
+    }
+  ],
+  "300": [
+    {
+      "ticker": "LTRX",
+      "price": 3.4203
+    },
+    {
+      "ticker": "TCCO",
+      "price": 4.8869
+    },
+    {
+      "ticker": "ARC",
+      "price": 2.9799
+    },
+    {
+      "ticker": "TGC",
+      "price": 1.09
+    }
+  ],
+  "380": [
+    {
+      "ticker": "LTRX",
+      "price": 3.39
+    },
+    {
+      "ticker": "ARC",
+      "price": 3
+    },
+    {
+      "ticker": "BLIN",
+      "price": 1.3311
+    }
+  ]
+}

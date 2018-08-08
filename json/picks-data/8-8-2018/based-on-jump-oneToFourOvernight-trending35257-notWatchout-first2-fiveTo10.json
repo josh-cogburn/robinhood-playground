@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "VTL",
+      "price": 8.8
+    },
+    {
+      "ticker": "IIJI",
+      "price": 9.9999
+    }
+  ],
+  "5": [
+    {
+      "ticker": "VTL",
+      "price": 8.675
+    },
+    {
+      "ticker": "IIJI",
+      "price": 9.9999
+    }
+  ],
+  "16": [
+    {
+      "ticker": "VTL",
+      "price": 8.5
+    },
+    {
+      "ticker": "IIJI",
+      "price": 9.871
+    }
+  ],
+  "30": [
+    {
+      "ticker": "VTL",
+      "price": 8.45
+    },
+    {
+      "ticker": "IIJI",
+      "price": 9.871
+    }
+  ]
+}

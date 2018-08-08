@@ -1,0 +1,54 @@
+{
+  "0": [
+    {
+      "ticker": "IDSA",
+      "price": 2.13
+    },
+    {
+      "ticker": "INSG",
+      "price": 2.25
+    }
+  ],
+  "5": [
+    {
+      "ticker": "IDSA",
+      "price": 2.13
+    },
+    {
+      "ticker": "INSG",
+      "price": 2.25
+    },
+    {
+      "ticker": "SID",
+      "price": 2.62
+    }
+  ],
+  "16": [
+    {
+      "ticker": "IDSA",
+      "price": 2.13
+    },
+    {
+      "ticker": "INSG",
+      "price": 2.24
+    },
+    {
+      "ticker": "SID",
+      "price": 2.61
+    }
+  ],
+  "30": [
+    {
+      "ticker": "IDSA",
+      "price": 2
+    },
+    {
+      "ticker": "INSG",
+      "price": 2.21
+    },
+    {
+      "ticker": "SID",
+      "price": 2.596
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "CHS",
+      "price": 9.45
+    },
+    {
+      "ticker": "DEPO",
+      "price": 8.33
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CSSE",
+      "price": 9.75
+    },
+    {
+      "ticker": "DEPO",
+      "price": 7.83
+    }
+  ],
+  "100": [
+    {
+      "ticker": "HMI",
+      "price": 10.05
+    },
+    {
+      "ticker": "CSSE",
+      "price": 9.75
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CSSE",
+      "price": 9.3
+    },
+    {
+      "ticker": "LONE",
+      "price": 9.18
+    }
+  ],
+  "260": [
+    {
+      "ticker": "HMI",
+      "price": 9.9
+    },
+    {
+      "ticker": "CSSE",
+      "price": 9.3206
+    }
+  ],
+  "351": [
+    {
+      "ticker": "HMI",
+      "price": 9.9882
+    },
+    {
+      "ticker": "CSSE",
+      "price": 9.37
+    }
+  ],
+  "381": [
+    {
+      "ticker": "HMI",
+      "price": 9.955
+    },
+    {
+      "ticker": "CSSE",
+      "price": 9.35
+    }
+  ]
+}

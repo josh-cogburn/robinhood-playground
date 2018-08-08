@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "GHG",
+      "price": 15.42
+    },
+    {
+      "ticker": "ALDR",
+      "price": 20.85
+    },
+    {
+      "ticker": "ARWR",
+      "price": 15.68
+    }
+  ],
+  "5": [
+    {
+      "ticker": "GHG",
+      "price": 15.42
+    },
+    {
+      "ticker": "ARWR",
+      "price": 15.75
+    },
+    {
+      "ticker": "GTXI",
+      "price": 17.52
+    }
+  ],
+  "16": [
+    {
+      "ticker": "GHG",
+      "price": 15.42
+    },
+    {
+      "ticker": "ARWR",
+      "price": 15.73
+    },
+    {
+      "ticker": "GTXI",
+      "price": 17.52
+    }
+  ],
+  "30": [
+    {
+      "ticker": "GHG",
+      "price": 15.27
+    },
+    {
+      "ticker": "ALDR",
+      "price": 20
+    },
+    {
+      "ticker": "ARWR",
+      "price": 15.705
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "OBSV",
+      "price": 15.21
+    },
+    {
+      "ticker": "SUP",
+      "price": 21.25
+    }
+  ],
+  "5": [
+    {
+      "ticker": "OBSV",
+      "price": 14.86
+    },
+    {
+      "ticker": "FNSR",
+      "price": 18.3
+    }
+  ],
+  "16": [
+    {
+      "ticker": "OBSV",
+      "price": 14.86
+    },
+    {
+      "ticker": "FNSR",
+      "price": 18.26
+    }
+  ],
+  "30": [
+    {
+      "ticker": "FNSR",
+      "price": 18.24
+    },
+    {
+      "ticker": "KRYS",
+      "price": 16.26
+    }
+  ]
+}

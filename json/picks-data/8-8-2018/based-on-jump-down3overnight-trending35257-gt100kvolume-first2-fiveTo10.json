@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "EXTR",
+      "price": 5.54
+    },
+    {
+      "ticker": "PGNX",
+      "price": 8.5
+    }
+  ],
+  "5": [
+    {
+      "ticker": "EXTR",
+      "price": 6
+    },
+    {
+      "ticker": "PGNX",
+      "price": 8.325
+    }
+  ],
+  "16": [
+    {
+      "ticker": "EXTR",
+      "price": 5.8
+    },
+    {
+      "ticker": "DEPO",
+      "price": 8.129
+    }
+  ],
+  "30": [
+    {
+      "ticker": "EXTR",
+      "price": 5.955
+    },
+    {
+      "ticker": "DEPO",
+      "price": 7.87
+    }
+  ]
+}

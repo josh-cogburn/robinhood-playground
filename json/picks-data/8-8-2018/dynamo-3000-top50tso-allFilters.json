@@ -1,0 +1,84 @@
+{
+  "4": [
+    {
+      "ticker": "OIIM",
+      "price": 2.14
+    },
+    {
+      "ticker": "INSG",
+      "price": 2.2
+    },
+    {
+      "ticker": "SNGX",
+      "price": 1.4962
+    },
+    {
+      "ticker": "DYSL",
+      "price": 1.56
+    }
+  ],
+  "40": [
+    {
+      "ticker": "OIIM",
+      "price": 2.14
+    },
+    {
+      "ticker": "SNGX",
+      "price": 1.485
+    }
+  ],
+  "100": [
+    {
+      "ticker": "LINC",
+      "price": 2.02
+    }
+  ],
+  "200": [
+    {
+      "ticker": "SNGX",
+      "price": 1.4654
+    },
+    {
+      "ticker": "LINC",
+      "price": 2.03
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SNGX",
+      "price": 1.48
+    },
+    {
+      "ticker": "CHKR",
+      "price": 1.75
+    },
+    {
+      "ticker": "LINC",
+      "price": 2.0001
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SNGX",
+      "price": 1.4675
+    },
+    {
+      "ticker": "SOFO",
+      "price": 2.29
+    },
+    {
+      "ticker": "LINC",
+      "price": 2.1
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SOFO",
+      "price": 2.29
+    },
+    {
+      "ticker": "LINC",
+      "price": 2.15
+    }
+  ]
+}

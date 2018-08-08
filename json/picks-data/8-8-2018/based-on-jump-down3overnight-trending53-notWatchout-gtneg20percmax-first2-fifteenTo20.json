@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "MODN",
+      "price": 18.55
+    },
+    {
+      "ticker": "GLP",
+      "price": 19.601
+    }
+  ],
+  "5": [
+    {
+      "ticker": "MODN",
+      "price": 18.2
+    },
+    {
+      "ticker": "GLP",
+      "price": 19.3899
+    }
+  ],
+  "16": [
+    {
+      "ticker": "ITG",
+      "price": 19.99
+    },
+    {
+      "ticker": "MODN",
+      "price": 18.2
+    }
+  ],
+  "30": [
+    {
+      "ticker": "ITG",
+      "price": 19.785
+    },
+    {
+      "ticker": "MODN",
+      "price": 18.2
+    }
+  ]
+}

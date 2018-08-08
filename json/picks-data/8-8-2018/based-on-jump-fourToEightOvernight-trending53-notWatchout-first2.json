@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "CMRX",
+      "price": 4.51
+    },
+    {
+      "ticker": "INSG",
+      "price": 2.25
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CMRX",
+      "price": 4.3
+    },
+    {
+      "ticker": "INSG",
+      "price": 2.25
+    }
+  ],
+  "16": [
+    {
+      "ticker": "INSG",
+      "price": 2.24
+    },
+    {
+      "ticker": "CMRX",
+      "price": 4.49
+    }
+  ],
+  "30": [
+    {
+      "ticker": "INSG",
+      "price": 2.21
+    },
+    {
+      "ticker": "CMRX",
+      "price": 4.36
+    }
+  ]
+}

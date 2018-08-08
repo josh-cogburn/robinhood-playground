@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "OXBR",
+      "price": 2
+    },
+    {
+      "ticker": "EGLT",
+      "price": 0.5125
+    },
+    {
+      "ticker": "CHKE",
+      "price": 0.9001
+    }
+  ],
+  "5": [
+    {
+      "ticker": "OXBR",
+      "price": 1.8006
+    },
+    {
+      "ticker": "EGLT",
+      "price": 0.4709
+    },
+    {
+      "ticker": "CHKE",
+      "price": 0.8398
+    }
+  ],
+  "16": [
+    {
+      "ticker": "OXBR",
+      "price": 1.8006
+    },
+    {
+      "ticker": "EGLT",
+      "price": 0.4534
+    },
+    {
+      "ticker": "CHKE",
+      "price": 0.8004
+    }
+  ],
+  "30": [
+    {
+      "ticker": "OXBR",
+      "price": 1.8
+    },
+    {
+      "ticker": "EGLT",
+      "price": 0.4514
+    },
+    {
+      "ticker": "CHKE",
+      "price": 0.82
+    }
+  ]
+}

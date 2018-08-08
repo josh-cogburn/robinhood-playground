@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "OBSV",
+      "price": 15.21
+    },
+    {
+      "ticker": "SUP",
+      "price": 21.25
+    },
+    {
+      "ticker": "HALO",
+      "price": 17.87
+    }
+  ],
+  "5": [
+    {
+      "ticker": "OBSV",
+      "price": 14.86
+    },
+    {
+      "ticker": "HALO",
+      "price": 17.57
+    },
+    {
+      "ticker": "PARR",
+      "price": 17.56
+    }
+  ],
+  "16": [
+    {
+      "ticker": "OBSV",
+      "price": 14.86
+    },
+    {
+      "ticker": "HALO",
+      "price": 17.48
+    },
+    {
+      "ticker": "PARR",
+      "price": 17.565
+    }
+  ],
+  "30": [
+    {
+      "ticker": "HALO",
+      "price": 17.48
+    },
+    {
+      "ticker": "PARR",
+      "price": 17.79
+    },
+    {
+      "ticker": "KRYS",
+      "price": 16.26
+    }
+  ]
+}

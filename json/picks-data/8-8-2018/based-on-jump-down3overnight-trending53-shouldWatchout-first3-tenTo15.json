@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "NCSM",
+      "price": 16.625
+    },
+    {
+      "ticker": "SELB",
+      "price": 12.98
+    },
+    {
+      "ticker": "PRTA",
+      "price": 14.29
+    }
+  ],
+  "5": [
+    {
+      "ticker": "SELB",
+      "price": 13.29
+    },
+    {
+      "ticker": "PRTA",
+      "price": 14.43
+    },
+    {
+      "ticker": "TGTX",
+      "price": 11.445
+    }
+  ],
+  "16": [
+    {
+      "ticker": "SELB",
+      "price": 13.29
+    },
+    {
+      "ticker": "PRTA",
+      "price": 14.415
+    },
+    {
+      "ticker": "TGTX",
+      "price": 11.4
+    }
+  ],
+  "30": [
+    {
+      "ticker": "SELB",
+      "price": 13.33
+    },
+    {
+      "ticker": "PRTA",
+      "price": 14.42
+    },
+    {
+      "ticker": "TGTX",
+      "price": 11.7
+    }
+  ]
+}

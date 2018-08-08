@@ -21,8 +21,8 @@ module.exports = {
     // important settings
     purchaseAmt: 44,
     forPurchase: [
-        '[myRecs-day1-hundredResultCreme]',
-        '[august2]',
+        // '[myRecs-day1-hundredResultCreme]',
+        // '[august2]',
         '[aug7lowCounts]',
         '[aug7More]',
         '[aug7PerfectoLowCounts]'

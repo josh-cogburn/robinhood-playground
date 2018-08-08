@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "XENE",
+      "price": 10.69
+    },
+    {
+      "ticker": "MBI",
+      "price": 10.495
+    }
+  ],
+  "40": [
+    {
+      "ticker": "USDP",
+      "price": 10.2068
+    },
+    {
+      "ticker": "MRAM",
+      "price": 10.5
+    }
+  ],
+  "100": [
+    {
+      "ticker": "USDP",
+      "price": 10.2
+    },
+    {
+      "ticker": "MRAM",
+      "price": 10.14
+    }
+  ],
+  "200": [
+    {
+      "ticker": "LFVN",
+      "price": 10.34
+    },
+    {
+      "ticker": "MRAM",
+      "price": 10.443
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CEPU",
+      "price": 11.3
+    },
+    {
+      "ticker": "TRUE",
+      "price": 11.27
+    }
+  ],
+  "351": [
+    {
+      "ticker": "PRTK",
+      "price": 10.975
+    },
+    {
+      "ticker": "CEPU",
+      "price": 11.09
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MRAM",
+      "price": 10.15
+    },
+    {
+      "ticker": "PRTK",
+      "price": 10.55
+    }
+  ]
+}

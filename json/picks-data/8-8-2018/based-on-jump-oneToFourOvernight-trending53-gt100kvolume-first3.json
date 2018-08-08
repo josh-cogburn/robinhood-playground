@@ -1,0 +1,46 @@
+{
+  "0": [
+    {
+      "ticker": "ODP",
+      "price": 2.95
+    }
+  ],
+  "5": [
+    {
+      "ticker": "ODP",
+      "price": 2.8999
+    },
+    {
+      "ticker": "TGB",
+      "price": 0.7632
+    }
+  ],
+  "16": [
+    {
+      "ticker": "FBIO",
+      "price": 2.06
+    },
+    {
+      "ticker": "ODP",
+      "price": 2.92
+    },
+    {
+      "ticker": "TGB",
+      "price": 0.7523
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CASM",
+      "price": 2.56
+    },
+    {
+      "ticker": "FBIO",
+      "price": 2.09
+    },
+    {
+      "ticker": "ODP",
+      "price": 2.925
+    }
+  ]
+}

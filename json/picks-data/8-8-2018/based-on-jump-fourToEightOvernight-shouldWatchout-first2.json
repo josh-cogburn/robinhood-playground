@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "ATIS",
+      "price": 0.4
+    },
+    {
+      "ticker": "SCON",
+      "price": 2.7
+    }
+  ],
+  "5": [
+    {
+      "ticker": "ATIS",
+      "price": 0.4
+    },
+    {
+      "ticker": "SCON",
+      "price": 2.55
+    }
+  ],
+  "16": [
+    {
+      "ticker": "ATIS",
+      "price": 0.401
+    },
+    {
+      "ticker": "SCON",
+      "price": 2.684
+    }
+  ],
+  "30": [
+    {
+      "ticker": "ATIS",
+      "price": 0.403
+    },
+    {
+      "ticker": "SCON",
+      "price": 2.7
+    }
+  ]
+}

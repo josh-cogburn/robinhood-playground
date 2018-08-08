@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "MTBC",
+      "price": 5.2
+    },
+    {
+      "ticker": "ENPH",
+      "price": 5.7799
+    }
+  ],
+  "40": [
+    {
+      "ticker": "MTBC",
+      "price": 5.15
+    },
+    {
+      "ticker": "CSBR",
+      "price": 7.8
+    }
+  ],
+  "100": [
+    {
+      "ticker": "MTBC",
+      "price": 5.0223
+    },
+    {
+      "ticker": "PGNX",
+      "price": 8.2
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CSBR",
+      "price": 7.79
+    },
+    {
+      "ticker": "PGNX",
+      "price": 8.24
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NIHD",
+      "price": 5.145
+    },
+    {
+      "ticker": "INVE",
+      "price": 5.5076
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NIHD",
+      "price": 5.095
+    },
+    {
+      "ticker": "INVE",
+      "price": 5.2
+    }
+  ],
+  "381": [
+    {
+      "ticker": "INVE",
+      "price": 5.2
+    },
+    {
+      "ticker": "LQDT",
+      "price": 7
+    }
+  ]
+}

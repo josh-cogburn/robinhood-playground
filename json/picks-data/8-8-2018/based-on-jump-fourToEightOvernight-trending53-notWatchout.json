@@ -1,0 +1,74 @@
+{
+  "0": [
+    {
+      "ticker": "CMRX",
+      "price": 4.51
+    },
+    {
+      "ticker": "INSG",
+      "price": 2.25
+    },
+    {
+      "ticker": "ATHX",
+      "price": 2.0078
+    },
+    {
+      "ticker": "DXYN",
+      "price": 2.05
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CMRX",
+      "price": 4.3
+    },
+    {
+      "ticker": "INSG",
+      "price": 2.25
+    },
+    {
+      "ticker": "ATHX",
+      "price": 1.976
+    },
+    {
+      "ticker": "DXYN",
+      "price": 2.05
+    }
+  ],
+  "16": [
+    {
+      "ticker": "INSG",
+      "price": 2.24
+    },
+    {
+      "ticker": "CMRX",
+      "price": 4.49
+    },
+    {
+      "ticker": "ATHX",
+      "price": 1.98
+    },
+    {
+      "ticker": "DXYN",
+      "price": 1.9
+    }
+  ],
+  "30": [
+    {
+      "ticker": "INSG",
+      "price": 2.21
+    },
+    {
+      "ticker": "CMRX",
+      "price": 4.36
+    },
+    {
+      "ticker": "ATHX",
+      "price": 1.96
+    },
+    {
+      "ticker": "DXYN",
+      "price": 1.9
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "HMI",
+      "price": 10.585
+    },
+    {
+      "ticker": "LIND",
+      "price": 13.56
+    }
+  ],
+  "40": [
+    {
+      "ticker": "LX",
+      "price": 12.365
+    },
+    {
+      "ticker": "HMI",
+      "price": 10.5272
+    }
+  ],
+  "100": [
+    {
+      "ticker": "SBLK",
+      "price": 13.57
+    },
+    {
+      "ticker": "MRAM",
+      "price": 10.14
+    }
+  ],
+  "200": [
+    {
+      "ticker": "HMI",
+      "price": 9.97
+    },
+    {
+      "ticker": "SBLK",
+      "price": 13.6138
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SBLK",
+      "price": 13.6
+    },
+    {
+      "ticker": "IOVA",
+      "price": 13.95
+    }
+  ],
+  "351": [
+    {
+      "ticker": "PRTK",
+      "price": 10.975
+    },
+    {
+      "ticker": "IOVA",
+      "price": 13.675
+    }
+  ],
+  "381": [
+    {
+      "ticker": "PRTK",
+      "price": 10.55
+    },
+    {
+      "ticker": "CEPU",
+      "price": 10.98
+    }
+  ]
+}

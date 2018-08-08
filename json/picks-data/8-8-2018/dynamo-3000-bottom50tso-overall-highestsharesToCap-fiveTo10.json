@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "MTBC",
+      "price": 5.2
+    },
+    {
+      "ticker": "MLNT",
+      "price": 5.225
+    }
+  ],
+  "40": [
+    {
+      "ticker": "MTBC",
+      "price": 5.15
+    },
+    {
+      "ticker": "SALM",
+      "price": 5.15
+    }
+  ],
+  "100": [
+    {
+      "ticker": "SBBP",
+      "price": 5.0223
+    },
+    {
+      "ticker": "MTBC",
+      "price": 5.0223
+    }
+  ],
+  "200": [
+    {
+      "ticker": "SBBP",
+      "price": 5.2
+    },
+    {
+      "ticker": "SALM",
+      "price": 5.15
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SALM",
+      "price": 5.05
+    },
+    {
+      "ticker": "MLNT",
+      "price": 5.2
+    }
+  ],
+  "351": [
+    {
+      "ticker": "MLNT",
+      "price": 5
+    },
+    {
+      "ticker": "TXMD",
+      "price": 5.2301
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MLNT",
+      "price": 5.075
+    },
+    {
+      "ticker": "TXMD",
+      "price": 5.23
+    }
+  ]
+}

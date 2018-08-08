@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "ANY",
+      "price": 0.3057
+    },
+    {
+      "ticker": "JONE",
+      "price": 0.4455
+    }
+  ],
+  "40": [
+    {
+      "ticker": "XSPA",
+      "price": 0.2497
+    },
+    {
+      "ticker": "IPCI",
+      "price": 0.3252
+    }
+  ],
+  "100": [
+    {
+      "ticker": "GLOW",
+      "price": 0.185
+    },
+    {
+      "ticker": "IPCI",
+      "price": 0.3245
+    }
+  ],
+  "200": [
+    {
+      "ticker": "GST",
+      "price": 0.1586
+    },
+    {
+      "ticker": "GLOW",
+      "price": 0.1888
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GST",
+      "price": 0.1732
+    },
+    {
+      "ticker": "GLOW",
+      "price": 0.19
+    }
+  ],
+  "351": [
+    {
+      "ticker": "GST",
+      "price": 0.1795
+    },
+    {
+      "ticker": "IPCI",
+      "price": 0.3268
+    }
+  ],
+  "381": [
+    {
+      "ticker": "GST",
+      "price": 0.174
+    },
+    {
+      "ticker": "IPCI",
+      "price": 0.3236
+    }
+  ]
+}

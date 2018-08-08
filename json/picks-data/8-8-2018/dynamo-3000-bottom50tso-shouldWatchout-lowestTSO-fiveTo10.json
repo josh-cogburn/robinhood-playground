@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "EXTR",
+      "price": 6.04
+    },
+    {
+      "ticker": "MTBC",
+      "price": 5.2
+    }
+  ],
+  "40": [
+    {
+      "ticker": "EXTR",
+      "price": 6
+    },
+    {
+      "ticker": "CALX",
+      "price": 6.5
+    }
+  ],
+  "100": [
+    {
+      "ticker": "INFN",
+      "price": 8.08
+    },
+    {
+      "ticker": "CALX",
+      "price": 6.4999
+    }
+  ],
+  "200": [
+    {
+      "ticker": "DBD",
+      "price": 5.6125
+    },
+    {
+      "ticker": "CSSE",
+      "price": 9.3
+    }
+  ],
+  "260": [
+    {
+      "ticker": "DBD",
+      "price": 5.55
+    },
+    {
+      "ticker": "NL",
+      "price": 8.0115
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CBB",
+      "price": 9.95
+    },
+    {
+      "ticker": "DBD",
+      "price": 5.525
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CBB",
+      "price": 9.925
+    },
+    {
+      "ticker": "DBD",
+      "price": 5.3625
+    }
+  ]
+}

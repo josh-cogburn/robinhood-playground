@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "OBSV",
+      "price": 15.21
+    },
+    {
+      "ticker": "SUP",
+      "price": 21.25
+    }
+  ],
+  "5": [
+    {
+      "ticker": "OBSV",
+      "price": 14.86
+    },
+    {
+      "ticker": "HALO",
+      "price": 17.57
+    }
+  ],
+  "16": [
+    {
+      "ticker": "OBSV",
+      "price": 14.86
+    },
+    {
+      "ticker": "HALO",
+      "price": 17.48
+    }
+  ],
+  "30": [
+    {
+      "ticker": "HALO",
+      "price": 17.48
+    },
+    {
+      "ticker": "KRYS",
+      "price": 16.26
+    }
+  ]
+}

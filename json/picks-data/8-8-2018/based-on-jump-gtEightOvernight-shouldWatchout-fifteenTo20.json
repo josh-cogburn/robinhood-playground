@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "DDD",
+      "price": 17.365
+    },
+    {
+      "ticker": "NVTR",
+      "price": 17.65
+    },
+    {
+      "ticker": "CSTE",
+      "price": 17.3
+    }
+  ],
+  "5": [
+    {
+      "ticker": "DDD",
+      "price": 17.72
+    },
+    {
+      "ticker": "NVTR",
+      "price": 17.95
+    },
+    {
+      "ticker": "CSTE",
+      "price": 17.65
+    }
+  ],
+  "16": [
+    {
+      "ticker": "DDD",
+      "price": 17.85
+    },
+    {
+      "ticker": "NVTR",
+      "price": 17.85
+    },
+    {
+      "ticker": "CSTE",
+      "price": 17.8
+    }
+  ],
+  "30": [
+    {
+      "ticker": "DDD",
+      "price": 17.89
+    },
+    {
+      "ticker": "NVTR",
+      "price": 18.1
+    },
+    {
+      "ticker": "CSTE",
+      "price": 17.8
+    }
+  ]
+}

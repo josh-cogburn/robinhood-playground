@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "EXTR",
+      "price": 5.54
+    },
+    {
+      "ticker": "PGNX",
+      "price": 8.5
+    }
+  ],
+  "5": [
+    {
+      "ticker": "EXTR",
+      "price": 6
+    },
+    {
+      "ticker": "SRT",
+      "price": 6.95
+    }
+  ],
+  "16": [
+    {
+      "ticker": "EXTR",
+      "price": 5.8
+    },
+    {
+      "ticker": "SRT",
+      "price": 6.87
+    }
+  ],
+  "30": [
+    {
+      "ticker": "EXTR",
+      "price": 5.955
+    },
+    {
+      "ticker": "SRT",
+      "price": 6.875
+    }
+  ]
+}
