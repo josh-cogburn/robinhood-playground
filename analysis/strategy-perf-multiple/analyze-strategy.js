@@ -7,7 +7,10 @@ const {
     hundredResult
 } = require('../../utils/array-math');
 
-const keyOrder = ['next-day-9', 'next-day-85', 'next-day-230', 'next-day-330', 'second-day-9', 'third-day-9', 'fourth-day-9'];
+const {
+    // compareTwoBreakdowns,
+    orderBreakdownKeys
+} = require('./breakdown-key-compares');
 
 const runPlayout = (playoutObj, breakdowns) => {
 
@@ -34,14 +37,16 @@ const runPlayout = (playoutObj, breakdowns) => {
 const analyzeStrategy = ({
     strategyName,
     stratObj,
-    detailed = false
+    detailed = false,
+    maxBreakdownKey
 }) => {
 
     const analyzed = Object.keys(stratObj)
         .map(date => analyzeDay({
             strategyName,
             stratPerf: stratObj[date],
-            date
+            date,
+            maxBreakdownKey
         }))
         .filter(value => !!value);
 
@@ -58,10 +63,9 @@ const analyzeStrategy = ({
         // .map(v => v.date);
 
     const breakdownsByDay = withoutErrors.map(obj => {
-        const breakdowns = keyOrder
-            .map(k => obj.breakdowns[k])
-            .filter(val => !!val);
-        // console.log(obj.date, obj.picks, ':', breakdowns);
+        const breakdownKeys = Object.keys(obj.breakdowns);
+        const orderedKeys = orderBreakdownKeys(breakdownKeys);
+        const breakdowns = orderedKeys.map(k => obj.breakdowns[k]);
         return breakdowns;
     });
 
@@ -93,9 +97,7 @@ const analyzeStrategy = ({
             // console.log('breakdownround', breakdownRoundup);
 
             const breakdownStats = {};
-
-            keyOrder.forEach(key => {
-                if (!breakdownRoundup[key]) return;
+            orderBreakdownKeys(Object.keys(breakdownRoundup)).forEach(key => {
                 const filteredVals = breakdownRoundup[key].filter(t => Math.abs(t) < 50);
                 breakdownStats[key] = {
                     avg: avgArray(filteredVals),
@@ -114,6 +116,8 @@ const analyzeStrategy = ({
         })() : {
             daysDown: daysDown.length,
         }),
+
+        breakdownsByDay,
 
         playouts: Object.keys(playouts).reduce((acc, k) => ({
             ...acc,

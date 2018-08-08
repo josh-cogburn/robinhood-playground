@@ -3,14 +3,26 @@ const initStratPerfs = require('./init-strat-perfs');
 const calcUniqStrategies = require('./calc-uniq-strategies');
 const analyzeStrategy = require('./analyze-strategy');
 const { analyzeRoundup } = require('./generate-breakdowns');
+const { isBreakdownKey } = require('./breakdown-key-compares');
 
 module.exports = async (Robinhood, daysBack = 2, ...strategies) => {
     console.log('days back', daysBack);
 
-    const suppliedStrategies = strategies.length;
-    if (suppliedStrategies) {
-        console.log('strategies', strategies);
-    }
+    let maxBreakdownKey = (() => {
+        if (strategies.length && isBreakdownKey(strategies[0])) {
+            // optional argument
+            // for exampple: node run analysis/strategy-perf-multiple 52 next-day-330 list-of-strategies... 2... etc...
+            const breakdownArg = strategies.shift();
+            console.log('max breakdown key set to...', breakdownArg);
+            return breakdownArg;
+        }
+    })();
+
+    const suppliedStrategies = !!strategies.length;
+    console.log(
+        'supplied strategies: ',
+        suppliedStrategies ? strategies : suppliedStrategies
+    );
 
     const { days, stratObj } = await initStratPerfs(daysBack);
     let allStrategies = strategies.length ? strategies : calcUniqStrategies(stratObj);
@@ -25,7 +37,8 @@ module.exports = async (Robinhood, daysBack = 2, ...strategies) => {
         const strategyAnalysis = analyzeStrategy({
             strategyName,
             stratObj,
-            detailed: suppliedStrategies
+            detailed: suppliedStrategies,
+            maxBreakdownKey
         });
         if (index % 50 === 0) {
             console.log(index, '/', allStrategies.length);

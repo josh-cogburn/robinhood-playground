@@ -1,8 +1,18 @@
-const analyzeDay = ({ strategyName, stratPerf, date }) => {
+const {
+    compareTwoBreakdowns,
+    // orderBreakdownKeys
+} = require('./breakdown-key-compares');
+
+const analyzeDay = ({ strategyName, stratPerf, date, maxBreakdownKey }) => {
+
+    const maxBreakdownFilter = key => !maxBreakdownKey
+        ? true
+        : compareTwoBreakdowns(key, maxBreakdownKey) <= 0;
 
     const foundTrends = [];
     Object.keys(stratPerf)
         // .filter(key => key.includes('next-day-9'))
+        .filter(maxBreakdownFilter)
         .forEach(key => {
             const foundObj = stratPerf[key].find(obj => obj.strategyName === strategyName);
             foundObj && foundTrends.push({
