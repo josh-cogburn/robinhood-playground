@@ -201,6 +201,42 @@ const aug2LowCounts = [
     'dynamo-3000-top50tso-trendingUp3010-fifteenTo20-351',
     'low-float-high-volume-floatPoints-trenddown3to10-shouldWatchout-fifteenTo20-276'
 ];
+
+const aug7More = [
+    'sudden-drops-last5trend-first1-221',
+    'sudden-drops-last2trend-first1-280',
+    'low-float-high-volume-floatTimesfloatToVolume-trenddown7to10-150',
+    'based-on-jump-down3overnight-trending53-notWatchout-ltneg50percmax-first2-30',
+    'based-on-jump-down5overnight-notWatchout-gtneg20percmax-0',
+]
+
+const filteredDrops = [
+    'sudden-drops-last10trend-filter10-221',
+    'sudden-drops-last10trend-filter10-221',
+    'sudden-drops-last3trend-filter10-221',
+    'sudden-drops-last2trend-filter10-280',
+    'sudden-drops-last30trend-filter20-280',
+    'sudden-drops-last3trend-filter30-32',
+    'sudden-drops-last5trend-filter30-280',
+    'sudden-drops-last30trend-filter30-328',
+    'sudden-drops-last10trend-filter30-280',
+];
+
+const aug7lowCounts = [
+    ...filteredDrops,
+    'low-float-high-volume-floatTimesfloatToVolume-trenddown7to10-notWatchout-25',
+    'based-on-jump-down3overnight-trending53-notWatchout-ltneg50percmax-first2-30',
+    'low-float-high-volume-twoWeekVolToAvgPoints-trenddowngt10-notWatchout-tenTo15-276',
+];
+
+const aug7PerfectoLowCounts = [
+    'sudden-drops-last3trend-filter10-221',
+    'low-float-high-volume-twoWeekVolToAvgPoints-trend15to25-fiveTo10-95',
+    'based-on-jump-down5overnight-trending103-notWatchout-gtneg20percmax-first1-5',
+    'low-float-high-volume-volTo2WeekPoints-fifteenTo20-6',
+    'low-float-high-volume-volToAvgPoints-trenddown7to10-shouldWatchout-fifteenTo20-150',
+]
+
 const august2 = [
     ...aug2HighCounts,
     ...aug2HighCounts,
@@ -240,5 +276,11 @@ module.exports = {
 
     aug2HighCounts,
     aug2LowCounts,
-    august2
+    august2,
+
+    aug7lowCounts,
+    aug7More,
+
+    filteredDrops,
+    aug7PerfectoLowCounts
 };

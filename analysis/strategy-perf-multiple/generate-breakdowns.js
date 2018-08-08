@@ -179,9 +179,9 @@ const analyzeRoundup = allRoundup => {
             scoreFn: highestPlayoutFn(({ avgTrend }) => avgTrend, 'alwaysLast')
         }),
 
-        bestUp2SinceLastAvgTrend: createBreakdown({
+        bestChangeGt2SinceLastAvgTrend: createBreakdown({
             filterFn: upperHalfCounts,
-            scoreFn: highestPlayoutFn(({ avgTrend }) => avgTrend, 'upTwoSinceLast')
+            scoreFn: highestPlayoutFn(({ avgTrend }) => avgTrend, 'changeGt2')
         }),
 
         bestAvgTrendAnyPlayout: createBreakdown({
@@ -199,6 +199,14 @@ const analyzeRoundup = allRoundup => {
             filterFn: upperHalfCounts,
             scoreFn: highestPlayoutFn(
                 ({ avgTrend }) => avgTrend,
+                playoutKey => playoutsOfInterest.includes(playoutKey)
+            )
+        }),
+
+        bestAvgTrendPlayoutsOfInterest: createBreakdown({
+            filterFn: upperHalfCounts,
+            scoreFn: highestPlayoutFn(
+                ({ percUp }) => percUp,
                 playoutKey => playoutsOfInterest.includes(playoutKey)
             )
         }),
@@ -232,23 +240,25 @@ const analyzeRoundup = allRoundup => {
 
         // low counts
 
-        lowestLimitPlayoutsHundredResultLowCount: createBreakdown({
+        lowCountHundredResult: createBreakdown({
             filterFn: lowCounts,
             scoreFn: highestPlayoutFn(({ hundredResult, percUp, avgTrend, percHitsPositive }, count) =>
-                -1 * hundredResult
+                hundredResult
             )
         }),
 
-        lowestLimitPlayoutsHundredResultPercUpLowCount: createBreakdown({
+        lowCountHundredResultPercUp: createBreakdown({
             filterFn: lowCounts,
             scoreFn: highestPlayoutFn(({ hundredResult, percUp, avgTrend, percHitsPositive }, count) =>
-                -1 * hundredResult * percUp
+                hundredResult * percUp
             )
         }),
 
-        lowestPercUpLowCount: createBreakdown({
-            filterFn: lowCounts,
-            scoreFn: ({ percUp }) => percUp
+        lowCountPerfecto: createBreakdown({
+            filterFn: obj => lowCounts(obj) && obj.percUp === 1,
+            scoreFn: highestPlayoutFn(({ hundredResult, percUp, avgTrend, percHitsPositive }, count) =>
+                count * avgTrend
+            )
         }),
 
     };
