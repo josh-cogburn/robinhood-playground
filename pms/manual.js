@@ -211,15 +211,44 @@ const aug7More = [
 ]
 
 const filteredDrops = [
-    'sudden-drops-last10trend-filter10-221',
+
+    // filtered 10s
+    // usual suspects
     'sudden-drops-last10trend-filter10-221',
     'sudden-drops-last3trend-filter10-221',
     'sudden-drops-last2trend-filter10-280',
-    'sudden-drops-last30trend-filter20-280',
+
+    // filter 20's
+
+    'sudden-drops-last5trend-filter20-280',
+    'sudden-drops-last5trend-filter20-280',
+    'sudden-drops-last10trend-filter20-221',
+
+    // very rare    - double power!
     'sudden-drops-last3trend-filter30-32',
+    'sudden-drops-last3trend-filter30-32',
+
+    'sudden-drops-last5trend-filter30-221',
+    'sudden-drops-last5trend-filter30-221',
+
     'sudden-drops-last5trend-filter30-280',
-    'sudden-drops-last30trend-filter30-328',
-    'sudden-drops-last10trend-filter30-280',
+    'sudden-drops-last5trend-filter30-280',
+
+    'sudden-drops-last5trend-filter30-328',
+    'sudden-drops-last5trend-filter30-328',
+];
+
+const moreCommonDrops = [
+    // every dayers
+    'sudden-drops-last3trend-first2-388',   // limit5 baby
+    'sudden-drops-last5trend-first1-221',
+    'sudden-drops-last3trend-first1-280',
+];
+
+const greatEverydayPerformers = [
+    'low-float-high-volume-floatTimesfloatToVolume-trenddown7to10-notWatchout-276',
+    'low-float-high-volume-twoWeekVolToAvgPoints-trenddown3to5-shouldWatchout-fiveTo10-276',
+    'low-float-high-volume-floatTimesfloatToVolume-trenddown3to5-315',
 ];
 
 const aug7lowCounts = [
@@ -241,6 +270,11 @@ const august2 = [
     ...aug2HighCounts,
     ...aug2HighCounts,
     ...aug2LowCounts
+];
+
+const qualityModerates = [
+    'based-on-jump-down3overnight-trending53-notWatchout-ltneg50percmax-first1-30',
+    'based-on-jump-down5overnight-trending103-notWatchout-gtneg20percmax-first1-5',
 ];
 
 
@@ -282,5 +316,12 @@ module.exports = {
     aug7More,
 
     filteredDrops,
-    aug7PerfectoLowCounts
+    aug7PerfectoLowCounts,
+
+
+    qualityModerates,
+    moreCommonDrops,
+    greatEverydayPerformers,
+
+    filteredDrops
 };

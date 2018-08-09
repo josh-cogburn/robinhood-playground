@@ -19,13 +19,22 @@ const {
 // TODO: flatten list of strategies with PMs for emailObj same way as forPurchase
 module.exports = {
     // important settings
-    purchaseAmt: 44,
+    sellAllStocksOnNthDay: 2,
+    purchaseAmt: 13,
     forPurchase: [
-        // '[myRecs-day1-hundredResultCreme]',
-        // '[august2]',
-        '[aug7lowCounts]',
-        '[aug7More]',
-        '[aug7PerfectoLowCounts]'
+        // 3x                               // 42
+        '[filteredDrops]',                      // 14
+        '[filteredDrops]',                      // 14
+        '[filteredDrops]',                      // 14
+
+        // 2x                               // 4
+        '[qualityModerates]',                   // 2
+        '[qualityModerates]',                   // 2
+
+        // 1x                               // 6
+        '[myRecs-day1-hundredResultCreme]',     // 1
+        '[moreCommonDrops]',                    // 3
+        '[greatEverydayPerformers]'             // 2
     ],
     sellStrategy: 'limit10Down3Up',
 

@@ -54,16 +54,20 @@ const analyzeDay = ({ strategyName, stratPerf, date, maxBreakdownKey }) => {
     //     console.log(sorted[0], date);
     // }
 
+    const breakdowns = foundTrends
+        .sort((a, b) => compareTwoBreakdowns(a.key, b.key))
+        .reduce((acc, { key, avgTrend }) => ({
+            ...acc,
+            [key]: avgTrend
+        }), {});
+
     const stats = {
         didGoUp: trends.some(trend => trend > 0),
         maxUp,
         winnerTime,
         date,
         picks,
-        breakdowns: sorted.reduce((acc, { key, avgTrend }) => ({
-            ...acc,
-            [key]: avgTrend
-        }), {})
+        breakdowns
     };
 
     return stats;

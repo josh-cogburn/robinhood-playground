@@ -15,7 +15,7 @@ const activeSell = require('./active-sell');
 const getTrend = require('../utils/get-trend');
 
 // the magic
-const { sellStrategy } = require('../settings');
+const { sellStrategy, sellAllStocksOnNthDay } = require('../settings');
 const playouts = require('../analysis/strategy-perf-multiple/playouts');
 
 const determineSingleBestPlayoutFromMultiOutput = require(
@@ -37,19 +37,7 @@ const daysBetween = (firstDate, secondDate) => {
     return diffDays;
 };
 
-// helper action fns
-const sellPosition = async (Robinhood, { ticker, quantity }, whySelling) => {
-    try {
-        console.log(`selling ${ticker} because ${whySelling}`);
-        const response = await activeSell(
-            Robinhood,
-            { ticker, quantity }
-        );
-        console.log(`sold ${quantity} shares of ${ticker} because ${whySelling}`, response);
-    } catch (e) {
-        console.log(`error selling ${ticker} because ${whySelling}`, e);
-    }
-};
+
 
 const getAssociatedStrategies = async (tickers, dailyTransactionDates) => {
 
@@ -109,7 +97,22 @@ const getStratPerfTrends = async (ticker, buyDate, strategy) => {
 
 // do it
 
-module.exports = async Robinhood => {
+module.exports = async (Robinhood, dontActuallySellFlag) => {
+
+    // helper action fns
+    const sellPosition = async ({ ticker, quantity }, whySelling) => {
+        try {
+            console.log(`selling ${ticker} because ${whySelling}`);
+            if (dontActuallySellFlag) return;
+            const response = await activeSell(
+                Robinhood,
+                { ticker, quantity }
+            );
+            console.log(`sold ${quantity} shares of ${ticker} because ${whySelling}`, response);
+        } catch (e) {
+            console.log(`error selling ${ticker} because ${whySelling}`, e);
+        }
+    };
 
     const dailyTransactionDates = await getFilesSortedByDate('daily-transactions');
     const pmModelDates = await getFilesSortedByDate('prediction-models');
@@ -154,30 +157,30 @@ module.exports = async Robinhood => {
     });
 
     // handle older than four days
-    const olderThanFourDays = withAge.filter(pos => pos.dayAge >= 4);
-    await mapLimit(olderThanFourDays, 3, async pos => {
-        await sellPosition(Robinhood, {
+    const olderThanNDays = withAge.filter(pos => pos.dayAge >= sellAllStocksOnNthDay);
+    await mapLimit(olderThanNDays, 3, async pos => {
+        await sellPosition({
             ticker: pos.symbol,
             quantity: pos.quantity
-        }, 'four days old');
+        }, `older than ${sellAllStocksOnNthDay} days: ${pos.dayAge}`);
     });
 
 
     // handle under four days (but not bought today) check for playout strategy
-    let underFourDays = withAge.filter(pos => pos.dayAge >= 1 && pos.dayAge < 4);
-    if (!underFourDays.length) return;
+    let underNDays = withAge.filter(pos => pos.dayAge >= 1 && pos.dayAge < sellAllStocksOnNthDay);
+    if (!underNDays.length) return;
     const highestPlayouts = await determineSingleBestPlayoutFromMultiOutput(
         Robinhood,
-        ...underFourDays.map(pos => pos.strategy)
+        ...underNDays.map(pos => pos.strategy)
     );
     // console.log(highestPlayouts, 'highestPlayouts')
-    underFourDays = underFourDays.map(pos => ({
+    underNDays = underNDays.map(pos => ({
         ...pos,
         highestPlayout: highestPlayouts.find(obj => obj.strategy === pos.strategy).highestPlayout
     }));
 
-    // console.log('underFourDays', underFourDays);
-    for (let pos of underFourDays) {
+    // console.log('underNDays', underNDays);
+    for (let pos of underNDays) {
         // const strategy = await findStrategyThatPurchasedTicker(pos.symbol);
         const breakdowns = await getStratPerfTrends(pos.ticker, pos.date, pos.strategy) || [];
         if (!breakdowns.length) {
@@ -197,8 +200,8 @@ module.exports = async Robinhood => {
     }
 
     // sell all under 4 days that hit the playoutFn
-    await mapLimit(underFourDays.filter(pos => pos.hitPlayout), 3, async pos => {
-        await sellPosition(Robinhood, pos, `hit ${pos.playoutToRun} playout`);
+    await mapLimit(underNDays.filter(pos => pos.hitPlayout), 3, async pos => {
+        await sellPosition(pos, `hit ${pos.playoutToRun} playout`);
     });
 
 
