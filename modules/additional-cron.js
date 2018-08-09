@@ -21,7 +21,7 @@ const stratManager = require('../socket-server/strat-manager');
 const additionalCronConfig = [
     {
         name: 'sell all stocks',
-        run: [15],
+        run: [30],
         fn: (Robinhood) => {
 
             setTimeout(async () => {
@@ -45,6 +45,13 @@ const additionalCronConfig = [
         run: [1],
         fn: sellAllIfWentUp
     },
+    // sell all based on playout
+    {
+        name: 'sellAllBasedOnPlayout',
+        run: [17],
+        fn: sellAllBasedOnPlayout
+    },
+
     // sell all if went up
     // {
     //     name: 'sellAllStocks',
@@ -70,7 +77,7 @@ const additionalCronConfig = [
         fn: async (Robinhood, min) => {
             await recordStratPerfs(Robinhood, min);
             await stratManager.refreshPastData();
-            await sellAllBasedOnPlayout(Robinhood);
+            // await sellAllBasedOnPlayout(Robinhood);
         }
     },
     {
