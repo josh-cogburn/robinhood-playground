@@ -5,14 +5,14 @@ const logPortfolioValue = require('../app-actions/log-portfolio-value');
 const { default: recordStratPerfs } = require('../app-actions/record-strat-perfs');
 // const sellAllOlderThanTwoDays = require('../app-actions/sell-all-older-than-two-days');
 const sellAllBasedOnPlayout = require('../app-actions/sell-all-based-on-playout');
+const sellAllIfWentUp = require('../app-actions/sell-all-if-went-up');
+const sellAllStocks = require('../app-actions/sell-all-stocks');
 
 // utils
 const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
 const timeoutPromise = require('../utils/timeout-promise');
 
 // rh actions
-const sellAllIfWentUp = require('../app-actions/sell-all-if-went-up');
-const sellAllStocks = require('../app-actions/sell-all-stocks');
 const getAllTickers = require('../rh-actions/get-all-tickers');
 
 // socket-server
@@ -21,7 +21,7 @@ const stratManager = require('../socket-server/strat-manager');
 const additionalCronConfig = [
     {
         name: 'sell all stocks',
-        run: [0],
+        run: [15],
         fn: (Robinhood) => {
 
             setTimeout(async () => {
@@ -40,11 +40,11 @@ const additionalCronConfig = [
         }
     },
     // sell all if went up
-    // {
-    //     name: 'sellAllIfWentUp',
-    //     run: [90, 305],
-    //     fn: sellAllIfWentUp
-    // },
+    {
+        name: 'sellAllIfWentUp',
+        run: [1],
+        fn: sellAllIfWentUp
+    },
     // sell all if went up
     // {
     //     name: 'sellAllStocks',
