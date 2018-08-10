@@ -1,0 +1,38 @@
+{
+  "0": [
+    {
+      "ticker": "FCX",
+      "price": 15.585
+    }
+  ],
+  "5": [
+    {
+      "ticker": "PEGI",
+      "price": 18.58
+    },
+    {
+      "ticker": "FCX",
+      "price": 15.56
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CISN",
+      "price": 15.495
+    },
+    {
+      "ticker": "FCX",
+      "price": 15.535
+    }
+  ],
+  "30": [
+    {
+      "ticker": "PEGI",
+      "price": 18.02
+    },
+    {
+      "ticker": "CISN",
+      "price": 15.34
+    }
+  ]
+}

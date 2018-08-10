@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "HMI",
+      "price": 10.4241
+    },
+    {
+      "ticker": "SRCI",
+      "price": 9.7
+    }
+  ],
+  "40": [
+    {
+      "ticker": "MRT",
+      "price": 9.9
+    },
+    {
+      "ticker": "LOMA",
+      "price": 9.4
+    }
+  ],
+  "100": [
+    {
+      "ticker": "CNST",
+      "price": 9.83
+    },
+    {
+      "ticker": "LOMA",
+      "price": 9.436
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CNST",
+      "price": 9.795
+    },
+    {
+      "ticker": "LOMA",
+      "price": 9.41
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CNST",
+      "price": 9.84
+    },
+    {
+      "ticker": "PRCP",
+      "price": 9.7
+    }
+  ],
+  "351": [
+    {
+      "ticker": "TBIO",
+      "price": 10.1
+    },
+    {
+      "ticker": "CNST",
+      "price": 9.7
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ELF",
+      "price": 9.4
+    },
+    {
+      "ticker": "CNST",
+      "price": 9.575
+    }
+  ]
+}

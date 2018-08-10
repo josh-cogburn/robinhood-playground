@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "RGLS",
+      "price": 0.222
+    },
+    {
+      "ticker": "SYN",
+      "price": 0.1191
+    }
+  ],
+  "40": [
+    {
+      "ticker": "RSLS",
+      "price": 0.0511
+    },
+    {
+      "ticker": "RGLS",
+      "price": 0.2377
+    }
+  ],
+  "100": [
+    {
+      "ticker": "UPL",
+      "price": 1.205
+    },
+    {
+      "ticker": "KZIA",
+      "price": 3.31
+    }
+  ],
+  "200": [
+    {
+      "ticker": "UPL",
+      "price": 1.2
+    },
+    {
+      "ticker": "SAEX",
+      "price": 0.63
+    }
+  ],
+  "260": [
+    {
+      "ticker": "UPL",
+      "price": 1.21
+    },
+    {
+      "ticker": "OASM",
+      "price": 1.7263
+    }
+  ],
+  "351": [
+    {
+      "ticker": "UPL",
+      "price": 1.245
+    },
+    {
+      "ticker": "EGLT",
+      "price": 0.3814
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MHLD",
+      "price": 4.525
+    },
+    {
+      "ticker": "MTP",
+      "price": 0.54
+    }
+  ]
+}

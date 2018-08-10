@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "SBBP",
+      "price": 5.975
+    },
+    {
+      "ticker": "CALA",
+      "price": 5.1
+    }
+  ],
+  "5": [
+    {
+      "ticker": "SBBP",
+      "price": 5.875
+    },
+    {
+      "ticker": "CADC",
+      "price": 5.75
+    }
+  ],
+  "16": [
+    {
+      "ticker": "SBBP",
+      "price": 5.7
+    },
+    {
+      "ticker": "CADC",
+      "price": 5.75
+    }
+  ],
+  "30": [
+    {
+      "ticker": "ARCT",
+      "price": 7.75
+    },
+    {
+      "ticker": "SBBP",
+      "price": 5.5
+    }
+  ]
+}

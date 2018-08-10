@@ -1,0 +1,40 @@
+{
+  "10": [
+    {
+      "ticker": "FNKO",
+      "price": 19.49
+    }
+  ],
+  "50": [
+    {
+      "ticker": "UMRX",
+      "price": 14.99
+    },
+    {
+      "ticker": "FNKO",
+      "price": 19.47
+    }
+  ],
+  "200": [
+    {
+      "ticker": "FNKO",
+      "price": 19.699
+    }
+  ],
+  "380": [
+    {
+      "ticker": "UMRX",
+      "price": 15.1099
+    },
+    {
+      "ticker": "FNKO",
+      "price": 20.06
+    }
+  ],
+  "600": [
+    {
+      "ticker": "UMRX",
+      "price": 15.03
+    }
+  ]
+}

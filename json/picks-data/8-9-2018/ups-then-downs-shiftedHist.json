@@ -1,0 +1,52 @@
+{
+  "10": [
+    {
+      "ticker": "BLIN",
+      "price": 1.39
+    }
+  ],
+  "50": [
+    {
+      "ticker": "ARC",
+      "price": 3.08
+    },
+    {
+      "ticker": "BLIN",
+      "price": 1.381
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ARC",
+      "price": 3.05
+    },
+    {
+      "ticker": "BLIN",
+      "price": 1.3527
+    }
+  ],
+  "380": [
+    {
+      "ticker": "ARC",
+      "price": 3.1
+    },
+    {
+      "ticker": "TGC",
+      "price": 1.0901
+    },
+    {
+      "ticker": "BLIN",
+      "price": 1.3684
+    }
+  ],
+  "600": [
+    {
+      "ticker": "ARC",
+      "price": 3.07
+    },
+    {
+      "ticker": "BLIN",
+      "price": 1.36
+    }
+  ]
+}

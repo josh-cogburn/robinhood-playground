@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "TITN",
+      "price": 15.23
+    },
+    {
+      "ticker": "GME",
+      "price": 15.25
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CIFS",
+      "price": 15.02
+    },
+    {
+      "ticker": "USAT",
+      "price": 15.2
+    }
+  ],
+  "100": [
+    {
+      "ticker": "CGO",
+      "price": 15.1059
+    },
+    {
+      "ticker": "USAT",
+      "price": 15.245
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CGO",
+      "price": 15.189
+    },
+    {
+      "ticker": "USAT",
+      "price": 15.4169
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CGO",
+      "price": 15.1625
+    },
+    {
+      "ticker": "USAT",
+      "price": 15.481
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SECO",
+      "price": 14.9093
+    },
+    {
+      "ticker": "CGO",
+      "price": 15.1625
+    }
+  ],
+  "381": [
+    {
+      "ticker": "USAT",
+      "price": 15.5
+    },
+    {
+      "ticker": "HABT",
+      "price": 15.35
+    }
+  ]
+}

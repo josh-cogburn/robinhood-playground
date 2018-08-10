@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "SMPL",
+      "price": 17.28
+    },
+    {
+      "ticker": "TTM",
+      "price": 18.68
+    }
+  ],
+  "5": [
+    {
+      "ticker": "UBOT",
+      "price": 18.7
+    },
+    {
+      "ticker": "SMPL",
+      "price": 17.43
+    }
+  ],
+  "16": [
+    {
+      "ticker": "UBOT",
+      "price": 18.606
+    },
+    {
+      "ticker": "LCNB",
+      "price": 19.75
+    }
+  ],
+  "30": [
+    {
+      "ticker": "UBOT",
+      "price": 18.606
+    },
+    {
+      "ticker": "ZMLP",
+      "price": 16.41
+    }
+  ]
+}

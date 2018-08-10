@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "PCTI",
+      "price": 5.1
+    },
+    {
+      "ticker": "AKBA",
+      "price": 9.24
+    },
+    {
+      "ticker": "NATR",
+      "price": 8.45
+    }
+  ],
+  "5": [
+    {
+      "ticker": "AKBA",
+      "price": 7.912
+    },
+    {
+      "ticker": "NATR",
+      "price": 8.45
+    },
+    {
+      "ticker": "ADT",
+      "price": 8.81
+    }
+  ],
+  "16": [
+    {
+      "ticker": "AKBA",
+      "price": 8
+    },
+    {
+      "ticker": "NATR",
+      "price": 8.45
+    },
+    {
+      "ticker": "ADT",
+      "price": 8.99
+    }
+  ],
+  "30": [
+    {
+      "ticker": "AKBA",
+      "price": 8.6559
+    },
+    {
+      "ticker": "NATR",
+      "price": 9.15
+    },
+    {
+      "ticker": "ADT",
+      "price": 8.925
+    }
+  ]
+}

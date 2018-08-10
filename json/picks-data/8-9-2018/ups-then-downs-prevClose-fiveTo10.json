@@ -1,0 +1,39 @@
+{
+  "10": [
+    {
+      "ticker": "INSY",
+      "price": 7.19
+    },
+    {
+      "ticker": "ADT",
+      "price": 8.7375
+    }
+  ],
+  "50": [],
+  "200": [
+    {
+      "ticker": "ADT",
+      "price": 8.7564
+    }
+  ],
+  "380": [
+    {
+      "ticker": "ONDK",
+      "price": 8.54
+    },
+    {
+      "ticker": "INSY",
+      "price": 7.5
+    }
+  ],
+  "600": [
+    {
+      "ticker": "ONDK",
+      "price": 8.49
+    },
+    {
+      "ticker": "INSY",
+      "price": 7.48
+    }
+  ]
+}

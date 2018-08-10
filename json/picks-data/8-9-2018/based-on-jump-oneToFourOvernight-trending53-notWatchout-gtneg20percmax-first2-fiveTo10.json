@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "MFIN",
+      "price": 5.88
+    },
+    {
+      "ticker": "SVBI",
+      "price": 8.9
+    }
+  ],
+  "5": [
+    {
+      "ticker": "MFIN",
+      "price": 5.8
+    },
+    {
+      "ticker": "VOC",
+      "price": 5.648
+    }
+  ],
+  "16": [
+    {
+      "ticker": "MFIN",
+      "price": 5.7739
+    },
+    {
+      "ticker": "VOC",
+      "price": 5.648
+    }
+  ],
+  "30": [
+    {
+      "ticker": "MFIN",
+      "price": 5.81
+    },
+    {
+      "ticker": "VOC",
+      "price": 5.628
+    }
+  ]
+}

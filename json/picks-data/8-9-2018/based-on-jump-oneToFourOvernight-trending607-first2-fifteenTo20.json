@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "PCOM",
+      "price": 14.99
+    },
+    {
+      "ticker": "CSTE",
+      "price": 17.8
+    }
+  ],
+  "5": [
+    {
+      "ticker": "WAAS",
+      "price": 16.72
+    },
+    {
+      "ticker": "CSTE",
+      "price": 18.1
+    }
+  ],
+  "16": [
+    {
+      "ticker": "WAAS",
+      "price": 16.879
+    },
+    {
+      "ticker": "CSTE",
+      "price": 18.3
+    }
+  ],
+  "30": [
+    {
+      "ticker": "WAAS",
+      "price": 16.87
+    },
+    {
+      "ticker": "CSTE",
+      "price": 18.7
+    }
+  ]
+}

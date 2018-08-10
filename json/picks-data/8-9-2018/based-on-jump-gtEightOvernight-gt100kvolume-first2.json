@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "RIGL",
+      "price": 3.04
+    },
+    {
+      "ticker": "GST",
+      "price": 0.1797
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CTXR",
+      "price": 1.93
+    },
+    {
+      "ticker": "RIGL",
+      "price": 2.98
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CTXR",
+      "price": 1.76
+    },
+    {
+      "ticker": "CLDC",
+      "price": 1.56
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CTXR",
+      "price": 1.82
+    },
+    {
+      "ticker": "CLDC",
+      "price": 1.5
+    }
+  ]
+}

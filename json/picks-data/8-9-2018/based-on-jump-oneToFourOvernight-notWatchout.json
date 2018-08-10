@@ -1,0 +1,90 @@
+{
+  "0": [
+    {
+      "ticker": "CHMA",
+      "price": 1.35
+    },
+    {
+      "ticker": "HL",
+      "price": 2.9901
+    },
+    {
+      "ticker": "AXAS",
+      "price": 2.19
+    },
+    {
+      "ticker": "OESX",
+      "price": 1
+    },
+    {
+      "ticker": "WWR",
+      "price": 0.31
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CHMA",
+      "price": 1.35
+    },
+    {
+      "ticker": "HL",
+      "price": 3.02
+    },
+    {
+      "ticker": "TTI",
+      "price": 4.25
+    },
+    {
+      "ticker": "AXAS",
+      "price": 2.1325
+    },
+    {
+      "ticker": "OESX",
+      "price": 1
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CHMA",
+      "price": 1.35
+    },
+    {
+      "ticker": "HL",
+      "price": 3.015
+    },
+    {
+      "ticker": "TTI",
+      "price": 4.23
+    },
+    {
+      "ticker": "AXAS",
+      "price": 2.135
+    },
+    {
+      "ticker": "LEVB",
+      "price": 3.0999
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CHMA",
+      "price": 1.35
+    },
+    {
+      "ticker": "HL",
+      "price": 3.04
+    },
+    {
+      "ticker": "TTI",
+      "price": 4.34
+    },
+    {
+      "ticker": "AXAS",
+      "price": 2.11
+    },
+    {
+      "ticker": "LEVB",
+      "price": 3.21
+    }
+  ]
+}

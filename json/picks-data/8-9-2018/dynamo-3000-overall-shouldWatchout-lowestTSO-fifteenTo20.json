@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "ENDP",
+      "price": 15.42
+    },
+    {
+      "ticker": "CSTE",
+      "price": 17.9
+    }
+  ],
+  "40": [
+    {
+      "ticker": "OSUR",
+      "price": 15.62
+    },
+    {
+      "ticker": "XERS",
+      "price": 19.07
+    }
+  ],
+  "100": [
+    {
+      "ticker": "OSUR",
+      "price": 15.4501
+    },
+    {
+      "ticker": "OPNT",
+      "price": 18.7985
+    }
+  ],
+  "200": [
+    {
+      "ticker": "BLFS",
+      "price": 19.1574
+    },
+    {
+      "ticker": "ALDR",
+      "price": 19
+    }
+  ],
+  "260": [
+    {
+      "ticker": "BLFS",
+      "price": 19.66
+    },
+    {
+      "ticker": "ALDR",
+      "price": 19.325
+    }
+  ],
+  "351": [
+    {
+      "ticker": "BLFS",
+      "price": 20.01
+    },
+    {
+      "ticker": "MRUS",
+      "price": 18.6852
+    }
+  ],
+  "381": [
+    {
+      "ticker": "BLFS",
+      "price": 19.6001
+    },
+    {
+      "ticker": "OPNT",
+      "price": 17.21
+    }
+  ]
+}

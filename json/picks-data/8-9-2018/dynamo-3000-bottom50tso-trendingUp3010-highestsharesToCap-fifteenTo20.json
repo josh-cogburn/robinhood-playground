@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "STRL",
+      "price": 15.41
+    },
+    {
+      "ticker": "TAST",
+      "price": 15.6
+    }
+  ],
+  "40": [
+    {
+      "ticker": "WTTR",
+      "price": 15.51
+    },
+    {
+      "ticker": "UBX",
+      "price": 15.7399
+    }
+  ],
+  "100": [
+    {
+      "ticker": "IMOS",
+      "price": 15.05
+    },
+    {
+      "ticker": "WTTR",
+      "price": 15.27
+    }
+  ],
+  "200": [
+    {
+      "ticker": "UBX",
+      "price": 15.538
+    },
+    {
+      "ticker": "OOMA",
+      "price": 16.2499
+    }
+  ],
+  "260": [
+    {
+      "ticker": "IMOS",
+      "price": 15.075
+    },
+    {
+      "ticker": "UBX",
+      "price": 15.5
+    }
+  ],
+  "351": [
+    {
+      "ticker": "UBX",
+      "price": 15.52
+    },
+    {
+      "ticker": "GTN",
+      "price": 16.725
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ENDP",
+      "price": 15.805
+    },
+    {
+      "ticker": "OOMA",
+      "price": 16.15
+    }
+  ]
+}

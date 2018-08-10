@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "WIT",
+      "price": 5.12
+    },
+    {
+      "ticker": "TXMD",
+      "price": 5.23
+    }
+  ],
+  "40": [
+    {
+      "ticker": "GGN",
+      "price": 5.0816
+    },
+    {
+      "ticker": "WIT",
+      "price": 5.12
+    }
+  ],
+  "100": [
+    {
+      "ticker": "WIT",
+      "price": 5.115
+    },
+    {
+      "ticker": "DRYS",
+      "price": 5.0585
+    }
+  ],
+  "200": [
+    {
+      "ticker": "RELV",
+      "price": 5.1456
+    },
+    {
+      "ticker": "WIT",
+      "price": 5.11
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GGN",
+      "price": 5.07
+    },
+    {
+      "ticker": "RELV",
+      "price": 5.1456
+    }
+  ],
+  "351": [
+    {
+      "ticker": "RRD",
+      "price": 5.09
+    },
+    {
+      "ticker": "WIT",
+      "price": 5.105
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ABEV",
+      "price": 5.055
+    },
+    {
+      "ticker": "ENIC",
+      "price": 5.07
+    }
+  ]
+}

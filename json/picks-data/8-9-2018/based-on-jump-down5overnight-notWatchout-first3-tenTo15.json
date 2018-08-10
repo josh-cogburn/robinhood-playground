@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "SBPH",
+      "price": 12.4
+    },
+    {
+      "ticker": "PICO",
+      "price": 12.4
+    },
+    {
+      "ticker": "SNMP",
+      "price": 10.6
+    }
+  ],
+  "5": [
+    {
+      "ticker": "SBPH",
+      "price": 12.3
+    },
+    {
+      "ticker": "PICO",
+      "price": 12.35
+    },
+    {
+      "ticker": "SNMP",
+      "price": 10.3
+    }
+  ],
+  "16": [
+    {
+      "ticker": "SBPH",
+      "price": 12.17
+    },
+    {
+      "ticker": "REV",
+      "price": 14.25
+    },
+    {
+      "ticker": "PICO",
+      "price": 12.35
+    }
+  ],
+  "30": [
+    {
+      "ticker": "SBPH",
+      "price": 12.2475
+    },
+    {
+      "ticker": "REV",
+      "price": 14.3
+    },
+    {
+      "ticker": "PICO",
+      "price": 12.35
+    }
+  ]
+}

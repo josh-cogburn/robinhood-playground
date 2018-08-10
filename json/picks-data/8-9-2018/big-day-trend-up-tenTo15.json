@@ -1,0 +1,70 @@
+{
+  "10": [
+    {
+      "ticker": "PICO",
+      "price": 12.4
+    },
+    {
+      "ticker": "CDXS",
+      "price": 13.325
+    }
+  ],
+  "35": [
+    {
+      "ticker": "PICO",
+      "price": 12.35
+    },
+    {
+      "ticker": "CDXS",
+      "price": 13.5
+    },
+    {
+      "ticker": "KEG",
+      "price": 14.82
+    }
+  ],
+  "90": [
+    {
+      "ticker": "PICO",
+      "price": 12.4
+    },
+    {
+      "ticker": "CDXS",
+      "price": 14
+    },
+    {
+      "ticker": "RCUS",
+      "price": 11.95
+    },
+    {
+      "ticker": "REV",
+      "price": 14.95
+    },
+    {
+      "ticker": "SURF",
+      "price": 11
+    }
+  ],
+  "223": [
+    {
+      "ticker": "CDXS",
+      "price": 14.15
+    },
+    {
+      "ticker": "PICO",
+      "price": 12.35
+    },
+    {
+      "ticker": "ORBC",
+      "price": 10.8
+    },
+    {
+      "ticker": "KEG",
+      "price": 14.9
+    },
+    {
+      "ticker": "RCUS",
+      "price": 11.84
+    }
+  ]
+}

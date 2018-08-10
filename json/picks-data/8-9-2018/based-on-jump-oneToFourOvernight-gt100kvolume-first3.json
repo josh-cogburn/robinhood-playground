@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "HMNY",
+      "price": 0.07
+    },
+    {
+      "ticker": "NVAX",
+      "price": 1.29
+    },
+    {
+      "ticker": "MBOT",
+      "price": 0.625
+    }
+  ],
+  "5": [
+    {
+      "ticker": "HMNY",
+      "price": 0.0691
+    },
+    {
+      "ticker": "NVAX",
+      "price": 1.305
+    },
+    {
+      "ticker": "BPMX",
+      "price": 0.194
+    }
+  ],
+  "16": [
+    {
+      "ticker": "PACB",
+      "price": 4.38
+    },
+    {
+      "ticker": "HL",
+      "price": 3.015
+    },
+    {
+      "ticker": "HMNY",
+      "price": 0.0632
+    }
+  ],
+  "30": [
+    {
+      "ticker": "PACB",
+      "price": 4.42
+    },
+    {
+      "ticker": "GLBS",
+      "price": 0.4273
+    },
+    {
+      "ticker": "HL",
+      "price": 3.04
+    }
+  ]
+}

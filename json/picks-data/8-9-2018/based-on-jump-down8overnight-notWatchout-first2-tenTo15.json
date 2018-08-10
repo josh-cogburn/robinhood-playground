@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "SBPH",
+      "price": 12.4
+    },
+    {
+      "ticker": "PICO",
+      "price": 12.4
+    }
+  ],
+  "5": [
+    {
+      "ticker": "SBPH",
+      "price": 12.3
+    },
+    {
+      "ticker": "PICO",
+      "price": 12.35
+    }
+  ],
+  "16": [
+    {
+      "ticker": "SBPH",
+      "price": 12.17
+    },
+    {
+      "ticker": "REV",
+      "price": 14.25
+    }
+  ],
+  "30": [
+    {
+      "ticker": "SBPH",
+      "price": 12.2475
+    },
+    {
+      "ticker": "REV",
+      "price": 14.3
+    }
+  ]
+}

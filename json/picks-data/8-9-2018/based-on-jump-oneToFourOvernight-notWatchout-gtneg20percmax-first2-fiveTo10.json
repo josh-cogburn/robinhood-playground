@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "EURN",
+      "price": 8.7
+    },
+    {
+      "ticker": "FOMX",
+      "price": 5.95
+    }
+  ],
+  "5": [
+    {
+      "ticker": "EURN",
+      "price": 8.675
+    },
+    {
+      "ticker": "FOMX",
+      "price": 5.82
+    }
+  ],
+  "16": [
+    {
+      "ticker": "EURN",
+      "price": 8.6
+    },
+    {
+      "ticker": "FOMX",
+      "price": 5.8
+    }
+  ],
+  "30": [
+    {
+      "ticker": "EURN",
+      "price": 8.6
+    },
+    {
+      "ticker": "FOMX",
+      "price": 5.8
+    }
+  ]
+}

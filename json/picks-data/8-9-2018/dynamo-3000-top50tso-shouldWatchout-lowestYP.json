@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "AMPE",
+      "price": 0.3745
+    },
+    {
+      "ticker": "FCSC",
+      "price": 1.815
+    }
+  ],
+  "40": [
+    {
+      "ticker": "EDGE",
+      "price": 0.97
+    },
+    {
+      "ticker": "PTIE",
+      "price": 1.199
+    }
+  ],
+  "100": [
+    {
+      "ticker": "EDGE",
+      "price": 0.9685
+    },
+    {
+      "ticker": "AMMA",
+      "price": 0.175
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PTIE",
+      "price": 1.2
+    },
+    {
+      "ticker": "FCSC",
+      "price": 1.91
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ANY",
+      "price": 0.3241
+    },
+    {
+      "ticker": "PTIE",
+      "price": 1.2
+    }
+  ],
+  "351": [
+    {
+      "ticker": "PTIE",
+      "price": 1.22
+    },
+    {
+      "ticker": "AMPE",
+      "price": 0.4601
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AMPE",
+      "price": 0.4541
+    },
+    {
+      "ticker": "PTIE",
+      "price": 1.22
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "IDSA",
+      "price": 2.18
+    },
+    {
+      "ticker": "MBOT",
+      "price": 0.6501
+    }
+  ],
+  "40": [
+    {
+      "ticker": "IDSA",
+      "price": 2.4218
+    },
+    {
+      "ticker": "UONEK",
+      "price": 2.35
+    }
+  ],
+  "100": [
+    {
+      "ticker": "PMTS",
+      "price": 2.55
+    },
+    {
+      "ticker": "IDSA",
+      "price": 2.41
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PMTS",
+      "price": 2.6125
+    },
+    {
+      "ticker": "TAT",
+      "price": 1.5
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PMTS",
+      "price": 2.5
+    },
+    {
+      "ticker": "TAT",
+      "price": 1.4827
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CKPT",
+      "price": 3.1927
+    },
+    {
+      "ticker": "TAT",
+      "price": 1.5559
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CKPT",
+      "price": 3.25
+    },
+    {
+      "ticker": "TAT",
+      "price": 1.5399
+    }
+  ]
+}

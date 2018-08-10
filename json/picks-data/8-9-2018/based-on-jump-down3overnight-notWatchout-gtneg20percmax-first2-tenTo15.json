@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "PICO",
+      "price": 12.4
+    },
+    {
+      "ticker": "SNMP",
+      "price": 10.6
+    }
+  ],
+  "5": [
+    {
+      "ticker": "PICO",
+      "price": 12.35
+    },
+    {
+      "ticker": "SNMP",
+      "price": 10.3
+    }
+  ],
+  "16": [
+    {
+      "ticker": "PICO",
+      "price": 12.35
+    },
+    {
+      "ticker": "SNMP",
+      "price": 10.271
+    }
+  ],
+  "30": [
+    {
+      "ticker": "PICO",
+      "price": 12.35
+    },
+    {
+      "ticker": "SNMP",
+      "price": 10.15
+    }
+  ]
+}

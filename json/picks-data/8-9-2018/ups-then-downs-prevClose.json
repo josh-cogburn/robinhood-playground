@@ -1,0 +1,84 @@
+{
+  "10": [
+    {
+      "ticker": "UONE",
+      "price": 2.8
+    },
+    {
+      "ticker": "LINC",
+      "price": 2.01
+    }
+  ],
+  "50": [
+    {
+      "ticker": "LINC",
+      "price": 2.0101
+    },
+    {
+      "ticker": "UONE",
+      "price": 2.9134
+    },
+    {
+      "ticker": "OASM",
+      "price": 1.87
+    }
+  ],
+  "200": [
+    {
+      "ticker": "LINC",
+      "price": 2.0045
+    },
+    {
+      "ticker": "UONE",
+      "price": 2.75
+    },
+    {
+      "ticker": "OASM",
+      "price": 1.8555
+    },
+    {
+      "ticker": "CLDX",
+      "price": 0.4452
+    }
+  ],
+  "380": [
+    {
+      "ticker": "UONE",
+      "price": 2.6867
+    },
+    {
+      "ticker": "OASM",
+      "price": 1.81
+    },
+    {
+      "ticker": "VTNR",
+      "price": 1.2038
+    },
+    {
+      "ticker": "VERU",
+      "price": 2.16
+    }
+  ],
+  "600": [
+    {
+      "ticker": "UONE",
+      "price": 2.65
+    },
+    {
+      "ticker": "OASM",
+      "price": 1.8
+    },
+    {
+      "ticker": "VERU",
+      "price": 2.15
+    },
+    {
+      "ticker": "VTNR",
+      "price": 1.2
+    },
+    {
+      "ticker": "CLDX",
+      "price": 0.4452
+    }
+  ]
+}

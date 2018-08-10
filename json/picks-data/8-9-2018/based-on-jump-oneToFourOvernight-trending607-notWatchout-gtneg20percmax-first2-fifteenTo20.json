@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "PCOM",
+      "price": 14.99
+    },
+    {
+      "ticker": "SMPL",
+      "price": 17.28
+    }
+  ],
+  "5": [
+    {
+      "ticker": "WAAS",
+      "price": 16.72
+    },
+    {
+      "ticker": "SMPL",
+      "price": 17.43
+    }
+  ],
+  "16": [
+    {
+      "ticker": "WAAS",
+      "price": 16.879
+    },
+    {
+      "ticker": "LCNB",
+      "price": 19.75
+    }
+  ],
+  "30": [
+    {
+      "ticker": "WAAS",
+      "price": 16.87
+    },
+    {
+      "ticker": "ZMLP",
+      "price": 16.41
+    }
+  ]
+}

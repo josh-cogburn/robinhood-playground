@@ -1,0 +1,54 @@
+{
+  "0": [
+    {
+      "ticker": "ADT",
+      "price": 8.46
+    },
+    {
+      "ticker": "IIJI",
+      "price": 9.61
+    }
+  ],
+  "5": [
+    {
+      "ticker": "ADT",
+      "price": 8.81
+    },
+    {
+      "ticker": "IIJI",
+      "price": 9.9
+    },
+    {
+      "ticker": "IDSY",
+      "price": 6.2
+    }
+  ],
+  "16": [
+    {
+      "ticker": "ADT",
+      "price": 8.99
+    },
+    {
+      "ticker": "IIJI",
+      "price": 9.9
+    },
+    {
+      "ticker": "IDSY",
+      "price": 6.2
+    }
+  ],
+  "30": [
+    {
+      "ticker": "ADT",
+      "price": 8.925
+    },
+    {
+      "ticker": "IIJI",
+      "price": 9.7209
+    },
+    {
+      "ticker": "IDSY",
+      "price": 6.2
+    }
+  ]
+}

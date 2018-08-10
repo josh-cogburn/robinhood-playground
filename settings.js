@@ -20,7 +20,7 @@ const {
 module.exports = {
     // important settings
     sellAllStocksOnNthDay: 2,
-    purchaseAmt: 13,
+    purchaseAmt: 26,
     forPurchase: [
         // 3x                               // 42
         '[filteredDrops]',                      // 14
@@ -41,12 +41,12 @@ module.exports = {
     // email
     email: {
         [['chief', 'sm', 'urph', '@', 'gm', 'ail', '.com'].join('')]: [
-            ...creme,
-            ...moderates,
-            ...occasionals,
-            ...occasionalLowCount,
-            ...keepAnEyeOn,
-            ...allShorts
+            // ...creme,
+            // ...moderates,
+            // ...occasionals,
+            // ...occasionalLowCount,
+            // ...keepAnEyeOn,
+            // ...allShorts
         ],
         ...cheapestPicksEmailObj
     }

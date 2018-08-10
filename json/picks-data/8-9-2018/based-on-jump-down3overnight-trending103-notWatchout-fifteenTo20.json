@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "REV",
+      "price": 15
+    },
+    {
+      "ticker": "LILA",
+      "price": 18.9899
+    }
+  ],
+  "5": [
+    {
+      "ticker": "LILA",
+      "price": 18.6
+    },
+    {
+      "ticker": "REPL",
+      "price": 15.701
+    }
+  ],
+  "16": [
+    {
+      "ticker": "LILA",
+      "price": 18.8899
+    },
+    {
+      "ticker": "REPL",
+      "price": 15.701
+    }
+  ],
+  "30": [
+    {
+      "ticker": "LILA",
+      "price": 19.314
+    },
+    {
+      "ticker": "REPL",
+      "price": 15.91
+    }
+  ]
+}

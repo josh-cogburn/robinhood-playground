@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "WIT",
+      "price": 5.12
+    },
+    {
+      "ticker": "CALA",
+      "price": 4.95
+    }
+  ],
+  "40": [
+    {
+      "ticker": "MOBL",
+      "price": 5.025
+    },
+    {
+      "ticker": "WIT",
+      "price": 5.12
+    }
+  ],
+  "100": [
+    {
+      "ticker": "RMTI",
+      "price": 5.04
+    },
+    {
+      "ticker": "MOBL",
+      "price": 5.025
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ASX",
+      "price": 5.06
+    },
+    {
+      "ticker": "PETX",
+      "price": 5.1
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ASX",
+      "price": 5.045
+    },
+    {
+      "ticker": "PETX",
+      "price": 5.075
+    }
+  ],
+  "351": [
+    {
+      "ticker": "ASX",
+      "price": 5.01
+    },
+    {
+      "ticker": "PETX",
+      "price": 5.1
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ASX",
+      "price": 5.005
+    },
+    {
+      "ticker": "PETX",
+      "price": 5.08
+    }
+  ]
+}

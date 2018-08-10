@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "PICO",
+      "price": 12.4
+    },
+    {
+      "ticker": "ACAD",
+      "price": 14.4242
+    }
+  ],
+  "40": [
+    {
+      "ticker": "PICO",
+      "price": 12.35
+    },
+    {
+      "ticker": "CDXS",
+      "price": 13.7499
+    }
+  ],
+  "100": [
+    {
+      "ticker": "CDXS",
+      "price": 14.15
+    },
+    {
+      "ticker": "PICO",
+      "price": 12.375
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ACAD",
+      "price": 14.82
+    },
+    {
+      "ticker": "BTAI",
+      "price": 10.1013
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CBB",
+      "price": 12.075
+    },
+    {
+      "ticker": "BTAI",
+      "price": 10.08
+    }
+  ],
+  "351": [
+    {
+      "ticker": "BTAI",
+      "price": 10.1
+    },
+    {
+      "ticker": "CBB",
+      "price": 12.1501
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AFH",
+      "price": 10.55
+    },
+    {
+      "ticker": "CDXS",
+      "price": 14.375
+    }
+  ]
+}

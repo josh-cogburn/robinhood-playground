@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "AOSL",
+      "price": 15.54
+    },
+    {
+      "ticker": "LAUR",
+      "price": 15.52
+    }
+  ],
+  "40": [
+    {
+      "ticker": "BEL",
+      "price": 16.05
+    },
+    {
+      "ticker": "AOSL",
+      "price": 15.52
+    }
+  ],
+  "100": [
+    {
+      "ticker": "BEL",
+      "price": 15.6
+    },
+    {
+      "ticker": "AOSL",
+      "price": 15.45
+    }
+  ],
+  "200": [
+    {
+      "ticker": "BEL",
+      "price": 15.225
+    },
+    {
+      "ticker": "OBSV",
+      "price": 15
+    }
+  ],
+  "260": [
+    {
+      "ticker": "BEL",
+      "price": 15.225
+    },
+    {
+      "ticker": "OBSV",
+      "price": 14.95
+    }
+  ],
+  "351": [
+    {
+      "ticker": "BEL",
+      "price": 15.375
+    },
+    {
+      "ticker": "OBSV",
+      "price": 15.06
+    }
+  ],
+  "381": [
+    {
+      "ticker": "BEL",
+      "price": 15.125
+    },
+    {
+      "ticker": "OBSV",
+      "price": 15.1
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "IAG",
+      "price": 5.27
+    },
+    {
+      "ticker": "AVID",
+      "price": 5.37
+    }
+  ],
+  "40": [
+    {
+      "ticker": "ORMP",
+      "price": 5.02
+    },
+    {
+      "ticker": "OCUL",
+      "price": 6.08
+    }
+  ],
+  "100": [
+    {
+      "ticker": "RMTI",
+      "price": 5.04
+    },
+    {
+      "ticker": "OCUL",
+      "price": 6.33
+    }
+  ],
+  "200": [
+    {
+      "ticker": "TIPT",
+      "price": 6.75
+    },
+    {
+      "ticker": "OCUL",
+      "price": 6.2267
+    }
+  ],
+  "260": [
+    {
+      "ticker": "IMV",
+      "price": 5.03
+    },
+    {
+      "ticker": "TIPT",
+      "price": 6.75
+    }
+  ],
+  "351": [
+    {
+      "ticker": "PIRS",
+      "price": 5.37
+    },
+    {
+      "ticker": "CRWS",
+      "price": 5.65
+    }
+  ],
+  "381": [
+    {
+      "ticker": "TRIL",
+      "price": 5.4
+    },
+    {
+      "ticker": "GNE",
+      "price": 5.44
+    }
+  ]
+}

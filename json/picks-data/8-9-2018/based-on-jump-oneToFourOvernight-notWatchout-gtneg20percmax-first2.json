@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "OESX",
+      "price": 1
+    },
+    {
+      "ticker": "SPRT",
+      "price": 2.78
+    }
+  ],
+  "5": [
+    {
+      "ticker": "TTI",
+      "price": 4.25
+    },
+    {
+      "ticker": "OESX",
+      "price": 1
+    }
+  ],
+  "16": [
+    {
+      "ticker": "TTI",
+      "price": 4.23
+    },
+    {
+      "ticker": "OESX",
+      "price": 1
+    }
+  ],
+  "30": [
+    {
+      "ticker": "TTI",
+      "price": 4.34
+    },
+    {
+      "ticker": "OESX",
+      "price": 1
+    }
+  ]
+}

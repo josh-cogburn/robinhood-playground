@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "PICO",
+      "price": 12.4
+    },
+    {
+      "ticker": "BT",
+      "price": 14.94
+    }
+  ],
+  "5": [
+    {
+      "ticker": "PICO",
+      "price": 12.35
+    },
+    {
+      "ticker": "BT",
+      "price": 14.92
+    }
+  ],
+  "16": [
+    {
+      "ticker": "PICO",
+      "price": 12.35
+    },
+    {
+      "ticker": "BT",
+      "price": 14.9001
+    }
+  ],
+  "30": [
+    {
+      "ticker": "PICO",
+      "price": 12.35
+    },
+    {
+      "ticker": "BT",
+      "price": 14.915
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "0": [
+    {
+      "ticker": "MBI",
+      "price": 11.22
+    }
+  ],
+  "5": [
+    {
+      "ticker": "MBI",
+      "price": 11.51
+    },
+    {
+      "ticker": "ACH",
+      "price": 11.24
+    }
+  ],
+  "16": [
+    {
+      "ticker": "MBI",
+      "price": 11.44
+    },
+    {
+      "ticker": "ACH",
+      "price": 11.24
+    }
+  ],
+  "30": [
+    {
+      "ticker": "MBI",
+      "price": 11.425
+    },
+    {
+      "ticker": "ACH",
+      "price": 11.2927
+    }
+  ]
+}

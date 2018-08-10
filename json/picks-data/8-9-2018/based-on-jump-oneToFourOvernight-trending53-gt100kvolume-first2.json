@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "NVAX",
+      "price": 1.29
+    },
+    {
+      "ticker": "ODP",
+      "price": 3.05
+    }
+  ],
+  "5": [
+    {
+      "ticker": "NVAX",
+      "price": 1.305
+    },
+    {
+      "ticker": "AGEN",
+      "price": 1.75
+    }
+  ],
+  "16": [
+    {
+      "ticker": "PACB",
+      "price": 4.38
+    },
+    {
+      "ticker": "CATB",
+      "price": 0.695
+    }
+  ],
+  "30": [
+    {
+      "ticker": "PACB",
+      "price": 4.42
+    },
+    {
+      "ticker": "GLBS",
+      "price": 0.4273
+    }
+  ]
+}

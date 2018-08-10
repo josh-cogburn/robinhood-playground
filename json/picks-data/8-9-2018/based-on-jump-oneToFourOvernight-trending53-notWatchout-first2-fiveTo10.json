@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "SMI",
+      "price": 6.17
+    },
+    {
+      "ticker": "MFIN",
+      "price": 5.88
+    }
+  ],
+  "5": [
+    {
+      "ticker": "SMI",
+      "price": 6.35
+    },
+    {
+      "ticker": "MFIN",
+      "price": 5.8
+    }
+  ],
+  "16": [
+    {
+      "ticker": "SMI",
+      "price": 6.4027
+    },
+    {
+      "ticker": "MFIN",
+      "price": 5.7739
+    }
+  ],
+  "30": [
+    {
+      "ticker": "SMI",
+      "price": 6.4
+    },
+    {
+      "ticker": "MFIN",
+      "price": 5.81
+    }
+  ]
+}
