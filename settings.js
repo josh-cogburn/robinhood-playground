@@ -20,21 +20,11 @@ const {
 module.exports = {
     // important settings
     sellAllStocksOnNthDay: 2,
-    purchaseAmt: 26,
+    purchaseAmt: 60,
     forPurchase: [
-        // 3x                               // 42
-        '[filteredDrops]',                      // 14
-        '[filteredDrops]',                      // 14
-        '[filteredDrops]',                      // 14
-
-        // 2x                               // 4
-        '[qualityModerates]',                   // 2
-        '[qualityModerates]',                   // 2
-
-        // 1x                               // 6
-        '[myRecs-day1-hundredResultCreme]',     // 1
-        '[moreCommonDrops]',                    // 3
-        '[greatEverydayPerformers]'             // 2
+        '[anyCountPerfectos]',
+        'based-on-jump-down5overnight-trending103-notWatchout-gtneg20percmax-first1-5',
+        '[myRecs-day1-hundredResultCreme]'
     ],
     sellStrategy: 'limit10Down3Up',
 

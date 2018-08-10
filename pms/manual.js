@@ -278,6 +278,39 @@ const qualityModerates = [
 ];
 
 
+// aug 9
+
+const anyCountPerfectos = [
+    'sudden-drops-last3trend-filter10-221',
+    'sudden-drops-last3trend-filter20-280',
+    'sudden-drops-last5trend-filter20-280',
+    'sudden-drops-last2trend-filter10-221',
+    'based-on-jump-down3overnight-trending103-notWatchout-ltneg50percmax-first1-fiveTo10-0',
+    'sudden-drops-last5trend-filter30-280',
+    'based-on-jump-down3overnight-trending103-notWatchout-ltneg50percmax-first1-fiveTo10-5',
+    // 'low-float-high-volume-floatTimesabsVolPoints-trenddown7to10-shouldWatchout-tenTo15-6',
+    // 'low-float-high-volume-floatTimesvolToAvgPoints-trenddown7to10-shouldWatchout-tenTo15-6',
+    // 'low-float-high-volume-floatTimesvolTo2WeekPoints-trenddown7to10-shouldWatchout-tenTo15-6',
+    // 'low-float-high-volume-absVolPoints-trenddown7to10-shouldWatchout-tenTo15-6',
+    // 'low-float-high-volume-volTo2WeekPoints-trenddown7to10-shouldWatchout-tenTo15-6',
+    'low-float-high-volume-floatPoints-trenddown7to10-shouldWatchout-tenTo15-6',
+    'based-on-jump-down3overnight-trending103-notWatchout-ltneg50percmax-fiveTo10-0',
+    'based-on-jump-gtEightOvernight-trending103-first1-tenTo15-30',
+    // 'based-on-jump-gtEightOvernight-trending103-tenTo15-30',
+    'low-float-high-volume-volTo2WeekPoints-fifteenTo20-6',
+    'based-on-jump-down3overnight-trending103-notWatchout-ltneg50percmax-fiveTo10-5',
+    'sudden-drops-last10trend-filter20-221',
+    'low-float-high-volume-floatPoints-trenddown7to10-fifteenTo20-150',
+    'low-float-high-volume-floatTimestwoWeekVolToAvgPoints-trenddowngt10-fifteenTo20-210',
+    // 'low-float-high-volume-volToAvgPoints-trenddowngt10-fifteenTo20-210',
+    // 'low-float-high-volume-twoWeekVolToAvgPoints-trenddowngt10-fifteenTo20-210',
+    'based-on-jump-gtEightOvernight-trending103-gt100kvolume-first1-tenTo15-30',
+    // 'based-on-jump-gtEightOvernight-trending103-gt100kvolume-tenTo15-30',
+    'low-float-high-volume-volTo2WeekPoints-trenddown7to10-shouldWatchout-fifteenTo20-210',
+    'low-float-high-volume-floatTimesfloatToVolume-trenddown7to10-shouldWatchout-fifteenTo20-150'
+];
+
+
 module.exports = {
     'wild n crazy': [
         'week-swings-tenTo15-1',  // wild
@@ -323,5 +356,8 @@ module.exports = {
     moreCommonDrops,
     greatEverydayPerformers,
 
-    filteredDrops
+    filteredDrops,
+
+
+    anyCountPerfectos
 };

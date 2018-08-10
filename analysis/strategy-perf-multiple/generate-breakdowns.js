@@ -32,7 +32,7 @@ const analyzeRoundup = allRoundup => {
             percUp * avgTrend * count,
         filterFn = () => true,
         includeAll = false,
-        includePlayout
+        includePlayout,
     }) => {
         const filtered = allRoundup.filter(filterFn);
         const withScore = filtered.map(obj => {
@@ -254,11 +254,12 @@ const analyzeRoundup = allRoundup => {
             )
         }),
 
-        lowCountPerfecto: createBreakdown({
-            filterFn: obj => lowCounts(obj) && obj.percUp === 1,
+        anyCountPerfectos: createBreakdown({
+            filterFn: obj => obj.percUp === 1,
             scoreFn: highestPlayoutFn(({ hundredResult, percUp, avgTrend, percHitsPositive }, count) =>
                 count * avgTrend
-            )
+            ),
+            includeAll: true
         }),
 
     };
