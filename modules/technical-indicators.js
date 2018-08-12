@@ -9,32 +9,9 @@ const addOvernightJump = require('../app-actions/add-overnight-jump');
 const mapLimit = require('promise-map-limit');
 const { OBV, SMA, isTrendingUp } = require('technicalindicators');
 
-const trendFilter = async (Robinhood, trend) => {
-
-    // add overnight jump
-    console.log('adding overnight jump')
-    const withOvernightJump = await addOvernightJump(Robinhood, trend);
-    console.log('done adding overnight jump')
 
 
-    const top50Volume = withOvernightJump.sort((a, b) => {
-        return b.fundamentals.volume - a.fundamentals.volume;
-    }).slice(0, 50);
-
-    // add historical data
-    let allHistoricals = await getMultipleHistoricals(
-        Robinhood,
-        top50Volume.map(buy => buy.ticker),
-        `interval=10minute&span=week`
-    );
-
-    let withHistoricals = top50Volume.map((buy, i) => ({
-        ...buy,
-        historicals: allHistoricals[i]
-    }));
-
-    // console.log(JSON.stringify(withHistoricals, null, 2));
-
+const analyzeTrend = (withHistoricals) => {
     let withTechnicalIndicators = withHistoricals.map((buy, i) => {
 
         const { historicals } = buy;
@@ -163,10 +140,8 @@ const trendFilter = async (Robinhood, trend) => {
 
     const withCrossoverRecently = (() => {
         const numHistoricals = withSMAcrossovers[0].historicals.length;
-        console.log(numHistoricals, 'numHistoricals')
         const foundCrossoverRecently = withSMAcrossovers.filter(buy => {
             const foundCrossover = buy.SMAcrossovers.find(crossover => {
-                console.log(crossover.index, numHistoricals.length - 30);
                 return crossover.index >= numHistoricals - 5
             });
             return !!foundCrossover;
@@ -183,6 +158,83 @@ const trendFilter = async (Robinhood, trend) => {
         withCrossoverMostRecentHist: withCrossoverRecently,
         topOBV: [topOBV.ticker]
     };
+};
+
+
+
+
+const trendFilter = async (Robinhood, trend) => {
+
+    // add overnight jump
+    console.log('adding overnight jump')
+    const withOvernightJump = await addOvernightJump(Robinhood, trend);
+    console.log('done adding overnight jump')
+
+
+    const top50Volume = withOvernightJump.sort((a, b) => {
+        return b.fundamentals.volume - a.fundamentals.volume;
+    }).slice(0, 50);
+
+
+    const getTrendWithHistoricals = async (interval, span) => {
+        // add historical data
+        let allHistoricals = await getMultipleHistoricals(
+            Robinhood,
+            top50Volume.map(buy => buy.ticker),
+            `interval=${interval}&span=${span}`
+        );
+
+        let withHistoricals = top50Volume.map((buy, i) => ({
+            ...buy,
+            historicals: allHistoricals[i]
+        }));
+
+        return withHistoricals;
+    };
+
+
+    // console.log(JSON.stringify(withHistoricals, null, 2));
+
+
+    const perms = [
+        {
+            interval: '5minute',
+            span: 'day'
+        },
+        {
+            interval: '10minute',
+            span: 'day'
+        },
+        {
+            interval: '10minute',
+            span: 'week'
+        },
+        {
+            interval: 'day',
+            span: 'year'
+        },
+    ];
+
+    const permMapped = await mapLimit(perms, 2, async perm => {
+        const { interval, span } = perm;
+        const trend = await getTrendWithHistoricals(interval, span);
+        return {
+            perm,
+            analyzed: analyzeTrend(trend)
+        };
+    });
+
+    return permMapped.reduce((acc, obj) => {
+        const { analyzed, perm: { interval, span } } = obj;
+        const prefixedObj = Object.keys(analyzed).reduce((innerAcc, key) => ({
+            ...innerAcc,
+            [`${interval}-${span}-${key}`]: analyzed[key]
+        }), {});
+        return {
+            ...acc,
+            ...prefixedObj
+        };
+    }, {});
 };
 
 const swings = {
