@@ -243,8 +243,7 @@ const swings = {
         // runs at init
         regCronIncAfterSixThirty(Robinhood, {
             name: 'execute technical indicators',
-            run: [193, 253], // 10:41am, 11:31am
-            // run: [],
+            run: [14, 29, 87, 114, 159, 190, 220, 246, 320, 340, 357, 383],
             fn: async (Robinhood, min) => {
                 await executeStrategy(Robinhood, trendFilter, min, 0.3, 'swings');
             }
