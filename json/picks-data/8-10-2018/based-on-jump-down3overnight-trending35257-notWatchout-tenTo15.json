@@ -1,0 +1,86 @@
+{
+  "0": [
+    {
+      "ticker": "APB",
+      "price": 12.95
+    },
+    {
+      "ticker": "HMI",
+      "price": 10.2618
+    },
+    {
+      "ticker": "BT",
+      "price": 14.34
+    },
+    {
+      "ticker": "ACH",
+      "price": 10.8
+    }
+  ],
+  "5": [
+    {
+      "ticker": "WTTR",
+      "price": 14.65
+    },
+    {
+      "ticker": "APB",
+      "price": 13.09
+    },
+    {
+      "ticker": "HMI",
+      "price": 10.31
+    },
+    {
+      "ticker": "BT",
+      "price": 14.31
+    },
+    {
+      "ticker": "ACH",
+      "price": 10.8
+    }
+  ],
+  "16": [
+    {
+      "ticker": "WTTR",
+      "price": 14.53
+    },
+    {
+      "ticker": "APB",
+      "price": 13.09
+    },
+    {
+      "ticker": "HMI",
+      "price": 10.32
+    },
+    {
+      "ticker": "BT",
+      "price": 14.31
+    },
+    {
+      "ticker": "ACH",
+      "price": 10.8
+    }
+  ],
+  "30": [
+    {
+      "ticker": "WTTR",
+      "price": 14.84
+    },
+    {
+      "ticker": "APB",
+      "price": 13.09
+    },
+    {
+      "ticker": "HMI",
+      "price": 10.28
+    },
+    {
+      "ticker": "BT",
+      "price": 14.33
+    },
+    {
+      "ticker": "ACH",
+      "price": 10.74
+    }
+  ]
+}

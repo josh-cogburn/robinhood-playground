@@ -1,0 +1,50 @@
+{
+  "0": [
+    {
+      "ticker": "RUN",
+      "price": 12.78
+    }
+  ],
+  "5": [
+    {
+      "ticker": "RUN",
+      "price": 12.78
+    },
+    {
+      "ticker": "XON",
+      "price": 13.7104
+    },
+    {
+      "ticker": "NWSA",
+      "price": 13.8
+    }
+  ],
+  "16": [
+    {
+      "ticker": "RUN",
+      "price": 12.52
+    },
+    {
+      "ticker": "XON",
+      "price": 13.62
+    },
+    {
+      "ticker": "NWSA",
+      "price": 13.77
+    }
+  ],
+  "30": [
+    {
+      "ticker": "RUN",
+      "price": 11.95
+    },
+    {
+      "ticker": "XON",
+      "price": 13.595
+    },
+    {
+      "ticker": "WTTR",
+      "price": 14.84
+    }
+  ]
+}

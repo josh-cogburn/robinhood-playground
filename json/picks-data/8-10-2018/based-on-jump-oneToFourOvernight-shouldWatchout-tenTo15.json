@@ -1,0 +1,70 @@
+{
+  "0": [
+    {
+      "ticker": "TRUE",
+      "price": 11.9
+    },
+    {
+      "ticker": "VECO",
+      "price": 11.6
+    },
+    {
+      "ticker": "PTGX",
+      "price": 11.26
+    }
+  ],
+  "5": [
+    {
+      "ticker": "TRUE",
+      "price": 12.24
+    },
+    {
+      "ticker": "VECO",
+      "price": 11.575
+    },
+    {
+      "ticker": "SIEB",
+      "price": 12.7778
+    },
+    {
+      "ticker": "PTGX",
+      "price": 11.111
+    }
+  ],
+  "16": [
+    {
+      "ticker": "TRUE",
+      "price": 12.1
+    },
+    {
+      "ticker": "VECO",
+      "price": 11.425
+    },
+    {
+      "ticker": "SIEB",
+      "price": 12.7778
+    },
+    {
+      "ticker": "PTGX",
+      "price": 11.33
+    }
+  ],
+  "30": [
+    {
+      "ticker": "TRUE",
+      "price": 12.33
+    },
+    {
+      "ticker": "VECO",
+      "price": 11.575
+    },
+    {
+      "ticker": "SIEB",
+      "price": 12.7778
+    },
+    {
+      "ticker": "PTGX",
+      "price": 11.22
+    }
+  ]
+}

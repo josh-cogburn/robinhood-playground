@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "BSMX",
+      "price": 8.04
+    },
+    {
+      "ticker": "DSE",
+      "price": 6.17
+    }
+  ],
+  "5": [
+    {
+      "ticker": "BSMX",
+      "price": 8.15
+    },
+    {
+      "ticker": "DSE",
+      "price": 6.24
+    }
+  ],
+  "16": [
+    {
+      "ticker": "BSMX",
+      "price": 8.09
+    },
+    {
+      "ticker": "DSE",
+      "price": 6.24
+    }
+  ],
+  "30": [
+    {
+      "ticker": "BSMX",
+      "price": 8.06
+    },
+    {
+      "ticker": "DSE",
+      "price": 6.26
+    }
+  ]
+}

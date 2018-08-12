@@ -1,0 +1,38 @@
+{
+  "0": [
+    {
+      "ticker": "RUN",
+      "price": 12.78
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CORT",
+      "price": 12.49
+    },
+    {
+      "ticker": "RUN",
+      "price": 12.78
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CORT",
+      "price": 12.06
+    },
+    {
+      "ticker": "RUN",
+      "price": 12.52
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CORT",
+      "price": 12
+    },
+    {
+      "ticker": "RUN",
+      "price": 11.95
+    }
+  ]
+}

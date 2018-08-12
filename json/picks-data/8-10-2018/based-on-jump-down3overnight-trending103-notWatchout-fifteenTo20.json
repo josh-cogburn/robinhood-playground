@@ -1,0 +1,74 @@
+{
+  "0": [
+    {
+      "ticker": "WTTR",
+      "price": 14.755
+    },
+    {
+      "ticker": "PQG",
+      "price": 17.35
+    },
+    {
+      "ticker": "AZUL",
+      "price": 18
+    },
+    {
+      "ticker": "PRTY",
+      "price": 15.35
+    }
+  ],
+  "5": [
+    {
+      "ticker": "PQG",
+      "price": 16.9599
+    },
+    {
+      "ticker": "AZUL",
+      "price": 17.925
+    },
+    {
+      "ticker": "PRTY",
+      "price": 15.375
+    }
+  ],
+  "16": [
+    {
+      "ticker": "PQG",
+      "price": 16.53
+    },
+    {
+      "ticker": "AZUL",
+      "price": 17.94
+    },
+    {
+      "ticker": "DNLI",
+      "price": 15.6167
+    },
+    {
+      "ticker": "PRTY",
+      "price": 15.375
+    }
+  ],
+  "30": [
+    {
+      "ticker": "PQG",
+      "price": 16.56
+    },
+    {
+      "ticker": "UBOT",
+      "price": 17.9127
+    },
+    {
+      "ticker": "AZUL",
+      "price": 17.889
+    },
+    {
+      "ticker": "DNLI",
+      "price": 15.2054
+    },
+    {
+      "ticker": "PRTY",
+      "price": 15.225
+    }
+  ]
+}

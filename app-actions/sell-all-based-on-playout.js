@@ -8,11 +8,15 @@
 
 const fs = require('mz/fs');
 const mapLimit = require('promise-map-limit');
-const jsonMgr = require('../utils/json-mgr');
 
+// utils
+const jsonMgr = require('../utils/json-mgr');
+const getFilesSortedByDate = require('../utils/get-files-sorted-by-date');
+const getTrend = require('../utils/get-trend');
+
+// app-actions
 const detailedNonZero = require('./detailed-non-zero');
 const activeSell = require('./active-sell');
-const getTrend = require('../utils/get-trend');
 
 // the magic
 const { sellStrategy, sellAllStocksOnNthDay } = require('../settings');
@@ -23,14 +27,6 @@ const determineSingleBestPlayoutFromMultiOutput = require(
 );
 
 // utils
-const getFilesSortedByDate = async jsonFolder => {
-    let files = await fs.readdir(`./json/${jsonFolder}`);
-    return files
-        .map(f => f.split('.')[0])
-        .sort((a, b) => new Date(a) - new Date(b))
-        .reverse();
-};
-
 const daysBetween = (firstDate, secondDate) => {
     var oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
     var diffDays = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime()) / (oneDay)));

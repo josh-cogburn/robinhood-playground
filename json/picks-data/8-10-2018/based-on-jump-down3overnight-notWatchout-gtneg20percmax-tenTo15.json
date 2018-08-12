@@ -1,0 +1,90 @@
+{
+  "0": [
+    {
+      "ticker": "RUN",
+      "price": 12.78
+    },
+    {
+      "ticker": "MGTA",
+      "price": 12.66
+    },
+    {
+      "ticker": "GRX",
+      "price": 10.02
+    },
+    {
+      "ticker": "APB",
+      "price": 12.95
+    },
+    {
+      "ticker": "BT",
+      "price": 14.34
+    }
+  ],
+  "5": [
+    {
+      "ticker": "RUN",
+      "price": 12.78
+    },
+    {
+      "ticker": "MGTA",
+      "price": 12.66
+    },
+    {
+      "ticker": "GRX",
+      "price": 10.4211
+    },
+    {
+      "ticker": "APB",
+      "price": 13.09
+    },
+    {
+      "ticker": "BT",
+      "price": 14.31
+    }
+  ],
+  "16": [
+    {
+      "ticker": "RUN",
+      "price": 12.52
+    },
+    {
+      "ticker": "MGTA",
+      "price": 12.66
+    },
+    {
+      "ticker": "GRX",
+      "price": 10.4864
+    },
+    {
+      "ticker": "APB",
+      "price": 13.09
+    },
+    {
+      "ticker": "BT",
+      "price": 14.31
+    }
+  ],
+  "30": [
+    {
+      "ticker": "RUN",
+      "price": 11.95
+    },
+    {
+      "ticker": "MGTA",
+      "price": 12.86
+    },
+    {
+      "ticker": "GRX",
+      "price": 10.4864
+    },
+    {
+      "ticker": "APB",
+      "price": 13.09
+    },
+    {
+      "ticker": "BT",
+      "price": 14.33
+    }
+  ]
+}

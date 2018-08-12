@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "APB",
+      "price": 12.95
+    },
+    {
+      "ticker": "HMI",
+      "price": 10.2618
+    }
+  ],
+  "5": [
+    {
+      "ticker": "WTTR",
+      "price": 14.65
+    },
+    {
+      "ticker": "APB",
+      "price": 13.09
+    }
+  ],
+  "16": [
+    {
+      "ticker": "WTTR",
+      "price": 14.53
+    },
+    {
+      "ticker": "APB",
+      "price": 13.09
+    }
+  ],
+  "30": [
+    {
+      "ticker": "WTTR",
+      "price": 14.84
+    },
+    {
+      "ticker": "APB",
+      "price": 13.09
+    }
+  ]
+}

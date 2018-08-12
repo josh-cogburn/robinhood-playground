@@ -1,0 +1,90 @@
+{
+  "0": [
+    {
+      "ticker": "EUM",
+      "price": 19.13
+    },
+    {
+      "ticker": "UNIT",
+      "price": 18.47
+    },
+    {
+      "ticker": "RDI",
+      "price": 16.02
+    },
+    {
+      "ticker": "TMF",
+      "price": 18.815
+    },
+    {
+      "ticker": "DMLP",
+      "price": 18.625
+    }
+  ],
+  "5": [
+    {
+      "ticker": "MVBF",
+      "price": 17.4
+    },
+    {
+      "ticker": "EUM",
+      "price": 19.13
+    },
+    {
+      "ticker": "SAFE",
+      "price": 17.35
+    },
+    {
+      "ticker": "UNIT",
+      "price": 18.62
+    },
+    {
+      "ticker": "RDI",
+      "price": 16
+    }
+  ],
+  "16": [
+    {
+      "ticker": "MVBF",
+      "price": 17.4
+    },
+    {
+      "ticker": "EUM",
+      "price": 19.1
+    },
+    {
+      "ticker": "SAFE",
+      "price": 17.2
+    },
+    {
+      "ticker": "UNIT",
+      "price": 18.7652
+    },
+    {
+      "ticker": "RDI",
+      "price": 16
+    }
+  ],
+  "30": [
+    {
+      "ticker": "MVBF",
+      "price": 17.4
+    },
+    {
+      "ticker": "BOTJ",
+      "price": 16.0462
+    },
+    {
+      "ticker": "EUM",
+      "price": 19.15
+    },
+    {
+      "ticker": "SAFE",
+      "price": 17.1739
+    },
+    {
+      "ticker": "UNIT",
+      "price": 18.36
+    }
+  ]
+}

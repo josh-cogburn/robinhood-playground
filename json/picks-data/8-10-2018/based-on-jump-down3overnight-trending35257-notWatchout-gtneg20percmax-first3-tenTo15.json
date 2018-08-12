@@ -1,0 +1,50 @@
+{
+  "0": [
+    {
+      "ticker": "APB",
+      "price": 12.95
+    },
+    {
+      "ticker": "BT",
+      "price": 14.34
+    }
+  ],
+  "5": [
+    {
+      "ticker": "APB",
+      "price": 13.09
+    },
+    {
+      "ticker": "BT",
+      "price": 14.31
+    }
+  ],
+  "16": [
+    {
+      "ticker": "APB",
+      "price": 13.09
+    },
+    {
+      "ticker": "BT",
+      "price": 14.31
+    },
+    {
+      "ticker": "LDF",
+      "price": 11.22
+    }
+  ],
+  "30": [
+    {
+      "ticker": "APB",
+      "price": 13.09
+    },
+    {
+      "ticker": "BT",
+      "price": 14.33
+    },
+    {
+      "ticker": "LDF",
+      "price": 11.35
+    }
+  ]
+}

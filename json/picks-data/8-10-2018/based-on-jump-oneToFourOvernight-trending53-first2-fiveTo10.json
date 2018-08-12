@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "TPIV",
+      "price": 8.5
+    },
+    {
+      "ticker": "HWCC",
+      "price": 8.2001
+    }
+  ],
+  "5": [
+    {
+      "ticker": "TPIV",
+      "price": 8.04
+    },
+    {
+      "ticker": "HWCC",
+      "price": 8.2001
+    }
+  ],
+  "16": [
+    {
+      "ticker": "TPIV",
+      "price": 8.01
+    },
+    {
+      "ticker": "HWCC",
+      "price": 8.2001
+    }
+  ],
+  "30": [
+    {
+      "ticker": "TPIV",
+      "price": 8.1601
+    },
+    {
+      "ticker": "HWCC",
+      "price": 8.15
+    }
+  ]
+}

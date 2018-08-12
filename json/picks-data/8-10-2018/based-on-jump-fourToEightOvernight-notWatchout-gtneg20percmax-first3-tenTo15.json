@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "ROAD",
+      "price": 12.13
+    },
+    {
+      "ticker": "JAG",
+      "price": 14.54
+    },
+    {
+      "ticker": "KIN",
+      "price": 14.325
+    }
+  ],
+  "5": [
+    {
+      "ticker": "ROAD",
+      "price": 11.79
+    },
+    {
+      "ticker": "JAG",
+      "price": 14.225
+    },
+    {
+      "ticker": "KIN",
+      "price": 14.5
+    }
+  ],
+  "16": [
+    {
+      "ticker": "ROAD",
+      "price": 11.9282
+    },
+    {
+      "ticker": "JAG",
+      "price": 14.23
+    },
+    {
+      "ticker": "DPK",
+      "price": 13.1078
+    }
+  ],
+  "30": [
+    {
+      "ticker": "ROAD",
+      "price": 11.73
+    },
+    {
+      "ticker": "JAG",
+      "price": 14.16
+    },
+    {
+      "ticker": "DPK",
+      "price": 13.11
+    }
+  ]
+}

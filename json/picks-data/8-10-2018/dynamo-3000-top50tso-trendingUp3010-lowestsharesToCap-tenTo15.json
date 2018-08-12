@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "WTTR",
+      "price": 14.935
+    },
+    {
+      "ticker": "DNLI",
+      "price": 14.995
+    }
+  ],
+  "40": [
+    {
+      "ticker": "WTTR",
+      "price": 14.8608
+    },
+    {
+      "ticker": "AMRC",
+      "price": 14.1277
+    }
+  ],
+  "100": [
+    {
+      "ticker": "AMRC",
+      "price": 14.1501
+    },
+    {
+      "ticker": "DRNA",
+      "price": 15.03
+    }
+  ],
+  "200": [
+    {
+      "ticker": "XON",
+      "price": 14.71
+    },
+    {
+      "ticker": "IOVA",
+      "price": 14.65
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AMRC",
+      "price": 14.25
+    },
+    {
+      "ticker": "IOVA",
+      "price": 14.55
+    }
+  ],
+  "351": [
+    {
+      "ticker": "IOVA",
+      "price": 14.8
+    },
+    {
+      "ticker": "INAP",
+      "price": 14.32
+    }
+  ],
+  "381": [
+    {
+      "ticker": "PSDO",
+      "price": 14.98
+    },
+    {
+      "ticker": "IOVA",
+      "price": 14.6
+    }
+  ]
+}

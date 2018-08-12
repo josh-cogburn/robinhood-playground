@@ -1,0 +1,66 @@
+{
+  "10": [
+    {
+      "ticker": "UONE",
+      "price": 2.65
+    },
+    {
+      "ticker": "VERU",
+      "price": 2.15
+    },
+    {
+      "ticker": "VTNR",
+      "price": 1.22
+    }
+  ],
+  "50": [
+    {
+      "ticker": "VERU",
+      "price": 2.16
+    },
+    {
+      "ticker": "VTNR",
+      "price": 1.21
+    }
+  ],
+  "200": [
+    {
+      "ticker": "VERU",
+      "price": 2.17
+    },
+    {
+      "ticker": "VTNR",
+      "price": 1.24
+    }
+  ],
+  "300": [
+    {
+      "ticker": "VERU",
+      "price": 2.16
+    },
+    {
+      "ticker": "VTNR",
+      "price": 1.23
+    }
+  ],
+  "380": [
+    {
+      "ticker": "VERU",
+      "price": 2.16
+    },
+    {
+      "ticker": "VTNR",
+      "price": 1.24
+    }
+  ],
+  "600": [
+    {
+      "ticker": "VERU",
+      "price": 2.18
+    },
+    {
+      "ticker": "VTNR",
+      "price": 1.24
+    }
+  ]
+}

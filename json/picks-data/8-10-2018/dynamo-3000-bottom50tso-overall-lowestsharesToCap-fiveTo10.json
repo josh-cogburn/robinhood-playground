@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "SNMP",
+      "price": 9.9999
+    },
+    {
+      "ticker": "LTM",
+      "price": 9.66
+    }
+  ],
+  "40": [
+    {
+      "ticker": "SNMP",
+      "price": 9.905
+    },
+    {
+      "ticker": "LTM",
+      "price": 9.67
+    }
+  ],
+  "100": [
+    {
+      "ticker": "SNMP",
+      "price": 9.9
+    },
+    {
+      "ticker": "LTM",
+      "price": 9.7627
+    }
+  ],
+  "200": [
+    {
+      "ticker": "MRAM",
+      "price": 8.6001
+    },
+    {
+      "ticker": "AP",
+      "price": 8.645
+    }
+  ],
+  "260": [
+    {
+      "ticker": "MRAM",
+      "price": 8.55
+    },
+    {
+      "ticker": "AP",
+      "price": 8.625
+    }
+  ],
+  "351": [
+    {
+      "ticker": "MRAM",
+      "price": 8.72
+    },
+    {
+      "ticker": "AP",
+      "price": 8.5841
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MRAM",
+      "price": 8.99
+    },
+    {
+      "ticker": "AP",
+      "price": 8.56
+    }
+  ]
+}

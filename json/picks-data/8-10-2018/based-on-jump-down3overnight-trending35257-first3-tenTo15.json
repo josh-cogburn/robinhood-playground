@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "APB",
+      "price": 12.95
+    },
+    {
+      "ticker": "HMI",
+      "price": 10.2618
+    },
+    {
+      "ticker": "BT",
+      "price": 14.34
+    }
+  ],
+  "5": [
+    {
+      "ticker": "XON",
+      "price": 13.7104
+    },
+    {
+      "ticker": "WTTR",
+      "price": 14.65
+    },
+    {
+      "ticker": "LBY",
+      "price": 10.2204
+    }
+  ],
+  "16": [
+    {
+      "ticker": "OPNT",
+      "price": 14.75
+    },
+    {
+      "ticker": "XON",
+      "price": 13.62
+    },
+    {
+      "ticker": "WTTR",
+      "price": 14.53
+    }
+  ],
+  "30": [
+    {
+      "ticker": "XON",
+      "price": 13.595
+    },
+    {
+      "ticker": "WTTR",
+      "price": 14.84
+    },
+    {
+      "ticker": "LBY",
+      "price": 10.59
+    }
+  ]
+}

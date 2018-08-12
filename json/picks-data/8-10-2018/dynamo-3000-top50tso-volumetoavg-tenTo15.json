@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "CPE",
+      "price": 11.35
+    },
+    {
+      "ticker": "WTTR",
+      "price": 14.935
+    }
+  ],
+  "40": [
+    {
+      "ticker": "RNET",
+      "price": 13.35
+    },
+    {
+      "ticker": "INS",
+      "price": 13.1999
+    }
+  ],
+  "100": [
+    {
+      "ticker": "CEN",
+      "price": 10.23
+    },
+    {
+      "ticker": "MGTA",
+      "price": 13.07
+    }
+  ],
+  "200": [
+    {
+      "ticker": "EVLO",
+      "price": 12.76
+    },
+    {
+      "ticker": "SMTA",
+      "price": 10.52
+    }
+  ],
+  "260": [
+    {
+      "ticker": "EXPR",
+      "price": 10.535
+    },
+    {
+      "ticker": "KIN",
+      "price": 15.075
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CEMI",
+      "price": 11.45
+    },
+    {
+      "ticker": "ELF",
+      "price": 10.2
+    }
+  ],
+  "381": [
+    {
+      "ticker": "HMI",
+      "price": 10.54
+    },
+    {
+      "ticker": "ELF",
+      "price": 10.17
+    }
+  ]
+}

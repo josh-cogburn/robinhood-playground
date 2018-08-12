@@ -1,0 +1,54 @@
+{
+  "0": [
+    {
+      "ticker": "LINC",
+      "price": 2.05
+    },
+    {
+      "ticker": "SOFO",
+      "price": 2.15
+    }
+  ],
+  "5": [
+    {
+      "ticker": "NETS",
+      "price": 2.601
+    },
+    {
+      "ticker": "LINC",
+      "price": 2.05
+    },
+    {
+      "ticker": "SOFO",
+      "price": 2.15
+    }
+  ],
+  "16": [
+    {
+      "ticker": "NETS",
+      "price": 2.63
+    },
+    {
+      "ticker": "NDRA",
+      "price": 1.99
+    },
+    {
+      "ticker": "LINC",
+      "price": 2.05
+    }
+  ],
+  "30": [
+    {
+      "ticker": "NETS",
+      "price": 2.6
+    },
+    {
+      "ticker": "NDRA",
+      "price": 2.2127
+    },
+    {
+      "ticker": "LINC",
+      "price": 2.05
+    }
+  ]
+}

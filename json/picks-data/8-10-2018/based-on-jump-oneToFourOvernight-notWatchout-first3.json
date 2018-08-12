@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "IDXG",
+      "price": 1.07
+    },
+    {
+      "ticker": "GTIM",
+      "price": 4.25
+    },
+    {
+      "ticker": "OESX",
+      "price": 0.999
+    }
+  ],
+  "5": [
+    {
+      "ticker": "IDXG",
+      "price": 1.07
+    },
+    {
+      "ticker": "GTIM",
+      "price": 4.2
+    },
+    {
+      "ticker": "DAC",
+      "price": 1.65
+    }
+  ],
+  "16": [
+    {
+      "ticker": "IDXG",
+      "price": 1.1
+    },
+    {
+      "ticker": "GTIM",
+      "price": 4.2
+    },
+    {
+      "ticker": "DAC",
+      "price": 1.65
+    }
+  ],
+  "30": [
+    {
+      "ticker": "IDXG",
+      "price": 1.1
+    },
+    {
+      "ticker": "GTIM",
+      "price": 4.2
+    },
+    {
+      "ticker": "DAC",
+      "price": 1.655
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "RUN",
+      "price": 12.78
+    },
+    {
+      "ticker": "MGTA",
+      "price": 12.66
+    }
+  ],
+  "5": [
+    {
+      "ticker": "RUN",
+      "price": 12.78
+    },
+    {
+      "ticker": "XON",
+      "price": 13.7104
+    }
+  ],
+  "16": [
+    {
+      "ticker": "RUN",
+      "price": 12.52
+    },
+    {
+      "ticker": "XON",
+      "price": 13.62
+    }
+  ],
+  "30": [
+    {
+      "ticker": "RUN",
+      "price": 11.95
+    },
+    {
+      "ticker": "XON",
+      "price": 13.595
+    }
+  ]
+}

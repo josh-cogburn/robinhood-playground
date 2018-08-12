@@ -1,0 +1,38 @@
+{
+  "0": [
+    {
+      "ticker": "RUN",
+      "price": 12.78
+    }
+  ],
+  "5": [
+    {
+      "ticker": "RUN",
+      "price": 12.78
+    },
+    {
+      "ticker": "WTTR",
+      "price": 14.65
+    }
+  ],
+  "16": [
+    {
+      "ticker": "RUN",
+      "price": 12.52
+    },
+    {
+      "ticker": "OPNT",
+      "price": 14.75
+    }
+  ],
+  "30": [
+    {
+      "ticker": "RUN",
+      "price": 11.95
+    },
+    {
+      "ticker": "WTTR",
+      "price": 14.84
+    }
+  ]
+}

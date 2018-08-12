@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "TRUE",
+      "price": 11.9
+    },
+    {
+      "ticker": "CCXI",
+      "price": 11.3828
+    }
+  ],
+  "5": [
+    {
+      "ticker": "TRUE",
+      "price": 12.24
+    },
+    {
+      "ticker": "CCXI",
+      "price": 11.6088
+    }
+  ],
+  "16": [
+    {
+      "ticker": "TRUE",
+      "price": 12.1
+    },
+    {
+      "ticker": "CCXI",
+      "price": 12.2
+    }
+  ],
+  "30": [
+    {
+      "ticker": "TRUE",
+      "price": 12.33
+    },
+    {
+      "ticker": "CCXI",
+      "price": 12.4634
+    }
+  ]
+}

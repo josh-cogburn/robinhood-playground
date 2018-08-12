@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "CARV",
+      "price": 5.3013
+    },
+    {
+      "ticker": "INVE",
+      "price": 5.9
+    }
+  ],
+  "40": [
+    {
+      "ticker": "FTR",
+      "price": 5.13
+    },
+    {
+      "ticker": "MTEM",
+      "price": 5.05
+    }
+  ],
+  "100": [
+    {
+      "ticker": "FTR",
+      "price": 5.09
+    },
+    {
+      "ticker": "MTEM",
+      "price": 5.1618
+    }
+  ],
+  "200": [
+    {
+      "ticker": "INVE",
+      "price": 5.9812
+    },
+    {
+      "ticker": "ASYS",
+      "price": 5.1801
+    }
+  ],
+  "260": [
+    {
+      "ticker": "INVE",
+      "price": 5.9406
+    },
+    {
+      "ticker": "OPHC",
+      "price": 5.5098
+    }
+  ],
+  "351": [
+    {
+      "ticker": "INVE",
+      "price": 6
+    },
+    {
+      "ticker": "OPHC",
+      "price": 5.5
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CARV",
+      "price": 5.6848
+    },
+    {
+      "ticker": "OPHC",
+      "price": 5.5
+    }
+  ]
+}

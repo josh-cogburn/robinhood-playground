@@ -4,6 +4,7 @@ const calcUniqStrategies = require('./calc-uniq-strategies');
 const analyzeStrategy = require('./analyze-strategy');
 const { analyzeRoundup } = require('./generate-breakdowns');
 const { isBreakdownKey } = require('./breakdown-key-compares');
+const saveToJson = require('./save-to-json');
 
 module.exports = async (Robinhood, daysBack = 2, ...strategies) => {
     console.log('days back', daysBack);
@@ -48,6 +49,15 @@ module.exports = async (Robinhood, daysBack = 2, ...strategies) => {
 
     console.log('done analyzing strategies')
 
-    return suppliedStrategies ? allRoundup : analyzeRoundup(allRoundup);
+    if (suppliedStrategies) {
+        return allRoundup;
+    }
+
+    // if !suppliedStrategies
+    const analyzed = analyzeRoundup(allRoundup);
+    if (daysBack > 50) {
+        await saveToJson(analyzed);
+    }
+    return analyzed;
 
 };

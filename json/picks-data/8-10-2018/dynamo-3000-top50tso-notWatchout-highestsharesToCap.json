@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "ITP",
+      "price": 1.05
+    },
+    {
+      "ticker": "ROX",
+      "price": 1.22
+    }
+  ],
+  "40": [
+    {
+      "ticker": "AUMN",
+      "price": 0.2729
+    },
+    {
+      "ticker": "NEON",
+      "price": 0.36
+    }
+  ],
+  "100": [
+    {
+      "ticker": "AUMN",
+      "price": 0.2714
+    },
+    {
+      "ticker": "NEON",
+      "price": 0.37
+    }
+  ],
+  "200": [
+    {
+      "ticker": "TGB",
+      "price": 0.7699
+    },
+    {
+      "ticker": "ONS",
+      "price": 0.8384
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AUMN",
+      "price": 0.2663
+    },
+    {
+      "ticker": "TGB",
+      "price": 0.7687
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AUMN",
+      "price": 0.27
+    },
+    {
+      "ticker": "TGB",
+      "price": 0.77
+    }
+  ],
+  "381": [
+    {
+      "ticker": "TGB",
+      "price": 0.7527
+    },
+    {
+      "ticker": "ALIM",
+      "price": 0.9431
+    }
+  ]
+}

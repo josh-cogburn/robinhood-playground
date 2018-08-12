@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "WTTR",
+      "price": 14.935
+    },
+    {
+      "ticker": "DNLI",
+      "price": 14.995
+    }
+  ],
+  "40": [
+    {
+      "ticker": "SRRK",
+      "price": 14.715
+    },
+    {
+      "ticker": "WTTR",
+      "price": 14.8608
+    }
+  ],
+  "100": [
+    {
+      "ticker": "ELF",
+      "price": 10.4
+    },
+    {
+      "ticker": "AMRC",
+      "price": 14.1501
+    }
+  ],
+  "200": [
+    {
+      "ticker": "XON",
+      "price": 14.71
+    },
+    {
+      "ticker": "ELF",
+      "price": 10.06
+    }
+  ],
+  "260": [
+    {
+      "ticker": "QTRX",
+      "price": 14.805
+    },
+    {
+      "ticker": "ELF",
+      "price": 10.34
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SRRK",
+      "price": 14.65
+    },
+    {
+      "ticker": "ELF",
+      "price": 10.2
+    }
+  ],
+  "381": [
+    {
+      "ticker": "QTRX",
+      "price": 14.74
+    },
+    {
+      "ticker": "ELF",
+      "price": 10.17
+    }
+  ]
+}

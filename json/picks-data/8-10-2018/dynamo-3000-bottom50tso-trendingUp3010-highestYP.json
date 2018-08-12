@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "PRSS",
+      "price": 1.34
+    },
+    {
+      "ticker": "DTRM",
+      "price": 1.23
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CDXC",
+      "price": 4.61
+    },
+    {
+      "ticker": "RIGL",
+      "price": 2.8825
+    }
+  ],
+  "100": [
+    {
+      "ticker": "SDPI",
+      "price": 1.71
+    },
+    {
+      "ticker": "PRSS",
+      "price": 1.33
+    }
+  ],
+  "200": [
+    {
+      "ticker": "SHIP",
+      "price": 0.9347
+    },
+    {
+      "ticker": "RMTI",
+      "price": 4.65
+    }
+  ],
+  "260": [
+    {
+      "ticker": "EKSO",
+      "price": 2.48
+    },
+    {
+      "ticker": "SHIP",
+      "price": 0.9403
+    }
+  ],
+  "351": [
+    {
+      "ticker": "OIIM",
+      "price": 1.9777
+    },
+    {
+      "ticker": "ENT",
+      "price": 2.5
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ENT",
+      "price": 2.36
+    },
+    {
+      "ticker": "CDXC",
+      "price": 4.51
+    }
+  ]
+}

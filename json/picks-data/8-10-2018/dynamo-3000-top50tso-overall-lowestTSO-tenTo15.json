@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "CPE",
+      "price": 11.35
+    },
+    {
+      "ticker": "DNLI",
+      "price": 14.995
+    }
+  ],
+  "40": [
+    {
+      "ticker": "RNET",
+      "price": 13.35
+    },
+    {
+      "ticker": "USX",
+      "price": 13.82
+    }
+  ],
+  "100": [
+    {
+      "ticker": "CEN",
+      "price": 10.23
+    },
+    {
+      "ticker": "BRT",
+      "price": 12.88
+    }
+  ],
+  "200": [
+    {
+      "ticker": "EVLO",
+      "price": 12.76
+    },
+    {
+      "ticker": "CEMI",
+      "price": 11.45
+    }
+  ],
+  "260": [
+    {
+      "ticker": "EXPR",
+      "price": 10.535
+    },
+    {
+      "ticker": "QNST",
+      "price": 13.56
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CEMI",
+      "price": 11.45
+    },
+    {
+      "ticker": "SRCI",
+      "price": 10.065
+    }
+  ],
+  "381": [
+    {
+      "ticker": "HMI",
+      "price": 10.54
+    },
+    {
+      "ticker": "AIRG",
+      "price": 11.46
+    }
+  ]
+}

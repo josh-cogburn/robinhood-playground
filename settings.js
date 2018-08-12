@@ -26,17 +26,12 @@ module.exports = {
         'based-on-jump-down5overnight-trending103-notWatchout-gtneg20percmax-first1-5',
         '[myRecs-day1-hundredResultCreme]'
     ],
-    sellStrategy: 'limit10Down3Up',
+    sellStrategy: 'limit3',     // for fallback
 
     // email
     email: {
         [['chief', 'sm', 'urph', '@', 'gm', 'ail', '.com'].join('')]: [
-            // ...creme,
-            // ...moderates,
-            // ...occasionals,
-            // ...occasionalLowCount,
-            // ...keepAnEyeOn,
-            // ...allShorts
+            ...allShorts
         ],
         ...cheapestPicksEmailObj
     }

@@ -1,0 +1,46 @@
+{
+  "10": [
+    {
+      "ticker": "ONDK",
+      "price": 8.555
+    },
+    {
+      "ticker": "INSY",
+      "price": 7.6001
+    }
+  ],
+  "50": [
+    {
+      "ticker": "ONDK",
+      "price": 8.6
+    },
+    {
+      "ticker": "INSY",
+      "price": 7.64
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ONDK",
+      "price": 8.7
+    }
+  ],
+  "300": [
+    {
+      "ticker": "ONDK",
+      "price": 8.625
+    }
+  ],
+  "380": [
+    {
+      "ticker": "ONDK",
+      "price": 8.635
+    }
+  ],
+  "600": [
+    {
+      "ticker": "ONDK",
+      "price": 8.62
+    }
+  ]
+}

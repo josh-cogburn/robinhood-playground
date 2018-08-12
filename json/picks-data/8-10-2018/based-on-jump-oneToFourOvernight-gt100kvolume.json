@@ -1,0 +1,50 @@
+{
+  "0": [
+    {
+      "ticker": "MNGA",
+      "price": 0.265
+    }
+  ],
+  "5": [
+    {
+      "ticker": "MNGA",
+      "price": 0.26
+    },
+    {
+      "ticker": "CLNE",
+      "price": 2.69
+    }
+  ],
+  "16": [
+    {
+      "ticker": "IDXG",
+      "price": 1.1
+    },
+    {
+      "ticker": "MNGA",
+      "price": 0.26
+    },
+    {
+      "ticker": "CLNE",
+      "price": 2.73
+    }
+  ],
+  "30": [
+    {
+      "ticker": "IDXG",
+      "price": 1.1
+    },
+    {
+      "ticker": "MNGA",
+      "price": 0.2619
+    },
+    {
+      "ticker": "CLNE",
+      "price": 2.72
+    },
+    {
+      "ticker": "IPAS",
+      "price": 0.3189
+    }
+  ]
+}

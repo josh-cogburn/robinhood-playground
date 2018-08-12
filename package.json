@@ -1,12 +1,11 @@
 {
-  "name": "rh",
+  "name": "robinhood-playground",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index 2>&1 | tee ./outputfile.txt",
-    "52day": "node --max_old_space_size=8000 run analysis/strategy-perf-multiple 52",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "52day": "node --max_old_space_size=8000 run analysis/strategy-perf-multiple 52 next-day-330"
   },
   "keywords": [],
   "author": "",

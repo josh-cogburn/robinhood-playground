@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "RUN",
+      "price": 12.78
+    },
+    {
+      "ticker": "MGTA",
+      "price": 12.66
+    },
+    {
+      "ticker": "APB",
+      "price": 12.95
+    }
+  ],
+  "5": [
+    {
+      "ticker": "RUN",
+      "price": 12.78
+    },
+    {
+      "ticker": "MGTA",
+      "price": 12.66
+    },
+    {
+      "ticker": "APB",
+      "price": 13.09
+    }
+  ],
+  "16": [
+    {
+      "ticker": "RUN",
+      "price": 12.52
+    },
+    {
+      "ticker": "MGTA",
+      "price": 12.66
+    },
+    {
+      "ticker": "APB",
+      "price": 13.09
+    }
+  ],
+  "30": [
+    {
+      "ticker": "RUN",
+      "price": 11.95
+    },
+    {
+      "ticker": "MGTA",
+      "price": 12.86
+    },
+    {
+      "ticker": "APB",
+      "price": 13.09
+    }
+  ]
+}

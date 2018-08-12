@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "PRKR",
+      "price": 0.67
+    },
+    {
+      "ticker": "FTFT",
+      "price": 1.64
+    },
+    {
+      "ticker": "ISNS",
+      "price": 4.6305
+    }
+  ],
+  "5": [
+    {
+      "ticker": "PRKR",
+      "price": 0.63
+    },
+    {
+      "ticker": "FTFT",
+      "price": 1.5484
+    },
+    {
+      "ticker": "ISNS",
+      "price": 4.75
+    }
+  ],
+  "16": [
+    {
+      "ticker": "PRKR",
+      "price": 0.6269
+    },
+    {
+      "ticker": "MTNB",
+      "price": 0.3781
+    },
+    {
+      "ticker": "FTFT",
+      "price": 1.5484
+    }
+  ],
+  "30": [
+    {
+      "ticker": "PRKR",
+      "price": 0.6052
+    },
+    {
+      "ticker": "MTNB",
+      "price": 0.3781
+    },
+    {
+      "ticker": "FTFT",
+      "price": 1.47
+    }
+  ]
+}

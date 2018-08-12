@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "AOSL",
+      "price": 15.33
+    },
+    {
+      "ticker": "CDNA",
+      "price": 17.71
+    }
+  ],
+  "40": [
+    {
+      "ticker": "AOSL",
+      "price": 15.23
+    },
+    {
+      "ticker": "IIIV",
+      "price": 15.9
+    }
+  ],
+  "100": [
+    {
+      "ticker": "AOSL",
+      "price": 15.02
+    },
+    {
+      "ticker": "VRCA",
+      "price": 15.075
+    }
+  ],
+  "200": [
+    {
+      "ticker": "AOSL",
+      "price": 14.96
+    },
+    {
+      "ticker": "VRCA",
+      "price": 15.04
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CDNA",
+      "price": 16.55
+    },
+    {
+      "ticker": "IIIV",
+      "price": 15.6901
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CDNA",
+      "price": 17.29
+    },
+    {
+      "ticker": "IIIV",
+      "price": 15.55
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CDNA",
+      "price": 17.02
+    },
+    {
+      "ticker": "IIIV",
+      "price": 15.68
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "CCT",
+      "price": 16.66
+    },
+    {
+      "ticker": "CDNA",
+      "price": 17.71
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CDNA",
+      "price": 17.185
+    },
+    {
+      "ticker": "CCT",
+      "price": 16.82
+    }
+  ],
+  "100": [
+    {
+      "ticker": "SIJ",
+      "price": 15.54
+    },
+    {
+      "ticker": "CDNA",
+      "price": 17.45
+    }
+  ],
+  "200": [
+    {
+      "ticker": "SIJ",
+      "price": 15.3701
+    },
+    {
+      "ticker": "FTSV",
+      "price": 15.1
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SIJ",
+      "price": 15.3701
+    },
+    {
+      "ticker": "FTSV",
+      "price": 15.1
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SIJ",
+      "price": 15.3701
+    },
+    {
+      "ticker": "AFIN",
+      "price": 15.24
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AFIN",
+      "price": 15.46
+    },
+    {
+      "ticker": "FTSV",
+      "price": 15.125
+    }
+  ]
+}

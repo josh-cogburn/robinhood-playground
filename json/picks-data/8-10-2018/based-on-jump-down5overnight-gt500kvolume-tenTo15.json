@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "RUN",
+      "price": 12.78
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CORT",
+      "price": 12.49
+    },
+    {
+      "ticker": "RUN",
+      "price": 12.78
+    },
+    {
+      "ticker": "NEO",
+      "price": 12.36
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CORT",
+      "price": 12.06
+    },
+    {
+      "ticker": "RUN",
+      "price": 12.52
+    },
+    {
+      "ticker": "NEO",
+      "price": 12.5
+    },
+    {
+      "ticker": "DB",
+      "price": 11.605
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CORT",
+      "price": 12
+    },
+    {
+      "ticker": "RUN",
+      "price": 11.95
+    },
+    {
+      "ticker": "NEO",
+      "price": 12.41
+    },
+    {
+      "ticker": "DB",
+      "price": 11.625
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "RCM",
+      "price": 9.22
+    },
+    {
+      "ticker": "VSTM",
+      "price": 8.53
+    }
+  ],
+  "40": [
+    {
+      "ticker": "VTL",
+      "price": 9.05
+    },
+    {
+      "ticker": "VSTM",
+      "price": 8.43
+    }
+  ],
+  "100": [
+    {
+      "ticker": "AMRS",
+      "price": 7.7
+    },
+    {
+      "ticker": "HBIO",
+      "price": 6.5
+    }
+  ],
+  "200": [
+    {
+      "ticker": "VSTM",
+      "price": 8.39
+    },
+    {
+      "ticker": "HBIO",
+      "price": 6.45
+    }
+  ],
+  "260": [
+    {
+      "ticker": "VSTM",
+      "price": 8.315
+    },
+    {
+      "ticker": "HBIO",
+      "price": 6.495
+    }
+  ],
+  "351": [
+    {
+      "ticker": "VSTM",
+      "price": 8.31
+    },
+    {
+      "ticker": "INVE",
+      "price": 6
+    }
+  ],
+  "381": [
+    {
+      "ticker": "VSTM",
+      "price": 8.21
+    },
+    {
+      "ticker": "INVE",
+      "price": 6.0801
+    }
+  ]
+}

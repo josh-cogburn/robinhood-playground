@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "WTTR",
+      "price": 14.755
+    },
+    {
+      "ticker": "PQG",
+      "price": 17.35
+    }
+  ],
+  "5": [
+    {
+      "ticker": "PQG",
+      "price": 16.9599
+    },
+    {
+      "ticker": "AZUL",
+      "price": 17.925
+    }
+  ],
+  "16": [
+    {
+      "ticker": "PQG",
+      "price": 16.53
+    },
+    {
+      "ticker": "AZUL",
+      "price": 17.94
+    }
+  ],
+  "30": [
+    {
+      "ticker": "PQG",
+      "price": 16.56
+    },
+    {
+      "ticker": "UBOT",
+      "price": 17.9127
+    }
+  ]
+}

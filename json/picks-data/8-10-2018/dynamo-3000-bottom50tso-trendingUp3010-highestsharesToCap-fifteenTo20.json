@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "AOSL",
+      "price": 15.33
+    },
+    {
+      "ticker": "CDNA",
+      "price": 17.71
+    }
+  ],
+  "40": [
+    {
+      "ticker": "BEL",
+      "price": 15.325
+    },
+    {
+      "ticker": "AOSL",
+      "price": 15.23
+    }
+  ],
+  "100": [
+    {
+      "ticker": "AOSL",
+      "price": 15.02
+    },
+    {
+      "ticker": "CDNA",
+      "price": 17.45
+    }
+  ],
+  "200": [
+    {
+      "ticker": "BEL",
+      "price": 15.625
+    },
+    {
+      "ticker": "AOSL",
+      "price": 14.96
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CDNA",
+      "price": 16.55
+    },
+    {
+      "ticker": "ENDP",
+      "price": 15.53
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CDNA",
+      "price": 17.29
+    },
+    {
+      "ticker": "ENDP",
+      "price": 15.58
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CDNA",
+      "price": 17.02
+    },
+    {
+      "ticker": "PAAS",
+      "price": 17.0099
+    }
+  ]
+}

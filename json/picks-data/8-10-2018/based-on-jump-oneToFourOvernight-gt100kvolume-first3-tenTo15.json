@@ -1,0 +1,50 @@
+{
+  "0": [
+    {
+      "ticker": "SQQQ",
+      "price": 12.1938
+    }
+  ],
+  "5": [
+    {
+      "ticker": "TRUE",
+      "price": 12.24
+    },
+    {
+      "ticker": "CBAY",
+      "price": 13.03
+    },
+    {
+      "ticker": "SSRM",
+      "price": 10.81
+    }
+  ],
+  "16": [
+    {
+      "ticker": "TRUE",
+      "price": 12.1
+    },
+    {
+      "ticker": "CBAY",
+      "price": 12.855
+    },
+    {
+      "ticker": "SSRM",
+      "price": 10.71
+    }
+  ],
+  "30": [
+    {
+      "ticker": "TRUE",
+      "price": 12.33
+    },
+    {
+      "ticker": "CBAY",
+      "price": 12.76
+    },
+    {
+      "ticker": "SSRM",
+      "price": 10.61
+    }
+  ]
+}

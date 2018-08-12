@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "TRUE",
+      "price": 11.9
+    },
+    {
+      "ticker": "VECO",
+      "price": 11.6
+    }
+  ],
+  "5": [
+    {
+      "ticker": "TRUE",
+      "price": 12.24
+    },
+    {
+      "ticker": "VECO",
+      "price": 11.575
+    }
+  ],
+  "16": [
+    {
+      "ticker": "TRUE",
+      "price": 12.1
+    },
+    {
+      "ticker": "VECO",
+      "price": 11.425
+    }
+  ],
+  "30": [
+    {
+      "ticker": "TRUE",
+      "price": 12.33
+    },
+    {
+      "ticker": "VECO",
+      "price": 11.575
+    }
+  ]
+}
