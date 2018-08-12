@@ -15,7 +15,6 @@ const analyzeTrend = (withHistoricals) => {
     let withTechnicalIndicators = withHistoricals.map((buy, i) => {
 
         const { historicals } = buy;
-        historicals.pop();
         // console.log(historicals, 'historicals')
 
         const OBVobject = ['close:close_price', 'volume'].reduce((acc, val) => {
@@ -245,7 +244,7 @@ const swings = {
             name: 'execute technical indicators',
             run: [14, 29, 87, 114, 159, 190, 220, 246, 320, 340, 357, 383],
             fn: async (Robinhood, min) => {
-                await executeStrategy(Robinhood, trendFilter, min, 0.3, 'swings');
+                await executeStrategy(Robinhood, trendFilter, min, 0.3, 'technical-indicators');
             }
         });
     }
