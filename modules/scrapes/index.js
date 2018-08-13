@@ -38,6 +38,7 @@ const scrapes = {
                         const strategyName = `${scrapeName}-${queryName}`;
                         // console.log(queryName, queryPicks);
                         await recordPicks(Robinhood, strategyName, min, tradeablePicks);
+                        await recordPicks(Robinhood, `${strategyName}-first1`, min, tradeablePicks.slice(0, 1));
                     }
                     await browser.close();
                 }
