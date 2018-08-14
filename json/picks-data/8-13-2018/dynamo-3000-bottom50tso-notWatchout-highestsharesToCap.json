@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "GSAT",
+      "price": 0.5014
+    },
+    {
+      "ticker": "ALIM",
+      "price": 0.85
+    }
+  ],
+  "40": [
+    {
+      "ticker": "VRML",
+      "price": 0.5226
+    },
+    {
+      "ticker": "NAO",
+      "price": 0.8298
+    }
+  ],
+  "100": [
+    {
+      "ticker": "NAVB",
+      "price": 0.132
+    },
+    {
+      "ticker": "AUMN",
+      "price": 0.24
+    }
+  ],
+  "200": [
+    {
+      "ticker": "NAVB",
+      "price": 0.1332
+    },
+    {
+      "ticker": "AUMN",
+      "price": 0.2351
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NAVB",
+      "price": 0.1333
+    },
+    {
+      "ticker": "AUMN",
+      "price": 0.2339
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NAVB",
+      "price": 0.139
+    },
+    {
+      "ticker": "WWR",
+      "price": 0.2999
+    }
+  ],
+  "381": [
+    {
+      "ticker": "NAVB",
+      "price": 0.1359
+    },
+    {
+      "ticker": "WWR",
+      "price": 0.298
+    }
+  ]
+}

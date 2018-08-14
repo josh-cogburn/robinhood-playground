@@ -1,0 +1,38 @@
+{
+  "0": [
+    {
+      "ticker": "NEW",
+      "price": 14.3889
+    },
+    {
+      "ticker": "WOW",
+      "price": 11.62
+    }
+  ],
+  "5": [
+    {
+      "ticker": "NEW",
+      "price": 14.8
+    },
+    {
+      "ticker": "WOW",
+      "price": 11.87
+    }
+  ],
+  "16": [
+    {
+      "ticker": "NEW",
+      "price": 14.6889
+    },
+    {
+      "ticker": "WOW",
+      "price": 11.72
+    }
+  ],
+  "30": [
+    {
+      "ticker": "WOW",
+      "price": 11.68
+    }
+  ]
+}

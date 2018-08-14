@@ -310,6 +310,11 @@ const anyCountPerfectos = [
     'low-float-high-volume-floatTimesfloatToVolume-trenddown7to10-shouldWatchout-fifteenTo20-150'
 ];
 
+const moreaddsons = [
+    'low-float-high-volume-volToAvgPoints-trenddowngt20-shouldWatchout-6',
+    
+]
+
 
 module.exports = {
     'wild n crazy': [

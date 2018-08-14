@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "AMRS",
+      "price": 7.7
+    },
+    {
+      "ticker": "VTL",
+      "price": 9.35
+    }
+  ],
+  "40": [
+    {
+      "ticker": "AMRS",
+      "price": 7.5683
+    },
+    {
+      "ticker": "VTL",
+      "price": 9.5
+    }
+  ],
+  "100": [
+    {
+      "ticker": "UFAB",
+      "price": 8.3
+    },
+    {
+      "ticker": "AMRS",
+      "price": 7.57
+    }
+  ],
+  "200": [
+    {
+      "ticker": "UFAB",
+      "price": 8.3
+    },
+    {
+      "ticker": "RFL",
+      "price": 9.25
+    }
+  ],
+  "260": [
+    {
+      "ticker": "UFAB",
+      "price": 8.3
+    },
+    {
+      "ticker": "RFL",
+      "price": 9.145
+    }
+  ],
+  "351": [
+    {
+      "ticker": "UFAB",
+      "price": 8.3
+    },
+    {
+      "ticker": "RFL",
+      "price": 9.12
+    }
+  ],
+  "381": [
+    {
+      "ticker": "UFAB",
+      "price": 8.4
+    },
+    {
+      "ticker": "RFL",
+      "price": 9.02
+    }
+  ]
+}

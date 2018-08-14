@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "EXPI",
+      "price": 16.99
+    },
+    {
+      "ticker": "CAPL",
+      "price": 18.07
+    }
+  ],
+  "40": [
+    {
+      "ticker": "EXPI",
+      "price": 16.45
+    },
+    {
+      "ticker": "AQST",
+      "price": 15.83
+    }
+  ],
+  "100": [
+    {
+      "ticker": "EXPI",
+      "price": 16.6
+    },
+    {
+      "ticker": "CDNA",
+      "price": 16.49
+    }
+  ],
+  "200": [
+    {
+      "ticker": "DDD",
+      "price": 18.22
+    },
+    {
+      "ticker": "NVTR",
+      "price": 17.29
+    }
+  ],
+  "260": [
+    {
+      "ticker": "LCNB",
+      "price": 18.55
+    },
+    {
+      "ticker": "DDD",
+      "price": 18.2
+    }
+  ],
+  "351": [
+    {
+      "ticker": "DDD",
+      "price": 18.05
+    },
+    {
+      "ticker": "LCNB",
+      "price": 18.8
+    }
+  ],
+  "381": [
+    {
+      "ticker": "DDD",
+      "price": 17.92
+    },
+    {
+      "ticker": "LCNB",
+      "price": 18.5
+    }
+  ]
+}

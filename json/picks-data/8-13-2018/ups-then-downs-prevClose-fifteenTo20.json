@@ -1,0 +1,55 @@
+{
+  "10": [],
+  "50": [
+    {
+      "ticker": "DDD",
+      "price": 19.04
+    },
+    {
+      "ticker": "EXPI",
+      "price": 16.354
+    }
+  ],
+  "200": [
+    {
+      "ticker": "DDD",
+      "price": 18.2
+    },
+    {
+      "ticker": "AFI",
+      "price": 16.2164
+    },
+    {
+      "ticker": "ARWR",
+      "price": 16.25
+    },
+    {
+      "ticker": "TRNC",
+      "price": 17.2
+    }
+  ],
+  "300": [
+    {
+      "ticker": "DDD",
+      "price": 18.24
+    }
+  ],
+  "380": [
+    {
+      "ticker": "DDD",
+      "price": 17.92
+    },
+    {
+      "ticker": "ATTU",
+      "price": 18.65
+    },
+    {
+      "ticker": "ARWR",
+      "price": 16.28
+    },
+    {
+      "ticker": "TRNC",
+      "price": 17.22
+    }
+  ]
+}

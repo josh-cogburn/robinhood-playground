@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "AHPI",
+      "price": 2.45
+    },
+    {
+      "ticker": "XGTI",
+      "price": 0.59
+    },
+    {
+      "ticker": "PIXY",
+      "price": 2.9975
+    }
+  ],
+  "5": [
+    {
+      "ticker": "AHPI",
+      "price": 2.489
+    },
+    {
+      "ticker": "BDR",
+      "price": 1.38
+    },
+    {
+      "ticker": "XGTI",
+      "price": 0.59
+    }
+  ],
+  "16": [
+    {
+      "ticker": "AHPI",
+      "price": 2.489
+    },
+    {
+      "ticker": "HLTH",
+      "price": 0.9037
+    },
+    {
+      "ticker": "BDR",
+      "price": 1.37
+    }
+  ],
+  "30": [
+    {
+      "ticker": "AHPI",
+      "price": 2.489
+    },
+    {
+      "ticker": "HLTH",
+      "price": 0.8999
+    },
+    {
+      "ticker": "BDR",
+      "price": 1.4
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "10": [
+    {
+      "ticker": "IDRA",
+      "price": 6.49
+    },
+    {
+      "ticker": "VSTM",
+      "price": 8.2987
+    },
+    {
+      "ticker": "NRT",
+      "price": 8.08
+    }
+  ],
+  "50": [
+    {
+      "ticker": "IDRA",
+      "price": 7.2001
+    },
+    {
+      "ticker": "VSTM",
+      "price": 8.19
+    },
+    {
+      "ticker": "NRT",
+      "price": 8.064
+    }
+  ],
+  "200": [
+    {
+      "ticker": "IDRA",
+      "price": 7.68
+    },
+    {
+      "ticker": "VSTM",
+      "price": 8.15
+    },
+    {
+      "ticker": "NRT",
+      "price": 8.2
+    }
+  ],
+  "300": [
+    {
+      "ticker": "IDRA",
+      "price": 7.67
+    },
+    {
+      "ticker": "VSTM",
+      "price": 8.16
+    },
+    {
+      "ticker": "NRT",
+      "price": 8.16
+    }
+  ],
+  "380": [
+    {
+      "ticker": "IDRA",
+      "price": 7.45
+    },
+    {
+      "ticker": "VSTM",
+      "price": 8.139
+    },
+    {
+      "ticker": "NRT",
+      "price": 8.16
+    }
+  ]
+}

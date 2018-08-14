@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "ASEA",
+      "price": 15.68
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CNNE",
+      "price": 17.34
+    },
+    {
+      "ticker": "ASEA",
+      "price": 15.68
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CNNE",
+      "price": 17.8
+    },
+    {
+      "ticker": "ASEA",
+      "price": 15.68
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CNNE",
+      "price": 17.45
+    },
+    {
+      "ticker": "URR",
+      "price": 16.7
+    },
+    {
+      "ticker": "ASEA",
+      "price": 15.68
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "LIVE",
+      "price": 11.36
+    },
+    {
+      "ticker": "FRD",
+      "price": 11.37
+    },
+    {
+      "ticker": "SWCH",
+      "price": 14.11
+    }
+  ],
+  "5": [
+    {
+      "ticker": "LIVE",
+      "price": 11.36
+    },
+    {
+      "ticker": "FRD",
+      "price": 11.288
+    },
+    {
+      "ticker": "SWCH",
+      "price": 14.03
+    }
+  ],
+  "16": [
+    {
+      "ticker": "LIVE",
+      "price": 11.642
+    },
+    {
+      "ticker": "FRD",
+      "price": 11.3773
+    },
+    {
+      "ticker": "SWCH",
+      "price": 14.08
+    }
+  ],
+  "30": [
+    {
+      "ticker": "LIVE",
+      "price": 11.6
+    },
+    {
+      "ticker": "FRD",
+      "price": 11.2152
+    },
+    {
+      "ticker": "SWCH",
+      "price": 14
+    }
+  ]
+}

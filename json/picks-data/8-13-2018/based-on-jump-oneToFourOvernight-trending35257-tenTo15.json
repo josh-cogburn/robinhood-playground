@@ -1,0 +1,90 @@
+{
+  "0": [
+    {
+      "ticker": "VIAV",
+      "price": 10.97
+    },
+    {
+      "ticker": "CSPI",
+      "price": 11.25
+    },
+    {
+      "ticker": "FRD",
+      "price": 11.37
+    },
+    {
+      "ticker": "SWCH",
+      "price": 14.11
+    },
+    {
+      "ticker": "TRUE",
+      "price": 12.65
+    }
+  ],
+  "5": [
+    {
+      "ticker": "VIAV",
+      "price": 10.88
+    },
+    {
+      "ticker": "CSPI",
+      "price": 11.25
+    },
+    {
+      "ticker": "FRD",
+      "price": 11.288
+    },
+    {
+      "ticker": "SWCH",
+      "price": 14.03
+    },
+    {
+      "ticker": "TRUE",
+      "price": 12.61
+    }
+  ],
+  "16": [
+    {
+      "ticker": "VIAV",
+      "price": 10.9
+    },
+    {
+      "ticker": "CSPI",
+      "price": 11.25
+    },
+    {
+      "ticker": "FRD",
+      "price": 11.3773
+    },
+    {
+      "ticker": "SWCH",
+      "price": 14.08
+    },
+    {
+      "ticker": "TRUE",
+      "price": 12.45
+    }
+  ],
+  "30": [
+    {
+      "ticker": "VIAV",
+      "price": 10.89
+    },
+    {
+      "ticker": "CSPI",
+      "price": 10.53
+    },
+    {
+      "ticker": "FRD",
+      "price": 11.2152
+    },
+    {
+      "ticker": "SWCH",
+      "price": 14
+    },
+    {
+      "ticker": "TRUE",
+      "price": 12.015
+    }
+  ]
+}

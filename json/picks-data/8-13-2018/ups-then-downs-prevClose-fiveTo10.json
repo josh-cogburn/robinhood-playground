@@ -1,0 +1,80 @@
+{
+  "10": [
+    {
+      "ticker": "PVG",
+      "price": 8.89
+    }
+  ],
+  "50": [
+    {
+      "ticker": "PVG",
+      "price": 8.61
+    }
+  ],
+  "200": [
+    {
+      "ticker": "NFEC",
+      "price": 5.82
+    },
+    {
+      "ticker": "RFIL",
+      "price": 9.95
+    },
+    {
+      "ticker": "PVG",
+      "price": 8.6
+    },
+    {
+      "ticker": "METC",
+      "price": 7.48
+    },
+    {
+      "ticker": "CCLP",
+      "price": 6.04
+    }
+  ],
+  "300": [
+    {
+      "ticker": "NFEC",
+      "price": 5.7641
+    },
+    {
+      "ticker": "METC",
+      "price": 7.35
+    },
+    {
+      "ticker": "CCLP",
+      "price": 5.95
+    },
+    {
+      "ticker": "DS",
+      "price": 5.68
+    },
+    {
+      "ticker": "PVG",
+      "price": 8.71
+    }
+  ],
+  "380": [
+    {
+      "ticker": "NFEC",
+      "price": 5.4196
+    },
+    {
+      "ticker": "CCLP",
+      "price": 5.88
+    },
+    {
+      "ticker": "METC",
+      "price": 7.42
+    },
+    {
+      "ticker": "PVG",
+      "price": 8.695
+    },
+    {
+      "ticker": "MOTS",
+      "price": 5.68
+    }
+  ]
+}

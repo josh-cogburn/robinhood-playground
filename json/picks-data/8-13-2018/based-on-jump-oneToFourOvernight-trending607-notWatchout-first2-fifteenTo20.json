@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "UBX",
+      "price": 16
+    },
+    {
+      "ticker": "DM",
+      "price": 15.9
+    }
+  ],
+  "5": [
+    {
+      "ticker": "UBX",
+      "price": 16
+    },
+    {
+      "ticker": "DM",
+      "price": 16.025
+    }
+  ],
+  "16": [
+    {
+      "ticker": "UBX",
+      "price": 15.95
+    },
+    {
+      "ticker": "DM",
+      "price": 16
+    }
+  ],
+  "30": [
+    {
+      "ticker": "UBX",
+      "price": 15.9177
+    },
+    {
+      "ticker": "DM",
+      "price": 16
+    }
+  ]
+}

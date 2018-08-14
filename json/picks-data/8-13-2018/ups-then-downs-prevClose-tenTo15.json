@@ -1,0 +1,35 @@
+{
+  "10": [],
+  "50": [
+    {
+      "ticker": "RFIL",
+      "price": 10.375
+    }
+  ],
+  "200": [
+    {
+      "ticker": "IMMR",
+      "price": 11.14
+    }
+  ],
+  "300": [
+    {
+      "ticker": "RFIL",
+      "price": 10.15
+    },
+    {
+      "ticker": "IMMR",
+      "price": 11.16
+    }
+  ],
+  "380": [
+    {
+      "ticker": "RFIL",
+      "price": 10.1762
+    },
+    {
+      "ticker": "IMMR",
+      "price": 11.155
+    }
+  ]
+}

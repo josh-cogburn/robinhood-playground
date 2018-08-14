@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "TRIL",
+      "price": 5.1
+    },
+    {
+      "ticker": "CRBP",
+      "price": 5
+    }
+  ],
+  "40": [
+    {
+      "ticker": "EGLE",
+      "price": 5.3
+    },
+    {
+      "ticker": "PIRS",
+      "price": 5.57
+    }
+  ],
+  "100": [
+    {
+      "ticker": "GNE",
+      "price": 5.21
+    },
+    {
+      "ticker": "PIRS",
+      "price": 5.36
+    }
+  ],
+  "200": [
+    {
+      "ticker": "XELA",
+      "price": 5.01
+    },
+    {
+      "ticker": "PIRS",
+      "price": 5.36
+    }
+  ],
+  "260": [
+    {
+      "ticker": "XELA",
+      "price": 5.05
+    },
+    {
+      "ticker": "PIRS",
+      "price": 5.42
+    }
+  ],
+  "351": [
+    {
+      "ticker": "XELA",
+      "price": 5.03
+    },
+    {
+      "ticker": "PIRS",
+      "price": 5.395
+    }
+  ],
+  "381": [
+    {
+      "ticker": "XELA",
+      "price": 5.02
+    },
+    {
+      "ticker": "EGLE",
+      "price": 5.185
+    }
+  ]
+}

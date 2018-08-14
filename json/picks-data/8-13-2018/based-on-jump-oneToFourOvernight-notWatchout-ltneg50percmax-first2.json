@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "EVFM",
+      "price": 2.16
+    },
+    {
+      "ticker": "DXYN",
+      "price": 1.95
+    }
+  ],
+  "5": [
+    {
+      "ticker": "EVFM",
+      "price": 2.0842
+    },
+    {
+      "ticker": "DXYN",
+      "price": 1.9
+    }
+  ],
+  "16": [
+    {
+      "ticker": "EVFM",
+      "price": 2.0842
+    },
+    {
+      "ticker": "DXYN",
+      "price": 1.9
+    }
+  ],
+  "30": [
+    {
+      "ticker": "VRML",
+      "price": 0.5226
+    },
+    {
+      "ticker": "EVFM",
+      "price": 2.0842
+    }
+  ]
+}

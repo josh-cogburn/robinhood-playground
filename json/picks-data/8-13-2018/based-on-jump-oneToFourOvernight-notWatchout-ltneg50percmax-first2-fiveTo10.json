@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "HMHC",
+      "price": 5.65
+    },
+    {
+      "ticker": "DRIP",
+      "price": 6.37
+    }
+  ],
+  "5": [
+    {
+      "ticker": "HMHC",
+      "price": 5.65
+    },
+    {
+      "ticker": "DRIP",
+      "price": 6.48
+    }
+  ],
+  "16": [
+    {
+      "ticker": "WTID",
+      "price": 8.24
+    },
+    {
+      "ticker": "HMHC",
+      "price": 5.65
+    }
+  ],
+  "30": [
+    {
+      "ticker": "WTID",
+      "price": 8.25
+    },
+    {
+      "ticker": "HMHC",
+      "price": 5.675
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "ANY",
+      "price": 0.16
+    },
+    {
+      "ticker": "ACST",
+      "price": 0.473
+    }
+  ],
+  "40": [
+    {
+      "ticker": "HGT",
+      "price": 0.393
+    },
+    {
+      "ticker": "SNOA",
+      "price": 2.14
+    }
+  ],
+  "100": [
+    {
+      "ticker": "HGT",
+      "price": 0.3411
+    },
+    {
+      "ticker": "SXE",
+      "price": 0.5785
+    }
+  ],
+  "200": [
+    {
+      "ticker": "HGT",
+      "price": 0.3699
+    },
+    {
+      "ticker": "HPJ",
+      "price": 3.05
+    }
+  ],
+  "260": [
+    {
+      "ticker": "HGT",
+      "price": 0.37
+    },
+    {
+      "ticker": "AUMN",
+      "price": 0.2339
+    }
+  ],
+  "351": [
+    {
+      "ticker": "DTRM",
+      "price": 0.93
+    },
+    {
+      "ticker": "GLBS",
+      "price": 0.4285
+    }
+  ],
+  "381": [
+    {
+      "ticker": "DTRM",
+      "price": 0.93
+    },
+    {
+      "ticker": "TPNL",
+      "price": 3.65
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "LIVE",
+      "price": 11.36
+    },
+    {
+      "ticker": "FRD",
+      "price": 11.37
+    }
+  ],
+  "5": [
+    {
+      "ticker": "LIVE",
+      "price": 11.36
+    },
+    {
+      "ticker": "FRD",
+      "price": 11.288
+    }
+  ],
+  "16": [
+    {
+      "ticker": "LIVE",
+      "price": 11.642
+    },
+    {
+      "ticker": "FRD",
+      "price": 11.3773
+    }
+  ],
+  "30": [
+    {
+      "ticker": "LIVE",
+      "price": 11.6
+    },
+    {
+      "ticker": "FRD",
+      "price": 11.2152
+    }
+  ]
+}
