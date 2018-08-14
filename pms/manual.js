@@ -298,7 +298,7 @@ const anyCountPerfectos = [
     'based-on-jump-gtEightOvernight-trending103-first1-tenTo15-30',
     // 'based-on-jump-gtEightOvernight-trending103-tenTo15-30',
     'low-float-high-volume-volTo2WeekPoints-fifteenTo20-6',
-    'based-on-jump-down3overnight-trending103-notWatchout-ltneg50percmax-fiveTo10-5',
+    // 'based-on-jump-down3overnight-trending103-notWatchout-ltneg50percmax-fiveTo10-5',
     'sudden-drops-last10trend-filter20-221',
     'low-float-high-volume-floatPoints-trenddown7to10-fifteenTo20-150',
     'low-float-high-volume-floatTimestwoWeekVolToAvgPoints-trenddowngt10-fifteenTo20-210',
@@ -312,7 +312,7 @@ const anyCountPerfectos = [
 
 const moreaddsons = [
     'low-float-high-volume-volToAvgPoints-trenddowngt20-shouldWatchout-6',
-    
+
 ]
 
 

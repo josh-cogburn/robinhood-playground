@@ -8,13 +8,7 @@ const flatten = list => list.reduce(
     (a, b) => a.concat(Array.isArray(b) ? flatten(b) : b), []
 );
 
-const getFilesSortedByDate = async jsonFolder => {
-    let files = await fs.readdir(`./json/${jsonFolder}`);
-    return files
-        .map(f => f.split('.')[0])
-        .sort((a, b) => new Date(a) - new Date(b))
-        .reverse();
-};
+const getFilesSortedByDate = require('../utils/get-files-sorted-by-date');
 
 module.exports = async (Robinhood, daysBack, ...pms) => {
 
