@@ -152,53 +152,63 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
         );
     });
 
-    // handle older than four days
-    const olderThanNDays = withAge.filter(pos => pos.dayAge >= sellAllStocksOnNthDay);
-    await mapLimit(olderThanNDays, 3, async pos => {
-        await sellPosition({
-            ticker: pos.symbol,
-            quantity: pos.quantity
-        }, `older than ${sellAllStocksOnNthDay} days: ${pos.dayAge}`);
-    });
 
+    const handleOverNDays = async () => {
+        // handle older than four days
+        const olderThanNDays = withAge.filter(pos => pos.dayAge >= sellAllStocksOnNthDay);
+        await mapLimit(olderThanNDays, 3, async pos => {
+            await sellPosition({
+                ticker: pos.symbol,
+                quantity: pos.quantity
+            }, `older than ${sellAllStocksOnNthDay} days: ${pos.dayAge}`);
+        });
+    };
 
-    // handle under four days (but not bought today) check for playout strategy
-    let underNDays = withAge.filter(pos => pos.dayAge >= 1 && pos.dayAge < sellAllStocksOnNthDay);
-    if (!underNDays.length) return;
-    const highestPlayouts = await determineSingleBestPlayoutFromMultiOutput(
-        Robinhood,
-        ...underNDays.map(pos => pos.strategy)
-    );
-    // console.log(highestPlayouts, 'highestPlayouts')
-    underNDays = underNDays.map(pos => ({
-        ...pos,
-        highestPlayout: highestPlayouts.find(obj => obj.strategy === pos.strategy).highestPlayout
-    }));
+    const handleUnderNDays = async () => {
+        // handle under four days (but not bought today) check for playout strategy
+        let underNDays = withAge.filter(pos => pos.dayAge >= 1 && pos.dayAge < sellAllStocksOnNthDay);
+        if (!underNDays.length) return;
+        const highestPlayouts = await determineSingleBestPlayoutFromMultiOutput(
+            Robinhood,
+            ...underNDays.map(pos => pos.strategy)
+        );
+        // console.log(highestPlayouts, 'highestPlayouts')
+        underNDays = underNDays.map(pos => ({
+            ...pos,
+            highestPlayout: highestPlayouts.find(obj => obj.strategy === pos.strategy).highestPlayout
+        }));
 
-    // console.log('underNDays', underNDays);
-    for (let pos of underNDays) {
-        // const strategy = await findStrategyThatPurchasedTicker(pos.symbol);
-        const breakdowns = await getStratPerfTrends(pos.ticker, pos.date, pos.strategy) || [];
-        if (!breakdowns.length) {
-            breakdowns.push(
-                getTrend(
-                    pos.currentPrice,
-                    pos.average_buy_price
-                )
-            );
+        // console.log('underNDays', underNDays);
+        for (let pos of underNDays) {
+            // const strategy = await findStrategyThatPurchasedTicker(pos.symbol);
+            const breakdowns = await getStratPerfTrends(pos.ticker, pos.date, pos.strategy) || [];
+            if (!breakdowns.length) {
+                breakdowns.push(
+                    getTrend(
+                        pos.currentPrice,
+                        pos.average_buy_price
+                    )
+                );
+            }
+            const playoutToRun = pos.highestPlayout || sellStrategy;
+            pos.playoutToRun = playoutToRun;
+            const playoutFn = playouts[playoutToRun].fn;
+            const { hitFn: hitPlayout } = playoutFn(breakdowns);
+            pos.hitPlayout = hitPlayout;
+            console.log(pos.ticker, breakdowns, 'playout', playoutToRun, 'hitPlayout', hitPlayout);
         }
-        const playoutToRun = pos.highestPlayout || sellStrategy;
-        pos.playoutToRun = playoutToRun;
-        const playoutFn = playouts[playoutToRun].fn;
-        const { hitFn: hitPlayout } = playoutFn(breakdowns);
-        pos.hitPlayout = hitPlayout;
-        console.log(pos.ticker, breakdowns, 'playout', playoutToRun, 'hitPlayout', hitPlayout);
-    }
 
-    // sell all under 4 days that hit the playoutFn
-    await mapLimit(underNDays.filter(pos => pos.hitPlayout), 3, async pos => {
-        await sellPosition(pos, `hit ${pos.playoutToRun} playout`);
-    });
+        // sell all under 4 days that hit the playoutFn
+        await mapLimit(underNDays.filter(pos => pos.hitPlayout), 3, async pos => {
+            await sellPosition(pos, `hit ${pos.playoutToRun} playout`);
+        });
+    };
+
+    await Promise.all([
+        handleOverNDays(),
+        handleUnderNDays()
+    ]);
+
 
 
 };

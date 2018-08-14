@@ -48,7 +48,7 @@ const additionalCronConfig = [
     // sell all based on playout
     {
         name: 'sellAllBasedOnPlayout',
-        run: [17],
+        run: [3],
         fn: sellAllBasedOnPlayout
     },
 
