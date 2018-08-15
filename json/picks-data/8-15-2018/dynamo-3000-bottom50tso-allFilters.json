@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "SNGX",
+      "price": 1.39
+    },
+    {
+      "ticker": "RIBT",
+      "price": 2.9
+    }
+  ],
+  "40": [
+    {
+      "ticker": "SIGM",
+      "price": 0.225
+    },
+    {
+      "ticker": "GNUS",
+      "price": 2.5336
+    },
+    {
+      "ticker": "JCP",
+      "price": 2.385
+    }
+  ],
+  "100": [
+    {
+      "ticker": "SIGM",
+      "price": 0.225
+    },
+    {
+      "ticker": "GNUS",
+      "price": 2.5
+    }
+  ],
+  "200": [
+    {
+      "ticker": "SIGM",
+      "price": 0.202
+    },
+    {
+      "ticker": "GNUS",
+      "price": 2.5602
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SIGM",
+      "price": 0.21
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SIGM",
+      "price": 0.22
+    },
+    {
+      "ticker": "LINC",
+      "price": 2.15
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SIGM",
+      "price": 0.2
+    },
+    {
+      "ticker": "LINC",
+      "price": 2.15
+    }
+  ]
+}

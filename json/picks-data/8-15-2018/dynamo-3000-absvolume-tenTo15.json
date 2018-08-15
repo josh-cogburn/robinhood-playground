@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "SSFN",
+      "price": 10.0693
+    },
+    {
+      "ticker": "GDP",
+      "price": 12.3
+    }
+  ],
+  "40": [
+    {
+      "ticker": "NUGT",
+      "price": 14.18
+    },
+    {
+      "ticker": "UVXY",
+      "price": 10.45
+    }
+  ],
+  "100": [
+    {
+      "ticker": "VERI",
+      "price": 10.15
+    },
+    {
+      "ticker": "UVXY",
+      "price": 10.11
+    }
+  ],
+  "200": [
+    {
+      "ticker": "VERI",
+      "price": 10.11
+    },
+    {
+      "ticker": "ABCD",
+      "price": 12.83
+    }
+  ],
+  "260": [
+    {
+      "ticker": "VERI",
+      "price": 10.49
+    },
+    {
+      "ticker": "ABCD",
+      "price": 12.93
+    }
+  ],
+  "351": [
+    {
+      "ticker": "VERI",
+      "price": 10.43
+    },
+    {
+      "ticker": "TBIO",
+      "price": 11.8
+    }
+  ],
+  "381": [
+    {
+      "ticker": "NUGT",
+      "price": 13.59
+    },
+    {
+      "ticker": "TBIO",
+      "price": 11.34
+    }
+  ]
+}

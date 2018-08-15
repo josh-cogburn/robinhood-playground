@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "SORL",
+      "price": 5.1655
+    },
+    {
+      "ticker": "EAST",
+      "price": 8
+    }
+  ],
+  "5": [
+    {
+      "ticker": "SORL",
+      "price": 5.44
+    },
+    {
+      "ticker": "EAST",
+      "price": 8.02
+    }
+  ],
+  "16": [
+    {
+      "ticker": "SORL",
+      "price": 5.4
+    },
+    {
+      "ticker": "EAST",
+      "price": 8.1
+    }
+  ],
+  "30": [
+    {
+      "ticker": "SORL",
+      "price": 5.3205
+    },
+    {
+      "ticker": "EAST",
+      "price": 8.02
+    }
+  ]
+}

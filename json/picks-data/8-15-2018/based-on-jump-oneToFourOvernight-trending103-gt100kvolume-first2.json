@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "INPX",
+      "price": 0.1307
+    },
+    {
+      "ticker": "GERN",
+      "price": 3.901
+    }
+  ],
+  "5": [
+    {
+      "ticker": "NEPT",
+      "price": 2.93
+    },
+    {
+      "ticker": "GERN",
+      "price": 3.92
+    }
+  ],
+  "16": [
+    {
+      "ticker": "NEPT",
+      "price": 2.98
+    },
+    {
+      "ticker": "EKSO",
+      "price": 2.9723
+    }
+  ],
+  "30": [
+    {
+      "ticker": "NEPT",
+      "price": 2.935
+    },
+    {
+      "ticker": "EKSO",
+      "price": 3.08
+    }
+  ]
+}

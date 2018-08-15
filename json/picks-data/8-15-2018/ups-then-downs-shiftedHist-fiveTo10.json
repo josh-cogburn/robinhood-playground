@@ -1,0 +1,54 @@
+{
+  "10": [
+    {
+      "ticker": "UVXY",
+      "price": 9.66
+    },
+    {
+      "ticker": "EAST",
+      "price": 8.1
+    }
+  ],
+  "50": [
+    {
+      "ticker": "EAST",
+      "price": 7.99
+    }
+  ],
+  "200": [
+    {
+      "ticker": "EAST",
+      "price": 7.89
+    }
+  ],
+  "300": [
+    {
+      "ticker": "EAST",
+      "price": 7.78
+    }
+  ],
+  "380": [
+    {
+      "ticker": "UVXY",
+      "price": 9.79
+    },
+    {
+      "ticker": "INSE",
+      "price": 7.125
+    },
+    {
+      "ticker": "EAST",
+      "price": 7.85
+    }
+  ],
+  "600": [
+    {
+      "ticker": "UVXY",
+      "price": 9.76
+    },
+    {
+      "ticker": "INSE",
+      "price": 7.3
+    }
+  ]
+}

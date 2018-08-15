@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "HOLI",
+      "price": 16.5
+    },
+    {
+      "ticker": "AQST",
+      "price": 15.9201
+    }
+  ],
+  "40": [
+    {
+      "ticker": "HOLI",
+      "price": 17.57
+    },
+    {
+      "ticker": "COLL",
+      "price": 16.1048
+    }
+  ],
+  "100": [
+    {
+      "ticker": "GASL",
+      "price": 18.645
+    },
+    {
+      "ticker": "COLL",
+      "price": 15.975
+    }
+  ],
+  "200": [
+    {
+      "ticker": "GASL",
+      "price": 19.0933
+    },
+    {
+      "ticker": "COLL",
+      "price": 16.005
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GASL",
+      "price": 18.9565
+    },
+    {
+      "ticker": "ACRS",
+      "price": 15.29
+    }
+  ],
+  "351": [
+    {
+      "ticker": "EAF",
+      "price": 17.81
+    },
+    {
+      "ticker": "GASL",
+      "price": 18.7801
+    }
+  ],
+  "381": [
+    {
+      "ticker": "GASL",
+      "price": 18.86
+    },
+    {
+      "ticker": "EAF",
+      "price": 18
+    }
+  ]
+}

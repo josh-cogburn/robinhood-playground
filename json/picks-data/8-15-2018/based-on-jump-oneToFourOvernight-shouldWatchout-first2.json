@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "ATIS",
+      "price": 0.3811
+    },
+    {
+      "ticker": "SUNW",
+      "price": 0.7
+    }
+  ],
+  "5": [
+    {
+      "ticker": "ATIS",
+      "price": 0.36
+    },
+    {
+      "ticker": "APHB",
+      "price": 1.14
+    }
+  ],
+  "16": [
+    {
+      "ticker": "ATIS",
+      "price": 0.365
+    },
+    {
+      "ticker": "APHB",
+      "price": 1.1599
+    }
+  ],
+  "30": [
+    {
+      "ticker": "ATIS",
+      "price": 0.365
+    },
+    {
+      "ticker": "APHB",
+      "price": 1.159
+    }
+  ]
+}

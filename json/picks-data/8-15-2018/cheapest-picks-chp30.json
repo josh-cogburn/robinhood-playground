@@ -1,0 +1,856 @@
+{
+  "4": [
+    {
+      "ticker": "ARLZ",
+      "price": 0.06
+    },
+    {
+      "ticker": "RSLS",
+      "price": 0.095
+    },
+    {
+      "ticker": "GST",
+      "price": 0.1
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.1032
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.136
+    },
+    {
+      "ticker": "NAVB",
+      "price": 0.1499
+    },
+    {
+      "ticker": "OHRP",
+      "price": 0.1627
+    },
+    {
+      "ticker": "LODE",
+      "price": 0.167
+    },
+    {
+      "ticker": "BPMX",
+      "price": 0.1685
+    },
+    {
+      "ticker": "GLOW",
+      "price": 0.1748
+    },
+    {
+      "ticker": "ALN",
+      "price": 0.1753
+    },
+    {
+      "ticker": "RHE",
+      "price": 0.1764
+    },
+    {
+      "ticker": "AMMA",
+      "price": 0.178
+    },
+    {
+      "ticker": "XSPA",
+      "price": 0.178
+    },
+    {
+      "ticker": "NSPR",
+      "price": 0.213
+    },
+    {
+      "ticker": "IMUC",
+      "price": 0.218
+    },
+    {
+      "ticker": "AKER",
+      "price": 0.225
+    },
+    {
+      "ticker": "YUMA",
+      "price": 0.225
+    },
+    {
+      "ticker": "CEI",
+      "price": 0.23
+    },
+    {
+      "ticker": "HUSA",
+      "price": 0.2313
+    },
+    {
+      "ticker": "MNGA",
+      "price": 0.2315
+    },
+    {
+      "ticker": "RGLS",
+      "price": 0.2399
+    },
+    {
+      "ticker": "AUMN",
+      "price": 0.2475
+    },
+    {
+      "ticker": "CPHI",
+      "price": 0.2496
+    },
+    {
+      "ticker": "ANY",
+      "price": 0.25
+    },
+    {
+      "ticker": "EARS",
+      "price": 0.26
+    },
+    {
+      "ticker": "AGRX",
+      "price": 0.2651
+    },
+    {
+      "ticker": "IPCI",
+      "price": 0.2699
+    },
+    {
+      "ticker": "APRI",
+      "price": 0.2704
+    },
+    {
+      "ticker": "OHGI",
+      "price": 0.275
+    }
+  ],
+  "65": [
+    {
+      "ticker": "ARLZ",
+      "price": 0.054
+    },
+    {
+      "ticker": "RSLS",
+      "price": 0.0828
+    },
+    {
+      "ticker": "GST",
+      "price": 0.0938
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.1053
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.1339
+    },
+    {
+      "ticker": "NAVB",
+      "price": 0.1497
+    },
+    {
+      "ticker": "XSPA",
+      "price": 0.1499
+    },
+    {
+      "ticker": "LODE",
+      "price": 0.1552
+    },
+    {
+      "ticker": "OHRP",
+      "price": 0.161
+    },
+    {
+      "ticker": "BPMX",
+      "price": 0.1652
+    },
+    {
+      "ticker": "RHE",
+      "price": 0.1673
+    },
+    {
+      "ticker": "ALN",
+      "price": 0.1719
+    },
+    {
+      "ticker": "GLOW",
+      "price": 0.1751
+    },
+    {
+      "ticker": "AMMA",
+      "price": 0.177
+    },
+    {
+      "ticker": "YUMA",
+      "price": 0.1881
+    },
+    {
+      "ticker": "NSPR",
+      "price": 0.197
+    },
+    {
+      "ticker": "SIGM",
+      "price": 0.2
+    },
+    {
+      "ticker": "IMUC",
+      "price": 0.205
+    },
+    {
+      "ticker": "HUSA",
+      "price": 0.2255
+    },
+    {
+      "ticker": "CPHI",
+      "price": 0.2274
+    },
+    {
+      "ticker": "MNGA",
+      "price": 0.23
+    },
+    {
+      "ticker": "CEI",
+      "price": 0.2331
+    },
+    {
+      "ticker": "ANY",
+      "price": 0.235
+    },
+    {
+      "ticker": "AKER",
+      "price": 0.235
+    },
+    {
+      "ticker": "AUMN",
+      "price": 0.2475
+    },
+    {
+      "ticker": "EARS",
+      "price": 0.25
+    },
+    {
+      "ticker": "AGRX",
+      "price": 0.2504
+    },
+    {
+      "ticker": "IPCI",
+      "price": 0.2646
+    },
+    {
+      "ticker": "APRI",
+      "price": 0.2729
+    },
+    {
+      "ticker": "RGLS",
+      "price": 0.2701
+    }
+  ],
+  "125": [
+    {
+      "ticker": "ARLZ",
+      "price": 0.0542
+    },
+    {
+      "ticker": "RSLS",
+      "price": 0.0738
+    },
+    {
+      "ticker": "GST",
+      "price": 0.0902
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.1087
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.125
+    },
+    {
+      "ticker": "XSPA",
+      "price": 0.1304
+    },
+    {
+      "ticker": "NAVB",
+      "price": 0.1388
+    },
+    {
+      "ticker": "RHE",
+      "price": 0.152
+    },
+    {
+      "ticker": "LODE",
+      "price": 0.1544
+    },
+    {
+      "ticker": "BPMX",
+      "price": 0.1612
+    },
+    {
+      "ticker": "OHRP",
+      "price": 0.1697
+    },
+    {
+      "ticker": "AMMA",
+      "price": 0.17
+    },
+    {
+      "ticker": "ALN",
+      "price": 0.171
+    },
+    {
+      "ticker": "GLOW",
+      "price": 0.1793
+    },
+    {
+      "ticker": "YUMA",
+      "price": 0.1841
+    },
+    {
+      "ticker": "NSPR",
+      "price": 0.2
+    },
+    {
+      "ticker": "IMUC",
+      "price": 0.2152
+    },
+    {
+      "ticker": "SIGM",
+      "price": 0.225
+    },
+    {
+      "ticker": "CEI",
+      "price": 0.225
+    },
+    {
+      "ticker": "CPHI",
+      "price": 0.2283
+    },
+    {
+      "ticker": "MNGA",
+      "price": 0.229
+    },
+    {
+      "ticker": "ANY",
+      "price": 0.23
+    },
+    {
+      "ticker": "HUSA",
+      "price": 0.234
+    },
+    {
+      "ticker": "AUMN",
+      "price": 0.2454
+    },
+    {
+      "ticker": "AGRX",
+      "price": 0.25
+    },
+    {
+      "ticker": "AKER",
+      "price": 0.2584
+    },
+    {
+      "ticker": "RGLS",
+      "price": 0.2589
+    },
+    {
+      "ticker": "EARS",
+      "price": 0.2599
+    },
+    {
+      "ticker": "IPCI",
+      "price": 0.2642
+    },
+    {
+      "ticker": "IPAS",
+      "price": 0.27
+    }
+  ],
+  "175": [
+    {
+      "ticker": "ARLZ",
+      "price": 0.0511
+    },
+    {
+      "ticker": "RSLS",
+      "price": 0.0753
+    },
+    {
+      "ticker": "GST",
+      "price": 0.0907
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.107
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.125
+    },
+    {
+      "ticker": "NAVB",
+      "price": 0.1388
+    },
+    {
+      "ticker": "RHE",
+      "price": 0.1494
+    },
+    {
+      "ticker": "LODE",
+      "price": 0.16
+    },
+    {
+      "ticker": "BPMX",
+      "price": 0.1628
+    },
+    {
+      "ticker": "AMMA",
+      "price": 0.1681
+    },
+    {
+      "ticker": "OHRP",
+      "price": 0.17
+    },
+    {
+      "ticker": "ALN",
+      "price": 0.1711
+    },
+    {
+      "ticker": "GLOW",
+      "price": 0.1789
+    },
+    {
+      "ticker": "XSPA",
+      "price": 0.18
+    },
+    {
+      "ticker": "YUMA",
+      "price": 0.1873
+    },
+    {
+      "ticker": "NSPR",
+      "price": 0.204
+    },
+    {
+      "ticker": "IMUC",
+      "price": 0.216
+    },
+    {
+      "ticker": "SIGM",
+      "price": 0.225
+    },
+    {
+      "ticker": "CEI",
+      "price": 0.2279
+    },
+    {
+      "ticker": "ANY",
+      "price": 0.2288
+    },
+    {
+      "ticker": "MNGA",
+      "price": 0.2298
+    },
+    {
+      "ticker": "HUSA",
+      "price": 0.232
+    },
+    {
+      "ticker": "CPHI",
+      "price": 0.235
+    },
+    {
+      "ticker": "AUMN",
+      "price": 0.2417
+    },
+    {
+      "ticker": "EARS",
+      "price": 0.25
+    },
+    {
+      "ticker": "AKER",
+      "price": 0.251
+    },
+    {
+      "ticker": "AGRX",
+      "price": 0.253
+    },
+    {
+      "ticker": "RGLS",
+      "price": 0.2546
+    },
+    {
+      "ticker": "IPCI",
+      "price": 0.2602
+    },
+    {
+      "ticker": "IPAS",
+      "price": 0.2675
+    }
+  ],
+  "225": [
+    {
+      "ticker": "ARLZ",
+      "price": 0.053
+    },
+    {
+      "ticker": "RSLS",
+      "price": 0.0808
+    },
+    {
+      "ticker": "GST",
+      "price": 0.083
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.106
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.1273
+    },
+    {
+      "ticker": "NAVB",
+      "price": 0.1388
+    },
+    {
+      "ticker": "RHE",
+      "price": 0.1527
+    },
+    {
+      "ticker": "XSPA",
+      "price": 0.1555
+    },
+    {
+      "ticker": "LODE",
+      "price": 0.16
+    },
+    {
+      "ticker": "BPMX",
+      "price": 0.1621
+    },
+    {
+      "ticker": "AMMA",
+      "price": 0.1681
+    },
+    {
+      "ticker": "OHRP",
+      "price": 0.1699
+    },
+    {
+      "ticker": "ALN",
+      "price": 0.171
+    },
+    {
+      "ticker": "GLOW",
+      "price": 0.1792
+    },
+    {
+      "ticker": "YUMA",
+      "price": 0.1857
+    },
+    {
+      "ticker": "NSPR",
+      "price": 0.2028
+    },
+    {
+      "ticker": "IMUC",
+      "price": 0.2147
+    },
+    {
+      "ticker": "MNGA",
+      "price": 0.22
+    },
+    {
+      "ticker": "SIGM",
+      "price": 0.225
+    },
+    {
+      "ticker": "CEI",
+      "price": 0.2251
+    },
+    {
+      "ticker": "HUSA",
+      "price": 0.227
+    },
+    {
+      "ticker": "ANY",
+      "price": 0.23
+    },
+    {
+      "ticker": "CPHI",
+      "price": 0.2338
+    },
+    {
+      "ticker": "AUMN",
+      "price": 0.24
+    },
+    {
+      "ticker": "EARS",
+      "price": 0.25
+    },
+    {
+      "ticker": "AKER",
+      "price": 0.2502
+    },
+    {
+      "ticker": "RGLS",
+      "price": 0.2587
+    },
+    {
+      "ticker": "AGRX",
+      "price": 0.259
+    },
+    {
+      "ticker": "IPCI",
+      "price": 0.2602
+    },
+    {
+      "ticker": "IPAS",
+      "price": 0.263
+    }
+  ],
+  "386": [
+    {
+      "ticker": "ARLZ",
+      "price": 0.0499
+    },
+    {
+      "ticker": "RSLS",
+      "price": 0.0812
+    },
+    {
+      "ticker": "GST",
+      "price": 0.087
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.1061
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.1282
+    },
+    {
+      "ticker": "RHE",
+      "price": 0.1311
+    },
+    {
+      "ticker": "NAVB",
+      "price": 0.1388
+    },
+    {
+      "ticker": "LODE",
+      "price": 0.1581
+    },
+    {
+      "ticker": "BPMX",
+      "price": 0.1619
+    },
+    {
+      "ticker": "ALN",
+      "price": 0.162
+    },
+    {
+      "ticker": "XSPA",
+      "price": 0.1699
+    },
+    {
+      "ticker": "AMMA",
+      "price": 0.17
+    },
+    {
+      "ticker": "OHRP",
+      "price": 0.1704
+    },
+    {
+      "ticker": "GLOW",
+      "price": 0.1788
+    },
+    {
+      "ticker": "SIGM",
+      "price": 0.2
+    },
+    {
+      "ticker": "NSPR",
+      "price": 0.2002
+    },
+    {
+      "ticker": "IMUC",
+      "price": 0.2084
+    },
+    {
+      "ticker": "YUMA",
+      "price": 0.21
+    },
+    {
+      "ticker": "MNGA",
+      "price": 0.22
+    },
+    {
+      "ticker": "CPHI",
+      "price": 0.2258
+    },
+    {
+      "ticker": "HUSA",
+      "price": 0.2276
+    },
+    {
+      "ticker": "ANY",
+      "price": 0.234
+    },
+    {
+      "ticker": "CEI",
+      "price": 0.2369
+    },
+    {
+      "ticker": "AUMN",
+      "price": 0.24
+    },
+    {
+      "ticker": "EARS",
+      "price": 0.2498
+    },
+    {
+      "ticker": "AGRX",
+      "price": 0.2563
+    },
+    {
+      "ticker": "AKER",
+      "price": 0.258
+    },
+    {
+      "ticker": "RGLS",
+      "price": 0.26
+    },
+    {
+      "ticker": "IPAS",
+      "price": 0.26
+    },
+    {
+      "ticker": "OHGI",
+      "price": 0.2649
+    }
+  ],
+  "-4": [
+    {
+      "ticker": "ARLZ",
+      "price": 0.063
+    },
+    {
+      "ticker": "GST",
+      "price": 0.1016
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.1031
+    },
+    {
+      "ticker": "RSLS",
+      "price": 0.1224
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.1371
+    },
+    {
+      "ticker": "NAVB",
+      "price": 0.1493
+    },
+    {
+      "ticker": "OHRP",
+      "price": 0.1635
+    },
+    {
+      "ticker": "BPMX",
+      "price": 0.166
+    },
+    {
+      "ticker": "LODE",
+      "price": 0.167
+    },
+    {
+      "ticker": "AMMA",
+      "price": 0.1701
+    },
+    {
+      "ticker": "GLOW",
+      "price": 0.1748
+    },
+    {
+      "ticker": "ALN",
+      "price": 0.1753
+    },
+    {
+      "ticker": "RHE",
+      "price": 0.178
+    },
+    {
+      "ticker": "XSPA",
+      "price": 0.2
+    },
+    {
+      "ticker": "NSPR",
+      "price": 0.2099
+    },
+    {
+      "ticker": "IMUC",
+      "price": 0.218
+    },
+    {
+      "ticker": "YUMA",
+      "price": 0.225
+    },
+    {
+      "ticker": "ANY",
+      "price": 0.2351
+    },
+    {
+      "ticker": "HUSA",
+      "price": 0.2361
+    },
+    {
+      "ticker": "CPHI",
+      "price": 0.2496
+    },
+    {
+      "ticker": "AUMN",
+      "price": 0.2506
+    },
+    {
+      "ticker": "CEI",
+      "price": 0.26
+    },
+    {
+      "ticker": "RGLS",
+      "price": 0.263
+    },
+    {
+      "ticker": "AGRX",
+      "price": 0.2663
+    },
+    {
+      "ticker": "IPCI",
+      "price": 0.273
+    },
+    {
+      "ticker": "APRI",
+      "price": 0.2731
+    },
+    {
+      "ticker": "MNGA",
+      "price": 0.277
+    },
+    {
+      "ticker": "EARS",
+      "price": 0.2793
+    },
+    {
+      "ticker": "IPAS",
+      "price": 0.2799
+    },
+    {
+      "ticker": "KOOL",
+      "price": 0.285
+    }
+  ]
+}

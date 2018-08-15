@@ -54,7 +54,7 @@ const trendFilter = async (Robinhood, trend) => {
 
         withPercDown = await addOvernightJump(Robinhood, withPercDown);
 
-        console.log('with', JSON.stringify(withPercDown, null, 2));
+        // console.log('with', JSON.stringify(withPercDown, null, 2));
         const orderBy = (what, trend) => {
             return trend
                 .sort((a, b) => a[what] - b[what])

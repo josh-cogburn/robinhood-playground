@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "EUM",
+      "price": 19.9599
+    },
+    {
+      "ticker": "OTEL",
+      "price": 17
+    }
+  ],
+  "5": [
+    {
+      "ticker": "EUM",
+      "price": 19.91
+    },
+    {
+      "ticker": "OTEL",
+      "price": 17.45
+    }
+  ],
+  "16": [
+    {
+      "ticker": "EUM",
+      "price": 19.949
+    },
+    {
+      "ticker": "OTEL",
+      "price": 17.45
+    }
+  ],
+  "30": [
+    {
+      "ticker": "EUM",
+      "price": 19.98
+    },
+    {
+      "ticker": "OTEL",
+      "price": 17.45
+    }
+  ]
+}

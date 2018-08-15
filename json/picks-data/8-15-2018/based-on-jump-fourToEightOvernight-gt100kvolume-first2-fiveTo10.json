@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "SORL",
+      "price": 5.1655
+    },
+    {
+      "ticker": "UVXY",
+      "price": 9.71
+    }
+  ],
+  "5": [
+    {
+      "ticker": "UVXY",
+      "price": 9.59
+    },
+    {
+      "ticker": "CRON",
+      "price": 6.17
+    }
+  ],
+  "16": [
+    {
+      "ticker": "SORL",
+      "price": 5.4
+    },
+    {
+      "ticker": "UVXY",
+      "price": 9.9156
+    }
+  ],
+  "30": [
+    {
+      "ticker": "SORL",
+      "price": 5.3205
+    },
+    {
+      "ticker": "CRON",
+      "price": 6.35
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "IPCI",
+      "price": 0.2699
+    },
+    {
+      "ticker": "AKER",
+      "price": 0.22
+    }
+  ],
+  "40": [
+    {
+      "ticker": "NLST",
+      "price": 0.1075
+    },
+    {
+      "ticker": "IPCI",
+      "price": 0.2725
+    }
+  ],
+  "100": [
+    {
+      "ticker": "NLST",
+      "price": 0.1104
+    },
+    {
+      "ticker": "IPCI",
+      "price": 0.2642
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ALN",
+      "price": 0.171
+    },
+    {
+      "ticker": "IPCI",
+      "price": 0.2602
+    }
+  ],
+  "260": [
+    {
+      "ticker": "IPCI",
+      "price": 0.26
+    },
+    {
+      "ticker": "AKER",
+      "price": 0.2503
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AKER",
+      "price": 0.254
+    },
+    {
+      "ticker": "RGSE",
+      "price": 0.338
+    }
+  ],
+  "381": [
+    {
+      "ticker": "IPCI",
+      "price": 0.265
+    },
+    {
+      "ticker": "AKER",
+      "price": 0.265
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "0": [
+    {
+      "ticker": "AKER",
+      "price": 0.22
+    },
+    {
+      "ticker": "RSLS",
+      "price": 0.0908
+    },
+    {
+      "ticker": "ENPH",
+      "price": 4.4925
+    }
+  ],
+  "5": [
+    {
+      "ticker": "RSLS",
+      "price": 0.0822
+    },
+    {
+      "ticker": "ENPH",
+      "price": 4.4361
+    },
+    {
+      "ticker": "CRMD",
+      "price": 0.4986
+    }
+  ],
+  "16": [
+    {
+      "ticker": "SIGM",
+      "price": 0.2
+    },
+    {
+      "ticker": "AKER",
+      "price": 0.239
+    },
+    {
+      "ticker": "RSLS",
+      "price": 0.081
+    },
+    {
+      "ticker": "ENPH",
+      "price": 4.5079
+    }
+  ],
+  "30": [
+    {
+      "ticker": "SIGM",
+      "price": 0.25
+    },
+    {
+      "ticker": "AKER",
+      "price": 0.2274
+    },
+    {
+      "ticker": "RSLS",
+      "price": 0.085
+    },
+    {
+      "ticker": "ENPH",
+      "price": 4.625
+    },
+    {
+      "ticker": "CRMD",
+      "price": 0.49
+    }
+  ]
+}

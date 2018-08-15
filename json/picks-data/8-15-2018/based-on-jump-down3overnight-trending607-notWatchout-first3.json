@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "SIGM",
+      "price": 0.275
+    },
+    {
+      "ticker": "SDLP",
+      "price": 3.418
+    },
+    {
+      "ticker": "AMS",
+      "price": 2.9
+    }
+  ],
+  "5": [
+    {
+      "ticker": "SIGM",
+      "price": 0.275
+    },
+    {
+      "ticker": "SDLP",
+      "price": 3.46
+    },
+    {
+      "ticker": "AMS",
+      "price": 2.9
+    }
+  ],
+  "16": [
+    {
+      "ticker": "SIGM",
+      "price": 0.2
+    },
+    {
+      "ticker": "INFU",
+      "price": 3
+    },
+    {
+      "ticker": "CPHI",
+      "price": 0.231
+    }
+  ],
+  "30": [
+    {
+      "ticker": "SIGM",
+      "price": 0.25
+    },
+    {
+      "ticker": "INFU",
+      "price": 3
+    },
+    {
+      "ticker": "CPHI",
+      "price": 0.235
+    }
+  ]
+}

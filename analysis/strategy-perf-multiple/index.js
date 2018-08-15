@@ -31,17 +31,11 @@ module.exports = async (Robinhood, daysBack = 2, ...strategiesArgs) => {
                 || strategiesArgs.every(s => strat.includes(s))
         ) : allStrategies;
     const isSearch = strategiesArgs[0] && !allStrategies.includes(strategiesArgs[0]);
+    const includeDetailed = suppliedStrategies && !isSearch;
 
-    // const allStrategies = [ // debug
-    //     'constant-risers-5minute-percUpHighClosePoints-lowovernightjumps-100',
-    //     'based-on-jump-down3overnight-trending35257-notWatchout-first1-fiveTo10-30',
-    //     'low-float-high-volume-volToAvgPoints-trend5to10-6'
-    // ];
     if (suppliedStrategies) {
         console.log('strategies of interest', strategiesOfInterest);
         console.log('isSearch', isSearch);
-        // console.log('strategiesArgs[0]', strategiesArgs[0])
-        // console.log(allStrategies, 'allStrategies')
     }
     console.log('num strategies', strategiesOfInterest.length);
 
@@ -49,7 +43,7 @@ module.exports = async (Robinhood, daysBack = 2, ...strategiesArgs) => {
         const strategyAnalysis = analyzeStrategy({
             strategyName,
             stratObj,
-            detailed: suppliedStrategies && !isSearch,
+            detailed: includeDetailed,
             maxBreakdownKey
         });
         if (index % 50 === 0) {
@@ -60,11 +54,10 @@ module.exports = async (Robinhood, daysBack = 2, ...strategiesArgs) => {
 
     console.log('done analyzing strategies')
 
-    if (suppliedStrategies && false) {
+    if (includeDetailed) {
         return allRoundup;
     }
 
-    // if !suppliedStrategies
     const analyzed = analyzeRoundup(allRoundup);
     if (daysBack > 50 && !suppliedStrategies) {
         await saveToJson(analyzed);

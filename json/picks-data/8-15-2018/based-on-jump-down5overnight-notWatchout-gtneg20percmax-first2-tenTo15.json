@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "OPRA",
+      "price": 12.1402
+    },
+    {
+      "ticker": "BRY",
+      "price": 12.11
+    }
+  ],
+  "5": [
+    {
+      "ticker": "GDP",
+      "price": 12.68
+    },
+    {
+      "ticker": "OPRA",
+      "price": 11.72
+    }
+  ],
+  "16": [
+    {
+      "ticker": "GDP",
+      "price": 12.68
+    },
+    {
+      "ticker": "OPRA",
+      "price": 11.61
+    }
+  ],
+  "30": [
+    {
+      "ticker": "GDP",
+      "price": 13.2
+    },
+    {
+      "ticker": "OPRA",
+      "price": 11.46
+    }
+  ]
+}

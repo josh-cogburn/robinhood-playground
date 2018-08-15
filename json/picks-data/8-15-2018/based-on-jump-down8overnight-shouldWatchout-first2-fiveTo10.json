@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "SBBP",
+      "price": 5.5438
+    },
+    {
+      "ticker": "AMBO",
+      "price": 5.67
+    }
+  ],
+  "5": [
+    {
+      "ticker": "SBBP",
+      "price": 5.625
+    },
+    {
+      "ticker": "AMBO",
+      "price": 5.67
+    }
+  ],
+  "16": [
+    {
+      "ticker": "SBBP",
+      "price": 5.625
+    },
+    {
+      "ticker": "AMBO",
+      "price": 6
+    }
+  ],
+  "30": [
+    {
+      "ticker": "SBBP",
+      "price": 5.625
+    },
+    {
+      "ticker": "AMBO",
+      "price": 6
+    }
+  ]
+}

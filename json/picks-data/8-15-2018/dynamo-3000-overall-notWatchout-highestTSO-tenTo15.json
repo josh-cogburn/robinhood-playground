@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "GDP",
+      "price": 12.3
+    },
+    {
+      "ticker": "YRD",
+      "price": 12.73
+    }
+  ],
+  "40": [
+    {
+      "ticker": "GDP",
+      "price": 12.77
+    },
+    {
+      "ticker": "VIIX",
+      "price": 14.035
+    }
+  ],
+  "100": [
+    {
+      "ticker": "TAYD",
+      "price": 11.75
+    },
+    {
+      "ticker": "VIIX",
+      "price": 13.83
+    }
+  ],
+  "200": [
+    {
+      "ticker": "BRY",
+      "price": 12.77
+    },
+    {
+      "ticker": "TAYD",
+      "price": 11.75
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TAYD",
+      "price": 11.8486
+    },
+    {
+      "ticker": "CEPU",
+      "price": 10.15
+    }
+  ],
+  "351": [
+    {
+      "ticker": "YRD",
+      "price": 13.51
+    },
+    {
+      "ticker": "TAYD",
+      "price": 11.8486
+    }
+  ],
+  "381": [
+    {
+      "ticker": "YRD",
+      "price": 13.48
+    },
+    {
+      "ticker": "TAYD",
+      "price": 11.8486
+    }
+  ]
+}

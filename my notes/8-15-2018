@@ -1,0 +1,2 @@
+node  --max_old_space_size=8000 run analysis/strategy-perf-multiple 80 next-day-330 sudden-drops filter
+anyCountPerfectos

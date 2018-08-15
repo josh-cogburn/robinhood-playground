@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "GDP",
+      "price": 12.3
+    },
+    {
+      "ticker": "YRD",
+      "price": 12.73
+    }
+  ],
+  "40": [
+    {
+      "ticker": "UVXY",
+      "price": 10.45
+    },
+    {
+      "ticker": "GDP",
+      "price": 12.77
+    }
+  ],
+  "100": [
+    {
+      "ticker": "UVXY",
+      "price": 10.11
+    },
+    {
+      "ticker": "TAYD",
+      "price": 11.75
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ABCD",
+      "price": 12.83
+    },
+    {
+      "ticker": "BRY",
+      "price": 12.77
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ABCD",
+      "price": 12.93
+    },
+    {
+      "ticker": "UVXY",
+      "price": 10.2462
+    }
+  ],
+  "351": [
+    {
+      "ticker": "TBIO",
+      "price": 11.8
+    },
+    {
+      "ticker": "EPZM",
+      "price": 10.775
+    }
+  ],
+  "381": [
+    {
+      "ticker": "TBIO",
+      "price": 11.34
+    },
+    {
+      "ticker": "ABCD",
+      "price": 12.94
+    }
+  ]
+}

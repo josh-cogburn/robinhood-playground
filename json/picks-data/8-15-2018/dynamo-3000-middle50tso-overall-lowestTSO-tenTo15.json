@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "AJX",
+      "price": 13.46
+    },
+    {
+      "ticker": "SNMP",
+      "price": 10.265
+    }
+  ],
+  "40": [
+    {
+      "ticker": "ETW",
+      "price": 12.08
+    },
+    {
+      "ticker": "PDLB",
+      "price": 14.71
+    }
+  ],
+  "100": [
+    {
+      "ticker": "NYCB",
+      "price": 10.6674
+    },
+    {
+      "ticker": "NEV",
+      "price": 14.152
+    }
+  ],
+  "200": [
+    {
+      "ticker": "RGT",
+      "price": 10.4299
+    },
+    {
+      "ticker": "JDD",
+      "price": 11.1335
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PFLT",
+      "price": 13.68
+    },
+    {
+      "ticker": "REDU",
+      "price": 11.18
+    }
+  ],
+  "351": [
+    {
+      "ticker": "HCAP",
+      "price": 10.8732
+    },
+    {
+      "ticker": "FOF",
+      "price": 13.23
+    }
+  ],
+  "381": [
+    {
+      "ticker": "FNB",
+      "price": 13.1
+    },
+    {
+      "ticker": "BFZ",
+      "price": 12.75
+    }
+  ]
+}

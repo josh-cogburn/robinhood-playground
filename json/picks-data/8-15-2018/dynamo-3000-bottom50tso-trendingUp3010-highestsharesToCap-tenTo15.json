@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "SOXS",
+      "price": 10.45
+    },
+    {
+      "ticker": "RFIL",
+      "price": 10.35
+    }
+  ],
+  "40": [
+    {
+      "ticker": "RFIL",
+      "price": 9.95
+    },
+    {
+      "ticker": "EXPR",
+      "price": 10.1
+    }
+  ],
+  "100": [
+    {
+      "ticker": "EXPR",
+      "price": 10.125
+    },
+    {
+      "ticker": "CPE",
+      "price": 10.455
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CPE",
+      "price": 10.545
+    },
+    {
+      "ticker": "FRD",
+      "price": 10.595
+    }
+  ],
+  "260": [
+    {
+      "ticker": "RFIL",
+      "price": 10.05
+    },
+    {
+      "ticker": "VKTX",
+      "price": 10.26
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CPE",
+      "price": 10.255
+    },
+    {
+      "ticker": "FRD",
+      "price": 10.66
+    }
+  ],
+  "381": [
+    {
+      "ticker": "EXPR",
+      "price": 10.11
+    },
+    {
+      "ticker": "CPE",
+      "price": 10.23
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "LCI",
+      "price": 13.25
+    },
+    {
+      "ticker": "PAI",
+      "price": 13.8328
+    }
+  ],
+  "40": [
+    {
+      "ticker": "SOXS",
+      "price": 10.88
+    },
+    {
+      "ticker": "PLSE",
+      "price": 14.41
+    }
+  ],
+  "100": [
+    {
+      "ticker": "SOXS",
+      "price": 10.87
+    },
+    {
+      "ticker": "INAP",
+      "price": 13.82
+    }
+  ],
+  "200": [
+    {
+      "ticker": "SOXS",
+      "price": 10.75
+    },
+    {
+      "ticker": "INAP",
+      "price": 13.865
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SOXS",
+      "price": 10.79
+    },
+    {
+      "ticker": "RCUS",
+      "price": 12.695
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SOXS",
+      "price": 10.7
+    },
+    {
+      "ticker": "PLSE",
+      "price": 14.6
+    }
+  ],
+  "381": [
+    {
+      "ticker": "PLSE",
+      "price": 14.58
+    },
+    {
+      "ticker": "RCUS",
+      "price": 12.91
+    }
+  ]
+}

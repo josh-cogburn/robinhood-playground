@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "TERP",
+      "price": 11.18
+    },
+    {
+      "ticker": "NVTA",
+      "price": 10.09
+    }
+  ],
+  "40": [
+    {
+      "ticker": "TERP",
+      "price": 11.06
+    },
+    {
+      "ticker": "NVTA",
+      "price": 10.13
+    }
+  ],
+  "100": [
+    {
+      "ticker": "NVTA",
+      "price": 10.21
+    },
+    {
+      "ticker": "SOXS",
+      "price": 10.87
+    }
+  ],
+  "200": [
+    {
+      "ticker": "NVTA",
+      "price": 10.28
+    },
+    {
+      "ticker": "SOXS",
+      "price": 10.75
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NVTA",
+      "price": 10.37
+    },
+    {
+      "ticker": "SOXS",
+      "price": 10.79
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NVTA",
+      "price": 10.4
+    },
+    {
+      "ticker": "SOXS",
+      "price": 10.7
+    }
+  ],
+  "381": [
+    {
+      "ticker": "NVTA",
+      "price": 10.385
+    },
+    {
+      "ticker": "MBI",
+      "price": 10.845
+    }
+  ]
+}

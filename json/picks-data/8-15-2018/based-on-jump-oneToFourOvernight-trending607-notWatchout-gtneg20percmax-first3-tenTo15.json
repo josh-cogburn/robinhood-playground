@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "CLAR",
+      "price": 10.25
+    },
+    {
+      "ticker": "MYD",
+      "price": 13.94
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CLAR",
+      "price": 10.1082
+    },
+    {
+      "ticker": "MYD",
+      "price": 13.93
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CLAR",
+      "price": 10.1082
+    },
+    {
+      "ticker": "MYD",
+      "price": 13.9
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CLAR",
+      "price": 10.15
+    },
+    {
+      "ticker": "MYD",
+      "price": 13.9
+    }
+  ]
+}

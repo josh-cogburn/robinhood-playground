@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "ATTU",
+      "price": 19
+    },
+    {
+      "ticker": "CHRS",
+      "price": 19.2
+    }
+  ],
+  "40": [
+    {
+      "ticker": "MTRX",
+      "price": 19.5
+    },
+    {
+      "ticker": "ANGI",
+      "price": 19.75
+    }
+  ],
+  "100": [
+    {
+      "ticker": "USAT",
+      "price": 15.55
+    },
+    {
+      "ticker": "ANGI",
+      "price": 19.69
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CHRS",
+      "price": 18.45
+    },
+    {
+      "ticker": "MTRX",
+      "price": 19.45
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CHRS",
+      "price": 18.425
+    },
+    {
+      "ticker": "OFG",
+      "price": 16.975
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CHRS",
+      "price": 18.425
+    },
+    {
+      "ticker": "OOMA",
+      "price": 15.9
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CHRS",
+      "price": 18.425
+    },
+    {
+      "ticker": "OFG",
+      "price": 16.975
+    }
+  ]
+}

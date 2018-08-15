@@ -1,0 +1,54 @@
+{
+  "0": [
+    {
+      "ticker": "CASA",
+      "price": 11.87
+    },
+    {
+      "ticker": "JP",
+      "price": 13.505
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CASA",
+      "price": 12.12
+    },
+    {
+      "ticker": "YRD",
+      "price": 13.08
+    },
+    {
+      "ticker": "JP",
+      "price": 13.241
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CASA",
+      "price": 11.82
+    },
+    {
+      "ticker": "NUGT",
+      "price": 14.839
+    },
+    {
+      "ticker": "YRD",
+      "price": 12.91
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CASA",
+      "price": 11.6501
+    },
+    {
+      "ticker": "NUGT",
+      "price": 14.6401
+    },
+    {
+      "ticker": "YRD",
+      "price": 13.16
+    }
+  ]
+}

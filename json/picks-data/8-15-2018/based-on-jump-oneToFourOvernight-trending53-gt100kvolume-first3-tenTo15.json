@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "TERP",
+      "price": 11.16
+    }
+  ],
+  "5": [
+    {
+      "ticker": "TERP",
+      "price": 11.13
+    }
+  ],
+  "16": [
+    {
+      "ticker": "SOXS",
+      "price": 10.59
+    },
+    {
+      "ticker": "TERP",
+      "price": 11.06
+    },
+    {
+      "ticker": "COTY",
+      "price": 11.56
+    }
+  ],
+  "30": [
+    {
+      "ticker": "SOXS",
+      "price": 10.79
+    },
+    {
+      "ticker": "TERP",
+      "price": 11.04
+    },
+    {
+      "ticker": "TWNK",
+      "price": 12.205
+    }
+  ]
+}

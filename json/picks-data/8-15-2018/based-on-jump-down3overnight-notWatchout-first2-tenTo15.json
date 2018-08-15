@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "CASA",
+      "price": 11.87
+    },
+    {
+      "ticker": "OPRA",
+      "price": 12.1402
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CASA",
+      "price": 12.12
+    },
+    {
+      "ticker": "GDP",
+      "price": 12.68
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CASA",
+      "price": 11.82
+    },
+    {
+      "ticker": "GDP",
+      "price": 12.68
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CASA",
+      "price": 11.6501
+    },
+    {
+      "ticker": "GDP",
+      "price": 13.2
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "SIGM",
+      "price": 0.275
+    },
+    {
+      "ticker": "ARAY",
+      "price": 3.35
+    }
+  ],
+  "5": [
+    {
+      "ticker": "SIGM",
+      "price": 0.275
+    },
+    {
+      "ticker": "ARAY",
+      "price": 3.45
+    }
+  ],
+  "16": [
+    {
+      "ticker": "SIGM",
+      "price": 0.2
+    },
+    {
+      "ticker": "INFU",
+      "price": 3
+    }
+  ],
+  "30": [
+    {
+      "ticker": "SIGM",
+      "price": 0.25
+    },
+    {
+      "ticker": "INFU",
+      "price": 3
+    }
+  ]
+}

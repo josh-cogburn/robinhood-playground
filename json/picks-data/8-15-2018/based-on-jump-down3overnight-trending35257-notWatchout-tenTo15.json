@@ -1,0 +1,54 @@
+{
+  "0": [
+    {
+      "ticker": "HMI",
+      "price": 10.2
+    },
+    {
+      "ticker": "VIAV",
+      "price": 10.62
+    }
+  ],
+  "5": [
+    {
+      "ticker": "GDP",
+      "price": 12.68
+    },
+    {
+      "ticker": "HMI",
+      "price": 10.25
+    },
+    {
+      "ticker": "VIAV",
+      "price": 10.69
+    }
+  ],
+  "16": [
+    {
+      "ticker": "GDP",
+      "price": 12.68
+    },
+    {
+      "ticker": "HMI",
+      "price": 10.24
+    },
+    {
+      "ticker": "VIAV",
+      "price": 10.85
+    }
+  ],
+  "30": [
+    {
+      "ticker": "GDP",
+      "price": 13.2
+    },
+    {
+      "ticker": "HMI",
+      "price": 10.184
+    },
+    {
+      "ticker": "VIAV",
+      "price": 10.915
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "10": [
+    {
+      "ticker": "INAP",
+      "price": 13.77
+    }
+  ],
+  "50": [
+    {
+      "ticker": "UVXY",
+      "price": 10.33
+    }
+  ],
+  "200": [
+    {
+      "ticker": "INAP",
+      "price": 13.86
+    },
+    {
+      "ticker": "CCXI",
+      "price": 11.36
+    },
+    {
+      "ticker": "UVXY",
+      "price": 10.11
+    }
+  ],
+  "300": [
+    {
+      "ticker": "INAP",
+      "price": 13.89
+    },
+    {
+      "ticker": "CCXI",
+      "price": 11.34
+    },
+    {
+      "ticker": "UVXY",
+      "price": 10.525
+    }
+  ],
+  "380": [
+    {
+      "ticker": "INAP",
+      "price": 14.15
+    },
+    {
+      "ticker": "CCXI",
+      "price": 11.43
+    }
+  ],
+  "600": [
+    {
+      "ticker": "INAP",
+      "price": 14.13
+    },
+    {
+      "ticker": "CCXI",
+      "price": 11.41
+    }
+  ]
+}

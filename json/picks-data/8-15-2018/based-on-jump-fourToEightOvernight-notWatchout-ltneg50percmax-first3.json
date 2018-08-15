@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "CBLI",
+      "price": 2.2
+    },
+    {
+      "ticker": "GNMX",
+      "price": 0.97
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CBLI",
+      "price": 2.25
+    },
+    {
+      "ticker": "GNMX",
+      "price": 0.98
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CBLI",
+      "price": 1.99
+    },
+    {
+      "ticker": "GNMX",
+      "price": 1.033
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CBLI",
+      "price": 2.0703
+    },
+    {
+      "ticker": "GNMX",
+      "price": 1.0021
+    }
+  ]
+}

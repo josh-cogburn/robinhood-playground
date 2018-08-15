@@ -2,5 +2,6 @@ module.exports = [
     // 'TOPS',
     'NSPR',
     'BOXL',
-    'SEII'
+    'SEII',
+    'AWX'
 ];

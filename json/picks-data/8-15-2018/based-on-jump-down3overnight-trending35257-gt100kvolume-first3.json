@@ -1,0 +1,50 @@
+{
+  "0": [
+    {
+      "ticker": "RGSE",
+      "price": 0.33
+    }
+  ],
+  "5": [
+    {
+      "ticker": "SIGM",
+      "price": 0.275
+    },
+    {
+      "ticker": "RGSE",
+      "price": 0.336
+    },
+    {
+      "ticker": "CRMD",
+      "price": 0.4986
+    }
+  ],
+  "16": [
+    {
+      "ticker": "SIGM",
+      "price": 0.2
+    },
+    {
+      "ticker": "RGSE",
+      "price": 0.3341
+    },
+    {
+      "ticker": "CRMD",
+      "price": 0.5011
+    }
+  ],
+  "30": [
+    {
+      "ticker": "SIGM",
+      "price": 0.25
+    },
+    {
+      "ticker": "RGSE",
+      "price": 0.337
+    },
+    {
+      "ticker": "CRMD",
+      "price": 0.49
+    }
+  ]
+}

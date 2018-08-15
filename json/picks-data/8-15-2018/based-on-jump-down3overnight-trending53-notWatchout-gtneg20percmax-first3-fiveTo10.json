@@ -1,0 +1,54 @@
+{
+  "0": [
+    {
+      "ticker": "CATS",
+      "price": 8.0311
+    },
+    {
+      "ticker": "EPM",
+      "price": 9.75
+    },
+    {
+      "ticker": "PIH",
+      "price": 7.15
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CATS",
+      "price": 8.197
+    },
+    {
+      "ticker": "EPM",
+      "price": 10
+    },
+    {
+      "ticker": "PIH",
+      "price": 7.15
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CATS",
+      "price": 8.1401
+    },
+    {
+      "ticker": "PIH",
+      "price": 7.15
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CATS",
+      "price": 8.2
+    },
+    {
+      "ticker": "EPM",
+      "price": 9.875
+    },
+    {
+      "ticker": "PIH",
+      "price": 7.15
+    }
+  ]
+}

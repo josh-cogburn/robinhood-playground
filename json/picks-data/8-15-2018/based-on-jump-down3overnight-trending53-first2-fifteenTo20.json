@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "UBOT",
+      "price": 16.42
+    },
+    {
+      "ticker": "REMX",
+      "price": 19.5548
+    }
+  ],
+  "5": [
+    {
+      "ticker": "UBOT",
+      "price": 16.6001
+    },
+    {
+      "ticker": "REMX",
+      "price": 19.5627
+    }
+  ],
+  "16": [
+    {
+      "ticker": "UBOT",
+      "price": 16.6001
+    },
+    {
+      "ticker": "IRS",
+      "price": 15.5
+    }
+  ],
+  "30": [
+    {
+      "ticker": "UBOT",
+      "price": 16.24
+    },
+    {
+      "ticker": "IRS",
+      "price": 15.63
+    }
+  ]
+}

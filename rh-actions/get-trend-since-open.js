@@ -26,7 +26,7 @@ const getTrendSinceOpen = {
         }
 
         const { open } = fundamentals;
-        const { last_trade_price, previous_close } = quote_data;
+        const { last_trade_price, adjusted_previous_close } = quote_data;
 
         return {
             fundamentals,
@@ -35,7 +35,7 @@ const getTrendSinceOpen = {
             last_trade_price,
             // previous_close,
             trend_since_open: getTrend(last_trade_price, open),
-            trend_since_prev_close: getTrend(last_trade_price, previous_close)
+            trend_since_prev_close: getTrend(last_trade_price, adjusted_previous_close)
         };
     },
     multiple: async (Robinhood, stocks) => {

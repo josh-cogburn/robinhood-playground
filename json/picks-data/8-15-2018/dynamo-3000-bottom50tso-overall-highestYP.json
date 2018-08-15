@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "RIBT",
+      "price": 2.9
+    },
+    {
+      "ticker": "LRAD",
+      "price": 2.88
+    }
+  ],
+  "40": [
+    {
+      "ticker": "LRAD",
+      "price": 2.7
+    },
+    {
+      "ticker": "MICT",
+      "price": 1.2772
+    }
+  ],
+  "100": [
+    {
+      "ticker": "SMRT",
+      "price": 2.74
+    },
+    {
+      "ticker": "MICT",
+      "price": 1.3
+    }
+  ],
+  "200": [
+    {
+      "ticker": "SMRT",
+      "price": 2.73
+    },
+    {
+      "ticker": "MICT",
+      "price": 1.24
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SMRT",
+      "price": 2.72
+    },
+    {
+      "ticker": "ITUS",
+      "price": 3.67
+    }
+  ],
+  "351": [
+    {
+      "ticker": "TPNL",
+      "price": 3.22
+    },
+    {
+      "ticker": "CASM",
+      "price": 2.008
+    }
+  ],
+  "381": [
+    {
+      "ticker": "TPNL",
+      "price": 3.151
+    },
+    {
+      "ticker": "CASM",
+      "price": 2
+    }
+  ]
+}

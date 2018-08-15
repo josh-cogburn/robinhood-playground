@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "CASM",
+      "price": 2.3
+    },
+    {
+      "ticker": "REED",
+      "price": 2.65
+    }
+  ],
+  "40": [
+    {
+      "ticker": "DDE",
+      "price": 3.2823
+    },
+    {
+      "ticker": "UAMY",
+      "price": 0.6219
+    }
+  ],
+  "100": [
+    {
+      "ticker": "UAMY",
+      "price": 0.6002
+    },
+    {
+      "ticker": "NFEC",
+      "price": 4.38
+    }
+  ],
+  "200": [
+    {
+      "ticker": "NFEC",
+      "price": 4.5774
+    },
+    {
+      "ticker": "ENPH",
+      "price": 4.7801
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NFEC",
+      "price": 4.65
+    },
+    {
+      "ticker": "ENPH",
+      "price": 4.8
+    }
+  ],
+  "351": [
+    {
+      "ticker": "REED",
+      "price": 2.7
+    },
+    {
+      "ticker": "ENPH",
+      "price": 4.895
+    }
+  ],
+  "381": [
+    {
+      "ticker": "REED",
+      "price": 2.65
+    },
+    {
+      "ticker": "ENPH",
+      "price": 4.895
+    }
+  ]
+}
