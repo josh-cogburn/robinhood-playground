@@ -5,11 +5,11 @@ const chunkApi = require('../utils/chunk-api');
 
 module.exports = async (Robinhood, trend) => {
 
-    console.log('adding ')
+    console.log('adding overnight jump')
     let fundamentals = await chunkApi(
         trend.map(t => t.ticker),
         async tickerStr => {
-            console.log('tickerstr', tickerStr);
+            // console.log('tickerstr', tickerStr);
             const { results } = await Robinhood.url(`https://api.robinhood.com/fundamentals/?symbols=${tickerStr}`);
             return results;
         },

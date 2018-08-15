@@ -26,7 +26,7 @@ const highestPlayoutFn = (
 };
 
 const analyzeRoundup = allRoundup => {
-    console.log('all round', JSON.stringify(allRoundup, null, 2))
+    // console.log('all round', JSON.stringify(allRoundup, null, 2))
     const createBreakdown = ({
         scoreFn = ({ count, playouts: { onlyMax: { percUp, avgTrend }}}) =>
             percUp * avgTrend * count,

@@ -72,7 +72,7 @@ const trendFilter = async (Robinhood, trend) => {
 
     console.log('got trend since open')
 
-    console.log(JSON.stringify(withTrendSinceOpen, null, 2));
+    // console.log(JSON.stringify(withTrendSinceOpen, null, 2));
 
     let baseKeys = Object.keys(withTrendSinceOpen[0])
         .filter(key => ['floatTimes', 'Points'].some(str => key.includes(str)));

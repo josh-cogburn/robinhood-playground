@@ -52,17 +52,17 @@ const trendFilter = async (Robinhood, trend) => {
         )
     });
 
-    console.log(
-        JSON.stringify(
-            withQuickTrends
-                .map((trend) => {
-                    delete trend.historicals;
-                    return trend;
-                }),
-            null,
-            2
-        )
-    );
+    // console.log(
+    //     JSON.stringify(
+    //         withQuickTrends
+    //             .map((trend) => {
+    //                 delete trend.historicals;
+    //                 return trend;
+    //             }),
+    //         null,
+    //         2
+    //     )
+    // );
     return perms
         .filter(val => withQuickTrends.some(buy => !!buy[`last${val}trend`]))
         .reduce((acc, val) => ({
