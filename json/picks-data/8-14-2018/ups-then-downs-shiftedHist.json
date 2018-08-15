@@ -1,0 +1,90 @@
+{
+  "10": [
+    {
+      "ticker": "HOS",
+      "price": 4.17
+    },
+    {
+      "ticker": "ONCS",
+      "price": 1.49
+    },
+    {
+      "ticker": "ATXI",
+      "price": 4.1
+    },
+    {
+      "ticker": "CDTX",
+      "price": 4.3
+    },
+    {
+      "ticker": "INFI",
+      "price": 1.987
+    }
+  ],
+  "50": [
+    {
+      "ticker": "INSG",
+      "price": 2.6
+    },
+    {
+      "ticker": "HOS",
+      "price": 4.215
+    },
+    {
+      "ticker": "ONCS",
+      "price": 1.48
+    },
+    {
+      "ticker": "CDTX",
+      "price": 4.3615
+    },
+    {
+      "ticker": "SPCB",
+      "price": 1.8
+    }
+  ],
+  "200": [
+    {
+      "ticker": "HOS",
+      "price": 4.165
+    },
+    {
+      "ticker": "ONCS",
+      "price": 1.511
+    },
+    {
+      "ticker": "CDTX",
+      "price": 4.4
+    },
+    {
+      "ticker": "INFI",
+      "price": 2
+    },
+    {
+      "ticker": "VGZ",
+      "price": 0.62
+    }
+  ],
+  "300": [
+    {
+      "ticker": "HOS",
+      "price": 4.165
+    },
+    {
+      "ticker": "ONCS",
+      "price": 1.52
+    },
+    {
+      "ticker": "CDTX",
+      "price": 4.45
+    },
+    {
+      "ticker": "INFI",
+      "price": 2.07
+    },
+    {
+      "ticker": "SPCB",
+      "price": 1.79
+    }
+  ]
+}

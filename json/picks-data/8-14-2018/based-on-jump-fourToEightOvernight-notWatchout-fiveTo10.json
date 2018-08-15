@@ -1,0 +1,54 @@
+{
+  "0": [
+    {
+      "ticker": "ROSE",
+      "price": 8.75
+    },
+    {
+      "ticker": "PHII",
+      "price": 7.75
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CELP",
+      "price": 8.38
+    },
+    {
+      "ticker": "ROSE",
+      "price": 8.8413
+    },
+    {
+      "ticker": "PHII",
+      "price": 7.75
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CELP",
+      "price": 8
+    },
+    {
+      "ticker": "ROSE",
+      "price": 8.71
+    },
+    {
+      "ticker": "PHII",
+      "price": 8.2778
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CELP",
+      "price": 8
+    },
+    {
+      "ticker": "ROSE",
+      "price": 8.6283
+    },
+    {
+      "ticker": "PHII",
+      "price": 8.2778
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "ACH",
+      "price": 10.31
+    },
+    {
+      "ticker": "GSHT",
+      "price": 10.39
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CHS",
+      "price": 10.085
+    },
+    {
+      "ticker": "HMI",
+      "price": 10.33
+    }
+  ],
+  "100": [
+    {
+      "ticker": "GWRS",
+      "price": 10.02
+    },
+    {
+      "ticker": "HMI",
+      "price": 10.43
+    }
+  ],
+  "200": [
+    {
+      "ticker": "GWRS",
+      "price": 10.2
+    },
+    {
+      "ticker": "CHS",
+      "price": 10.26
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GWRS",
+      "price": 10.2
+    },
+    {
+      "ticker": "CLAR",
+      "price": 10.25
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "CVM",
+      "price": 1.02
+    },
+    {
+      "ticker": "RWLK",
+      "price": 0.947
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CVM",
+      "price": 0.96
+    },
+    {
+      "ticker": "RWLK",
+      "price": 0.8849
+    }
+  ],
+  "100": [
+    {
+      "ticker": "JONE",
+      "price": 0.4098
+    },
+    {
+      "ticker": "CVM",
+      "price": 0.9884
+    }
+  ],
+  "200": [
+    {
+      "ticker": "RWLK",
+      "price": 0.9287
+    },
+    {
+      "ticker": "APDN",
+      "price": 1.1789
+    }
+  ],
+  "260": [
+    {
+      "ticker": "JONE",
+      "price": 0.401
+    },
+    {
+      "ticker": "APDN",
+      "price": 1.175
+    }
+  ]
+}

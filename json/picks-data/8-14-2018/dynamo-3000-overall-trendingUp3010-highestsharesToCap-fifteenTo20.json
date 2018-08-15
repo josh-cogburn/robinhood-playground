@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "IOVA",
+      "price": 15.2
+    },
+    {
+      "ticker": "ENDP",
+      "price": 15.58
+    }
+  ],
+  "40": [
+    {
+      "ticker": "RES",
+      "price": 15.05
+    },
+    {
+      "ticker": "IOVA",
+      "price": 15.25
+    }
+  ],
+  "100": [
+    {
+      "ticker": "PRTA",
+      "price": 15.11
+    },
+    {
+      "ticker": "DRNA",
+      "price": 15.015
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PRTA",
+      "price": 15.25
+    },
+    {
+      "ticker": "PSDO",
+      "price": 15.12
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PRTA",
+      "price": 15.3
+    },
+    {
+      "ticker": "PSDO",
+      "price": 15.1
+    }
+  ]
+}

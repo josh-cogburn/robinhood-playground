@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "FPRX",
+      "price": 14.47
+    },
+    {
+      "ticker": "CBIO",
+      "price": 10.1
+    }
+  ],
+  "40": [
+    {
+      "ticker": "SWCH",
+      "price": 10.34
+    },
+    {
+      "ticker": "BEDU",
+      "price": 11.7
+    }
+  ],
+  "100": [
+    {
+      "ticker": "LIVE",
+      "price": 10.6828
+    },
+    {
+      "ticker": "NEW",
+      "price": 14.7796
+    }
+  ],
+  "200": [
+    {
+      "ticker": "BEDU",
+      "price": 11.57
+    },
+    {
+      "ticker": "NEW",
+      "price": 14.8
+    }
+  ],
+  "260": [
+    {
+      "ticker": "FPRX",
+      "price": 14.02
+    },
+    {
+      "ticker": "NEW",
+      "price": 14.83
+    }
+  ]
+}

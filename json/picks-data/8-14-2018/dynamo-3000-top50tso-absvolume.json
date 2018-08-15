@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "URG",
+      "price": 0.71
+    },
+    {
+      "ticker": "BKYI",
+      "price": 1.7712
+    }
+  ],
+  "40": [
+    {
+      "ticker": "TIK",
+      "price": 2.75
+    },
+    {
+      "ticker": "BKYI",
+      "price": 1.79
+    }
+  ],
+  "100": [
+    {
+      "ticker": "ENG",
+      "price": 1.08
+    },
+    {
+      "ticker": "BKYI",
+      "price": 1.78
+    }
+  ],
+  "200": [
+    {
+      "ticker": "DFFN",
+      "price": 0.3857
+    },
+    {
+      "ticker": "LEVB",
+      "price": 3.55
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AMMA",
+      "price": 0.1746
+    },
+    {
+      "ticker": "RGLS",
+      "price": 0.2653
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "VERI",
+      "price": 12.35
+    },
+    {
+      "ticker": "SUPV",
+      "price": 10.42
+    }
+  ],
+  "40": [
+    {
+      "ticker": "VERI",
+      "price": 12.72
+    },
+    {
+      "ticker": "SUPV",
+      "price": 10.4502
+    }
+  ],
+  "100": [
+    {
+      "ticker": "VERI",
+      "price": 12.5
+    },
+    {
+      "ticker": "IMTE",
+      "price": 13
+    }
+  ],
+  "200": [
+    {
+      "ticker": "IMTE",
+      "price": 13
+    },
+    {
+      "ticker": "NYNY",
+      "price": 12.8
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PRTK",
+      "price": 10.125
+    },
+    {
+      "ticker": "SOXS",
+      "price": 10.24
+    }
+  ]
+}

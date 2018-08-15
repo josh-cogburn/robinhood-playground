@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "DPLO",
+      "price": 19.46
+    },
+    {
+      "ticker": "COT",
+      "price": 15.59
+    },
+    {
+      "ticker": "DNOW",
+      "price": 17.19
+    }
+  ],
+  "40": [
+    {
+      "ticker": "COT",
+      "price": 15.54
+    },
+    {
+      "ticker": "OSUR",
+      "price": 16.5221
+    },
+    {
+      "ticker": "HONE",
+      "price": 18.69
+    }
+  ],
+  "100": [
+    {
+      "ticker": "PSCE",
+      "price": 16.224
+    },
+    {
+      "ticker": "COT",
+      "price": 15.55
+    },
+    {
+      "ticker": "GME",
+      "price": 15.36
+    }
+  ],
+  "200": [
+    {
+      "ticker": "HBI",
+      "price": 18.295
+    },
+    {
+      "ticker": "OSUR",
+      "price": 16.53
+    },
+    {
+      "ticker": "RIF",
+      "price": 18.33
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GLOG",
+      "price": 16.5501
+    },
+    {
+      "ticker": "PDM",
+      "price": 19.685
+    },
+    {
+      "ticker": "RIF",
+      "price": 18.33
+    }
+  ]
+}

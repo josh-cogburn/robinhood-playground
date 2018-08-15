@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "INSE",
+      "price": 7.55
+    },
+    {
+      "ticker": "SORL",
+      "price": 5.469
+    }
+  ],
+  "40": [
+    {
+      "ticker": "INSE",
+      "price": 7.346
+    },
+    {
+      "ticker": "SORL",
+      "price": 5.489
+    }
+  ],
+  "100": [
+    {
+      "ticker": "MNLO",
+      "price": 8.4746
+    },
+    {
+      "ticker": "HZN",
+      "price": 7.22
+    }
+  ],
+  "200": [
+    {
+      "ticker": "MNLO",
+      "price": 8.53
+    },
+    {
+      "ticker": "DRIP",
+      "price": 6.78
+    }
+  ],
+  "260": [
+    {
+      "ticker": "MNLO",
+      "price": 8.57
+    },
+    {
+      "ticker": "DRIP",
+      "price": 6.7456
+    }
+  ]
+}

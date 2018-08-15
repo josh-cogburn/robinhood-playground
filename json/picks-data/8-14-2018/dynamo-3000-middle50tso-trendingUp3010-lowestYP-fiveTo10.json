@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "FG",
+      "price": 9.285
+    },
+    {
+      "ticker": "AMKR",
+      "price": 9.33
+    }
+  ],
+  "40": [
+    {
+      "ticker": "HYB",
+      "price": 8.546
+    },
+    {
+      "ticker": "FG",
+      "price": 9.33
+    }
+  ],
+  "100": [
+    {
+      "ticker": "SBI",
+      "price": 8.6416
+    },
+    {
+      "ticker": "AMKR",
+      "price": 9.3601
+    }
+  ],
+  "200": [
+    {
+      "ticker": "SBI",
+      "price": 8.6416
+    },
+    {
+      "ticker": "ORC",
+      "price": 8.0701
+    }
+  ],
+  "260": [
+    {
+      "ticker": "FAT",
+      "price": 6.9925
+    },
+    {
+      "ticker": "EVF",
+      "price": 6.4101
+    }
+  ]
+}

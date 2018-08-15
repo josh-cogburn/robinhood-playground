@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "SECO",
+      "price": 14.808
+    },
+    {
+      "ticker": "BEDU",
+      "price": 11.74
+    }
+  ],
+  "5": [
+    {
+      "ticker": "BEDU",
+      "price": 11.6836
+    },
+    {
+      "ticker": "SECO",
+      "price": 14.72
+    }
+  ],
+  "16": [
+    {
+      "ticker": "BEDU",
+      "price": 11.6261
+    },
+    {
+      "ticker": "SECO",
+      "price": 13.92
+    }
+  ],
+  "30": [
+    {
+      "ticker": "BEDU",
+      "price": 11.6827
+    },
+    {
+      "ticker": "SECO",
+      "price": 13.28
+    }
+  ]
+}

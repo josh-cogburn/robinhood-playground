@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "AQST",
+      "price": 16.23
+    },
+    {
+      "ticker": "DBE",
+      "price": 16.65
+    }
+  ],
+  "5": [
+    {
+      "ticker": "AQST",
+      "price": 16.23
+    },
+    {
+      "ticker": "DBE",
+      "price": 16.655
+    }
+  ],
+  "16": [
+    {
+      "ticker": "AQST",
+      "price": 16.23
+    },
+    {
+      "ticker": "KRYS",
+      "price": 16.2888
+    }
+  ],
+  "30": [
+    {
+      "ticker": "AQST",
+      "price": 16.17
+    },
+    {
+      "ticker": "KRYS",
+      "price": 16.23
+    }
+  ]
+}

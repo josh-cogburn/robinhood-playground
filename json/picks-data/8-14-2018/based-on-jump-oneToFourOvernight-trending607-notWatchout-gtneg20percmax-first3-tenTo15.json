@@ -1,0 +1,54 @@
+{
+  "0": [
+    {
+      "ticker": "USO",
+      "price": 14.22
+    },
+    {
+      "ticker": "FLWS",
+      "price": 14.8
+    }
+  ],
+  "5": [
+    {
+      "ticker": "USO",
+      "price": 14.2
+    },
+    {
+      "ticker": "DBO",
+      "price": 12.22
+    },
+    {
+      "ticker": "FLWS",
+      "price": 14.75
+    }
+  ],
+  "16": [
+    {
+      "ticker": "USO",
+      "price": 14.13
+    },
+    {
+      "ticker": "DBO",
+      "price": 12.21
+    },
+    {
+      "ticker": "FLWS",
+      "price": 14.8
+    }
+  ],
+  "30": [
+    {
+      "ticker": "USO",
+      "price": 14.16
+    },
+    {
+      "ticker": "DBO",
+      "price": 12.1838
+    },
+    {
+      "ticker": "FLWS",
+      "price": 14.9
+    }
+  ]
+}

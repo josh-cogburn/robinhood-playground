@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "NYNY",
+      "price": 12.35
+    },
+    {
+      "ticker": "UGP",
+      "price": 10.99
+    }
+  ],
+  "5": [
+    {
+      "ticker": "NYNY",
+      "price": 12.45
+    },
+    {
+      "ticker": "BFR",
+      "price": 10.25
+    }
+  ],
+  "16": [
+    {
+      "ticker": "NYNY",
+      "price": 12.45
+    },
+    {
+      "ticker": "BFR",
+      "price": 10.11
+    }
+  ],
+  "30": [
+    {
+      "ticker": "NYNY",
+      "price": 12.3753
+    },
+    {
+      "ticker": "BFR",
+      "price": 10.175
+    }
+  ]
+}

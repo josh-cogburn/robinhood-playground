@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "NFEC",
+      "price": 5.0841
+    },
+    {
+      "ticker": "ENPH",
+      "price": 5.3665
+    }
+  ],
+  "40": [
+    {
+      "ticker": "GNE",
+      "price": 5.19
+    },
+    {
+      "ticker": "SRNE",
+      "price": 5.325
+    }
+  ],
+  "100": [
+    {
+      "ticker": "VSLR",
+      "price": 5.125
+    },
+    {
+      "ticker": "NIHD",
+      "price": 5.26
+    }
+  ],
+  "200": [
+    {
+      "ticker": "SRNE",
+      "price": 5.275
+    },
+    {
+      "ticker": "NIHD",
+      "price": 5.165
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SRNE",
+      "price": 5.2
+    },
+    {
+      "ticker": "ENPH",
+      "price": 5.115
+    }
+  ]
+}

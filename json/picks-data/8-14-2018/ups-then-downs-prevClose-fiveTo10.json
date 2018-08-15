@@ -1,0 +1,50 @@
+{
+  "10": [
+    {
+      "ticker": "CASI",
+      "price": 7.53
+    }
+  ],
+  "50": [
+    {
+      "ticker": "CASI",
+      "price": 7.44
+    },
+    {
+      "ticker": "INSE",
+      "price": 7.25
+    },
+    {
+      "ticker": "EAST",
+      "price": 7.68
+    }
+  ],
+  "200": [
+    {
+      "ticker": "GIFI",
+      "price": 9.9
+    },
+    {
+      "ticker": "INSE",
+      "price": 6.9
+    },
+    {
+      "ticker": "UVXY",
+      "price": 9.12
+    }
+  ],
+  "300": [
+    {
+      "ticker": "INSE",
+      "price": 7.05
+    },
+    {
+      "ticker": "UVXY",
+      "price": 9.03
+    },
+    {
+      "ticker": "EAST",
+      "price": 7.58
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "SAN",
+      "price": 5.035
+    },
+    {
+      "ticker": "WIT",
+      "price": 5.125
+    }
+  ],
+  "40": [
+    {
+      "ticker": "EOD",
+      "price": 5.465
+    },
+    {
+      "ticker": "MGI",
+      "price": 5.86
+    }
+  ],
+  "100": [
+    {
+      "ticker": "SAN",
+      "price": 5.055
+    },
+    {
+      "ticker": "DXR",
+      "price": 5.0075
+    }
+  ],
+  "200": [
+    {
+      "ticker": "MDLY",
+      "price": 5.2993
+    },
+    {
+      "ticker": "FIT",
+      "price": 5.41
+    }
+  ],
+  "260": [
+    {
+      "ticker": "XELA",
+      "price": 5.05
+    },
+    {
+      "ticker": "ELMD",
+      "price": 5.1522
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "10": [
+    {
+      "ticker": "CCXI",
+      "price": 11.5
+    }
+  ],
+  "50": [
+    {
+      "ticker": "CCXI",
+      "price": 11.545
+    }
+  ],
+  "200": [
+    {
+      "ticker": "INAP",
+      "price": 13.83
+    },
+    {
+      "ticker": "CCXI",
+      "price": 11.41
+    }
+  ],
+  "300": [
+    {
+      "ticker": "INAP",
+      "price": 13.64
+    },
+    {
+      "ticker": "CCXI",
+      "price": 11.2299
+    },
+    {
+      "ticker": "GIFI",
+      "price": 10.1
+    }
+  ]
+}

@@ -32,7 +32,7 @@ module.exports = {
     // email
     email: {
         [['chief', 'sm', 'urph', '@', 'gm', 'ail', '.com'].join('')]: [
-            ...allShorts
+            // ...allShorts
         ],
         ...cheapestPicksEmailObj
     }

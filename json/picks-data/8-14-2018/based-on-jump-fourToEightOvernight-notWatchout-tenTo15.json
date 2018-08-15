@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "SVT",
+      "price": 11.29
+    },
+    {
+      "ticker": "GOAU",
+      "price": 11.95
+    }
+  ],
+  "5": [
+    {
+      "ticker": "SVT",
+      "price": 10.91
+    },
+    {
+      "ticker": "GOAU",
+      "price": 11.95
+    }
+  ],
+  "16": [
+    {
+      "ticker": "SVT",
+      "price": 10.9875
+    },
+    {
+      "ticker": "GOAU",
+      "price": 11.5
+    }
+  ],
+  "30": [
+    {
+      "ticker": "SVT",
+      "price": 11.15
+    },
+    {
+      "ticker": "GOAU",
+      "price": 11.35
+    }
+  ]
+}

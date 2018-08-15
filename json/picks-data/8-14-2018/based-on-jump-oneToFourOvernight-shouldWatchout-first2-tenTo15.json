@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "HCLP",
+      "price": 13
+    },
+    {
+      "ticker": "PBR",
+      "price": 11.72
+    }
+  ],
+  "5": [
+    {
+      "ticker": "HCLP",
+      "price": 12.8
+    },
+    {
+      "ticker": "PBR",
+      "price": 11.73
+    }
+  ],
+  "16": [
+    {
+      "ticker": "HCLP",
+      "price": 12.85
+    },
+    {
+      "ticker": "PBR",
+      "price": 11.68
+    }
+  ],
+  "30": [
+    {
+      "ticker": "IMRN",
+      "price": 10.1
+    },
+    {
+      "ticker": "HCLP",
+      "price": 12.95
+    }
+  ]
+}

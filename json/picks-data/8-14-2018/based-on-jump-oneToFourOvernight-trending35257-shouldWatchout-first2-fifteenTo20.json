@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "TLYS",
+      "price": 17.26
+    },
+    {
+      "ticker": "VSTO",
+      "price": 18.815
+    }
+  ],
+  "5": [
+    {
+      "ticker": "TLYS",
+      "price": 17.28
+    },
+    {
+      "ticker": "CIFS",
+      "price": 15.04
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CAPL",
+      "price": 18.33
+    },
+    {
+      "ticker": "TLYS",
+      "price": 17.3
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CAPL",
+      "price": 18.35
+    },
+    {
+      "ticker": "TLYS",
+      "price": 17.55
+    }
+  ]
+}

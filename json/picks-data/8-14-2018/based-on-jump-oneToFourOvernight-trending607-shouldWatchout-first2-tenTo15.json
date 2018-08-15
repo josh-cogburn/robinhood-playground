@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "HCLP",
+      "price": 13
+    },
+    {
+      "ticker": "FRD",
+      "price": 11.188
+    }
+  ],
+  "5": [
+    {
+      "ticker": "HCLP",
+      "price": 12.8
+    },
+    {
+      "ticker": "FRD",
+      "price": 11.188
+    }
+  ],
+  "16": [
+    {
+      "ticker": "HCLP",
+      "price": 12.85
+    },
+    {
+      "ticker": "FRD",
+      "price": 11.188
+    }
+  ],
+  "30": [
+    {
+      "ticker": "HCLP",
+      "price": 12.95
+    },
+    {
+      "ticker": "FRD",
+      "price": 11.05
+    }
+  ]
+}

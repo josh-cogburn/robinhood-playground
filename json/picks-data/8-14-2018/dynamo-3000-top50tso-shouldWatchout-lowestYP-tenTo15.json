@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "VERI",
+      "price": 12.35
+    },
+    {
+      "ticker": "LIVE",
+      "price": 10.95
+    }
+  ],
+  "40": [
+    {
+      "ticker": "VERI",
+      "price": 12.72
+    },
+    {
+      "ticker": "LIVE",
+      "price": 11.34
+    }
+  ],
+  "100": [
+    {
+      "ticker": "VERI",
+      "price": 12.5
+    },
+    {
+      "ticker": "IMTE",
+      "price": 13
+    }
+  ],
+  "200": [
+    {
+      "ticker": "IMTE",
+      "price": 13
+    },
+    {
+      "ticker": "CENX",
+      "price": 12.5
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PRTK",
+      "price": 10.125
+    },
+    {
+      "ticker": "IMTE",
+      "price": 13
+    }
+  ]
+}

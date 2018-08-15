@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "ARLZ",
+      "price": 0.0757
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.115
+    }
+  ],
+  "40": [
+    {
+      "ticker": "ARLZ",
+      "price": 0.0716
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.1033
+    }
+  ],
+  "100": [
+    {
+      "ticker": "ARLZ",
+      "price": 0.069
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.103
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ARLZ",
+      "price": 0.0669
+    },
+    {
+      "ticker": "RSLS",
+      "price": 0.1265
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ARLZ",
+      "price": 0.0625
+    },
+    {
+      "ticker": "RSLS",
+      "price": 0.1282
+    }
+  ]
+}

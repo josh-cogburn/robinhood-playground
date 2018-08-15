@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "HCLP",
+      "price": 13
+    },
+    {
+      "ticker": "USO",
+      "price": 14.22
+    },
+    {
+      "ticker": "FRD",
+      "price": 11.188
+    }
+  ],
+  "5": [
+    {
+      "ticker": "HCLP",
+      "price": 12.8
+    },
+    {
+      "ticker": "USO",
+      "price": 14.2
+    },
+    {
+      "ticker": "FRD",
+      "price": 11.188
+    }
+  ],
+  "16": [
+    {
+      "ticker": "HCLP",
+      "price": 12.85
+    },
+    {
+      "ticker": "USO",
+      "price": 14.13
+    },
+    {
+      "ticker": "FRD",
+      "price": 11.188
+    }
+  ],
+  "30": [
+    {
+      "ticker": "HCLP",
+      "price": 12.95
+    },
+    {
+      "ticker": "USO",
+      "price": 14.16
+    },
+    {
+      "ticker": "FRD",
+      "price": 11.05
+    }
+  ]
+}

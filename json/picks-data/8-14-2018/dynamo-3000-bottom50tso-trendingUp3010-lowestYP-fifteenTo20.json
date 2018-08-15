@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "XPER",
+      "price": 16.55
+    },
+    {
+      "ticker": "HTLD",
+      "price": 19.57
+    }
+  ],
+  "40": [
+    {
+      "ticker": "MFGP",
+      "price": 15.795
+    },
+    {
+      "ticker": "CASA",
+      "price": 15.3525
+    }
+  ],
+  "100": [
+    {
+      "ticker": "MFGP",
+      "price": 15.74
+    },
+    {
+      "ticker": "CASA",
+      "price": 15.51
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CASA",
+      "price": 15.53
+    },
+    {
+      "ticker": "CSTE",
+      "price": 17.225
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CASA",
+      "price": 15.4925
+    },
+    {
+      "ticker": "CSTE",
+      "price": 17.2
+    }
+  ]
+}

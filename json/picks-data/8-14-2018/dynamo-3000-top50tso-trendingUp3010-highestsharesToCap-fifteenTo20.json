@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "IOVA",
+      "price": 15.2
+    },
+    {
+      "ticker": "OTEL",
+      "price": 16
+    }
+  ],
+  "40": [
+    {
+      "ticker": "IOVA",
+      "price": 15.25
+    },
+    {
+      "ticker": "OTEL",
+      "price": 16.5
+    }
+  ],
+  "100": [
+    {
+      "ticker": "PRTA",
+      "price": 15.11
+    },
+    {
+      "ticker": "PSDO",
+      "price": 15.06
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PRTA",
+      "price": 15.25
+    },
+    {
+      "ticker": "IOVA",
+      "price": 15.575
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PRTA",
+      "price": 15.3
+    },
+    {
+      "ticker": "IOVA",
+      "price": 15.65
+    }
+  ]
+}

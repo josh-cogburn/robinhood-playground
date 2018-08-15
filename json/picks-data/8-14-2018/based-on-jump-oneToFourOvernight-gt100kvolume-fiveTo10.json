@@ -1,0 +1,78 @@
+{
+  "0": [
+    {
+      "ticker": "TXMD",
+      "price": 5.2699
+    },
+    {
+      "ticker": "CRON",
+      "price": 5.94
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CRON",
+      "price": 5.901
+    },
+    {
+      "ticker": "TXMD",
+      "price": 5.27
+    },
+    {
+      "ticker": "NE",
+      "price": 5.8
+    },
+    {
+      "ticker": "IBN",
+      "price": 9.435
+    },
+    {
+      "ticker": "ESV",
+      "price": 6.86
+    }
+  ],
+  "16": [
+    {
+      "ticker": "WTI",
+      "price": 6.495
+    },
+    {
+      "ticker": "CRON",
+      "price": 5.8699
+    },
+    {
+      "ticker": "TXMD",
+      "price": 5.34
+    },
+    {
+      "ticker": "NE",
+      "price": 5.72
+    },
+    {
+      "ticker": "IBN",
+      "price": 9.425
+    }
+  ],
+  "30": [
+    {
+      "ticker": "WTI",
+      "price": 6.41
+    },
+    {
+      "ticker": "CRON",
+      "price": 5.761
+    },
+    {
+      "ticker": "QEP",
+      "price": 9.865
+    },
+    {
+      "ticker": "TXMD",
+      "price": 5.3335
+    },
+    {
+      "ticker": "NE",
+      "price": 5.715
+    }
+  ]
+}

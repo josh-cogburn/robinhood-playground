@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "HMNY",
+      "price": 0.0505
+    },
+    {
+      "ticker": "ARLZ",
+      "price": 0.0757
+    }
+  ],
+  "40": [
+    {
+      "ticker": "HMNY",
+      "price": 0.0501
+    },
+    {
+      "ticker": "ARLZ",
+      "price": 0.0716
+    }
+  ],
+  "100": [
+    {
+      "ticker": "HMNY",
+      "price": 0.0513
+    },
+    {
+      "ticker": "ARLZ",
+      "price": 0.069
+    }
+  ],
+  "200": [
+    {
+      "ticker": "HMNY",
+      "price": 0.0537
+    },
+    {
+      "ticker": "ARLZ",
+      "price": 0.0669
+    }
+  ],
+  "260": [
+    {
+      "ticker": "HMNY",
+      "price": 0.0534
+    },
+    {
+      "ticker": "ARLZ",
+      "price": 0.0625
+    }
+  ]
+}

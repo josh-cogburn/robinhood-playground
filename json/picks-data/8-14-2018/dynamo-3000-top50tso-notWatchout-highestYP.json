@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "UUUU",
+      "price": 3.1
+    },
+    {
+      "ticker": "SYNC",
+      "price": 2.35
+    }
+  ],
+  "40": [
+    {
+      "ticker": "UUUU",
+      "price": 3.17
+    },
+    {
+      "ticker": "SYNC",
+      "price": 2.375
+    }
+  ],
+  "100": [
+    {
+      "ticker": "NWY",
+      "price": 4.99
+    },
+    {
+      "ticker": "UUUU",
+      "price": 3.24
+    }
+  ],
+  "200": [
+    {
+      "ticker": "UUUU",
+      "price": 3.2558
+    },
+    {
+      "ticker": "LTRX",
+      "price": 3.52
+    }
+  ],
+  "260": [
+    {
+      "ticker": "UUUU",
+      "price": 3.29
+    },
+    {
+      "ticker": "LTRX",
+      "price": 3.5
+    }
+  ]
+}

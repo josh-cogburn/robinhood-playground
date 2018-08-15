@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "ENDP",
+      "price": 15.48
+    },
+    {
+      "ticker": "FIXX",
+      "price": 15.99
+    }
+  ],
+  "5": [
+    {
+      "ticker": "HRTG",
+      "price": 15.39
+    },
+    {
+      "ticker": "ENDP",
+      "price": 15.59
+    }
+  ],
+  "16": [
+    {
+      "ticker": "HRTG",
+      "price": 15.62
+    },
+    {
+      "ticker": "IO",
+      "price": 16.25
+    }
+  ],
+  "30": [
+    {
+      "ticker": "HRTG",
+      "price": 15.77
+    },
+    {
+      "ticker": "IO",
+      "price": 16.25
+    }
+  ]
+}

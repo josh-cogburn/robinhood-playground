@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "ACBI",
+      "price": 18.15
+    },
+    {
+      "ticker": "EOI",
+      "price": 15.81
+    }
+  ],
+  "40": [
+    {
+      "ticker": "LL",
+      "price": 17.7
+    },
+    {
+      "ticker": "FIXX",
+      "price": 15.88
+    }
+  ],
+  "100": [
+    {
+      "ticker": "IPFF",
+      "price": 17.63
+    },
+    {
+      "ticker": "SDRL",
+      "price": 18.479
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PCOM",
+      "price": 15.97
+    },
+    {
+      "ticker": "MHH",
+      "price": 20.4811
+    }
+  ],
+  "260": [
+    {
+      "ticker": "FTNW",
+      "price": 16.4
+    },
+    {
+      "ticker": "PSCE",
+      "price": 16.0462
+    }
+  ]
+}

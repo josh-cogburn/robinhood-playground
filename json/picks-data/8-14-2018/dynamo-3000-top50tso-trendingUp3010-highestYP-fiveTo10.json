@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "ARQL",
+      "price": 6
+    },
+    {
+      "ticker": "NCMI",
+      "price": 8.9
+    }
+  ],
+  "40": [
+    {
+      "ticker": "ARQL",
+      "price": 6.01
+    },
+    {
+      "ticker": "SIGA",
+      "price": 8.08
+    }
+  ],
+  "100": [
+    {
+      "ticker": "SIGA",
+      "price": 8.27
+    },
+    {
+      "ticker": "ARQL",
+      "price": 5.992
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ARQL",
+      "price": 6.06
+    },
+    {
+      "ticker": "SIGA",
+      "price": 8.2
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ARQL",
+      "price": 6.065
+    },
+    {
+      "ticker": "SIGA",
+      "price": 8.15
+    }
+  ]
+}

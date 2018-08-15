@@ -1,0 +1,50 @@
+{
+  "0": [
+    {
+      "ticker": "SNES",
+      "price": 0.93
+    },
+    {
+      "ticker": "AMCN",
+      "price": 0.425
+    }
+  ],
+  "5": [
+    {
+      "ticker": "SNES",
+      "price": 0.925
+    },
+    {
+      "ticker": "ABIL",
+      "price": 4.8
+    },
+    {
+      "ticker": "AMCN",
+      "price": 0.425
+    }
+  ],
+  "16": [
+    {
+      "ticker": "SNES",
+      "price": 0.9221
+    },
+    {
+      "ticker": "AMCN",
+      "price": 0.464
+    }
+  ],
+  "30": [
+    {
+      "ticker": "SNES",
+      "price": 0.9013
+    },
+    {
+      "ticker": "ABIL",
+      "price": 4.8
+    },
+    {
+      "ticker": "AMCN",
+      "price": 0.464
+    }
+  ]
+}

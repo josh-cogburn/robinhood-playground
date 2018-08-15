@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "ACH",
+      "price": 10.31
+    },
+    {
+      "ticker": "TRUE",
+      "price": 12.64
+    }
+  ],
+  "40": [
+    {
+      "ticker": "VIIX",
+      "price": 13.28
+    },
+    {
+      "ticker": "HMI",
+      "price": 10.33
+    }
+  ],
+  "100": [
+    {
+      "ticker": "RCUS",
+      "price": 12.58
+    },
+    {
+      "ticker": "BGCP",
+      "price": 11.55
+    }
+  ],
+  "200": [
+    {
+      "ticker": "AFH",
+      "price": 10.4003
+    },
+    {
+      "ticker": "RCUS",
+      "price": 12.42
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SWCH",
+      "price": 10.76
+    },
+    {
+      "ticker": "AFH",
+      "price": 10.45
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "TXMD",
+      "price": 5.2699
+    },
+    {
+      "ticker": "CRON",
+      "price": 5.94
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CRON",
+      "price": 5.901
+    },
+    {
+      "ticker": "TXMD",
+      "price": 5.27
+    }
+  ],
+  "16": [
+    {
+      "ticker": "WTI",
+      "price": 6.495
+    },
+    {
+      "ticker": "CRON",
+      "price": 5.8699
+    }
+  ],
+  "30": [
+    {
+      "ticker": "WTI",
+      "price": 6.41
+    },
+    {
+      "ticker": "CRON",
+      "price": 5.761
+    }
+  ]
+}

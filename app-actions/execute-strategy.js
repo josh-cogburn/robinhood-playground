@@ -5,7 +5,7 @@ const recordPicks = require('./record-picks');
 
 const executeStrategy = async (Robinhood, strategyFn, min, ratioToSpend, strategy, pricePermFilter) => {
 
-    console.log('executing strategy', strategy, min);
+    console.log('executing strategy', `${strategy}-${min}`);
 
     const trend = await getTrendAndSave(Robinhood, min + '*');
 

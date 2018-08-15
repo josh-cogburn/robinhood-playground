@@ -1,0 +1,54 @@
+{
+  "0": [
+    {
+      "ticker": "AEY",
+      "price": 1.4
+    },
+    {
+      "ticker": "EMX",
+      "price": 1.13
+    }
+  ],
+  "5": [
+    {
+      "ticker": "AEY",
+      "price": 1.35
+    },
+    {
+      "ticker": "EMX",
+      "price": 1.1225
+    }
+  ],
+  "16": [
+    {
+      "ticker": "ADIL",
+      "price": 3.25
+    },
+    {
+      "ticker": "AEY",
+      "price": 1.35
+    },
+    {
+      "ticker": "EMX",
+      "price": 1.1343
+    }
+  ],
+  "30": [
+    {
+      "ticker": "INFU",
+      "price": 2.8499
+    },
+    {
+      "ticker": "ADIL",
+      "price": 3.2925
+    },
+    {
+      "ticker": "AEY",
+      "price": 1.3367
+    },
+    {
+      "ticker": "EMX",
+      "price": 1.15
+    }
+  ]
+}
