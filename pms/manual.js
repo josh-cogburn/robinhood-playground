@@ -307,13 +307,21 @@ const anyCountPerfectos = [
     'based-on-jump-gtEightOvernight-trending103-gt100kvolume-first1-tenTo15-30',
     // 'based-on-jump-gtEightOvernight-trending103-gt100kvolume-tenTo15-30',
     'low-float-high-volume-volTo2WeekPoints-trenddown7to10-shouldWatchout-fifteenTo20-210',
-    'low-float-high-volume-floatTimesfloatToVolume-trenddown7to10-shouldWatchout-fifteenTo20-150'
+    'low-float-high-volume-floatTimesfloatToVolume-trenddown7to10-shouldWatchout-fifteenTo20-150',
+
+
+    'sudden-drops-last10trend-filter30-328',
+    'sudden-drops-last10trend-filter20-290',
 ];
 
 const moreaddsons = [
     'low-float-high-volume-volToAvgPoints-trenddowngt20-shouldWatchout-6',
-
-]
+    'based-on-jump-down8overnight-notWatchout-ltneg50percmax-first1-30',
+    'technical-indicators-10minute-week-topSMAoverUnderLastTrade-114',
+    'technical-indicators-10minute-week-topSMAoverUnderLastTrade-tenTo15-29',
+    'technical-indicators-day-year-topOBV-29',
+    'fizbiz-nanoEarlyRunners-first1-180'
+];
 
 
 module.exports = {
@@ -364,5 +372,6 @@ module.exports = {
     filteredDrops,
 
 
-    anyCountPerfectos
+    anyCountPerfectos,
+    moreaddsons
 };
