@@ -5,6 +5,7 @@ const http = require('http');
 const SocketIO = require('socket.io');
 const compression = require('compression');
 const stratManager = require('./strat-manager');
+const path = require('path');
 
 let app = express();
 let server = http.Server(app);
@@ -13,10 +14,14 @@ let port = process.env.PORT || 3000;
 let users = [];
 let sockets = {};
 
-console.log(__dirname, 'dirname');
+// console.log(__dirname, 'dirname');
 
 app.use(compression({}));
-app.use(express['static'](__dirname + '/../client/build'));
+
+
+const buildDir = path.join(__dirname, '../client/build');
+console.log('build dir', buildDir);
+app.use(express['static'](buildDir));
 
 io.on('connection', (socket) => {
 
