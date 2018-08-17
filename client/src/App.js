@@ -73,12 +73,8 @@ class Pick extends Component {
 class App extends Component {
   state = { picks: [], relatedPrices: {}, strategyFilter: 'forPurchase', pastData: {}, strategies: {}, afterHoursEnabled: false };
   componentDidMount() {
-      const { protocol, hostname } = window.location;
-      let endpoint = `${protocol}//${hostname}`;
-      if (hostname === 'localhost') {
-          endpoint += ':3000';
-      }
-      const socket = socketIOClient(endpoint);
+      const { origin } = window.location;
+      const socket = socketIOClient(origin);
       socket.on('server:picks-data', data => {
           console.log(data);
           this.setState({
