@@ -94,7 +94,7 @@ const stratManager = {
         // calc current date
         const now = new Date();
         const compareDate = new Date();
-        compareDate.setHours(6);
+        compareDate.setHours(9);
         compareDate.setMinutes(25);
         if (compareDate - now > 0) {
             now.setDate(now.getDate() - 1);

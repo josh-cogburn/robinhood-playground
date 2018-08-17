@@ -4,7 +4,7 @@ let allCrons = [];
 
 const regCronIncAfterSixThirty = (Robinhood, { name, run, fn }) => {
     const d = new Date();
-    d.setHours(6, 30);
+    d.setHours(9, 30);
     run.forEach((min, index) => {
         const newDateObj = new Date(d.getTime() + min * 60000);
         newDateObj.setSeconds(0);
