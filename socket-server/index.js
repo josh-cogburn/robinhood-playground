@@ -13,6 +13,8 @@ let port = process.env.PORT || 3000;
 let users = [];
 let sockets = {};
 
+console.log(__dirname, 'dirname');
+
 app.use(compression({}));
 app.use(express['static'](__dirname + '/../client/build'));
 
