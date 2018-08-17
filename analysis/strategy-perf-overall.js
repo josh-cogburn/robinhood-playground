@@ -141,8 +141,8 @@ module.exports = async (Robinhood, includeToday, daysBack = NUM_DAYS, minCount =
         .slice(0);
 
     // console.log(sortedByAvgTrend);
-    console.log('sorted by avg trend')
-    console.table(sortedByAvgTrend);
+    // console.log('sorted by avg trend')
+    // console.table(sortedByAvgTrend);
 
     const sortedByPercUp = withData
         // .filter(t => t.trend.length > 30)
@@ -152,8 +152,8 @@ module.exports = async (Robinhood, includeToday, daysBack = NUM_DAYS, minCount =
         })
         .slice(0);
 
-    console.log('sorted by perc up')
-    console.table(sortedByPercUp);
+    // console.log('sorted by perc up')
+    // console.table(sortedByPercUp);
 
     const sortedByHundredResult = withData
         // .filter(t => t.trend.length > 30)
@@ -164,8 +164,10 @@ module.exports = async (Robinhood, includeToday, daysBack = NUM_DAYS, minCount =
         })
         .slice(0);
 
-    console.log('sorted by hundred result')
-    console.table(sortedByHundredResult);
+    // console.log('sorted by hundred result')
+    // console.table(sortedByHundredResult);
+
+    console.log('done getting strat perf overall')
 
 
 
