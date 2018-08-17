@@ -282,11 +282,14 @@ const qualityModerates = [
 
 const anyCountPerfectos = [
 
-    'based-on-jump-down3overnight-trending103-notWatchout-ltneg50percmax-first1-fiveTo10-0',
+    // 'based-on-jump-down3overnight-trending103-notWatchout-ltneg50percmax-first1-fiveTo10-0',
     'based-on-jump-down3overnight-trending103-notWatchout-ltneg50percmax-first1-fiveTo10-5',
-    'based-on-jump-down3overnight-trending103-notWatchout-ltneg50percmax-fiveTo10-0',
+    'based-on-jump-down5overnight-trending103-notWatchout-gtneg20percmax-first1-5',
+    // 'based-on-jump-down3overnight-trending103-notWatchout-ltneg50percmax-fiveTo10-0',
     'based-on-jump-gtEightOvernight-trending103-first1-tenTo15-30',
     'based-on-jump-gtEightOvernight-trending103-gt100kvolume-first1-tenTo15-30',
+    'based-on-jump-down3overnight-notWatchout-ltneg50percmax-first1-fifteenTo20-30',
+    'based-on-jump-down8overnight-notWatchout-ltneg50percmax-first1-30',
 
     'low-float-high-volume-volTo2WeekPoints-fifteenTo20-6',
     'low-float-high-volume-floatPoints-trenddown7to10-shouldWatchout-tenTo15-6',
@@ -307,6 +310,9 @@ const anyCountPerfectos = [
     'sudden-drops-last10trend-filter30-328',
 
     'sudden-drops-last30trend-filter20-290',
+
+    'technical-indicators-10minute-week-topSMAoverUnderLastTrade-114',
+    'technical-indicators-10minute-week-topSMAoverUnderLastTrade-tenTo15-29'
 ];
 
 const moreaddsons = [
