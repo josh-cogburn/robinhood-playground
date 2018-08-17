@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "CPHI",
+      "price": 0.23
+    },
+    {
+      "ticker": "XIN",
+      "price": 4.09
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CPHI",
+      "price": 0.2337
+    },
+    {
+      "ticker": "YVR",
+      "price": 1.1737
+    }
+  ],
+  "100": [
+    {
+      "ticker": "CPHI",
+      "price": 0.2324
+    },
+    {
+      "ticker": "YVR",
+      "price": 1.06
+    }
+  ],
+  "200": [
+    {
+      "ticker": "YVR",
+      "price": 1.125
+    },
+    {
+      "ticker": "JTPY",
+      "price": 1.75
+    }
+  ],
+  "260": [
+    {
+      "ticker": "YVR",
+      "price": 1.0599
+    },
+    {
+      "ticker": "JTPY",
+      "price": 1.81
+    }
+  ],
+  "351": [
+    {
+      "ticker": "YVR",
+      "price": 1.16
+    },
+    {
+      "ticker": "JTPY",
+      "price": 1.81
+    }
+  ],
+  "381": [
+    {
+      "ticker": "YVR",
+      "price": 1.15
+    },
+    {
+      "ticker": "EVOL",
+      "price": 2.4
+    }
+  ]
+}

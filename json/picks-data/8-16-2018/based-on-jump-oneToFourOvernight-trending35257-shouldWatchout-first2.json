@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "GVP",
+      "price": 3.2
+    },
+    {
+      "ticker": "KONA",
+      "price": 2.6
+    }
+  ],
+  "5": [
+    {
+      "ticker": "GVP",
+      "price": 3.2
+    },
+    {
+      "ticker": "ISNS",
+      "price": 4.9
+    }
+  ],
+  "16": [
+    {
+      "ticker": "GVP",
+      "price": 3.25
+    },
+    {
+      "ticker": "ISNS",
+      "price": 4.9
+    }
+  ],
+  "30": [
+    {
+      "ticker": "GVP",
+      "price": 3.25
+    },
+    {
+      "ticker": "ISNS",
+      "price": 4.9
+    }
+  ]
+}

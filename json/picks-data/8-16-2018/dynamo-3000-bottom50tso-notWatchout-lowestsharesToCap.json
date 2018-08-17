@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "SGBX",
+      "price": 4.1169
+    },
+    {
+      "ticker": "NK",
+      "price": 3.06
+    }
+  ],
+  "40": [
+    {
+      "ticker": "TPNL",
+      "price": 2.81
+    },
+    {
+      "ticker": "JCP",
+      "price": 1.83
+    }
+  ],
+  "100": [
+    {
+      "ticker": "SGBX",
+      "price": 4.09
+    },
+    {
+      "ticker": "TPNL",
+      "price": 2.64
+    }
+  ],
+  "200": [
+    {
+      "ticker": "NG",
+      "price": 3.935
+    },
+    {
+      "ticker": "TPNL",
+      "price": 2.95
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NG",
+      "price": 3.87
+    },
+    {
+      "ticker": "LAC",
+      "price": 3.79
+    }
+  ],
+  "351": [
+    {
+      "ticker": "BTN",
+      "price": 4.7501
+    },
+    {
+      "ticker": "MLNT",
+      "price": 4.2
+    }
+  ],
+  "381": [
+    {
+      "ticker": "BTN",
+      "price": 4.7501
+    },
+    {
+      "ticker": "MLNT",
+      "price": 4.195
+    }
+  ]
+}

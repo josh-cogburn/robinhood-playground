@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "NAUH",
+      "price": 1.14
+    },
+    {
+      "ticker": "ARCI",
+      "price": 0.69
+    }
+  ],
+  "5": [
+    {
+      "ticker": "MTP",
+      "price": 0.6955
+    },
+    {
+      "ticker": "NAUH",
+      "price": 1.14
+    }
+  ],
+  "16": [
+    {
+      "ticker": "MTP",
+      "price": 0.64
+    },
+    {
+      "ticker": "NAUH",
+      "price": 1.14
+    }
+  ],
+  "30": [
+    {
+      "ticker": "MTP",
+      "price": 0.672
+    },
+    {
+      "ticker": "NAUH",
+      "price": 1.14
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "TAST",
+      "price": 16.05
+    },
+    {
+      "ticker": "KNSA",
+      "price": 16.71
+    }
+  ],
+  "40": [
+    {
+      "ticker": "KNSA",
+      "price": 17.05
+    },
+    {
+      "ticker": "IOVA",
+      "price": 17.2139
+    }
+  ],
+  "100": [
+    {
+      "ticker": "SPOK",
+      "price": 15.675
+    },
+    {
+      "ticker": "KNSA",
+      "price": 17.14
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PLSE",
+      "price": 15.25
+    },
+    {
+      "ticker": "KNSA",
+      "price": 17.15
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PLSE",
+      "price": 15.38
+    },
+    {
+      "ticker": "EXPI",
+      "price": 16.49
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SPOK",
+      "price": 15.725
+    },
+    {
+      "ticker": "DRNA",
+      "price": 15.155
+    }
+  ],
+  "381": [
+    {
+      "ticker": "DRNA",
+      "price": 15.08
+    },
+    {
+      "ticker": "PLSE",
+      "price": 15.19
+    }
+  ]
+}

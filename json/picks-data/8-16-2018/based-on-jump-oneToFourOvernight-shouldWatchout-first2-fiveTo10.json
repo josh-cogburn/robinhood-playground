@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "CMTA",
+      "price": 8.75
+    },
+    {
+      "ticker": "BKD",
+      "price": 7.99
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CMTA",
+      "price": 8.75
+    },
+    {
+      "ticker": "BKD",
+      "price": 7.9
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CMTA",
+      "price": 8.8082
+    },
+    {
+      "ticker": "STG",
+      "price": 5.83
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CMTA",
+      "price": 8.9
+    },
+    {
+      "ticker": "STG",
+      "price": 5.84
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "DNLI",
+      "price": 15.16
+    },
+    {
+      "ticker": "LTRPA",
+      "price": 15.5
+    }
+  ],
+  "40": [
+    {
+      "ticker": "BCBP",
+      "price": 15.05
+    },
+    {
+      "ticker": "YPF",
+      "price": 15.19
+    }
+  ],
+  "100": [
+    {
+      "ticker": "SPOK",
+      "price": 15.675
+    },
+    {
+      "ticker": "BCBP",
+      "price": 15.1
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PLSE",
+      "price": 15.25
+    },
+    {
+      "ticker": "BCBP",
+      "price": 15.1
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PLSE",
+      "price": 15.38
+    },
+    {
+      "ticker": "BCBP",
+      "price": 15.05
+    }
+  ],
+  "351": [
+    {
+      "ticker": "TROX",
+      "price": 15.06
+    },
+    {
+      "ticker": "SPOK",
+      "price": 15.725
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SRRK",
+      "price": 15.01
+    },
+    {
+      "ticker": "TROX",
+      "price": 15.1
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "CIG",
+      "price": 2.05
+    },
+    {
+      "ticker": "KONA",
+      "price": 2.6
+    },
+    {
+      "ticker": "ALJJ",
+      "price": 2.25
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CIG",
+      "price": 2.06
+    },
+    {
+      "ticker": "ISNS",
+      "price": 4.9
+    },
+    {
+      "ticker": "KONA",
+      "price": 2.6
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CIG",
+      "price": 2.085
+    },
+    {
+      "ticker": "ISNS",
+      "price": 4.9
+    },
+    {
+      "ticker": "KONA",
+      "price": 2.6
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CIG",
+      "price": 2.08
+    },
+    {
+      "ticker": "ISNS",
+      "price": 4.9
+    },
+    {
+      "ticker": "KONA",
+      "price": 2.59
+    }
+  ]
+}

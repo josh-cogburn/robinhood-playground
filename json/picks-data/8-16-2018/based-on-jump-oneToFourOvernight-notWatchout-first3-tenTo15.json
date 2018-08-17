@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "HMI",
+      "price": 10.3574
+    },
+    {
+      "ticker": "BILI",
+      "price": 10.5
+    },
+    {
+      "ticker": "SNMP",
+      "price": 10.289
+    }
+  ],
+  "5": [
+    {
+      "ticker": "NYNY",
+      "price": 12.6
+    },
+    {
+      "ticker": "HMI",
+      "price": 10.2973
+    },
+    {
+      "ticker": "WTTR",
+      "price": 12.81
+    }
+  ],
+  "16": [
+    {
+      "ticker": "NYNY",
+      "price": 12.45
+    },
+    {
+      "ticker": "HMI",
+      "price": 10.2973
+    },
+    {
+      "ticker": "WTTR",
+      "price": 12.91
+    }
+  ],
+  "30": [
+    {
+      "ticker": "NYNY",
+      "price": 12.495
+    },
+    {
+      "ticker": "HMI",
+      "price": 10.49
+    },
+    {
+      "ticker": "WTTR",
+      "price": 12.87
+    }
+  ]
+}

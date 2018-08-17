@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "OMI",
+      "price": 15.27
+    },
+    {
+      "ticker": "AIQ",
+      "price": 15.2689
+    }
+  ],
+  "40": [
+    {
+      "ticker": "OMI",
+      "price": 15.24
+    },
+    {
+      "ticker": "AIQ",
+      "price": 15.1629
+    }
+  ],
+  "100": [
+    {
+      "ticker": "ZAGG",
+      "price": 15.05
+    },
+    {
+      "ticker": "OMI",
+      "price": 15.27
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PLSE",
+      "price": 15.25
+    },
+    {
+      "ticker": "ZAGG",
+      "price": 15
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PLSE",
+      "price": 15.38
+    },
+    {
+      "ticker": "OMI",
+      "price": 15.5
+    }
+  ],
+  "351": [
+    {
+      "ticker": "TROX",
+      "price": 15.06
+    },
+    {
+      "ticker": "PLSE",
+      "price": 15.21
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SRRK",
+      "price": 15.01
+    },
+    {
+      "ticker": "TROX",
+      "price": 15.1
+    }
+  ]
+}

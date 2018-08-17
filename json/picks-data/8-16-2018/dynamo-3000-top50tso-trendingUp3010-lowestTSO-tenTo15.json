@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "ABCD",
+      "price": 13.32
+    },
+    {
+      "ticker": "MDRX",
+      "price": 14.45
+    }
+  ],
+  "40": [
+    {
+      "ticker": "AIRG",
+      "price": 11.97
+    },
+    {
+      "ticker": "SPNS",
+      "price": 10.98
+    }
+  ],
+  "100": [
+    {
+      "ticker": "DRNA",
+      "price": 14.86
+    },
+    {
+      "ticker": "HMTV",
+      "price": 13.15
+    }
+  ],
+  "200": [
+    {
+      "ticker": "SHSP",
+      "price": 12.89
+    },
+    {
+      "ticker": "AAC",
+      "price": 10.17
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SOXS",
+      "price": 10.68
+    },
+    {
+      "ticker": "SHSP",
+      "price": 12.8446
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SOXS",
+      "price": 10.7
+    },
+    {
+      "ticker": "AIRG",
+      "price": 12.09
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AAC",
+      "price": 10.13
+    },
+    {
+      "ticker": "RLH",
+      "price": 13.825
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "EXPR",
+      "price": 10.12
+    },
+    {
+      "ticker": "RARX",
+      "price": 10.325
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CVIA",
+      "price": 11.95
+    },
+    {
+      "ticker": "RARX",
+      "price": 10.28
+    }
+  ],
+  "100": [
+    {
+      "ticker": "CVIA",
+      "price": 12.3
+    },
+    {
+      "ticker": "RARX",
+      "price": 10.295
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CVIA",
+      "price": 12
+    },
+    {
+      "ticker": "LBY",
+      "price": 10.1
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CVIA",
+      "price": 11.88
+    },
+    {
+      "ticker": "RARX",
+      "price": 10.34
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CVIA",
+      "price": 11.95
+    },
+    {
+      "ticker": "FRD",
+      "price": 10.34
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CVIA",
+      "price": 11.9042
+    },
+    {
+      "ticker": "FRD",
+      "price": 10.339
+    }
+  ]
+}

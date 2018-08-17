@@ -1,0 +1,134 @@
+{
+  "10": [
+    {
+      "ticker": "SMRT",
+      "price": 2.729
+    },
+    {
+      "ticker": "IZEA",
+      "price": 1.11
+    },
+    {
+      "ticker": "BBOX",
+      "price": 1.59
+    },
+    {
+      "ticker": "WPRT",
+      "price": 2.66
+    },
+    {
+      "ticker": "ASNA",
+      "price": 4.75
+    }
+  ],
+  "50": [
+    {
+      "ticker": "IZEA",
+      "price": 1.119
+    },
+    {
+      "ticker": "EVFM",
+      "price": 2.2196
+    },
+    {
+      "ticker": "BBOX",
+      "price": 1.595
+    },
+    {
+      "ticker": "OHGI",
+      "price": 0.2801
+    },
+    {
+      "ticker": "WPRT",
+      "price": 2.67
+    }
+  ],
+  "200": [
+    {
+      "ticker": "IZEA",
+      "price": 1.1
+    },
+    {
+      "ticker": "VJET",
+      "price": 3.5001
+    },
+    {
+      "ticker": "OHGI",
+      "price": 0.2792
+    },
+    {
+      "ticker": "WPRT",
+      "price": 2.585
+    },
+    {
+      "ticker": "ASNA",
+      "price": 4.765
+    }
+  ],
+  "300": [
+    {
+      "ticker": "IZEA",
+      "price": 1.1
+    },
+    {
+      "ticker": "VJET",
+      "price": 3.5
+    },
+    {
+      "ticker": "BBOX",
+      "price": 1.5691
+    },
+    {
+      "ticker": "WPRT",
+      "price": 2.59
+    },
+    {
+      "ticker": "ASNA",
+      "price": 4.7
+    }
+  ],
+  "380": [
+    {
+      "ticker": "IZEA",
+      "price": 1.0945
+    },
+    {
+      "ticker": "VJET",
+      "price": 3.5369
+    },
+    {
+      "ticker": "WPRT",
+      "price": 2.585
+    },
+    {
+      "ticker": "ASNA",
+      "price": 4.71
+    },
+    {
+      "ticker": "DNR",
+      "price": 4.48
+    }
+  ],
+  "600": [
+    {
+      "ticker": "IZEA",
+      "price": 1.1
+    },
+    {
+      "ticker": "WPRT",
+      "price": 2.59
+    },
+    {
+      "ticker": "ASNA",
+      "price": 4.69
+    },
+    {
+      "ticker": "DNR",
+      "price": 4.48
+    },
+    {
+      "ticker": "SGLB",
+      "price": 0.9001
+    }
+  ]
+}

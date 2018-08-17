@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "OMEX",
+      "price": 7.87
+    },
+    {
+      "ticker": "CATS",
+      "price": 8.365
+    }
+  ],
+  "40": [
+    {
+      "ticker": "BOXL",
+      "price": 5.79
+    },
+    {
+      "ticker": "OMEX",
+      "price": 7.72
+    }
+  ],
+  "100": [
+    {
+      "ticker": "MGTX",
+      "price": 9.85
+    },
+    {
+      "ticker": "OMEX",
+      "price": 7.7
+    }
+  ],
+  "200": [
+    {
+      "ticker": "NFEC",
+      "price": 5
+    },
+    {
+      "ticker": "MGTX",
+      "price": 9.8
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CMTA",
+      "price": 9.55
+    },
+    {
+      "ticker": "SCPH",
+      "price": 5.08
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SCPH",
+      "price": 5.12
+    },
+    {
+      "ticker": "CMTA",
+      "price": 9.53
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CMTA",
+      "price": 9.84
+    },
+    {
+      "ticker": "SCPH",
+      "price": 5.15
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "0": [
+    {
+      "ticker": "UVXY",
+      "price": 9.19
+    },
+    {
+      "ticker": "RIOT",
+      "price": 5.07
+    },
+    {
+      "ticker": "OMEX",
+      "price": 7.87
+    }
+  ],
+  "5": [
+    {
+      "ticker": "UVXY",
+      "price": 9.1015
+    },
+    {
+      "ticker": "OMEX",
+      "price": 7.87
+    }
+  ],
+  "16": [
+    {
+      "ticker": "UVXY",
+      "price": 9.1899
+    },
+    {
+      "ticker": "CSBR",
+      "price": 7.25
+    },
+    {
+      "ticker": "OMEX",
+      "price": 7.84
+    }
+  ],
+  "30": [
+    {
+      "ticker": "UVXY",
+      "price": 9.13
+    },
+    {
+      "ticker": "CSBR",
+      "price": 7.3777
+    },
+    {
+      "ticker": "OMEX",
+      "price": 7.72
+    }
+  ]
+}

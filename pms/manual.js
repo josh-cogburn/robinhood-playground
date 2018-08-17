@@ -305,6 +305,8 @@ const anyCountPerfectos = [
     'sudden-drops-last10trend-filter20-290',
     'sudden-drops-last10trend-filter20-290',
     'sudden-drops-last10trend-filter30-328',
+
+    'sudden-drops-last30trend-filter20-290',
 ];
 
 const moreaddsons = [

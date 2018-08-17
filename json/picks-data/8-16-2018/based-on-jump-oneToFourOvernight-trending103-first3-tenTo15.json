@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "CSPI",
+      "price": 11.48
+    },
+    {
+      "ticker": "EIGR",
+      "price": 10.45
+    },
+    {
+      "ticker": "RCUS",
+      "price": 13.1592
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CSPI",
+      "price": 11.48
+    },
+    {
+      "ticker": "RCUS",
+      "price": 13.0818
+    },
+    {
+      "ticker": "EIGR",
+      "price": 10.45
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CLPR",
+      "price": 11.541
+    },
+    {
+      "ticker": "CSPI",
+      "price": 11.48
+    },
+    {
+      "ticker": "EIGR",
+      "price": 10.3352
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CLPR",
+      "price": 11.541
+    },
+    {
+      "ticker": "CSPI",
+      "price": 11.48
+    },
+    {
+      "ticker": "EIGR",
+      "price": 10.595
+    }
+  ]
+}

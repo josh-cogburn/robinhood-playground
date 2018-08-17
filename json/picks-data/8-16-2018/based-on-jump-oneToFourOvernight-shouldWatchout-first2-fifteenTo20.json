@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "IO",
+      "price": 15.8
+    },
+    {
+      "ticker": "BRZU",
+      "price": 20.56
+    }
+  ],
+  "5": [
+    {
+      "ticker": "IO",
+      "price": 15.8
+    },
+    {
+      "ticker": "IOVA",
+      "price": 16.8735
+    }
+  ],
+  "16": [
+    {
+      "ticker": "IO",
+      "price": 15.75
+    },
+    {
+      "ticker": "IOVA",
+      "price": 16.55
+    }
+  ],
+  "30": [
+    {
+      "ticker": "IO",
+      "price": 15.9
+    },
+    {
+      "ticker": "IOVA",
+      "price": 17.325
+    }
+  ]
+}

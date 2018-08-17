@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "TGB",
+      "price": 0.7
+    },
+    {
+      "ticker": "SBGL",
+      "price": 2.17
+    }
+  ],
+  "40": [
+    {
+      "ticker": "SBGL",
+      "price": 2.145
+    },
+    {
+      "ticker": "MBOT",
+      "price": 0.5801
+    }
+  ],
+  "100": [
+    {
+      "ticker": "EVFM",
+      "price": 2.21
+    },
+    {
+      "ticker": "FBIO",
+      "price": 2.03
+    }
+  ],
+  "200": [
+    {
+      "ticker": "FBIO",
+      "price": 2.03
+    },
+    {
+      "ticker": "HBM",
+      "price": 4.65
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ENZ",
+      "price": 4.02
+    },
+    {
+      "ticker": "HYRE",
+      "price": 2.861
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NEON",
+      "price": 0.319
+    },
+    {
+      "ticker": "FBIO",
+      "price": 2.0289
+    }
+  ],
+  "381": [
+    {
+      "ticker": "NEON",
+      "price": 0.319
+    },
+    {
+      "ticker": "NNVC",
+      "price": 0.3468
+    }
+  ]
+}

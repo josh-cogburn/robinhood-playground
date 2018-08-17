@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "CIG",
+      "price": 2.05
+    },
+    {
+      "ticker": "SID",
+      "price": 2.32
+    }
+  ],
+  "5": [
+    {
+      "ticker": "EXK",
+      "price": 2.2905
+    },
+    {
+      "ticker": "HMY",
+      "price": 1.545
+    }
+  ],
+  "16": [
+    {
+      "ticker": "EXK",
+      "price": 2.26
+    },
+    {
+      "ticker": "HMY",
+      "price": 1.55
+    }
+  ],
+  "30": [
+    {
+      "ticker": "THM",
+      "price": 0.4572
+    },
+    {
+      "ticker": "EXK",
+      "price": 2.255
+    }
+  ]
+}

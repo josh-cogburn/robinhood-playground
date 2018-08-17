@@ -1,0 +1,70 @@
+{
+  "10": [
+    {
+      "ticker": "SESN",
+      "price": 1.8885
+    }
+  ],
+  "50": [
+    {
+      "ticker": "PULM",
+      "price": 0.341
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PULM",
+      "price": 0.334
+    },
+    {
+      "ticker": "DFFN",
+      "price": 0.3843
+    },
+    {
+      "ticker": "EKSO",
+      "price": 2.86
+    }
+  ],
+  "300": [
+    {
+      "ticker": "PULM",
+      "price": 0.3385
+    },
+    {
+      "ticker": "EKSO",
+      "price": 2.84
+    },
+    {
+      "ticker": "DFFN",
+      "price": 0.3918
+    }
+  ],
+  "380": [
+    {
+      "ticker": "PULM",
+      "price": 0.3399
+    },
+    {
+      "ticker": "EKSO",
+      "price": 2.86
+    },
+    {
+      "ticker": "DFFN",
+      "price": 0.3903
+    }
+  ],
+  "600": [
+    {
+      "ticker": "PULM",
+      "price": 0.34
+    },
+    {
+      "ticker": "DFFN",
+      "price": 0.385
+    },
+    {
+      "ticker": "EKSO",
+      "price": 2.89
+    }
+  ]
+}
