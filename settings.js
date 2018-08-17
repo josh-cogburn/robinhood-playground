@@ -24,8 +24,8 @@ module.exports = {
     forPurchase: [
         '[anyCountPerfectos]',
         'based-on-jump-down5overnight-trending103-notWatchout-gtneg20percmax-first1-5',
-        '[myRecs-day1-hundredResultCreme]',
-        '[myRecs-day1-hundredResultCreme]',
+        // '[myRecs-day1-hundredResultCreme]',
+        // '[myRecs-day1-hundredResultCreme]',
     ],
     sellStrategy: 'limit3',     // for fallback
 

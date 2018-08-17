@@ -4,6 +4,8 @@ const getTrendAndSave = require('./app-actions/get-trend-and-save');
 // node run [filename goes here]
 
 (async () => {
+    console.log('asd')
+    console.log(process.argv, 'ps');
     let Robinhood = await login();
     const argPath = process.argv[2];
     let relatedAnalysisFn = require(`./${argPath}`);
