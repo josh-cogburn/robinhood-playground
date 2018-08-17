@@ -1,6 +1,5 @@
-const allStocks = require('../json/stock-data/allStocks');
-
 const filterByTradeable = stocks => {
+    const allStocks = require('../json/stock-data/allStocks');
     const areTradeable = [];
     for (let ticker of stocks) {
         const foundObj = allStocks.find(obj => obj.symbol === ticker);
