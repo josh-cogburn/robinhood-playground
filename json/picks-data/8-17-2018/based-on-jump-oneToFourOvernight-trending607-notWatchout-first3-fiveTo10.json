@@ -1,0 +1,50 @@
+{
+  "0": [
+    {
+      "ticker": "WEAT",
+      "price": 7
+    },
+    {
+      "ticker": "IBN",
+      "price": 9.655
+    }
+  ],
+  "5": [
+    {
+      "ticker": "WEAT",
+      "price": 6.985
+    },
+    {
+      "ticker": "IBN",
+      "price": 9.66
+    }
+  ],
+  "16": [
+    {
+      "ticker": "WEAT",
+      "price": 7.05
+    },
+    {
+      "ticker": "TAC",
+      "price": 5.85
+    },
+    {
+      "ticker": "IBN",
+      "price": 9.665
+    }
+  ],
+  "30": [
+    {
+      "ticker": "WEAT",
+      "price": 7.04
+    },
+    {
+      "ticker": "TAC",
+      "price": 5.85
+    },
+    {
+      "ticker": "IBN",
+      "price": 9.675
+    }
+  ]
+}

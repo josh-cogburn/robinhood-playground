@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "ANY",
+      "price": 0.2913
+    }
+  ],
+  "5": [
+    {
+      "ticker": "ADOM",
+      "price": 0.68
+    }
+  ],
+  "16": [
+    {
+      "ticker": "ADOM",
+      "price": 0.719
+    },
+    {
+      "ticker": "JMU",
+      "price": 1.4873
+    },
+    {
+      "ticker": "ANY",
+      "price": 0.275
+    }
+  ],
+  "30": [
+    {
+      "ticker": "ADOM",
+      "price": 0.7204
+    },
+    {
+      "ticker": "JMU",
+      "price": 1.8111
+    },
+    {
+      "ticker": "ANY",
+      "price": 0.285
+    }
+  ]
+}

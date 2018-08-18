@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "FRD",
+      "price": 10.33
+    },
+    {
+      "ticker": "NVTA",
+      "price": 10.3417
+    }
+  ],
+  "40": [
+    {
+      "ticker": "SWCH",
+      "price": 10.15
+    },
+    {
+      "ticker": "CBIO",
+      "price": 10.23
+    }
+  ],
+  "100": [
+    {
+      "ticker": "SWCH",
+      "price": 10.145
+    },
+    {
+      "ticker": "NVTA",
+      "price": 10.14
+    }
+  ],
+  "200": [
+    {
+      "ticker": "LBY",
+      "price": 10.08
+    },
+    {
+      "ticker": "FRD",
+      "price": 10.118
+    }
+  ],
+  "260": [
+    {
+      "ticker": "FRD",
+      "price": 10.1
+    },
+    {
+      "ticker": "NVTA",
+      "price": 10.2
+    }
+  ],
+  "351": [
+    {
+      "ticker": "FRD",
+      "price": 10.2259
+    },
+    {
+      "ticker": "NVTA",
+      "price": 10.2424
+    }
+  ],
+  "381": [
+    {
+      "ticker": "FRD",
+      "price": 10.2337
+    },
+    {
+      "ticker": "NVTA",
+      "price": 10.205
+    }
+  ]
+}

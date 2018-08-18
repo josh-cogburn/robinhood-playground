@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "PRPO",
+      "price": 0.42
+    },
+    {
+      "ticker": "CVM",
+      "price": 1.04
+    }
+  ],
+  "40": [
+    {
+      "ticker": "PRPO",
+      "price": 0.44
+    },
+    {
+      "ticker": "ARCI",
+      "price": 0.7325
+    }
+  ],
+  "100": [
+    {
+      "ticker": "PRPO",
+      "price": 0.4191
+    },
+    {
+      "ticker": "ARCI",
+      "price": 0.73
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PRPO",
+      "price": 0.4149
+    },
+    {
+      "ticker": "ARCI",
+      "price": 0.72
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PRPO",
+      "price": 0.4283
+    },
+    {
+      "ticker": "ARCI",
+      "price": 0.721
+    }
+  ],
+  "351": [
+    {
+      "ticker": "PRPO",
+      "price": 0.4267
+    },
+    {
+      "ticker": "BIOL",
+      "price": 1.8
+    }
+  ],
+  "381": [
+    {
+      "ticker": "PRPO",
+      "price": 0.425
+    },
+    {
+      "ticker": "ARCI",
+      "price": 0.72
+    }
+  ]
+}

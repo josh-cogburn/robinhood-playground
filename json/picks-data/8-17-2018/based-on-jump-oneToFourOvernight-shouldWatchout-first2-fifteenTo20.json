@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "EXPI",
+      "price": 16.94
+    },
+    {
+      "ticker": "NITE",
+      "price": 19.8
+    }
+  ],
+  "5": [
+    {
+      "ticker": "EXPI",
+      "price": 16.8474
+    },
+    {
+      "ticker": "CNX",
+      "price": 15.27
+    }
+  ],
+  "16": [
+    {
+      "ticker": "EXPI",
+      "price": 16.08
+    },
+    {
+      "ticker": "CNX",
+      "price": 15.24
+    }
+  ],
+  "30": [
+    {
+      "ticker": "EXPI",
+      "price": 15.61
+    },
+    {
+      "ticker": "CNX",
+      "price": 15.21
+    }
+  ]
+}

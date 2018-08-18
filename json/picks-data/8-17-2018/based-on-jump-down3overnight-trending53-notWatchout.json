@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "JTPY",
+      "price": 1.8
+    },
+    {
+      "ticker": "LINC",
+      "price": 2.06
+    },
+    {
+      "ticker": "GIGM",
+      "price": 2.9
+    }
+  ],
+  "5": [
+    {
+      "ticker": "JTPY",
+      "price": 1.7
+    },
+    {
+      "ticker": "LINC",
+      "price": 2.06
+    },
+    {
+      "ticker": "GIGM",
+      "price": 3
+    }
+  ],
+  "16": [
+    {
+      "ticker": "JTPY",
+      "price": 1.7
+    },
+    {
+      "ticker": "LINC",
+      "price": 2.06
+    },
+    {
+      "ticker": "GIGM",
+      "price": 3.14
+    }
+  ],
+  "30": [
+    {
+      "ticker": "JTPY",
+      "price": 1.8
+    },
+    {
+      "ticker": "LINC",
+      "price": 2.06
+    },
+    {
+      "ticker": "GIGM",
+      "price": 3.14
+    }
+  ]
+}

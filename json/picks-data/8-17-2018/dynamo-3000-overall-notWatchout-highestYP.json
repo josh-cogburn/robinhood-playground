@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "DNR",
+      "price": 4.55
+    },
+    {
+      "ticker": "WMIH",
+      "price": 1.49
+    }
+  ],
+  "40": [
+    {
+      "ticker": "INSG",
+      "price": 2.74
+    },
+    {
+      "ticker": "DNR",
+      "price": 4.525
+    }
+  ],
+  "100": [
+    {
+      "ticker": "RIBT",
+      "price": 2.92
+    },
+    {
+      "ticker": "TPNL",
+      "price": 3.04
+    }
+  ],
+  "200": [
+    {
+      "ticker": "TPNL",
+      "price": 3.16
+    },
+    {
+      "ticker": "WMIH",
+      "price": 1.565
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TPNL",
+      "price": 3.15
+    },
+    {
+      "ticker": "RIBT",
+      "price": 2.92
+    }
+  ],
+  "351": [
+    {
+      "ticker": "WMIH",
+      "price": 1.58
+    },
+    {
+      "ticker": "RIBT",
+      "price": 2.9
+    }
+  ],
+  "381": [
+    {
+      "ticker": "TPNL",
+      "price": 3.08
+    },
+    {
+      "ticker": "WMIH",
+      "price": 1.57
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "COT",
+      "price": 15.985
+    },
+    {
+      "ticker": "CDNA",
+      "price": 17
+    }
+  ],
+  "5": [
+    {
+      "ticker": "COT",
+      "price": 16
+    },
+    {
+      "ticker": "CDNA",
+      "price": 16.87
+    }
+  ],
+  "16": [
+    {
+      "ticker": "COT",
+      "price": 16.01
+    },
+    {
+      "ticker": "LBRT",
+      "price": 19.75
+    }
+  ],
+  "30": [
+    {
+      "ticker": "COT",
+      "price": 15.95
+    },
+    {
+      "ticker": "LBRT",
+      "price": 19.75
+    }
+  ]
+}

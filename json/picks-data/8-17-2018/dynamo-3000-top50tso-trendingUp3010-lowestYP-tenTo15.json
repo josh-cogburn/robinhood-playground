@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "SOXS",
+      "price": 11.38
+    },
+    {
+      "ticker": "LCI",
+      "price": 13.65
+    }
+  ],
+  "40": [
+    {
+      "ticker": "SOXS",
+      "price": 11.219
+    },
+    {
+      "ticker": "AFH",
+      "price": 10.65
+    }
+  ],
+  "100": [
+    {
+      "ticker": "SOXS",
+      "price": 11.25
+    },
+    {
+      "ticker": "AFH",
+      "price": 10.75
+    }
+  ],
+  "200": [
+    {
+      "ticker": "AFH",
+      "price": 10.8
+    },
+    {
+      "ticker": "BOCH",
+      "price": 12.8
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CSPI",
+      "price": 11.7764
+    },
+    {
+      "ticker": "BOCH",
+      "price": 12.8
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SPNS",
+      "price": 11.26
+    },
+    {
+      "ticker": "FF",
+      "price": 14.34
+    }
+  ],
+  "381": [
+    {
+      "ticker": "BGCP",
+      "price": 11.545
+    },
+    {
+      "ticker": "SPNS",
+      "price": 11.34
+    }
+  ]
+}

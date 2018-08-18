@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "COT",
+      "price": 15.985
+    },
+    {
+      "ticker": "TTM",
+      "price": 18.14
+    }
+  ],
+  "5": [
+    {
+      "ticker": "COT",
+      "price": 16
+    },
+    {
+      "ticker": "TTM",
+      "price": 18.15
+    }
+  ],
+  "16": [
+    {
+      "ticker": "COT",
+      "price": 16.01
+    },
+    {
+      "ticker": "TTM",
+      "price": 18.185
+    }
+  ],
+  "30": [
+    {
+      "ticker": "COT",
+      "price": 15.95
+    },
+    {
+      "ticker": "TTM",
+      "price": 18.265
+    }
+  ]
+}

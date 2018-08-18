@@ -1,0 +1,54 @@
+{
+  "0": [
+    {
+      "ticker": "ISDR",
+      "price": 15.7
+    },
+    {
+      "ticker": "AMRB",
+      "price": 15.06
+    }
+  ],
+  "5": [
+    {
+      "ticker": "ISDR",
+      "price": 16
+    },
+    {
+      "ticker": "BXG",
+      "price": 18.84
+    },
+    {
+      "ticker": "CHAU",
+      "price": 17.06
+    }
+  ],
+  "16": [
+    {
+      "ticker": "ISDR",
+      "price": 15.75
+    },
+    {
+      "ticker": "BXG",
+      "price": 19.1244
+    },
+    {
+      "ticker": "CHAU",
+      "price": 17.0762
+    }
+  ],
+  "30": [
+    {
+      "ticker": "ISDR",
+      "price": 15.6
+    },
+    {
+      "ticker": "BXG",
+      "price": 17.9111
+    },
+    {
+      "ticker": "CHAU",
+      "price": 17.0799
+    }
+  ]
+}

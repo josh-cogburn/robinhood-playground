@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "CDE",
+      "price": 5.52
+    },
+    {
+      "ticker": "TXMD",
+      "price": 5.54
+    }
+  ],
+  "40": [
+    {
+      "ticker": "NE",
+      "price": 5.44
+    },
+    {
+      "ticker": "AGC",
+      "price": 5.6001
+    }
+  ],
+  "100": [
+    {
+      "ticker": "HYGS",
+      "price": 5.7773
+    },
+    {
+      "ticker": "AINV",
+      "price": 5.6875
+    }
+  ],
+  "200": [
+    {
+      "ticker": "EOD",
+      "price": 5.51
+    },
+    {
+      "ticker": "SMI",
+      "price": 5.425
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ICL",
+      "price": 5.1553
+    },
+    {
+      "ticker": "MMT",
+      "price": 5.54
+    }
+  ],
+  "351": [
+    {
+      "ticker": "IRET",
+      "price": 5.44
+    },
+    {
+      "ticker": "TSI",
+      "price": 5.53
+    }
+  ],
+  "381": [
+    {
+      "ticker": "IRET",
+      "price": 5.435
+    },
+    {
+      "ticker": "TSI",
+      "price": 5.53
+    }
+  ]
+}

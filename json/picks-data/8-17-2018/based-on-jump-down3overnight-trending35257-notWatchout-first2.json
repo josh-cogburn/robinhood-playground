@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "JTPY",
+      "price": 1.8
+    },
+    {
+      "ticker": "LINC",
+      "price": 2.06
+    }
+  ],
+  "5": [
+    {
+      "ticker": "JTPY",
+      "price": 1.7
+    },
+    {
+      "ticker": "LINC",
+      "price": 2.06
+    }
+  ],
+  "16": [
+    {
+      "ticker": "OBCI",
+      "price": 3.84
+    },
+    {
+      "ticker": "JTPY",
+      "price": 1.7
+    }
+  ],
+  "30": [
+    {
+      "ticker": "OBCI",
+      "price": 4.02
+    },
+    {
+      "ticker": "JTPY",
+      "price": 1.8
+    }
+  ]
+}

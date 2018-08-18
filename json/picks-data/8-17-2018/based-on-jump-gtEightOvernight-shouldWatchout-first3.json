@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "TIK",
+      "price": 4.2
+    },
+    {
+      "ticker": "IZEA",
+      "price": 1.63
+    },
+    {
+      "ticker": "CNET",
+      "price": 2.34
+    }
+  ],
+  "5": [
+    {
+      "ticker": "TIK",
+      "price": 4.1819
+    },
+    {
+      "ticker": "IZEA",
+      "price": 1.4779
+    },
+    {
+      "ticker": "CNET",
+      "price": 2.3609
+    }
+  ],
+  "16": [
+    {
+      "ticker": "IZEA",
+      "price": 1.6099
+    },
+    {
+      "ticker": "CNET",
+      "price": 2.219
+    },
+    {
+      "ticker": "MYND",
+      "price": 1.4
+    }
+  ],
+  "30": [
+    {
+      "ticker": "IZEA",
+      "price": 1.43
+    },
+    {
+      "ticker": "CNET",
+      "price": 2.21
+    },
+    {
+      "ticker": "MYND",
+      "price": 1.3878
+    }
+  ]
+}

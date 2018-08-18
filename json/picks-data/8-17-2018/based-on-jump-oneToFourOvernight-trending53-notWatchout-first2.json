@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "URG",
+      "price": 0.73
+    },
+    {
+      "ticker": "HPR",
+      "price": 5.01
+    }
+  ],
+  "5": [
+    {
+      "ticker": "URG",
+      "price": 0.7301
+    },
+    {
+      "ticker": "AVP",
+      "price": 2.035
+    }
+  ],
+  "16": [
+    {
+      "ticker": "AMS",
+      "price": 3.1527
+    },
+    {
+      "ticker": "PLM",
+      "price": 0.85
+    }
+  ],
+  "30": [
+    {
+      "ticker": "AMS",
+      "price": 3.1001
+    },
+    {
+      "ticker": "PLM",
+      "price": 0.8543
+    }
+  ]
+}

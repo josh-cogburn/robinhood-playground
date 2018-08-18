@@ -1,0 +1,78 @@
+{
+  "10": [
+    {
+      "ticker": "ATAI",
+      "price": 6.5
+    }
+  ],
+  "50": [
+    {
+      "ticker": "ATAI",
+      "price": 6.38
+    },
+    {
+      "ticker": "IDRA",
+      "price": 8.975
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ATAI",
+      "price": 6.41
+    },
+    {
+      "ticker": "APVO",
+      "price": 5.35
+    }
+  ],
+  "300": [
+    {
+      "ticker": "ATAI",
+      "price": 6.34
+    },
+    {
+      "ticker": "IDRA",
+      "price": 8.94
+    },
+    {
+      "ticker": "APVO",
+      "price": 5.45
+    }
+  ],
+  "380": [
+    {
+      "ticker": "ATAI",
+      "price": 6.4
+    },
+    {
+      "ticker": "IDRA",
+      "price": 8.615
+    },
+    {
+      "ticker": "APVO",
+      "price": 5.38
+    },
+    {
+      "ticker": "INNT",
+      "price": 5.1
+    }
+  ],
+  "600": [
+    {
+      "ticker": "ATAI",
+      "price": 6.48
+    },
+    {
+      "ticker": "IDRA",
+      "price": 8.8
+    },
+    {
+      "ticker": "APVO",
+      "price": 5.4
+    },
+    {
+      "ticker": "INNT",
+      "price": 5.08
+    }
+  ]
+}

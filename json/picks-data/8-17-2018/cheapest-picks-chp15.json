@@ -1,0 +1,436 @@
+{
+  "4": [
+    {
+      "ticker": "ARLZ",
+      "price": 0.0492
+    },
+    {
+      "ticker": "RSLS",
+      "price": 0.0768
+    },
+    {
+      "ticker": "GST",
+      "price": 0.0901
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.1294
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.1382
+    },
+    {
+      "ticker": "RHE",
+      "price": 0.1566
+    },
+    {
+      "ticker": "XSPA",
+      "price": 0.165
+    },
+    {
+      "ticker": "BPMX",
+      "price": 0.1689
+    },
+    {
+      "ticker": "LODE",
+      "price": 0.169
+    },
+    {
+      "ticker": "NAVB",
+      "price": 0.17
+    },
+    {
+      "ticker": "OHRP",
+      "price": 0.1709
+    },
+    {
+      "ticker": "AMMA",
+      "price": 0.1727
+    },
+    {
+      "ticker": "ALN",
+      "price": 0.175
+    },
+    {
+      "ticker": "GLOW",
+      "price": 0.176
+    },
+    {
+      "ticker": "NSPR",
+      "price": 0.1978
+    }
+  ],
+  "65": [
+    {
+      "ticker": "ARLZ",
+      "price": 0.0482
+    },
+    {
+      "ticker": "RSLS",
+      "price": 0.0729
+    },
+    {
+      "ticker": "GST",
+      "price": 0.0921
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.1239
+    },
+    {
+      "ticker": "RHE",
+      "price": 0.131
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.1375
+    },
+    {
+      "ticker": "XSPA",
+      "price": 0.1596
+    },
+    {
+      "ticker": "BPMX",
+      "price": 0.1628
+    },
+    {
+      "ticker": "LODE",
+      "price": 0.1687
+    },
+    {
+      "ticker": "ALN",
+      "price": 0.1713
+    },
+    {
+      "ticker": "OHRP",
+      "price": 0.175
+    },
+    {
+      "ticker": "GLOW",
+      "price": 0.1778
+    },
+    {
+      "ticker": "NAVB",
+      "price": 0.1797
+    },
+    {
+      "ticker": "AMMA",
+      "price": 0.1934
+    },
+    {
+      "ticker": "NSPR",
+      "price": 0.1961
+    }
+  ],
+  "125": [
+    {
+      "ticker": "ARLZ",
+      "price": 0.0439
+    },
+    {
+      "ticker": "RSLS",
+      "price": 0.0674
+    },
+    {
+      "ticker": "GST",
+      "price": 0.0921
+    },
+    {
+      "ticker": "RHE",
+      "price": 0.1208
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.1223
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.1367
+    },
+    {
+      "ticker": "XSPA",
+      "price": 0.1492
+    },
+    {
+      "ticker": "BPMX",
+      "price": 0.165
+    },
+    {
+      "ticker": "LODE",
+      "price": 0.1699
+    },
+    {
+      "ticker": "ALN",
+      "price": 0.1714
+    },
+    {
+      "ticker": "OHRP",
+      "price": 0.174
+    },
+    {
+      "ticker": "GLOW",
+      "price": 0.175
+    },
+    {
+      "ticker": "NAVB",
+      "price": 0.1774
+    },
+    {
+      "ticker": "AMMA",
+      "price": 0.1862
+    },
+    {
+      "ticker": "NSPR",
+      "price": 0.2
+    }
+  ],
+  "175": [
+    {
+      "ticker": "ARLZ",
+      "price": 0.0429
+    },
+    {
+      "ticker": "RSLS",
+      "price": 0.0677
+    },
+    {
+      "ticker": "GST",
+      "price": 0.0917
+    },
+    {
+      "ticker": "RHE",
+      "price": 0.115
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.1229
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.1359
+    },
+    {
+      "ticker": "XSPA",
+      "price": 0.15
+    },
+    {
+      "ticker": "BPMX",
+      "price": 0.1626
+    },
+    {
+      "ticker": "LODE",
+      "price": 0.1651
+    },
+    {
+      "ticker": "ALN",
+      "price": 0.1712
+    },
+    {
+      "ticker": "NAVB",
+      "price": 0.1724
+    },
+    {
+      "ticker": "GLOW",
+      "price": 0.1748
+    },
+    {
+      "ticker": "OHRP",
+      "price": 0.175
+    },
+    {
+      "ticker": "AMMA",
+      "price": 0.1864
+    },
+    {
+      "ticker": "NSPR",
+      "price": 0.1992
+    }
+  ],
+  "225": [
+    {
+      "ticker": "ARLZ",
+      "price": 0.043
+    },
+    {
+      "ticker": "RSLS",
+      "price": 0.0709
+    },
+    {
+      "ticker": "GST",
+      "price": 0.0905
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.1227
+    },
+    {
+      "ticker": "RHE",
+      "price": 0.1283
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.1368
+    },
+    {
+      "ticker": "XSPA",
+      "price": 0.155
+    },
+    {
+      "ticker": "BPMX",
+      "price": 0.1628
+    },
+    {
+      "ticker": "LODE",
+      "price": 0.17
+    },
+    {
+      "ticker": "ALN",
+      "price": 0.1713
+    },
+    {
+      "ticker": "GLOW",
+      "price": 0.1749
+    },
+    {
+      "ticker": "OHRP",
+      "price": 0.179
+    },
+    {
+      "ticker": "NAVB",
+      "price": 0.181
+    },
+    {
+      "ticker": "AMMA",
+      "price": 0.1868
+    },
+    {
+      "ticker": "NSPR",
+      "price": 0.1955
+    }
+  ],
+  "386": [
+    {
+      "ticker": "ARLZ",
+      "price": 0.0425
+    },
+    {
+      "ticker": "RSLS",
+      "price": 0.069
+    },
+    {
+      "ticker": "GST",
+      "price": 0.0909
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.121
+    },
+    {
+      "ticker": "RHE",
+      "price": 0.1268
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.132
+    },
+    {
+      "ticker": "XSPA",
+      "price": 0.16
+    },
+    {
+      "ticker": "BPMX",
+      "price": 0.163
+    },
+    {
+      "ticker": "LODE",
+      "price": 0.164
+    },
+    {
+      "ticker": "ALN",
+      "price": 0.1752
+    },
+    {
+      "ticker": "GLOW",
+      "price": 0.1758
+    },
+    {
+      "ticker": "OHRP",
+      "price": 0.18
+    },
+    {
+      "ticker": "NAVB",
+      "price": 0.186
+    },
+    {
+      "ticker": "AMMA",
+      "price": 0.195
+    },
+    {
+      "ticker": "NSPR",
+      "price": 0.2009
+    }
+  ],
+  "-4": [
+    {
+      "ticker": "ARLZ",
+      "price": 0.0495
+    },
+    {
+      "ticker": "RSLS",
+      "price": 0.079
+    },
+    {
+      "ticker": "GST",
+      "price": 0.0896
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.1206
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.1325
+    },
+    {
+      "ticker": "NAVB",
+      "price": 0.1401
+    },
+    {
+      "ticker": "RHE",
+      "price": 0.1492
+    },
+    {
+      "ticker": "XSPA",
+      "price": 0.1599
+    },
+    {
+      "ticker": "LODE",
+      "price": 0.164
+    },
+    {
+      "ticker": "BPMX",
+      "price": 0.165
+    },
+    {
+      "ticker": "OHRP",
+      "price": 0.1709
+    },
+    {
+      "ticker": "GLOW",
+      "price": 0.176
+    },
+    {
+      "ticker": "ALN",
+      "price": 0.181
+    },
+    {
+      "ticker": "AMMA",
+      "price": 0.194
+    },
+    {
+      "ticker": "NSPR",
+      "price": 0.1978
+    }
+  ]
+}

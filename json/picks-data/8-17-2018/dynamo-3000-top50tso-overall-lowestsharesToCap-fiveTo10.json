@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "ACH",
+      "price": 9.7012
+    },
+    {
+      "ticker": "PMBC",
+      "price": 9.9
+    }
+  ],
+  "40": [
+    {
+      "ticker": "JNUG",
+      "price": 7.62
+    },
+    {
+      "ticker": "IIJI",
+      "price": 9.53
+    }
+  ],
+  "100": [
+    {
+      "ticker": "JNUG",
+      "price": 7.86
+    },
+    {
+      "ticker": "CZR",
+      "price": 9.925
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CZR",
+      "price": 9.95
+    },
+    {
+      "ticker": "IIJI",
+      "price": 9.55
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CZR",
+      "price": 9.95
+    },
+    {
+      "ticker": "IIJI",
+      "price": 9.55
+    }
+  ],
+  "351": [
+    {
+      "ticker": "JNUG",
+      "price": 7.721
+    },
+    {
+      "ticker": "IIJI",
+      "price": 9.57
+    }
+  ],
+  "381": [
+    {
+      "ticker": "JNUG",
+      "price": 7.84
+    },
+    {
+      "ticker": "CZR",
+      "price": 9.85
+    }
+  ]
+}

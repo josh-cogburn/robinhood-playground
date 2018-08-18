@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "PRTK",
+      "price": 10
+    },
+    {
+      "ticker": "TORC",
+      "price": 10.91
+    }
+  ],
+  "40": [
+    {
+      "ticker": "RFIL",
+      "price": 10.25
+    },
+    {
+      "ticker": "TORC",
+      "price": 10.425
+    }
+  ],
+  "100": [
+    {
+      "ticker": "RFIL",
+      "price": 10.4
+    },
+    {
+      "ticker": "AOBC",
+      "price": 10.145
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CMT",
+      "price": 10.23
+    },
+    {
+      "ticker": "RFIL",
+      "price": 10.35
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CMT",
+      "price": 10.19
+    },
+    {
+      "ticker": "RFIL",
+      "price": 10.4056
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CMT",
+      "price": 10.18
+    },
+    {
+      "ticker": "RFIL",
+      "price": 10.4
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ERYP",
+      "price": 10.2561
+    },
+    {
+      "ticker": "RFIL",
+      "price": 10.3
+    }
+  ]
+}

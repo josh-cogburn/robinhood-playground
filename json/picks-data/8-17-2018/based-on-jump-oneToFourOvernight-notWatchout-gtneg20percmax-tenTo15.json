@@ -1,0 +1,90 @@
+{
+  "0": [
+    {
+      "ticker": "SIC",
+      "price": 13
+    },
+    {
+      "ticker": "EIO",
+      "price": 11.7101
+    },
+    {
+      "ticker": "CLAR",
+      "price": 10.647
+    },
+    {
+      "ticker": "USO",
+      "price": 13.8094
+    },
+    {
+      "ticker": "LQDA",
+      "price": 14.18
+    }
+  ],
+  "5": [
+    {
+      "ticker": "SIC",
+      "price": 13
+    },
+    {
+      "ticker": "EIO",
+      "price": 11.7101
+    },
+    {
+      "ticker": "CLAR",
+      "price": 10.6
+    },
+    {
+      "ticker": "USO",
+      "price": 13.8
+    },
+    {
+      "ticker": "LQDA",
+      "price": 14.18
+    }
+  ],
+  "16": [
+    {
+      "ticker": "SIC",
+      "price": 13
+    },
+    {
+      "ticker": "EIO",
+      "price": 11.71
+    },
+    {
+      "ticker": "CLAR",
+      "price": 10.6373
+    },
+    {
+      "ticker": "AMRC",
+      "price": 14.95
+    },
+    {
+      "ticker": "USO",
+      "price": 13.785
+    }
+  ],
+  "30": [
+    {
+      "ticker": "SIC",
+      "price": 13
+    },
+    {
+      "ticker": "EIO",
+      "price": 11.71
+    },
+    {
+      "ticker": "CLAR",
+      "price": 10.55
+    },
+    {
+      "ticker": "AMRC",
+      "price": 14.8499
+    },
+    {
+      "ticker": "USO",
+      "price": 13.7806
+    }
+  ]
+}

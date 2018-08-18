@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "EXPI",
+      "price": 16.94
+    },
+    {
+      "ticker": "PLSE",
+      "price": 15.45
+    }
+  ],
+  "5": [
+    {
+      "ticker": "EXPI",
+      "price": 16.8474
+    },
+    {
+      "ticker": "PLSE",
+      "price": 15.45
+    }
+  ],
+  "16": [
+    {
+      "ticker": "EXPI",
+      "price": 16.08
+    },
+    {
+      "ticker": "PLSE",
+      "price": 15.27
+    }
+  ],
+  "30": [
+    {
+      "ticker": "EXPI",
+      "price": 15.61
+    },
+    {
+      "ticker": "PLSE",
+      "price": 15.101
+    }
+  ]
+}

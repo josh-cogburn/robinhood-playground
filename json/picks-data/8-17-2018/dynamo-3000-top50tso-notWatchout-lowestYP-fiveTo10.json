@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "ACH",
+      "price": 9.7012
+    },
+    {
+      "ticker": "TZA",
+      "price": 8.705
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CMCM",
+      "price": 9.0511
+    },
+    {
+      "ticker": "OR",
+      "price": 8.12
+    }
+  ],
+  "100": [
+    {
+      "ticker": "CMCM",
+      "price": 9.1
+    },
+    {
+      "ticker": "OR",
+      "price": 8.16
+    }
+  ],
+  "200": [
+    {
+      "ticker": "HYGS",
+      "price": 5.95
+    },
+    {
+      "ticker": "CMCM",
+      "price": 9.12
+    }
+  ],
+  "260": [
+    {
+      "ticker": "WTID",
+      "price": 8.839
+    },
+    {
+      "ticker": "HYGS",
+      "price": 6
+    }
+  ],
+  "351": [
+    {
+      "ticker": "BCOM",
+      "price": 6.5236
+    },
+    {
+      "ticker": "HYGS",
+      "price": 5.9938
+    }
+  ],
+  "381": [
+    {
+      "ticker": "BCOM",
+      "price": 6.5236
+    },
+    {
+      "ticker": "CMCM",
+      "price": 9.1
+    }
+  ]
+}

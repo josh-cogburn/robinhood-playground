@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "NLST",
+      "price": 0.129
+    },
+    {
+      "ticker": "PTIE",
+      "price": 1.04
+    }
+  ],
+  "5": [
+    {
+      "ticker": "NLST",
+      "price": 0.1294
+    },
+    {
+      "ticker": "FFHL",
+      "price": 2.9058
+    }
+  ],
+  "16": [
+    {
+      "ticker": "NLST",
+      "price": 0.1253
+    },
+    {
+      "ticker": "FFHL",
+      "price": 2.83
+    }
+  ],
+  "30": [
+    {
+      "ticker": "NLST",
+      "price": 0.125
+    },
+    {
+      "ticker": "FFHL",
+      "price": 2.43
+    }
+  ]
+}

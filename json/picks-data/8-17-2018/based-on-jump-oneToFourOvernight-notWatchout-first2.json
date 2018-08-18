@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "INTX",
+      "price": 1.49
+    },
+    {
+      "ticker": "LTS",
+      "price": 3.36
+    }
+  ],
+  "5": [
+    {
+      "ticker": "PDS",
+      "price": 3.595
+    },
+    {
+      "ticker": "GPL",
+      "price": 0.8979
+    }
+  ],
+  "16": [
+    {
+      "ticker": "PDS",
+      "price": 3.59
+    },
+    {
+      "ticker": "AMS",
+      "price": 3.1527
+    }
+  ],
+  "30": [
+    {
+      "ticker": "PDS",
+      "price": 3.61
+    },
+    {
+      "ticker": "AMS",
+      "price": 3.1001
+    }
+  ]
+}

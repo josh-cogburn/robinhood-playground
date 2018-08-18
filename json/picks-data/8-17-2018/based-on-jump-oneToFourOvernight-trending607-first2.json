@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "SPCB",
+      "price": 1.9105
+    },
+    {
+      "ticker": "ASCMA",
+      "price": 2.75
+    }
+  ],
+  "5": [
+    {
+      "ticker": "SPCB",
+      "price": 1.85
+    },
+    {
+      "ticker": "ASCMA",
+      "price": 2.75
+    }
+  ],
+  "16": [
+    {
+      "ticker": "AMS",
+      "price": 3.1527
+    },
+    {
+      "ticker": "SPCB",
+      "price": 1.8322
+    }
+  ],
+  "30": [
+    {
+      "ticker": "AMS",
+      "price": 3.1001
+    },
+    {
+      "ticker": "SPCB",
+      "price": 1.85
+    }
+  ]
+}

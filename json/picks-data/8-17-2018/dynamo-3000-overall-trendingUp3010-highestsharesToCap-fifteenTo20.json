@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "DRNA",
+      "price": 15.03
+    },
+    {
+      "ticker": "PLSE",
+      "price": 15.45
+    }
+  ],
+  "40": [
+    {
+      "ticker": "PLSE",
+      "price": 15.101
+    },
+    {
+      "ticker": "SGMO",
+      "price": 15.2
+    }
+  ],
+  "100": [
+    {
+      "ticker": "PLSE",
+      "price": 15.09
+    },
+    {
+      "ticker": "SRET",
+      "price": 15.596
+    }
+  ],
+  "200": [
+    {
+      "ticker": "DRNA",
+      "price": 15.05
+    },
+    {
+      "ticker": "PLSE",
+      "price": 15.23
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PLSE",
+      "price": 15.221
+    },
+    {
+      "ticker": "HVBC",
+      "price": 15.3203
+    }
+  ],
+  "351": [
+    {
+      "ticker": "PLSE",
+      "price": 15.09
+    },
+    {
+      "ticker": "HVBC",
+      "price": 15.3203
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MLPC",
+      "price": 15.492
+    },
+    {
+      "ticker": "HVBC",
+      "price": 15.3203
+    }
+  ]
+}

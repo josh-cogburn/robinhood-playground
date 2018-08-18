@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "CNX",
+      "price": 15.23
+    },
+    {
+      "ticker": "AIQ",
+      "price": 15.08
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CNX",
+      "price": 15.17
+    },
+    {
+      "ticker": "TROX",
+      "price": 15.08
+    }
+  ],
+  "100": [
+    {
+      "ticker": "ESND",
+      "price": 15.03
+    },
+    {
+      "ticker": "CNX",
+      "price": 15.14
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ESND",
+      "price": 15.11
+    },
+    {
+      "ticker": "SRRK",
+      "price": 15.4
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ESND",
+      "price": 15.03
+    },
+    {
+      "ticker": "GMLP",
+      "price": 15.0999
+    }
+  ],
+  "351": [
+    {
+      "ticker": "ESND",
+      "price": 15.11
+    },
+    {
+      "ticker": "GMLP",
+      "price": 15.195
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ESND",
+      "price": 15.1
+    },
+    {
+      "ticker": "GMLP",
+      "price": 15.17
+    }
+  ]
+}

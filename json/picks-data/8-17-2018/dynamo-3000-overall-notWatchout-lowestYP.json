@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "NAVB",
+      "price": 0.1877
+    },
+    {
+      "ticker": "AGEN",
+      "price": 1.72
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CPHI",
+      "price": 0.2251
+    },
+    {
+      "ticker": "WWR",
+      "price": 0.2791
+    }
+  ],
+  "100": [
+    {
+      "ticker": "WWR",
+      "price": 0.28
+    },
+    {
+      "ticker": "CPHI",
+      "price": 0.2305
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CPHI",
+      "price": 0.2288
+    },
+    {
+      "ticker": "WWR",
+      "price": 0.2832
+    }
+  ],
+  "260": [
+    {
+      "ticker": "WWR",
+      "price": 0.2803
+    },
+    {
+      "ticker": "EVFM",
+      "price": 2.15
+    }
+  ],
+  "351": [
+    {
+      "ticker": "WWR",
+      "price": 0.28
+    },
+    {
+      "ticker": "EVFM",
+      "price": 2.16
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CPHI",
+      "price": 0.226
+    },
+    {
+      "ticker": "WWR",
+      "price": 0.2761
+    }
+  ]
+}
