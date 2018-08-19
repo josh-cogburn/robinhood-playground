@@ -295,7 +295,7 @@ const anyCountPerfectos = [
     'low-float-high-volume-floatPoints-trenddown7to10-shouldWatchout-tenTo15-6',
 
     'low-float-high-volume-floatTimesfloatToVolume-trenddown7to10-shouldWatchout-fifteenTo20-150',
-    'low-float-high-volume-floatPoints-trenddown7to10-fifteenTo20-150',
+    // 'low-float-high-volume-floatPoints-trenddown7to10-fifteenTo20-150',
     'low-float-high-volume-volTo2WeekPoints-trenddown7to10-shouldWatchout-fifteenTo20-210',
     'low-float-high-volume-floatTimestwoWeekVolToAvgPoints-trenddowngt10-fifteenTo20-210',
 
@@ -311,7 +311,6 @@ const anyCountPerfectos = [
 
     'sudden-drops-last30trend-filter20-290',
 
-    'technical-indicators-10minute-week-topSMAoverUnderLastTrade-114',
     'technical-indicators-10minute-week-topSMAoverUnderLastTrade-tenTo15-29'
 ];
 
