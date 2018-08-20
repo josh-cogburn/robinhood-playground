@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "FVE",
+      "price": 1.05
+    },
+    {
+      "ticker": "PTN",
+      "price": 0.9049
+    },
+    {
+      "ticker": "VRML",
+      "price": 0.5211
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CGA",
+      "price": 1.08
+    },
+    {
+      "ticker": "FVE",
+      "price": 1.05
+    },
+    {
+      "ticker": "PTN",
+      "price": 0.879
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CGA",
+      "price": 1.0899
+    },
+    {
+      "ticker": "FVE",
+      "price": 1.05
+    },
+    {
+      "ticker": "PTN",
+      "price": 0.9018
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CGA",
+      "price": 1.09
+    },
+    {
+      "ticker": "FVE",
+      "price": 1.1347
+    },
+    {
+      "ticker": "PTN",
+      "price": 0.8952
+    }
+  ]
+}

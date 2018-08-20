@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "LMFA",
+      "price": 0.3778
+    },
+    {
+      "ticker": "SGLB",
+      "price": 1.03
+    }
+  ],
+  "40": [
+    {
+      "ticker": "LMFA",
+      "price": 0.39
+    },
+    {
+      "ticker": "CNET",
+      "price": 2.29
+    }
+  ],
+  "100": [
+    {
+      "ticker": "REFR",
+      "price": 1.01
+    },
+    {
+      "ticker": "CHMA",
+      "price": 2.2
+    }
+  ],
+  "200": [
+    {
+      "ticker": "AAME",
+      "price": 2.7
+    },
+    {
+      "ticker": "REFR",
+      "price": 0.998
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AAME",
+      "price": 2.7
+    },
+    {
+      "ticker": "REFR",
+      "price": 0.98
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AAME",
+      "price": 2.6
+    },
+    {
+      "ticker": "REFR",
+      "price": 1
+    }
+  ],
+  "381": [
+    {
+      "ticker": "REFR",
+      "price": 1
+    },
+    {
+      "ticker": "LINC",
+      "price": 2.32
+    }
+  ]
+}

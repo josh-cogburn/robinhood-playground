@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "STLR",
+      "price": 10.76
+    },
+    {
+      "ticker": "PLLL",
+      "price": 13.2
+    },
+    {
+      "ticker": "BRY",
+      "price": 13.089
+    }
+  ],
+  "5": [
+    {
+      "ticker": "STLR",
+      "price": 10.76
+    },
+    {
+      "ticker": "PLLL",
+      "price": 13
+    },
+    {
+      "ticker": "BRY",
+      "price": 12.91
+    }
+  ],
+  "16": [
+    {
+      "ticker": "STLR",
+      "price": 10.76
+    },
+    {
+      "ticker": "PLLL",
+      "price": 13
+    },
+    {
+      "ticker": "FBM",
+      "price": 13.835
+    }
+  ],
+  "30": [
+    {
+      "ticker": "STLR",
+      "price": 10.76
+    },
+    {
+      "ticker": "PLLL",
+      "price": 13
+    },
+    {
+      "ticker": "FBM",
+      "price": 13.745
+    }
+  ]
+}

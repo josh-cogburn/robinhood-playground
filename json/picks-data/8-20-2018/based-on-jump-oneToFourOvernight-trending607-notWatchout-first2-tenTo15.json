@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "LPL",
+      "price": 10.1
+    },
+    {
+      "ticker": "RLH",
+      "price": 14.35
+    }
+  ],
+  "5": [
+    {
+      "ticker": "LPL",
+      "price": 10.12
+    },
+    {
+      "ticker": "RLH",
+      "price": 14.35
+    }
+  ],
+  "16": [
+    {
+      "ticker": "LPL",
+      "price": 10.1
+    },
+    {
+      "ticker": "RLH",
+      "price": 14.45
+    }
+  ],
+  "30": [
+    {
+      "ticker": "LPL",
+      "price": 10.07
+    },
+    {
+      "ticker": "RLH",
+      "price": 14.45
+    }
+  ]
+}

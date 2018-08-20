@@ -1,0 +1,54 @@
+{
+  "0": [
+    {
+      "ticker": "ARLZ",
+      "price": 0.04
+    }
+  ],
+  "5": [
+    {
+      "ticker": "ARLZ",
+      "price": 0.0319
+    },
+    {
+      "ticker": "JCP",
+      "price": 1.715
+    }
+  ],
+  "16": [
+    {
+      "ticker": "ARLZ",
+      "price": 0.0349
+    },
+    {
+      "ticker": "JCP",
+      "price": 1.735
+    },
+    {
+      "ticker": "PTN",
+      "price": 0.9018
+    },
+    {
+      "ticker": "AFMD",
+      "price": 1.5912
+    }
+  ],
+  "30": [
+    {
+      "ticker": "ARLZ",
+      "price": 0.0359
+    },
+    {
+      "ticker": "JCP",
+      "price": 1.72
+    },
+    {
+      "ticker": "PTN",
+      "price": 0.8952
+    },
+    {
+      "ticker": "AFMD",
+      "price": 1.5912
+    }
+  ]
+}

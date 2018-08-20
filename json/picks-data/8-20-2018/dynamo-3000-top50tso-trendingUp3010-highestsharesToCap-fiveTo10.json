@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "PPDF",
+      "price": 5.12
+    },
+    {
+      "ticker": "NIHD",
+      "price": 5.59
+    }
+  ],
+  "40": [
+    {
+      "ticker": "FTR",
+      "price": 5.475
+    },
+    {
+      "ticker": "NIHD",
+      "price": 5.615
+    }
+  ],
+  "100": [
+    {
+      "ticker": "ISNS",
+      "price": 5.2945
+    },
+    {
+      "ticker": "FTR",
+      "price": 5.4902
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ISNS",
+      "price": 5.2817
+    },
+    {
+      "ticker": "FTR",
+      "price": 5.6237
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TCCO",
+      "price": 5.1006
+    },
+    {
+      "ticker": "ISNS",
+      "price": 5.3345
+    }
+  ],
+  "351": [
+    {
+      "ticker": "IVAC",
+      "price": 5.4
+    },
+    {
+      "ticker": "TCCO",
+      "price": 5.3
+    }
+  ],
+  "381": [
+    {
+      "ticker": "IVAC",
+      "price": 5.325
+    },
+    {
+      "ticker": "TCCO",
+      "price": 5.25
+    }
+  ]
+}

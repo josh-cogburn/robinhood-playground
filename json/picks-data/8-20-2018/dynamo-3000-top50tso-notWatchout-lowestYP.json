@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "TYHT",
+      "price": 1.28
+    },
+    {
+      "ticker": "BXE",
+      "price": 0.9299
+    }
+  ],
+  "40": [
+    {
+      "ticker": "MLNT",
+      "price": 4.375
+    },
+    {
+      "ticker": "TYHT",
+      "price": 1.24
+    }
+  ],
+  "100": [
+    {
+      "ticker": "PGLC",
+      "price": 1.1855
+    },
+    {
+      "ticker": "ONS",
+      "price": 0.85
+    }
+  ],
+  "200": [
+    {
+      "ticker": "MLNT",
+      "price": 4.575
+    },
+    {
+      "ticker": "CAPR",
+      "price": 1.0854
+    }
+  ],
+  "260": [
+    {
+      "ticker": "MLNT",
+      "price": 4.6
+    },
+    {
+      "ticker": "CAPR",
+      "price": 1.0854
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CAPR",
+      "price": 1.09
+    },
+    {
+      "ticker": "MLNT",
+      "price": 4.75
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CAPR",
+      "price": 1.1035
+    },
+    {
+      "ticker": "MLNT",
+      "price": 4.725
+    }
+  ]
+}

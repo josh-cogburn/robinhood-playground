@@ -1,0 +1,91 @@
+{
+  "10": [],
+  "50": [
+    {
+      "ticker": "XRF",
+      "price": 2.6601
+    },
+    {
+      "ticker": "NFEC",
+      "price": 4.69
+    },
+    {
+      "ticker": "SCON",
+      "price": 2.27
+    },
+    {
+      "ticker": "UAVS",
+      "price": 1.76
+    },
+    {
+      "ticker": "ONVO",
+      "price": 1.2101
+    }
+  ],
+  "200": [
+    {
+      "ticker": "NFEC",
+      "price": 4.34
+    },
+    {
+      "ticker": "XRF",
+      "price": 2.79
+    },
+    {
+      "ticker": "SCPH",
+      "price": 4.98
+    },
+    {
+      "ticker": "ONVO",
+      "price": 1.17
+    },
+    {
+      "ticker": "UAVS",
+      "price": 1.72
+    }
+  ],
+  "300": [
+    {
+      "ticker": "NFEC",
+      "price": 4.3548
+    },
+    {
+      "ticker": "SCPH",
+      "price": 4.9696
+    },
+    {
+      "ticker": "UAVS",
+      "price": 1.72
+    },
+    {
+      "ticker": "IHT",
+      "price": 1.5317
+    },
+    {
+      "ticker": "ONVO",
+      "price": 1.2034
+    }
+  ],
+  "380": [
+    {
+      "ticker": "NFEC",
+      "price": 4.2999
+    },
+    {
+      "ticker": "XRF",
+      "price": 2.8
+    },
+    {
+      "ticker": "SCPH",
+      "price": 4.9315
+    },
+    {
+      "ticker": "UAVS",
+      "price": 1.72
+    },
+    {
+      "ticker": "IHT",
+      "price": 1.53
+    }
+  ]
+}

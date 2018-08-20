@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "PRTY",
+      "price": 15.25
+    },
+    {
+      "ticker": "GME",
+      "price": 15.58
+    }
+  ],
+  "40": [
+    {
+      "ticker": "QTRX",
+      "price": 15.265
+    },
+    {
+      "ticker": "SBH",
+      "price": 15.015
+    }
+  ],
+  "100": [
+    {
+      "ticker": "QTRX",
+      "price": 15.265
+    },
+    {
+      "ticker": "SBH",
+      "price": 15.04
+    }
+  ],
+  "200": [
+    {
+      "ticker": "QTRX",
+      "price": 15.1
+    },
+    {
+      "ticker": "RRC",
+      "price": 15.07
+    }
+  ],
+  "260": [
+    {
+      "ticker": "YPF",
+      "price": 15.34
+    },
+    {
+      "ticker": "CPHC",
+      "price": 15.277
+    }
+  ],
+  "351": [
+    {
+      "ticker": "YPF",
+      "price": 15.47
+    },
+    {
+      "ticker": "CPHC",
+      "price": 15.277
+    }
+  ],
+  "381": [
+    {
+      "ticker": "YPF",
+      "price": 15.549
+    },
+    {
+      "ticker": "CPHC",
+      "price": 15.277
+    }
+  ]
+}

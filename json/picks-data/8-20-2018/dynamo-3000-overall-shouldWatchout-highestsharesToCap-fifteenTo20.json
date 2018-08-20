@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "IOVA",
+      "price": 15
+    },
+    {
+      "ticker": "GMLP",
+      "price": 15.083
+    }
+  ],
+  "40": [
+    {
+      "ticker": "SRRK",
+      "price": 15.47
+    },
+    {
+      "ticker": "ESND",
+      "price": 15.31
+    }
+  ],
+  "100": [
+    {
+      "ticker": "GLYC",
+      "price": 15.09
+    },
+    {
+      "ticker": "SRRK",
+      "price": 15.35
+    }
+  ],
+  "200": [
+    {
+      "ticker": "TITN",
+      "price": 15.11
+    },
+    {
+      "ticker": "SRRK",
+      "price": 15.7
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TITN",
+      "price": 15.31
+    },
+    {
+      "ticker": "GLYC",
+      "price": 14.99
+    }
+  ],
+  "351": [
+    {
+      "ticker": "TITN",
+      "price": 15.27
+    },
+    {
+      "ticker": "PRTA",
+      "price": 15.06
+    }
+  ],
+  "381": [
+    {
+      "ticker": "TITN",
+      "price": 15.34
+    },
+    {
+      "ticker": "PRTA",
+      "price": 15.16
+    }
+  ]
+}

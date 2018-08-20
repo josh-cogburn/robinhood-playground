@@ -1,0 +1,72 @@
+{
+  "10": [
+    {
+      "ticker": "ADOM",
+      "price": 0.7501
+    },
+    {
+      "ticker": "VVPR",
+      "price": 1.48
+    }
+  ],
+  "50": [
+    {
+      "ticker": "BIOL",
+      "price": 1.8601
+    },
+    {
+      "ticker": "ADOM",
+      "price": 0.7261
+    },
+    {
+      "ticker": "VVPR",
+      "price": 1.5516
+    }
+  ],
+  "200": [
+    {
+      "ticker": "BIOL",
+      "price": 1.834
+    },
+    {
+      "ticker": "ADOM",
+      "price": 0.7352
+    },
+    {
+      "ticker": "VVPR",
+      "price": 1.5
+    }
+  ],
+  "300": [
+    {
+      "ticker": "BIOL",
+      "price": 1.79
+    },
+    {
+      "ticker": "ADOM",
+      "price": 0.7399
+    },
+    {
+      "ticker": "VVPR",
+      "price": 1.5
+    }
+  ],
+  "380": [
+    {
+      "ticker": "BIOL",
+      "price": 1.7801
+    },
+    {
+      "ticker": "VIVE",
+      "price": 3.17
+    },
+    {
+      "ticker": "ADOM",
+      "price": 0.73
+    },
+    {
+      "ticker": "VVPR",
+      "price": 1.48
+    }
+  ]
+}

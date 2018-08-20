@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "TYHT",
+      "price": 1.28
+    },
+    {
+      "ticker": "DGLY",
+      "price": 2.85
+    }
+  ],
+  "40": [
+    {
+      "ticker": "NNA",
+      "price": 0.5669
+    },
+    {
+      "ticker": "FVE",
+      "price": 1.125
+    }
+  ],
+  "100": [
+    {
+      "ticker": "GTIM",
+      "price": 4.7499
+    },
+    {
+      "ticker": "FVE",
+      "price": 1.15
+    }
+  ],
+  "200": [
+    {
+      "ticker": "VRML",
+      "price": 0.5774
+    },
+    {
+      "ticker": "AAME",
+      "price": 2.7
+    }
+  ],
+  "260": [
+    {
+      "ticker": "VRML",
+      "price": 0.5948
+    },
+    {
+      "ticker": "AAME",
+      "price": 2.7
+    }
+  ],
+  "351": [
+    {
+      "ticker": "MLNT",
+      "price": 4.75
+    },
+    {
+      "ticker": "VRML",
+      "price": 0.5944
+    }
+  ],
+  "381": [
+    {
+      "ticker": "VRML",
+      "price": 0.59
+    },
+    {
+      "ticker": "MLNT",
+      "price": 4.725
+    }
+  ]
+}

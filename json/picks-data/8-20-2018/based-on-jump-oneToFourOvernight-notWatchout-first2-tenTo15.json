@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "STLR",
+      "price": 10.76
+    },
+    {
+      "ticker": "PLLL",
+      "price": 13.2
+    }
+  ],
+  "5": [
+    {
+      "ticker": "STLR",
+      "price": 10.76
+    },
+    {
+      "ticker": "VEDL",
+      "price": 12.72
+    }
+  ],
+  "16": [
+    {
+      "ticker": "ACH",
+      "price": 10.18
+    },
+    {
+      "ticker": "STLR",
+      "price": 10.76
+    }
+  ],
+  "30": [
+    {
+      "ticker": "ACH",
+      "price": 10.14
+    },
+    {
+      "ticker": "STLR",
+      "price": 10.76
+    }
+  ]
+}

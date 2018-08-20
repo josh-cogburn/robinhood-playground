@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "TUES",
+      "price": 3.15
+    },
+    {
+      "ticker": "LRAD",
+      "price": 3.08
+    },
+    {
+      "ticker": "CGEN",
+      "price": 3.55
+    }
+  ],
+  "5": [
+    {
+      "ticker": "TUES",
+      "price": 3.15
+    },
+    {
+      "ticker": "CHKR",
+      "price": 1.7777
+    },
+    {
+      "ticker": "LRAD",
+      "price": 3.0942
+    }
+  ],
+  "16": [
+    {
+      "ticker": "TUES",
+      "price": 3.125
+    },
+    {
+      "ticker": "CHKR",
+      "price": 1.755
+    },
+    {
+      "ticker": "LRAD",
+      "price": 3.09
+    }
+  ],
+  "30": [
+    {
+      "ticker": "TUES",
+      "price": 3.175
+    },
+    {
+      "ticker": "CHKR",
+      "price": 1.7745
+    },
+    {
+      "ticker": "LRAD",
+      "price": 3.0801
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "CHS",
+      "price": 10.13
+    },
+    {
+      "ticker": "NVTA",
+      "price": 10.29
+    }
+  ],
+  "40": [
+    {
+      "ticker": "EXPR",
+      "price": 10.165
+    },
+    {
+      "ticker": "VKTX",
+      "price": 10.29
+    }
+  ],
+  "100": [
+    {
+      "ticker": "AOBC",
+      "price": 10.04
+    },
+    {
+      "ticker": "EXPR",
+      "price": 10.135
+    }
+  ],
+  "200": [
+    {
+      "ticker": "AOBC",
+      "price": 10.01
+    },
+    {
+      "ticker": "VKTX",
+      "price": 10.03
+    }
+  ],
+  "260": [
+    {
+      "ticker": "VKTX",
+      "price": 10.0403
+    },
+    {
+      "ticker": "SYRS",
+      "price": 10.309
+    }
+  ],
+  "351": [
+    {
+      "ticker": "VKTX",
+      "price": 10.07
+    },
+    {
+      "ticker": "SYRS",
+      "price": 10.32
+    }
+  ],
+  "381": [
+    {
+      "ticker": "VKTX",
+      "price": 10.09
+    },
+    {
+      "ticker": "SYRS",
+      "price": 10.29
+    }
+  ]
+}

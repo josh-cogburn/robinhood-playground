@@ -1,0 +1,38 @@
+{
+  "0": [
+    {
+      "ticker": "INSI",
+      "price": 20.5
+    }
+  ],
+  "5": [
+    {
+      "ticker": "INSI",
+      "price": 19.75
+    },
+    {
+      "ticker": "MIXT",
+      "price": 15.8865
+    }
+  ],
+  "16": [
+    {
+      "ticker": "INSI",
+      "price": 19.6027
+    },
+    {
+      "ticker": "MIXT",
+      "price": 15.8975
+    }
+  ],
+  "30": [
+    {
+      "ticker": "INSI",
+      "price": 19.45
+    },
+    {
+      "ticker": "MIXT",
+      "price": 15.87
+    }
+  ]
+}

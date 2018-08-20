@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "USA",
+      "price": 6.5833
+    },
+    {
+      "ticker": "PSEC",
+      "price": 6.9281
+    }
+  ],
+  "40": [
+    {
+      "ticker": "IDT",
+      "price": 5.3478
+    },
+    {
+      "ticker": "NCZ",
+      "price": 6.1155
+    }
+  ],
+  "100": [
+    {
+      "ticker": "TSI",
+      "price": 5.52
+    },
+    {
+      "ticker": "GUT",
+      "price": 5.85
+    }
+  ],
+  "200": [
+    {
+      "ticker": "GUT",
+      "price": 5.87
+    },
+    {
+      "ticker": "RJA",
+      "price": 5.9534
+    }
+  ],
+  "260": [
+    {
+      "ticker": "MFV",
+      "price": 5.5475
+    },
+    {
+      "ticker": "GUT",
+      "price": 5.8545
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CCLP",
+      "price": 6
+    },
+    {
+      "ticker": "RJA",
+      "price": 5.95
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MFV",
+      "price": 5.5628
+    },
+    {
+      "ticker": "CCLP",
+      "price": 5.9999
+    }
+  ]
+}

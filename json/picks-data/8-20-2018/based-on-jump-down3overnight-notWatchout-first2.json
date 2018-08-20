@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "FVE",
+      "price": 1.05
+    },
+    {
+      "ticker": "PTN",
+      "price": 0.9049
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CGA",
+      "price": 1.08
+    },
+    {
+      "ticker": "FVE",
+      "price": 1.05
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CGA",
+      "price": 1.0899
+    },
+    {
+      "ticker": "FVE",
+      "price": 1.05
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CGA",
+      "price": 1.09
+    },
+    {
+      "ticker": "FVE",
+      "price": 1.1347
+    }
+  ]
+}

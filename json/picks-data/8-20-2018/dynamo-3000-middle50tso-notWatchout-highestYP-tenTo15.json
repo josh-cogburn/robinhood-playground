@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "CAMT",
+      "price": 10.41
+    },
+    {
+      "ticker": "MITL",
+      "price": 10.955
+    }
+  ],
+  "40": [
+    {
+      "ticker": "SHSP",
+      "price": 12.86
+    },
+    {
+      "ticker": "MITL",
+      "price": 10.955
+    }
+  ],
+  "100": [
+    {
+      "ticker": "RCII",
+      "price": 14.74
+    },
+    {
+      "ticker": "AFSI",
+      "price": 14.5
+    }
+  ],
+  "200": [
+    {
+      "ticker": "LIND",
+      "price": 14.98
+    },
+    {
+      "ticker": "AFSI",
+      "price": 14.5172
+    }
+  ],
+  "260": [
+    {
+      "ticker": "JMBA",
+      "price": 12.98
+    },
+    {
+      "ticker": "AFSI",
+      "price": 14.515
+    }
+  ],
+  "351": [
+    {
+      "ticker": "JMBA",
+      "price": 12.98
+    },
+    {
+      "ticker": "MITL",
+      "price": 10.965
+    }
+  ],
+  "381": [
+    {
+      "ticker": "JMBA",
+      "price": 12.98
+    },
+    {
+      "ticker": "MITL",
+      "price": 10.97
+    }
+  ]
+}

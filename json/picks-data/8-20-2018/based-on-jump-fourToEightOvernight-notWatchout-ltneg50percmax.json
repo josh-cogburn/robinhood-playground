@@ -1,0 +1,90 @@
+{
+  "0": [
+    {
+      "ticker": "INTX",
+      "price": 1.44
+    },
+    {
+      "ticker": "DXYN",
+      "price": 1.6
+    },
+    {
+      "ticker": "NH",
+      "price": 2.48
+    },
+    {
+      "ticker": "AST",
+      "price": 1.7
+    },
+    {
+      "ticker": "NBY",
+      "price": 2.15
+    }
+  ],
+  "5": [
+    {
+      "ticker": "INTX",
+      "price": 1.44
+    },
+    {
+      "ticker": "DXYN",
+      "price": 1.5
+    },
+    {
+      "ticker": "NH",
+      "price": 2.48
+    },
+    {
+      "ticker": "AST",
+      "price": 1.7
+    },
+    {
+      "ticker": "NBY",
+      "price": 2.15
+    }
+  ],
+  "16": [
+    {
+      "ticker": "INTX",
+      "price": 1.45
+    },
+    {
+      "ticker": "LWAY",
+      "price": 3.97
+    },
+    {
+      "ticker": "DXYN",
+      "price": 1.5
+    },
+    {
+      "ticker": "NH",
+      "price": 2.47
+    },
+    {
+      "ticker": "AST",
+      "price": 1.6999
+    }
+  ],
+  "30": [
+    {
+      "ticker": "INTX",
+      "price": 1.45
+    },
+    {
+      "ticker": "LWAY",
+      "price": 3.8407
+    },
+    {
+      "ticker": "DXYN",
+      "price": 1.5
+    },
+    {
+      "ticker": "NH",
+      "price": 2.44
+    },
+    {
+      "ticker": "AST",
+      "price": 1.6728
+    }
+  ]
+}

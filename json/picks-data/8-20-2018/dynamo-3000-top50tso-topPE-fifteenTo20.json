@@ -1,0 +1,100 @@
+{
+  "4": [
+    {
+      "ticker": "COT",
+      "price": 16.06
+    },
+    {
+      "ticker": "GME",
+      "price": 15.58
+    },
+    {
+      "ticker": "DOC",
+      "price": 17.57
+    }
+  ],
+  "40": [
+    {
+      "ticker": "DPLO",
+      "price": 19.52
+    },
+    {
+      "ticker": "COT",
+      "price": 16.165
+    },
+    {
+      "ticker": "CROX",
+      "price": 19.02
+    }
+  ],
+  "100": [
+    {
+      "ticker": "PSCE",
+      "price": 15.95
+    },
+    {
+      "ticker": "DPLO",
+      "price": 19.52
+    },
+    {
+      "ticker": "COT",
+      "price": 16.225
+    }
+  ],
+  "200": [
+    {
+      "ticker": "DPLO",
+      "price": 19.67
+    },
+    {
+      "ticker": "CROX",
+      "price": 19.32
+    },
+    {
+      "ticker": "GME",
+      "price": 15.77
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CROX",
+      "price": 19.38
+    },
+    {
+      "ticker": "GME",
+      "price": 15.76
+    },
+    {
+      "ticker": "CSTE",
+      "price": 18.3
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CROX",
+      "price": 19.5
+    },
+    {
+      "ticker": "GME",
+      "price": 15.93
+    },
+    {
+      "ticker": "CSTE",
+      "price": 18.5
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CROX",
+      "price": 19.53
+    },
+    {
+      "ticker": "GME",
+      "price": 15.91
+    },
+    {
+      "ticker": "ACBI",
+      "price": 18.625
+    }
+  ]
+}

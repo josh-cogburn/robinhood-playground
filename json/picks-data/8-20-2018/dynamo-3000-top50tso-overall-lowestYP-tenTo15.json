@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "PRTA",
+      "price": 14.65
+    },
+    {
+      "ticker": "ACAD",
+      "price": 13.19
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CBIO",
+      "price": 10.43
+    },
+    {
+      "ticker": "CASA",
+      "price": 12.82
+    }
+  ],
+  "100": [
+    {
+      "ticker": "PRTK",
+      "price": 10.3732
+    },
+    {
+      "ticker": "CASA",
+      "price": 13.095
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PRTK",
+      "price": 10.375
+    },
+    {
+      "ticker": "CASA",
+      "price": 13.24
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PRTK",
+      "price": 10.445
+    },
+    {
+      "ticker": "IMTE",
+      "price": 12.766
+    }
+  ],
+  "351": [
+    {
+      "ticker": "ACAD",
+      "price": 13.46
+    },
+    {
+      "ticker": "PRTK",
+      "price": 10.4
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ACAD",
+      "price": 13.56
+    },
+    {
+      "ticker": "PRTK",
+      "price": 10.425
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "GME",
+      "price": 15.58
+    },
+    {
+      "ticker": "SPOK",
+      "price": 15.55
+    }
+  ],
+  "40": [
+    {
+      "ticker": "DRNA",
+      "price": 15.27
+    },
+    {
+      "ticker": "SRRK",
+      "price": 15.47
+    }
+  ],
+  "100": [
+    {
+      "ticker": "DRNA",
+      "price": 15.45
+    },
+    {
+      "ticker": "SRRK",
+      "price": 15.35
+    }
+  ],
+  "200": [
+    {
+      "ticker": "DRNA",
+      "price": 15.53
+    },
+    {
+      "ticker": "SRRK",
+      "price": 15.7
+    }
+  ],
+  "260": [
+    {
+      "ticker": "DRNA",
+      "price": 15.52
+    },
+    {
+      "ticker": "SRRK",
+      "price": 15.7
+    }
+  ],
+  "351": [
+    {
+      "ticker": "DRNA",
+      "price": 15.58
+    },
+    {
+      "ticker": "SRRK",
+      "price": 15.89
+    }
+  ],
+  "381": [
+    {
+      "ticker": "DRNA",
+      "price": 15.51
+    },
+    {
+      "ticker": "SRRK",
+      "price": 15.73
+    }
+  ]
+}
