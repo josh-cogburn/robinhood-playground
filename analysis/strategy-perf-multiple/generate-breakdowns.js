@@ -79,6 +79,9 @@ const analyzeRoundup = allRoundup => {
 
     const lowCounts = ({ count }) => count <= maxCount / 2 && count >= 5;
     const upperHalfCounts = ({ count }) => count > maxCount / 2;
+    const middleCounts = ({ count }) =>
+        // 25% - 75%
+        count > maxCount / 4 && count > 3 * maxCount / 4;
 
     return {
         all: createBreakdown({
@@ -208,6 +211,23 @@ const analyzeRoundup = allRoundup => {
             scoreFn: highestPlayoutFn(
                 ({ percUp }) => percUp,
                 playoutKey => playoutsOfInterest.includes(playoutKey)
+            )
+        }),
+
+
+        // middleCounts
+
+        middleCountsJohnsRecipe: createBreakdown({
+            filterFn: middleCounts,
+            scoreFn: highestPlayoutFn(({ hundredResult, percUp, avgTrend, percHitsPositive }) =>
+                hundredResult * (2 * percUp) * avgTrend * (2 * percHitsPositive)
+            )
+        }),
+
+        middleCountsJohnsRecipeNoHundredResult: createBreakdown({
+            filterFn: middleCounts,
+            scoreFn: highestPlayoutFn(({ hundredResult, percUp, avgTrend, percHitsPositive }) =>
+                (2 * percUp) * avgTrend * (2 * percHitsPositive)
             )
         }),
 

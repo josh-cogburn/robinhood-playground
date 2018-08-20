@@ -335,7 +335,8 @@ const iwantthis = [
     'low-float-high-volume-twoWeekVolToAvgPoints-trenddown7to10-fiveTo10-95',
     'dynamo-3000-bottom50tso-notWatchout-highestsharesToCap-100',
     'low-float-high-volume-floatTimesvolToAvgPoints-trenddown3to10-notWatchout-fiveTo10-25',
-    'sudden-drops-last10trend-first1-fiveTo10-290'
+    'sudden-drops-last10trend-first1-fiveTo10-290',
+    'low-float-high-volume-twoWeekVolToAvgPoints-trenddown7to10-notWatchout-25',
 ];
 
 

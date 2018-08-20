@@ -1,3 +1,5 @@
+// analysis
+const stratPerfMultiple = require('../analysis/strategy-perf-multiple');
 
 // app actions
 const getTrendAndSave = require('../app-actions/get-trend-and-save');
@@ -98,7 +100,15 @@ const additionalCronConfig = [
         name: 'getAllTickers',
         run: [1027],
         fn: getAllTickers
-    }
+    },
+
+    {
+        name: 'strat perf multiple',
+        run: [900],
+        fn: (Robinhood) => {
+            await stratPerfMultiple(Robinhood, 52, 'next-day-330');
+        }
+    },
 ];
 
 const additionalCron = {
