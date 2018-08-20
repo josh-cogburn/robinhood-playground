@@ -299,6 +299,9 @@ const anyCountPerfectos = [
     'low-float-high-volume-volTo2WeekPoints-trenddown7to10-shouldWatchout-fifteenTo20-210',
     'low-float-high-volume-floatTimestwoWeekVolToAvgPoints-trenddowngt10-fifteenTo20-210',
 
+    'sudden-drops-last2trend-first2-100',
+
+    'sudden-drops-last30trend-filter20-153',
     'sudden-drops-last3trend-filter10-221',
     'sudden-drops-last2trend-filter10-221',
     'sudden-drops-last10trend-filter20-221',
@@ -308,6 +311,8 @@ const anyCountPerfectos = [
     'sudden-drops-last10trend-filter20-290',
     'sudden-drops-last10trend-filter20-290',
     'sudden-drops-last10trend-filter30-328',
+
+
 
     'sudden-drops-last30trend-filter20-290',
 
@@ -321,6 +326,16 @@ const moreaddsons = [
     'technical-indicators-10minute-week-topSMAoverUnderLastTrade-tenTo15-29',
     'technical-indicators-day-year-topOBV-29',
     'fizbiz-nanoEarlyRunners-first1-180'
+];
+
+const iwantthis = [
+    'low-float-high-volume-floatPoints-trenddowngt20-6',
+    'dynamo-3000-bottom50tso-notWatchout-lowestYP-100',
+    'constant-risers-10minute-percUpHighClose-lowovernightjumps-100',
+    'low-float-high-volume-twoWeekVolToAvgPoints-trenddown7to10-fiveTo10-95',
+    'dynamo-3000-bottom50tso-notWatchout-highestsharesToCap-100',
+    'low-float-high-volume-floatTimesvolToAvgPoints-trenddown3to10-notWatchout-fiveTo10-25',
+    'sudden-drops-last10trend-first1-fiveTo10-290'
 ];
 
 
@@ -373,5 +388,6 @@ module.exports = {
 
 
     anyCountPerfectos,
-    moreaddsons
+    moreaddsons,
+    iwantthis
 };

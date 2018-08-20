@@ -19,26 +19,26 @@ const getAllTickers = require('../rh-actions/get-all-tickers');
 const stratManager = require('../socket-server/strat-manager');
 
 const additionalCronConfig = [
-    {
-        name: 'sell all stocks',
-        run: [5],
-        fn: (Robinhood) => {
-
-            setTimeout(async () => {
-                // daily at 6:30AM + 4 seconds
-                await sellAllStocks(Robinhood);
-                console.log('done selling all');
-                //
-                // timeoutPromise(5000);
-                // console.log('selling all stocks that went up');
-                // await sellAllIfWentUp(Robinhood);
-                // console.log('logging portfolio value');
-                // await logPortfolioValue(Robinhood);
-
-            }, 8);
-
-        }
-    },
+    // {
+    //     name: 'sell all stocks',
+    //     run: [5],
+    //     fn: (Robinhood) => {
+    //
+    //         setTimeout(async () => {
+    //             // daily at 6:30AM + 4 seconds
+    //             await sellAllStocks(Robinhood);
+    //             console.log('done selling all');
+    //             //
+    //             // timeoutPromise(5000);
+    //             // console.log('selling all stocks that went up');
+    //             // await sellAllIfWentUp(Robinhood);
+    //             // console.log('logging portfolio value');
+    //             // await logPortfolioValue(Robinhood);
+    //
+    //         }, 8);
+    //
+    //     }
+    // },
     // sell all if went up
     // {
     //     name: 'sellAllIfWentUp',
