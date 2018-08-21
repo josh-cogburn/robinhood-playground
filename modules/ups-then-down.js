@@ -58,7 +58,7 @@ const trendFilter = async (Robinhood, trend) => {
             .slice(0, 5);
 
 
-        console.log(JSON.stringify(ofInterest, null, 2));
+        // console.log(JSON.stringify(ofInterest, null, 2));
 
         return ofInterest
             .map(({ ticker }) => ticker);
@@ -88,7 +88,7 @@ const trendFilter = async (Robinhood, trend) => {
         shiftedHist: analyzeTrend(
             withHistoricals
                 .map(buy => {
-                    console.log(buy.mostRecentTrend, 'does it exist already');
+                    // console.log(buy.mostRecentTrend, 'does it exist already');
                     const {historicals} = buy;
                     // evening
                     const {trend: mostRecentHistorical} = historicals.shift();

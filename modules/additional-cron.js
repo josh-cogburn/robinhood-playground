@@ -102,11 +102,23 @@ const additionalCronConfig = [
         fn: getAllTickers
     },
 
+    // {
+    //     name: 'commit day to git',
+    //     run: [1027],
+    //     fn: getAllTickers
+    // },
+
     {
         name: 'strat perf multiple',
         run: [900],
         fn: (Robinhood) => stratPerfMultiple(Robinhood, 52, 'next-day-330')
     },
+
+    // {
+    //     name: 'commit strat-perf-multiple to git'
+    // }
+
+
 ];
 
 const additionalCron = {

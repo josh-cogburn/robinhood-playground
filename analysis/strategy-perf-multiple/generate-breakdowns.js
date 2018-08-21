@@ -81,7 +81,7 @@ const analyzeRoundup = allRoundup => {
     const upperHalfCounts = ({ count }) => count > maxCount / 2;
     const middleCounts = ({ count }) =>
         // 25% - 75%
-        count > maxCount / 4 && count > 3 * maxCount / 4;
+        count > maxCount / 4 && count < 3 * maxCount / 4;
 
     return {
         all: createBreakdown({
