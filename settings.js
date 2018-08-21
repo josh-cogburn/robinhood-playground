@@ -25,7 +25,13 @@ module.exports = {
         '[anyCountPerfectos]',
         '[iwantthis]'
     ],
-    sellStrategy: 'limit3',     // for fallback
+    sellStrategy: 'limit3',     // for fallback,
+    keepers: [
+        'NSPR',
+        'BOXL',
+        'SEII',
+        'AWX'
+    ],
 
     // email
     email: {
