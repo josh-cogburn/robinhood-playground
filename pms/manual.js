@@ -316,7 +316,10 @@ const anyCountPerfectos = [
 
     'sudden-drops-last30trend-filter20-290',
 
-    'technical-indicators-10minute-week-topSMAoverUnderLastTrade-tenTo15-29'
+    'technical-indicators-10minute-week-topSMAoverUnderLastTrade-tenTo15-29',
+    'technical-indicators-10minute-day-topSMAoverUnderHist-14',
+    'technical-indicators-10minute-week-topSMAoverUnderHist-fiveTo10-159',
+    'technical-indicators-5minute-day-topSMAoverUnderHist-fifteenTo20-87'
 ];
 
 const moreaddsons = [

@@ -27,10 +27,10 @@ module.exports = {
     ],
     sellStrategy: 'limit3',     // for fallback,
     keepers: [
-        'NSPR',
-        'BOXL',
-        'SEII',
-        'AWX'
+        // 'NSPR',
+        // 'BOXL',
+        // 'SEII',
+        // 'AWX'
     ],
 
     // email
