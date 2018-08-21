@@ -328,7 +328,7 @@ const moreaddsons = [
     'fizbiz-nanoEarlyRunners-first1-180'
 ];
 
-const iwantthis = [
+const iwantthisPARTONE = [
     'low-float-high-volume-floatPoints-trenddowngt20-6',
     'dynamo-3000-bottom50tso-notWatchout-lowestYP-100',
     'constant-risers-10minute-percUpHighClose-lowovernightjumps-100',
@@ -341,13 +341,20 @@ const iwantthis = [
     'low-float-high-volume-floatPoints-trenddowngt30-276',
     'sudden-drops-last10trend-filter10-221',
 
+]
 
+const iwantthisPARTTWO = [
     'low-float-high-volume-floatTimestwoWeekVolToAvgPoints-trendgt50-tenTo15-384',
     'sudden-drops-last2trend-first2-290',
     'low-float-high-volume-floatPoints-trenddown5to7-shouldWatchout-fifteenTo20-25',
     'low-float-high-volume-floatTimesabsVolPoints-trenddown7to10-shouldWatchout-fifteenTo20-210',
     'based-on-jump-down3overnight-trending103-notWatchout-ltneg50percmax-first1-fiveTo10-0',
     'based-on-jump-down3overnight-notWatchout-ltneg50percmax-fifteenTo20-30'
+]
+
+const iwantthis = [
+    ...iwantthisPARTONE,
+    ...iwantthisPARTTWO
 ];
 
 
@@ -401,5 +408,8 @@ module.exports = {
 
     anyCountPerfectos,
     moreaddsons,
+
+    iwantthisPARTONE,
+    iwantthisPARTTWO,
     iwantthis
 };
