@@ -38,6 +38,6 @@ module.exports = {
         [['chief', 'sm', 'urph', '@', 'gm', 'ail', '.com'].join('')]: [
             // ...allShorts
         ],
-        // ...cheapestPicksEmailObj
+        ...cheapestPicksEmailObj
     }
 };
