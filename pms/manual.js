@@ -337,6 +337,17 @@ const iwantthis = [
     'low-float-high-volume-floatTimesvolToAvgPoints-trenddown3to10-notWatchout-fiveTo10-25',
     'sudden-drops-last10trend-first1-fiveTo10-290',
     'low-float-high-volume-twoWeekVolToAvgPoints-trenddown7to10-notWatchout-25',
+    'based-on-jump-down3overnight-trending53-notWatchout-ltneg50percmax-first2-30',
+    'low-float-high-volume-floatPoints-trenddowngt30-276',
+    'sudden-drops-last10trend-filter10-221',
+
+
+    'low-float-high-volume-floatTimestwoWeekVolToAvgPoints-trendgt50-tenTo15-384',
+    'sudden-drops-last2trend-first2-290',
+    'low-float-high-volume-floatPoints-trenddown5to7-shouldWatchout-fifteenTo20-25',
+    'low-float-high-volume-floatTimesabsVolPoints-trenddown7to10-shouldWatchout-fifteenTo20-210',
+    'based-on-jump-down3overnight-trending103-notWatchout-ltneg50percmax-first1-fiveTo10-0',
+    'based-on-jump-down3overnight-notWatchout-ltneg50percmax-fifteenTo20-30'
 ];
 
 

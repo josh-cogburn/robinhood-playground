@@ -20,7 +20,7 @@ const {
 module.exports = {
     // important settings
     sellAllStocksOnNthDay: 2,
-    purchaseAmt: 24,
+    purchaseAmt: 21,
     forPurchase: [
         '[anyCountPerfectos]',
         '[iwantthis]'
