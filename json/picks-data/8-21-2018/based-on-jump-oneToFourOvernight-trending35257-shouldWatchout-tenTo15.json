@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "RFIL",
+      "price": 11.65
+    },
+    {
+      "ticker": "EXPR",
+      "price": 10.555
+    }
+  ],
+  "5": [
+    {
+      "ticker": "RFIL",
+      "price": 11.5
+    },
+    {
+      "ticker": "EXPR",
+      "price": 10.58
+    }
+  ],
+  "16": [
+    {
+      "ticker": "RFIL",
+      "price": 11.3
+    },
+    {
+      "ticker": "EXPR",
+      "price": 10.62
+    }
+  ],
+  "30": [
+    {
+      "ticker": "RFIL",
+      "price": 11.25
+    },
+    {
+      "ticker": "EXPR",
+      "price": 10.63
+    }
+  ]
+}

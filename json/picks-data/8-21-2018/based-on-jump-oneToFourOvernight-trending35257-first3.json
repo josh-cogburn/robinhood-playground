@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "RNN",
+      "price": 1.6794
+    },
+    {
+      "ticker": "SUMR",
+      "price": 1.96
+    },
+    {
+      "ticker": "NEPT",
+      "price": 3.22
+    }
+  ],
+  "5": [
+    {
+      "ticker": "RNN",
+      "price": 1.73
+    },
+    {
+      "ticker": "SUMR",
+      "price": 1.95
+    },
+    {
+      "ticker": "CYH",
+      "price": 3.7
+    }
+  ],
+  "16": [
+    {
+      "ticker": "RNN",
+      "price": 1.71
+    },
+    {
+      "ticker": "SUMR",
+      "price": 1.97
+    },
+    {
+      "ticker": "CYH",
+      "price": 3.61
+    }
+  ],
+  "30": [
+    {
+      "ticker": "RNN",
+      "price": 1.699
+    },
+    {
+      "ticker": "SUMR",
+      "price": 1.959
+    },
+    {
+      "ticker": "CYH",
+      "price": 3.615
+    }
+  ]
+}

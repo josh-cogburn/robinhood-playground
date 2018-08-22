@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "SEAC",
+      "price": 1.5
+    }
+  ],
+  "5": [
+    {
+      "ticker": "SEAC",
+      "price": 1.53
+    },
+    {
+      "ticker": "LUB",
+      "price": 2.1232
+    }
+  ],
+  "16": [
+    {
+      "ticker": "SEAC",
+      "price": 1.4418
+    },
+    {
+      "ticker": "LUB",
+      "price": 2.1294
+    }
+  ],
+  "30": [
+    {
+      "ticker": "SEAC",
+      "price": 1.5
+    },
+    {
+      "ticker": "SSNT",
+      "price": 3.32
+    },
+    {
+      "ticker": "LUB",
+      "price": 2.16
+    }
+  ]
+}

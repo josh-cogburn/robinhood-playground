@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "KALV",
+      "price": 15.2321
+    },
+    {
+      "ticker": "CEM",
+      "price": 15.4399
+    }
+  ],
+  "40": [
+    {
+      "ticker": "KALV",
+      "price": 15.14
+    },
+    {
+      "ticker": "CEM",
+      "price": 15.3493
+    }
+  ],
+  "100": [
+    {
+      "ticker": "ALTY",
+      "price": 15.44
+    },
+    {
+      "ticker": "SPOK",
+      "price": 15.4
+    }
+  ],
+  "200": [
+    {
+      "ticker": "HVBC",
+      "price": 15.4
+    },
+    {
+      "ticker": "ALTY",
+      "price": 15.44
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CEM",
+      "price": 15.2766
+    },
+    {
+      "ticker": "HVBC",
+      "price": 15.4
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CEM",
+      "price": 15.1399
+    },
+    {
+      "ticker": "HVBC",
+      "price": 15.3999
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CEM",
+      "price": 15.15
+    },
+    {
+      "ticker": "HVBC",
+      "price": 15.3999
+    }
+  ]
+}

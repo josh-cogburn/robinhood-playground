@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "SMRT",
+      "price": 3.1
+    },
+    {
+      "ticker": "ISIG",
+      "price": 2.12
+    }
+  ],
+  "40": [
+    {
+      "ticker": "LTRX",
+      "price": 4.4
+    },
+    {
+      "ticker": "SMRT",
+      "price": 3.2
+    }
+  ],
+  "100": [
+    {
+      "ticker": "KOSS",
+      "price": 3.749
+    },
+    {
+      "ticker": "ATRS",
+      "price": 3.705
+    }
+  ],
+  "200": [
+    {
+      "ticker": "KOSS",
+      "price": 3.7196
+    },
+    {
+      "ticker": "TAT",
+      "price": 1.7599
+    }
+  ],
+  "260": [
+    {
+      "ticker": "KOSS",
+      "price": 3.83
+    },
+    {
+      "ticker": "TAT",
+      "price": 1.76
+    }
+  ],
+  "351": [
+    {
+      "ticker": "KOSS",
+      "price": 3.7899
+    },
+    {
+      "ticker": "ATEC",
+      "price": 3.779
+    }
+  ],
+  "381": [
+    {
+      "ticker": "KOSS",
+      "price": 3.936
+    },
+    {
+      "ticker": "ATEC",
+      "price": 3.77
+    }
+  ]
+}

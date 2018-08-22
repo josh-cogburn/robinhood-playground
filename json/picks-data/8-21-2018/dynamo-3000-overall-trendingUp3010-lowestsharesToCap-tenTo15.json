@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "MPW",
+      "price": 14.99
+    },
+    {
+      "ticker": "BLW",
+      "price": 14.98
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CGO",
+      "price": 15.13
+    },
+    {
+      "ticker": "NVG",
+      "price": 14.91
+    }
+  ],
+  "100": [
+    {
+      "ticker": "BLW",
+      "price": 14.9877
+    },
+    {
+      "ticker": "NVG",
+      "price": 14.9175
+    }
+  ],
+  "200": [
+    {
+      "ticker": "GMLP",
+      "price": 14.86
+    },
+    {
+      "ticker": "MPW",
+      "price": 14.97
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GMLP",
+      "price": 14.86
+    },
+    {
+      "ticker": "BLW",
+      "price": 14.9939
+    }
+  ],
+  "351": [
+    {
+      "ticker": "GMLP",
+      "price": 14.91
+    },
+    {
+      "ticker": "BLW",
+      "price": 14.96
+    }
+  ],
+  "381": [
+    {
+      "ticker": "GMLP",
+      "price": 14.8301
+    },
+    {
+      "ticker": "BCBP",
+      "price": 14.9
+    }
+  ]
+}

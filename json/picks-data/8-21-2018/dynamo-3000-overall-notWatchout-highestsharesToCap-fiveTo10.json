@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "HPR",
+      "price": 5.04
+    },
+    {
+      "ticker": "TTI",
+      "price": 5.05
+    }
+  ],
+  "40": [
+    {
+      "ticker": "INTT",
+      "price": 9.0001
+    },
+    {
+      "ticker": "HPR",
+      "price": 5.03
+    }
+  ],
+  "100": [
+    {
+      "ticker": "INTT",
+      "price": 9.1
+    },
+    {
+      "ticker": "SKIS",
+      "price": 5.0388
+    }
+  ],
+  "200": [
+    {
+      "ticker": "INTT",
+      "price": 9.1
+    },
+    {
+      "ticker": "CRBP",
+      "price": 5.1681
+    }
+  ],
+  "260": [
+    {
+      "ticker": "INTT",
+      "price": 9.175
+    },
+    {
+      "ticker": "CRBP",
+      "price": 5.175
+    }
+  ],
+  "351": [
+    {
+      "ticker": "INTT",
+      "price": 9.1999
+    },
+    {
+      "ticker": "CRBP",
+      "price": 5.025
+    }
+  ],
+  "381": [
+    {
+      "ticker": "INTT",
+      "price": 9.225
+    },
+    {
+      "ticker": "CRBP",
+      "price": 5.125
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "GST",
+      "price": 0.0898
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.1336
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CEI",
+      "price": 0.2276
+    },
+    {
+      "ticker": "CVRS",
+      "price": 0.9741
+    }
+  ],
+  "100": [
+    {
+      "ticker": "LODE",
+      "price": 0.1667
+    },
+    {
+      "ticker": "NSPR",
+      "price": 0.1918
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CEI",
+      "price": 0.2261
+    },
+    {
+      "ticker": "SIGM",
+      "price": 0.269
+    }
+  ],
+  "260": [
+    {
+      "ticker": "XPL",
+      "price": 0.375
+    },
+    {
+      "ticker": "SPEX",
+      "price": 1.06
+    }
+  ],
+  "351": [
+    {
+      "ticker": "XPL",
+      "price": 0.3756
+    },
+    {
+      "ticker": "CFMS",
+      "price": 0.935
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MNGA",
+      "price": 0.221
+    },
+    {
+      "ticker": "PZG",
+      "price": 1.09
+    }
+  ]
+}

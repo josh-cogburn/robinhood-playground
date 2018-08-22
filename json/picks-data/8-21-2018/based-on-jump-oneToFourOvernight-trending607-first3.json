@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "ASCMA",
+      "price": 3.14
+    },
+    {
+      "ticker": "RNN",
+      "price": 1.6794
+    },
+    {
+      "ticker": "GENE",
+      "price": 1.15
+    }
+  ],
+  "5": [
+    {
+      "ticker": "ASCMA",
+      "price": 3.05
+    },
+    {
+      "ticker": "RNN",
+      "price": 1.73
+    },
+    {
+      "ticker": "GENE",
+      "price": 1.15
+    }
+  ],
+  "16": [
+    {
+      "ticker": "ASCMA",
+      "price": 3.05
+    },
+    {
+      "ticker": "RNN",
+      "price": 1.71
+    },
+    {
+      "ticker": "GENE",
+      "price": 1.15
+    }
+  ],
+  "30": [
+    {
+      "ticker": "ASCMA",
+      "price": 3.0361
+    },
+    {
+      "ticker": "RNN",
+      "price": 1.699
+    },
+    {
+      "ticker": "GENE",
+      "price": 1.12
+    }
+  ]
+}

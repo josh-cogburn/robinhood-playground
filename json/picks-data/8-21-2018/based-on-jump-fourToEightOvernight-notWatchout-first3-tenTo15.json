@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "PNTR",
+      "price": 12.75
+    },
+    {
+      "ticker": "BZH",
+      "price": 13.78
+    }
+  ],
+  "5": [
+    {
+      "ticker": "BZH",
+      "price": 13.84
+    },
+    {
+      "ticker": "PNTR",
+      "price": 12.75
+    }
+  ],
+  "16": [
+    {
+      "ticker": "BZH",
+      "price": 13.62
+    },
+    {
+      "ticker": "PNTR",
+      "price": 12.3
+    }
+  ],
+  "30": [
+    {
+      "ticker": "BZH",
+      "price": 13.6547
+    },
+    {
+      "ticker": "PNTR",
+      "price": 12.6016
+    }
+  ]
+}

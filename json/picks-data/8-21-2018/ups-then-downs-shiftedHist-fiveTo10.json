@@ -1,0 +1,50 @@
+{
+  "10": [
+    {
+      "ticker": "MCF",
+      "price": 5.93
+    }
+  ],
+  "50": [
+    {
+      "ticker": "SCPH",
+      "price": 5.22
+    },
+    {
+      "ticker": "MCF",
+      "price": 5.875
+    }
+  ],
+  "200": [
+    {
+      "ticker": "SCPH",
+      "price": 5.268
+    },
+    {
+      "ticker": "MCF",
+      "price": 5.8593
+    }
+  ],
+  "300": [
+    {
+      "ticker": "SCPH",
+      "price": 5.2
+    },
+    {
+      "ticker": "MCF",
+      "price": 5.875
+    }
+  ],
+  "380": [
+    {
+      "ticker": "SCPH",
+      "price": 5.25
+    }
+  ],
+  "600": [
+    {
+      "ticker": "SCPH",
+      "price": 5.23
+    }
+  ]
+}

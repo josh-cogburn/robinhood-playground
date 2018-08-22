@@ -1,0 +1,63 @@
+{
+  "4": [
+    {
+      "ticker": "ABCD",
+      "price": 13.4
+    },
+    {
+      "ticker": "CVIA",
+      "price": 12.525
+    }
+  ],
+  "40": [
+    {
+      "ticker": "SVXY",
+      "price": 14.3
+    },
+    {
+      "ticker": "INOV",
+      "price": 11.6
+    }
+  ],
+  "100": [
+    {
+      "ticker": "BRS",
+      "price": 10.99
+    },
+    {
+      "ticker": "INAP",
+      "price": 13.17
+    }
+  ],
+  "200": [
+    {
+      "ticker": "TACO",
+      "price": 13.27
+    },
+    {
+      "ticker": "VERI",
+      "price": 11.42
+    }
+  ],
+  "260": [],
+  "351": [
+    {
+      "ticker": "XRM",
+      "price": 13.37
+    },
+    {
+      "ticker": "TACO",
+      "price": 13.29
+    }
+  ],
+  "381": [
+    {
+      "ticker": "XRM",
+      "price": 13.37
+    },
+    {
+      "ticker": "LKSD",
+      "price": 12.01
+    }
+  ]
+}

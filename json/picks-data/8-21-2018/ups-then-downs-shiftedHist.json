@@ -1,0 +1,70 @@
+{
+  "10": [
+    {
+      "ticker": "NFEC",
+      "price": 4.7082
+    },
+    {
+      "ticker": "UAVS",
+      "price": 1.8025
+    },
+    {
+      "ticker": "IHT",
+      "price": 1.53
+    }
+  ],
+  "50": [
+    {
+      "ticker": "NFEC",
+      "price": 4.9194
+    },
+    {
+      "ticker": "UAVS",
+      "price": 1.77
+    }
+  ],
+  "200": [
+    {
+      "ticker": "NFEC",
+      "price": 4.81
+    },
+    {
+      "ticker": "UAVS",
+      "price": 1.761
+    },
+    {
+      "ticker": "IHT",
+      "price": 1.5341
+    }
+  ],
+  "300": [
+    {
+      "ticker": "NFEC",
+      "price": 4.8001
+    },
+    {
+      "ticker": "UAVS",
+      "price": 1.78
+    }
+  ],
+  "380": [
+    {
+      "ticker": "NFEC",
+      "price": 4.74
+    },
+    {
+      "ticker": "UAVS",
+      "price": 1.782
+    }
+  ],
+  "600": [
+    {
+      "ticker": "NFEC",
+      "price": 4.8
+    },
+    {
+      "ticker": "UAVS",
+      "price": 1.8
+    }
+  ]
+}

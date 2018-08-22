@@ -1,0 +1,90 @@
+{
+  "0": [
+    {
+      "ticker": "USO",
+      "price": 13.97
+    },
+    {
+      "ticker": "ECA",
+      "price": 12.7
+    },
+    {
+      "ticker": "RMCF",
+      "price": 10.1
+    },
+    {
+      "ticker": "NORW",
+      "price": 14.2094
+    },
+    {
+      "ticker": "ERF",
+      "price": 12.69
+    }
+  ],
+  "5": [
+    {
+      "ticker": "SE",
+      "price": 14.19
+    },
+    {
+      "ticker": "FDD",
+      "price": 13.25
+    },
+    {
+      "ticker": "USO",
+      "price": 13.975
+    },
+    {
+      "ticker": "ECA",
+      "price": 12.659
+    },
+    {
+      "ticker": "NVGS",
+      "price": 12.2108
+    }
+  ],
+  "16": [
+    {
+      "ticker": "SE",
+      "price": 14.1992
+    },
+    {
+      "ticker": "FDD",
+      "price": 13.2291
+    },
+    {
+      "ticker": "USO",
+      "price": 13.9432
+    },
+    {
+      "ticker": "PFO",
+      "price": 12.0115
+    },
+    {
+      "ticker": "ECA",
+      "price": 12.59
+    }
+  ],
+  "30": [
+    {
+      "ticker": "KALV",
+      "price": 14.9869
+    },
+    {
+      "ticker": "SE",
+      "price": 14.28
+    },
+    {
+      "ticker": "FDD",
+      "price": 13.22
+    },
+    {
+      "ticker": "USO",
+      "price": 13.945
+    },
+    {
+      "ticker": "PFO",
+      "price": 11.9797
+    }
+  ]
+}

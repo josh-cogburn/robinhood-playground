@@ -1,0 +1,90 @@
+{
+  "0": [
+    {
+      "ticker": "CSPI",
+      "price": 11.88
+    },
+    {
+      "ticker": "DB",
+      "price": 11.465
+    },
+    {
+      "ticker": "RFIL",
+      "price": 11.65
+    },
+    {
+      "ticker": "RES",
+      "price": 15.19
+    },
+    {
+      "ticker": "LPL",
+      "price": 10.36
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CSPI",
+      "price": 11.88
+    },
+    {
+      "ticker": "DB",
+      "price": 11.455
+    },
+    {
+      "ticker": "RFIL",
+      "price": 11.5
+    },
+    {
+      "ticker": "HMI",
+      "price": 11.35
+    },
+    {
+      "ticker": "ERF",
+      "price": 12.68
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CSPI",
+      "price": 11.88
+    },
+    {
+      "ticker": "DB",
+      "price": 11.45
+    },
+    {
+      "ticker": "RFIL",
+      "price": 11.3
+    },
+    {
+      "ticker": "HMI",
+      "price": 11.1
+    },
+    {
+      "ticker": "ERF",
+      "price": 12.62
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CSPI",
+      "price": 11.76
+    },
+    {
+      "ticker": "KALV",
+      "price": 14.9869
+    },
+    {
+      "ticker": "DB",
+      "price": 11.4498
+    },
+    {
+      "ticker": "RFIL",
+      "price": 11.25
+    },
+    {
+      "ticker": "HMI",
+      "price": 11.11
+    }
+  ]
+}

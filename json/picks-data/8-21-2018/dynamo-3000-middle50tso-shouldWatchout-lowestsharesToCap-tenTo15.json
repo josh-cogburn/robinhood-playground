@@ -1,0 +1,63 @@
+{
+  "4": [
+    {
+      "ticker": "PLSE",
+      "price": 13.5
+    },
+    {
+      "ticker": "ABCD",
+      "price": 13.4
+    }
+  ],
+  "40": [
+    {
+      "ticker": "SVXY",
+      "price": 14.3
+    },
+    {
+      "ticker": "BPI",
+      "price": 13.52
+    }
+  ],
+  "100": [
+    {
+      "ticker": "INAP",
+      "price": 13.17
+    },
+    {
+      "ticker": "BRS",
+      "price": 10.99
+    }
+  ],
+  "200": [
+    {
+      "ticker": "SVXY",
+      "price": 14.29
+    },
+    {
+      "ticker": "TACO",
+      "price": 13.27
+    }
+  ],
+  "260": [],
+  "351": [
+    {
+      "ticker": "OXFD",
+      "price": 13.99
+    },
+    {
+      "ticker": "TMST",
+      "price": 13.71
+    }
+  ],
+  "381": [
+    {
+      "ticker": "XRM",
+      "price": 13.37
+    },
+    {
+      "ticker": "CLCT",
+      "price": 13.32
+    }
+  ]
+}

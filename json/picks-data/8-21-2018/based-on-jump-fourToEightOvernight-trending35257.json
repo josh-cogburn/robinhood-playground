@@ -1,0 +1,50 @@
+{
+  "0": [
+    {
+      "ticker": "TUES",
+      "price": 3.4
+    },
+    {
+      "ticker": "NDRA",
+      "price": 2.72
+    }
+  ],
+  "5": [
+    {
+      "ticker": "TUES",
+      "price": 3.3
+    },
+    {
+      "ticker": "NDRA",
+      "price": 2.7
+    }
+  ],
+  "16": [
+    {
+      "ticker": "TUES",
+      "price": 3.225
+    },
+    {
+      "ticker": "MTNB",
+      "price": 0.45
+    },
+    {
+      "ticker": "NDRA",
+      "price": 2.63
+    }
+  ],
+  "30": [
+    {
+      "ticker": "TUES",
+      "price": 3.2
+    },
+    {
+      "ticker": "MTNB",
+      "price": 0.425
+    },
+    {
+      "ticker": "NDRA",
+      "price": 2.5665
+    }
+  ]
+}

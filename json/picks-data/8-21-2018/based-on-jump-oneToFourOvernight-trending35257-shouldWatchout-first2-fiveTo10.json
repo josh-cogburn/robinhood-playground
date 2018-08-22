@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "ISNS",
+      "price": 5.45
+    },
+    {
+      "ticker": "IVAC",
+      "price": 5.4
+    }
+  ],
+  "5": [
+    {
+      "ticker": "IVAC",
+      "price": 5.4
+    },
+    {
+      "ticker": "ISNS",
+      "price": 5.4499
+    }
+  ],
+  "16": [
+    {
+      "ticker": "TCCO",
+      "price": 5.2188
+    },
+    {
+      "ticker": "ISNS",
+      "price": 5.445
+    }
+  ],
+  "30": [
+    {
+      "ticker": "TCCO",
+      "price": 5.15
+    },
+    {
+      "ticker": "IVAC",
+      "price": 5.6254
+    }
+  ]
+}

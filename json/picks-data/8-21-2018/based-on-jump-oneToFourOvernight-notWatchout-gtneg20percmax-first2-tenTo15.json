@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "USO",
+      "price": 13.97
+    },
+    {
+      "ticker": "ECA",
+      "price": 12.7
+    }
+  ],
+  "5": [
+    {
+      "ticker": "SE",
+      "price": 14.19
+    },
+    {
+      "ticker": "FDD",
+      "price": 13.25
+    }
+  ],
+  "16": [
+    {
+      "ticker": "SE",
+      "price": 14.1992
+    },
+    {
+      "ticker": "FDD",
+      "price": 13.2291
+    }
+  ],
+  "30": [
+    {
+      "ticker": "KALV",
+      "price": 14.9869
+    },
+    {
+      "ticker": "SE",
+      "price": 14.28
+    }
+  ]
+}
