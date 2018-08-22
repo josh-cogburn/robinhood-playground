@@ -1,0 +1,90 @@
+{
+  "0": [
+    {
+      "ticker": "EGLT",
+      "price": 0.3
+    },
+    {
+      "ticker": "AUTO",
+      "price": 3.69
+    },
+    {
+      "ticker": "RHE",
+      "price": 0.1576
+    },
+    {
+      "ticker": "SLS",
+      "price": 0.89
+    },
+    {
+      "ticker": "RGLS",
+      "price": 0.275
+    }
+  ],
+  "5": [
+    {
+      "ticker": "EGLT",
+      "price": 0.3
+    },
+    {
+      "ticker": "EPE",
+      "price": 1.6683
+    },
+    {
+      "ticker": "AUTO",
+      "price": 3.51
+    },
+    {
+      "ticker": "RHE",
+      "price": 0.15
+    },
+    {
+      "ticker": "RNN",
+      "price": 1.8
+    }
+  ],
+  "16": [
+    {
+      "ticker": "EGLT",
+      "price": 0.2976
+    },
+    {
+      "ticker": "EPE",
+      "price": 1.665
+    },
+    {
+      "ticker": "AUTO",
+      "price": 3.575
+    },
+    {
+      "ticker": "HUSA",
+      "price": 0.22
+    },
+    {
+      "ticker": "RHE",
+      "price": 0.1479
+    }
+  ],
+  "30": [
+    {
+      "ticker": "MN",
+      "price": 2.845
+    },
+    {
+      "ticker": "EGLT",
+      "price": 0.2952
+    },
+    {
+      "ticker": "EPE",
+      "price": 1.675
+    },
+    {
+      "ticker": "AUTO",
+      "price": 3.635
+    },
+    {
+      "ticker": "HUSA",
+      "price": 0.2201
+    }
+  ]
+}

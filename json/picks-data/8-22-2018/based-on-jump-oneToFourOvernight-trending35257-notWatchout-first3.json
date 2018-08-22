@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "SNGX",
+      "price": 1.5
+    },
+    {
+      "ticker": "XBIT",
+      "price": 4.6
+    },
+    {
+      "ticker": "GTIM",
+      "price": 4.8
+    }
+  ],
+  "5": [
+    {
+      "ticker": "SNGX",
+      "price": 1.54
+    },
+    {
+      "ticker": "PDS",
+      "price": 3.9
+    },
+    {
+      "ticker": "XBIT",
+      "price": 4.54
+    }
+  ],
+  "16": [
+    {
+      "ticker": "DNR",
+      "price": 4.99
+    },
+    {
+      "ticker": "SNGX",
+      "price": 1.41
+    },
+    {
+      "ticker": "PTNR",
+      "price": 4.5396
+    }
+  ],
+  "30": [
+    {
+      "ticker": "SNGX",
+      "price": 1.399
+    },
+    {
+      "ticker": "PTNR",
+      "price": 4.5396
+    },
+    {
+      "ticker": "PDS",
+      "price": 3.9599
+    }
+  ]
+}

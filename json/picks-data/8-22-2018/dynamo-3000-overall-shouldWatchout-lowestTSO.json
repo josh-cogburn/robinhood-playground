@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "ATLC",
+      "price": 1.75
+    },
+    {
+      "ticker": "ZDGE",
+      "price": 2.37
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CVM",
+      "price": 1.435
+    },
+    {
+      "ticker": "ATLC",
+      "price": 1.75
+    }
+  ],
+  "100": [
+    {
+      "ticker": "CVM",
+      "price": 1.4356
+    },
+    {
+      "ticker": "AMPE",
+      "price": 0.62
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ALRN",
+      "price": 2.145
+    },
+    {
+      "ticker": "RENN",
+      "price": 1.7589
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ALRN",
+      "price": 2.1
+    },
+    {
+      "ticker": "ABIO",
+      "price": 0.5748
+    }
+  ],
+  "351": [
+    {
+      "ticker": "ALRN",
+      "price": 2.105
+    },
+    {
+      "ticker": "ABIO",
+      "price": 0.5752
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ALRN",
+      "price": 2.09
+    },
+    {
+      "ticker": "LIFE",
+      "price": 0.611
+    }
+  ]
+}

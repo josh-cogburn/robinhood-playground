@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "JAG",
+      "price": 13.52
+    },
+    {
+      "ticker": "USO",
+      "price": 14.135
+    },
+    {
+      "ticker": "ERF",
+      "price": 12.76
+    }
+  ],
+  "5": [
+    {
+      "ticker": "JAG",
+      "price": 13.39
+    },
+    {
+      "ticker": "USO",
+      "price": 14.14
+    },
+    {
+      "ticker": "FET",
+      "price": 12.1
+    }
+  ],
+  "16": [
+    {
+      "ticker": "JAG",
+      "price": 13.35
+    },
+    {
+      "ticker": "USO",
+      "price": 14.14
+    },
+    {
+      "ticker": "FET",
+      "price": 11.95
+    }
+  ],
+  "30": [
+    {
+      "ticker": "JAG",
+      "price": 13.27
+    },
+    {
+      "ticker": "USO",
+      "price": 14.14
+    },
+    {
+      "ticker": "FET",
+      "price": 12.05
+    }
+  ]
+}

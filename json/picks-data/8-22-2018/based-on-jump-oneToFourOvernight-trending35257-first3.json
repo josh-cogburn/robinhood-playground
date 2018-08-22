@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "RWLK",
+      "price": 1.05
+    },
+    {
+      "ticker": "REFR",
+      "price": 1.05
+    },
+    {
+      "ticker": "SNGX",
+      "price": 1.5
+    }
+  ],
+  "5": [
+    {
+      "ticker": "RWLK",
+      "price": 1.06
+    },
+    {
+      "ticker": "REFR",
+      "price": 1.05
+    },
+    {
+      "ticker": "RNN",
+      "price": 1.8
+    }
+  ],
+  "16": [
+    {
+      "ticker": "DNR",
+      "price": 4.99
+    },
+    {
+      "ticker": "RWLK",
+      "price": 1.0348
+    },
+    {
+      "ticker": "REFR",
+      "price": 1.05
+    }
+  ],
+  "30": [
+    {
+      "ticker": "RWLK",
+      "price": 1.0344
+    },
+    {
+      "ticker": "REFR",
+      "price": 1.07
+    },
+    {
+      "ticker": "RNN",
+      "price": 1.7937
+    }
+  ]
+}

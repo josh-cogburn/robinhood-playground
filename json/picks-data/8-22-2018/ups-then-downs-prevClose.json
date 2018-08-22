@@ -1,0 +1,96 @@
+{
+  "10": [
+    {
+      "ticker": "IGC",
+      "price": 0.501
+    },
+    {
+      "ticker": "TNXP",
+      "price": 1.23
+    }
+  ],
+  "50": [
+    {
+      "ticker": "TNXP",
+      "price": 1.16
+    },
+    {
+      "ticker": "IGC",
+      "price": 0.5032
+    },
+    {
+      "ticker": "GEVO",
+      "price": 3.82
+    },
+    {
+      "ticker": "CHMA",
+      "price": 2.325
+    }
+  ],
+  "200": [
+    {
+      "ticker": "TNXP",
+      "price": 1.191
+    },
+    {
+      "ticker": "IGC",
+      "price": 0.5245
+    },
+    {
+      "ticker": "SALM",
+      "price": 3.95
+    },
+    {
+      "ticker": "CHMA",
+      "price": 2.31
+    },
+    {
+      "ticker": "ZIOP",
+      "price": 2.85
+    }
+  ],
+  "300": [
+    {
+      "ticker": "TNXP",
+      "price": 1.19
+    },
+    {
+      "ticker": "IGC",
+      "price": 0.5226
+    },
+    {
+      "ticker": "GEVO",
+      "price": 3.82
+    },
+    {
+      "ticker": "SALM",
+      "price": 3.9295
+    },
+    {
+      "ticker": "ZIOP",
+      "price": 2.81
+    }
+  ],
+  "380": [
+    {
+      "ticker": "TNXP",
+      "price": 1.19
+    },
+    {
+      "ticker": "IGC",
+      "price": 0.53
+    },
+    {
+      "ticker": "ZIOP",
+      "price": 2.765
+    },
+    {
+      "ticker": "SALM",
+      "price": 3.9303
+    },
+    {
+      "ticker": "PTNR",
+      "price": 4.23
+    }
+  ]
+}

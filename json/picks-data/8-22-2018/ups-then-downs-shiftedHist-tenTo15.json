@@ -1,0 +1,40 @@
+{
+  "10": [
+    {
+      "ticker": "CAMT",
+      "price": 10.35
+    },
+    {
+      "ticker": "SOXS",
+      "price": 10.56
+    }
+  ],
+  "50": [
+    {
+      "ticker": "CAMT",
+      "price": 10.3501
+    },
+    {
+      "ticker": "SOXS",
+      "price": 10.445
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CAMT",
+      "price": 10.55
+    }
+  ],
+  "300": [
+    {
+      "ticker": "CAMT",
+      "price": 10.4
+    }
+  ],
+  "380": [
+    {
+      "ticker": "CAMT",
+      "price": 10.38
+    }
+  ]
+}

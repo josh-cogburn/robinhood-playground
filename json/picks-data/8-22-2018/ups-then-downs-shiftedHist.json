@@ -1,0 +1,80 @@
+{
+  "10": [
+    {
+      "ticker": "ASCMA",
+      "price": 2.82
+    },
+    {
+      "ticker": "AMCN",
+      "price": 0.48
+    },
+    {
+      "ticker": "BLPH",
+      "price": 0.8511
+    },
+    {
+      "ticker": "RESN",
+      "price": 4.56
+    }
+  ],
+  "50": [
+    {
+      "ticker": "ASCMA",
+      "price": 2.81
+    },
+    {
+      "ticker": "AMCN",
+      "price": 0.46
+    },
+    {
+      "ticker": "BLPH",
+      "price": 0.8521
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ASCMA",
+      "price": 2.81
+    },
+    {
+      "ticker": "AMCN",
+      "price": 0.4602
+    },
+    {
+      "ticker": "BLPH",
+      "price": 0.854
+    },
+    {
+      "ticker": "RESN",
+      "price": 4.56
+    }
+  ],
+  "300": [
+    {
+      "ticker": "ASCMA",
+      "price": 2.85
+    },
+    {
+      "ticker": "BLPH",
+      "price": 0.8499
+    },
+    {
+      "ticker": "RESN",
+      "price": 4.68
+    }
+  ],
+  "380": [
+    {
+      "ticker": "ASCMA",
+      "price": 2.88
+    },
+    {
+      "ticker": "BLPH",
+      "price": 0.8776
+    },
+    {
+      "ticker": "RESN",
+      "price": 4.56
+    }
+  ]
+}

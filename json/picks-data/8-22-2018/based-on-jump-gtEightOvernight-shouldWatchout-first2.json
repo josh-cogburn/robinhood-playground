@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "USEG",
+      "price": 1.1
+    },
+    {
+      "ticker": "BLPH",
+      "price": 0.92
+    }
+  ],
+  "5": [
+    {
+      "ticker": "USEG",
+      "price": 1.0948
+    },
+    {
+      "ticker": "BLPH",
+      "price": 0.8377
+    }
+  ],
+  "16": [
+    {
+      "ticker": "USEG",
+      "price": 1.03
+    },
+    {
+      "ticker": "BLPH",
+      "price": 0.86
+    }
+  ],
+  "30": [
+    {
+      "ticker": "USEG",
+      "price": 1.0701
+    },
+    {
+      "ticker": "BLPH",
+      "price": 0.8512
+    }
+  ]
+}

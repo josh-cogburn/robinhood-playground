@@ -1,0 +1,52 @@
+{
+  "10": [
+    {
+      "ticker": "CRON",
+      "price": 7.8601
+    },
+    {
+      "ticker": "GSM",
+      "price": 7.62
+    }
+  ],
+  "50": [
+    {
+      "ticker": "GSM",
+      "price": 7.78
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ISNS",
+      "price": 5.5
+    }
+  ],
+  "300": [
+    {
+      "ticker": "GSM",
+      "price": 7.8
+    },
+    {
+      "ticker": "ISNS",
+      "price": 5.55
+    },
+    {
+      "ticker": "RMBL",
+      "price": 6.43
+    }
+  ],
+  "380": [
+    {
+      "ticker": "RMBL",
+      "price": 6.34
+    },
+    {
+      "ticker": "GSM",
+      "price": 7.785
+    },
+    {
+      "ticker": "ISNS",
+      "price": 5.55
+    }
+  ]
+}

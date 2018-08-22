@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "EBMT",
+      "price": 17.005
+    },
+    {
+      "ticker": "SCO",
+      "price": 16.5299
+    },
+    {
+      "ticker": "REPL",
+      "price": 16.21
+    }
+  ],
+  "5": [
+    {
+      "ticker": "SMCI",
+      "price": 15.45
+    },
+    {
+      "ticker": "EBMT",
+      "price": 17.005
+    },
+    {
+      "ticker": "SCO",
+      "price": 16.4899
+    }
+  ],
+  "16": [
+    {
+      "ticker": "SMCI",
+      "price": 15.475
+    },
+    {
+      "ticker": "EBMT",
+      "price": 18.5
+    },
+    {
+      "ticker": "SCO",
+      "price": 16.5174
+    }
+  ],
+  "30": [
+    {
+      "ticker": "SMCI",
+      "price": 15.675
+    },
+    {
+      "ticker": "EBMT",
+      "price": 18.9
+    },
+    {
+      "ticker": "SCO",
+      "price": 16.52
+    }
+  ]
+}

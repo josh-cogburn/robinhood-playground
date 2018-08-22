@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "MESA",
+      "price": 12.33
+    },
+    {
+      "ticker": "FTSV",
+      "price": 14.3
+    }
+  ],
+  "40": [
+    {
+      "ticker": "MESA",
+      "price": 12.4
+    },
+    {
+      "ticker": "FTSV",
+      "price": 14.7
+    }
+  ],
+  "100": [
+    {
+      "ticker": "MESA",
+      "price": 12.425
+    },
+    {
+      "ticker": "FTSV",
+      "price": 14.54
+    }
+  ],
+  "200": [
+    {
+      "ticker": "MESA",
+      "price": 12.335
+    },
+    {
+      "ticker": "FTSV",
+      "price": 14.98
+    }
+  ],
+  "260": [
+    {
+      "ticker": "MESA",
+      "price": 12.38
+    },
+    {
+      "ticker": "FTSV",
+      "price": 14.95
+    }
+  ],
+  "351": [
+    {
+      "ticker": "MESA",
+      "price": 12.37
+    },
+    {
+      "ticker": "LOV",
+      "price": 12.9
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MESA",
+      "price": 12.39
+    },
+    {
+      "ticker": "LOV",
+      "price": 12.9
+    }
+  ]
+}

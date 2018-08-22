@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "PER",
+      "price": 2.5
+    },
+    {
+      "ticker": "CHK",
+      "price": 4.635
+    }
+  ],
+  "5": [
+    {
+      "ticker": "DSX",
+      "price": 4.31
+    },
+    {
+      "ticker": "PER",
+      "price": 2.5
+    }
+  ],
+  "16": [
+    {
+      "ticker": "DNR",
+      "price": 4.99
+    },
+    {
+      "ticker": "DSX",
+      "price": 4.29
+    }
+  ],
+  "30": [
+    {
+      "ticker": "DSX",
+      "price": 4.275
+    },
+    {
+      "ticker": "OIIM",
+      "price": 1.9407
+    }
+  ]
+}

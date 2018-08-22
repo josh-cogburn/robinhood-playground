@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "LAC",
+      "price": 4.09
+    },
+    {
+      "ticker": "SNGX",
+      "price": 1.52
+    }
+  ],
+  "40": [
+    {
+      "ticker": "VRML",
+      "price": 0.607
+    },
+    {
+      "ticker": "AUMN",
+      "price": 0.25
+    }
+  ],
+  "100": [
+    {
+      "ticker": "JTPY",
+      "price": 1.65
+    },
+    {
+      "ticker": "AUMN",
+      "price": 0.2501
+    }
+  ],
+  "200": [
+    {
+      "ticker": "JTPY",
+      "price": 1.65
+    },
+    {
+      "ticker": "ITP",
+      "price": 0.85
+    }
+  ],
+  "260": [
+    {
+      "ticker": "JTPY",
+      "price": 1.65
+    },
+    {
+      "ticker": "ITP",
+      "price": 0.841
+    }
+  ],
+  "351": [
+    {
+      "ticker": "VRML",
+      "price": 0.5615
+    },
+    {
+      "ticker": "PEIX",
+      "price": 1.875
+    }
+  ],
+  "381": [
+    {
+      "ticker": "NNVC",
+      "price": 0.2849
+    },
+    {
+      "ticker": "VRML",
+      "price": 0.5701
+    }
+  ]
+}

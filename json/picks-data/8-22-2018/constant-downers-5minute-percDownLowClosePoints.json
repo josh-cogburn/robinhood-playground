@@ -1,0 +1,44 @@
+{
+  "77": [
+    {
+      "ticker": "CVM",
+      "price": 1.41
+    },
+    {
+      "ticker": "SNGX",
+      "price": 1.3575
+    },
+    {
+      "ticker": "AMPE",
+      "price": 0.6496
+    }
+  ],
+  "242": [
+    {
+      "ticker": "AMPE",
+      "price": 0.62
+    },
+    {
+      "ticker": "CVM",
+      "price": 1.525
+    },
+    {
+      "ticker": "SRRA",
+      "price": 1.76
+    }
+  ],
+  "309": [
+    {
+      "ticker": "AMPE",
+      "price": 0.6225
+    },
+    {
+      "ticker": "SRRA",
+      "price": 1.76
+    },
+    {
+      "ticker": "CVM",
+      "price": 1.52
+    }
+  ]
+}

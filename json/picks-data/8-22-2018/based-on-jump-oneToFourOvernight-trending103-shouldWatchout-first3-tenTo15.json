@@ -1,0 +1,54 @@
+{
+  "0": [
+    {
+      "ticker": "OAS",
+      "price": 12.76
+    },
+    {
+      "ticker": "FLEX",
+      "price": 13.94
+    }
+  ],
+  "5": [
+    {
+      "ticker": "OAS",
+      "price": 12.73
+    },
+    {
+      "ticker": "FET",
+      "price": 12.1
+    },
+    {
+      "ticker": "FLEX",
+      "price": 14.09
+    }
+  ],
+  "16": [
+    {
+      "ticker": "OAS",
+      "price": 12.67
+    },
+    {
+      "ticker": "FET",
+      "price": 11.95
+    },
+    {
+      "ticker": "FLEX",
+      "price": 13.949
+    }
+  ],
+  "30": [
+    {
+      "ticker": "OAS",
+      "price": 12.9001
+    },
+    {
+      "ticker": "FET",
+      "price": 12.05
+    },
+    {
+      "ticker": "FLEX",
+      "price": 14.01
+    }
+  ]
+}

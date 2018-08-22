@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "NBY",
+      "price": 2.05
+    },
+    {
+      "ticker": "RIGL",
+      "price": 2.83
+    }
+  ],
+  "5": [
+    {
+      "ticker": "FVE",
+      "price": 1.125
+    },
+    {
+      "ticker": "NBY",
+      "price": 2.05
+    }
+  ],
+  "16": [
+    {
+      "ticker": "FVE",
+      "price": 1.1
+    },
+    {
+      "ticker": "NBY",
+      "price": 2.05
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CBLI",
+      "price": 2.05
+    },
+    {
+      "ticker": "FVE",
+      "price": 1.05
+    }
+  ]
+}

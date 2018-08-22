@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "RWLK",
+      "price": 1.05
+    },
+    {
+      "ticker": "REFR",
+      "price": 1.05
+    }
+  ],
+  "5": [
+    {
+      "ticker": "RWLK",
+      "price": 1.06
+    },
+    {
+      "ticker": "REFR",
+      "price": 1.05
+    }
+  ],
+  "16": [
+    {
+      "ticker": "DNR",
+      "price": 4.99
+    },
+    {
+      "ticker": "REFR",
+      "price": 1.05
+    }
+  ],
+  "30": [
+    {
+      "ticker": "RWLK",
+      "price": 1.0344
+    },
+    {
+      "ticker": "REFR",
+      "price": 1.07
+    }
+  ]
+}

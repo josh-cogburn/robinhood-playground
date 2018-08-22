@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "NBY",
+      "price": 2.05
+    },
+    {
+      "ticker": "RIGL",
+      "price": 2.83
+    },
+    {
+      "ticker": "SRRA",
+      "price": 1.9194
+    }
+  ],
+  "5": [
+    {
+      "ticker": "FVE",
+      "price": 1.125
+    },
+    {
+      "ticker": "NBY",
+      "price": 2.05
+    },
+    {
+      "ticker": "ASM",
+      "price": 1.02
+    }
+  ],
+  "16": [
+    {
+      "ticker": "FVE",
+      "price": 1.1
+    },
+    {
+      "ticker": "NBY",
+      "price": 2.05
+    },
+    {
+      "ticker": "ASM",
+      "price": 1.02
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CBLI",
+      "price": 2.05
+    },
+    {
+      "ticker": "FVE",
+      "price": 1.05
+    },
+    {
+      "ticker": "AUMN",
+      "price": 0.25
+    }
+  ]
+}

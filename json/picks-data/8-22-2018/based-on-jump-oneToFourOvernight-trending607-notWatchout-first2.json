@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "IDXG",
+      "price": 1.09
+    },
+    {
+      "ticker": "SNGX",
+      "price": 1.5
+    }
+  ],
+  "5": [
+    {
+      "ticker": "IDXG",
+      "price": 1.09
+    },
+    {
+      "ticker": "ICD",
+      "price": 4.11
+    }
+  ],
+  "16": [
+    {
+      "ticker": "DNR",
+      "price": 4.99
+    },
+    {
+      "ticker": "IDXG",
+      "price": 1.09
+    }
+  ],
+  "30": [
+    {
+      "ticker": "IDXG",
+      "price": 1.0708
+    },
+    {
+      "ticker": "ICD",
+      "price": 4.13
+    }
+  ]
+}

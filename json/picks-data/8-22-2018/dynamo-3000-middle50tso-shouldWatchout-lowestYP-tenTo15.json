@@ -1,0 +1,55 @@
+{
+  "4": [
+    {
+      "ticker": "WATT",
+      "price": 12.61
+    },
+    {
+      "ticker": "CLDR",
+      "price": 13.79
+    }
+  ],
+  "40": [
+    {
+      "ticker": "GHG",
+      "price": 14.19
+    }
+  ],
+  "100": [],
+  "200": [
+    {
+      "ticker": "FRD",
+      "price": 10.2062
+    },
+    {
+      "ticker": "XRM",
+      "price": 13.38
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TRUE",
+      "price": 12.435
+    },
+    {
+      "ticker": "KIRK",
+      "price": 11.49
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SPA",
+      "price": 12.18
+    },
+    {
+      "ticker": "BPI",
+      "price": 13.07
+    }
+  ],
+  "381": [
+    {
+      "ticker": "XRM",
+      "price": 13.38
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "CBIO",
+      "price": 10.53
+    },
+    {
+      "ticker": "TIVO",
+      "price": 12.9
+    }
+  ],
+  "40": [
+    {
+      "ticker": "TIVO",
+      "price": 12.725
+    },
+    {
+      "ticker": "CMCM",
+      "price": 10.44
+    }
+  ],
+  "100": [
+    {
+      "ticker": "IMTE",
+      "price": 12.78
+    },
+    {
+      "ticker": "RES",
+      "price": 14.97
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PRTK",
+      "price": 10.495
+    },
+    {
+      "ticker": "KALA",
+      "price": 13.4799
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PRTK",
+      "price": 10.375
+    },
+    {
+      "ticker": "REW",
+      "price": 11.44
+    }
+  ],
+  "351": [
+    {
+      "ticker": "PRTK",
+      "price": 10.25
+    },
+    {
+      "ticker": "IMTE",
+      "price": 12.44
+    }
+  ],
+  "381": [
+    {
+      "ticker": "IMTE",
+      "price": 12.029
+    },
+    {
+      "ticker": "PRTK",
+      "price": 10.2
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "EGLT",
+      "price": 0.3
+    },
+    {
+      "ticker": "BTE",
+      "price": 3.09
+    }
+  ],
+  "5": [
+    {
+      "ticker": "EGLT",
+      "price": 0.3
+    },
+    {
+      "ticker": "BTE",
+      "price": 3.13
+    }
+  ],
+  "16": [
+    {
+      "ticker": "NNA",
+      "price": 0.5655
+    },
+    {
+      "ticker": "EGLT",
+      "price": 0.2976
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CFRX",
+      "price": 1.96
+    },
+    {
+      "ticker": "NNA",
+      "price": 0.5899
+    }
+  ]
+}

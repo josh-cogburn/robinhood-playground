@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "BRY",
+      "price": 13.4
+    },
+    {
+      "ticker": "VSI",
+      "price": 12.5
+    }
+  ],
+  "40": [
+    {
+      "ticker": "LOV",
+      "price": 12.9
+    },
+    {
+      "ticker": "XENE",
+      "price": 12.1073
+    }
+  ],
+  "100": [
+    {
+      "ticker": "LOV",
+      "price": 12.85
+    },
+    {
+      "ticker": "XENE",
+      "price": 12.05
+    }
+  ],
+  "200": [
+    {
+      "ticker": "XENE",
+      "price": 12.05
+    },
+    {
+      "ticker": "LFVN",
+      "price": 11.215
+    }
+  ],
+  "260": [
+    {
+      "ticker": "LFVN",
+      "price": 11.35
+    },
+    {
+      "ticker": "ABCD",
+      "price": 13.37
+    }
+  ],
+  "351": [
+    {
+      "ticker": "LFVN",
+      "price": 11.295
+    },
+    {
+      "ticker": "ABCD",
+      "price": 13.34
+    }
+  ],
+  "381": [
+    {
+      "ticker": "LFVN",
+      "price": 11.34
+    },
+    {
+      "ticker": "ABCD",
+      "price": 13.42
+    }
+  ]
+}

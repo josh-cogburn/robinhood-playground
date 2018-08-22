@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "ASNA",
+      "price": 5.08
+    },
+    {
+      "ticker": "DNR",
+      "price": 5.145
+    }
+  ],
+  "40": [
+    {
+      "ticker": "ASNA",
+      "price": 5.18
+    },
+    {
+      "ticker": "LLEX",
+      "price": 5.17
+    }
+  ],
+  "100": [
+    {
+      "ticker": "CERC",
+      "price": 5.09
+    },
+    {
+      "ticker": "ASNA",
+      "price": 5
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CERC",
+      "price": 5.08
+    },
+    {
+      "ticker": "LLEX",
+      "price": 5.24
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TRXC",
+      "price": 5.0999
+    },
+    {
+      "ticker": "PFNX",
+      "price": 5.01
+    }
+  ],
+  "351": [
+    {
+      "ticker": "TRXC",
+      "price": 5.09
+    },
+    {
+      "ticker": "PFNX",
+      "price": 5.06
+    }
+  ],
+  "381": [
+    {
+      "ticker": "TRXC",
+      "price": 5.07
+    },
+    {
+      "ticker": "PFNX",
+      "price": 5.05
+    }
+  ]
+}

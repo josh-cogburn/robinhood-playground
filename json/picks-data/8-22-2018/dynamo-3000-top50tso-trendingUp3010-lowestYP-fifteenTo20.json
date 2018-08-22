@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "PRTA",
+      "price": 15.65
+    },
+    {
+      "ticker": "XPER",
+      "price": 16.4
+    }
+  ],
+  "40": [
+    {
+      "ticker": "PRTA",
+      "price": 15.74
+    },
+    {
+      "ticker": "DNLI",
+      "price": 16.42
+    }
+  ],
+  "100": [
+    {
+      "ticker": "DNLI",
+      "price": 16.4494
+    },
+    {
+      "ticker": "CAPL",
+      "price": 18.52
+    }
+  ],
+  "200": [
+    {
+      "ticker": "DNLI",
+      "price": 16.35
+    },
+    {
+      "ticker": "CAPL",
+      "price": 18.9
+    }
+  ],
+  "260": [
+    {
+      "ticker": "DNLI",
+      "price": 16.36
+    },
+    {
+      "ticker": "CAPL",
+      "price": 19.12
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AMAL",
+      "price": 17.04
+    },
+    {
+      "ticker": "CAPL",
+      "price": 19.06
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AMAL",
+      "price": 17
+    },
+    {
+      "ticker": "KEN",
+      "price": 15.83
+    }
+  ]
+}

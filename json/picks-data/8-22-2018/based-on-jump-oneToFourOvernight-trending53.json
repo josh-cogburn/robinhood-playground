@@ -1,0 +1,90 @@
+{
+  "0": [
+    {
+      "ticker": "EGLT",
+      "price": 0.3
+    },
+    {
+      "ticker": "BTE",
+      "price": 3.09
+    },
+    {
+      "ticker": "AUTO",
+      "price": 3.69
+    },
+    {
+      "ticker": "RHE",
+      "price": 0.1576
+    },
+    {
+      "ticker": "SLS",
+      "price": 0.89
+    }
+  ],
+  "5": [
+    {
+      "ticker": "EGLT",
+      "price": 0.3
+    },
+    {
+      "ticker": "BTE",
+      "price": 3.13
+    },
+    {
+      "ticker": "EPE",
+      "price": 1.6683
+    },
+    {
+      "ticker": "DSX",
+      "price": 4.31
+    },
+    {
+      "ticker": "AUTO",
+      "price": 3.51
+    }
+  ],
+  "16": [
+    {
+      "ticker": "NNA",
+      "price": 0.5655
+    },
+    {
+      "ticker": "EGLT",
+      "price": 0.2976
+    },
+    {
+      "ticker": "BTE",
+      "price": 3.1201
+    },
+    {
+      "ticker": "DNR",
+      "price": 4.99
+    },
+    {
+      "ticker": "EPE",
+      "price": 1.665
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CFRX",
+      "price": 1.96
+    },
+    {
+      "ticker": "NNA",
+      "price": 0.5899
+    },
+    {
+      "ticker": "EGLT",
+      "price": 0.2952
+    },
+    {
+      "ticker": "MN",
+      "price": 2.845
+    },
+    {
+      "ticker": "BTE",
+      "price": 3.12
+    }
+  ]
+}

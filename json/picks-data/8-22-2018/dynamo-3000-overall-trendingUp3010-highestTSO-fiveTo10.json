@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "ASNA",
+      "price": 5.08
+    },
+    {
+      "ticker": "TELL",
+      "price": 8.65
+    }
+  ],
+  "40": [
+    {
+      "ticker": "ASNA",
+      "price": 5.18
+    },
+    {
+      "ticker": "TELL",
+      "price": 8.5
+    }
+  ],
+  "100": [
+    {
+      "ticker": "ADVM",
+      "price": 5.9
+    },
+    {
+      "ticker": "IDRA",
+      "price": 9.05
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ADVM",
+      "price": 5.825
+    },
+    {
+      "ticker": "BNED",
+      "price": 5.81
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ADVM",
+      "price": 5.775
+    },
+    {
+      "ticker": "IDRA",
+      "price": 9.1
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NERV",
+      "price": 9.675
+    },
+    {
+      "ticker": "APVO",
+      "price": 5.45
+    }
+  ],
+  "381": [
+    {
+      "ticker": "NERV",
+      "price": 9.6
+    },
+    {
+      "ticker": "ADVM",
+      "price": 5.825
+    }
+  ]
+}

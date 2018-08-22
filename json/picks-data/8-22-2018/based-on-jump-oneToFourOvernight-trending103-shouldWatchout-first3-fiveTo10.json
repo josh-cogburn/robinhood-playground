@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "IVAC",
+      "price": 5.85
+    },
+    {
+      "ticker": "NOK",
+      "price": 5.43
+    },
+    {
+      "ticker": "LPI",
+      "price": 8.48
+    }
+  ],
+  "5": [
+    {
+      "ticker": "TSRI",
+      "price": 8.2
+    },
+    {
+      "ticker": "IVAC",
+      "price": 5.85
+    },
+    {
+      "ticker": "BAS",
+      "price": 9.42
+    }
+  ],
+  "16": [
+    {
+      "ticker": "TSRI",
+      "price": 8.2
+    },
+    {
+      "ticker": "IVAC",
+      "price": 5.981
+    },
+    {
+      "ticker": "BAS",
+      "price": 9.39
+    }
+  ],
+  "30": [
+    {
+      "ticker": "TSRI",
+      "price": 8.2
+    },
+    {
+      "ticker": "IVAC",
+      "price": 5.925
+    },
+    {
+      "ticker": "BAS",
+      "price": 9.39
+    }
+  ]
+}

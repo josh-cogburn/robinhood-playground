@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "FEDU",
+      "price": 4.85
+    },
+    {
+      "ticker": "SCON",
+      "price": 2.35
+    }
+  ],
+  "5": [
+    {
+      "ticker": "DPW",
+      "price": 0.4009
+    },
+    {
+      "ticker": "MYO",
+      "price": 1.85
+    }
+  ],
+  "16": [
+    {
+      "ticker": "DPW",
+      "price": 0.4
+    },
+    {
+      "ticker": "MYO",
+      "price": 1.929
+    }
+  ],
+  "30": [
+    {
+      "ticker": "DPW",
+      "price": 0.395
+    },
+    {
+      "ticker": "MYO",
+      "price": 1.9
+    }
+  ]
+}

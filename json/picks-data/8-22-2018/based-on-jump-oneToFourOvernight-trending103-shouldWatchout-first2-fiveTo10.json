@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "IVAC",
+      "price": 5.85
+    },
+    {
+      "ticker": "NOK",
+      "price": 5.43
+    }
+  ],
+  "5": [
+    {
+      "ticker": "TSRI",
+      "price": 8.2
+    },
+    {
+      "ticker": "IVAC",
+      "price": 5.85
+    }
+  ],
+  "16": [
+    {
+      "ticker": "TSRI",
+      "price": 8.2
+    },
+    {
+      "ticker": "IVAC",
+      "price": 5.981
+    }
+  ],
+  "30": [
+    {
+      "ticker": "TSRI",
+      "price": 8.2
+    },
+    {
+      "ticker": "IVAC",
+      "price": 5.925
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "DNR",
+      "price": 5.11
+    },
+    {
+      "ticker": "NE",
+      "price": 6.01
+    }
+  ],
+  "5": [
+    {
+      "ticker": "TSRI",
+      "price": 8.2
+    },
+    {
+      "ticker": "DNR",
+      "price": 5.115
+    }
+  ],
+  "16": [
+    {
+      "ticker": "TSRI",
+      "price": 8.2
+    },
+    {
+      "ticker": "NE",
+      "price": 6.02
+    }
+  ],
+  "30": [
+    {
+      "ticker": "TSRI",
+      "price": 8.2
+    },
+    {
+      "ticker": "DNR",
+      "price": 5
+    }
+  ]
+}

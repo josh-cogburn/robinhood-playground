@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "STAR",
+      "price": 10.73
+    },
+    {
+      "ticker": "MLP",
+      "price": 13.3
+    }
+  ],
+  "5": [
+    {
+      "ticker": "STAR",
+      "price": 10.67
+    },
+    {
+      "ticker": "MLP",
+      "price": 13.3
+    }
+  ],
+  "16": [
+    {
+      "ticker": "STAR",
+      "price": 10.675
+    },
+    {
+      "ticker": "MLP",
+      "price": 13.31
+    }
+  ],
+  "30": [
+    {
+      "ticker": "STAR",
+      "price": 10.695
+    },
+    {
+      "ticker": "MLP",
+      "price": 13.35
+    }
+  ]
+}

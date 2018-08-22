@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "OAS",
+      "price": 12.76
+    },
+    {
+      "ticker": "ERH",
+      "price": 12.89
+    }
+  ],
+  "5": [
+    {
+      "ticker": "OAS",
+      "price": 12.73
+    },
+    {
+      "ticker": "TCS",
+      "price": 11.5
+    }
+  ],
+  "16": [
+    {
+      "ticker": "OAS",
+      "price": 12.67
+    },
+    {
+      "ticker": "TCS",
+      "price": 11.45
+    }
+  ],
+  "30": [
+    {
+      "ticker": "OAS",
+      "price": 12.9001
+    },
+    {
+      "ticker": "TCS",
+      "price": 11.47
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "BTE",
+      "price": 3.09
+    },
+    {
+      "ticker": "RGLS",
+      "price": 0.275
+    },
+    {
+      "ticker": "IDXG",
+      "price": 1.09
+    }
+  ],
+  "5": [
+    {
+      "ticker": "BTE",
+      "price": 3.13
+    },
+    {
+      "ticker": "DSX",
+      "price": 4.31
+    },
+    {
+      "ticker": "RNN",
+      "price": 1.8
+    }
+  ],
+  "16": [
+    {
+      "ticker": "NNA",
+      "price": 0.5655
+    },
+    {
+      "ticker": "BTE",
+      "price": 3.1201
+    },
+    {
+      "ticker": "DNR",
+      "price": 4.99
+    }
+  ],
+  "30": [
+    {
+      "ticker": "NNA",
+      "price": 0.5899
+    },
+    {
+      "ticker": "MN",
+      "price": 2.845
+    },
+    {
+      "ticker": "BTE",
+      "price": 3.12
+    }
+  ]
+}

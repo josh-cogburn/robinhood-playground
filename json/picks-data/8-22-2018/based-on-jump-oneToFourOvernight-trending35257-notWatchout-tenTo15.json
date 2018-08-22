@@ -1,0 +1,70 @@
+{
+  "0": [
+    {
+      "ticker": "ERH",
+      "price": 12.89
+    },
+    {
+      "ticker": "FRAC",
+      "price": 13.76
+    }
+  ],
+  "5": [
+    {
+      "ticker": "HMI",
+      "price": 11.45
+    },
+    {
+      "ticker": "ERH",
+      "price": 12.89
+    },
+    {
+      "ticker": "FRAC",
+      "price": 13.71
+    }
+  ],
+  "16": [
+    {
+      "ticker": "HMI",
+      "price": 11.25
+    },
+    {
+      "ticker": "SEA",
+      "price": 10.149
+    },
+    {
+      "ticker": "DWCH",
+      "price": 13.1
+    },
+    {
+      "ticker": "ERH",
+      "price": 12.8199
+    },
+    {
+      "ticker": "GCI",
+      "price": 10.79
+    }
+  ],
+  "30": [
+    {
+      "ticker": "HMI",
+      "price": 11.24
+    },
+    {
+      "ticker": "SEA",
+      "price": 10.149
+    },
+    {
+      "ticker": "DWCH",
+      "price": 13.2
+    },
+    {
+      "ticker": "ERH",
+      "price": 12.76
+    },
+    {
+      "ticker": "GCI",
+      "price": 10.76
+    }
+  ]
+}

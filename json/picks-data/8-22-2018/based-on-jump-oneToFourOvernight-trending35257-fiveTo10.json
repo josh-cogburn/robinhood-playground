@@ -1,0 +1,90 @@
+{
+  "0": [
+    {
+      "ticker": "DNR",
+      "price": 5.11
+    },
+    {
+      "ticker": "NBR",
+      "price": 6.31
+    },
+    {
+      "ticker": "IVAC",
+      "price": 5.85
+    },
+    {
+      "ticker": "RMBL",
+      "price": 6.65
+    },
+    {
+      "ticker": "AGLE",
+      "price": 9.58
+    }
+  ],
+  "5": [
+    {
+      "ticker": "TSRI",
+      "price": 8.2
+    },
+    {
+      "ticker": "DNR",
+      "price": 5.115
+    },
+    {
+      "ticker": "NBR",
+      "price": 6.3466
+    },
+    {
+      "ticker": "IVAC",
+      "price": 5.85
+    },
+    {
+      "ticker": "RMBL",
+      "price": 6.9
+    }
+  ],
+  "16": [
+    {
+      "ticker": "TSRI",
+      "price": 8.2
+    },
+    {
+      "ticker": "NBR",
+      "price": 6.3089
+    },
+    {
+      "ticker": "CEL",
+      "price": 6.21
+    },
+    {
+      "ticker": "IVAC",
+      "price": 5.981
+    },
+    {
+      "ticker": "RMBL",
+      "price": 6.69
+    }
+  ],
+  "30": [
+    {
+      "ticker": "TSRI",
+      "price": 8.2
+    },
+    {
+      "ticker": "DNR",
+      "price": 5
+    },
+    {
+      "ticker": "NBR",
+      "price": 6.36
+    },
+    {
+      "ticker": "CEL",
+      "price": 6.21
+    },
+    {
+      "ticker": "IVAC",
+      "price": 5.925
+    }
+  ]
+}

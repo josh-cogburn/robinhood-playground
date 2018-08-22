@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "MESA",
+      "price": 12.33
+    },
+    {
+      "ticker": "RFIL",
+      "price": 11.04
+    }
+  ],
+  "40": [
+    {
+      "ticker": "MESA",
+      "price": 12.4
+    },
+    {
+      "ticker": "FATE",
+      "price": 11.595
+    }
+  ],
+  "100": [
+    {
+      "ticker": "RFIL",
+      "price": 11.05
+    },
+    {
+      "ticker": "CAMT",
+      "price": 10.5799
+    }
+  ],
+  "200": [
+    {
+      "ticker": "NVTA",
+      "price": 11.33
+    },
+    {
+      "ticker": "CAMT",
+      "price": 10.55
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NVTA",
+      "price": 11.3505
+    },
+    {
+      "ticker": "CAMT",
+      "price": 10.42
+    }
+  ],
+  "351": [
+    {
+      "ticker": "RFIL",
+      "price": 11.305
+    },
+    {
+      "ticker": "VSI",
+      "price": 12.95
+    }
+  ],
+  "381": [
+    {
+      "ticker": "RFIL",
+      "price": 11.4
+    },
+    {
+      "ticker": "VSI",
+      "price": 12.975
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "FRD",
+      "price": 10.1
+    },
+    {
+      "ticker": "TBIO",
+      "price": 10.35
+    }
+  ],
+  "40": [
+    {
+      "ticker": "LIVE",
+      "price": 10.75
+    },
+    {
+      "ticker": "VERI",
+      "price": 11.2132
+    }
+  ],
+  "100": [
+    {
+      "ticker": "LBY",
+      "price": 10.26
+    },
+    {
+      "ticker": "TORC",
+      "price": 10.56
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PRTK",
+      "price": 10.495
+    },
+    {
+      "ticker": "TORC",
+      "price": 10.4341
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NES",
+      "price": 10.4436
+    },
+    {
+      "ticker": "PRTK",
+      "price": 10.375
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NES",
+      "price": 10.4436
+    },
+    {
+      "ticker": "EXPR",
+      "price": 10.495
+    }
+  ],
+  "381": [
+    {
+      "ticker": "EXPR",
+      "price": 10.52
+    },
+    {
+      "ticker": "PRTK",
+      "price": 10.2
+    }
+  ]
+}

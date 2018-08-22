@@ -1,0 +1,44 @@
+{
+  "77": [
+    {
+      "ticker": "OPRA",
+      "price": 12.4
+    },
+    {
+      "ticker": "ABCD",
+      "price": 13.39
+    },
+    {
+      "ticker": "LAND",
+      "price": 13.2001
+    }
+  ],
+  "242": [
+    {
+      "ticker": "SA",
+      "price": 10.825
+    },
+    {
+      "ticker": "ABCD",
+      "price": 13.33
+    },
+    {
+      "ticker": "PRTY",
+      "price": 14.925
+    }
+  ],
+  "309": [
+    {
+      "ticker": "PRTK",
+      "price": 10.35
+    },
+    {
+      "ticker": "PRTY",
+      "price": 14.825
+    },
+    {
+      "ticker": "VERI",
+      "price": 11
+    }
+  ]
+}

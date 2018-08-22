@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "FRD",
+      "price": 10.1
+    },
+    {
+      "ticker": "TBIO",
+      "price": 10.35
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CNST",
+      "price": 10.26
+    },
+    {
+      "ticker": "PLYA",
+      "price": 10.51
+    }
+  ],
+  "100": [
+    {
+      "ticker": "LBY",
+      "price": 10.26
+    },
+    {
+      "ticker": "PLYA",
+      "price": 10.49
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PLYA",
+      "price": 10.46
+    },
+    {
+      "ticker": "CLAR",
+      "price": 10.3052
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NES",
+      "price": 10.4436
+    },
+    {
+      "ticker": "PLYA",
+      "price": 10.51
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NES",
+      "price": 10.4436
+    },
+    {
+      "ticker": "PLYA",
+      "price": 10.5
+    }
+  ],
+  "381": [
+    {
+      "ticker": "PRCP",
+      "price": 10.155
+    },
+    {
+      "ticker": "PLYA",
+      "price": 10.51
+    }
+  ]
+}
