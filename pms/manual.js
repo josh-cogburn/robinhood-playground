@@ -288,7 +288,7 @@ const anyCountPerfectos = [
     // 'based-on-jump-down3overnight-trending103-notWatchout-ltneg50percmax-fiveTo10-0',
     'based-on-jump-gtEightOvernight-trending103-first1-tenTo15-30',
     'based-on-jump-gtEightOvernight-trending103-gt100kvolume-first1-tenTo15-30',
-    'based-on-jump-down3overnight-notWatchout-ltneg50percmax-first1-fifteenTo20-30',
+    // 'based-on-jump-down3overnight-notWatchout-ltneg50percmax-first1-fifteenTo20-30',
     'based-on-jump-down8overnight-notWatchout-ltneg50percmax-first1-30',
 
     'low-float-high-volume-volTo2WeekPoints-fifteenTo20-6',
@@ -353,7 +353,7 @@ const iwantthisPARTTWO = [
     'low-float-high-volume-floatPoints-trenddown5to7-shouldWatchout-fifteenTo20-25',
     'low-float-high-volume-floatTimesabsVolPoints-trenddown7to10-shouldWatchout-fifteenTo20-210',
     'based-on-jump-down3overnight-trending103-notWatchout-ltneg50percmax-first1-fiveTo10-0',
-    'based-on-jump-down3overnight-notWatchout-ltneg50percmax-fifteenTo20-30'
+    'based-on-jump-down3overnight-notWatchout-ltneg50percmax-first1-fifteenTo20-30'
 ]
 
 const iwantthis = [

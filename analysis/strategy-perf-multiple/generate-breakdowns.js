@@ -76,12 +76,15 @@ const analyzeRoundup = allRoundup => {
 
 
 
-
-    const lowCounts = ({ count }) => count <= maxCount / 2 && count >= 5;
-    const upperHalfCounts = ({ count }) => count > maxCount / 2;
+    const upperCounts = ({ count }) =>
+        // top third
+        count > maxCount * 2 / 3;
+    const lowCounts = ({ count }) =>
+        // lower third
+        count < maxCount * 1 / 3 && count >= 2;
     const middleCounts = ({ count }) =>
-        // 25% - 75%
-        count > maxCount / 4 && count < 3 * maxCount / 4;
+        // middle third
+        count >= maxCount * 1 / 3 && count <= maxCount * 2 / 3;
 
     return {
         all: createBreakdown({
@@ -109,7 +112,7 @@ const analyzeRoundup = allRoundup => {
         // }),
 
         limit5hundredResult: createBreakdown({
-            filterFn: upperHalfCounts,
+            filterFn: upperCounts,
             scoreFn: ({
                 playouts: {
                     limit5: { hundredResult }
@@ -119,7 +122,7 @@ const analyzeRoundup = allRoundup => {
         }),
 
         limit5creme: createBreakdown({
-            filterFn: upperHalfCounts,
+            filterFn: upperCounts,
             scoreFn: ({
                 count,
                 playouts: {
@@ -130,65 +133,65 @@ const analyzeRoundup = allRoundup => {
         }),
 
         highestLimitPlayoutsAvgTrend: createBreakdown({
-            filterFn: upperHalfCounts,
+            filterFn: upperCounts,
             scoreFn: highestPlayoutFn(playout => playout.avgTrend)
         }),
 
         highestLimitPlayoutsPercUp: createBreakdown({
-            filterFn: upperHalfCounts,
+            filterFn: upperCounts,
             scoreFn: highestPlayoutFn(playout => playout.percUp)
         }),
 
         highestLimitPlayoutsHundredResult: createBreakdown({
-            filterFn: upperHalfCounts,
+            filterFn: upperCounts,
             scoreFn: highestPlayoutFn(playout => playout.hundredResult)
         }),
 
         highestLimitPlayoutsPercUpCountAvg: createBreakdown({
-            filterFn: upperHalfCounts,
+            filterFn: upperCounts,
             scoreFn: highestPlayoutFn(({ percUp, avgTrend }, count) =>
                 count * (percUp * 3) * avgTrend
             )
         }),
 
         highestLimitPlayoutsJohnsSecretRecipe: createBreakdown({
-            filterFn: upperHalfCounts,
+            filterFn: upperCounts,
             scoreFn: highestPlayoutFn(({ hundredResult, percUp, avgTrend, percHitsPositive }) =>
                 hundredResult * (2 * percUp) * avgTrend * (2 * percHitsPositive)
             )
         }),
 
         highestLimitPlayoutsJohnsSecretRecipeWithCount: createBreakdown({
-            filterFn: upperHalfCounts,
+            filterFn: upperCounts,
             scoreFn: highestPlayoutFn(({ hundredResult, percUp, avgTrend, percHitsPositive }, count) =>
                 hundredResult * (2 * percUp) * avgTrend * (2 * percHitsPositive) * count
             )
         }),
 
         highestLimitPlayoutsAvgTrend: createBreakdown({
-            filterFn: upperHalfCounts,
+            filterFn: upperCounts,
             scoreFn: highestPlayoutFn(({ hundredResult, percUp, avgTrend, percHitsPositive }, count) =>
                 hundredResult * (2 * percUp) * avgTrend * (2 * percHitsPositive) * count
             )
         }),
 
         bestFirstGreenAvgTrend: createBreakdown({
-            filterFn: upperHalfCounts,
+            filterFn: upperCounts,
             scoreFn: highestPlayoutFn(({ avgTrend }) => avgTrend, 'firstGreen')
         }),
 
         bestAlwaysLastAvgTrend: createBreakdown({
-            filterFn: upperHalfCounts,
+            filterFn: upperCounts,
             scoreFn: highestPlayoutFn(({ avgTrend }) => avgTrend, 'alwaysLast')
         }),
 
         bestChangeGt2SinceLastAvgTrend: createBreakdown({
-            filterFn: upperHalfCounts,
+            filterFn: upperCounts,
             scoreFn: highestPlayoutFn(({ avgTrend }) => avgTrend, 'changeGt2')
         }),
 
         bestAvgTrendAnyPlayout: createBreakdown({
-            filterFn: upperHalfCounts,
+            filterFn: upperCounts,
             scoreFn: highestPlayoutFn(
                 ({ avgTrend }) => avgTrend,
                 playoutKey => [
@@ -199,7 +202,7 @@ const analyzeRoundup = allRoundup => {
         }),
 
         bestAvgTrendPlayoutsOfInterest: createBreakdown({
-            filterFn: upperHalfCounts,
+            filterFn: upperCounts,
             scoreFn: highestPlayoutFn(
                 ({ avgTrend }) => avgTrend,
                 playoutKey => playoutsOfInterest.includes(playoutKey)
@@ -207,7 +210,7 @@ const analyzeRoundup = allRoundup => {
         }),
 
         bestAvgTrendPlayoutsOfInterest: createBreakdown({
-            filterFn: upperHalfCounts,
+            filterFn: upperCounts,
             scoreFn: highestPlayoutFn(
                 ({ percUp }) => percUp,
                 playoutKey => playoutsOfInterest.includes(playoutKey)
@@ -235,21 +238,21 @@ const analyzeRoundup = allRoundup => {
         // shorts
 
         lowestLimitPlayoutsHundredResult: createBreakdown({
-            filterFn: upperHalfCounts,
+            filterFn: upperCounts,
             scoreFn: highestPlayoutFn(({ hundredResult, percUp, avgTrend, percHitsPositive }, count) =>
                 -1 * hundredResult
             )
         }),
 
         lowestLimitPlayoutsHundredResultCount: createBreakdown({
-            filterFn: upperHalfCounts,
+            filterFn: upperCounts,
             scoreFn: highestPlayoutFn(({ hundredResult, percUp, avgTrend, percHitsPositive }, count) =>
                 -1 * hundredResult * count
             )
         }),
 
         lowestLimitPlayoutsHundredResultPercUp: createBreakdown({
-            filterFn: upperHalfCounts,
+            filterFn: upperCounts,
             scoreFn: highestPlayoutFn(({ hundredResult, percUp, avgTrend, percHitsPositive }, count) =>
                 -1 * hundredResult * percUp * count
             )
