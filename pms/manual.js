@@ -353,7 +353,8 @@ const iwantthisPARTTWO = [
     'low-float-high-volume-floatPoints-trenddown5to7-shouldWatchout-fifteenTo20-25',
     'low-float-high-volume-floatTimesabsVolPoints-trenddown7to10-shouldWatchout-fifteenTo20-210',
     'based-on-jump-down3overnight-trending103-notWatchout-ltneg50percmax-first1-fiveTo10-0',
-    'based-on-jump-down3overnight-notWatchout-ltneg50percmax-first1-fifteenTo20-30'
+    'based-on-jump-down3overnight-notWatchout-ltneg50percmax-first1-fifteenTo20-30',
+    'low-float-high-volume-twoWeekVolToAvgPoints-trenddowngt10-notWatchout-6'
 ]
 
 const iwantthis = [
