@@ -41,12 +41,16 @@ module.exports = async (
 
             // maxPrice = Math.min(maxPrice, 35);
 
-            const { currentPrice } = await lookup(Robinhood, ticker);
+
+
+
 
             const attempt = async () => {
 
                 attemptCount++;
                 console.log('attempting ', curBuyRatio, ticker, 'ratio', curBuyRatio);
+
+
 
                 // if (!quantity) {
                 //     console.log('maxPrice below bidPrice but ', maxPrice, bidPrice, ticker);
@@ -66,8 +70,12 @@ module.exports = async (
                     );
                 };
 
-                const bidPrice = currentPrice * curBuyRatio;
-                let res = await limitBid(bidPrice);
+                const limitBidRatioAboveCurrent = async buyRatio => {
+                    const { currentPrice } = await lookup(Robinhood, ticker);
+                    return await limitBid(currentPrice * buyRatio);
+                };
+
+                let res = await limitBidRatioAboveCurrent(curBuyRatio);
 
                 if (!res || res.detail) {
                     return reject(res.detail || 'unable to purchase' + ticker);
@@ -109,8 +117,7 @@ module.exports = async (
                             const errMessage = 'reached MAX_BUY_RATIO, unable to BUY';
                             console.log(errMessage, ticker);
                             if (GO_FOR_5PERC_LIMIT) {
-                                curBuyRatio = 1.05;
-                                return attempt();
+                                return limitBidRatioAboveCurrent(1.05);
                             }
                             return reject(errMessage);
                         }
