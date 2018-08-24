@@ -7,8 +7,10 @@ const getFilesSortedByDate = require('../utils/get-files-sorted-by-date');
 const jsonMgr = require('../utils/json-mgr');
 const stratPerfMultiple = require('./strategy-perf-multiple');
 
-module.exports = async (Robinhood, daysBack, pmName) => {
-    const pmStrats = manualPms[pmName];
+module.exports = async (Robinhood, daysBack, ...pmNames) => {
+    const pmStrats = flatten(
+        pmNames.map(pm => manualPms[pm])
+    );
     const stratPerf = await stratPerfMultiple(Robinhood, daysBack, ...pmStrats);
     // console.log(stratPerf);
 
@@ -16,6 +18,7 @@ module.exports = async (Robinhood, daysBack, pmName) => {
         .map(strat => {
             return stratPerf.find(perf => perf.strategy === strat);
         })
+        .filter(obj => !!obj)
         .map(obj => {
             ['allDays', 'breakdowns', 'bigDays', 'playouts'].forEach(key => {
                 delete obj[key];
