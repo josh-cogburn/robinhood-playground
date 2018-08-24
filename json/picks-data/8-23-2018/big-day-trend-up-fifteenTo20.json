@@ -1,0 +1,50 @@
+{
+  "10": [
+    {
+      "ticker": "SMCI",
+      "price": 16
+    }
+  ],
+  "35": [
+    {
+      "ticker": "SMCI",
+      "price": 16.2
+    }
+  ],
+  "90": [
+    {
+      "ticker": "SMCI",
+      "price": 16.59
+    },
+    {
+      "ticker": "KINS",
+      "price": 19.35
+    },
+    {
+      "ticker": "HALO",
+      "price": 18.73
+    }
+  ],
+  "223": [
+    {
+      "ticker": "SMCI",
+      "price": 16.579999
+    },
+    {
+      "ticker": "KINS",
+      "price": 19.5
+    },
+    {
+      "ticker": "EIDX",
+      "price": 19.6
+    },
+    {
+      "ticker": "PSDO",
+      "price": 16.07
+    },
+    {
+      "ticker": "KZR",
+      "price": 16.95
+    }
+  ]
+}

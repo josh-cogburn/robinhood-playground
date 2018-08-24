@@ -1,0 +1,42 @@
+{
+  "10": [
+    {
+      "ticker": "BILI",
+      "price": 11.22
+    },
+    {
+      "ticker": "ELF",
+      "price": 12.15
+    }
+  ],
+  "50": [
+    {
+      "ticker": "ELF",
+      "price": 12.21
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ELF",
+      "price": 12.27
+    }
+  ],
+  "300": [
+    {
+      "ticker": "ELF",
+      "price": 12.325
+    }
+  ],
+  "380": [
+    {
+      "ticker": "ELF",
+      "price": 12.3601
+    }
+  ],
+  "600": [
+    {
+      "ticker": "ELF",
+      "price": 12.39
+    }
+  ]
+}

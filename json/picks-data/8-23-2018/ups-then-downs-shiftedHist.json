@@ -1,0 +1,90 @@
+{
+  "10": [
+    {
+      "ticker": "DMPI",
+      "price": 0.54
+    },
+    {
+      "ticker": "SALM",
+      "price": 3.9
+    }
+  ],
+  "50": [
+    {
+      "ticker": "DMPI",
+      "price": 0.54
+    }
+  ],
+  "200": [
+    {
+      "ticker": "DMPI",
+      "price": 0.54
+    },
+    {
+      "ticker": "KIQ",
+      "price": 0.4902
+    }
+  ],
+  "300": [
+    {
+      "ticker": "DMPI",
+      "price": 0.5254
+    },
+    {
+      "ticker": "SALM",
+      "price": 3.925
+    },
+    {
+      "ticker": "LIFE",
+      "price": 0.64
+    },
+    {
+      "ticker": "KIQ",
+      "price": 0.49
+    }
+  ],
+  "380": [
+    {
+      "ticker": "IGC",
+      "price": 0.5288
+    },
+    {
+      "ticker": "DMPI",
+      "price": 0.525
+    },
+    {
+      "ticker": "SALM",
+      "price": 3.925
+    },
+    {
+      "ticker": "ZIOP",
+      "price": 2.7853
+    },
+    {
+      "ticker": "PTNR",
+      "price": 4.4301
+    }
+  ],
+  "600": [
+    {
+      "ticker": "IGC",
+      "price": 0.5399
+    },
+    {
+      "ticker": "DMPI",
+      "price": 0.525
+    },
+    {
+      "ticker": "SALM",
+      "price": 3.95
+    },
+    {
+      "ticker": "ZIOP",
+      "price": 2.78
+    },
+    {
+      "ticker": "PTNR",
+      "price": 4.43
+    }
+  ]
+}

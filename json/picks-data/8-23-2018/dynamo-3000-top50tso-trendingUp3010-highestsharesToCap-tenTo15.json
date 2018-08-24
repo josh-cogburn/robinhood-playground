@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "NXEO",
+      "price": 10.1
+    },
+    {
+      "ticker": "CAMT",
+      "price": 10.3706
+    }
+  ],
+  "40": [
+    {
+      "ticker": "PTGX",
+      "price": 10.1
+    },
+    {
+      "ticker": "CAMT",
+      "price": 10.49
+    }
+  ],
+  "100": [
+    {
+      "ticker": "NERV",
+      "price": 9.95
+    },
+    {
+      "ticker": "AGLE",
+      "price": 10.07
+    }
+  ],
+  "200": [
+    {
+      "ticker": "AGLE",
+      "price": 10.12
+    },
+    {
+      "ticker": "PTGX",
+      "price": 10.16
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AGLE",
+      "price": 10.145
+    },
+    {
+      "ticker": "PTGX",
+      "price": 10.11
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AGLE",
+      "price": 10.1
+    },
+    {
+      "ticker": "MGTX",
+      "price": 11.49
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AGLE",
+      "price": 10.22
+    },
+    {
+      "ticker": "LBY",
+      "price": 10.84
+    }
+  ]
+}

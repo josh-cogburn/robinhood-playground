@@ -1,0 +1,66 @@
+{
+  "10": [
+    {
+      "ticker": "OMEX",
+      "price": 8.7397
+    },
+    {
+      "ticker": "GSM",
+      "price": 7.96
+    }
+  ],
+  "50": [
+    {
+      "ticker": "OMEX",
+      "price": 8.88
+    },
+    {
+      "ticker": "GSM",
+      "price": 8.07
+    },
+    {
+      "ticker": "RMBL",
+      "price": 6.5
+    }
+  ],
+  "200": [
+    {
+      "ticker": "OMEX",
+      "price": 8.82
+    },
+    {
+      "ticker": "GSM",
+      "price": 8.03
+    }
+  ],
+  "300": [
+    {
+      "ticker": "OMEX",
+      "price": 8.8652
+    },
+    {
+      "ticker": "GSM",
+      "price": 8.01
+    }
+  ],
+  "380": [
+    {
+      "ticker": "OMEX",
+      "price": 8.608
+    },
+    {
+      "ticker": "GSM",
+      "price": 8.05
+    }
+  ],
+  "600": [
+    {
+      "ticker": "OMEX",
+      "price": 8.65
+    },
+    {
+      "ticker": "GSM",
+      "price": 8.04
+    }
+  ]
+}

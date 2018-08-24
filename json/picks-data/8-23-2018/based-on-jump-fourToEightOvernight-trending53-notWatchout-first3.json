@@ -1,0 +1,50 @@
+{
+  "0": [
+    {
+      "ticker": "MPVD",
+      "price": 2.3
+    },
+    {
+      "ticker": "BCLI",
+      "price": 4.188
+    }
+  ],
+  "5": [
+    {
+      "ticker": "MPVD",
+      "price": 2.2382
+    },
+    {
+      "ticker": "BCLI",
+      "price": 4.13
+    }
+  ],
+  "16": [
+    {
+      "ticker": "RAND",
+      "price": 2.412
+    },
+    {
+      "ticker": "UONEK",
+      "price": 2.25
+    },
+    {
+      "ticker": "MPVD",
+      "price": 2.225
+    }
+  ],
+  "30": [
+    {
+      "ticker": "RAND",
+      "price": 2.4001
+    },
+    {
+      "ticker": "MPVD",
+      "price": 2.225
+    },
+    {
+      "ticker": "UONEK",
+      "price": 2.25
+    }
+  ]
+}

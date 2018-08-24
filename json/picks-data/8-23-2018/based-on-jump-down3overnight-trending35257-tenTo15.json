@@ -1,0 +1,66 @@
+{
+  "0": [
+    {
+      "ticker": "EDUC",
+      "price": 12.2
+    },
+    {
+      "ticker": "BRID",
+      "price": 13.51
+    },
+    {
+      "ticker": "EMO",
+      "price": 11.62
+    }
+  ],
+  "5": [
+    {
+      "ticker": "EDUC",
+      "price": 12
+    },
+    {
+      "ticker": "BRID",
+      "price": 13.51
+    },
+    {
+      "ticker": "EMO",
+      "price": 11.697
+    }
+  ],
+  "16": [
+    {
+      "ticker": "EDUC",
+      "price": 12.3
+    },
+    {
+      "ticker": "BRID",
+      "price": 13.51
+    },
+    {
+      "ticker": "EMO",
+      "price": 11.697
+    },
+    {
+      "ticker": "IOR",
+      "price": 12.9104
+    }
+  ],
+  "30": [
+    {
+      "ticker": "EDUC",
+      "price": 13
+    },
+    {
+      "ticker": "BRID",
+      "price": 13.51
+    },
+    {
+      "ticker": "EMO",
+      "price": 11.69
+    },
+    {
+      "ticker": "IOR",
+      "price": 12.8276
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "SPWH",
+      "price": 5.98
+    },
+    {
+      "ticker": "PETX",
+      "price": 5.43
+    }
+  ],
+  "5": [
+    {
+      "ticker": "SPWH",
+      "price": 6.1
+    },
+    {
+      "ticker": "PETX",
+      "price": 5.43
+    }
+  ],
+  "16": [
+    {
+      "ticker": "SPWH",
+      "price": 5.97
+    },
+    {
+      "ticker": "PETX",
+      "price": 5.38
+    }
+  ],
+  "30": [
+    {
+      "ticker": "SPWH",
+      "price": 5.9
+    },
+    {
+      "ticker": "PETX",
+      "price": 5.33
+    }
+  ]
+}

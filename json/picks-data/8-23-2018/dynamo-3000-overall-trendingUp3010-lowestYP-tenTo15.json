@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "SVXY",
+      "price": 14.24
+    },
+    {
+      "ticker": "SQQQ",
+      "price": 12.15
+    }
+  ],
+  "40": [
+    {
+      "ticker": "SVXY",
+      "price": 14.29
+    },
+    {
+      "ticker": "CBIO",
+      "price": 10.78
+    }
+  ],
+  "100": [
+    {
+      "ticker": "SVXY",
+      "price": 14.22
+    },
+    {
+      "ticker": "CBIO",
+      "price": 10.76
+    }
+  ],
+  "200": [
+    {
+      "ticker": "SVXY",
+      "price": 14.21
+    },
+    {
+      "ticker": "CBIO",
+      "price": 10.71
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SVXY",
+      "price": 14.18
+    },
+    {
+      "ticker": "CBIO",
+      "price": 10.77
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SVXY",
+      "price": 14.2385
+    },
+    {
+      "ticker": "CBIO",
+      "price": 10.745
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SVXY",
+      "price": 14.1899
+    },
+    {
+      "ticker": "CBIO",
+      "price": 10.755
+    }
+  ]
+}

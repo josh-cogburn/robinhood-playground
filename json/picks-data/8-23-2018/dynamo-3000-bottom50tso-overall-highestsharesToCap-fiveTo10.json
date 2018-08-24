@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "EGLE",
+      "price": 5.205
+    },
+    {
+      "ticker": "PETX",
+      "price": 5.43
+    }
+  ],
+  "40": [
+    {
+      "ticker": "INNT",
+      "price": 5.1
+    },
+    {
+      "ticker": "DXR",
+      "price": 5.22
+    }
+  ],
+  "100": [
+    {
+      "ticker": "INNT",
+      "price": 5.04
+    },
+    {
+      "ticker": "DXR",
+      "price": 5.025
+    }
+  ],
+  "200": [
+    {
+      "ticker": "AKAO",
+      "price": 5.06
+    },
+    {
+      "ticker": "CWBR",
+      "price": 5.16
+    }
+  ],
+  "260": [
+    {
+      "ticker": "DXR",
+      "price": 5.15
+    },
+    {
+      "ticker": "AKAO",
+      "price": 5.11
+    }
+  ],
+  "351": [
+    {
+      "ticker": "DXR",
+      "price": 5.15
+    },
+    {
+      "ticker": "CWBR",
+      "price": 5.1365
+    }
+  ],
+  "381": [
+    {
+      "ticker": "XTNT",
+      "price": 5.0794
+    },
+    {
+      "ticker": "AKAO",
+      "price": 5.06
+    }
+  ]
+}
