@@ -8,10 +8,10 @@ const lookup = require('../utils/lookup');
 const mapLimit = require('promise-map-limit');
 
 
-const MAX_BUY_RATIO = 1.01; // before gives up
-const TIME_BETWEEN_CHECK = 10; // seconds
+const MAX_BUY_RATIO = 1.025; // before gives up
+const TIME_BETWEEN_CHECK = 8; // seconds
 const BUY_RATIO_INCREMENT = 0.001;
-
+const GO_FOR_5PERC_LIMIT = true;
 
 const addToDailyTransactions = async data => {
     const fileName = `./json/daily-transactions/${(new Date()).toLocaleDateString().split('/').join('-')}.json`;
@@ -33,6 +33,17 @@ module.exports = async (
 
     return new Promise((resolve, reject) => {
 
+        const limitBid = async (bidPrice) =>
+            await limitBuyLastTrade(
+                Robinhood,
+                {
+                    ticker,
+                    bidPrice,
+                    quantity,
+                    strategy
+                }
+            );
+
         try {
 
             let curBuyRatio = 1.0;
@@ -51,15 +62,7 @@ module.exports = async (
                 //     return reject('maxPrice below bidPrice');
                 // }
 
-                let res = await limitBuyLastTrade(
-                    Robinhood,
-                    {
-                        ticker,
-                        bidPrice,
-                        quantity,
-                        strategy
-                    }
-                );
+                let res = await limitBid(bidPrice);
 
                 if (!res || res.detail) {
                     return reject(res.detail || 'unable to purchase' + ticker);
@@ -72,15 +75,7 @@ module.exports = async (
                     const newBid = nearestFiveCents(bidPrice);
                     console.log('5 center!!!');
                     console.log('new bid', newBid);
-                    res = await limitBuyLastTrade(
-                        Robinhood,
-                        {
-                            ticker,
-                            bidPrice: newBid,
-                            quantity,
-                            strategy
-                        }
-                    );
+                    res = await limitBid(newBid);
                 }
 
                 const timeout = ((0.8 * TIME_BETWEEN_CHECK) + (Math.random() * TIME_BETWEEN_CHECK * 0.8)) * 1000;
@@ -108,6 +103,10 @@ module.exports = async (
                         } else {
                             const errMessage = 'reached MAX_BUY_RATIO, unable to BUY';
                             console.log(errMessage, ticker);
+                            if (GO_FOR_5PERC_LIMIT) {
+                                curBuyRatio = 1.05;
+                                return attempt();
+                            }
                             return reject(errMessage);
                         }
                     } else {
