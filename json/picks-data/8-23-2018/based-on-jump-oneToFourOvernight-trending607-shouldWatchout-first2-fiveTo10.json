@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "PETX",
+      "price": 5.43
+    },
+    {
+      "ticker": "TRXC",
+      "price": 5.1234
+    }
+  ],
+  "5": [
+    {
+      "ticker": "PETX",
+      "price": 5.43
+    },
+    {
+      "ticker": "TRXC",
+      "price": 5.2599
+    }
+  ],
+  "16": [
+    {
+      "ticker": "PETX",
+      "price": 5.38
+    },
+    {
+      "ticker": "TSRI",
+      "price": 7.745
+    }
+  ],
+  "30": [
+    {
+      "ticker": "PETX",
+      "price": 5.33
+    },
+    {
+      "ticker": "TSRI",
+      "price": 7.8
+    }
+  ]
+}

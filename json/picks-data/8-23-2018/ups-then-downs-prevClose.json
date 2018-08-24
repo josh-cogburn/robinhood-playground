@@ -1,0 +1,134 @@
+{
+  "10": [
+    {
+      "ticker": "CYTX",
+      "price": 0.61
+    },
+    {
+      "ticker": "AUMN",
+      "price": 0.24
+    },
+    {
+      "ticker": "SSI",
+      "price": 2.0845
+    },
+    {
+      "ticker": "SMRT",
+      "price": 2.75
+    },
+    {
+      "ticker": "PKD",
+      "price": 4
+    }
+  ],
+  "50": [
+    {
+      "ticker": "CYTX",
+      "price": 0.6424
+    },
+    {
+      "ticker": "KOSS",
+      "price": 4.1001
+    },
+    {
+      "ticker": "SSI",
+      "price": 2.1
+    },
+    {
+      "ticker": "SMRT",
+      "price": 2.75
+    },
+    {
+      "ticker": "PKD",
+      "price": 4.0078
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CYTX",
+      "price": 0.57
+    },
+    {
+      "ticker": "KOSS",
+      "price": 3.98
+    },
+    {
+      "ticker": "SSI",
+      "price": 2.07
+    },
+    {
+      "ticker": "PKD",
+      "price": 3.9601
+    },
+    {
+      "ticker": "SMRT",
+      "price": 2.69
+    }
+  ],
+  "300": [
+    {
+      "ticker": "CYTX",
+      "price": 0.55
+    },
+    {
+      "ticker": "KOSS",
+      "price": 3.9449
+    },
+    {
+      "ticker": "AMRH",
+      "price": 1.501
+    },
+    {
+      "ticker": "SSI",
+      "price": 2.0625
+    },
+    {
+      "ticker": "PGLC",
+      "price": 1.22
+    }
+  ],
+  "380": [
+    {
+      "ticker": "CYTX",
+      "price": 0.5702
+    },
+    {
+      "ticker": "KOSS",
+      "price": 4
+    },
+    {
+      "ticker": "AMRH",
+      "price": 1.48
+    },
+    {
+      "ticker": "SSI",
+      "price": 2.0701
+    },
+    {
+      "ticker": "SMRT",
+      "price": 2.67
+    }
+  ],
+  "600": [
+    {
+      "ticker": "CYTX",
+      "price": 0.609
+    },
+    {
+      "ticker": "AMRH",
+      "price": 1.5
+    },
+    {
+      "ticker": "SMRT",
+      "price": 2.65
+    },
+    {
+      "ticker": "SSI",
+      "price": 2.11
+    },
+    {
+      "ticker": "GST",
+      "price": 0.092
+    }
+  ]
+}

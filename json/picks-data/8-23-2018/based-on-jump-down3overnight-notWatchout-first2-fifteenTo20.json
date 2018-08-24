@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "SMCI",
+      "price": 15.75
+    },
+    {
+      "ticker": "TTM",
+      "price": 18.3
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CATO",
+      "price": 20.015
+    },
+    {
+      "ticker": "TTM",
+      "price": 18.24
+    }
+  ],
+  "16": [
+    {
+      "ticker": "ARL",
+      "price": 17.085
+    },
+    {
+      "ticker": "TTM",
+      "price": 18.2531
+    }
+  ],
+  "30": [
+    {
+      "ticker": "ARL",
+      "price": 17.1282
+    },
+    {
+      "ticker": "TTM",
+      "price": 18.31
+    }
+  ]
+}

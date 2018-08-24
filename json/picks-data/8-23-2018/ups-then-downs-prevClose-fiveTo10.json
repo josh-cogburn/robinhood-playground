@@ -1,0 +1,90 @@
+{
+  "10": [
+    {
+      "ticker": "JNUG",
+      "price": 7.75
+    }
+  ],
+  "50": [
+    {
+      "ticker": "JNUG",
+      "price": 7.78
+    },
+    {
+      "ticker": "CUE",
+      "price": 8.82
+    }
+  ],
+  "200": [
+    {
+      "ticker": "JNUG",
+      "price": 7.5101
+    },
+    {
+      "ticker": "CUE",
+      "price": 8.77
+    },
+    {
+      "ticker": "AG",
+      "price": 5.23
+    }
+  ],
+  "300": [
+    {
+      "ticker": "JNUG",
+      "price": 7.4415
+    },
+    {
+      "ticker": "CUE",
+      "price": 8.21
+    },
+    {
+      "ticker": "IVAC",
+      "price": 5.75
+    },
+    {
+      "ticker": "GOGL",
+      "price": 9.51
+    },
+    {
+      "ticker": "AG",
+      "price": 5.2399
+    }
+  ],
+  "380": [
+    {
+      "ticker": "JNUG",
+      "price": 7.51
+    },
+    {
+      "ticker": "CUE",
+      "price": 8.38
+    },
+    {
+      "ticker": "GOGL",
+      "price": 9.49
+    },
+    {
+      "ticker": "AG",
+      "price": 5.24
+    }
+  ],
+  "600": [
+    {
+      "ticker": "JNUG",
+      "price": 7.52
+    },
+    {
+      "ticker": "CUE",
+      "price": 8.35
+    },
+    {
+      "ticker": "GOGL",
+      "price": 9.46
+    },
+    {
+      "ticker": "AG",
+      "price": 5.23
+    }
+  ]
+}

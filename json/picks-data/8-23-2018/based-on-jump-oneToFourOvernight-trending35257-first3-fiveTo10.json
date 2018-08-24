@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "SPWH",
+      "price": 5.98
+    },
+    {
+      "ticker": "PETX",
+      "price": 5.43
+    },
+    {
+      "ticker": "ADVM",
+      "price": 5.95
+    }
+  ],
+  "5": [
+    {
+      "ticker": "SPWH",
+      "price": 6.1
+    },
+    {
+      "ticker": "PETX",
+      "price": 5.43
+    },
+    {
+      "ticker": "ADVM",
+      "price": 5.8
+    }
+  ],
+  "16": [
+    {
+      "ticker": "SPWH",
+      "price": 5.97
+    },
+    {
+      "ticker": "PETX",
+      "price": 5.38
+    },
+    {
+      "ticker": "TSRI",
+      "price": 7.745
+    }
+  ],
+  "30": [
+    {
+      "ticker": "SPWH",
+      "price": 5.9
+    },
+    {
+      "ticker": "PETX",
+      "price": 5.33
+    },
+    {
+      "ticker": "TSRI",
+      "price": 7.8
+    }
+  ]
+}

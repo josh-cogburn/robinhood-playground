@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "AMDA",
+      "price": 0.51
+    },
+    {
+      "ticker": "FLNT",
+      "price": 2.4
+    }
+  ],
+  "40": [
+    {
+      "ticker": "AMDA",
+      "price": 0.5109
+    },
+    {
+      "ticker": "QTM",
+      "price": 2.24
+    }
+  ],
+  "100": [
+    {
+      "ticker": "ARCI",
+      "price": 0.7101
+    },
+    {
+      "ticker": "BIOL",
+      "price": 1.7
+    }
+  ],
+  "200": [
+    {
+      "ticker": "QTM",
+      "price": 2.275
+    },
+    {
+      "ticker": "BIOL",
+      "price": 1.621
+    }
+  ],
+  "260": [
+    {
+      "ticker": "QTM",
+      "price": 2.3299
+    },
+    {
+      "ticker": "ARCI",
+      "price": 0.7101
+    }
+  ],
+  "351": [
+    {
+      "ticker": "TWMC",
+      "price": 1.03
+    },
+    {
+      "ticker": "QTM",
+      "price": 2.34
+    }
+  ],
+  "381": [
+    {
+      "ticker": "QTM",
+      "price": 2.38
+    },
+    {
+      "ticker": "CAAS",
+      "price": 4.01
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "ERIC",
+      "price": 8.31
+    },
+    {
+      "ticker": "AKTS",
+      "price": 7.69
+    }
+  ],
+  "5": [
+    {
+      "ticker": "SGU",
+      "price": 9.95
+    },
+    {
+      "ticker": "NWY",
+      "price": 5.23
+    }
+  ],
+  "16": [
+    {
+      "ticker": "SGU",
+      "price": 9.945
+    },
+    {
+      "ticker": "NWY",
+      "price": 5.2
+    }
+  ],
+  "30": [
+    {
+      "ticker": "SGU",
+      "price": 9.885
+    },
+    {
+      "ticker": "NWY",
+      "price": 5.235
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "AMDA",
+      "price": 0.51
+    },
+    {
+      "ticker": "ARCI",
+      "price": 0.6948
+    }
+  ],
+  "40": [
+    {
+      "ticker": "AMDA",
+      "price": 0.5109
+    },
+    {
+      "ticker": "ARCI",
+      "price": 0.715
+    }
+  ],
+  "100": [
+    {
+      "ticker": "ARCI",
+      "price": 0.7101
+    },
+    {
+      "ticker": "SHIP",
+      "price": 0.975
+    }
+  ],
+  "200": [
+    {
+      "ticker": "REFR",
+      "price": 1.173
+    },
+    {
+      "ticker": "BIOL",
+      "price": 1.621
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ARCI",
+      "price": 0.7101
+    },
+    {
+      "ticker": "REFR",
+      "price": 1.171
+    }
+  ],
+  "351": [
+    {
+      "ticker": "TWMC",
+      "price": 1.03
+    },
+    {
+      "ticker": "REFR",
+      "price": 1.17
+    }
+  ],
+  "381": [
+    {
+      "ticker": "REFR",
+      "price": 1.17
+    },
+    {
+      "ticker": "IDXG",
+      "price": 1.19
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "BB",
+      "price": 10.125
+    },
+    {
+      "ticker": "REDU",
+      "price": 10.28
+    }
+  ],
+  "40": [
+    {
+      "ticker": "PRCP",
+      "price": 10.135
+    },
+    {
+      "ticker": "SOXS",
+      "price": 10.02
+    }
+  ],
+  "100": [
+    {
+      "ticker": "SOXS",
+      "price": 10.1223
+    },
+    {
+      "ticker": "PBR",
+      "price": 10.32
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PRTK",
+      "price": 10.1
+    },
+    {
+      "ticker": "PRCP",
+      "price": 10.1496
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PBR",
+      "price": 10.265
+    },
+    {
+      "ticker": "CDOR",
+      "price": 10.5549
+    }
+  ],
+  "351": [
+    {
+      "ticker": "PRCP",
+      "price": 10.06
+    },
+    {
+      "ticker": "CDOR",
+      "price": 10.5549
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CMTA",
+      "price": 9.99
+    },
+    {
+      "ticker": "CNST",
+      "price": 10.12
+    }
+  ]
+}

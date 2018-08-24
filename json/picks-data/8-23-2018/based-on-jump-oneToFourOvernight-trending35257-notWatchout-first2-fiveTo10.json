@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "FRO",
+      "price": 5.48
+    },
+    {
+      "ticker": "EMMS",
+      "price": 5.06
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CATS",
+      "price": 8.9
+    },
+    {
+      "ticker": "FRO",
+      "price": 5.48
+    }
+  ],
+  "16": [
+    {
+      "ticker": "PLAB",
+      "price": 9.9
+    },
+    {
+      "ticker": "CATS",
+      "price": 9
+    }
+  ],
+  "30": [
+    {
+      "ticker": "PLAB",
+      "price": 9.9
+    },
+    {
+      "ticker": "CATS",
+      "price": 8.8101
+    }
+  ]
+}
