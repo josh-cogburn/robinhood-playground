@@ -1,0 +1,38 @@
+{
+  "0": [
+    {
+      "ticker": "GNMX",
+      "price": 1.2
+    }
+  ],
+  "5": [
+    {
+      "ticker": "GNMX",
+      "price": 1.2
+    },
+    {
+      "ticker": "HK",
+      "price": 4.135
+    }
+  ],
+  "16": [
+    {
+      "ticker": "GNMX",
+      "price": 1.25
+    },
+    {
+      "ticker": "HK",
+      "price": 4.13
+    }
+  ],
+  "30": [
+    {
+      "ticker": "GNMX",
+      "price": 1.2
+    },
+    {
+      "ticker": "HK",
+      "price": 4.145
+    }
+  ]
+}

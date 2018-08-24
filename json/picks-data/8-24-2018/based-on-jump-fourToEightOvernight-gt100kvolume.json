@@ -1,0 +1,38 @@
+{
+  "0": [
+    {
+      "ticker": "SSC",
+      "price": 4.31
+    }
+  ],
+  "5": [
+    {
+      "ticker": "SSC",
+      "price": 4.42
+    }
+  ],
+  "16": [
+    {
+      "ticker": "SSC",
+      "price": 4.23
+    },
+    {
+      "ticker": "BTE",
+      "price": 3.38
+    }
+  ],
+  "30": [
+    {
+      "ticker": "SSC",
+      "price": 4.3901
+    },
+    {
+      "ticker": "BTE",
+      "price": 3.37
+    },
+    {
+      "ticker": "SENS",
+      "price": 3.495
+    }
+  ]
+}

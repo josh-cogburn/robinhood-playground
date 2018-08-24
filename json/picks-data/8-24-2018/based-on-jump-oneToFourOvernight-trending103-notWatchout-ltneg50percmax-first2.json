@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "PMTS",
+      "price": 2.49
+    },
+    {
+      "ticker": "LTBR",
+      "price": 0.98
+    }
+  ],
+  "5": [
+    {
+      "ticker": "PMTS",
+      "price": 2.49
+    },
+    {
+      "ticker": "LTBR",
+      "price": 0.975
+    }
+  ],
+  "16": [
+    {
+      "ticker": "PMTS",
+      "price": 2.49
+    },
+    {
+      "ticker": "ENZ",
+      "price": 4.42
+    }
+  ],
+  "30": [
+    {
+      "ticker": "PMTS",
+      "price": 2.53
+    },
+    {
+      "ticker": "ENZ",
+      "price": 4.4529
+    }
+  ]
+}
