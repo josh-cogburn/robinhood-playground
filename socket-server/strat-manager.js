@@ -287,9 +287,8 @@ const stratManager = {
             ].reduce((acc, perc) => ({
                 [`forPurchase${perc}Perc5Day-notincludingblanks`]: filterBy5DayPercUp(perc),
                 [`forPurchase${perc}Perc5Day-yesincludingblanks`]: filterBy5DayPercUp(perc, true),
-            }), {
-                forPurchase
-            });
+                ...acc
+            }), {});
         })();
 
         return {
