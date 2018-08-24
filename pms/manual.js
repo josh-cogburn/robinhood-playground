@@ -294,7 +294,7 @@ const anyCountPerfectos = [
     'low-float-high-volume-volTo2WeekPoints-fifteenTo20-6',
     'low-float-high-volume-floatPoints-trenddown7to10-shouldWatchout-tenTo15-6',
 
-    'low-float-high-volume-floatTimesfloatToVolume-trenddown7to10-shouldWatchout-fifteenTo20-150',
+    // 'low-float-high-volume-floatTimesfloatToVolume-trenddown7to10-shouldWatchout-fifteenTo20-150',
     // 'low-float-high-volume-floatPoints-trenddown7to10-fifteenTo20-150',
     'low-float-high-volume-volTo2WeekPoints-trenddown7to10-shouldWatchout-fifteenTo20-210',
     'low-float-high-volume-floatTimestwoWeekVolToAvgPoints-trenddowngt10-fifteenTo20-210',
@@ -344,7 +344,6 @@ const iwantthisPARTONE = [
     'based-on-jump-down3overnight-trending53-notWatchout-ltneg50percmax-first2-30',
     'low-float-high-volume-floatPoints-trenddowngt30-276',
     'sudden-drops-last10trend-filter10-221',
-
 ]
 
 const iwantthisPARTTWO = [
@@ -354,8 +353,9 @@ const iwantthisPARTTWO = [
     // 'low-float-high-volume-floatTimesabsVolPoints-trenddown7to10-shouldWatchout-fifteenTo20-210',
     'based-on-jump-down3overnight-trending103-notWatchout-ltneg50percmax-first1-fiveTo10-0',
     'based-on-jump-down3overnight-notWatchout-ltneg50percmax-first1-fifteenTo20-30',
-    'low-float-high-volume-twoWeekVolToAvgPoints-trenddowngt10-notWatchout-6'
-    'low-float-high-volume-floatTimesfloatToVolume-trenddown7to10-shouldWatchout-6'
+    'low-float-high-volume-twoWeekVolToAvgPoints-trenddowngt10-notWatchout-6',
+    // 'low-float-high-volume-floatTimesfloatToVolume-trenddown7to10-shouldWatchout-6'
+    'low-float-high-volume-floatTimesfloatToVolume-trenddown7to10-notWatchout-276'
 ]
 
 const iwantthis = [

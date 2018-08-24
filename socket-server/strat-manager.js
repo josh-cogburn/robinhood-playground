@@ -270,9 +270,32 @@ const stratManager = {
                 )
             );
 
+        const forPurchase = flattenStrategiesWithPMs(settings.forPurchase);
+
+        const forPurchaseVariations = (() => {
+            const filterBy5DayPercUp = (perc, includeBlanks) => forPurchase
+                .filter(strat => {
+                    const foundFiveDay = this.pastData.fiveDay[strat];
+                    return (includeBlanks && !foundFiveDay)
+                        || (foundFiveDay && foundFiveDay.percUp >= perc / 100);
+                });
+            return [
+                50,
+                75,
+                80,
+                100
+            ].reduce((acc, perc) => ({
+                [`forPurchase${perc}Perc5Day-notincludingblanks`]: filterBy5DayPercUp(perc),
+                [`forPurchase${perc}Perc5Day-yesincludingblanks`]: filterBy5DayPercUp(perc, true),
+            }), {
+                forPurchase
+            });
+        })();
+
         return {
             ...strategies,
-            forPurchase: flattenStrategiesWithPMs(settings.forPurchase),
+            forPurchase,
+            ...forPurchaseVariations
         };
     },
     async setPastData(stratPerfData) {
