@@ -92,5 +92,27 @@
       "ticker": "PTNR",
       "price": 4.23
     }
+  ],
+  "600": [
+    {
+      "ticker": "TNXP",
+      "price": 1.19
+    },
+    {
+      "ticker": "IGC",
+      "price": 0.51
+    },
+    {
+      "ticker": "DMPI",
+      "price": 0.525
+    },
+    {
+      "ticker": "SALM",
+      "price": 3.9
+    },
+    {
+      "ticker": "ZIOP",
+      "price": 2.78
+    }
   ]
 }
