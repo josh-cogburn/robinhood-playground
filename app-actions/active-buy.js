@@ -31,37 +31,42 @@ module.exports = async (
     }
 ) => {
 
-    return new Promise((resolve, reject) => {
+    return new Promise(async (resolve, reject) => {
 
-        const limitBid = async (bidPrice) =>
-            await limitBuyLastTrade(
-                Robinhood,
-                {
-                    ticker,
-                    bidPrice,
-                    quantity,
-                    strategy
-                }
-            );
 
         try {
 
             let curBuyRatio = 1.0;
             let attemptCount = 0;
+
             // maxPrice = Math.min(maxPrice, 35);
+
+            const { currentPrice } = await lookup(Robinhood, ticker);
 
             const attempt = async () => {
 
                 attemptCount++;
                 console.log('attempting ', curBuyRatio, ticker, 'ratio', curBuyRatio);
-                const { currentPrice } = (await lookup(Robinhood, ticker));
-                const bidPrice = currentPrice * curBuyRatio;
-                const quantity = Math.floor(maxPrice / bidPrice) || 1;
+
                 // if (!quantity) {
                 //     console.log('maxPrice below bidPrice but ', maxPrice, bidPrice, ticker);
                 //     return reject('maxPrice below bidPrice');
                 // }
 
+                const limitBid = async bidPrice => {
+                    const quantity = Math.floor(maxPrice / bidPrice) || 1;
+                    return await limitBuyLastTrade(
+                        Robinhood,
+                        {
+                            ticker,
+                            bidPrice,
+                            quantity,
+                            strategy
+                        }
+                    );
+                };
+
+                const bidPrice = currentPrice * curBuyRatio;
                 let res = await limitBid(bidPrice);
 
                 if (!res || res.detail) {
