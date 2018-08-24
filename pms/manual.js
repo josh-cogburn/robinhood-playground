@@ -355,6 +355,7 @@ const iwantthisPARTTWO = [
     'based-on-jump-down3overnight-trending103-notWatchout-ltneg50percmax-first1-fiveTo10-0',
     'based-on-jump-down3overnight-notWatchout-ltneg50percmax-first1-fifteenTo20-30',
     'low-float-high-volume-twoWeekVolToAvgPoints-trenddowngt10-notWatchout-6'
+    'low-float-high-volume-floatTimesfloatToVolume-trenddown7to10-shouldWatchout-6'
 ]
 
 const iwantthis = [

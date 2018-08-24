@@ -20,10 +20,11 @@ const {
 module.exports = {
     // important settings
     sellAllStocksOnNthDay: 2,
-    purchaseAmt: 27,
+    purchaseAmt: 23,
     forPurchase: [
         '[anyCountPerfectos]',
-        '[iwantthis]'
+        '[iwantthis]',
+        '[topPercUpJuly16]',
     ],
     sellStrategy: 'limit3',     // for fallback,
     keepers: [
