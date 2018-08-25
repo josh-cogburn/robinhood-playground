@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "SSC",
+      "price": 4.31
+    },
+    {
+      "ticker": "NAKD",
+      "price": 4.75
+    },
+    {
+      "ticker": "REFR",
+      "price": 1.2325
+    }
+  ],
+  "5": [
+    {
+      "ticker": "SSC",
+      "price": 4.42
+    },
+    {
+      "ticker": "REED",
+      "price": 2.95
+    },
+    {
+      "ticker": "NAKD",
+      "price": 4.6227
+    }
+  ],
+  "16": [
+    {
+      "ticker": "SSC",
+      "price": 4.23
+    },
+    {
+      "ticker": "REED",
+      "price": 3
+    },
+    {
+      "ticker": "NAKD",
+      "price": 4.5901
+    }
+  ],
+  "30": [
+    {
+      "ticker": "SSC",
+      "price": 4.3901
+    },
+    {
+      "ticker": "REED",
+      "price": 2.85
+    },
+    {
+      "ticker": "NAKD",
+      "price": 4.5342
+    }
+  ]
+}

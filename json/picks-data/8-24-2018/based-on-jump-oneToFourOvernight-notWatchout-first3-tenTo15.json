@@ -1,0 +1,44 @@
+{
+  "0": [
+    {
+      "ticker": "IIJI",
+      "price": 10.35
+    },
+    {
+      "ticker": "TSU",
+      "price": 14.72
+    },
+    {
+      "ticker": "VALE",
+      "price": 13.27
+    }
+  ],
+  "5": [
+    {
+      "ticker": "IIJI",
+      "price": 10.37
+    },
+    {
+      "ticker": "TSU",
+      "price": 14.78
+    },
+    {
+      "ticker": "VALE",
+      "price": 13.29
+    }
+  ],
+  "16": [
+    {
+      "ticker": "IIJI",
+      "price": 10.37
+    },
+    {
+      "ticker": "TSU",
+      "price": 14.7
+    },
+    {
+      "ticker": "VALE",
+      "price": 13.235
+    }
+  ]
+}

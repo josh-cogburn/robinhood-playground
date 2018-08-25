@@ -1,0 +1,44 @@
+{
+  "0": [
+    {
+      "ticker": "IIJI",
+      "price": 10.35
+    },
+    {
+      "ticker": "VALE",
+      "price": 13.27
+    },
+    {
+      "ticker": "ITCB",
+      "price": 14.435
+    }
+  ],
+  "5": [
+    {
+      "ticker": "IIJI",
+      "price": 10.37
+    },
+    {
+      "ticker": "VALE",
+      "price": 13.29
+    },
+    {
+      "ticker": "ITCB",
+      "price": 14.435
+    }
+  ],
+  "16": [
+    {
+      "ticker": "IIJI",
+      "price": 10.37
+    },
+    {
+      "ticker": "VALE",
+      "price": 13.235
+    },
+    {
+      "ticker": "ITCB",
+      "price": 14.62
+    }
+  ]
+}
