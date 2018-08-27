@@ -117,6 +117,7 @@ module.exports = async (
                             const errMessage = 'reached MAX_BUY_RATIO, unable to BUY';
                             console.log(errMessage, ticker);
                             if (GO_FOR_5PERC_LIMIT) {
+                                console.log('going for 5 perc limit above');
                                 return limitBidRatioAboveCurrent(1.05);
                             }
                             return reject(errMessage);
