@@ -12,7 +12,7 @@ module.exports = async (Robinhood, daysBack = 2, ...strategiesArgs) => {
     let maxBreakdownKey = (() => {
         if (strategiesArgs.length && isBreakdownKey(strategiesArgs[0])) {
             // optional argument
-            // for exampple: node run analysis/strategy-perf-multiple 52 next-day-330 list-of-strategies... 2... etc...
+            // for example: node run analysis/strategy-perf-multiple 52 next-day-330 list-of-strategies... 2... etc...
             const breakdownArg = strategiesArgs.shift();
             console.log('max breakdown key set to...', breakdownArg);
             return breakdownArg;
@@ -30,12 +30,13 @@ module.exports = async (Robinhood, daysBack = 2, ...strategiesArgs) => {
                 strategiesArgs.includes(strat)
                 || strategiesArgs.every(s => strat.includes(s))
         ) : allStrategies;
-    const isSearch = strategiesArgs[0] && !allStrategies.includes(strategiesArgs[0]);
+    const isSearch = strategiesArgs[0] && !allStrategies.includes(strategiesArgs[0]);// && false;
     const includeDetailed = suppliedStrategies && !isSearch;
 
     if (suppliedStrategies) {
         console.log('strategies of interest', strategiesOfInterest);
         console.log('isSearch', isSearch);
+        console.log('includeDetailed', includeDetailed);
     }
     console.log('num strategies', strategiesOfInterest.length);
 

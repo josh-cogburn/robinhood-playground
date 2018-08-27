@@ -283,8 +283,8 @@ const qualityModerates = [
 const anyCountPerfectos = [
 
     // 'based-on-jump-down3overnight-trending103-notWatchout-ltneg50percmax-first1-fiveTo10-0',
-    'based-on-jump-down3overnight-trending103-notWatchout-ltneg50percmax-first1-fiveTo10-5',
-    'based-on-jump-down5overnight-trending103-notWatchout-gtneg20percmax-first1-5',
+    // 'based-on-jump-down3overnight-trending103-notWatchout-ltneg50percmax-first1-fiveTo10-5',
+    // 'based-on-jump-down5overnight-trending103-notWatchout-gtneg20percmax-first1-5',
     // 'based-on-jump-down3overnight-trending103-notWatchout-ltneg50percmax-fiveTo10-0',
     // 'based-on-jump-gtEightOvernight-trending103-first1-tenTo15-30',
     'based-on-jump-gtEightOvernight-trending103-gt100kvolume-first1-tenTo15-30',
@@ -336,7 +336,7 @@ const iwantthisPARTONE = [
     'low-float-high-volume-floatPoints-trenddowngt20-6',
     'dynamo-3000-bottom50tso-notWatchout-lowestYP-100',
     'constant-risers-10minute-percUpHighClose-lowovernightjumps-100',
-    'low-float-high-volume-twoWeekVolToAvgPoints-trenddown7to10-fiveTo10-95',
+    // 'low-float-high-volume-twoWeekVolToAvgPoints-trenddown7to10-fiveTo10-95',
     'dynamo-3000-bottom50tso-notWatchout-highestsharesToCap-100',
     // 'low-float-high-volume-floatTimesvolToAvgPoints-trenddown3to10-notWatchout-fiveTo10-25',
     'sudden-drops-last10trend-first1-fiveTo10-290',
@@ -344,6 +344,10 @@ const iwantthisPARTONE = [
     'based-on-jump-down3overnight-trending53-notWatchout-ltneg50percmax-first2-30',
     'low-float-high-volume-floatPoints-trenddowngt30-276',
     'sudden-drops-last10trend-filter10-221',
+
+    'low-float-high-volume-floatTimesvolTo2WeekPoints-trend10to15-shouldWatchout-315',
+    'technical-indicators-day-year-topSMAoverUnderLastTrade-tenTo15-320',
+
 ]
 
 const iwantthisPARTTWO = [
@@ -361,6 +365,31 @@ const iwantthisPARTTWO = [
 const iwantthis = [
     ...iwantthisPARTONE,
     ...iwantthisPARTTWO
+];
+
+
+const weekofaug27 = [
+    'sudden-drops-last30trend-filter20-153',
+    'low-float-high-volume-floatPoints-trenddowngt20-6',
+    'sudden-drops-last30trend-filter20-290',
+    'sudden-drops-last2trend-filter10-221',
+    'low-float-high-volume-floatTimestwoWeekVolToAvgPoints-trenddowngt10-fifteenTo20-210',
+    'dynamo-3000-bottom50tso-notWatchout-lowestYP-100',
+    'sudden-drops-last2trend-first2-290',
+    'low-float-high-volume-floatTimesfloatToVolume-trenddown7to10-notWatchout-276',
+    'dynamo-3000-bottom50tso-notWatchout-highestsharesToCap-100',
+    'based-on-jump-down3overnight-notWatchout-ltneg50percmax-first1-fifteenTo20-30',
+    'constant-risers-10minute-percUpHighClose-lowovernightjumps-100',
+    'technical-indicators-day-year-topSMAoverUnderLastTrade-tenTo15-320',
+    'low-float-high-volume-floatTimesvolTo2WeekPoints-trend10to15-shouldWatchout-315',
+    'technical-indicators-10minute-week-topSMAoverUnderLastTrade-tenTo15-29',
+    'based-on-jump-down8overnight-notWatchout-ltneg50percmax-first1-30',
+    'low-float-high-volume-twoWeekVolToAvgPoints-trenddowngt10-notWatchout-6',
+    'sudden-drops-last10trend-filter20-290',
+    'sudden-drops-last10trend-filter30-328',
+    'sudden-drops-last5trend-filter30-280',
+    'sudden-drops-last10trend-filter20-221',
+    'low-float-high-volume-floatTimesfloatToVolume-trenddown7to10-shouldWatchout-6',
 ];
 
 
@@ -417,5 +446,8 @@ module.exports = {
 
     iwantthisPARTONE,
     iwantthisPARTTWO,
-    iwantthis
+    iwantthis,
+
+
+    weekofaug27
 };

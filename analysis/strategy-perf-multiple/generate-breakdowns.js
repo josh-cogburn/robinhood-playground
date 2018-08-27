@@ -65,13 +65,13 @@ const analyzeRoundup = allRoundup => {
             }
 
         });
-        console.log(withScore, 'withScore');
+        // console.log(withScore, 'withScore');
         const sorted = withScore.sort((a, b) => b.score - a.score);
         return includeAll ? sorted : sorted.slice(0, 15);
     };
 
     const maxCount = Math.max(...allRoundup.map(o => o.count));
-    console.log(maxCount, 'maxCount');
+    // console.log(maxCount, 'maxCount');
 
 
 
