@@ -22,6 +22,11 @@ const sellAllStocks = require('./app-actions/sell-all-stocks');
 
 const sellAllOlderThanTwoDays = require('./app-actions/sell-all-older-than-two-days');
 
+process.on('unhandledRejection', (reason, p) => {
+  console.log('Unhandled Rejection at: Promise', p, 'reason:', reason);
+  // application specific logging, throwing an error, or other logic here
+});
+
 (async () => {
 
     Robinhood = await login();
