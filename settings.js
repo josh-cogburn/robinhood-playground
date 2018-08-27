@@ -20,7 +20,7 @@ const {
 module.exports = {
     // important settings
     sellAllStocksOnNthDay: 1,
-    purchaseAmt: 35,
+    purchaseAmt: 44,
     forPurchase: [
         '[weekofaug27]'
     ],
