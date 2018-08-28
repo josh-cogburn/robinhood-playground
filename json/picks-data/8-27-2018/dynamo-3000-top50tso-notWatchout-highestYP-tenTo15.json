@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "CRON",
+      "price": 12.0101
+    },
+    {
+      "ticker": "GFN",
+      "price": 14
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CRON",
+      "price": 12.4053
+    },
+    {
+      "ticker": "GFN",
+      "price": 14
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CRON",
+      "price": 11.81
+    },
+    {
+      "ticker": "GFN",
+      "price": 14
+    }
+  ],
+  "381": [
+    {
+      "ticker": "GFN",
+      "price": 14
+    },
+    {
+      "ticker": "CTSO",
+      "price": 12.7448
+    }
+  ]
+}

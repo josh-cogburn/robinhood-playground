@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "GTIM",
+      "price": 5.05
+    },
+    {
+      "ticker": "DEST",
+      "price": 5.125
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SKIS",
+      "price": 5.05
+    },
+    {
+      "ticker": "GTIM",
+      "price": 5.1
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SKIS",
+      "price": 5.05
+    },
+    {
+      "ticker": "GTIM",
+      "price": 5.1
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SKIS",
+      "price": 5.0499
+    },
+    {
+      "ticker": "GTIM",
+      "price": 5.1
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "TRIL",
+      "price": 5.4783
+    },
+    {
+      "ticker": "MBIO",
+      "price": 6.67
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TRIL",
+      "price": 5.5
+    },
+    {
+      "ticker": "GSM",
+      "price": 8.48
+    }
+  ],
+  "351": [
+    {
+      "ticker": "RDVT",
+      "price": 7.6
+    },
+    {
+      "ticker": "TRIL",
+      "price": 5.55
+    }
+  ],
+  "381": [
+    {
+      "ticker": "RDVT",
+      "price": 7.6
+    },
+    {
+      "ticker": "TRIL",
+      "price": 5.5724
+    }
+  ]
+}

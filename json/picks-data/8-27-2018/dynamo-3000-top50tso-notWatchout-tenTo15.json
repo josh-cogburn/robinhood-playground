@@ -1,0 +1,90 @@
+{
+  "200": [
+    {
+      "ticker": "FCX",
+      "price": 14.745
+    },
+    {
+      "ticker": "GE",
+      "price": 12.7047
+    },
+    {
+      "ticker": "EGAN",
+      "price": 14.05
+    },
+    {
+      "ticker": "GFN",
+      "price": 14
+    },
+    {
+      "ticker": "WTTR",
+      "price": 13.185
+    }
+  ],
+  "260": [
+    {
+      "ticker": "DZSI",
+      "price": 10.19
+    },
+    {
+      "ticker": "GFN",
+      "price": 14
+    },
+    {
+      "ticker": "CLF",
+      "price": 10.08
+    },
+    {
+      "ticker": "VALE",
+      "price": 13.58
+    },
+    {
+      "ticker": "LAKE",
+      "price": 13.0191
+    }
+  ],
+  "351": [
+    {
+      "ticker": "LAKE",
+      "price": 13
+    },
+    {
+      "ticker": "ADAP",
+      "price": 10.4299
+    },
+    {
+      "ticker": "JFR",
+      "price": 10.365
+    },
+    {
+      "ticker": "USX",
+      "price": 14.92
+    },
+    {
+      "ticker": "GFN",
+      "price": 14
+    }
+  ],
+  "381": [
+    {
+      "ticker": "VALE",
+      "price": 13.585
+    },
+    {
+      "ticker": "HMTA",
+      "price": 13.5397
+    },
+    {
+      "ticker": "GFN",
+      "price": 14
+    },
+    {
+      "ticker": "CNHI",
+      "price": 11.965
+    },
+    {
+      "ticker": "BZH",
+      "price": 12.9
+    }
+  ]
+}

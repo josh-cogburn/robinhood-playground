@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "CIA",
+      "price": 8.7503
+    },
+    {
+      "ticker": "CRBP",
+      "price": 5.3995
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CRBP",
+      "price": 5.475
+    },
+    {
+      "ticker": "ARQL",
+      "price": 6.29
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CRBP",
+      "price": 5.5
+    },
+    {
+      "ticker": "ARQL",
+      "price": 6.195
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CRBP",
+      "price": 5.5
+    },
+    {
+      "ticker": "ARQL",
+      "price": 6.19
+    }
+  ]
+}

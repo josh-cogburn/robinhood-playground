@@ -1,0 +1,58 @@
+{
+  "200": [
+    {
+      "ticker": "WCFB",
+      "price": 8.8701
+    },
+    {
+      "ticker": "YIN",
+      "price": 7.05
+    },
+    {
+      "ticker": "DLNG",
+      "price": 8.8955
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CTG",
+      "price": 6.08
+    },
+    {
+      "ticker": "PCF",
+      "price": 9.45
+    },
+    {
+      "ticker": "SLVP",
+      "price": 8.79
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CTG",
+      "price": 6.08
+    },
+    {
+      "ticker": "PCF",
+      "price": 9.45
+    },
+    {
+      "ticker": "GPM",
+      "price": 8.99
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CTG",
+      "price": 6.08
+    },
+    {
+      "ticker": "SRC",
+      "price": 8.34
+    },
+    {
+      "ticker": "ENY",
+      "price": 8.28
+    }
+  ]
+}

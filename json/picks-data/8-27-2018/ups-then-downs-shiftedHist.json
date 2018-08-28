@@ -1,0 +1,80 @@
+{
+  "10": [
+    {
+      "ticker": "SSKN",
+      "price": 2.661
+    },
+    {
+      "ticker": "HYRE",
+      "price": 3.27
+    },
+    {
+      "ticker": "EARS",
+      "price": 0.2795
+    },
+    {
+      "ticker": "SLS",
+      "price": 0.98
+    },
+    {
+      "ticker": "UWN",
+      "price": 2.4716
+    }
+  ],
+  "200": [
+    {
+      "ticker": "HYRE",
+      "price": 3.442
+    },
+    {
+      "ticker": "EARS",
+      "price": 0.2792
+    },
+    {
+      "ticker": "SLS",
+      "price": 1.01
+    }
+  ],
+  "300": [
+    {
+      "ticker": "HYRE",
+      "price": 3.4001
+    },
+    {
+      "ticker": "EARS",
+      "price": 0.2796
+    },
+    {
+      "ticker": "SLS",
+      "price": 1.01
+    }
+  ],
+  "380": [
+    {
+      "ticker": "HYRE",
+      "price": 3.44
+    },
+    {
+      "ticker": "EARS",
+      "price": 0.2791
+    },
+    {
+      "ticker": "SLS",
+      "price": 1.0302
+    }
+  ],
+  "600": [
+    {
+      "ticker": "HYRE",
+      "price": 3.41
+    },
+    {
+      "ticker": "EARS",
+      "price": 0.279
+    },
+    {
+      "ticker": "SLS",
+      "price": 1.03
+    }
+  ]
+}

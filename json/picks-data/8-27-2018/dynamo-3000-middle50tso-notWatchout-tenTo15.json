@@ -1,0 +1,90 @@
+{
+  "200": [
+    {
+      "ticker": "MYJ",
+      "price": 13.4363
+    },
+    {
+      "ticker": "BFY",
+      "price": 12.6975
+    },
+    {
+      "ticker": "HYT",
+      "price": 10.67
+    },
+    {
+      "ticker": "RIVE",
+      "price": 13.899
+    },
+    {
+      "ticker": "JTA",
+      "price": 13.602
+    }
+  ],
+  "260": [
+    {
+      "ticker": "LXRX",
+      "price": 10.495
+    },
+    {
+      "ticker": "FAN",
+      "price": 12.905
+    },
+    {
+      "ticker": "JAG",
+      "price": 12.85
+    },
+    {
+      "ticker": "GHY",
+      "price": 13.79
+    },
+    {
+      "ticker": "VTA",
+      "price": 11.4525
+    }
+  ],
+  "351": [
+    {
+      "ticker": "BQH",
+      "price": 13
+    },
+    {
+      "ticker": "NMS",
+      "price": 13.3
+    },
+    {
+      "ticker": "VTA",
+      "price": 11.455
+    },
+    {
+      "ticker": "KMF",
+      "price": 13.52
+    },
+    {
+      "ticker": "BHK",
+      "price": 12.88
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MITL",
+      "price": 10.975
+    },
+    {
+      "ticker": "EDI",
+      "price": 13.2187
+    },
+    {
+      "ticker": "BQH",
+      "price": 13
+    },
+    {
+      "ticker": "AI",
+      "price": 10.13
+    },
+    {
+      "ticker": "NFJ",
+      "price": 13.1535
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "CANG",
+      "price": 9.9705
+    },
+    {
+      "ticker": "SOXS",
+      "price": 9.19
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CANG",
+      "price": 9.9746
+    },
+    {
+      "ticker": "SOXS",
+      "price": 9.095
+    }
+  ],
+  "351": [
+    {
+      "ticker": "EXPR",
+      "price": 9.865
+    },
+    {
+      "ticker": "EPM",
+      "price": 9.65
+    }
+  ],
+  "381": [
+    {
+      "ticker": "EXPR",
+      "price": 9.81
+    },
+    {
+      "ticker": "EPM",
+      "price": 9.675
+    }
+  ]
+}

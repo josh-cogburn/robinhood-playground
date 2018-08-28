@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "FCX",
+      "price": 14.745
+    },
+    {
+      "ticker": "SBPH",
+      "price": 14.2
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SELB",
+      "price": 13.12
+    },
+    {
+      "ticker": "IDRA",
+      "price": 10.08
+    }
+  ],
+  "351": [
+    {
+      "ticker": "LAKE",
+      "price": 13
+    },
+    {
+      "ticker": "SBPH",
+      "price": 14.13
+    }
+  ],
+  "381": [
+    {
+      "ticker": "VALE",
+      "price": 13.585
+    },
+    {
+      "ticker": "RCUS",
+      "price": 14.921
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "IDRA",
+      "price": 10.0297
+    },
+    {
+      "ticker": "CRON",
+      "price": 12.0101
+    }
+  ],
+  "260": [
+    {
+      "ticker": "IDRA",
+      "price": 10.08
+    },
+    {
+      "ticker": "CRON",
+      "price": 12.4053
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CRON",
+      "price": 11.81
+    },
+    {
+      "ticker": "RFIL",
+      "price": 11.95
+    }
+  ],
+  "381": [
+    {
+      "ticker": "GFN",
+      "price": 14
+    },
+    {
+      "ticker": "NVTA",
+      "price": 13.09
+    }
+  ]
+}

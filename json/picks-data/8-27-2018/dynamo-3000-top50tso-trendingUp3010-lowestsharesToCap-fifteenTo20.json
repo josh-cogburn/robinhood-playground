@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "GTXI",
+      "price": 19.81
+    },
+    {
+      "ticker": "CDLX",
+      "price": 19.88
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GTXI",
+      "price": 19.92
+    },
+    {
+      "ticker": "JCAP",
+      "price": 19.17
+    }
+  ],
+  "351": [
+    {
+      "ticker": "GTXI",
+      "price": 19.85
+    },
+    {
+      "ticker": "MSON",
+      "price": 19.8132
+    }
+  ],
+  "381": [
+    {
+      "ticker": "GTXI",
+      "price": 19.9075
+    },
+    {
+      "ticker": "JCAP",
+      "price": 19.25
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "AMAL",
+      "price": 17.1
+    },
+    {
+      "ticker": "OPNT",
+      "price": 15.8401
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AMAL",
+      "price": 17.3
+    },
+    {
+      "ticker": "APLS",
+      "price": 18.05
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AMAL",
+      "price": 17.3
+    },
+    {
+      "ticker": "OPNT",
+      "price": 15.72
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AMAL",
+      "price": 17.265
+    },
+    {
+      "ticker": "OPNT",
+      "price": 15.7
+    }
+  ]
+}

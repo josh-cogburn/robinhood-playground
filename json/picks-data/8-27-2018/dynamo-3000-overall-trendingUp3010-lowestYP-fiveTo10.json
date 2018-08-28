@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "RDVT",
+      "price": 7.5261
+    },
+    {
+      "ticker": "JNCE",
+      "price": 7.96
+    }
+  ],
+  "260": [
+    {
+      "ticker": "RDVT",
+      "price": 7.5101
+    },
+    {
+      "ticker": "JNCE",
+      "price": 8.1264
+    }
+  ],
+  "351": [
+    {
+      "ticker": "RDVT",
+      "price": 7.6
+    },
+    {
+      "ticker": "JNCE",
+      "price": 8.07
+    }
+  ],
+  "381": [
+    {
+      "ticker": "RDVT",
+      "price": 7.6
+    },
+    {
+      "ticker": "JNCE",
+      "price": 8.08
+    }
+  ]
+}

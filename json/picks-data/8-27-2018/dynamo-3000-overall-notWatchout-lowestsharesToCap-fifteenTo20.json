@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "IRDM",
+      "price": 19.6001
+    },
+    {
+      "ticker": "YXI",
+      "price": 19.391
+    }
+  ],
+  "260": [
+    {
+      "ticker": "IRDM",
+      "price": 19.4
+    },
+    {
+      "ticker": "YXI",
+      "price": 19.44
+    }
+  ],
+  "351": [
+    {
+      "ticker": "IRDM",
+      "price": 19.5674
+    },
+    {
+      "ticker": "BPMP",
+      "price": 19.96
+    }
+  ],
+  "381": [
+    {
+      "ticker": "IRDM",
+      "price": 19.625
+    },
+    {
+      "ticker": "BPMP",
+      "price": 19.85
+    }
+  ]
+}

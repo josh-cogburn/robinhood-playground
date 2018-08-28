@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "SE",
+      "price": 15.085
+    },
+    {
+      "ticker": "FLY",
+      "price": 15.23
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SE",
+      "price": 15.065
+    },
+    {
+      "ticker": "FLY",
+      "price": 15.25
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SE",
+      "price": 15.135
+    },
+    {
+      "ticker": "FLY",
+      "price": 15.09
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SE",
+      "price": 15.1975
+    },
+    {
+      "ticker": "FLY",
+      "price": 15.08
+    }
+  ]
+}

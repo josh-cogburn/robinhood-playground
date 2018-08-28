@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "CRON",
+      "price": 12.0101
+    },
+    {
+      "ticker": "DZSI",
+      "price": 10.2
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CLF",
+      "price": 10.08
+    },
+    {
+      "ticker": "CRON",
+      "price": 12.4053
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CLF",
+      "price": 10.175
+    },
+    {
+      "ticker": "CRON",
+      "price": 11.81
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CLF",
+      "price": 10.15
+    },
+    {
+      "ticker": "DZSI",
+      "price": 10.22
+    }
+  ]
+}

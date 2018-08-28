@@ -1,0 +1,58 @@
+{
+  "200": [
+    {
+      "ticker": "CARV",
+      "price": 5.7581
+    },
+    {
+      "ticker": "UXIN",
+      "price": 6.25
+    },
+    {
+      "ticker": "LONE",
+      "price": 9.215
+    }
+  ],
+  "300": [
+    {
+      "ticker": "CARV",
+      "price": 6.01
+    },
+    {
+      "ticker": "UXIN",
+      "price": 6.26
+    },
+    {
+      "ticker": "LONE",
+      "price": 9.21
+    }
+  ],
+  "380": [
+    {
+      "ticker": "CARV",
+      "price": 5.7883
+    },
+    {
+      "ticker": "UXIN",
+      "price": 6.225
+    },
+    {
+      "ticker": "LONE",
+      "price": 9.19
+    }
+  ],
+  "600": [
+    {
+      "ticker": "CARV",
+      "price": 5.65
+    },
+    {
+      "ticker": "UXIN",
+      "price": 6.21
+    },
+    {
+      "ticker": "LONE",
+      "price": 9.2
+    }
+  ]
+}

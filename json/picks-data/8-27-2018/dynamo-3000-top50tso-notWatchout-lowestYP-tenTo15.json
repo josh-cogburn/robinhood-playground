@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "GE",
+      "price": 12.7047
+    },
+    {
+      "ticker": "JP",
+      "price": 13.85
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GE",
+      "price": 12.715
+    },
+    {
+      "ticker": "JP",
+      "price": 13.89
+    }
+  ],
+  "351": [
+    {
+      "ticker": "GE",
+      "price": 12.745
+    },
+    {
+      "ticker": "JP",
+      "price": 13.885
+    }
+  ],
+  "381": [
+    {
+      "ticker": "UGP",
+      "price": 10.625
+    },
+    {
+      "ticker": "GE",
+      "price": 12.7668
+    }
+  ]
+}

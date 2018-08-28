@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "KT",
+      "price": 13.705
+    },
+    {
+      "ticker": "NHS",
+      "price": 10.98
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PMO",
+      "price": 11.7199
+    },
+    {
+      "ticker": "MUC",
+      "price": 13.12
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NFJ",
+      "price": 13.168
+    },
+    {
+      "ticker": "CLM",
+      "price": 14.25
+    }
+  ],
+  "381": [
+    {
+      "ticker": "NXJ",
+      "price": 13.14
+    },
+    {
+      "ticker": "SPFF",
+      "price": 12.0301
+    }
+  ]
+}

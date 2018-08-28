@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "AFTY",
+      "price": 15.15
+    },
+    {
+      "ticker": "DJCI",
+      "price": 15.35
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AFTY",
+      "price": 15.15
+    },
+    {
+      "ticker": "AIF",
+      "price": 15.535
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AFTY",
+      "price": 15.15
+    },
+    {
+      "ticker": "QTRX",
+      "price": 14.915
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AFTY",
+      "price": 15.15
+    },
+    {
+      "ticker": "NUW",
+      "price": 15.2237
+    }
+  ]
+}

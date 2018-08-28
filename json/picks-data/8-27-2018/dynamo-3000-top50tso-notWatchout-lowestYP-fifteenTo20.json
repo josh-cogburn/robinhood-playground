@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "TEO",
+      "price": 18.015
+    },
+    {
+      "ticker": "AZUL",
+      "price": 16.53
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TEO",
+      "price": 18.045
+    },
+    {
+      "ticker": "AZUL",
+      "price": 16.54
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AZUL",
+      "price": 16.605
+    },
+    {
+      "ticker": "KEN",
+      "price": 15.71
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AZUL",
+      "price": 16.61
+    },
+    {
+      "ticker": "KEN",
+      "price": 15.71
+    }
+  ]
+}

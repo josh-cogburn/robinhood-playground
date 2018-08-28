@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "LMFA",
+      "price": 0.42
+    },
+    {
+      "ticker": "EARS",
+      "price": 0.2792
+    }
+  ],
+  "260": [
+    {
+      "ticker": "EARS",
+      "price": 0.2795
+    },
+    {
+      "ticker": "AMMA",
+      "price": 0.3695
+    }
+  ],
+  "351": [
+    {
+      "ticker": "EARS",
+      "price": 0.2791
+    },
+    {
+      "ticker": "AMMA",
+      "price": 0.3699
+    }
+  ],
+  "381": [
+    {
+      "ticker": "EARS",
+      "price": 0.2791
+    },
+    {
+      "ticker": "AMMA",
+      "price": 0.3687
+    }
+  ]
+}

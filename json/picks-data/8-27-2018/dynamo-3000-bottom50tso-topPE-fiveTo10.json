@@ -1,0 +1,58 @@
+{
+  "200": [
+    {
+      "ticker": "ONDK",
+      "price": 8.29
+    },
+    {
+      "ticker": "METC",
+      "price": 8.5
+    },
+    {
+      "ticker": "TSRI",
+      "price": 8.35
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ONDK",
+      "price": 8.28
+    },
+    {
+      "ticker": "TSRI",
+      "price": 8.35
+    },
+    {
+      "ticker": "FRAN",
+      "price": 6.57
+    }
+  ],
+  "351": [
+    {
+      "ticker": "ONDK",
+      "price": 8.22
+    },
+    {
+      "ticker": "TTS",
+      "price": 7.675
+    },
+    {
+      "ticker": "FRAN",
+      "price": 6.625
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MITK",
+      "price": 8.55
+    },
+    {
+      "ticker": "TTS",
+      "price": 7.55
+    },
+    {
+      "ticker": "FRAN",
+      "price": 6.6193
+    }
+  ]
+}

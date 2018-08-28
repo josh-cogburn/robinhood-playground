@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "MEET",
+      "price": 4.94
+    },
+    {
+      "ticker": "CHMA",
+      "price": 2.35
+    }
+  ],
+  "260": [
+    {
+      "ticker": "MEET",
+      "price": 4.8601
+    },
+    {
+      "ticker": "BDR",
+      "price": 1.62
+    }
+  ],
+  "351": [
+    {
+      "ticker": "IGC",
+      "price": 1.2847
+    },
+    {
+      "ticker": "BDR",
+      "price": 1.67
+    }
+  ],
+  "381": [
+    {
+      "ticker": "IGC",
+      "price": 1.43
+    },
+    {
+      "ticker": "BDR",
+      "price": 1.6462
+    }
+  ]
+}

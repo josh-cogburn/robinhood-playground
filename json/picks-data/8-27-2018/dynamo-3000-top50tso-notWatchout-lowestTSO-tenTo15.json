@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "FCX",
+      "price": 14.745
+    },
+    {
+      "ticker": "GE",
+      "price": 12.7047
+    }
+  ],
+  "260": [
+    {
+      "ticker": "DZSI",
+      "price": 10.19
+    },
+    {
+      "ticker": "GFN",
+      "price": 14
+    }
+  ],
+  "351": [
+    {
+      "ticker": "LAKE",
+      "price": 13
+    },
+    {
+      "ticker": "ADAP",
+      "price": 10.4299
+    }
+  ],
+  "381": [
+    {
+      "ticker": "VALE",
+      "price": 13.585
+    },
+    {
+      "ticker": "HMTA",
+      "price": 13.5397
+    }
+  ]
+}

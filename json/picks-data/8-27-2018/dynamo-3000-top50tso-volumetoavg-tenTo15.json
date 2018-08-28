@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "FCX",
+      "price": 14.745
+    },
+    {
+      "ticker": "CCXI",
+      "price": 11.88
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SELB",
+      "price": 13.12
+    },
+    {
+      "ticker": "JP",
+      "price": 13.89
+    }
+  ],
+  "351": [
+    {
+      "ticker": "LAKE",
+      "price": 13
+    },
+    {
+      "ticker": "NUGT",
+      "price": 14.92
+    }
+  ],
+  "381": [
+    {
+      "ticker": "VALE",
+      "price": 13.585
+    },
+    {
+      "ticker": "CRESY",
+      "price": 14.86
+    }
+  ]
+}

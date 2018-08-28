@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "HOPE",
+      "price": 17.7
+    },
+    {
+      "ticker": "FPE",
+      "price": 19.221
+    }
+  ],
+  "260": [
+    {
+      "ticker": "BSCP",
+      "price": 19.9577
+    },
+    {
+      "ticker": "BIZD",
+      "price": 17.27
+    }
+  ],
+  "351": [
+    {
+      "ticker": "PHB",
+      "price": 18.5317
+    },
+    {
+      "ticker": "BIZD",
+      "price": 17.2707
+    }
+  ],
+  "381": [
+    {
+      "ticker": "HBAN",
+      "price": 16.265
+    },
+    {
+      "ticker": "MDR",
+      "price": 19.76
+    }
+  ]
+}

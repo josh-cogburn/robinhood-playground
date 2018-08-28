@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "TOCA",
+      "price": 8.2
+    },
+    {
+      "ticker": "IPIC",
+      "price": 6.8771
+    }
+  ],
+  "260": [
+    {
+      "ticker": "IPIC",
+      "price": 6.8771
+    },
+    {
+      "ticker": "BBW",
+      "price": 8.1
+    }
+  ],
+  "351": [
+    {
+      "ticker": "TOCA",
+      "price": 8.31
+    },
+    {
+      "ticker": "IPIC",
+      "price": 6.8771
+    }
+  ],
+  "381": [
+    {
+      "ticker": "TOCA",
+      "price": 8.3
+    },
+    {
+      "ticker": "CHRA",
+      "price": 7.01
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "MXL",
+      "price": 19.05
+    },
+    {
+      "ticker": "VSTO",
+      "price": 18
+    }
+  ],
+  "260": [
+    {
+      "ticker": "HBI",
+      "price": 17.585
+    },
+    {
+      "ticker": "TITN",
+      "price": 15.66
+    }
+  ],
+  "351": [
+    {
+      "ticker": "ATV",
+      "price": 19.56
+    },
+    {
+      "ticker": "SCOR",
+      "price": 18.98
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ATV",
+      "price": 19.56
+    },
+    {
+      "ticker": "VSTO",
+      "price": 17.975
+    }
+  ]
+}

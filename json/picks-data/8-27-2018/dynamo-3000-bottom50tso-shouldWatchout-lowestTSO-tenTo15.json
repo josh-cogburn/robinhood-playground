@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "CDZI",
+      "price": 11.65
+    },
+    {
+      "ticker": "VERI",
+      "price": 10.11
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CDZI",
+      "price": 11.7
+    },
+    {
+      "ticker": "LBY",
+      "price": 10.63
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CDZI",
+      "price": 11.6
+    },
+    {
+      "ticker": "LBY",
+      "price": 10.7
+    }
+  ],
+  "381": [
+    {
+      "ticker": "LBY",
+      "price": 10.52
+    },
+    {
+      "ticker": "CDZI",
+      "price": 11.75
+    }
+  ]
+}

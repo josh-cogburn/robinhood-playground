@@ -1,0 +1,58 @@
+{
+  "200": [
+    {
+      "ticker": "CY",
+      "price": 16.95
+    },
+    {
+      "ticker": "ERJ",
+      "price": 19.37
+    },
+    {
+      "ticker": "DPLO",
+      "price": 19.81
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CY",
+      "price": 17.12
+    },
+    {
+      "ticker": "ERJ",
+      "price": 19.4
+    },
+    {
+      "ticker": "DPLO",
+      "price": 19.56
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AVNW",
+      "price": 16.0701
+    },
+    {
+      "ticker": "CY",
+      "price": 17.025
+    },
+    {
+      "ticker": "ERJ",
+      "price": 19.5
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AVNW",
+      "price": 15.54
+    },
+    {
+      "ticker": "CY",
+      "price": 17.02
+    },
+    {
+      "ticker": "ERJ",
+      "price": 19.495
+    }
+  ]
+}

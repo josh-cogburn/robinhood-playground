@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "KT",
+      "price": 13.705
+    },
+    {
+      "ticker": "BIF",
+      "price": 11.23
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PMO",
+      "price": 11.7199
+    },
+    {
+      "ticker": "BFY",
+      "price": 12.71
+    }
+  ],
+  "351": [
+    {
+      "ticker": "BFZ",
+      "price": 12.68
+    },
+    {
+      "ticker": "NFJ",
+      "price": 13.168
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MYJ",
+      "price": 13.45
+    },
+    {
+      "ticker": "NXJ",
+      "price": 13.14
+    }
+  ]
+}

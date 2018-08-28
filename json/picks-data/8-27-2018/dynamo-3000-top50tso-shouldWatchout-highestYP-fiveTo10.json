@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "VSTM",
+      "price": 9.7707
+    },
+    {
+      "ticker": "DEST",
+      "price": 5.125
+    }
+  ],
+  "260": [
+    {
+      "ticker": "VSTM",
+      "price": 9.7705
+    },
+    {
+      "ticker": "BOM",
+      "price": 9.92
+    }
+  ],
+  "351": [
+    {
+      "ticker": "IDRA",
+      "price": 9.62
+    },
+    {
+      "ticker": "BOM",
+      "price": 9.91
+    }
+  ],
+  "381": [
+    {
+      "ticker": "IDRA",
+      "price": 9.645
+    },
+    {
+      "ticker": "EDRY",
+      "price": 7.25
+    }
+  ]
+}

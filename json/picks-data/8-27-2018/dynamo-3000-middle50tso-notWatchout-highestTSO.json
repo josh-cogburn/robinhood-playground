@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "JRJC",
+      "price": 1.81
+    },
+    {
+      "ticker": "HCFT",
+      "price": 3.57
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NXE",
+      "price": 1.92
+    },
+    {
+      "ticker": "SGBX",
+      "price": 3.85
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SFUN",
+      "price": 3.11
+    },
+    {
+      "ticker": "RLGT",
+      "price": 4.32
+    }
+  ],
+  "381": [
+    {
+      "ticker": "OESX",
+      "price": 0.9825
+    },
+    {
+      "ticker": "AVDL",
+      "price": 4.42
+    }
+  ]
+}

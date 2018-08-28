@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "SPRO",
+      "price": 11.23
+    },
+    {
+      "ticker": "PAI",
+      "price": 13.9
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PAI",
+      "price": 13.9
+    },
+    {
+      "ticker": "NKG",
+      "price": 11.2675
+    }
+  ],
+  "351": [
+    {
+      "ticker": "ZF",
+      "price": 10.71
+    },
+    {
+      "ticker": "NBH",
+      "price": 13.67
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ZF",
+      "price": 10.7
+    },
+    {
+      "ticker": "MYF",
+      "price": 13.941
+    }
+  ]
+}

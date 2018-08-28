@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "NUGT",
+      "price": 14.94
+    },
+    {
+      "ticker": "CBIO",
+      "price": 11.32
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NUGT",
+      "price": 14.9
+    },
+    {
+      "ticker": "UCTT",
+      "price": 14.5999
+    }
+  ],
+  "351": [
+    {
+      "ticker": "PRTA",
+      "price": 14.98
+    },
+    {
+      "ticker": "NUGT",
+      "price": 14.92
+    }
+  ],
+  "381": [
+    {
+      "ticker": "PRTA",
+      "price": 14.97
+    },
+    {
+      "ticker": "NUGT",
+      "price": 14.88
+    }
+  ]
+}

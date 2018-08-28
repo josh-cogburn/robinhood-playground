@@ -1,0 +1,58 @@
+{
+  "200": [
+    {
+      "ticker": "NTWK",
+      "price": 5.85
+    },
+    {
+      "ticker": "AGFS",
+      "price": 6.55
+    },
+    {
+      "ticker": "LTRX",
+      "price": 6.335
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AGFS",
+      "price": 6.5199
+    },
+    {
+      "ticker": "LTRX",
+      "price": 6.15
+    },
+    {
+      "ticker": "PCYG",
+      "price": 8.2
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AGFS",
+      "price": 6.55
+    },
+    {
+      "ticker": "LTRX",
+      "price": 6.1899
+    },
+    {
+      "ticker": "IEC",
+      "price": 5.55
+    }
+  ],
+  "381": [
+    {
+      "ticker": "LTRX",
+      "price": 6.1835
+    },
+    {
+      "ticker": "IEC",
+      "price": 5.55
+    },
+    {
+      "ticker": "AXTI",
+      "price": 7.7485
+    }
+  ]
+}

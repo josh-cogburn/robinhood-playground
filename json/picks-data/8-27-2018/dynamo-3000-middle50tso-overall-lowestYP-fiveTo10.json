@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "DRIP",
+      "price": 6.025
+    },
+    {
+      "ticker": "CMT",
+      "price": 9.66
+    }
+  ],
+  "260": [
+    {
+      "ticker": "MRAM",
+      "price": 8.71
+    },
+    {
+      "ticker": "MAG",
+      "price": 8.05
+    }
+  ],
+  "351": [
+    {
+      "ticker": "DRIP",
+      "price": 6.0152
+    },
+    {
+      "ticker": "PTGX",
+      "price": 9.99
+    }
+  ],
+  "381": [
+    {
+      "ticker": "WTID",
+      "price": 7.335
+    },
+    {
+      "ticker": "CMT",
+      "price": 9.66
+    }
+  ]
+}

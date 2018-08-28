@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "RGSE",
+      "price": 0.505
+    },
+    {
+      "ticker": "ATAI",
+      "price": 1.68
+    }
+  ],
+  "260": [
+    {
+      "ticker": "RGSE",
+      "price": 0.444
+    },
+    {
+      "ticker": "ATAI",
+      "price": 1.68
+    }
+  ],
+  "351": [
+    {
+      "ticker": "RGSE",
+      "price": 0.455
+    },
+    {
+      "ticker": "EGLT",
+      "price": 0.3611
+    }
+  ],
+  "381": [
+    {
+      "ticker": "RGSE",
+      "price": 0.4578
+    },
+    {
+      "ticker": "UAVS",
+      "price": 1.9
+    }
+  ]
+}

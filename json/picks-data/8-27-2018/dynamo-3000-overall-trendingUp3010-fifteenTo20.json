@@ -1,0 +1,90 @@
+{
+  "200": [
+    {
+      "ticker": "GME",
+      "price": 15.075
+    },
+    {
+      "ticker": "IRDM",
+      "price": 19.6001
+    },
+    {
+      "ticker": "SONO",
+      "price": 19.26
+    },
+    {
+      "ticker": "UBX",
+      "price": 17.4235
+    },
+    {
+      "ticker": "AOI",
+      "price": 18.4
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GME",
+      "price": 15.025
+    },
+    {
+      "ticker": "IRDM",
+      "price": 19.4
+    },
+    {
+      "ticker": "UBX",
+      "price": 17.02
+    },
+    {
+      "ticker": "SONO",
+      "price": 19.3
+    },
+    {
+      "ticker": "LQDA",
+      "price": 15.95
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SONO",
+      "price": 18.8
+    },
+    {
+      "ticker": "IRDM",
+      "price": 19.5674
+    },
+    {
+      "ticker": "UBX",
+      "price": 17.06
+    },
+    {
+      "ticker": "NGVC",
+      "price": 18.46
+    },
+    {
+      "ticker": "LQDA",
+      "price": 16.03
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SONO",
+      "price": 18.91
+    },
+    {
+      "ticker": "UBX",
+      "price": 17.02
+    },
+    {
+      "ticker": "LQDA",
+      "price": 15.7
+    },
+    {
+      "ticker": "IRDM",
+      "price": 19.625
+    },
+    {
+      "ticker": "NGVC",
+      "price": 18.35
+    }
+  ]
+}

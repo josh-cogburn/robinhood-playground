@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "IDRA",
+      "price": 10.0297
+    },
+    {
+      "ticker": "CVGI",
+      "price": 10.05
+    }
+  ],
+  "260": [
+    {
+      "ticker": "IDRA",
+      "price": 10.08
+    },
+    {
+      "ticker": "CVGI",
+      "price": 10.06
+    }
+  ],
+  "351": [
+    {
+      "ticker": "PDFS",
+      "price": 10.14
+    },
+    {
+      "ticker": "TORC",
+      "price": 10.47
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CLUB",
+      "price": 10.075
+    },
+    {
+      "ticker": "PDFS",
+      "price": 10.2
+    }
+  ]
+}

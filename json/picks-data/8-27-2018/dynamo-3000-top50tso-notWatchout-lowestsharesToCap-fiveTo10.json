@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "IMGN",
+      "price": 9.77
+    },
+    {
+      "ticker": "RCM",
+      "price": 9.62
+    }
+  ],
+  "260": [
+    {
+      "ticker": "IMGN",
+      "price": 9.8533
+    },
+    {
+      "ticker": "RCM",
+      "price": 9.62
+    }
+  ],
+  "351": [
+    {
+      "ticker": "IMGN",
+      "price": 9.85
+    },
+    {
+      "ticker": "RCM",
+      "price": 9.51
+    }
+  ],
+  "381": [
+    {
+      "ticker": "IMGN",
+      "price": 9.85
+    },
+    {
+      "ticker": "RCM",
+      "price": 9.485
+    }
+  ]
+}

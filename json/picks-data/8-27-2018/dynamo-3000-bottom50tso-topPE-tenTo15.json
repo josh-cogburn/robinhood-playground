@@ -1,0 +1,58 @@
+{
+  "200": [
+    {
+      "ticker": "LOCO",
+      "price": 12.3
+    },
+    {
+      "ticker": "CLAR",
+      "price": 10.25
+    },
+    {
+      "ticker": "REI",
+      "price": 11.86
+    }
+  ],
+  "260": [
+    {
+      "ticker": "LOCO",
+      "price": 12.25
+    },
+    {
+      "ticker": "REI",
+      "price": 11.691
+    },
+    {
+      "ticker": "MMLP",
+      "price": 11.55
+    }
+  ],
+  "351": [
+    {
+      "ticker": "GME",
+      "price": 14.77
+    },
+    {
+      "ticker": "HRTG",
+      "price": 14.8
+    },
+    {
+      "ticker": "LOCO",
+      "price": 12.15
+    }
+  ],
+  "381": [
+    {
+      "ticker": "GME",
+      "price": 14.62
+    },
+    {
+      "ticker": "HRTG",
+      "price": 14.71
+    },
+    {
+      "ticker": "LOCO",
+      "price": 12.2
+    }
+  ]
+}

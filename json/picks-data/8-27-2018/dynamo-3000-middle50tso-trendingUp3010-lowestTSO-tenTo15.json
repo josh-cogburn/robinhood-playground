@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "HYT",
+      "price": 10.67
+    },
+    {
+      "ticker": "RIVE",
+      "price": 13.899
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GHY",
+      "price": 13.79
+    },
+    {
+      "ticker": "HNW",
+      "price": 14.6855
+    }
+  ],
+  "351": [
+    {
+      "ticker": "BHK",
+      "price": 12.88
+    },
+    {
+      "ticker": "NTC",
+      "price": 11.65
+    }
+  ],
+  "381": [
+    {
+      "ticker": "NFJ",
+      "price": 13.1535
+    },
+    {
+      "ticker": "MLPX",
+      "price": 14.0546
+    }
+  ]
+}

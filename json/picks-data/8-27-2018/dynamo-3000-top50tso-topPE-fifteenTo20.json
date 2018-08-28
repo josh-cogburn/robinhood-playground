@@ -1,0 +1,58 @@
+{
+  "200": [
+    {
+      "ticker": "SIEB",
+      "price": 15.9984
+    },
+    {
+      "ticker": "FLY",
+      "price": 15.23
+    },
+    {
+      "ticker": "AMSWA",
+      "price": 18.12
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CY",
+      "price": 17.12
+    },
+    {
+      "ticker": "SIEB",
+      "price": 15.9189
+    },
+    {
+      "ticker": "FLY",
+      "price": 15.25
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CY",
+      "price": 17.025
+    },
+    {
+      "ticker": "SIEB",
+      "price": 15.9
+    },
+    {
+      "ticker": "AMSWA",
+      "price": 18.69
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SIEB",
+      "price": 15.9875
+    },
+    {
+      "ticker": "AMSWA",
+      "price": 18.91
+    },
+    {
+      "ticker": "MOD",
+      "price": 18.175
+    }
+  ]
+}

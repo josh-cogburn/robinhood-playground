@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "CDZI",
+      "price": 11.65
+    },
+    {
+      "ticker": "PAI",
+      "price": 13.9
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CDZI",
+      "price": 11.7
+    },
+    {
+      "ticker": "ECA",
+      "price": 12.9919
+    }
+  ],
+  "351": [
+    {
+      "ticker": "GME",
+      "price": 14.77
+    },
+    {
+      "ticker": "EHIC",
+      "price": 12.715
+    }
+  ],
+  "381": [
+    {
+      "ticker": "GME",
+      "price": 14.62
+    },
+    {
+      "ticker": "VLY",
+      "price": 12.035
+    }
+  ]
+}

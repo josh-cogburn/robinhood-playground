@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "NLS",
+      "price": 14.8499
+    },
+    {
+      "ticker": "ESND",
+      "price": 14.85
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NLS",
+      "price": 14.9
+    },
+    {
+      "ticker": "ESND",
+      "price": 14.82
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NLS",
+      "price": 14.9
+    },
+    {
+      "ticker": "ESND",
+      "price": 14.67
+    }
+  ],
+  "381": [
+    {
+      "ticker": "NLS",
+      "price": 14.925
+    },
+    {
+      "ticker": "ESND",
+      "price": 14.645
+    }
+  ]
+}

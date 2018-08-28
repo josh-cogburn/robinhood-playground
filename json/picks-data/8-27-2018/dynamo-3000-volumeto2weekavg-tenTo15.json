@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "CDZI",
+      "price": 11.65
+    },
+    {
+      "ticker": "EIDX",
+      "price": 13.99
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CDZI",
+      "price": 11.7
+    },
+    {
+      "ticker": "LBY",
+      "price": 10.63
+    }
+  ],
+  "351": [
+    {
+      "ticker": "GME",
+      "price": 14.77
+    },
+    {
+      "ticker": "CDZI",
+      "price": 11.6
+    }
+  ],
+  "381": [
+    {
+      "ticker": "GME",
+      "price": 14.62
+    },
+    {
+      "ticker": "LBY",
+      "price": 10.52
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "TV",
+      "price": 18.68
+    },
+    {
+      "ticker": "TGH",
+      "price": 15.3
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SGMO",
+      "price": 15.55
+    },
+    {
+      "ticker": "YPF",
+      "price": 15.84
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NGE",
+      "price": 19.175
+    },
+    {
+      "ticker": "UBOT",
+      "price": 19.0228
+    }
+  ],
+  "381": [
+    {
+      "ticker": "DM",
+      "price": 16.9
+    },
+    {
+      "ticker": "STML",
+      "price": 16.05
+    }
+  ]
+}

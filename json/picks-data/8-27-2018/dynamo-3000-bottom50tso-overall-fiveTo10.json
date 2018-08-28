@@ -1,0 +1,90 @@
+{
+  "200": [
+    {
+      "ticker": "TOCA",
+      "price": 8.2
+    },
+    {
+      "ticker": "IPIC",
+      "price": 6.8771
+    },
+    {
+      "ticker": "CHRA",
+      "price": 6.905
+    },
+    {
+      "ticker": "BBW",
+      "price": 8.05
+    },
+    {
+      "ticker": "JNCE",
+      "price": 7.96
+    }
+  ],
+  "260": [
+    {
+      "ticker": "IPIC",
+      "price": 6.8771
+    },
+    {
+      "ticker": "SSC",
+      "price": 5.22
+    },
+    {
+      "ticker": "BBW",
+      "price": 8.1
+    },
+    {
+      "ticker": "DXR",
+      "price": 5.12
+    },
+    {
+      "ticker": "TOCA",
+      "price": 8.38
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SSC",
+      "price": 5.02
+    },
+    {
+      "ticker": "TOCA",
+      "price": 8.31
+    },
+    {
+      "ticker": "IPIC",
+      "price": 6.8771
+    },
+    {
+      "ticker": "BBW",
+      "price": 8.05
+    },
+    {
+      "ticker": "DXR",
+      "price": 5.12
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CNAT",
+      "price": 5.01
+    },
+    {
+      "ticker": "TOCA",
+      "price": 8.3
+    },
+    {
+      "ticker": "DXR",
+      "price": 5.08
+    },
+    {
+      "ticker": "CHRA",
+      "price": 7.01
+    },
+    {
+      "ticker": "BBW",
+      "price": 8.05
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "TOCA",
+      "price": 8.2
+    },
+    {
+      "ticker": "MRNS",
+      "price": 6.35
+    }
+  ],
+  "260": [
+    {
+      "ticker": "IPIC",
+      "price": 6.8771
+    },
+    {
+      "ticker": "STG",
+      "price": 5.8955
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SSC",
+      "price": 5.02
+    },
+    {
+      "ticker": "STG",
+      "price": 7.61
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CNAT",
+      "price": 5.01
+    },
+    {
+      "ticker": "STG",
+      "price": 6.3699
+    }
+  ]
+}

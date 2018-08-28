@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "VSTM",
+      "price": 9.7707
+    },
+    {
+      "ticker": "TRXC",
+      "price": 5.19
+    }
+  ],
+  "260": [
+    {
+      "ticker": "VSTM",
+      "price": 9.7705
+    },
+    {
+      "ticker": "TRXC",
+      "price": 5.23
+    }
+  ],
+  "351": [
+    {
+      "ticker": "IDRA",
+      "price": 9.62
+    },
+    {
+      "ticker": "VSTM",
+      "price": 9.715
+    }
+  ],
+  "381": [
+    {
+      "ticker": "IDRA",
+      "price": 9.645
+    },
+    {
+      "ticker": "VSTM",
+      "price": 9.66
+    }
+  ]
+}

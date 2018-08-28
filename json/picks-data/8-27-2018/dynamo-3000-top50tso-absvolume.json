@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "OTIC",
+      "price": 2.95
+    },
+    {
+      "ticker": "ATAI",
+      "price": 1.68
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SBGL",
+      "price": 2.455
+    },
+    {
+      "ticker": "ATAI",
+      "price": 1.68
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SBGL",
+      "price": 2.4601
+    },
+    {
+      "ticker": "ATAI",
+      "price": 2.31
+    }
+  ],
+  "381": [
+    {
+      "ticker": "RGLS",
+      "price": 0.3079
+    },
+    {
+      "ticker": "ATAI",
+      "price": 2.082
+    }
+  ]
+}

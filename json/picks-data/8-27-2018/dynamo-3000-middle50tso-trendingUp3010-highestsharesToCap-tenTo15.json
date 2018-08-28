@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "SEA",
+      "price": 10.2
+    },
+    {
+      "ticker": "RMT",
+      "price": 10.65
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NHS",
+      "price": 10.9742
+    },
+    {
+      "ticker": "NKG",
+      "price": 11.2675
+    }
+  ],
+  "351": [
+    {
+      "ticker": "HYT",
+      "price": 10.68
+    },
+    {
+      "ticker": "ZF",
+      "price": 10.71
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ZF",
+      "price": 10.7
+    },
+    {
+      "ticker": "NHS",
+      "price": 10.9741
+    }
+  ]
+}

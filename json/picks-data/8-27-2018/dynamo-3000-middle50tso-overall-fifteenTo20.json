@@ -1,0 +1,90 @@
+{
+  "200": [
+    {
+      "ticker": "ETV",
+      "price": 16.14
+    },
+    {
+      "ticker": "BSCP",
+      "price": 19.9501
+    },
+    {
+      "ticker": "TSLF",
+      "price": 16.85
+    },
+    {
+      "ticker": "PDBC",
+      "price": 18.0163
+    },
+    {
+      "ticker": "SMB",
+      "price": 17.2701
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CHAP",
+      "price": 18.2
+    },
+    {
+      "ticker": "DIAL",
+      "price": 19.22
+    },
+    {
+      "ticker": "FNWB",
+      "price": 16.75
+    },
+    {
+      "ticker": "CPER",
+      "price": 17.1
+    },
+    {
+      "ticker": "MXF",
+      "price": 16.42
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SHBI",
+      "price": 18.9
+    },
+    {
+      "ticker": "HBAN",
+      "price": 16.26
+    },
+    {
+      "ticker": "CNNE",
+      "price": 19.7
+    },
+    {
+      "ticker": "QTRX",
+      "price": 14.915
+    },
+    {
+      "ticker": "PMD",
+      "price": 19.78
+    }
+  ],
+  "381": [
+    {
+      "ticker": "WPM",
+      "price": 18.145
+    },
+    {
+      "ticker": "BATT",
+      "price": 15.81
+    },
+    {
+      "ticker": "DIAL",
+      "price": 19.22
+    },
+    {
+      "ticker": "CGBD",
+      "price": 17.04
+    },
+    {
+      "ticker": "CPER",
+      "price": 17.1
+    }
+  ]
+}

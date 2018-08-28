@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "TRXC",
+      "price": 5.19
+    },
+    {
+      "ticker": "NIHD",
+      "price": 5.46
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TRXC",
+      "price": 5.23
+    },
+    {
+      "ticker": "NIHD",
+      "price": 5.4
+    }
+  ],
+  "351": [
+    {
+      "ticker": "TRXC",
+      "price": 5.215
+    },
+    {
+      "ticker": "NIHD",
+      "price": 5.355
+    }
+  ],
+  "381": [
+    {
+      "ticker": "TRXC",
+      "price": 5.1995
+    },
+    {
+      "ticker": "NIHD",
+      "price": 5.3001
+    }
+  ]
+}

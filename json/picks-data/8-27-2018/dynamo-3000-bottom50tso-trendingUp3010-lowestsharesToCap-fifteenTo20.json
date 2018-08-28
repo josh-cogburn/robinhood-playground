@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "IRDM",
+      "price": 19.6001
+    },
+    {
+      "ticker": "UA",
+      "price": 19.19
+    }
+  ],
+  "260": [
+    {
+      "ticker": "IRDM",
+      "price": 19.4
+    },
+    {
+      "ticker": "UA",
+      "price": 19.15
+    }
+  ],
+  "351": [
+    {
+      "ticker": "IRDM",
+      "price": 19.5674
+    },
+    {
+      "ticker": "CRCM",
+      "price": 19.4031
+    }
+  ],
+  "381": [
+    {
+      "ticker": "IRDM",
+      "price": 19.625
+    },
+    {
+      "ticker": "CRCM",
+      "price": 19.38
+    }
+  ]
+}

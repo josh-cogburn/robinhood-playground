@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "NYNY",
+      "price": 12.5
+    },
+    {
+      "ticker": "ZBIO",
+      "price": 13.655
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NYNY",
+      "price": 12.4
+    },
+    {
+      "ticker": "CSS",
+      "price": 14.55
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NYNY",
+      "price": 12.269
+    },
+    {
+      "ticker": "CSS",
+      "price": 14.58
+    }
+  ],
+  "381": [
+    {
+      "ticker": "NYNY",
+      "price": 12.35
+    },
+    {
+      "ticker": "CSS",
+      "price": 14.5
+    }
+  ]
+}

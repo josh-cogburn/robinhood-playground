@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "GME",
+      "price": 15.075
+    },
+    {
+      "ticker": "IRDM",
+      "price": 19.6001
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GME",
+      "price": 15.025
+    },
+    {
+      "ticker": "IRDM",
+      "price": 19.4
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SONO",
+      "price": 18.8
+    },
+    {
+      "ticker": "IRDM",
+      "price": 19.5674
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SONO",
+      "price": 18.91
+    },
+    {
+      "ticker": "UBX",
+      "price": 17.02
+    }
+  ]
+}

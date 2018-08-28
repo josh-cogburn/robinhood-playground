@@ -1,0 +1,90 @@
+{
+  "200": [
+    {
+      "ticker": "TV",
+      "price": 18.68
+    },
+    {
+      "ticker": "JCAP",
+      "price": 19.15
+    },
+    {
+      "ticker": "MFC",
+      "price": 18.805
+    },
+    {
+      "ticker": "PAAS",
+      "price": 16.145
+    },
+    {
+      "ticker": "SE",
+      "price": 15.085
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PAAS",
+      "price": 16.13
+    },
+    {
+      "ticker": "TV",
+      "price": 18.675
+    },
+    {
+      "ticker": "MFC",
+      "price": 18.783
+    },
+    {
+      "ticker": "BRY",
+      "price": 15.65
+    },
+    {
+      "ticker": "SE",
+      "price": 15.065
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NGE",
+      "price": 19.175
+    },
+    {
+      "ticker": "CHIQ",
+      "price": 16.25
+    },
+    {
+      "ticker": "BRY",
+      "price": 15.69
+    },
+    {
+      "ticker": "PTEN",
+      "price": 17.765
+    },
+    {
+      "ticker": "CY",
+      "price": 17.025
+    }
+  ],
+  "381": [
+    {
+      "ticker": "DM",
+      "price": 16.9
+    },
+    {
+      "ticker": "PTEN",
+      "price": 17.765
+    },
+    {
+      "ticker": "PAAS",
+      "price": 16.14
+    },
+    {
+      "ticker": "CHIQ",
+      "price": 16.2622
+    },
+    {
+      "ticker": "AZRE",
+      "price": 15.94
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "LAC",
+      "price": 4.8099
+    },
+    {
+      "ticker": "ENZ",
+      "price": 4.505
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ENZ",
+      "price": 4.465
+    },
+    {
+      "ticker": "LAC",
+      "price": 4.6999
+    }
+  ],
+  "351": [
+    {
+      "ticker": "DXYN",
+      "price": 1.74
+    },
+    {
+      "ticker": "ENZ",
+      "price": 4.525
+    }
+  ],
+  "381": [
+    {
+      "ticker": "DXYN",
+      "price": 1.775
+    },
+    {
+      "ticker": "ENZ",
+      "price": 4.525
+    }
+  ]
+}

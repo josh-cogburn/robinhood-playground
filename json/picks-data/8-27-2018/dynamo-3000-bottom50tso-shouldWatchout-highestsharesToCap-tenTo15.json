@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "EXPR",
+      "price": 10.085
+    },
+    {
+      "ticker": "VERI",
+      "price": 10.11
+    }
+  ],
+  "260": [
+    {
+      "ticker": "EXPR",
+      "price": 10.05
+    },
+    {
+      "ticker": "VERI",
+      "price": 10.28
+    }
+  ],
+  "351": [
+    {
+      "ticker": "VERI",
+      "price": 10.13
+    },
+    {
+      "ticker": "TBIO",
+      "price": 10.56
+    }
+  ],
+  "381": [
+    {
+      "ticker": "LIVE",
+      "price": 10.301
+    },
+    {
+      "ticker": "VERI",
+      "price": 10.245
+    }
+  ]
+}

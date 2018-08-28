@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "AFTY",
+      "price": 15.15
+    },
+    {
+      "ticker": "SE",
+      "price": 15.085
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AFTY",
+      "price": 15.15
+    },
+    {
+      "ticker": "SE",
+      "price": 15.065
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AFTY",
+      "price": 15.15
+    },
+    {
+      "ticker": "TACT",
+      "price": 15.0877
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AFTY",
+      "price": 15.15
+    },
+    {
+      "ticker": "SE",
+      "price": 15.1975
+    }
+  ]
+}

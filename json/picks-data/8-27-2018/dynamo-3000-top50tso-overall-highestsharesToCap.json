@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "RSLS",
+      "price": 0.0715
+    },
+    {
+      "ticker": "IPCI",
+      "price": 0.2801
+    }
+  ],
+  "260": [
+    {
+      "ticker": "RSLS",
+      "price": 0.0712
+    },
+    {
+      "ticker": "IPCI",
+      "price": 0.2751
+    }
+  ],
+  "351": [
+    {
+      "ticker": "IGC",
+      "price": 1.2847
+    },
+    {
+      "ticker": "IPCI",
+      "price": 0.28
+    }
+  ],
+  "381": [
+    {
+      "ticker": "IGC",
+      "price": 1.43
+    },
+    {
+      "ticker": "IPCI",
+      "price": 0.2766
+    }
+  ]
+}

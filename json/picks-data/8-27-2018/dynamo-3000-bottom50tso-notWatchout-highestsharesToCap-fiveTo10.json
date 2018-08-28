@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "HPR",
+      "price": 5.21
+    },
+    {
+      "ticker": "NWY",
+      "price": 5.17
+    }
+  ],
+  "260": [
+    {
+      "ticker": "HPR",
+      "price": 5.17
+    },
+    {
+      "ticker": "NWY",
+      "price": 5.17
+    }
+  ],
+  "351": [
+    {
+      "ticker": "HPR",
+      "price": 5.14
+    },
+    {
+      "ticker": "FOMX",
+      "price": 5.55
+    }
+  ],
+  "381": [
+    {
+      "ticker": "HPR",
+      "price": 5.115
+    },
+    {
+      "ticker": "FOMX",
+      "price": 5.57
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "BSCP",
+      "price": 19.9501
+    },
+    {
+      "ticker": "CNNE",
+      "price": 19.73
+    }
+  ],
+  "260": [
+    {
+      "ticker": "BSCP",
+      "price": 19.9577
+    },
+    {
+      "ticker": "AGGP",
+      "price": 19.195
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CNNE",
+      "price": 19.7
+    },
+    {
+      "ticker": "MDR",
+      "price": 19.75
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MDR",
+      "price": 19.76
+    },
+    {
+      "ticker": "AGGP",
+      "price": 19.1963
+    }
+  ]
+}

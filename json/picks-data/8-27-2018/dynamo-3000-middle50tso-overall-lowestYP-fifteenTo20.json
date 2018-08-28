@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "PPC",
+      "price": 18.54
+    },
+    {
+      "ticker": "BRF",
+      "price": 17.5312
+    }
+  ],
+  "260": [
+    {
+      "ticker": "IRS",
+      "price": 15.89
+    },
+    {
+      "ticker": "SNNA",
+      "price": 16.015
+    }
+  ],
+  "351": [
+    {
+      "ticker": "ATV",
+      "price": 19.56
+    },
+    {
+      "ticker": "SCOR",
+      "price": 18.98
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SCO",
+      "price": 15.6679
+    },
+    {
+      "ticker": "ATV",
+      "price": 19.56
+    }
+  ]
+}

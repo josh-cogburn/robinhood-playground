@@ -1,0 +1,90 @@
+{
+  "200": [
+    {
+      "ticker": "GSVC",
+      "price": 7.31
+    },
+    {
+      "ticker": "GRIN",
+      "price": 9.52
+    },
+    {
+      "ticker": "HX",
+      "price": 8.31
+    },
+    {
+      "ticker": "PCYG",
+      "price": 8.2
+    },
+    {
+      "ticker": "SHLO",
+      "price": 9.34
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GSM",
+      "price": 8.48
+    },
+    {
+      "ticker": "SCX",
+      "price": 6.7
+    },
+    {
+      "ticker": "AGFS",
+      "price": 6.5199
+    },
+    {
+      "ticker": "PCYG",
+      "price": 8.2
+    },
+    {
+      "ticker": "CZZ",
+      "price": 6.9
+    }
+  ],
+  "351": [
+    {
+      "ticker": "XONE",
+      "price": 8.73
+    },
+    {
+      "ticker": "NVUS",
+      "price": 5.0354
+    },
+    {
+      "ticker": "OMEX",
+      "price": 8.995
+    },
+    {
+      "ticker": "CARV",
+      "price": 5.87
+    },
+    {
+      "ticker": "WIN",
+      "price": 5.365
+    }
+  ],
+  "381": [
+    {
+      "ticker": "WIN",
+      "price": 5.3702
+    },
+    {
+      "ticker": "TOUR",
+      "price": 8.08
+    },
+    {
+      "ticker": "ASPU",
+      "price": 8
+    },
+    {
+      "ticker": "GSM",
+      "price": 8.495
+    },
+    {
+      "ticker": "NEXT",
+      "price": 6.66
+    }
+  ]
+}

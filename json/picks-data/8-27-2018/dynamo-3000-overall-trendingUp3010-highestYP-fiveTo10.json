@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "RFL",
+      "price": 9.46
+    },
+    {
+      "ticker": "DNR",
+      "price": 5.325
+    }
+  ],
+  "260": [
+    {
+      "ticker": "RFL",
+      "price": 9.16
+    },
+    {
+      "ticker": "DNR",
+      "price": 5.315
+    }
+  ],
+  "351": [
+    {
+      "ticker": "RFL",
+      "price": 9.28
+    },
+    {
+      "ticker": "IDRA",
+      "price": 9.62
+    }
+  ],
+  "381": [
+    {
+      "ticker": "RFL",
+      "price": 9.24
+    },
+    {
+      "ticker": "IDRA",
+      "price": 9.645
+    }
+  ]
+}

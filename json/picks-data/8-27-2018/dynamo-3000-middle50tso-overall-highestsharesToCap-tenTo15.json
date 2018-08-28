@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "SEA",
+      "price": 10.2
+    },
+    {
+      "ticker": "TEI",
+      "price": 10.2101
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AI",
+      "price": 10.135
+    },
+    {
+      "ticker": "LXRX",
+      "price": 10.495
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AI",
+      "price": 10.13
+    },
+    {
+      "ticker": "JRO",
+      "price": 10.183
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AI",
+      "price": 10.13
+    },
+    {
+      "ticker": "NLY",
+      "price": 10.6142
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "TPNL",
+      "price": 3.43
+    },
+    {
+      "ticker": "RIBT",
+      "price": 3.34
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TPNL",
+      "price": 3.3694
+    },
+    {
+      "ticker": "RIBT",
+      "price": 3.3866
+    }
+  ],
+  "351": [
+    {
+      "ticker": "TPNL",
+      "price": 3.47
+    },
+    {
+      "ticker": "RIBT",
+      "price": 3.37
+    }
+  ],
+  "381": [
+    {
+      "ticker": "TPNL",
+      "price": 3.4693
+    },
+    {
+      "ticker": "RIBT",
+      "price": 3.43
+    }
+  ]
+}

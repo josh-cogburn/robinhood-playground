@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "ZFGN",
+      "price": 9.12
+    },
+    {
+      "ticker": "CHS",
+      "price": 8.995
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ZFGN",
+      "price": 9.165
+    },
+    {
+      "ticker": "CHS",
+      "price": 8.98
+    }
+  ],
+  "351": [
+    {
+      "ticker": "EXPR",
+      "price": 9.865
+    },
+    {
+      "ticker": "ZFGN",
+      "price": 9.155
+    }
+  ],
+  "381": [
+    {
+      "ticker": "EXPR",
+      "price": 9.81
+    },
+    {
+      "ticker": "ZFGN",
+      "price": 9.22
+    }
+  ]
+}

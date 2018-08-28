@@ -1,0 +1,58 @@
+{
+  "200": [
+    {
+      "ticker": "DNOW",
+      "price": 17.16
+    },
+    {
+      "ticker": "GME",
+      "price": 15.075
+    },
+    {
+      "ticker": "CIVI",
+      "price": 16.1
+    }
+  ],
+  "260": [
+    {
+      "ticker": "DNOW",
+      "price": 17.06
+    },
+    {
+      "ticker": "ACBI",
+      "price": 18.55
+    },
+    {
+      "ticker": "GME",
+      "price": 15.025
+    }
+  ],
+  "351": [
+    {
+      "ticker": "DNOW",
+      "price": 16.975
+    },
+    {
+      "ticker": "ACBI",
+      "price": 18.5
+    },
+    {
+      "ticker": "CRCM",
+      "price": 19.4031
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AVNW",
+      "price": 15.54
+    },
+    {
+      "ticker": "DNOW",
+      "price": 16.98
+    },
+    {
+      "ticker": "CRCM",
+      "price": 19.38
+    }
+  ]
+}

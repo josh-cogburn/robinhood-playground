@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "ETV",
+      "price": 16.14
+    },
+    {
+      "ticker": "BSCP",
+      "price": 19.9501
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CHAP",
+      "price": 18.2
+    },
+    {
+      "ticker": "DIAL",
+      "price": 19.22
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SHBI",
+      "price": 18.9
+    },
+    {
+      "ticker": "HBAN",
+      "price": 16.26
+    }
+  ],
+  "381": [
+    {
+      "ticker": "WPM",
+      "price": 18.145
+    },
+    {
+      "ticker": "BATT",
+      "price": 15.81
+    }
+  ]
+}

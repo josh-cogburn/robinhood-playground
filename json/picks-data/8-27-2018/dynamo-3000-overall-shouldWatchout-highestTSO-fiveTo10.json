@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "MRNS",
+      "price": 6.35
+    },
+    {
+      "ticker": "STG",
+      "price": 5.834
+    }
+  ],
+  "260": [
+    {
+      "ticker": "STG",
+      "price": 5.8955
+    },
+    {
+      "ticker": "BOM",
+      "price": 9.92
+    }
+  ],
+  "351": [
+    {
+      "ticker": "STG",
+      "price": 7.61
+    },
+    {
+      "ticker": "BOM",
+      "price": 9.91
+    }
+  ],
+  "381": [
+    {
+      "ticker": "STG",
+      "price": 6.3699
+    },
+    {
+      "ticker": "BOM",
+      "price": 9.91
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "200": [
+    {
+      "ticker": "GSVC",
+      "price": 7.31
+    },
+    {
+      "ticker": "PCYG",
+      "price": 8.2
+    },
+    {
+      "ticker": "GOL",
+      "price": 5.26
+    },
+    {
+      "ticker": "GTIM",
+      "price": 5.05
+    },
+    {
+      "ticker": "DAVE",
+      "price": 6.55
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SCX",
+      "price": 6.7
+    },
+    {
+      "ticker": "AGFS",
+      "price": 6.5199
+    },
+    {
+      "ticker": "PCYG",
+      "price": 8.2
+    },
+    {
+      "ticker": "CZZ",
+      "price": 6.9
+    },
+    {
+      "ticker": "HWCC",
+      "price": 8.5
+    }
+  ],
+  "351": [
+    {
+      "ticker": "FRSH",
+      "price": 5.61
+    },
+    {
+      "ticker": "FAT",
+      "price": 8.28
+    },
+    {
+      "ticker": "GOL",
+      "price": 5.265
+    },
+    {
+      "ticker": "AGFS",
+      "price": 6.55
+    },
+    {
+      "ticker": "FIT",
+      "price": 6.22
+    }
+  ],
+  "381": [
+    {
+      "ticker": "TOUR",
+      "price": 8.08
+    },
+    {
+      "ticker": "ASPU",
+      "price": 8
+    },
+    {
+      "ticker": "GOL",
+      "price": 5.27
+    },
+    {
+      "ticker": "RCM",
+      "price": 9.485
+    },
+    {
+      "ticker": "FIT",
+      "price": 6.215
+    }
+  ]
+}

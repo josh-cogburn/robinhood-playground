@@ -1,0 +1,58 @@
+{
+  "200": [
+    {
+      "ticker": "NTWK",
+      "price": 5.85
+    },
+    {
+      "ticker": "ELVT",
+      "price": 9.6425
+    },
+    {
+      "ticker": "PRGX",
+      "price": 9.65
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NTWK",
+      "price": 5.775
+    },
+    {
+      "ticker": "ELVT",
+      "price": 9.62
+    },
+    {
+      "ticker": "GMRE",
+      "price": 9.35
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NTWK",
+      "price": 5.775
+    },
+    {
+      "ticker": "ELVT",
+      "price": 9.55
+    },
+    {
+      "ticker": "GMRE",
+      "price": 9.3801
+    }
+  ],
+  "381": [
+    {
+      "ticker": "NTWK",
+      "price": 5.775
+    },
+    {
+      "ticker": "ELVT",
+      "price": 9.575
+    },
+    {
+      "ticker": "GMRE",
+      "price": 9.42
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "OTEL",
+      "price": 17.1
+    },
+    {
+      "ticker": "IRDM",
+      "price": 19.6001
+    }
+  ],
+  "260": [
+    {
+      "ticker": "OTEL",
+      "price": 17.1
+    },
+    {
+      "ticker": "IRDM",
+      "price": 19.4
+    }
+  ],
+  "351": [
+    {
+      "ticker": "IRDM",
+      "price": 19.5674
+    },
+    {
+      "ticker": "AMC",
+      "price": 18.9
+    }
+  ],
+  "381": [
+    {
+      "ticker": "IRDM",
+      "price": 19.625
+    },
+    {
+      "ticker": "AMC",
+      "price": 18.825
+    }
+  ]
+}

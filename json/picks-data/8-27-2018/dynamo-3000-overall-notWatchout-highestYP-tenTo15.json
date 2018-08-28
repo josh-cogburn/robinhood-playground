@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "FLMN",
+      "price": 11.54
+    },
+    {
+      "ticker": "MESA",
+      "price": 12.47
+    }
+  ],
+  "260": [
+    {
+      "ticker": "FLMN",
+      "price": 11.49
+    },
+    {
+      "ticker": "MESA",
+      "price": 12.4348
+    }
+  ],
+  "351": [
+    {
+      "ticker": "FLMN",
+      "price": 11.4925
+    },
+    {
+      "ticker": "MESA",
+      "price": 12.5
+    }
+  ],
+  "381": [
+    {
+      "ticker": "FLMN",
+      "price": 11.5
+    },
+    {
+      "ticker": "MESA",
+      "price": 12.51
+    }
+  ]
+}

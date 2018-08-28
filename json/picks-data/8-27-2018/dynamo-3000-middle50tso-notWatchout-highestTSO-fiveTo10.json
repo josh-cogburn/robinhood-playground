@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "WCFB",
+      "price": 8.8701
+    },
+    {
+      "ticker": "MSD",
+      "price": 8.7899
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NRO",
+      "price": 5.15
+    },
+    {
+      "ticker": "XELA",
+      "price": 5.91
+    }
+  ],
+  "351": [
+    {
+      "ticker": "S",
+      "price": 6.12
+    },
+    {
+      "ticker": "NYMT",
+      "price": 6.36
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ENY",
+      "price": 8.28
+    },
+    {
+      "ticker": "EXD",
+      "price": 9.03
+    }
+  ]
+}

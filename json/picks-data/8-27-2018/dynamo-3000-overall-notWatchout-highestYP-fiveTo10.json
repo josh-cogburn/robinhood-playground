@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "INTT",
+      "price": 8.89
+    },
+    {
+      "ticker": "RFL",
+      "price": 9.46
+    }
+  ],
+  "260": [
+    {
+      "ticker": "INTT",
+      "price": 8.825
+    },
+    {
+      "ticker": "RFL",
+      "price": 9.16
+    }
+  ],
+  "351": [
+    {
+      "ticker": "INTT",
+      "price": 8.75
+    },
+    {
+      "ticker": "RFL",
+      "price": 9.28
+    }
+  ],
+  "381": [
+    {
+      "ticker": "INTT",
+      "price": 8.75
+    },
+    {
+      "ticker": "RFL",
+      "price": 9.24
+    }
+  ]
+}

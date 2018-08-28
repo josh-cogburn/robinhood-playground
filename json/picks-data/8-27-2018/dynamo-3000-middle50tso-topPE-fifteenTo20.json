@@ -1,0 +1,58 @@
+{
+  "200": [
+    {
+      "ticker": "GF",
+      "price": 19.0499
+    },
+    {
+      "ticker": "ETV",
+      "price": 16.14
+    },
+    {
+      "ticker": "TPZ",
+      "price": 19.6552
+    }
+  ],
+  "260": [
+    {
+      "ticker": "HBI",
+      "price": 17.585
+    },
+    {
+      "ticker": "ETV",
+      "price": 16.145
+    },
+    {
+      "ticker": "SPXX",
+      "price": 17.156
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NCSM",
+      "price": 16.16
+    },
+    {
+      "ticker": "ETV",
+      "price": 16.1339
+    },
+    {
+      "ticker": "BATT",
+      "price": 15.8248
+    }
+  ],
+  "381": [
+    {
+      "ticker": "COT",
+      "price": 15.275
+    },
+    {
+      "ticker": "PROV",
+      "price": 18.04
+    },
+    {
+      "ticker": "ETV",
+      "price": 16.135
+    }
+  ]
+}

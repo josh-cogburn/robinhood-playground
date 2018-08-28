@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "NGVC",
+      "price": 18.74
+    },
+    {
+      "ticker": "OTEL",
+      "price": 17.1
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NGVC",
+      "price": 18.705
+    },
+    {
+      "ticker": "OTEL",
+      "price": 17.1
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NGVC",
+      "price": 18.46
+    },
+    {
+      "ticker": "IRDM",
+      "price": 19.5674
+    }
+  ],
+  "381": [
+    {
+      "ticker": "NGVC",
+      "price": 18.35
+    },
+    {
+      "ticker": "IRDM",
+      "price": 19.625
+    }
+  ]
+}

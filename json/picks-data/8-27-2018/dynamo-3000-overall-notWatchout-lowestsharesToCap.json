@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "GGN",
+      "price": 4.965
+    },
+    {
+      "ticker": "RCMT",
+      "price": 4.91
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GGN",
+      "price": 4.95
+    },
+    {
+      "ticker": "RCMT",
+      "price": 4.91
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NWY",
+      "price": 4.9
+    },
+    {
+      "ticker": "GGN",
+      "price": 4.95
+    }
+  ],
+  "381": [
+    {
+      "ticker": "NWY",
+      "price": 4.9199
+    },
+    {
+      "ticker": "GGN",
+      "price": 4.9574
+    }
+  ]
+}

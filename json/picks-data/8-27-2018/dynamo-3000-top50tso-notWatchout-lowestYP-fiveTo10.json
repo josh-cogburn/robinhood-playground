@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "GOL",
+      "price": 5.26
+    },
+    {
+      "ticker": "MGI",
+      "price": 6.4
+    }
+  ],
+  "260": [
+    {
+      "ticker": "MGI",
+      "price": 6.345
+    },
+    {
+      "ticker": "TRIL",
+      "price": 5.5
+    }
+  ],
+  "351": [
+    {
+      "ticker": "GOL",
+      "price": 5.265
+    },
+    {
+      "ticker": "MGI",
+      "price": 6.295
+    }
+  ],
+  "381": [
+    {
+      "ticker": "GOL",
+      "price": 5.27
+    },
+    {
+      "ticker": "TRIL",
+      "price": 5.5724
+    }
+  ]
+}

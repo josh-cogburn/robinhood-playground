@@ -1,0 +1,33 @@
+{
+  "200": [],
+  "300": [
+    {
+      "ticker": "SSC",
+      "price": 5.07
+    },
+    {
+      "ticker": "SPWH",
+      "price": 5.85
+    }
+  ],
+  "380": [
+    {
+      "ticker": "SSC",
+      "price": 5.01
+    },
+    {
+      "ticker": "SPWH",
+      "price": 5.7201
+    }
+  ],
+  "600": [
+    {
+      "ticker": "SPWH",
+      "price": 5.73
+    },
+    {
+      "ticker": "FAT",
+      "price": 7.9
+    }
+  ]
+}

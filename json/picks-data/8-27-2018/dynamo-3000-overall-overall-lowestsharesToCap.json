@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "ATAI",
+      "price": 1.68
+    },
+    {
+      "ticker": "CNAT",
+      "price": 4.92
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ATAI",
+      "price": 1.68
+    },
+    {
+      "ticker": "CNAT",
+      "price": 4.9201
+    }
+  ],
+  "351": [
+    {
+      "ticker": "ATAI",
+      "price": 2.31
+    },
+    {
+      "ticker": "NWY",
+      "price": 4.9
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ATAI",
+      "price": 2.082
+    },
+    {
+      "ticker": "SSC",
+      "price": 5
+    }
+  ]
+}

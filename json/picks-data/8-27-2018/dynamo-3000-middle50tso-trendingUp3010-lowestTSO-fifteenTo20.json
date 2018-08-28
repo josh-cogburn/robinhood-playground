@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "BSCP",
+      "price": 19.9501
+    },
+    {
+      "ticker": "BFIT",
+      "price": 19.6402
+    }
+  ],
+  "260": [
+    {
+      "ticker": "FNWB",
+      "price": 16.75
+    },
+    {
+      "ticker": "JRI",
+      "price": 16.5
+    }
+  ],
+  "351": [
+    {
+      "ticker": "HBAN",
+      "price": 16.26
+    },
+    {
+      "ticker": "QTRX",
+      "price": 14.915
+    }
+  ],
+  "381": [
+    {
+      "ticker": "APTS",
+      "price": 17.9
+    },
+    {
+      "ticker": "VBF",
+      "price": 17.94
+    }
+  ]
+}

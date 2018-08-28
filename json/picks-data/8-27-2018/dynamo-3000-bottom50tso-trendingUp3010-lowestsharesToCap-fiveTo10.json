@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "NERV",
+      "price": 9.875
+    },
+    {
+      "ticker": "CATS",
+      "price": 9.07
+    }
+  ],
+  "260": [
+    {
+      "ticker": "RFL",
+      "price": 9.16
+    },
+    {
+      "ticker": "CATS",
+      "price": 9.05
+    }
+  ],
+  "351": [
+    {
+      "ticker": "EIGI",
+      "price": 9.85
+    },
+    {
+      "ticker": "CATS",
+      "price": 8.965
+    }
+  ],
+  "381": [
+    {
+      "ticker": "RFL",
+      "price": 9.24
+    },
+    {
+      "ticker": "EIGI",
+      "price": 9.75
+    }
+  ]
+}

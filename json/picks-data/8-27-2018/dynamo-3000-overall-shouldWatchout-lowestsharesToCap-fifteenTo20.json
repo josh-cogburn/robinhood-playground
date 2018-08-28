@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "HIBB",
+      "price": 19.75
+    },
+    {
+      "ticker": "CMLS",
+      "price": 19.15
+    }
+  ],
+  "260": [
+    {
+      "ticker": "HIBB",
+      "price": 19.725
+    },
+    {
+      "ticker": "CMLS",
+      "price": 19.68
+    }
+  ],
+  "351": [
+    {
+      "ticker": "HIBB",
+      "price": 19.55
+    },
+    {
+      "ticker": "CMLS",
+      "price": 19.68
+    }
+  ],
+  "381": [
+    {
+      "ticker": "HIBB",
+      "price": 19.65
+    },
+    {
+      "ticker": "EOLS",
+      "price": 19.98
+    }
+  ]
+}

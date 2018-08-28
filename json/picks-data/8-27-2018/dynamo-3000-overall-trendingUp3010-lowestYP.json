@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "AVGR",
+      "price": 1.38
+    },
+    {
+      "ticker": "LMFA",
+      "price": 0.42
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AVGR",
+      "price": 1.39
+    },
+    {
+      "ticker": "TROV",
+      "price": 0.845
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AVGR",
+      "price": 1.381
+    },
+    {
+      "ticker": "TROV",
+      "price": 0.835
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AVGR",
+      "price": 1.42
+    },
+    {
+      "ticker": "TROV",
+      "price": 0.8298
+    }
+  ]
+}

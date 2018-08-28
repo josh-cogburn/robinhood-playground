@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "AMMA",
+      "price": 0.3441
+    },
+    {
+      "ticker": "ATAI",
+      "price": 1.68
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AMMA",
+      "price": 0.3695
+    },
+    {
+      "ticker": "ATAI",
+      "price": 1.68
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AMMA",
+      "price": 0.3699
+    },
+    {
+      "ticker": "ATAI",
+      "price": 2.31
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AMMA",
+      "price": 0.3687
+    },
+    {
+      "ticker": "ATAI",
+      "price": 2.082
+    }
+  ]
+}

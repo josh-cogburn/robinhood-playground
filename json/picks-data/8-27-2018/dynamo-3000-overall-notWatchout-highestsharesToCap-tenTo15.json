@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "CSSE",
+      "price": 10.01
+    },
+    {
+      "ticker": "BCOM",
+      "price": 10.2
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CSSE",
+      "price": 10.08
+    },
+    {
+      "ticker": "CLF",
+      "price": 10.08
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CSSE",
+      "price": 10.0157
+    },
+    {
+      "ticker": "CLF",
+      "price": 10.175
+    }
+  ],
+  "381": [
+    {
+      "ticker": "BCOM",
+      "price": 10.11
+    },
+    {
+      "ticker": "CLF",
+      "price": 10.15
+    }
+  ]
+}

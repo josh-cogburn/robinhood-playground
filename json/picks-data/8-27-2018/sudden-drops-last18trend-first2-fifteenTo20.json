@@ -1,0 +1,72 @@
+{
+  "100": [
+    {
+      "ticker": "GME",
+      "price": 15.08
+    },
+    {
+      "ticker": "ARL",
+      "price": 17.1318
+    }
+  ],
+  "189": [
+    {
+      "ticker": "CBAN",
+      "price": 17.25
+    },
+    {
+      "ticker": "REIS",
+      "price": 17.8
+    }
+  ],
+  "221": [
+    {
+      "ticker": "CBAN",
+      "price": 17.25
+    },
+    {
+      "ticker": "LQDA",
+      "price": 16
+    }
+  ],
+  "280": [
+    {
+      "ticker": "YRD",
+      "price": 18.06
+    },
+    {
+      "ticker": "SRRK",
+      "price": 19.25
+    }
+  ],
+  "328": [
+    {
+      "ticker": "BKSC",
+      "price": 19.65
+    },
+    {
+      "ticker": "YRD",
+      "price": 18.24
+    }
+  ],
+  "360": [
+    {
+      "ticker": "REPL",
+      "price": 16.56
+    },
+    {
+      "ticker": "BKSC",
+      "price": 19.65
+    }
+  ],
+  "388": [
+    {
+      "ticker": "SRRK",
+      "price": 18.8179
+    },
+    {
+      "ticker": "AVNW",
+      "price": 15.54
+    }
+  ]
+}

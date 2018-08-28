@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "FRD",
+      "price": 10.66
+    },
+    {
+      "ticker": "LBY",
+      "price": 11.04
+    }
+  ],
+  "260": [
+    {
+      "ticker": "FRD",
+      "price": 10.61
+    },
+    {
+      "ticker": "LBY",
+      "price": 10.63
+    }
+  ],
+  "351": [
+    {
+      "ticker": "LBY",
+      "price": 10.7
+    },
+    {
+      "ticker": "VCYT",
+      "price": 12
+    }
+  ],
+  "381": [
+    {
+      "ticker": "LBY",
+      "price": 10.52
+    },
+    {
+      "ticker": "NES",
+      "price": 11.5
+    }
+  ]
+}

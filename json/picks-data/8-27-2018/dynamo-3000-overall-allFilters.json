@@ -1,0 +1,90 @@
+{
+  "200": [
+    {
+      "ticker": "LRAD",
+      "price": 3.2
+    },
+    {
+      "ticker": "TRPX",
+      "price": 3.91
+    },
+    {
+      "ticker": "RIGL",
+      "price": 2.9099
+    },
+    {
+      "ticker": "ECR",
+      "price": 1.455
+    },
+    {
+      "ticker": "LTBR",
+      "price": 0.9605
+    }
+  ],
+  "260": [
+    {
+      "ticker": "LRAD",
+      "price": 3.1405
+    },
+    {
+      "ticker": "TRPX",
+      "price": 3.9204
+    },
+    {
+      "ticker": "IDXG",
+      "price": 1.31
+    },
+    {
+      "ticker": "RIGL",
+      "price": 2.885
+    },
+    {
+      "ticker": "ECR",
+      "price": 1.44
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NWY",
+      "price": 4.9
+    },
+    {
+      "ticker": "TRPX",
+      "price": 3.8027
+    },
+    {
+      "ticker": "LRAD",
+      "price": 3.16
+    },
+    {
+      "ticker": "IDXG",
+      "price": 1.33
+    },
+    {
+      "ticker": "ATEC",
+      "price": 3.5678
+    }
+  ],
+  "381": [
+    {
+      "ticker": "NWY",
+      "price": 4.9199
+    },
+    {
+      "ticker": "TRPX",
+      "price": 3.862
+    },
+    {
+      "ticker": "LRAD",
+      "price": 3.19
+    },
+    {
+      "ticker": "IDXG",
+      "price": 1.33
+    },
+    {
+      "ticker": "RIGL",
+      "price": 2.88
+    }
+  ]
+}

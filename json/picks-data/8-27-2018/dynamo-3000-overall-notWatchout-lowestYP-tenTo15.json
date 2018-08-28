@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "SQQQ",
+      "price": 11.56
+    },
+    {
+      "ticker": "UGP",
+      "price": 10.52
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SQQQ",
+      "price": 11.575
+    },
+    {
+      "ticker": "UGP",
+      "price": 10.5
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SQQQ",
+      "price": 11.5899
+    },
+    {
+      "ticker": "NYNY",
+      "price": 12.269
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SQQQ",
+      "price": 11.56
+    },
+    {
+      "ticker": "NYNY",
+      "price": 12.35
+    }
+  ]
+}

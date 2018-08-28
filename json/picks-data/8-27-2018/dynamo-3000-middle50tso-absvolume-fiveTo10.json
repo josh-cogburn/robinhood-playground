@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "JPC",
+      "price": 9.3728
+    },
+    {
+      "ticker": "WCFB",
+      "price": 8.8701
+    }
+  ],
+  "260": [
+    {
+      "ticker": "FG",
+      "price": 8.99
+    },
+    {
+      "ticker": "NRO",
+      "price": 5.15
+    }
+  ],
+  "351": [
+    {
+      "ticker": "DSM",
+      "price": 7.5599
+    },
+    {
+      "ticker": "S",
+      "price": 6.12
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MFA",
+      "price": 7.675
+    },
+    {
+      "ticker": "ENY",
+      "price": 8.28
+    }
+  ]
+}

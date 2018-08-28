@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "CNAT",
+      "price": 4.92
+    },
+    {
+      "ticker": "GERN",
+      "price": 4.815
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CNAT",
+      "price": 4.9201
+    },
+    {
+      "ticker": "GERN",
+      "price": 4.735
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NWY",
+      "price": 4.9
+    },
+    {
+      "ticker": "CNAT",
+      "price": 4.9899
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SSC",
+      "price": 5
+    },
+    {
+      "ticker": "NWY",
+      "price": 4.9199
+    }
+  ]
+}

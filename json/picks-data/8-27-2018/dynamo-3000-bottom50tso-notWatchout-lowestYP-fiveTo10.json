@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "SOXS",
+      "price": 9.19
+    },
+    {
+      "ticker": "BFR",
+      "price": 9.335
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SOXS",
+      "price": 9.095
+    },
+    {
+      "ticker": "IPIC",
+      "price": 6.8771
+    }
+  ],
+  "351": [
+    {
+      "ticker": "BFR",
+      "price": 9.27
+    },
+    {
+      "ticker": "IPIC",
+      "price": 6.8771
+    }
+  ],
+  "381": [
+    {
+      "ticker": "BFR",
+      "price": 9.26
+    },
+    {
+      "ticker": "TOCA",
+      "price": 8.3
+    }
+  ]
+}

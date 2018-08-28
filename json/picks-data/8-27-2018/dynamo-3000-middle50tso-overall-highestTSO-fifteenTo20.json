@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "AGNC",
+      "price": 19.35
+    },
+    {
+      "ticker": "BRF",
+      "price": 17.5312
+    }
+  ],
+  "260": [
+    {
+      "ticker": "MLN",
+      "price": 19.7545
+    },
+    {
+      "ticker": "BVAL",
+      "price": 16.17
+    }
+  ],
+  "351": [
+    {
+      "ticker": "PHB",
+      "price": 18.5317
+    },
+    {
+      "ticker": "PCB",
+      "price": 19.72
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SCO",
+      "price": 15.6679
+    },
+    {
+      "ticker": "BVAL",
+      "price": 16.17
+    }
+  ]
+}

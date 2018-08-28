@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "AMAL",
+      "price": 17.1
+    },
+    {
+      "ticker": "SSG",
+      "price": 15.1061
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AMAL",
+      "price": 17.3
+    },
+    {
+      "ticker": "SSG",
+      "price": 15.109
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AMAL",
+      "price": 17.3
+    },
+    {
+      "ticker": "SSG",
+      "price": 15.0988
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AMAL",
+      "price": 17.265
+    },
+    {
+      "ticker": "IRS",
+      "price": 15.66
+    }
+  ]
+}

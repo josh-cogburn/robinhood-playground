@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "JPC",
+      "price": 9.3728
+    },
+    {
+      "ticker": "CXE",
+      "price": 5.055
+    }
+  ],
+  "260": [
+    {
+      "ticker": "FG",
+      "price": 8.99
+    },
+    {
+      "ticker": "PHK",
+      "price": 8.88
+    }
+  ],
+  "351": [
+    {
+      "ticker": "DSM",
+      "price": 7.5599
+    },
+    {
+      "ticker": "ERIC",
+      "price": 8.58
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MFA",
+      "price": 7.675
+    },
+    {
+      "ticker": "ERIC",
+      "price": 8.595
+    }
+  ]
+}

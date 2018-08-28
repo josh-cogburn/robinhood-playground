@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "RSLS",
+      "price": 0.0715
+    },
+    {
+      "ticker": "SYN",
+      "price": 2.8699
+    }
+  ],
+  "260": [
+    {
+      "ticker": "RSLS",
+      "price": 0.0712
+    },
+    {
+      "ticker": "SYN",
+      "price": 2.78
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SYN",
+      "price": 2.81
+    },
+    {
+      "ticker": "SPI",
+      "price": 0.3197
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SYN",
+      "price": 2.8
+    },
+    {
+      "ticker": "SPI",
+      "price": 0.3195
+    }
+  ]
+}

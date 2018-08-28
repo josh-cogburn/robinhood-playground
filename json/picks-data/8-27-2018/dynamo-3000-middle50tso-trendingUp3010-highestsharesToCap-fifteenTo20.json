@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "JCE",
+      "price": 15.8799
+    },
+    {
+      "ticker": "AVK",
+      "price": 15.8489
+    }
+  ],
+  "260": [
+    {
+      "ticker": "EGIF",
+      "price": 15.73
+    },
+    {
+      "ticker": "TITN",
+      "price": 15.66
+    }
+  ],
+  "351": [
+    {
+      "ticker": "QTRX",
+      "price": 14.915
+    },
+    {
+      "ticker": "EGIF",
+      "price": 15.73
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SPOK",
+      "price": 15.575
+    },
+    {
+      "ticker": "HBAN",
+      "price": 16.265
+    }
+  ]
+}

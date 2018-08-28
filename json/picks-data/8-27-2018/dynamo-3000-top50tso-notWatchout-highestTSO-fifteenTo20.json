@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "KEN",
+      "price": 15.8578
+    },
+    {
+      "ticker": "PDD",
+      "price": 18.85
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ELOX",
+      "price": 16.46
+    },
+    {
+      "ticker": "KEN",
+      "price": 15.8578
+    }
+  ],
+  "351": [
+    {
+      "ticker": "ELOX",
+      "price": 17.39
+    },
+    {
+      "ticker": "KEN",
+      "price": 15.71
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ELOX",
+      "price": 17.1
+    },
+    {
+      "ticker": "KEN",
+      "price": 15.71
+    }
+  ]
+}

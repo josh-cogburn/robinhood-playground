@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "GTXI",
+      "price": 19.81
+    },
+    {
+      "ticker": "BEL",
+      "price": 16.325
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SGMO",
+      "price": 15.55
+    },
+    {
+      "ticker": "TLYS",
+      "price": 17.72
+    }
+  ],
+  "351": [
+    {
+      "ticker": "GTXI",
+      "price": 19.85
+    },
+    {
+      "ticker": "OPTN",
+      "price": 15.395
+    }
+  ],
+  "381": [
+    {
+      "ticker": "OPTN",
+      "price": 15.45
+    },
+    {
+      "ticker": "GTXI",
+      "price": 19.9075
+    }
+  ]
+}

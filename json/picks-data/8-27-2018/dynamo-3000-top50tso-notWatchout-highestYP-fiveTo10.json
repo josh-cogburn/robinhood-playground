@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "LTRX",
+      "price": 6.335
+    },
+    {
+      "ticker": "ARQL",
+      "price": 6.2
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ARQL",
+      "price": 6.29
+    },
+    {
+      "ticker": "RCM",
+      "price": 9.62
+    }
+  ],
+  "351": [
+    {
+      "ticker": "ARQL",
+      "price": 6.195
+    },
+    {
+      "ticker": "LTRX",
+      "price": 6.1899
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ARQL",
+      "price": 6.19
+    },
+    {
+      "ticker": "LTRX",
+      "price": 6.1835
+    }
+  ]
+}

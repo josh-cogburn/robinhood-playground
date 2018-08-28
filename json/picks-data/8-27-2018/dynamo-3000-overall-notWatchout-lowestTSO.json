@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "VERU",
+      "price": 2.03
+    },
+    {
+      "ticker": "LRAD",
+      "price": 3.2
+    }
+  ],
+  "260": [
+    {
+      "ticker": "LRAD",
+      "price": 3.1405
+    },
+    {
+      "ticker": "VERU",
+      "price": 2.02
+    }
+  ],
+  "351": [
+    {
+      "ticker": "VERU",
+      "price": 1.93
+    },
+    {
+      "ticker": "NWY",
+      "price": 4.9
+    }
+  ],
+  "381": [
+    {
+      "ticker": "VERU",
+      "price": 1.95
+    },
+    {
+      "ticker": "NWY",
+      "price": 4.9199
+    }
+  ]
+}

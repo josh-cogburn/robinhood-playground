@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "TV",
+      "price": 18.68
+    },
+    {
+      "ticker": "JCAP",
+      "price": 19.15
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PAAS",
+      "price": 16.13
+    },
+    {
+      "ticker": "TV",
+      "price": 18.675
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NGE",
+      "price": 19.175
+    },
+    {
+      "ticker": "CHIQ",
+      "price": 16.25
+    }
+  ],
+  "381": [
+    {
+      "ticker": "DM",
+      "price": 16.9
+    },
+    {
+      "ticker": "PTEN",
+      "price": 17.765
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "JNCE",
+      "price": 7.96
+    },
+    {
+      "ticker": "SCPH",
+      "price": 5.275
+    }
+  ],
+  "260": [
+    {
+      "ticker": "JNCE",
+      "price": 8.1264
+    },
+    {
+      "ticker": "SCPH",
+      "price": 5.23
+    }
+  ],
+  "351": [
+    {
+      "ticker": "JNCE",
+      "price": 8.07
+    },
+    {
+      "ticker": "SCPH",
+      "price": 5.26
+    }
+  ],
+  "381": [
+    {
+      "ticker": "JNCE",
+      "price": 8.08
+    },
+    {
+      "ticker": "SCPH",
+      "price": 5.22
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "200": [
+    {
+      "ticker": "MDRX",
+      "price": 14.83
+    },
+    {
+      "ticker": "CRON",
+      "price": 12.0101
+    },
+    {
+      "ticker": "JAG",
+      "price": 12.7
+    }
+  ],
+  "260": [
+    {
+      "ticker": "MDRX",
+      "price": 14.815
+    },
+    {
+      "ticker": "CRON",
+      "price": 12.4053
+    },
+    {
+      "ticker": "JAG",
+      "price": 12.85
+    }
+  ],
+  "351": [
+    {
+      "ticker": "MDRX",
+      "price": 14.795
+    },
+    {
+      "ticker": "CRON",
+      "price": 11.81
+    },
+    {
+      "ticker": "JAG",
+      "price": 12.955
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MDRX",
+      "price": 14.82
+    },
+    {
+      "ticker": "CRON",
+      "price": 12
+    },
+    {
+      "ticker": "JAG",
+      "price": 12.865
+    }
+  ]
+}

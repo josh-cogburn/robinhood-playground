@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "CATB",
+      "price": 0.7313
+    },
+    {
+      "ticker": "NOVN",
+      "price": 2.91
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GEVO",
+      "price": 4.01
+    },
+    {
+      "ticker": "BMRA",
+      "price": 3.83
+    }
+  ],
+  "351": [
+    {
+      "ticker": "GEVO",
+      "price": 4
+    },
+    {
+      "ticker": "SGLB",
+      "price": 1.0232
+    }
+  ],
+  "381": [
+    {
+      "ticker": "GEVO",
+      "price": 4
+    },
+    {
+      "ticker": "FWP",
+      "price": 2.85
+    }
+  ]
+}

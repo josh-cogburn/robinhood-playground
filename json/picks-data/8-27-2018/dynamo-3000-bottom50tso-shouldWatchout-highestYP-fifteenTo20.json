@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "NGVC",
+      "price": 18.74
+    },
+    {
+      "ticker": "UA",
+      "price": 19.19
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NGVC",
+      "price": 18.705
+    },
+    {
+      "ticker": "IOVA",
+      "price": 15.55
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NGVC",
+      "price": 18.46
+    },
+    {
+      "ticker": "IOVA",
+      "price": 15.75
+    }
+  ],
+  "381": [
+    {
+      "ticker": "NGVC",
+      "price": 18.35
+    },
+    {
+      "ticker": "UA",
+      "price": 19.025
+    }
+  ]
+}

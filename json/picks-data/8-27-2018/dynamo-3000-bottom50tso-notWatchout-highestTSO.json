@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "ARPO",
+      "price": 3.425
+    },
+    {
+      "ticker": "RIGL",
+      "price": 2.9099
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CBLI",
+      "price": 1.85
+    },
+    {
+      "ticker": "AWSM",
+      "price": 3.4
+    }
+  ],
+  "351": [
+    {
+      "ticker": "RIGL",
+      "price": 2.91
+    },
+    {
+      "ticker": "AMS",
+      "price": 3.0295
+    }
+  ],
+  "381": [
+    {
+      "ticker": "LEU",
+      "price": 2.8
+    },
+    {
+      "ticker": "NBY",
+      "price": 1.9
+    }
+  ]
+}

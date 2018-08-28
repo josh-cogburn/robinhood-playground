@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "ATAI",
+      "price": 1.68
+    },
+    {
+      "ticker": "TIS",
+      "price": 3.65
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ATAI",
+      "price": 1.68
+    },
+    {
+      "ticker": "TIS",
+      "price": 3.46
+    }
+  ],
+  "351": [
+    {
+      "ticker": "ATAI",
+      "price": 2.31
+    },
+    {
+      "ticker": "TIS",
+      "price": 3.66
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ATAI",
+      "price": 2.082
+    },
+    {
+      "ticker": "EGLT",
+      "price": 0.4
+    }
+  ]
+}

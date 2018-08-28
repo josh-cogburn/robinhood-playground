@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "ENZ",
+      "price": 4.505
+    },
+    {
+      "ticker": "BTN",
+      "price": 4.65
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ENZ",
+      "price": 4.465
+    },
+    {
+      "ticker": "BTN",
+      "price": 4.65
+    }
+  ],
+  "351": [
+    {
+      "ticker": "ENZ",
+      "price": 4.525
+    },
+    {
+      "ticker": "LAC",
+      "price": 4.74
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ENZ",
+      "price": 4.525
+    },
+    {
+      "ticker": "LAC",
+      "price": 4.72
+    }
+  ]
+}

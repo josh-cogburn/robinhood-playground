@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "SCPH",
+      "price": 5.275
+    },
+    {
+      "ticker": "NWY",
+      "price": 5.17
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SCPH",
+      "price": 5.23
+    },
+    {
+      "ticker": "NWY",
+      "price": 5.17
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SCPH",
+      "price": 5.26
+    },
+    {
+      "ticker": "TRXC",
+      "price": 5.215
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CNAT",
+      "price": 5.01
+    },
+    {
+      "ticker": "SCPH",
+      "price": 5.22
+    }
+  ]
+}

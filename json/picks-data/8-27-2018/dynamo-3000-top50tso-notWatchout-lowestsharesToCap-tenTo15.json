@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "FCX",
+      "price": 14.745
+    },
+    {
+      "ticker": "EGAN",
+      "price": 14.05
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ITCB",
+      "price": 14.98
+    },
+    {
+      "ticker": "MTLS",
+      "price": 14.49
+    }
+  ],
+  "351": [
+    {
+      "ticker": "ITCB",
+      "price": 14.98
+    },
+    {
+      "ticker": "USX",
+      "price": 14.92
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ITCB",
+      "price": 14.98
+    },
+    {
+      "ticker": "USX",
+      "price": 14.9601
+    }
+  ]
+}

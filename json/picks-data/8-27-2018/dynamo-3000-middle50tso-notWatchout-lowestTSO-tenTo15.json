@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "MYJ",
+      "price": 13.4363
+    },
+    {
+      "ticker": "BFY",
+      "price": 12.6975
+    }
+  ],
+  "260": [
+    {
+      "ticker": "LXRX",
+      "price": 10.495
+    },
+    {
+      "ticker": "FAN",
+      "price": 12.905
+    }
+  ],
+  "351": [
+    {
+      "ticker": "BQH",
+      "price": 13
+    },
+    {
+      "ticker": "NMS",
+      "price": 13.3
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MITL",
+      "price": 10.975
+    },
+    {
+      "ticker": "EDI",
+      "price": 13.2187
+    }
+  ]
+}

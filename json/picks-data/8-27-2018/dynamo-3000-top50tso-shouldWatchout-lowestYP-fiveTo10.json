@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "RIOT",
+      "price": 5.91
+    },
+    {
+      "ticker": "SEED",
+      "price": 5.679
+    }
+  ],
+  "260": [
+    {
+      "ticker": "RIOT",
+      "price": 5.8685
+    },
+    {
+      "ticker": "SEED",
+      "price": 5.7
+    }
+  ],
+  "351": [
+    {
+      "ticker": "RDVT",
+      "price": 7.6
+    },
+    {
+      "ticker": "SEED",
+      "price": 5.765
+    }
+  ],
+  "381": [
+    {
+      "ticker": "RDVT",
+      "price": 7.6
+    },
+    {
+      "ticker": "SEED",
+      "price": 5.78
+    }
+  ]
+}

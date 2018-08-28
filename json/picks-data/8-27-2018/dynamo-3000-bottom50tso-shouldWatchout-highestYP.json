@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "REED",
+      "price": 2.97
+    },
+    {
+      "ticker": "AYTU",
+      "price": 4.3126
+    }
+  ],
+  "260": [
+    {
+      "ticker": "REED",
+      "price": 2.975
+    },
+    {
+      "ticker": "ASNA",
+      "price": 4.56
+    }
+  ],
+  "351": [
+    {
+      "ticker": "REED",
+      "price": 2.975
+    },
+    {
+      "ticker": "ASNA",
+      "price": 4.52
+    }
+  ],
+  "381": [
+    {
+      "ticker": "REED",
+      "price": 2.975
+    },
+    {
+      "ticker": "ASNA",
+      "price": 4.54
+    }
+  ]
+}

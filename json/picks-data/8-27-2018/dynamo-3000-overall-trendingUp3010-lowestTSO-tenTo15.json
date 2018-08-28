@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "EIDX",
+      "price": 13.99
+    },
+    {
+      "ticker": "WAIR",
+      "price": 12.575
+    }
+  ],
+  "260": [
+    {
+      "ticker": "LBY",
+      "price": 10.63
+    },
+    {
+      "ticker": "EIDX",
+      "price": 14.055
+    }
+  ],
+  "351": [
+    {
+      "ticker": "GME",
+      "price": 14.77
+    },
+    {
+      "ticker": "LBY",
+      "price": 10.7
+    }
+  ],
+  "381": [
+    {
+      "ticker": "GME",
+      "price": 14.62
+    },
+    {
+      "ticker": "LBY",
+      "price": 10.52
+    }
+  ]
+}

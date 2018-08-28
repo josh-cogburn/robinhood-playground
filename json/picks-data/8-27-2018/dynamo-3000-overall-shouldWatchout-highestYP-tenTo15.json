@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "IDRA",
+      "price": 10.0297
+    },
+    {
+      "ticker": "XENE",
+      "price": 12
+    }
+  ],
+  "260": [
+    {
+      "ticker": "IDRA",
+      "price": 10.08
+    },
+    {
+      "ticker": "RFIL",
+      "price": 12.05
+    }
+  ],
+  "351": [
+    {
+      "ticker": "XENE",
+      "price": 12.15
+    },
+    {
+      "ticker": "RFIL",
+      "price": 11.95
+    }
+  ],
+  "381": [
+    {
+      "ticker": "XENE",
+      "price": 12.4
+    },
+    {
+      "ticker": "VSI",
+      "price": 13.675
+    }
+  ]
+}

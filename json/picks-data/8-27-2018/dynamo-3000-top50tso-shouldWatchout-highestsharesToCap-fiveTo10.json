@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "DEST",
+      "price": 5.125
+    },
+    {
+      "ticker": "CWBR",
+      "price": 5.3391
+    }
+  ],
+  "260": [
+    {
+      "ticker": "DEST",
+      "price": 5.045
+    },
+    {
+      "ticker": "ASYS",
+      "price": 5.5
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NVUS",
+      "price": 5.0354
+    },
+    {
+      "ticker": "WIN",
+      "price": 5.365
+    }
+  ],
+  "381": [
+    {
+      "ticker": "WIN",
+      "price": 5.3702
+    },
+    {
+      "ticker": "STG",
+      "price": 6.3699
+    }
+  ]
+}

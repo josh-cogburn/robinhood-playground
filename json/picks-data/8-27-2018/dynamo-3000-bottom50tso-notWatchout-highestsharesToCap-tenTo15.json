@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "CLAR",
+      "price": 10.25
+    },
+    {
+      "ticker": "MGTX",
+      "price": 11.3421
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PEI",
+      "price": 10.145
+    },
+    {
+      "ticker": "NTGN",
+      "price": 11.8975
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CANG",
+      "price": 10.02
+    },
+    {
+      "ticker": "CLAR",
+      "price": 10.15
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CANG",
+      "price": 10.1497
+    },
+    {
+      "ticker": "CLAR",
+      "price": 10.2
+    }
+  ]
+}

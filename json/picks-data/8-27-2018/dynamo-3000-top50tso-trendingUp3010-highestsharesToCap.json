@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "EGLT",
+      "price": 0.3699
+    },
+    {
+      "ticker": "RGSE",
+      "price": 0.505
+    }
+  ],
+  "260": [
+    {
+      "ticker": "EGLT",
+      "price": 0.36
+    },
+    {
+      "ticker": "RGSE",
+      "price": 0.444
+    }
+  ],
+  "351": [
+    {
+      "ticker": "IGC",
+      "price": 1.2847
+    },
+    {
+      "ticker": "EGLT",
+      "price": 0.3611
+    }
+  ],
+  "381": [
+    {
+      "ticker": "IGC",
+      "price": 1.43
+    },
+    {
+      "ticker": "EGLT",
+      "price": 0.4
+    }
+  ]
+}

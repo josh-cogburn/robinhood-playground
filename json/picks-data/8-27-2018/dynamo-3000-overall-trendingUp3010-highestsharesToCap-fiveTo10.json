@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "GTIM",
+      "price": 5.05
+    },
+    {
+      "ticker": "DEST",
+      "price": 5.125
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GTIM",
+      "price": 5.1
+    },
+    {
+      "ticker": "DEST",
+      "price": 5.045
+    }
+  ],
+  "351": [
+    {
+      "ticker": "GTIM",
+      "price": 5.1
+    },
+    {
+      "ticker": "CRBP",
+      "price": 5.5
+    }
+  ],
+  "381": [
+    {
+      "ticker": "GTIM",
+      "price": 5.1
+    },
+    {
+      "ticker": "CRBP",
+      "price": 5.5
+    }
+  ]
+}

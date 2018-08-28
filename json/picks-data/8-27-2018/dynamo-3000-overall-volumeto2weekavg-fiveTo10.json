@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "TOCA",
+      "price": 8.2
+    },
+    {
+      "ticker": "IPIC",
+      "price": 6.8771
+    }
+  ],
+  "260": [
+    {
+      "ticker": "IPIC",
+      "price": 6.8771
+    },
+    {
+      "ticker": "SSC",
+      "price": 5.22
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SSC",
+      "price": 5.02
+    },
+    {
+      "ticker": "TOCA",
+      "price": 8.31
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CNAT",
+      "price": 5.01
+    },
+    {
+      "ticker": "TOCA",
+      "price": 8.3
+    }
+  ]
+}

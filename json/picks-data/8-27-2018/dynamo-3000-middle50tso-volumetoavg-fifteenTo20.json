@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "ETV",
+      "price": 16.14
+    },
+    {
+      "ticker": "BSCR",
+      "price": 19.1836
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CHAP",
+      "price": 18.2
+    },
+    {
+      "ticker": "AGGP",
+      "price": 19.195
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SHBI",
+      "price": 18.9
+    },
+    {
+      "ticker": "PGF",
+      "price": 18.4127
+    }
+  ],
+  "381": [
+    {
+      "ticker": "WPM",
+      "price": 18.145
+    },
+    {
+      "ticker": "SEM",
+      "price": 19.55
+    }
+  ]
+}

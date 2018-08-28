@@ -1,0 +1,40 @@
+{
+  "0": [
+    {
+      "ticker": "ECR",
+      "price": 1.52
+    },
+    {
+      "ticker": "PTX",
+      "price": 1.25
+    }
+  ],
+  "5": [
+    {
+      "ticker": "ECR",
+      "price": 1.4874
+    },
+    {
+      "ticker": "ENZ",
+      "price": 4.44
+    },
+    {
+      "ticker": "PTX",
+      "price": 1.2301
+    }
+  ],
+  "16": [
+    {
+      "ticker": "ECR",
+      "price": 1.4915
+    },
+    {
+      "ticker": "ENZ",
+      "price": 4.4
+    },
+    {
+      "ticker": "PTX",
+      "price": 1.2525
+    }
+  ]
+}

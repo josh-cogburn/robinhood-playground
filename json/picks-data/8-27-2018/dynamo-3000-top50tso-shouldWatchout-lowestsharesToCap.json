@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "ATAI",
+      "price": 1.68
+    },
+    {
+      "ticker": "MEET",
+      "price": 4.94
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ATAI",
+      "price": 1.68
+    },
+    {
+      "ticker": "MEET",
+      "price": 4.8601
+    }
+  ],
+  "351": [
+    {
+      "ticker": "ATAI",
+      "price": 2.31
+    },
+    {
+      "ticker": "AWX",
+      "price": 4.6799
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ATAI",
+      "price": 2.082
+    },
+    {
+      "ticker": "AWX",
+      "price": 4.765
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "PPR",
+      "price": 5.0029
+    },
+    {
+      "ticker": "CXE",
+      "price": 5.055
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PPR",
+      "price": 5.001
+    },
+    {
+      "ticker": "MMT",
+      "price": 5.6213
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CXE",
+      "price": 5.06
+    },
+    {
+      "ticker": "NCZ",
+      "price": 6.165
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CXE",
+      "price": 5.06
+    },
+    {
+      "ticker": "ITI",
+      "price": 5.09
+    }
+  ]
+}

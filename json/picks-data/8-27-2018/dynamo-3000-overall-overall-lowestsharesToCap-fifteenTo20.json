@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "IRDM",
+      "price": 19.6001
+    },
+    {
+      "ticker": "HIBB",
+      "price": 19.75
+    }
+  ],
+  "260": [
+    {
+      "ticker": "IRDM",
+      "price": 19.4
+    },
+    {
+      "ticker": "HIBB",
+      "price": 19.725
+    }
+  ],
+  "351": [
+    {
+      "ticker": "IRDM",
+      "price": 19.5674
+    },
+    {
+      "ticker": "HIBB",
+      "price": 19.55
+    }
+  ],
+  "381": [
+    {
+      "ticker": "IRDM",
+      "price": 19.625
+    },
+    {
+      "ticker": "HIBB",
+      "price": 19.65
+    }
+  ]
+}

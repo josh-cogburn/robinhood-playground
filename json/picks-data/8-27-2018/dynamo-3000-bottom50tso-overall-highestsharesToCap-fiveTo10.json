@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "MXC",
+      "price": 5.25
+    },
+    {
+      "ticker": "DXR",
+      "price": 5.2
+    }
+  ],
+  "260": [
+    {
+      "ticker": "MXC",
+      "price": 5.25
+    },
+    {
+      "ticker": "DXR",
+      "price": 5.12
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NTN",
+      "price": 5.0033
+    },
+    {
+      "ticker": "DXR",
+      "price": 5.12
+    }
+  ],
+  "381": [
+    {
+      "ticker": "NTN",
+      "price": 5.0033
+    },
+    {
+      "ticker": "CNAT",
+      "price": 5.01
+    }
+  ]
+}

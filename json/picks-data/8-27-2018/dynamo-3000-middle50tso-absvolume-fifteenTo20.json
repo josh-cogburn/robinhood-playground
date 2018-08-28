@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "ETV",
+      "price": 16.14
+    },
+    {
+      "ticker": "AGNC",
+      "price": 19.35
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CHAP",
+      "price": 18.2
+    },
+    {
+      "ticker": "MLN",
+      "price": 19.7545
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SHBI",
+      "price": 18.9
+    },
+    {
+      "ticker": "PHB",
+      "price": 18.5317
+    }
+  ],
+  "381": [
+    {
+      "ticker": "WPM",
+      "price": 18.145
+    },
+    {
+      "ticker": "SCO",
+      "price": 15.6679
+    }
+  ]
+}

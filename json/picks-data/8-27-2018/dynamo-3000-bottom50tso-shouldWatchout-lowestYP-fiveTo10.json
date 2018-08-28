@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "QD",
+      "price": 5.93
+    },
+    {
+      "ticker": "NETE",
+      "price": 5.94
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NETE",
+      "price": 5.9898
+    },
+    {
+      "ticker": "DXR",
+      "price": 5.12
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SUPV",
+      "price": 6.09
+    },
+    {
+      "ticker": "NETE",
+      "price": 5.96
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SUPV",
+      "price": 6.08
+    },
+    {
+      "ticker": "NETE",
+      "price": 5.979
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "TGH",
+      "price": 15.3
+    },
+    {
+      "ticker": "KALV",
+      "price": 15.6195
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TGH",
+      "price": 15.3
+    },
+    {
+      "ticker": "KALV",
+      "price": 15.64
+    }
+  ],
+  "351": [
+    {
+      "ticker": "KALV",
+      "price": 15.92
+    },
+    {
+      "ticker": "OPTN",
+      "price": 15.395
+    }
+  ],
+  "381": [
+    {
+      "ticker": "KALV",
+      "price": 16.14
+    },
+    {
+      "ticker": "OPTN",
+      "price": 15.45
+    }
+  ]
+}

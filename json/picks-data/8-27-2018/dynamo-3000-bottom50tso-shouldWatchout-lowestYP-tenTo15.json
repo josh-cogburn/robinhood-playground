@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "VERI",
+      "price": 10.11
+    },
+    {
+      "ticker": "CIFS",
+      "price": 13.03
+    }
+  ],
+  "260": [
+    {
+      "ticker": "VERI",
+      "price": 10.28
+    },
+    {
+      "ticker": "CIFS",
+      "price": 13.01
+    }
+  ],
+  "351": [
+    {
+      "ticker": "VERI",
+      "price": 10.13
+    },
+    {
+      "ticker": "CIFS",
+      "price": 13
+    }
+  ],
+  "381": [
+    {
+      "ticker": "VERI",
+      "price": 10.245
+    },
+    {
+      "ticker": "CIFS",
+      "price": 12.71
+    }
+  ]
+}

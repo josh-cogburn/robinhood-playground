@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "BOM",
+      "price": 9.12
+    },
+    {
+      "ticker": "VRAY",
+      "price": 9.8
+    }
+  ],
+  "260": [
+    {
+      "ticker": "BOM",
+      "price": 9.92
+    },
+    {
+      "ticker": "VRAY",
+      "price": 9.8
+    }
+  ],
+  "351": [
+    {
+      "ticker": "BOM",
+      "price": 9.91
+    },
+    {
+      "ticker": "EXPR",
+      "price": 9.865
+    }
+  ],
+  "381": [
+    {
+      "ticker": "BOM",
+      "price": 9.91
+    },
+    {
+      "ticker": "EXPR",
+      "price": 9.81
+    }
+  ]
+}

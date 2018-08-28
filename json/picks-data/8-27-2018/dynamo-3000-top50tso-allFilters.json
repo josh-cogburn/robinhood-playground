@@ -1,0 +1,50 @@
+{
+  "200": [
+    {
+      "ticker": "YVR",
+      "price": 1.17
+    },
+    {
+      "ticker": "AGEN",
+      "price": 2.2168
+    },
+    {
+      "ticker": "ENZ",
+      "price": 4.505
+    }
+  ],
+  "260": [
+    {
+      "ticker": "RIBT",
+      "price": 3.3866
+    },
+    {
+      "ticker": "YVR",
+      "price": 1.17
+    },
+    {
+      "ticker": "ENZ",
+      "price": 4.465
+    }
+  ],
+  "351": [
+    {
+      "ticker": "YVR",
+      "price": 1.1699
+    },
+    {
+      "ticker": "ENZ",
+      "price": 4.525
+    }
+  ],
+  "381": [
+    {
+      "ticker": "RIBT",
+      "price": 3.43
+    },
+    {
+      "ticker": "ENZ",
+      "price": 4.525
+    }
+  ]
+}

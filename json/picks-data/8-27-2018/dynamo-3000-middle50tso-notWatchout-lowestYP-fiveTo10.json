@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "DRIP",
+      "price": 6.025
+    },
+    {
+      "ticker": "YIN",
+      "price": 7.05
+    }
+  ],
+  "260": [
+    {
+      "ticker": "MAG",
+      "price": 8.05
+    },
+    {
+      "ticker": "CANE",
+      "price": 6.6908
+    }
+  ],
+  "351": [
+    {
+      "ticker": "DRIP",
+      "price": 6.0152
+    },
+    {
+      "ticker": "MAG",
+      "price": 8.048
+    }
+  ],
+  "381": [
+    {
+      "ticker": "WTID",
+      "price": 7.335
+    },
+    {
+      "ticker": "IPIC",
+      "price": 7.46
+    }
+  ]
+}
