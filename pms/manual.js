@@ -369,6 +369,7 @@ const iwantthis = [
 
 
 const weekofaug27 = [
+    'sudden-drops-last10trend-filter10-221',
     'sudden-drops-last30trend-filter20-153',
     'low-float-high-volume-floatPoints-trenddowngt20-6',
     'sudden-drops-last30trend-filter20-290',
@@ -390,6 +391,7 @@ const weekofaug27 = [
     'sudden-drops-last5trend-filter30-280',
     'sudden-drops-last10trend-filter20-221',
     'low-float-high-volume-floatTimesfloatToVolume-trenddown7to10-shouldWatchout-6',
+    'low-float-high-volume-twoWeekVolToAvgPoints-trenddowngt10-notWatchout-tenTo15-276'
 ];
 
 
