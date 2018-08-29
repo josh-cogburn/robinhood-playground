@@ -37,7 +37,13 @@ module.exports = async (Robinhood, daysBack, ...pmNames) => {
     const objRoundup = Object.keys(limits).reduce((acc, key) => ({
         [key]: allStratsPerf.filter(limits[key]),
         ...acc
-    }), {});
+    }), {
+        missing: pmStrats.filter(strat =>
+            !allStratsPerf
+                .map(o => o.strategy)
+                .includes(strat)
+        ).map(strategy => ({ strategy }))
+    });
 
     Object.keys(objRoundup).forEach(key => {
         console.log(key);
