@@ -395,6 +395,81 @@ const weekofaug27 = [
 ];
 
 
+const aug28basedonperfectos = [
+    'low-float-high-volume-floatTimesvolTo2WeekPoints-trenddown7to10-shouldWatchout-tenTo15-384',
+    'low-float-high-volume-floatTimestwoWeekVolToAvgPoints-trenddowngt10-fifteenTo20-210',
+    'sudden-drops-last5trend-first1-100',
+    'based-on-jump-down3overnight-trending103-notWatchout-ltneg50percmax-first1-fiveTo10-0',
+    'low-float-high-volume-floatPoints-trenddown7to10-fifteenTo20-150',
+    'sudden-drops-last30trend-first1-tenTo15-290',
+    // 'low-float-high-volume-twoWeekVolToAvgPoints-trenddowngt20-notWatchout-210',
+    'low-float-high-volume-floatTimesfloatToVolume-trenddowngt20-notWatchout-210',
+    'technical-indicators-day-year-topSMAoverUnderLastTrade-tenTo15-29',
+    'technical-indicators-10minute-week-topSMAoverUnderLastTrade-tenTo15-320',
+    'technical-indicators-10minute-week-topSMAoverUnderHist-fifteenTo20-29',
+    'based-on-jump-down5overnight-trending103-notWatchout-first1-tenTo15-16',
+    // 'low-float-high-volume-volToAvgPoints-trenddowngt10-shouldWatchout-fifteenTo20-276',
+    'based-on-jump-down5overnight-trending103-notWatchout-gtneg20percmax-16',
+    'based-on-jump-down3overnight-trending607-gt500kvolume-first1-tenTo15-5',
+    'sudden-drops-last10trend-first1-fifteenTo20-360',
+    'sudden-drops-last3trend-first2-fiveTo10-290',
+    'ups-then-downs-prevClose-fifteenTo20-10',
+    'up-streak-3to5days-gt3overnight-fifteenTo20-45',
+    'based-on-jump-down8overnight-notWatchout-gtneg20percmax-first1-tenTo15-0',
+    'based-on-jump-gtEightOvernight-trending103-shouldWatchout-first2-tenTo15-30',
+    'based-on-jump-fourToEightOvernight-trending53-gt100kvolume-first3-fifteenTo20-5',
+    'low-float-high-volume-absVolPoints-trend10to15-notWatchout-fiveTo10-25',
+    'ups-then-downs-shiftedHist-fifteenTo20-380',
+    'based-on-jump-fourToEightOvernight-gt1milvolume-fifteenTo20-16',
+    'technical-indicators-5minute-day-topSMAoverUnderHist-tenTo15-320',
+    'technical-indicators-day-year-topOBV-tenTo15-383',
+    'up-streak-gt8days-gt1overnight-189',
+    'based-on-jump-fourToEightOvernight-trending35257-shouldWatchout-first2-fifteenTo20-30',
+    'up-streak-9days-fifteenTo20-45',
+    'fizbiz-under5Target10Change2Vol200-first1-180'
+];
+
+
+// combined week of aug 27 and aug 28 perfectos
+
+const combinedWeekOfAug27ANDAug28BasedOnPerfectosRealLowCounts = [
+    "low-float-high-volume-floatTimestwoWeekVolToAvgPoints-trenddowngt10-fifteenTo20-210",
+    "low-float-high-volume-floatTimesfloatToVolume-trenddowngt20-notWatchout-210",
+    "based-on-jump-down5overnight-trending103-notWatchout-gtneg20percmax-16",
+    "ups-then-downs-prevClose-fifteenTo20-10",
+    "based-on-jump-gtEightOvernight-trending103-shouldWatchout-first2-tenTo15-30",
+    "based-on-jump-fourToEightOvernight-trending53-gt100kvolume-first3-fifteenTo20-5",
+    "based-on-jump-fourToEightOvernight-trending35257-shouldWatchout-first2-fifteenTo20-30"
+];
+
+const combinedWeekOfAug27ANDAug28BasedOnPerfectosLowAndMedCount = [
+    // low
+    "based-on-jump-down5overnight-trending103-notWatchout-first1-tenTo15-16",
+    "based-on-jump-down3overnight-trending607-gt500kvolume-first1-tenTo15-5",
+    "up-streak-3to5days-gt3overnight-fifteenTo20-45",
+    "based-on-jump-down8overnight-notWatchout-gtneg20percmax-first1-tenTo15-0",
+    "ups-then-downs-shiftedHist-fifteenTo20-380",
+    "up-streak-gt8days-gt1overnight-189",
+    "up-streak-9days-fifteenTo20-45",
+    "fizbiz-under5Target10Change2Vol200-first1-180",
+
+    // med
+    "low-float-high-volume-floatTimesvolTo2WeekPoints-trenddown7to10-shouldWatchout-tenTo15-384",
+    "sudden-drops-last5trend-first1-100",
+    "low-float-high-volume-floatPoints-trenddown7to10-fifteenTo20-150",
+];
+
+const combinedWeekOfAug27ANDAug28BasedOnPerfectosHighCount = [
+    "sudden-drops-last30trend-first1-tenTo15-290",
+    "technical-indicators-day-year-topSMAoverUnderLastTrade-tenTo15-29",
+    "technical-indicators-10minute-week-topSMAoverUnderLastTrade-tenTo15-320",
+    "technical-indicators-10minute-week-topSMAoverUnderHist-fifteenTo20-29",
+    "sudden-drops-last10trend-first1-fifteenTo20-360",
+    "sudden-drops-last3trend-first2-fiveTo10-290",
+    "technical-indicators-5minute-day-topSMAoverUnderHist-tenTo15-320",
+    "technical-indicators-day-year-topOBV-tenTo15-383"
+];
+
 module.exports = {
     'wild n crazy': [
         'week-swings-tenTo15-1',  // wild
@@ -451,5 +526,7 @@ module.exports = {
     iwantthis,
 
 
-    weekofaug27
+    weekofaug27,
+
+    aug28basedonperfectos
 };

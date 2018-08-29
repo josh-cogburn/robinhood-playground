@@ -13,6 +13,8 @@ const getFilesSortedByDate = require('../utils/get-files-sorted-by-date');
 module.exports = async (Robinhood, daysBack, ...pms) => {
 
     const strategies = flatten(pms.map(pm => manualPms[pm]));
+    console.log('pms', pms);
+    console.log('strategies', strategies)
     const stratPerfs = await stratPerfMultiple(Robinhood, daysBack, ...strategies);
     // console.log(JSON.stringify(stratPerfs, null, 2));
 
