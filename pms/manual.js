@@ -467,7 +467,7 @@ const combinedWeekOfAug27ANDAug28BasedOnPerfectosLowAndMedCount = [
     "up-streak-9days-fifteenTo20-45",
     "sudden-drops-last10trend-filter10-221",
     "sudden-drops-last30trend-filter20-153",
-    "low-float-high-volume-floatPoints-trenddowngt20-6"
+    "low-float-high-volume-floatPoints-trenddowngt20-6",
 
     // med
     "low-float-high-volume-floatTimesvolTo2WeekPoints-trenddown7to10-shouldWatchout-tenTo15-384",
