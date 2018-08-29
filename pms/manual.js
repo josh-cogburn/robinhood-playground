@@ -442,7 +442,7 @@ const combinedWeekOfAug27ANDAug28BasedOnPerfectosRealLowCounts = [
     "sudden-drops-last10trend-filter20-290",
     "sudden-drops-last10trend-filter30-328",
     "sudden-drops-last5trend-filter30-280",
-    "sudden-drops-last10trend-filter20-221"
+    "sudden-drops-last10trend-filter20-221",
 
     // real low
     "low-float-high-volume-floatTimestwoWeekVolToAvgPoints-trenddowngt10-fifteenTo20-210",

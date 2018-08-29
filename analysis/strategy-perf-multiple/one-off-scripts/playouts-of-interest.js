@@ -4,7 +4,7 @@ module.exports = [
     'limit3',
     'limit4',
     'limit5',
-    'limit6',
+    // 'limit6',
     // 'limit8',
     // 'limit9',
     // 'limit10',
