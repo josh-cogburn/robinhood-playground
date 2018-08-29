@@ -1,0 +1,38 @@
+{
+  "0": [
+    {
+      "ticker": "COTY",
+      "price": 12.925
+    }
+  ],
+  "5": [
+    {
+      "ticker": "COTY",
+      "price": 13.14
+    },
+    {
+      "ticker": "ACH",
+      "price": 10.911
+    }
+  ],
+  "16": [
+    {
+      "ticker": "COTY",
+      "price": 13
+    },
+    {
+      "ticker": "ACH",
+      "price": 10.9001
+    }
+  ],
+  "30": [
+    {
+      "ticker": "COTY",
+      "price": 12.965
+    },
+    {
+      "ticker": "ACH",
+      "price": 10.945
+    }
+  ]
+}

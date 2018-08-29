@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "RGSE",
+      "price": 0.5
+    },
+    {
+      "ticker": "BSPM",
+      "price": 2.05
+    }
+  ],
+  "5": [
+    {
+      "ticker": "RGSE",
+      "price": 0.51
+    },
+    {
+      "ticker": "BSPM",
+      "price": 2.05
+    }
+  ],
+  "16": [
+    {
+      "ticker": "RGSE",
+      "price": 0.5003
+    },
+    {
+      "ticker": "BSPM",
+      "price": 2.05
+    }
+  ],
+  "30": [
+    {
+      "ticker": "RGSE",
+      "price": 0.4794
+    },
+    {
+      "ticker": "BSPM",
+      "price": 2.03
+    }
+  ]
+}

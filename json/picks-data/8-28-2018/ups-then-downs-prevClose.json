@@ -1,0 +1,130 @@
+{
+  "10": [
+    {
+      "ticker": "IGC",
+      "price": 1.2836
+    },
+    {
+      "ticker": "NAKD",
+      "price": 4.29
+    },
+    {
+      "ticker": "OBLN",
+      "price": 2.82
+    },
+    {
+      "ticker": "MDXG",
+      "price": 4.3439
+    },
+    {
+      "ticker": "RGLS",
+      "price": 0.2882
+    }
+  ],
+  "50": [
+    {
+      "ticker": "IGC",
+      "price": 1.3101
+    },
+    {
+      "ticker": "OBLN",
+      "price": 2.6
+    },
+    {
+      "ticker": "NAKD",
+      "price": 4.45
+    },
+    {
+      "ticker": "RGLS",
+      "price": 0.2667
+    },
+    {
+      "ticker": "ACST",
+      "price": 0.51
+    }
+  ],
+  "200": [
+    {
+      "ticker": "OBLN",
+      "price": 2.666
+    },
+    {
+      "ticker": "EGLT",
+      "price": 0.338
+    },
+    {
+      "ticker": "NAKD",
+      "price": 4.35
+    },
+    {
+      "ticker": "RGLS",
+      "price": 0.2561
+    }
+  ],
+  "300": [
+    {
+      "ticker": "OBLN",
+      "price": 2.6
+    },
+    {
+      "ticker": "IGC",
+      "price": 1.4599
+    },
+    {
+      "ticker": "NAKD",
+      "price": 4.25
+    },
+    {
+      "ticker": "EGLT",
+      "price": 0.3574
+    },
+    {
+      "ticker": "AWX",
+      "price": 4.5929
+    }
+  ],
+  "380": [
+    {
+      "ticker": "IGC",
+      "price": 1.41
+    },
+    {
+      "ticker": "OBLN",
+      "price": 2.62
+    },
+    {
+      "ticker": "NAKD",
+      "price": 4.1001
+    },
+    {
+      "ticker": "EGLT",
+      "price": 0.3352
+    },
+    {
+      "ticker": "BTE",
+      "price": 3.235
+    }
+  ],
+  "600": [
+    {
+      "ticker": "IGC",
+      "price": 1.32
+    },
+    {
+      "ticker": "OBLN",
+      "price": 2.64
+    },
+    {
+      "ticker": "EGLT",
+      "price": 0.342
+    },
+    {
+      "ticker": "NAKD",
+      "price": 4.26
+    },
+    {
+      "ticker": "BTE",
+      "price": 3.24
+    }
+  ]
+}

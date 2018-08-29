@@ -1,0 +1,49 @@
+{
+  "10": [],
+  "50": [
+    {
+      "ticker": "CRON",
+      "price": 11.27
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CRON",
+      "price": 11.31
+    },
+    {
+      "ticker": "RYI",
+      "price": 10.525
+    }
+  ],
+  "300": [
+    {
+      "ticker": "CRON",
+      "price": 11.3973
+    },
+    {
+      "ticker": "RYI",
+      "price": 10.475
+    }
+  ],
+  "380": [
+    {
+      "ticker": "CRON",
+      "price": 11.11
+    },
+    {
+      "ticker": "RYI",
+      "price": 10.375
+    }
+  ],
+  "600": [
+    {
+      "ticker": "CRON",
+      "price": 11.08
+    },
+    {
+      "ticker": "RYI",
+      "price": 10.4
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "NOA",
+      "price": 8.25
+    },
+    {
+      "ticker": "TRIL",
+      "price": 5.673
+    },
+    {
+      "ticker": "MGIC",
+      "price": 9.1
+    }
+  ],
+  "5": [
+    {
+      "ticker": "NOA",
+      "price": 8.1
+    },
+    {
+      "ticker": "TRIL",
+      "price": 5.7
+    },
+    {
+      "ticker": "MGIC",
+      "price": 9.1
+    }
+  ],
+  "16": [
+    {
+      "ticker": "LAC",
+      "price": 5.1145
+    },
+    {
+      "ticker": "NOA",
+      "price": 8.16
+    },
+    {
+      "ticker": "TRIL",
+      "price": 5.75
+    }
+  ],
+  "30": [
+    {
+      "ticker": "LAC",
+      "price": 5.1
+    },
+    {
+      "ticker": "NOA",
+      "price": 8.05
+    },
+    {
+      "ticker": "TRIL",
+      "price": 5.75
+    }
+  ]
+}

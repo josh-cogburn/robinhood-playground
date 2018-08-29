@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "AFMD",
+      "price": 4.125
+    },
+    {
+      "ticker": "STAF",
+      "price": 3.42
+    }
+  ],
+  "5": [
+    {
+      "ticker": "AFMD",
+      "price": 4.15
+    },
+    {
+      "ticker": "STAF",
+      "price": 3
+    }
+  ],
+  "16": [
+    {
+      "ticker": "AFMD",
+      "price": 4.05
+    },
+    {
+      "ticker": "STAF",
+      "price": 2.6978
+    },
+    {
+      "ticker": "SHLD",
+      "price": 1.245
+    },
+    {
+      "ticker": "EGLT",
+      "price": 0.4251
+    }
+  ],
+  "30": [
+    {
+      "ticker": "AFMD",
+      "price": 3.9212
+    },
+    {
+      "ticker": "STAF",
+      "price": 2.71
+    },
+    {
+      "ticker": "SHLD",
+      "price": 1.274
+    },
+    {
+      "ticker": "EGLT",
+      "price": 0.415
+    }
+  ]
+}

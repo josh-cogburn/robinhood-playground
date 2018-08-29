@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "OPK",
+      "price": 6.06
+    },
+    {
+      "ticker": "ABUS",
+      "price": 9.25
+    }
+  ],
+  "5": [
+    {
+      "ticker": "OPK",
+      "price": 5.99
+    },
+    {
+      "ticker": "ABUS",
+      "price": 9.19
+    }
+  ],
+  "16": [
+    {
+      "ticker": "OPK",
+      "price": 5.9216
+    },
+    {
+      "ticker": "ABUS",
+      "price": 9.05
+    }
+  ],
+  "30": [
+    {
+      "ticker": "OPK",
+      "price": 5.8767
+    },
+    {
+      "ticker": "ABUS",
+      "price": 9.05
+    }
+  ]
+}
