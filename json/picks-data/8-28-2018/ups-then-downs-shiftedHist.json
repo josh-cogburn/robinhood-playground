@@ -1,0 +1,44 @@
+{
+  "10": [
+    {
+      "ticker": "LRAD",
+      "price": 3.191
+    },
+    {
+      "ticker": "TMQ",
+      "price": 1.89
+    }
+  ],
+  "50": [
+    {
+      "ticker": "LRAD",
+      "price": 3.165
+    },
+    {
+      "ticker": "WFT",
+      "price": 2.775
+    },
+    {
+      "ticker": "AGRX",
+      "price": 0.265
+    }
+  ],
+  "200": [
+    {
+      "ticker": "AGRX",
+      "price": 0.265
+    }
+  ],
+  "300": [
+    {
+      "ticker": "LRAD",
+      "price": 3.19
+    },
+    {
+      "ticker": "AGRX",
+      "price": 0.263
+    }
+  ],
+  "380": [],
+  "600": []
+}

@@ -1,0 +1,34 @@
+{
+  "0": [
+    {
+      "ticker": "CAMT",
+      "price": 10.5
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CAMT",
+      "price": 10.51
+    }
+  ],
+  "16": [
+    {
+      "ticker": "JAX",
+      "price": 12.35
+    },
+    {
+      "ticker": "CAMT",
+      "price": 10.48
+    }
+  ],
+  "30": [
+    {
+      "ticker": "JAX",
+      "price": 12.35
+    },
+    {
+      "ticker": "AKP",
+      "price": 14.08
+    }
+  ]
+}

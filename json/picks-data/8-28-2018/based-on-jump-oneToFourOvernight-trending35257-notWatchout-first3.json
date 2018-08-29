@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "AGEN",
+      "price": 2.215
+    },
+    {
+      "ticker": "LAC",
+      "price": 4.9
+    },
+    {
+      "ticker": "PMTS",
+      "price": 2.6
+    }
+  ],
+  "5": [
+    {
+      "ticker": "AGEN",
+      "price": 2.17
+    },
+    {
+      "ticker": "LAC",
+      "price": 4.97
+    },
+    {
+      "ticker": "PMTS",
+      "price": 2.63
+    }
+  ],
+  "16": [
+    {
+      "ticker": "AGEN",
+      "price": 2.21
+    },
+    {
+      "ticker": "PMTS",
+      "price": 2.6361
+    },
+    {
+      "ticker": "BDSI",
+      "price": 2.925
+    }
+  ],
+  "30": [
+    {
+      "ticker": "AGEN",
+      "price": 2.17
+    },
+    {
+      "ticker": "PMTS",
+      "price": 2.65
+    },
+    {
+      "ticker": "BDSI",
+      "price": 2.95
+    }
+  ]
+}

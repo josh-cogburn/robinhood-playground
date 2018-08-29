@@ -1,0 +1,54 @@
+{
+  "0": [
+    {
+      "ticker": "LINC",
+      "price": 2.05
+    },
+    {
+      "ticker": "TRPX",
+      "price": 3.85
+    }
+  ],
+  "5": [
+    {
+      "ticker": "LINC",
+      "price": 2.11
+    },
+    {
+      "ticker": "CPHI",
+      "price": 0.2352
+    },
+    {
+      "ticker": "TRPX",
+      "price": 3.85
+    }
+  ],
+  "16": [
+    {
+      "ticker": "LINC",
+      "price": 2.13
+    },
+    {
+      "ticker": "CPHI",
+      "price": 0.2352
+    },
+    {
+      "ticker": "TRPX",
+      "price": 3.979
+    }
+  ],
+  "30": [
+    {
+      "ticker": "LINC",
+      "price": 2.13
+    },
+    {
+      "ticker": "CPHI",
+      "price": 0.2359
+    },
+    {
+      "ticker": "TRPX",
+      "price": 3.86
+    }
+  ]
+}

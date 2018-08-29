@@ -1,0 +1,54 @@
+{
+  "0": [
+    {
+      "ticker": "RGSE",
+      "price": 0.5
+    }
+  ],
+  "5": [
+    {
+      "ticker": "RGSE",
+      "price": 0.51
+    }
+  ],
+  "16": [
+    {
+      "ticker": "RGSE",
+      "price": 0.5003
+    },
+    {
+      "ticker": "SSC",
+      "price": 4.8501
+    },
+    {
+      "ticker": "RSLS",
+      "price": 0.0719
+    },
+    {
+      "ticker": "MARA",
+      "price": 1.02
+    }
+  ],
+  "30": [
+    {
+      "ticker": "RGSE",
+      "price": 0.4794
+    },
+    {
+      "ticker": "SSC",
+      "price": 4.9601
+    },
+    {
+      "ticker": "RSLS",
+      "price": 0.0715
+    },
+    {
+      "ticker": "MARA",
+      "price": 1.04
+    },
+    {
+      "ticker": "CLDX",
+      "price": 0.5038
+    }
+  ]
+}

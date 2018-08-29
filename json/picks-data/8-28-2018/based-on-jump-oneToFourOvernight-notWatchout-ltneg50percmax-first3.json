@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "AGEN",
+      "price": 2.215
+    },
+    {
+      "ticker": "MBOT",
+      "price": 0.64
+    },
+    {
+      "ticker": "AST",
+      "price": 1.6
+    }
+  ],
+  "5": [
+    {
+      "ticker": "AGEN",
+      "price": 2.17
+    },
+    {
+      "ticker": "MBOT",
+      "price": 0.6
+    },
+    {
+      "ticker": "AST",
+      "price": 1.6001
+    }
+  ],
+  "16": [
+    {
+      "ticker": "AGEN",
+      "price": 2.21
+    },
+    {
+      "ticker": "MBOT",
+      "price": 0.5975
+    },
+    {
+      "ticker": "AST",
+      "price": 1.6201
+    }
+  ],
+  "30": [
+    {
+      "ticker": "AGEN",
+      "price": 2.17
+    },
+    {
+      "ticker": "MBOT",
+      "price": 0.6
+    },
+    {
+      "ticker": "AST",
+      "price": 1.625
+    }
+  ]
+}

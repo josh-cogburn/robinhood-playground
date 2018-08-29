@@ -1,0 +1,58 @@
+{
+  "10": [
+    {
+      "ticker": "LAC",
+      "price": 5.0799
+    }
+  ],
+  "35": [
+    {
+      "ticker": "LOOP",
+      "price": 9.9799
+    },
+    {
+      "ticker": "HPR",
+      "price": 5.36
+    },
+    {
+      "ticker": "LAC",
+      "price": 5.08
+    },
+    {
+      "ticker": "CCNI",
+      "price": 5.5
+    }
+  ],
+  "90": [
+    {
+      "ticker": "RESN",
+      "price": 5.13
+    },
+    {
+      "ticker": "CCNI",
+      "price": 5.5
+    }
+  ],
+  "223": [
+    {
+      "ticker": "RESN",
+      "price": 5.1
+    },
+    {
+      "ticker": "ADT",
+      "price": 9.54
+    },
+    {
+      "ticker": "CVU",
+      "price": 8.7
+    },
+    {
+      "ticker": "IMV",
+      "price": 5.78
+    },
+    {
+      "ticker": "NTRP",
+      "price": 9.25
+    }
+  ]
+}

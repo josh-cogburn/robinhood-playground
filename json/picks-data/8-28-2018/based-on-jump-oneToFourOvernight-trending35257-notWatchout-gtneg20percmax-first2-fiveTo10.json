@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "NOA",
+      "price": 8.25
+    },
+    {
+      "ticker": "MGIC",
+      "price": 9.1
+    }
+  ],
+  "5": [
+    {
+      "ticker": "NOA",
+      "price": 8.1
+    },
+    {
+      "ticker": "MGIC",
+      "price": 9.1
+    }
+  ],
+  "16": [
+    {
+      "ticker": "NOA",
+      "price": 8.16
+    },
+    {
+      "ticker": "MGIC",
+      "price": 9.1
+    }
+  ],
+  "30": [
+    {
+      "ticker": "NOA",
+      "price": 8.05
+    },
+    {
+      "ticker": "MGIC",
+      "price": 9.1
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "RGSE",
+      "price": 0.5
+    }
+  ],
+  "5": [
+    {
+      "ticker": "RGSE",
+      "price": 0.51
+    }
+  ],
+  "16": [
+    {
+      "ticker": "RGSE",
+      "price": 0.5003
+    },
+    {
+      "ticker": "SSC",
+      "price": 4.8501
+    },
+    {
+      "ticker": "IHT",
+      "price": 1.75
+    }
+  ],
+  "30": [
+    {
+      "ticker": "RGSE",
+      "price": 0.4794
+    },
+    {
+      "ticker": "SSC",
+      "price": 4.9601
+    },
+    {
+      "ticker": "IHT",
+      "price": 1.75
+    }
+  ]
+}

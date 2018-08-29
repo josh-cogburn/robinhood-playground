@@ -1,0 +1,82 @@
+{
+  "10": [
+    {
+      "ticker": "LTRX",
+      "price": 5.89
+    },
+    {
+      "ticker": "VSTM",
+      "price": 9.12
+    },
+    {
+      "ticker": "JG",
+      "price": 9.05
+    }
+  ],
+  "50": [
+    {
+      "ticker": "LTRX",
+      "price": 5.81
+    },
+    {
+      "ticker": "JG",
+      "price": 8.72
+    },
+    {
+      "ticker": "VSTM",
+      "price": 9.195
+    }
+  ],
+  "200": [
+    {
+      "ticker": "LTRX",
+      "price": 5.3833
+    },
+    {
+      "ticker": "METC",
+      "price": 8.32
+    },
+    {
+      "ticker": "DNR",
+      "price": 5.185
+    },
+    {
+      "ticker": "CRR",
+      "price": 8.6092
+    },
+    {
+      "ticker": "JG",
+      "price": 9.0404
+    }
+  ],
+  "300": [
+    {
+      "ticker": "LTRX",
+      "price": 5.39
+    },
+    {
+      "ticker": "BCOM",
+      "price": 9.74
+    },
+    {
+      "ticker": "FLDM",
+      "price": 7.61
+    }
+  ],
+  "380": [
+    {
+      "ticker": "LTRX",
+      "price": 5.35
+    },
+    {
+      "ticker": "BCOM",
+      "price": 9.74
+    }
+  ],
+  "600": [
+    {
+      "ticker": "LTRX",
+      "price": 5.5
+    }
+  ]
+}
