@@ -19,17 +19,15 @@ const {
 // TODO: flatten list of strategies with PMs for emailObj same way as forPurchase
 module.exports = {
     // important settings
-    sellAllStocksOnNthDay: 1,
+    sellAllStocksOnNthDay: 2,
     purchaseAmt: 20,
     forPurchase: [
-        '[combinedWeekOfAug27ANDAug28BasedOnPerfectosRealLowCounts]',   // 7
-        '[combinedWeekOfAug27ANDAug28BasedOnPerfectosRealLowCounts]',
-        '[combinedWeekOfAug27ANDAug28BasedOnPerfectosRealLowCounts]',
+        '[aug29LowCountsABQuality]',    // 3x power up!
+        '[aug29LowCountsABQuality]',
+        '[aug29LowCountsABQuality]',
 
-        '[combinedWeekOfAug27ANDAug28BasedOnPerfectosLowAndMedCount]',  // 11
-        '[combinedWeekOfAug27ANDAug28BasedOnPerfectosLowAndMedCount]',
-
-        '[combinedWeekOfAug27ANDAug28BasedOnPerfectosHighCount]'        // 8
+        '[aug29LowCountsGradeC]',       // low count and grade c
+        '[aug29MedHighCounts]',         // everydayers
     ],
     sellStrategy: 'limit3',     // for fallback,
     keepers: [

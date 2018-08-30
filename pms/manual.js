@@ -498,6 +498,74 @@ const combinedWeekOfAug27ANDAug28BasedOnPerfectosHighCount = [
     "low-float-high-volume-floatTimesfloatToVolume-trenddown7to10-shouldWatchout-6"
 ];
 
+
+const aug29LowCountsABQuality = [
+    // GRADE A
+    'sudden-drops-last10trend-filter30-328',
+    'sudden-drops-last10trend-filter20-290',
+    'sudden-drops-last5trend-first1-100',
+
+
+    'sudden-drops-last30trend-filter20-290',
+    'low-float-high-volume-floatTimesfloatToVolume-trenddowngt20-notWatchout-210',
+    'sudden-drops-last10trend-filter20-221',
+    'based-on-jump-down3overnight-trending103-notWatchout-ltneg50percmax-first1-fiveTo10-0',
+    'sudden-drops-last5trend-filter30-280',
+    'based-on-jump-down3overnight-notWatchout-ltneg50percmax-first1-fifteenTo20-30',
+    'sudden-drops-last30trend-filter20-153',
+    'based-on-jump-gtEightOvernight-trending103-shouldWatchout-first2-tenTo15-30',
+    'fizbiz-under5Target10Change2Vol200-first1-180',
+    'based-on-jump-down5overnight-trending103-notWatchout-gtneg20percmax-16',
+    'based-on-jump-fourToEightOvernight-trending53-gt100kvolume-first3-fifteenTo20-5',
+    'based-on-jump-down3overnight-trending607-gt500kvolume-first1-tenTo15-5',
+    'based-on-jump-down5overnight-trending103-notWatchout-first1-tenTo15-16',
+    'based-on-jump-fourToEightOvernight-gt1milvolume-fifteenTo20-16',
+    'based-on-jump-fourToEightOvernight-trending35257-shouldWatchout-first2-fifteenTo20-30',
+    'up-streak-gt8days-gt1overnight-189',
+    'low-float-high-volume-absVolPoints-trend10to15-notWatchout-fiveTo10-25',
+    'based-on-jump-down8overnight-notWatchout-ltneg50percmax-first1-30',
+
+    // GRADE B
+    'sudden-drops-last30trend-first1-tenTo15-290',
+    'low-float-high-volume-floatTimestwoWeekVolToAvgPoints-trenddowngt10-fifteenTo20-210',
+    'up-streak-3to5days-gt3overnight-fifteenTo20-45',
+    'ups-then-downs-shiftedHist-fifteenTo20-380',
+    'ups-then-downs-prevClose-fifteenTo20-10',
+    'sudden-drops-last3trend-first2-fiveTo10-290',
+    'sudden-drops-last2trend-first2-290',
+    'low-float-high-volume-twoWeekVolToAvgPoints-trenddowngt10-notWatchout-tenTo15-276',
+    'based-on-jump-down8overnight-notWatchout-gtneg20percmax-first1-tenTo15-0',
+    'sudden-drops-last2trend-filter10-221',
+    'technical-indicators-5minute-day-topSMAoverUnderHist-tenTo15-320',
+
+];
+
+const aug29LowCountsGradeC = [
+    // GRADE C = determined by lowest "max" subtracted from avgTrend of highestlimitplayout (see pm-sort-by-count)
+    'technical-indicators-day-year-topSMAoverUnderLastTrade-tenTo15-29',
+    'technical-indicators-10minute-week-topSMAoverUnderLastTrade-tenTo15-29',
+    'low-float-high-volume-floatPoints-trenddown7to10-fifteenTo20-150',
+    'technical-indicators-10minute-week-topSMAoverUnderLastTrade-tenTo15-320',
+    'sudden-drops-last10trend-first1-fifteenTo20-360',
+    'technical-indicators-10minute-week-topSMAoverUnderHist-fifteenTo20-29',
+    'technical-indicators-day-year-topSMAoverUnderLastTrade-tenTo15-320',
+    'technical-indicators-day-year-topOBV-tenTo15-383',
+    'low-float-high-volume-twoWeekVolToAvgPoints-trenddowngt10-notWatchout-6',
+    'up-streak-9days-fifteenTo20-45',
+    'low-float-high-volume-floatPoints-trenddowngt20-6'
+];
+
+const aug29MedHighCounts = [
+    'low-float-high-volume-floatTimesvolTo2WeekPoints-trenddown7to10-shouldWatchout-tenTo15-384',
+    'sudden-drops-last10trend-filter10-221',
+    'low-float-high-volume-floatTimesfloatToVolume-trenddown7to10-notWatchout-276',
+    'dynamo-3000-bottom50tso-notWatchout-lowestYP-100',
+    'low-float-high-volume-floatTimesfloatToVolume-trenddown7to10-shouldWatchout-6',
+    'dynamo-3000-bottom50tso-notWatchout-highestsharesToCap-100',
+    'low-float-high-volume-floatTimesvolTo2WeekPoints-trend10to15-shouldWatchout-315',
+    'constant-risers-10minute-percUpHighClose-lowovernightjumps-100'
+];
+
 module.exports = {
     'wild n crazy': [
         'week-swings-tenTo15-1',  // wild
@@ -559,5 +627,10 @@ module.exports = {
     aug28basedonperfectos,
     combinedWeekOfAug27ANDAug28BasedOnPerfectosRealLowCounts,
     combinedWeekOfAug27ANDAug28BasedOnPerfectosLowAndMedCount,
-    combinedWeekOfAug27ANDAug28BasedOnPerfectosHighCount
+    combinedWeekOfAug27ANDAug28BasedOnPerfectosHighCount,
+
+
+    aug29LowCountsABQuality,
+    aug29LowCountsGradeC,
+    aug29MedHighCounts,
 };

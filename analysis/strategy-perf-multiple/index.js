@@ -19,8 +19,6 @@ module.exports = async (Robinhood, daysBack = 2, ...strategiesArgs) => {
         }
     })();
 
-
-
     const { days, stratObj } = await initStratPerfs(daysBack);
     let allStrategies = calcUniqStrategies(stratObj);
 
@@ -31,7 +29,7 @@ module.exports = async (Robinhood, daysBack = 2, ...strategiesArgs) => {
                 || strategiesArgs.every(s => strat.includes(s))
         ) : allStrategies;
     const isSearch = strategiesArgs[0] && !allStrategies.includes(strategiesArgs[0]);// && false;
-    const includeDetailed = suppliedStrategies && !isSearch;
+    const includeDetailed = suppliedStrategies && !isSearch && false;
 
     if (suppliedStrategies) {
         console.log('strategies of interest', strategiesOfInterest);
