@@ -46,7 +46,7 @@ module.exports = async (Robinhood, daysBack = 2, ...strategiesArgs) => {
             maxBreakdownKey
         });
         if (index % 50 === 0) {
-            console.log(index, '/', strategiesOfInterest.length);
+            console.log(index + 1, '/', strategiesOfInterest.length);
         }
         return strategyAnalysis;
     });

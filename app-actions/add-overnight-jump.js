@@ -28,7 +28,9 @@ module.exports = async (Robinhood, trend) => {
 
     return withFundamentals.map(stock => ({
         ...stock,
-        overnightJump: getTrend(stock.fundamentals.open, stock.quote_data.previous_close)
+        overnightJump: stock.fundamentals.open
+            ? getTrend(stock.fundamentals.open, stock.quote_data.adjusted_previous_close)
+            : getTrend(stock.last_trade_price, stock.quote_data.adjusted_previous_close)
     })).filter(a => a.fundamentals.open).sort((a, b) => b.overnightJump - a.overnightJump);
 
 };

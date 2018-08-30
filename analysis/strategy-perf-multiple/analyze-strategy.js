@@ -82,6 +82,8 @@ const analyzeStrategy = ({
         // numErrors: withErrors.length,
         count: withoutErrors.length,
 
+        maxs: withoutErrors.map(a => a.maxUp),
+
         ...(detailed ? (() => {
 
             // console.log(breakdownsByDay, 'breakdownsByDay');
@@ -110,7 +112,6 @@ const analyzeStrategy = ({
                 daysDown: daysDown,
                 bigDays: withoutErrors.filter(v => v.maxUp > 50),
                 breakdowns: breakdownStats,
-                maxs: withoutErrors.map(a => a.maxUp),
                 hundredResult: hundredResult(withoutErrors.map(obj => obj.maxUp))
             };
 
