@@ -307,10 +307,14 @@ const analyzeRoundup = allRoundup => {
     const breakdownConfigs = generateBreakdownConfigs(allRoundup);
 
     const runAllBreakdowns = () => {
-        return Object.keys(breakdownConfigs).reduce((acc, key) => ({
-            ...acc,
-            [key]: runBreakdown(allRoundup, breakdownConfigs[key])
-        }), {});
+        return Object.keys(breakdownConfigs).reduce((acc, key, i) => {
+            console.log('running ', key, 'breakdown');
+            console.log(i + 1, '/', Object.keys(breakdownConfigs).length);
+            return {
+                ...acc,
+                [key]: runBreakdown(allRoundup, breakdownConfigs[key])
+            };
+        }, {});
     };
 
     return runAllBreakdowns();
