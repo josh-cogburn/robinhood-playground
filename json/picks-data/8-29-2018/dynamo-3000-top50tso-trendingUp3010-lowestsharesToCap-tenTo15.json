@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "MTLS",
+      "price": 14.97
+    },
+    {
+      "ticker": "ASUR",
+      "price": 14.93
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ASUR",
+      "price": 14.91
+    },
+    {
+      "ticker": "CLDR",
+      "price": 14.82
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CLDR",
+      "price": 14.965
+    },
+    {
+      "ticker": "CORT",
+      "price": 14.76
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CLDR",
+      "price": 14.965
+    },
+    {
+      "ticker": "CORT",
+      "price": 14.785
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "KOSS",
+      "price": 4.01
+    },
+    {
+      "ticker": "ATAI",
+      "price": 2.3534
+    }
+  ],
+  "260": [
+    {
+      "ticker": "KOSS",
+      "price": 4
+    },
+    {
+      "ticker": "ATAI",
+      "price": 2.3403
+    }
+  ],
+  "351": [
+    {
+      "ticker": "KOSS",
+      "price": 4.01
+    },
+    {
+      "ticker": "ATAI",
+      "price": 2.44
+    }
+  ],
+  "381": [
+    {
+      "ticker": "KOSS",
+      "price": 4.01
+    },
+    {
+      "ticker": "ATAI",
+      "price": 2.3899
+    }
+  ]
+}

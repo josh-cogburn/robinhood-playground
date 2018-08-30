@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "UA",
+      "price": 19.0228
+    },
+    {
+      "ticker": "HIBB",
+      "price": 19.525
+    }
+  ],
+  "260": [
+    {
+      "ticker": "UA",
+      "price": 19.17
+    },
+    {
+      "ticker": "HIBB",
+      "price": 19.6
+    }
+  ],
+  "351": [
+    {
+      "ticker": "UA",
+      "price": 19.135
+    },
+    {
+      "ticker": "HIBB",
+      "price": 19.675
+    }
+  ],
+  "381": [
+    {
+      "ticker": "UA",
+      "price": 19.31
+    },
+    {
+      "ticker": "HIBB",
+      "price": 19.95
+    }
+  ]
+}

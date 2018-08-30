@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "GLYC",
+      "price": 14.98
+    },
+    {
+      "ticker": "EIDX",
+      "price": 14.2
+    }
+  ],
+  "260": [
+    {
+      "ticker": "OPTN",
+      "price": 14.9637
+    },
+    {
+      "ticker": "EIDX",
+      "price": 14.18
+    }
+  ],
+  "351": [
+    {
+      "ticker": "OPTN",
+      "price": 14.79
+    },
+    {
+      "ticker": "EIDX",
+      "price": 14.07
+    }
+  ],
+  "381": [
+    {
+      "ticker": "OPTN",
+      "price": 14.77
+    },
+    {
+      "ticker": "ACAD",
+      "price": 14.45
+    }
+  ]
+}

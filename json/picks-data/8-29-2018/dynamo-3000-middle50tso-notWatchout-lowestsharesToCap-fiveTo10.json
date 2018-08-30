@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "USDP",
+      "price": 9.95
+    },
+    {
+      "ticker": "NIM",
+      "price": 9.68
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TBBK",
+      "price": 9.9
+    },
+    {
+      "ticker": "RCS",
+      "price": 9.8801
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CRZBY",
+      "price": 9.86
+    },
+    {
+      "ticker": "NIM",
+      "price": 9.69
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CANG",
+      "price": 9.8368
+    },
+    {
+      "ticker": "NIM",
+      "price": 9.68
+    }
+  ]
+}

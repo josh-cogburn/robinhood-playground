@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "CSBR",
+      "price": 8.5121
+    },
+    {
+      "ticker": "METC",
+      "price": 7.86
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CSBR",
+      "price": 8.5601
+    },
+    {
+      "ticker": "METC",
+      "price": 7.9
+    }
+  ],
+  "351": [
+    {
+      "ticker": "EXPR",
+      "price": 9.85
+    },
+    {
+      "ticker": "TSRI",
+      "price": 7.05
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AFMD",
+      "price": 6.3
+    },
+    {
+      "ticker": "METC",
+      "price": 7.9
+    }
+  ]
+}

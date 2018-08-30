@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "MTLS",
+      "price": 14.97
+    },
+    {
+      "ticker": "ASUR",
+      "price": 14.93
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ASUR",
+      "price": 14.91
+    },
+    {
+      "ticker": "CASA",
+      "price": 14.835
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CASA",
+      "price": 14.7
+    },
+    {
+      "ticker": "AKRX",
+      "price": 14.65
+    }
+  ],
+  "381": [
+    {
+      "ticker": "TSU",
+      "price": 14.98
+    },
+    {
+      "ticker": "AKRX",
+      "price": 14.68
+    }
+  ]
+}

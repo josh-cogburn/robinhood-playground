@@ -1,0 +1,90 @@
+{
+  "200": [
+    {
+      "ticker": "CORI",
+      "price": 9.86
+    },
+    {
+      "ticker": "MCF",
+      "price": 6.1606
+    },
+    {
+      "ticker": "GNMK",
+      "price": 8.32
+    },
+    {
+      "ticker": "CATS",
+      "price": 9.45
+    },
+    {
+      "ticker": "SPWH",
+      "price": 5.95
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CATS",
+      "price": 9.38
+    },
+    {
+      "ticker": "ASC",
+      "price": 7.075
+    },
+    {
+      "ticker": "AFMD",
+      "price": 6.8
+    },
+    {
+      "ticker": "GNMK",
+      "price": 8.29
+    },
+    {
+      "ticker": "LXU",
+      "price": 7.42
+    }
+  ],
+  "351": [
+    {
+      "ticker": "LXU",
+      "price": 7.4
+    },
+    {
+      "ticker": "CALA",
+      "price": 5.275
+    },
+    {
+      "ticker": "RESN",
+      "price": 5.299
+    },
+    {
+      "ticker": "INO",
+      "price": 5
+    },
+    {
+      "ticker": "ADVM",
+      "price": 6.125
+    }
+  ],
+  "381": [
+    {
+      "ticker": "PPDF",
+      "price": 5.985
+    },
+    {
+      "ticker": "INO",
+      "price": 5.005
+    },
+    {
+      "ticker": "RESN",
+      "price": 5.32
+    },
+    {
+      "ticker": "LXU",
+      "price": 7.42
+    },
+    {
+      "ticker": "ADVM",
+      "price": 6.125
+    }
+  ]
+}

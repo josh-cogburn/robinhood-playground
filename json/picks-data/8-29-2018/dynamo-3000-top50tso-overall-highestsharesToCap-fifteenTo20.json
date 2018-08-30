@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "EGAN",
+      "price": 15.175
+    },
+    {
+      "ticker": "UMRX",
+      "price": 15.61
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CSIQ",
+      "price": 15.01
+    },
+    {
+      "ticker": "EGAN",
+      "price": 15.15
+    }
+  ],
+  "351": [
+    {
+      "ticker": "BFRA",
+      "price": 15.11
+    },
+    {
+      "ticker": "EGAN",
+      "price": 15.075
+    }
+  ],
+  "381": [
+    {
+      "ticker": "BFRA",
+      "price": 15.11
+    },
+    {
+      "ticker": "EGAN",
+      "price": 15.025
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "NVG",
+      "price": 14.9736
+    },
+    {
+      "ticker": "OXFD",
+      "price": 14.575
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NZF",
+      "price": 14.73
+    },
+    {
+      "ticker": "OXFD",
+      "price": 14.6
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NZF",
+      "price": 14.7265
+    },
+    {
+      "ticker": "PGX",
+      "price": 14.6032
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MPW",
+      "price": 14.96
+    },
+    {
+      "ticker": "NZF",
+      "price": 14.7299
+    }
+  ]
+}

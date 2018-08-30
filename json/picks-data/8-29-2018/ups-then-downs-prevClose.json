@@ -1,0 +1,90 @@
+{
+  "200": [
+    {
+      "ticker": "ATAI",
+      "price": 2.3534
+    },
+    {
+      "ticker": "RGSE",
+      "price": 0.4381
+    },
+    {
+      "ticker": "TPNL",
+      "price": 3.16
+    },
+    {
+      "ticker": "HTGM",
+      "price": 3.93
+    },
+    {
+      "ticker": "SSNT",
+      "price": 4.021
+    }
+  ],
+  "300": [
+    {
+      "ticker": "ATAI",
+      "price": 2.4091
+    },
+    {
+      "ticker": "RGSE",
+      "price": 0.4388
+    },
+    {
+      "ticker": "GLG",
+      "price": 0.851
+    },
+    {
+      "ticker": "WSTL",
+      "price": 2.83
+    },
+    {
+      "ticker": "LAC",
+      "price": 4.6472
+    }
+  ],
+  "380": [
+    {
+      "ticker": "ATAI",
+      "price": 2.39
+    },
+    {
+      "ticker": "RGSE",
+      "price": 0.42
+    },
+    {
+      "ticker": "PFMT",
+      "price": 2.37
+    },
+    {
+      "ticker": "GLG",
+      "price": 0.84
+    },
+    {
+      "ticker": "DHX",
+      "price": 2.2
+    }
+  ],
+  "600": [
+    {
+      "ticker": "ATAI",
+      "price": 2.42
+    },
+    {
+      "ticker": "RGSE",
+      "price": 0.4424
+    },
+    {
+      "ticker": "PFMT",
+      "price": 2.39
+    },
+    {
+      "ticker": "DHX",
+      "price": 2.2
+    },
+    {
+      "ticker": "WSTL",
+      "price": 2.83
+    }
+  ]
+}

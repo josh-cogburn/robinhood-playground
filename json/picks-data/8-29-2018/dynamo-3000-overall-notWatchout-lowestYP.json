@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "WWR",
+      "price": 0.2469
+    },
+    {
+      "ticker": "AWSM",
+      "price": 3.59
+    }
+  ],
+  "260": [
+    {
+      "ticker": "WWR",
+      "price": 0.2437
+    },
+    {
+      "ticker": "AWSM",
+      "price": 3.6
+    }
+  ],
+  "351": [
+    {
+      "ticker": "WWR",
+      "price": 0.2465
+    },
+    {
+      "ticker": "AWSM",
+      "price": 3.51
+    }
+  ],
+  "381": [
+    {
+      "ticker": "WWR",
+      "price": 0.2479
+    },
+    {
+      "ticker": "AWSM",
+      "price": 3.52
+    }
+  ]
+}

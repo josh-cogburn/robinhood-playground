@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "ARLO",
+      "price": 19.47
+    },
+    {
+      "ticker": "AQST",
+      "price": 17.18
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AOI",
+      "price": 16.15
+    },
+    {
+      "ticker": "XOMA",
+      "price": 18.61
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AOI",
+      "price": 16.1
+    },
+    {
+      "ticker": "UMRX",
+      "price": 16.13
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AOI",
+      "price": 16.05
+    },
+    {
+      "ticker": "XOMA",
+      "price": 18.221
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "NYRT",
+      "price": 18.63
+    },
+    {
+      "ticker": "PRTA",
+      "price": 15.6
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NYRT",
+      "price": 18.6
+    },
+    {
+      "ticker": "PRTA",
+      "price": 15.49
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NYRT",
+      "price": 18.61
+    },
+    {
+      "ticker": "PRTA",
+      "price": 15.41
+    }
+  ],
+  "381": [
+    {
+      "ticker": "NYRT",
+      "price": 18.66
+    },
+    {
+      "ticker": "PRTA",
+      "price": 15.46
+    }
+  ]
+}

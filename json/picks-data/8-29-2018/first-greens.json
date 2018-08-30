@@ -1,0 +1,68 @@
+{
+  "190": [
+    {
+      "ticker": "ADIL",
+      "price": 3.14
+    },
+    {
+      "ticker": "OHGI",
+      "price": 0.2223
+    },
+    {
+      "ticker": "USEG",
+      "price": 0.9338
+    },
+    {
+      "ticker": "GEMP",
+      "price": 1.4527
+    },
+    {
+      "ticker": "GENE",
+      "price": 1.16
+    }
+  ],
+  "250": [
+    {
+      "ticker": "ADIL",
+      "price": 3.15
+    },
+    {
+      "ticker": "OHGI",
+      "price": 0.22
+    },
+    {
+      "ticker": "USEG",
+      "price": 0.9338
+    },
+    {
+      "ticker": "GEMP",
+      "price": 1.47
+    },
+    {
+      "ticker": "GENE",
+      "price": 1.13
+    }
+  ],
+  "600": [
+    {
+      "ticker": "ADIL",
+      "price": 3.03
+    },
+    {
+      "ticker": "OHGI",
+      "price": 0.234
+    },
+    {
+      "ticker": "USEG",
+      "price": 0.9256
+    },
+    {
+      "ticker": "GEMP",
+      "price": 1.45
+    },
+    {
+      "ticker": "GENE",
+      "price": 1.13
+    }
+  ]
+}

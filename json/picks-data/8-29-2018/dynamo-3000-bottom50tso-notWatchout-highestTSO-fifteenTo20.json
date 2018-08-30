@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "SD",
+      "price": 15.84
+    },
+    {
+      "ticker": "SAFE",
+      "price": 16.36
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TECS",
+      "price": 18.29
+    },
+    {
+      "ticker": "WLH",
+      "price": 19.82
+    }
+  ],
+  "351": [
+    {
+      "ticker": "BXG",
+      "price": 19.445
+    },
+    {
+      "ticker": "SKHSY",
+      "price": 16.39
+    }
+  ],
+  "381": [
+    {
+      "ticker": "LQDA",
+      "price": 15.53
+    },
+    {
+      "ticker": "WLH",
+      "price": 19.81
+    }
+  ]
+}

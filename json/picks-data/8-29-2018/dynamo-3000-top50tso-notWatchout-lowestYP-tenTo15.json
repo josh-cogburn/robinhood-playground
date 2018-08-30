@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "VNTR",
+      "price": 12.11
+    },
+    {
+      "ticker": "AACAY",
+      "price": 10.92
+    }
+  ],
+  "260": [
+    {
+      "ticker": "VNTR",
+      "price": 12.05
+    },
+    {
+      "ticker": "AACAY",
+      "price": 10.875
+    }
+  ],
+  "351": [
+    {
+      "ticker": "VNTR",
+      "price": 12.04
+    },
+    {
+      "ticker": "JKS",
+      "price": 13.6
+    }
+  ],
+  "381": [
+    {
+      "ticker": "VNTR",
+      "price": 12.045
+    },
+    {
+      "ticker": "JKS",
+      "price": 13.53
+    }
+  ]
+}

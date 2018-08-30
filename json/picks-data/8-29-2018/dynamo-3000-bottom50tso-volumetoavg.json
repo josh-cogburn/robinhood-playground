@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "RGSE",
+      "price": 0.4381
+    },
+    {
+      "ticker": "MARA",
+      "price": 0.9548
+    }
+  ],
+  "260": [
+    {
+      "ticker": "RGSE",
+      "price": 0.432
+    },
+    {
+      "ticker": "ACST",
+      "price": 0.49
+    }
+  ],
+  "351": [
+    {
+      "ticker": "RGSE",
+      "price": 0.4337
+    },
+    {
+      "ticker": "PTIE",
+      "price": 0.9893
+    }
+  ],
+  "381": [
+    {
+      "ticker": "RGSE",
+      "price": 0.4248
+    },
+    {
+      "ticker": "ATXI",
+      "price": 3.71
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "SPKE",
+      "price": 8.825
+    },
+    {
+      "ticker": "UEPS",
+      "price": 8.74
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ROSE",
+      "price": 7.97
+    },
+    {
+      "ticker": "RKUNY",
+      "price": 7.4
+    }
+  ],
+  "351": [
+    {
+      "ticker": "TSCDY",
+      "price": 9.737
+    },
+    {
+      "ticker": "MAMS",
+      "price": 7.8501
+    }
+  ],
+  "381": [
+    {
+      "ticker": "LTRX",
+      "price": 5.45
+    },
+    {
+      "ticker": "TSCDY",
+      "price": 9.716
+    }
+  ]
+}

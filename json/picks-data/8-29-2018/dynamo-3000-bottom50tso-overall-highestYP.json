@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "TPNL",
+      "price": 3.16
+    },
+    {
+      "ticker": "KOSS",
+      "price": 4.01
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TPNL",
+      "price": 3.236
+    },
+    {
+      "ticker": "KOSS",
+      "price": 4
+    }
+  ],
+  "351": [
+    {
+      "ticker": "TPNL",
+      "price": 3.33
+    },
+    {
+      "ticker": "KOSS",
+      "price": 4.01
+    }
+  ],
+  "381": [
+    {
+      "ticker": "TPNL",
+      "price": 3.3293
+    },
+    {
+      "ticker": "KOSS",
+      "price": 4.01
+    }
+  ]
+}

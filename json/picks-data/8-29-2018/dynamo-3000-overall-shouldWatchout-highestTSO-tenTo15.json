@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "TBIO",
+      "price": 11.27
+    },
+    {
+      "ticker": "CLDR",
+      "price": 14.87
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GRIN",
+      "price": 10.1445
+    },
+    {
+      "ticker": "NVTA",
+      "price": 13.9687
+    }
+  ],
+  "351": [
+    {
+      "ticker": "GRIN",
+      "price": 10.05
+    },
+    {
+      "ticker": "NVTA",
+      "price": 14.05
+    }
+  ],
+  "381": [
+    {
+      "ticker": "NVTA",
+      "price": 14.15
+    },
+    {
+      "ticker": "CLDR",
+      "price": 14.965
+    }
+  ]
+}

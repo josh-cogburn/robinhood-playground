@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "GLOW",
+      "price": 0.1701
+    },
+    {
+      "ticker": "AMMA",
+      "price": 0.3419
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GLOW",
+      "price": 0.1751
+    },
+    {
+      "ticker": "AMMA",
+      "price": 0.3428
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AMMA",
+      "price": 0.335
+    },
+    {
+      "ticker": "RGSE",
+      "price": 0.4337
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AMMA",
+      "price": 0.3326
+    },
+    {
+      "ticker": "RGSE",
+      "price": 0.4248
+    }
+  ]
+}

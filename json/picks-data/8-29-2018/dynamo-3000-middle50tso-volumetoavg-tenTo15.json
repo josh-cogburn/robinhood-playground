@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "CIO",
+      "price": 13
+    },
+    {
+      "ticker": "BSD",
+      "price": 12.59
+    }
+  ],
+  "260": [
+    {
+      "ticker": "INF",
+      "price": 12.66
+    },
+    {
+      "ticker": "EVJ",
+      "price": 11.84
+    }
+  ],
+  "351": [
+    {
+      "ticker": "EVJ",
+      "price": 11.84
+    },
+    {
+      "ticker": "CEF",
+      "price": 11.8756
+    }
+  ],
+  "381": [
+    {
+      "ticker": "KST",
+      "price": 12.5275
+    },
+    {
+      "ticker": "MEN",
+      "price": 10.37
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "200": [
+    {
+      "ticker": "MYFW",
+      "price": 17.5
+    },
+    {
+      "ticker": "CHIQ",
+      "price": 16.42
+    },
+    {
+      "ticker": "EFBI",
+      "price": 16.054
+    },
+    {
+      "ticker": "APLS",
+      "price": 18.95
+    },
+    {
+      "ticker": "AMX",
+      "price": 17.365
+    }
+  ],
+  "260": [
+    {
+      "ticker": "EFBI",
+      "price": 16.054
+    },
+    {
+      "ticker": "CNX",
+      "price": 15.955
+    },
+    {
+      "ticker": "UCTT",
+      "price": 15.42
+    },
+    {
+      "ticker": "KAOOY",
+      "price": 15.3
+    },
+    {
+      "ticker": "LTRPA",
+      "price": 15.625
+    }
+  ],
+  "351": [
+    {
+      "ticker": "BKSC",
+      "price": 19.95
+    },
+    {
+      "ticker": "REPL",
+      "price": 20.5
+    },
+    {
+      "ticker": "CNX",
+      "price": 16.015
+    },
+    {
+      "ticker": "GTES",
+      "price": 18.3
+    },
+    {
+      "ticker": "TITN",
+      "price": 15.96
+    }
+  ],
+  "381": [
+    {
+      "ticker": "LNSTY",
+      "price": 15.3
+    },
+    {
+      "ticker": "SHBI",
+      "price": 18.58
+    },
+    {
+      "ticker": "GAIA",
+      "price": 17.325
+    },
+    {
+      "ticker": "BKSC",
+      "price": 19.95
+    },
+    {
+      "ticker": "NWPX",
+      "price": 18.16
+    }
+  ]
+}

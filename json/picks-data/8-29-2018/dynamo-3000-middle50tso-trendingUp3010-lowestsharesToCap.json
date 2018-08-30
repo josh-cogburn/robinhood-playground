@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "BVX",
+      "price": 4.93
+    },
+    {
+      "ticker": "HIO",
+      "price": 4.82
+    }
+  ],
+  "260": [
+    {
+      "ticker": "BVX",
+      "price": 4.9391
+    },
+    {
+      "ticker": "HIO",
+      "price": 4.8297
+    }
+  ],
+  "351": [
+    {
+      "ticker": "BVX",
+      "price": 4.94
+    },
+    {
+      "ticker": "HIO",
+      "price": 4.8201
+    }
+  ],
+  "381": [
+    {
+      "ticker": "HIO",
+      "price": 4.83
+    },
+    {
+      "ticker": "DHT",
+      "price": 4.67
+    }
+  ]
+}

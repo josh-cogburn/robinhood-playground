@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "BAS",
+      "price": 9.65
+    },
+    {
+      "ticker": "PBR.A",
+      "price": 9.265
+    }
+  ],
+  "260": [
+    {
+      "ticker": "BAS",
+      "price": 9.6201
+    },
+    {
+      "ticker": "MRAM",
+      "price": 9.35
+    }
+  ],
+  "351": [
+    {
+      "ticker": "PBR.A",
+      "price": 9.32
+    },
+    {
+      "ticker": "MRAM",
+      "price": 9.67
+    }
+  ],
+  "381": [
+    {
+      "ticker": "PBR.A",
+      "price": 9.32
+    },
+    {
+      "ticker": "MRAM",
+      "price": 9.6
+    }
+  ]
+}

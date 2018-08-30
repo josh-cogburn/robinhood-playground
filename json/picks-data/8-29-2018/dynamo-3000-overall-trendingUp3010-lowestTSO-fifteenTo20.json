@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "ARLO",
+      "price": 19.47
+    },
+    {
+      "ticker": "ECYT",
+      "price": 19.02
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ARLO",
+      "price": 19.2564
+    },
+    {
+      "ticker": "ECYT",
+      "price": 18.67
+    }
+  ],
+  "351": [
+    {
+      "ticker": "ARLO",
+      "price": 19.13
+    },
+    {
+      "ticker": "ECYT",
+      "price": 18.45
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ARLO",
+      "price": 19.07
+    },
+    {
+      "ticker": "ECYT",
+      "price": 18.59
+    }
+  ]
+}

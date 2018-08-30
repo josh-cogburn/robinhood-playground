@@ -1,0 +1,90 @@
+{
+  "200": [
+    {
+      "ticker": "RGSE",
+      "price": 0.4381
+    },
+    {
+      "ticker": "ATAI",
+      "price": 2.3534
+    },
+    {
+      "ticker": "STAF",
+      "price": 2.07
+    },
+    {
+      "ticker": "WPRT",
+      "price": 3.38
+    },
+    {
+      "ticker": "GLOW",
+      "price": 0.1701
+    }
+  ],
+  "260": [
+    {
+      "ticker": "RGSE",
+      "price": 0.432
+    },
+    {
+      "ticker": "ATAI",
+      "price": 2.3403
+    },
+    {
+      "ticker": "THST",
+      "price": 1.6343
+    },
+    {
+      "ticker": "AMMA",
+      "price": 0.3428
+    },
+    {
+      "ticker": "SSC",
+      "price": 3.8322
+    }
+  ],
+  "351": [
+    {
+      "ticker": "RGSE",
+      "price": 0.4337
+    },
+    {
+      "ticker": "AMMA",
+      "price": 0.335
+    },
+    {
+      "ticker": "GLG",
+      "price": 0.847
+    },
+    {
+      "ticker": "THST",
+      "price": 1.647
+    },
+    {
+      "ticker": "SSC",
+      "price": 3.81
+    }
+  ],
+  "381": [
+    {
+      "ticker": "RGSE",
+      "price": 0.4248
+    },
+    {
+      "ticker": "CARV",
+      "price": 4.9301
+    },
+    {
+      "ticker": "RNN",
+      "price": 1.6645
+    },
+    {
+      "ticker": "ATAI",
+      "price": 2.3899
+    },
+    {
+      "ticker": "AMMA",
+      "price": 0.3326
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "ARCI",
+      "price": 1.02
+    },
+    {
+      "ticker": "IGC",
+      "price": 1.845
+    }
+  ],
+  "260": [
+    {
+      "ticker": "EARS",
+      "price": 0.2868
+    },
+    {
+      "ticker": "EGLT",
+      "price": 0.384
+    }
+  ],
+  "351": [
+    {
+      "ticker": "MTNB",
+      "price": 0.4387
+    },
+    {
+      "ticker": "CATB",
+      "price": 0.7598
+    }
+  ],
+  "381": [
+    {
+      "ticker": "EGLT",
+      "price": 0.3811
+    },
+    {
+      "ticker": "MTNB",
+      "price": 0.4369
+    }
+  ]
+}

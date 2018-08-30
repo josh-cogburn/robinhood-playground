@@ -1,0 +1,58 @@
+{
+  "200": [
+    {
+      "ticker": "GTE",
+      "price": 3.455
+    },
+    {
+      "ticker": "EXK",
+      "price": 2.3
+    },
+    {
+      "ticker": "PTNR",
+      "price": 4.5064
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GTE",
+      "price": 3.445
+    },
+    {
+      "ticker": "EXK",
+      "price": 2.27
+    },
+    {
+      "ticker": "PTNR",
+      "price": 4.5064
+    }
+  ],
+  "351": [
+    {
+      "ticker": "GTE",
+      "price": 3.515
+    },
+    {
+      "ticker": "EXK",
+      "price": 2.285
+    },
+    {
+      "ticker": "PTNR",
+      "price": 4.5
+    }
+  ],
+  "381": [
+    {
+      "ticker": "GTE",
+      "price": 3.46
+    },
+    {
+      "ticker": "EXK",
+      "price": 2.285
+    },
+    {
+      "ticker": "PTNR",
+      "price": 4.61
+    }
+  ]
+}

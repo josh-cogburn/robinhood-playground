@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "AIQ",
+      "price": 16.001
+    },
+    {
+      "ticker": "BRY",
+      "price": 15.93
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AIQ",
+      "price": 16.001
+    },
+    {
+      "ticker": "BRY",
+      "price": 16
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AIQ",
+      "price": 16.0052
+    },
+    {
+      "ticker": "BRY",
+      "price": 15.995
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AIQ",
+      "price": 16.0246
+    },
+    {
+      "ticker": "BRY",
+      "price": 16
+    }
+  ]
+}

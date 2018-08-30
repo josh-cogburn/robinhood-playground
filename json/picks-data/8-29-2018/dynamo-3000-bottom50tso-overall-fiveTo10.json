@@ -1,0 +1,90 @@
+{
+  "200": [
+    {
+      "ticker": "EXPR",
+      "price": 9.58
+    },
+    {
+      "ticker": "LCI",
+      "price": 5.225
+    },
+    {
+      "ticker": "TOUR",
+      "price": 7.54
+    },
+    {
+      "ticker": "CNFR",
+      "price": 6.05
+    },
+    {
+      "ticker": "CAMT",
+      "price": 9.68
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TOUR",
+      "price": 7.5
+    },
+    {
+      "ticker": "LCI",
+      "price": 5.25
+    },
+    {
+      "ticker": "EXPR",
+      "price": 9.655
+    },
+    {
+      "ticker": "CNFR",
+      "price": 6.1
+    },
+    {
+      "ticker": "CMTA",
+      "price": 9.65
+    }
+  ],
+  "351": [
+    {
+      "ticker": "TSRI",
+      "price": 7.05
+    },
+    {
+      "ticker": "CARV",
+      "price": 5.0101
+    },
+    {
+      "ticker": "TOUR",
+      "price": 7.47
+    },
+    {
+      "ticker": "CMCL",
+      "price": 6.2
+    },
+    {
+      "ticker": "CNFR",
+      "price": 6.05
+    }
+  ],
+  "381": [
+    {
+      "ticker": "TSRI",
+      "price": 7.05
+    },
+    {
+      "ticker": "CMCL",
+      "price": 6.1837
+    },
+    {
+      "ticker": "TOUR",
+      "price": 7.5744
+    },
+    {
+      "ticker": "CEPU",
+      "price": 9.055
+    },
+    {
+      "ticker": "CNFR",
+      "price": 6.05
+    }
+  ]
+}

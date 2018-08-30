@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "OPHC",
+      "price": 4.8801
+    },
+    {
+      "ticker": "DFBG",
+      "price": 4.8739
+    }
+  ],
+  "260": [
+    {
+      "ticker": "OPHC",
+      "price": 4.8801
+    },
+    {
+      "ticker": "DFBG",
+      "price": 4.918
+    }
+  ],
+  "351": [
+    {
+      "ticker": "RELV",
+      "price": 4.8542
+    },
+    {
+      "ticker": "DXR",
+      "price": 4.9604
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CARV",
+      "price": 4.9301
+    },
+    {
+      "ticker": "RELV",
+      "price": 4.8542
+    }
+  ]
+}

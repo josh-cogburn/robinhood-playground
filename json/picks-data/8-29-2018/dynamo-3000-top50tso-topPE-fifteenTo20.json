@@ -1,0 +1,58 @@
+{
+  "200": [
+    {
+      "ticker": "HBI",
+      "price": 17.9356
+    },
+    {
+      "ticker": "EFBI",
+      "price": 16.054
+    },
+    {
+      "ticker": "RRC",
+      "price": 16.5448
+    }
+  ],
+  "260": [
+    {
+      "ticker": "HBI",
+      "price": 17.96
+    },
+    {
+      "ticker": "EFBI",
+      "price": 16.054
+    },
+    {
+      "ticker": "RRC",
+      "price": 16.57
+    }
+  ],
+  "351": [
+    {
+      "ticker": "HBI",
+      "price": 18
+    },
+    {
+      "ticker": "PSCE",
+      "price": 16.7
+    },
+    {
+      "ticker": "RRC",
+      "price": 16.64
+    }
+  ],
+  "381": [
+    {
+      "ticker": "DNOW",
+      "price": 17.345
+    },
+    {
+      "ticker": "HBI",
+      "price": 18
+    },
+    {
+      "ticker": "RRC",
+      "price": 16.585
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "SDRL",
+      "price": 19.26
+    },
+    {
+      "ticker": "TLYS",
+      "price": 17.77
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SDRL",
+      "price": 19.38
+    },
+    {
+      "ticker": "NSTG",
+      "price": 15.72
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SDRL",
+      "price": 19.45
+    },
+    {
+      "ticker": "NSTG",
+      "price": 15.86
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SDRL",
+      "price": 19.2471
+    },
+    {
+      "ticker": "NSTG",
+      "price": 15.74
+    }
+  ]
+}

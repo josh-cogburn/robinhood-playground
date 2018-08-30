@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "DXR",
+      "price": 5.1
+    },
+    {
+      "ticker": "DERM",
+      "price": 9.73
+    }
+  ],
+  "260": [
+    {
+      "ticker": "MTEM",
+      "price": 5.3503
+    },
+    {
+      "ticker": "CO",
+      "price": 6.8901
+    }
+  ],
+  "351": [
+    {
+      "ticker": "RDVT",
+      "price": 8.0099
+    },
+    {
+      "ticker": "APOP",
+      "price": 5.1068
+    }
+  ],
+  "381": [
+    {
+      "ticker": "GFA",
+      "price": 5.33
+    },
+    {
+      "ticker": "WIN",
+      "price": 5.175
+    }
+  ]
+}

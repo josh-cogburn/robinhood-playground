@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "NGVC",
+      "price": 18.24
+    },
+    {
+      "ticker": "QNST",
+      "price": 15.35
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NGVC",
+      "price": 18.35
+    },
+    {
+      "ticker": "QNST",
+      "price": 15.275
+    }
+  ],
+  "351": [
+    {
+      "ticker": "QNST",
+      "price": 15.14
+    },
+    {
+      "ticker": "EXPI",
+      "price": 15.42
+    }
+  ],
+  "381": [
+    {
+      "ticker": "QNST",
+      "price": 15.18
+    },
+    {
+      "ticker": "EXPI",
+      "price": 15.5
+    }
+  ]
+}

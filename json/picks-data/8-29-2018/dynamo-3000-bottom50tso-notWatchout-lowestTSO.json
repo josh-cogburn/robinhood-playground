@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "TPNL",
+      "price": 3.16
+    },
+    {
+      "ticker": "WPRT",
+      "price": 3.38
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TPNL",
+      "price": 3.236
+    },
+    {
+      "ticker": "CETXP",
+      "price": 4
+    }
+  ],
+  "351": [
+    {
+      "ticker": "KFS",
+      "price": 2.45
+    },
+    {
+      "ticker": "CETXP",
+      "price": 4.0001
+    }
+  ],
+  "381": [
+    {
+      "ticker": "KFS",
+      "price": 2.5
+    },
+    {
+      "ticker": "CETXP",
+      "price": 4.0001
+    }
+  ]
+}

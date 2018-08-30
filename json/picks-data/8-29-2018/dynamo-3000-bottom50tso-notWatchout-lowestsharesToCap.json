@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "SSNT",
+      "price": 4.021
+    },
+    {
+      "ticker": "BMRA",
+      "price": 3.7998
+    }
+  ],
+  "260": [
+    {
+      "ticker": "LAC",
+      "price": 4.6785
+    },
+    {
+      "ticker": "SSNT",
+      "price": 4.021
+    }
+  ],
+  "351": [
+    {
+      "ticker": "LAC",
+      "price": 4.618
+    },
+    {
+      "ticker": "SSNT",
+      "price": 4
+    }
+  ],
+  "381": [
+    {
+      "ticker": "LAC",
+      "price": 4.61
+    },
+    {
+      "ticker": "SSNT",
+      "price": 4
+    }
+  ]
+}

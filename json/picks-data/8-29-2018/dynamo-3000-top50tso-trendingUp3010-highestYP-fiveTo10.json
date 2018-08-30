@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "AFMD",
+      "price": 6.95
+    },
+    {
+      "ticker": "RCM",
+      "price": 9.98
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AFMD",
+      "price": 6.8
+    },
+    {
+      "ticker": "RCM",
+      "price": 9.98
+    }
+  ],
+  "351": [
+    {
+      "ticker": "TRXC",
+      "price": 5.66
+    },
+    {
+      "ticker": "CDMO",
+      "price": 6.53
+    }
+  ],
+  "381": [
+    {
+      "ticker": "TRXC",
+      "price": 5.65
+    },
+    {
+      "ticker": "CDMO",
+      "price": 6.43
+    }
+  ]
+}

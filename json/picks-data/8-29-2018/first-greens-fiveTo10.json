@@ -1,0 +1,68 @@
+{
+  "190": [
+    {
+      "ticker": "JILL",
+      "price": 5.88
+    },
+    {
+      "ticker": "NTN",
+      "price": 5.05
+    },
+    {
+      "ticker": "BNED",
+      "price": 5.79
+    },
+    {
+      "ticker": "NIHD",
+      "price": 5.66
+    },
+    {
+      "ticker": "FSUGY",
+      "price": 5.92
+    }
+  ],
+  "250": [
+    {
+      "ticker": "JILL",
+      "price": 5.93
+    },
+    {
+      "ticker": "NTN",
+      "price": 5.05
+    },
+    {
+      "ticker": "BNED",
+      "price": 5.87
+    },
+    {
+      "ticker": "NIHD",
+      "price": 5.67
+    },
+    {
+      "ticker": "FSUGY",
+      "price": 5.95
+    }
+  ],
+  "600": [
+    {
+      "ticker": "JILL",
+      "price": 5.95
+    },
+    {
+      "ticker": "BNED",
+      "price": 5.91
+    },
+    {
+      "ticker": "NIHD",
+      "price": 5.67
+    },
+    {
+      "ticker": "FSUGY",
+      "price": 5.94
+    },
+    {
+      "ticker": "CNFR",
+      "price": 6.05
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "MYFW",
+      "price": 17.5
+    },
+    {
+      "ticker": "CHIQ",
+      "price": 16.42
+    }
+  ],
+  "260": [
+    {
+      "ticker": "EFBI",
+      "price": 16.054
+    },
+    {
+      "ticker": "CNX",
+      "price": 15.955
+    }
+  ],
+  "351": [
+    {
+      "ticker": "BKSC",
+      "price": 19.95
+    },
+    {
+      "ticker": "REPL",
+      "price": 20.5
+    }
+  ],
+  "381": [
+    {
+      "ticker": "LNSTY",
+      "price": 15.3
+    },
+    {
+      "ticker": "SHBI",
+      "price": 18.58
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "200": [
+    {
+      "ticker": "GOV",
+      "price": 17.145
+    },
+    {
+      "ticker": "NCSM",
+      "price": 16.07
+    },
+    {
+      "ticker": "ROIC",
+      "price": 19.595
+    }
+  ],
+  "260": [
+    {
+      "ticker": "RNP",
+      "price": 19.9925
+    },
+    {
+      "ticker": "GOEX",
+      "price": 19.44
+    },
+    {
+      "ticker": "GF",
+      "price": 19.25
+    }
+  ],
+  "351": [
+    {
+      "ticker": "COT",
+      "price": 15.245
+    },
+    {
+      "ticker": "AQUA",
+      "price": 19.56
+    },
+    {
+      "ticker": "DOC",
+      "price": 17.515
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AQUA",
+      "price": 19.58
+    },
+    {
+      "ticker": "DOC",
+      "price": 17.515
+    },
+    {
+      "ticker": "SGDM",
+      "price": 16.1586
+    }
+  ]
+}

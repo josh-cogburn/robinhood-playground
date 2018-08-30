@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "TPNL",
+      "price": 3.16
+    },
+    {
+      "ticker": "SSNT",
+      "price": 4.021
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TPNL",
+      "price": 3.236
+    },
+    {
+      "ticker": "TAIT",
+      "price": 2.18
+    }
+  ],
+  "351": [
+    {
+      "ticker": "TPNL",
+      "price": 3.33
+    },
+    {
+      "ticker": "SSNT",
+      "price": 4
+    }
+  ],
+  "381": [
+    {
+      "ticker": "TPNL",
+      "price": 3.3293
+    },
+    {
+      "ticker": "TAIT",
+      "price": 2.17
+    }
+  ]
+}

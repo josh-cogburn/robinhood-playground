@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "IGC",
+      "price": 1.845
+    },
+    {
+      "ticker": "TEUM",
+      "price": 2.921
+    }
+  ],
+  "260": [
+    {
+      "ticker": "IGC",
+      "price": 1.8661
+    },
+    {
+      "ticker": "CORV",
+      "price": 4.6
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CVM",
+      "price": 2.53
+    },
+    {
+      "ticker": "CRMD",
+      "price": 0.5423
+    }
+  ],
+  "381": [
+    {
+      "ticker": "IGC",
+      "price": 1.9099
+    },
+    {
+      "ticker": "CVM",
+      "price": 2.56
+    }
+  ]
+}

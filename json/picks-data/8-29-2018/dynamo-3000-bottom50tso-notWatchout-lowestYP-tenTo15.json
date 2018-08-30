@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "SQQQ",
+      "price": 11.1478
+    },
+    {
+      "ticker": "ZBIO",
+      "price": 13.0278
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SQQQ",
+      "price": 11.1615
+    },
+    {
+      "ticker": "IRS",
+      "price": 14.74
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SQQQ",
+      "price": 11.085
+    },
+    {
+      "ticker": "IRS",
+      "price": 14.75
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SQQQ",
+      "price": 11.1
+    },
+    {
+      "ticker": "IRS",
+      "price": 14.8
+    }
+  ]
+}

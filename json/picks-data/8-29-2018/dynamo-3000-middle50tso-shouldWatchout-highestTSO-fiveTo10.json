@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "DXR",
+      "price": 5.1
+    },
+    {
+      "ticker": "OCLR",
+      "price": 9.605
+    }
+  ],
+  "260": [
+    {
+      "ticker": "MTEM",
+      "price": 5.3503
+    },
+    {
+      "ticker": "OCLR",
+      "price": 9.6044
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CLBS",
+      "price": 5.02
+    },
+    {
+      "ticker": "WIN",
+      "price": 5.19
+    }
+  ],
+  "381": [
+    {
+      "ticker": "OVID",
+      "price": 6.6
+    },
+    {
+      "ticker": "FPI",
+      "price": 7.05
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "200": [
+    {
+      "ticker": "WPRT",
+      "price": 3.38
+    },
+    {
+      "ticker": "SCKT",
+      "price": 2.3929
+    },
+    {
+      "ticker": "SSNT",
+      "price": 4.021
+    },
+    {
+      "ticker": "SYPR",
+      "price": 1.57
+    },
+    {
+      "ticker": "BMRA",
+      "price": 3.7998
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SCKT",
+      "price": 2.3929
+    },
+    {
+      "ticker": "WPRT",
+      "price": 3.4099
+    },
+    {
+      "ticker": "SSNT",
+      "price": 4.021
+    },
+    {
+      "ticker": "LAC",
+      "price": 4.6785
+    },
+    {
+      "ticker": "TAIT",
+      "price": 2.18
+    }
+  ],
+  "351": [
+    {
+      "ticker": "LAC",
+      "price": 4.618
+    },
+    {
+      "ticker": "SSNT",
+      "price": 4
+    },
+    {
+      "ticker": "SCKT",
+      "price": 2.3929
+    }
+  ],
+  "381": [
+    {
+      "ticker": "LAC",
+      "price": 4.61
+    },
+    {
+      "ticker": "SSNT",
+      "price": 4
+    },
+    {
+      "ticker": "BKTI",
+      "price": 3.7
+    },
+    {
+      "ticker": "TAIT",
+      "price": 2.17
+    }
+  ]
+}

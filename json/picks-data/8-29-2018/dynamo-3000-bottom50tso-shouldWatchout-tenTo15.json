@@ -1,0 +1,90 @@
+{
+  "200": [
+    {
+      "ticker": "CDZI",
+      "price": 10.825
+    },
+    {
+      "ticker": "VSI",
+      "price": 12.85
+    },
+    {
+      "ticker": "BPI",
+      "price": 12.2337
+    },
+    {
+      "ticker": "VNET",
+      "price": 10.66
+    },
+    {
+      "ticker": "HCLP",
+      "price": 11.7
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CDZI",
+      "price": 10.9
+    },
+    {
+      "ticker": "BPI",
+      "price": 12.175
+    },
+    {
+      "ticker": "NEW",
+      "price": 13.34
+    },
+    {
+      "ticker": "VNET",
+      "price": 10.64
+    },
+    {
+      "ticker": "FTNW",
+      "price": 12.43
+    }
+  ],
+  "351": [
+    {
+      "ticker": "BPI",
+      "price": 11.8975
+    },
+    {
+      "ticker": "CDZI",
+      "price": 10.9
+    },
+    {
+      "ticker": "FTNW",
+      "price": 12.3499
+    },
+    {
+      "ticker": "VNET",
+      "price": 10.5201
+    },
+    {
+      "ticker": "NEW",
+      "price": 13.37
+    }
+  ],
+  "381": [
+    {
+      "ticker": "BPI",
+      "price": 11.81
+    },
+    {
+      "ticker": "CDZI",
+      "price": 10.9
+    },
+    {
+      "ticker": "NEW",
+      "price": 13.15
+    },
+    {
+      "ticker": "VNET",
+      "price": 10.53
+    },
+    {
+      "ticker": "OPTN",
+      "price": 14.77
+    }
+  ]
+}

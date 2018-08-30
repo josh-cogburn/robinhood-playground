@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "RDVT",
+      "price": 7.835
+    },
+    {
+      "ticker": "MNLO",
+      "price": 8.09
+    }
+  ],
+  "260": [
+    {
+      "ticker": "RDVT",
+      "price": 7.8507
+    },
+    {
+      "ticker": "MNLO",
+      "price": 8.14
+    }
+  ],
+  "351": [
+    {
+      "ticker": "RDVT",
+      "price": 8.0099
+    },
+    {
+      "ticker": "MNLO",
+      "price": 8.095
+    }
+  ],
+  "381": [
+    {
+      "ticker": "RDVT",
+      "price": 8.0103
+    },
+    {
+      "ticker": "MNLO",
+      "price": 8.08
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "EXPR",
+      "price": 9.58
+    },
+    {
+      "ticker": "ZYNE",
+      "price": 7.94
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TOUR",
+      "price": 7.5
+    },
+    {
+      "ticker": "ZYNE",
+      "price": 7.9218
+    }
+  ],
+  "351": [
+    {
+      "ticker": "TSRI",
+      "price": 7.05
+    },
+    {
+      "ticker": "GALT",
+      "price": 5.34
+    }
+  ],
+  "381": [
+    {
+      "ticker": "TSRI",
+      "price": 7.05
+    },
+    {
+      "ticker": "ZYNE",
+      "price": 7.97
+    }
+  ]
+}

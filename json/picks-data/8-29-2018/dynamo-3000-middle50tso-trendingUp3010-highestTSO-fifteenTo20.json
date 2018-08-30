@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "FFA",
+      "price": 16.589
+    },
+    {
+      "ticker": "JCE",
+      "price": 15.8985
+    }
+  ],
+  "260": [
+    {
+      "ticker": "IPFF",
+      "price": 17.82
+    },
+    {
+      "ticker": "AMPH",
+      "price": 18.15
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CHMI",
+      "price": 18.54
+    },
+    {
+      "ticker": "MNR",
+      "price": 17.35
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SNH",
+      "price": 19.075
+    },
+    {
+      "ticker": "ARI",
+      "price": 19.435
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "VERI",
+      "price": 10.35
+    },
+    {
+      "ticker": "CBIO",
+      "price": 10.72
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NEW",
+      "price": 13.34
+    },
+    {
+      "ticker": "CVIA",
+      "price": 11.58
+    }
+  ],
+  "351": [
+    {
+      "ticker": "VERI",
+      "price": 10.29
+    },
+    {
+      "ticker": "CVIA",
+      "price": 11.61
+    }
+  ],
+  "381": [
+    {
+      "ticker": "VERI",
+      "price": 10.3
+    },
+    {
+      "ticker": "CIFS",
+      "price": 12.0235
+    }
+  ]
+}

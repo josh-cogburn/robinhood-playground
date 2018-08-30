@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "PPR",
+      "price": 5
+    },
+    {
+      "ticker": "GGN",
+      "price": 4.9531
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PPR",
+      "price": 4.9967
+    },
+    {
+      "ticker": "GGN",
+      "price": 4.9436
+    }
+  ],
+  "351": [
+    {
+      "ticker": "RELV",
+      "price": 4.8542
+    },
+    {
+      "ticker": "PPR",
+      "price": 4.9962
+    }
+  ],
+  "381": [
+    {
+      "ticker": "RELV",
+      "price": 4.8542
+    },
+    {
+      "ticker": "HBM",
+      "price": 4.95
+    }
+  ]
+}

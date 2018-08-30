@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "GSVC",
+      "price": 7.245
+    },
+    {
+      "ticker": "XSPL",
+      "price": 6.49
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NHYDY",
+      "price": 5.77
+    },
+    {
+      "ticker": "FT",
+      "price": 6.8075
+    }
+  ],
+  "351": [
+    {
+      "ticker": "WETF",
+      "price": 8.115
+    },
+    {
+      "ticker": "EURN",
+      "price": 8.625
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CXE",
+      "price": 5.0426
+    },
+    {
+      "ticker": "EAD",
+      "price": 8.0599
+    }
+  ]
+}

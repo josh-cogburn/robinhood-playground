@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "AMAL",
+      "price": 17.645
+    },
+    {
+      "ticker": "SCO",
+      "price": 15.46
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AMAL",
+      "price": 17.31
+    },
+    {
+      "ticker": "SCO",
+      "price": 15.339
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AMAL",
+      "price": 17.46
+    },
+    {
+      "ticker": "SCO",
+      "price": 15.3548
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AMAL",
+      "price": 17.51
+    },
+    {
+      "ticker": "SCO",
+      "price": 15.3099
+    }
+  ]
+}

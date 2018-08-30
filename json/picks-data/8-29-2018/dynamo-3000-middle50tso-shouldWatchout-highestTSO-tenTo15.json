@@ -1,0 +1,38 @@
+{
+  "200": [
+    {
+      "ticker": "BEDU",
+      "price": 12.39
+    },
+    {
+      "ticker": "OXFD",
+      "price": 14.575
+    }
+  ],
+  "260": [
+    {
+      "ticker": "OXFD",
+      "price": 14.6
+    },
+    {
+      "ticker": "SPRO",
+      "price": 11.345
+    }
+  ],
+  "351": [
+    {
+      "ticker": "LIVE",
+      "price": 10.39
+    },
+    {
+      "ticker": "SPRO",
+      "price": 11.3409
+    }
+  ],
+  "381": [
+    {
+      "ticker": "LIVE",
+      "price": 10.38
+    }
+  ]
+}

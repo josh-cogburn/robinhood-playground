@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "MYSZ",
+      "price": 0.8036
+    },
+    {
+      "ticker": "AEHR",
+      "price": 2.59
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TGC",
+      "price": 1.08
+    },
+    {
+      "ticker": "AMTX",
+      "price": 1.2961
+    }
+  ],
+  "351": [
+    {
+      "ticker": "IMUC",
+      "price": 0.2395
+    },
+    {
+      "ticker": "DPW",
+      "price": 0.4818
+    }
+  ],
+  "381": [
+    {
+      "ticker": "IMUC",
+      "price": 0.2392
+    },
+    {
+      "ticker": "PRAN",
+      "price": 2.06
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "200": [
+    {
+      "ticker": "TPNL",
+      "price": 3.16
+    },
+    {
+      "ticker": "WPRT",
+      "price": 3.38
+    },
+    {
+      "ticker": "CETXP",
+      "price": 4
+    },
+    {
+      "ticker": "WWR",
+      "price": 0.2469
+    },
+    {
+      "ticker": "SCKT",
+      "price": 2.3929
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TPNL",
+      "price": 3.236
+    },
+    {
+      "ticker": "CETXP",
+      "price": 4
+    },
+    {
+      "ticker": "WWR",
+      "price": 0.2437
+    },
+    {
+      "ticker": "VBIV",
+      "price": 1.99
+    },
+    {
+      "ticker": "SCKT",
+      "price": 2.3929
+    }
+  ],
+  "351": [
+    {
+      "ticker": "KFS",
+      "price": 2.45
+    },
+    {
+      "ticker": "CETXP",
+      "price": 4.0001
+    },
+    {
+      "ticker": "VBIV",
+      "price": 1.97
+    },
+    {
+      "ticker": "LAC",
+      "price": 4.618
+    },
+    {
+      "ticker": "WWR",
+      "price": 0.2465
+    }
+  ],
+  "381": [
+    {
+      "ticker": "KFS",
+      "price": 2.5
+    },
+    {
+      "ticker": "CETXP",
+      "price": 4.0001
+    },
+    {
+      "ticker": "VBIV",
+      "price": 1.97
+    },
+    {
+      "ticker": "LAC",
+      "price": 4.61
+    },
+    {
+      "ticker": "SSNT",
+      "price": 4
+    }
+  ]
+}

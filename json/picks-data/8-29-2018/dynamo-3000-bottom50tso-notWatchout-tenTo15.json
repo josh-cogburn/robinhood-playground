@@ -1,0 +1,90 @@
+{
+  "200": [
+    {
+      "ticker": "OBSV",
+      "price": 12.979
+    },
+    {
+      "ticker": "RCUS",
+      "price": 14
+    },
+    {
+      "ticker": "DQJCY",
+      "price": 12.23
+    },
+    {
+      "ticker": "SGBLY",
+      "price": 13.205
+    },
+    {
+      "ticker": "PNTR",
+      "price": 12.8502
+    }
+  ],
+  "260": [
+    {
+      "ticker": "OBSV",
+      "price": 12.92
+    },
+    {
+      "ticker": "RCUS",
+      "price": 14
+    },
+    {
+      "ticker": "DQJCY",
+      "price": 12.01
+    },
+    {
+      "ticker": "IRS",
+      "price": 14.74
+    },
+    {
+      "ticker": "GLBZ",
+      "price": 12.15
+    }
+  ],
+  "351": [
+    {
+      "ticker": "LMST",
+      "price": 13.82
+    },
+    {
+      "ticker": "OBSV",
+      "price": 13
+    },
+    {
+      "ticker": "TGS",
+      "price": 12.61
+    },
+    {
+      "ticker": "DQJCY",
+      "price": 12.23
+    },
+    {
+      "ticker": "INS",
+      "price": 13.03
+    }
+  ],
+  "381": [
+    {
+      "ticker": "OBSV",
+      "price": 12.905
+    },
+    {
+      "ticker": "RCUS",
+      "price": 13.88
+    },
+    {
+      "ticker": "MMLP",
+      "price": 11.075
+    },
+    {
+      "ticker": "SGBLY",
+      "price": 13.06
+    },
+    {
+      "ticker": "TGS",
+      "price": 12.88
+    }
+  ]
+}

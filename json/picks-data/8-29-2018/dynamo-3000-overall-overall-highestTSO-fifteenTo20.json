@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "AQST",
+      "price": 17.18
+    },
+    {
+      "ticker": "XOMA",
+      "price": 18.13
+    }
+  ],
+  "260": [
+    {
+      "ticker": "XOMA",
+      "price": 18.61
+    },
+    {
+      "ticker": "UMRX",
+      "price": 15.95
+    }
+  ],
+  "351": [
+    {
+      "ticker": "UMRX",
+      "price": 16.13
+    },
+    {
+      "ticker": "XOMA",
+      "price": 18.42
+    }
+  ],
+  "381": [
+    {
+      "ticker": "XOMA",
+      "price": 18.221
+    },
+    {
+      "ticker": "UMRX",
+      "price": 15.92
+    }
+  ]
+}

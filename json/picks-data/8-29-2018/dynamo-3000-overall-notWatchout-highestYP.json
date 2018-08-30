@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "GGN",
+      "price": 4.9531
+    },
+    {
+      "ticker": "INSG",
+      "price": 3.33
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GGN",
+      "price": 4.9436
+    },
+    {
+      "ticker": "TPNL",
+      "price": 3.236
+    }
+  ],
+  "351": [
+    {
+      "ticker": "GGN",
+      "price": 4.9501
+    },
+    {
+      "ticker": "TPNL",
+      "price": 3.33
+    }
+  ],
+  "381": [
+    {
+      "ticker": "GGN",
+      "price": 4.96
+    },
+    {
+      "ticker": "TPNL",
+      "price": 3.3293
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "ARLO",
+      "price": 19.47
+    },
+    {
+      "ticker": "AOI",
+      "price": 16.55
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AOI",
+      "price": 16.15
+    },
+    {
+      "ticker": "ARLO",
+      "price": 19.2564
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AOI",
+      "price": 16.1
+    },
+    {
+      "ticker": "ARLO",
+      "price": 19.13
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AOI",
+      "price": 16.05
+    },
+    {
+      "ticker": "ARLO",
+      "price": 19.07
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "TEO",
+      "price": 17.66
+    },
+    {
+      "ticker": "CLXT",
+      "price": 17.23
+    }
+  ],
+  "260": [
+    {
+      "ticker": "DM",
+      "price": 16.725
+    },
+    {
+      "ticker": "TTM",
+      "price": 18.485
+    }
+  ],
+  "351": [
+    {
+      "ticker": "OMI",
+      "price": 16.96
+    },
+    {
+      "ticker": "MZZ",
+      "price": 15.6097
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AZUL",
+      "price": 16.58
+    },
+    {
+      "ticker": "XPER",
+      "price": 16.375
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "GLOW",
+      "price": 0.1701
+    },
+    {
+      "ticker": "IMUC",
+      "price": 0.2381
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GLOW",
+      "price": 0.1751
+    },
+    {
+      "ticker": "IMUC",
+      "price": 0.2406
+    }
+  ],
+  "351": [
+    {
+      "ticker": "GLOW",
+      "price": 0.1765
+    },
+    {
+      "ticker": "IMUC",
+      "price": 0.2395
+    }
+  ],
+  "381": [
+    {
+      "ticker": "GLOW",
+      "price": 0.18
+    },
+    {
+      "ticker": "IMUC",
+      "price": 0.2392
+    }
+  ]
+}

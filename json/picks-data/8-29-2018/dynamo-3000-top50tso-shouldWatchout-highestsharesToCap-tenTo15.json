@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "AOBC",
+      "price": 10.105
+    },
+    {
+      "ticker": "VRAY",
+      "price": 10.55
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AOBC",
+      "price": 10.1
+    },
+    {
+      "ticker": "VRAY",
+      "price": 10.52
+    }
+  ],
+  "351": [
+    {
+      "ticker": "VRAY",
+      "price": 10.6
+    },
+    {
+      "ticker": "PBR",
+      "price": 10.815
+    }
+  ],
+  "381": [
+    {
+      "ticker": "VRAY",
+      "price": 10.43
+    },
+    {
+      "ticker": "PBR",
+      "price": 10.8
+    }
+  ]
+}

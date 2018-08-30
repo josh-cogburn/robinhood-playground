@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "GLPEY",
+      "price": 10.4
+    },
+    {
+      "ticker": "ACRE",
+      "price": 14.575
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PAH",
+      "price": 13.31
+    },
+    {
+      "ticker": "DBOEY",
+      "price": 13.879
+    }
+  ],
+  "351": [
+    {
+      "ticker": "PAH",
+      "price": 13.345
+    },
+    {
+      "ticker": "VIAV",
+      "price": 11.475
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MPW",
+      "price": 14.96
+    },
+    {
+      "ticker": "ACRE",
+      "price": 14.58
+    }
+  ]
+}

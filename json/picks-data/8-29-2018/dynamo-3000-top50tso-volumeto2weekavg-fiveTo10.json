@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "REPH",
+      "price": 6.3492
+    },
+    {
+      "ticker": "JT",
+      "price": 5.1232
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TTOO",
+      "price": 6.43
+    },
+    {
+      "ticker": "CATS",
+      "price": 9.38
+    }
+  ],
+  "351": [
+    {
+      "ticker": "LXU",
+      "price": 7.4
+    },
+    {
+      "ticker": "CALA",
+      "price": 5.275
+    }
+  ],
+  "381": [
+    {
+      "ticker": "HLX",
+      "price": 9.305
+    },
+    {
+      "ticker": "PBR.A",
+      "price": 9.32
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "RCM",
+      "price": 9.98
+    },
+    {
+      "ticker": "MFIN",
+      "price": 6.265
+    }
+  ],
+  "260": [
+    {
+      "ticker": "RCM",
+      "price": 9.98
+    },
+    {
+      "ticker": "MFIN",
+      "price": 6.17
+    }
+  ],
+  "351": [
+    {
+      "ticker": "MFIN",
+      "price": 6.19
+    },
+    {
+      "ticker": "ADMA",
+      "price": 6.31
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MFIN",
+      "price": 6.33
+    },
+    {
+      "ticker": "ADMA",
+      "price": 6.25
+    }
+  ]
+}

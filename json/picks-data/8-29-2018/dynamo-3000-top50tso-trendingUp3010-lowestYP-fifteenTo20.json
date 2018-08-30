@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "UCTT",
+      "price": 15.53
+    },
+    {
+      "ticker": "MFGP",
+      "price": 17.34
+    }
+  ],
+  "260": [
+    {
+      "ticker": "UCTT",
+      "price": 15.42
+    },
+    {
+      "ticker": "SGMO",
+      "price": 16.4722
+    }
+  ],
+  "351": [
+    {
+      "ticker": "UCTT",
+      "price": 15.575
+    },
+    {
+      "ticker": "LNTH",
+      "price": 15.15
+    }
+  ],
+  "381": [
+    {
+      "ticker": "UCTT",
+      "price": 15.625
+    },
+    {
+      "ticker": "LNTH",
+      "price": 15.125
+    }
+  ]
+}

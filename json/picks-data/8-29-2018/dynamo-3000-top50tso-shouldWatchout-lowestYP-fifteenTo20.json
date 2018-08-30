@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "PRTA",
+      "price": 15.6
+    },
+    {
+      "ticker": "BRZU",
+      "price": 17.92
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PRTA",
+      "price": 15.49
+    },
+    {
+      "ticker": "BRZU",
+      "price": 17.5601
+    }
+  ],
+  "351": [
+    {
+      "ticker": "BRZU",
+      "price": 17.931
+    },
+    {
+      "ticker": "LL",
+      "price": 17.91
+    }
+  ],
+  "381": [
+    {
+      "ticker": "BRZU",
+      "price": 17.87
+    },
+    {
+      "ticker": "LL",
+      "price": 17.97
+    }
+  ]
+}

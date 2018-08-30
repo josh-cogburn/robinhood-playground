@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "GASX",
+      "price": 18.03
+    },
+    {
+      "ticker": "GRVY",
+      "price": 18.66
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AMAL",
+      "price": 17.31
+    },
+    {
+      "ticker": "GASX",
+      "price": 17.89
+    }
+  ],
+  "351": [
+    {
+      "ticker": "GRVY",
+      "price": 18.31
+    },
+    {
+      "ticker": "GASX",
+      "price": 17.94
+    }
+  ],
+  "381": [
+    {
+      "ticker": "GRVY",
+      "price": 18.25
+    },
+    {
+      "ticker": "TEO",
+      "price": 17.13
+    }
+  ]
+}

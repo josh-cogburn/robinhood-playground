@@ -1,0 +1,90 @@
+{
+  "200": [
+    {
+      "ticker": "EXPR",
+      "price": 9.58
+    },
+    {
+      "ticker": "LCI",
+      "price": 5.225
+    },
+    {
+      "ticker": "RIOT",
+      "price": 6.1108
+    },
+    {
+      "ticker": "CMTA",
+      "price": 9.62
+    },
+    {
+      "ticker": "NETE",
+      "price": 6.17
+    }
+  ],
+  "260": [
+    {
+      "ticker": "LCI",
+      "price": 5.25
+    },
+    {
+      "ticker": "EXPR",
+      "price": 9.655
+    },
+    {
+      "ticker": "CMTA",
+      "price": 9.65
+    },
+    {
+      "ticker": "SUPV",
+      "price": 5.6205
+    },
+    {
+      "ticker": "NETE",
+      "price": 6.175
+    }
+  ],
+  "351": [
+    {
+      "ticker": "TSRI",
+      "price": 7.05
+    },
+    {
+      "ticker": "CARV",
+      "price": 5.0101
+    },
+    {
+      "ticker": "LCI",
+      "price": 5.3
+    },
+    {
+      "ticker": "LOMA",
+      "price": 7.6
+    },
+    {
+      "ticker": "EXPR",
+      "price": 9.85
+    }
+  ],
+  "381": [
+    {
+      "ticker": "TSRI",
+      "price": 7.05
+    },
+    {
+      "ticker": "CMTA",
+      "price": 9.75
+    },
+    {
+      "ticker": "AFMD",
+      "price": 6.3
+    },
+    {
+      "ticker": "LOMA",
+      "price": 7.61
+    },
+    {
+      "ticker": "LCI",
+      "price": 5.375
+    }
+  ]
+}

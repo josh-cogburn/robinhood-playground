@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "USLV",
+      "price": 6.8
+    },
+    {
+      "ticker": "EDD",
+      "price": 6.81
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SVNLY",
+      "price": 6.063
+    },
+    {
+      "ticker": "NRO",
+      "price": 5.1993
+    }
+  ],
+  "351": [
+    {
+      "ticker": "EDGW",
+      "price": 5.145
+    },
+    {
+      "ticker": "NRO",
+      "price": 5.2001
+    }
+  ],
+  "381": [
+    {
+      "ticker": "EEA",
+      "price": 9.5732
+    },
+    {
+      "ticker": "ICLN",
+      "price": 8.7601
+    }
+  ]
+}

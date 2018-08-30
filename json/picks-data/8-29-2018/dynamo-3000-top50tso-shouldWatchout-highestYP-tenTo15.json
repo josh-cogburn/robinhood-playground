@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "VKTX",
+      "price": 11.8167
+    },
+    {
+      "ticker": "LFVN",
+      "price": 12.2
+    }
+  ],
+  "260": [
+    {
+      "ticker": "VKTX",
+      "price": 12.0066
+    },
+    {
+      "ticker": "LFVN",
+      "price": 12.19
+    }
+  ],
+  "351": [
+    {
+      "ticker": "VKTX",
+      "price": 12.0473
+    },
+    {
+      "ticker": "LFVN",
+      "price": 11.94
+    }
+  ],
+  "381": [
+    {
+      "ticker": "VKTX",
+      "price": 12.065
+    },
+    {
+      "ticker": "LFVN",
+      "price": 12.13
+    }
+  ]
+}

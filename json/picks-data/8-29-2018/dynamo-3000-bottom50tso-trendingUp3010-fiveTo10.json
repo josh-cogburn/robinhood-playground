@@ -1,0 +1,90 @@
+{
+  "200": [
+    {
+      "ticker": "TOUR",
+      "price": 7.54
+    },
+    {
+      "ticker": "CMTA",
+      "price": 9.62
+    },
+    {
+      "ticker": "SVBI",
+      "price": 9.05
+    },
+    {
+      "ticker": "IMV",
+      "price": 5.5338
+    },
+    {
+      "ticker": "CSBR",
+      "price": 8.5121
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TOUR",
+      "price": 7.5
+    },
+    {
+      "ticker": "CMTA",
+      "price": 9.65
+    },
+    {
+      "ticker": "SVBI",
+      "price": 9.05
+    },
+    {
+      "ticker": "LONE",
+      "price": 8.91
+    },
+    {
+      "ticker": "LTRX",
+      "price": 5.42
+    }
+  ],
+  "351": [
+    {
+      "ticker": "TSRI",
+      "price": 7.05
+    },
+    {
+      "ticker": "CARV",
+      "price": 5.0101
+    },
+    {
+      "ticker": "TOUR",
+      "price": 7.47
+    },
+    {
+      "ticker": "BBGI",
+      "price": 6.9
+    },
+    {
+      "ticker": "CMTA",
+      "price": 9.77
+    }
+  ],
+  "381": [
+    {
+      "ticker": "TSRI",
+      "price": 7.05
+    },
+    {
+      "ticker": "TOUR",
+      "price": 7.5744
+    },
+    {
+      "ticker": "CMTA",
+      "price": 9.75
+    },
+    {
+      "ticker": "AFMD",
+      "price": 6.3
+    },
+    {
+      "ticker": "BBGI",
+      "price": 6.9
+    }
+  ]
+}

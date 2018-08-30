@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "CRON",
+      "price": 12.28
+    },
+    {
+      "ticker": "LDF",
+      "price": 10.95
+    }
+  ],
+  "260": [
+    {
+      "ticker": "QIWI",
+      "price": 14.06
+    },
+    {
+      "ticker": "LDF",
+      "price": 10.95
+    }
+  ],
+  "351": [
+    {
+      "ticker": "VNTR",
+      "price": 12.04
+    },
+    {
+      "ticker": "JG",
+      "price": 11.541
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SPKKY",
+      "price": 13.2
+    },
+    {
+      "ticker": "LDF",
+      "price": 10.95
+    }
+  ]
+}

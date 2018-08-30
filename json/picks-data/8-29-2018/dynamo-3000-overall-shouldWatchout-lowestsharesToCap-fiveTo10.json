@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "CMTA",
+      "price": 9.62
+    },
+    {
+      "ticker": "PTGX",
+      "price": 9.96
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CMTA",
+      "price": 9.65
+    },
+    {
+      "ticker": "CCRN",
+      "price": 9.98
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CMTA",
+      "price": 9.77
+    },
+    {
+      "ticker": "PTGX",
+      "price": 9.865
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CMTA",
+      "price": 9.75
+    },
+    {
+      "ticker": "CCRN",
+      "price": 9.98
+    }
+  ]
+}

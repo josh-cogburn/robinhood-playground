@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "AFIN",
+      "price": 16.3884
+    },
+    {
+      "ticker": "BRY",
+      "price": 15.93
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AFIN",
+      "price": 16.35
+    },
+    {
+      "ticker": "BRY",
+      "price": 16
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AFIN",
+      "price": 16.1
+    },
+    {
+      "ticker": "BRY",
+      "price": 15.995
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AFIN",
+      "price": 16.35
+    },
+    {
+      "ticker": "BRY",
+      "price": 16
+    }
+  ]
+}

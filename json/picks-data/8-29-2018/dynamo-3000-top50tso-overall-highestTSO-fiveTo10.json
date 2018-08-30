@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "ZYNE",
+      "price": 7.94
+    },
+    {
+      "ticker": "MDXG",
+      "price": 5.51
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ZYNE",
+      "price": 7.9218
+    },
+    {
+      "ticker": "MDXG",
+      "price": 5.4101
+    }
+  ],
+  "351": [
+    {
+      "ticker": "GALT",
+      "price": 5.34
+    },
+    {
+      "ticker": "ZYNE",
+      "price": 7.95
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ZYNE",
+      "price": 7.97
+    },
+    {
+      "ticker": "GALT",
+      "price": 5.3499
+    }
+  ]
+}

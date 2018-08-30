@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "PPC",
+      "price": 18.745
+    },
+    {
+      "ticker": "CHAU",
+      "price": 19.1488
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CHAU",
+      "price": 19.15
+    },
+    {
+      "ticker": "EXEL",
+      "price": 19.46
+    }
+  ],
+  "351": [
+    {
+      "ticker": "EXEL",
+      "price": 19.555
+    },
+    {
+      "ticker": "HBMD",
+      "price": 17.25
+    }
+  ],
+  "381": [
+    {
+      "ticker": "EXEL",
+      "price": 19.535
+    },
+    {
+      "ticker": "HBMD",
+      "price": 17.25
+    }
+  ]
+}

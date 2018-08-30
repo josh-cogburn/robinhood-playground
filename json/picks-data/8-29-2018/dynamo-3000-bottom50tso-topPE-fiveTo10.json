@@ -1,0 +1,58 @@
+{
+  "200": [
+    {
+      "ticker": "LTRX",
+      "price": 5.445
+    },
+    {
+      "ticker": "ONDK",
+      "price": 8.31
+    },
+    {
+      "ticker": "VOXX",
+      "price": 5.4
+    }
+  ],
+  "260": [
+    {
+      "ticker": "LTRX",
+      "price": 5.42
+    },
+    {
+      "ticker": "ONDK",
+      "price": 8.235
+    },
+    {
+      "ticker": "PVG",
+      "price": 8.83
+    }
+  ],
+  "351": [
+    {
+      "ticker": "LTRX",
+      "price": 5.46
+    },
+    {
+      "ticker": "ONDK",
+      "price": 8.25
+    },
+    {
+      "ticker": "PVG",
+      "price": 8.82
+    }
+  ],
+  "381": [
+    {
+      "ticker": "LTRX",
+      "price": 5.45
+    },
+    {
+      "ticker": "ONDK",
+      "price": 8.255
+    },
+    {
+      "ticker": "PVG",
+      "price": 8.8211
+    }
+  ]
+}

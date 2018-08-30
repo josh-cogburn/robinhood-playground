@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "RGSE",
+      "price": 0.4381
+    },
+    {
+      "ticker": "ARDM",
+      "price": 1.4
+    }
+  ],
+  "260": [
+    {
+      "ticker": "RGSE",
+      "price": 0.432
+    },
+    {
+      "ticker": "TRT",
+      "price": 4.3086
+    }
+  ],
+  "351": [
+    {
+      "ticker": "RGSE",
+      "price": 0.4337
+    },
+    {
+      "ticker": "NMM",
+      "price": 1.99
+    }
+  ],
+  "381": [
+    {
+      "ticker": "RGSE",
+      "price": 0.4248
+    },
+    {
+      "ticker": "NAUH",
+      "price": 0.8994
+    }
+  ]
+}

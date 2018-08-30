@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "XOMA",
+      "price": 18.13
+    },
+    {
+      "ticker": "TLYS",
+      "price": 17.77
+    }
+  ],
+  "260": [
+    {
+      "ticker": "XOMA",
+      "price": 18.61
+    },
+    {
+      "ticker": "SGMO",
+      "price": 16.4722
+    }
+  ],
+  "351": [
+    {
+      "ticker": "XOMA",
+      "price": 18.42
+    },
+    {
+      "ticker": "SGMO",
+      "price": 16.869
+    }
+  ],
+  "381": [
+    {
+      "ticker": "XOMA",
+      "price": 18.221
+    },
+    {
+      "ticker": "SGMO",
+      "price": 16.75
+    }
+  ]
+}

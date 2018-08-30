@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "APLS",
+      "price": 18.95
+    },
+    {
+      "ticker": "GLT",
+      "price": 19.05
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CNX",
+      "price": 15.955
+    },
+    {
+      "ticker": "UCTT",
+      "price": 15.42
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CNX",
+      "price": 16.015
+    },
+    {
+      "ticker": "TITN",
+      "price": 15.96
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CNCE",
+      "price": 15.77
+    },
+    {
+      "ticker": "RECN",
+      "price": 16.025
+    }
+  ]
+}

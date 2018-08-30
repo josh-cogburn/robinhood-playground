@@ -1,0 +1,74 @@
+{
+  "200": [
+    {
+      "ticker": "IGC",
+      "price": 1.845
+    },
+    {
+      "ticker": "OBLN",
+      "price": 2.73
+    },
+    {
+      "ticker": "EGLT",
+      "price": 0.3641
+    },
+    {
+      "ticker": "BTE",
+      "price": 3.28
+    }
+  ],
+  "300": [
+    {
+      "ticker": "IGC",
+      "price": 1.85
+    },
+    {
+      "ticker": "OBLN",
+      "price": 2.71
+    },
+    {
+      "ticker": "EGLT",
+      "price": 0.3899
+    },
+    {
+      "ticker": "BTE",
+      "price": 3.315
+    }
+  ],
+  "380": [
+    {
+      "ticker": "IGC",
+      "price": 1.9142
+    },
+    {
+      "ticker": "OBLN",
+      "price": 2.8072
+    },
+    {
+      "ticker": "EGLT",
+      "price": 0.3891
+    },
+    {
+      "ticker": "BTE",
+      "price": 3.31
+    }
+  ],
+  "600": [
+    {
+      "ticker": "IGC",
+      "price": 2.04
+    },
+    {
+      "ticker": "OBLN",
+      "price": 2.7
+    },
+    {
+      "ticker": "EGLT",
+      "price": 0.387
+    },
+    {
+      "ticker": "BTE",
+      "price": 3.3
+    }
+  ]
+}

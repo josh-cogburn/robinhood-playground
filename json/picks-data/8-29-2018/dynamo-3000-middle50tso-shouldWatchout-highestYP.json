@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "DDE",
+      "price": 3.2201
+    },
+    {
+      "ticker": "BVX",
+      "price": 4.93
+    }
+  ],
+  "260": [
+    {
+      "ticker": "BVX",
+      "price": 4.9391
+    },
+    {
+      "ticker": "DRYS",
+      "price": 4.9301
+    }
+  ],
+  "351": [
+    {
+      "ticker": "BVX",
+      "price": 4.94
+    },
+    {
+      "ticker": "MEIP",
+      "price": 4.21
+    }
+  ],
+  "381": [
+    {
+      "ticker": "HOS",
+      "price": 4.45
+    },
+    {
+      "ticker": "EDAP",
+      "price": 3.139
+    }
+  ]
+}

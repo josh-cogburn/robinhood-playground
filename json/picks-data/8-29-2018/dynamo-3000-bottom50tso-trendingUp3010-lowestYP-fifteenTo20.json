@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "BCAUY",
+      "price": 15.915
+    },
+    {
+      "ticker": "GPX",
+      "price": 18.95
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AMAL",
+      "price": 17.31
+    },
+    {
+      "ticker": "BCAUY",
+      "price": 15.82
+    }
+  ],
+  "351": [
+    {
+      "ticker": "BCAUY",
+      "price": 15.82
+    },
+    {
+      "ticker": "GPX",
+      "price": 18.7625
+    }
+  ],
+  "381": [
+    {
+      "ticker": "BCAUY",
+      "price": 16.01
+    },
+    {
+      "ticker": "GPX",
+      "price": 18.95
+    }
+  ]
+}

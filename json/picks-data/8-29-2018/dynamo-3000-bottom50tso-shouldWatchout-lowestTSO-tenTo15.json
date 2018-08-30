@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "CDZI",
+      "price": 10.825
+    },
+    {
+      "ticker": "VSI",
+      "price": 12.85
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CDZI",
+      "price": 10.9
+    },
+    {
+      "ticker": "BPI",
+      "price": 12.175
+    }
+  ],
+  "351": [
+    {
+      "ticker": "BPI",
+      "price": 11.8975
+    },
+    {
+      "ticker": "CDZI",
+      "price": 10.9
+    }
+  ],
+  "381": [
+    {
+      "ticker": "BPI",
+      "price": 11.81
+    },
+    {
+      "ticker": "CDZI",
+      "price": 10.9
+    }
+  ]
+}

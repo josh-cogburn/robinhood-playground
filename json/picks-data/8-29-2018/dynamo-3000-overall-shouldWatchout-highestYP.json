@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "GVP",
+      "price": 3.35
+    },
+    {
+      "ticker": "IGC",
+      "price": 1.845
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GVP",
+      "price": 3.35
+    },
+    {
+      "ticker": "IGC",
+      "price": 1.8661
+    }
+  ],
+  "351": [
+    {
+      "ticker": "GVP",
+      "price": 3.35
+    },
+    {
+      "ticker": "IGC",
+      "price": 1.839
+    }
+  ],
+  "381": [
+    {
+      "ticker": "GVP",
+      "price": 3.3
+    },
+    {
+      "ticker": "IGC",
+      "price": 1.9099
+    }
+  ]
+}

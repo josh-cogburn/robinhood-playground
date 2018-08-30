@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "CAMT",
+      "price": 9.68
+    },
+    {
+      "ticker": "F",
+      "price": 9.965
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CAMT",
+      "price": 9.85
+    },
+    {
+      "ticker": "CEN",
+      "price": 9.9385
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CAMT",
+      "price": 9.9542
+    },
+    {
+      "ticker": "CEN",
+      "price": 9.9412
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CAMT",
+      "price": 9.935
+    },
+    {
+      "ticker": "NERV",
+      "price": 9.925
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "INNT",
+      "price": 5.07
+    },
+    {
+      "ticker": "VOXX",
+      "price": 5.4
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PETX",
+      "price": 5.16
+    },
+    {
+      "ticker": "AKAO",
+      "price": 5.26
+    }
+  ],
+  "351": [
+    {
+      "ticker": "INTT",
+      "price": 8.6
+    },
+    {
+      "ticker": "AKAO",
+      "price": 5.19
+    }
+  ],
+  "381": [
+    {
+      "ticker": "INTT",
+      "price": 8.6
+    },
+    {
+      "ticker": "AKAO",
+      "price": 5.2
+    }
+  ]
+}

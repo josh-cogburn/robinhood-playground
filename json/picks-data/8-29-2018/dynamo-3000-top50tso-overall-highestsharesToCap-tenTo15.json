@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "MVO",
+      "price": 10.11
+    },
+    {
+      "ticker": "JG",
+      "price": 10.765
+    }
+  ],
+  "260": [
+    {
+      "ticker": "MVO",
+      "price": 10.12
+    },
+    {
+      "ticker": "JG",
+      "price": 10.8
+    }
+  ],
+  "351": [
+    {
+      "ticker": "MVO",
+      "price": 10.28
+    },
+    {
+      "ticker": "JG",
+      "price": 11.541
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MVO",
+      "price": 10.28
+    },
+    {
+      "ticker": "JG",
+      "price": 11.27
+    }
+  ]
+}

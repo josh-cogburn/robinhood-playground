@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "RGSE",
+      "price": 0.4381
+    },
+    {
+      "ticker": "KOOL",
+      "price": 0.4119
+    }
+  ],
+  "260": [
+    {
+      "ticker": "RGSE",
+      "price": 0.432
+    },
+    {
+      "ticker": "KOOL",
+      "price": 0.4219
+    }
+  ],
+  "351": [
+    {
+      "ticker": "RGSE",
+      "price": 0.4337
+    },
+    {
+      "ticker": "KOOL",
+      "price": 0.4442
+    }
+  ],
+  "381": [
+    {
+      "ticker": "RGSE",
+      "price": 0.4248
+    },
+    {
+      "ticker": "KOOL",
+      "price": 0.4514
+    }
+  ]
+}

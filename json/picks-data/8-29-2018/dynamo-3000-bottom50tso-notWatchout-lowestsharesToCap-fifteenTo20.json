@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "WLH",
+      "price": 19.9
+    },
+    {
+      "ticker": "CJPRY",
+      "price": 19.68
+    }
+  ],
+  "260": [
+    {
+      "ticker": "WLH",
+      "price": 19.82
+    },
+    {
+      "ticker": "ECYT",
+      "price": 18.67
+    }
+  ],
+  "351": [
+    {
+      "ticker": "ECYT",
+      "price": 18.45
+    },
+    {
+      "ticker": "BXG",
+      "price": 19.445
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MIK",
+      "price": 19.99
+    },
+    {
+      "ticker": "WLH",
+      "price": 19.81
+    }
+  ]
+}

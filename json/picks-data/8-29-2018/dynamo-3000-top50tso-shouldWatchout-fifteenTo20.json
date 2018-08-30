@@ -1,0 +1,90 @@
+{
+  "200": [
+    {
+      "ticker": "APLS",
+      "price": 18.95
+    },
+    {
+      "ticker": "GLT",
+      "price": 19.05
+    },
+    {
+      "ticker": "HIBB",
+      "price": 19.525
+    },
+    {
+      "ticker": "MFGP",
+      "price": 17.34
+    },
+    {
+      "ticker": "UA",
+      "price": 19.0228
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CNX",
+      "price": 15.955
+    },
+    {
+      "ticker": "UCTT",
+      "price": 15.42
+    },
+    {
+      "ticker": "LTRPA",
+      "price": 15.625
+    },
+    {
+      "ticker": "BRZU",
+      "price": 17.5601
+    },
+    {
+      "ticker": "TITN",
+      "price": 15.95
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CNX",
+      "price": 16.015
+    },
+    {
+      "ticker": "TITN",
+      "price": 15.96
+    },
+    {
+      "ticker": "CNCE",
+      "price": 15.75
+    },
+    {
+      "ticker": "RECN",
+      "price": 16.072
+    },
+    {
+      "ticker": "APLS",
+      "price": 19.04
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CNCE",
+      "price": 15.77
+    },
+    {
+      "ticker": "RECN",
+      "price": 16.025
+    },
+    {
+      "ticker": "LTRPA",
+      "price": 15.725
+    },
+    {
+      "ticker": "APLS",
+      "price": 19.06
+    },
+    {
+      "ticker": "IOVA",
+      "price": 16.55
+    }
+  ]
+}

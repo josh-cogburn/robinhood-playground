@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "XIN",
+      "price": 4.69
+    },
+    {
+      "ticker": "III",
+      "price": 4.67
+    }
+  ],
+  "260": [
+    {
+      "ticker": "XIN",
+      "price": 4.665
+    },
+    {
+      "ticker": "III",
+      "price": 4.69
+    }
+  ],
+  "351": [
+    {
+      "ticker": "III",
+      "price": 4.7
+    },
+    {
+      "ticker": "VJET",
+      "price": 4.315
+    }
+  ],
+  "381": [
+    {
+      "ticker": "III",
+      "price": 4.7455
+    },
+    {
+      "ticker": "VJET",
+      "price": 4.2801
+    }
+  ]
+}

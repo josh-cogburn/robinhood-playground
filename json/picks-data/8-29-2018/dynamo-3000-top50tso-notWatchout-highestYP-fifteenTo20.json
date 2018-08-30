@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "EGAN",
+      "price": 15.175
+    },
+    {
+      "ticker": "KPTI",
+      "price": 19.63
+    }
+  ],
+  "260": [
+    {
+      "ticker": "EGAN",
+      "price": 15.15
+    },
+    {
+      "ticker": "KPTI",
+      "price": 19.78
+    }
+  ],
+  "351": [
+    {
+      "ticker": "EGAN",
+      "price": 15.075
+    },
+    {
+      "ticker": "KPTI",
+      "price": 19.76
+    }
+  ],
+  "381": [
+    {
+      "ticker": "EGAN",
+      "price": 15.025
+    },
+    {
+      "ticker": "DNOW",
+      "price": 17.345
+    }
+  ]
+}

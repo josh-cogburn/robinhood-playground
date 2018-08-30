@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "KOOL",
+      "price": 0.4119
+    },
+    {
+      "ticker": "IPAS",
+      "price": 2.31
+    }
+  ],
+  "260": [
+    {
+      "ticker": "KOOL",
+      "price": 0.4219
+    },
+    {
+      "ticker": "IPAS",
+      "price": 2.2705
+    }
+  ],
+  "351": [
+    {
+      "ticker": "KOOL",
+      "price": 0.4442
+    },
+    {
+      "ticker": "IPAS",
+      "price": 2.23
+    }
+  ],
+  "381": [
+    {
+      "ticker": "KOOL",
+      "price": 0.4514
+    },
+    {
+      "ticker": "IPAS",
+      "price": 2.2375
+    }
+  ]
+}

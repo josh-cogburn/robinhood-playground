@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "CSPI",
+      "price": 13.81
+    },
+    {
+      "ticker": "SLLDY",
+      "price": 11.295
+    }
+  ],
+  "300": [
+    {
+      "ticker": "CSPI",
+      "price": 13.7648
+    },
+    {
+      "ticker": "SLLDY",
+      "price": 11.32
+    }
+  ],
+  "380": [
+    {
+      "ticker": "CSPI",
+      "price": 13.7648
+    },
+    {
+      "ticker": "SLLDY",
+      "price": 11.325
+    }
+  ],
+  "600": [
+    {
+      "ticker": "CSPI",
+      "price": 13.65
+    },
+    {
+      "ticker": "SLLDY",
+      "price": 11.363
+    }
+  ]
+}

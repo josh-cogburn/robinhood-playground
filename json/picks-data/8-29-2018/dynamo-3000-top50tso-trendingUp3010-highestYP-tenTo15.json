@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "CRON",
+      "price": 12.28
+    },
+    {
+      "ticker": "VKTX",
+      "price": 11.8167
+    }
+  ],
+  "260": [
+    {
+      "ticker": "VKTX",
+      "price": 12.0066
+    },
+    {
+      "ticker": "LFVN",
+      "price": 12.19
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CRON",
+      "price": 12.47
+    },
+    {
+      "ticker": "VKTX",
+      "price": 12.0473
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CRON",
+      "price": 12.74
+    },
+    {
+      "ticker": "VKTX",
+      "price": 12.065
+    }
+  ]
+}

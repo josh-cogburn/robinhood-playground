@@ -1,0 +1,90 @@
+{
+  "200": [
+    {
+      "ticker": "CIO",
+      "price": 13
+    },
+    {
+      "ticker": "NVG",
+      "price": 14.9736
+    },
+    {
+      "ticker": "NTC",
+      "price": 11.68
+    },
+    {
+      "ticker": "BTA",
+      "price": 11.43
+    },
+    {
+      "ticker": "GLO",
+      "price": 11.3511
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PAH",
+      "price": 13.31
+    },
+    {
+      "ticker": "ISD",
+      "price": 14.28
+    },
+    {
+      "ticker": "NBH",
+      "price": 13.67
+    },
+    {
+      "ticker": "PFD",
+      "price": 14.1263
+    },
+    {
+      "ticker": "IRT",
+      "price": 10.32
+    }
+  ],
+  "351": [
+    {
+      "ticker": "EVJ",
+      "price": 11.84
+    },
+    {
+      "ticker": "CLM",
+      "price": 14.281
+    },
+    {
+      "ticker": "MMV",
+      "price": 12.8098
+    },
+    {
+      "ticker": "PZC",
+      "price": 10.849
+    },
+    {
+      "ticker": "CBIO",
+      "price": 10.89
+    }
+  ],
+  "381": [
+    {
+      "ticker": "KST",
+      "price": 12.5275
+    },
+    {
+      "ticker": "ACRE",
+      "price": 14.58
+    },
+    {
+      "ticker": "MPW",
+      "price": 14.96
+    },
+    {
+      "ticker": "MRCC",
+      "price": 13.7201
+    },
+    {
+      "ticker": "MSP",
+      "price": 12.01
+    }
+  ]
+}

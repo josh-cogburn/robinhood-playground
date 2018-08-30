@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "AOBC",
+      "price": 10.105
+    },
+    {
+      "ticker": "XNET",
+      "price": 10.06
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AOBC",
+      "price": 10.1
+    },
+    {
+      "ticker": "IDRA",
+      "price": 10.01
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AOBC",
+      "price": 10.08
+    },
+    {
+      "ticker": "XNET",
+      "price": 10.04
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AOBC",
+      "price": 10.09
+    },
+    {
+      "ticker": "IDRA",
+      "price": 9.99
+    }
+  ]
+}

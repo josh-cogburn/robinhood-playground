@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "FUV",
+      "price": 4.26
+    },
+    {
+      "ticker": "KOSS",
+      "price": 4.01
+    }
+  ],
+  "260": [
+    {
+      "ticker": "LAC",
+      "price": 4.6785
+    },
+    {
+      "ticker": "KOSS",
+      "price": 4
+    }
+  ],
+  "351": [
+    {
+      "ticker": "LAC",
+      "price": 4.618
+    },
+    {
+      "ticker": "KOSS",
+      "price": 4.01
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CARV",
+      "price": 4.9301
+    },
+    {
+      "ticker": "LAC",
+      "price": 4.61
+    }
+  ]
+}

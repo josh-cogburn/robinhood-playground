@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "ROIC",
+      "price": 19.595
+    },
+    {
+      "ticker": "APTS",
+      "price": 18.211
+    }
+  ],
+  "260": [
+    {
+      "ticker": "RNP",
+      "price": 19.9925
+    },
+    {
+      "ticker": "FPEI",
+      "price": 19.1553
+    }
+  ],
+  "351": [
+    {
+      "ticker": "RNP",
+      "price": 19.9967
+    },
+    {
+      "ticker": "ROIC",
+      "price": 19.575
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ARI",
+      "price": 19.435
+    },
+    {
+      "ticker": "SNH",
+      "price": 19.075
+    }
+  ]
+}

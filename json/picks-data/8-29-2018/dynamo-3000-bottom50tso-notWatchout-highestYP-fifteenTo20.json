@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "ECYT",
+      "price": 19.02
+    },
+    {
+      "ticker": "CDXS",
+      "price": 16.95
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ECYT",
+      "price": 18.67
+    },
+    {
+      "ticker": "CDXS",
+      "price": 16.875
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AFIN",
+      "price": 16.1
+    },
+    {
+      "ticker": "ECYT",
+      "price": 18.45
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ECYT",
+      "price": 18.59
+    },
+    {
+      "ticker": "CDXS",
+      "price": 16.75
+    }
+  ]
+}

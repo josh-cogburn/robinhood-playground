@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "IDRA",
+      "price": 9.91
+    },
+    {
+      "ticker": "AFMD",
+      "price": 6.95
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TRXC",
+      "price": 5.525
+    },
+    {
+      "ticker": "AFMD",
+      "price": 6.8
+    }
+  ],
+  "351": [
+    {
+      "ticker": "TRXC",
+      "price": 5.66
+    },
+    {
+      "ticker": "AFMD",
+      "price": 6.7572
+    }
+  ],
+  "381": [
+    {
+      "ticker": "TRXC",
+      "price": 5.65
+    },
+    {
+      "ticker": "VSTM",
+      "price": 9.67
+    }
+  ]
+}

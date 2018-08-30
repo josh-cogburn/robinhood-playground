@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "AMAL",
+      "price": 17.645
+    },
+    {
+      "ticker": "NYRT",
+      "price": 18.63
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AMAL",
+      "price": 17.31
+    },
+    {
+      "ticker": "NYRT",
+      "price": 18.6
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AMAL",
+      "price": 17.46
+    },
+    {
+      "ticker": "NYRT",
+      "price": 18.61
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AMAL",
+      "price": 17.51
+    },
+    {
+      "ticker": "NYRT",
+      "price": 18.66
+    }
+  ]
+}

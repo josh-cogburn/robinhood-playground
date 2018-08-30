@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "RCUS",
+      "price": 14
+    },
+    {
+      "ticker": "VRA",
+      "price": 14.45
+    }
+  ],
+  "260": [
+    {
+      "ticker": "KIN",
+      "price": 14.9
+    },
+    {
+      "ticker": "RCUS",
+      "price": 14
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SE",
+      "price": 14.895
+    },
+    {
+      "ticker": "KIN",
+      "price": 14.9
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SE",
+      "price": 14.88
+    },
+    {
+      "ticker": "KIN",
+      "price": 14.8
+    }
+  ]
+}

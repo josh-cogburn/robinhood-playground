@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "ASUR",
+      "price": 14.93
+    },
+    {
+      "ticker": "CASA",
+      "price": 14.775
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ASUR",
+      "price": 14.91
+    },
+    {
+      "ticker": "CASA",
+      "price": 14.835
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CASA",
+      "price": 14.7
+    },
+    {
+      "ticker": "AKRX",
+      "price": 14.65
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AKRX",
+      "price": 14.68
+    },
+    {
+      "ticker": "CLDR",
+      "price": 14.965
+    }
+  ]
+}

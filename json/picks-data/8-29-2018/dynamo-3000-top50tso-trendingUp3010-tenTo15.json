@@ -1,0 +1,90 @@
+{
+  "200": [
+    {
+      "ticker": "CRON",
+      "price": 12.28
+    },
+    {
+      "ticker": "MTLS",
+      "price": 14.97
+    },
+    {
+      "ticker": "AOBC",
+      "price": 10.105
+    },
+    {
+      "ticker": "VKTX",
+      "price": 11.8167
+    },
+    {
+      "ticker": "EDUC",
+      "price": 12.4
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AOBC",
+      "price": 10.1
+    },
+    {
+      "ticker": "NRBAY",
+      "price": 10.83
+    },
+    {
+      "ticker": "ARDS",
+      "price": 13.49
+    },
+    {
+      "ticker": "MHH",
+      "price": 10.53
+    },
+    {
+      "ticker": "CRVS",
+      "price": 10.58
+    }
+  ],
+  "351": [
+    {
+      "ticker": "ARDS",
+      "price": 13.4999
+    },
+    {
+      "ticker": "LFVN",
+      "price": 11.94
+    },
+    {
+      "ticker": "SHZHY",
+      "price": 13.2
+    },
+    {
+      "ticker": "FRD",
+      "price": 10.68
+    },
+    {
+      "ticker": "CBAY",
+      "price": 12.89
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SHZHY",
+      "price": 13.2
+    },
+    {
+      "ticker": "CBAY",
+      "price": 12.88
+    },
+    {
+      "ticker": "SYRS",
+      "price": 12.44
+    },
+    {
+      "ticker": "CRVS",
+      "price": 10.61
+    },
+    {
+      "ticker": "FRD",
+      "price": 10.68
+    }
+  ]
+}

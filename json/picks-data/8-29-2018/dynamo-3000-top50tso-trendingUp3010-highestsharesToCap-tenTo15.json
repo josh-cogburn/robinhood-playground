@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "JG",
+      "price": 10.765
+    },
+    {
+      "ticker": "BCOM",
+      "price": 10.29
+    }
+  ],
+  "260": [
+    {
+      "ticker": "JG",
+      "price": 10.8
+    },
+    {
+      "ticker": "BCOM",
+      "price": 10.29
+    }
+  ],
+  "351": [
+    {
+      "ticker": "JG",
+      "price": 11.541
+    },
+    {
+      "ticker": "BCOM",
+      "price": 10.29
+    }
+  ],
+  "381": [
+    {
+      "ticker": "JG",
+      "price": 11.27
+    },
+    {
+      "ticker": "BCOM",
+      "price": 10.29
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "200": [
+    {
+      "ticker": "CY",
+      "price": 16.74
+    },
+    {
+      "ticker": "CRCM",
+      "price": 19.04
+    },
+    {
+      "ticker": "SAFE",
+      "price": 16.36
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CY",
+      "price": 16.74
+    },
+    {
+      "ticker": "CRCM",
+      "price": 18.97
+    },
+    {
+      "ticker": "SIEB",
+      "price": 15.9324
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CY",
+      "price": 16.765
+    },
+    {
+      "ticker": "FSBC",
+      "price": 17.75
+    },
+    {
+      "ticker": "CRCM",
+      "price": 19.045
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CY",
+      "price": 16.7475
+    },
+    {
+      "ticker": "FSBC",
+      "price": 17.75
+    },
+    {
+      "ticker": "CRCM",
+      "price": 19.04
+    }
+  ]
+}

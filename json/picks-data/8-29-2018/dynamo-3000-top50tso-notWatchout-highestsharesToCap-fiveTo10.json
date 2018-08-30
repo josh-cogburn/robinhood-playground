@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "JT",
+      "price": 5.1232
+    },
+    {
+      "ticker": "RESN",
+      "price": 5.291
+    }
+  ],
+  "260": [
+    {
+      "ticker": "KMPH",
+      "price": 5.0696
+    },
+    {
+      "ticker": "GOL",
+      "price": 5.38
+    }
+  ],
+  "351": [
+    {
+      "ticker": "KMPH",
+      "price": 5.2
+    },
+    {
+      "ticker": "RESN",
+      "price": 5.299
+    }
+  ],
+  "381": [
+    {
+      "ticker": "KMPH",
+      "price": 5.2
+    },
+    {
+      "ticker": "RESN",
+      "price": 5.32
+    }
+  ]
+}

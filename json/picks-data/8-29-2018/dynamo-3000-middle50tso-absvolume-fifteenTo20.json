@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "MCI",
+      "price": 15.4328
+    },
+    {
+      "ticker": "FFA",
+      "price": 16.589
+    }
+  ],
+  "260": [
+    {
+      "ticker": "BSCR",
+      "price": 19.17
+    },
+    {
+      "ticker": "REK",
+      "price": 15.115
+    }
+  ],
+  "351": [
+    {
+      "ticker": "ENTR",
+      "price": 18.83
+    },
+    {
+      "ticker": "CHMI",
+      "price": 18.54
+    }
+  ],
+  "381": [
+    {
+      "ticker": "FIF",
+      "price": 16.3976
+    },
+    {
+      "ticker": "SUNS",
+      "price": 16.665
+    }
+  ]
+}

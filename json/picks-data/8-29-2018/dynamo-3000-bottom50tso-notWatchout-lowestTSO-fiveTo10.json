@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "TOUR",
+      "price": 7.54
+    },
+    {
+      "ticker": "CNFR",
+      "price": 6.05
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TOUR",
+      "price": 7.5
+    },
+    {
+      "ticker": "CNFR",
+      "price": 6.1
+    }
+  ],
+  "351": [
+    {
+      "ticker": "TOUR",
+      "price": 7.47
+    },
+    {
+      "ticker": "CMCL",
+      "price": 6.2
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CMCL",
+      "price": 6.1837
+    },
+    {
+      "ticker": "TOUR",
+      "price": 7.5744
+    }
+  ]
+}

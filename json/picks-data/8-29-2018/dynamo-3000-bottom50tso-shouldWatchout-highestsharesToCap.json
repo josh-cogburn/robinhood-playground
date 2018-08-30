@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "XSPA",
+      "price": 0.16
+    },
+    {
+      "ticker": "LODE",
+      "price": 0.1656
+    }
+  ],
+  "260": [
+    {
+      "ticker": "LODE",
+      "price": 0.167
+    },
+    {
+      "ticker": "GLOW",
+      "price": 0.1751
+    }
+  ],
+  "351": [
+    {
+      "ticker": "LODE",
+      "price": 0.166
+    },
+    {
+      "ticker": "ALN",
+      "price": 0.1614
+    }
+  ],
+  "381": [
+    {
+      "ticker": "RGLS",
+      "price": 0.2376
+    },
+    {
+      "ticker": "IPCI",
+      "price": 0.251
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "NHS",
+      "price": 10.9893
+    },
+    {
+      "ticker": "BFRA",
+      "price": 14.85
+    }
+  ],
+  "260": [
+    {
+      "ticker": "BTZ",
+      "price": 12.439
+    },
+    {
+      "ticker": "OXFD",
+      "price": 14.6
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AWF",
+      "price": 11.721
+    },
+    {
+      "ticker": "MSP",
+      "price": 12.02
+    }
+  ],
+  "381": [
+    {
+      "ticker": "NMZ",
+      "price": 13.14
+    },
+    {
+      "ticker": "NFJ",
+      "price": 13.2
+    }
+  ]
+}

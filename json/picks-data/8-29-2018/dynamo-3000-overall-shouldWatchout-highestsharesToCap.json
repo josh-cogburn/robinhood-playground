@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "RSLS",
+      "price": 0.067
+    },
+    {
+      "ticker": "GST",
+      "price": 0.0897
+    }
+  ],
+  "260": [
+    {
+      "ticker": "RSLS",
+      "price": 0.0685
+    },
+    {
+      "ticker": "GST",
+      "price": 0.0897
+    }
+  ],
+  "351": [
+    {
+      "ticker": "GST",
+      "price": 0.0939
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.1211
+    }
+  ],
+  "381": [
+    {
+      "ticker": "RSLS",
+      "price": 0.0697
+    },
+    {
+      "ticker": "GST",
+      "price": 0.0929
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "FPH",
+      "price": 11.1197
+    },
+    {
+      "ticker": "FPL",
+      "price": 10.21
+    }
+  ],
+  "260": [
+    {
+      "ticker": "RES",
+      "price": 14.43
+    },
+    {
+      "ticker": "MYJ",
+      "price": 13.36
+    }
+  ],
+  "351": [
+    {
+      "ticker": "FRAC",
+      "price": 13.16
+    },
+    {
+      "ticker": "NYH",
+      "price": 10.69
+    }
+  ],
+  "381": [
+    {
+      "ticker": "GME",
+      "price": 14.145
+    },
+    {
+      "ticker": "PCRFY",
+      "price": 12.19
+    }
+  ]
+}

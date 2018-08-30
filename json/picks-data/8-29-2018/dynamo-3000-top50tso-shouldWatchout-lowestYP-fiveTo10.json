@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "QD",
+      "price": 6.4189
+    },
+    {
+      "ticker": "MDXG",
+      "price": 5.51
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CALA",
+      "price": 5.325
+    },
+    {
+      "ticker": "MDXG",
+      "price": 5.4101
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CALA",
+      "price": 5.275
+    },
+    {
+      "ticker": "MDXG",
+      "price": 5.37
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MDXG",
+      "price": 5.43
+    },
+    {
+      "ticker": "PPDF",
+      "price": 5.985
+    }
+  ]
+}

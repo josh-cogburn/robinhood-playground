@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "MTLS",
+      "price": 14.97
+    },
+    {
+      "ticker": "CSS",
+      "price": 14.48
+    }
+  ],
+  "260": [
+    {
+      "ticker": "RDC",
+      "price": 14.21
+    },
+    {
+      "ticker": "QIWI",
+      "price": 14.06
+    }
+  ],
+  "351": [
+    {
+      "ticker": "RDC",
+      "price": 14.295
+    },
+    {
+      "ticker": "QIWI",
+      "price": 14.09
+    }
+  ],
+  "381": [
+    {
+      "ticker": "TSU",
+      "price": 14.98
+    },
+    {
+      "ticker": "RDC",
+      "price": 14.265
+    }
+  ]
+}

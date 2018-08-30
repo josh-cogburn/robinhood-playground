@@ -1,0 +1,58 @@
+{
+  "200": [
+    {
+      "ticker": "CRON",
+      "price": 12.28
+    },
+    {
+      "ticker": "WTTR",
+      "price": 13.845
+    },
+    {
+      "ticker": "CCXI",
+      "price": 12.66
+    }
+  ],
+  "260": [
+    {
+      "ticker": "WTTR",
+      "price": 13.885
+    },
+    {
+      "ticker": "CCXI",
+      "price": 12.72
+    },
+    {
+      "ticker": "PRCP",
+      "price": 10.68
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CRON",
+      "price": 12.47
+    },
+    {
+      "ticker": "REI",
+      "price": 11.49
+    },
+    {
+      "ticker": "WTTR",
+      "price": 13.83
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CRON",
+      "price": 12.74
+    },
+    {
+      "ticker": "REI",
+      "price": 11.46
+    },
+    {
+      "ticker": "WTTR",
+      "price": 13.77
+    }
+  ]
+}

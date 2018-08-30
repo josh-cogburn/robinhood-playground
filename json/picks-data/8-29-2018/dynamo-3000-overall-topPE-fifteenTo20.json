@@ -1,0 +1,58 @@
+{
+  "200": [
+    {
+      "ticker": "CY",
+      "price": 16.74
+    },
+    {
+      "ticker": "ERJ",
+      "price": 19.17
+    },
+    {
+      "ticker": "COT",
+      "price": 15.26
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CY",
+      "price": 16.74
+    },
+    {
+      "ticker": "ERJ",
+      "price": 19.11
+    },
+    {
+      "ticker": "COT",
+      "price": 15.18
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CY",
+      "price": 16.765
+    },
+    {
+      "ticker": "ERJ",
+      "price": 19.17
+    },
+    {
+      "ticker": "COT",
+      "price": 15.245
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CY",
+      "price": 16.7475
+    },
+    {
+      "ticker": "ERJ",
+      "price": 19.18
+    },
+    {
+      "ticker": "COT",
+      "price": 15.255
+    }
+  ]
+}

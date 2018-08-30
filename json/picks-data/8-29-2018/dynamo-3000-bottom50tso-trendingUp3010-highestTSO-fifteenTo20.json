@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "QNST",
+      "price": 15.35
+    },
+    {
+      "ticker": "MERC",
+      "price": 17.8421
+    }
+  ],
+  "260": [
+    {
+      "ticker": "HPE",
+      "price": 16.73
+    },
+    {
+      "ticker": "MERC",
+      "price": 17.775
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AMSWA",
+      "price": 17.78
+    },
+    {
+      "ticker": "DLA",
+      "price": 18.71
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SZC",
+      "price": 19
+    },
+    {
+      "ticker": "HPE",
+      "price": 16.745
+    }
+  ]
+}

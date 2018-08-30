@@ -1,0 +1,58 @@
+{
+  "200": [
+    {
+      "ticker": "IRT",
+      "price": 10.335
+    },
+    {
+      "ticker": "KRNY",
+      "price": 13.625
+    },
+    {
+      "ticker": "RCII",
+      "price": 14.76
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PLYA",
+      "price": 10.36
+    },
+    {
+      "ticker": "IRT",
+      "price": 10.32
+    },
+    {
+      "ticker": "RFI",
+      "price": 12.9468
+    }
+  ],
+  "351": [
+    {
+      "ticker": "RCII",
+      "price": 14.76
+    },
+    {
+      "ticker": "GGZ",
+      "price": 12.3275
+    },
+    {
+      "ticker": "CLM",
+      "price": 14.281
+    }
+  ],
+  "381": [
+    {
+      "ticker": "GME",
+      "price": 14.145
+    },
+    {
+      "ticker": "RCII",
+      "price": 14.76
+    },
+    {
+      "ticker": "ZF",
+      "price": 10.6326
+    }
+  ]
+}

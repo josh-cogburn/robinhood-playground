@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "SMNNY",
+      "price": 15.3
+    },
+    {
+      "ticker": "SD",
+      "price": 15.84
+    }
+  ],
+  "260": [
+    {
+      "ticker": "YPF",
+      "price": 15.45
+    },
+    {
+      "ticker": "ACRS",
+      "price": 15.465
+    }
+  ],
+  "351": [
+    {
+      "ticker": "YPF",
+      "price": 15.25
+    },
+    {
+      "ticker": "BIS",
+      "price": 15.7426
+    }
+  ],
+  "381": [
+    {
+      "ticker": "YPF",
+      "price": 15.235
+    },
+    {
+      "ticker": "BIS",
+      "price": 15.7426
+    }
+  ]
+}

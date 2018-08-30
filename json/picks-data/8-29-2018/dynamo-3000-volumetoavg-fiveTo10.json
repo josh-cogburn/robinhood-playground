@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "EXPR",
+      "price": 9.58
+    },
+    {
+      "ticker": "XSPL",
+      "price": 6.49
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TOUR",
+      "price": 7.5
+    },
+    {
+      "ticker": "FT",
+      "price": 6.8075
+    }
+  ],
+  "351": [
+    {
+      "ticker": "TSRI",
+      "price": 7.05
+    },
+    {
+      "ticker": "EURN",
+      "price": 8.625
+    }
+  ],
+  "381": [
+    {
+      "ticker": "TSRI",
+      "price": 7.05
+    },
+    {
+      "ticker": "EAD",
+      "price": 8.0599
+    }
+  ]
+}

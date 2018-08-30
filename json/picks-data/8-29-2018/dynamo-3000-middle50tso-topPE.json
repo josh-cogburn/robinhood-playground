@@ -1,0 +1,58 @@
+{
+  "200": [
+    {
+      "ticker": "EXK",
+      "price": 2.3
+    },
+    {
+      "ticker": "SAND",
+      "price": 3.8132
+    },
+    {
+      "ticker": "PCTI",
+      "price": 4.35
+    }
+  ],
+  "260": [
+    {
+      "ticker": "KCAP",
+      "price": 3.1731
+    },
+    {
+      "ticker": "IAG",
+      "price": 4.135
+    },
+    {
+      "ticker": "RLGT",
+      "price": 4.27
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SAND",
+      "price": 3.82
+    },
+    {
+      "ticker": "KCAP",
+      "price": 3.1751
+    },
+    {
+      "ticker": "RLGT",
+      "price": 4.28
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SAND",
+      "price": 3.82
+    },
+    {
+      "ticker": "KCAP",
+      "price": 3.1751
+    },
+    {
+      "ticker": "IAG",
+      "price": 4.14
+    }
+  ]
+}

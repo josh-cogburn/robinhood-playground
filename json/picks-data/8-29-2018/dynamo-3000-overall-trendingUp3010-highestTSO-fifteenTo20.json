@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "AQST",
+      "price": 17.18
+    },
+    {
+      "ticker": "UBX",
+      "price": 19
+    }
+  ],
+  "260": [
+    {
+      "ticker": "KPTI",
+      "price": 19.78
+    },
+    {
+      "ticker": "UBX",
+      "price": 18.791
+    }
+  ],
+  "351": [
+    {
+      "ticker": "KPTI",
+      "price": 19.76
+    },
+    {
+      "ticker": "AQST",
+      "price": 17.02
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AQST",
+      "price": 17
+    },
+    {
+      "ticker": "SGMO",
+      "price": 16.75
+    }
+  ]
+}

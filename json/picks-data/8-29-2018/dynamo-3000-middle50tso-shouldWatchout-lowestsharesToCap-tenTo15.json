@@ -1,0 +1,38 @@
+{
+  "200": [
+    {
+      "ticker": "NUGT",
+      "price": 14.31
+    },
+    {
+      "ticker": "OXFD",
+      "price": 14.575
+    }
+  ],
+  "260": [
+    {
+      "ticker": "OXFD",
+      "price": 14.6
+    },
+    {
+      "ticker": "WOW",
+      "price": 11.72
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SPRO",
+      "price": 11.3409
+    },
+    {
+      "ticker": "CBIO",
+      "price": 10.89
+    }
+  ],
+  "381": [
+    {
+      "ticker": "LIVE",
+      "price": 10.38
+    }
+  ]
+}

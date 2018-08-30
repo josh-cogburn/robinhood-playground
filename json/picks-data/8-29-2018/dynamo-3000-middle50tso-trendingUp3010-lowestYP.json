@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "MYSZ",
+      "price": 0.8036
+    },
+    {
+      "ticker": "AEHR",
+      "price": 2.59
+    }
+  ],
+  "260": [
+    {
+      "ticker": "LPCN",
+      "price": 1.3869
+    },
+    {
+      "ticker": "ELTK",
+      "price": 3.85
+    }
+  ],
+  "351": [
+    {
+      "ticker": "DPW",
+      "price": 0.4818
+    },
+    {
+      "ticker": "NOVN",
+      "price": 2.92
+    }
+  ],
+  "381": [
+    {
+      "ticker": "VXRT",
+      "price": 3.0675
+    },
+    {
+      "ticker": "FWP",
+      "price": 2.9701
+    }
+  ]
+}

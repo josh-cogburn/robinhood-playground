@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "QNST",
+      "price": 15.35
+    },
+    {
+      "ticker": "PFBI",
+      "price": 19.0983
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NGVC",
+      "price": 18.35
+    },
+    {
+      "ticker": "HPE",
+      "price": 16.73
+    }
+  ],
+  "351": [
+    {
+      "ticker": "PFBI",
+      "price": 19.0983
+    },
+    {
+      "ticker": "BBBY",
+      "price": 17.99
+    }
+  ],
+  "381": [
+    {
+      "ticker": "HPE",
+      "price": 16.745
+    },
+    {
+      "ticker": "ATV",
+      "price": 19.3233
+    }
+  ]
+}

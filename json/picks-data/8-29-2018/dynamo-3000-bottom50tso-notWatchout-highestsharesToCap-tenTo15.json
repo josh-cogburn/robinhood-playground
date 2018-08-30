@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "MIDZ",
+      "price": 10.06
+    },
+    {
+      "ticker": "CLAR",
+      "price": 10.05
+    }
+  ],
+  "260": [
+    {
+      "ticker": "MIDZ",
+      "price": 10.06
+    },
+    {
+      "ticker": "CLAR",
+      "price": 10.15
+    }
+  ],
+  "351": [
+    {
+      "ticker": "MIDZ",
+      "price": 10.06
+    },
+    {
+      "ticker": "AUDC",
+      "price": 10.6
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MIDZ",
+      "price": 10.06
+    },
+    {
+      "ticker": "REDU",
+      "price": 10.35
+    }
+  ]
+}
