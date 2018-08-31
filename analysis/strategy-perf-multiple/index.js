@@ -29,7 +29,7 @@ module.exports = async (Robinhood, daysBack = 2, ...strategiesArgs) => {
                 || strategiesArgs.every(s => strat.includes(s))
         ) : allStrategies;
     const isSearch = strategiesArgs[0] && !allStrategies.includes(strategiesArgs[0]);// && false;
-    const includeDetailed = suppliedStrategies && !isSearch && false;
+    const includeDetailed = suppliedStrategies && !isSearch;
 
     if (suppliedStrategies) {
         console.log('strategies of interest', strategiesOfInterest);
