@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "IMGN",
+      "price": 10.03
+    },
+    {
+      "ticker": "QEP",
+      "price": 10.2
+    }
+  ],
+  "40": [
+    {
+      "ticker": "IMGN",
+      "price": 10.0499
+    },
+    {
+      "ticker": "NERV",
+      "price": 10.05
+    }
+  ],
+  "100": [
+    {
+      "ticker": "IMGN",
+      "price": 10.1
+    },
+    {
+      "ticker": "NERV",
+      "price": 10.25
+    }
+  ],
+  "200": [
+    {
+      "ticker": "IMGN",
+      "price": 10.22
+    },
+    {
+      "ticker": "NERV",
+      "price": 10.55
+    }
+  ],
+  "260": [
+    {
+      "ticker": "IMGN",
+      "price": 10.23
+    },
+    {
+      "ticker": "NERV",
+      "price": 10.525
+    }
+  ]
+}

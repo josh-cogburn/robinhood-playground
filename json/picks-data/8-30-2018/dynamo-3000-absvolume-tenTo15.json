@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "PRCP",
+      "price": 10.3525
+    },
+    {
+      "ticker": "OBSV",
+      "price": 13.46
+    }
+  ],
+  "40": [
+    {
+      "ticker": "PRCP",
+      "price": 10.32
+    },
+    {
+      "ticker": "EXPR",
+      "price": 10.59
+    }
+  ],
+  "100": [
+    {
+      "ticker": "TGS",
+      "price": 11.53
+    },
+    {
+      "ticker": "INS",
+      "price": 13.41
+    }
+  ],
+  "200": [
+    {
+      "ticker": "TGS",
+      "price": 11.06
+    },
+    {
+      "ticker": "EXPR",
+      "price": 10.83
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TGS",
+      "price": 10.99
+    },
+    {
+      "ticker": "INSY",
+      "price": 10.9425
+    }
+  ]
+}

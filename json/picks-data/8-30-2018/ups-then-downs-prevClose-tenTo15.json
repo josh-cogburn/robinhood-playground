@@ -1,0 +1,38 @@
+{
+  "10": [
+    {
+      "ticker": "PRCP",
+      "price": 10.3525
+    }
+  ],
+  "50": [
+    {
+      "ticker": "BILI",
+      "price": 13.0072
+    },
+    {
+      "ticker": "PRCP",
+      "price": 10.26
+    }
+  ],
+  "200": [
+    {
+      "ticker": "BILI",
+      "price": 12.97
+    },
+    {
+      "ticker": "PRCP",
+      "price": 10.25
+    }
+  ],
+  "300": [
+    {
+      "ticker": "BILI",
+      "price": 12.42
+    },
+    {
+      "ticker": "PRCP",
+      "price": 10.6152
+    }
+  ]
+}

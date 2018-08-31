@@ -1,0 +1,53 @@
+{
+  "10": [],
+  "50": [
+    {
+      "ticker": "UAVS",
+      "price": 2.011
+    },
+    {
+      "ticker": "DPW",
+      "price": 0.4675
+    },
+    {
+      "ticker": "LMFA",
+      "price": 0.48
+    },
+    {
+      "ticker": "USAS",
+      "price": 2.4
+    }
+  ],
+  "200": [
+    {
+      "ticker": "UAVS",
+      "price": 2.1444
+    },
+    {
+      "ticker": "USAS",
+      "price": 2.38
+    }
+  ],
+  "300": [
+    {
+      "ticker": "NEPT",
+      "price": 3.91
+    },
+    {
+      "ticker": "NNA",
+      "price": 0.5714
+    },
+    {
+      "ticker": "UAVS",
+      "price": 2.0091
+    },
+    {
+      "ticker": "LMFA",
+      "price": 0.48
+    },
+    {
+      "ticker": "IFMK",
+      "price": 3.2275
+    }
+  ]
+}

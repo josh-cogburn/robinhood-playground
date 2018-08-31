@@ -1,0 +1,29 @@
+{
+  "10": [],
+  "50": [
+    {
+      "ticker": "PDD",
+      "price": 19.62
+    },
+    {
+      "ticker": "REPL",
+      "price": 19.75
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PDD",
+      "price": 19.32
+    }
+  ],
+  "300": [
+    {
+      "ticker": "PDD",
+      "price": 18.97
+    },
+    {
+      "ticker": "REPL",
+      "price": 19.02
+    }
+  ]
+}

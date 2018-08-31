@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "EXPR",
+      "price": 10.18
+    },
+    {
+      "ticker": "PRTK",
+      "price": 10.05
+    }
+  ],
+  "40": [
+    {
+      "ticker": "EXPR",
+      "price": 10.59
+    },
+    {
+      "ticker": "PRTK",
+      "price": 10.15
+    }
+  ],
+  "100": [
+    {
+      "ticker": "EXPR",
+      "price": 10.64
+    },
+    {
+      "ticker": "PTGX",
+      "price": 10.1204
+    }
+  ],
+  "200": [
+    {
+      "ticker": "EXPR",
+      "price": 10.83
+    },
+    {
+      "ticker": "PTGX",
+      "price": 10.34
+    }
+  ],
+  "260": [
+    {
+      "ticker": "INSY",
+      "price": 10.9425
+    },
+    {
+      "ticker": "SYBX",
+      "price": 10.07
+    }
+  ]
+}

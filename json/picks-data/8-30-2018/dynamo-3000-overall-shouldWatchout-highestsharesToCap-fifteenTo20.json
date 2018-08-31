@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "QNST",
+      "price": 15.01
+    },
+    {
+      "ticker": "FORM",
+      "price": 15.3
+    }
+  ],
+  "40": [
+    {
+      "ticker": "ASUR",
+      "price": 15.1
+    },
+    {
+      "ticker": "LNTH",
+      "price": 15.45
+    }
+  ],
+  "100": [
+    {
+      "ticker": "ASUR",
+      "price": 15.06
+    },
+    {
+      "ticker": "LNTH",
+      "price": 15.55
+    }
+  ],
+  "200": [
+    {
+      "ticker": "OPTN",
+      "price": 15.02
+    },
+    {
+      "ticker": "TGH",
+      "price": 15.1
+    }
+  ],
+  "260": [
+    {
+      "ticker": "OPTN",
+      "price": 15.045
+    },
+    {
+      "ticker": "TGH",
+      "price": 15.1
+    }
+  ]
+}

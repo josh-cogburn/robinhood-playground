@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "ELP",
+      "price": 4.9
+    },
+    {
+      "ticker": "HBM",
+      "price": 4.85
+    }
+  ],
+  "40": [
+    {
+      "ticker": "ELP",
+      "price": 4.875
+    },
+    {
+      "ticker": "HBM",
+      "price": 4.825
+    }
+  ],
+  "100": [
+    {
+      "ticker": "PPR",
+      "price": 4.995
+    },
+    {
+      "ticker": "ELP",
+      "price": 4.86
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PPR",
+      "price": 4.9931
+    },
+    {
+      "ticker": "ELP",
+      "price": 4.86
+    }
+  ],
+  "260": [
+    {
+      "ticker": "EDGW",
+      "price": 4.94
+    },
+    {
+      "ticker": "PPR",
+      "price": 4.995
+    }
+  ]
+}

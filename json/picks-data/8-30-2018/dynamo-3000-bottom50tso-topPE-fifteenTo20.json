@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "HBI",
+      "price": 17.8
+    },
+    {
+      "ticker": "ATGFF",
+      "price": 19.11
+    },
+    {
+      "ticker": "GDX",
+      "price": 18.67
+    }
+  ],
+  "40": [
+    {
+      "ticker": "SIEB",
+      "price": 15.89
+    },
+    {
+      "ticker": "MOD",
+      "price": 17.6
+    },
+    {
+      "ticker": "PTEN",
+      "price": 17.42
+    }
+  ],
+  "100": [
+    {
+      "ticker": "RYB",
+      "price": 19.7
+    },
+    {
+      "ticker": "AVNW",
+      "price": 17.27
+    },
+    {
+      "ticker": "AZUL",
+      "price": 16
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PSCE",
+      "price": 16.1
+    },
+    {
+      "ticker": "SIEB",
+      "price": 15.975
+    },
+    {
+      "ticker": "AVNW",
+      "price": 17.3
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AVNW",
+      "price": 17.5
+    },
+    {
+      "ticker": "PTEN",
+      "price": 17.28
+    },
+    {
+      "ticker": "TV",
+      "price": 17.77
+    }
+  ]
+}

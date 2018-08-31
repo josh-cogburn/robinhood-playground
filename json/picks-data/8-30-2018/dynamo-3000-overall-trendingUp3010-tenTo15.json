@@ -1,0 +1,112 @@
+{
+  "4": [
+    {
+      "ticker": "PRCP",
+      "price": 10.3525
+    },
+    {
+      "ticker": "JG",
+      "price": 11.08
+    },
+    {
+      "ticker": "CRON",
+      "price": 11.7499
+    },
+    {
+      "ticker": "CKHUY",
+      "price": 11.266
+    },
+    {
+      "ticker": "BKRKY",
+      "price": 10.94
+    }
+  ],
+  "40": [
+    {
+      "ticker": "PRCP",
+      "price": 10.32
+    },
+    {
+      "ticker": "CRON",
+      "price": 11.265
+    },
+    {
+      "ticker": "VNET",
+      "price": 9.93
+    },
+    {
+      "ticker": "BKRKY",
+      "price": 10.82
+    },
+    {
+      "ticker": "CENX",
+      "price": 12.51
+    }
+  ],
+  "100": [
+    {
+      "ticker": "PRCP",
+      "price": 10
+    },
+    {
+      "ticker": "SE",
+      "price": 13.94
+    },
+    {
+      "ticker": "CENX",
+      "price": 12.3061
+    },
+    {
+      "ticker": "CYOU",
+      "price": 13.6904
+    },
+    {
+      "ticker": "AQ",
+      "price": 12.216
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PRCP",
+      "price": 10.66
+    },
+    {
+      "ticker": "CRON",
+      "price": 11.2697
+    },
+    {
+      "ticker": "SE",
+      "price": 13.84
+    },
+    {
+      "ticker": "CYOU",
+      "price": 13.45
+    },
+    {
+      "ticker": "NR",
+      "price": 10.625
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PRCP",
+      "price": 10.3
+    },
+    {
+      "ticker": "CYOU",
+      "price": 13.395
+    },
+    {
+      "ticker": "SE",
+      "price": 13.9
+    },
+    {
+      "ticker": "NR",
+      "price": 10.6
+    },
+    {
+      "ticker": "BILI",
+      "price": 12.73
+    }
+  ]
+}

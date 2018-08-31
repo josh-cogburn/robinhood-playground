@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "SPWR",
+      "price": 7
+    },
+    {
+      "ticker": "CHRA",
+      "price": 7.24
+    }
+  ],
+  "5": [
+    {
+      "ticker": "RKUNY",
+      "price": 7.65
+    },
+    {
+      "ticker": "FOMX",
+      "price": 5.75
+    }
+  ],
+  "16": [
+    {
+      "ticker": "RKUNY",
+      "price": 7.64
+    },
+    {
+      "ticker": "FOMX",
+      "price": 5.68
+    }
+  ],
+  "30": [
+    {
+      "ticker": "RKUNY",
+      "price": 7.59
+    },
+    {
+      "ticker": "FOMX",
+      "price": 5.7
+    }
+  ]
+}

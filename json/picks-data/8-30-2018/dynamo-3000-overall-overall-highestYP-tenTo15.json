@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "VKTX",
+      "price": 12
+    },
+    {
+      "ticker": "XENE",
+      "price": 12.2
+    }
+  ],
+  "40": [
+    {
+      "ticker": "FLMN",
+      "price": 11.4
+    },
+    {
+      "ticker": "MESA",
+      "price": 12.825
+    }
+  ],
+  "100": [
+    {
+      "ticker": "FLMN",
+      "price": 11.4
+    },
+    {
+      "ticker": "MESA",
+      "price": 12.9873
+    }
+  ],
+  "200": [
+    {
+      "ticker": "MESA",
+      "price": 13.25
+    },
+    {
+      "ticker": "FLMN",
+      "price": 11.39
+    }
+  ],
+  "260": [
+    {
+      "ticker": "MESA",
+      "price": 13.5
+    },
+    {
+      "ticker": "FLMN",
+      "price": 11.4
+    }
+  ]
+}

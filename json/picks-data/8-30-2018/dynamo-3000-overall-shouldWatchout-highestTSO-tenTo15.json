@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "EXPR",
+      "price": 10.18
+    },
+    {
+      "ticker": "VECO",
+      "price": 11.6
+    }
+  ],
+  "40": [
+    {
+      "ticker": "EXPR",
+      "price": 10.59
+    },
+    {
+      "ticker": "LBY",
+      "price": 10.52
+    }
+  ],
+  "100": [
+    {
+      "ticker": "EXPR",
+      "price": 10.64
+    },
+    {
+      "ticker": "TORC",
+      "price": 11.57
+    }
+  ],
+  "200": [
+    {
+      "ticker": "EXPR",
+      "price": 10.83
+    },
+    {
+      "ticker": "VKTX",
+      "price": 12.91
+    }
+  ],
+  "260": [
+    {
+      "ticker": "INSY",
+      "price": 10.9425
+    },
+    {
+      "ticker": "EXPR",
+      "price": 10.89
+    }
+  ]
+}

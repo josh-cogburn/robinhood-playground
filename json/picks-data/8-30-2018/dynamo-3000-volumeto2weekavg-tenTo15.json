@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "PRCP",
+      "price": 10.3525
+    },
+    {
+      "ticker": "JG",
+      "price": 11.08
+    }
+  ],
+  "40": [
+    {
+      "ticker": "PRCP",
+      "price": 10.32
+    },
+    {
+      "ticker": "CRON",
+      "price": 11.265
+    }
+  ],
+  "100": [
+    {
+      "ticker": "TGS",
+      "price": 11.53
+    },
+    {
+      "ticker": "PRCP",
+      "price": 10
+    }
+  ],
+  "200": [
+    {
+      "ticker": "TGS",
+      "price": 11.06
+    },
+    {
+      "ticker": "PUMP",
+      "price": 14.575
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TGS",
+      "price": 10.99
+    },
+    {
+      "ticker": "CRESY",
+      "price": 12.52
+    }
+  ]
+}

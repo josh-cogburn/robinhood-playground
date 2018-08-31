@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "SDOW",
+      "price": 15.0135
+    },
+    {
+      "ticker": "MTLS",
+      "price": 15.06
+    }
+  ],
+  "40": [
+    {
+      "ticker": "ASUR",
+      "price": 15.1
+    },
+    {
+      "ticker": "SDOW",
+      "price": 15.04
+    }
+  ],
+  "100": [
+    {
+      "ticker": "LMST",
+      "price": 15.25
+    },
+    {
+      "ticker": "ASUR",
+      "price": 15.06
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ECOR",
+      "price": 16.05
+    },
+    {
+      "ticker": "OPTN",
+      "price": 15.02
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ECOR",
+      "price": 17.48
+    },
+    {
+      "ticker": "OPTN",
+      "price": 15.045
+    }
+  ]
+}

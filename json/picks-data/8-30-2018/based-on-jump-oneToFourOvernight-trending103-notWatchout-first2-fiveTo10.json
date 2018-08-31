@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "SPWR",
+      "price": 7
+    },
+    {
+      "ticker": "NOA",
+      "price": 8.1
+    }
+  ],
+  "5": [
+    {
+      "ticker": "RKUNY",
+      "price": 7.65
+    },
+    {
+      "ticker": "SPWR",
+      "price": 6.9
+    }
+  ],
+  "16": [
+    {
+      "ticker": "RKUNY",
+      "price": 7.64
+    },
+    {
+      "ticker": "SPWR",
+      "price": 6.82
+    }
+  ],
+  "30": [
+    {
+      "ticker": "RKUNY",
+      "price": 7.59
+    },
+    {
+      "ticker": "SPWR",
+      "price": 6.779
+    }
+  ]
+}

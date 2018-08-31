@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "VKTX",
+      "price": 12
+    },
+    {
+      "ticker": "XENE",
+      "price": 12.2
+    }
+  ],
+  "40": [
+    {
+      "ticker": "VKTX",
+      "price": 12.43
+    },
+    {
+      "ticker": "XENE",
+      "price": 12.25
+    }
+  ],
+  "100": [
+    {
+      "ticker": "VKTX",
+      "price": 12.56
+    },
+    {
+      "ticker": "XENE",
+      "price": 12.75
+    }
+  ],
+  "200": [
+    {
+      "ticker": "VKTX",
+      "price": 12.91
+    },
+    {
+      "ticker": "XENE",
+      "price": 12.75
+    }
+  ],
+  "260": [
+    {
+      "ticker": "VKTX",
+      "price": 12.84
+    },
+    {
+      "ticker": "XENE",
+      "price": 13.1
+    }
+  ]
+}

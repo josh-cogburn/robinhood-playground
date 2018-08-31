@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "CY",
+      "price": 16.62
+    },
+    {
+      "ticker": "DNOW",
+      "price": 17.45
+    },
+    {
+      "ticker": "ACBI",
+      "price": 18.1625
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CY",
+      "price": 16.69
+    },
+    {
+      "ticker": "ERJ",
+      "price": 18.92
+    },
+    {
+      "ticker": "COT",
+      "price": 15.295
+    }
+  ],
+  "100": [
+    {
+      "ticker": "VNDA",
+      "price": 19.925
+    },
+    {
+      "ticker": "CY",
+      "price": 16.65
+    },
+    {
+      "ticker": "ERJ",
+      "price": 18.93
+    }
+  ],
+  "200": [
+    {
+      "ticker": "VNDA",
+      "price": 19.975
+    },
+    {
+      "ticker": "CY",
+      "price": 16.744
+    },
+    {
+      "ticker": "ERJ",
+      "price": 18.98
+    }
+  ],
+  "260": [
+    {
+      "ticker": "VNDA",
+      "price": 19.975
+    },
+    {
+      "ticker": "CY",
+      "price": 16.735
+    },
+    {
+      "ticker": "ERJ",
+      "price": 19.01
+    }
+  ]
+}

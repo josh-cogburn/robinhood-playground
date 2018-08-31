@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "RGSE",
+      "price": 0.425
+    },
+    {
+      "ticker": "CATB",
+      "price": 0.75
+    }
+  ],
+  "40": [
+    {
+      "ticker": "AMMA",
+      "price": 0.3254
+    },
+    {
+      "ticker": "RGSE",
+      "price": 0.3941
+    }
+  ],
+  "100": [
+    {
+      "ticker": "AMMA",
+      "price": 0.3203
+    },
+    {
+      "ticker": "RGSE",
+      "price": 0.3931
+    }
+  ],
+  "200": [
+    {
+      "ticker": "AMMA",
+      "price": 0.3231
+    },
+    {
+      "ticker": "RGSE",
+      "price": 0.4015
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AMMA",
+      "price": 0.3212
+    },
+    {
+      "ticker": "RGSE",
+      "price": 0.3999
+    }
+  ]
+}

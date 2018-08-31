@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "DOC",
+      "price": 17.535
+    },
+    {
+      "ticker": "RRC",
+      "price": 16.54
+    },
+    {
+      "ticker": "TFSL",
+      "price": 15.24
+    }
+  ],
+  "40": [
+    {
+      "ticker": "LIND",
+      "price": 15.1
+    },
+    {
+      "ticker": "DOC",
+      "price": 17.565
+    },
+    {
+      "ticker": "TAST",
+      "price": 16.225
+    }
+  ],
+  "100": [
+    {
+      "ticker": "FTAI",
+      "price": 18.1799
+    },
+    {
+      "ticker": "CRCM",
+      "price": 19.015
+    },
+    {
+      "ticker": "TAST",
+      "price": 16.225
+    }
+  ],
+  "200": [
+    {
+      "ticker": "FTAI",
+      "price": 18.191
+    },
+    {
+      "ticker": "GOV",
+      "price": 17.06
+    },
+    {
+      "ticker": "OSUR",
+      "price": 16.11
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GOV",
+      "price": 17.09
+    },
+    {
+      "ticker": "EOI",
+      "price": 16.21
+    },
+    {
+      "ticker": "ETV",
+      "price": 16.155
+    }
+  ]
+}

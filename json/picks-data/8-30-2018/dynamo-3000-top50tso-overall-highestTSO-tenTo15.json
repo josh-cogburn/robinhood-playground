@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "OBSV",
+      "price": 13.46
+    },
+    {
+      "ticker": "ACH",
+      "price": 10.59
+    }
+  ],
+  "40": [
+    {
+      "ticker": "EXPR",
+      "price": 10.59
+    },
+    {
+      "ticker": "LBY",
+      "price": 10.52
+    }
+  ],
+  "100": [
+    {
+      "ticker": "INS",
+      "price": 13.41
+    },
+    {
+      "ticker": "EXPR",
+      "price": 10.64
+    }
+  ],
+  "200": [
+    {
+      "ticker": "EXPR",
+      "price": 10.83
+    },
+    {
+      "ticker": "IKNX",
+      "price": 11.253
+    }
+  ],
+  "260": [
+    {
+      "ticker": "INSY",
+      "price": 10.9425
+    },
+    {
+      "ticker": "EXPR",
+      "price": 10.89
+    }
+  ]
+}

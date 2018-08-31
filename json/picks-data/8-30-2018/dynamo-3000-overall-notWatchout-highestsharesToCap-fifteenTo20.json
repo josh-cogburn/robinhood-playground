@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "SDOW",
+      "price": 15.0135
+    },
+    {
+      "ticker": "MTLS",
+      "price": 15.06
+    }
+  ],
+  "40": [
+    {
+      "ticker": "SDOW",
+      "price": 15.04
+    },
+    {
+      "ticker": "EJPRY",
+      "price": 15.086
+    }
+  ],
+  "100": [
+    {
+      "ticker": "LMST",
+      "price": 15.25
+    },
+    {
+      "ticker": "SDOW",
+      "price": 15.04
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ECOR",
+      "price": 16.05
+    },
+    {
+      "ticker": "LMST",
+      "price": 15.25
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ECOR",
+      "price": 17.48
+    },
+    {
+      "ticker": "QTRX",
+      "price": 15.075
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "SMTX",
+      "price": 2.89
+    },
+    {
+      "ticker": "APT",
+      "price": 3.65
+    }
+  ],
+  "5": [
+    {
+      "ticker": "SMTX",
+      "price": 2.8
+    },
+    {
+      "ticker": "ICD",
+      "price": 4.36
+    }
+  ],
+  "16": [
+    {
+      "ticker": "SMTX",
+      "price": 2.73
+    },
+    {
+      "ticker": "ICD",
+      "price": 4.31
+    }
+  ],
+  "30": [
+    {
+      "ticker": "SMTX",
+      "price": 2.8
+    },
+    {
+      "ticker": "ICD",
+      "price": 4.31
+    }
+  ]
+}

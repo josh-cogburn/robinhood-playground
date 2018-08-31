@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "LAC",
+      "price": 4.7
+    },
+    {
+      "ticker": "AWX",
+      "price": 4.27
+    }
+  ],
+  "40": [
+    {
+      "ticker": "OBCI",
+      "price": 4.1
+    },
+    {
+      "ticker": "BMRA",
+      "price": 3.68
+    }
+  ],
+  "100": [
+    {
+      "ticker": "BMRA",
+      "price": 3.71
+    },
+    {
+      "ticker": "WPRT",
+      "price": 3.38
+    }
+  ],
+  "200": [
+    {
+      "ticker": "BMRA",
+      "price": 3.63
+    },
+    {
+      "ticker": "WPRT",
+      "price": 3.3
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NEPT",
+      "price": 3.9
+    },
+    {
+      "ticker": "BMRA",
+      "price": 3.63
+    }
+  ]
+}

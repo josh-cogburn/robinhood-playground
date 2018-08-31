@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "QTM",
+      "price": 1.86
+    },
+    {
+      "ticker": "EVFM",
+      "price": 3.3428
+    }
+  ],
+  "40": [
+    {
+      "ticker": "UAVS",
+      "price": 2.0959
+    },
+    {
+      "ticker": "RGSE",
+      "price": 0.3941
+    }
+  ],
+  "100": [
+    {
+      "ticker": "ATAI",
+      "price": 2.1304
+    },
+    {
+      "ticker": "RGSE",
+      "price": 0.3931
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ATAI",
+      "price": 2.08
+    },
+    {
+      "ticker": "RGSE",
+      "price": 0.4015
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TRPX",
+      "price": 4.45
+    },
+    {
+      "ticker": "UAVS",
+      "price": 2.05
+    }
+  ]
+}

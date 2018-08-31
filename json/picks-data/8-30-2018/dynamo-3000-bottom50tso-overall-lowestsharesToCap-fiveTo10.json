@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "KIRK",
+      "price": 9.35
+    },
+    {
+      "ticker": "SPN",
+      "price": 9.82
+    }
+  ],
+  "40": [
+    {
+      "ticker": "KIRK",
+      "price": 9.21
+    },
+    {
+      "ticker": "CDZI",
+      "price": 9.25
+    }
+  ],
+  "100": [
+    {
+      "ticker": "KIRK",
+      "price": 9.31
+    },
+    {
+      "ticker": "CDZI",
+      "price": 9.35
+    }
+  ],
+  "200": [
+    {
+      "ticker": "KIRK",
+      "price": 9.2538
+    },
+    {
+      "ticker": "CDZI",
+      "price": 9.335
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CRON",
+      "price": 9.2652
+    },
+    {
+      "ticker": "KIRK",
+      "price": 9.51
+    }
+  ]
+}

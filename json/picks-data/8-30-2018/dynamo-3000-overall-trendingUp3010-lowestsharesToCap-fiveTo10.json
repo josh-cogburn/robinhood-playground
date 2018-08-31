@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "KIRK",
+      "price": 9.35
+    },
+    {
+      "ticker": "F",
+      "price": 9.8499
+    }
+  ],
+  "40": [
+    {
+      "ticker": "KIRK",
+      "price": 9.21
+    },
+    {
+      "ticker": "AOBC",
+      "price": 9.935
+    }
+  ],
+  "100": [
+    {
+      "ticker": "KIRK",
+      "price": 9.31
+    },
+    {
+      "ticker": "VNET",
+      "price": 9.7
+    }
+  ],
+  "200": [
+    {
+      "ticker": "KIRK",
+      "price": 9.2538
+    },
+    {
+      "ticker": "VNET",
+      "price": 9.73
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CRON",
+      "price": 9.2652
+    },
+    {
+      "ticker": "KIRK",
+      "price": 9.51
+    }
+  ]
+}

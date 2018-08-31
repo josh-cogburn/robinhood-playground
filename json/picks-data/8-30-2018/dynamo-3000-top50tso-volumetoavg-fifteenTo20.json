@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "USAT",
+      "price": 16.3
+    },
+    {
+      "ticker": "UBX",
+      "price": 17.99
+    }
+  ],
+  "40": [
+    {
+      "ticker": "EAF",
+      "price": 18.61
+    },
+    {
+      "ticker": "PCB",
+      "price": 19.6
+    }
+  ],
+  "100": [
+    {
+      "ticker": "MODN",
+      "price": 16.725
+    },
+    {
+      "ticker": "RDFN",
+      "price": 19.82
+    }
+  ],
+  "200": [
+    {
+      "ticker": "HPE",
+      "price": 16.935
+    },
+    {
+      "ticker": "BRY",
+      "price": 16.39
+    }
+  ],
+  "260": [
+    {
+      "ticker": "KN",
+      "price": 17.685
+    },
+    {
+      "ticker": "TGH",
+      "price": 15.1
+    }
+  ]
+}

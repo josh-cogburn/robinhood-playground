@@ -1,0 +1,50 @@
+{
+  "0": [
+    {
+      "ticker": "OGZPY",
+      "price": 4.3
+    },
+    {
+      "ticker": "CPHI",
+      "price": 0.235
+    },
+    {
+      "ticker": "SID",
+      "price": 2.14
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CPHI",
+      "price": 0.235
+    },
+    {
+      "ticker": "SID",
+      "price": 2.125
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CPHI",
+      "price": 0.2467
+    },
+    {
+      "ticker": "SID",
+      "price": 2.1
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CPHI",
+      "price": 0.2493
+    },
+    {
+      "ticker": "SID",
+      "price": 2.0899
+    },
+    {
+      "ticker": "AAV",
+      "price": 3.1245
+    }
+  ]
+}

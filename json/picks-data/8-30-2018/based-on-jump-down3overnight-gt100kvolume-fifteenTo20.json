@@ -1,0 +1,54 @@
+{
+  "0": [
+    {
+      "ticker": "OVCHY",
+      "price": 16.7362
+    },
+    {
+      "ticker": "TUR",
+      "price": 19.8
+    },
+    {
+      "ticker": "MIK",
+      "price": 18.93
+    }
+  ],
+  "5": [
+    {
+      "ticker": "TUR",
+      "price": 19.85
+    },
+    {
+      "ticker": "MIK",
+      "price": 19.01
+    }
+  ],
+  "16": [
+    {
+      "ticker": "TUR",
+      "price": 19.81
+    },
+    {
+      "ticker": "MIK",
+      "price": 18.4
+    },
+    {
+      "ticker": "BRZU",
+      "price": 16.96
+    }
+  ],
+  "30": [
+    {
+      "ticker": "TUR",
+      "price": 19.67
+    },
+    {
+      "ticker": "MIK",
+      "price": 18.345
+    },
+    {
+      "ticker": "BRZU",
+      "price": 16.72
+    }
+  ]
+}
