@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "ADVM",
+      "price": 7.3
+    },
+    {
+      "ticker": "GALT",
+      "price": 5.9843
+    },
+    {
+      "ticker": "ARQL",
+      "price": 6.51
+    }
+  ],
+  "5": [
+    {
+      "ticker": "ADVM",
+      "price": 7.275
+    },
+    {
+      "ticker": "GALT",
+      "price": 5.9895
+    },
+    {
+      "ticker": "ARQL",
+      "price": 6.5
+    }
+  ],
+  "16": [
+    {
+      "ticker": "PFNX",
+      "price": 5.4
+    },
+    {
+      "ticker": "ADVM",
+      "price": 7.275
+    },
+    {
+      "ticker": "STG",
+      "price": 6.4773
+    }
+  ],
+  "30": [
+    {
+      "ticker": "PFNX",
+      "price": 5.48
+    },
+    {
+      "ticker": "ADVM",
+      "price": 7.2
+    },
+    {
+      "ticker": "STG",
+      "price": 6.26
+    }
+  ]
+}

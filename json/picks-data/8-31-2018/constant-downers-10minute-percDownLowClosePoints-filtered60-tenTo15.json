@@ -1,0 +1,44 @@
+{
+  "77": [
+    {
+      "ticker": "VIIX",
+      "price": 12.25
+    },
+    {
+      "ticker": "DNKEY",
+      "price": 14.73
+    },
+    {
+      "ticker": "NGL",
+      "price": 11.525
+    }
+  ],
+  "242": [
+    {
+      "ticker": "CIFS",
+      "price": 10.3
+    },
+    {
+      "ticker": "MGTA",
+      "price": 14.78
+    },
+    {
+      "ticker": "INOV",
+      "price": 11.225
+    }
+  ],
+  "309": [
+    {
+      "ticker": "CIFS",
+      "price": 10.3
+    },
+    {
+      "ticker": "INOV",
+      "price": 11.2
+    },
+    {
+      "ticker": "MGTA",
+      "price": 14.825
+    }
+  ]
+}

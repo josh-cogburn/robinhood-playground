@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "VCYT",
+      "price": 12.5
+    },
+    {
+      "ticker": "CLCT",
+      "price": 14.07
+    }
+  ],
+  "5": [
+    {
+      "ticker": "VCYT",
+      "price": 12.4
+    },
+    {
+      "ticker": "CLCT",
+      "price": 13.8601
+    }
+  ],
+  "16": [
+    {
+      "ticker": "MRSN",
+      "price": 14.1
+    },
+    {
+      "ticker": "VCYT",
+      "price": 12.52
+    }
+  ],
+  "30": [
+    {
+      "ticker": "MRSN",
+      "price": 14.04
+    },
+    {
+      "ticker": "VCYT",
+      "price": 12.469
+    }
+  ]
+}

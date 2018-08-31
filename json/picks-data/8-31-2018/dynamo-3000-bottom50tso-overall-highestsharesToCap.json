@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "RSLS",
+      "price": 0.0672
+    },
+    {
+      "ticker": "XSPA",
+      "price": 0.16
+    }
+  ],
+  "40": [
+    {
+      "ticker": "RSLS",
+      "price": 0.0672
+    },
+    {
+      "ticker": "GST",
+      "price": 0.084
+    }
+  ],
+  "100": [
+    {
+      "ticker": "RSLS",
+      "price": 0.0675
+    },
+    {
+      "ticker": "GST",
+      "price": 0.0836
+    }
+  ],
+  "200": [
+    {
+      "ticker": "RSLS",
+      "price": 0.0672
+    },
+    {
+      "ticker": "GST",
+      "price": 0.074
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GST",
+      "price": 0.0782
+    },
+    {
+      "ticker": "RHE",
+      "price": 0.1436
+    }
+  ],
+  "351": [
+    {
+      "ticker": "RSLS",
+      "price": 0.0679
+    },
+    {
+      "ticker": "GST",
+      "price": 0.0791
+    }
+  ],
+  "381": [
+    {
+      "ticker": "RSLS",
+      "price": 0.0665
+    },
+    {
+      "ticker": "GST",
+      "price": 0.079
+    }
+  ]
+}

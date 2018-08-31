@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "LAC",
+      "price": 4.94
+    },
+    {
+      "ticker": "AZRX",
+      "price": 2.85
+    },
+    {
+      "ticker": "IDXG",
+      "price": 1.45
+    }
+  ],
+  "5": [
+    {
+      "ticker": "LAC",
+      "price": 4.94
+    },
+    {
+      "ticker": "AZRX",
+      "price": 2.7738
+    },
+    {
+      "ticker": "IDXG",
+      "price": 1.4321
+    }
+  ],
+  "16": [
+    {
+      "ticker": "LAC",
+      "price": 4.758
+    },
+    {
+      "ticker": "AZRX",
+      "price": 2.7738
+    },
+    {
+      "ticker": "IDXG",
+      "price": 1.4685
+    }
+  ],
+  "30": [
+    {
+      "ticker": "LAC",
+      "price": 4.75
+    },
+    {
+      "ticker": "AZRX",
+      "price": 2.6
+    },
+    {
+      "ticker": "IDXG",
+      "price": 1.4401
+    }
+  ]
+}

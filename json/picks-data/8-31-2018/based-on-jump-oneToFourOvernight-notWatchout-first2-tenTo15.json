@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "PRCP",
+      "price": 11.0789
+    },
+    {
+      "ticker": "HMTA",
+      "price": 13.96
+    }
+  ],
+  "5": [
+    {
+      "ticker": "PRCP",
+      "price": 10.8
+    },
+    {
+      "ticker": "HMTA",
+      "price": 13.96
+    }
+  ],
+  "16": [
+    {
+      "ticker": "PRCP",
+      "price": 10.85
+    },
+    {
+      "ticker": "FLMN",
+      "price": 11.64
+    }
+  ],
+  "30": [
+    {
+      "ticker": "PRCP",
+      "price": 10.8
+    },
+    {
+      "ticker": "FLMN",
+      "price": 11.5
+    }
+  ]
+}

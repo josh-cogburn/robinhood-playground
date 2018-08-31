@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "ADVM",
+      "price": 7.3
+    },
+    {
+      "ticker": "GALT",
+      "price": 5.9843
+    }
+  ],
+  "5": [
+    {
+      "ticker": "ADVM",
+      "price": 7.275
+    },
+    {
+      "ticker": "GALT",
+      "price": 5.9895
+    }
+  ],
+  "16": [
+    {
+      "ticker": "PFNX",
+      "price": 5.4
+    },
+    {
+      "ticker": "ADVM",
+      "price": 7.275
+    }
+  ],
+  "30": [
+    {
+      "ticker": "PFNX",
+      "price": 5.48
+    },
+    {
+      "ticker": "ADVM",
+      "price": 7.2
+    }
+  ]
+}

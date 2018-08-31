@@ -1,0 +1,38 @@
+{
+  "0": [
+    {
+      "ticker": "DRIP",
+      "price": 5.95
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CEPU",
+      "price": 8.52
+    },
+    {
+      "ticker": "DRIP",
+      "price": 5.99
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CEPU",
+      "price": 8.66
+    },
+    {
+      "ticker": "DRIP",
+      "price": 6.01
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CEPU",
+      "price": 9.07
+    },
+    {
+      "ticker": "DRIP",
+      "price": 6.06
+    }
+  ]
+}

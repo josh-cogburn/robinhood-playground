@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "CRMD",
+      "price": 0.6296
+    },
+    {
+      "ticker": "ARCI",
+      "price": 1.15
+    },
+    {
+      "ticker": "ALT",
+      "price": 0.335
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CRMD",
+      "price": 0.6
+    },
+    {
+      "ticker": "ALT",
+      "price": 0.3524
+    },
+    {
+      "ticker": "ARCI",
+      "price": 1.22
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CRMD",
+      "price": 0.618
+    },
+    {
+      "ticker": "ARCI",
+      "price": 1.217
+    },
+    {
+      "ticker": "ALT",
+      "price": 0.3498
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CRMD",
+      "price": 0.6479
+    },
+    {
+      "ticker": "ARCI",
+      "price": 1.13
+    },
+    {
+      "ticker": "ALT",
+      "price": 0.3295
+    }
+  ]
+}

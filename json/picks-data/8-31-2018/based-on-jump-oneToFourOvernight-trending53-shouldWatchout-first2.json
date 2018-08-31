@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "DXLG",
+      "price": 3.0095
+    },
+    {
+      "ticker": "OGEN",
+      "price": 0.45
+    }
+  ],
+  "5": [
+    {
+      "ticker": "DXLG",
+      "price": 2.95
+    },
+    {
+      "ticker": "OGEN",
+      "price": 0.45
+    }
+  ],
+  "16": [
+    {
+      "ticker": "DTRM",
+      "price": 0.845
+    },
+    {
+      "ticker": "DXLG",
+      "price": 2.75
+    }
+  ],
+  "30": [
+    {
+      "ticker": "DTRM",
+      "price": 0.89
+    },
+    {
+      "ticker": "DXLG",
+      "price": 2.85
+    }
+  ]
+}

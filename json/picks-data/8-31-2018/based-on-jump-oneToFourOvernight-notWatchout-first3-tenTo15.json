@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "PRCP",
+      "price": 11.0789
+    },
+    {
+      "ticker": "HMTA",
+      "price": 13.96
+    },
+    {
+      "ticker": "IIJI",
+      "price": 10.74
+    }
+  ],
+  "5": [
+    {
+      "ticker": "PRCP",
+      "price": 10.8
+    },
+    {
+      "ticker": "HMTA",
+      "price": 13.96
+    },
+    {
+      "ticker": "IIJI",
+      "price": 10.74
+    }
+  ],
+  "16": [
+    {
+      "ticker": "PRCP",
+      "price": 10.85
+    },
+    {
+      "ticker": "FLMN",
+      "price": 11.64
+    },
+    {
+      "ticker": "ITCB",
+      "price": 14.69
+    }
+  ],
+  "30": [
+    {
+      "ticker": "PRCP",
+      "price": 10.8
+    },
+    {
+      "ticker": "FLMN",
+      "price": 11.5
+    },
+    {
+      "ticker": "VCF",
+      "price": 14.8
+    }
+  ]
+}

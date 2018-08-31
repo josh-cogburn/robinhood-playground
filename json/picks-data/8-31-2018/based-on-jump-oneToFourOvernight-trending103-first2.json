@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "LAC",
+      "price": 4.94
+    },
+    {
+      "ticker": "DXLG",
+      "price": 3.0095
+    }
+  ],
+  "5": [
+    {
+      "ticker": "LAC",
+      "price": 4.94
+    },
+    {
+      "ticker": "DXLG",
+      "price": 2.95
+    }
+  ],
+  "16": [
+    {
+      "ticker": "LAC",
+      "price": 4.758
+    },
+    {
+      "ticker": "DXLG",
+      "price": 2.75
+    }
+  ],
+  "30": [
+    {
+      "ticker": "LAC",
+      "price": 4.75
+    },
+    {
+      "ticker": "DXLG",
+      "price": 2.85
+    }
+  ]
+}

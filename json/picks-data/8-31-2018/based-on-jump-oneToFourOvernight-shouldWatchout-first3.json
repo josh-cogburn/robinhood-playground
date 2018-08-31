@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "CNET",
+      "price": 2
+    },
+    {
+      "ticker": "OPTT",
+      "price": 0.75
+    },
+    {
+      "ticker": "DXLG",
+      "price": 3.0095
+    }
+  ],
+  "5": [
+    {
+      "ticker": "QTM",
+      "price": 2.05
+    },
+    {
+      "ticker": "UAVS",
+      "price": 2.049
+    },
+    {
+      "ticker": "OPGN",
+      "price": 1.9899
+    }
+  ],
+  "16": [
+    {
+      "ticker": "QTM",
+      "price": 2.06
+    },
+    {
+      "ticker": "DTRM",
+      "price": 0.845
+    },
+    {
+      "ticker": "UAVS",
+      "price": 2.049
+    }
+  ],
+  "30": [
+    {
+      "ticker": "QTM",
+      "price": 2.03
+    },
+    {
+      "ticker": "DTRM",
+      "price": 0.89
+    },
+    {
+      "ticker": "UAVS",
+      "price": 2.011
+    }
+  ]
+}
