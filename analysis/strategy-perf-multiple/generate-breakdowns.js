@@ -323,8 +323,20 @@ const generateBreakdownConfigs = allRoundup => {
                     filterFn: ({ count }) => lowCounts({ count }) && count >= 5,
                     scoreFn: magicScoreFn
                 },
-                customCount5to10MagicScore: {
-                    filterFn: ({ count }) => count >= 5 && count <= 10,
+                customCount3to5MagicScore: {
+                    filterFn: ({ count }) => count >= 3 && count < 5,
+                    scoreFn: magicScoreFn
+                }
+                customCount5to7MagicScore: {
+                    filterFn: ({ count }) => count >= 5 && count < 8,
+                    scoreFn: magicScoreFn
+                }
+                customCount7to11MagicScore: {
+                    filterFn: ({ count }) => count >= 8 && count < 11,
+                    scoreFn: magicScoreFn
+                },
+                customCount11to14MagicScore: {
+                    filterFn: ({ count }) => count >= 11 && count < 14,
                     scoreFn: magicScoreFn
                 }
             };
