@@ -297,9 +297,10 @@ const generateBreakdownConfigs = allRoundup => {
                 highestPlayoutFn((playout, count, rest) => {
                     // console.log(playout, 'playout', 'rest', rest);
                     const lowestMax = Math.min(...rest.maxs);
-                    return (playout.avgTrend * playout.percUp)
-                        + (lowestMax * 2)
-                        + (count * 2 / (Math.max(10 - countStrength, 1)));
+                    return (
+                        (playout.avgTrend * playout.percUp)
+                        // + (count / (Math.max(10 - countStrength, 1)))
+                    ) * (lowestMax * 2);
                 });
 
             return {
