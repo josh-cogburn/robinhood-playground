@@ -108,5 +108,27 @@
       "ticker": "IFMK",
       "price": 3.3
     }
+  ],
+  "600": [
+    {
+      "ticker": "NEPT",
+      "price": 4.04
+    },
+    {
+      "ticker": "UAVS",
+      "price": 2.06
+    },
+    {
+      "ticker": "CFMS",
+      "price": 1.22
+    },
+    {
+      "ticker": "USAS",
+      "price": 2.42
+    },
+    {
+      "ticker": "IFMK",
+      "price": 3.42
+    }
   ]
 }
