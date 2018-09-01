@@ -293,36 +293,27 @@ const generateBreakdownConfigs = allRoundup => {
 
             const top2thirds = ({ count }) => upperCounts({ count }) || middleCounts({ count });
 
-            const magicScoreFn = countStrength =>
-                highestPlayoutFn((playout, count, rest) => {
-                    // console.log(playout, 'playout', 'rest', rest);
-                    const lowestMax = Math.min(...rest.maxs);
-                    return (
-                        (playout.avgTrend * playout.percUp)
-                        // + (count / (Math.max(10 - countStrength, 1)))
-                    ) * (lowestMax * 2);
-                });
+            const magicScoreFn = highestPlayoutFn((playout, count, rest) => {
+                // console.log(playout, 'playout', 'rest', rest);
+                const lowestMax = Math.min(...rest.maxs);
+                return (
+                    (playout.avgTrend * playout.percUp)
+                    // + (count / (Math.max(10 - countStrength, 1)))
+                ) + (lowestMax * 2);
+            });
 
             return {
                 middleCountMagicScore: {
                     filterFn: top2thirds,
-                    scoreFn: magicScoreFn(5)
+                    scoreFn: magicScoreFn
                 },
-                topTwoThirdsMagicScore10: {
+                topTwoThirdsMagicScore: {
                     filterFn: top2thirds,
-                    scoreFn: magicScoreFn(10)
-                },
-                topTwoThirdsMagicScore5: {
-                    filterFn: top2thirds,
-                    scoreFn: magicScoreFn(5)
-                },
-                topTwoThirdsMagicScore2: {
-                    filterFn: top2thirds,
-                    scoreFn: magicScoreFn(2)
+                    scoreFn: magicScoreFn
                 },
                 lowThirdMagicScore: {
                     filterFn: lowCounts,
-                    scoreFn: magicScoreFn(10)
+                    scoreFn: magicScoreFn
                 }
             };
 
