@@ -286,16 +286,44 @@ const generateBreakdownConfigs = allRoundup => {
             includeAll: true
         },
 
-        // topTwoThirds
+        // magicScoreFns
         // this breakdown takes into consideration avgTrend, lowestMax and count
-        topTwoThirdsLowestMaxAvgTrendCount: {
-            filterFn: ({ count }) => upperCounts({ count }) || middleCounts({ count }),
-            scoreFn: highestPlayoutFn((playout, count, rest) => {
-                // console.log(playout, 'playout', 'rest', rest);
-                const lowestMax = Math.min(...rest.maxs);
-                return (playout.avgTrend + lowestMax) * count;
-            })
-        }
+
+        ...(() => {
+
+            const magicScoreFn = countStrength =>
+                highestPlayoutFn((playout, count, rest) => {
+                    // console.log(playout, 'playout', 'rest', rest);
+                    const lowestMax = Math.min(...rest.maxs);
+                    return (playout.avgTrend * playout.percUp)
+                        + (lowestMax * 2)
+                        + (count * 2 / (Math.max(10 - countStrength, 1)));
+                });
+
+            return {
+                middleCountMagicScore: {
+                    filterFn: ({ count }) => middleCounts({ count }),
+                    scoreFn: magicScoreFn(5)
+                },
+                topTwoThirdsMagicScore10: {
+                    filterFn: ({ count }) => upperCounts({ count }) || middleCounts({ count }),
+                    scoreFn: magicScoreFn(10)
+                },
+                topTwoThirdsMagicScore5: {
+                    filterFn: ({ count }) => upperCounts({ count }) || middleCounts({ count }),
+                    scoreFn: magicScoreFn(5)
+                },
+                topTwoThirdsMagicScore2: {
+                    filterFn: ({ count }) => upperCounts({ count }) || middleCounts({ count }),
+                    scoreFn: magicScoreFn(2)
+                },
+                lowThirdMagicScore: {
+                    filterFn: lowCounts,
+                    scoreFn: magicScoreFn(10)
+                }
+            };
+
+        })()
 
     }
 
