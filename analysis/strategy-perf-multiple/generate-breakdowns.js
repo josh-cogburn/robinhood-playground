@@ -291,6 +291,8 @@ const generateBreakdownConfigs = allRoundup => {
 
         ...(() => {
 
+            const top2thirds = ({ count }) => upperCounts({ count }) || middleCounts({ count });
+
             const magicScoreFn = countStrength =>
                 highestPlayoutFn((playout, count, rest) => {
                     // console.log(playout, 'playout', 'rest', rest);
@@ -302,19 +304,19 @@ const generateBreakdownConfigs = allRoundup => {
 
             return {
                 middleCountMagicScore: {
-                    filterFn: ({ count }) => middleCounts({ count }),
+                    filterFn: top2thirds,
                     scoreFn: magicScoreFn(5)
                 },
                 topTwoThirdsMagicScore10: {
-                    filterFn: ({ count }) => upperCounts({ count }) || middleCounts({ count }),
+                    filterFn: top2thirds,
                     scoreFn: magicScoreFn(10)
                 },
                 topTwoThirdsMagicScore5: {
-                    filterFn: ({ count }) => upperCounts({ count }) || middleCounts({ count }),
+                    filterFn: top2thirds,
                     scoreFn: magicScoreFn(5)
                 },
                 topTwoThirdsMagicScore2: {
-                    filterFn: ({ count }) => upperCounts({ count }) || middleCounts({ count }),
+                    filterFn: top2thirds,
                     scoreFn: magicScoreFn(2)
                 },
                 lowThirdMagicScore: {
