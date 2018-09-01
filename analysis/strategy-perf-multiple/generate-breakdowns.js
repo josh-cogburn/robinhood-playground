@@ -289,7 +289,7 @@ const generateBreakdownConfigs = allRoundup => {
         // topTwoThirds
         // this breakdown takes into consideration avgTrend, lowestMax and count
         topTwoThirdsLowestMaxAvgTrendCount: {
-            filterFn: ({ count }) => upperCounts(count) || middleCounts(count),
+            filterFn: ({ count }) => upperCounts({ count }) || middleCounts({ count }),
             scoreFn: highestPlayoutFn((playout, count, rest) => {
                 // console.log(playout, 'playout', 'rest', rest);
                 const lowestMax = Math.min(...rest.maxs);
