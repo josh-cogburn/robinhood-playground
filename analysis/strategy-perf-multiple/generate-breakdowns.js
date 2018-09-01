@@ -303,8 +303,12 @@ const generateBreakdownConfigs = allRoundup => {
             });
 
             return {
+                upperCountMagicScore: {
+                    filterFn: upperCounts,
+                    scoreFn: magicScoreFn
+                },
                 middleCountMagicScore: {
-                    filterFn: top2thirds,
+                    filterFn: middleCounts,
                     scoreFn: magicScoreFn
                 },
                 topTwoThirdsMagicScore: {
@@ -313,6 +317,14 @@ const generateBreakdownConfigs = allRoundup => {
                 },
                 lowThirdMagicScore: {
                     filterFn: lowCounts,
+                    scoreFn: magicScoreFn
+                },
+                lowThirdMinCount5MagicScore: {
+                    filterFn: ({ count }) => lowCounts({ count }) && count >= 5,
+                    scoreFn: magicScoreFn
+                },
+                customCount5to10MagicScore: {
+                    filterFn: ({ count }) => count >= 5 && count <= 10,
                     scoreFn: magicScoreFn
                 }
             };
