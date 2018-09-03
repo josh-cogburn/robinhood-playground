@@ -23,12 +23,22 @@ module.exports = async (Robinhood, daysBack = 2, ...strategiesArgs) => {
     let allStrategies = calcUniqStrategies(stratObj);
 
     const suppliedStrategies = strategiesArgs.length;
-    const strategiesOfInterest = suppliedStrategies
-        ? allStrategies.filter(strat =>
+
+    let isSearch = false;
+    const strategiesOfInterest = (() => {
+        if (!suppliedStrategies) {
+            return allStrategies;
+        }
+        const filteredStrats = allStrategies.filter(strat =>
                 strategiesArgs.includes(strat)
-                || strategiesArgs.every(s => strat.includes(s))
-        ) : allStrategies;
-    const isSearch = strategiesArgs[0] && !allStrategies.includes(strategiesArgs[0]);// && false;
+                || (() => {
+                    const matchSearch = strategiesArgs.every(s => strat.includes(s));
+                    isSearch = isSearch || matchSearch;
+                    return matchSearch;
+                })()
+        );
+        return filteredStrats;
+    })();
     const includeDetailed = suppliedStrategies && !isSearch;
 
     if (suppliedStrategies) {
