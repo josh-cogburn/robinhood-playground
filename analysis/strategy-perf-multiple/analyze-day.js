@@ -41,6 +41,8 @@ const analyzeDay = ({ strategyName, stratPerf, date, maxBreakdownKey }) => {
     }
 
     const sorted = foundTrends.sort((a, b) => b.avgTrend - a.avgTrend);
+
+    // console.log('sorted', sorted);
     const trends = foundTrends.map(trend => trend.avgTrend);
 
     const {

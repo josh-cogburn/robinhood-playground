@@ -72,7 +72,7 @@ module.exports = async (Robinhood, daysBack, ...pmNames) => {
                 [
                     strategy,
                     count,
-                    JSON.stringify(
+                    maxs && JSON.stringify(
                         maxs.map(i => Math.round(i))
                     )
                 ].join(' ')

@@ -295,11 +295,13 @@ const generateBreakdownConfigs = allRoundup => {
 
             const magicScoreFn = highestPlayoutFn((playout, count, rest) => {
                 // console.log(playout, 'playout', 'rest', rest);
-                const lowestMax = Math.min(...rest.maxs);
+                const { maxs } = rest;
+                const lowestMax = Math.min(...maxs);
+                const numBelow0 = maxs.filter(val => val <= 0).length;
                 return (
-                    (playout.avgTrend * playout.percUp)
+                    (playout.avgTrend * (playout.percUp * 2))
                     // + (count / (Math.max(10 - countStrength, 1)))
-                ) + (lowestMax * 2);
+                ) + ((lowestMax - numBelow0) * 2);
             });
 
             return {
@@ -326,12 +328,12 @@ const generateBreakdownConfigs = allRoundup => {
                 customCount3to5MagicScore: {
                     filterFn: ({ count }) => count >= 3 && count < 5,
                     scoreFn: magicScoreFn
-                }
-                customCount5to7MagicScore: {
+                },
+                customCount5to8MagicScore: {
                     filterFn: ({ count }) => count >= 5 && count < 8,
                     scoreFn: magicScoreFn
-                }
-                customCount7to11MagicScore: {
+                },
+                customCount8to11MagicScore: {
                     filterFn: ({ count }) => count >= 8 && count < 11,
                     scoreFn: magicScoreFn
                 },

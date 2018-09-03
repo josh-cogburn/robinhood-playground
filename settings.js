@@ -22,12 +22,15 @@ module.exports = {
     sellAllStocksOnNthDay: 2,
     purchaseAmt: 20,
     forPurchase: [
-        '[aug29LowCountsABQuality]',    // 3x power up!
-        '[aug29LowCountsABQuality]',
-        '[aug29LowCountsABQuality]',
+        '[sepPerfectosHigherCounts]',
 
-        '[aug29LowCountsGradeC]',       // low count and grade c
-        '[aug29MedHighCounts]',         // everydayers
+        '[sepPerfectosLowerCounts]',
+        '[sepPerfectosLowerCounts]',
+        '[sepPerfectosMissing]',
+        '[sepPerfectosMissing]',
+
+        '[sepHighlights]',
+        '[sepStars]'
     ],
     sellStrategy: 'limit3',     // for fallback,
     keepers: [

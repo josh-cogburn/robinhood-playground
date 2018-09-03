@@ -566,6 +566,233 @@ const aug29MedHighCounts = [
     'constant-risers-10minute-percUpHighClose-lowovernightjumps-100'
 ];
 
+
+const sepStars = [
+    'sudden-drops-last5trend-filter10-100',
+    'sudden-drops-last5trend-first1-fiveTo10-290',
+    'low-float-high-volume-volToAvgPoints-trenddown7to10-shouldWatchout-fifteenTo20-95',
+    'sudden-drops-last10trend-first1-fifteenTo20-360'
+];
+const sepHighlights = [
+
+    // next-day-9
+
+        // lowThirdMinCount5MagicScore
+        'sudden-drops-last5trend-first1-100',
+        'low-float-high-volume-twoWeekVolToAvgPoints-trenddowngt10-notWatchout-fifteenTo20-150',
+        'low-float-high-volume-volToAvgPoints-trenddowngt10-notWatchout-6',
+
+        // customCount3to5MagicScore
+        'sudden-drops-last18trend-filter10-tenTo15-328',
+        'sudden-drops-last5trend-filter10-100', // star
+        'based-on-jump-down3overnight-trending103-notWatchout-ltneg50percmax-first1-fiveTo10-0',
+        'based-on-jump-down5overnight-trending103-notWatchout-ltneg50percmax-first2-5',
+
+        // customCount5to8MagicScore
+        'sudden-drops-last5trend-first1-100',
+        'low-float-high-volume-twoWeekVolToAvgPoints-trenddowngt10-notWatchout-fifteenTo20-150',
+        'sudden-drops-last3trend-first1-100',
+        'sudden-drops-last30trend-filter10-tenTo15-328',
+        'based-on-jump-gtEightOvernight-trending53-notWatchout-first1-tenTo15-5',
+        'based-on-jump-gtEightOvernight-trending53-notWatchout-first1-tenTo15-16',
+        'up-streak-3to5days-gt3overnight-fifteenTo20-45',
+
+        // customCount8to11MagicScore
+        'dynamo-3000-overall-onlyWatchout-highestTSO-fiveTo10-200',
+        'based-on-jump-down5overnight-trending103-notWatchout-gtneg20percmax-first2-16',
+        'sudden-drops-last5trend-first1-fiveTo10-290',   // star
+        'sudden-drops-last2trend-first1-fiveTo10-290',
+        'based-on-jump-down3overnight-notWatchout-ltneg50percmax-first1-fifteenTo20-16',
+        'sudden-drops-last5trend-first2-fiveTo10-290',
+
+        // customCount11to14MagicScore
+        'low-float-high-volume-volToAvgPoints-trenddown7to10-shouldWatchout-fifteenTo20-95', // star
+        'sudden-drops-last10trend-first1-fifteenTo20-360',  // star
+        // 'sudden-drops-last10trend-first2-fifteenTo20-360',
+
+];
+
+const sepPerfectos = [
+
+    // next-day-330
+
+        // perfectos
+        'based-on-jump-up3overnight-trending35257-ltneg50percmax-fiveTo10-5',
+        'dynamo-3000-overall-onlyWatchout-highestTSO-fiveTo10-200',
+        'sudden-drops-last3trend-filter20-280',
+        'sudden-drops-last5trend-filter20-280',
+        'dynamo-3000-overall-onlyWatchout-highestTSO-tenTo15-100',
+        'low-float-high-volume-floatTimesfloatToVolume-trendgt50-tenTo15-384',
+        'sudden-drops-last3trend-filter20-328',
+        'sudden-drops-last18trend-filter10-tenTo15-328',
+        'sudden-drops-last5trend-filter10-100',
+        'sudden-drops-last5trend-first1-tenTo15-360',
+        'low-float-high-volume-volToAvgPoints-trenddown7to10-shouldWatchout-fifteenTo20-150',
+        'technical-indicators-10minute-week-topSMAoverUnderHist-fifteenTo20-29',
+        'based-on-jump-down3overnight-trending103-notWatchout-ltneg50percmax-first1-fiveTo10-0',
+        'sudden-drops-last10trend-first1-fifteenTo20-360',
+        'low-float-high-volume-floatTimestwoWeekVolToAvgPoints-trenddown7to10-shouldWatchout-fifteenTo20-95',
+        'based-on-jump-up3overnight-trending35257-shouldWatchout-first2-fiveTo10-30',
+        'low-float-high-volume-volTo2WeekPoints-trenddown7to10-shouldWatchout-fifteenTo20-210',
+        'sudden-drops-last3trend-first1-tenTo15-360',
+        'sudden-drops-last5trend-filter30-280',
+        'sudden-drops-last30trend-filter30-328',
+        'based-on-jump-down5overnight-trending103-notWatchout-gtneg20percmax-first2-16',
+        'sudden-drops-last10trend-filter20-221',
+        'sudden-drops-last18trend-filter30-328',
+        'sudden-drops-last2trend-filter10-tenTo15-328',
+        'low-float-high-volume-volTo2WeekPoints-trenddown7to10-shouldWatchout-tenTo15-6',
+        'low-float-high-volume-floatTimestwoWeekVolToAvgPoints-trenddowngt10-notWatchout-fifteenTo20-150',
+        'sudden-drops-last5trend-filter30-328',
+        'low-float-high-volume-volToAvgPoints-trendgt50-tenTo15-315',
+        // 'low-float-high-volume-absVolPoints-trendgt50-shouldWatchout-tenTo15-315',
+        'sudden-drops-last10trend-filter10-tenTo15-280',
+        'sudden-drops-last3trend-filter20-221',
+        'sudden-drops-last5trend-filter30-221',
+        // 'low-float-high-volume-floatTimesvolTo2WeekPoints-trenddowngt10-notWatchout-fifteenTo20-150',
+        'sudden-drops-last2trend-filter10-360',
+        'based-on-jump-down5overnight-trending103-notWatchout-ltneg50percmax-5',
+        'sudden-drops-last5trend-filter10-189',
+        'based-on-jump-gtEightOvernight-trending607-first1-fifteenTo20-30',
+        'sudden-drops-last1trend-filter10-360',
+        'sudden-drops-last30trend-filter30-360',
+        'sudden-drops-last30trend-filter20-290',
+        'sudden-drops-last30trend-filter30-290',
+        'based-on-jump-gtEightOvernight-trending53-notWatchout-first1-tenTo15-16',
+        'sudden-drops-last10trend-filter30-221',
+        'sudden-drops-last18trend-filter10-tenTo15-290',
+        'low-float-high-volume-twoWeekVolToAvgPoints-trenddowngt20-notWatchout-tenTo15-25',
+        'sudden-drops-last3trend-filter10-100',
+        'up-streak-3to5days-gt3overnight-fifteenTo20-45',
+        'based-on-jump-fourToEightOvernight-trending53-notWatchout-ltneg50percmax-first1-fiveTo10-0',
+        'based-on-jump-gtEightOvernight-trending53-notWatchout-tenTo15-16',
+        'based-on-jump-down8overnight-trending53-notWatchout-ltneg50percmax-first2-5',
+        'sudden-drops-last1trend-filter20-fiveTo10-14',
+        'sudden-drops-last3trend-filter30-32',
+        'low-float-high-volume-floatTimesvolTo2WeekPoints-trenddowngt30-notWatchout-150',
+        'sudden-drops-last3trend-filter10-fiveTo10-14',
+        'up-streak-7days-ltneg3overnight-189',
+        'based-on-jump-gtEightOvernight-trending607-gt100kvolume-fifteenTo20-30',
+        'based-on-jump-down8overnight-trending53-notWatchout-gtneg20percmax-first1-16',
+        'low-float-high-volume-floatTimestwoWeekVolToAvgPoints-trenddowngt30-notWatchout-fiveTo10-276',
+        'based-on-jump-gtEightOvernight-trending103-first1-fifteenTo20-5',
+        'based-on-jump-gtEightOvernight-trending607-notWatchout-gtneg20percmax-first1-fifteenTo20-0',
+        'based-on-jump-fourToEightOvernight-trending53-gt100kvolume-first1-fifteenTo20-5',
+        'based-on-jump-down8overnight-trending53-gt1milvolume-first2-fiveTo10-16',
+        'low-float-high-volume-volToAvgPoints-trend10to15-notWatchout-fiveTo10-25',
+        'based-on-jump-down3overnight-trending103-ltneg50percmax-first1-16',
+        'low-float-high-volume-volToAvgPoints-trenddowngt30-notWatchout-fiveTo10-384',
+        'low-float-high-volume-volTo2WeekPoints-trenddowngt30-notWatchout-210',
+        'based-on-jump-down5overnight-notWatchout-ltneg50percmax-first1-fifteenTo20-16',
+        'sudden-drops-last5trend-first1-14',
+        'sudden-drops-last1trend-filter10-fiveTo10-63',
+        'sudden-drops-last10trend-filter20-290',
+        'low-float-high-volume-floatTimesvolToAvgPoints-trenddowngt30-notWatchout-384',
+        'sudden-drops-last10trend-filter10-fiveTo10-280',
+];
+
+
+
+// sepPerfectos broken down by frequency
+
+
+const sepPerfectosHigherCounts = [
+
+    // high counts
+    'sudden-drops-last10trend-first1-fifteenTo20-360',
+    'sudden-drops-last3trend-first1-tenTo15-360',
+    'sudden-drops-last5trend-first1-tenTo15-360',
+
+
+    // middle counts
+    'low-float-high-volume-volTo2WeekPoints-trenddown7to10-shouldWatchout-fifteenTo20-210',
+    'low-float-high-volume-volToAvgPoints-trenddown7to10-shouldWatchout-fifteenTo20-150',
+    'low-float-high-volume-floatTimestwoWeekVolToAvgPoints-trenddown7to10-shouldWatchout-fifteenTo20-95',
+    'technical-indicators-10minute-week-topSMAoverUnderHist-fifteenTo20-29',
+]
+
+const sepPerfectosRealLowCounts = [
+    // realLowCounts
+    "sudden-drops-last18trend-filter30-328",
+    "sud`den-drops-last3trend-filter20-328",
+    "sudden-drops-last30trend-filter30-328",
+    "low-float-high-volume-floatTimesvolToAvgPoints-trenddowngt30-notWatchout-384",
+    "low-float-high-volume-floatTimesvolTo2WeekPoints-trenddowngt30-notWatchout-150",
+    "based-on-jump-down8overnight-trending53-notWatchout-gtneg20percmax-first1-16",
+    "low-float-high-volume-volTo2WeekPoints-trenddowngt30-notWatchout-210",
+    "sudden-drops-last10trend-filter20-290",
+    "low-float-high-volume-twoWeekVolToAvgPoints-trenddowngt20-notWatchout-tenTo15-25",
+    "based-on-jump-gtEightOvernight-trending607-first1-fifteenTo20-30",
+    "based-on-jump-gtEightOvernight-trending607-gt100kvolume-fifteenTo20-30",
+    "based-on-jump-down5overnight-trending103-notWatchout-gtneg20percmax-first2-16",
+    "sudden-drops-last18trend-filter10-tenTo15-328",
+    "sudden-drops-last5trend-filter20-280",
+    "based-on-jump-down5overnight-trending103-notWatchout-ltneg50percmax-5",
+    "sudden-drops-last10trend-filter10-fiveTo10-280",
+    "sudden-drops-last1trend-filter10-360",
+    "up-streak-7days-ltneg3overnight-189",
+    "low-float-high-volume-volToAvgPoints-trend10to15-notWatchout-fiveTo10-25",
+    "based-on-jump-fourToEightOvernight-trending53-gt100kvolume-first1-fifteenTo20-5",
+    "based-on-jump-fourToEightOvernight-trending53-notWatchout-ltneg50percmax-first1-fiveTo10-0",
+    "sudden-drops-last30trend-filter30-360",
+
+]
+
+const sepPerfectosLowCounts = [
+
+
+    // lowCounts
+    "sudden-drops-last5trend-filter10-100",
+    "sudden-drops-last5trend-filter10-189",
+    "sudden-drops-last3trend-filter10-100",
+    "sudden-drops-last30trend-filter20-290",
+    "sudden-drops-last30trend-filter30-290",
+    "sudden-drops-last18trend-filter10-tenTo15-290",
+    "low-float-high-volume-floatTimestwoWeekVolToAvgPoints-trenddowngt10-notWatchout-fifteenTo20-150",
+    "based-on-jump-down5overnight-notWatchout-ltneg50percmax-first1-fifteenTo20-16",
+    "based-on-jump-gtEightOvernight-trending103-first1-fifteenTo20-5",
+    "up-streak-3to5days-gt3overnight-fifteenTo20-45",
+    "sudden-drops-last2trend-filter10-360"
+];
+
+const sepPerfectosLowerCounts = [
+    ...sepPerfectosRealLowCounts,
+    ...sepPerfectosLowCounts
+];
+
+const sepPerfectosMissing = [
+    "based-on-jump-up3overnight-trending35257-ltneg50percmax-fiveTo10-5",
+    "dynamo-3000-overall-onlyWatchout-highestTSO-fiveTo10-200",
+    "sudden-drops-last3trend-filter20-280",
+    "dynamo-3000-overall-onlyWatchout-highestTSO-tenTo15-100",
+    "low-float-high-volume-floatTimesfloatToVolume-trendgt50-tenTo15-384",
+    "based-on-jump-down3overnight-trending103-notWatchout-ltneg50percmax-first1-fiveTo10-0",
+    "based-on-jump-up3overnight-trending35257-shouldWatchout-first2-fiveTo10-30",
+    "sudden-drops-last5trend-filter30-280",
+    "sudden-drops-last10trend-filter20-221",
+    "sudden-drops-last2trend-filter10-tenTo15-328",
+    "low-float-high-volume-volTo2WeekPoints-trenddown7to10-shouldWatchout-tenTo15-6",
+    "sudden-drops-last5trend-filter30-328",
+    "low-float-high-volume-volToAvgPoints-trendgt50-tenTo15-315",
+    "sudden-drops-last10trend-filter10-tenTo15-280",
+    "sudden-drops-last3trend-filter20-221",
+    "sudden-drops-last5trend-filter30-221",
+    "based-on-jump-gtEightOvernight-trending53-notWatchout-first1-tenTo15-16",
+    "sudden-drops-last10trend-filter30-221",
+    "based-on-jump-gtEightOvernight-trending53-notWatchout-tenTo15-16",
+    "based-on-jump-down8overnight-trending53-notWatchout-ltneg50percmax-first2-5",
+    "sudden-drops-last1trend-filter20-fiveTo10-14",
+    "sudden-drops-last3trend-filter30-32",
+    "sudden-drops-last3trend-filter10-fiveTo10-14",
+    "low-float-high-volume-floatTimestwoWeekVolToAvgPoints-trenddowngt30-notWatchout-fiveTo10-276",
+    "based-on-jump-gtEightOvernight-trending607-notWatchout-gtneg20percmax-first1-fifteenTo20-0",
+    "based-on-jump-down8overnight-trending53-gt1milvolume-first2-fiveTo10-16",
+    "based-on-jump-down3overnight-trending103-ltneg50percmax-first1-16",
+    "low-float-high-volume-volToAvgPoints-trenddowngt30-notWatchout-fiveTo10-384",
+    "sudden-drops-last5trend-first1-14",
+    "sudden-drops-last1trend-filter10-fiveTo10-63"
+];
+
 module.exports = {
     'wild n crazy': [
         'week-swings-tenTo15-1',  // wild
@@ -633,4 +860,17 @@ module.exports = {
     aug29LowCountsABQuality,
     aug29LowCountsGradeC,
     aug29MedHighCounts,
+
+    sep,
+    sepPerfectos,
+
+    // broken down by count in last 15 days
+    sepPerfectosHigherCounts,
+    sepPerfectosLowerCounts,
+    sepPerfectosMissing,
+
+    sepHighlights,
+    sepStars
+
+
 };
