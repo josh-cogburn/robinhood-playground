@@ -39,7 +39,7 @@ module.exports = async (Robinhood, daysBack = 2, ...strategiesArgs) => {
         );
         return filteredStrats;
     })();
-    const includeDetailed = suppliedStrategies && !isSearch;
+    const includeDetailed = true;//suppliedStrategies && !isSearch;
 
     if (suppliedStrategies) {
         console.log('strategies of interest', strategiesOfInterest);
