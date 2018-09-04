@@ -861,12 +861,14 @@ module.exports = {
     aug29LowCountsGradeC,
     aug29MedHighCounts,
 
-    sep,
     sepPerfectos,
 
     // broken down by count in last 15 days
     sepPerfectosHigherCounts,
     sepPerfectosLowerCounts,
+        sepPerfectosRealLowCounts,
+        sepPerfectosLowCounts,
+
     sepPerfectosMissing,
 
     sepHighlights,
