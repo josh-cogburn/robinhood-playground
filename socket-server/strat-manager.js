@@ -44,12 +44,12 @@ const stratManager = {
         await this.initPicksAndPMs();
         console.log('get prices')
         await this.getRelatedPrices();
-        console.log('send report init')
-        try {
-            await this.sendStrategyReport();
-        } catch (e) {
-            console.log('error sending report', e);
-        }
+        // console.log('send report init')
+        // try {
+        //     await this.sendStrategyReport();
+        // } catch (e) {
+        //     console.log('error sending report', e);
+        // }
         console.log('initd strat manager');
 
         new CronJob(`20 9 * * 1-5`, () => this.newDay(), null, true);

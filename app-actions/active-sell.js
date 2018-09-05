@@ -1,7 +1,7 @@
 // starts attempting to sell at 100% of current stock price
 // every attempt it goes down from there until it successfully gets sold or it reaches MIN_SELL_RATIO
 
-const { force: { keep } } = require('../settings');
+const { force: { keep: keepers } } = require('../settings');
 
 const limitSellLastTrade = require('../rh-actions/limit-sell-last-trade');
 const jsonMgr = require('../utils/json-mgr');
