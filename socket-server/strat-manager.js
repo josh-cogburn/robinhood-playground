@@ -45,7 +45,11 @@ const stratManager = {
         console.log('get prices')
         await this.getRelatedPrices();
         console.log('send report init')
-        await this.sendStrategyReport();
+        try {
+            await this.sendStrategyReport();
+        } catch (e) {
+            console.log('error sending report', e);
+        }
         console.log('initd strat manager');
 
         new CronJob(`20 9 * * 1-5`, () => this.newDay(), null, true);
@@ -79,11 +83,11 @@ const stratManager = {
     async newDay() {
         console.log('NEW DAY')
         await this.getRelatedPrices();
-        // try {
-        //     await this.sendStrategyReport();
-        // } catch (e) {
-        //     console.log('error sending report', e);
-        // }
+        try {
+            await this.sendStrategyReport();
+        } catch (e) {
+            console.log('error sending report', e);
+        }
         await this.refreshPastData();
         this.picks = [];
         await this.initPicksAndPMs();
