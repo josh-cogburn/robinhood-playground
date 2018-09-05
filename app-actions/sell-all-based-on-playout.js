@@ -2,7 +2,7 @@
 // 1. get list of current positions
 // 2. look within the daily-transactions and find which day that stock was bought and which strategy was responsible for the purchase
 // 3. look at the strat-perfs for the transaction
-// 4. run the playoutFn (strategy-perf-multiple) related to the current settings.js sellStrategy on that list of breakdowns
+// 4. run the playoutFn (strategy-perf-multiple) related to the current settings.js fallbackSellStrategy on that list of breakdowns
 // 5. sell all that are > 4 days old or the output of playoutFn shows that it hit the playout at some point
 
 
@@ -19,7 +19,11 @@ const detailedNonZero = require('./detailed-non-zero');
 const activeSell = require('./active-sell');
 
 // the magic
-const { sellStrategy, sellAllStocksOnNthDay } = require('../settings');
+const {
+  fallbackSellStrategy,
+  sellAllStocksOnNthDay,
+  force: { sell: forceSell }
+} = require('../settings');
 const playouts = require('../analysis/strategy-perf-multiple/playouts');
 
 const determineSingleBestPlayoutFromMultiOutput = require(
@@ -138,10 +142,20 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
         }
     };
 
-    const withAge = combined.map(pos => ({
+    let withAge = combined.map(pos => ({
         ...pos,
         dayAge: calcDayAgeFromPosition(pos)
     }));
+
+    const forceSells = withAge.filter(pos => forceSell.includes(pos.symbol));
+    withAge = withAge.filter(pos => !forceSell.includes(pos.symbol));
+
+    await mapLimit(forceSells, 2, async pos => {
+        await sellPosition({
+            ticker: pos.symbol,
+            quantity: pos.quantity
+        }, `on force sell list in settings.js`);
+    });
 
     // console.log(withAge.length);
 
@@ -168,15 +182,21 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
         // handle under four days (but not bought today) check for playout strategy
         let underNDays = withAge.filter(pos => pos.dayAge >= 1 && pos.dayAge < sellAllStocksOnNthDay);
         if (!underNDays.length) return;
-        const highestPlayouts = await determineSingleBestPlayoutFromMultiOutput(
-            Robinhood,
-            ...underNDays.map(pos => pos.strategy)
-        );
+        // console.log({ underNDays });
+        const strategiesToLookup = underNDays.map(pos => pos.strategy).filter(v => !!v);
+        const highestPlayouts = strategiesToLookup.length ?
+            await determineSingleBestPlayoutFromMultiOutput(
+                Robinhood,
+                ...strategiesToLookup
+            ) : [];
         // console.log(highestPlayouts, 'highestPlayouts')
-        underNDays = underNDays.map(pos => ({
-            ...pos,
-            highestPlayout: highestPlayouts.find(obj => obj.strategy === pos.strategy).highestPlayout
-        }));
+        underNDays = underNDays.map(pos => {
+            const foundMatch = highestPlayouts.find(obj => obj.strategy === pos.strategy);
+            return {
+                ...pos,
+                ...(foundMatch && { highestPlayout: foundMatch.highestPlayout })
+            };
+        });
 
         // console.log('underNDays', underNDays);
         for (let pos of underNDays) {
@@ -190,7 +210,7 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
                     )
                 );
             }
-            const playoutToRun = pos.highestPlayout || sellStrategy;
+            const playoutToRun = pos.highestPlayout || fallbackSellStrategy;
             pos.playoutToRun = playoutToRun;
             const playoutFn = playouts[playoutToRun].fn;
             const { hitFn: hitPlayout } = playoutFn(breakdowns);

@@ -32,13 +32,19 @@ module.exports = {
         '[sepHighlights]',
         '[sepStars]'
     ],
-    sellStrategy: 'limit3',     // for fallback,
-    keepers: [
-        // 'NSPR',
-        // 'BOXL',
-        // 'SEII',
-        // 'AWX'
-    ],
+    fallbackSellStrategy: 'limit3',     // for fallback,
+    force: {
+        sell: [
+            'FCNCA',
+            'EBMT'
+        ],
+        keep: [
+            // 'NSPR',
+            // 'BOXL',
+            // 'SEII',
+            // 'AWX'
+        ]
+    },
 
     // email
     email: {

@@ -60,7 +60,10 @@ module.exports = async (
                 let quantity;
                 const limitBid = async bidPrice => {
                     lastBidPrice = bidPrice;
-                    quantity = Math.floor(maxPrice / bidPrice) || 1;
+                    quantity = Math.floor(maxPrice / bidPrice);
+                    if (quantity === 0 && bidPrice < 50) {
+                        quantity = 1;
+                    }
                     return await limitBuyLastTrade(
                         Robinhood,
                         {

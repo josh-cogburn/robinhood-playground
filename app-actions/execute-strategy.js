@@ -27,8 +27,9 @@ const executeStrategy = async (Robinhood, strategyFn, min, ratioToSpend, strateg
 
     for (let priceKey of Object.keys(pricePerms)) {
 
+        const [lowBounds, highBounds] = pricePerms[priceKey];
         const trendFilteredByPricePerm = trend.filter(stock => {
-            return Number(stock.quote_data.last_trade_price) > pricePerms[priceKey][0] && Number(stock.quote_data.last_trade_price) < pricePerms[priceKey][1];
+            return Number(stock.quote_data.last_trade_price) > lowBounds && Number(stock.quote_data.last_trade_price) <= highBounds;
         });
         const toPurchase = await strategyFn(Robinhood, trendFilteredByPricePerm);
         console.log(toPurchase, 'toPurchase');
