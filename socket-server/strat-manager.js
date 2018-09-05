@@ -79,11 +79,11 @@ const stratManager = {
     async newDay() {
         console.log('NEW DAY')
         await this.getRelatedPrices();
-        try {
-            await this.sendStrategyReport();
-        } catch (e) {
-            console.log('error sending report', e);
-        }
+        // try {
+        //     await this.sendStrategyReport();
+        // } catch (e) {
+        //     console.log('error sending report', e);
+        // }
         await this.refreshPastData();
         this.picks = [];
         await this.initPicksAndPMs();
