@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "RCM",
+      "price": 10.28
+    },
+    {
+      "ticker": "SYBX",
+      "price": 11.01
+    }
+  ],
+  "5": [
+    {
+      "ticker": "RCM",
+      "price": 10.23
+    },
+    {
+      "ticker": "SYBX",
+      "price": 10.9
+    }
+  ],
+  "16": [
+    {
+      "ticker": "RCM",
+      "price": 10.22
+    },
+    {
+      "ticker": "SYBX",
+      "price": 10.82
+    }
+  ],
+  "30": [
+    {
+      "ticker": "RCM",
+      "price": 10.295
+    },
+    {
+      "ticker": "SYBX",
+      "price": 10.818
+    }
+  ]
+}

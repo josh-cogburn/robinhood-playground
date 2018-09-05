@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "MYSZ",
+      "price": 0.8883
+    },
+    {
+      "ticker": "YGYI",
+      "price": 3.8374
+    },
+    {
+      "ticker": "CTXR",
+      "price": 1.59
+    }
+  ],
+  "5": [
+    {
+      "ticker": "MYSZ",
+      "price": 0.892
+    },
+    {
+      "ticker": "CHCI",
+      "price": 2.95
+    },
+    {
+      "ticker": "YGYI",
+      "price": 3.8374
+    }
+  ],
+  "16": [
+    {
+      "ticker": "MYSZ",
+      "price": 0.8685
+    },
+    {
+      "ticker": "CHCI",
+      "price": 2.95
+    },
+    {
+      "ticker": "YGYI",
+      "price": 3.84
+    }
+  ],
+  "30": [
+    {
+      "ticker": "MYSZ",
+      "price": 0.8812
+    },
+    {
+      "ticker": "BDR",
+      "price": 1.3848
+    },
+    {
+      "ticker": "CHCI",
+      "price": 2.95
+    }
+  ]
+}

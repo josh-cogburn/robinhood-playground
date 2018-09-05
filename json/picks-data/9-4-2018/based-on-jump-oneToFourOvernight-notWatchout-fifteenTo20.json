@@ -1,0 +1,90 @@
+{
+  "0": [
+    {
+      "ticker": "IVR",
+      "price": 16.18
+    },
+    {
+      "ticker": "ESRT",
+      "price": 17.52
+    },
+    {
+      "ticker": "UBX",
+      "price": 18.93
+    },
+    {
+      "ticker": "INSM",
+      "price": 19.16
+    },
+    {
+      "ticker": "SAFE",
+      "price": 16.56
+    }
+  ],
+  "5": [
+    {
+      "ticker": "UBX",
+      "price": 18.93
+    },
+    {
+      "ticker": "TMV",
+      "price": 19.59
+    },
+    {
+      "ticker": "FUD",
+      "price": 16.19
+    },
+    {
+      "ticker": "DLBS",
+      "price": 19.97
+    },
+    {
+      "ticker": "EUM",
+      "price": 19.46
+    }
+  ],
+  "16": [
+    {
+      "ticker": "UBX",
+      "price": 18.91
+    },
+    {
+      "ticker": "TMV",
+      "price": 19.56
+    },
+    {
+      "ticker": "FUD",
+      "price": 16.19
+    },
+    {
+      "ticker": "DLBS",
+      "price": 19.97
+    },
+    {
+      "ticker": "EUM",
+      "price": 19.46
+    }
+  ],
+  "30": [
+    {
+      "ticker": "UBX",
+      "price": 18.9
+    },
+    {
+      "ticker": "TMV",
+      "price": 19.6501
+    },
+    {
+      "ticker": "FUD",
+      "price": 16.19
+    },
+    {
+      "ticker": "DLBS",
+      "price": 19.9216
+    },
+    {
+      "ticker": "EUM",
+      "price": 19.45
+    }
+  ]
+}

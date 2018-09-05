@@ -1,0 +1,50 @@
+{
+  "0": [
+    {
+      "ticker": "SNGX",
+      "price": 1.61
+    }
+  ],
+  "5": [
+    {
+      "ticker": "NURO",
+      "price": 1.3267
+    },
+    {
+      "ticker": "SNGX",
+      "price": 1.6123
+    },
+    {
+      "ticker": "OIIM",
+      "price": 2.3362
+    }
+  ],
+  "16": [
+    {
+      "ticker": "NURO",
+      "price": 1.33
+    },
+    {
+      "ticker": "SNGX",
+      "price": 1.64
+    },
+    {
+      "ticker": "OIIM",
+      "price": 2.3
+    }
+  ],
+  "30": [
+    {
+      "ticker": "NURO",
+      "price": 1.3234
+    },
+    {
+      "ticker": "SNGX",
+      "price": 1.6
+    },
+    {
+      "ticker": "OIIM",
+      "price": 2.2289
+    }
+  ]
+}

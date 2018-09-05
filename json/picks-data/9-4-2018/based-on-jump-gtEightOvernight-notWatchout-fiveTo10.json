@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "BLK",
+      "price": 477.34
+    },
+    {
+      "ticker": "ILMN",
+      "price": 351.54
+    },
+    {
+      "ticker": "NFLX",
+      "price": 364.975
+    },
+    {
+      "ticker": "BA",
+      "price": 341.975
+    },
+    {
+      "ticker": "SAM",
+      "price": 300.2
+    }
+  ],
+  "5": [
+    {
+      "ticker": "TA",
+      "price": 6
+    }
+  ],
+  "16": [
+    {
+      "ticker": "TA",
+      "price": 5.95
+    }
+  ],
+  "30": [
+    {
+      "ticker": "TA",
+      "price": 5.695
+    }
+  ]
+}

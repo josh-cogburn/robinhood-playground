@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "TOCA",
+      "price": 10.315
+    },
+    {
+      "ticker": "MESA",
+      "price": 14.34
+    }
+  ],
+  "5": [
+    {
+      "ticker": "EIGR",
+      "price": 13.245
+    },
+    {
+      "ticker": "TOCA",
+      "price": 10.2
+    }
+  ],
+  "16": [
+    {
+      "ticker": "EIGR",
+      "price": 13.1
+    },
+    {
+      "ticker": "DPK",
+      "price": 13.3275
+    }
+  ],
+  "30": [
+    {
+      "ticker": "EIGR",
+      "price": 13.05
+    },
+    {
+      "ticker": "DPK",
+      "price": 13.3275
+    }
+  ]
+}

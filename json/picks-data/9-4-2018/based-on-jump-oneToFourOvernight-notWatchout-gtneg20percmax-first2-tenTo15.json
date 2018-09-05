@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "NAD",
+      "price": 13.2125
+    },
+    {
+      "ticker": "CKHUY",
+      "price": 11.46
+    }
+  ],
+  "5": [
+    {
+      "ticker": "COHN",
+      "price": 10.02
+    },
+    {
+      "ticker": "CKHUY",
+      "price": 11.46
+    }
+  ],
+  "16": [
+    {
+      "ticker": "MHH",
+      "price": 10.9
+    },
+    {
+      "ticker": "DPK",
+      "price": 13.3275
+    }
+  ],
+  "30": [
+    {
+      "ticker": "MHH",
+      "price": 10.9215
+    },
+    {
+      "ticker": "DPK",
+      "price": 13.3275
+    }
+  ]
+}

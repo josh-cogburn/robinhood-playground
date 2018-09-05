@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "LOOP",
+      "price": 10.34
+    },
+    {
+      "ticker": "MESO",
+      "price": 6.2
+    }
+  ],
+  "5": [
+    {
+      "ticker": "BCRX",
+      "price": 6.4299
+    },
+    {
+      "ticker": "DLHC",
+      "price": 5.6075
+    }
+  ],
+  "16": [
+    {
+      "ticker": "YIN",
+      "price": 7.56
+    },
+    {
+      "ticker": "BCRX",
+      "price": 6.63
+    }
+  ],
+  "30": [
+    {
+      "ticker": "YIN",
+      "price": 7.3635
+    },
+    {
+      "ticker": "BCRX",
+      "price": 6.92
+    }
+  ]
+}

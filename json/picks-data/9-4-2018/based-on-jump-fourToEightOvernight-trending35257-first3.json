@@ -1,0 +1,54 @@
+{
+  "0": [
+    {
+      "ticker": "PMTS",
+      "price": 3.24
+    },
+    {
+      "ticker": "SENS",
+      "price": 4.22
+    }
+  ],
+  "5": [
+    {
+      "ticker": "OHRP",
+      "price": 0.2009
+    },
+    {
+      "ticker": "CHEK",
+      "price": 4.16
+    },
+    {
+      "ticker": "SESN",
+      "price": 2.39
+    }
+  ],
+  "16": [
+    {
+      "ticker": "OHRP",
+      "price": 0.2068
+    },
+    {
+      "ticker": "CHEK",
+      "price": 4.08
+    },
+    {
+      "ticker": "SESN",
+      "price": 2.44
+    }
+  ],
+  "30": [
+    {
+      "ticker": "OHRP",
+      "price": 0.209
+    },
+    {
+      "ticker": "CHEK",
+      "price": 4.1692
+    },
+    {
+      "ticker": "SESN",
+      "price": 2.38
+    }
+  ]
+}

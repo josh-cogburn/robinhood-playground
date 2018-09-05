@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "MYSZ",
+      "price": 0.8883
+    },
+    {
+      "ticker": "SNGX",
+      "price": 1.61
+    },
+    {
+      "ticker": "MYND",
+      "price": 1.85
+    }
+  ],
+  "5": [
+    {
+      "ticker": "MYSZ",
+      "price": 0.892
+    },
+    {
+      "ticker": "SNGX",
+      "price": 1.6123
+    },
+    {
+      "ticker": "FWP",
+      "price": 3.25
+    }
+  ],
+  "16": [
+    {
+      "ticker": "MYSZ",
+      "price": 0.8685
+    },
+    {
+      "ticker": "SNGX",
+      "price": 1.64
+    },
+    {
+      "ticker": "FWP",
+      "price": 3.251
+    }
+  ],
+  "30": [
+    {
+      "ticker": "MYSZ",
+      "price": 0.8812
+    },
+    {
+      "ticker": "SNGX",
+      "price": 1.6
+    },
+    {
+      "ticker": "FWP",
+      "price": 3.3483
+    }
+  ]
+}

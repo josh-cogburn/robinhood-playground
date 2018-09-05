@@ -1,0 +1,108 @@
+{
+  "10": [
+    {
+      "ticker": "SPI",
+      "price": 0.3551
+    },
+    {
+      "ticker": "MTP",
+      "price": 0.7818
+    },
+    {
+      "ticker": "IZEA",
+      "price": 1.61
+    },
+    {
+      "ticker": "IBIO",
+      "price": 0.8
+    }
+  ],
+  "50": [
+    {
+      "ticker": "SPI",
+      "price": 0.36
+    },
+    {
+      "ticker": "MTP",
+      "price": 0.785
+    },
+    {
+      "ticker": "HAIR",
+      "price": 2.3484
+    },
+    {
+      "ticker": "LLNW",
+      "price": 4.91
+    },
+    {
+      "ticker": "SAEX",
+      "price": 0.6393
+    }
+  ],
+  "300": [
+    {
+      "ticker": "SPI",
+      "price": 0.3792
+    },
+    {
+      "ticker": "EVFM",
+      "price": 3.85
+    },
+    {
+      "ticker": "MTP",
+      "price": 0.787
+    },
+    {
+      "ticker": "LLNW",
+      "price": 4.87
+    },
+    {
+      "ticker": "SAEX",
+      "price": 0.62
+    }
+  ],
+  "380": [
+    {
+      "ticker": "SPI",
+      "price": 0.3634
+    },
+    {
+      "ticker": "LLNW",
+      "price": 4.825
+    },
+    {
+      "ticker": "SAEX",
+      "price": 0.6001
+    },
+    {
+      "ticker": "MTP",
+      "price": 0.8
+    },
+    {
+      "ticker": "HAIR",
+      "price": 2.36
+    }
+  ],
+  "600": [
+    {
+      "ticker": "SPI",
+      "price": 0.3634
+    },
+    {
+      "ticker": "LLNW",
+      "price": 4.82
+    },
+    {
+      "ticker": "MTP",
+      "price": 0.7762
+    },
+    {
+      "ticker": "AZRX",
+      "price": 2.56
+    },
+    {
+      "ticker": "APOP",
+      "price": 4.99
+    }
+  ]
+}

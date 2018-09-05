@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "OSIS",
+      "price": 77.515
+    },
+    {
+      "ticker": "VSAT",
+      "price": 62.67
+    }
+  ],
+  "5": [
+    {
+      "ticker": "MNKD",
+      "price": 1.6
+    },
+    {
+      "ticker": "CREG",
+      "price": 1.36
+    }
+  ],
+  "16": [
+    {
+      "ticker": "MNKD",
+      "price": 1.52
+    },
+    {
+      "ticker": "CREG",
+      "price": 1.3197
+    }
+  ],
+  "30": [
+    {
+      "ticker": "MNKD",
+      "price": 1.59
+    },
+    {
+      "ticker": "CREG",
+      "price": 1.32
+    }
+  ]
+}
