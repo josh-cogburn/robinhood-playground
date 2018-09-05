@@ -42,10 +42,18 @@ const trendFilter = async (Robinhood, trend) => {
     );
 
     console.log('count', withDetails.length);
-    return withDetails
-        .sort((a, b) => b.trendSinceOpen - a.trendSinceOpen)
-        .slice(0, 5)    // top five trending up
+    const sorted = withDetails
+        .sort((a, b) => b.trendSinceOpen - a.trendSinceOpen);
+
+    const num = n => sorted
+        .slice(0, n)    // top five trending up
         .map(stock => stock.ticker);
+
+    return {
+        count5: num(5),
+        count2: num(2),
+        count1: num(1)
+    };
 };
 
 const bigDayTrendUp = {

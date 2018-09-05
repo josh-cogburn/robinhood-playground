@@ -76,11 +76,17 @@ const trendFilter = async (Robinhood, trend) => {
             };
         })
         .filter(buy => buy.daysDownCount > 0 && Math.abs(buy.percDown) > buy.mostRecentTrend)
-        .sort((a, b) => b.points - a.points)
-        .slice(0, 10);
+        .sort((a, b) => b.points - a.points);
 
+    const num = n => ofInterest
+        .slice(0, n)
+        .map(buy => buy.ticker);
     // console.log(JSON.stringify(ofInterest));
-    return ofInterest.map(buy => buy.ticker);
+    return {
+        count1: num(1),
+        count2: num(2),
+        count10: num(10),
+    };
 };
 
 const firstGreens = {

@@ -116,7 +116,12 @@ const trendFilter = async (Robinhood, trend) => {
 
     return {
         sortedByAvgToday,
-        sortedByPercUp
+        sortedByAvgTodayUno: sortedByAvgToday.slice(0, 1),
+        sortedByAvgTodayDos: sortedByAvgToday.slice(0, 2),
+
+        sortedByPercUp,
+        sortedByPercUpUno: sortedByPercUp.slice(0, 1),
+        sortedByPercUpDos: sortedByPercUp.slice(0, 2),
     };
 };
 
