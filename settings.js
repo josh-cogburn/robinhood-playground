@@ -30,7 +30,10 @@ module.exports = {
         '[sepPerfectosMissing]',
 
         '[sepHighlights]',
-        '[sepStars]'
+        '[sepStars]',
+        
+        '[sepAdds]',
+        '[sepAdds]',
     ],
     fallbackSellStrategy: 'limit3',     // for fallback,
     force: {

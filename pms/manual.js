@@ -793,6 +793,10 @@ const sepPerfectosMissing = [
     "sudden-drops-last1trend-filter10-fiveTo10-63"
 ];
 
+const sepAdds = [
+    'low-float-high-volume-volToAvgPoints-trend10to15-shouldWatchout-tenTo15-276',
+]
+
 module.exports = {
     'wild n crazy': [
         'week-swings-tenTo15-1',  // wild
@@ -872,7 +876,9 @@ module.exports = {
     sepPerfectosMissing,
 
     sepHighlights,
-    sepStars
+    sepStars,
+
+    sepAdds
 
 
 };
