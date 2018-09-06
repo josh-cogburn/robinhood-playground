@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "DNR",
+      "price": 5.26
+    },
+    {
+      "ticker": "WTI",
+      "price": 6.67
+    }
+  ],
+  "40": [
+    {
+      "ticker": "ADMA",
+      "price": 6.32
+    },
+    {
+      "ticker": "RCM",
+      "price": 9.825
+    }
+  ],
+  "100": [
+    {
+      "ticker": "RLM",
+      "price": 9.36
+    },
+    {
+      "ticker": "MFIN",
+      "price": 6.311
+    }
+  ],
+  "200": [
+    {
+      "ticker": "RLM",
+      "price": 7.2
+    },
+    {
+      "ticker": "MBOT",
+      "price": 7.2
+    }
+  ],
+  "260": [
+    {
+      "ticker": "RLM",
+      "price": 7.2
+    },
+    {
+      "ticker": "MBOT",
+      "price": 7.0701
+    }
+  ],
+  "351": [
+    {
+      "ticker": "RLM",
+      "price": 7.2
+    },
+    {
+      "ticker": "MBOT",
+      "price": 6.6156
+    }
+  ],
+  "381": [
+    {
+      "ticker": "RLM",
+      "price": 6.74
+    },
+    {
+      "ticker": "MBOT",
+      "price": 6.6537
+    }
+  ]
+}

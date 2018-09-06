@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "FTSV",
+      "price": 14
+    },
+    {
+      "ticker": "RCM",
+      "price": 9.99
+    }
+  ],
+  "40": [
+    {
+      "ticker": "FTSV",
+      "price": 13.64
+    },
+    {
+      "ticker": "SHSP",
+      "price": 14.05
+    }
+  ],
+  "100": [
+    {
+      "ticker": "FTSV",
+      "price": 13.63
+    },
+    {
+      "ticker": "SHSP",
+      "price": 13.6
+    }
+  ],
+  "200": [
+    {
+      "ticker": "FTSV",
+      "price": 13.9
+    },
+    {
+      "ticker": "SHSP",
+      "price": 13.7221
+    }
+  ],
+  "260": [
+    {
+      "ticker": "FTSV",
+      "price": 13.785
+    },
+    {
+      "ticker": "SHSP",
+      "price": 13.315
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SHSP",
+      "price": 13.55
+    },
+    {
+      "ticker": "USAT",
+      "price": 14.675
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SHSP",
+      "price": 13.72
+    },
+    {
+      "ticker": "USAT",
+      "price": 14.575
+    }
+  ]
+}

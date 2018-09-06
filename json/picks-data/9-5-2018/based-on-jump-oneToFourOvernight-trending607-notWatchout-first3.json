@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "HMY",
+      "price": 1.72
+    },
+    {
+      "ticker": "PME",
+      "price": 2.8
+    },
+    {
+      "ticker": "NDRO",
+      "price": 3.7
+    }
+  ],
+  "5": [
+    {
+      "ticker": "HMY",
+      "price": 1.73
+    },
+    {
+      "ticker": "PME",
+      "price": 2.7336
+    },
+    {
+      "ticker": "NDRO",
+      "price": 3.7
+    }
+  ],
+  "16": [
+    {
+      "ticker": "HMY",
+      "price": 1.735
+    },
+    {
+      "ticker": "PME",
+      "price": 2.7336
+    },
+    {
+      "ticker": "NDRO",
+      "price": 3.6326
+    }
+  ],
+  "30": [
+    {
+      "ticker": "HMY",
+      "price": 1.735
+    },
+    {
+      "ticker": "PME",
+      "price": 2.73
+    },
+    {
+      "ticker": "NDRO",
+      "price": 3.6559
+    }
+  ]
+}

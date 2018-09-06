@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "FAT",
+      "price": 7.51
+    },
+    {
+      "ticker": "LPL",
+      "price": 9.75
+    }
+  ],
+  "5": [
+    {
+      "ticker": "FRHLF",
+      "price": 8.4
+    },
+    {
+      "ticker": "FAT",
+      "price": 7.51
+    }
+  ],
+  "16": [
+    {
+      "ticker": "FRHLF",
+      "price": 8.4
+    },
+    {
+      "ticker": "FAT",
+      "price": 7.51
+    }
+  ],
+  "30": [
+    {
+      "ticker": "FRHLF",
+      "price": 8.4
+    },
+    {
+      "ticker": "FAT",
+      "price": 8.3206
+    }
+  ]
+}

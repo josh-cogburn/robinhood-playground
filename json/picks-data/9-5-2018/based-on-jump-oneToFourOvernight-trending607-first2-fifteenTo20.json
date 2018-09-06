@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "MESA",
+      "price": 16.2
+    },
+    {
+      "ticker": "CDXS",
+      "price": 17.55
+    }
+  ],
+  "5": [
+    {
+      "ticker": "MESA",
+      "price": 16
+    },
+    {
+      "ticker": "CDXS",
+      "price": 17.35
+    }
+  ],
+  "16": [
+    {
+      "ticker": "MESA",
+      "price": 15.8238
+    },
+    {
+      "ticker": "CDXS",
+      "price": 17.35
+    }
+  ],
+  "30": [
+    {
+      "ticker": "MESA",
+      "price": 15.7
+    },
+    {
+      "ticker": "CDXS",
+      "price": 17.1
+    }
+  ]
+}

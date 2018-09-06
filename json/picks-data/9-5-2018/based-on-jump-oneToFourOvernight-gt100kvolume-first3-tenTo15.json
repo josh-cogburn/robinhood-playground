@@ -1,0 +1,54 @@
+{
+  "0": [
+    {
+      "ticker": "CZR",
+      "price": 10
+    },
+    {
+      "ticker": "NUGT",
+      "price": 11.9601
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CZR",
+      "price": 10
+    },
+    {
+      "ticker": "DB",
+      "price": 11.6
+    },
+    {
+      "ticker": "ABUS",
+      "price": 11
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CZR",
+      "price": 10
+    },
+    {
+      "ticker": "DB",
+      "price": 11.595
+    },
+    {
+      "ticker": "ABUS",
+      "price": 10.85
+    }
+  ],
+  "30": [
+    {
+      "ticker": "DB",
+      "price": 11.585
+    },
+    {
+      "ticker": "ABUS",
+      "price": 10.719
+    },
+    {
+      "ticker": "NUGT",
+      "price": 11.86
+    }
+  ]
+}

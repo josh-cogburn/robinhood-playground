@@ -1,0 +1,45 @@
+{
+  "10": [],
+  "200": [
+    {
+      "ticker": "TORC",
+      "price": 11.7
+    },
+    {
+      "ticker": "CCXI",
+      "price": 12.81
+    }
+  ],
+  "300": [
+    {
+      "ticker": "SGMO",
+      "price": 14.9
+    },
+    {
+      "ticker": "TORC",
+      "price": 12.11
+    },
+    {
+      "ticker": "CCXI",
+      "price": 12.7465
+    }
+  ],
+  "380": [
+    {
+      "ticker": "SGMO",
+      "price": 14.55
+    },
+    {
+      "ticker": "TORC",
+      "price": 12.255
+    },
+    {
+      "ticker": "CCXI",
+      "price": 12.61
+    },
+    {
+      "ticker": "MNOV",
+      "price": 11.95
+    }
+  ]
+}

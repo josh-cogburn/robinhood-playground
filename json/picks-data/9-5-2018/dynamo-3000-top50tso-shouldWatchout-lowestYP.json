@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "DCAR",
+      "price": 0.6403
+    },
+    {
+      "ticker": "FLKS",
+      "price": 0.483
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CEI",
+      "price": 0.2447
+    },
+    {
+      "ticker": "FLKS",
+      "price": 0.49
+    }
+  ],
+  "100": [
+    {
+      "ticker": "EDGE",
+      "price": 0.878
+    },
+    {
+      "ticker": "FLKS",
+      "price": 0.486
+    }
+  ],
+  "200": [
+    {
+      "ticker": "DFFN",
+      "price": 0.375
+    },
+    {
+      "ticker": "PRPO",
+      "price": 0.3978
+    }
+  ],
+  "260": [
+    {
+      "ticker": "DFFN",
+      "price": 0.38
+    },
+    {
+      "ticker": "PRPO",
+      "price": 0.4
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CHFS",
+      "price": 1.2804
+    },
+    {
+      "ticker": "GEMP",
+      "price": 1.479
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CHFS",
+      "price": 1.28
+    },
+    {
+      "ticker": "GEMP",
+      "price": 1.55
+    }
+  ]
+}

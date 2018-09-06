@@ -1,0 +1,64 @@
+{
+  "10": [
+    {
+      "ticker": "PXLW",
+      "price": 5.49
+    },
+    {
+      "ticker": "ADVM",
+      "price": 7.031
+    }
+  ],
+  "50": [
+    {
+      "ticker": "PXLW",
+      "price": 5.235
+    },
+    {
+      "ticker": "APOP",
+      "price": 5.109
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PXLW",
+      "price": 5.38
+    },
+    {
+      "ticker": "ADVM",
+      "price": 7.125
+    },
+    {
+      "ticker": "APOP",
+      "price": 5.0499
+    }
+  ],
+  "300": [
+    {
+      "ticker": "PXLW",
+      "price": 5.34
+    },
+    {
+      "ticker": "ADVM",
+      "price": 7.125
+    },
+    {
+      "ticker": "APOP",
+      "price": 5.0435
+    }
+  ],
+  "380": [
+    {
+      "ticker": "PXLW",
+      "price": 5.37
+    },
+    {
+      "ticker": "ADVM",
+      "price": 7.175
+    },
+    {
+      "ticker": "APOP",
+      "price": 5.0474
+    }
+  ]
+}

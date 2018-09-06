@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "NLST",
+      "price": 0.1299
+    },
+    {
+      "ticker": "RHE",
+      "price": 0.1308
+    }
+  ],
+  "40": [
+    {
+      "ticker": "NLST",
+      "price": 0.1289
+    },
+    {
+      "ticker": "RHE",
+      "price": 0.1304
+    }
+  ],
+  "100": [
+    {
+      "ticker": "GLG",
+      "price": 0.84
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.1319
+    }
+  ],
+  "200": [
+    {
+      "ticker": "GLG",
+      "price": 0.823
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.1304
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GLG",
+      "price": 0.8106
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.1332
+    }
+  ],
+  "351": [
+    {
+      "ticker": "GLG",
+      "price": 0.7377
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.137
+    }
+  ],
+  "381": [
+    {
+      "ticker": "GLG",
+      "price": 0.82
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.141
+    }
+  ]
+}

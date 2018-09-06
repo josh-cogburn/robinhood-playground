@@ -1,0 +1,108 @@
+{
+  "10": [
+    {
+      "ticker": "AZRX",
+      "price": 2.6
+    },
+    {
+      "ticker": "AGRX",
+      "price": 0.278
+    },
+    {
+      "ticker": "CLDX",
+      "price": 0.4713
+    },
+    {
+      "ticker": "SNSS",
+      "price": 2.11
+    }
+  ],
+  "50": [
+    {
+      "ticker": "AZRX",
+      "price": 2.6
+    },
+    {
+      "ticker": "GLBS",
+      "price": 0.4
+    },
+    {
+      "ticker": "AGRX",
+      "price": 0.276
+    },
+    {
+      "ticker": "CLDX",
+      "price": 0.49
+    },
+    {
+      "ticker": "SNSS",
+      "price": 2.22
+    }
+  ],
+  "200": [
+    {
+      "ticker": "AZRX",
+      "price": 2.58
+    },
+    {
+      "ticker": "INTX",
+      "price": 1.66
+    },
+    {
+      "ticker": "GLBS",
+      "price": 0.4008
+    },
+    {
+      "ticker": "AGRX",
+      "price": 0.2751
+    },
+    {
+      "ticker": "CLDX",
+      "price": 0.4819
+    }
+  ],
+  "300": [
+    {
+      "ticker": "AZRX",
+      "price": 2.62
+    },
+    {
+      "ticker": "INTX",
+      "price": 1.62
+    },
+    {
+      "ticker": "GLBS",
+      "price": 0.4079
+    },
+    {
+      "ticker": "AGRX",
+      "price": 0.2701
+    },
+    {
+      "ticker": "CLDX",
+      "price": 0.4798
+    }
+  ],
+  "380": [
+    {
+      "ticker": "AZRX",
+      "price": 2.6201
+    },
+    {
+      "ticker": "INTX",
+      "price": 1.65
+    },
+    {
+      "ticker": "GLBS",
+      "price": 0.4
+    },
+    {
+      "ticker": "AGRX",
+      "price": 0.2746
+    },
+    {
+      "ticker": "CLDX",
+      "price": 0.478
+    }
+  ]
+}

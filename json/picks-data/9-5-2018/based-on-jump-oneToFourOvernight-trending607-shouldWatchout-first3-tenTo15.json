@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "VSI",
+      "price": 13.1
+    },
+    {
+      "ticker": "ABUS",
+      "price": 10.75
+    }
+  ],
+  "5": [
+    {
+      "ticker": "VSI",
+      "price": 13.3
+    },
+    {
+      "ticker": "ABUS",
+      "price": 11
+    }
+  ],
+  "16": [
+    {
+      "ticker": "VSI",
+      "price": 13.025
+    },
+    {
+      "ticker": "ABUS",
+      "price": 10.85
+    }
+  ],
+  "30": [
+    {
+      "ticker": "VSI",
+      "price": 12.9679
+    },
+    {
+      "ticker": "ABUS",
+      "price": 10.719
+    }
+  ]
+}

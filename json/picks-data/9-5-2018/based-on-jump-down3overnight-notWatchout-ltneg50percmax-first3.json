@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "CIOXY",
+      "price": 3.5
+    },
+    {
+      "ticker": "ONS",
+      "price": 0.861
+    },
+    {
+      "ticker": "NBY",
+      "price": 1.64
+    }
+  ],
+  "5": [
+    {
+      "ticker": "ONS",
+      "price": 0.861
+    },
+    {
+      "ticker": "NBY",
+      "price": 1.64
+    },
+    {
+      "ticker": "CAPR",
+      "price": 1.18
+    }
+  ],
+  "16": [
+    {
+      "ticker": "ONS",
+      "price": 0.861
+    },
+    {
+      "ticker": "NBY",
+      "price": 1.64
+    },
+    {
+      "ticker": "CAPR",
+      "price": 1.18
+    }
+  ],
+  "30": [
+    {
+      "ticker": "ONS",
+      "price": 0.9
+    },
+    {
+      "ticker": "NBY",
+      "price": 1.6
+    },
+    {
+      "ticker": "CAPR",
+      "price": 1.19
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "WTBDY",
+      "price": 15.2
+    },
+    {
+      "ticker": "CIVI",
+      "price": 14.85
+    }
+  ],
+  "40": [
+    {
+      "ticker": "WTBDY",
+      "price": 15.2
+    },
+    {
+      "ticker": "CIVI",
+      "price": 14.8
+    }
+  ],
+  "100": [
+    {
+      "ticker": "XPER",
+      "price": 16.65
+    },
+    {
+      "ticker": "HABT",
+      "price": 17.55
+    }
+  ],
+  "200": [
+    {
+      "ticker": "XPER",
+      "price": 16.35
+    },
+    {
+      "ticker": "FIXX",
+      "price": 16.665
+    }
+  ],
+  "260": [
+    {
+      "ticker": "FIXX",
+      "price": 16.66
+    },
+    {
+      "ticker": "HABT",
+      "price": 17.5
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CASA",
+      "price": 15.18
+    },
+    {
+      "ticker": "UCTT",
+      "price": 15.0911
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CASA",
+      "price": 15.05
+    },
+    {
+      "ticker": "UCTT",
+      "price": 15.04
+    }
+  ]
+}

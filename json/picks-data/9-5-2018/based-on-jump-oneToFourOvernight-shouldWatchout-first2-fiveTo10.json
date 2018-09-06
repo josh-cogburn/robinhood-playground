@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "LIVX",
+      "price": 5.63
+    },
+    {
+      "ticker": "LCI",
+      "price": 5.72
+    }
+  ],
+  "5": [
+    {
+      "ticker": "LIVX",
+      "price": 5.55
+    },
+    {
+      "ticker": "PFNX",
+      "price": 5.29
+    }
+  ],
+  "16": [
+    {
+      "ticker": "LIVX",
+      "price": 5.55
+    },
+    {
+      "ticker": "PFNX",
+      "price": 5.29
+    }
+  ],
+  "30": [
+    {
+      "ticker": "LIVX",
+      "price": 5.5
+    },
+    {
+      "ticker": "PFNX",
+      "price": 5.22
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "SCWX",
+      "price": 12.56
+    },
+    {
+      "ticker": "GME",
+      "price": 15.45
+    }
+  ],
+  "40": [
+    {
+      "ticker": "SGMO",
+      "price": 14.6
+    },
+    {
+      "ticker": "TGS",
+      "price": 12.992
+    }
+  ],
+  "100": [
+    {
+      "ticker": "SCWX",
+      "price": 11.6
+    },
+    {
+      "ticker": "TGS",
+      "price": 12.88
+    }
+  ],
+  "200": [
+    {
+      "ticker": "SCWX",
+      "price": 11.87
+    },
+    {
+      "ticker": "TGS",
+      "price": 12.88
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SGMO",
+      "price": 14.65
+    },
+    {
+      "ticker": "SPAR",
+      "price": 14.8701
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AMSWA",
+      "price": 14.555
+    },
+    {
+      "ticker": "TGS",
+      "price": 13.14
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AMSWA",
+      "price": 14.65
+    },
+    {
+      "ticker": "TGS",
+      "price": 13.11
+    }
+  ]
+}

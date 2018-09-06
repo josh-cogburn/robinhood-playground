@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "TPIV",
+      "price": 9.7
+    },
+    {
+      "ticker": "CMFN",
+      "price": 9.555
+    }
+  ],
+  "40": [
+    {
+      "ticker": "GECC",
+      "price": 9.9503
+    },
+    {
+      "ticker": "CMFN",
+      "price": 9.6
+    }
+  ],
+  "100": [
+    {
+      "ticker": "GECC",
+      "price": 9.89
+    },
+    {
+      "ticker": "CVU",
+      "price": 8.845
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PDEX",
+      "price": 9.6
+    },
+    {
+      "ticker": "CSU",
+      "price": 8.745
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PDEX",
+      "price": 9.9
+    },
+    {
+      "ticker": "MCRB",
+      "price": 8.8964
+    }
+  ],
+  "351": [
+    {
+      "ticker": "OMN",
+      "price": 9.7
+    },
+    {
+      "ticker": "CVU",
+      "price": 8.8748
+    }
+  ],
+  "381": [
+    {
+      "ticker": "OMN",
+      "price": 9.775
+    },
+    {
+      "ticker": "PDEX",
+      "price": 9.8
+    }
+  ]
+}

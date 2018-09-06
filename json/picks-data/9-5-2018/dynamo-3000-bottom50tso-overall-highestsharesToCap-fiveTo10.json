@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "PFNX",
+      "price": 5.25
+    },
+    {
+      "ticker": "AG",
+      "price": 5.32
+    }
+  ],
+  "40": [
+    {
+      "ticker": "PFNX",
+      "price": 5.22
+    },
+    {
+      "ticker": "DAIO",
+      "price": 5.2001
+    }
+  ],
+  "100": [
+    {
+      "ticker": "PFNX",
+      "price": 5.2
+    },
+    {
+      "ticker": "PXLW",
+      "price": 5.35
+    }
+  ],
+  "200": [
+    {
+      "ticker": "MBOT",
+      "price": 7.2
+    },
+    {
+      "ticker": "JVA",
+      "price": 5.01
+    }
+  ],
+  "260": [
+    {
+      "ticker": "MBOT",
+      "price": 7.0701
+    },
+    {
+      "ticker": "JVA",
+      "price": 5.01
+    }
+  ],
+  "351": [
+    {
+      "ticker": "MBOT",
+      "price": 6.6156
+    },
+    {
+      "ticker": "DHCP",
+      "price": 5.0511
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MBOT",
+      "price": 6.6537
+    },
+    {
+      "ticker": "DHCP",
+      "price": 5.08
+    }
+  ]
+}

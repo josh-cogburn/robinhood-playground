@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "HMY",
+      "price": 1.72
+    },
+    {
+      "ticker": "PME",
+      "price": 2.8
+    }
+  ],
+  "5": [
+    {
+      "ticker": "HMY",
+      "price": 1.73
+    },
+    {
+      "ticker": "PME",
+      "price": 2.7336
+    }
+  ],
+  "16": [
+    {
+      "ticker": "HMY",
+      "price": 1.735
+    },
+    {
+      "ticker": "PME",
+      "price": 2.7336
+    }
+  ],
+  "30": [
+    {
+      "ticker": "HMY",
+      "price": 1.735
+    },
+    {
+      "ticker": "PME",
+      "price": 2.73
+    }
+  ]
+}

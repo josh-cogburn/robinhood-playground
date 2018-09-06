@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "VNTR",
+      "price": 11.91
+    },
+    {
+      "ticker": "ACH",
+      "price": 9.95
+    }
+  ],
+  "40": [
+    {
+      "ticker": "SQQQ",
+      "price": 11.65
+    },
+    {
+      "ticker": "VNTR",
+      "price": 11.98
+    }
+  ],
+  "100": [
+    {
+      "ticker": "SQQQ",
+      "price": 11.79
+    },
+    {
+      "ticker": "ZBIO",
+      "price": 13.45
+    }
+  ],
+  "200": [
+    {
+      "ticker": "SQQQ",
+      "price": 11.631
+    },
+    {
+      "ticker": "TGS",
+      "price": 12.88
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SQQQ",
+      "price": 11.62
+    },
+    {
+      "ticker": "CSS",
+      "price": 14.23
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NYNY",
+      "price": 11.369
+    },
+    {
+      "ticker": "SQQQ",
+      "price": 11.7047
+    }
+  ],
+  "381": [
+    {
+      "ticker": "NYNY",
+      "price": 10.95
+    },
+    {
+      "ticker": "SQQQ",
+      "price": 11.7
+    }
+  ]
+}

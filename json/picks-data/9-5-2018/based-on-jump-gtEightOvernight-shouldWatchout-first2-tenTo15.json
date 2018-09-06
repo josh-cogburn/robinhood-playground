@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "CRON",
+      "price": 12.85
+    },
+    {
+      "ticker": "WATT",
+      "price": 12.351
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CRON",
+      "price": 12.425
+    },
+    {
+      "ticker": "WATT",
+      "price": 12.6492
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CRON",
+      "price": 12.5
+    },
+    {
+      "ticker": "WATT",
+      "price": 12.5978
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CRON",
+      "price": 12.21
+    },
+    {
+      "ticker": "WATT",
+      "price": 12.43
+    }
+  ]
+}

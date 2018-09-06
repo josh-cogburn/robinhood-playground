@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "MDIBY",
+      "price": 10.16
+    },
+    {
+      "ticker": "CZR",
+      "price": 10
+    }
+  ],
+  "40": [
+    {
+      "ticker": "MDIBY",
+      "price": 10.18
+    },
+    {
+      "ticker": "COHN",
+      "price": 9.9
+    }
+  ],
+  "100": [
+    {
+      "ticker": "DERM",
+      "price": 10
+    },
+    {
+      "ticker": "CRZBY",
+      "price": 9.96
+    }
+  ],
+  "200": [
+    {
+      "ticker": "DERM",
+      "price": 9.99
+    },
+    {
+      "ticker": "CMCM",
+      "price": 10.0059
+    }
+  ],
+  "260": [
+    {
+      "ticker": "DERM",
+      "price": 10
+    },
+    {
+      "ticker": "CMCM",
+      "price": 10.0399
+    }
+  ],
+  "351": [
+    {
+      "ticker": "PDEX",
+      "price": 9.95
+    },
+    {
+      "ticker": "CMCM",
+      "price": 10.04
+    }
+  ],
+  "381": [
+    {
+      "ticker": "DERM",
+      "price": 10.03
+    },
+    {
+      "ticker": "CMCM",
+      "price": 10.12
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "MESA",
+      "price": 16.2
+    },
+    {
+      "ticker": "NSSC",
+      "price": 15.31
+    },
+    {
+      "ticker": "EOCC",
+      "price": 19.47
+    }
+  ],
+  "5": [
+    {
+      "ticker": "MESA",
+      "price": 16
+    },
+    {
+      "ticker": "NSSC",
+      "price": 15.3
+    },
+    {
+      "ticker": "EOCC",
+      "price": 19.47
+    }
+  ],
+  "16": [
+    {
+      "ticker": "MESA",
+      "price": 15.8238
+    },
+    {
+      "ticker": "NSSC",
+      "price": 15.25
+    },
+    {
+      "ticker": "EOCC",
+      "price": 19.47
+    }
+  ],
+  "30": [
+    {
+      "ticker": "MESA",
+      "price": 15.7
+    },
+    {
+      "ticker": "NSSC",
+      "price": 15.2
+    },
+    {
+      "ticker": "EOCC",
+      "price": 19.0247
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "ENPH",
+      "price": 4.76
+    },
+    {
+      "ticker": "CARV",
+      "price": 4.55
+    }
+  ],
+  "40": [
+    {
+      "ticker": "ENPH",
+      "price": 4.63
+    },
+    {
+      "ticker": "CARV",
+      "price": 4.47
+    }
+  ],
+  "100": [
+    {
+      "ticker": "ENPH",
+      "price": 4.635
+    },
+    {
+      "ticker": "DFBG",
+      "price": 4.46
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ENPH",
+      "price": 4.605
+    },
+    {
+      "ticker": "DFBG",
+      "price": 4.05
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ENPH",
+      "price": 4.595
+    },
+    {
+      "ticker": "DFBG",
+      "price": 4.3314
+    }
+  ],
+  "351": [
+    {
+      "ticker": "DEST",
+      "price": 4.3
+    },
+    {
+      "ticker": "DFBG",
+      "price": 4.34
+    }
+  ],
+  "381": [
+    {
+      "ticker": "DEST",
+      "price": 4.42
+    },
+    {
+      "ticker": "DFBG",
+      "price": 4.38
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "12": [
+    {
+      "ticker": "TSQ",
+      "price": 9.42
+    },
+    {
+      "ticker": "FRTA",
+      "price": 8.68
+    },
+    {
+      "ticker": "PBI",
+      "price": 7.33
+    },
+    {
+      "ticker": "CIFS",
+      "price": 9.9536
+    },
+    {
+      "ticker": "CELP",
+      "price": 7.85
+    }
+  ],
+  "190": [
+    {
+      "ticker": "TSQ",
+      "price": 9.5148
+    },
+    {
+      "ticker": "FRTA",
+      "price": 8.87
+    },
+    {
+      "ticker": "PBI",
+      "price": 7.55
+    },
+    {
+      "ticker": "NTP",
+      "price": 9.95
+    },
+    {
+      "ticker": "CIFS",
+      "price": 9.76
+    }
+  ],
+  "250": [
+    {
+      "ticker": "TSQ",
+      "price": 9.57
+    },
+    {
+      "ticker": "FRTA",
+      "price": 8.89
+    },
+    {
+      "ticker": "PBI",
+      "price": 7.525
+    },
+    {
+      "ticker": "NTP",
+      "price": 9.8797
+    },
+    {
+      "ticker": "CIFS",
+      "price": 9.52
+    }
+  ],
+  "600": [
+    {
+      "ticker": "TSQ",
+      "price": 9.75
+    },
+    {
+      "ticker": "FRTA",
+      "price": 8.97
+    },
+    {
+      "ticker": "PBI",
+      "price": 7.65
+    },
+    {
+      "ticker": "NTP",
+      "price": 9.9
+    },
+    {
+      "ticker": "CIFS",
+      "price": 9.5
+    }
+  ]
+}

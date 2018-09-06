@@ -1,0 +1,42 @@
+{
+  "12": [
+    {
+      "ticker": "TSQ",
+      "price": 9.42
+    },
+    {
+      "ticker": "FRTA",
+      "price": 8.68
+    }
+  ],
+  "190": [
+    {
+      "ticker": "TSQ",
+      "price": 9.5148
+    },
+    {
+      "ticker": "FRTA",
+      "price": 8.87
+    }
+  ],
+  "250": [
+    {
+      "ticker": "TSQ",
+      "price": 9.57
+    },
+    {
+      "ticker": "FRTA",
+      "price": 8.89
+    }
+  ],
+  "600": [
+    {
+      "ticker": "TSQ",
+      "price": 9.75
+    },
+    {
+      "ticker": "FRTA",
+      "price": 8.97
+    }
+  ]
+}

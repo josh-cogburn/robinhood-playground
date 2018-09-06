@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "BCRX",
+      "price": 7.9
+    },
+    {
+      "ticker": "TSQ",
+      "price": 9.5
+    }
+  ],
+  "5": [
+    {
+      "ticker": "BCRX",
+      "price": 7.89
+    },
+    {
+      "ticker": "TSQ",
+      "price": 9.27
+    }
+  ],
+  "16": [
+    {
+      "ticker": "BCRX",
+      "price": 7.97
+    },
+    {
+      "ticker": "TSQ",
+      "price": 9.27
+    }
+  ],
+  "30": [
+    {
+      "ticker": "BCRX",
+      "price": 7.88
+    },
+    {
+      "ticker": "TSQ",
+      "price": 9.38
+    }
+  ]
+}

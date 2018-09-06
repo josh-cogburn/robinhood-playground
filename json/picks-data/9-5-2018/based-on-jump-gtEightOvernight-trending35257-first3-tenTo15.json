@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "CRON",
+      "price": 12.85
+    },
+    {
+      "ticker": "SYBX",
+      "price": 11.99
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CRON",
+      "price": 12.425
+    },
+    {
+      "ticker": "SYBX",
+      "price": 11.57
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CRON",
+      "price": 12.5
+    },
+    {
+      "ticker": "SYBX",
+      "price": 11.495
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CRON",
+      "price": 12.21
+    },
+    {
+      "ticker": "SYBX",
+      "price": 11.7
+    }
+  ]
+}
