@@ -24,15 +24,23 @@ actions are divided up into "app-actions" and "rh-actions" (robinhood actions)
 
 modules are generally "strategies", but can be anything that runs at app init and using utils/reg-cron-after-630 something that gets run at various times of the day
 
-picks-data - each day a folder is created that saves the "picks" for each of the strategies / modules whenever they are run
+## json gets saved to /json
 
 daily-transactions - the actual transactions that the program went ahead and bought or sold for each day
 
+picks-data - each day a folder is created that saves the "picks" for each of the strategies / modules whenever they are run
+
+pm-perfs - how did each of the prediction-models trend at the following morning?
+
+prediction-model - collections of strategies that are generated every time.  some are dynamically created based on past performance while others have been hand-selected in `pms/manual.js`
+
 stock-data - contains all the output of getTrendAndSave
 
-strat-perfs - when app-actions/record-strat-perfs is run, it calculates how well each of the strategies from the previous day have trended and averages them out, calculated at multiple times of the day as well
+strat-perf-multiples - are the latest greatest method of getting the performance of all the strategies.  any time `analysis/strategy-perf-multiple.js` gets run with a daysBack > 50 (currently 1x / day) the output gets saved here
 
-shared-async and socket-server should be deleted
+strat-perfs - how well have each of the strategies trended at various points? (next-day-9 all the way to fourth-day-330 are saved)
+
+
 
 ## tell me more how does it work?
 
@@ -40,17 +48,28 @@ strategies are mostly "trendFilter"s.  which just take in a Robinhood instance a
 
 when the strategy is run it returns a list of tickers (ie `[AAPL, GOOG, JAGX]`).  These "picks" are saved along with their current trading price in picks-data/[date]/[strategy-name]-[price-perm] as an object with their keys being the minute after opening bell of that particularly run.
 
-the program will actively purchase the forPurchase strategies in settings.js.  also the program sells half the holdings of each of the stocks it purchased after 1 day and it sells 100% of the shares after 2 days.
+the program will actively purchase the forPurchase strategies in settings.js which gets saved to the days' "prediction model"
 
 ## configuring
 
-all strategies (modules/*) are enabled to run at various times per day.  they run for every increment of $1-5, $5-10 and $10-15.
+all strategies (modules/*) are enabled to run at various times per day.  they run for every increment of $1-5, $5-10, $10-15, and recently added $15-20!
 
 settings.js determines which strategies are "enabled for purchase" as well as sent via email
 
 also determines the purchase amount when I strategy is set to forPurchase
 
-## analytics
+## strategy analytics
+
+`node run analysis/strategy-perf-multiple 52` - generates report on how well all strategies have performed over the last 52.  called "multiple" because instead of "strategy-perf-overall" that takes into consideration not just a single hardcoded "breakdown" such as next-day-9, this method takes into consideration all strat-perf data points that were recorded for that strategy.  you can run it like this too: `node run analysis/strategy-perf-multiple 25 next-day-330` means lookup past 25 days but only consider breakdowns up to next-day-330 (up at end the following day).   `node run analysis/strategy-perf-multiple 25 low-float-high-volume-floatTimesfloatToVolume-trenddown7to10-shouldWatchout-fifteenTo20-95 based-on-jump-gtEightOvernight-gt500kvolume-first1-5` only considers the strategies passed in and returns additional detailed output on these strategies.  this can be combined with the `next-day-330` option shown here along with the ability to filter out all found strategies by a collection of query phrases: `node run analysis/strategy-perf-multiple 25 sudden-drops filter30 first1` but is not detailed and is broken down into filtered collections.
+
+## prediction-model analytics
+
+`node run analysis/pm-perf-50-14-7 sepPerfectos sepAdds` - weight recent performance of the strategies more than old trends
+`node run analysis/pm-perf-day-coverage 52 sepPerfectos sepAdds` - what stocks bought and how did they trend each of the past 52 days?
+`node run analysis/pm-perf-using-custom-breakdown 52 sepPerfectos sepAdds` - determine which strategies in the pm are going to be highCount'ers or lowCount'ers (does it find a pick everyday?)
+`node run analysis/pm-per 52 sepPerfectos sepAdds` - straight up how did each of the strategies in these pm's perform in the given daysBack?
+
+## somewhat deprecated analytics
 
 `node run analysis/day-report` - reports on how the purchases the app has made today have trended since they were purchased
 
@@ -64,6 +83,10 @@ also determines the purchase amount when I strategy is set to forPurchase
 
 
 ## todo
+
+* much
+* truth: database needed
+* front-end should be used more as a way to view the incoming strategy picks highlighting the one's that may be of interest ... not just as a way to view all the trends of the given subset of strategies (pm filter)
 
 * integrate this electron front-end https://github.com/chiefsmurph/johns-electron-playground
 * better manage dependency on pattern-predict
