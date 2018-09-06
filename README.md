@@ -60,13 +60,24 @@ also determines the purchase amount when I strategy is set to forPurchase
 
 ## strategy analytics
 
-`node run analysis/strategy-perf-multiple 52` - generates report on how well all strategies have performed over the last 52.  called "multiple" because instead of "strategy-perf-overall" that takes into consideration not just a single hardcoded "breakdown" such as next-day-9, this method takes into consideration all strat-perf data points that were recorded for that strategy.  you can run it like this too: `node run analysis/strategy-perf-multiple 25 next-day-330` means lookup past 25 days but only consider breakdowns up to next-day-330 (up at end the following day).   `node run analysis/strategy-perf-multiple 25 low-float-high-volume-floatTimesfloatToVolume-trenddown7to10-shouldWatchout-fifteenTo20-95 based-on-jump-gtEightOvernight-gt500kvolume-first1-5` only considers the strategies passed in and returns additional detailed output on these strategies.  this can be combined with the `next-day-330` option shown here along with the ability to filter out all found strategies by a collection of query phrases: `node run analysis/strategy-perf-multiple 25 sudden-drops filter30 first1` but is not detailed and is broken down into filtered collections.
+`node run analysis/strategy-perf-multiple 52` - generates report on how well all strategies have performed over the last 52.  called "multiple" because instead of "strategy-perf-overall" that takes into consideration not just a single hardcoded "breakdown" such as next-day-9, this method takes into consideration all strat-perf data points that were recorded for that strategy.  
+
+you can run it like this too:
+
+`node run analysis/strategy-perf-multiple 25 next-day-330` means lookup past 25 days but only consider breakdowns up to next-day-330 (up at end the following day).   
+
+`node run analysis/strategy-perf-multiple 25 low-float-high-volume-floatTimesfloatToVolume-trenddown7to10-shouldWatchout-fifteenTo20-95 based-on-jump-gtEightOvernight-gt500kvolume-first1-5` only considers the strategies passed in and returns additional detailed output on these strategies.  
+
+this can be combined with the `next-day-330` option shown here along with the ability to filter out all found strategies by a collection of query phrases: `node run analysis/strategy-perf-multiple 25 next-day-330 sudden-drops filter30` but is not detailed and is broken down into filtered collections.
 
 ## prediction-model analytics
 
 `node run analysis/pm-perf-50-14-7 sepPerfectos sepAdds` - weight recent performance of the strategies more than old trends
+
 `node run analysis/pm-perf-day-coverage 52 sepPerfectos sepAdds` - what stocks bought and how did they trend each of the past 52 days?
+
 `node run analysis/pm-perf-using-custom-breakdown 52 sepPerfectos sepAdds` - determine which strategies in the pm are going to be highCount'ers or lowCount'ers (does it find a pick everyday?)
+
 `node run analysis/pm-per 52 sepPerfectos sepAdds` - straight up how did each of the strategies in these pm's perform in the given daysBack?
 
 ## somewhat deprecated analytics

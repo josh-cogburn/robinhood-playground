@@ -31,11 +31,11 @@ module.exports = {
 
         '[sepHighlights]',
         '[sepStars]',
-        
+
         '[sepAdds]',
         '[sepAdds]',
     ],
-    fallbackSellStrategy: 'limit3',     // for fallback,
+    fallbackSellStrategy: 'limit3',
     force: {
         sell: [
             'FCNCA',
