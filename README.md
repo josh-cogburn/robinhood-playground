@@ -58,6 +58,12 @@ settings.js determines which strategies are "enabled for purchase" as well as se
 
 also determines the purchase amount when I strategy is set to forPurchase
 
+## what more is there to know?
+
+it sends emails to the runner of the program for any strategies run within the forPurchase prediction model or if added to `settings.js`'s email with the key being an email address and the value being an array of strategies that you want to send to that email.  there is a list of users `cheapest-picks-email-list` which sends the `cheapest-picks-chp50--4` strategy to each of those emails.
+
+it posts to twitter
+
 ## strategy analytics
 
 `node run analysis/strategy-perf-multiple 52` - generates report on how well all strategies have performed over the last 52.  called "multiple" because instead of "strategy-perf-overall" that takes into consideration not just a single hardcoded "breakdown" such as next-day-9, this method takes into consideration all strat-perf data points that were recorded for that strategy.  
