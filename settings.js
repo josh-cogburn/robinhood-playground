@@ -22,16 +22,18 @@ module.exports = {
     sellAllStocksOnNthDay: 2,
     purchaseAmt: 20,
     forPurchase: [
-        '[sepPerfectosHigherCounts]',
+        '[sepPerfectosLowCounts]',
+        '[sepPerfectosLowCounts]',
 
-        '[sepPerfectosLowerCounts]',
-        '[sepPerfectosLowerCounts]',
+        '[sepPerfectosRealLowCounts]',
+        '[sepPerfectosRealLowCounts]',
+        '[sepPerfectosRealLowCounts]',
+
         '[sepPerfectosMissing]',
         '[sepPerfectosMissing]',
+        '[sepPerfectosMissing]',
 
-        '[sepHighlights]',
-        '[sepStars]',
-
+        '[sepAdds]',
         '[sepAdds]',
         '[sepAdds]',
     ],

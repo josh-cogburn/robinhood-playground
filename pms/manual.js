@@ -751,7 +751,7 @@ const sepPerfectosLowCounts = [
     "low-float-high-volume-floatTimestwoWeekVolToAvgPoints-trenddowngt10-notWatchout-fifteenTo20-150",
     "based-on-jump-down5overnight-notWatchout-ltneg50percmax-first1-fifteenTo20-16",
     "based-on-jump-gtEightOvernight-trending103-first1-fifteenTo20-5",
-    "up-streak-3to5days-gt3overnight-fifteenTo20-45",
+    // "up-streak-3to5days-gt3overnight-fifteenTo20-45",
     "sudden-drops-last2trend-filter10-360"
 ];
 
@@ -795,6 +795,76 @@ const sepPerfectosMissing = [
 
 const sepAdds = [
     'low-float-high-volume-volToAvgPoints-trend10to15-shouldWatchout-tenTo15-276',
+]
+
+const noGuarantees = [
+    'based-on-jump-fourToEightOvernight-trending53-notWatchout-ltneg50percmax-first1-fiveTo10-0',
+    'based-on-jump-down5overnight-trending103-notWatchout-gtneg20percmax-first2-16',
+    'based-on-jump-down5overnight-trending103-notWatchout-ltneg50percmax-5',
+    'based-on-jump-gtEightOvernight-trending607-first1-fifteenTo20-30',
+    'based-on-jump-gtEightOvernight-trending607-gt100kvolume-fifteenTo20-30',
+    'up-streak-7days-ltneg3overnight-189',
+    'sudden-drops-last18trend-filter30-328',
+]
+
+const unprovenFilter30Drops = [
+    "sudden-drops-last5trend-filter30-280",
+    // "sudden-drops-last30trend-filter30-328",
+    // "sudden-drops-last18trend-filter30-328",
+    // "sudden-drops-last5trend-filter30-328",
+    // "sudden-drops-last5trend-filter30-221",
+    // "sudden-drops-last10trend-filter30-328",
+    // "sudden-drops-last30trend-filter30-360",
+    // "sudden-drops-last30trend-filter30-290",
+    "sudden-drops-last10trend-filter30-221",
+    "sudden-drops-last3trend-filter30-32",
+    // "sudden-drops-last50trend-filter30-290",
+    "sudden-drops-last18trend-filter30-290",
+    // "sudden-drops-last10trend-filter30-290",
+    "sudden-drops-last3trend-filter30-tenTo15-14",
+    "sudden-drops-last2trend-filter30-tenTo15-14"
+];
+
+const unprovenFilter20Drops = [
+    "sudden-drops-last30trend-filter20-tenTo15-388",
+    "sudden-drops-last10trend-filter20-fiveTo10-388",
+    // "sudden-drops-last18trend-filter20-fiveTo10-388",
+    "sudden-drops-last50trend-filter20-tenTo15-388",
+    // "sudden-drops-last5trend-filter20-fiveTo10-388",
+    "sudden-drops-last10trend-filter20-360",
+    "sudden-drops-last3trend-filter20-360",
+    // "sudden-drops-last5trend-filter20-360",
+    // "sudden-drops-last18trend-filter20-360",
+    "sudden-drops-last18trend-filter20-tenTo15-328",
+    // "sudden-drops-last30trend-filter20-tenTo15-328",
+    // "sudden-drops-last50trend-filter20-tenTo15-328",
+    "sudden-drops-last3trend-filter20-328",
+    // "sudden-drops-last18trend-filter20-290",
+    "sudden-drops-last10trend-filter20-290",
+    // "sudden-drops-last30trend-filter20-290",
+    "sudden-drops-last30trend-filter20-tenTo15-290",
+    // "sudden-drops-last50trend-filter20-tenTo15-290",
+    "sudden-drops-last10trend-filter20-tenTo15-280",
+    // "sudden-drops-last18trend-filter20-tenTo15-280",
+    "sudden-drops-last5trend-filter20-280",
+    "sudden-drops-last3trend-filter20-280",
+    "sudden-drops-last10trend-filter20-221",
+    "sudden-drops-last3trend-filter20-221",
+    "sudden-drops-last18trend-filter20-189",
+    // "sudden-drops-last10trend-filter20-189",
+    // "sudden-drops-last30trend-filter20-189",
+    "sudden-drops-last30trend-filter20-fiveTo10-153",
+    "sudden-drops-last5trend-filter20-fiveTo10-32",
+    "sudden-drops-last1trend-filter20-fiveTo10-14"
+];
+
+const unprovenSuddenDropsLast2Filter10 = [
+    "sudden-drops-last2trend-filter10-tenTo15-328",
+    "sudden-drops-last2trend-filter10-360",
+    "sudden-drops-last2trend-filter10-100",
+    "sudden-drops-last2trend-filter10-189",
+    "sudden-drops-last2trend-filter10-fifteenTo20-328",
+    "sudden-drops-last2trend-filter10-fiveTo10-328"
 ]
 
 module.exports = {
@@ -878,7 +948,12 @@ module.exports = {
     sepHighlights,
     sepStars,
 
-    sepAdds
+    sepAdds,
 
+
+    noGuarantees,
+    unprovenFilter30Drops,
+    unprovenFilter20Drops,
+    unprovenSuddenDropsLast2Filter10,
 
 };
