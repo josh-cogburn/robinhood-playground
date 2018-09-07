@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "NBEV",
+      "price": 2.3215
+    },
+    {
+      "ticker": "MYSZ",
+      "price": 1.0249
+    }
+  ],
+  "5": [
+    {
+      "ticker": "NBEV",
+      "price": 2.2699
+    },
+    {
+      "ticker": "MYSZ",
+      "price": 0.9985
+    }
+  ],
+  "16": [
+    {
+      "ticker": "ABAC",
+      "price": 2.543
+    },
+    {
+      "ticker": "NBEV",
+      "price": 2.19
+    }
+  ],
+  "30": [
+    {
+      "ticker": "AMDA",
+      "price": 0.5111
+    },
+    {
+      "ticker": "ABAC",
+      "price": 2.54
+    }
+  ]
+}

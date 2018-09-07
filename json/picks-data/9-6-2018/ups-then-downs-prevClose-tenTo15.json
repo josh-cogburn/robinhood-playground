@@ -1,0 +1,74 @@
+{
+  "10": [
+    {
+      "ticker": "CRON",
+      "price": 11.07
+    },
+    {
+      "ticker": "ABUS",
+      "price": 10.425
+    }
+  ],
+  "50": [
+    {
+      "ticker": "CRON",
+      "price": 11.4317
+    },
+    {
+      "ticker": "MESA",
+      "price": 14.825
+    },
+    {
+      "ticker": "ABUS",
+      "price": 10.44
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CRON",
+      "price": 11.34
+    },
+    {
+      "ticker": "ABUS",
+      "price": 10.5
+    }
+  ],
+  "300": [
+    {
+      "ticker": "CRON",
+      "price": 11.49
+    },
+    {
+      "ticker": "EXPR",
+      "price": 11.03
+    }
+  ],
+  "380": [
+    {
+      "ticker": "CRON",
+      "price": 11.64
+    },
+    {
+      "ticker": "ABUS",
+      "price": 10.475
+    },
+    {
+      "ticker": "EXPR",
+      "price": 10.945
+    }
+  ],
+  "600": [
+    {
+      "ticker": "CRON",
+      "price": 11.62
+    },
+    {
+      "ticker": "ABUS",
+      "price": 10.5
+    },
+    {
+      "ticker": "EXPR",
+      "price": 10.9
+    }
+  ]
+}

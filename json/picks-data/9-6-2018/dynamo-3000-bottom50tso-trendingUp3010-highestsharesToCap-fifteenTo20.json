@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "RTMVY",
+      "price": 16.5
+    },
+    {
+      "ticker": "KAOOY",
+      "price": 15.21
+    }
+  ],
+  "40": [
+    {
+      "ticker": "GME",
+      "price": 15.66
+    },
+    {
+      "ticker": "FIXX",
+      "price": 16.73
+    }
+  ],
+  "100": [
+    {
+      "ticker": "GME",
+      "price": 15.55
+    },
+    {
+      "ticker": "FIXX",
+      "price": 16.7
+    }
+  ],
+  "200": [
+    {
+      "ticker": "BRY",
+      "price": 15.57
+    },
+    {
+      "ticker": "STML",
+      "price": 16.095
+    }
+  ],
+  "260": [
+    {
+      "ticker": "BRY",
+      "price": 15.55
+    },
+    {
+      "ticker": "ENDP",
+      "price": 16.44
+    }
+  ],
+  "351": [
+    {
+      "ticker": "BRY",
+      "price": 15.52
+    },
+    {
+      "ticker": "STML",
+      "price": 15.95
+    }
+  ],
+  "381": [
+    {
+      "ticker": "BRY",
+      "price": 15.71
+    },
+    {
+      "ticker": "STML",
+      "price": 16.025
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "RYCEY",
+      "price": 12.65
+    },
+    {
+      "ticker": "SUHJY",
+      "price": 14.51
+    },
+    {
+      "ticker": "SOUHY",
+      "price": 12.54
+    }
+  ],
+  "5": [
+    {
+      "ticker": "MSON",
+      "price": 13.905
+    },
+    {
+      "ticker": "MNOV",
+      "price": 11.45
+    }
+  ],
+  "16": [
+    {
+      "ticker": "MSON",
+      "price": 16
+    },
+    {
+      "ticker": "MNOV",
+      "price": 11.565
+    }
+  ],
+  "30": [
+    {
+      "ticker": "MNOV",
+      "price": 11.53
+    }
+  ]
+}

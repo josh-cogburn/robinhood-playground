@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "XSPA",
+      "price": 0.1552
+    },
+    {
+      "ticker": "ALN",
+      "price": 0.175
+    }
+  ],
+  "40": [
+    {
+      "ticker": "XSPA",
+      "price": 0.1575
+    },
+    {
+      "ticker": "ALN",
+      "price": 0.1724
+    }
+  ],
+  "100": [
+    {
+      "ticker": "GLG",
+      "price": 0.821
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.1654
+    }
+  ],
+  "200": [
+    {
+      "ticker": "GLG",
+      "price": 0.8
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.1578
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GLG",
+      "price": 0.8001
+    },
+    {
+      "ticker": "ALN",
+      "price": 0.172
+    }
+  ],
+  "351": [
+    {
+      "ticker": "GLG",
+      "price": 0.8001
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.155
+    }
+  ],
+  "381": [
+    {
+      "ticker": "GLG",
+      "price": 0.8009
+    },
+    {
+      "ticker": "ALN",
+      "price": 0.1744
+    }
+  ]
+}

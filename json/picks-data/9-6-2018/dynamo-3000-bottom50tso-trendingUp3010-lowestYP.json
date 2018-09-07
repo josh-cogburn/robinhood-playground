@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "CHFS",
+      "price": 1.2
+    },
+    {
+      "ticker": "SLS",
+      "price": 1.189
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CHFS",
+      "price": 1.2239
+    },
+    {
+      "ticker": "AMDA",
+      "price": 0.5255
+    }
+  ],
+  "100": [
+    {
+      "ticker": "AMDA",
+      "price": 0.505
+    },
+    {
+      "ticker": "FCSC",
+      "price": 2.0501
+    }
+  ],
+  "200": [
+    {
+      "ticker": "AMDA",
+      "price": 0.5011
+    },
+    {
+      "ticker": "LIFE",
+      "price": 0.761
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AMDA",
+      "price": 0.4998
+    },
+    {
+      "ticker": "LIFE",
+      "price": 0.75
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AMDA",
+      "price": 0.4813
+    },
+    {
+      "ticker": "LIFE",
+      "price": 0.7457
+    }
+  ],
+  "381": [
+    {
+      "ticker": "KOOL",
+      "price": 0.4021
+    },
+    {
+      "ticker": "AMDA",
+      "price": 0.4739
+    }
+  ]
+}

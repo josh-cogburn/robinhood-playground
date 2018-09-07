@@ -1,0 +1,53 @@
+{
+  "10": [],
+  "35": [
+    {
+      "ticker": "TGS",
+      "price": 14.2536
+    },
+    {
+      "ticker": "LOOP",
+      "price": 10.3999
+    }
+  ],
+  "90": [
+    {
+      "ticker": "TGS",
+      "price": 14.45
+    },
+    {
+      "ticker": "LOOP",
+      "price": 10.3999
+    },
+    {
+      "ticker": "PLLL",
+      "price": 11
+    },
+    {
+      "ticker": "SQQQ",
+      "price": 12.07
+    }
+  ],
+  "223": [
+    {
+      "ticker": "TGS",
+      "price": 14.3301
+    },
+    {
+      "ticker": "AUDC",
+      "price": 10.78
+    },
+    {
+      "ticker": "CSPI",
+      "price": 14.103
+    },
+    {
+      "ticker": "PLLL",
+      "price": 11.001
+    },
+    {
+      "ticker": "SQQQ",
+      "price": 12.168
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "IMMP",
+      "price": 3
+    },
+    {
+      "ticker": "CGIX",
+      "price": 0.985
+    },
+    {
+      "ticker": "PIXY",
+      "price": 3.55
+    }
+  ],
+  "5": [
+    {
+      "ticker": "IMMP",
+      "price": 2.81
+    },
+    {
+      "ticker": "CGIX",
+      "price": 0.985
+    },
+    {
+      "ticker": "PIXY",
+      "price": 3.5
+    }
+  ],
+  "16": [
+    {
+      "ticker": "IMMP",
+      "price": 2.889
+    },
+    {
+      "ticker": "AST",
+      "price": 1.606
+    },
+    {
+      "ticker": "CGIX",
+      "price": 0.99
+    }
+  ],
+  "30": [
+    {
+      "ticker": "IMMP",
+      "price": 2.99
+    },
+    {
+      "ticker": "AST",
+      "price": 1.65
+    },
+    {
+      "ticker": "CGIX",
+      "price": 0.99
+    }
+  ]
+}

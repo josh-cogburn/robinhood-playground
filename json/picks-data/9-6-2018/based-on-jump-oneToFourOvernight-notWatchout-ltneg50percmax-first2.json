@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "PTX",
+      "price": 1
+    },
+    {
+      "ticker": "BKEP",
+      "price": 2.55
+    }
+  ],
+  "5": [
+    {
+      "ticker": "PTX",
+      "price": 1
+    },
+    {
+      "ticker": "BKEP",
+      "price": 2.55
+    }
+  ],
+  "16": [
+    {
+      "ticker": "WRN",
+      "price": 0.6699
+    },
+    {
+      "ticker": "AST",
+      "price": 1.606
+    }
+  ],
+  "30": [
+    {
+      "ticker": "AUMN",
+      "price": 0.2652
+    },
+    {
+      "ticker": "WRN",
+      "price": 0.6699
+    }
+  ]
+}

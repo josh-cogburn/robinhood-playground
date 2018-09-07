@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "VRML",
+      "price": 0.643
+    },
+    {
+      "ticker": "ONCY",
+      "price": 4.1431
+    }
+  ],
+  "5": [
+    {
+      "ticker": "VRML",
+      "price": 0.643
+    },
+    {
+      "ticker": "DNN",
+      "price": 0.5057
+    },
+    {
+      "ticker": "ONCY",
+      "price": 4.1431
+    }
+  ],
+  "16": [
+    {
+      "ticker": "VRML",
+      "price": 0.6343
+    },
+    {
+      "ticker": "DNN",
+      "price": 0.5089
+    },
+    {
+      "ticker": "ONCY",
+      "price": 3.97
+    }
+  ],
+  "30": [
+    {
+      "ticker": "VRML",
+      "price": 0.639
+    },
+    {
+      "ticker": "DNN",
+      "price": 0.5089
+    },
+    {
+      "ticker": "JCS",
+      "price": 3.5
+    },
+    {
+      "ticker": "ONCY",
+      "price": 3.97
+    }
+  ]
+}

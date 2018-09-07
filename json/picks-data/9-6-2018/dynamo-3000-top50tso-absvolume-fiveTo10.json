@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "PIRS",
+      "price": 5.5216
+    },
+    {
+      "ticker": "CRZBY",
+      "price": 9.875
+    }
+  ],
+  "40": [
+    {
+      "ticker": "SOHO",
+      "price": 7.374
+    },
+    {
+      "ticker": "LOMA",
+      "price": 8.08
+    }
+  ],
+  "100": [
+    {
+      "ticker": "VIV",
+      "price": 9.76
+    },
+    {
+      "ticker": "SUPV",
+      "price": 7.77
+    }
+  ],
+  "200": [
+    {
+      "ticker": "MNLO",
+      "price": 7.66
+    },
+    {
+      "ticker": "SUPV",
+      "price": 8.04
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ALPN",
+      "price": 6.45
+    },
+    {
+      "ticker": "SUPV",
+      "price": 7.89
+    }
+  ],
+  "351": [
+    {
+      "ticker": "GRIN",
+      "price": 7.795
+    },
+    {
+      "ticker": "JG",
+      "price": 9.72
+    }
+  ],
+  "381": [
+    {
+      "ticker": "FSUGY",
+      "price": 5.25
+    },
+    {
+      "ticker": "SUPV",
+      "price": 7.94
+    }
+  ]
+}

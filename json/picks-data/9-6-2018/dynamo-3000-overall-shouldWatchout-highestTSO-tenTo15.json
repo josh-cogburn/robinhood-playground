@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "SBRCY",
+      "price": 10.5
+    },
+    {
+      "ticker": "CENX",
+      "price": 12.98
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CENX",
+      "price": 12.65
+    },
+    {
+      "ticker": "SYBX",
+      "price": 13.13
+    }
+  ],
+  "100": [
+    {
+      "ticker": "IDRA",
+      "price": 10.41
+    },
+    {
+      "ticker": "CMTA",
+      "price": 10.76
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CMTA",
+      "price": 10.92
+    },
+    {
+      "ticker": "PDEX",
+      "price": 10.6
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CMTA",
+      "price": 11.1995
+    },
+    {
+      "ticker": "PDEX",
+      "price": 10.295
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CMTA",
+      "price": 11.9
+    },
+    {
+      "ticker": "PDEX",
+      "price": 10.2
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CMTA",
+      "price": 11.8875
+    },
+    {
+      "ticker": "AIRG",
+      "price": 11.84
+    }
+  ]
+}

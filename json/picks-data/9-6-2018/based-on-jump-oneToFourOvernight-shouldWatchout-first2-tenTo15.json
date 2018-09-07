@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "NUGT",
+      "price": 12.03
+    },
+    {
+      "ticker": "HCLP",
+      "price": 12.3
+    }
+  ],
+  "5": [
+    {
+      "ticker": "GHG",
+      "price": 11.47
+    },
+    {
+      "ticker": "SGMO",
+      "price": 14.4001
+    }
+  ],
+  "16": [
+    {
+      "ticker": "GHG",
+      "price": 11.2888
+    },
+    {
+      "ticker": "SGMO",
+      "price": 13.975
+    }
+  ],
+  "30": [
+    {
+      "ticker": "GHG",
+      "price": 11.41
+    },
+    {
+      "ticker": "SGMO",
+      "price": 14.075
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "SLS",
+      "price": 1.19
+    },
+    {
+      "ticker": "LIFE",
+      "price": 0.84
+    }
+  ],
+  "5": [
+    {
+      "ticker": "SLS",
+      "price": 1.189
+    },
+    {
+      "ticker": "LIFE",
+      "price": 0.8359
+    }
+  ],
+  "16": [
+    {
+      "ticker": "SLS",
+      "price": 1.1699
+    },
+    {
+      "ticker": "OPGN",
+      "price": 1.9826
+    }
+  ],
+  "30": [
+    {
+      "ticker": "SLS",
+      "price": 1.18
+    },
+    {
+      "ticker": "OPGN",
+      "price": 1.925
+    }
+  ]
+}

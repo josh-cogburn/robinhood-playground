@@ -1,0 +1,44 @@
+{
+  "77": [
+    {
+      "ticker": "CHFS",
+      "price": 1.23
+    },
+    {
+      "ticker": "CANF",
+      "price": 1.247
+    },
+    {
+      "ticker": "VRML",
+      "price": 0.6051
+    }
+  ],
+  "242": [
+    {
+      "ticker": "SYN",
+      "price": 2.63
+    },
+    {
+      "ticker": "OBLN",
+      "price": 2.8899
+    },
+    {
+      "ticker": "ESES",
+      "price": 0.3762
+    }
+  ],
+  "309": [
+    {
+      "ticker": "AST",
+      "price": 1.4501
+    },
+    {
+      "ticker": "OHRP",
+      "price": 0.191
+    },
+    {
+      "ticker": "BLNK",
+      "price": 3.22
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "10": [
+    {
+      "ticker": "INPX",
+      "price": 0.1365
+    },
+    {
+      "ticker": "CLSN",
+      "price": 2.93
+    },
+    {
+      "ticker": "TLRA",
+      "price": 4.08
+    },
+    {
+      "ticker": "OASM",
+      "price": 2.16
+    },
+    {
+      "ticker": "EYPT",
+      "price": 2.27
+    }
+  ],
+  "50": [
+    {
+      "ticker": "NNVC",
+      "price": 0.4111
+    },
+    {
+      "ticker": "CRMD",
+      "price": 0.5802
+    },
+    {
+      "ticker": "KTOV",
+      "price": 2.01
+    },
+    {
+      "ticker": "CLSN",
+      "price": 2.8847
+    },
+    {
+      "ticker": "TLRA",
+      "price": 4.085
+    }
+  ],
+  "200": [
+    {
+      "ticker": "NNVC",
+      "price": 0.4101
+    },
+    {
+      "ticker": "EVFM",
+      "price": 4.1153
+    },
+    {
+      "ticker": "CRMD",
+      "price": 0.5962
+    },
+    {
+      "ticker": "KTOV",
+      "price": 1.99
+    },
+    {
+      "ticker": "TLRA",
+      "price": 4.08
+    }
+  ],
+  "300": [
+    {
+      "ticker": "NNVC",
+      "price": 0.4368
+    },
+    {
+      "ticker": "AVEO",
+      "price": 2.83
+    },
+    {
+      "ticker": "EVFM",
+      "price": 4.3
+    },
+    {
+      "ticker": "CRMD",
+      "price": 0.5802
+    },
+    {
+      "ticker": "CLSN",
+      "price": 2.8401
+    }
+  ],
+  "380": [
+    {
+      "ticker": "NNVC",
+      "price": 0.4342
+    },
+    {
+      "ticker": "AVEO",
+      "price": 2.83
+    },
+    {
+      "ticker": "EVFM",
+      "price": 4.2811
+    },
+    {
+      "ticker": "CRMD",
+      "price": 0.5852
+    },
+    {
+      "ticker": "CLSN",
+      "price": 2.9
+    }
+  ],
+  "600": [
+    {
+      "ticker": "NNVC",
+      "price": 0.4369
+    },
+    {
+      "ticker": "AVEO",
+      "price": 2.84
+    },
+    {
+      "ticker": "EVFM",
+      "price": 4.41
+    },
+    {
+      "ticker": "CRMD",
+      "price": 0.5904
+    },
+    {
+      "ticker": "CLSN",
+      "price": 2.85
+    }
+  ]
+}

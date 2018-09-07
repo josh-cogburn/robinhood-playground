@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "IMMP",
+      "price": 3
+    },
+    {
+      "ticker": "RIBT",
+      "price": 3.09
+    }
+  ],
+  "5": [
+    {
+      "ticker": "IMMP",
+      "price": 2.81
+    },
+    {
+      "ticker": "SILV",
+      "price": 2.455
+    }
+  ],
+  "16": [
+    {
+      "ticker": "IMMP",
+      "price": 2.889
+    },
+    {
+      "ticker": "SILV",
+      "price": 2.2801
+    }
+  ],
+  "30": [
+    {
+      "ticker": "IMMP",
+      "price": 2.99
+    },
+    {
+      "ticker": "SILV",
+      "price": 2.44
+    }
+  ]
+}

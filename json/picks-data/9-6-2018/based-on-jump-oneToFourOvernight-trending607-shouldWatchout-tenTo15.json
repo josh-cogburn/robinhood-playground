@@ -1,0 +1,38 @@
+{
+  "0": [
+    {
+      "ticker": "HCLP",
+      "price": 12.3
+    }
+  ],
+  "5": [
+    {
+      "ticker": "HCLP",
+      "price": 12.3
+    },
+    {
+      "ticker": "TCS",
+      "price": 11.57
+    }
+  ],
+  "16": [
+    {
+      "ticker": "HCLP",
+      "price": 12.4
+    },
+    {
+      "ticker": "TCS",
+      "price": 11.455
+    }
+  ],
+  "30": [
+    {
+      "ticker": "HCLP",
+      "price": 12.425
+    },
+    {
+      "ticker": "TCS",
+      "price": 11.49
+    }
+  ]
+}

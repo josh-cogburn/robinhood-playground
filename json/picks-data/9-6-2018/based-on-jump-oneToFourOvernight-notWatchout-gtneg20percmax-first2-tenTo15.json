@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "YLCO",
+      "price": 12.02
+    },
+    {
+      "ticker": "USAT",
+      "price": 14.8
+    }
+  ],
+  "5": [
+    {
+      "ticker": "MGTA",
+      "price": 13.99
+    },
+    {
+      "ticker": "YLCO",
+      "price": 12.02
+    }
+  ],
+  "16": [
+    {
+      "ticker": "MGTA",
+      "price": 13.66
+    },
+    {
+      "ticker": "ROAD",
+      "price": 12.68
+    }
+  ],
+  "30": [
+    {
+      "ticker": "MGTA",
+      "price": 13
+    },
+    {
+      "ticker": "ROAD",
+      "price": 12.59
+    }
+  ]
+}

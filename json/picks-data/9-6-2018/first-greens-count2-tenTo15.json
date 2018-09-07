@@ -1,0 +1,52 @@
+{
+  "12": [
+    {
+      "ticker": "AMEH",
+      "price": 14.61
+    },
+    {
+      "ticker": "DNKEY",
+      "price": 14.39
+    }
+  ],
+  "190": [
+    {
+      "ticker": "CMCM",
+      "price": 10.19
+    },
+    {
+      "ticker": "AMEH",
+      "price": 14.5
+    }
+  ],
+  "250": [
+    {
+      "ticker": "CMCM",
+      "price": 10.2
+    },
+    {
+      "ticker": "AMEH",
+      "price": 14.46
+    }
+  ],
+  "600": [
+    {
+      "ticker": "CMCM",
+      "price": 10.05
+    },
+    {
+      "ticker": "AMEH",
+      "price": 14.7
+    }
+  ],
+  "-15": [
+    {
+      "ticker": "CMCM",
+      "price": 10.13
+    },
+    {
+      "ticker": "AMEH",
+      "price": 14.61
+    }
+  ]
+}

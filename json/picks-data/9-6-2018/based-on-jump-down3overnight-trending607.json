@@ -1,0 +1,50 @@
+{
+  "0": [
+    {
+      "ticker": "III",
+      "price": 4.8
+    },
+    {
+      "ticker": "OCC",
+      "price": 4.05
+    },
+    {
+      "ticker": "MBII",
+      "price": 2.04
+    }
+  ],
+  "5": [
+    {
+      "ticker": "OCC",
+      "price": 4.05
+    },
+    {
+      "ticker": "MBII",
+      "price": 2.12
+    }
+  ],
+  "16": [
+    {
+      "ticker": "III",
+      "price": 5
+    },
+    {
+      "ticker": "OCC",
+      "price": 4.05
+    },
+    {
+      "ticker": "MBII",
+      "price": 2.1
+    }
+  ],
+  "30": [
+    {
+      "ticker": "OCC",
+      "price": 3.85
+    },
+    {
+      "ticker": "MBII",
+      "price": 2.0622
+    }
+  ]
+}

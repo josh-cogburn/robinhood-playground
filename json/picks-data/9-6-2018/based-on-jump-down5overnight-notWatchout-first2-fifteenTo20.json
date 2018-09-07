@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "SSUMY",
+      "price": 15.775
+    },
+    {
+      "ticker": "CJPRY",
+      "price": 19.16
+    }
+  ],
+  "5": [
+    {
+      "ticker": "FCCY",
+      "price": 18.5
+    },
+    {
+      "ticker": "ZLAB",
+      "price": 18.9
+    }
+  ],
+  "16": [
+    {
+      "ticker": "FCCY",
+      "price": 19.7
+    },
+    {
+      "ticker": "ZLAB",
+      "price": 18.25
+    }
+  ],
+  "30": [
+    {
+      "ticker": "FCCY",
+      "price": 19.75
+    },
+    {
+      "ticker": "ZLAB",
+      "price": 18.54
+    }
+  ]
+}

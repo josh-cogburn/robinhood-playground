@@ -1,0 +1,78 @@
+{
+  "10": [
+    {
+      "ticker": "INNT",
+      "price": 8.067
+    },
+    {
+      "ticker": "RCM",
+      "price": 9.54
+    },
+    {
+      "ticker": "MFIN",
+      "price": 6.5
+    },
+    {
+      "ticker": "TRXC",
+      "price": 5.68
+    }
+  ],
+  "50": [
+    {
+      "ticker": "INNT",
+      "price": 7.7724
+    },
+    {
+      "ticker": "RCM",
+      "price": 9.53
+    },
+    {
+      "ticker": "MFIN",
+      "price": 6.5
+    },
+    {
+      "ticker": "TRXC",
+      "price": 5.76
+    }
+  ],
+  "200": [
+    {
+      "ticker": "RCM",
+      "price": 9.69
+    },
+    {
+      "ticker": "TRXC",
+      "price": 5.79
+    }
+  ],
+  "300": [
+    {
+      "ticker": "RCM",
+      "price": 9.65
+    },
+    {
+      "ticker": "TRXC",
+      "price": 5.795
+    }
+  ],
+  "380": [
+    {
+      "ticker": "RCM",
+      "price": 9.525
+    },
+    {
+      "ticker": "TRXC",
+      "price": 5.8101
+    }
+  ],
+  "600": [
+    {
+      "ticker": "RCM",
+      "price": 9.6
+    },
+    {
+      "ticker": "TRXC",
+      "price": 5.81
+    }
+  ]
+}

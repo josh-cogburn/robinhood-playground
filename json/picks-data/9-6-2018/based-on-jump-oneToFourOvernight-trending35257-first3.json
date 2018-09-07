@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "IMMP",
+      "price": 3
+    },
+    {
+      "ticker": "SLS",
+      "price": 1.19
+    },
+    {
+      "ticker": "LIFE",
+      "price": 0.84
+    }
+  ],
+  "5": [
+    {
+      "ticker": "IMMP",
+      "price": 2.81
+    },
+    {
+      "ticker": "SLS",
+      "price": 1.189
+    },
+    {
+      "ticker": "LIFE",
+      "price": 0.8359
+    }
+  ],
+  "16": [
+    {
+      "ticker": "IMMP",
+      "price": 2.889
+    },
+    {
+      "ticker": "SLS",
+      "price": 1.1699
+    },
+    {
+      "ticker": "OPGN",
+      "price": 1.9826
+    }
+  ],
+  "30": [
+    {
+      "ticker": "IMMP",
+      "price": 2.99
+    },
+    {
+      "ticker": "SLS",
+      "price": 1.18
+    },
+    {
+      "ticker": "OPGN",
+      "price": 1.925
+    }
+  ]
+}

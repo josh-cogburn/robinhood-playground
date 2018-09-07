@@ -1,0 +1,59 @@
+{
+  "4": [
+    {
+      "ticker": "ABCD",
+      "price": 12.8
+    },
+    {
+      "ticker": "MTG",
+      "price": 13.0401
+    }
+  ],
+  "40": [],
+  "100": [
+    {
+      "ticker": "ESND",
+      "price": 14.36
+    },
+    {
+      "ticker": "EEQ",
+      "price": 10.98
+    }
+  ],
+  "200": [
+    {
+      "ticker": "OXFD",
+      "price": 14.69
+    },
+    {
+      "ticker": "EEQ",
+      "price": 10.965
+    }
+  ],
+  "260": [
+    {
+      "ticker": "OXFD",
+      "price": 14.69
+    },
+    {
+      "ticker": "EEQ",
+      "price": 10.97
+    }
+  ],
+  "351": [
+    {
+      "ticker": "QNST",
+      "price": 14.275
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ELF",
+      "price": 13.28
+    },
+    {
+      "ticker": "INAP",
+      "price": 12.3999
+    }
+  ]
+}
