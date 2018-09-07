@@ -20,7 +20,7 @@ const {
 module.exports = {
     // important settings
     sellAllStocksOnNthDay: 2,
-    purchaseAmt: 20,
+    purchaseAmt: 30,
     forPurchase: [
         '[sepPerfectosLowCounts]',
         '[sepPerfectosLowCounts]',
