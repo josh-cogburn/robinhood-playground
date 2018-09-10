@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "AQMS",
+      "price": 2.53
+    },
+    {
+      "ticker": "SLS",
+      "price": 1.29
+    }
+  ],
+  "5": [
+    {
+      "ticker": "AQMS",
+      "price": 2.55
+    },
+    {
+      "ticker": "SLS",
+      "price": 1.2599
+    }
+  ],
+  "16": [
+    {
+      "ticker": "AQMS",
+      "price": 2.57
+    },
+    {
+      "ticker": "SLS",
+      "price": 1.24
+    }
+  ],
+  "30": [
+    {
+      "ticker": "AQMS",
+      "price": 2.63
+    },
+    {
+      "ticker": "SLS",
+      "price": 1.25
+    }
+  ]
+}

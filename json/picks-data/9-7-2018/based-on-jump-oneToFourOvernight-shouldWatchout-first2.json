@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "ESES",
+      "price": 0.39
+    },
+    {
+      "ticker": "TIS",
+      "price": 2.6241
+    }
+  ],
+  "5": [
+    {
+      "ticker": "TIS",
+      "price": 2.6241
+    },
+    {
+      "ticker": "ESES",
+      "price": 0.392
+    }
+  ],
+  "16": [
+    {
+      "ticker": "TIS",
+      "price": 2.66
+    },
+    {
+      "ticker": "ESES",
+      "price": 0.392
+    }
+  ],
+  "30": [
+    {
+      "ticker": "HLTH",
+      "price": 0.765
+    },
+    {
+      "ticker": "TIS",
+      "price": 2.7001
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "10": [
+    {
+      "ticker": "LOOP",
+      "price": 10.4999
+    },
+    {
+      "ticker": "JP",
+      "price": 12.55
+    }
+  ],
+  "35": [
+    {
+      "ticker": "JP",
+      "price": 12.5
+    },
+    {
+      "ticker": "LOOP",
+      "price": 10.3
+    }
+  ],
+  "90": [
+    {
+      "ticker": "JP",
+      "price": 12.6
+    },
+    {
+      "ticker": "FOLD",
+      "price": 12.65
+    }
+  ],
+  "223": [
+    {
+      "ticker": "EVER",
+      "price": 13.92
+    },
+    {
+      "ticker": "FOLD",
+      "price": 12.66
+    }
+  ]
+}

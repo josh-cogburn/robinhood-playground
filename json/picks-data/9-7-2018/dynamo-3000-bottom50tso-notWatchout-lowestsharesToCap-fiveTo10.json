@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "PLAB",
+      "price": 9.9
+    },
+    {
+      "ticker": "GRBK",
+      "price": 9.85
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CMCM",
+      "price": 9.965
+    },
+    {
+      "ticker": "FTSI",
+      "price": 9.5
+    }
+  ],
+  "100": [
+    {
+      "ticker": "EGAN",
+      "price": 9.65
+    },
+    {
+      "ticker": "CMCM",
+      "price": 9.91
+    }
+  ],
+  "200": [
+    {
+      "ticker": "EGAN",
+      "price": 9.45
+    },
+    {
+      "ticker": "FTSI",
+      "price": 9.5
+    }
+  ],
+  "260": [
+    {
+      "ticker": "EGAN",
+      "price": 9.0001
+    },
+    {
+      "ticker": "FTSI",
+      "price": 9.51
+    }
+  ],
+  "351": [
+    {
+      "ticker": "EGAN",
+      "price": 8.825
+    },
+    {
+      "ticker": "CMCM",
+      "price": 9.64
+    }
+  ],
+  "381": [
+    {
+      "ticker": "EGAN",
+      "price": 8.8
+    },
+    {
+      "ticker": "CMCM",
+      "price": 9.67
+    }
+  ]
+}

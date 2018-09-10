@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "SCO",
+      "price": 16.4
+    },
+    {
+      "ticker": "PRQR",
+      "price": 16.2
+    }
+  ],
+  "5": [
+    {
+      "ticker": "SCO",
+      "price": 16.42
+    },
+    {
+      "ticker": "PRQR",
+      "price": 15.9901
+    }
+  ],
+  "16": [
+    {
+      "ticker": "SCO",
+      "price": 16.41
+    },
+    {
+      "ticker": "PRQR",
+      "price": 15.9931
+    }
+  ],
+  "30": [
+    {
+      "ticker": "SCO",
+      "price": 16.35
+    },
+    {
+      "ticker": "PRQR",
+      "price": 16.3001
+    }
+  ]
+}

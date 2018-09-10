@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "ACH",
+      "price": 10.0499
+    },
+    {
+      "ticker": "CYOU",
+      "price": 13.5732
+    }
+  ],
+  "40": [
+    {
+      "ticker": "JP",
+      "price": 12.5536
+    },
+    {
+      "ticker": "CYOU",
+      "price": 13.92
+    }
+  ],
+  "100": [
+    {
+      "ticker": "JP",
+      "price": 12.6
+    },
+    {
+      "ticker": "CYOU",
+      "price": 13.91
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CYOU",
+      "price": 13.68
+    },
+    {
+      "ticker": "FRAC",
+      "price": 10.5701
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NYNY",
+      "price": 10.35
+    },
+    {
+      "ticker": "JP",
+      "price": 12.1
+    }
+  ],
+  "351": [
+    {
+      "ticker": "JP",
+      "price": 12.15
+    },
+    {
+      "ticker": "FRAC",
+      "price": 10.55
+    }
+  ],
+  "381": [
+    {
+      "ticker": "JP",
+      "price": 12.02
+    },
+    {
+      "ticker": "FRAC",
+      "price": 10.63
+    }
+  ]
+}

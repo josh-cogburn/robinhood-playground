@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "SCO",
+      "price": 16.4
+    },
+    {
+      "ticker": "LBJ",
+      "price": 18.43
+    }
+  ],
+  "5": [
+    {
+      "ticker": "SCO",
+      "price": 16.42
+    },
+    {
+      "ticker": "LBJ",
+      "price": 18.35
+    }
+  ],
+  "16": [
+    {
+      "ticker": "SCO",
+      "price": 16.41
+    },
+    {
+      "ticker": "LBJ",
+      "price": 18.55
+    }
+  ],
+  "30": [
+    {
+      "ticker": "SCO",
+      "price": 16.35
+    },
+    {
+      "ticker": "LBJ",
+      "price": 18.5
+    }
+  ]
+}

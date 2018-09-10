@@ -1,0 +1,43 @@
+{
+  "10": [
+    {
+      "ticker": "TPIV",
+      "price": 9.2
+    },
+    {
+      "ticker": "TA",
+      "price": 5.65
+    }
+  ],
+  "50": [
+    {
+      "ticker": "TPIV",
+      "price": 9.5239
+    },
+    {
+      "ticker": "SURF",
+      "price": 9.7775
+    },
+    {
+      "ticker": "TA",
+      "price": 5.6212
+    },
+    {
+      "ticker": "INO",
+      "price": 5.4875
+    }
+  ],
+  "200": [
+    {
+      "ticker": "INO",
+      "price": 5.4
+    },
+    {
+      "ticker": "CLBS",
+      "price": 5.44
+    }
+  ],
+  "300": [],
+  "380": [],
+  "600": []
+}

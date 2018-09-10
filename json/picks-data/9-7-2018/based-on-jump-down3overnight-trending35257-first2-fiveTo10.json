@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "AMKBY",
+      "price": 6.98
+    },
+    {
+      "ticker": "HGKGY",
+      "price": 7.1
+    }
+  ],
+  "5": [
+    {
+      "ticker": "LXU",
+      "price": 8.4
+    },
+    {
+      "ticker": "INTT",
+      "price": 8.55
+    }
+  ],
+  "16": [
+    {
+      "ticker": "LXU",
+      "price": 8.55
+    },
+    {
+      "ticker": "INTT",
+      "price": 8.45
+    }
+  ],
+  "30": [
+    {
+      "ticker": "LXU",
+      "price": 8.755
+    },
+    {
+      "ticker": "INTT",
+      "price": 8.305
+    }
+  ]
+}

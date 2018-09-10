@@ -1,0 +1,42 @@
+{
+  "10": [
+    {
+      "ticker": "ACTG",
+      "price": 3.6
+    },
+    {
+      "ticker": "XBIT",
+      "price": 3.88
+    }
+  ],
+  "35": [
+    {
+      "ticker": "ACTG",
+      "price": 3.6
+    },
+    {
+      "ticker": "PLM",
+      "price": 0.9698
+    }
+  ],
+  "90": [
+    {
+      "ticker": "PLM",
+      "price": 0.9864
+    },
+    {
+      "ticker": "ACTG",
+      "price": 3.625
+    }
+  ],
+  "223": [
+    {
+      "ticker": "PLM",
+      "price": 0.9768
+    },
+    {
+      "ticker": "ACTG",
+      "price": 3.6
+    }
+  ]
+}

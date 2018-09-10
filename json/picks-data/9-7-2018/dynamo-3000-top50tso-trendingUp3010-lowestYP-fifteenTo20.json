@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "TFSL",
+      "price": 15.55
+    },
+    {
+      "ticker": "USX",
+      "price": 15.4
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CAPL",
+      "price": 18.53
+    },
+    {
+      "ticker": "GLOG",
+      "price": 17.666
+    }
+  ],
+  "100": [
+    {
+      "ticker": "GLOG",
+      "price": 17.95
+    },
+    {
+      "ticker": "GME",
+      "price": 16.15
+    }
+  ],
+  "200": [
+    {
+      "ticker": "OMI",
+      "price": 17.98
+    },
+    {
+      "ticker": "GLOG",
+      "price": 17.825
+    }
+  ],
+  "260": [
+    {
+      "ticker": "OMI",
+      "price": 18.001
+    },
+    {
+      "ticker": "TITN",
+      "price": 17.82
+    }
+  ],
+  "351": [
+    {
+      "ticker": "OMI",
+      "price": 18.01
+    },
+    {
+      "ticker": "TITN",
+      "price": 17.89
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MBNAB",
+      "price": 10
+    },
+    {
+      "ticker": "OMI",
+      "price": 18.03
+    }
+  ]
+}

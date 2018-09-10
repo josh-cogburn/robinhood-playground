@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "ABUS",
+      "price": 10.65
+    },
+    {
+      "ticker": "NRBAY",
+      "price": 10.65
+    }
+  ],
+  "40": [
+    {
+      "ticker": "VECO",
+      "price": 11.775
+    },
+    {
+      "ticker": "LOOP",
+      "price": 10.3
+    }
+  ],
+  "100": [
+    {
+      "ticker": "VECO",
+      "price": 11.75
+    },
+    {
+      "ticker": "CBB",
+      "price": 13.8
+    }
+  ],
+  "200": [
+    {
+      "ticker": "TORC",
+      "price": 11.65
+    },
+    {
+      "ticker": "SELB",
+      "price": 13.805
+    }
+  ],
+  "260": [
+    {
+      "ticker": "VECO",
+      "price": 11.775
+    },
+    {
+      "ticker": "TORC",
+      "price": 11.76
+    }
+  ],
+  "351": [
+    {
+      "ticker": "VECO",
+      "price": 11.75
+    },
+    {
+      "ticker": "TORC",
+      "price": 11.7545
+    }
+  ],
+  "381": [
+    {
+      "ticker": "VECO",
+      "price": 11.825
+    },
+    {
+      "ticker": "TORC",
+      "price": 11.76
+    }
+  ]
+}

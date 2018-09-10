@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "HCLP",
+      "price": 12.25
+    },
+    {
+      "ticker": "CMTA",
+      "price": 12.4168
+    }
+  ],
+  "5": [
+    {
+      "ticker": "HCLP",
+      "price": 12.225
+    },
+    {
+      "ticker": "CMTA",
+      "price": 12.4168
+    }
+  ],
+  "16": [
+    {
+      "ticker": "HCLP",
+      "price": 12.225
+    },
+    {
+      "ticker": "CMTA",
+      "price": 11.33
+    }
+  ],
+  "30": [
+    {
+      "ticker": "HCLP",
+      "price": 12.1817
+    },
+    {
+      "ticker": "CMTA",
+      "price": 11.34
+    }
+  ]
+}

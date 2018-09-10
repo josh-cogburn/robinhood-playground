@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "CVM",
+      "price": 3.05
+    },
+    {
+      "ticker": "KIQ",
+      "price": 0.45
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CVM",
+      "price": 3.135
+    },
+    {
+      "ticker": "KIQ",
+      "price": 0.45
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CVM",
+      "price": 3.25
+    },
+    {
+      "ticker": "KIQ",
+      "price": 0.451
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CVM",
+      "price": 3.16
+    },
+    {
+      "ticker": "KIQ",
+      "price": 0.451
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "VIIX",
+      "price": 13.1
+    },
+    {
+      "ticker": "CSPI",
+      "price": 13.79
+    }
+  ],
+  "5": [
+    {
+      "ticker": "VIIX",
+      "price": 13.14
+    },
+    {
+      "ticker": "CSPI",
+      "price": 13.79
+    }
+  ],
+  "16": [
+    {
+      "ticker": "VIIX",
+      "price": 13.12
+    },
+    {
+      "ticker": "CSPI",
+      "price": 13.65
+    }
+  ],
+  "30": [
+    {
+      "ticker": "VIIX",
+      "price": 13.013
+    },
+    {
+      "ticker": "CSPI",
+      "price": 13.5
+    }
+  ]
+}

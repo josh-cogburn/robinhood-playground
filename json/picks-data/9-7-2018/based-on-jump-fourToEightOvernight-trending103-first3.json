@@ -1,0 +1,54 @@
+{
+  "0": [
+    {
+      "ticker": "SPI",
+      "price": 0.3596
+    },
+    {
+      "ticker": "ALT",
+      "price": 0.31
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CRMD",
+      "price": 0.6185
+    },
+    {
+      "ticker": "SPI",
+      "price": 0.34
+    },
+    {
+      "ticker": "ALT",
+      "price": 0.31
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CRMD",
+      "price": 0.5987
+    },
+    {
+      "ticker": "SPI",
+      "price": 0.34
+    },
+    {
+      "ticker": "ENSV",
+      "price": 0.6802
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CRMD",
+      "price": 0.591
+    },
+    {
+      "ticker": "SPI",
+      "price": 0.3442
+    },
+    {
+      "ticker": "ENSV",
+      "price": 0.6975
+    }
+  ]
+}

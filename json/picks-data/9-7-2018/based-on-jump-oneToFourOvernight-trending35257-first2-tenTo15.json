@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "VIIX",
+      "price": 13.1
+    },
+    {
+      "ticker": "CMTA",
+      "price": 12.4168
+    }
+  ],
+  "5": [
+    {
+      "ticker": "VIIX",
+      "price": 13.14
+    },
+    {
+      "ticker": "CMTA",
+      "price": 12.4168
+    }
+  ],
+  "16": [
+    {
+      "ticker": "VIIX",
+      "price": 13.12
+    },
+    {
+      "ticker": "CMTA",
+      "price": 11.33
+    }
+  ],
+  "30": [
+    {
+      "ticker": "VIIX",
+      "price": 13.013
+    },
+    {
+      "ticker": "CMTA",
+      "price": 11.34
+    }
+  ]
+}

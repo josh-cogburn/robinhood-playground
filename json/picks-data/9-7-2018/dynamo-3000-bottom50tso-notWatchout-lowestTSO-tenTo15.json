@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "ADAP",
+      "price": 10.55
+    },
+    {
+      "ticker": "EGAN",
+      "price": 10
+    }
+  ],
+  "40": [
+    {
+      "ticker": "HMTA",
+      "price": 14.05
+    },
+    {
+      "ticker": "DNKEY",
+      "price": 13.7
+    }
+  ],
+  "100": [
+    {
+      "ticker": "HMTA",
+      "price": 13.8188
+    },
+    {
+      "ticker": "ARDS",
+      "price": 12.5
+    }
+  ],
+  "200": [
+    {
+      "ticker": "HMTA",
+      "price": 13.8188
+    },
+    {
+      "ticker": "ARDS",
+      "price": 12.3402
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ARDS",
+      "price": 12.05
+    },
+    {
+      "ticker": "CCXI",
+      "price": 11.365
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CCXI",
+      "price": 10.94
+    },
+    {
+      "ticker": "ARDS",
+      "price": 12.0366
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CCXI",
+      "price": 10.81
+    },
+    {
+      "ticker": "ARDS",
+      "price": 12.12
+    }
+  ]
+}

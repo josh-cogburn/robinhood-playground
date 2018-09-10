@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "DERM",
+      "price": 10
+    },
+    {
+      "ticker": "PDEX",
+      "price": 9.9
+    }
+  ],
+  "40": [
+    {
+      "ticker": "PDEX",
+      "price": 9.9
+    },
+    {
+      "ticker": "GWRS",
+      "price": 9.9685
+    }
+  ],
+  "100": [
+    {
+      "ticker": "DERM",
+      "price": 9.66
+    },
+    {
+      "ticker": "LOOP",
+      "price": 9.4
+    }
+  ],
+  "200": [
+    {
+      "ticker": "DERM",
+      "price": 9.67
+    },
+    {
+      "ticker": "LOOP",
+      "price": 9.6
+    }
+  ],
+  "260": [
+    {
+      "ticker": "DERM",
+      "price": 9.65
+    },
+    {
+      "ticker": "LOOP",
+      "price": 9.61
+    }
+  ],
+  "351": [
+    {
+      "ticker": "DERM",
+      "price": 9.75
+    },
+    {
+      "ticker": "LOOP",
+      "price": 9.795
+    }
+  ],
+  "381": [
+    {
+      "ticker": "DERM",
+      "price": 9.85
+    },
+    {
+      "ticker": "LOOP",
+      "price": 9.79
+    }
+  ]
+}

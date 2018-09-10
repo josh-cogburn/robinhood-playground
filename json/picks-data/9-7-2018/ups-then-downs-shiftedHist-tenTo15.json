@@ -1,0 +1,35 @@
+{
+  "10": [
+    {
+      "ticker": "CRON",
+      "price": 11.96
+    },
+    {
+      "ticker": "ABUS",
+      "price": 10.5511
+    }
+  ],
+  "50": [
+    {
+      "ticker": "CRON",
+      "price": 12.3
+    },
+    {
+      "ticker": "ABUS",
+      "price": 10.85
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CRON",
+      "price": 12.1
+    },
+    {
+      "ticker": "ABUS",
+      "price": 10.725
+    }
+  ],
+  "300": [],
+  "380": [],
+  "600": []
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "NVUS",
+      "price": 4.95
+    },
+    {
+      "ticker": "CORV",
+      "price": 5.0151
+    }
+  ],
+  "40": [
+    {
+      "ticker": "MBOT",
+      "price": 6.6431
+    },
+    {
+      "ticker": "NVUS",
+      "price": 5.1199
+    }
+  ],
+  "100": [
+    {
+      "ticker": "BKS",
+      "price": 5.25
+    },
+    {
+      "ticker": "KMPH",
+      "price": 5.05
+    }
+  ],
+  "200": [
+    {
+      "ticker": "BKS",
+      "price": 5.075
+    },
+    {
+      "ticker": "KMPH",
+      "price": 5.15
+    }
+  ],
+  "260": [
+    {
+      "ticker": "BKS",
+      "price": 5.1005
+    },
+    {
+      "ticker": "KMPH",
+      "price": 5.2
+    }
+  ],
+  "351": [
+    {
+      "ticker": "BKS",
+      "price": 5.3001
+    },
+    {
+      "ticker": "KMPH",
+      "price": 5.25
+    }
+  ],
+  "381": [
+    {
+      "ticker": "BKS",
+      "price": 5.325
+    },
+    {
+      "ticker": "KMPH",
+      "price": 5.2
+    }
+  ]
+}

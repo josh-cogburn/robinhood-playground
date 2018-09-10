@@ -1,0 +1,90 @@
+{
+  "0": [
+    {
+      "ticker": "TTM",
+      "price": 18.95
+    },
+    {
+      "ticker": "SCO",
+      "price": 16.4
+    },
+    {
+      "ticker": "MIK",
+      "price": 16.395
+    },
+    {
+      "ticker": "LBJ",
+      "price": 18.43
+    },
+    {
+      "ticker": "TMV",
+      "price": 19.91
+    }
+  ],
+  "5": [
+    {
+      "ticker": "REPL",
+      "price": 19.999
+    },
+    {
+      "ticker": "TTM",
+      "price": 18.882
+    },
+    {
+      "ticker": "SCO",
+      "price": 16.42
+    },
+    {
+      "ticker": "MIK",
+      "price": 16.37
+    },
+    {
+      "ticker": "LBJ",
+      "price": 18.35
+    }
+  ],
+  "16": [
+    {
+      "ticker": "REPL",
+      "price": 19.98
+    },
+    {
+      "ticker": "TTM",
+      "price": 18.915
+    },
+    {
+      "ticker": "SCO",
+      "price": 16.41
+    },
+    {
+      "ticker": "MIK",
+      "price": 16.59
+    },
+    {
+      "ticker": "LBJ",
+      "price": 18.55
+    }
+  ],
+  "30": [
+    {
+      "ticker": "TTM",
+      "price": 19.01
+    },
+    {
+      "ticker": "SCO",
+      "price": 16.35
+    },
+    {
+      "ticker": "MIK",
+      "price": 16.54
+    },
+    {
+      "ticker": "LBJ",
+      "price": 18.5
+    },
+    {
+      "ticker": "TMV",
+      "price": 19.99
+    }
+  ]
+}

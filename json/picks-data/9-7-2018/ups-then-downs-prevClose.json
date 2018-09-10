@@ -1,0 +1,55 @@
+{
+  "10": [
+    {
+      "ticker": "AMDA",
+      "price": 0.4202
+    },
+    {
+      "ticker": "INFI",
+      "price": 2.31
+    },
+    {
+      "ticker": "NBEV",
+      "price": 1.95
+    },
+    {
+      "ticker": "CVM",
+      "price": 3.21
+    },
+    {
+      "ticker": "VBIV",
+      "price": 2.16
+    }
+  ],
+  "50": [
+    {
+      "ticker": "NBEV",
+      "price": 1.8593
+    },
+    {
+      "ticker": "CVM",
+      "price": 3.0301
+    },
+    {
+      "ticker": "FEDU",
+      "price": 4.28
+    }
+  ],
+  "200": [
+    {
+      "ticker": "NBEV",
+      "price": 1.76
+    },
+    {
+      "ticker": "INFI",
+      "price": 2.405
+    },
+    {
+      "ticker": "VBIV",
+      "price": 2.13
+    }
+  ],
+  "300": [],
+  "380": [],
+  "600": []
+}

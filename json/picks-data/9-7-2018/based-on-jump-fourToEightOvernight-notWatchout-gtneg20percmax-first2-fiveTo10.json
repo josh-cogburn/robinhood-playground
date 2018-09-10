@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "EPM",
+      "price": 10
+    },
+    {
+      "ticker": "OCUL",
+      "price": 6.9556
+    }
+  ],
+  "5": [
+    {
+      "ticker": "EPM",
+      "price": 9.75
+    },
+    {
+      "ticker": "OCUL",
+      "price": 6.865
+    }
+  ],
+  "16": [
+    {
+      "ticker": "EPM",
+      "price": 9.8
+    },
+    {
+      "ticker": "OCUL",
+      "price": 6.8501
+    }
+  ],
+  "30": [
+    {
+      "ticker": "EPM",
+      "price": 9.875
+    },
+    {
+      "ticker": "OCUL",
+      "price": 6.88
+    }
+  ]
+}

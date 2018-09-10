@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "TTM",
+      "price": 18.95
+    },
+    {
+      "ticker": "SCO",
+      "price": 16.4
+    }
+  ],
+  "5": [
+    {
+      "ticker": "TTM",
+      "price": 18.882
+    },
+    {
+      "ticker": "SCO",
+      "price": 16.42
+    }
+  ],
+  "16": [
+    {
+      "ticker": "TTM",
+      "price": 18.915
+    },
+    {
+      "ticker": "SCO",
+      "price": 16.41
+    }
+  ],
+  "30": [
+    {
+      "ticker": "TTM",
+      "price": 19.01
+    },
+    {
+      "ticker": "SCO",
+      "price": 16.35
+    }
+  ]
+}

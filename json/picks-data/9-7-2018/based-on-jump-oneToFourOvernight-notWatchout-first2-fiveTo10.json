@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "HPR",
+      "price": 5.42
+    },
+    {
+      "ticker": "WTID",
+      "price": 7.82
+    }
+  ],
+  "5": [
+    {
+      "ticker": "HPR",
+      "price": 5.32
+    },
+    {
+      "ticker": "WTID",
+      "price": 7.8242
+    }
+  ],
+  "16": [
+    {
+      "ticker": "HPR",
+      "price": 5.29
+    },
+    {
+      "ticker": "WTID",
+      "price": 7.83
+    }
+  ],
+  "30": [
+    {
+      "ticker": "HPR",
+      "price": 5.33
+    },
+    {
+      "ticker": "WTID",
+      "price": 7.83
+    }
+  ]
+}

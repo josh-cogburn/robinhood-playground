@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "SCO",
+      "price": 16.4
+    },
+    {
+      "ticker": "TECS",
+      "price": 19.95
+    }
+  ],
+  "5": [
+    {
+      "ticker": "SCO",
+      "price": 16.42
+    },
+    {
+      "ticker": "BIS",
+      "price": 16.92
+    }
+  ],
+  "16": [
+    {
+      "ticker": "SCO",
+      "price": 16.41
+    },
+    {
+      "ticker": "TECS",
+      "price": 19.829
+    }
+  ],
+  "30": [
+    {
+      "ticker": "SCO",
+      "price": 16.35
+    },
+    {
+      "ticker": "TECS",
+      "price": 19.544
+    }
+  ]
+}

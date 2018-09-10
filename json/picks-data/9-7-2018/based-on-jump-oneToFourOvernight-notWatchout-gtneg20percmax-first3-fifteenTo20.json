@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "TMV",
+      "price": 19.91
+    },
+    {
+      "ticker": "FEYE",
+      "price": 15.36
+    },
+    {
+      "ticker": "CDEV",
+      "price": 18.92
+    }
+  ],
+  "5": [
+    {
+      "ticker": "REPL",
+      "price": 19.999
+    },
+    {
+      "ticker": "TMV",
+      "price": 19.93
+    },
+    {
+      "ticker": "FEYE",
+      "price": 15.43
+    }
+  ],
+  "16": [
+    {
+      "ticker": "REPL",
+      "price": 19.98
+    },
+    {
+      "ticker": "TMV",
+      "price": 19.98
+    },
+    {
+      "ticker": "FEYE",
+      "price": 15.58
+    }
+  ],
+  "30": [
+    {
+      "ticker": "TMV",
+      "price": 19.99
+    },
+    {
+      "ticker": "FEYE",
+      "price": 15.68
+    },
+    {
+      "ticker": "CDEV",
+      "price": 18.94
+    }
+  ]
+}

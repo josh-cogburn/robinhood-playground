@@ -1,0 +1,43 @@
+{
+  "12": [
+    {
+      "ticker": "USAT",
+      "price": 15.3166
+    },
+    {
+      "ticker": "AMOV",
+      "price": 15.99
+    }
+  ],
+  "190": [
+    {
+      "ticker": "AMX",
+      "price": 15.89
+    },
+    {
+      "ticker": "AGYS",
+      "price": 15.59
+    }
+  ],
+  "250": [
+    {
+      "ticker": "BXG",
+      "price": 19.12
+    },
+    {
+      "ticker": "SMHI",
+      "price": 20
+    }
+  ],
+  "600": [],
+  "-15": [
+    {
+      "ticker": "USAT",
+      "price": 15.35
+    },
+    {
+      "ticker": "AMOV",
+      "price": 15.99
+    }
+  ]
+}
