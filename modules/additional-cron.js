@@ -110,7 +110,7 @@ const additionalCronConfig = [
 
     {
         name: 'strat perf multiple',
-        run: [600],
+        run: [500],
         fn: (Robinhood) => stratPerfMultiple(Robinhood, 52, 'next-day-330')
     },
 
