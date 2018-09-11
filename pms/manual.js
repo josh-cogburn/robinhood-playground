@@ -752,7 +752,13 @@ const sepPerfectosLowCounts = [
     "based-on-jump-down5overnight-notWatchout-ltneg50percmax-first1-fifteenTo20-16",
     "based-on-jump-gtEightOvernight-trending103-first1-fifteenTo20-5",
     // "up-streak-3to5days-gt3overnight-fifteenTo20-45",
-    "sudden-drops-last2trend-filter10-360"
+    "sudden-drops-last2trend-filter10-360",
+
+
+    'based-on-jump-down8overnight-trending53-gt500kvolume-fiveTo10-0',
+    'sudden-drops-last5trend-filter20-388',
+    'low-float-high-volume-floatTimestwoWeekVolToAvgPoints-trenddowngt20-notWatchout-210',
+
 ];
 
 const sepPerfectosLowerCounts = [
@@ -828,6 +834,7 @@ const unprovenFilter30Drops = [
 const unprovenFilter20Drops = [
     "sudden-drops-last30trend-filter20-tenTo15-388",
     "sudden-drops-last10trend-filter20-fiveTo10-388",
+    'sudden-drops-last5trend-filter20-388',
     // "sudden-drops-last18trend-filter20-fiveTo10-388",
     "sudden-drops-last50trend-filter20-tenTo15-388",
     // "sudden-drops-last5trend-filter20-fiveTo10-388",
@@ -855,7 +862,9 @@ const unprovenFilter20Drops = [
     // "sudden-drops-last30trend-filter20-189",
     "sudden-drops-last30trend-filter20-fiveTo10-153",
     "sudden-drops-last5trend-filter20-fiveTo10-32",
-    "sudden-drops-last1trend-filter20-fiveTo10-14"
+    "sudden-drops-last1trend-filter20-fiveTo10-14",
+
+    
 ];
 
 const unprovenSuddenDropsLast2Filter10 = [
