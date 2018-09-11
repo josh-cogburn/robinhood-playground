@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "FRED",
+      "price": 2.52
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.4293
+    },
+    {
+      "ticker": "TTNP",
+      "price": 0.776
+    }
+  ],
+  "5": [
+    {
+      "ticker": "FRED",
+      "price": 2.53
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.41
+    },
+    {
+      "ticker": "TTNP",
+      "price": 0.715
+    }
+  ],
+  "16": [
+    {
+      "ticker": "FRED",
+      "price": 2.3801
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.41
+    },
+    {
+      "ticker": "TTNP",
+      "price": 0.7411
+    }
+  ],
+  "30": [
+    {
+      "ticker": "FRED",
+      "price": 2.395
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.4
+    },
+    {
+      "ticker": "TTNP",
+      "price": 0.7
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "ESNC",
+      "price": 0.3
+    },
+    {
+      "ticker": "CEI",
+      "price": 0.211
+    }
+  ],
+  "40": [
+    {
+      "ticker": "OHRP",
+      "price": 0.1935
+    },
+    {
+      "ticker": "SAEX",
+      "price": 0.541
+    }
+  ],
+  "100": [
+    {
+      "ticker": "IMUC",
+      "price": 0.23
+    },
+    {
+      "ticker": "MVIS",
+      "price": 1.0736
+    }
+  ],
+  "200": [
+    {
+      "ticker": "HLTH",
+      "price": 0.8096
+    },
+    {
+      "ticker": "NGD",
+      "price": 0.822
+    }
+  ],
+  "260": [
+    {
+      "ticker": "KIQ",
+      "price": 0.4656
+    },
+    {
+      "ticker": "ISR",
+      "price": 0.531
+    }
+  ],
+  "351": [
+    {
+      "ticker": "OGEN",
+      "price": 0.4208
+    },
+    {
+      "ticker": "ISR",
+      "price": 0.5233
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ISR",
+      "price": 0.5299
+    },
+    {
+      "ticker": "OPTT",
+      "price": 0.7238
+    }
+  ]
+}

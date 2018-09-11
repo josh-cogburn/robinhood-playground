@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "OESX",
+      "price": 0.969
+    },
+    {
+      "ticker": "OCC",
+      "price": 3.75
+    }
+  ],
+  "5": [
+    {
+      "ticker": "HOV",
+      "price": 1.595
+    },
+    {
+      "ticker": "PLX",
+      "price": 0.4971
+    }
+  ],
+  "16": [
+    {
+      "ticker": "HOV",
+      "price": 1.62
+    },
+    {
+      "ticker": "PLX",
+      "price": 0.49
+    }
+  ],
+  "30": [
+    {
+      "ticker": "HOV",
+      "price": 1.64
+    },
+    {
+      "ticker": "PLX",
+      "price": 0.483
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "0": [
+    {
+      "ticker": "CRON",
+      "price": 12.1696
+    },
+    {
+      "ticker": "SCWX",
+      "price": 13.165
+    },
+    {
+      "ticker": "SHLO",
+      "price": 10.8
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CRON",
+      "price": 12.1
+    },
+    {
+      "ticker": "SCWX",
+      "price": 13.165
+    },
+    {
+      "ticker": "SHLO",
+      "price": 10.65
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CRON",
+      "price": 12.0913
+    },
+    {
+      "ticker": "SCWX",
+      "price": 13.1801
+    },
+    {
+      "ticker": "SHLO",
+      "price": 10.7
+    }
+  ]
+}

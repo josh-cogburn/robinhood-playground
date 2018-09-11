@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "SOHO",
+      "price": 7.45
+    },
+    {
+      "ticker": "PHK",
+      "price": 8.9401
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CERS",
+      "price": 7.28
+    },
+    {
+      "ticker": "NE",
+      "price": 5.71
+    }
+  ],
+  "100": [
+    {
+      "ticker": "DNR",
+      "price": 5.165
+    },
+    {
+      "ticker": "CERS",
+      "price": 7.255
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ARQL",
+      "price": 6.06
+    },
+    {
+      "ticker": "EIGI",
+      "price": 9.475
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ZIXI",
+      "price": 5.6
+    },
+    {
+      "ticker": "GLAD",
+      "price": 9.7
+    }
+  ],
+  "351": [
+    {
+      "ticker": "WTI",
+      "price": 6.535
+    },
+    {
+      "ticker": "GMRE",
+      "price": 9.4
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ARQL",
+      "price": 6.085
+    },
+    {
+      "ticker": "MFIN",
+      "price": 6.1373
+    }
+  ]
+}

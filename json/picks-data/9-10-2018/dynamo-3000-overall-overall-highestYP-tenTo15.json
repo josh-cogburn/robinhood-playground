@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "IDRA",
+      "price": 10.2
+    },
+    {
+      "ticker": "XENE",
+      "price": 14.6
+    }
+  ],
+  "40": [
+    {
+      "ticker": "FTSV",
+      "price": 13.95
+    },
+    {
+      "ticker": "XENE",
+      "price": 14.6
+    }
+  ],
+  "100": [
+    {
+      "ticker": "CRON",
+      "price": 12.2
+    },
+    {
+      "ticker": "FTSV",
+      "price": 13.73
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CRON",
+      "price": 12.1324
+    },
+    {
+      "ticker": "XENE",
+      "price": 14.6
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CRON",
+      "price": 12.13
+    },
+    {
+      "ticker": "XENE",
+      "price": 14.65
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CRON",
+      "price": 12.0812
+    },
+    {
+      "ticker": "XENE",
+      "price": 14.65
+    }
+  ],
+  "381": [
+    {
+      "ticker": "FTSV",
+      "price": 13.57
+    },
+    {
+      "ticker": "CRON",
+      "price": 12.09
+    }
+  ]
+}

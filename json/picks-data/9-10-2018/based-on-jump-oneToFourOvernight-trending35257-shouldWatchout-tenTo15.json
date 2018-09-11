@@ -1,0 +1,44 @@
+{
+  "0": [
+    {
+      "ticker": "CRON",
+      "price": 12.1696
+    },
+    {
+      "ticker": "SHLO",
+      "price": 10.8
+    },
+    {
+      "ticker": "SPA",
+      "price": 13.825
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CRON",
+      "price": 12.1
+    },
+    {
+      "ticker": "SHLO",
+      "price": 10.65
+    },
+    {
+      "ticker": "SPA",
+      "price": 13.825
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CRON",
+      "price": 12.0913
+    },
+    {
+      "ticker": "SHLO",
+      "price": 10.7
+    },
+    {
+      "ticker": "SPA",
+      "price": 13.7
+    }
+  ]
+}

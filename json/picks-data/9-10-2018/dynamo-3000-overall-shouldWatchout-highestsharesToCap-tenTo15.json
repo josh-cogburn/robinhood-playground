@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "CVIA",
+      "price": 9.95
+    },
+    {
+      "ticker": "SHLO",
+      "price": 10.7356
+    }
+  ],
+  "40": [
+    {
+      "ticker": "PDEX",
+      "price": 10.145
+    },
+    {
+      "ticker": "CVIA",
+      "price": 10.04
+    }
+  ],
+  "100": [
+    {
+      "ticker": "PDEX",
+      "price": 10.395
+    },
+    {
+      "ticker": "DERM",
+      "price": 10.14
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PDEX",
+      "price": 10.2
+    },
+    {
+      "ticker": "SHLO",
+      "price": 10.96
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PDEX",
+      "price": 10.238
+    },
+    {
+      "ticker": "SHLO",
+      "price": 11.1144
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SHLO",
+      "price": 10.99
+    },
+    {
+      "ticker": "RFIL",
+      "price": 10.45
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SHLO",
+      "price": 10.86
+    },
+    {
+      "ticker": "RFIL",
+      "price": 10.45
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "INTT",
+      "price": 8
+    },
+    {
+      "ticker": "GTIM",
+      "price": 5.15
+    }
+  ],
+  "40": [
+    {
+      "ticker": "INTT",
+      "price": 8.15
+    },
+    {
+      "ticker": "EGLE",
+      "price": 5.04
+    }
+  ],
+  "100": [
+    {
+      "ticker": "INTT",
+      "price": 8.1
+    },
+    {
+      "ticker": "EGLE",
+      "price": 5.27
+    }
+  ],
+  "200": [
+    {
+      "ticker": "INTT",
+      "price": 8.0393
+    },
+    {
+      "ticker": "EGLE",
+      "price": 5.285
+    }
+  ],
+  "260": [
+    {
+      "ticker": "INTT",
+      "price": 8.045
+    },
+    {
+      "ticker": "EGLE",
+      "price": 5.33
+    }
+  ],
+  "351": [
+    {
+      "ticker": "EGLE",
+      "price": 5.35
+    },
+    {
+      "ticker": "VSLR",
+      "price": 5.15
+    }
+  ],
+  "381": [
+    {
+      "ticker": "EGLE",
+      "price": 5.38
+    },
+    {
+      "ticker": "VSLR",
+      "price": 5.2
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "MDIBY",
+      "price": 10.4
+    },
+    {
+      "ticker": "EONGY",
+      "price": 10.53
+    }
+  ],
+  "40": [
+    {
+      "ticker": "MDIBY",
+      "price": 10.46
+    },
+    {
+      "ticker": "EONGY",
+      "price": 10.55
+    }
+  ],
+  "100": [
+    {
+      "ticker": "CATS",
+      "price": 10.5
+    },
+    {
+      "ticker": "FTSI",
+      "price": 10.41
+    }
+  ],
+  "200": [
+    {
+      "ticker": "TOCA",
+      "price": 12.05
+    },
+    {
+      "ticker": "MDIBY",
+      "price": 10.4775
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TOCA",
+      "price": 12.0475
+    },
+    {
+      "ticker": "OSIR",
+      "price": 10.15
+    }
+  ],
+  "351": [
+    {
+      "ticker": "TOCA",
+      "price": 12.095
+    },
+    {
+      "ticker": "OSIR",
+      "price": 10.16
+    }
+  ],
+  "381": [
+    {
+      "ticker": "TOCA",
+      "price": 12.25
+    },
+    {
+      "ticker": "OSIR",
+      "price": 10.15
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "12": [
+    {
+      "ticker": "WFT",
+      "price": 2.355
+    },
+    {
+      "ticker": "GNPX",
+      "price": 2.3664
+    }
+  ],
+  "190": [
+    {
+      "ticker": "WFT",
+      "price": 2.345
+    },
+    {
+      "ticker": "GNPX",
+      "price": 2.21
+    }
+  ],
+  "250": [
+    {
+      "ticker": "WFT",
+      "price": 2.325
+    },
+    {
+      "ticker": "GNPX",
+      "price": 2.2
+    }
+  ],
+  "600": [
+    {
+      "ticker": "WFT",
+      "price": 2.38
+    },
+    {
+      "ticker": "GNPX",
+      "price": 2.2
+    }
+  ],
+  "-15": [
+    {
+      "ticker": "WFT",
+      "price": 2.3
+    },
+    {
+      "ticker": "GNPX",
+      "price": 2.37
+    }
+  ]
+}

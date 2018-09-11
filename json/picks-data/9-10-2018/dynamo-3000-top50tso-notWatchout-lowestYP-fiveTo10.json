@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "NYNY",
+      "price": 9.9
+    },
+    {
+      "ticker": "SOXS",
+      "price": 9.82
+    }
+  ],
+  "40": [
+    {
+      "ticker": "SOXS",
+      "price": 9.92
+    },
+    {
+      "ticker": "FTSI",
+      "price": 10
+    }
+  ],
+  "100": [
+    {
+      "ticker": "HIMX",
+      "price": 6.27
+    },
+    {
+      "ticker": "IMH",
+      "price": 6.86
+    }
+  ],
+  "200": [
+    {
+      "ticker": "HIMX",
+      "price": 6.25
+    },
+    {
+      "ticker": "IMH",
+      "price": 7.12
+    }
+  ],
+  "260": [
+    {
+      "ticker": "HIMX",
+      "price": 6.26
+    },
+    {
+      "ticker": "TRIL",
+      "price": 6
+    }
+  ],
+  "351": [
+    {
+      "ticker": "HIMX",
+      "price": 6.29
+    },
+    {
+      "ticker": "TRIL",
+      "price": 5.9
+    }
+  ],
+  "381": [
+    {
+      "ticker": "HIMX",
+      "price": 6.27
+    },
+    {
+      "ticker": "TRIL",
+      "price": 5.9
+    }
+  ]
+}

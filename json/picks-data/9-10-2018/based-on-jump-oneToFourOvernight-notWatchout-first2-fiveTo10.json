@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "GREK",
+      "price": 8.5
+    },
+    {
+      "ticker": "RBS",
+      "price": 6.6
+    }
+  ],
+  "5": [
+    {
+      "ticker": "GREK",
+      "price": 8.495
+    },
+    {
+      "ticker": "RBS",
+      "price": 6.6
+    }
+  ],
+  "16": [
+    {
+      "ticker": "GREK",
+      "price": 8.49
+    },
+    {
+      "ticker": "RBS",
+      "price": 6.6
+    }
+  ],
+  "30": [
+    {
+      "ticker": "GREK",
+      "price": 8.485
+    },
+    {
+      "ticker": "RBS",
+      "price": 6.6
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "0": [
+    {
+      "ticker": "CRON",
+      "price": 12.1696
+    },
+    {
+      "ticker": "SGMO",
+      "price": 13.9
+    },
+    {
+      "ticker": "NUGT",
+      "price": 11.7654
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CRON",
+      "price": 12.1
+    },
+    {
+      "ticker": "SGMO",
+      "price": 13.875
+    },
+    {
+      "ticker": "NUGT",
+      "price": 11.7
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CRON",
+      "price": 12.0913
+    },
+    {
+      "ticker": "SGMO",
+      "price": 14.25
+    },
+    {
+      "ticker": "NUGT",
+      "price": 11.7
+    }
+  ]
+}

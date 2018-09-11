@@ -1,0 +1,38 @@
+{
+  "0": [
+    {
+      "ticker": "FTSI",
+      "price": 9.77
+    },
+    {
+      "ticker": "USLV",
+      "price": 5.99
+    }
+  ],
+  "5": [
+    {
+      "ticker": "FTSI",
+      "price": 9.91
+    },
+    {
+      "ticker": "USLV",
+      "price": 6
+    }
+  ],
+  "16": [
+    {
+      "ticker": "FTSI",
+      "price": 10.07
+    },
+    {
+      "ticker": "USLV",
+      "price": 5.98
+    }
+  ],
+  "30": [
+    {
+      "ticker": "USLV",
+      "price": 6
+    }
+  ]
+}

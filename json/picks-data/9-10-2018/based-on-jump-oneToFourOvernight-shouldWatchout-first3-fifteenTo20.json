@@ -1,0 +1,44 @@
+{
+  "0": [
+    {
+      "ticker": "CLDR",
+      "price": 17.47
+    },
+    {
+      "ticker": "MFGP",
+      "price": 16.99
+    },
+    {
+      "ticker": "FIXX",
+      "price": 16.49
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CLDR",
+      "price": 17.46
+    },
+    {
+      "ticker": "MFGP",
+      "price": 16.98
+    },
+    {
+      "ticker": "FIXX",
+      "price": 16.385
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CLDR",
+      "price": 17.335
+    },
+    {
+      "ticker": "MFGP",
+      "price": 16.95
+    },
+    {
+      "ticker": "FIXX",
+      "price": 16.53
+    }
+  ]
+}

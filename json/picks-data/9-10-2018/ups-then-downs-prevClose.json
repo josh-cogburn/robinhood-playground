@@ -1,0 +1,102 @@
+{
+  "10": [
+    {
+      "ticker": "SHLD",
+      "price": 1.6187
+    }
+  ],
+  "50": [
+    {
+      "ticker": "SHLD",
+      "price": 1.475
+    }
+  ],
+  "200": [
+    {
+      "ticker": "SHLD",
+      "price": 1.34
+    },
+    {
+      "ticker": "PLM",
+      "price": 0.9301
+    },
+    {
+      "ticker": "RAVE",
+      "price": 1.31
+    },
+    {
+      "ticker": "DAG",
+      "price": 2.22
+    },
+    {
+      "ticker": "DBD",
+      "price": 4.95
+    }
+  ],
+  "300": [
+    {
+      "ticker": "SHLD",
+      "price": 1.4129
+    },
+    {
+      "ticker": "RAVE",
+      "price": 1.3
+    },
+    {
+      "ticker": "FEDU",
+      "price": 4.33
+    },
+    {
+      "ticker": "AGRX",
+      "price": 0.28
+    },
+    {
+      "ticker": "DAG",
+      "price": 2.22
+    }
+  ],
+  "380": [
+    {
+      "ticker": "SHLD",
+      "price": 1.415
+    },
+    {
+      "ticker": "PLM",
+      "price": 0.903
+    },
+    {
+      "ticker": "DBD",
+      "price": 4.875
+    },
+    {
+      "ticker": "RAVE",
+      "price": 1.32
+    },
+    {
+      "ticker": "PRTO",
+      "price": 2.25
+    }
+  ],
+  "600": [
+    {
+      "ticker": "SHLD",
+      "price": 1.41
+    },
+    {
+      "ticker": "PLM",
+      "price": 0.905
+    },
+    {
+      "ticker": "RAVE",
+      "price": 1.28
+    },
+    {
+      "ticker": "DBD",
+      "price": 4.9
+    },
+    {
+      "ticker": "PRTO",
+      "price": 2.25
+    }
+  ]
+}

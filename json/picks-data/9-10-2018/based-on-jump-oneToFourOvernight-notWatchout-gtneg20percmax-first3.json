@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "OCC",
+      "price": 3.75
+    },
+    {
+      "ticker": "SDPI",
+      "price": 2.5
+    },
+    {
+      "ticker": "APWC",
+      "price": 2.65
+    }
+  ],
+  "5": [
+    {
+      "ticker": "OCC",
+      "price": 3.8
+    },
+    {
+      "ticker": "SDPI",
+      "price": 2.551
+    },
+    {
+      "ticker": "APWC",
+      "price": 2.65
+    }
+  ],
+  "16": [
+    {
+      "ticker": "OCC",
+      "price": 3.95
+    },
+    {
+      "ticker": "SDPI",
+      "price": 2.5564
+    },
+    {
+      "ticker": "APWC",
+      "price": 2.65
+    }
+  ],
+  "30": [
+    {
+      "ticker": "OCC",
+      "price": 4.026
+    },
+    {
+      "ticker": "SDPI",
+      "price": 2.51
+    },
+    {
+      "ticker": "APWC",
+      "price": 2.65
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "CSU",
+      "price": 9.09
+    },
+    {
+      "ticker": "GTIM",
+      "price": 5.15
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CSU",
+      "price": 9.27
+    },
+    {
+      "ticker": "GTIM",
+      "price": 5.175
+    }
+  ],
+  "16": [
+    {
+      "ticker": "MDWD",
+      "price": 6.65
+    },
+    {
+      "ticker": "CSU",
+      "price": 9.08
+    }
+  ],
+  "30": [
+    {
+      "ticker": "MDWD",
+      "price": 6.65
+    },
+    {
+      "ticker": "CSU",
+      "price": 8.87
+    }
+  ]
+}

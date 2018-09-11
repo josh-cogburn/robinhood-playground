@@ -1,0 +1,58 @@
+{
+  "10": [
+    {
+      "ticker": "NBEV",
+      "price": 1.73
+    },
+    {
+      "ticker": "VBIV",
+      "price": 2.1
+    },
+    {
+      "ticker": "LPCN",
+      "price": 1.57
+    }
+  ],
+  "50": [
+    {
+      "ticker": "NBEV",
+      "price": 1.74
+    },
+    {
+      "ticker": "LPCN",
+      "price": 1.58
+    }
+  ],
+  "200": [
+    {
+      "ticker": "NBEV",
+      "price": 1.82
+    },
+    {
+      "ticker": "LPCN",
+      "price": 1.6
+    }
+  ],
+  "300": [
+    {
+      "ticker": "NBEV",
+      "price": 1.8184
+    },
+    {
+      "ticker": "LPCN",
+      "price": 1.6
+    }
+  ],
+  "380": [
+    {
+      "ticker": "NBEV",
+      "price": 1.83
+    }
+  ],
+  "600": [
+    {
+      "ticker": "NBEV",
+      "price": 1.83
+    }
+  ]
+}

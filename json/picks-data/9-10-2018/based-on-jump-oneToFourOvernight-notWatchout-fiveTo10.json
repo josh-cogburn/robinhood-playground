@@ -1,0 +1,90 @@
+{
+  "0": [
+    {
+      "ticker": "GREK",
+      "price": 8.5
+    },
+    {
+      "ticker": "RBS",
+      "price": 6.6
+    },
+    {
+      "ticker": "GTIM",
+      "price": 5.15
+    },
+    {
+      "ticker": "VTL",
+      "price": 6.75
+    },
+    {
+      "ticker": "CVE",
+      "price": 9.29
+    }
+  ],
+  "5": [
+    {
+      "ticker": "GREK",
+      "price": 8.495
+    },
+    {
+      "ticker": "RBS",
+      "price": 6.6
+    },
+    {
+      "ticker": "GTIM",
+      "price": 5.175
+    },
+    {
+      "ticker": "VTL",
+      "price": 6.725
+    },
+    {
+      "ticker": "CVE",
+      "price": 9.175
+    }
+  ],
+  "16": [
+    {
+      "ticker": "GREK",
+      "price": 8.49
+    },
+    {
+      "ticker": "RBS",
+      "price": 6.6
+    },
+    {
+      "ticker": "GTIM",
+      "price": 5.175
+    },
+    {
+      "ticker": "VTL",
+      "price": 6.7385
+    },
+    {
+      "ticker": "CVE",
+      "price": 9.32
+    }
+  ],
+  "30": [
+    {
+      "ticker": "GREK",
+      "price": 8.485
+    },
+    {
+      "ticker": "RBS",
+      "price": 6.6
+    },
+    {
+      "ticker": "GTIM",
+      "price": 5.2
+    },
+    {
+      "ticker": "VTL",
+      "price": 6.725
+    },
+    {
+      "ticker": "CVE",
+      "price": 9.38
+    }
+  ]
+}

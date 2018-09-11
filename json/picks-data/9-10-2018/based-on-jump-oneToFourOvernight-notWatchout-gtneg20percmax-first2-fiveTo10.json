@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "GTIM",
+      "price": 5.15
+    },
+    {
+      "ticker": "AMRS",
+      "price": 8.34
+    }
+  ],
+  "5": [
+    {
+      "ticker": "GTIM",
+      "price": 5.175
+    },
+    {
+      "ticker": "AMRS",
+      "price": 8.3384
+    }
+  ],
+  "16": [
+    {
+      "ticker": "GTIM",
+      "price": 5.175
+    },
+    {
+      "ticker": "AMRS",
+      "price": 8.28
+    }
+  ],
+  "30": [
+    {
+      "ticker": "GTIM",
+      "price": 5.2
+    },
+    {
+      "ticker": "AMRS",
+      "price": 8.24
+    }
+  ]
+}

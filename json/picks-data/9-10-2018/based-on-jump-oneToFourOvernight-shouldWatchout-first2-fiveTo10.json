@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "CSU",
+      "price": 9.09
+    },
+    {
+      "ticker": "ZFGN",
+      "price": 9.23
+    }
+  ],
+  "5": [
+    {
+      "ticker": "ACBFF",
+      "price": 6.25
+    },
+    {
+      "ticker": "CSU",
+      "price": 9.27
+    }
+  ],
+  "16": [
+    {
+      "ticker": "MDWD",
+      "price": 6.65
+    },
+    {
+      "ticker": "TENX",
+      "price": 5.58
+    }
+  ],
+  "30": [
+    {
+      "ticker": "TENX",
+      "price": 5.4682
+    },
+    {
+      "ticker": "MDWD",
+      "price": 6.65
+    }
+  ]
+}
