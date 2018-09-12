@@ -54,7 +54,12 @@ process.on('unhandledRejection', (reason, p) => {
 
     await cancelAllOrders(Robinhood);
 
-    await logPortfolioValue(Robinhood);
+    try {
+        await logPortfolioValue(Robinhood);
+    } catch (e) {
+        console.log(e);
+    }
+
 
     await initModules(Robinhood);
     regCronIncAfterSixThirty.display();
