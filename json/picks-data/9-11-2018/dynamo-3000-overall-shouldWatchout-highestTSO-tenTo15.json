@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "CMTA",
+      "price": 10.42
+    },
+    {
+      "ticker": "SNAP",
+      "price": 10.04
+    }
+  ],
+  "40": [
+    {
+      "ticker": "IOVA",
+      "price": 13.3506
+    },
+    {
+      "ticker": "CMTA",
+      "price": 10.42
+    }
+  ],
+  "100": [
+    {
+      "ticker": "ZFGN",
+      "price": 10.2301
+    },
+    {
+      "ticker": "SECO",
+      "price": 13
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PDEX",
+      "price": 10
+    },
+    {
+      "ticker": "IOVA",
+      "price": 13.575
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ZFGN",
+      "price": 10.19
+    },
+    {
+      "ticker": "IOVA",
+      "price": 13.4
+    }
+  ],
+  "351": [
+    {
+      "ticker": "ZFGN",
+      "price": 10.27
+    },
+    {
+      "ticker": "ABEO",
+      "price": 14.225
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ZFGN",
+      "price": 10.28
+    },
+    {
+      "ticker": "ABEO",
+      "price": 14.3
+    }
+  ]
+}

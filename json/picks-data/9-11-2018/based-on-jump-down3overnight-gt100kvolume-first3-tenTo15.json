@@ -1,0 +1,54 @@
+{
+  "0": [
+    {
+      "ticker": "ITUB",
+      "price": 10.12
+    },
+    {
+      "ticker": "PBR",
+      "price": 10.56
+    }
+  ],
+  "5": [
+    {
+      "ticker": "USAT",
+      "price": 10.9
+    },
+    {
+      "ticker": "BRZU",
+      "price": 15.18
+    },
+    {
+      "ticker": "ITUB",
+      "price": 10.15
+    }
+  ],
+  "16": [
+    {
+      "ticker": "USAT",
+      "price": 10.475
+    },
+    {
+      "ticker": "SD",
+      "price": 12.64
+    },
+    {
+      "ticker": "CNX",
+      "price": 14.37
+    }
+  ],
+  "30": [
+    {
+      "ticker": "USAT",
+      "price": 10.425
+    },
+    {
+      "ticker": "SD",
+      "price": 12.66
+    },
+    {
+      "ticker": "CNX",
+      "price": 14.68
+    }
+  ]
+}

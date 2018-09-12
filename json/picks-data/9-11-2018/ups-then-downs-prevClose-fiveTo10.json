@@ -1,0 +1,47 @@
+{
+  "10": [],
+  "50": [
+    {
+      "ticker": "DWT",
+      "price": 6.66
+    }
+  ],
+  "200": [
+    {
+      "ticker": "DWT",
+      "price": 6.38
+    },
+    {
+      "ticker": "WTID",
+      "price": 7.07
+    }
+  ],
+  "300": [
+    {
+      "ticker": "DWT",
+      "price": 6.395
+    },
+    {
+      "ticker": "WTID",
+      "price": 7.0566
+    },
+    {
+      "ticker": "GERN",
+      "price": 5.78
+    }
+  ],
+  "380": [
+    {
+      "ticker": "DWT",
+      "price": 6.34
+    },
+    {
+      "ticker": "WTID",
+      "price": 7.09
+    },
+    {
+      "ticker": "GERN",
+      "price": 5.895
+    }
+  ]
+}

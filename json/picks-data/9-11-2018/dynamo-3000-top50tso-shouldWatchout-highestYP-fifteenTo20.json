@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "EXPI",
+      "price": 16.68
+    },
+    {
+      "ticker": "SIEB",
+      "price": 19.43
+    }
+  ],
+  "40": [
+    {
+      "ticker": "DRNA",
+      "price": 16.3
+    },
+    {
+      "ticker": "EXPI",
+      "price": 17.102
+    }
+  ],
+  "100": [
+    {
+      "ticker": "SDRL",
+      "price": 19.4
+    },
+    {
+      "ticker": "SIEB",
+      "price": 19.43
+    }
+  ],
+  "200": [
+    {
+      "ticker": "SDRL",
+      "price": 19.805
+    },
+    {
+      "ticker": "SIEB",
+      "price": 19.85
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SDRL",
+      "price": 19.71
+    },
+    {
+      "ticker": "SIEB",
+      "price": 19.7189
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SIEB",
+      "price": 19.7725
+    },
+    {
+      "ticker": "SDRL",
+      "price": 19.6665
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SDRL",
+      "price": 19.73
+    },
+    {
+      "ticker": "SIEB",
+      "price": 19.76
+    }
+  ]
+}

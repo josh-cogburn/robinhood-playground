@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "LIVX",
+      "price": 5.11
+    },
+    {
+      "ticker": "REPH",
+      "price": 7.6
+    }
+  ],
+  "5": [
+    {
+      "ticker": "LIVX",
+      "price": 5.05
+    },
+    {
+      "ticker": "REPH",
+      "price": 7.6
+    }
+  ],
+  "16": [
+    {
+      "ticker": "LIVX",
+      "price": 5.05
+    },
+    {
+      "ticker": "REPH",
+      "price": 7.8501
+    }
+  ],
+  "30": [
+    {
+      "ticker": "REPH",
+      "price": 7.9
+    },
+    {
+      "ticker": "ACBFF",
+      "price": 6.6
+    }
+  ]
+}

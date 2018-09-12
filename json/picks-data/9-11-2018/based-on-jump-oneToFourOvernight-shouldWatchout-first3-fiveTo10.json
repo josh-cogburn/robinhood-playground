@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "LIVX",
+      "price": 5.11
+    },
+    {
+      "ticker": "REPH",
+      "price": 7.6
+    },
+    {
+      "ticker": "CMT",
+      "price": 9.0103
+    }
+  ],
+  "5": [
+    {
+      "ticker": "LIVX",
+      "price": 5.05
+    },
+    {
+      "ticker": "REPH",
+      "price": 7.6
+    },
+    {
+      "ticker": "ACBFF",
+      "price": 6.35
+    }
+  ],
+  "16": [
+    {
+      "ticker": "LIVX",
+      "price": 5.05
+    },
+    {
+      "ticker": "REPH",
+      "price": 7.8501
+    },
+    {
+      "ticker": "ACBFF",
+      "price": 6.5061
+    }
+  ],
+  "30": [
+    {
+      "ticker": "REPH",
+      "price": 7.9
+    },
+    {
+      "ticker": "ACBFF",
+      "price": 6.6
+    },
+    {
+      "ticker": "CMT",
+      "price": 8.81
+    }
+  ]
+}

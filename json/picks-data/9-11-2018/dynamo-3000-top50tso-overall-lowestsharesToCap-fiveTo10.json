@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "LX",
+      "price": 9.8
+    },
+    {
+      "ticker": "QEP",
+      "price": 9.5
+    }
+  ],
+  "40": [
+    {
+      "ticker": "MHH",
+      "price": 9.71
+    },
+    {
+      "ticker": "CRZBY",
+      "price": 9.96
+    }
+  ],
+  "100": [
+    {
+      "ticker": "MHH",
+      "price": 9.81
+    },
+    {
+      "ticker": "CRZBY",
+      "price": 9.97
+    }
+  ],
+  "200": [
+    {
+      "ticker": "MHH",
+      "price": 9.95
+    },
+    {
+      "ticker": "QEP",
+      "price": 10.01
+    }
+  ],
+  "260": [
+    {
+      "ticker": "DL",
+      "price": 9.6715
+    },
+    {
+      "ticker": "QEP",
+      "price": 9.965
+    }
+  ],
+  "351": [
+    {
+      "ticker": "DL",
+      "price": 9.73
+    },
+    {
+      "ticker": "PDEX",
+      "price": 10.05
+    }
+  ],
+  "381": [
+    {
+      "ticker": "DL",
+      "price": 9.75
+    },
+    {
+      "ticker": "PDEX",
+      "price": 9.6
+    }
+  ]
+}

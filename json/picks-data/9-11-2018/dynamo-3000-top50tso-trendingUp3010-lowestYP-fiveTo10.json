@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "FTR",
+      "price": 5.53
+    },
+    {
+      "ticker": "CLNY",
+      "price": 6.18
+    }
+  ],
+  "40": [
+    {
+      "ticker": "IDT",
+      "price": 5.42
+    },
+    {
+      "ticker": "CRZBY",
+      "price": 9.96
+    }
+  ],
+  "100": [
+    {
+      "ticker": "CRZBY",
+      "price": 9.97
+    },
+    {
+      "ticker": "PHIIK",
+      "price": 8.41
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PHIIK",
+      "price": 8.47
+    },
+    {
+      "ticker": "IRET",
+      "price": 5.8
+    }
+  ],
+  "260": [
+    {
+      "ticker": "VLRS",
+      "price": 8.37
+    },
+    {
+      "ticker": "IRET",
+      "price": 5.725
+    }
+  ],
+  "351": [
+    {
+      "ticker": "FAT",
+      "price": 8.95
+    },
+    {
+      "ticker": "IRET",
+      "price": 5.76
+    }
+  ],
+  "381": [
+    {
+      "ticker": "PHIIK",
+      "price": 8.54
+    },
+    {
+      "ticker": "IRET",
+      "price": 5.745
+    }
+  ]
+}

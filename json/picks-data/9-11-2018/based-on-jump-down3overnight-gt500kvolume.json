@@ -1,0 +1,38 @@
+{
+  "0": [
+    {
+      "ticker": "FRED",
+      "price": 2.77
+    }
+  ],
+  "5": [
+    {
+      "ticker": "FRAN",
+      "price": 4.06
+    }
+  ],
+  "16": [
+    {
+      "ticker": "FRAN",
+      "price": 4.15
+    },
+    {
+      "ticker": "FRED",
+      "price": 2.72
+    }
+  ],
+  "30": [
+    {
+      "ticker": "FRAN",
+      "price": 4.025
+    },
+    {
+      "ticker": "GGB",
+      "price": 3.69
+    },
+    {
+      "ticker": "FRED",
+      "price": 2.6101
+    }
+  ]
+}

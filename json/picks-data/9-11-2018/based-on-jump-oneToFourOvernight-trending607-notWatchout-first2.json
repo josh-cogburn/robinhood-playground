@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "UQM",
+      "price": 1.24
+    },
+    {
+      "ticker": "DGLY",
+      "price": 2.7
+    }
+  ],
+  "5": [
+    {
+      "ticker": "UQM",
+      "price": 1.22
+    },
+    {
+      "ticker": "CCO",
+      "price": 4.9999
+    }
+  ],
+  "16": [
+    {
+      "ticker": "UQM",
+      "price": 1.2001
+    },
+    {
+      "ticker": "CCO",
+      "price": 4.9999
+    }
+  ],
+  "30": [
+    {
+      "ticker": "UQM",
+      "price": 1.2025
+    },
+    {
+      "ticker": "DGLY",
+      "price": 2.6528
+    }
+  ]
+}

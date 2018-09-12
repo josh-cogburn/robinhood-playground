@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "AGRX",
+      "price": 0.5493
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.9
+    }
+  ],
+  "5": [
+    {
+      "ticker": "NLST",
+      "price": 0.9699
+    }
+  ],
+  "16": [
+    {
+      "ticker": "AGRX",
+      "price": 0.453
+    },
+    {
+      "ticker": "NLST",
+      "price": 1.05
+    }
+  ],
+  "30": [
+    {
+      "ticker": "AGRX",
+      "price": 0.556
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.962
+    },
+    {
+      "ticker": "SSC",
+      "price": 4.82
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "INPX",
+      "price": 0.1234
+    },
+    {
+      "ticker": "AMDA",
+      "price": 0.3515
+    }
+  ],
+  "40": [
+    {
+      "ticker": "INPX",
+      "price": 0.1279
+    },
+    {
+      "ticker": "CYTX",
+      "price": 0.5157
+    }
+  ],
+  "100": [
+    {
+      "ticker": "AMDA",
+      "price": 0.345
+    },
+    {
+      "ticker": "CYTX",
+      "price": 0.535
+    }
+  ],
+  "200": [
+    {
+      "ticker": "AMDA",
+      "price": 0.345
+    },
+    {
+      "ticker": "CYTX",
+      "price": 0.5145
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CEI",
+      "price": 0.1928
+    },
+    {
+      "ticker": "CYTX",
+      "price": 0.5135
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CEI",
+      "price": 0.187
+    },
+    {
+      "ticker": "CYTX",
+      "price": 0.5084
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CEI",
+      "price": 0.1852
+    },
+    {
+      "ticker": "CYTX",
+      "price": 0.5087
+    }
+  ]
+}

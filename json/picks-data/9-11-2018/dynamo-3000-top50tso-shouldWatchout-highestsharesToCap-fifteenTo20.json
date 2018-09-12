@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "EXPI",
+      "price": 16.68
+    },
+    {
+      "ticker": "NGVC",
+      "price": 18.55
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CASA",
+      "price": 15.215
+    },
+    {
+      "ticker": "SGRY",
+      "price": 15.525
+    }
+  ],
+  "100": [
+    {
+      "ticker": "CASA",
+      "price": 15.23
+    },
+    {
+      "ticker": "SGRY",
+      "price": 15.55
+    }
+  ],
+  "200": [
+    {
+      "ticker": "OXFD",
+      "price": 15.265
+    },
+    {
+      "ticker": "SGRY",
+      "price": 15.75
+    }
+  ],
+  "260": [
+    {
+      "ticker": "OXFD",
+      "price": 15.22
+    },
+    {
+      "ticker": "CASA",
+      "price": 15.3
+    }
+  ],
+  "351": [
+    {
+      "ticker": "OXFD",
+      "price": 15.4
+    },
+    {
+      "ticker": "CASA",
+      "price": 15.325
+    }
+  ],
+  "381": [
+    {
+      "ticker": "OXFD",
+      "price": 15.525
+    },
+    {
+      "ticker": "CASA",
+      "price": 15.325
+    }
+  ]
+}

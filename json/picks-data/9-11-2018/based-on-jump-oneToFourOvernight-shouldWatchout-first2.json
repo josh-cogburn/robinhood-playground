@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "ATIS",
+      "price": 0.34
+    },
+    {
+      "ticker": "GLG",
+      "price": 0.79
+    }
+  ],
+  "5": [
+    {
+      "ticker": "ATIS",
+      "price": 0.3262
+    },
+    {
+      "ticker": "GLG",
+      "price": 0.79
+    }
+  ],
+  "16": [
+    {
+      "ticker": "ATIS",
+      "price": 0.3229
+    },
+    {
+      "ticker": "GLG",
+      "price": 0.77
+    }
+  ],
+  "30": [
+    {
+      "ticker": "ATIS",
+      "price": 0.3201
+    },
+    {
+      "ticker": "GLG",
+      "price": 0.71
+    }
+  ]
+}

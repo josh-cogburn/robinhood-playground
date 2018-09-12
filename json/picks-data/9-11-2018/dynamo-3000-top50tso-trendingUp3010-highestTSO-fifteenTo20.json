@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "CAPL",
+      "price": 18.2976
+    },
+    {
+      "ticker": "ATUS",
+      "price": 18.52
+    }
+  ],
+  "40": [
+    {
+      "ticker": "NSTG",
+      "price": 17.55
+    },
+    {
+      "ticker": "SIEB",
+      "price": 19.43
+    }
+  ],
+  "100": [
+    {
+      "ticker": "NSTG",
+      "price": 18.095
+    },
+    {
+      "ticker": "GME",
+      "price": 16.47
+    }
+  ],
+  "200": [
+    {
+      "ticker": "NSTG",
+      "price": 17.76
+    },
+    {
+      "ticker": "SIEB",
+      "price": 19.85
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NSTG",
+      "price": 18.05
+    },
+    {
+      "ticker": "SBH",
+      "price": 16.86
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NSTG",
+      "price": 18.175
+    },
+    {
+      "ticker": "HMTA",
+      "price": 15.54
+    }
+  ],
+  "381": [
+    {
+      "ticker": "NSTG",
+      "price": 18.23
+    },
+    {
+      "ticker": "HMTA",
+      "price": 15.75
+    }
+  ]
+}

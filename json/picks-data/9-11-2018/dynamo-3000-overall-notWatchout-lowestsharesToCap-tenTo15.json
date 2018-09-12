@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "USAT",
+      "price": 11.25
+    },
+    {
+      "ticker": "HDELY",
+      "price": 14.96
+    }
+  ],
+  "40": [
+    {
+      "ticker": "YMLI",
+      "price": 13.65
+    },
+    {
+      "ticker": "USAT",
+      "price": 10.325
+    }
+  ],
+  "100": [
+    {
+      "ticker": "YMLI",
+      "price": 13.65
+    },
+    {
+      "ticker": "USAT",
+      "price": 10.6
+    }
+  ],
+  "200": [
+    {
+      "ticker": "USAT",
+      "price": 10.375
+    },
+    {
+      "ticker": "SGDM",
+      "price": 14.91
+    }
+  ],
+  "260": [
+    {
+      "ticker": "USAT",
+      "price": 10.075
+    },
+    {
+      "ticker": "SGDM",
+      "price": 14.9381
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SGDM",
+      "price": 14.92
+    },
+    {
+      "ticker": "KOL",
+      "price": 14.99
+    }
+  ],
+  "381": [
+    {
+      "ticker": "YMLI",
+      "price": 13.72
+    },
+    {
+      "ticker": "SGDM",
+      "price": 14.9562
+    }
+  ]
+}

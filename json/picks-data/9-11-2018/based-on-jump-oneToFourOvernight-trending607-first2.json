@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "UQM",
+      "price": 1.24
+    },
+    {
+      "ticker": "GVP",
+      "price": 3.55
+    }
+  ],
+  "5": [
+    {
+      "ticker": "UQM",
+      "price": 1.22
+    },
+    {
+      "ticker": "GVP",
+      "price": 3.5
+    }
+  ],
+  "16": [
+    {
+      "ticker": "UQM",
+      "price": 1.2001
+    },
+    {
+      "ticker": "GVP",
+      "price": 3.5
+    }
+  ],
+  "30": [
+    {
+      "ticker": "UQM",
+      "price": 1.2025
+    },
+    {
+      "ticker": "GVP",
+      "price": 3.3667
+    }
+  ]
+}

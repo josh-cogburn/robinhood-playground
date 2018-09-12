@@ -1,0 +1,54 @@
+{
+  "0": [
+    {
+      "ticker": "LLIT",
+      "price": 1.61
+    },
+    {
+      "ticker": "OCC",
+      "price": 3.8
+    }
+  ],
+  "5": [
+    {
+      "ticker": "LLIT",
+      "price": 1.61
+    },
+    {
+      "ticker": "OCC",
+      "price": 3.7738
+    },
+    {
+      "ticker": "TNP",
+      "price": 3.425
+    }
+  ],
+  "16": [
+    {
+      "ticker": "LLIT",
+      "price": 1.69
+    },
+    {
+      "ticker": "OCC",
+      "price": 3.84
+    },
+    {
+      "ticker": "SSNT",
+      "price": 3.9275
+    }
+  ],
+  "30": [
+    {
+      "ticker": "LLIT",
+      "price": 1.7501
+    },
+    {
+      "ticker": "OCC",
+      "price": 3.84
+    },
+    {
+      "ticker": "SSNT",
+      "price": 3.991
+    }
+  ]
+}

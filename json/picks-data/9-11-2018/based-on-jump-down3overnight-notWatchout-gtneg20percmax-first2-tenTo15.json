@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "LEAF",
+      "price": 10.15
+    },
+    {
+      "ticker": "MNTX",
+      "price": 11.19
+    }
+  ],
+  "5": [
+    {
+      "ticker": "USAT",
+      "price": 10.9
+    },
+    {
+      "ticker": "LEAF",
+      "price": 10.1
+    }
+  ],
+  "16": [
+    {
+      "ticker": "USAT",
+      "price": 10.475
+    },
+    {
+      "ticker": "LEAF",
+      "price": 10.3
+    }
+  ],
+  "30": [
+    {
+      "ticker": "USAT",
+      "price": 10.425
+    },
+    {
+      "ticker": "LEAF",
+      "price": 10.25
+    }
+  ]
+}

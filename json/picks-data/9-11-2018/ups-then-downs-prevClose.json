@@ -1,0 +1,48 @@
+{
+  "10": [
+    {
+      "ticker": "SGBX",
+      "price": 3.64
+    }
+  ],
+  "50": [
+    {
+      "ticker": "CVM",
+      "price": 3.63
+    },
+    {
+      "ticker": "SGBX",
+      "price": 3.64
+    },
+    {
+      "ticker": "VLRX",
+      "price": 1.17
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CVM",
+      "price": 3.75
+    },
+    {
+      "ticker": "LINK",
+      "price": 4.9309
+    }
+  ],
+  "300": [
+    {
+      "ticker": "NLST",
+      "price": 0.5637
+    }
+  ],
+  "380": [
+    {
+      "ticker": "NLST",
+      "price": 0.6989
+    },
+    {
+      "ticker": "LINK",
+      "price": 4.93
+    }
+  ]
+}

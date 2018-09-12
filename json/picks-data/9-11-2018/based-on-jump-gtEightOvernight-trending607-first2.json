@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "NLST",
+      "price": 0.9
+    },
+    {
+      "ticker": "TPNL",
+      "price": 3.65
+    }
+  ],
+  "5": [
+    {
+      "ticker": "NLST",
+      "price": 0.9699
+    },
+    {
+      "ticker": "TPNL",
+      "price": 3.6
+    }
+  ],
+  "16": [
+    {
+      "ticker": "NLST",
+      "price": 1.05
+    },
+    {
+      "ticker": "TPNL",
+      "price": 3.6075
+    }
+  ],
+  "30": [
+    {
+      "ticker": "NLST",
+      "price": 0.962
+    },
+    {
+      "ticker": "SSC",
+      "price": 4.82
+    }
+  ]
+}

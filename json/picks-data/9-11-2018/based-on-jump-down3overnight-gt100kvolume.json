@@ -1,0 +1,62 @@
+{
+  "0": [
+    {
+      "ticker": "FRAN",
+      "price": 4
+    },
+    {
+      "ticker": "FRED",
+      "price": 2.77
+    }
+  ],
+  "5": [
+    {
+      "ticker": "FRAN",
+      "price": 4.06
+    },
+    {
+      "ticker": "PACB",
+      "price": 4.35
+    },
+    {
+      "ticker": "FRED",
+      "price": 2.7
+    }
+  ],
+  "16": [
+    {
+      "ticker": "FRAN",
+      "price": 4.15
+    },
+    {
+      "ticker": "PACB",
+      "price": 4.28
+    },
+    {
+      "ticker": "GGB",
+      "price": 3.655
+    },
+    {
+      "ticker": "FRED",
+      "price": 2.72
+    }
+  ],
+  "30": [
+    {
+      "ticker": "FRAN",
+      "price": 4.025
+    },
+    {
+      "ticker": "PACB",
+      "price": 4.28
+    },
+    {
+      "ticker": "GGB",
+      "price": 3.69
+    },
+    {
+      "ticker": "FRED",
+      "price": 2.6101
+    }
+  ]
+}

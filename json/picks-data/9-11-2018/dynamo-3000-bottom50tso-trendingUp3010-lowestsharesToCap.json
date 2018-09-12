@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "OCC",
+      "price": 3.85
+    },
+    {
+      "ticker": "FRED",
+      "price": 2.721
+    }
+  ],
+  "40": [
+    {
+      "ticker": "SSC",
+      "price": 4.8669
+    },
+    {
+      "ticker": "CVM",
+      "price": 3.63
+    }
+  ],
+  "100": [
+    {
+      "ticker": "PMTS",
+      "price": 3.3
+    },
+    {
+      "ticker": "FRED",
+      "price": 2.6298
+    }
+  ],
+  "200": [
+    {
+      "ticker": "SSC",
+      "price": 5.0004
+    },
+    {
+      "ticker": "DYNT",
+      "price": 2.8869
+    }
+  ],
+  "260": [
+    {
+      "ticker": "KMPH",
+      "price": 5
+    },
+    {
+      "ticker": "CHCI",
+      "price": 2.8801
+    }
+  ],
+  "351": [
+    {
+      "ticker": "KMPH",
+      "price": 4.9255
+    },
+    {
+      "ticker": "FRED",
+      "price": 2.5242
+    }
+  ],
+  "381": [
+    {
+      "ticker": "KMPH",
+      "price": 4.9
+    },
+    {
+      "ticker": "CHCI",
+      "price": 2.9
+    }
+  ]
+}

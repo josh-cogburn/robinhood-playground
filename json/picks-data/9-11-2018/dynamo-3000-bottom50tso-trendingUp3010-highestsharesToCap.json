@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "AWSM",
+      "price": 4.28
+    },
+    {
+      "ticker": "AGRX",
+      "price": 0.556
+    }
+  ],
+  "40": [
+    {
+      "ticker": "AWSM",
+      "price": 4.2
+    },
+    {
+      "ticker": "AGRX",
+      "price": 0.495
+    }
+  ],
+  "100": [
+    {
+      "ticker": "AGRX",
+      "price": 0.518
+    },
+    {
+      "ticker": "AAU",
+      "price": 0.6274
+    }
+  ],
+  "200": [
+    {
+      "ticker": "AAU",
+      "price": 0.6185
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.8299
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NLST",
+      "price": 0.72
+    },
+    {
+      "ticker": "NAO",
+      "price": 0.91
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NLST",
+      "price": 0.5993
+    },
+    {
+      "ticker": "YVR",
+      "price": 0.99
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AAU",
+      "price": 0.6271
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.67
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "FRAN",
+      "price": 4
+    },
+    {
+      "ticker": "FRED",
+      "price": 2.77
+    }
+  ],
+  "5": [
+    {
+      "ticker": "FRAN",
+      "price": 4.06
+    },
+    {
+      "ticker": "PACB",
+      "price": 4.35
+    }
+  ],
+  "16": [
+    {
+      "ticker": "FRAN",
+      "price": 4.15
+    },
+    {
+      "ticker": "PACB",
+      "price": 4.28
+    }
+  ],
+  "30": [
+    {
+      "ticker": "FRAN",
+      "price": 4.025
+    },
+    {
+      "ticker": "PACB",
+      "price": 4.28
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "RUN",
+      "price": 13.27
+    },
+    {
+      "ticker": "SPKKY",
+      "price": 12.77
+    }
+  ],
+  "5": [
+    {
+      "ticker": "RUN",
+      "price": 13.16
+    },
+    {
+      "ticker": "SPKKY",
+      "price": 13
+    }
+  ],
+  "16": [
+    {
+      "ticker": "RUN",
+      "price": 13.28
+    },
+    {
+      "ticker": "SPKKY",
+      "price": 13.14
+    }
+  ],
+  "30": [
+    {
+      "ticker": "RUN",
+      "price": 13.09
+    },
+    {
+      "ticker": "SPKKY",
+      "price": 13.14
+    }
+  ]
+}

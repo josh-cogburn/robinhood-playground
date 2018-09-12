@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "BBDC",
+      "price": 10.6
+    },
+    {
+      "ticker": "HFFG",
+      "price": 13.9
+    }
+  ],
+  "5": [
+    {
+      "ticker": "BBDC",
+      "price": 10.59
+    },
+    {
+      "ticker": "SNAP",
+      "price": 10.05
+    }
+  ],
+  "16": [
+    {
+      "ticker": "BBDC",
+      "price": 10.555
+    },
+    {
+      "ticker": "SNAP",
+      "price": 10.05
+    }
+  ],
+  "30": [
+    {
+      "ticker": "BBDC",
+      "price": 10.5999
+    },
+    {
+      "ticker": "SNAP",
+      "price": 10.015
+    }
+  ]
+}

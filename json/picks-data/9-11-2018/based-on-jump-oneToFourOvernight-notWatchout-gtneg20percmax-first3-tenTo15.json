@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "PRCP",
+      "price": 10.83
+    },
+    {
+      "ticker": "AHPA",
+      "price": 10.4
+    },
+    {
+      "ticker": "ARDS",
+      "price": 12.33
+    }
+  ],
+  "5": [
+    {
+      "ticker": "PRCP",
+      "price": 10.8
+    },
+    {
+      "ticker": "AHPA",
+      "price": 10.4
+    },
+    {
+      "ticker": "ARDS",
+      "price": 12.33
+    }
+  ],
+  "16": [
+    {
+      "ticker": "PRCP",
+      "price": 10.86
+    },
+    {
+      "ticker": "AHPA",
+      "price": 10.4
+    },
+    {
+      "ticker": "CATS",
+      "price": 10.0201
+    }
+  ],
+  "30": [
+    {
+      "ticker": "PRCP",
+      "price": 10.86
+    },
+    {
+      "ticker": "AHPA",
+      "price": 10.4
+    },
+    {
+      "ticker": "CATS",
+      "price": 10.14
+    }
+  ]
+}
