@@ -103,6 +103,8 @@ this can be combined with the `next-day-330` option shown here along with the ab
 
 * much
 * truth: database needed
+* look at most recent strat-perf-multiple (52 day).  of the strats enabled determine likelyhood it will hit a match today and calculate the best $ buy amount
+
 * front-end should be used more as a way to view the incoming strategy picks highlighting the one's that may be of interest ... not just as a way to view all the trends of the given subset of strategies (pm filter)
 
 * integrate this electron front-end https://github.com/chiefsmurph/johns-electron-playground
