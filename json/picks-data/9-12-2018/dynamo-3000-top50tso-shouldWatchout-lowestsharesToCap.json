@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "GOGO",
+      "price": 4.76
+    },
+    {
+      "ticker": "MDCA",
+      "price": 4.55
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ICLK",
+      "price": 4.97
+    },
+    {
+      "ticker": "GOGO",
+      "price": 4.76
+    }
+  ],
+  "351": [
+    {
+      "ticker": "GOGO",
+      "price": 4.77
+    },
+    {
+      "ticker": "MDCA",
+      "price": 4.325
+    }
+  ],
+  "381": [
+    {
+      "ticker": "GOGO",
+      "price": 4.87
+    },
+    {
+      "ticker": "MDCA",
+      "price": 4.325
+    }
+  ]
+}

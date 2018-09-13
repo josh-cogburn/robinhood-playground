@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "FOMX",
+      "price": 6.42
+    },
+    {
+      "ticker": "AGLE",
+      "price": 8.36
+    }
+  ],
+  "260": [
+    {
+      "ticker": "FOMX",
+      "price": 6.47
+    },
+    {
+      "ticker": "CHRA",
+      "price": 6.715
+    }
+  ],
+  "351": [
+    {
+      "ticker": "RDVT",
+      "price": 5.1336
+    },
+    {
+      "ticker": "CRBP",
+      "price": 5.1639
+    }
+  ],
+  "381": [
+    {
+      "ticker": "FOMX",
+      "price": 6.1
+    },
+    {
+      "ticker": "EAST",
+      "price": 7.59
+    }
+  ]
+}

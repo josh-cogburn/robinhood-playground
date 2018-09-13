@@ -1,0 +1,90 @@
+{
+  "200": [
+    {
+      "ticker": "FOMX",
+      "price": 6.42
+    },
+    {
+      "ticker": "LTRX",
+      "price": 5.08
+    },
+    {
+      "ticker": "SRCI",
+      "price": 8.325
+    },
+    {
+      "ticker": "NOA",
+      "price": 8.4923
+    },
+    {
+      "ticker": "COE",
+      "price": 7.3
+    }
+  ],
+  "260": [
+    {
+      "ticker": "FOMX",
+      "price": 6.47
+    },
+    {
+      "ticker": "LTRX",
+      "price": 5.2742
+    },
+    {
+      "ticker": "VCNX",
+      "price": 9.35
+    },
+    {
+      "ticker": "AVID",
+      "price": 5.7041
+    },
+    {
+      "ticker": "NOA",
+      "price": 8.4993
+    }
+  ],
+  "351": [
+    {
+      "ticker": "FOMX",
+      "price": 6.23
+    },
+    {
+      "ticker": "LTRX",
+      "price": 5.2307
+    },
+    {
+      "ticker": "SGMA",
+      "price": 6.4643
+    },
+    {
+      "ticker": "FIT",
+      "price": 5.515
+    },
+    {
+      "ticker": "NOA",
+      "price": 8.45
+    }
+  ],
+  "381": [
+    {
+      "ticker": "FOMX",
+      "price": 6.1
+    },
+    {
+      "ticker": "NTGN",
+      "price": 9.55
+    },
+    {
+      "ticker": "LTRX",
+      "price": 5.11
+    },
+    {
+      "ticker": "FIT",
+      "price": 5.54
+    },
+    {
+      "ticker": "CRVS",
+      "price": 9.93
+    }
+  ]
+}

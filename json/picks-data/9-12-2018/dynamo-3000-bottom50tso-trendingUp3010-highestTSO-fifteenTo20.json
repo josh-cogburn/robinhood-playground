@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "UIS",
+      "price": 19.15
+    },
+    {
+      "ticker": "ARWR",
+      "price": 19.53
+    }
+  ],
+  "260": [
+    {
+      "ticker": "IVC",
+      "price": 16.1
+    },
+    {
+      "ticker": "BV",
+      "price": 18.365
+    }
+  ],
+  "351": [
+    {
+      "ticker": "MRRL",
+      "price": 15.96
+    },
+    {
+      "ticker": "BV",
+      "price": 18.3425
+    }
+  ],
+  "381": [
+    {
+      "ticker": "FFWM",
+      "price": 16.46
+    },
+    {
+      "ticker": "BV",
+      "price": 18.35
+    }
+  ]
+}

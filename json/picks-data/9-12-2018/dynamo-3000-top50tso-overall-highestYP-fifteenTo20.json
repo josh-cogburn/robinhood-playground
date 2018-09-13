@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "VNCE",
+      "price": 18.498
+    },
+    {
+      "ticker": "QTNA",
+      "price": 18.57
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GFN",
+      "price": 15.05
+    },
+    {
+      "ticker": "EXPI",
+      "price": 16.43
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AFIN",
+      "price": 16.7
+    },
+    {
+      "ticker": "GFN",
+      "price": 15.15
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AFIN",
+      "price": 16.68
+    },
+    {
+      "ticker": "GFN",
+      "price": 15.2
+    }
+  ]
+}

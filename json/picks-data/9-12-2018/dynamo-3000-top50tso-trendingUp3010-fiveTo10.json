@@ -1,0 +1,90 @@
+{
+  "200": [
+    {
+      "ticker": "METC",
+      "price": 7.91
+    },
+    {
+      "ticker": "MOBL",
+      "price": 5.675
+    },
+    {
+      "ticker": "PCYG",
+      "price": 9.295
+    },
+    {
+      "ticker": "TRIL",
+      "price": 6.35
+    },
+    {
+      "ticker": "MBOT",
+      "price": 6.3168
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SVA",
+      "price": 7.32
+    },
+    {
+      "ticker": "METC",
+      "price": 7.955
+    },
+    {
+      "ticker": "ESTE",
+      "price": 9.01
+    },
+    {
+      "ticker": "AMBO",
+      "price": 6.4862
+    },
+    {
+      "ticker": "EDRY",
+      "price": 7.14
+    }
+  ],
+  "351": [
+    {
+      "ticker": "YRCW",
+      "price": 9.6
+    },
+    {
+      "ticker": "SVA",
+      "price": 7.33
+    },
+    {
+      "ticker": "METC",
+      "price": 7.97
+    },
+    {
+      "ticker": "ESTE",
+      "price": 9
+    },
+    {
+      "ticker": "AXR",
+      "price": 8.08
+    }
+  ],
+  "381": [
+    {
+      "ticker": "METC",
+      "price": 7.97
+    },
+    {
+      "ticker": "ESTE",
+      "price": 9
+    },
+    {
+      "ticker": "AMBO",
+      "price": 6.49
+    },
+    {
+      "ticker": "YRCW",
+      "price": 9.73
+    },
+    {
+      "ticker": "TRIL",
+      "price": 6.5
+    }
+  ]
+}

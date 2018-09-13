@@ -1,0 +1,37 @@
+{
+  "200": [
+    {
+      "ticker": "OBCI",
+      "price": 4.2328
+    },
+    {
+      "ticker": "ARPO",
+      "price": 3.685
+    }
+  ],
+  "260": [
+    {
+      "ticker": "OBCI",
+      "price": 4.2328
+    },
+    {
+      "ticker": "ARPO",
+      "price": 3.6675
+    }
+  ],
+  "351": [],
+  "381": [
+    {
+      "ticker": "ARPO",
+      "price": 3.68
+    },
+    {
+      "ticker": "DTEA",
+      "price": 3.15
+    },
+    {
+      "ticker": "GTIM",
+      "price": 4.7653
+    }
+  ]
+}

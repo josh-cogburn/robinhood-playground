@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "CEFS",
+      "price": 19.98
+    },
+    {
+      "ticker": "CNNE",
+      "price": 19.745
+    }
+  ],
+  "260": [
+    {
+      "ticker": "BSCP",
+      "price": 19.898
+    },
+    {
+      "ticker": "TSLX",
+      "price": 20.015
+    }
+  ],
+  "351": [
+    {
+      "ticker": "UIHC",
+      "price": 19.92
+    },
+    {
+      "ticker": "TECS",
+      "price": 19.37
+    }
+  ],
+  "381": [
+    {
+      "ticker": "DIAX",
+      "price": 19.65
+    },
+    {
+      "ticker": "TETF",
+      "price": 19.34
+    }
+  ]
+}

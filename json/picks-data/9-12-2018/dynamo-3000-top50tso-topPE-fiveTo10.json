@@ -1,0 +1,58 @@
+{
+  "200": [
+    {
+      "ticker": "AU",
+      "price": 7.965
+    },
+    {
+      "ticker": "SILJ",
+      "price": 8.765
+    },
+    {
+      "ticker": "PCYG",
+      "price": 9.295
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AU",
+      "price": 8.025
+    },
+    {
+      "ticker": "PVG",
+      "price": 7.695
+    },
+    {
+      "ticker": "SILJ",
+      "price": 8.765
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AXR",
+      "price": 8.08
+    },
+    {
+      "ticker": "AU",
+      "price": 8.045
+    },
+    {
+      "ticker": "PVG",
+      "price": 7.695
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AXR",
+      "price": 8.25
+    },
+    {
+      "ticker": "AU",
+      "price": 8.01
+    },
+    {
+      "ticker": "PVG",
+      "price": 7.665
+    }
+  ]
+}

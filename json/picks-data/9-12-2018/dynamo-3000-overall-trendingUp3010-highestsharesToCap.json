@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "AWSM",
+      "price": 4.18
+    },
+    {
+      "ticker": "BPMX",
+      "price": 0.2274
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AWSM",
+      "price": 4.18
+    },
+    {
+      "ticker": "BPMX",
+      "price": 0.2162
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AWSM",
+      "price": 4.39
+    },
+    {
+      "ticker": "BPMX",
+      "price": 0.205
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AWSM",
+      "price": 4.5
+    },
+    {
+      "ticker": "BPMX",
+      "price": 0.2
+    }
+  ]
+}

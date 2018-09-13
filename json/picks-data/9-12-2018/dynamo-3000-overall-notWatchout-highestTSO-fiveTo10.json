@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "ONE",
+      "price": 8.29
+    },
+    {
+      "ticker": "CDE",
+      "price": 5.715
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ICCC",
+      "price": 8.41
+    },
+    {
+      "ticker": "CDE",
+      "price": 5.72
+    }
+  ],
+  "351": [
+    {
+      "ticker": "ONE",
+      "price": 8.4799
+    },
+    {
+      "ticker": "ICCC",
+      "price": 8.4
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ONE",
+      "price": 8.4999
+    },
+    {
+      "ticker": "ICCC",
+      "price": 8.4895
+    }
+  ]
+}

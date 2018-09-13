@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "XENE",
+      "price": 14.25
+    },
+    {
+      "ticker": "VKTX",
+      "price": 10.87
+    }
+  ],
+  "260": [
+    {
+      "ticker": "XENE",
+      "price": 14.15
+    },
+    {
+      "ticker": "CRON",
+      "price": 11.33
+    }
+  ],
+  "351": [
+    {
+      "ticker": "XENE",
+      "price": 14.2
+    },
+    {
+      "ticker": "CRON",
+      "price": 11.48
+    }
+  ],
+  "381": [
+    {
+      "ticker": "XENE",
+      "price": 14.17
+    },
+    {
+      "ticker": "CRON",
+      "price": 11.3
+    }
+  ]
+}

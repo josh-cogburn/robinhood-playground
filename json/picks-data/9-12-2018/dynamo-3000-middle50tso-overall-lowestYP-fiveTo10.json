@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "DWT",
+      "price": 6.071
+    },
+    {
+      "ticker": "DRIP",
+      "price": 6.33
+    }
+  ],
+  "260": [
+    {
+      "ticker": "UGP",
+      "price": 9.44
+    },
+    {
+      "ticker": "XNET",
+      "price": 8.83
+    }
+  ],
+  "351": [
+    {
+      "ticker": "TWI",
+      "price": 7.105
+    },
+    {
+      "ticker": "TZA",
+      "price": 8.18
+    }
+  ],
+  "381": [
+    {
+      "ticker": "IDT",
+      "price": 5.36
+    },
+    {
+      "ticker": "STG",
+      "price": 6.26
+    }
+  ]
+}

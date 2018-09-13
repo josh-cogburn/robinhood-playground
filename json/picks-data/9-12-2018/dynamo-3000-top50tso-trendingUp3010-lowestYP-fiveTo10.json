@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "TRIL",
+      "price": 6.35
+    },
+    {
+      "ticker": "ESTE",
+      "price": 9
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TRIL",
+      "price": 6.525
+    },
+    {
+      "ticker": "ESTE",
+      "price": 9.01
+    }
+  ],
+  "351": [
+    {
+      "ticker": "TRIL",
+      "price": 6.5055
+    },
+    {
+      "ticker": "YRCW",
+      "price": 9.6
+    }
+  ],
+  "381": [
+    {
+      "ticker": "TRIL",
+      "price": 6.5
+    },
+    {
+      "ticker": "YRCW",
+      "price": 9.73
+    }
+  ]
+}

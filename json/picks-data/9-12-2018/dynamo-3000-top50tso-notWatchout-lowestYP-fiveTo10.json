@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "MGI",
+      "price": 6.03
+    },
+    {
+      "ticker": "DFRG",
+      "price": 8.35
+    }
+  ],
+  "260": [
+    {
+      "ticker": "BFR",
+      "price": 8.93
+    },
+    {
+      "ticker": "MGI",
+      "price": 6.12
+    }
+  ],
+  "351": [
+    {
+      "ticker": "BFR",
+      "price": 8.91
+    },
+    {
+      "ticker": "MGI",
+      "price": 6.13
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MGI",
+      "price": 6.09
+    },
+    {
+      "ticker": "ALPN",
+      "price": 6.3086
+    }
+  ]
+}

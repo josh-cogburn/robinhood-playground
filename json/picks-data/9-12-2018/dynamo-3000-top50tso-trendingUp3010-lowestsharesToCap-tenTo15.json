@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "CSIQ",
+      "price": 14.99
+    },
+    {
+      "ticker": "SHZHY",
+      "price": 12.02
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SHZHY",
+      "price": 12.02
+    },
+    {
+      "ticker": "WIMHY",
+      "price": 13.785
+    }
+  ],
+  "351": [
+    {
+      "ticker": "WIMHY",
+      "price": 13.8097
+    },
+    {
+      "ticker": "NDLS",
+      "price": 12.5
+    }
+  ],
+  "381": [
+    {
+      "ticker": "WIMHY",
+      "price": 13.78
+    },
+    {
+      "ticker": "OSIR",
+      "price": 11.2
+    }
+  ]
+}

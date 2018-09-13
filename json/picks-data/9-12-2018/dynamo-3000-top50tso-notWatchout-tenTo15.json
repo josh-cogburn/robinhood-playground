@@ -1,0 +1,90 @@
+{
+  "200": [
+    {
+      "ticker": "COTY",
+      "price": 12.27
+    },
+    {
+      "ticker": "SVRA",
+      "price": 10.935
+    },
+    {
+      "ticker": "CSIQ",
+      "price": 14.99
+    },
+    {
+      "ticker": "CZR",
+      "price": 10.25
+    },
+    {
+      "ticker": "VEDL",
+      "price": 12.68
+    }
+  ],
+  "260": [
+    {
+      "ticker": "COTY",
+      "price": 12.3
+    },
+    {
+      "ticker": "RES",
+      "price": 14.535
+    },
+    {
+      "ticker": "WIMHY",
+      "price": 13.785
+    },
+    {
+      "ticker": "JAG",
+      "price": 13.31
+    },
+    {
+      "ticker": "ERA",
+      "price": 12.57
+    }
+  ],
+  "351": [
+    {
+      "ticker": "RES",
+      "price": 14.495
+    },
+    {
+      "ticker": "SMTA",
+      "price": 11.03
+    },
+    {
+      "ticker": "NDLS",
+      "price": 12.5
+    },
+    {
+      "ticker": "REI",
+      "price": 11.499
+    },
+    {
+      "ticker": "CPE",
+      "price": 11.695
+    }
+  ],
+  "381": [
+    {
+      "ticker": "WIMHY",
+      "price": 13.78
+    },
+    {
+      "ticker": "COTY",
+      "price": 12.35
+    },
+    {
+      "ticker": "CZR",
+      "price": 10.3
+    },
+    {
+      "ticker": "EEI",
+      "price": 13.7
+    },
+    {
+      "ticker": "CYOU",
+      "price": 13.6
+    }
+  ]
+}

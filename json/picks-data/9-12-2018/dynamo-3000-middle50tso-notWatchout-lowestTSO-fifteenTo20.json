@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "CEFS",
+      "price": 19.98
+    },
+    {
+      "ticker": "BSCQ",
+      "price": 18.8204
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ROIC",
+      "price": 19.18
+    },
+    {
+      "ticker": "MLN",
+      "price": 19.53
+    }
+  ],
+  "351": [
+    {
+      "ticker": "TETF",
+      "price": 19.34
+    },
+    {
+      "ticker": "REK",
+      "price": 15.32
+    }
+  ],
+  "381": [
+    {
+      "ticker": "TETF",
+      "price": 19.34
+    },
+    {
+      "ticker": "REK",
+      "price": 15.32
+    }
+  ]
+}

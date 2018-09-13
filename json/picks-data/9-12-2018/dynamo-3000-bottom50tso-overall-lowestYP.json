@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "MNGA",
+      "price": 0.1683
+    },
+    {
+      "ticker": "VTL",
+      "price": 0.525
+    }
+  ],
+  "260": [
+    {
+      "ticker": "VTL",
+      "price": 0.525
+    },
+    {
+      "ticker": "JAGX",
+      "price": 0.5799
+    }
+  ],
+  "351": [
+    {
+      "ticker": "MNGA",
+      "price": 0.165
+    },
+    {
+      "ticker": "VTL",
+      "price": 0.425
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MNGA",
+      "price": 0.165
+    },
+    {
+      "ticker": "VTL",
+      "price": 0.45
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "MTSI",
+      "price": 19.575
+    },
+    {
+      "ticker": "PRQR",
+      "price": 19.5
+    }
+  ],
+  "260": [
+    {
+      "ticker": "MTSI",
+      "price": 19.6
+    },
+    {
+      "ticker": "PRQR",
+      "price": 19.3109
+    }
+  ],
+  "351": [
+    {
+      "ticker": "MTSI",
+      "price": 19.49
+    },
+    {
+      "ticker": "PRQR",
+      "price": 18.85
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MTSI",
+      "price": 19.375
+    },
+    {
+      "ticker": "PRQR",
+      "price": 18.55
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "SVXY",
+      "price": 14.232
+    },
+    {
+      "ticker": "VERI",
+      "price": 10.11
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SVXY",
+      "price": 14.23
+    },
+    {
+      "ticker": "VERI",
+      "price": 10.14
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SVXY",
+      "price": 14.2722
+    },
+    {
+      "ticker": "VERI",
+      "price": 10.22
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SVXY",
+      "price": 14.25
+    },
+    {
+      "ticker": "VERI",
+      "price": 10.2
+    }
+  ]
+}

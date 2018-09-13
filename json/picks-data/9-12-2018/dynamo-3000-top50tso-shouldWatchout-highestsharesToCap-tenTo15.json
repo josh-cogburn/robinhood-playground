@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "CIFS",
+      "price": 10.15
+    },
+    {
+      "ticker": "USAT",
+      "price": 10.025
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CIFS",
+      "price": 10.215
+    },
+    {
+      "ticker": "USAT",
+      "price": 10.025
+    }
+  ],
+  "351": [
+    {
+      "ticker": "USAT",
+      "price": 10.17
+    },
+    {
+      "ticker": "CMTA",
+      "price": 10.135
+    }
+  ],
+  "381": [
+    {
+      "ticker": "USAT",
+      "price": 10.075
+    },
+    {
+      "ticker": "DERM",
+      "price": 10.48
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "KOL",
+      "price": 15.448
+    },
+    {
+      "ticker": "PDLB",
+      "price": 15.06
+    }
+  ],
+  "260": [
+    {
+      "ticker": "KOL",
+      "price": 15.455
+    },
+    {
+      "ticker": "PDLB",
+      "price": 15.06
+    }
+  ],
+  "351": [
+    {
+      "ticker": "KOL",
+      "price": 15.43
+    },
+    {
+      "ticker": "PDLB",
+      "price": 15.06
+    }
+  ],
+  "381": [
+    {
+      "ticker": "KOL",
+      "price": 15.43
+    },
+    {
+      "ticker": "GFN",
+      "price": 15.2
+    }
+  ]
+}

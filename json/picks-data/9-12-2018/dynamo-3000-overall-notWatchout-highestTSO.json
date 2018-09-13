@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "CDXC",
+      "price": 4.019
+    },
+    {
+      "ticker": "BKTI",
+      "price": 4
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CDXC",
+      "price": 4.03
+    },
+    {
+      "ticker": "BKTI",
+      "price": 4.1
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CDXC",
+      "price": 4.08
+    },
+    {
+      "ticker": "CXDC",
+      "price": 4
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CDXC",
+      "price": 4.06
+    },
+    {
+      "ticker": "NAO",
+      "price": 1.05
+    }
+  ]
+}

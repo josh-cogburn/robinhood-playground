@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "SPRO",
+      "price": 9.96
+    },
+    {
+      "ticker": "ABUS",
+      "price": 9.525
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SPRO",
+      "price": 9.99
+    },
+    {
+      "ticker": "ABUS",
+      "price": 9.25
+    }
+  ],
+  "351": [
+    {
+      "ticker": "RFIL",
+      "price": 9.9455
+    },
+    {
+      "ticker": "SPRO",
+      "price": 10
+    }
+  ],
+  "381": [
+    {
+      "ticker": "RFIL",
+      "price": 9.995
+    },
+    {
+      "ticker": "SPRO",
+      "price": 10.02
+    }
+  ]
+}

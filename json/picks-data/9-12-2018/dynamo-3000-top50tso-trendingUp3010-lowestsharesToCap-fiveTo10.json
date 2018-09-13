@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "PCYG",
+      "price": 9.295
+    },
+    {
+      "ticker": "CALX",
+      "price": 8.9
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ESTE",
+      "price": 9.01
+    },
+    {
+      "ticker": "ICCC",
+      "price": 8.41
+    }
+  ],
+  "351": [
+    {
+      "ticker": "YRCW",
+      "price": 9.6
+    },
+    {
+      "ticker": "FAT",
+      "price": 9.47
+    }
+  ],
+  "381": [
+    {
+      "ticker": "YRCW",
+      "price": 9.73
+    },
+    {
+      "ticker": "ESTE",
+      "price": 9
+    }
+  ]
+}

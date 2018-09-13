@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "VYGR",
+      "price": 18.4502
+    },
+    {
+      "ticker": "HBI",
+      "price": 17.785
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SIEB",
+      "price": 19.95
+    },
+    {
+      "ticker": "NGVC",
+      "price": 18.25
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AIQ",
+      "price": 15.6455
+    },
+    {
+      "ticker": "WSC",
+      "price": 17.125
+    }
+  ],
+  "381": [
+    {
+      "ticker": "WSC",
+      "price": 17.125
+    },
+    {
+      "ticker": "TRNC",
+      "price": 16.495
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "REVG",
+      "price": 14.77
+    },
+    {
+      "ticker": "FPRX",
+      "price": 14.06
+    }
+  ],
+  "260": [
+    {
+      "ticker": "REVG",
+      "price": 14.91
+    },
+    {
+      "ticker": "FPRX",
+      "price": 14.215
+    }
+  ],
+  "351": [
+    {
+      "ticker": "REVG",
+      "price": 15
+    },
+    {
+      "ticker": "FPRX",
+      "price": 14.3
+    }
+  ],
+  "381": [
+    {
+      "ticker": "REVG",
+      "price": 14.95
+    },
+    {
+      "ticker": "FPRX",
+      "price": 14.42
+    }
+  ]
+}

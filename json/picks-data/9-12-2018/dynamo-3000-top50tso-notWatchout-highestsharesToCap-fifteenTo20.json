@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "EJPRY",
+      "price": 15.17
+    },
+    {
+      "ticker": "SGDM",
+      "price": 15.46
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GFN",
+      "price": 15.05
+    },
+    {
+      "ticker": "EJPRY",
+      "price": 15.2
+    }
+  ],
+  "351": [
+    {
+      "ticker": "GFN",
+      "price": 15.15
+    },
+    {
+      "ticker": "SGDM",
+      "price": 15.55
+    }
+  ],
+  "381": [
+    {
+      "ticker": "GFN",
+      "price": 15.2
+    },
+    {
+      "ticker": "SGDM",
+      "price": 15.4716
+    }
+  ]
+}

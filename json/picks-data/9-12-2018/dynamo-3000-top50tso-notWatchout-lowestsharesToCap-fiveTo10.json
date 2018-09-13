@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "PCYG",
+      "price": 9.295
+    },
+    {
+      "ticker": "CMCM",
+      "price": 9.39
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SPN",
+      "price": 9.275
+    },
+    {
+      "ticker": "BFR",
+      "price": 8.93
+    }
+  ],
+  "351": [
+    {
+      "ticker": "FAT",
+      "price": 9.47
+    },
+    {
+      "ticker": "BFR",
+      "price": 8.91
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ESTE",
+      "price": 9
+    },
+    {
+      "ticker": "SILJ",
+      "price": 8.786
+    }
+  ]
+}

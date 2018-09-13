@@ -1,0 +1,86 @@
+{
+  "200": [
+    {
+      "ticker": "GAB",
+      "price": 6.5873
+    },
+    {
+      "ticker": "NSL",
+      "price": 6.16
+    },
+    {
+      "ticker": "ASG",
+      "price": 7.5
+    },
+    {
+      "ticker": "NUV",
+      "price": 9.51
+    },
+    {
+      "ticker": "FLDM",
+      "price": 8.33
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ASG",
+      "price": 7.5
+    },
+    {
+      "ticker": "PHK",
+      "price": 9.01
+    },
+    {
+      "ticker": "NSL",
+      "price": 6.16
+    },
+    {
+      "ticker": "JQC",
+      "price": 8.025
+    }
+  ],
+  "351": [
+    {
+      "ticker": "FT",
+      "price": 6.7853
+    },
+    {
+      "ticker": "BRG",
+      "price": 9.96
+    },
+    {
+      "ticker": "GMRE",
+      "price": 9.46
+    },
+    {
+      "ticker": "JQC",
+      "price": 8.023
+    },
+    {
+      "ticker": "EXG",
+      "price": 9.6978
+    }
+  ],
+  "381": [
+    {
+      "ticker": "NUV",
+      "price": 9.51
+    },
+    {
+      "ticker": "GAB",
+      "price": 6.5864
+    },
+    {
+      "ticker": "GMRE",
+      "price": 9.46
+    },
+    {
+      "ticker": "JPS",
+      "price": 8.89
+    },
+    {
+      "ticker": "ETJ",
+      "price": 9.975
+    }
+  ]
+}

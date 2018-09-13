@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "SSP",
+      "price": 15.66
+    },
+    {
+      "ticker": "AOBC",
+      "price": 15.415
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SSP",
+      "price": 15.79
+    },
+    {
+      "ticker": "FIXX",
+      "price": 18.55
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SSP",
+      "price": 15.945
+    },
+    {
+      "ticker": "FIXX",
+      "price": 18.72
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SSP",
+      "price": 15.93
+    },
+    {
+      "ticker": "FIXX",
+      "price": 19.02
+    }
+  ]
+}

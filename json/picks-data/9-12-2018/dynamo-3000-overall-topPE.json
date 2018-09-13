@@ -1,0 +1,58 @@
+{
+  "200": [
+    {
+      "ticker": "FRAN",
+      "price": 3.545
+    },
+    {
+      "ticker": "GTE",
+      "price": 3.5
+    },
+    {
+      "ticker": "EXK",
+      "price": 2.255
+    }
+  ],
+  "260": [
+    {
+      "ticker": "FRAN",
+      "price": 3.59
+    },
+    {
+      "ticker": "GTE",
+      "price": 3.56
+    },
+    {
+      "ticker": "EXK",
+      "price": 2.275
+    }
+  ],
+  "351": [
+    {
+      "ticker": "FRAN",
+      "price": 3.68
+    },
+    {
+      "ticker": "GTE",
+      "price": 3.545
+    },
+    {
+      "ticker": "EXK",
+      "price": 2.265
+    }
+  ],
+  "381": [
+    {
+      "ticker": "FRAN",
+      "price": 3.705
+    },
+    {
+      "ticker": "GTE",
+      "price": 3.545
+    },
+    {
+      "ticker": "CODA",
+      "price": 4.54
+    }
+  ]
+}

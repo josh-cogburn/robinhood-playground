@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "CZR",
+      "price": 10.25
+    },
+    {
+      "ticker": "ZFGN",
+      "price": 10.19
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CZR",
+      "price": 10.275
+    },
+    {
+      "ticker": "DERM",
+      "price": 10.42
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CZR",
+      "price": 10.35
+    },
+    {
+      "ticker": "DERM",
+      "price": 10.53
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CZR",
+      "price": 10.3
+    },
+    {
+      "ticker": "DERM",
+      "price": 10.48
+    }
+  ]
+}

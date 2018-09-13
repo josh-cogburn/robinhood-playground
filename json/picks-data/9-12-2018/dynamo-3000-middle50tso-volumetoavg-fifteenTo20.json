@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "CEFS",
+      "price": 19.98
+    },
+    {
+      "ticker": "HBI",
+      "price": 17.785
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ROIC",
+      "price": 19.18
+    },
+    {
+      "ticker": "BZF",
+      "price": 15.21
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CAPL",
+      "price": 18.5839
+    },
+    {
+      "ticker": "BZF",
+      "price": 15.21
+    }
+  ],
+  "381": [
+    {
+      "ticker": "TETF",
+      "price": 19.34
+    },
+    {
+      "ticker": "FXN",
+      "price": 16.89
+    }
+  ]
+}

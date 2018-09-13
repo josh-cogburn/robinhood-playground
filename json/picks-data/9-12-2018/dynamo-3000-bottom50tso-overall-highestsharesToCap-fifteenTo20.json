@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "SGRY",
+      "price": 15.3
+    },
+    {
+      "ticker": "TFSL",
+      "price": 15.335
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ZAGG",
+      "price": 15.25
+    },
+    {
+      "ticker": "BRY",
+      "price": 15.655
+    }
+  ],
+  "351": [
+    {
+      "ticker": "ZAGG",
+      "price": 15.35
+    },
+    {
+      "ticker": "BRY",
+      "price": 15.68
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ZAGG",
+      "price": 15.2
+    },
+    {
+      "ticker": "BRY",
+      "price": 15.68
+    }
+  ]
+}

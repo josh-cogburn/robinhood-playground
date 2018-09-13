@@ -1,0 +1,58 @@
+{
+  "200": [
+    {
+      "ticker": "HBI",
+      "price": 17.785
+    },
+    {
+      "ticker": "SAFE",
+      "price": 16.79
+    },
+    {
+      "ticker": "ROIC",
+      "price": 19.2
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GOV",
+      "price": 16.795
+    },
+    {
+      "ticker": "SIEB",
+      "price": 19.95
+    },
+    {
+      "ticker": "ROIC",
+      "price": 19.18
+    }
+  ],
+  "351": [
+    {
+      "ticker": "BNCL",
+      "price": 17.7
+    },
+    {
+      "ticker": "CAPL",
+      "price": 18.5839
+    },
+    {
+      "ticker": "AIQ",
+      "price": 15.6455
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ROIC",
+      "price": 19.215
+    },
+    {
+      "ticker": "GLQ",
+      "price": 15.29
+    },
+    {
+      "ticker": "ENTR",
+      "price": 18.48
+    }
+  ]
+}

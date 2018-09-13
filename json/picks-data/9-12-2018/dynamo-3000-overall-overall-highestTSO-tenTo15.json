@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "CIFS",
+      "price": 10.15
+    },
+    {
+      "ticker": "BILI",
+      "price": 13.1124
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CIFS",
+      "price": 10.215
+    },
+    {
+      "ticker": "NUGT",
+      "price": 12.43
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NUGT",
+      "price": 12.36
+    },
+    {
+      "ticker": "ZFGN",
+      "price": 10.41
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ZFGN",
+      "price": 10.44
+    },
+    {
+      "ticker": "FQVLF",
+      "price": 11.8674
+    }
+  ]
+}

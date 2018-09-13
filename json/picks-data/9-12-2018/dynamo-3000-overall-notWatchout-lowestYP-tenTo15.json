@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "JP",
+      "price": 10.305
+    },
+    {
+      "ticker": "SCO",
+      "price": 14.89
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SCO",
+      "price": 14.8
+    },
+    {
+      "ticker": "JP",
+      "price": 10.81
+    }
+  ],
+  "351": [
+    {
+      "ticker": "JP",
+      "price": 10.7
+    },
+    {
+      "ticker": "SCO",
+      "price": 14.945
+    }
+  ],
+  "381": [
+    {
+      "ticker": "JP",
+      "price": 10.75
+    },
+    {
+      "ticker": "SCO",
+      "price": 14.979
+    }
+  ]
+}

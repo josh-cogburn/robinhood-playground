@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "ABX",
+      "price": 10.06
+    },
+    {
+      "ticker": "NERV",
+      "price": 10.625
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ABX",
+      "price": 10.15
+    },
+    {
+      "ticker": "NERV",
+      "price": 10.55
+    }
+  ],
+  "351": [
+    {
+      "ticker": "ABX",
+      "price": 10.135
+    },
+    {
+      "ticker": "NTP",
+      "price": 10.15
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ABX",
+      "price": 10.095
+    },
+    {
+      "ticker": "NTP",
+      "price": 10.2
+    }
+  ]
+}

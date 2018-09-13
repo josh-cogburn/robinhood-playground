@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "IDT",
+      "price": 5.38
+    },
+    {
+      "ticker": "FTR",
+      "price": 5.615
+    }
+  ],
+  "260": [
+    {
+      "ticker": "IDT",
+      "price": 5.395
+    },
+    {
+      "ticker": "FTR",
+      "price": 5.575
+    }
+  ],
+  "351": [
+    {
+      "ticker": "IDT",
+      "price": 5.385
+    },
+    {
+      "ticker": "FTR",
+      "price": 5.6346
+    }
+  ],
+  "381": [
+    {
+      "ticker": "IDT",
+      "price": 5.36
+    },
+    {
+      "ticker": "FTR",
+      "price": 5.7
+    }
+  ]
+}

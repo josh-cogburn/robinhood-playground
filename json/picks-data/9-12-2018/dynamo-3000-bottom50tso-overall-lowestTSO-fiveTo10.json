@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "FOMX",
+      "price": 6.42
+    },
+    {
+      "ticker": "LTRX",
+      "price": 5.08
+    }
+  ],
+  "260": [
+    {
+      "ticker": "FOMX",
+      "price": 6.47
+    },
+    {
+      "ticker": "RDVT",
+      "price": 5.4
+    }
+  ],
+  "351": [
+    {
+      "ticker": "RDVT",
+      "price": 5.1336
+    },
+    {
+      "ticker": "FOMX",
+      "price": 6.23
+    }
+  ],
+  "381": [
+    {
+      "ticker": "FOMX",
+      "price": 6.1
+    },
+    {
+      "ticker": "RDVT",
+      "price": 5.36
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "EPZM",
+      "price": 9.9
+    },
+    {
+      "ticker": "XONE",
+      "price": 8.835
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GIFI",
+      "price": 9.7
+    },
+    {
+      "ticker": "TELL",
+      "price": 8.9
+    }
+  ],
+  "351": [
+    {
+      "ticker": "YRCW",
+      "price": 9.6
+    },
+    {
+      "ticker": "XONE",
+      "price": 8.9
+    }
+  ],
+  "381": [
+    {
+      "ticker": "YRCW",
+      "price": 9.73
+    },
+    {
+      "ticker": "XONE",
+      "price": 8.93
+    }
+  ]
+}

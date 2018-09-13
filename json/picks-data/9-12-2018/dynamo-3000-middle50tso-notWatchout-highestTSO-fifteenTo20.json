@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "ALTY",
+      "price": 15.18
+    },
+    {
+      "ticker": "DBC",
+      "price": 17.475
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TSLX",
+      "price": 20.015
+    },
+    {
+      "ticker": "SPOK",
+      "price": 15.219
+    }
+  ],
+  "351": [
+    {
+      "ticker": "BNCL",
+      "price": 17.7
+    },
+    {
+      "ticker": "DIAX",
+      "price": 19.6195
+    }
+  ],
+  "381": [
+    {
+      "ticker": "NEWM",
+      "price": 15.41
+    },
+    {
+      "ticker": "DMLP",
+      "price": 18.9
+    }
+  ]
+}

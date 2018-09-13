@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "TEI",
+      "price": 9.87
+    },
+    {
+      "ticker": "MLPA",
+      "price": 9.9082
+    }
+  ],
+  "260": [
+    {
+      "ticker": "JHY",
+      "price": 9.84
+    },
+    {
+      "ticker": "MLPA",
+      "price": 9.9082
+    }
+  ],
+  "351": [
+    {
+      "ticker": "BRG",
+      "price": 9.96
+    },
+    {
+      "ticker": "IPOA",
+      "price": 9.9
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ETJ",
+      "price": 9.975
+    },
+    {
+      "ticker": "IPOA",
+      "price": 9.9
+    }
+  ]
+}

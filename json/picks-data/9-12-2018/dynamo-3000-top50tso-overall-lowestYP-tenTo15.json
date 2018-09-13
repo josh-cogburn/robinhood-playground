@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "CIFS",
+      "price": 10.15
+    },
+    {
+      "ticker": "FPRX",
+      "price": 14.06
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CIFS",
+      "price": 10.215
+    },
+    {
+      "ticker": "FPRX",
+      "price": 14.215
+    }
+  ],
+  "351": [
+    {
+      "ticker": "FPRX",
+      "price": 14.3
+    },
+    {
+      "ticker": "NUGT",
+      "price": 12.36
+    }
+  ],
+  "381": [
+    {
+      "ticker": "FPRX",
+      "price": 14.42
+    },
+    {
+      "ticker": "NUGT",
+      "price": 12.2254
+    }
+  ]
+}

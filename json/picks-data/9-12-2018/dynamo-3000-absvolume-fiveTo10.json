@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "FOMX",
+      "price": 6.42
+    },
+    {
+      "ticker": "VVUS",
+      "price": 6
+    }
+  ],
+  "260": [
+    {
+      "ticker": "FOMX",
+      "price": 6.47
+    },
+    {
+      "ticker": "VVUS",
+      "price": 5.8925
+    }
+  ],
+  "351": [
+    {
+      "ticker": "RDVT",
+      "price": 5.1336
+    },
+    {
+      "ticker": "CIFS",
+      "price": 9.5
+    }
+  ],
+  "381": [
+    {
+      "ticker": "FOMX",
+      "price": 6.1
+    },
+    {
+      "ticker": "CIFS",
+      "price": 9.74
+    }
+  ]
+}

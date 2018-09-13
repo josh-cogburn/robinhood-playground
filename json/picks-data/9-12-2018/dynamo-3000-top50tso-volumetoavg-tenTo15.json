@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "COTY",
+      "price": 12.27
+    },
+    {
+      "ticker": "CYOU",
+      "price": 13.57
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TMST",
+      "price": 13.94
+    },
+    {
+      "ticker": "SE",
+      "price": 12.99
+    }
+  ],
+  "351": [
+    {
+      "ticker": "RES",
+      "price": 14.495
+    },
+    {
+      "ticker": "SE",
+      "price": 13.12
+    }
+  ],
+  "381": [
+    {
+      "ticker": "WIMHY",
+      "price": 13.78
+    },
+    {
+      "ticker": "FTSV",
+      "price": 14.69
+    }
+  ]
+}

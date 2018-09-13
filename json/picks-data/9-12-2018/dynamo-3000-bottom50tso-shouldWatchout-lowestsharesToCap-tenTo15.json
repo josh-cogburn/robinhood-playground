@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "XENE",
+      "price": 14.25
+    },
+    {
+      "ticker": "QNST",
+      "price": 14.22
+    }
+  ],
+  "260": [
+    {
+      "ticker": "XENE",
+      "price": 14.15
+    },
+    {
+      "ticker": "QNST",
+      "price": 14.16
+    }
+  ],
+  "351": [
+    {
+      "ticker": "XENE",
+      "price": 14.2
+    },
+    {
+      "ticker": "QNST",
+      "price": 14.27
+    }
+  ],
+  "381": [
+    {
+      "ticker": "XENE",
+      "price": 14.17
+    },
+    {
+      "ticker": "QNST",
+      "price": 14.25
+    }
+  ]
+}

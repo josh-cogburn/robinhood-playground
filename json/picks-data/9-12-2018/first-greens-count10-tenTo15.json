@@ -1,4 +1,48 @@
 {
+  "190": [
+    {
+      "ticker": "LX",
+      "price": 10.35
+    },
+    {
+      "ticker": "FTNW",
+      "price": 11.99
+    },
+    {
+      "ticker": "ABEO",
+      "price": 14.425
+    },
+    {
+      "ticker": "WTTR",
+      "price": 12.695
+    },
+    {
+      "ticker": "INAP",
+      "price": 12.115
+    }
+  ],
+  "250": [
+    {
+      "ticker": "LX",
+      "price": 10.42
+    },
+    {
+      "ticker": "FTNW",
+      "price": 11.89
+    },
+    {
+      "ticker": "ABEO",
+      "price": 14.425
+    },
+    {
+      "ticker": "WTTR",
+      "price": 12.625
+    },
+    {
+      "ticker": "INAP",
+      "price": 12.085
+    }
+  ],
   "600": [
     {
       "ticker": "LX",

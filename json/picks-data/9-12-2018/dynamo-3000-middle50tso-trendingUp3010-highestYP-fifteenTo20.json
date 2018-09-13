@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "GSG",
+      "price": 17.53
+    },
+    {
+      "ticker": "SZC",
+      "price": 19.36
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SIEB",
+      "price": 19.95
+    },
+    {
+      "ticker": "EOI",
+      "price": 16.26
+    }
+  ],
+  "351": [
+    {
+      "ticker": "LADR",
+      "price": 17.485
+    },
+    {
+      "ticker": "EOI",
+      "price": 16.268
+    }
+  ],
+  "381": [
+    {
+      "ticker": "DMLP",
+      "price": 18.9
+    },
+    {
+      "ticker": "USX",
+      "price": 15.655
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "MNGA",
+      "price": 0.1683
+    },
+    {
+      "ticker": "ATIS",
+      "price": 0.25
+    }
+  ],
+  "260": [
+    {
+      "ticker": "JAGX",
+      "price": 0.5799
+    },
+    {
+      "ticker": "ATIS",
+      "price": 0.25
+    }
+  ],
+  "351": [
+    {
+      "ticker": "MNGA",
+      "price": 0.165
+    },
+    {
+      "ticker": "JAGX",
+      "price": 0.5509
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MNGA",
+      "price": 0.165
+    },
+    {
+      "ticker": "JAGX",
+      "price": 0.5511
+    }
+  ]
+}

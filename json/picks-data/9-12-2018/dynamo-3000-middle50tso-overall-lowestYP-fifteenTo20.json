@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "XOMA",
+      "price": 16.99
+    },
+    {
+      "ticker": "MXL",
+      "price": 18.13
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SDOW",
+      "price": 15.17
+    },
+    {
+      "ticker": "WLH",
+      "price": 18.27
+    }
+  ],
+  "351": [
+    {
+      "ticker": "TECS",
+      "price": 19.37
+    },
+    {
+      "ticker": "CAPL",
+      "price": 18.5839
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CLXT",
+      "price": 15.98
+    },
+    {
+      "ticker": "SCC",
+      "price": 17.1136
+    }
+  ]
+}

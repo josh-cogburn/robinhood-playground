@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "ADTN",
+      "price": 18.625
+    },
+    {
+      "ticker": "LBRT",
+      "price": 19.24
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ADTN",
+      "price": 18.5999
+    },
+    {
+      "ticker": "LBRT",
+      "price": 19.27
+    }
+  ],
+  "351": [
+    {
+      "ticker": "ADTN",
+      "price": 18.5905
+    },
+    {
+      "ticker": "LBRT",
+      "price": 19.39
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ADTN",
+      "price": 18.625
+    },
+    {
+      "ticker": "LBRT",
+      "price": 19.2
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "DHXM",
+      "price": 1.1671
+    },
+    {
+      "ticker": "VTL",
+      "price": 0.525
+    }
+  ],
+  "260": [
+    {
+      "ticker": "DHXM",
+      "price": 1.2248
+    },
+    {
+      "ticker": "VERU",
+      "price": 1.58
+    }
+  ],
+  "351": [
+    {
+      "ticker": "VTL",
+      "price": 0.425
+    },
+    {
+      "ticker": "VERU",
+      "price": 1.54
+    }
+  ],
+  "381": [
+    {
+      "ticker": "VTL",
+      "price": 0.45
+    },
+    {
+      "ticker": "DHXM",
+      "price": 1.2969
+    }
+  ]
+}

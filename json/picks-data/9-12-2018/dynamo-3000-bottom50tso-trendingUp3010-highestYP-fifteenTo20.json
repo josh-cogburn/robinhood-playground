@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "BRY",
+      "price": 15.8
+    },
+    {
+      "ticker": "ARWR",
+      "price": 19.53
+    }
+  ],
+  "260": [
+    {
+      "ticker": "BRY",
+      "price": 15.655
+    },
+    {
+      "ticker": "ARWR",
+      "price": 19.34
+    }
+  ],
+  "351": [
+    {
+      "ticker": "BRY",
+      "price": 15.68
+    },
+    {
+      "ticker": "ARWR",
+      "price": 19.3501
+    }
+  ],
+  "381": [
+    {
+      "ticker": "BRY",
+      "price": 15.68
+    },
+    {
+      "ticker": "ARWR",
+      "price": 19.13
+    }
+  ]
+}

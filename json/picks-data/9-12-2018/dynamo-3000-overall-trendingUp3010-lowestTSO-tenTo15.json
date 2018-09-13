@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "SSEZY",
+      "price": 14.986
+    },
+    {
+      "ticker": "ZYME",
+      "price": 14.09
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SSEZY",
+      "price": 14.97
+    },
+    {
+      "ticker": "SCWX",
+      "price": 13.01
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SSEZY",
+      "price": 14.88
+    },
+    {
+      "ticker": "SCWX",
+      "price": 12.8485
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SSEZY",
+      "price": 14.88
+    },
+    {
+      "ticker": "SCWX",
+      "price": 12.9
+    }
+  ]
+}

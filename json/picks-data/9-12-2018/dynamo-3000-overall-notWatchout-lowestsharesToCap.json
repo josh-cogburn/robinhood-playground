@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "VTL",
+      "price": 0.525
+    },
+    {
+      "ticker": "III",
+      "price": 4.98
+    }
+  ],
+  "260": [
+    {
+      "ticker": "VTL",
+      "price": 0.525
+    },
+    {
+      "ticker": "III",
+      "price": 4.99
+    }
+  ],
+  "351": [
+    {
+      "ticker": "VTL",
+      "price": 0.425
+    },
+    {
+      "ticker": "III",
+      "price": 5
+    }
+  ],
+  "381": [
+    {
+      "ticker": "VTL",
+      "price": 0.45
+    },
+    {
+      "ticker": "III",
+      "price": 5
+    }
+  ]
+}

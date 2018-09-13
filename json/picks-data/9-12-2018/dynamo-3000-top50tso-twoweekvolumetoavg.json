@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "XBIO",
+      "price": 2.6215
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.2093
+    }
+  ],
+  "260": [
+    {
+      "ticker": "REED",
+      "price": 3.17
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.2
+    }
+  ],
+  "351": [
+    {
+      "ticker": "PIXY",
+      "price": 4.03
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.22
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MRIN",
+      "price": 3.3
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.21
+    }
+  ]
+}

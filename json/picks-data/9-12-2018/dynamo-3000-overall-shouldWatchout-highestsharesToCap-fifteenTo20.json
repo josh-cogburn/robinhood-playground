@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "AOBC",
+      "price": 15.415
+    },
+    {
+      "ticker": "WTBDY",
+      "price": 15.07
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AOBC",
+      "price": 15.43
+    },
+    {
+      "ticker": "WTBDY",
+      "price": 15.25
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AOBC",
+      "price": 15.455
+    },
+    {
+      "ticker": "WTBDY",
+      "price": 15.07
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AOBC",
+      "price": 15.4
+    },
+    {
+      "ticker": "WTBDY",
+      "price": 15.07
+    }
+  ]
+}

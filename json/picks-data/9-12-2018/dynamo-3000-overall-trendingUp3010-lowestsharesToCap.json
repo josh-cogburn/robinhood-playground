@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "APOP",
+      "price": 4.9547
+    },
+    {
+      "ticker": "GTIM",
+      "price": 4.8381
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SSC",
+      "price": 4.86
+    },
+    {
+      "ticker": "APOP",
+      "price": 4.9547
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SSC",
+      "price": 4.8939
+    },
+    {
+      "ticker": "APOP",
+      "price": 4.95
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SSC",
+      "price": 4.98
+    },
+    {
+      "ticker": "APOP",
+      "price": 4.8
+    }
+  ]
+}

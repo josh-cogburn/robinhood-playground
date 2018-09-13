@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "UIS",
+      "price": 19.15
+    },
+    {
+      "ticker": "LBAI",
+      "price": 18.95
+    }
+  ],
+  "260": [
+    {
+      "ticker": "RDUS",
+      "price": 18.45
+    },
+    {
+      "ticker": "LBAI",
+      "price": 18.85
+    }
+  ],
+  "351": [
+    {
+      "ticker": "RDCM",
+      "price": 16.95
+    },
+    {
+      "ticker": "MOD",
+      "price": 15.85
+    }
+  ],
+  "381": [
+    {
+      "ticker": "FFWM",
+      "price": 16.46
+    },
+    {
+      "ticker": "HFBC",
+      "price": 17.3
+    }
+  ]
+}

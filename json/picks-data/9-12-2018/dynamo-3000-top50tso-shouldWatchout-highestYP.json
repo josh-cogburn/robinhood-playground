@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "ARCI",
+      "price": 1.6295
+    },
+    {
+      "ticker": "REED",
+      "price": 3.25
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ARCI",
+      "price": 1.5112
+    },
+    {
+      "ticker": "REED",
+      "price": 3.17
+    }
+  ],
+  "351": [
+    {
+      "ticker": "ENT",
+      "price": 2.6
+    },
+    {
+      "ticker": "EVK",
+      "price": 3.3
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ATNM",
+      "price": 0.6637
+    },
+    {
+      "ticker": "EVK",
+      "price": 3.3
+    }
+  ]
+}

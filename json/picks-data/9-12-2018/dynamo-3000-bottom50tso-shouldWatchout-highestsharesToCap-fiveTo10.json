@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "LGCY",
+      "price": 5.231
+    },
+    {
+      "ticker": "RRD",
+      "price": 5.19
+    }
+  ],
+  "260": [
+    {
+      "ticker": "RRD",
+      "price": 5.17
+    },
+    {
+      "ticker": "LCI",
+      "price": 5.275
+    }
+  ],
+  "351": [
+    {
+      "ticker": "BRFS",
+      "price": 5.105
+    },
+    {
+      "ticker": "RRD",
+      "price": 5.185
+    }
+  ],
+  "381": [
+    {
+      "ticker": "BRFS",
+      "price": 5.08
+    },
+    {
+      "ticker": "RRD",
+      "price": 5.175
+    }
+  ]
+}

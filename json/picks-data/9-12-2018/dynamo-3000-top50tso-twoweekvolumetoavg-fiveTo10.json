@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "METC",
+      "price": 7.91
+    },
+    {
+      "ticker": "VVUS",
+      "price": 6
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AKTS",
+      "price": 8.25
+    },
+    {
+      "ticker": "VVUS",
+      "price": 5.8925
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NVUS",
+      "price": 5.2
+    },
+    {
+      "ticker": "CIFS",
+      "price": 9.5
+    }
+  ],
+  "381": [
+    {
+      "ticker": "OR",
+      "price": 7.81
+    },
+    {
+      "ticker": "CIFS",
+      "price": 9.74
+    }
+  ]
+}

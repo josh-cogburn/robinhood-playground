@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "CEFS",
+      "price": 19.98
+    },
+    {
+      "ticker": "OPP",
+      "price": 17.6141
+    }
+  ],
+  "260": [
+    {
+      "ticker": "OUT",
+      "price": 19.975
+    },
+    {
+      "ticker": "GDO",
+      "price": 16.372
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CAPL",
+      "price": 18.5839
+    },
+    {
+      "ticker": "OPP",
+      "price": 17.6653
+    }
+  ],
+  "381": [
+    {
+      "ticker": "GFY",
+      "price": 16.41
+    },
+    {
+      "ticker": "APTS",
+      "price": 17.76
+    }
+  ]
+}

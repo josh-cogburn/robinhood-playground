@@ -1,0 +1,90 @@
+{
+  "200": [
+    {
+      "ticker": "CISN",
+      "price": 16.67
+    },
+    {
+      "ticker": "ECOR",
+      "price": 16.9699
+    },
+    {
+      "ticker": "ERJ",
+      "price": 18.795
+    },
+    {
+      "ticker": "BSM",
+      "price": 18.45
+    },
+    {
+      "ticker": "FFWM",
+      "price": 16.26
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CISN",
+      "price": 16.57
+    },
+    {
+      "ticker": "ECOR",
+      "price": 16.73
+    },
+    {
+      "ticker": "LQDA",
+      "price": 18.97
+    },
+    {
+      "ticker": "ERJ",
+      "price": 18.85
+    },
+    {
+      "ticker": "BSM",
+      "price": 18.46
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CISN",
+      "price": 16.67
+    },
+    {
+      "ticker": "KRYS",
+      "price": 19.5
+    },
+    {
+      "ticker": "ERJ",
+      "price": 18.68
+    },
+    {
+      "ticker": "BRY",
+      "price": 15.68
+    },
+    {
+      "ticker": "BSM",
+      "price": 18.47
+    }
+  ],
+  "381": [
+    {
+      "ticker": "KRYS",
+      "price": 17.73
+    },
+    {
+      "ticker": "CISN",
+      "price": 16.42
+    },
+    {
+      "ticker": "ERJ",
+      "price": 18.665
+    },
+    {
+      "ticker": "ECOR",
+      "price": 16.99
+    },
+    {
+      "ticker": "BRY",
+      "price": 15.68
+    }
+  ]
+}

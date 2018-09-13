@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "SRNE",
+      "price": 4.92
+    },
+    {
+      "ticker": "ASYS",
+      "price": 5
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SRNE",
+      "price": 4.925
+    },
+    {
+      "ticker": "ASYS",
+      "price": 4.99
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SRNE",
+      "price": 4.975
+    },
+    {
+      "ticker": "ATOM",
+      "price": 5
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SRNE",
+      "price": 4.975
+    },
+    {
+      "ticker": "ATOM",
+      "price": 5
+    }
+  ]
+}

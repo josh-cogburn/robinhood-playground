@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "SCOR",
+      "price": 19.79
+    },
+    {
+      "ticker": "AFI",
+      "price": 19.22
+    }
+  ],
+  "260": [
+    {
+      "ticker": "KZR",
+      "price": 20.1
+    },
+    {
+      "ticker": "SCOR",
+      "price": 19.86
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SCOR",
+      "price": 19.845
+    },
+    {
+      "ticker": "FIXX",
+      "price": 18.72
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SCOR",
+      "price": 19.79
+    },
+    {
+      "ticker": "FIXX",
+      "price": 19.02
+    }
+  ]
+}

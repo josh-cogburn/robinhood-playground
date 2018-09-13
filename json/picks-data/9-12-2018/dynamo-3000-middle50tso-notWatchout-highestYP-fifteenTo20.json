@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "ELOX",
+      "price": 15.41
+    },
+    {
+      "ticker": "WEN",
+      "price": 17.745
+    }
+  ],
+  "260": [
+    {
+      "ticker": "QAT",
+      "price": 17.82
+    },
+    {
+      "ticker": "FXN",
+      "price": 16.8958
+    }
+  ],
+  "351": [
+    {
+      "ticker": "LADR",
+      "price": 17.485
+    },
+    {
+      "ticker": "FXN",
+      "price": 16.915
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CCT",
+      "price": 16.2
+    },
+    {
+      "ticker": "FXN",
+      "price": 16.89
+    }
+  ]
+}

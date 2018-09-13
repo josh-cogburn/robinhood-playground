@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "LTRX",
+      "price": 5.08
+    },
+    {
+      "ticker": "TTOO",
+      "price": 6.4
+    }
+  ],
+  "260": [
+    {
+      "ticker": "LTRX",
+      "price": 5.2742
+    },
+    {
+      "ticker": "TTOO",
+      "price": 6.353
+    }
+  ],
+  "351": [
+    {
+      "ticker": "LTRX",
+      "price": 5.2307
+    },
+    {
+      "ticker": "SGMA",
+      "price": 6.4643
+    }
+  ],
+  "381": [
+    {
+      "ticker": "LTRX",
+      "price": 5.11
+    },
+    {
+      "ticker": "TTOO",
+      "price": 6.37
+    }
+  ]
+}

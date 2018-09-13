@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "AMAL",
+      "price": 18.735
+    },
+    {
+      "ticker": "CLCT",
+      "price": 15.165
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AMAL",
+      "price": 18.85
+    },
+    {
+      "ticker": "CLCT",
+      "price": 15.25
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AMAL",
+      "price": 18.85
+    },
+    {
+      "ticker": "PPC",
+      "price": 19.055
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AMAL",
+      "price": 18.85
+    },
+    {
+      "ticker": "PPC",
+      "price": 19.065
+    }
+  ]
+}

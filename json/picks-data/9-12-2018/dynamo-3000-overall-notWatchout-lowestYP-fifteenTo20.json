@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "AMAL",
+      "price": 18.735
+    },
+    {
+      "ticker": "LBJ",
+      "price": 17.99
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AMAL",
+      "price": 18.85
+    },
+    {
+      "ticker": "LBJ",
+      "price": 18.183
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AMAL",
+      "price": 18.85
+    },
+    {
+      "ticker": "LBJ",
+      "price": 18.21
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AMAL",
+      "price": 18.85
+    },
+    {
+      "ticker": "LBJ",
+      "price": 18.0978
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "WWR",
+      "price": 0.1976
+    },
+    {
+      "ticker": "AUMN",
+      "price": 0.2296
+    }
+  ],
+  "260": [
+    {
+      "ticker": "WWR",
+      "price": 0.195
+    },
+    {
+      "ticker": "AUMN",
+      "price": 0.2304
+    }
+  ],
+  "351": [
+    {
+      "ticker": "WWR",
+      "price": 0.195
+    },
+    {
+      "ticker": "AUMN",
+      "price": 0.2274
+    }
+  ],
+  "381": [
+    {
+      "ticker": "WWR",
+      "price": 0.2
+    },
+    {
+      "ticker": "AUMN",
+      "price": 0.23
+    }
+  ]
+}

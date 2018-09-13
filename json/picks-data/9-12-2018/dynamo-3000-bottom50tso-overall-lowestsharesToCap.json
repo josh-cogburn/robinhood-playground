@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "VTL",
+      "price": 0.525
+    },
+    {
+      "ticker": "SRNE",
+      "price": 4.92
+    }
+  ],
+  "260": [
+    {
+      "ticker": "VTL",
+      "price": 0.525
+    },
+    {
+      "ticker": "SRNE",
+      "price": 4.925
+    }
+  ],
+  "351": [
+    {
+      "ticker": "VTL",
+      "price": 0.425
+    },
+    {
+      "ticker": "SRNE",
+      "price": 4.975
+    }
+  ],
+  "381": [
+    {
+      "ticker": "VTL",
+      "price": 0.45
+    },
+    {
+      "ticker": "SRNE",
+      "price": 4.975
+    }
+  ]
+}

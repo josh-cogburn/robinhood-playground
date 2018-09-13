@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "ZFGN",
+      "price": 10.19
+    },
+    {
+      "ticker": "EDUC",
+      "price": 11.7
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ZFGN",
+      "price": 10.27
+    },
+    {
+      "ticker": "EDUC",
+      "price": 11.8
+    }
+  ],
+  "351": [
+    {
+      "ticker": "ZFGN",
+      "price": 10.41
+    },
+    {
+      "ticker": "SECO",
+      "price": 13.72
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ZFGN",
+      "price": 10.44
+    },
+    {
+      "ticker": "EDUC",
+      "price": 11.86
+    }
+  ]
+}

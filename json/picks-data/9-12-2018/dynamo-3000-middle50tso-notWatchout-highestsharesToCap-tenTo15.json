@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "MDIBY",
+      "price": 10.434
+    },
+    {
+      "ticker": "HYT",
+      "price": 10.6711
+    }
+  ],
+  "260": [
+    {
+      "ticker": "RGT",
+      "price": 10.4253
+    },
+    {
+      "ticker": "HYT",
+      "price": 10.675
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SMM",
+      "price": 10.21
+    },
+    {
+      "ticker": "JRO",
+      "price": 10.23
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SMM",
+      "price": 10.21
+    },
+    {
+      "ticker": "IRT",
+      "price": 10.245
+    }
+  ]
+}

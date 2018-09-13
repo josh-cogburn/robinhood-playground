@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "COTY",
+      "price": 12.27
+    },
+    {
+      "ticker": "CIFS",
+      "price": 10.15
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TMST",
+      "price": 13.94
+    },
+    {
+      "ticker": "CIFS",
+      "price": 10.215
+    }
+  ],
+  "351": [
+    {
+      "ticker": "RES",
+      "price": 14.495
+    },
+    {
+      "ticker": "NUGT",
+      "price": 12.36
+    }
+  ],
+  "381": [
+    {
+      "ticker": "WIMHY",
+      "price": 13.78
+    },
+    {
+      "ticker": "ZFGN",
+      "price": 10.44
+    }
+  ]
+}

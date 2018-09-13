@@ -1,3 +1,45 @@
 {
+  "200": [
+    {
+      "ticker": "AGRX",
+      "price": 0.583
+    },
+    {
+      "ticker": "SPI",
+      "price": 0.3499
+    }
+  ],
+  "300": [
+    {
+      "ticker": "AGRX",
+      "price": 0.52
+    },
+    {
+      "ticker": "SPI",
+      "price": 0.3483
+    },
+    {
+      "ticker": "GEVO",
+      "price": 4.6
+    }
+  ],
+  "380": [
+    {
+      "ticker": "AGRX",
+      "price": 0.56
+    },
+    {
+      "ticker": "SPI",
+      "price": 0.34
+    },
+    {
+      "ticker": "GEVO",
+      "price": 4.53
+    },
+    {
+      "ticker": "ARPO",
+      "price": 3.64
+    }
+  ],
   "600": []
 }

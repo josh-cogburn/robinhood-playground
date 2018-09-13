@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "AWSM",
+      "price": 4.18
+    },
+    {
+      "ticker": "GVP",
+      "price": 3.65
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AWSM",
+      "price": 4.18
+    },
+    {
+      "ticker": "GVP",
+      "price": 3.65
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AWSM",
+      "price": 4.39
+    },
+    {
+      "ticker": "GVP",
+      "price": 3.65
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AWSM",
+      "price": 4.5
+    },
+    {
+      "ticker": "GVP",
+      "price": 3.628
+    }
+  ]
+}

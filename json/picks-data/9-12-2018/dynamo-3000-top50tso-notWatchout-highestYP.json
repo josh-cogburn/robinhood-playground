@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "STKS",
+      "price": 3.215
+    },
+    {
+      "ticker": "IDSA",
+      "price": 2.45
+    }
+  ],
+  "260": [
+    {
+      "ticker": "IMMP",
+      "price": 3.125
+    },
+    {
+      "ticker": "BKTI",
+      "price": 4.1
+    }
+  ],
+  "351": [
+    {
+      "ticker": "STKS",
+      "price": 3.29
+    },
+    {
+      "ticker": "IMMP",
+      "price": 3.16
+    }
+  ],
+  "381": [
+    {
+      "ticker": "STKS",
+      "price": 3.29
+    },
+    {
+      "ticker": "IMMP",
+      "price": 3.1501
+    }
+  ]
+}

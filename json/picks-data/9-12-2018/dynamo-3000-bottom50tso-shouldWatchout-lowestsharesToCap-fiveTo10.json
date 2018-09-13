@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "ABUS",
+      "price": 9.525
+    },
+    {
+      "ticker": "CBIO",
+      "price": 9.55
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ABUS",
+      "price": 9.25
+    },
+    {
+      "ticker": "CBIO",
+      "price": 9.53
+    }
+  ],
+  "351": [
+    {
+      "ticker": "RFIL",
+      "price": 9.9455
+    },
+    {
+      "ticker": "ABUS",
+      "price": 9.5
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ABUS",
+      "price": 9.575
+    },
+    {
+      "ticker": "LBY",
+      "price": 9
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "COTY",
+      "price": 12.27
+    },
+    {
+      "ticker": "SVRA",
+      "price": 10.935
+    }
+  ],
+  "260": [
+    {
+      "ticker": "COTY",
+      "price": 12.3
+    },
+    {
+      "ticker": "RES",
+      "price": 14.535
+    }
+  ],
+  "351": [
+    {
+      "ticker": "RES",
+      "price": 14.495
+    },
+    {
+      "ticker": "SMTA",
+      "price": 11.03
+    }
+  ],
+  "381": [
+    {
+      "ticker": "WIMHY",
+      "price": 13.78
+    },
+    {
+      "ticker": "COTY",
+      "price": 12.35
+    }
+  ]
+}

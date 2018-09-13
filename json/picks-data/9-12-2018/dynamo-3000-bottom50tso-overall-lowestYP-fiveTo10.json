@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "RDVT",
+      "price": 5.9
+    },
+    {
+      "ticker": "CBIO",
+      "price": 9.55
+    }
+  ],
+  "260": [
+    {
+      "ticker": "RDVT",
+      "price": 5.4
+    },
+    {
+      "ticker": "LCI",
+      "price": 5.275
+    }
+  ],
+  "351": [
+    {
+      "ticker": "RDVT",
+      "price": 5.1336
+    },
+    {
+      "ticker": "INNT",
+      "price": 6.05
+    }
+  ],
+  "381": [
+    {
+      "ticker": "RDVT",
+      "price": 5.36
+    },
+    {
+      "ticker": "INNT",
+      "price": 6.1
+    }
+  ]
+}

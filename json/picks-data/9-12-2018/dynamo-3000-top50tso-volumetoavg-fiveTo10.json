@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "METC",
+      "price": 7.91
+    },
+    {
+      "ticker": "DFRG",
+      "price": 8.35
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AKTS",
+      "price": 8.25
+    },
+    {
+      "ticker": "ESTE",
+      "price": 9.01
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NVUS",
+      "price": 5.2
+    },
+    {
+      "ticker": "TA",
+      "price": 5.5
+    }
+  ],
+  "381": [
+    {
+      "ticker": "OR",
+      "price": 7.81
+    },
+    {
+      "ticker": "TENX",
+      "price": 5.25
+    }
+  ]
+}

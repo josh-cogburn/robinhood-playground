@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "UXIN",
+      "price": 5.03
+    },
+    {
+      "ticker": "COE",
+      "price": 7.3
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AP",
+      "price": 6.62
+    },
+    {
+      "ticker": "COE",
+      "price": 7.3102
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AP",
+      "price": 6.65
+    },
+    {
+      "ticker": "UXIN",
+      "price": 5.03
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AP",
+      "price": 6.6
+    },
+    {
+      "ticker": "UXIN",
+      "price": 5.0301
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "MLCO",
+      "price": 19.8847
+    },
+    {
+      "ticker": "ADTN",
+      "price": 18.625
+    }
+  ],
+  "260": [
+    {
+      "ticker": "EXPI",
+      "price": 16.43
+    },
+    {
+      "ticker": "ADTN",
+      "price": 18.5999
+    }
+  ],
+  "351": [
+    {
+      "ticker": "PNGAY",
+      "price": 18.77
+    },
+    {
+      "ticker": "ADTN",
+      "price": 18.5905
+    }
+  ],
+  "381": [
+    {
+      "ticker": "RAIL",
+      "price": 16.33
+    },
+    {
+      "ticker": "ADTN",
+      "price": 18.625
+    }
+  ]
+}

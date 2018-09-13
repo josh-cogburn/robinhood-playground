@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "NEW",
+      "price": 10.19
+    },
+    {
+      "ticker": "BPI",
+      "price": 10.27
+    }
+  ],
+  "260": [
+    {
+      "ticker": "IMMR",
+      "price": 10.98
+    },
+    {
+      "ticker": "BPI",
+      "price": 10.26
+    }
+  ],
+  "351": [
+    {
+      "ticker": "IMMR",
+      "price": 10.94
+    },
+    {
+      "ticker": "BPI",
+      "price": 10.225
+    }
+  ],
+  "381": [
+    {
+      "ticker": "BPI",
+      "price": 10.2
+    },
+    {
+      "ticker": "SHLO",
+      "price": 10.818
+    }
+  ]
+}

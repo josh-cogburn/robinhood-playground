@@ -1,0 +1,90 @@
+{
+  "200": [
+    {
+      "ticker": "HK",
+      "price": 4.83
+    },
+    {
+      "ticker": "DHF",
+      "price": 3.17
+    },
+    {
+      "ticker": "TNP",
+      "price": 3.42
+    },
+    {
+      "ticker": "PER",
+      "price": 2.5683
+    },
+    {
+      "ticker": "CMU",
+      "price": 4.635
+    }
+  ],
+  "260": [
+    {
+      "ticker": "DHY",
+      "price": 2.615
+    },
+    {
+      "ticker": "VVR",
+      "price": 4.335
+    },
+    {
+      "ticker": "HK",
+      "price": 4.835
+    },
+    {
+      "ticker": "EMX",
+      "price": 1.2105
+    },
+    {
+      "ticker": "NVLN",
+      "price": 4
+    }
+  ],
+  "351": [
+    {
+      "ticker": "VVR",
+      "price": 4.331
+    },
+    {
+      "ticker": "DHF",
+      "price": 3.175
+    },
+    {
+      "ticker": "CMU",
+      "price": 4.6362
+    },
+    {
+      "ticker": "CIK",
+      "price": 3.171
+    },
+    {
+      "ticker": "LLNW",
+      "price": 4.87
+    }
+  ],
+  "381": [
+    {
+      "ticker": "OGZPY",
+      "price": 4.492
+    },
+    {
+      "ticker": "VVR",
+      "price": 4.33
+    },
+    {
+      "ticker": "DHF",
+      "price": 3.175
+    },
+    {
+      "ticker": "CMU",
+      "price": 4.6362
+    },
+    {
+      "ticker": "SENS",
+      "price": 4.52
+    }
+  ]
+}

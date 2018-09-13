@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "NVUS",
+      "price": 5.1636
+    },
+    {
+      "ticker": "ICLK",
+      "price": 5.08
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NVUS",
+      "price": 5.19
+    },
+    {
+      "ticker": "MXC",
+      "price": 5.1
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NVUS",
+      "price": 5.2
+    },
+    {
+      "ticker": "ELMD",
+      "price": 5.44
+    }
+  ],
+  "381": [
+    {
+      "ticker": "NVUS",
+      "price": 5.07
+    },
+    {
+      "ticker": "ELMD",
+      "price": 5.42
+    }
+  ]
+}

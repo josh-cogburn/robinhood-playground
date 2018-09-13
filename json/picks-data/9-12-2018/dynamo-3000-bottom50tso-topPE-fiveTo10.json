@@ -1,0 +1,58 @@
+{
+  "200": [
+    {
+      "ticker": "LTRX",
+      "price": 5.08
+    },
+    {
+      "ticker": "PFSW",
+      "price": 8.11
+    },
+    {
+      "ticker": "PHII",
+      "price": 8.6072
+    }
+  ],
+  "260": [
+    {
+      "ticker": "LTRX",
+      "price": 5.2742
+    },
+    {
+      "ticker": "ONDK",
+      "price": 7.67
+    },
+    {
+      "ticker": "TTS",
+      "price": 7.3
+    }
+  ],
+  "351": [
+    {
+      "ticker": "LTRX",
+      "price": 5.2307
+    },
+    {
+      "ticker": "ONDK",
+      "price": 7.735
+    },
+    {
+      "ticker": "TTS",
+      "price": 7.325
+    }
+  ],
+  "381": [
+    {
+      "ticker": "LTRX",
+      "price": 5.11
+    },
+    {
+      "ticker": "ONDK",
+      "price": 7.755
+    },
+    {
+      "ticker": "TTS",
+      "price": 7.325
+    }
+  ]
+}

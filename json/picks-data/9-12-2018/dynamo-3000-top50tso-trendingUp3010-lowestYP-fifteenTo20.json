@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "SCOR",
+      "price": 19.79
+    },
+    {
+      "ticker": "OMI",
+      "price": 18.1633
+    }
+  ],
+  "260": [
+    {
+      "ticker": "DM",
+      "price": 17.625
+    },
+    {
+      "ticker": "SCOR",
+      "price": 19.86
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SCOR",
+      "price": 19.845
+    },
+    {
+      "ticker": "OMI",
+      "price": 18.245
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SCOR",
+      "price": 19.79
+    },
+    {
+      "ticker": "OMI",
+      "price": 18.2
+    }
+  ]
+}

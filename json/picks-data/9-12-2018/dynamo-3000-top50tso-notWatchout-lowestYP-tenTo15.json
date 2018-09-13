@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "JP",
+      "price": 10.305
+    },
+    {
+      "ticker": "JKS",
+      "price": 12.54
+    }
+  ],
+  "260": [
+    {
+      "ticker": "JP",
+      "price": 10.81
+    },
+    {
+      "ticker": "JKS",
+      "price": 12.595
+    }
+  ],
+  "351": [
+    {
+      "ticker": "JP",
+      "price": 10.7
+    },
+    {
+      "ticker": "JKS",
+      "price": 12.67
+    }
+  ],
+  "381": [
+    {
+      "ticker": "JP",
+      "price": 10.75
+    },
+    {
+      "ticker": "JKS",
+      "price": 12.765
+    }
+  ]
+}

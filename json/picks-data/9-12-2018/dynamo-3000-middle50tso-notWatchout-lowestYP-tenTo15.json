@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "CSS",
+      "price": 14.105
+    },
+    {
+      "ticker": "IDCBY",
+      "price": 13.89
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SIJ",
+      "price": 14.3032
+    },
+    {
+      "ticker": "IDCBY",
+      "price": 13.895
+    }
+  ],
+  "351": [
+    {
+      "ticker": "LFC",
+      "price": 10.64
+    },
+    {
+      "ticker": "SDD",
+      "price": 11.4228
+    }
+  ],
+  "381": [
+    {
+      "ticker": "BZH",
+      "price": 11.945
+    },
+    {
+      "ticker": "SDD",
+      "price": 11.4228
+    }
+  ]
+}

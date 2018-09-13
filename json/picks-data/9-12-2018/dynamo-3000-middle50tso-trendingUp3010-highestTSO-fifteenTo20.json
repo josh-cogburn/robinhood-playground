@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "DBC",
+      "price": 17.475
+    },
+    {
+      "ticker": "AIF",
+      "price": 15.76
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PGRE",
+      "price": 15.61
+    },
+    {
+      "ticker": "GOV",
+      "price": 16.795
+    }
+  ],
+  "351": [
+    {
+      "ticker": "PGRE",
+      "price": 15.62
+    },
+    {
+      "ticker": "PTY",
+      "price": 18.215
+    }
+  ],
+  "381": [
+    {
+      "ticker": "DMLP",
+      "price": 18.9
+    },
+    {
+      "ticker": "PSDO",
+      "price": 16.75
+    }
+  ]
+}

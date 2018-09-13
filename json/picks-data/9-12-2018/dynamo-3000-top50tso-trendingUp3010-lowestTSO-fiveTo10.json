@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "METC",
+      "price": 7.91
+    },
+    {
+      "ticker": "MOBL",
+      "price": 5.675
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SVA",
+      "price": 7.32
+    },
+    {
+      "ticker": "METC",
+      "price": 7.955
+    }
+  ],
+  "351": [
+    {
+      "ticker": "YRCW",
+      "price": 9.6
+    },
+    {
+      "ticker": "SVA",
+      "price": 7.33
+    }
+  ],
+  "381": [
+    {
+      "ticker": "METC",
+      "price": 7.97
+    },
+    {
+      "ticker": "ESTE",
+      "price": 9
+    }
+  ]
+}

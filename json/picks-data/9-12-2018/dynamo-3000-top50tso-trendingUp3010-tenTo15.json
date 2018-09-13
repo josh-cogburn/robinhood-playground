@@ -1,0 +1,90 @@
+{
+  "200": [
+    {
+      "ticker": "CSIQ",
+      "price": 14.99
+    },
+    {
+      "ticker": "CZR",
+      "price": 10.25
+    },
+    {
+      "ticker": "WIMHY",
+      "price": 13.81
+    },
+    {
+      "ticker": "SHZHY",
+      "price": 12.02
+    },
+    {
+      "ticker": "NDLS",
+      "price": 12.625
+    }
+  ],
+  "260": [
+    {
+      "ticker": "WIMHY",
+      "price": 13.785
+    },
+    {
+      "ticker": "ERA",
+      "price": 12.57
+    },
+    {
+      "ticker": "CZR",
+      "price": 10.275
+    },
+    {
+      "ticker": "SHZHY",
+      "price": 12.02
+    },
+    {
+      "ticker": "DERM",
+      "price": 10.42
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SMTA",
+      "price": 11.03
+    },
+    {
+      "ticker": "NDLS",
+      "price": 12.5
+    },
+    {
+      "ticker": "WIMHY",
+      "price": 13.8097
+    },
+    {
+      "ticker": "DERM",
+      "price": 10.53
+    },
+    {
+      "ticker": "CZR",
+      "price": 10.35
+    }
+  ],
+  "381": [
+    {
+      "ticker": "WIMHY",
+      "price": 13.78
+    },
+    {
+      "ticker": "DERM",
+      "price": 10.48
+    },
+    {
+      "ticker": "CZR",
+      "price": 10.3
+    },
+    {
+      "ticker": "CLF",
+      "price": 11.15
+    },
+    {
+      "ticker": "OSIR",
+      "price": 11.2
+    }
+  ]
+}

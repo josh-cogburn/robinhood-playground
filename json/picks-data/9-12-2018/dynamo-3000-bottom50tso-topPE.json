@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "FRAN",
+      "price": 3.545
+    },
+    {
+      "ticker": "CRHM",
+      "price": 4.175
+    },
+    {
+      "ticker": "OBCI",
+      "price": 4.2328
+    }
+  ],
+  "260": [
+    {
+      "ticker": "FRAN",
+      "price": 3.59
+    },
+    {
+      "ticker": "CRHM",
+      "price": 4.1305
+    },
+    {
+      "ticker": "OBCI",
+      "price": 4.2328
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CRHM",
+      "price": 4.2
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CRHM",
+      "price": 4.15
+    }
+  ]
+}

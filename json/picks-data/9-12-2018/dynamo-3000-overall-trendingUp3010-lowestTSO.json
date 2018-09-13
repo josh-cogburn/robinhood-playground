@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "ANY",
+      "price": 0.318
+    },
+    {
+      "ticker": "OHRP",
+      "price": 0.1973
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ANY",
+      "price": 0.3099
+    },
+    {
+      "ticker": "OHRP",
+      "price": 0.2041
+    }
+  ],
+  "351": [
+    {
+      "ticker": "ANY",
+      "price": 0.3073
+    },
+    {
+      "ticker": "BPMX",
+      "price": 0.205
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ANY",
+      "price": 0.32
+    },
+    {
+      "ticker": "BPMX",
+      "price": 0.2
+    }
+  ]
+}

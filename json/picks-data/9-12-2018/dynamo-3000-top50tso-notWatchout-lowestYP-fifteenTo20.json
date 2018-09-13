@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "TEO",
+      "price": 17.105
+    },
+    {
+      "ticker": "CHAU",
+      "price": 17.44
+    }
+  ],
+  "260": [
+    {
+      "ticker": "LBJ",
+      "price": 18.183
+    },
+    {
+      "ticker": "TEO",
+      "price": 17.125
+    }
+  ],
+  "351": [
+    {
+      "ticker": "LBJ",
+      "price": 18.21
+    },
+    {
+      "ticker": "TEO",
+      "price": 17.39
+    }
+  ],
+  "381": [
+    {
+      "ticker": "LBJ",
+      "price": 18.0978
+    },
+    {
+      "ticker": "TEO",
+      "price": 17.36
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "200": [
+    {
+      "ticker": "SYRS",
+      "price": 12.03
+    },
+    {
+      "ticker": "INAP",
+      "price": 12.14
+    },
+    {
+      "ticker": "FPRX",
+      "price": 14.06
+    },
+    {
+      "ticker": "TMST",
+      "price": 13.99
+    },
+    {
+      "ticker": "EIDX",
+      "price": 12.81
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TMST",
+      "price": 13.94
+    },
+    {
+      "ticker": "DERM",
+      "price": 10.42
+    },
+    {
+      "ticker": "USAT",
+      "price": 10.025
+    },
+    {
+      "ticker": "FPRX",
+      "price": 14.215
+    },
+    {
+      "ticker": "PLSE",
+      "price": 13.54
+    }
+  ],
+  "351": [
+    {
+      "ticker": "DERM",
+      "price": 10.53
+    },
+    {
+      "ticker": "BEDU",
+      "price": 11.675
+    },
+    {
+      "ticker": "AKRX",
+      "price": 14.11
+    },
+    {
+      "ticker": "ALNA",
+      "price": 10.75
+    },
+    {
+      "ticker": "PLSE",
+      "price": 13.6232
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AQ",
+      "price": 12.73
+    },
+    {
+      "ticker": "DERM",
+      "price": 10.48
+    },
+    {
+      "ticker": "INAP",
+      "price": 12.09
+    },
+    {
+      "ticker": "AKRX",
+      "price": 14.065
+    },
+    {
+      "ticker": "ALNA",
+      "price": 10.5
+    }
+  ]
+}

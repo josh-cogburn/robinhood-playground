@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "REPL",
+      "price": 17.7955
+    },
+    {
+      "ticker": "ACLS",
+      "price": 18.7874
+    }
+  ],
+  "260": [
+    {
+      "ticker": "REPL",
+      "price": 17.85
+    },
+    {
+      "ticker": "STM",
+      "price": 17.78
+    }
+  ],
+  "351": [
+    {
+      "ticker": "PRQR",
+      "price": 18.85
+    },
+    {
+      "ticker": "STM",
+      "price": 17.775
+    }
+  ],
+  "381": [
+    {
+      "ticker": "PRQR",
+      "price": 18.55
+    },
+    {
+      "ticker": "AMPH",
+      "price": 18.48
+    }
+  ]
+}

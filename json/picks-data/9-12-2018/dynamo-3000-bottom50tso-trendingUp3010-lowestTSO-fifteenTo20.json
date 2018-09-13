@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "PRQR",
+      "price": 19.5
+    },
+    {
+      "ticker": "CRCM",
+      "price": 18.73
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PRQR",
+      "price": 19.3109
+    },
+    {
+      "ticker": "CISN",
+      "price": 16.57
+    }
+  ],
+  "351": [
+    {
+      "ticker": "PRQR",
+      "price": 18.85
+    },
+    {
+      "ticker": "CISN",
+      "price": 16.67
+    }
+  ],
+  "381": [
+    {
+      "ticker": "PRQR",
+      "price": 18.55
+    },
+    {
+      "ticker": "KRYS",
+      "price": 17.73
+    }
+  ]
+}

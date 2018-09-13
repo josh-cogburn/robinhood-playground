@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "TFSL",
+      "price": 15.335
+    },
+    {
+      "ticker": "BRY",
+      "price": 15.8
+    }
+  ],
+  "260": [
+    {
+      "ticker": "BRY",
+      "price": 15.655
+    },
+    {
+      "ticker": "HBAN",
+      "price": 15.89
+    }
+  ],
+  "351": [
+    {
+      "ticker": "BRY",
+      "price": 15.68
+    },
+    {
+      "ticker": "MOD",
+      "price": 15.85
+    }
+  ],
+  "381": [
+    {
+      "ticker": "BRY",
+      "price": 15.68
+    },
+    {
+      "ticker": "MOD",
+      "price": 15.75
+    }
+  ]
+}

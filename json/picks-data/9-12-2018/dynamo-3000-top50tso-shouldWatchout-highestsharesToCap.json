@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "INPX",
+      "price": 0.2093
+    },
+    {
+      "ticker": "LODE",
+      "price": 0.1907
+    }
+  ],
+  "260": [
+    {
+      "ticker": "INPX",
+      "price": 0.2
+    },
+    {
+      "ticker": "LODE",
+      "price": 0.1886
+    }
+  ],
+  "351": [
+    {
+      "ticker": "INPX",
+      "price": 0.22
+    },
+    {
+      "ticker": "NAVB",
+      "price": 0.1949
+    }
+  ],
+  "381": [
+    {
+      "ticker": "INPX",
+      "price": 0.21
+    },
+    {
+      "ticker": "NAVB",
+      "price": 0.1949
+    }
+  ]
+}

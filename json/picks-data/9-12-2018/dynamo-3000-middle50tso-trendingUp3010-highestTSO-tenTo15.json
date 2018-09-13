@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "PHD",
+      "price": 11.11
+    },
+    {
+      "ticker": "GHY",
+      "price": 13.8768
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CEV",
+      "price": 11.4604
+    },
+    {
+      "ticker": "HMG",
+      "price": 14.9501
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NFJ",
+      "price": 13.1537
+    },
+    {
+      "ticker": "HMG",
+      "price": 14.9501
+    }
+  ],
+  "381": [
+    {
+      "ticker": "BXMX",
+      "price": 14.5469
+    },
+    {
+      "ticker": "OFS",
+      "price": 12.7
+    }
+  ]
+}

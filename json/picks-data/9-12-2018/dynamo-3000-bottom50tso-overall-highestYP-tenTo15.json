@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "XENE",
+      "price": 14.25
+    },
+    {
+      "ticker": "OPRX",
+      "price": 13.6999
+    }
+  ],
+  "260": [
+    {
+      "ticker": "XENE",
+      "price": 14.15
+    },
+    {
+      "ticker": "OPRX",
+      "price": 13.5
+    }
+  ],
+  "351": [
+    {
+      "ticker": "OPRX",
+      "price": 13.75
+    },
+    {
+      "ticker": "XENE",
+      "price": 14.2
+    }
+  ],
+  "381": [
+    {
+      "ticker": "XENE",
+      "price": 14.17
+    },
+    {
+      "ticker": "OPRX",
+      "price": 13.75
+    }
+  ]
+}

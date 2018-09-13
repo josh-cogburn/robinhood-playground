@@ -1,0 +1,58 @@
+{
+  "200": [
+    {
+      "ticker": "CRON",
+      "price": 11.07
+    },
+    {
+      "ticker": "ACMR",
+      "price": 11.75
+    },
+    {
+      "ticker": "TZOO",
+      "price": 11.8
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CRON",
+      "price": 11.33
+    },
+    {
+      "ticker": "ACMR",
+      "price": 11.85
+    },
+    {
+      "ticker": "QNST",
+      "price": 14.16
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CRON",
+      "price": 11.48
+    },
+    {
+      "ticker": "ACMR",
+      "price": 11.52
+    },
+    {
+      "ticker": "DGII",
+      "price": 12.325
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CRON",
+      "price": 11.3
+    },
+    {
+      "ticker": "ACMR",
+      "price": 11.19
+    },
+    {
+      "ticker": "DGII",
+      "price": 12.35
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "RHE",
+      "price": 0.23
+    },
+    {
+      "ticker": "ANY",
+      "price": 0.318
+    }
+  ],
+  "260": [
+    {
+      "ticker": "RHE",
+      "price": 0.2199
+    },
+    {
+      "ticker": "ANY",
+      "price": 0.3099
+    }
+  ],
+  "351": [
+    {
+      "ticker": "RHE",
+      "price": 0.2152
+    },
+    {
+      "ticker": "ANY",
+      "price": 0.3073
+    }
+  ],
+  "381": [
+    {
+      "ticker": "RHE",
+      "price": 0.2101
+    },
+    {
+      "ticker": "ANY",
+      "price": 0.32
+    }
+  ]
+}

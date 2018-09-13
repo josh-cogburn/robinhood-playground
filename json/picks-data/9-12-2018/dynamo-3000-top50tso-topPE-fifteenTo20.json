@@ -1,0 +1,58 @@
+{
+  "200": [
+    {
+      "ticker": "DEA",
+      "price": 19.82
+    },
+    {
+      "ticker": "GDX",
+      "price": 18.085
+    },
+    {
+      "ticker": "PRMW",
+      "price": 19.72
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GDX",
+      "price": 18.245
+    },
+    {
+      "ticker": "RRC",
+      "price": 15.604
+    },
+    {
+      "ticker": "SGDM",
+      "price": 15.5321
+    }
+  ],
+  "351": [
+    {
+      "ticker": "DEA",
+      "price": 19.8931
+    },
+    {
+      "ticker": "GDX",
+      "price": 18.2
+    },
+    {
+      "ticker": "SGDM",
+      "price": 15.55
+    }
+  ],
+  "381": [
+    {
+      "ticker": "DEA",
+      "price": 19.915
+    },
+    {
+      "ticker": "GDX",
+      "price": 18.12
+    },
+    {
+      "ticker": "SGDM",
+      "price": 15.4716
+    }
+  ]
+}

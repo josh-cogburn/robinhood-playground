@@ -1,0 +1,58 @@
+{
+  "200": [
+    {
+      "ticker": "ERJ",
+      "price": 18.795
+    },
+    {
+      "ticker": "DPLO",
+      "price": 18.92
+    },
+    {
+      "ticker": "CRCM",
+      "price": 18.73
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ERJ",
+      "price": 18.85
+    },
+    {
+      "ticker": "DPLO",
+      "price": 18.89
+    },
+    {
+      "ticker": "CRCM",
+      "price": 18.7
+    }
+  ],
+  "351": [
+    {
+      "ticker": "ERJ",
+      "price": 18.68
+    },
+    {
+      "ticker": "CRCM",
+      "price": 19.075
+    },
+    {
+      "ticker": "ATGFF",
+      "price": 18.8089
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ERJ",
+      "price": 18.665
+    },
+    {
+      "ticker": "CRCM",
+      "price": 19.23
+    },
+    {
+      "ticker": "ATGFF",
+      "price": 18.8224
+    }
+  ]
+}

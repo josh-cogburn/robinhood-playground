@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "ARCI",
+      "price": 1.6295
+    },
+    {
+      "ticker": "STKS",
+      "price": 3.215
+    }
+  ],
+  "260": [
+    {
+      "ticker": "IMMP",
+      "price": 3.125
+    },
+    {
+      "ticker": "ARCI",
+      "price": 1.5112
+    }
+  ],
+  "351": [
+    {
+      "ticker": "STKS",
+      "price": 3.29
+    },
+    {
+      "ticker": "IMMP",
+      "price": 3.16
+    }
+  ],
+  "381": [
+    {
+      "ticker": "STKS",
+      "price": 3.29
+    },
+    {
+      "ticker": "IMMP",
+      "price": 3.1501
+    }
+  ]
+}

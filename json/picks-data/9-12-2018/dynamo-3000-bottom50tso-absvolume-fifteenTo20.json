@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "REPL",
+      "price": 17.7955
+    },
+    {
+      "ticker": "UIS",
+      "price": 19.15
+    }
+  ],
+  "260": [
+    {
+      "ticker": "REPL",
+      "price": 17.85
+    },
+    {
+      "ticker": "RDUS",
+      "price": 18.45
+    }
+  ],
+  "351": [
+    {
+      "ticker": "PRQR",
+      "price": 18.85
+    },
+    {
+      "ticker": "RDCM",
+      "price": 16.95
+    }
+  ],
+  "381": [
+    {
+      "ticker": "PRQR",
+      "price": 18.55
+    },
+    {
+      "ticker": "FFWM",
+      "price": 16.46
+    }
+  ]
+}

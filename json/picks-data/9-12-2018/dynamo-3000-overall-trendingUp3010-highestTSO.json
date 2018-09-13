@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "ARCI",
+      "price": 1.6295
+    },
+    {
+      "ticker": "STRM",
+      "price": 1.15
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ARCI",
+      "price": 1.5112
+    },
+    {
+      "ticker": "STRM",
+      "price": 1.14
+    }
+  ],
+  "351": [
+    {
+      "ticker": "STRM",
+      "price": 1.18
+    },
+    {
+      "ticker": "CXDC",
+      "price": 4
+    }
+  ],
+  "381": [
+    {
+      "ticker": "STRM",
+      "price": 1.21
+    },
+    {
+      "ticker": "NAO",
+      "price": 1.05
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "LMFA",
+      "price": 0.5
+    },
+    {
+      "ticker": "ANY",
+      "price": 0.318
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ANY",
+      "price": 0.3099
+    },
+    {
+      "ticker": "LMFA",
+      "price": 0.5
+    }
+  ],
+  "351": [
+    {
+      "ticker": "ANY",
+      "price": 0.3073
+    },
+    {
+      "ticker": "LMFA",
+      "price": 0.495
+    }
+  ],
+  "381": [
+    {
+      "ticker": "LMFA",
+      "price": 0.5075
+    },
+    {
+      "ticker": "ANY",
+      "price": 0.32
+    }
+  ]
+}

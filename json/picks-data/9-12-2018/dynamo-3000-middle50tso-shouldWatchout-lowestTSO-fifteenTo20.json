@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "VYGR",
+      "price": 18.4502
+    },
+    {
+      "ticker": "XOMA",
+      "price": 16.99
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SIEB",
+      "price": 19.95
+    },
+    {
+      "ticker": "ENDP",
+      "price": 16.115
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CAPL",
+      "price": 18.5839
+    },
+    {
+      "ticker": "KBR",
+      "price": 19.975
+    }
+  ],
+  "381": [
+    {
+      "ticker": "TRNC",
+      "price": 16.495
+    },
+    {
+      "ticker": "WSC",
+      "price": 17.125
+    }
+  ]
+}

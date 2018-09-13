@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "TPNL",
+      "price": 4.1373
+    },
+    {
+      "ticker": "INSG",
+      "price": 3.9311
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TPNL",
+      "price": 4.205
+    },
+    {
+      "ticker": "SDPI",
+      "price": 2.7139
+    }
+  ],
+  "351": [
+    {
+      "ticker": "TPNL",
+      "price": 4.15
+    },
+    {
+      "ticker": "SDPI",
+      "price": 2.74
+    }
+  ],
+  "381": [
+    {
+      "ticker": "TPNL",
+      "price": 4.15
+    },
+    {
+      "ticker": "SDPI",
+      "price": 2.7206
+    }
+  ]
+}

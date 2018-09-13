@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "BRF",
+      "price": 16.35
+    },
+    {
+      "ticker": "FRAK",
+      "price": 16.1195
+    }
+  ],
+  "260": [
+    {
+      "ticker": "BRF",
+      "price": 16.39
+    },
+    {
+      "ticker": "FRAK",
+      "price": 16.14
+    }
+  ],
+  "351": [
+    {
+      "ticker": "BRF",
+      "price": 16.39
+    },
+    {
+      "ticker": "FRAK",
+      "price": 16.1606
+    }
+  ],
+  "381": [
+    {
+      "ticker": "BRF",
+      "price": 16.3
+    },
+    {
+      "ticker": "FRAK",
+      "price": 16.1301
+    }
+  ]
+}

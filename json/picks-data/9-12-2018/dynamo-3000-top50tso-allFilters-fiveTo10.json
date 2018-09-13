@@ -1,0 +1,82 @@
+{
+  "200": [
+    {
+      "ticker": "MOBL",
+      "price": 5.675
+    },
+    {
+      "ticker": "PCYG",
+      "price": 9.295
+    },
+    {
+      "ticker": "TRIL",
+      "price": 6.35
+    },
+    {
+      "ticker": "CALX",
+      "price": 8.9
+    },
+    {
+      "ticker": "ICCC",
+      "price": 8.11
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SVA",
+      "price": 7.32
+    },
+    {
+      "ticker": "ESTE",
+      "price": 9.01
+    },
+    {
+      "ticker": "TRIL",
+      "price": 6.525
+    },
+    {
+      "ticker": "ICCC",
+      "price": 8.41
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SVA",
+      "price": 7.33
+    },
+    {
+      "ticker": "ESTE",
+      "price": 9
+    },
+    {
+      "ticker": "AXR",
+      "price": 8.08
+    },
+    {
+      "ticker": "TRIL",
+      "price": 6.5055
+    },
+    {
+      "ticker": "FAT",
+      "price": 9.47
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ESTE",
+      "price": 9
+    },
+    {
+      "ticker": "TRIL",
+      "price": 6.5
+    },
+    {
+      "ticker": "AXR",
+      "price": 8.25
+    },
+    {
+      "ticker": "ICCC",
+      "price": 8.4895
+    }
+  ]
+}

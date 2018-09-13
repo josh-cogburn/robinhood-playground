@@ -1,0 +1,90 @@
+{
+  "200": [
+    {
+      "ticker": "AFI",
+      "price": 19.22
+    },
+    {
+      "ticker": "SBH",
+      "price": 17.035
+    },
+    {
+      "ticker": "LNSTY",
+      "price": 15.92
+    },
+    {
+      "ticker": "OMI",
+      "price": 18.1633
+    },
+    {
+      "ticker": "MAT",
+      "price": 16.04
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SBH",
+      "price": 17.095
+    },
+    {
+      "ticker": "GME",
+      "price": 16.56
+    },
+    {
+      "ticker": "DM",
+      "price": 17.625
+    },
+    {
+      "ticker": "GFN",
+      "price": 15.05
+    },
+    {
+      "ticker": "LNSTY",
+      "price": 15.83
+    }
+  ],
+  "351": [
+    {
+      "ticker": "BXBLY",
+      "price": 16.247499
+    },
+    {
+      "ticker": "GFN",
+      "price": 15.15
+    },
+    {
+      "ticker": "GME",
+      "price": 16.68
+    },
+    {
+      "ticker": "AFIN",
+      "price": 16.7
+    },
+    {
+      "ticker": "MAT",
+      "price": 16.085
+    }
+  ],
+  "381": [
+    {
+      "ticker": "GFN",
+      "price": 15.2
+    },
+    {
+      "ticker": "MAT",
+      "price": 16.08
+    },
+    {
+      "ticker": "AFIN",
+      "price": 16.68
+    },
+    {
+      "ticker": "OMI",
+      "price": 18.2
+    },
+    {
+      "ticker": "GME",
+      "price": 16.65
+    }
+  ]
+}

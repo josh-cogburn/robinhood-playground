@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "COOL",
+      "price": 19.29
+    },
+    {
+      "ticker": "APLS",
+      "price": 18.865
+    }
+  ],
+  "260": [
+    {
+      "ticker": "FIXX",
+      "price": 18.55
+    },
+    {
+      "ticker": "HTZ",
+      "price": 20.025
+    }
+  ],
+  "351": [
+    {
+      "ticker": "FIXX",
+      "price": 18.72
+    },
+    {
+      "ticker": "HTZ",
+      "price": 19.805
+    }
+  ],
+  "381": [
+    {
+      "ticker": "FIXX",
+      "price": 19.02
+    },
+    {
+      "ticker": "HTZ",
+      "price": 19.835
+    }
+  ]
+}

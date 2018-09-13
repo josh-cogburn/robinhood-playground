@@ -1,0 +1,58 @@
+{
+  "200": [
+    {
+      "ticker": "JAG",
+      "price": 13.35
+    },
+    {
+      "ticker": "FQVLF",
+      "price": 11.7679
+    },
+    {
+      "ticker": "RING",
+      "price": 14.02
+    }
+  ],
+  "260": [
+    {
+      "ticker": "JAG",
+      "price": 13.31
+    },
+    {
+      "ticker": "FQVLF",
+      "price": 11.7679
+    },
+    {
+      "ticker": "RING",
+      "price": 14.1
+    }
+  ],
+  "351": [
+    {
+      "ticker": "FQVLF",
+      "price": 11.8674
+    },
+    {
+      "ticker": "RING",
+      "price": 14.09
+    },
+    {
+      "ticker": "REI",
+      "price": 11.499
+    }
+  ],
+  "381": [
+    {
+      "ticker": "FQVLF",
+      "price": 11.8674
+    },
+    {
+      "ticker": "RING",
+      "price": 14.04
+    },
+    {
+      "ticker": "REI",
+      "price": 11.51
+    }
+  ]
+}

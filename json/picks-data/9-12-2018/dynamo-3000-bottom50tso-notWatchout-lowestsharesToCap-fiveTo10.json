@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "VCNX",
+      "price": 9.5
+    },
+    {
+      "ticker": "PHII",
+      "price": 8.6072
+    }
+  ],
+  "260": [
+    {
+      "ticker": "VCNX",
+      "price": 9.35
+    },
+    {
+      "ticker": "PHII",
+      "price": 8.5
+    }
+  ],
+  "351": [
+    {
+      "ticker": "VCNX",
+      "price": 9.54
+    },
+    {
+      "ticker": "AMBR",
+      "price": 9.07
+    }
+  ],
+  "381": [
+    {
+      "ticker": "NTGN",
+      "price": 9.55
+    },
+    {
+      "ticker": "CRVS",
+      "price": 9.93
+    }
+  ]
+}

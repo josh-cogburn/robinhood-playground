@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "AFIN",
+      "price": 16.27
+    },
+    {
+      "ticker": "AIQ",
+      "price": 15.48
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AFIN",
+      "price": 16.56
+    },
+    {
+      "ticker": "AIQ",
+      "price": 15.62
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AFIN",
+      "price": 16.7
+    },
+    {
+      "ticker": "AIQ",
+      "price": 15.6455
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AFIN",
+      "price": 16.68
+    },
+    {
+      "ticker": "AIQ",
+      "price": 15.703
+    }
+  ]
+}

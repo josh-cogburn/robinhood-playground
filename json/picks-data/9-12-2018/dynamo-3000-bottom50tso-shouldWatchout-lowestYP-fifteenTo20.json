@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "MTSI",
+      "price": 19.575
+    },
+    {
+      "ticker": "ACOR",
+      "price": 17.7
+    }
+  ],
+  "260": [
+    {
+      "ticker": "MTSI",
+      "price": 19.6
+    },
+    {
+      "ticker": "ACOR",
+      "price": 17.8
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CWH",
+      "price": 19.205
+    },
+    {
+      "ticker": "XOMA",
+      "price": 16.52
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CWH",
+      "price": 19.0699
+    },
+    {
+      "ticker": "COOL",
+      "price": 17.85
+    }
+  ]
+}

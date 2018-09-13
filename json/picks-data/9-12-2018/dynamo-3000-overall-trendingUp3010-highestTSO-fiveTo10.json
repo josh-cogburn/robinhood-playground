@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "VVUS",
+      "price": 6
+    },
+    {
+      "ticker": "EDRY",
+      "price": 7.14
+    }
+  ],
+  "260": [
+    {
+      "ticker": "VVUS",
+      "price": 5.8925
+    },
+    {
+      "ticker": "ICCC",
+      "price": 8.41
+    }
+  ],
+  "351": [
+    {
+      "ticker": "VVUS",
+      "price": 5.82
+    },
+    {
+      "ticker": "ICCC",
+      "price": 8.4
+    }
+  ],
+  "381": [
+    {
+      "ticker": "VVUS",
+      "price": 5.82
+    },
+    {
+      "ticker": "ICCC",
+      "price": 8.4895
+    }
+  ]
+}

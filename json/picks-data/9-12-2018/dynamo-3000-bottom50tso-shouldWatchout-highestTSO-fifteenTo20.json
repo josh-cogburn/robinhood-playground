@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "ARWR",
+      "price": 19.53
+    },
+    {
+      "ticker": "SGRY",
+      "price": 15.3
+    }
+  ],
+  "260": [
+    {
+      "ticker": "DPLO",
+      "price": 18.89
+    },
+    {
+      "ticker": "AMEH",
+      "price": 17.22
+    }
+  ],
+  "351": [
+    {
+      "ticker": "PFBI",
+      "price": 18.92
+    },
+    {
+      "ticker": "ZAGG",
+      "price": 15.35
+    }
+  ],
+  "381": [
+    {
+      "ticker": "BLFS",
+      "price": 19.05
+    },
+    {
+      "ticker": "PFBI",
+      "price": 18.96
+    }
+  ]
+}

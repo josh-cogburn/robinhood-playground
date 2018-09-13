@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "AOBC",
+      "price": 15.415
+    },
+    {
+      "ticker": "SSP",
+      "price": 15.66
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GFN",
+      "price": 15.05
+    },
+    {
+      "ticker": "AOBC",
+      "price": 15.43
+    }
+  ],
+  "351": [
+    {
+      "ticker": "GFN",
+      "price": 15.15
+    },
+    {
+      "ticker": "UCI",
+      "price": 15.0899
+    }
+  ],
+  "381": [
+    {
+      "ticker": "GFN",
+      "price": 15.2
+    },
+    {
+      "ticker": "UCI",
+      "price": 15.0899
+    }
+  ]
+}

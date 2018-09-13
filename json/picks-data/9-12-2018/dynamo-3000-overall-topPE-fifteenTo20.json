@@ -1,0 +1,58 @@
+{
+  "200": [
+    {
+      "ticker": "SJR",
+      "price": 19.3
+    },
+    {
+      "ticker": "CY",
+      "price": 15.27
+    },
+    {
+      "ticker": "ERJ",
+      "price": 18.795
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SJR",
+      "price": 19.32
+    },
+    {
+      "ticker": "CY",
+      "price": 15.245
+    },
+    {
+      "ticker": "ERJ",
+      "price": 18.85
+    }
+  ],
+  "351": [
+    {
+      "ticker": "VNDA",
+      "price": 18.5
+    },
+    {
+      "ticker": "SJR",
+      "price": 19.46
+    },
+    {
+      "ticker": "CY",
+      "price": 15.245
+    }
+  ],
+  "381": [
+    {
+      "ticker": "VNDA",
+      "price": 18.4
+    },
+    {
+      "ticker": "SJR",
+      "price": 19.39
+    },
+    {
+      "ticker": "CY",
+      "price": 15.33
+    }
+  ]
+}

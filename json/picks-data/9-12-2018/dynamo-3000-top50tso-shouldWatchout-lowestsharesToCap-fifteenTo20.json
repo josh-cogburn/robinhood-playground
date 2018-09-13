@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "COOL",
+      "price": 19.29
+    },
+    {
+      "ticker": "SCOR",
+      "price": 19.79
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SCOR",
+      "price": 19.86
+    },
+    {
+      "ticker": "HTZ",
+      "price": 20.025
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SCOR",
+      "price": 19.845
+    },
+    {
+      "ticker": "HTZ",
+      "price": 19.805
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SCOR",
+      "price": 19.79
+    },
+    {
+      "ticker": "HTZ",
+      "price": 19.835
+    }
+  ]
+}

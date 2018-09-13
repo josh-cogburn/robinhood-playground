@@ -1,0 +1,90 @@
+{
+  "200": [
+    {
+      "ticker": "TGTX",
+      "price": 11.1001
+    },
+    {
+      "ticker": "SYBX",
+      "price": 11.945
+    },
+    {
+      "ticker": "CRON",
+      "price": 11.07
+    },
+    {
+      "ticker": "FATE",
+      "price": 11.78
+    },
+    {
+      "ticker": "ACMR",
+      "price": 11.75
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SYBX",
+      "price": 11.885
+    },
+    {
+      "ticker": "TGTX",
+      "price": 11.225
+    },
+    {
+      "ticker": "XENE",
+      "price": 14.15
+    },
+    {
+      "ticker": "FATE",
+      "price": 11.9
+    },
+    {
+      "ticker": "CRON",
+      "price": 11.33
+    }
+  ],
+  "351": [
+    {
+      "ticker": "MBNAA",
+      "price": 12.8
+    },
+    {
+      "ticker": "TROX",
+      "price": 13.45
+    },
+    {
+      "ticker": "ACMR",
+      "price": 11.52
+    },
+    {
+      "ticker": "TGTX",
+      "price": 11.075
+    },
+    {
+      "ticker": "FATE",
+      "price": 11.89
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MBNAA",
+      "price": 12.8
+    },
+    {
+      "ticker": "ACMR",
+      "price": 11.19
+    },
+    {
+      "ticker": "TROX",
+      "price": 13.45
+    },
+    {
+      "ticker": "TGTX",
+      "price": 11.075
+    },
+    {
+      "ticker": "XENE",
+      "price": 14.17
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "SSEZY",
+      "price": 14.986
+    },
+    {
+      "ticker": "HMTA",
+      "price": 14.53
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SSEZY",
+      "price": 14.97
+    },
+    {
+      "ticker": "HMTA",
+      "price": 15.07
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SSEZY",
+      "price": 14.88
+    },
+    {
+      "ticker": "TAST",
+      "price": 14.925
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SSEZY",
+      "price": 14.88
+    },
+    {
+      "ticker": "HMTA",
+      "price": 15.32
+    }
+  ]
+}

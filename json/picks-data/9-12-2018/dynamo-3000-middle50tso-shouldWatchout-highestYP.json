@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "TEUM",
+      "price": 2.72
+    },
+    {
+      "ticker": "TAT",
+      "price": 1.6923
+    }
+  ],
+  "260": [
+    {
+      "ticker": "LUNA",
+      "price": 3.545
+    },
+    {
+      "ticker": "ASFI",
+      "price": 3.85
+    }
+  ],
+  "351": [
+    {
+      "ticker": "TAT",
+      "price": 1.69
+    },
+    {
+      "ticker": "ATOM",
+      "price": 5
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ATOM",
+      "price": 5
+    },
+    {
+      "ticker": "NTN",
+      "price": 4.8765
+    }
+  ]
+}

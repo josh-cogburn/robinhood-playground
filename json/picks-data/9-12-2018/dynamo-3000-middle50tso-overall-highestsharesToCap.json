@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "GLOW",
+      "price": 0.1885
+    },
+    {
+      "ticker": "AKER",
+      "price": 0.2646
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ADOM",
+      "price": 0.5977
+    },
+    {
+      "ticker": "INUV",
+      "price": 0.6309
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AKER",
+      "price": 0.2645
+    },
+    {
+      "ticker": "VGZ",
+      "price": 0.4789
+    }
+  ],
+  "381": [
+    {
+      "ticker": "GMO",
+      "price": 0.38
+    },
+    {
+      "ticker": "CLDX",
+      "price": 0.4152
+    }
+  ]
+}

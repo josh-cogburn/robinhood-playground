@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "DERM",
+      "price": 10.25
+    },
+    {
+      "ticker": "VRNA",
+      "price": 12.901
+    }
+  ],
+  "260": [
+    {
+      "ticker": "DERM",
+      "price": 10.42
+    },
+    {
+      "ticker": "VRNA",
+      "price": 12.901
+    }
+  ],
+  "351": [
+    {
+      "ticker": "DERM",
+      "price": 10.53
+    },
+    {
+      "ticker": "VRNA",
+      "price": 12.5986
+    }
+  ],
+  "381": [
+    {
+      "ticker": "DERM",
+      "price": 10.48
+    },
+    {
+      "ticker": "VRNA",
+      "price": 12.99
+    }
+  ]
+}

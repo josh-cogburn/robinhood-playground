@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "FOMX",
+      "price": 6.42
+    },
+    {
+      "ticker": "AMRS",
+      "price": 8.075
+    }
+  ],
+  "260": [
+    {
+      "ticker": "FOMX",
+      "price": 6.47
+    },
+    {
+      "ticker": "LCI",
+      "price": 5.275
+    }
+  ],
+  "351": [
+    {
+      "ticker": "RDVT",
+      "price": 5.1336
+    },
+    {
+      "ticker": "COE",
+      "price": 7.41
+    }
+  ],
+  "381": [
+    {
+      "ticker": "FOMX",
+      "price": 6.1
+    },
+    {
+      "ticker": "VCNX",
+      "price": 9.4
+    }
+  ]
+}

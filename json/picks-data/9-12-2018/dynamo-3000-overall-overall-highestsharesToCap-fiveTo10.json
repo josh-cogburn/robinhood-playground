@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "INTT",
+      "price": 7.9763
+    },
+    {
+      "ticker": "NVUS",
+      "price": 5.1636
+    }
+  ],
+  "260": [
+    {
+      "ticker": "INTT",
+      "price": 7.9733
+    },
+    {
+      "ticker": "NVUS",
+      "price": 5.19
+    }
+  ],
+  "351": [
+    {
+      "ticker": "INTT",
+      "price": 7.975
+    },
+    {
+      "ticker": "NVUS",
+      "price": 5.2
+    }
+  ],
+  "381": [
+    {
+      "ticker": "INTT",
+      "price": 7.971
+    },
+    {
+      "ticker": "NVUS",
+      "price": 5.07
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "REPL",
+      "price": 17.7955
+    },
+    {
+      "ticker": "ADTN",
+      "price": 18.625
+    }
+  ],
+  "260": [
+    {
+      "ticker": "REPL",
+      "price": 17.85
+    },
+    {
+      "ticker": "ADTN",
+      "price": 18.5999
+    }
+  ],
+  "351": [
+    {
+      "ticker": "PRQR",
+      "price": 18.85
+    },
+    {
+      "ticker": "ADTN",
+      "price": 18.5905
+    }
+  ],
+  "381": [
+    {
+      "ticker": "PRQR",
+      "price": 18.55
+    },
+    {
+      "ticker": "ADTN",
+      "price": 18.625
+    }
+  ]
+}

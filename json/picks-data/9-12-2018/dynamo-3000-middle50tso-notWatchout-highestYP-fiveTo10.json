@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "FLDM",
+      "price": 8.33
+    },
+    {
+      "ticker": "WTI",
+      "price": 6.965
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ASG",
+      "price": 7.5
+    },
+    {
+      "ticker": "ICL",
+      "price": 5.74
+    }
+  ],
+  "351": [
+    {
+      "ticker": "WTI",
+      "price": 6.965
+    },
+    {
+      "ticker": "ICL",
+      "price": 5.73
+    }
+  ],
+  "381": [
+    {
+      "ticker": "FBP",
+      "price": 8.585
+    },
+    {
+      "ticker": "ICL",
+      "price": 5.73
+    }
+  ]
+}

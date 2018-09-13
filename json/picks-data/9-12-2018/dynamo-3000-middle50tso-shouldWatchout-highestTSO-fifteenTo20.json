@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "MXL",
+      "price": 18.13
+    },
+    {
+      "ticker": "XOMA",
+      "price": 16.99
+    }
+  ],
+  "260": [
+    {
+      "ticker": "BEL",
+      "price": 16.625
+    },
+    {
+      "ticker": "NGVC",
+      "price": 18.25
+    }
+  ],
+  "351": [
+    {
+      "ticker": "WSC",
+      "price": 17.125
+    },
+    {
+      "ticker": "AIQ",
+      "price": 15.6455
+    }
+  ],
+  "381": [
+    {
+      "ticker": "WSC",
+      "price": 17.125
+    },
+    {
+      "ticker": "TRNC",
+      "price": 16.495
+    }
+  ]
+}

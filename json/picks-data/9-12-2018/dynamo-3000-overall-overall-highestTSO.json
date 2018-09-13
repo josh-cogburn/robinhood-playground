@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "INPX",
+      "price": 0.2093
+    },
+    {
+      "ticker": "NGD",
+      "price": 1.0153
+    }
+  ],
+  "260": [
+    {
+      "ticker": "INPX",
+      "price": 0.2
+    },
+    {
+      "ticker": "NGD",
+      "price": 0.9895
+    }
+  ],
+  "351": [
+    {
+      "ticker": "INPX",
+      "price": 0.22
+    },
+    {
+      "ticker": "OGEN",
+      "price": 0.535
+    }
+  ],
+  "381": [
+    {
+      "ticker": "INPX",
+      "price": 0.21
+    },
+    {
+      "ticker": "ABAC",
+      "price": 1.8585
+    }
+  ]
+}

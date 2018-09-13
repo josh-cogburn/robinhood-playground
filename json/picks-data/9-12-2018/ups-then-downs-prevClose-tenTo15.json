@@ -1,3 +1,33 @@
 {
+  "200": [
+    {
+      "ticker": "ZYME",
+      "price": 14.1296
+    },
+    {
+      "ticker": "HMTA",
+      "price": 14.53
+    }
+  ],
+  "300": [
+    {
+      "ticker": "ZYME",
+      "price": 14.38
+    },
+    {
+      "ticker": "EROS",
+      "price": 12.8
+    }
+  ],
+  "380": [
+    {
+      "ticker": "ZYME",
+      "price": 14.4
+    },
+    {
+      "ticker": "XENE",
+      "price": 14.13
+    }
+  ],
   "600": []
 }

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "SCON",
+      "price": 2.1191
+    },
+    {
+      "ticker": "ARDX",
+      "price": 3.8
+    }
+  ],
+  "260": [
+    {
+      "ticker": "FTD",
+      "price": 2.98
+    },
+    {
+      "ticker": "ARPO",
+      "price": 3.6675
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CORV",
+      "price": 4.775
+    },
+    {
+      "ticker": "VNRX",
+      "price": 2.3
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MBII",
+      "price": 1.955
+    },
+    {
+      "ticker": "GTIM",
+      "price": 4.7653
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "SHNY",
+      "price": 4.7059
+    },
+    {
+      "ticker": "GOGO",
+      "price": 4.76
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ICLK",
+      "price": 4.97
+    },
+    {
+      "ticker": "PTNR",
+      "price": 4.8337
+    }
+  ],
+  "351": [
+    {
+      "ticker": "PTNR",
+      "price": 4.8337
+    },
+    {
+      "ticker": "SHNY",
+      "price": 4.761
+    }
+  ],
+  "381": [
+    {
+      "ticker": "PTNR",
+      "price": 4.8337
+    },
+    {
+      "ticker": "SHNY",
+      "price": 4.761
+    }
+  ]
+}

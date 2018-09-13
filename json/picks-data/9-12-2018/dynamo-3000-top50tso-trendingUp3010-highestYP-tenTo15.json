@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "NDLS",
+      "price": 12.625
+    },
+    {
+      "ticker": "ZFGN",
+      "price": 10.19
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NDLS",
+      "price": 12.6339
+    },
+    {
+      "ticker": "ZFGN",
+      "price": 10.27
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NDLS",
+      "price": 12.5
+    },
+    {
+      "ticker": "ZFGN",
+      "price": 10.41
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ZFGN",
+      "price": 10.44
+    },
+    {
+      "ticker": "CLF",
+      "price": 11.15
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "HBP",
+      "price": 4.88
+    },
+    {
+      "ticker": "PPR",
+      "price": 4.965
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PPR",
+      "price": 4.96
+    },
+    {
+      "ticker": "ELP",
+      "price": 4.97
+    }
+  ],
+  "351": [
+    {
+      "ticker": "PPR",
+      "price": 4.975
+    },
+    {
+      "ticker": "ORMP",
+      "price": 4.9745
+    }
+  ],
+  "381": [
+    {
+      "ticker": "PPR",
+      "price": 4.97
+    },
+    {
+      "ticker": "ORMP",
+      "price": 4.98
+    }
+  ]
+}

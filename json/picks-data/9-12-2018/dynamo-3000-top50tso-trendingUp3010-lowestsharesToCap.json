@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "CXDC",
+      "price": 3.8
+    },
+    {
+      "ticker": "NDRA",
+      "price": 3.2438
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PTNR",
+      "price": 4.8337
+    },
+    {
+      "ticker": "CXDC",
+      "price": 3.8
+    }
+  ],
+  "351": [
+    {
+      "ticker": "PTNR",
+      "price": 4.8337
+    },
+    {
+      "ticker": "PIXY",
+      "price": 4.03
+    }
+  ],
+  "381": [
+    {
+      "ticker": "PTNR",
+      "price": 4.8337
+    },
+    {
+      "ticker": "CXDC",
+      "price": 3.9
+    }
+  ]
+}

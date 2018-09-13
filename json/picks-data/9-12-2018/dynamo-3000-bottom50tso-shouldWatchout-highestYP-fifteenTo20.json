@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "ARWR",
+      "price": 19.53
+    },
+    {
+      "ticker": "PRQR",
+      "price": 19.5
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ARWR",
+      "price": 19.34
+    },
+    {
+      "ticker": "PRQR",
+      "price": 19.3109
+    }
+  ],
+  "351": [
+    {
+      "ticker": "ARWR",
+      "price": 19.3501
+    },
+    {
+      "ticker": "DRNA",
+      "price": 15.545
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ARWR",
+      "price": 19.13
+    },
+    {
+      "ticker": "PRQR",
+      "price": 18.55
+    }
+  ]
+}

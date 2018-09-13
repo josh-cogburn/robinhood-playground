@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "REPL",
+      "price": 17.7955
+    },
+    {
+      "ticker": "HBI",
+      "price": 17.785
+    }
+  ],
+  "260": [
+    {
+      "ticker": "REPL",
+      "price": 17.85
+    },
+    {
+      "ticker": "BZF",
+      "price": 15.21
+    }
+  ],
+  "351": [
+    {
+      "ticker": "PRQR",
+      "price": 18.85
+    },
+    {
+      "ticker": "BZF",
+      "price": 15.21
+    }
+  ],
+  "381": [
+    {
+      "ticker": "PRQR",
+      "price": 18.55
+    },
+    {
+      "ticker": "FXN",
+      "price": 16.89
+    }
+  ]
+}

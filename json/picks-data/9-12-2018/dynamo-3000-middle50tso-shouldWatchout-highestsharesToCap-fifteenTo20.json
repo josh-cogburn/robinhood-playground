@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "XOMA",
+      "price": 16.99
+    },
+    {
+      "ticker": "HBI",
+      "price": 17.785
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ENDP",
+      "price": 16.115
+    },
+    {
+      "ticker": "BEL",
+      "price": 16.625
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AIQ",
+      "price": 15.6455
+    },
+    {
+      "ticker": "WSC",
+      "price": 17.125
+    }
+  ],
+  "381": [
+    {
+      "ticker": "TRNC",
+      "price": 16.495
+    },
+    {
+      "ticker": "WSC",
+      "price": 17.125
+    }
+  ]
+}

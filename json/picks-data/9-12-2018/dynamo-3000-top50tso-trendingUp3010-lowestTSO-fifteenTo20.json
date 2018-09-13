@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "AFI",
+      "price": 19.22
+    },
+    {
+      "ticker": "SBH",
+      "price": 17.035
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SBH",
+      "price": 17.095
+    },
+    {
+      "ticker": "GME",
+      "price": 16.56
+    }
+  ],
+  "351": [
+    {
+      "ticker": "BXBLY",
+      "price": 16.247499
+    },
+    {
+      "ticker": "GFN",
+      "price": 15.15
+    }
+  ],
+  "381": [
+    {
+      "ticker": "GFN",
+      "price": 15.2
+    },
+    {
+      "ticker": "MAT",
+      "price": 16.08
+    }
+  ]
+}

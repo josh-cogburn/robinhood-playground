@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "RCII",
+      "price": 14.775
+    },
+    {
+      "ticker": "JMBA",
+      "price": 12.995
+    }
+  ],
+  "260": [
+    {
+      "ticker": "RCII",
+      "price": 14.775
+    },
+    {
+      "ticker": "JMBA",
+      "price": 12.995
+    }
+  ],
+  "351": [
+    {
+      "ticker": "JMBA",
+      "price": 12.995
+    },
+    {
+      "ticker": "AFSI",
+      "price": 14.51
+    }
+  ],
+  "381": [
+    {
+      "ticker": "RCII",
+      "price": 14.785
+    },
+    {
+      "ticker": "JMBA",
+      "price": 13
+    }
+  ]
+}

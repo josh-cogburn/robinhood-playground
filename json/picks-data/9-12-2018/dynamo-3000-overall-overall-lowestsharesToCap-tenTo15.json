@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "SSEZY",
+      "price": 14.986
+    },
+    {
+      "ticker": "SCO",
+      "price": 14.89
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SSEZY",
+      "price": 14.97
+    },
+    {
+      "ticker": "SCO",
+      "price": 14.8
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SSEZY",
+      "price": 14.88
+    },
+    {
+      "ticker": "SCO",
+      "price": 14.945
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SSEZY",
+      "price": 14.88
+    },
+    {
+      "ticker": "SCO",
+      "price": 14.979
+    }
+  ]
+}

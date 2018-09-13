@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "AIQ",
+      "price": 15.48
+    },
+    {
+      "ticker": "SIEB",
+      "price": 19.9667
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AIQ",
+      "price": 15.62
+    },
+    {
+      "ticker": "SIEB",
+      "price": 19.95
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AIQ",
+      "price": 15.6455
+    },
+    {
+      "ticker": "SIEB",
+      "price": 19.99
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AIQ",
+      "price": 15.703
+    },
+    {
+      "ticker": "ARWR",
+      "price": 19.13
+    }
+  ]
+}

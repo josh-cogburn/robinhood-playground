@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "PFSW",
+      "price": 8.11
+    },
+    {
+      "ticker": "AMKR",
+      "price": 7.345
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CHRA",
+      "price": 6.715
+    },
+    {
+      "ticker": "INTT",
+      "price": 7.9733
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CRBP",
+      "price": 5.1639
+    },
+    {
+      "ticker": "AMKR",
+      "price": 7.33
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SGTPY",
+      "price": 5.27
+    },
+    {
+      "ticker": "UXIN",
+      "price": 5.0301
+    }
+  ]
+}

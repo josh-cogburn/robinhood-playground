@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "CEFS",
+      "price": 19.98
+    },
+    {
+      "ticker": "ALTY",
+      "price": 15.18
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ROIC",
+      "price": 19.18
+    },
+    {
+      "ticker": "BEL",
+      "price": 16.625
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CAPL",
+      "price": 18.5839
+    },
+    {
+      "ticker": "WSC",
+      "price": 17.125
+    }
+  ],
+  "381": [
+    {
+      "ticker": "TETF",
+      "price": 19.34
+    },
+    {
+      "ticker": "NEWM",
+      "price": 15.41
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "QTNA",
+      "price": 18.57
+    },
+    {
+      "ticker": "AOBC",
+      "price": 15.415
+    }
+  ],
+  "260": [
+    {
+      "ticker": "EXPI",
+      "price": 16.43
+    },
+    {
+      "ticker": "AOBC",
+      "price": 15.43
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AOBC",
+      "price": 15.455
+    },
+    {
+      "ticker": "GLT",
+      "price": 19.28
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AOBC",
+      "price": 15.4
+    },
+    {
+      "ticker": "GLT",
+      "price": 19.24
+    }
+  ]
+}

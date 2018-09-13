@@ -1,0 +1,58 @@
+{
+  "200": [
+    {
+      "ticker": "AMRK",
+      "price": 13.5
+    },
+    {
+      "ticker": "RFI",
+      "price": 12.87
+    },
+    {
+      "ticker": "RCII",
+      "price": 14.775
+    }
+  ],
+  "260": [
+    {
+      "ticker": "RTMVY",
+      "price": 12.9
+    },
+    {
+      "ticker": "AMRK",
+      "price": 13.48
+    },
+    {
+      "ticker": "MLPX",
+      "price": 13.6647
+    }
+  ],
+  "351": [
+    {
+      "ticker": "MLPX",
+      "price": 13.6807
+    },
+    {
+      "ticker": "SMM",
+      "price": 10.21
+    },
+    {
+      "ticker": "CLM",
+      "price": 14.2881
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MLPX",
+      "price": 13.6601
+    },
+    {
+      "ticker": "IRT",
+      "price": 10.245
+    },
+    {
+      "ticker": "RCII",
+      "price": 14.785
+    }
+  ]
+}

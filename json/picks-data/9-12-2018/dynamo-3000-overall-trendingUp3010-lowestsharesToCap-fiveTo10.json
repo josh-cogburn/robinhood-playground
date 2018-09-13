@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "BCRH",
+      "price": 9.92
+    },
+    {
+      "ticker": "CRZBY",
+      "price": 9.91
+    }
+  ],
+  "260": [
+    {
+      "ticker": "BCRH",
+      "price": 9.9
+    },
+    {
+      "ticker": "CRZBY",
+      "price": 9.89
+    }
+  ],
+  "351": [
+    {
+      "ticker": "BCRH",
+      "price": 9.85
+    },
+    {
+      "ticker": "CRZBY",
+      "price": 9.932
+    }
+  ],
+  "381": [
+    {
+      "ticker": "BCRH",
+      "price": 9.8001
+    },
+    {
+      "ticker": "CRZBY",
+      "price": 9.95
+    }
+  ]
+}

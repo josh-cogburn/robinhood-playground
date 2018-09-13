@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "MESA",
+      "price": 14.71
+    },
+    {
+      "ticker": "FTSV",
+      "price": 14.13
+    }
+  ],
+  "260": [
+    {
+      "ticker": "MESA",
+      "price": 14.7692
+    },
+    {
+      "ticker": "FTSV",
+      "price": 14.06
+    }
+  ],
+  "351": [
+    {
+      "ticker": "MESA",
+      "price": 14.7701
+    },
+    {
+      "ticker": "FTSV",
+      "price": 14.23
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MESA",
+      "price": 14.64
+    },
+    {
+      "ticker": "FTSV",
+      "price": 14.69
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "200": [
+    {
+      "ticker": "REPL",
+      "price": 17.7955
+    },
+    {
+      "ticker": "CISN",
+      "price": 16.67
+    },
+    {
+      "ticker": "BXG",
+      "price": 18.46
+    },
+    {
+      "ticker": "ECYT",
+      "price": 18.93
+    },
+    {
+      "ticker": "ECOR",
+      "price": 16.9699
+    }
+  ],
+  "260": [
+    {
+      "ticker": "REPL",
+      "price": 17.85
+    },
+    {
+      "ticker": "CISN",
+      "price": 16.57
+    },
+    {
+      "ticker": "BXG",
+      "price": 18.26
+    },
+    {
+      "ticker": "ECYT",
+      "price": 18.88
+    },
+    {
+      "ticker": "KPTI",
+      "price": 18.645
+    }
+  ],
+  "351": [
+    {
+      "ticker": "REPL",
+      "price": 18.69
+    },
+    {
+      "ticker": "BXG",
+      "price": 18.04
+    },
+    {
+      "ticker": "CISN",
+      "price": 16.67
+    },
+    {
+      "ticker": "KPTI",
+      "price": 18.66
+    },
+    {
+      "ticker": "KRYS",
+      "price": 19.5
+    }
+  ],
+  "381": [
+    {
+      "ticker": "BXG",
+      "price": 17.4502
+    },
+    {
+      "ticker": "KRYS",
+      "price": 17.73
+    },
+    {
+      "ticker": "CISN",
+      "price": 16.42
+    },
+    {
+      "ticker": "KPTI",
+      "price": 18.58
+    },
+    {
+      "ticker": "ECYT",
+      "price": 18.93
+    }
+  ]
+}

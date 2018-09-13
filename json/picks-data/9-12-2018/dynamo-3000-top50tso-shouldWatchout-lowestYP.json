@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "INPX",
+      "price": 0.2093
+    },
+    {
+      "ticker": "CEI",
+      "price": 0.1987
+    }
+  ],
+  "260": [
+    {
+      "ticker": "INPX",
+      "price": 0.2
+    },
+    {
+      "ticker": "OGEN",
+      "price": 0.5066
+    }
+  ],
+  "351": [
+    {
+      "ticker": "INPX",
+      "price": 0.22
+    },
+    {
+      "ticker": "NSPR",
+      "price": 0.243
+    }
+  ],
+  "381": [
+    {
+      "ticker": "INPX",
+      "price": 0.21
+    },
+    {
+      "ticker": "NSPR",
+      "price": 0.2569
+    }
+  ]
+}

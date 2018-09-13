@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "CEFS",
+      "price": 19.98
+    },
+    {
+      "ticker": "OPP",
+      "price": 17.6141
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SIEB",
+      "price": 19.95
+    },
+    {
+      "ticker": "MDIV",
+      "price": 18.81
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CAPL",
+      "price": 18.5839
+    },
+    {
+      "ticker": "EOI",
+      "price": 16.268
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SPE",
+      "price": 15.09
+    },
+    {
+      "ticker": "BSL",
+      "price": 18.07
+    }
+  ]
+}

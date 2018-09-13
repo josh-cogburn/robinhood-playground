@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "PRQR",
+      "price": 19.5
+    },
+    {
+      "ticker": "CRCM",
+      "price": 18.73
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PRQR",
+      "price": 19.3109
+    },
+    {
+      "ticker": "GASX",
+      "price": 19.48
+    }
+  ],
+  "351": [
+    {
+      "ticker": "PRQR",
+      "price": 18.85
+    },
+    {
+      "ticker": "GASX",
+      "price": 19.4349
+    }
+  ],
+  "381": [
+    {
+      "ticker": "PRQR",
+      "price": 18.55
+    },
+    {
+      "ticker": "GASX",
+      "price": 19.5
+    }
+  ]
+}

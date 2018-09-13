@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "CHFS",
+      "price": 1.1915
+    },
+    {
+      "ticker": "LMFA",
+      "price": 0.5
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CHFS",
+      "price": 1.18
+    },
+    {
+      "ticker": "ANY",
+      "price": 0.3099
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CHFS",
+      "price": 1.2
+    },
+    {
+      "ticker": "ANY",
+      "price": 0.3073
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CHFS",
+      "price": 1.2
+    },
+    {
+      "ticker": "LMFA",
+      "price": 0.5075
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "GSKY",
+      "price": 19.925
+    },
+    {
+      "ticker": "KPTI",
+      "price": 18.83
+    }
+  ],
+  "260": [
+    {
+      "ticker": "OILD",
+      "price": 18.7396
+    },
+    {
+      "ticker": "HBNC",
+      "price": 19.92
+    }
+  ],
+  "351": [
+    {
+      "ticker": "KRYS",
+      "price": 19.5
+    },
+    {
+      "ticker": "KPTI",
+      "price": 18.66
+    }
+  ],
+  "381": [
+    {
+      "ticker": "KRYS",
+      "price": 17.73
+    },
+    {
+      "ticker": "KPTI",
+      "price": 18.58
+    }
+  ]
+}

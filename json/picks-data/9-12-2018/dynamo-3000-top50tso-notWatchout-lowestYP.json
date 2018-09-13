@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "TYHT",
+      "price": 0.97
+    },
+    {
+      "ticker": "SHNY",
+      "price": 4.7059
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TYHT",
+      "price": 0.97
+    },
+    {
+      "ticker": "SHNY",
+      "price": 4.765
+    }
+  ],
+  "351": [
+    {
+      "ticker": "TYHT",
+      "price": 0.9603
+    },
+    {
+      "ticker": "SHNY",
+      "price": 4.761
+    }
+  ],
+  "381": [
+    {
+      "ticker": "TYHT",
+      "price": 0.9701
+    },
+    {
+      "ticker": "SHNY",
+      "price": 4.761
+    }
+  ]
+}

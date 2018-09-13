@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "NSSC",
+      "price": 13.105
+    },
+    {
+      "ticker": "SSEZY",
+      "price": 14.986
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NSSC",
+      "price": 13.055
+    },
+    {
+      "ticker": "SSEZY",
+      "price": 14.97
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NSSC",
+      "price": 13.675
+    },
+    {
+      "ticker": "NTGN",
+      "price": 10.06
+    }
+  ],
+  "381": [
+    {
+      "ticker": "NSSC",
+      "price": 13.6
+    },
+    {
+      "ticker": "SSEZY",
+      "price": 14.88
+    }
+  ]
+}

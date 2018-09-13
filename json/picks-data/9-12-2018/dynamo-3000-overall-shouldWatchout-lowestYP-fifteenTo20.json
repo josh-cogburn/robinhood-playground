@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "NYRT",
+      "price": 17.9213
+    },
+    {
+      "ticker": "BRZU",
+      "price": 15.3901
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NYRT",
+      "price": 18
+    },
+    {
+      "ticker": "BRZU",
+      "price": 15.5399
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NYRT",
+      "price": 17.93
+    },
+    {
+      "ticker": "BRZU",
+      "price": 15.3299
+    }
+  ],
+  "381": [
+    {
+      "ticker": "NYRT",
+      "price": 17.86
+    },
+    {
+      "ticker": "BRZU",
+      "price": 15.1401
+    }
+  ]
+}

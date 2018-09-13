@@ -1,0 +1,42 @@
+{
+  "200": [
+    {
+      "ticker": "FOMX",
+      "price": 6.42
+    },
+    {
+      "ticker": "LTRX",
+      "price": 5.08
+    }
+  ],
+  "260": [
+    {
+      "ticker": "FOMX",
+      "price": 6.47
+    },
+    {
+      "ticker": "LTRX",
+      "price": 5.2742
+    }
+  ],
+  "351": [
+    {
+      "ticker": "FOMX",
+      "price": 6.23
+    },
+    {
+      "ticker": "LTRX",
+      "price": 5.2307
+    }
+  ],
+  "381": [
+    {
+      "ticker": "FOMX",
+      "price": 6.1
+    },
+    {
+      "ticker": "NTGN",
+      "price": 9.55
+    }
+  ]
+}
