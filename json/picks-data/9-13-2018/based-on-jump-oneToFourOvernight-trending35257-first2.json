@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "PRTS",
+      "price": 1.57
+    },
+    {
+      "ticker": "SAEX",
+      "price": 0.5689
+    }
+  ],
+  "5": [
+    {
+      "ticker": "APWC",
+      "price": 2.75
+    },
+    {
+      "ticker": "NAO",
+      "price": 1.0539
+    }
+  ],
+  "16": [
+    {
+      "ticker": "APWC",
+      "price": 2.75
+    },
+    {
+      "ticker": "NAO",
+      "price": 1.05
+    }
+  ],
+  "30": [
+    {
+      "ticker": "APWC",
+      "price": 2.75
+    },
+    {
+      "ticker": "NAO",
+      "price": 1.0213
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "ADIL",
+      "price": 3
+    },
+    {
+      "ticker": "PRSS",
+      "price": 1.26
+    }
+  ],
+  "5": [
+    {
+      "ticker": "ADIL",
+      "price": 2.88
+    },
+    {
+      "ticker": "PRSS",
+      "price": 1.26
+    }
+  ],
+  "16": [
+    {
+      "ticker": "ADIL",
+      "price": 2.8652
+    },
+    {
+      "ticker": "PRSS",
+      "price": 1.26
+    }
+  ],
+  "30": [
+    {
+      "ticker": "AEHR",
+      "price": 2.3901
+    },
+    {
+      "ticker": "ADIL",
+      "price": 2.8412
+    }
+  ]
+}

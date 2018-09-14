@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "INPX",
+      "price": 0.215
+    }
+  ],
+  "5": [
+    {
+      "ticker": "INPX",
+      "price": 0.2599
+    }
+  ],
+  "16": [
+    {
+      "ticker": "BLPH",
+      "price": 1.21
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.2365
+    },
+    {
+      "ticker": "NGD",
+      "price": 1
+    }
+  ],
+  "30": [
+    {
+      "ticker": "BLPH",
+      "price": 1.1799
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.2265
+    },
+    {
+      "ticker": "NGD",
+      "price": 1
+    }
+  ]
+}

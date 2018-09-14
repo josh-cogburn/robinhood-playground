@@ -1,0 +1,50 @@
+{
+  "10": [
+    {
+      "ticker": "KRYS",
+      "price": 18.26
+    },
+    {
+      "ticker": "DRNA",
+      "price": 16.04
+    }
+  ],
+  "50": [
+    {
+      "ticker": "KRYS",
+      "price": 18.4001
+    },
+    {
+      "ticker": "DRNA",
+      "price": 16.7092
+    }
+  ],
+  "200": [
+    {
+      "ticker": "KRYS",
+      "price": 18
+    },
+    {
+      "ticker": "DRNA",
+      "price": 16.74
+    }
+  ],
+  "300": [
+    {
+      "ticker": "DRNA",
+      "price": 16.57
+    }
+  ],
+  "380": [
+    {
+      "ticker": "DRNA",
+      "price": 16.62
+    }
+  ],
+  "600": [
+    {
+      "ticker": "DRNA",
+      "price": 16.62
+    }
+  ]
+}

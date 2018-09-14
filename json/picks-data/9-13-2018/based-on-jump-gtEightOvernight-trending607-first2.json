@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "TPNL",
+      "price": 4.23
+    },
+    {
+      "ticker": "AWSM",
+      "price": 4.5
+    }
+  ],
+  "5": [
+    {
+      "ticker": "TPNL",
+      "price": 4.21
+    },
+    {
+      "ticker": "AWSM",
+      "price": 4.5
+    }
+  ],
+  "16": [
+    {
+      "ticker": "TPNL",
+      "price": 4.19
+    },
+    {
+      "ticker": "AWSM",
+      "price": 4.47
+    }
+  ],
+  "30": [
+    {
+      "ticker": "TPNL",
+      "price": 4.15
+    },
+    {
+      "ticker": "AWSM",
+      "price": 4.5
+    }
+  ]
+}

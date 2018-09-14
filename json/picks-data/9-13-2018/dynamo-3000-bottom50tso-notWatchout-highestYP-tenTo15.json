@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "OPRX",
+      "price": 13.55
+    },
+    {
+      "ticker": "VCEL",
+      "price": 12.3
+    }
+  ],
+  "40": [
+    {
+      "ticker": "VCEL",
+      "price": 12.05
+    },
+    {
+      "ticker": "SVVC",
+      "price": 14.9028
+    }
+  ],
+  "100": [
+    {
+      "ticker": "FTSV",
+      "price": 14.13
+    },
+    {
+      "ticker": "CATS",
+      "price": 10.16
+    }
+  ],
+  "200": [
+    {
+      "ticker": "FTSV",
+      "price": 13.85
+    },
+    {
+      "ticker": "CATS",
+      "price": 10.18
+    }
+  ],
+  "260": [
+    {
+      "ticker": "FTSV",
+      "price": 13.72
+    },
+    {
+      "ticker": "CATS",
+      "price": 10.09
+    }
+  ],
+  "351": [
+    {
+      "ticker": "FTSV",
+      "price": 13.545
+    },
+    {
+      "ticker": "CATS",
+      "price": 10.025
+    }
+  ],
+  "381": [
+    {
+      "ticker": "FTSV",
+      "price": 13.35
+    },
+    {
+      "ticker": "KTOS",
+      "price": 14.245
+    }
+  ]
+}

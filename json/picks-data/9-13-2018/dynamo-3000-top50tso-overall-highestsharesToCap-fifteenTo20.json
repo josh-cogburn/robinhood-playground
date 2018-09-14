@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "FPRX",
+      "price": 14.83
+    },
+    {
+      "ticker": "MSADY",
+      "price": 15.13
+    }
+  ],
+  "40": [
+    {
+      "ticker": "HRTG",
+      "price": 15.25
+    },
+    {
+      "ticker": "SCS",
+      "price": 15.35
+    }
+  ],
+  "100": [
+    {
+      "ticker": "HRTG",
+      "price": 15.36
+    },
+    {
+      "ticker": "ZAGG",
+      "price": 15.35
+    }
+  ],
+  "200": [
+    {
+      "ticker": "HRTG",
+      "price": 15.61
+    },
+    {
+      "ticker": "ZAGG",
+      "price": 15.5
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SMCAY",
+      "price": 15.008
+    },
+    {
+      "ticker": "HRTG",
+      "price": 15.72
+    }
+  ],
+  "351": [
+    {
+      "ticker": "MESA",
+      "price": 15.24
+    },
+    {
+      "ticker": "SMCAY",
+      "price": 15.0025
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MESA",
+      "price": 15.27
+    },
+    {
+      "ticker": "HRTG",
+      "price": 15.735
+    }
+  ]
+}

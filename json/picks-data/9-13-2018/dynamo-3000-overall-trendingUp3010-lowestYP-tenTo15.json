@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "SVXY",
+      "price": 14.43
+    },
+    {
+      "ticker": "DERM",
+      "price": 10.52
+    }
+  ],
+  "40": [
+    {
+      "ticker": "SVXY",
+      "price": 14.44
+    },
+    {
+      "ticker": "FPRX",
+      "price": 14.285
+    }
+  ],
+  "100": [
+    {
+      "ticker": "SVXY",
+      "price": 14.43
+    },
+    {
+      "ticker": "FPRX",
+      "price": 13.83
+    }
+  ],
+  "200": [
+    {
+      "ticker": "SVXY",
+      "price": 14.42
+    },
+    {
+      "ticker": "MNLO",
+      "price": 10.3
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SVXY",
+      "price": 14.41
+    },
+    {
+      "ticker": "MNLO",
+      "price": 10.1
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SVXY",
+      "price": 14.42
+    },
+    {
+      "ticker": "MNLO",
+      "price": 10.37
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SVXY",
+      "price": 14.435
+    },
+    {
+      "ticker": "MNLO",
+      "price": 10.3251
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "0": [
+    {
+      "ticker": "SE",
+      "price": 13.39
+    },
+    {
+      "ticker": "CLF",
+      "price": 11.235
+    }
+  ],
+  "5": [
+    {
+      "ticker": "SOUHY",
+      "price": 13.26
+    },
+    {
+      "ticker": "SE",
+      "price": 13.39
+    },
+    {
+      "ticker": "CLF",
+      "price": 11.18
+    }
+  ],
+  "16": [
+    {
+      "ticker": "SOUHY",
+      "price": 13.25
+    },
+    {
+      "ticker": "HILO",
+      "price": 14.4124
+    },
+    {
+      "ticker": "RYI",
+      "price": 10.65
+    }
+  ],
+  "30": [
+    {
+      "ticker": "SOUHY",
+      "price": 13.24
+    },
+    {
+      "ticker": "HILO",
+      "price": 14.4124
+    },
+    {
+      "ticker": "RYI",
+      "price": 10.725
+    }
+  ]
+}

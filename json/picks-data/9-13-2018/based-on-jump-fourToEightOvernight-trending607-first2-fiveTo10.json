@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "AMSC",
+      "price": 6.42
+    },
+    {
+      "ticker": "EVRI",
+      "price": 8.67
+    }
+  ],
+  "5": [
+    {
+      "ticker": "AMSC",
+      "price": 6.25
+    },
+    {
+      "ticker": "EVRI",
+      "price": 9.06
+    }
+  ],
+  "16": [
+    {
+      "ticker": "AMSC",
+      "price": 6.1999
+    },
+    {
+      "ticker": "EVRI",
+      "price": 8.99
+    }
+  ],
+  "30": [
+    {
+      "ticker": "AMSC",
+      "price": 6.34
+    },
+    {
+      "ticker": "EVRI",
+      "price": 8.93
+    }
+  ]
+}

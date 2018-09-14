@@ -1,0 +1,44 @@
+{
+  "10": [],
+  "50": [],
+  "200": [
+    {
+      "ticker": "MCF",
+      "price": 6.45
+    }
+  ],
+  "300": [
+    {
+      "ticker": "ACBFF",
+      "price": 6.4301
+    },
+    {
+      "ticker": "MCF",
+      "price": 6.4
+    }
+  ],
+  "380": [
+    {
+      "ticker": "ACBFF",
+      "price": 6.23
+    },
+    {
+      "ticker": "MCF",
+      "price": 6.265
+    },
+    {
+      "ticker": "ICCC",
+      "price": 8.0001
+    }
+  ],
+  "600": [
+    {
+      "ticker": "ACBFF",
+      "price": 6.375
+    },
+    {
+      "ticker": "MCF",
+      "price": 6.28
+    }
+  ]
+}

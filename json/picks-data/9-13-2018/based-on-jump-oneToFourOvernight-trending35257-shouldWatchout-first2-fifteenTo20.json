@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "NSTG",
+      "price": 18
+    },
+    {
+      "ticker": "APLS",
+      "price": 18.5
+    }
+  ],
+  "5": [
+    {
+      "ticker": "NSTG",
+      "price": 18.23
+    },
+    {
+      "ticker": "NILSY",
+      "price": 17.08
+    }
+  ],
+  "16": [
+    {
+      "ticker": "NSTG",
+      "price": 18.53
+    },
+    {
+      "ticker": "NILSY",
+      "price": 17.1
+    }
+  ],
+  "30": [
+    {
+      "ticker": "NSTG",
+      "price": 18.53
+    },
+    {
+      "ticker": "NILSY",
+      "price": 17.09
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "SBRCY",
+      "price": 11.31
+    },
+    {
+      "ticker": "CIFS",
+      "price": 10.33
+    }
+  ],
+  "40": [
+    {
+      "ticker": "USAT",
+      "price": 11.69
+    },
+    {
+      "ticker": "CIFS",
+      "price": 10.765
+    }
+  ],
+  "100": [
+    {
+      "ticker": "USAT",
+      "price": 11.35
+    },
+    {
+      "ticker": "CIFS",
+      "price": 10.69
+    }
+  ],
+  "200": [
+    {
+      "ticker": "MNLO",
+      "price": 10.3
+    },
+    {
+      "ticker": "CIFS",
+      "price": 10.95
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CIFS",
+      "price": 11.01
+    },
+    {
+      "ticker": "USAT",
+      "price": 11.175
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CIFS",
+      "price": 11.09
+    },
+    {
+      "ticker": "MNLO",
+      "price": 10.37
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CIFS",
+      "price": 11.1434
+    },
+    {
+      "ticker": "MNLO",
+      "price": 10.3251
+    }
+  ]
+}

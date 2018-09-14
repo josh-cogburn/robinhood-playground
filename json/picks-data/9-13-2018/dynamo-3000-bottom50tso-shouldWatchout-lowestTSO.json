@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "SKYS",
+      "price": 0.75
+    },
+    {
+      "ticker": "AKER",
+      "price": 0.2731
+    }
+  ],
+  "40": [
+    {
+      "ticker": "BLIN",
+      "price": 1.02
+    },
+    {
+      "ticker": "SKYS",
+      "price": 0.75
+    }
+  ],
+  "100": [
+    {
+      "ticker": "NSPR",
+      "price": 0.209
+    },
+    {
+      "ticker": "BLIN",
+      "price": 1.04
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ARCI",
+      "price": 1.12
+    },
+    {
+      "ticker": "SNOA",
+      "price": 1.471
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SNOA",
+      "price": 1.51
+    },
+    {
+      "ticker": "ARCI",
+      "price": 1.1999
+    }
+  ],
+  "351": [
+    {
+      "ticker": "INPX",
+      "price": 0.1789
+    },
+    {
+      "ticker": "ARCI",
+      "price": 1.15
+    }
+  ],
+  "381": [
+    {
+      "ticker": "INPX",
+      "price": 0.172
+    },
+    {
+      "ticker": "AMDA",
+      "price": 0.343
+    }
+  ]
+}

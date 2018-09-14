@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "BILI",
+      "price": 13.34
+    },
+    {
+      "ticker": "REDU",
+      "price": 10.22
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CRZBY",
+      "price": 10.33
+    },
+    {
+      "ticker": "BYDDY",
+      "price": 11.65
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CRZBY",
+      "price": 10.32
+    },
+    {
+      "ticker": "BYDDY",
+      "price": 11.65
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CRZBY",
+      "price": 10.32
+    },
+    {
+      "ticker": "BYDDY",
+      "price": 11.7
+    }
+  ]
+}
