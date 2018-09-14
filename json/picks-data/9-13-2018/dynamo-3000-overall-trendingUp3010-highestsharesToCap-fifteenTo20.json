@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "FPRX",
+      "price": 14.83
+    },
+    {
+      "ticker": "OBSV",
+      "price": 15.015
+    }
+  ],
+  "40": [
+    {
+      "ticker": "WTBDY",
+      "price": 15.2301
+    },
+    {
+      "ticker": "SCS",
+      "price": 15.35
+    }
+  ],
+  "100": [
+    {
+      "ticker": "OBSV",
+      "price": 15.2
+    },
+    {
+      "ticker": "KOL",
+      "price": 15.4475
+    }
+  ],
+  "200": [
+    {
+      "ticker": "OBSV",
+      "price": 15.31
+    },
+    {
+      "ticker": "KOL",
+      "price": 15.46
+    }
+  ],
+  "260": [
+    {
+      "ticker": "KOL",
+      "price": 15.45
+    },
+    {
+      "ticker": "WTBDY",
+      "price": 15.31
+    }
+  ],
+  "351": [
+    {
+      "ticker": "KOL",
+      "price": 15.46
+    },
+    {
+      "ticker": "WTBDY",
+      "price": 15.18
+    }
+  ],
+  "381": [
+    {
+      "ticker": "KOL",
+      "price": 15.46
+    },
+    {
+      "ticker": "WTBDY",
+      "price": 15.18
+    }
+  ]
+}

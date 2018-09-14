@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "ACST",
+      "price": 0.6
+    },
+    {
+      "ticker": "YUMA",
+      "price": 0.2999
+    }
+  ],
+  "5": [
+    {
+      "ticker": "ACST",
+      "price": 0.6
+    },
+    {
+      "ticker": "YUMA",
+      "price": 0.2898
+    }
+  ],
+  "16": [
+    {
+      "ticker": "ACST",
+      "price": 0.55
+    },
+    {
+      "ticker": "YUMA",
+      "price": 0.2898
+    }
+  ],
+  "30": [
+    {
+      "ticker": "ACST",
+      "price": 0.55
+    },
+    {
+      "ticker": "YUMA",
+      "price": 0.2875
+    }
+  ]
+}

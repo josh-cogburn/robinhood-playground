@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "PRTS",
+      "price": 1.57
+    },
+    {
+      "ticker": "VHC",
+      "price": 3.9
+    }
+  ],
+  "5": [
+    {
+      "ticker": "PRTS",
+      "price": 1.66
+    },
+    {
+      "ticker": "VHC",
+      "price": 3.9295
+    }
+  ],
+  "16": [
+    {
+      "ticker": "PZG",
+      "price": 1.07
+    },
+    {
+      "ticker": "PRTS",
+      "price": 1.6788
+    }
+  ],
+  "30": [
+    {
+      "ticker": "PZG",
+      "price": 1.05
+    },
+    {
+      "ticker": "PRTS",
+      "price": 1.6681
+    }
+  ]
+}

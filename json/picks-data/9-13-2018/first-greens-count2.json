@@ -1,0 +1,52 @@
+{
+  "12": [
+    {
+      "ticker": "NH",
+      "price": 1.52
+    },
+    {
+      "ticker": "VRML",
+      "price": 0.56
+    }
+  ],
+  "190": [
+    {
+      "ticker": "NH",
+      "price": 1.695
+    },
+    {
+      "ticker": "VRML",
+      "price": 0.5587
+    }
+  ],
+  "250": [
+    {
+      "ticker": "NH",
+      "price": 1.73
+    },
+    {
+      "ticker": "VRML",
+      "price": 0.5501
+    }
+  ],
+  "600": [
+    {
+      "ticker": "NH",
+      "price": 1.69
+    },
+    {
+      "ticker": "VRML",
+      "price": 0.5503
+    }
+  ],
+  "-15": [
+    {
+      "ticker": "NH",
+      "price": 1.49
+    },
+    {
+      "ticker": "VRML",
+      "price": 0.565
+    }
+  ]
+}

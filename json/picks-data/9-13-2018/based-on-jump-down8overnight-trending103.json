@@ -1,0 +1,50 @@
+{
+  "0": [
+    {
+      "ticker": "OGZPY",
+      "price": 4.51
+    },
+    {
+      "ticker": "BDRBF",
+      "price": 3.586
+    },
+    {
+      "ticker": "FRED",
+      "price": 2.11
+    },
+    {
+      "ticker": "CTEK",
+      "price": 3.51
+    }
+  ],
+  "5": [
+    {
+      "ticker": "FRED",
+      "price": 2.251
+    },
+    {
+      "ticker": "CTEK",
+      "price": 3.85
+    }
+  ],
+  "16": [
+    {
+      "ticker": "FRED",
+      "price": 2.271
+    },
+    {
+      "ticker": "CTEK",
+      "price": 3.85
+    }
+  ],
+  "30": [
+    {
+      "ticker": "FRED",
+      "price": 2.2799
+    },
+    {
+      "ticker": "CTEK",
+      "price": 3.84
+    }
+  ]
+}

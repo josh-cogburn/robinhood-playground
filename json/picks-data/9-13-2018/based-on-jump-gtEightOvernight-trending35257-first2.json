@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "TPNL",
+      "price": 4.23
+    },
+    {
+      "ticker": "BPMX",
+      "price": 0.2236
+    }
+  ],
+  "5": [
+    {
+      "ticker": "TPNL",
+      "price": 4.21
+    },
+    {
+      "ticker": "BPMX",
+      "price": 0.21
+    }
+  ],
+  "16": [
+    {
+      "ticker": "TPNL",
+      "price": 4.19
+    },
+    {
+      "ticker": "BPMX",
+      "price": 0.2147
+    }
+  ],
+  "30": [
+    {
+      "ticker": "TPNL",
+      "price": 4.15
+    },
+    {
+      "ticker": "BPMX",
+      "price": 0.2101
+    }
+  ]
+}

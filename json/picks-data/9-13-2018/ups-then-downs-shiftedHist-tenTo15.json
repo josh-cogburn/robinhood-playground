@@ -1,0 +1,36 @@
+{
+  "10": [
+    {
+      "ticker": "SHLO",
+      "price": 11.2
+    },
+    {
+      "ticker": "EROS",
+      "price": 13.1
+    }
+  ],
+  "50": [
+    {
+      "ticker": "SHLO",
+      "price": 10.91
+    },
+    {
+      "ticker": "EROS",
+      "price": 13.1
+    }
+  ],
+  "200": [
+    {
+      "ticker": "EROS",
+      "price": 13.05
+    }
+  ],
+  "300": [],
+  "380": [
+    {
+      "ticker": "ZYME",
+      "price": 14.44
+    }
+  ],
+  "600": []
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "RFIL",
+      "price": 10.45
+    },
+    {
+      "ticker": "CKHUY",
+      "price": 11.56
+    }
+  ],
+  "40": [
+    {
+      "ticker": "IO",
+      "price": 14.975
+    },
+    {
+      "ticker": "USAT",
+      "price": 11.69
+    }
+  ],
+  "100": [
+    {
+      "ticker": "FPRX",
+      "price": 13.83
+    },
+    {
+      "ticker": "USAT",
+      "price": 11.35
+    }
+  ],
+  "200": [
+    {
+      "ticker": "SHLO",
+      "price": 10.1
+    },
+    {
+      "ticker": "MNLO",
+      "price": 10.3
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CRON",
+      "price": 10.44
+    },
+    {
+      "ticker": "CIFS",
+      "price": 11.01
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CRON",
+      "price": 10.1858
+    },
+    {
+      "ticker": "CIFS",
+      "price": 11.09
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CRON",
+      "price": 10.0313
+    },
+    {
+      "ticker": "CIFS",
+      "price": 11.1434
+    }
+  ]
+}

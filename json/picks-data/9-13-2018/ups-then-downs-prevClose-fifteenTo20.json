@@ -1,0 +1,44 @@
+{
+  "10": [],
+  "50": [],
+  "200": [
+    {
+      "ticker": "SIEB",
+      "price": 19.626
+    },
+    {
+      "ticker": "HTZ",
+      "price": 18.45
+    }
+  ],
+  "300": [
+    {
+      "ticker": "SIEB",
+      "price": 18.4
+    },
+    {
+      "ticker": "HTZ",
+      "price": 18.765
+    }
+  ],
+  "380": [
+    {
+      "ticker": "SIEB",
+      "price": 17.59
+    },
+    {
+      "ticker": "HTZ",
+      "price": 18.86
+    }
+  ],
+  "600": [
+    {
+      "ticker": "SIEB",
+      "price": 17.5
+    },
+    {
+      "ticker": "HTZ",
+      "price": 18.85
+    }
+  ]
+}

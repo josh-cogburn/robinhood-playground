@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "ZTCOY",
+      "price": 3.575
+    },
+    {
+      "ticker": "MTNOY",
+      "price": 4.91
+    }
+  ],
+  "5": [
+    {
+      "ticker": "FRED",
+      "price": 2.251
+    },
+    {
+      "ticker": "ALT",
+      "price": 0.2664
+    }
+  ],
+  "16": [
+    {
+      "ticker": "FRED",
+      "price": 2.271
+    },
+    {
+      "ticker": "ALT",
+      "price": 0.265
+    }
+  ],
+  "30": [
+    {
+      "ticker": "FRED",
+      "price": 2.2799
+    },
+    {
+      "ticker": "ALT",
+      "price": 0.2661
+    }
+  ]
+}

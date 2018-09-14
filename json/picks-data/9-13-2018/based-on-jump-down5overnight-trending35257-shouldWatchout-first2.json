@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "FRED",
+      "price": 2.11
+    },
+    {
+      "ticker": "OHRP",
+      "price": 0.1922
+    }
+  ],
+  "5": [
+    {
+      "ticker": "FRED",
+      "price": 2.251
+    },
+    {
+      "ticker": "DFFN",
+      "price": 0.4501
+    }
+  ],
+  "16": [
+    {
+      "ticker": "FRED",
+      "price": 2.271
+    },
+    {
+      "ticker": "DFFN",
+      "price": 0.475
+    }
+  ],
+  "30": [
+    {
+      "ticker": "FRED",
+      "price": 2.2799
+    },
+    {
+      "ticker": "DFFN",
+      "price": 0.4511
+    }
+  ]
+}

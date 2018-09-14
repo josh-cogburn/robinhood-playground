@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "COTY",
+      "price": 12.29
+    },
+    {
+      "ticker": "BILI",
+      "price": 13.4499
+    }
+  ],
+  "40": [
+    {
+      "ticker": "FPRX",
+      "price": 14.285
+    },
+    {
+      "ticker": "ABX",
+      "price": 10.16
+    }
+  ],
+  "100": [
+    {
+      "ticker": "FPRX",
+      "price": 13.83
+    },
+    {
+      "ticker": "SYBX",
+      "price": 11.935
+    }
+  ],
+  "200": [
+    {
+      "ticker": "FPRX",
+      "price": 13.86
+    },
+    {
+      "ticker": "ABX",
+      "price": 10.095
+    }
+  ],
+  "260": [
+    {
+      "ticker": "FPRX",
+      "price": 13.76
+    },
+    {
+      "ticker": "ABX",
+      "price": 10.08
+    }
+  ],
+  "351": [
+    {
+      "ticker": "FPRX",
+      "price": 13.75
+    },
+    {
+      "ticker": "SYBX",
+      "price": 11.7
+    }
+  ],
+  "381": [
+    {
+      "ticker": "FPRX",
+      "price": 13.51
+    },
+    {
+      "ticker": "SYBX",
+      "price": 11.925
+    }
+  ]
+}

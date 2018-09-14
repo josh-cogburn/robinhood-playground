@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "NSPR",
+      "price": 0.2303
+    },
+    {
+      "ticker": "AMDA",
+      "price": 0.382
+    }
+  ],
+  "5": [
+    {
+      "ticker": "FRED",
+      "price": 2.251
+    },
+    {
+      "ticker": "NSPR",
+      "price": 0.219
+    }
+  ],
+  "16": [
+    {
+      "ticker": "FRED",
+      "price": 2.271
+    },
+    {
+      "ticker": "NSPR",
+      "price": 0.2226
+    }
+  ],
+  "30": [
+    {
+      "ticker": "FRED",
+      "price": 2.2799
+    },
+    {
+      "ticker": "DFFN",
+      "price": 0.4511
+    }
+  ]
+}
