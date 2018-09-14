@@ -757,7 +757,7 @@ const sepPerfectosLowCounts = [
 
     'based-on-jump-down8overnight-trending53-gt500kvolume-fiveTo10-0',
     'sudden-drops-last5trend-filter20-388',
-    'low-float-high-volume-floatTimestwoWeekVolToAvgPoints-trenddowngt20-notWatchout-210',
+    // 'low-float-high-volume-floatTimestwoWeekVolToAvgPoints-trenddowngt20-notWatchout-210',
 
 ];
 
