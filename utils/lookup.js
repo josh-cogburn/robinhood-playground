@@ -10,10 +10,18 @@ const { lookup } = require('yahoo-stocks');
 module.exports = async (Robinhood, ticker) => {
     // console.log('looking up', ticker);
     const quoteData = await Robinhood.quote_data(ticker);
-    const { last_trade_price, previous_close, instrument } = quoteData.results[0];
+    const { 
+        last_trade_price, 
+        adjusted_previous_close, 
+        instrument,
+        ask_price,
+        bid_price
+    } = quoteData.results[0];
     let data = {
         lastTrade: Number(last_trade_price),
-        prevClose: Number(previous_close),
+        prevClose: Number(adjusted_previous_close),
+        askPrice: Number(ask_price),
+        bidPrice: Number(bid_price),
         instrument
     };
     try {

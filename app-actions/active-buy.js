@@ -7,11 +7,8 @@ const jsonMgr = require('../utils/json-mgr');
 const lookup = require('../utils/lookup');
 const mapLimit = require('promise-map-limit');
 
-
-const MAX_BUY_RATIO = 1.02; // before gives up
-const TIME_BETWEEN_CHECK = 15; // seconds
-const BUY_RATIO_INCREMENT = 0.001;
-const GO_FOR_5PERC_LIMIT = true;
+const TIME_BETWEEN_CHECK = 10; // seconds
+const TOTAL_ATTEMPTS = 6;
 
 const addToDailyTransactions = async data => {
     const fileName = `./json/daily-transactions/${(new Date()).toLocaleDateString().split('/').join('-')}.json`;
@@ -36,20 +33,15 @@ module.exports = async (
 
         try {
 
-            let curBuyRatio = 1.0;
             let attemptCount = 0;
 
             // maxPrice = Math.min(maxPrice, 35);
 
 
-
-
-
             const attempt = async () => {
 
                 attemptCount++;
-                console.log('attempting ', curBuyRatio, ticker, 'ratio', curBuyRatio);
-
+                console.log('attempting ', attemptCount, ticker);
 
 
                 // if (!quantity) {
@@ -64,23 +56,36 @@ module.exports = async (
                     if (quantity === 0 && bidPrice < 50) {
                         quantity = 1;
                     }
+                    const data = {
+                        ticker,
+                        bidPrice,
+                        quantity,
+                        strategy
+                    };
+                    console.log({ data, maxPrice });
                     return await limitBuyLastTrade(
                         Robinhood,
-                        {
-                            ticker,
-                            bidPrice,
-                            quantity,
-                            strategy
-                        }
+                        data
                     );
+
                 };
 
-                const limitBidRatioAboveCurrent = async buyRatio => {
-                    const { currentPrice } = await lookup(Robinhood, ticker);
-                    return await limitBid(currentPrice * buyRatio);
+                const attemptLimitOrder = async () => {
+                    const { askPrice, bidPrice } = await lookup(Robinhood, ticker);
+                    const spread = askPrice - bidPrice;
+                    const aboveBid = spread * (attemptCount - 1) / (TOTAL_ATTEMPTS - 1);
+                    const attemptPrice = bidPrice + aboveBid;
+                    console.log({
+                        askPrice,
+                        bidPrice,
+                        spread,
+                        aboveBid,
+                        attemptPrice
+                    })
+                    return await limitBid(attemptPrice);
                 };
 
-                let res = await limitBidRatioAboveCurrent(curBuyRatio);
+                let res = await attemptLimitOrder();
 
                 if (!res || res.detail) {
                     return reject(res.detail || 'unable to purchase' + ticker);
@@ -115,16 +120,11 @@ module.exports = async (
                     if (relOrder) {
                         console.log('canceling last attempt', ticker);
                         await Robinhood.cancel_order(relOrder);
-                        curBuyRatio += BUY_RATIO_INCREMENT;
-                        if (curBuyRatio < MAX_BUY_RATIO) {
+                        if (attemptCount < TOTAL_ATTEMPTS) {
                             return attempt();
                         } else {
-                            const errMessage = 'reached MAX_BUY_RATIO, unable to BUY';
+                            const errMessage = 'reached max attempts, unable to BUY';
                             console.log(errMessage, ticker);
-                            if (GO_FOR_5PERC_LIMIT) {
-                                console.log('going for 5 perc limit above');
-                                return limitBidRatioAboveCurrent(1.05);
-                            }
                             return reject(errMessage);
                         }
                     } else {

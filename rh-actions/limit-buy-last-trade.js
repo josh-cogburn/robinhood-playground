@@ -26,7 +26,7 @@ const limitBuyLastTrade = async (Robinhood, { ticker, maxPrice, quantity, bidPri
 
 
 
-        const quoteData = await Robinhood.quote_data(ticker);
+        // const quoteData = await Robinhood.quote_data(ticker);
 
         //
         // const impNums = [
@@ -59,10 +59,10 @@ const limitBuyLastTrade = async (Robinhood, { ticker, maxPrice, quantity, bidPri
             instrument: {
                 url: instrument,
                 symbol: ticker
-            }
+            },
             // // Optional:
-            // trigger: String, // Defaults to "gfd" (Good For Day)
-            // time: String,    // Defaults to "immediate"
+            // trigger: 'immediate', // Defaults to "gfd" (Good For Day)
+            // time: 'gfd',    // Defaults to "immediate"
             // type: String     // Defaults to "market"
         };
         const res = await Robinhood.place_buy_order(options);
