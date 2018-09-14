@@ -83,7 +83,7 @@ module.exports = {
         // runs at init
         regCronIncAfterSixThirty(Robinhood, {
             name: 'execute sudden-drops strategy',
-            run: [3, 14, 32, 63, 100, 153, 189, 221, 280, 290, 328, 360, 388], // 10:41am, 11:31am
+            run: [3, 14, 32, 63, 100, 153, 189, 221, 280, 290, 328, 360, 388, 400, 430, 470], // 10:41am, 11:31am
             fn: async (Robinhood, min) => {
                 await executeStrategy(Robinhood, trendFilter, min, 0.3, 'sudden-drops');
             }
