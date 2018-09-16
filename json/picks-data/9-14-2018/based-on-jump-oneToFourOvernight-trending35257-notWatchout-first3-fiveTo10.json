@@ -1,0 +1,50 @@
+{
+  "0": [
+    {
+      "ticker": "CALX",
+      "price": 9
+    }
+  ],
+  "5": [
+    {
+      "ticker": "MAMS",
+      "price": 8.4585
+    },
+    {
+      "ticker": "EPM",
+      "price": 10.1
+    },
+    {
+      "ticker": "MFIN",
+      "price": 6.33
+    }
+  ],
+  "16": [
+    {
+      "ticker": "MAMS",
+      "price": 8.49
+    },
+    {
+      "ticker": "MFIN",
+      "price": 6.48
+    },
+    {
+      "ticker": "WTI",
+      "price": 6.91
+    }
+  ],
+  "30": [
+    {
+      "ticker": "MAMS",
+      "price": 8.295
+    },
+    {
+      "ticker": "MFIN",
+      "price": 6.41
+    },
+    {
+      "ticker": "WTI",
+      "price": 6.89
+    }
+  ]
+}

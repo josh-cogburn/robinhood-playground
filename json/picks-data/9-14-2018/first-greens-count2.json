@@ -1,0 +1,52 @@
+{
+  "12": [
+    {
+      "ticker": "FRAN",
+      "price": 3.825
+    },
+    {
+      "ticker": "AYTU",
+      "price": 3.015
+    }
+  ],
+  "190": [
+    {
+      "ticker": "FRAN",
+      "price": 4.05
+    },
+    {
+      "ticker": "AYTU",
+      "price": 3.0627
+    }
+  ],
+  "250": [
+    {
+      "ticker": "FRAN",
+      "price": 3.99
+    },
+    {
+      "ticker": "AYTU",
+      "price": 3.138
+    }
+  ],
+  "600": [
+    {
+      "ticker": "FRAN",
+      "price": 4.06
+    },
+    {
+      "ticker": "AYTU",
+      "price": 3.02
+    }
+  ],
+  "-15": [
+    {
+      "ticker": "FRAN",
+      "price": 3.8
+    },
+    {
+      "ticker": "AYTU",
+      "price": 2.94
+    }
+  ]
+}

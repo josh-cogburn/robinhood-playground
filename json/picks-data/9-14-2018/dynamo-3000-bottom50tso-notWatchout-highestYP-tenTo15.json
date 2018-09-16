@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "OPRX",
+      "price": 14.25
+    },
+    {
+      "ticker": "CATS",
+      "price": 10.015
+    }
+  ],
+  "40": [
+    {
+      "ticker": "OPRX",
+      "price": 14.5
+    },
+    {
+      "ticker": "NERV",
+      "price": 10.25
+    }
+  ],
+  "100": [
+    {
+      "ticker": "SHSP",
+      "price": 13.1229
+    },
+    {
+      "ticker": "MVO",
+      "price": 11.05
+    }
+  ],
+  "200": [
+    {
+      "ticker": "FTSV",
+      "price": 13.12
+    },
+    {
+      "ticker": "SHSP",
+      "price": 12.81
+    }
+  ],
+  "260": [
+    {
+      "ticker": "FTSV",
+      "price": 13.0601
+    },
+    {
+      "ticker": "SHSP",
+      "price": 12.75
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SHSP",
+      "price": 12.5
+    },
+    {
+      "ticker": "CTSO",
+      "price": 12.85
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SHSP",
+      "price": 12.69
+    },
+    {
+      "ticker": "CTSO",
+      "price": 12.8001
+    }
+  ]
+}

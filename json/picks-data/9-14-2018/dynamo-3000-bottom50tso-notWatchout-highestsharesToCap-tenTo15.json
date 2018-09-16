@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "ABX",
+      "price": 10.09
+    },
+    {
+      "ticker": "CATS",
+      "price": 10.015
+    }
+  ],
+  "40": [
+    {
+      "ticker": "VNTR",
+      "price": 10.05
+    },
+    {
+      "ticker": "NERV",
+      "price": 10.25
+    }
+  ],
+  "100": [
+    {
+      "ticker": "VNTR",
+      "price": 10.18
+    },
+    {
+      "ticker": "AUDC",
+      "price": 10.3575
+    }
+  ],
+  "200": [
+    {
+      "ticker": "LDF",
+      "price": 10.3433
+    },
+    {
+      "ticker": "SURF",
+      "price": 10.21
+    }
+  ],
+  "260": [
+    {
+      "ticker": "LDF",
+      "price": 10.3433
+    },
+    {
+      "ticker": "SURF",
+      "price": 10.36
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SURF",
+      "price": 10.38
+    },
+    {
+      "ticker": "INFY",
+      "price": 10.285
+    }
+  ],
+  "381": [
+    {
+      "ticker": "INFY",
+      "price": 10.305
+    },
+    {
+      "ticker": "PAK",
+      "price": 10.555
+    }
+  ]
+}

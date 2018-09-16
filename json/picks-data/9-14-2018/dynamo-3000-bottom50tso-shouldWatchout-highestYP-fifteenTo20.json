@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "MESA",
+      "price": 15.17
+    },
+    {
+      "ticker": "EXPI",
+      "price": 17.15
+    }
+  ],
+  "40": [
+    {
+      "ticker": "NGVC",
+      "price": 17.095
+    },
+    {
+      "ticker": "KALV",
+      "price": 15.26
+    }
+  ],
+  "100": [
+    {
+      "ticker": "NGVC",
+      "price": 17.205
+    },
+    {
+      "ticker": "ALDR",
+      "price": 18.2
+    }
+  ],
+  "200": [
+    {
+      "ticker": "NGVC",
+      "price": 16.92
+    },
+    {
+      "ticker": "ALDR",
+      "price": 18.025
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ENDP",
+      "price": 15.71
+    },
+    {
+      "ticker": "SIEB",
+      "price": 17.1401
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NSTG",
+      "price": 17.12
+    },
+    {
+      "ticker": "NGVC",
+      "price": 16.95
+    }
+  ],
+  "381": [
+    {
+      "ticker": "NSTG",
+      "price": 17.13
+    },
+    {
+      "ticker": "SIEB",
+      "price": 17.37
+    }
+  ]
+}

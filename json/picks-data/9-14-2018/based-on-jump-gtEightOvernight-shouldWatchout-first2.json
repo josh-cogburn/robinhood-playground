@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "CHKE",
+      "price": 1.23
+    },
+    {
+      "ticker": "AWSM",
+      "price": 4.8287
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CHKE",
+      "price": 1.14
+    },
+    {
+      "ticker": "AWSM",
+      "price": 4.8501
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CHKE",
+      "price": 1.15
+    },
+    {
+      "ticker": "FPAY",
+      "price": 2.3
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CHKE",
+      "price": 1.0069
+    },
+    {
+      "ticker": "FPAY",
+      "price": 2.1999
+    }
+  ]
+}

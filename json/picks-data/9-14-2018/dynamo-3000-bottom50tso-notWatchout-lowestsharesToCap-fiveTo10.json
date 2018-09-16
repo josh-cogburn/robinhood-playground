@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "PEI",
+      "price": 9.7
+    },
+    {
+      "ticker": "HMI",
+      "price": 9.6324
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CATS",
+      "price": 9.81
+    },
+    {
+      "ticker": "PEI",
+      "price": 9.53
+    }
+  ],
+  "100": [
+    {
+      "ticker": "SOXS",
+      "price": 9.63
+    },
+    {
+      "ticker": "CATS",
+      "price": 10.01
+    }
+  ],
+  "200": [
+    {
+      "ticker": "VNTR",
+      "price": 9.89
+    },
+    {
+      "ticker": "DL",
+      "price": 8.69
+    }
+  ],
+  "260": [
+    {
+      "ticker": "VNTR",
+      "price": 9.995
+    },
+    {
+      "ticker": "BCRH",
+      "price": 9.9148
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SOXS",
+      "price": 9.5827
+    },
+    {
+      "ticker": "LX",
+      "price": 9.95
+    }
+  ],
+  "381": [
+    {
+      "ticker": "LX",
+      "price": 9.9499
+    },
+    {
+      "ticker": "NTGN",
+      "price": 9.055
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "AEYE",
+      "price": 8.6631
+    },
+    {
+      "ticker": "MFIN",
+      "price": 6.3683
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CATS",
+      "price": 9.81
+    },
+    {
+      "ticker": "AMRS",
+      "price": 7.69
+    }
+  ],
+  "100": [
+    {
+      "ticker": "CATS",
+      "price": 10.01
+    },
+    {
+      "ticker": "AMRS",
+      "price": 7.74
+    }
+  ],
+  "200": [
+    {
+      "ticker": "AMRS",
+      "price": 7.5485
+    },
+    {
+      "ticker": "CALX",
+      "price": 8.55
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CALX",
+      "price": 8.55
+    },
+    {
+      "ticker": "AMRS",
+      "price": 7.4
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AMRS",
+      "price": 7.41
+    },
+    {
+      "ticker": "CALX",
+      "price": 8.405
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AMRS",
+      "price": 7.59
+    },
+    {
+      "ticker": "CALX",
+      "price": 8.5
+    }
+  ]
+}

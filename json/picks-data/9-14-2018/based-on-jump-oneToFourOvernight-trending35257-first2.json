@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "MYSZ",
+      "price": 1.1
+    },
+    {
+      "ticker": "OESX",
+      "price": 1.01
+    }
+  ],
+  "5": [
+    {
+      "ticker": "MYSZ",
+      "price": 1.2916
+    },
+    {
+      "ticker": "OESX",
+      "price": 1.01
+    }
+  ],
+  "16": [
+    {
+      "ticker": "MYSZ",
+      "price": 1.416
+    },
+    {
+      "ticker": "OESX",
+      "price": 1.01
+    }
+  ],
+  "30": [
+    {
+      "ticker": "MYSZ",
+      "price": 1.3817
+    },
+    {
+      "ticker": "OESX",
+      "price": 1.01
+    }
+  ]
+}

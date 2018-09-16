@@ -1,0 +1,110 @@
+{
+  "10": [
+    {
+      "ticker": "DFFN",
+      "price": 0.4649
+    },
+    {
+      "ticker": "SGBX",
+      "price": 3.99
+    },
+    {
+      "ticker": "UPL",
+      "price": 1.19
+    },
+    {
+      "ticker": "PIXY",
+      "price": 3.89
+    }
+  ],
+  "50": [
+    {
+      "ticker": "DFFN",
+      "price": 0.4582
+    },
+    {
+      "ticker": "PLXP",
+      "price": 4.4
+    },
+    {
+      "ticker": "BIOL",
+      "price": 2.1375
+    },
+    {
+      "ticker": "UPL",
+      "price": 1.19
+    },
+    {
+      "ticker": "PIXY",
+      "price": 3.84
+    }
+  ],
+  "200": [
+    {
+      "ticker": "DFFN",
+      "price": 0.4541
+    },
+    {
+      "ticker": "PLXP",
+      "price": 4.4
+    },
+    {
+      "ticker": "BIOL",
+      "price": 2.14
+    },
+    {
+      "ticker": "SSC",
+      "price": 4.75
+    },
+    {
+      "ticker": "PIXY",
+      "price": 3.8658
+    }
+  ],
+  "300": [
+    {
+      "ticker": "DFFN",
+      "price": 0.4564
+    },
+    {
+      "ticker": "SSC",
+      "price": 4.81
+    },
+    {
+      "ticker": "PIXY",
+      "price": 3.9299
+    }
+  ],
+  "380": [
+    {
+      "ticker": "DFFN",
+      "price": 0.4563
+    },
+    {
+      "ticker": "BIOL",
+      "price": 2.09
+    },
+    {
+      "ticker": "SSC",
+      "price": 4.9101
+    },
+    {
+      "ticker": "PIXY",
+      "price": 3.84
+    }
+  ],
+  "600": [
+    {
+      "ticker": "DFFN",
+      "price": 0.44
+    },
+    {
+      "ticker": "SSC",
+      "price": 4.95
+    },
+    {
+      "ticker": "PIXY",
+      "price": 3.83
+    }
+  ]
+}

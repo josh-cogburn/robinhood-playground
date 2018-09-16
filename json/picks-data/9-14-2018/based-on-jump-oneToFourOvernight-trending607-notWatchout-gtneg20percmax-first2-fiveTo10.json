@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "GOGL",
+      "price": 9.1
+    },
+    {
+      "ticker": "CALX",
+      "price": 9
+    }
+  ],
+  "5": [
+    {
+      "ticker": "GOGL",
+      "price": 9.1
+    },
+    {
+      "ticker": "MFIN",
+      "price": 6.33
+    }
+  ],
+  "16": [
+    {
+      "ticker": "GOGL",
+      "price": 9.08
+    },
+    {
+      "ticker": "MFIN",
+      "price": 6.48
+    }
+  ],
+  "30": [
+    {
+      "ticker": "GOGL",
+      "price": 9.12
+    },
+    {
+      "ticker": "MFIN",
+      "price": 6.41
+    }
+  ]
+}

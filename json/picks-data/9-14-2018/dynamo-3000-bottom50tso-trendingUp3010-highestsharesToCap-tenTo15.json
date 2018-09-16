@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "ABX",
+      "price": 10.09
+    },
+    {
+      "ticker": "CATS",
+      "price": 10.015
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CLAR",
+      "price": 11
+    },
+    {
+      "ticker": "MVO",
+      "price": 11.0842
+    }
+  ],
+  "100": [
+    {
+      "ticker": "INFY",
+      "price": 10.365
+    },
+    {
+      "ticker": "SMTA",
+      "price": 10.755
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ZFGN",
+      "price": 10.39
+    },
+    {
+      "ticker": "SMTA",
+      "price": 10.66
+    }
+  ],
+  "260": [
+    {
+      "ticker": "INFY",
+      "price": 10.32
+    },
+    {
+      "ticker": "ZFGN",
+      "price": 10.2375
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CSBR",
+      "price": 10.589
+    },
+    {
+      "ticker": "INFY",
+      "price": 10.285
+    }
+  ],
+  "381": [
+    {
+      "ticker": "INFY",
+      "price": 10.305
+    },
+    {
+      "ticker": "ZFGN",
+      "price": 10.11
+    }
+  ]
+}

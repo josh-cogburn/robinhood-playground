@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "MYSZ",
+      "price": 1.1
+    },
+    {
+      "ticker": "XTNT",
+      "price": 4.7089
+    }
+  ],
+  "5": [
+    {
+      "ticker": "MYSZ",
+      "price": 1.2916
+    },
+    {
+      "ticker": "XTNT",
+      "price": 4.75
+    }
+  ],
+  "16": [
+    {
+      "ticker": "MYSZ",
+      "price": 1.416
+    },
+    {
+      "ticker": "XTNT",
+      "price": 4.857
+    }
+  ],
+  "30": [
+    {
+      "ticker": "GMO",
+      "price": 0.3769
+    },
+    {
+      "ticker": "MYSZ",
+      "price": 1.3817
+    }
+  ]
+}

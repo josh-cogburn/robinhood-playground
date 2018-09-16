@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "NH",
+      "price": 1.74
+    },
+    {
+      "ticker": "KCAP",
+      "price": 3.3
+    }
+  ],
+  "5": [
+    {
+      "ticker": "NH",
+      "price": 1.68
+    },
+    {
+      "ticker": "KCAP",
+      "price": 3.3
+    }
+  ],
+  "16": [
+    {
+      "ticker": "NH",
+      "price": 1.682
+    },
+    {
+      "ticker": "KCAP",
+      "price": 3.31
+    }
+  ],
+  "30": [
+    {
+      "ticker": "GMO",
+      "price": 0.3769
+    },
+    {
+      "ticker": "NH",
+      "price": 1.65
+    }
+  ]
+}

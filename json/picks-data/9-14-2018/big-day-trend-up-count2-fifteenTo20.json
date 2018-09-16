@@ -1,0 +1,42 @@
+{
+  "10": [
+    {
+      "ticker": "ITCB",
+      "price": 15.24
+    },
+    {
+      "ticker": "SMCAY",
+      "price": 15.53
+    }
+  ],
+  "35": [
+    {
+      "ticker": "DNLI",
+      "price": 18.98
+    },
+    {
+      "ticker": "OI",
+      "price": 18.83
+    }
+  ],
+  "90": [
+    {
+      "ticker": "OI",
+      "price": 19.055
+    },
+    {
+      "ticker": "DNLI",
+      "price": 18.925
+    }
+  ],
+  "223": [
+    {
+      "ticker": "DNLI",
+      "price": 19.64
+    },
+    {
+      "ticker": "OI",
+      "price": 19.37
+    }
+  ]
+}
