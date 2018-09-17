@@ -74,8 +74,7 @@ const spread = {
         // runs at init
         regCronIncAfterSixThirty(Robinhood, {
             name: 'execute spread strategy',
-            run: [4, 40, 100, 200, 260, 351, 381], // 10:41am, 11:31am
-            // run: [],
+            run: [58, 123, 202],
             fn: async (Robinhood, min) => {
                 await executeStrategy(Robinhood, trendFilter, min, 0.3, 'spread');
             }
