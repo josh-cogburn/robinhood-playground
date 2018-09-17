@@ -28,17 +28,20 @@ const trendFilter = async (Robinhood, trend) => {
         }))
         .map(t => ({
             ...t,
-            spreadPerc: Math.round(t.spreadAbs / t.lastTrade * 100
+            spreadPerc: Math.round(t.spreadAbs / t.lastTrade * 100)
         }));
     console.log(JSON.stringify(withTrendSinceOpen, null, 2));
 
-    const singleHighestSpreadWithFilter = (filter = () => true) => {
+    const singleHighestSpreadWithFilter = prop => (filter = () => true) => {
         return withTrendSinceOpen
             .filter(filter)
-            .sort((a, b) => b.spreadAbs - a.spreadAbs)
+            .sort((a, b) => b[prop] - a[prop])
             .slice(0, 1)
             .ticks();
     };
+
+    const highestAbsoluteSpread = singleHighestSpreadWithFilter('spreadAbs');
+    const highestPercSpread = singleHighestSpreadWithFilter('spreadPerc');
 
     const bidAskLastTradeSame = (({ quote_data: { ask_price, bid_price, last_trade_price }}) => 
         ask_price === bid_price && bid_price === last_trade_price
@@ -50,10 +53,18 @@ const trendFilter = async (Robinhood, trend) => {
             .filter(t => Number(t.fundamentals.volume) > 500000)
             .filter(bidAskLastTradeSame)
             .ticks(),
-        singleLargestSpread: singleHighestSpreadWithFilter(),
-        singleLargestSpread100kVolume: singleHighestSpreadWithFilter(t => Number(t.fundamentals.volume) > 100000),
-        singleLargestSpread500kVolume: singleHighestSpreadWithFilter(t => Number(t.fundamentals.volume) > 500000),
-        singleLargestSpread1milVolume: singleHighestSpreadWithFilter(t => Number(t.fundamentals.volume) > 1000000),
+
+        singleLargestSpreadAbs: highestAbsoluteSpread(),
+        singleLargestSpreadAbs100kVolume: highestAbsoluteSpread(t => Number(t.fundamentals.volume) > 100000),
+        singleLargestSpreadAbs500kVolume: highestAbsoluteSpread(t => Number(t.fundamentals.volume) > 500000),
+        singleLargestSpreadAbs1milVolume: highestAbsoluteSpread(t => Number(t.fundamentals.volume) > 1000000),
+
+
+        singleLargestSpreadPerc: highestPercSpread(),
+        singleLargestSpreadPerc100kVolume: highestPercSpread(t => Number(t.fundamentals.volume) > 100000),
+        singleLargestSpreadPerc500kVolume: highestPercSpread(t => Number(t.fundamentals.volume) > 500000),
+        singleLargestSpreadPerc1milVolume: highestPercSpread(t => Number(t.fundamentals.volume) > 1000000),
+
     };
 };
 
