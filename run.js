@@ -20,8 +20,10 @@ const getTrendAndSave = require('./app-actions/get-trend-and-save');
         callArgs.push(trend.filter(t => t.last_trade_price < 5));
     }
 
+    const restArgs = process.argv.slice(3)
+        .map(arg => arg === 'true' ? true : arg);
 
-    const response = await relatedAnalysisFn(...callArgs, ...process.argv.slice(3));
+    const response = await relatedAnalysisFn(...callArgs, ...restArgs);
     console.log('response');
     console.log(JSON.stringify(response, null, 2));
 })();

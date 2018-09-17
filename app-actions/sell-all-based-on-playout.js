@@ -17,6 +17,7 @@ const getTrend = require('../utils/get-trend');
 // app-actions
 const detailedNonZero = require('./detailed-non-zero');
 const activeSell = require('./active-sell');
+const getAssociatedStrategies = require('./get-associated-strategies');
 
 // the magic
 const {
@@ -37,45 +38,6 @@ const daysBetween = (firstDate, secondDate) => {
     return diffDays;
 };
 
-
-
-const getAssociatedStrategies = async (tickers, dailyTransactionDates) => {
-
-    const withStrategies = [];  // [{ ticker, strategy }]
-    const withStrategiesIncludesTicker = ticker =>
-        withStrategies
-            .map(obj => obj.ticker)
-            .includes(ticker);
-
-    for (let file of dailyTransactionDates) {
-        // console.log('checking', file, withStrategies);
-        const transactions = await jsonMgr.get(`./json/daily-transactions/${file}.json`);
-        // console.log(transactions);
-        tickers
-            .filter(ticker => !withStrategiesIncludesTicker(ticker))
-            .forEach(ticker => {
-                const foundStrategy = transactions.find(transaction =>
-                    transaction.ticker === ticker
-                    && transaction.type === 'buy'
-                );
-                // console.log(ticker, 'found', foundStrategy);
-                if (!foundStrategy)  return;
-                const { strategy, min } = foundStrategy;
-                withStrategies.push({
-                    ticker,
-                    strategy: `${strategy}-${min}`,
-                    date: file
-                });
-            });
-
-        if (tickers.every(withStrategiesIncludesTicker)) {
-            console.log('found all tickers');
-            break;
-        }
-    }
-
-    return withStrategies;
-};
 
 const getStratPerfTrends = async (ticker, buyDate, strategy) => {
     try {
@@ -120,10 +82,10 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
     // console.log(pmModelDates, 'pmModelDates');
 
     const nonzero = await detailedNonZero(Robinhood);
-    const withStrategies = await getAssociatedStrategies(
-        nonzero.map(pos => pos.symbol),
-        dailyTransactionDates
-    );
+    const withStrategies = await getAssociatedStrategies({
+        tickers: nonzero.map(pos => pos.symbol),
+    }, dailyTransactionDates);
+    
     const combined = nonzero.map(pos => ({
         ...pos,
         ...withStrategies.find(obj => obj.ticker === pos.symbol),

@@ -9,6 +9,7 @@ const { default: recordStratPerfs } = require('../app-actions/record-strat-perfs
 const sellAllBasedOnPlayout = require('../app-actions/sell-all-based-on-playout');
 const sellAllIfWentUp = require('../app-actions/sell-all-if-went-up');
 const sellAllStocks = require('../app-actions/sell-all-stocks');
+const sendDayReport = require('../app-actions/send-day-report');
 
 // utils
 const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
@@ -107,10 +108,15 @@ const additionalCronConfig = [
     //     run: [1027],
     //     fn: getAllTickers
     // },
+    {
+        name: 'send day report',
+        run: [515],
+        fn: sendDayReport
+    },
 
     {
         name: 'strat perf multiple',
-        run: [500],
+        run: [520],
         fn: (Robinhood) => stratPerfMultiple(Robinhood, 52, 'next-day-330')
     },
 

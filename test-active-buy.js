@@ -75,9 +75,9 @@ process.on('unhandledRejection', (reason, p) => {
 
 
     await activeBuy(Robinhood, {
-        ticker: 'AAPL',
+        ticker: 'BPMX',
         strategy: 'testing',
-        maxPrice: 300,
+        maxPrice: 5,
         min: 242
     });
 
