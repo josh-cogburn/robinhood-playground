@@ -5,12 +5,16 @@ const executeStrategy = require('../app-actions/execute-strategy');
 const getTrend = require('../utils/get-trend');
 const addOvernightJump = require('../app-actions/add-overnight-jump');
 
-const trendFilter = async (Robinhood, trend) => {
+const trendFilter = async (Robinhood, trend, min) => {
+
+    const isAfterHours = min >= 390;
+    let histQS = `interval=5minute`;
+    if (isAfterHours) histQS += '&bounds=extended';
 
     let allHistoricals = await getMultipleHistoricals(
         Robinhood,
         trend.map(buy => buy.ticker),
-        `interval=5minute`
+        histQS
     );
 
     let withHistoricals = trend.map((buy, i) => ({

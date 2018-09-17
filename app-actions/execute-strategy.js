@@ -31,7 +31,7 @@ const executeStrategy = async (Robinhood, strategyFn, min, ratioToSpend, strateg
         const trendFilteredByPricePerm = trend.filter(stock => {
             return Number(stock.quote_data.last_trade_price) > lowBounds && Number(stock.quote_data.last_trade_price) <= highBounds;
         });
-        const toPurchase = await strategyFn(Robinhood, trendFilteredByPricePerm);
+        const toPurchase = await strategyFn(Robinhood, trendFilteredByPricePerm, min);
         console.log(toPurchase, 'toPurchase');
 
         // gives ability to return an object from a trendFilter with multiple "variations"
