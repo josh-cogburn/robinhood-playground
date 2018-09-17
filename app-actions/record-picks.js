@@ -14,7 +14,15 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
 
     if (!strategy.includes('cheapest-picks')) withPrices = withPrices.slice(0, 5);  // take only 5 picks
 
-    console.log('recording', strategy, 'strategy');
+    const stratMin = `${strategy}-${min}`;
+
+    withPrices = withPrices.filter(tickerPrice => !!tickerPrice);
+    if (!withPrices.length) {
+        return console.log(`no stocks found for ${stratMin}`)
+    }
+
+    console.log('recording', stratMin, 'strategy');
+
     const dateStr = (new Date()).toLocaleDateString().split('/').join('-');
     const fileLocation = `./json/picks-data/${dateStr}/${strategy}.json`;
     // create day directory if needed
@@ -33,8 +41,6 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
     //         return null;
     //     }
     // });
-    withPrices = withPrices.filter(tickerPrice => !!tickerPrice);
-
 
     console.log('saving', strategy, 'picks', withPrices);
     const curData = await jsonMgr.get(fileLocation);
@@ -43,8 +49,6 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
         [min]: withPrices
     };
     await jsonMgr.save(fileLocation, savedData);
-
-    const stratMin = `${strategy}-${min}`;
 
     // for socket-server
     stratManager.newPick({
@@ -58,15 +62,13 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
     if (enableCount) {
         console.log('strategy enabled: ', stratMin, 'purchasing');
         const stocksToBuy = withPrices.map(obj => obj.ticker);
-        if (stocksToBuy.length) {
-            await purchaseStocks(Robinhood, {
-                stocksToBuy,
-                strategy,
-                multiplier: enableCount,
-                min
-            });
-            tweeter.tweet(`BUY ${withPrices.map(({ ticker, price }) => `#${ticker} @ $${price}`).join(' and ')} - ${stratMin}`);
-        }
+        await purchaseStocks(Robinhood, {
+            stocksToBuy,
+            strategy,
+            multiplier: enableCount,
+            min
+        });
+        tweeter.tweet(`BUY ${withPrices.map(({ ticker, price }) => `#${ticker} @ $${price}`).join(' and ')} - ${stratMin}`);
         await sendEmail(
             `robinhood-playground: ${stratMin}`,
             JSON.stringify(withPrices, null, 2)
