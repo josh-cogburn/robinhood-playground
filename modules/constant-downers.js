@@ -31,7 +31,7 @@ const trendFilter = async (Robinhood, trend) => {
                 }).length / historicals.length;
 
                 const percDownCloseOnly = buy.historicals.filter(({ open_price, close_price }) => {
-                    return close_price > open_price;
+                    return close_price < open_price;
                 }).length / historicals.length;
 
                 const trendPerc = getTrend(historicals[historicals.length - 1].close_price, historicals[0].open_price);
