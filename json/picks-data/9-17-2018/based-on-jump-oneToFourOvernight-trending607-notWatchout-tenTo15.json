@@ -1,0 +1,70 @@
+{
+  "0": [
+    {
+      "ticker": "SOIL",
+      "price": 10.81
+    },
+    {
+      "ticker": "OSIR",
+      "price": 11.7
+    }
+  ],
+  "5": [
+    {
+      "ticker": "DQJCY",
+      "price": 12.39
+    },
+    {
+      "ticker": "SOIL",
+      "price": 10.8
+    },
+    {
+      "ticker": "OSIR",
+      "price": 11.7
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CSSE",
+      "price": 10.94
+    },
+    {
+      "ticker": "DQJCY",
+      "price": 12.39
+    },
+    {
+      "ticker": "ECF",
+      "price": 10.44
+    },
+    {
+      "ticker": "SOIL",
+      "price": 10.8
+    },
+    {
+      "ticker": "OSIR",
+      "price": 11.74
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CSSE",
+      "price": 10.94
+    },
+    {
+      "ticker": "DQJCY",
+      "price": 12.39
+    },
+    {
+      "ticker": "ECF",
+      "price": 10.41
+    },
+    {
+      "ticker": "SOIL",
+      "price": 10.8
+    },
+    {
+      "ticker": "OSIR",
+      "price": 11.7672
+    }
+  ]
+}

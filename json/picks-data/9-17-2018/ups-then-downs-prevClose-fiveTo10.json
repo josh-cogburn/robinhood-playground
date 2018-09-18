@@ -1,0 +1,54 @@
+{
+  "200": [
+    {
+      "ticker": "ESV",
+      "price": 7.23
+    },
+    {
+      "ticker": "REPH",
+      "price": 7.75
+    }
+  ],
+  "300": [
+    {
+      "ticker": "ESV",
+      "price": 7.16
+    },
+    {
+      "ticker": "REPH",
+      "price": 7.75
+    }
+  ],
+  "380": [
+    {
+      "ticker": "RMBL",
+      "price": 9.8
+    },
+    {
+      "ticker": "ESV",
+      "price": 7.13
+    },
+    {
+      "ticker": "LIVE",
+      "price": 9.93
+    }
+  ],
+  "600": [
+    {
+      "ticker": "RMBL",
+      "price": 9.665
+    },
+    {
+      "ticker": "ESV",
+      "price": 7.12
+    },
+    {
+      "ticker": "REPH",
+      "price": 7.7
+    },
+    {
+      "ticker": "LIVE",
+      "price": 9.94
+    }
+  ]
+}

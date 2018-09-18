@@ -1,0 +1,52 @@
+{
+  "12": [
+    {
+      "ticker": "SYBX",
+      "price": 12.4
+    },
+    {
+      "ticker": "CRON",
+      "price": 10.29
+    }
+  ],
+  "190": [
+    {
+      "ticker": "SYBX",
+      "price": 12.74
+    },
+    {
+      "ticker": "CRON",
+      "price": 10.21
+    }
+  ],
+  "250": [
+    {
+      "ticker": "SYBX",
+      "price": 12.81
+    },
+    {
+      "ticker": "CRON",
+      "price": 10.17
+    }
+  ],
+  "600": [
+    {
+      "ticker": "SYBX",
+      "price": 13.02
+    },
+    {
+      "ticker": "CRON",
+      "price": 10.18
+    }
+  ],
+  "-15": [
+    {
+      "ticker": "SYBX",
+      "price": 12.38
+    },
+    {
+      "ticker": "CRON",
+      "price": 10.38
+    }
+  ]
+}

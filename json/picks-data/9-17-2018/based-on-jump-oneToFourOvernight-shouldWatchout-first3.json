@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "FCEL",
+      "price": 1.1
+    },
+    {
+      "ticker": "MVIS",
+      "price": 1.12
+    },
+    {
+      "ticker": "DCAR",
+      "price": 0.58
+    }
+  ],
+  "5": [
+    {
+      "ticker": "FCEL",
+      "price": 1.1
+    },
+    {
+      "ticker": "MVIS",
+      "price": 1.119
+    },
+    {
+      "ticker": "RNN",
+      "price": 1.75
+    }
+  ],
+  "16": [
+    {
+      "ticker": "FCEL",
+      "price": 1.07
+    },
+    {
+      "ticker": "MVIS",
+      "price": 1.1
+    },
+    {
+      "ticker": "RNN",
+      "price": 1.75
+    }
+  ],
+  "30": [
+    {
+      "ticker": "FCEL",
+      "price": 1.06
+    },
+    {
+      "ticker": "MVIS",
+      "price": 1.1
+    },
+    {
+      "ticker": "JOB",
+      "price": 2.62
+    }
+  ]
+}

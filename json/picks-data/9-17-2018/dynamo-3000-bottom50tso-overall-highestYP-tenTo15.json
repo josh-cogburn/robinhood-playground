@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "CATS",
+      "price": 11.1645
+    },
+    {
+      "ticker": "RMBL",
+      "price": 10.8186
+    }
+  ],
+  "40": [
+    {
+      "ticker": "QTT",
+      "price": 13.041
+    },
+    {
+      "ticker": "NDLS",
+      "price": 12.55
+    }
+  ],
+  "100": [
+    {
+      "ticker": "QTT",
+      "price": 11.55
+    },
+    {
+      "ticker": "LFVN",
+      "price": 12.5
+    }
+  ],
+  "200": [
+    {
+      "ticker": "QTT",
+      "price": 11.3
+    },
+    {
+      "ticker": "LFVN",
+      "price": 12.52
+    }
+  ],
+  "260": [
+    {
+      "ticker": "QTT",
+      "price": 10.5595
+    },
+    {
+      "ticker": "MESA",
+      "price": 14.8519
+    }
+  ],
+  "351": [
+    {
+      "ticker": "QTT",
+      "price": 10.0701
+    },
+    {
+      "ticker": "MESA",
+      "price": 14.86
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MESA",
+      "price": 14.8219
+    },
+    {
+      "ticker": "GFN",
+      "price": 14.425
+    }
+  ]
+}

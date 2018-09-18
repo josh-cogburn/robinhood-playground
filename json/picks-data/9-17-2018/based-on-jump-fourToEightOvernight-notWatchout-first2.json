@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "NEON",
+      "price": 0.27
+    },
+    {
+      "ticker": "PTNR",
+      "price": 4.92
+    }
+  ],
+  "5": [
+    {
+      "ticker": "NEON",
+      "price": 0.2677
+    },
+    {
+      "ticker": "PTNR",
+      "price": 4.92
+    }
+  ],
+  "16": [
+    {
+      "ticker": "NNVC",
+      "price": 0.415
+    },
+    {
+      "ticker": "NEON",
+      "price": 0.2677
+    }
+  ],
+  "30": [
+    {
+      "ticker": "AUMN",
+      "price": 0.247
+    },
+    {
+      "ticker": "NNVC",
+      "price": 0.4095
+    }
+  ]
+}

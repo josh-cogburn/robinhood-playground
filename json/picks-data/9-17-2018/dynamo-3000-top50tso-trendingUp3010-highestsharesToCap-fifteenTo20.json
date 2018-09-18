@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "SNPHY",
+      "price": 15.31
+    },
+    {
+      "ticker": "NVTA",
+      "price": 15.72
+    }
+  ],
+  "40": [
+    {
+      "ticker": "OBSV",
+      "price": 16.4849
+    },
+    {
+      "ticker": "NVTA",
+      "price": 16.01
+    }
+  ],
+  "100": [
+    {
+      "ticker": "OBSV",
+      "price": 16.25
+    },
+    {
+      "ticker": "SNPHY",
+      "price": 15.46
+    }
+  ],
+  "200": [
+    {
+      "ticker": "OBSV",
+      "price": 16.51
+    },
+    {
+      "ticker": "SNPHY",
+      "price": 15.44
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SPA",
+      "price": 15.2601
+    },
+    {
+      "ticker": "OBSV",
+      "price": 16.5
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SPA",
+      "price": 15.2095
+    },
+    {
+      "ticker": "OBSV",
+      "price": 16.5
+    }
+  ],
+  "381": [
+    {
+      "ticker": "RDNT",
+      "price": 15.025
+    },
+    {
+      "ticker": "AOBC",
+      "price": 15.68
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "NIHD",
+      "price": 5
+    },
+    {
+      "ticker": "PBR.A",
+      "price": 9.07
+    }
+  ],
+  "40": [
+    {
+      "ticker": "OMEX",
+      "price": 7.25
+    },
+    {
+      "ticker": "TEDU",
+      "price": 8.7
+    }
+  ],
+  "100": [
+    {
+      "ticker": "CLNY",
+      "price": 6.235
+    },
+    {
+      "ticker": "ELMD",
+      "price": 5.9032
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ELVT",
+      "price": 8.72
+    },
+    {
+      "ticker": "BRFS",
+      "price": 5.26
+    }
+  ],
+  "260": [
+    {
+      "ticker": "OCLR",
+      "price": 9.145
+    },
+    {
+      "ticker": "MOTS",
+      "price": 5.607
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SFS",
+      "price": 6.525
+    },
+    {
+      "ticker": "OCLR",
+      "price": 9.1199
+    }
+  ],
+  "381": [
+    {
+      "ticker": "OCLR",
+      "price": 9.12
+    },
+    {
+      "ticker": "DAKT",
+      "price": 7.715
+    }
+  ]
+}

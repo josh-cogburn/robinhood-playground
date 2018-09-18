@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "DGLY",
+      "price": 3.2944
+    },
+    {
+      "ticker": "INSG",
+      "price": 4.34
+    }
+  ],
+  "5": [
+    {
+      "ticker": "DGLY",
+      "price": 3.3
+    },
+    {
+      "ticker": "INSG",
+      "price": 4.32
+    }
+  ],
+  "16": [
+    {
+      "ticker": "GMO",
+      "price": 0.3884
+    },
+    {
+      "ticker": "DGLY",
+      "price": 3.2827
+    }
+  ],
+  "30": [
+    {
+      "ticker": "GMO",
+      "price": 0.378
+    },
+    {
+      "ticker": "DGLY",
+      "price": 3.251
+    }
+  ]
+}

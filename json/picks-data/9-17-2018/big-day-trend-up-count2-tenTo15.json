@@ -1,0 +1,42 @@
+{
+  "10": [
+    {
+      "ticker": "CSPI",
+      "price": 13.7913
+    },
+    {
+      "ticker": "JAG",
+      "price": 13.29
+    }
+  ],
+  "35": [
+    {
+      "ticker": "CRVS",
+      "price": 10.62
+    },
+    {
+      "ticker": "CSPI",
+      "price": 13.7913
+    }
+  ],
+  "90": [
+    {
+      "ticker": "JAG",
+      "price": 13.44
+    },
+    {
+      "ticker": "PLSE",
+      "price": 14.96
+    }
+  ],
+  "223": [
+    {
+      "ticker": "FTSV",
+      "price": 14.13
+    },
+    {
+      "ticker": "JAG",
+      "price": 13.37
+    }
+  ]
+}

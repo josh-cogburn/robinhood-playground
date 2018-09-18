@@ -1,0 +1,50 @@
+{
+  "0": [
+    {
+      "ticker": "ICL",
+      "price": 6
+    }
+  ],
+  "5": [
+    {
+      "ticker": "ICL",
+      "price": 6.02
+    },
+    {
+      "ticker": "SWZ",
+      "price": 8.715
+    },
+    {
+      "ticker": "RLGT",
+      "price": 5.285
+    }
+  ],
+  "16": [
+    {
+      "ticker": "ICL",
+      "price": 6.01
+    },
+    {
+      "ticker": "SWZ",
+      "price": 8.7913
+    },
+    {
+      "ticker": "RLGT",
+      "price": 5.298
+    }
+  ],
+  "30": [
+    {
+      "ticker": "ICL",
+      "price": 6
+    },
+    {
+      "ticker": "SWZ",
+      "price": 8.8
+    },
+    {
+      "ticker": "RLGT",
+      "price": 5.3025
+    }
+  ]
+}

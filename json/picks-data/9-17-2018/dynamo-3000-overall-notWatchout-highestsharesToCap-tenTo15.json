@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "HMI",
+      "price": 10.0099
+    },
+    {
+      "ticker": "EPM",
+      "price": 10.475
+    }
+  ],
+  "40": [
+    {
+      "ticker": "HMI",
+      "price": 10.27
+    },
+    {
+      "ticker": "LX",
+      "price": 10.09
+    }
+  ],
+  "100": [
+    {
+      "ticker": "CEPU",
+      "price": 10.0025
+    },
+    {
+      "ticker": "HMI",
+      "price": 10.0027
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CEPU",
+      "price": 10.28
+    },
+    {
+      "ticker": "HMI",
+      "price": 10
+    }
+  ],
+  "260": [
+    {
+      "ticker": "MHH",
+      "price": 10.18
+    },
+    {
+      "ticker": "CEPU",
+      "price": 10.285
+    }
+  ],
+  "351": [
+    {
+      "ticker": "MHH",
+      "price": 10.22
+    },
+    {
+      "ticker": "CEPU",
+      "price": 10.28
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MHH",
+      "price": 10.19
+    },
+    {
+      "ticker": "CEPU",
+      "price": 10.39
+    }
+  ]
+}

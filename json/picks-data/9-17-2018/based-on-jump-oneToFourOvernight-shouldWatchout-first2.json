@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "FCEL",
+      "price": 1.1
+    },
+    {
+      "ticker": "MVIS",
+      "price": 1.12
+    }
+  ],
+  "5": [
+    {
+      "ticker": "FCEL",
+      "price": 1.1
+    },
+    {
+      "ticker": "MVIS",
+      "price": 1.119
+    }
+  ],
+  "16": [
+    {
+      "ticker": "FCEL",
+      "price": 1.07
+    },
+    {
+      "ticker": "MVIS",
+      "price": 1.1
+    }
+  ],
+  "30": [
+    {
+      "ticker": "FCEL",
+      "price": 1.06
+    },
+    {
+      "ticker": "MVIS",
+      "price": 1.1
+    }
+  ]
+}

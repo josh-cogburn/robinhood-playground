@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "NSPR",
+      "price": 0.2
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.1545
+    }
+  ],
+  "40": [
+    {
+      "ticker": "NSPR",
+      "price": 0.1948
+    },
+    {
+      "ticker": "ALN",
+      "price": 0.1542
+    }
+  ],
+  "100": [
+    {
+      "ticker": "ALN",
+      "price": 0.1502
+    },
+    {
+      "ticker": "NSPR",
+      "price": 0.1916
+    }
+  ],
+  "200": [
+    {
+      "ticker": "NSPR",
+      "price": 0.189
+    },
+    {
+      "ticker": "ALN",
+      "price": 0.1503
+    }
+  ],
+  "260": [
+    {
+      "ticker": "OGEN",
+      "price": 0.406
+    },
+    {
+      "ticker": "ALN",
+      "price": 0.1568
+    }
+  ],
+  "351": [
+    {
+      "ticker": "OGEN",
+      "price": 0.408
+    },
+    {
+      "ticker": "ALT",
+      "price": 4.75
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ALT",
+      "price": 4.7501
+    },
+    {
+      "ticker": "NSPR",
+      "price": 0.187
+    }
+  ]
+}

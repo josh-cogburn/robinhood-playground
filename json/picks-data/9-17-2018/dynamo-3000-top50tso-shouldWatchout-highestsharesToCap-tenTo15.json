@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "BPI",
+      "price": 10.18
+    },
+    {
+      "ticker": "PDEX",
+      "price": 10.6
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CMTA",
+      "price": 10.25
+    },
+    {
+      "ticker": "PDEX",
+      "price": 10.65
+    }
+  ],
+  "100": [
+    {
+      "ticker": "EPZM",
+      "price": 10.25
+    },
+    {
+      "ticker": "PDEX",
+      "price": 11.3
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CMTA",
+      "price": 10.17
+    },
+    {
+      "ticker": "PDEX",
+      "price": 11.05
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PDEX",
+      "price": 11.15
+    },
+    {
+      "ticker": "MNLO",
+      "price": 10.49
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SPRO",
+      "price": 10.05
+    },
+    {
+      "ticker": "PDEX",
+      "price": 11.4
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SPRO",
+      "price": 10.005
+    },
+    {
+      "ticker": "PDEX",
+      "price": 11.7
+    }
+  ]
+}

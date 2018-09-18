@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "PYX",
+      "price": 19.35
+    },
+    {
+      "ticker": "BBBY",
+      "price": 18.95
+    }
+  ],
+  "5": [
+    {
+      "ticker": "PYX",
+      "price": 19.65
+    },
+    {
+      "ticker": "BBBY",
+      "price": 19.33
+    }
+  ],
+  "16": [
+    {
+      "ticker": "BBBY",
+      "price": 18.9775
+    },
+    {
+      "ticker": "ACOR",
+      "price": 16.7
+    }
+  ],
+  "30": [
+    {
+      "ticker": "BBBY",
+      "price": 19.08
+    },
+    {
+      "ticker": "ACOR",
+      "price": 16.4499
+    }
+  ]
+}

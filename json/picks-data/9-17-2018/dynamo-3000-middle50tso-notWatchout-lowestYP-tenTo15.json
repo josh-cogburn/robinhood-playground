@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "VIIX",
+      "price": 11.5
+    },
+    {
+      "ticker": "GE",
+      "price": 12.677
+    }
+  ],
+  "40": [
+    {
+      "ticker": "WTTR",
+      "price": 12.305
+    },
+    {
+      "ticker": "EWZS",
+      "price": 11.015
+    }
+  ],
+  "100": [
+    {
+      "ticker": "BZH",
+      "price": 12.07
+    },
+    {
+      "ticker": "BOE",
+      "price": 11.03
+    }
+  ],
+  "200": [
+    {
+      "ticker": "SDOW",
+      "price": 14.88
+    },
+    {
+      "ticker": "BSIG",
+      "price": 12.64
+    }
+  ],
+  "260": [
+    {
+      "ticker": "FBZ",
+      "price": 10.5535
+    },
+    {
+      "ticker": "BOE",
+      "price": 11.0232
+    }
+  ],
+  "351": [
+    {
+      "ticker": "DNKEY",
+      "price": 13.185
+    },
+    {
+      "ticker": "IDCBY",
+      "price": 13.79
+    }
+  ],
+  "381": [
+    {
+      "ticker": "BYDDY",
+      "price": 12.32
+    },
+    {
+      "ticker": "TRMT",
+      "price": 11.77
+    }
+  ]
+}

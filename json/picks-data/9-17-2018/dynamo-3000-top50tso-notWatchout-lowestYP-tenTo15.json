@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "WBAI",
+      "price": 11.56
+    },
+    {
+      "ticker": "CRVS",
+      "price": 10
+    }
+  ],
+  "40": [
+    {
+      "ticker": "SQQQ",
+      "price": 11.91
+    },
+    {
+      "ticker": "PLSE",
+      "price": 14.5
+    }
+  ],
+  "100": [
+    {
+      "ticker": "JP",
+      "price": 10.48
+    },
+    {
+      "ticker": "SQQQ",
+      "price": 11.92
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PLSE",
+      "price": 14.63
+    },
+    {
+      "ticker": "LX",
+      "price": 10.18
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SQQQ",
+      "price": 11.94
+    },
+    {
+      "ticker": "PLSE",
+      "price": 14.59
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SQQQ",
+      "price": 12.0526
+    },
+    {
+      "ticker": "VIIX",
+      "price": 11.7232
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SQQQ",
+      "price": 12.105
+    },
+    {
+      "ticker": "VIIX",
+      "price": 11.8442
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "EPM",
+      "price": 10.3
+    },
+    {
+      "ticker": "LBC",
+      "price": 11.7554
+    }
+  ],
+  "5": [
+    {
+      "ticker": "EPM",
+      "price": 10.5
+    },
+    {
+      "ticker": "CDOR",
+      "price": 10.6
+    }
+  ],
+  "16": [
+    {
+      "ticker": "EPM",
+      "price": 10.5
+    },
+    {
+      "ticker": "CDOR",
+      "price": 10.6
+    }
+  ],
+  "30": [
+    {
+      "ticker": "EPM",
+      "price": 10.475
+    },
+    {
+      "ticker": "CDOR",
+      "price": 10.6
+    }
+  ]
+}

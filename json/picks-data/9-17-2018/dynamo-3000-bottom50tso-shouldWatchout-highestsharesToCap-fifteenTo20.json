@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "QTT",
+      "price": 14.9268
+    },
+    {
+      "ticker": "TWO",
+      "price": 15.27
+    }
+  ],
+  "40": [
+    {
+      "ticker": "EGOV",
+      "price": 15.075
+    },
+    {
+      "ticker": "LNTH",
+      "price": 16.025
+    }
+  ],
+  "100": [
+    {
+      "ticker": "EGOV",
+      "price": 15.15
+    },
+    {
+      "ticker": "LNTH",
+      "price": 15.9
+    }
+  ],
+  "200": [
+    {
+      "ticker": "MESA",
+      "price": 15.08
+    },
+    {
+      "ticker": "EGOV",
+      "price": 15.15
+    }
+  ],
+  "260": [
+    {
+      "ticker": "XPER",
+      "price": 15.05
+    },
+    {
+      "ticker": "EGOV",
+      "price": 15.05
+    }
+  ],
+  "351": [
+    {
+      "ticker": "XOMA",
+      "price": 15.71
+    },
+    {
+      "ticker": "SIEB",
+      "price": 16.35
+    }
+  ],
+  "381": [
+    {
+      "ticker": "XOMA",
+      "price": 15.7
+    },
+    {
+      "ticker": "SIEB",
+      "price": 16.51
+    }
+  ]
+}

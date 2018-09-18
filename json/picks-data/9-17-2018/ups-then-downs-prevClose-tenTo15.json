@@ -1,0 +1,66 @@
+{
+  "10": [
+    {
+      "ticker": "GFN",
+      "price": 14.6
+    }
+  ],
+  "50": [
+    {
+      "ticker": "CIFS",
+      "price": 12.185
+    },
+    {
+      "ticker": "GFN",
+      "price": 14.75
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CIFS",
+      "price": 11.56
+    },
+    {
+      "ticker": "RMBL",
+      "price": 10.2877
+    },
+    {
+      "ticker": "GFN",
+      "price": 14.325
+    }
+  ],
+  "300": [
+    {
+      "ticker": "CIFS",
+      "price": 11.53
+    },
+    {
+      "ticker": "RMBL",
+      "price": 10.23
+    },
+    {
+      "ticker": "GFN",
+      "price": 14.4
+    }
+  ],
+  "380": [
+    {
+      "ticker": "CIFS",
+      "price": 11.1
+    },
+    {
+      "ticker": "GFN",
+      "price": 14.45
+    }
+  ],
+  "600": [
+    {
+      "ticker": "CIFS",
+      "price": 11.2
+    },
+    {
+      "ticker": "GFN",
+      "price": 14.4
+    }
+  ]
+}

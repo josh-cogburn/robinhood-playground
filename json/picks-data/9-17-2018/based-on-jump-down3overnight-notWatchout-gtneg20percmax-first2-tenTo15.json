@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "DKILY",
+      "price": 13.55
+    },
+    {
+      "ticker": "UMICY",
+      "price": 13.85
+    }
+  ],
+  "5": [
+    {
+      "ticker": "GOV",
+      "price": 13.8999
+    },
+    {
+      "ticker": "JAG",
+      "price": 13.31
+    }
+  ],
+  "16": [
+    {
+      "ticker": "GOV",
+      "price": 13.9
+    },
+    {
+      "ticker": "JAG",
+      "price": 13.18
+    }
+  ],
+  "30": [
+    {
+      "ticker": "GOV",
+      "price": 13.92
+    },
+    {
+      "ticker": "JAG",
+      "price": 13.31
+    }
+  ]
+}
