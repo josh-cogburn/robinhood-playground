@@ -36,6 +36,10 @@ module.exports = {
         '[sepAdds]',
         '[sepAdds]',
         '[sepAdds]',
+
+        '[sep17MORE]',
+        '[sep17MORE]',
+        '[sep17MORE]',
     ],
     fallbackSellStrategy: 'limit3',
     force: {

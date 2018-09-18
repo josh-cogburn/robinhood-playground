@@ -15,14 +15,16 @@ module.exports = async (Robinhood, ticker) => {
         adjusted_previous_close, 
         instrument,
         ask_price,
-        bid_price
+        bid_price,
+        last_extended_hours_trade_price
     } = quoteData.results[0];
     let data = {
         lastTrade: Number(last_trade_price),
         prevClose: Number(adjusted_previous_close),
         askPrice: Number(ask_price),
         bidPrice: Number(bid_price),
-        instrument
+        afterHoursPrice: Number(last_extended_hours_trade_price),
+        instrument,
     };
     try {
         var yahooPrice = (await lookup(ticker)).currentPrice;

@@ -874,6 +874,16 @@ const unprovenSuddenDropsLast2Filter10 = [
     "sudden-drops-last2trend-filter10-189",
     "sudden-drops-last2trend-filter10-fifteenTo20-328",
     "sudden-drops-last2trend-filter10-fiveTo10-328"
+];
+
+
+const sep17MORE = [
+    'sudden-drops-last30trend-filter20-189',
+    'sudden-drops-last10trend-filter30-280',
+    'low-float-high-volume-absVolPoints-trenddowngt30-notWatchout-315',
+    'based-on-jump-gtEightOvernight-trending53-first1-tenTo15-0',
+    'sudden-drops-last10trend-filter10-189',
+    'based-on-jump-fourToEightOvernight-trending53-shouldWatchout-tenTo15-0',
 ]
 
 module.exports = {
@@ -964,5 +974,7 @@ module.exports = {
     unprovenFilter30Drops,
     unprovenFilter20Drops,
     unprovenSuddenDropsLast2Filter10,
+
+    sep17MORE,
 
 };

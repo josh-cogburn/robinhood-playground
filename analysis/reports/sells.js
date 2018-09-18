@@ -2,12 +2,12 @@
 // return list of days
 
 const mapLimit = require('promise-map-limit');
-const jsonMgr = require('../utils/json-mgr');
+const jsonMgr = require('../../utils/json-mgr');
 
-const getAssociatedStrategies = require('../app-actions/get-associated-strategies');
+const getAssociatedStrategies = require('../../app-actions/get-associated-strategies');
 
-const getFilesSortedByDate = require('../utils/get-files-sorted-by-date');
-const recursiveUrl = require('../rh-actions/recursive-url');
+const getFilesSortedByDate = require('../../utils/get-files-sorted-by-date');
+const recursiveUrl = require('../../rh-actions/recursive-url');
 
 const roundTo = numDec => num => Math.round(num * Math.pow(10, numDec)) / Math.pow(10, numDec);
 const oneDec = roundTo(1);
@@ -161,9 +161,7 @@ module.exports = async (Robinhood, daysBack = 5) => {
 
         const lineOutput = [];
         const l = text => lineOutput.push(text);
-        l('--------------------');
-        l(`DATE: ${date}`);
-
+        
         output
                 .filter(c => c.playouts.length)
                 .forEach(({ ticker, returnDollars, returnPerc, playouts, buyPrice, sellPrice, quantity, strategy, buyDate }) => {
