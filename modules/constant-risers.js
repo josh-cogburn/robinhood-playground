@@ -81,6 +81,8 @@ const trendFilter = async (Robinhood, trend) => {
             [`${interval}-${val}-filtered40`]: orderBy(val, filtered(0.4)),
             [`${interval}-${val}-filtered50`]: orderBy(val, filtered(0.5)),
             [`${interval}-${val}-filtered60`]: orderBy(val, filtered(0.6)),
+            [`${interval}-${val}-filtered70`]: orderBy(val, filtered(0.7)),
+            [`${interval}-${val}-filtered80`]: orderBy(val, filtered(0.8)),
             [`${interval}-${val}-lowovernightjumps`]: orderBy(val, onlyOvernightDown5),
             [`${interval}-${val}-highovernightjumps`]: orderBy(val, onlyOvernightUp5)
         }), {});
