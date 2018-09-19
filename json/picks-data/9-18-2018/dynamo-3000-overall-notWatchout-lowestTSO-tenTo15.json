@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "SURF",
+      "price": 10.04
+    },
+    {
+      "ticker": "SBPH",
+      "price": 11.2671
+    }
+  ],
+  "40": [
+    {
+      "ticker": "ECOR",
+      "price": 14.315
+    },
+    {
+      "ticker": "ELOX",
+      "price": 13.95
+    }
+  ],
+  "100": [
+    {
+      "ticker": "ELOX",
+      "price": 13.45
+    },
+    {
+      "ticker": "ECOR",
+      "price": 14.605
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ECOR",
+      "price": 13.84
+    },
+    {
+      "ticker": "ELOX",
+      "price": 13.73
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ECOR",
+      "price": 14.13
+    },
+    {
+      "ticker": "VRNA",
+      "price": 12.77
+    }
+  ],
+  "351": [
+    {
+      "ticker": "VRNA",
+      "price": 12.49
+    },
+    {
+      "ticker": "ELOX",
+      "price": 13.33
+    }
+  ],
+  "381": [
+    {
+      "ticker": "VRNA",
+      "price": 12.1101
+    },
+    {
+      "ticker": "ELOX",
+      "price": 13.32
+    }
+  ]
+}

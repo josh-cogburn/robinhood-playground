@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "CIFS",
+      "price": 10.1
+    },
+    {
+      "ticker": "MNLO",
+      "price": 10.21
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CIFS",
+      "price": 10.13
+    },
+    {
+      "ticker": "ECOR",
+      "price": 14.315
+    }
+  ],
+  "100": [
+    {
+      "ticker": "CIFS",
+      "price": 10.11
+    },
+    {
+      "ticker": "ELOX",
+      "price": 13.45
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ECOR",
+      "price": 13.84
+    },
+    {
+      "ticker": "SONO",
+      "price": 13.7379
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ECOR",
+      "price": 14.13
+    },
+    {
+      "ticker": "VRNA",
+      "price": 12.77
+    }
+  ],
+  "351": [
+    {
+      "ticker": "VRNA",
+      "price": 12.49
+    },
+    {
+      "ticker": "ELOX",
+      "price": 13.33
+    }
+  ],
+  "381": [
+    {
+      "ticker": "VRNA",
+      "price": 12.1101
+    },
+    {
+      "ticker": "ELOX",
+      "price": 13.32
+    }
+  ]
+}

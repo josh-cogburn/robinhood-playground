@@ -1,0 +1,100 @@
+{
+  "4": [
+    {
+      "ticker": "CEM",
+      "price": 14.6451
+    },
+    {
+      "ticker": "GOV",
+      "price": 12.34
+    },
+    {
+      "ticker": "CLAR",
+      "price": 11.0317
+    }
+  ],
+  "40": [
+    {
+      "ticker": "GOV",
+      "price": 12.01
+    },
+    {
+      "ticker": "CLAR",
+      "price": 10.825
+    },
+    {
+      "ticker": "KRNY",
+      "price": 13.55
+    }
+  ],
+  "100": [
+    {
+      "ticker": "AMRK",
+      "price": 13.28
+    },
+    {
+      "ticker": "GOV",
+      "price": 12.025
+    },
+    {
+      "ticker": "CLAR",
+      "price": 10.7001
+    }
+  ],
+  "200": [
+    {
+      "ticker": "AMRK",
+      "price": 13.25
+    },
+    {
+      "ticker": "GOV",
+      "price": 12.01
+    },
+    {
+      "ticker": "RIVE",
+      "price": 13.5
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AMRK",
+      "price": 13.4
+    },
+    {
+      "ticker": "GOV",
+      "price": 12.04
+    },
+    {
+      "ticker": "RIVE",
+      "price": 13.5
+    }
+  ],
+  "351": [
+    {
+      "ticker": "GOV",
+      "price": 11.89
+    },
+    {
+      "ticker": "RIVE",
+      "price": 13.6
+    },
+    {
+      "ticker": "CLAR",
+      "price": 10.85
+    }
+  ],
+  "381": [
+    {
+      "ticker": "GOV",
+      "price": 11.84
+    },
+    {
+      "ticker": "CLAR",
+      "price": 10.825
+    },
+    {
+      "ticker": "NCMGY",
+      "price": 13.83
+    }
+  ]
+}

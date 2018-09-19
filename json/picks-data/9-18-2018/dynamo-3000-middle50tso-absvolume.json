@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "HLTH",
+      "price": 1.0067
+    },
+    {
+      "ticker": "ASTC",
+      "price": 3.1055
+    }
+  ],
+  "40": [
+    {
+      "ticker": "MYO",
+      "price": 2.3168
+    },
+    {
+      "ticker": "TRIB",
+      "price": 4.06
+    }
+  ],
+  "100": [
+    {
+      "ticker": "INTX",
+      "price": 1.7
+    },
+    {
+      "ticker": "HIVE",
+      "price": 4.06
+    }
+  ],
+  "200": [
+    {
+      "ticker": "TMQ",
+      "price": 1.91
+    },
+    {
+      "ticker": "ARTX",
+      "price": 3.4226
+    }
+  ],
+  "260": [
+    {
+      "ticker": "DPW",
+      "price": 0.429
+    },
+    {
+      "ticker": "BXE",
+      "price": 0.9566
+    }
+  ],
+  "351": [
+    {
+      "ticker": "MGF",
+      "price": 4.42
+    },
+    {
+      "ticker": "OASM",
+      "price": 3.0248
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AXU",
+      "price": 1.034
+    },
+    {
+      "ticker": "FORD",
+      "price": 1.5073
+    }
+  ]
+}

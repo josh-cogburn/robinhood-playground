@@ -1,0 +1,52 @@
+{
+  "12": [
+    {
+      "ticker": "CFRX",
+      "price": 1.6588
+    },
+    {
+      "ticker": "ALSK",
+      "price": 1.7
+    }
+  ],
+  "190": [
+    {
+      "ticker": "CFRX",
+      "price": 1.67
+    },
+    {
+      "ticker": "ALSK",
+      "price": 1.68
+    }
+  ],
+  "250": [
+    {
+      "ticker": "CFRX",
+      "price": 1.67
+    },
+    {
+      "ticker": "ALSK",
+      "price": 1.68
+    }
+  ],
+  "600": [
+    {
+      "ticker": "CFRX",
+      "price": 1.68
+    },
+    {
+      "ticker": "ALSK",
+      "price": 1.66
+    }
+  ],
+  "-15": [
+    {
+      "ticker": "CFRX",
+      "price": 1.66
+    },
+    {
+      "ticker": "ALSK",
+      "price": 1.7
+    }
+  ]
+}

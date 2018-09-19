@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "NSANY",
+      "price": 19.23
+    },
+    {
+      "ticker": "PYX",
+      "price": 18.75
+    }
+  ],
+  "40": [
+    {
+      "ticker": "KZR",
+      "price": 19.01
+    },
+    {
+      "ticker": "GLOG",
+      "price": 19.7001
+    }
+  ],
+  "100": [
+    {
+      "ticker": "KZR",
+      "price": 19.67
+    },
+    {
+      "ticker": "GLOG",
+      "price": 19.8501
+    }
+  ],
+  "200": [
+    {
+      "ticker": "KZR",
+      "price": 19.75
+    },
+    {
+      "ticker": "BLMN",
+      "price": 19.98
+    }
+  ],
+  "260": [
+    {
+      "ticker": "KZR",
+      "price": 19.655
+    },
+    {
+      "ticker": "EXPI",
+      "price": 17.42
+    }
+  ],
+  "351": [
+    {
+      "ticker": "KZR",
+      "price": 19.949
+    },
+    {
+      "ticker": "EXPI",
+      "price": 17.9484
+    }
+  ],
+  "381": [
+    {
+      "ticker": "KZR",
+      "price": 20
+    },
+    {
+      "ticker": "BLMN",
+      "price": 19.875
+    }
+  ]
+}

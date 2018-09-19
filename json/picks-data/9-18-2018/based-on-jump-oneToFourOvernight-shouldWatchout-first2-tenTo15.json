@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "CRON",
+      "price": 10.488
+    },
+    {
+      "ticker": "EEQ",
+      "price": 11.2
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CRON",
+      "price": 10.7494
+    },
+    {
+      "ticker": "FTNW",
+      "price": 10.7
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CRON",
+      "price": 10.92
+    },
+    {
+      "ticker": "FTNW",
+      "price": 10.7
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CRON",
+      "price": 11.38
+    },
+    {
+      "ticker": "FTNW",
+      "price": 10.41
+    }
+  ]
+}

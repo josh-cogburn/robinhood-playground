@@ -1,0 +1,78 @@
+{
+  "10": [
+    {
+      "ticker": "RMBL",
+      "price": 9.6694
+    },
+    {
+      "ticker": "ESV",
+      "price": 7.425
+    },
+    {
+      "ticker": "REPH",
+      "price": 7.71
+    }
+  ],
+  "50": [
+    {
+      "ticker": "RMBL",
+      "price": 9.9583
+    },
+    {
+      "ticker": "ESV",
+      "price": 7.4
+    },
+    {
+      "ticker": "REPH",
+      "price": 7.75
+    },
+    {
+      "ticker": "LIVE",
+      "price": 10
+    }
+  ],
+  "200": [
+    {
+      "ticker": "RMBL",
+      "price": 9.717
+    },
+    {
+      "ticker": "ESV",
+      "price": 7.395
+    }
+  ],
+  "300": [
+    {
+      "ticker": "RMBL",
+      "price": 9.89
+    },
+    {
+      "ticker": "ESV",
+      "price": 7.445
+    },
+    {
+      "ticker": "LIVE",
+      "price": 9.9625
+    }
+  ],
+  "380": [
+    {
+      "ticker": "RMBL",
+      "price": 9.71
+    },
+    {
+      "ticker": "ESV",
+      "price": 7.445
+    }
+  ],
+  "600": [
+    {
+      "ticker": "RMBL",
+      "price": 9.75
+    },
+    {
+      "ticker": "ESV",
+      "price": 7.4
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "LLNW",
+      "price": 5.03
+    },
+    {
+      "ticker": "SAN",
+      "price": 5.115
+    }
+  ],
+  "40": [
+    {
+      "ticker": "LLNW",
+      "price": 5.0375
+    },
+    {
+      "ticker": "SAN",
+      "price": 5.11
+    }
+  ],
+  "100": [
+    {
+      "ticker": "MOBL",
+      "price": 5.56
+    },
+    {
+      "ticker": "BKT",
+      "price": 5.75
+    }
+  ],
+  "200": [
+    {
+      "ticker": "RLGT",
+      "price": 5.38
+    },
+    {
+      "ticker": "EOD",
+      "price": 5.43
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GOGO",
+      "price": 5.1
+    },
+    {
+      "ticker": "AG",
+      "price": 5.705
+    }
+  ],
+  "351": [
+    {
+      "ticker": "DNR",
+      "price": 5.3746
+    },
+    {
+      "ticker": "RLGT",
+      "price": 5.375
+    }
+  ],
+  "381": [
+    {
+      "ticker": "GALT",
+      "price": 5.92
+    },
+    {
+      "ticker": "OLO",
+      "price": 6.49
+    }
+  ]
+}

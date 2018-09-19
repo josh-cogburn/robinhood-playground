@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "VERI",
+      "price": 10.28
+    },
+    {
+      "ticker": "CIFS",
+      "price": 10.1
+    }
+  ],
+  "40": [
+    {
+      "ticker": "VERI",
+      "price": 10.2327
+    },
+    {
+      "ticker": "CIFS",
+      "price": 10.13
+    }
+  ],
+  "100": [
+    {
+      "ticker": "VERI",
+      "price": 10.2
+    },
+    {
+      "ticker": "CIFS",
+      "price": 10.11
+    }
+  ],
+  "200": [
+    {
+      "ticker": "VERI",
+      "price": 10.1684
+    },
+    {
+      "ticker": "PRTA",
+      "price": 12.7175
+    }
+  ],
+  "260": [
+    {
+      "ticker": "VERI",
+      "price": 10.19
+    },
+    {
+      "ticker": "PRTA",
+      "price": 13.04
+    }
+  ],
+  "351": [
+    {
+      "ticker": "VERI",
+      "price": 10.16
+    },
+    {
+      "ticker": "PRTA",
+      "price": 13.1
+    }
+  ],
+  "381": [
+    {
+      "ticker": "PRTA",
+      "price": 13.17
+    },
+    {
+      "ticker": "FPRX",
+      "price": 13.83
+    }
+  ]
+}

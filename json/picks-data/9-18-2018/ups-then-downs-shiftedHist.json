@@ -1,0 +1,86 @@
+{
+  "10": [
+    {
+      "ticker": "MHLD",
+      "price": 2.775
+    },
+    {
+      "ticker": "CXDC",
+      "price": 3.7
+    },
+    {
+      "ticker": "HAIR",
+      "price": 2.9
+    },
+    {
+      "ticker": "ONCY",
+      "price": 4.5199
+    },
+    {
+      "ticker": "TLRA",
+      "price": 4.11
+    }
+  ],
+  "50": [
+    {
+      "ticker": "MHLD",
+      "price": 2.9
+    },
+    {
+      "ticker": "CXDC",
+      "price": 3.7
+    },
+    {
+      "ticker": "ONCY",
+      "price": 4.5
+    }
+  ],
+  "200": [
+    {
+      "ticker": "MHLD",
+      "price": 3
+    },
+    {
+      "ticker": "CXDC",
+      "price": 3.75
+    },
+    {
+      "ticker": "THM",
+      "price": 0.4651
+    }
+  ],
+  "300": [
+    {
+      "ticker": "MHLD",
+      "price": 2.975
+    },
+    {
+      "ticker": "CXDC",
+      "price": 3.75
+    },
+    {
+      "ticker": "THM",
+      "price": 0.4665
+    }
+  ],
+  "380": [
+    {
+      "ticker": "MHLD",
+      "price": 2.975
+    },
+    {
+      "ticker": "CXDC",
+      "price": 3.65
+    }
+  ],
+  "600": [
+    {
+      "ticker": "MHLD",
+      "price": 2.925
+    },
+    {
+      "ticker": "CXDC",
+      "price": 3.75
+    }
+  ]
+}

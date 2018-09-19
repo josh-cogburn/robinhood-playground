@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "FOMX",
+      "price": 5.34
+    },
+    {
+      "ticker": "TTOO",
+      "price": 6.25
+    }
+  ],
+  "40": [
+    {
+      "ticker": "FOMX",
+      "price": 5.32
+    },
+    {
+      "ticker": "LTM",
+      "price": 9.29
+    }
+  ],
+  "100": [
+    {
+      "ticker": "CNST",
+      "price": 7.1
+    },
+    {
+      "ticker": "FOMX",
+      "price": 5.22
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CNST",
+      "price": 7.2
+    },
+    {
+      "ticker": "SNMP",
+      "price": 7.4022
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CNST",
+      "price": 7.24
+    },
+    {
+      "ticker": "FOMX",
+      "price": 5.305
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CNST",
+      "price": 7
+    },
+    {
+      "ticker": "SNMP",
+      "price": 7.05
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CNST",
+      "price": 6.4001
+    },
+    {
+      "ticker": "SNMP",
+      "price": 6.9
+    }
+  ]
+}

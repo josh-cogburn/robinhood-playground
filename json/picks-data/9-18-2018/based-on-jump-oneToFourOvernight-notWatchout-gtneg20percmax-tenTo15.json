@@ -1,0 +1,90 @@
+{
+  "0": [
+    {
+      "ticker": "NDLS",
+      "price": 12.2
+    },
+    {
+      "ticker": "RIG",
+      "price": 11.89
+    },
+    {
+      "ticker": "ECA",
+      "price": 12.17
+    },
+    {
+      "ticker": "JAG",
+      "price": 13.84
+    },
+    {
+      "ticker": "USO",
+      "price": 14.7
+    }
+  ],
+  "5": [
+    {
+      "ticker": "NDLS",
+      "price": 12.575
+    },
+    {
+      "ticker": "DKILY",
+      "price": 13.48
+    },
+    {
+      "ticker": "RIG",
+      "price": 11.925
+    },
+    {
+      "ticker": "ECA",
+      "price": 12.21
+    },
+    {
+      "ticker": "JAG",
+      "price": 13.85
+    }
+  ],
+  "16": [
+    {
+      "ticker": "NDLS",
+      "price": 12.7
+    },
+    {
+      "ticker": "DKILY",
+      "price": 13.62
+    },
+    {
+      "ticker": "RIG",
+      "price": 12.105
+    },
+    {
+      "ticker": "ECA",
+      "price": 12.35
+    },
+    {
+      "ticker": "JAG",
+      "price": 14.005
+    }
+  ],
+  "30": [
+    {
+      "ticker": "NDLS",
+      "price": 12.75
+    },
+    {
+      "ticker": "DKILY",
+      "price": 13.62
+    },
+    {
+      "ticker": "ARDS",
+      "price": 12.967
+    },
+    {
+      "ticker": "RIG",
+      "price": 11.98
+    },
+    {
+      "ticker": "ECA",
+      "price": 12.33
+    }
+  ]
+}

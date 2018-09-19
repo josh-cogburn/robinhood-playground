@@ -1,0 +1,42 @@
+{
+  "10": [
+    {
+      "ticker": "FIT",
+      "price": 5.68
+    },
+    {
+      "ticker": "DSEEY",
+      "price": 6.35
+    }
+  ],
+  "35": [
+    {
+      "ticker": "IPIC",
+      "price": 9.7
+    },
+    {
+      "ticker": "MAMS",
+      "price": 7.6862
+    }
+  ],
+  "90": [
+    {
+      "ticker": "NYNY",
+      "price": 9.848
+    },
+    {
+      "ticker": "SPWR",
+      "price": 7.28
+    }
+  ],
+  "223": [
+    {
+      "ticker": "SPWR",
+      "price": 7.6
+    },
+    {
+      "ticker": "COE",
+      "price": 7.5999
+    }
+  ]
+}

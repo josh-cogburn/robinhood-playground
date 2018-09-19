@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "FOMX",
+      "price": 5.34
+    },
+    {
+      "ticker": "ADMA",
+      "price": 6.45
+    }
+  ],
+  "40": [
+    {
+      "ticker": "FOMX",
+      "price": 5.32
+    },
+    {
+      "ticker": "AGRO",
+      "price": 7.345
+    }
+  ],
+  "100": [
+    {
+      "ticker": "AWSM",
+      "price": 6.1203
+    },
+    {
+      "ticker": "CBIO",
+      "price": 9.09
+    }
+  ],
+  "200": [
+    {
+      "ticker": "AWSM",
+      "price": 5.551
+    },
+    {
+      "ticker": "EDNT",
+      "price": 7.05
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CIFS",
+      "price": 9.4104
+    },
+    {
+      "ticker": "LAZY",
+      "price": 8.035
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CIFS",
+      "price": 9.1987
+    },
+    {
+      "ticker": "AVH",
+      "price": 5.5657
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CIFS",
+      "price": 9.21
+    },
+    {
+      "ticker": "LTM",
+      "price": 9.24
+    }
+  ]
+}

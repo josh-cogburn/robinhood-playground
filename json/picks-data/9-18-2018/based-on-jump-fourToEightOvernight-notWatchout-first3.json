@@ -1,0 +1,54 @@
+{
+  "0": [
+    {
+      "ticker": "WWR",
+      "price": 0.1995
+    },
+    {
+      "ticker": "CPSH",
+      "price": 1.58
+    }
+  ],
+  "5": [
+    {
+      "ticker": "AVP",
+      "price": 2.19
+    },
+    {
+      "ticker": "WWR",
+      "price": 0.1995
+    },
+    {
+      "ticker": "CPSH",
+      "price": 1.58
+    }
+  ],
+  "16": [
+    {
+      "ticker": "NNVC",
+      "price": 0.4196
+    },
+    {
+      "ticker": "AVP",
+      "price": 2.185
+    },
+    {
+      "ticker": "WWR",
+      "price": 0.195
+    }
+  ],
+  "30": [
+    {
+      "ticker": "NNVC",
+      "price": 0.4196
+    },
+    {
+      "ticker": "SES",
+      "price": 2.4588
+    },
+    {
+      "ticker": "AVP",
+      "price": 2.16
+    }
+  ]
+}

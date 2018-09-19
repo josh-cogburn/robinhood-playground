@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "MNLO",
+      "price": 10.21
+    },
+    {
+      "ticker": "SURF",
+      "price": 10.04
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CORT",
+      "price": 14.685
+    },
+    {
+      "ticker": "ELF",
+      "price": 13.045
+    }
+  ],
+  "100": [
+    {
+      "ticker": "PLSE",
+      "price": 14.53
+    },
+    {
+      "ticker": "CORT",
+      "price": 14.56
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CORT",
+      "price": 14.36
+    },
+    {
+      "ticker": "ELF",
+      "price": 13.235
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PLSE",
+      "price": 14.29
+    },
+    {
+      "ticker": "CORT",
+      "price": 14.39
+    }
+  ],
+  "351": [
+    {
+      "ticker": "PLSE",
+      "price": 14.44
+    },
+    {
+      "ticker": "CORT",
+      "price": 14.2401
+    }
+  ],
+  "381": [
+    {
+      "ticker": "PLSE",
+      "price": 14.49
+    },
+    {
+      "ticker": "CORT",
+      "price": 14.31
+    }
+  ]
+}

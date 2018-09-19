@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "CCXI",
+      "price": 11
+    },
+    {
+      "ticker": "ARRY",
+      "price": 14.22
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CCXI",
+      "price": 11.14
+    },
+    {
+      "ticker": "PCRFY",
+      "price": 11.8604
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CCXI",
+      "price": 11.66
+    },
+    {
+      "ticker": "INS",
+      "price": 10.85
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CCXI",
+      "price": 11.88
+    },
+    {
+      "ticker": "INS",
+      "price": 10.85
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "NDLS",
+      "price": 12.2
+    },
+    {
+      "ticker": "RIG",
+      "price": 11.89
+    },
+    {
+      "ticker": "ECA",
+      "price": 12.17
+    }
+  ],
+  "5": [
+    {
+      "ticker": "NDLS",
+      "price": 12.575
+    },
+    {
+      "ticker": "DKILY",
+      "price": 13.48
+    },
+    {
+      "ticker": "RIG",
+      "price": 11.925
+    }
+  ],
+  "16": [
+    {
+      "ticker": "NDLS",
+      "price": 12.7
+    },
+    {
+      "ticker": "DKILY",
+      "price": 13.62
+    },
+    {
+      "ticker": "RIG",
+      "price": 12.105
+    }
+  ],
+  "30": [
+    {
+      "ticker": "NDLS",
+      "price": 12.75
+    },
+    {
+      "ticker": "DKILY",
+      "price": 13.62
+    },
+    {
+      "ticker": "ARDS",
+      "price": 12.967
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "ZIXI",
+      "price": 5.89
+    },
+    {
+      "ticker": "CCNI",
+      "price": 6.01
+    }
+  ],
+  "40": [
+    {
+      "ticker": "NCMI",
+      "price": 9.09
+    },
+    {
+      "ticker": "ZIXI",
+      "price": 5.89
+    }
+  ],
+  "100": [
+    {
+      "ticker": "MOBL",
+      "price": 5.56
+    },
+    {
+      "ticker": "AMRS",
+      "price": 7.41
+    }
+  ],
+  "200": [
+    {
+      "ticker": "GERN",
+      "price": 5.41
+    },
+    {
+      "ticker": "AMRS",
+      "price": 7.42
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ARQL",
+      "price": 5.04
+    },
+    {
+      "ticker": "CALX",
+      "price": 8.35
+    }
+  ],
+  "351": [
+    {
+      "ticker": "DNR",
+      "price": 5.3746
+    },
+    {
+      "ticker": "CALX",
+      "price": 8.35
+    }
+  ],
+  "381": [
+    {
+      "ticker": "IVTY",
+      "price": 7.375
+    },
+    {
+      "ticker": "CALX",
+      "price": 8.35
+    }
+  ]
+}

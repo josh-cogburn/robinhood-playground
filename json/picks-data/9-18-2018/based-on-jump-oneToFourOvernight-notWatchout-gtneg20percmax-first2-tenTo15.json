@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "NDLS",
+      "price": 12.2
+    },
+    {
+      "ticker": "RIG",
+      "price": 11.89
+    }
+  ],
+  "5": [
+    {
+      "ticker": "NDLS",
+      "price": 12.575
+    },
+    {
+      "ticker": "DKILY",
+      "price": 13.48
+    }
+  ],
+  "16": [
+    {
+      "ticker": "NDLS",
+      "price": 12.7
+    },
+    {
+      "ticker": "DKILY",
+      "price": 13.62
+    }
+  ],
+  "30": [
+    {
+      "ticker": "NDLS",
+      "price": 12.75
+    },
+    {
+      "ticker": "DKILY",
+      "price": 13.62
+    }
+  ]
+}

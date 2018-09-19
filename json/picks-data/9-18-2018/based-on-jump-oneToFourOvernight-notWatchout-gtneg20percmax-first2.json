@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "CHKR",
+      "price": 1.7
+    },
+    {
+      "ticker": "EXFO",
+      "price": 3.95
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CHKR",
+      "price": 1.6667
+    },
+    {
+      "ticker": "ECT",
+      "price": 1.9
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CHKR",
+      "price": 1.6667
+    },
+    {
+      "ticker": "ECT",
+      "price": 1.9
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CHKR",
+      "price": 1.6999
+    },
+    {
+      "ticker": "ECT",
+      "price": 1.9
+    }
+  ]
+}

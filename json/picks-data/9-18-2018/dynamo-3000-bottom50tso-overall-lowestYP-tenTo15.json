@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "CIFS",
+      "price": 10.1
+    },
+    {
+      "ticker": "PRTA",
+      "price": 12.56
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CIFS",
+      "price": 10.13
+    },
+    {
+      "ticker": "PRTA",
+      "price": 12.28
+    }
+  ],
+  "100": [
+    {
+      "ticker": "CIFS",
+      "price": 10.11
+    },
+    {
+      "ticker": "SQQQ",
+      "price": 11.73
+    }
+  ],
+  "200": [
+    {
+      "ticker": "SQQQ",
+      "price": 11.76
+    },
+    {
+      "ticker": "FTNW",
+      "price": 10.4
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SQQQ",
+      "price": 11.755
+    },
+    {
+      "ticker": "PLSE",
+      "price": 14.29
+    }
+  ],
+  "351": [
+    {
+      "ticker": "IMTE",
+      "price": 10.375
+    },
+    {
+      "ticker": "SQQQ",
+      "price": 11.72
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SQQQ",
+      "price": 11.81
+    },
+    {
+      "ticker": "PLSE",
+      "price": 14.49
+    }
+  ]
+}
