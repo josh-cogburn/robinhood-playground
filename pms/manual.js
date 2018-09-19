@@ -884,7 +884,19 @@ const sep17MORE = [
     'based-on-jump-gtEightOvernight-trending53-first1-tenTo15-0',
     'sudden-drops-last10trend-filter10-189',
     'based-on-jump-fourToEightOvernight-trending53-shouldWatchout-tenTo15-0',
-]
+];
+
+const afterhoursdropsGAMBLES = [
+    'sudden-drops-last30trend-filter10-fiveTo10-360',
+    'sudden-drops-last18trend-filter10-tenTo15-360',
+    'sudden-drops-last30trend-filter20-388',
+    'sudden-drops-last5trend-filter10-388',
+    'sudden-drops-last18trend-filter20-400',
+    'sudden-drops-last10trend-filter10-400',
+    'sudden-drops-last18trend-filter10-430',
+    'sudden-drops-last30trend-filter10-fiveTo10-430',
+    'sudden-drops-last18trend-filter10-470',
+];
 
 module.exports = {
     'wild n crazy': [
@@ -976,5 +988,5 @@ module.exports = {
     unprovenSuddenDropsLast2Filter10,
 
     sep17MORE,
-
+    afterhoursdropsGAMBLES
 };
