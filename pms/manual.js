@@ -896,6 +896,7 @@ const afterhoursdropsGAMBLES = [
     'sudden-drops-last18trend-filter10-430',
     'sudden-drops-last30trend-filter10-fiveTo10-430',
     'sudden-drops-last18trend-filter10-470',
+    'sudden-drops-last18trend-filter10-500',
 ];
 
 module.exports = {
