@@ -17,6 +17,34 @@ const addToDailyTransactions = async data => {
     await jsonMgr.save(fileName, curTransactions);
 };
 
+const calcQuantity = (maxPrice, bidPrice) => {
+    let quantity = Math.floor(maxPrice / bidPrice);
+    if (quantity === 0 && bidPrice < 50) {
+        quantity = 1;
+    }
+    return quantity;
+};
+
+const preOrPostMarketBuy = async ({
+    ticker,
+    strategy,
+    maxPrice,
+}) => {
+    const { afterHoursPrice } = await lookup(Robinhood, ticker);
+    const bidPrice = afterHoursPrice;
+    const quantity = calcQuantity(maxPrice, bidPrice);
+    const data = {
+        ticker,
+        bidPrice,
+        quantity,
+        strategy
+    };
+    console.log('pre or post market buy', data);
+    return await limitBuyLastTrade(
+        Robinhood,
+        data
+    );
+};
 
 module.exports = async (
     Robinhood,
@@ -27,6 +55,14 @@ module.exports = async (
         min
     }
 ) => {
+
+    if (min < 0 || min > 390) {
+        return preOrPostMarketBuy({
+            ticker,
+            strategy,
+            maxPrice,
+        });
+    }
 
     return new Promise(async (resolve, reject) => {
 
@@ -52,10 +88,7 @@ module.exports = async (
                 let quantity;
                 const limitBid = async bidPrice => {
                     lastBidPrice = bidPrice;
-                    quantity = Math.floor(maxPrice / bidPrice);
-                    if (quantity === 0 && bidPrice < 50) {
-                        quantity = 1;
-                    }
+                    const quantity = calcQuantity(maxPrice, bidPrice);
                     const data = {
                         ticker,
                         bidPrice,
