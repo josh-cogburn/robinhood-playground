@@ -3,7 +3,6 @@
 
 const mapLimit = require('promise-map-limit');
 const jsonMgr = require('../../utils/json-mgr');
-const { avgArray } = require('../../utils/array-math');
 
 const getAssociatedStrategies = require('../../app-actions/get-associated-strategies');
 

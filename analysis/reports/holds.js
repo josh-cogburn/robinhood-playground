@@ -6,6 +6,10 @@ const getAssociatedStrategies = require('../../app-actions/get-associated-strate
 
 const getTrend = require('../../utils/get-trend');
 
+const roundTo = numDec => num => Math.round(num * Math.pow(10, numDec)) / Math.pow(10, numDec);
+const oneDec = roundTo(1);
+const twoDec = roundTo(2);
+
 module.exports = async (Robinhood) => {
 
     const nonzero = await detailedNonZero(Robinhood);
@@ -43,7 +47,7 @@ module.exports = async (Robinhood) => {
     const formatted = combined.map(pos => 
         [
             pos.symbol,
-            `    currentReturn: ${formatReturnDollars(pos.returnDollars)} (${pos.returnPerc}%) | total value: $${pos.value}`,
+            `    currentReturn: ${formatReturnDollars(twoDec(pos.returnDollars))} (${pos.returnPerc}%) | total value: $${twoDec(pos.value)}`,
             `    buyPrice: ${pos.average_buy_price} | currentPrice: ${pos.lastTrade}`,
             `    strategy: ${pos.strategy} | buyDate: ${pos.buyDate}`
         ].join('\n')
