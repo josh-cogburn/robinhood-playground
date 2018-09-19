@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "NEPT",
+      "price": 4.35
+    },
+    {
+      "ticker": "BLDP",
+      "price": 4.01
+    },
+    {
+      "ticker": "NVAX",
+      "price": 1.405
+    }
+  ],
+  "5": [
+    {
+      "ticker": "NEPT",
+      "price": 4.32
+    },
+    {
+      "ticker": "BLDP",
+      "price": 4.08
+    },
+    {
+      "ticker": "NVAX",
+      "price": 1.4075
+    }
+  ],
+  "16": [
+    {
+      "ticker": "WFT",
+      "price": 2.4867
+    },
+    {
+      "ticker": "NEPT",
+      "price": 4.3101
+    },
+    {
+      "ticker": "BLDP",
+      "price": 4.15
+    }
+  ],
+  "30": [
+    {
+      "ticker": "LIFE",
+      "price": 0.819
+    },
+    {
+      "ticker": "WFT",
+      "price": 2.5
+    },
+    {
+      "ticker": "NEPT",
+      "price": 4.35
+    }
+  ]
+}

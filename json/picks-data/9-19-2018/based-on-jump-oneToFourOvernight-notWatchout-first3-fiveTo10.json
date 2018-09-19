@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "GTIM",
+      "price": 5.05
+    },
+    {
+      "ticker": "FAT",
+      "price": 8.84
+    },
+    {
+      "ticker": "RBS",
+      "price": 6.85
+    }
+  ],
+  "5": [
+    {
+      "ticker": "GTIM",
+      "price": 4.85
+    },
+    {
+      "ticker": "FAT",
+      "price": 8.84
+    },
+    {
+      "ticker": "TSQ",
+      "price": 8.56
+    }
+  ],
+  "16": [
+    {
+      "ticker": "FAT",
+      "price": 8.84
+    },
+    {
+      "ticker": "CRR",
+      "price": 8.17
+    },
+    {
+      "ticker": "TSQ",
+      "price": 8.54
+    }
+  ],
+  "30": [
+    {
+      "ticker": "FAT",
+      "price": 8.84
+    },
+    {
+      "ticker": "CRR",
+      "price": 8.26
+    },
+    {
+      "ticker": "TSQ",
+      "price": 8.65
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "0": [
+    {
+      "ticker": "HBM",
+      "price": 4.85
+    },
+    {
+      "ticker": "CBLI",
+      "price": 2
+    },
+    {
+      "ticker": "NH",
+      "price": 1.55
+    },
+    {
+      "ticker": "LWAY",
+      "price": 3.3
+    },
+    {
+      "ticker": "LTBR",
+      "price": 0.9875
+    }
+  ],
+  "5": [
+    {
+      "ticker": "HBM",
+      "price": 4.95
+    },
+    {
+      "ticker": "ORMP",
+      "price": 4.9
+    },
+    {
+      "ticker": "NH",
+      "price": 1.4705
+    },
+    {
+      "ticker": "CBLI",
+      "price": 2
+    },
+    {
+      "ticker": "LWAY",
+      "price": 3.3
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CIOXY",
+      "price": 3.32
+    },
+    {
+      "ticker": "HBM",
+      "price": 4.975
+    },
+    {
+      "ticker": "ORMP",
+      "price": 4.83
+    },
+    {
+      "ticker": "NH",
+      "price": 1.5285
+    },
+    {
+      "ticker": "CBLI",
+      "price": 2
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CIOXY",
+      "price": 3.32
+    },
+    {
+      "ticker": "HBM",
+      "price": 4.925
+    },
+    {
+      "ticker": "ORMP",
+      "price": 4.9782
+    },
+    {
+      "ticker": "NH",
+      "price": 1.5009
+    },
+    {
+      "ticker": "CBLI",
+      "price": 1.82
+    }
+  ]
+}

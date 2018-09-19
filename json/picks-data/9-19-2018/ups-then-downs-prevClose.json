@@ -1,0 +1,68 @@
+{
+  "10": [
+    {
+      "ticker": "RRTS",
+      "price": 1.1919
+    }
+  ],
+  "50": [
+    {
+      "ticker": "SKYS",
+      "price": 1.07
+    },
+    {
+      "ticker": "RRTS",
+      "price": 1.17
+    },
+    {
+      "ticker": "NFEC",
+      "price": 4.2521
+    },
+    {
+      "ticker": "CEI",
+      "price": 0.2049
+    }
+  ],
+  "200": [
+    {
+      "ticker": "RRTS",
+      "price": 1.0998
+    },
+    {
+      "ticker": "NFEC",
+      "price": 4.25
+    },
+    {
+      "ticker": "SMSI",
+      "price": 2.6341
+    }
+  ],
+  "300": [
+    {
+      "ticker": "RRTS",
+      "price": 1.136
+    },
+    {
+      "ticker": "NFEC",
+      "price": 4.1817
+    },
+    {
+      "ticker": "CHMA",
+      "price": 2.9
+    },
+    {
+      "ticker": "TEUM",
+      "price": 2.864
+    }
+  ],
+  "380": [
+    {
+      "ticker": "RRTS",
+      "price": 1.14
+    },
+    {
+      "ticker": "TEUM",
+      "price": 2.85
+    }
+  ]
+}

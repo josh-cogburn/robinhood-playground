@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "SCO",
+      "price": 15.01
+    },
+    {
+      "ticker": "CBB",
+      "price": 14.9
+    }
+  ],
+  "40": [
+    {
+      "ticker": "SCO",
+      "price": 14.93
+    },
+    {
+      "ticker": "CBB",
+      "price": 14.85
+    }
+  ],
+  "100": [
+    {
+      "ticker": "SCO",
+      "price": 14.64
+    },
+    {
+      "ticker": "CBB",
+      "price": 15.05
+    }
+  ],
+  "200": [
+    {
+      "ticker": "SIEB",
+      "price": 14.23
+    },
+    {
+      "ticker": "SCO",
+      "price": 14.77
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SIEB",
+      "price": 14.38
+    },
+    {
+      "ticker": "VNCE",
+      "price": 14.74
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SIEB",
+      "price": 14.455
+    },
+    {
+      "ticker": "VNCE",
+      "price": 14.9335
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SIEB",
+      "price": 14.4625
+    },
+    {
+      "ticker": "VNCE",
+      "price": 14.88
+    }
+  ]
+}

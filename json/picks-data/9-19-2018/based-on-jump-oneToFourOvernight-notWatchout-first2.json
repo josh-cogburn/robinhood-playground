@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "SSI",
+      "price": 2.0125
+    },
+    {
+      "ticker": "DTEA",
+      "price": 3
+    }
+  ],
+  "5": [
+    {
+      "ticker": "SSI",
+      "price": 2.036
+    },
+    {
+      "ticker": "TRX",
+      "price": 0.391
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CIOXY",
+      "price": 3.32
+    },
+    {
+      "ticker": "SSI",
+      "price": 2.036
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CIOXY",
+      "price": 3.32
+    },
+    {
+      "ticker": "SSI",
+      "price": 2.0358
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "CRON",
+      "price": 12.6
+    },
+    {
+      "ticker": "GOV",
+      "price": 11.52
+    }
+  ],
+  "40": [
+    {
+      "ticker": "RDCM",
+      "price": 13.1467
+    },
+    {
+      "ticker": "EGOV",
+      "price": 14.1
+    }
+  ],
+  "100": [
+    {
+      "ticker": "RDCM",
+      "price": 13
+    },
+    {
+      "ticker": "GOV",
+      "price": 11.2199
+    }
+  ],
+  "200": [
+    {
+      "ticker": "SIEB",
+      "price": 14.23
+    },
+    {
+      "ticker": "GOV",
+      "price": 11.0299
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SIEB",
+      "price": 14.38
+    },
+    {
+      "ticker": "EIDX",
+      "price": 11.35
+    }
+  ],
+  "351": [
+    {
+      "ticker": "RDCM",
+      "price": 12.6767
+    },
+    {
+      "ticker": "SIEB",
+      "price": 14.455
+    }
+  ],
+  "381": [
+    {
+      "ticker": "PDEX",
+      "price": 11.6
+    },
+    {
+      "ticker": "RDCM",
+      "price": 12.55
+    }
+  ]
+}

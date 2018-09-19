@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "SEA",
+      "price": 10.1716
+    },
+    {
+      "ticker": "ZFGN",
+      "price": 10.2621
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CSSE",
+      "price": 10.04
+    },
+    {
+      "ticker": "NRBAY",
+      "price": 10.67
+    }
+  ],
+  "100": [
+    {
+      "ticker": "CSSE",
+      "price": 10.08
+    },
+    {
+      "ticker": "SURF",
+      "price": 10.89
+    }
+  ],
+  "200": [
+    {
+      "ticker": "SURF",
+      "price": 10.7695
+    },
+    {
+      "ticker": "CLAR",
+      "price": 10.45
+    }
+  ],
+  "260": [
+    {
+      "ticker": "LMB",
+      "price": 10.055
+    },
+    {
+      "ticker": "SURF",
+      "price": 10.74
+    }
+  ],
+  "351": [
+    {
+      "ticker": "LMB",
+      "price": 10.03
+    },
+    {
+      "ticker": "CLAR",
+      "price": 10.5
+    }
+  ],
+  "381": [
+    {
+      "ticker": "LMB",
+      "price": 10.05
+    },
+    {
+      "ticker": "CLAR",
+      "price": 10.475
+    }
+  ]
+}

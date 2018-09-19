@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "BSPM",
+      "price": 1.85
+    },
+    {
+      "ticker": "EGLT",
+      "price": 0.29
+    }
+  ],
+  "5": [
+    {
+      "ticker": "VTL",
+      "price": 0.3644
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.4141
+    }
+  ],
+  "16": [
+    {
+      "ticker": "VTL",
+      "price": 0.3351
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.438
+    }
+  ],
+  "30": [
+    {
+      "ticker": "VTL",
+      "price": 0.3645
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.43
+    }
+  ]
+}

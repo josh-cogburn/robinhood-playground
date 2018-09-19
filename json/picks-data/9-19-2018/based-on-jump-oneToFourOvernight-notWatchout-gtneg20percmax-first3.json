@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "OCC",
+      "price": 3.75
+    },
+    {
+      "ticker": "UONEK",
+      "price": 2.05
+    },
+    {
+      "ticker": "DNN",
+      "price": 0.57
+    }
+  ],
+  "5": [
+    {
+      "ticker": "OCC",
+      "price": 3.75
+    },
+    {
+      "ticker": "UONEK",
+      "price": 2.05
+    },
+    {
+      "ticker": "DNN",
+      "price": 0.57
+    }
+  ],
+  "16": [
+    {
+      "ticker": "GTIM",
+      "price": 4.85
+    },
+    {
+      "ticker": "OCC",
+      "price": 3.75
+    },
+    {
+      "ticker": "UONEK",
+      "price": 2.05
+    }
+  ],
+  "30": [
+    {
+      "ticker": "GTIM",
+      "price": 4.85
+    },
+    {
+      "ticker": "OCC",
+      "price": 3.85
+    },
+    {
+      "ticker": "UONEK",
+      "price": 2.05
+    }
+  ]
+}

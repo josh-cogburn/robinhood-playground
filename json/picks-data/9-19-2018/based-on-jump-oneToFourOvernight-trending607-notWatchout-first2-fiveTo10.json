@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "GTIM",
+      "price": 5.05
+    },
+    {
+      "ticker": "RBS",
+      "price": 6.85
+    }
+  ],
+  "5": [
+    {
+      "ticker": "GTIM",
+      "price": 4.85
+    },
+    {
+      "ticker": "RBS",
+      "price": 6.86
+    }
+  ],
+  "16": [
+    {
+      "ticker": "RBS",
+      "price": 6.86
+    },
+    {
+      "ticker": "UNAM",
+      "price": 7.9
+    }
+  ],
+  "30": [
+    {
+      "ticker": "RBS",
+      "price": 6.845
+    },
+    {
+      "ticker": "UNAM",
+      "price": 7.9
+    }
+  ]
+}

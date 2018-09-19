@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "NEPT",
+      "price": 4.35
+    },
+    {
+      "ticker": "BLDP",
+      "price": 4.01
+    }
+  ],
+  "5": [
+    {
+      "ticker": "NEPT",
+      "price": 4.32
+    },
+    {
+      "ticker": "BLDP",
+      "price": 4.08
+    }
+  ],
+  "16": [
+    {
+      "ticker": "ATNM",
+      "price": 0.7476
+    },
+    {
+      "ticker": "NEPT",
+      "price": 4.3101
+    }
+  ],
+  "30": [
+    {
+      "ticker": "ATNM",
+      "price": 0.74
+    },
+    {
+      "ticker": "LIFE",
+      "price": 0.819
+    }
+  ]
+}

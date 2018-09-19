@@ -1,0 +1,42 @@
+{
+  "10": [
+    {
+      "ticker": "IPIC",
+      "price": 7.308
+    },
+    {
+      "ticker": "HYGS",
+      "price": 6.5208
+    }
+  ],
+  "35": [
+    {
+      "ticker": "FOMX",
+      "price": 5.495
+    },
+    {
+      "ticker": "HYGS",
+      "price": 6.55
+    }
+  ],
+  "90": [
+    {
+      "ticker": "SNMP",
+      "price": 7.75
+    },
+    {
+      "ticker": "HYGS",
+      "price": 6.7067
+    }
+  ],
+  "223": [
+    {
+      "ticker": "SNMP",
+      "price": 7.7
+    },
+    {
+      "ticker": "HBP",
+      "price": 5.35
+    }
+  ]
+}

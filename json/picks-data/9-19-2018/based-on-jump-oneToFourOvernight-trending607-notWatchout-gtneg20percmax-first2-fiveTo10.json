@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "GTIM",
+      "price": 5.05
+    },
+    {
+      "ticker": "SPPP",
+      "price": 8.4899
+    }
+  ],
+  "5": [
+    {
+      "ticker": "GTIM",
+      "price": 4.85
+    },
+    {
+      "ticker": "SPPP",
+      "price": 8.51
+    }
+  ],
+  "16": [
+    {
+      "ticker": "SPPP",
+      "price": 8.51
+    },
+    {
+      "ticker": "RLGT",
+      "price": 5.42
+    }
+  ],
+  "30": [
+    {
+      "ticker": "SPPP",
+      "price": 8.51
+    },
+    {
+      "ticker": "RLGT",
+      "price": 5.44
+    }
+  ]
+}

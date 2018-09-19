@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "SRT",
+      "price": 6.48
+    },
+    {
+      "ticker": "GTIM",
+      "price": 5.05
+    }
+  ],
+  "5": [
+    {
+      "ticker": "SRT",
+      "price": 6.39
+    },
+    {
+      "ticker": "GTIM",
+      "price": 4.85
+    }
+  ],
+  "16": [
+    {
+      "ticker": "SRT",
+      "price": 6.54
+    },
+    {
+      "ticker": "FAT",
+      "price": 8.84
+    }
+  ],
+  "30": [
+    {
+      "ticker": "SRT",
+      "price": 6.55
+    },
+    {
+      "ticker": "FAT",
+      "price": 8.84
+    }
+  ]
+}

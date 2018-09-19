@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "ABAC",
+      "price": 2.4
+    }
+  ],
+  "5": [
+    {
+      "ticker": "ABAC",
+      "price": 2.4
+    },
+    {
+      "ticker": "CVRS",
+      "price": 1.39
+    }
+  ],
+  "16": [
+    {
+      "ticker": "ABAC",
+      "price": 2.295
+    },
+    {
+      "ticker": "CVRS",
+      "price": 1.3972
+    }
+  ],
+  "30": [
+    {
+      "ticker": "ABAC",
+      "price": 2.28
+    },
+    {
+      "ticker": "RLM",
+      "price": 4.84
+    },
+    {
+      "ticker": "CVRS",
+      "price": 1.42
+    }
+  ]
+}

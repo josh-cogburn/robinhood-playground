@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "OPRX",
+      "price": 17.014
+    },
+    {
+      "ticker": "CDXS",
+      "price": 18
+    }
+  ],
+  "40": [
+    {
+      "ticker": "OPRX",
+      "price": 16.601
+    },
+    {
+      "ticker": "ATTU",
+      "price": 19.27
+    }
+  ],
+  "100": [
+    {
+      "ticker": "OPRX",
+      "price": 16.86
+    },
+    {
+      "ticker": "ATTU",
+      "price": 18.99
+    }
+  ],
+  "200": [
+    {
+      "ticker": "OPRX",
+      "price": 16.9
+    },
+    {
+      "ticker": "ATTU",
+      "price": 18.61
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ATTU",
+      "price": 18.8
+    },
+    {
+      "ticker": "IRDM",
+      "price": 19.975
+    }
+  ],
+  "351": [
+    {
+      "ticker": "ATTU",
+      "price": 18.92
+    },
+    {
+      "ticker": "SMPL",
+      "price": 18.0501
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ATTU",
+      "price": 18.78
+    },
+    {
+      "ticker": "SMPL",
+      "price": 18.025
+    }
+  ]
+}

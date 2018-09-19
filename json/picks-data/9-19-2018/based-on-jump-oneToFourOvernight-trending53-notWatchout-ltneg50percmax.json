@@ -1,0 +1,90 @@
+{
+  "0": [
+    {
+      "ticker": "HBM",
+      "price": 4.85
+    },
+    {
+      "ticker": "CBLI",
+      "price": 2
+    },
+    {
+      "ticker": "NH",
+      "price": 1.55
+    },
+    {
+      "ticker": "LWAY",
+      "price": 3.3
+    },
+    {
+      "ticker": "MLNT",
+      "price": 4.5
+    }
+  ],
+  "5": [
+    {
+      "ticker": "HBM",
+      "price": 4.95
+    },
+    {
+      "ticker": "NH",
+      "price": 1.4705
+    },
+    {
+      "ticker": "CBLI",
+      "price": 2
+    },
+    {
+      "ticker": "LWAY",
+      "price": 3.3
+    },
+    {
+      "ticker": "SBGL",
+      "price": 2.45
+    }
+  ],
+  "16": [
+    {
+      "ticker": "HBM",
+      "price": 4.975
+    },
+    {
+      "ticker": "NH",
+      "price": 1.5285
+    },
+    {
+      "ticker": "CBLI",
+      "price": 2
+    },
+    {
+      "ticker": "LWAY",
+      "price": 3.33
+    },
+    {
+      "ticker": "SBGL",
+      "price": 2.455
+    }
+  ],
+  "30": [
+    {
+      "ticker": "HBM",
+      "price": 4.925
+    },
+    {
+      "ticker": "NH",
+      "price": 1.5009
+    },
+    {
+      "ticker": "CBLI",
+      "price": 1.82
+    },
+    {
+      "ticker": "LWAY",
+      "price": 3.33
+    },
+    {
+      "ticker": "SBGL",
+      "price": 2.46
+    }
+  ]
+}

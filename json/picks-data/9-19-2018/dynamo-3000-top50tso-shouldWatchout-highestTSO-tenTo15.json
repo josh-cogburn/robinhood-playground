@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "SBRCY",
+      "price": 11.88
+    },
+    {
+      "ticker": "INAP",
+      "price": 13.2905
+    }
+  ],
+  "40": [
+    {
+      "ticker": "MNLO",
+      "price": 11.5999
+    },
+    {
+      "ticker": "INAP",
+      "price": 13.73
+    }
+  ],
+  "100": [
+    {
+      "ticker": "FATE",
+      "price": 13.35
+    },
+    {
+      "ticker": "CRON",
+      "price": 14.07
+    }
+  ],
+  "200": [
+    {
+      "ticker": "FATE",
+      "price": 13.4
+    },
+    {
+      "ticker": "GHG",
+      "price": 12.775
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ALT",
+      "price": 11.55
+    },
+    {
+      "ticker": "CRON",
+      "price": 14.65
+    }
+  ],
+  "351": [
+    {
+      "ticker": "ALT",
+      "price": 14.4959
+    },
+    {
+      "ticker": "CSBR",
+      "price": 14.195
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ALT",
+      "price": 13.908
+    },
+    {
+      "ticker": "CSBR",
+      "price": 14.09
+    }
+  ]
+}

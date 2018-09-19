@@ -1,0 +1,52 @@
+{
+  "10": [
+    {
+      "ticker": "AWSM",
+      "price": 6.3408
+    },
+    {
+      "ticker": "AVH",
+      "price": 5.68
+    }
+  ],
+  "50": [
+    {
+      "ticker": "AWSM",
+      "price": 6.4
+    },
+    {
+      "ticker": "AVH",
+      "price": 5.75
+    }
+  ],
+  "200": [
+    {
+      "ticker": "AWSM",
+      "price": 7.12
+    },
+    {
+      "ticker": "AVH",
+      "price": 5.81
+    }
+  ],
+  "300": [
+    {
+      "ticker": "AWSM",
+      "price": 6.98
+    },
+    {
+      "ticker": "AVH",
+      "price": 5.78
+    }
+  ],
+  "380": [
+    {
+      "ticker": "AWSM",
+      "price": 6.7797
+    },
+    {
+      "ticker": "AVH",
+      "price": 5.73
+    }
+  ]
+}

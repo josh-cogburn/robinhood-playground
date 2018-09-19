@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "HBM",
+      "price": 4.85
+    },
+    {
+      "ticker": "CBLI",
+      "price": 2
+    }
+  ],
+  "5": [
+    {
+      "ticker": "HBM",
+      "price": 4.95
+    },
+    {
+      "ticker": "NH",
+      "price": 1.4705
+    }
+  ],
+  "16": [
+    {
+      "ticker": "HBM",
+      "price": 4.975
+    },
+    {
+      "ticker": "NH",
+      "price": 1.5285
+    }
+  ],
+  "30": [
+    {
+      "ticker": "HBM",
+      "price": 4.925
+    },
+    {
+      "ticker": "NH",
+      "price": 1.5009
+    }
+  ]
+}

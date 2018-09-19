@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "TWO",
+      "price": 15.165
+    },
+    {
+      "ticker": "WTBDY",
+      "price": 15.33
+    }
+  ],
+  "40": [
+    {
+      "ticker": "WTBDY",
+      "price": 15.33
+    },
+    {
+      "ticker": "SIEB",
+      "price": 15.6861
+    }
+  ],
+  "100": [
+    {
+      "ticker": "OXFD",
+      "price": 15.68
+    },
+    {
+      "ticker": "SIEB",
+      "price": 15.1253
+    }
+  ],
+  "200": [
+    {
+      "ticker": "NCSM",
+      "price": 15.91
+    },
+    {
+      "ticker": "ALDR",
+      "price": 15.9945
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ALDR",
+      "price": 15.875
+    },
+    {
+      "ticker": "GMXAY",
+      "price": 15.932
+    }
+  ],
+  "351": [
+    {
+      "ticker": "HMG",
+      "price": 15.01
+    },
+    {
+      "ticker": "ALDR",
+      "price": 15.925
+    }
+  ],
+  "381": [
+    {
+      "ticker": "HMG",
+      "price": 15.01
+    },
+    {
+      "ticker": "ALDR",
+      "price": 16.025
+    }
+  ]
+}

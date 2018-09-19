@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "GTIM",
+      "price": 5.05
+    },
+    {
+      "ticker": "INSY",
+      "price": 9.535
+    }
+  ],
+  "5": [
+    {
+      "ticker": "GTIM",
+      "price": 4.85
+    },
+    {
+      "ticker": "INSY",
+      "price": 9.9579
+    }
+  ],
+  "16": [
+    {
+      "ticker": "INSY",
+      "price": 9.47
+    },
+    {
+      "ticker": "RBS",
+      "price": 6.86
+    }
+  ],
+  "30": [
+    {
+      "ticker": "INSY",
+      "price": 9.4208
+    },
+    {
+      "ticker": "RBS",
+      "price": 6.845
+    }
+  ]
+}

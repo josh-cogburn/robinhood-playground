@@ -1,0 +1,46 @@
+{
+  "0": [
+    {
+      "ticker": "CATB",
+      "price": 0.8
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CATB",
+      "price": 0.78
+    },
+    {
+      "ticker": "CVRS",
+      "price": 1.39
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CATB",
+      "price": 0.8331
+    },
+    {
+      "ticker": "CVRS",
+      "price": 1.3972
+    },
+    {
+      "ticker": "AUMN",
+      "price": 0.2565
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CATB",
+      "price": 0.8166
+    },
+    {
+      "ticker": "RLM",
+      "price": 4.84
+    },
+    {
+      "ticker": "MTP",
+      "price": 0.7556
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "FIT",
+      "price": 6.13
+    },
+    {
+      "ticker": "SPWR",
+      "price": 7.94
+    }
+  ],
+  "5": [
+    {
+      "ticker": "FIT",
+      "price": 6.11
+    },
+    {
+      "ticker": "SPWR",
+      "price": 7.93
+    }
+  ],
+  "16": [
+    {
+      "ticker": "FIT",
+      "price": 5.975
+    },
+    {
+      "ticker": "SPWR",
+      "price": 7.78
+    }
+  ],
+  "30": [
+    {
+      "ticker": "FIT",
+      "price": 5.965
+    },
+    {
+      "ticker": "SPWR",
+      "price": 7.77
+    }
+  ]
+}

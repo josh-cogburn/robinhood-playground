@@ -1,0 +1,36 @@
+{
+  "5": [
+    {
+      "ticker": "NOK",
+      "price": 5.43
+    },
+    {
+      "ticker": "OMEX",
+      "price": 7.5963
+    }
+  ],
+  "16": [
+    {
+      "ticker": "NOK",
+      "price": 5.4
+    },
+    {
+      "ticker": "OMEX",
+      "price": 7.5963
+    }
+  ],
+  "30": [
+    {
+      "ticker": "TENX",
+      "price": 5.1684
+    },
+    {
+      "ticker": "NOK",
+      "price": 5.43
+    },
+    {
+      "ticker": "OMEX",
+      "price": 7.7695
+    }
+  ]
+}

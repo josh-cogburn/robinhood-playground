@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "GTIM",
+      "price": 5.05
+    },
+    {
+      "ticker": "RBS",
+      "price": 6.85
+    },
+    {
+      "ticker": "UNAM",
+      "price": 7.9
+    }
+  ],
+  "5": [
+    {
+      "ticker": "GTIM",
+      "price": 4.85
+    },
+    {
+      "ticker": "RBS",
+      "price": 6.86
+    },
+    {
+      "ticker": "UNAM",
+      "price": 7.9
+    }
+  ],
+  "16": [
+    {
+      "ticker": "RBS",
+      "price": 6.86
+    },
+    {
+      "ticker": "UNAM",
+      "price": 7.9
+    },
+    {
+      "ticker": "YAHOY",
+      "price": 7.316
+    }
+  ],
+  "30": [
+    {
+      "ticker": "RBS",
+      "price": 6.845
+    },
+    {
+      "ticker": "UNAM",
+      "price": 7.9
+    },
+    {
+      "ticker": "YAHOY",
+      "price": 7.195
+    }
+  ]
+}

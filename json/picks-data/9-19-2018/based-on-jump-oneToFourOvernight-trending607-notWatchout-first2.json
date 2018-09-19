@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "OCC",
+      "price": 3.75
+    },
+    {
+      "ticker": "BLDP",
+      "price": 4.01
+    }
+  ],
+  "5": [
+    {
+      "ticker": "OCC",
+      "price": 3.75
+    },
+    {
+      "ticker": "BLDP",
+      "price": 4.08
+    }
+  ],
+  "16": [
+    {
+      "ticker": "GTIM",
+      "price": 4.85
+    },
+    {
+      "ticker": "OCC",
+      "price": 3.75
+    }
+  ],
+  "30": [
+    {
+      "ticker": "GTIM",
+      "price": 4.85
+    },
+    {
+      "ticker": "OCC",
+      "price": 3.85
+    }
+  ]
+}
