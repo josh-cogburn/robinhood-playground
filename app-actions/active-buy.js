@@ -104,15 +104,30 @@ module.exports = async (
                 };
 
                 const attemptLimitOrder = async () => {
-                    const { askPrice, bidPrice } = await lookup(Robinhood, ticker);
-                    const spread = askPrice - bidPrice;
+                    const { askPrice, bidPrice, lastTrade } = await lookup(Robinhood, ticker);
+                    const allPrices = [askPrice, bidPrice, lastTrade];
+                    const upperTarget = Math.max(...allPrices);
+                    const lowerTarget = Math.min(...allPrices);
+                    const spread = upperTarget - lowerTarget;
                     const aboveBid = spread * (attemptCount - 1) / (TOTAL_ATTEMPTS - 1);
-                    const attemptPrice = bidPrice + aboveBid;
+                    const attemptPrice = lowerTarget + aboveBid;
                     console.log({
                         askPrice,
                         bidPrice,
+                        lastTrade,
                         spread,
                         aboveBid,
+                        attemptPrice,
+                        attemptCount
+                    })
+                    return await limitBid(attemptPrice);
+                };
+
+                const limitLastTrade = async () => {
+                    const { lastTrade } = await lookup(Robinhood, ticker);
+                    const attemptPrice = lastTrade;
+                    console.log('limit buy last trade', {
+                        lastTrade,
                         attemptPrice
                     })
                     return await limitBid(attemptPrice);
@@ -158,7 +173,8 @@ module.exports = async (
                         } else {
                             const errMessage = 'reached max attempts, unable to BUY';
                             console.log(errMessage, ticker);
-                            return reject(errMessage);
+                            return limitLastTrade();
+                            // return reject(errMessage);
                         }
                     } else {
 
