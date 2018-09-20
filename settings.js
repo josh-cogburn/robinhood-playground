@@ -20,7 +20,7 @@ const {
 module.exports = {
     // important settings
     sellAllStocksOnNthDay: 2,
-    purchaseAmt: 90,
+    purchaseAmt: 110,
     forPurchase: [
         '[sepPerfectosLowCounts]',
         '[sepPerfectosLowCounts]',
@@ -41,13 +41,15 @@ module.exports = {
         '[sep17MORE]',
         '[sep17MORE]',
 
-        '[afterhoursdropsGAMBLES]'
+        '[afterhoursdropsGAMBLES]',
+        '[doubleDown]',
+        '[doubleDown]'
     ],
     fallbackSellStrategy: 'limit3',
     force: {
         sell: [
-            'FCNCA',
-            'EBMT'
+            // 'FCNCA',
+            // 'EBMT'
         ],
         keep: [
             // 'NSPR',

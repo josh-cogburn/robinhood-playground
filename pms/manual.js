@@ -899,6 +899,17 @@ const afterhoursdropsGAMBLES = [
     'sudden-drops-last18trend-filter10-500',
 ];
 
+const doubleDown = [
+    'sudden-drops-last30trend-filter10-fiveTo10-360',
+    'sudden-drops-last10trend-filter10-221',
+    'sudden-drops-last30trend-filter20-189',
+    'sudden-drops-last30trend-filter20-189',
+    'low-float-high-volume-absVolPoints-trenddowngt30-notWatchout-315',
+    'spread-singleLargestSpreadAbs1milVolume-58',
+    'spread-singleLargestSpreadAbs100kVolume-tenTo15-202',
+    'constant-downers-10minute-percDownLowClosePoints-filtered80-tenTo15-77'
+];
+
 module.exports = {
     'wild n crazy': [
         'week-swings-tenTo15-1',  // wild
@@ -989,5 +1000,6 @@ module.exports = {
     unprovenSuddenDropsLast2Filter10,
 
     sep17MORE,
-    afterhoursdropsGAMBLES
+    afterhoursdropsGAMBLES,
+    doubleDown
 };
