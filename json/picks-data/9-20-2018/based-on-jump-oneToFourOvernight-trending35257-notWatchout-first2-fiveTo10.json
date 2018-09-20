@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "NE",
+      "price": 6.455
+    },
+    {
+      "ticker": "SAN",
+      "price": 5.4
+    }
+  ],
+  "5": [
+    {
+      "ticker": "NE",
+      "price": 6.42
+    },
+    {
+      "ticker": "SAN",
+      "price": 5.4
+    }
+  ],
+  "16": [
+    {
+      "ticker": "YGYI",
+      "price": 5.65
+    },
+    {
+      "ticker": "NE",
+      "price": 6.38
+    }
+  ],
+  "30": [
+    {
+      "ticker": "YGYI",
+      "price": 5.3635
+    },
+    {
+      "ticker": "NE",
+      "price": 6.395
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "CBAK",
+      "price": 0.75
+    },
+    {
+      "ticker": "NVUS",
+      "price": 4.99
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CBAK",
+      "price": 0.75
+    },
+    {
+      "ticker": "NVUS",
+      "price": 4.775
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CBAK",
+      "price": 0.7
+    },
+    {
+      "ticker": "NVUS",
+      "price": 4.77
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CBAK",
+      "price": 0.72
+    },
+    {
+      "ticker": "NVUS",
+      "price": 4.77
+    }
+  ]
+}

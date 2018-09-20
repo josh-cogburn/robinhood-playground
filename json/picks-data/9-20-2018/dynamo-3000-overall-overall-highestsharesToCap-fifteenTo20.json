@@ -1,0 +1,62 @@
+{
+  "4": [
+    {
+      "ticker": "USO",
+      "price": 15.005
+    },
+    {
+      "ticker": "COLL",
+      "price": 15.065
+    }
+  ],
+  "40": [
+    {
+      "ticker": "SIEB",
+      "price": 15.04
+    },
+    {
+      "ticker": "XPER",
+      "price": 15.15
+    }
+  ],
+  "100": [
+    {
+      "ticker": "RARX",
+      "price": 15.38
+    },
+    {
+      "ticker": "XPER",
+      "price": 15.5
+    }
+  ],
+  "260": [
+    {
+      "ticker": "EGOV",
+      "price": 15.2
+    },
+    {
+      "ticker": "SIEB",
+      "price": 15.06
+    }
+  ],
+  "351": [
+    {
+      "ticker": "EGOV",
+      "price": 15.575
+    },
+    {
+      "ticker": "SIEB",
+      "price": 15.1843
+    }
+  ],
+  "381": [
+    {
+      "ticker": "EGOV",
+      "price": 15.4
+    },
+    {
+      "ticker": "SIEB",
+      "price": 15.1349
+    }
+  ]
+}

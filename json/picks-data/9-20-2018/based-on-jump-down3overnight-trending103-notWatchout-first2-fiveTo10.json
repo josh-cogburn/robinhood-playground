@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "DVCR",
+      "price": 6.41
+    },
+    {
+      "ticker": "SSW",
+      "price": 8.86
+    }
+  ],
+  "5": [
+    {
+      "ticker": "DVCR",
+      "price": 6.75
+    },
+    {
+      "ticker": "SSW",
+      "price": 8.3201
+    }
+  ],
+  "16": [
+    {
+      "ticker": "INTT",
+      "price": 8.225
+    },
+    {
+      "ticker": "DVCR",
+      "price": 6.75
+    }
+  ],
+  "30": [
+    {
+      "ticker": "INTT",
+      "price": 8.2
+    },
+    {
+      "ticker": "DVCR",
+      "price": 6.75
+    }
+  ]
+}

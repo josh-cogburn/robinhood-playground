@@ -1,0 +1,32 @@
+{
+  "12": [
+    {
+      "ticker": "AOSL",
+      "price": 12.48
+    },
+    {
+      "ticker": "SONO",
+      "price": 14.58
+    }
+  ],
+  "250": [
+    {
+      "ticker": "AOSL",
+      "price": 12.25
+    },
+    {
+      "ticker": "GLBZ",
+      "price": 12.5
+    }
+  ],
+  "-15": [
+    {
+      "ticker": "AOSL",
+      "price": 12.33
+    },
+    {
+      "ticker": "SONO",
+      "price": 14.38
+    }
+  ]
+}

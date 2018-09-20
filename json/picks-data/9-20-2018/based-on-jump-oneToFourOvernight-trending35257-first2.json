@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "CBAK",
+      "price": 0.75
+    },
+    {
+      "ticker": "BLIN",
+      "price": 1.0111
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CBAK",
+      "price": 0.75
+    },
+    {
+      "ticker": "BLIN",
+      "price": 1.03
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CBAK",
+      "price": 0.7
+    },
+    {
+      "ticker": "BLIN",
+      "price": 0.993
+    }
+  ],
+  "30": [
+    {
+      "ticker": "BLIN",
+      "price": 0.9802
+    },
+    {
+      "ticker": "CBAK",
+      "price": 0.72
+    }
+  ]
+}

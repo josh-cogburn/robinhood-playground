@@ -1,0 +1,44 @@
+{
+  "5": [
+    {
+      "ticker": "RIG",
+      "price": 12.67
+    },
+    {
+      "ticker": "CRZBY",
+      "price": 11.23
+    },
+    {
+      "ticker": "AACAY",
+      "price": 10.34
+    }
+  ],
+  "16": [
+    {
+      "ticker": "RIG",
+      "price": 12.7
+    },
+    {
+      "ticker": "CRZBY",
+      "price": 11.23
+    },
+    {
+      "ticker": "PNTR",
+      "price": 12.7
+    }
+  ],
+  "30": [
+    {
+      "ticker": "GDP",
+      "price": 14.01
+    },
+    {
+      "ticker": "RIG",
+      "price": 12.68
+    },
+    {
+      "ticker": "CRZBY",
+      "price": 11.14
+    }
+  ]
+}

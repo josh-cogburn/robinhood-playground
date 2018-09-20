@@ -1,0 +1,68 @@
+{
+  "12": [
+    {
+      "ticker": "APTO",
+      "price": 2.6801
+    },
+    {
+      "ticker": "GNCA",
+      "price": 0.515
+    },
+    {
+      "ticker": "RXII",
+      "price": 1.24
+    },
+    {
+      "ticker": "OBLN",
+      "price": 2.6138
+    },
+    {
+      "ticker": "CYTX",
+      "price": 0.4487
+    }
+  ],
+  "250": [
+    {
+      "ticker": "APTO",
+      "price": 2.6829
+    },
+    {
+      "ticker": "GNCA",
+      "price": 0.5132
+    },
+    {
+      "ticker": "RXII",
+      "price": 1.1827
+    },
+    {
+      "ticker": "CYTX",
+      "price": 0.431
+    },
+    {
+      "ticker": "ATOS",
+      "price": 1.5899
+    }
+  ],
+  "-15": [
+    {
+      "ticker": "APTO",
+      "price": 2.71
+    },
+    {
+      "ticker": "GNCA",
+      "price": 0.511
+    },
+    {
+      "ticker": "RXII",
+      "price": 1.24
+    },
+    {
+      "ticker": "OBLN",
+      "price": 2.7
+    },
+    {
+      "ticker": "CYTX",
+      "price": 0.44
+    }
+  ]
+}

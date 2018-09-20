@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "ITUS",
+      "price": 4.64
+    },
+    {
+      "ticker": "CVRS",
+      "price": 1.46
+    }
+  ],
+  "5": [
+    {
+      "ticker": "ITUS",
+      "price": 4.6065
+    },
+    {
+      "ticker": "CVRS",
+      "price": 1.44
+    }
+  ],
+  "16": [
+    {
+      "ticker": "PKD",
+      "price": 3.36
+    },
+    {
+      "ticker": "ITUS",
+      "price": 4.63
+    }
+  ],
+  "30": [
+    {
+      "ticker": "PKD",
+      "price": 3.33
+    },
+    {
+      "ticker": "ITUS",
+      "price": 4.65
+    }
+  ]
+}

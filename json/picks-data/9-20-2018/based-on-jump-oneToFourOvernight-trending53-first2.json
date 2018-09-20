@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "ASCMA",
+      "price": 1.11
+    },
+    {
+      "ticker": "RTTR",
+      "price": 1.8
+    }
+  ],
+  "5": [
+    {
+      "ticker": "ASCMA",
+      "price": 1.17
+    },
+    {
+      "ticker": "RTTR",
+      "price": 1.8
+    }
+  ],
+  "16": [
+    {
+      "ticker": "ASCMA",
+      "price": 1.34
+    },
+    {
+      "ticker": "RTTR",
+      "price": 1.8
+    }
+  ],
+  "30": [
+    {
+      "ticker": "ASCMA",
+      "price": 1.44
+    },
+    {
+      "ticker": "RTTR",
+      "price": 1.9
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "FBP",
+      "price": 9.13
+    },
+    {
+      "ticker": "LOOP",
+      "price": 9.1995
+    }
+  ],
+  "5": [
+    {
+      "ticker": "FBP",
+      "price": 9
+    },
+    {
+      "ticker": "LOOP",
+      "price": 8.85
+    }
+  ],
+  "16": [
+    {
+      "ticker": "FBP",
+      "price": 9.03
+    },
+    {
+      "ticker": "LOOP",
+      "price": 8.86
+    }
+  ],
+  "30": [
+    {
+      "ticker": "FBP",
+      "price": 9.1
+    },
+    {
+      "ticker": "LOOP",
+      "price": 8.72
+    }
+  ]
+}

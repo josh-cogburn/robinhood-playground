@@ -1,0 +1,52 @@
+{
+  "5": [
+    {
+      "ticker": "FUJHY",
+      "price": 14.67
+    },
+    {
+      "ticker": "CRON",
+      "price": 13.8545
+    },
+    {
+      "ticker": "NAII",
+      "price": 10.059
+    },
+    {
+      "ticker": "TOCA",
+      "price": 12.8
+    }
+  ],
+  "16": [
+    {
+      "ticker": "FUJHY",
+      "price": 14.73
+    },
+    {
+      "ticker": "CRON",
+      "price": 13.72
+    },
+    {
+      "ticker": "TOCA",
+      "price": 12.72
+    }
+  ],
+  "30": [
+    {
+      "ticker": "FUJHY",
+      "price": 14.79
+    },
+    {
+      "ticker": "CRON",
+      "price": 13.68
+    },
+    {
+      "ticker": "NAII",
+      "price": 10.4
+    },
+    {
+      "ticker": "TOCA",
+      "price": 13.2
+    }
+  ]
+}

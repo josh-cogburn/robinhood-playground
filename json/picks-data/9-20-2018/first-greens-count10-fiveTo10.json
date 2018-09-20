@@ -1,0 +1,68 @@
+{
+  "12": [
+    {
+      "ticker": "IRIX",
+      "price": 6.5987
+    },
+    {
+      "ticker": "QTT",
+      "price": 9.58
+    },
+    {
+      "ticker": "TSQ",
+      "price": 8.74
+    },
+    {
+      "ticker": "CTG",
+      "price": 5.33
+    },
+    {
+      "ticker": "JP",
+      "price": 9.28
+    }
+  ],
+  "250": [
+    {
+      "ticker": "IRIX",
+      "price": 6.58
+    },
+    {
+      "ticker": "TSQ",
+      "price": 8.73
+    },
+    {
+      "ticker": "CTG",
+      "price": 5.55
+    },
+    {
+      "ticker": "JP",
+      "price": 9.116
+    },
+    {
+      "ticker": "VLRS",
+      "price": 7.93
+    }
+  ],
+  "-15": [
+    {
+      "ticker": "IRIX",
+      "price": 6.32
+    },
+    {
+      "ticker": "QTT",
+      "price": 9.77
+    },
+    {
+      "ticker": "TSQ",
+      "price": 8.74
+    },
+    {
+      "ticker": "CTG",
+      "price": 5.33
+    },
+    {
+      "ticker": "JP",
+      "price": 9.2
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "OSN",
+      "price": 3
+    },
+    {
+      "ticker": "NIHD",
+      "price": 4.99
+    }
+  ],
+  "5": [
+    {
+      "ticker": "OSN",
+      "price": 2.9549
+    },
+    {
+      "ticker": "NIHD",
+      "price": 4.98
+    }
+  ],
+  "16": [
+    {
+      "ticker": "OSN",
+      "price": 2.7945
+    },
+    {
+      "ticker": "ZOM",
+      "price": 1.99
+    }
+  ],
+  "30": [
+    {
+      "ticker": "OSN",
+      "price": 2.757
+    },
+    {
+      "ticker": "ZOM",
+      "price": 1.98
+    }
+  ]
+}

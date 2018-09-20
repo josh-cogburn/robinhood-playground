@@ -1,0 +1,42 @@
+{
+  "100": [
+    {
+      "ticker": "EGLT",
+      "price": 0.088
+    },
+    {
+      "ticker": "ATAI",
+      "price": 1.05
+    },
+    {
+      "ticker": "NGD",
+      "price": 0.9652
+    }
+  ],
+  "430": [
+    {
+      "ticker": "PIR",
+      "price": 1.5
+    }
+  ],
+  "470": [
+    {
+      "ticker": "PIR",
+      "price": 1.52
+    },
+    {
+      "ticker": "OSN",
+      "price": 2.25
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "NAK",
+      "price": 0.5477
+    },
+    {
+      "ticker": "LITB",
+      "price": 0.86
+    }
+  ]
+}

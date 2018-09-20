@@ -1,0 +1,54 @@
+{
+  "0": [
+    {
+      "ticker": "HYGS",
+      "price": 7
+    },
+    {
+      "ticker": "MESO",
+      "price": 6.556
+    }
+  ],
+  "5": [
+    {
+      "ticker": "HYGS",
+      "price": 7.2
+    },
+    {
+      "ticker": "GOL",
+      "price": 5.43
+    },
+    {
+      "ticker": "MESO",
+      "price": 6.56
+    }
+  ],
+  "16": [
+    {
+      "ticker": "HYGS",
+      "price": 7.05
+    },
+    {
+      "ticker": "NAII",
+      "price": 9.9
+    },
+    {
+      "ticker": "GOL",
+      "price": 5.26
+    }
+  ],
+  "30": [
+    {
+      "ticker": "HYGS",
+      "price": 7.2
+    },
+    {
+      "ticker": "GOL",
+      "price": 5.38
+    },
+    {
+      "ticker": "MESO",
+      "price": 6.52
+    }
+  ]
+}

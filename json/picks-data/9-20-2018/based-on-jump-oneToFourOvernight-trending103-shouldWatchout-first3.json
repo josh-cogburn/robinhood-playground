@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "CBAK",
+      "price": 0.75
+    },
+    {
+      "ticker": "NVUS",
+      "price": 4.99
+    },
+    {
+      "ticker": "NGD",
+      "price": 1.11
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CBAK",
+      "price": 0.75
+    },
+    {
+      "ticker": "NVUS",
+      "price": 4.775
+    },
+    {
+      "ticker": "NGD",
+      "price": 1.095
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CBAK",
+      "price": 0.7
+    },
+    {
+      "ticker": "NVUS",
+      "price": 4.77
+    },
+    {
+      "ticker": "NGD",
+      "price": 1.065
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CBAK",
+      "price": 0.72
+    },
+    {
+      "ticker": "NVUS",
+      "price": 4.77
+    },
+    {
+      "ticker": "NGD",
+      "price": 1.02
+    }
+  ]
+}

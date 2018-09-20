@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "OSN",
+      "price": 3
+    },
+    {
+      "ticker": "NIHD",
+      "price": 4.99
+    },
+    {
+      "ticker": "IGC",
+      "price": 1.9005
+    }
+  ],
+  "5": [
+    {
+      "ticker": "OSN",
+      "price": 2.9549
+    },
+    {
+      "ticker": "NIHD",
+      "price": 4.98
+    },
+    {
+      "ticker": "ZOM",
+      "price": 2.0295
+    }
+  ],
+  "16": [
+    {
+      "ticker": "OSN",
+      "price": 2.7945
+    },
+    {
+      "ticker": "ZOM",
+      "price": 1.99
+    },
+    {
+      "ticker": "IGC",
+      "price": 1.81
+    }
+  ],
+  "30": [
+    {
+      "ticker": "OSN",
+      "price": 2.757
+    },
+    {
+      "ticker": "ZOM",
+      "price": 1.98
+    },
+    {
+      "ticker": "IGC",
+      "price": 1.85
+    }
+  ]
+}

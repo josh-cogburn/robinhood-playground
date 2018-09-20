@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "ASCMA",
+      "price": 1.11
+    },
+    {
+      "ticker": "RTTR",
+      "price": 1.8
+    },
+    {
+      "ticker": "YGYI",
+      "price": 4.5
+    }
+  ],
+  "5": [
+    {
+      "ticker": "ASCMA",
+      "price": 1.17
+    },
+    {
+      "ticker": "RTTR",
+      "price": 1.8
+    },
+    {
+      "ticker": "DTEA",
+      "price": 3.1
+    }
+  ],
+  "16": [
+    {
+      "ticker": "ASCMA",
+      "price": 1.34
+    },
+    {
+      "ticker": "RTTR",
+      "price": 1.8
+    },
+    {
+      "ticker": "DTEA",
+      "price": 3.1
+    }
+  ],
+  "30": [
+    {
+      "ticker": "ASCMA",
+      "price": 1.44
+    },
+    {
+      "ticker": "RTTR",
+      "price": 1.9
+    },
+    {
+      "ticker": "DTEA",
+      "price": 2.9
+    }
+  ]
+}
