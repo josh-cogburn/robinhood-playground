@@ -51,14 +51,16 @@ const getTrendSinceOpen = {
             1630
         );
 
+        quotes = quotes.filter(q => !!q);
+
         let withQuotes = stocks.map((ticker, i) => {
-            let quoteData = quotes.find(q => q.symbol === ticker) || {};
+            let relatedQuote = quotes.find(q => q.symbol === ticker) || {};
             return {
                 ticker,
-                quote_data: quoteData,
-                last_trade_price: Number(quoteData.last_trade_price),
-                previous_close: Number(quoteData.previous_close),
-                trend_since_prev_close: getTrend(quoteData.last_trade_price, quoteData.previous_close)
+                quote_data: relatedQuote,
+                last_trade_price: Number(relatedQuote.last_trade_price),
+                previous_close: Number(relatedQuote.previous_close),
+                trend_since_prev_close: getTrend(relatedQuote.last_trade_price, relatedQuote.adjusted_previous_close)
             };
         });
 
