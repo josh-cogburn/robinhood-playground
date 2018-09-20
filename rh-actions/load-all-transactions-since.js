@@ -7,6 +7,18 @@ const convertDateToRhFormat = date => {
     return `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
 };
 
+const lookupInstrument = (() => {
+    const instrumentCache = {};
+    return async (Robinhood, instrument) => {
+        if (instrumentCache[instrument]) {
+            return instrumentCache[instrument];
+        }
+        const lookup = await Robinhood.url(instrument);
+        instrumentCache[instrument] = lookup;
+        return lookup;
+    };
+})();
+
 const loadAllRobinhoodTransactions = async (Robinhood, daysBack = 1) => {
 
     startDate = (await getFilesSortedByDate('daily-transactions'))[daysBack - 1];
@@ -24,20 +36,10 @@ const loadAllRobinhoodTransactions = async (Robinhood, daysBack = 1) => {
         .filter(t => t.executions.length);
 
     console.log('looking up robinhood instruments');
-    const lookupInstrument = (() => {
-        const instrumentCache = {};
-        return async instrument => {
-            if (instrumentCache[instrument]) {
-                return instrumentCache[instrument];
-            }
-            const lookup = await Robinhood.url(instrument);
-            instrumentCache[instrument] = lookup;
-            return lookup;
-        };
-    })();
+    
     const withTickers = await mapLimit(orders, 1, async order => ({
         ...order,
-        instrument: await lookupInstrument(order.instrument)
+        instrument: await lookupInstrument(Robinhood, order.instrument)
     }));
 
     console.log('done loading all robinhood transactions');
