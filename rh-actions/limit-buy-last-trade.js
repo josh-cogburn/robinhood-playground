@@ -64,6 +64,7 @@ const limitBuyLastTrade = async (Robinhood, { ticker, maxPrice, quantity, bidPri
             // trigger: 'immediate', // Defaults to "gfd" (Good For Day)
             // time: 'gfd',    // Defaults to "immediate"
             // type: String     // Defaults to "market"
+            extended_hours: true
         };
         const res = await Robinhood.place_buy_order(options);
         console.log('limit buy response', res);

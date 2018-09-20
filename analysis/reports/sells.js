@@ -7,50 +7,11 @@ const jsonMgr = require('../../utils/json-mgr');
 const getAssociatedStrategies = require('../../app-actions/get-associated-strategies');
 
 const getFilesSortedByDate = require('../../utils/get-files-sorted-by-date');
-const recursiveUrl = require('../../rh-actions/recursive-url');
+const loadAllTransactionsSince = require('../../rh-actions/load-all-transactions-since');
 
 const roundTo = numDec => num => Math.round(num * Math.pow(10, numDec)) / Math.pow(10, numDec);
 const oneDec = roundTo(1);
 const twoDec = roundTo(2);
-
-
-const loadAllRobinhoodTransactions = async (Robinhood, startDate) => {
-
-    console.log('loading all robinhood transactions', startDate);
-    let orders = await Robinhood.orders({
-        updated_at: startDate,
-    });
-    if (orders.next) {
-        orders = [
-            ...orders.results,
-            ...await recursiveUrl(Robinhood, orders.next)
-        ];
-    }
-    orders = orders
-        .filter(t => t.state === 'filled')
-        .filter(t => t.executions.length);
-
-    console.log('looking up robinhood instruments');
-    const lookupInstrument = (() => {
-        const instrumentCache = {};
-        return async instrument => {
-            if (instrumentCache[instrument]) {
-                return instrumentCache[instrument];
-            }
-            const lookup = await Robinhood.url(instrument);
-            instrumentCache[instrument] = lookup;
-            return lookup;
-        };
-    })();
-    const withTickers = await mapLimit(orders, 1, async order => ({
-        ...order,
-        instrument: await lookupInstrument(order.instrument)
-    }));
-
-    console.log('done loading all robinhood transactions');
-    return withTickers;
-    // console.log({ orders });
-};
 
 const convertDateToRhFormat = date => {
     const [month, day, year] = date.split('-');
@@ -73,10 +34,7 @@ module.exports = async (Robinhood, daysBack = 5) => {
     // console.log({ mostRecentOnly });
     const dailyTransactionDates = await getFilesSortedByDate('daily-transactions');
     // console.log({ dailyTransactionDates })
-    const robinhoodTransactions = await loadAllRobinhoodTransactions(
-        Robinhood, 
-        convertDateToRhFormat(dailyTransactionDates[Number(daysBack) + 3])
-    );
+    const robinhoodTransactions = await loadAllTransactionsSince(Robinhood, Number(daysBack) + 3);
 
     const analyzeDay = async date => {
         
