@@ -27,7 +27,7 @@ const lookupTickers = async (Robinhood, tickersToLookup, includeAfterHours) => {
         const {symbol, last_trade_price, last_extended_hours_trade_price} = quote;
         tickerLookups[symbol] = includeAfterHours ? {
             lastTradePrice: Number(last_trade_price),
-            afterHourPrice: Number(last_extended_hours_trade_price)
+            afterHoursPrice: Number(last_extended_hours_trade_price)
         } : Number(last_trade_price);
     });
     return tickerLookups;

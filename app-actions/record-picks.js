@@ -96,7 +96,7 @@ module.exports = async (Robinhood, strategy, min, toPurchase, priceFilterSuffix 
         const withPrices = stocks.map(ticker => {
             const relatedLookup = tickerLookups[ticker];
             const price = isNotRegularHours ? 
-                relatedLookup.afterHourPrice || relatedLookup.lastTradePrice: 
+                relatedLookup.afterHoursPrice || relatedLookup.lastTradePrice: 
                 relatedLookup.lastTradePrice;
             return {
                 ticker,
@@ -113,9 +113,9 @@ module.exports = async (Robinhood, strategy, min, toPurchase, priceFilterSuffix 
                 .map(strategyName => toPurchase[strategyName])
                 .reduce((acc, val) => acc.concat(val), []) // flatten
         )];
-        console.log('alltickers', allTickers);
+        // console.log('alltickers', allTickers);
         const tickerLookups = await lookupTickers(Robinhood, allTickers, true);
-        console.log('tickerLookups', tickerLookups);
+        // console.log('tickerLookups', tickerLookups);
         for (let strategyName of Object.keys(toPurchase)) {
             const subsetToPurchase = toPurchase[strategyName];
             await record(subsetToPurchase, `${strategy}-${strategyName}${priceFilterSuffix}`, tickerLookups);
@@ -123,7 +123,7 @@ module.exports = async (Robinhood, strategy, min, toPurchase, priceFilterSuffix 
     } else {
         console.log('no variety to purchase', toPurchase);
         const tickerLookups = await lookupTickers(Robinhood, toPurchase, true);
-        console.log('ticker lookups', tickerLookups);
+        // console.log('ticker lookups', tickerLookups);
         await record(toPurchase, `${strategy}${priceFilterSuffix}`, tickerLookups);
     }
 
