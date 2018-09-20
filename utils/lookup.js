@@ -9,16 +9,17 @@ const { lookup } = require('yahoo-stocks');
 
 module.exports = async (Robinhood, ticker) => {
     // console.log('looking up', ticker);
-    const quoteData = await Robinhood.quote_data(ticker);
+    const quoteDataResponse = await Robinhood.quote_data(ticker);
+    const originalQuoteData = quoteDataResponse.results[0];
     const { 
-        last_trade_price,
+        last_trade_price, 
         adjusted_previous_close,
         instrument,
         ask_price,
         bid_price,
         last_extended_hours_trade_price
-    } = quoteData.results[0];
-    let data = {
+    } = originalQuoteData;
+    let additionalData = {
         lastTrade: Number(last_trade_price),
         prevClose: Number(adjusted_previous_close),
         askPrice: Number(ask_price),
@@ -30,9 +31,10 @@ module.exports = async (Robinhood, ticker) => {
         var yahooPrice = (await lookup(ticker)).currentPrice;
     } catch (e) {}
     data = {
-        ...data,
+        ...originalQuoteData,
+        ...additionalData,
         yahooPrice,
-        currentPrice: data.lastTrade || yahooPrice
+        currentPrice: additionalData.lastTrade || yahooPrice,
     };
     // console.log(data, 'data');
     return data;

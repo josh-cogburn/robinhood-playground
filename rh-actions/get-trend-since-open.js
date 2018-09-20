@@ -6,36 +6,36 @@ const mapLimit = require('promise-map-limit');
 // utils
 const getTrend = require('../utils/get-trend');
 const chunkApi = require('../utils/chunk-api');
-
-
+const lookup = require('../utils/lookup');
 
 
 const getTrendSinceOpen = {
     single: async (Robinhood, ticker) => {
         console.log('tick', ticker);
         try {
-            var [fundamentals, quote_data] = await Promise.all([
+            var [fundamentals, lookup_data] = await Promise.all([
                 Robinhood.fundamentals(ticker),
-                Robinhood.quote_data(ticker)
+                lookup(Robinhood, ticker)
             ]);
             fundamentals = fundamentals.results[0];
-            quote_data = quote_data.results[0];
         } catch (e) {
             console.log(e, 'error getting trend', ticker);
             return {};
         }
 
         const { open } = fundamentals;
-        const { last_trade_price, adjusted_previous_close } = quote_data;
+        const { last_trade_price, adjusted_previous_close } = lookup_data;
 
         return {
+            ticker,
+            symbol: ticker,
             fundamentals,
-            quote_data,
+            quote_data: lookup_data,
             open,
             last_trade_price,
             // previous_close,
             trend_since_open: getTrend(last_trade_price, open),
-            trend_since_prev_close: getTrend(last_trade_price, adjusted_previous_close)
+            trend_since_prev_close: getTrend(last_trade_price, adjusted_previous_close),
         };
     },
     multiple: async (Robinhood, stocks) => {
