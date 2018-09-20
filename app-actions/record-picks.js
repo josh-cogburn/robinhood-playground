@@ -95,7 +95,9 @@ module.exports = async (Robinhood, strategy, min, toPurchase, priceFilterSuffix 
     const record = async (stocks, strategyName, tickerLookups) => {
         const withPrices = stocks.map(ticker => {
             const relatedLookup = tickerLookups[ticker];
-            const price = isNotRegularHours ? relatedLookup.afterHourPrice : relatedLookup.lastTradePrice;
+            const price = isNotRegularHours ? 
+                relatedLookup.afterHourPrice || relatedLookup.lastTradePrice: 
+                relatedLookup.lastTradePrice;
             return {
                 ticker,
                 price
