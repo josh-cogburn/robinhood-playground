@@ -11,8 +11,8 @@ module.exports = async (Robinhood, ticker) => {
     // console.log('looking up', ticker);
     const quoteData = await Robinhood.quote_data(ticker);
     const { 
-        last_trade_price, 
-        adjusted_previous_close, 
+        last_trade_price,
+        adjusted_previous_close,
         instrument,
         ask_price,
         bid_price,

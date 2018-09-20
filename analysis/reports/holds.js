@@ -43,6 +43,8 @@ module.exports = async (Robinhood) => {
         };
     });
 
+    console.log({ combined});
+
     const formatReturnDollars = returnDollars => returnDollars < 0 ? `-$${Math.abs(returnDollars)}` : `+$${returnDollars}`;
     const formatted = combined.map(pos => 
         [
