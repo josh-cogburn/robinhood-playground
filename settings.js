@@ -42,8 +42,12 @@ module.exports = {
         '[sep17MORE]',
 
         '[afterhoursdropsGAMBLES]',
-        '[doubleDown]',
-        '[doubleDown]'
+
+        '[tripleDown]',
+        '[tripleDown]',
+        '[tripleDown]',
+
+        '[singleDown]',  // everydayers
     ],
     fallbackSellStrategy: 'limit3',
     force: {
