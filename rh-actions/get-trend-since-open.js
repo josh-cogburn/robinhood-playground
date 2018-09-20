@@ -52,7 +52,7 @@ const getTrendSinceOpen = {
         );
 
         let withQuotes = stocks.map((ticker, i) => {
-            let quoteData = quotes[i] || {};
+            let quoteData = quotes.find(q => q.symbol === ticker) || {};
             return {
                 ticker,
                 quote_data: quoteData,
