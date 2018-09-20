@@ -9,12 +9,13 @@ module.exports = async (Robinhood) => {
         const lookupObj = await lookup(Robinhood, instrument.symbol);
         return {
             ...pos,
+            ...lookupObj,
             average_buy_price: Number(pos.average_buy_price),
             symbol: instrument.symbol,
-            quantity: pos.quantity,
-            ...lookupObj,
+            ticker: instrument.symbol,
+            quantity: Number(pos.quantity),
         };
     });
     // console.log('made it', withTicks);
-    return withTicks;
+    return withTicks.filter(pos => pos.quantity);
 };
