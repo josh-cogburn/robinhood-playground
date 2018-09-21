@@ -4,12 +4,12 @@ const getTrendAndSave = require('./get-trend-and-save');
 const recordPicks = require('./record-picks');
 
 const GOLDEN_VARIATIONS = [
-    {
-        name: 'askEqLastTrade',
-        stockFilter: stock => 
-            stock.quote_data.askPrice === stock.quote_data.lastTrade 
-            || stock.quote_data.askPrice === stock.quote_data.afterHoursPrice
-    },
+    // {
+    //     name: 'askEqLastTrade',
+    //     stockFilter: stock => 
+    //         stock.quote_data.askPrice === stock.quote_data.lastTrade 
+    //         || stock.quote_data.askPrice === stock.quote_data.afterHoursPrice
+    // },
     // {
     //     name: 'trendingUpGt2SincePrevClose',
     //     stockFilter: stock => stock.trend_since_prev_close > 2
