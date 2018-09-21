@@ -71,7 +71,7 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
     // console.log(dailyTransactionDates, 'dailyTransactionDates');
     // console.log(pmModelDates, 'pmModelDates');
 
-    const nonzero = await detailedNonZero(Robinhood);
+    let nonzero = await detailedNonZero(Robinhood);
 
     const forceSells = nonzero.filter(pos => forceSell.includes(pos.symbol));
     nonzero = nonzero.filter(pos => !forceSell.includes(pos.symbol));
