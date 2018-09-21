@@ -6,7 +6,7 @@ const getNames = arr => arr.map(pick => pick.name);
 
 module.exports = async (Robinhood) => {
     const { sortedByPercUp } = await stratPerfOverall(Robinhood, true, 60);
-    // console.log(sortedByPercUp, 'haha');
+    console.log(sortedByPercUp, 'haha');
 
     const countPerms = [1, 2, 3, 4, 5, 6];
 
