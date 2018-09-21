@@ -3,13 +3,47 @@ const getTrendAndSave = require('./get-trend-and-save');
 // const purchaseStocks = require('./purchase-stocks');
 const recordPicks = require('./record-picks');
 
-const multipleRuns = {
-    askEqLastTrade: stock => 
-        stock.quote_data.ask_price === stock.quote_data.last_trade_price 
-        || stock.quote_data.ask_price === stock.quote_data.last_extended_hours_trade_price
-};
+const GOLDEN_VARIATIONS = [
+    {
+        name: 'askEqLastTrade',
+        stockFilter: stock => 
+            stock.quote_data.askPrice === stock.quote_data.lastTrade 
+            || stock.quote_data.askPrice === stock.quote_data.afterHoursPrice
+    },
+    {
+        name: 'trendingUpGt2SincePrevClose',
+        stockFilter: stock => stock.trend_since_prev_close > 2
+    },
+    {
+        name: 'trendingDown2SincePrevClose',
+        stockFilter: stock => stock.trend_since_prev_close < -2
+    }
+];
+
 
 const executeStrategy = async (Robinhood, strategyFn, min, ratioToSpend, strategy, pricePermFilter) => {
+
+    const executeSingleStrategy = async (trend, strategyName, priceKey) => {
+        const toPurchase = await strategyFn(Robinhood, trend, min);
+        console.log(toPurchase, 'toPurchase');
+
+        // gives ability to return an object from a trendFilter with multiple "variations"
+
+        const priceFilterSuffix = (priceKey === 'under5') ? '' : `-${priceKey}`;
+        await recordPicks(Robinhood, strategyName, min, toPurchase, priceFilterSuffix);
+    };
+
+    const runAllGoldenVariations = async (filteredByPrice, priceFilterSuffix) => {
+        for (let variation of GOLDEN_VARIATIONS) {
+            const { name, stockFilter } = variation;
+            await executeSingleStrategy(
+                filteredByPrice.filter(stockFilter),
+                `${strategy}-${name}`,
+                priceFilterSuffix
+            );
+        };
+    };
+
 
     console.log('executing strategy', `${strategy}-${min}`);
 
@@ -21,6 +55,7 @@ const executeStrategy = async (Robinhood, strategyFn, min, ratioToSpend, strateg
         tenTo15: [10, 15],
         fifteenTo20: [15, 20]
     };
+
 
     if (pricePermFilter) {
         Object.keys(pricePerms)
@@ -35,15 +70,19 @@ const executeStrategy = async (Robinhood, strategyFn, min, ratioToSpend, strateg
 
         const [lowBounds, highBounds] = pricePerms[priceKey];
         const trendFilteredByPricePerm = trend.filter(stock => {
-            return Number(stock.quote_data.last_trade_price) > lowBounds && Number(stock.quote_data.last_trade_price) <= highBounds;
+            return stock.quote_data.lastTrade > lowBounds && stock.quote_data.lastTrade <= highBounds;
         });
-        const toPurchase = await strategyFn(Robinhood, trendFilteredByPricePerm, min);
-        console.log(toPurchase, 'toPurchase');
 
-        // gives ability to return an object from a trendFilter with multiple "variations"
-
-        const priceFilterSuffix = (priceKey === 'under5') ? '' : `-${priceKey}`;
-        await recordPicks(Robinhood, strategy, min, toPurchase, priceFilterSuffix);
+        await executeSingleStrategy(    // first execute the strategy without any golden variations filtering
+            trendFilteredByPricePerm,
+            strategy,
+            priceKey
+        );
+        await runAllGoldenVariations(   // then run all golden variations (exponential power!)
+            trendFilteredByPricePerm,
+            priceKey
+        );
+        
 
     }
 
