@@ -47,7 +47,12 @@ module.exports = {
         '[tripleDown]',
         '[tripleDown]',
 
-        '[singleDown]',  // everydayers
+        '[singleDown]',  // 5 everydayers,
+        
+        '[preMarketDrops]',
+        '[hadAGoodDay]', // 3 everydayers
+
+        'constant-risers-10minute-percUpCloseOnlyPoints-filtered80-fiveTo10-40'
     ],
     fallbackSellStrategy: 'limit3',
     force: {

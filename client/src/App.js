@@ -117,8 +117,8 @@ class App extends Component {
               if (!foundPrice) {
                   return console.log(pick, 'not found', ticker, price);
               }
-              const { lastTradePrice, afterHourPrice } = foundPrice;
-              const nowPrice = afterHoursEnabled ? afterHourPrice || lastTradePrice : lastTradePrice;
+              const { lastTradePrice, afterHoursPrice } = foundPrice;
+              const nowPrice = afterHoursEnabled ? afterHoursPrice || lastTradePrice : lastTradePrice;
               return {
                   ticker,
                   thenPrice: price,

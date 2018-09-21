@@ -166,8 +166,9 @@ const stratManager = {
                             console.log('OH NO DAWG', stratObj.ticker, stratObj);
                             return {};
                         }
-                        const { lastTradePrice, afterHourPrice } = relPrices;
-                        const nowPrice = afterHourPrice || lastTradePrice;
+                        // console.log('relPrices', relPrices);
+                        const { lastTradePrice, afterHoursPrice } = relPrices;
+                        const nowPrice = afterHoursPrice || lastTradePrice;
                         return {
                             ticker: stratObj.ticker,
                             thenPrice: stratObj.price,

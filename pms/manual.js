@@ -785,7 +785,7 @@ const sepPerfectosMissing = [
     "sudden-drops-last5trend-filter30-221",
     "based-on-jump-gtEightOvernight-trending53-notWatchout-first1-tenTo15-16",
     "sudden-drops-last10trend-filter30-221",
-    "based-on-jump-gtEightOvernight-trending53-notWatchout-tenTo15-16",
+    // "based-on-jump-gtEightOvernight-trending53-notWatchout-tenTo15-16",
     "based-on-jump-down8overnight-trending53-notWatchout-ltneg50percmax-first2-5",
     "sudden-drops-last1trend-filter20-fiveTo10-14",
     "sudden-drops-last3trend-filter30-32",
@@ -894,7 +894,7 @@ const afterhoursdropsGAMBLES = [
     'sudden-drops-last18trend-filter20-400',
     'sudden-drops-last10trend-filter10-400',
     'sudden-drops-last18trend-filter10-430',
-    'sudden-drops-last30trend-filter10-fiveTo10-430',
+    // 'sudden-drops-last30trend-filter10-fiveTo10-430',
     'sudden-drops-last18trend-filter10-470',
     'sudden-drops-last18trend-filter10-500',
 ];
@@ -915,6 +915,17 @@ const singleDown = [
     'constant-risers-10minute-percUpCloseOnlyPoints-filtered80-fiveTo10-40',
 ];
 
+const preMarketDrops = [
+    'sudden-drops-last5trend-filter10-fiveTo10--50',
+    'sudden-drops-last50trend-first1-fifteenTo20--10',
+    'sudden-drops-last2trend-first1--30'
+];
+
+const hadAGoodDay = [
+    'sudden-drops-last5trend-first1-100',
+    'sudden-drops-last5trend-first2-fiveTo10-290',
+    'sudden-drops-last3trend-first1-100',
+];
 module.exports = {
     'wild n crazy': [
         'week-swings-tenTo15-1',  // wild
@@ -1007,5 +1018,7 @@ module.exports = {
     sep17MORE,
     afterhoursdropsGAMBLES,
     tripleDown,
-    singleDown
+    singleDown,
+    preMarketDrops,
+    hadAGoodDay
 };
