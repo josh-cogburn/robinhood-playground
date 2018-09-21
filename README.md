@@ -1,3 +1,5 @@
+![robinhood balance 9-10 through 9-20 2018 png](https://user-images.githubusercontent.com/11671559/45860802-0d9f1c80-bd1e-11e8-930d-cc0c9b8b492d.png)
+
 # robinhood-playground
 
 this repo is a Node.js stock scanner with Robinhood integration currently focused on penny stocks.
