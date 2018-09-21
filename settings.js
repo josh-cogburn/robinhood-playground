@@ -57,8 +57,7 @@ module.exports = {
     fallbackSellStrategy: 'limit3',
     force: {
         sell: [
-            // 'FCNCA',
-            // 'EBMT'
+            'FIHD'
         ],
         keep: [
             // 'NSPR',
