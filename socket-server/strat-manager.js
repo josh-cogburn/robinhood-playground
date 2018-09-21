@@ -52,7 +52,7 @@ const stratManager = {
         // }
         console.log('initd strat manager');
 
-        new CronJob(`20 9 * * 1-5`, () => this.newDay(), null, true);
+        new CronJob(`40 7 * * 1-5`, () => this.newDay(), null, true);
 
         setInterval(() => this.getRelatedPrices(), 40000);
     },
@@ -98,8 +98,8 @@ const stratManager = {
         // calc current date
         const now = new Date();
         const compareDate = new Date();
-        compareDate.setHours(9);
-        compareDate.setMinutes(20);
+        compareDate.setHours(7);
+        compareDate.setMinutes(40);
         if (compareDate - now > 0) {
             now.setDate(now.getDate() - 1);
         }
