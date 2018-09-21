@@ -1,4 +1,4 @@
-![robinhood balance 9-10 through 9-20 2018 png](https://user-images.githubusercontent.com/11671559/45860802-0d9f1c80-bd1e-11e8-930d-cc0c9b8b492d.png)
+![account balance perc up since 9-10-18](https://user-images.githubusercontent.com/11671559/45861246-6374c400-bd20-11e8-8f94-86025b21b133.png)
 
 # robinhood-playground
 
