@@ -27,7 +27,7 @@ module.exports = async (Robinhood) => {
 
     let cheapBuys = trend
         .filter(stock => {
-            return Number(stock.quote_data.last_trade_price) > 5 && Number(stock.quote_data.last_trade_price) < 6;
+            return stock.quoteData.lastTrade > 5 && stock.quoteData.lastTrade < 6;
         });
 
     // var allTickers = require('../json/stock-data/allStocks');

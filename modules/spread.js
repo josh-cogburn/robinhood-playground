@@ -17,9 +17,9 @@ const trendFilter = async (Robinhood, trend) => {
     withTrendSinceOpen = withTrendSinceOpen
         .map(t => ({
             ...t,
-            askPrice: Number(t.quote_data.ask_price),
-            bidPrice: Number(t.quote_data.bid_price),
-            lastTrade: Number(t.quote_data.last_trade_price)
+            askPrice: t.quote_data.askPrice,
+            bidPrice: t.quote_data.bidPrice,
+            lastTrade: t.quote_data.lastTrade
         }))
         .filter(buy => buy.trendSinceOpen && buy.askPrice && buy.bidPrice && buy.lastTrade)
         .map(t => ({

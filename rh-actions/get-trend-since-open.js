@@ -7,7 +7,24 @@ const mapLimit = require('promise-map-limit');
 const getTrend = require('../utils/get-trend');
 const chunkApi = require('../utils/chunk-api');
 const lookup = require('../utils/lookup');
+const formatQuoteData = require('../utils/format-quote-data');
 
+const formatStock = stock => {
+    // console.log('formatting', stock)
+    const { quote_data } = stock;
+    const shouldFormatQD = !quote_data.lastTrade;
+    const actualQD = shouldFormatQD ? formatQuoteData(quote_data) : quote_data;
+    const { lastTrade, prevClose } = actualQD;
+    const withAdditionalProps = {
+        ...stock,
+        symbol: stock.ticker,
+        quote_data: actualQD,
+        last_trade_price: lastTrade,
+        previous_close: prevClose,
+        trend_since_prev_close: getTrend(lastTrade, prevClose)
+    };
+    return withAdditionalProps;
+};
 
 const getTrendSinceOpen = {
     single: async (Robinhood, ticker) => {
@@ -24,19 +41,14 @@ const getTrendSinceOpen = {
         }
 
         const { open } = fundamentals;
-        const { last_trade_price, adjusted_previous_close } = lookup_data;
-
-        return {
+        
+        const stockObj = {
             ticker,
-            symbol: ticker,
             fundamentals,
             quote_data: lookup_data,
             open,
-            last_trade_price,
-            // previous_close,
-            trend_since_open: getTrend(last_trade_price, open),
-            trend_since_prev_close: getTrend(last_trade_price, adjusted_previous_close),
         };
+        return formatStock(stockObj);
     },
     multiple: async (Robinhood, stocks) => {
 
@@ -55,13 +67,11 @@ const getTrendSinceOpen = {
 
         let withQuotes = stocks.map((ticker, i) => {
             let relatedQuote = quotes.find(q => q.symbol === ticker) || {};
-            return {
+            const stockObj = {
                 ticker,
-                quote_data: relatedQuote,
-                last_trade_price: Number(relatedQuote.last_trade_price),
-                previous_close: Number(relatedQuote.previous_close),
-                trend_since_prev_close: getTrend(relatedQuote.last_trade_price, relatedQuote.adjusted_previous_close)
+                quote_data: relatedQuote
             };
+            return formatStock(stockObj);
         });
 
         // console.log(quotes, quotes.length, stocks.length);

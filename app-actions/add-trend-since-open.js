@@ -29,7 +29,7 @@ module.exports = async (Robinhood, trend) => {
         .filter(stock => stock.fundamentals.open)
         .map(stock => ({
             ...stock,
-            trendSinceOpen: getTrend(stock.quote_data.last_trade_price, stock.fundamentals.open)
+            trendSinceOpen: getTrend(stock.quote_data.lastTrade, stock.fundamentals.open)
         })).sort((a, b) => b.trendSinceOpen - a.trendSinceOpen);
 
 };
