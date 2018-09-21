@@ -1,4 +1,5 @@
-![robinhood-playground vs s and p](https://user-images.githubusercontent.com/11671559/45862255-d59bd780-bd25-11e8-9dd3-dff4b54f3ded.png)
+
+![robinhood-playground vs s and p perc thumbs up](https://user-images.githubusercontent.com/11671559/45863279-4644f300-bd2a-11e8-89d3-228d86e608b8.png)
 
 # robinhood-playground
 
