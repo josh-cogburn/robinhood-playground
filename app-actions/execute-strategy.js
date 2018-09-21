@@ -3,11 +3,11 @@ const getTrendAndSave = require('./get-trend-and-save');
 // const purchaseStocks = require('./purchase-stocks');
 const recordPicks = require('./record-picks');
 
-const multipleRuns = [
+const multipleRuns = {
     askEqLastTrade: stock => 
         stock.quote_data.ask_price === stock.quote_data.last_trade_price 
         || stock.quote_data.ask_price === stock.quote_data.last_extended_hours_trade_price
-];
+};
 
 const executeStrategy = async (Robinhood, strategyFn, min, ratioToSpend, strategy, pricePermFilter) => {
 

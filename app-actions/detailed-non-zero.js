@@ -14,12 +14,16 @@ const getDetailedNonZero = async (Robinhood) => {
     console.log('getting detailed non zero');
     const formattedWithLookup = await mapLimit(atLeastOneShare, 1, async pos => {
         const instrument = await Robinhood.url(pos.instrument);
+        console.log('instrument', instrument, 'sym', instrument.symbol)
         const lookupObj = await lookup(Robinhood, instrument.symbol);
         return {
             ...pos,
+            ticker: instrument.symbol,
             ...lookupObj,
         };
     });
+
+    console.log({ formattedWithLookup})
     
     const finalNonZeroPositions = await addBuyDataToPositions(formattedWithLookup);
     // console.log('made it', withTicks);

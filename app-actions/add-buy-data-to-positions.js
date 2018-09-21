@@ -11,7 +11,7 @@ const daysBetween = (firstDate, secondDate) => {
 };
 
 const addBuyDateToPositions = async nonzero => {
-    console.log('adding buy to positions')
+    console.log('adding buy to positions', nonzero)
     // shared var
     const dailyTransactionDates = await getFilesSortedByDate('daily-transactions');
     
@@ -19,19 +19,18 @@ const addBuyDateToPositions = async nonzero => {
     const withReturn = nonzero
         .map(pos => ({
             ...pos,
-            ticker: pos.symbol,
+            symbol: pos.ticker,
             returnPerc: getTrend(pos.afterHoursPrice || pos.lastTrade, pos.average_buy_price),
         }))
         .map(pos => ({
             ...pos,
             returnDollars: pos.returnPerc / 100 * pos.quantity * pos.lastTrade,
             value: pos.lastTrade * pos.quantity,
-            ticker: pos.symbol,
         }));
 
     // include buyStrategy, buyDate (from daily-transactions)
     const associatedBuys = await getAssociatedStrategies({
-        tickers: withReturn.map(pos => pos.symbol),
+        tickers: withReturn.map(pos => pos.ticker),
     }, dailyTransactionDates);
 
     console.log({associatedBuys})
