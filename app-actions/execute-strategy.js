@@ -10,14 +10,14 @@ const GOLDEN_VARIATIONS = [
             stock.quote_data.askPrice === stock.quote_data.lastTrade 
             || stock.quote_data.askPrice === stock.quote_data.afterHoursPrice
     },
-    {
-        name: 'trendingUpGt2SincePrevClose',
-        stockFilter: stock => stock.trend_since_prev_close > 2
-    },
-    {
-        name: 'trendingDown2SincePrevClose',
-        stockFilter: stock => stock.trend_since_prev_close < -2
-    }
+    // {
+    //     name: 'trendingUpGt2SincePrevClose',
+    //     stockFilter: stock => stock.trend_since_prev_close > 2
+    // },
+    // {
+    //     name: 'trendingDown2SincePrevClose',
+    //     stockFilter: stock => stock.trend_since_prev_close < -2
+    // }
 ];
 
 
@@ -25,10 +25,10 @@ const executeStrategy = async (Robinhood, strategyFn, min, ratioToSpend, strateg
 
     const executeSingleStrategy = async (trend, strategyName, priceKey) => {
         const toPurchase = await strategyFn(Robinhood, trend, min);
-        console.log(toPurchase, 'toPurchase');
+        constole.log('strategyName', strategyName);
+        console.log('toPurchase', toPurchase);
 
         // gives ability to return an object from a trendFilter with multiple "variations"
-
         const priceFilterSuffix = (priceKey === 'under5') ? '' : `-${priceKey}`;
         await recordPicks(Robinhood, strategyName, min, toPurchase, priceFilterSuffix);
     };
