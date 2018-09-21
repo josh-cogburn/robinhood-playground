@@ -105,7 +105,7 @@ module.exports = async (
 
                 const attemptLimitOrder = async () => {
                     const { askPrice, bidPrice, lastTrade } = await lookup(Robinhood, ticker);
-                    const allPrices = [askPrice, bidPrice, lastTrade];
+                    const allPrices = askPrice ? [askPrice, bidPrice, lastTrade] : [lastTrade, lastTrade * 1.05];    // if askPrice is not set use lastTrade * 1.05 as upper limit
                     const upperTarget = Math.max(...allPrices);
                     const lowerTarget = Math.min(...allPrices);
                     const spread = upperTarget - lowerTarget;
