@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "APDN",
+      "price": 1.5001
+    },
+    {
+      "ticker": "PRPO",
+      "price": 0.426
+    }
+  ],
+  "5": [
+    {
+      "ticker": "APDN",
+      "price": 1.5175
+    },
+    {
+      "ticker": "PRPO",
+      "price": 0.4274
+    }
+  ],
+  "16": [
+    {
+      "ticker": "APDN",
+      "price": 1.4243
+    },
+    {
+      "ticker": "PRPO",
+      "price": 0.41
+    }
+  ],
+  "30": [
+    {
+      "ticker": "APDN",
+      "price": 1.45
+    },
+    {
+      "ticker": "PRPO",
+      "price": 0.41
+    }
+  ]
+}

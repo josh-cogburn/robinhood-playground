@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "USO",
+      "price": 15
+    },
+    {
+      "ticker": "FATE",
+      "price": 14.13
+    },
+    {
+      "ticker": "NORW",
+      "price": 15.005
+    }
+  ],
+  "5": [
+    {
+      "ticker": "USO",
+      "price": 15.0001
+    },
+    {
+      "ticker": "FATE",
+      "price": 14.02
+    },
+    {
+      "ticker": "DBO",
+      "price": 13.01
+    }
+  ],
+  "16": [
+    {
+      "ticker": "USO",
+      "price": 14.99
+    },
+    {
+      "ticker": "FATE",
+      "price": 14.34
+    },
+    {
+      "ticker": "DBO",
+      "price": 12.98
+    }
+  ],
+  "30": [
+    {
+      "ticker": "PBD",
+      "price": 12.3299
+    },
+    {
+      "ticker": "PXJ",
+      "price": 10.052
+    },
+    {
+      "ticker": "FATE",
+      "price": 14.53
+    }
+  ]
+}

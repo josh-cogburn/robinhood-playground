@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "VNET",
+      "price": 9.92
+    },
+    {
+      "ticker": "BKD",
+      "price": 9.72
+    }
+  ],
+  "40": [
+    {
+      "ticker": "VNET",
+      "price": 9.945
+    },
+    {
+      "ticker": "BKD",
+      "price": 9.975
+    }
+  ],
+  "100": [
+    {
+      "ticker": "BKD",
+      "price": 9.85
+    },
+    {
+      "ticker": "CSU",
+      "price": 9.29
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PBR.A",
+      "price": 10.01
+    },
+    {
+      "ticker": "BKD",
+      "price": 9.845
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PRTK",
+      "price": 9.425
+    },
+    {
+      "ticker": "CSU",
+      "price": 9.1598
+    }
+  ],
+  "351": [
+    {
+      "ticker": "PRTK",
+      "price": 9.475
+    },
+    {
+      "ticker": "CSU",
+      "price": 9.18
+    }
+  ],
+  "381": [
+    {
+      "ticker": "PRTK",
+      "price": 9.55
+    },
+    {
+      "ticker": "LBY",
+      "price": 9.31
+    }
+  ]
+}

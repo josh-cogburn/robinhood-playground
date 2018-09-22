@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "USAT",
+      "price": 10
+    },
+    {
+      "ticker": "PBR.A",
+      "price": 9.82
+    }
+  ],
+  "40": [
+    {
+      "ticker": "USAT",
+      "price": 9.825
+    },
+    {
+      "ticker": "ABUS",
+      "price": 9.95
+    }
+  ],
+  "100": [
+    {
+      "ticker": "CBIO",
+      "price": 9.92
+    },
+    {
+      "ticker": "USAT",
+      "price": 9.375
+    }
+  ],
+  "200": [
+    {
+      "ticker": "USAT",
+      "price": 9.325
+    },
+    {
+      "ticker": "ABUS",
+      "price": 9.75
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CBIO",
+      "price": 9.99
+    },
+    {
+      "ticker": "USAT",
+      "price": 9.125
+    }
+  ],
+  "351": [
+    {
+      "ticker": "USAT",
+      "price": 8.8
+    },
+    {
+      "ticker": "ABUS",
+      "price": 9.625
+    }
+  ],
+  "381": [
+    {
+      "ticker": "USAT",
+      "price": 8.675
+    },
+    {
+      "ticker": "ABUS",
+      "price": 9.575
+    }
+  ]
+}

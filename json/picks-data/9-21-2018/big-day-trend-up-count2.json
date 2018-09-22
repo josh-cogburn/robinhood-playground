@@ -1,0 +1,42 @@
+{
+  "10": [
+    {
+      "ticker": "INTX",
+      "price": 1.8
+    },
+    {
+      "ticker": "GSAT",
+      "price": 0.52
+    }
+  ],
+  "35": [
+    {
+      "ticker": "SJT",
+      "price": 4.95
+    },
+    {
+      "ticker": "DAG",
+      "price": 2.18
+    }
+  ],
+  "90": [
+    {
+      "ticker": "SJT",
+      "price": 4.8868
+    },
+    {
+      "ticker": "DAG",
+      "price": 2.2
+    }
+  ],
+  "223": [
+    {
+      "ticker": "PLX",
+      "price": 0.7174
+    },
+    {
+      "ticker": "VRML",
+      "price": 0.68
+    }
+  ]
+}

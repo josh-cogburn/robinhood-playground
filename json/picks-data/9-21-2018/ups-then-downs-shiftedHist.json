@@ -1,0 +1,82 @@
+{
+  "10": [
+    {
+      "ticker": "DGLY",
+      "price": 4.1
+    },
+    {
+      "ticker": "CVRS",
+      "price": 1.415
+    },
+    {
+      "ticker": "RIGL",
+      "price": 3.359
+    }
+  ],
+  "50": [
+    {
+      "ticker": "DGLY",
+      "price": 3.9577
+    },
+    {
+      "ticker": "CVRS",
+      "price": 1.43
+    }
+  ],
+  "200": [
+    {
+      "ticker": "DGLY",
+      "price": 4.1788
+    },
+    {
+      "ticker": "CVRS",
+      "price": 1.43
+    },
+    {
+      "ticker": "SES",
+      "price": 2.3
+    }
+  ],
+  "300": [
+    {
+      "ticker": "DGLY",
+      "price": 4.15
+    },
+    {
+      "ticker": "CVRS",
+      "price": 1.415
+    },
+    {
+      "ticker": "SES",
+      "price": 2.3
+    }
+  ],
+  "380": [
+    {
+      "ticker": "DGLY",
+      "price": 4.2
+    },
+    {
+      "ticker": "CVRS",
+      "price": 1.4
+    },
+    {
+      "ticker": "SES",
+      "price": 2.3
+    }
+  ],
+  "600": [
+    {
+      "ticker": "DGLY",
+      "price": 4.3
+    },
+    {
+      "ticker": "CVRS",
+      "price": 1.39
+    },
+    {
+      "ticker": "SES",
+      "price": 2.3
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "0": [
+    {
+      "ticker": "DTEA",
+      "price": 5
+    },
+    {
+      "ticker": "IGC",
+      "price": 2.8357
+    },
+    {
+      "ticker": "REED",
+      "price": 3.75
+    }
+  ],
+  "5": [
+    {
+      "ticker": "DTEA",
+      "price": 4.5
+    },
+    {
+      "ticker": "IGC",
+      "price": 2.869
+    },
+    {
+      "ticker": "REED",
+      "price": 3.7
+    }
+  ],
+  "16": [
+    {
+      "ticker": "IGC",
+      "price": 3.39
+    },
+    {
+      "ticker": "REED",
+      "price": 3.65
+    },
+    {
+      "ticker": "NVAX",
+      "price": 1.59
+    }
+  ]
+}

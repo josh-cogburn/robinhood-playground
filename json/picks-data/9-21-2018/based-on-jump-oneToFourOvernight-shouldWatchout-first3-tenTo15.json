@@ -1,0 +1,46 @@
+{
+  "0": [
+    {
+      "ticker": "HCLP",
+      "price": 12.3
+    },
+    {
+      "ticker": "FATE",
+      "price": 14.13
+    }
+  ],
+  "5": [
+    {
+      "ticker": "HCLP",
+      "price": 12.35
+    },
+    {
+      "ticker": "FATE",
+      "price": 14.02
+    }
+  ],
+  "16": [
+    {
+      "ticker": "HCLP",
+      "price": 12.35
+    },
+    {
+      "ticker": "FATE",
+      "price": 14.34
+    }
+  ],
+  "30": [
+    {
+      "ticker": "HCLP",
+      "price": 12.4163
+    },
+    {
+      "ticker": "FATE",
+      "price": 14.53
+    },
+    {
+      "ticker": "VNET",
+      "price": 10.01
+    }
+  ]
+}

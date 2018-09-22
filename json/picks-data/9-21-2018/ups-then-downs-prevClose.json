@@ -1,0 +1,118 @@
+{
+  "10": [
+    {
+      "ticker": "BLRX",
+      "price": 1.024
+    },
+    {
+      "ticker": "GPL",
+      "price": 0.9543
+    },
+    {
+      "ticker": "QUMU",
+      "price": 2.65
+    }
+  ],
+  "50": [
+    {
+      "ticker": "BLRX",
+      "price": 0.98
+    },
+    {
+      "ticker": "IPWR",
+      "price": 0.656
+    },
+    {
+      "ticker": "QUMU",
+      "price": 2.62
+    },
+    {
+      "ticker": "GPL",
+      "price": 0.9664
+    }
+  ],
+  "200": [
+    {
+      "ticker": "BLRX",
+      "price": 0.9647
+    },
+    {
+      "ticker": "SEII",
+      "price": 3.0138
+    },
+    {
+      "ticker": "BLDP",
+      "price": 4.38
+    },
+    {
+      "ticker": "IPWR",
+      "price": 0.65
+    },
+    {
+      "ticker": "TOPS",
+      "price": 1.0444
+    }
+  ],
+  "300": [
+    {
+      "ticker": "BLRX",
+      "price": 0.96
+    },
+    {
+      "ticker": "BLDP",
+      "price": 4.4028
+    },
+    {
+      "ticker": "IPWR",
+      "price": 0.6423
+    },
+    {
+      "ticker": "GPL",
+      "price": 0.949
+    },
+    {
+      "ticker": "HTGM",
+      "price": 4.43
+    }
+  ],
+  "380": [
+    {
+      "ticker": "BLRX",
+      "price": 0.9711
+    },
+    {
+      "ticker": "BLDP",
+      "price": 4.36
+    },
+    {
+      "ticker": "IPWR",
+      "price": 0.6421
+    },
+    {
+      "ticker": "HTGM",
+      "price": 4.41
+    }
+  ],
+  "600": [
+    {
+      "ticker": "BLRX",
+      "price": 0.996
+    },
+    {
+      "ticker": "BLDP",
+      "price": 4.36
+    },
+    {
+      "ticker": "LIFE",
+      "price": 0.8029
+    },
+    {
+      "ticker": "CPST",
+      "price": 0.97
+    },
+    {
+      "ticker": "HTGM",
+      "price": 4.37
+    }
+  ]
+}

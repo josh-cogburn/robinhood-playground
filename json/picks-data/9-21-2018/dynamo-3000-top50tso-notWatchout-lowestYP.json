@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "CAPR",
+      "price": 1.1403
+    },
+    {
+      "ticker": "GSAT",
+      "price": 0.5299
+    }
+  ],
+  "40": [
+    {
+      "ticker": "TGB",
+      "price": 0.786
+    },
+    {
+      "ticker": "ASM",
+      "price": 0.59
+    }
+  ],
+  "100": [
+    {
+      "ticker": "VRML",
+      "price": 0.648
+    },
+    {
+      "ticker": "ASM",
+      "price": 0.6039
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CPHI",
+      "price": 0.2164
+    },
+    {
+      "ticker": "TGB",
+      "price": 0.8
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NEON",
+      "price": 0.2897
+    },
+    {
+      "ticker": "TGB",
+      "price": 0.7914
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NEON",
+      "price": 0.2801
+    },
+    {
+      "ticker": "TGB",
+      "price": 0.7975
+    }
+  ],
+  "381": [
+    {
+      "ticker": "NEON",
+      "price": 0.2811
+    },
+    {
+      "ticker": "TGB",
+      "price": 0.8
+    }
+  ]
+}

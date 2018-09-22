@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "BB",
+      "price": 10.3
+    },
+    {
+      "ticker": "CBIO",
+      "price": 10.3
+    }
+  ],
+  "40": [
+    {
+      "ticker": "BPI",
+      "price": 10.1
+    },
+    {
+      "ticker": "CBIO",
+      "price": 10.06
+    }
+  ],
+  "100": [
+    {
+      "ticker": "BPI",
+      "price": 10.05
+    },
+    {
+      "ticker": "IMMR",
+      "price": 10.22
+    }
+  ],
+  "200": [
+    {
+      "ticker": "BPI",
+      "price": 10.005
+    },
+    {
+      "ticker": "CBIO",
+      "price": 10.04
+    }
+  ],
+  "260": [
+    {
+      "ticker": "BPI",
+      "price": 10.01
+    },
+    {
+      "ticker": "IMMR",
+      "price": 10.2
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CBIO",
+      "price": 10.16
+    },
+    {
+      "ticker": "IMMR",
+      "price": 10.14
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CBIO",
+      "price": 10.1299
+    },
+    {
+      "ticker": "IMMR",
+      "price": 10.16
+    }
+  ]
+}

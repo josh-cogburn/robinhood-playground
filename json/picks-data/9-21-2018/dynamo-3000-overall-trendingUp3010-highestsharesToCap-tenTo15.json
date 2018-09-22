@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "BB",
+      "price": 10.3
+    },
+    {
+      "ticker": "GCI",
+      "price": 10.44
+    }
+  ],
+  "40": [
+    {
+      "ticker": "LTM",
+      "price": 10
+    },
+    {
+      "ticker": "NAII",
+      "price": 10.15
+    }
+  ],
+  "100": [
+    {
+      "ticker": "NAII",
+      "price": 10.1245
+    },
+    {
+      "ticker": "JRO",
+      "price": 10.19
+    }
+  ],
+  "200": [
+    {
+      "ticker": "NAII",
+      "price": 10.15
+    },
+    {
+      "ticker": "JRO",
+      "price": 10.19
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NAII",
+      "price": 10.15
+    },
+    {
+      "ticker": "JRO",
+      "price": 10.19
+    }
+  ],
+  "351": [
+    {
+      "ticker": "PXJ",
+      "price": 10.03
+    },
+    {
+      "ticker": "NAII",
+      "price": 10.05
+    }
+  ],
+  "381": [
+    {
+      "ticker": "PXJ",
+      "price": 10.03
+    },
+    {
+      "ticker": "NAII",
+      "price": 10.1
+    }
+  ]
+}

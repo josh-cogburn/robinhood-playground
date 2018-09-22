@@ -1,0 +1,52 @@
+{
+  "12": [
+    {
+      "ticker": "SIEB",
+      "price": 15.15
+    },
+    {
+      "ticker": "ALDR",
+      "price": 16.45
+    }
+  ],
+  "190": [
+    {
+      "ticker": "ALDR",
+      "price": 16.4
+    },
+    {
+      "ticker": "NYRT",
+      "price": 17.7125
+    }
+  ],
+  "250": [
+    {
+      "ticker": "ALDR",
+      "price": 16.35
+    },
+    {
+      "ticker": "NYRT",
+      "price": 17.7775
+    }
+  ],
+  "600": [
+    {
+      "ticker": "ALDR",
+      "price": 16.1
+    },
+    {
+      "ticker": "NYRT",
+      "price": 17.89
+    }
+  ],
+  "-15": [
+    {
+      "ticker": "SIEB",
+      "price": 15.23
+    },
+    {
+      "ticker": "ALDR",
+      "price": 16.3
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "0": [
+    {
+      "ticker": "ICCC",
+      "price": 8.51
+    },
+    {
+      "ticker": "GOL",
+      "price": 5.61
+    },
+    {
+      "ticker": "CMCM",
+      "price": 10.04
+    },
+    {
+      "ticker": "DLHC",
+      "price": 6.099
+    },
+    {
+      "ticker": "HYGS",
+      "price": 7.35
+    }
+  ],
+  "5": [
+    {
+      "ticker": "ICCC",
+      "price": 8.51
+    },
+    {
+      "ticker": "GOL",
+      "price": 5.6495
+    },
+    {
+      "ticker": "DLHC",
+      "price": 6.2
+    },
+    {
+      "ticker": "HYGS",
+      "price": 7.35
+    },
+    {
+      "ticker": "TXMD",
+      "price": 6.79
+    }
+  ],
+  "16": [
+    {
+      "ticker": "GOL",
+      "price": 5.625
+    },
+    {
+      "ticker": "HYGS",
+      "price": 7.35
+    },
+    {
+      "ticker": "AGRO",
+      "price": 7.685
+    }
+  ]
+}

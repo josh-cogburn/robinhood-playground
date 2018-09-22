@@ -1,0 +1,44 @@
+{
+  "0": [
+    {
+      "ticker": "INPX",
+      "price": 0.1632
+    },
+    {
+      "ticker": "BLDP",
+      "price": 4.6
+    },
+    {
+      "ticker": "AMRN",
+      "price": 2.95
+    }
+  ],
+  "5": [
+    {
+      "ticker": "AVP",
+      "price": 2.5099
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.16
+    },
+    {
+      "ticker": "BLDP",
+      "price": 4.5578
+    },
+    {
+      "ticker": "AMRN",
+      "price": 2.9084
+    }
+  ],
+  "16": [
+    {
+      "ticker": "AVP",
+      "price": 2.5
+    },
+    {
+      "ticker": "BLDP",
+      "price": 4.52
+    }
+  ]
+}

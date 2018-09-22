@@ -74,5 +74,23 @@
       "ticker": "LODE",
       "price": 0.154
     }
+  ],
+  "600": [
+    {
+      "ticker": "DGLY",
+      "price": 3.9499
+    },
+    {
+      "ticker": "CVRS",
+      "price": 1.37
+    },
+    {
+      "ticker": "RIGL",
+      "price": 3.3399
+    },
+    {
+      "ticker": "SES",
+      "price": 2.3
+    }
   ]
 }

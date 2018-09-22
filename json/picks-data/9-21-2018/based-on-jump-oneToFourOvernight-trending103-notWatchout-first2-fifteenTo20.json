@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "SGC",
+      "price": 19.44
+    },
+    {
+      "ticker": "DO",
+      "price": 18.83
+    }
+  ],
+  "5": [
+    {
+      "ticker": "SGC",
+      "price": 19.44
+    },
+    {
+      "ticker": "CHIQ",
+      "price": 15.875
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CPER",
+      "price": 17.76
+    },
+    {
+      "ticker": "SGC",
+      "price": 19.5
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CPER",
+      "price": 17.76
+    },
+    {
+      "ticker": "SGC",
+      "price": 19.85
+    }
+  ]
+}

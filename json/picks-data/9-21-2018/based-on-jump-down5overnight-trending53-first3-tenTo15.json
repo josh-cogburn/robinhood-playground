@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "NUGT",
+      "price": 13
+    },
+    {
+      "ticker": "WMC",
+      "price": 10.66
+    }
+  ],
+  "5": [
+    {
+      "ticker": "NUGT",
+      "price": 13.0599
+    },
+    {
+      "ticker": "WMC",
+      "price": 10.6599
+    }
+  ],
+  "16": [
+    {
+      "ticker": "NUGT",
+      "price": 13.19
+    },
+    {
+      "ticker": "WMC",
+      "price": 10.68
+    }
+  ],
+  "30": [
+    {
+      "ticker": "NUGT",
+      "price": 13.52
+    },
+    {
+      "ticker": "WMC",
+      "price": 10.69
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "0": [
+    {
+      "ticker": "FCX",
+      "price": 14.6963
+    },
+    {
+      "ticker": "LFC",
+      "price": 11.46
+    },
+    {
+      "ticker": "CGO",
+      "price": 14.57
+    },
+    {
+      "ticker": "NORW",
+      "price": 15.005
+    },
+    {
+      "ticker": "CCXI",
+      "price": 12.6
+    }
+  ],
+  "5": [
+    {
+      "ticker": "FCX",
+      "price": 14.66
+    },
+    {
+      "ticker": "CMCM",
+      "price": 9.95
+    },
+    {
+      "ticker": "LFC",
+      "price": 11.445
+    },
+    {
+      "ticker": "CGO",
+      "price": 14.57
+    },
+    {
+      "ticker": "CCXI",
+      "price": 12.37
+    }
+  ],
+  "16": [
+    {
+      "ticker": "FCX",
+      "price": 14.64
+    },
+    {
+      "ticker": "CMCM",
+      "price": 10.0096
+    },
+    {
+      "ticker": "LFC",
+      "price": 11.445
+    },
+    {
+      "ticker": "SEA",
+      "price": 10.395
+    },
+    {
+      "ticker": "CGO",
+      "price": 14.57
+    }
+  ],
+  "30": [
+    {
+      "ticker": "FCX",
+      "price": 14.86
+    },
+    {
+      "ticker": "PBD",
+      "price": 12.3299
+    },
+    {
+      "ticker": "LFC",
+      "price": 11.445
+    },
+    {
+      "ticker": "APB",
+      "price": 13.5961
+    },
+    {
+      "ticker": "PXJ",
+      "price": 10.052
+    }
+  ]
+}

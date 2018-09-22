@@ -1,0 +1,44 @@
+{
+  "0": [
+    {
+      "ticker": "BRID",
+      "price": 17.15
+    },
+    {
+      "ticker": "SGC",
+      "price": 19.44
+    },
+    {
+      "ticker": "GLQ",
+      "price": 15.3
+    }
+  ],
+  "5": [
+    {
+      "ticker": "BRID",
+      "price": 17.15
+    },
+    {
+      "ticker": "SGC",
+      "price": 19.44
+    },
+    {
+      "ticker": "CHIQ",
+      "price": 15.875
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CHIQ",
+      "price": 15.875
+    },
+    {
+      "ticker": "GLQ",
+      "price": 15.09
+    },
+    {
+      "ticker": "IRS",
+      "price": 17.2
+    }
+  ]
+}

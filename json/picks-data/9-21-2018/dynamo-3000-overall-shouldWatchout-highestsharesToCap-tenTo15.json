@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "BPI",
+      "price": 10.23
+    },
+    {
+      "ticker": "CBIO",
+      "price": 10.3
+    }
+  ],
+  "40": [
+    {
+      "ticker": "VCYT",
+      "price": 10.13
+    },
+    {
+      "ticker": "BPI",
+      "price": 10.1
+    }
+  ],
+  "100": [
+    {
+      "ticker": "VNET",
+      "price": 10.2
+    },
+    {
+      "ticker": "VCYT",
+      "price": 9.97
+    }
+  ],
+  "200": [
+    {
+      "ticker": "VNET",
+      "price": 10.17
+    },
+    {
+      "ticker": "VCYT",
+      "price": 10.13
+    }
+  ],
+  "260": [
+    {
+      "ticker": "VNET",
+      "price": 10.07
+    },
+    {
+      "ticker": "VCYT",
+      "price": 10.09
+    }
+  ],
+  "351": [
+    {
+      "ticker": "VNET",
+      "price": 10.145
+    },
+    {
+      "ticker": "VCYT",
+      "price": 10.15
+    }
+  ],
+  "381": [
+    {
+      "ticker": "VNET",
+      "price": 10.25
+    },
+    {
+      "ticker": "VCYT",
+      "price": 10.05
+    }
+  ]
+}

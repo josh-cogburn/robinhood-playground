@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "BB",
+      "price": 10.3
+    },
+    {
+      "ticker": "ABX",
+      "price": 10.3675
+    }
+  ],
+  "40": [
+    {
+      "ticker": "IKNX",
+      "price": 10.52
+    },
+    {
+      "ticker": "DERM",
+      "price": 10.83
+    }
+  ],
+  "100": [
+    {
+      "ticker": "IKNX",
+      "price": 10.52
+    },
+    {
+      "ticker": "DERM",
+      "price": 10.58
+    }
+  ],
+  "200": [
+    {
+      "ticker": "IKNX",
+      "price": 10.475
+    },
+    {
+      "ticker": "DERM",
+      "price": 10.64
+    }
+  ],
+  "260": [
+    {
+      "ticker": "DERM",
+      "price": 10.4301
+    },
+    {
+      "ticker": "MFD",
+      "price": 10.951
+    }
+  ],
+  "351": [
+    {
+      "ticker": "DERM",
+      "price": 10.34
+    },
+    {
+      "ticker": "MFD",
+      "price": 10.94
+    }
+  ],
+  "381": [
+    {
+      "ticker": "DERM",
+      "price": 10.35
+    },
+    {
+      "ticker": "VECO",
+      "price": 10.85
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "NORW",
+      "price": 15.005
+    },
+    {
+      "ticker": "PSAU",
+      "price": 15.3049
+    }
+  ],
+  "40": [
+    {
+      "ticker": "PSAU",
+      "price": 15.41
+    },
+    {
+      "ticker": "INVA",
+      "price": 15.39
+    }
+  ],
+  "100": [
+    {
+      "ticker": "CSIQ",
+      "price": 15.06
+    },
+    {
+      "ticker": "INVA",
+      "price": 15.23
+    }
+  ],
+  "200": [
+    {
+      "ticker": "INVA",
+      "price": 15.215
+    },
+    {
+      "ticker": "SPAR",
+      "price": 15.525
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ITCB",
+      "price": 15.0345
+    },
+    {
+      "ticker": "INVA",
+      "price": 15.13
+    }
+  ],
+  "351": [
+    {
+      "ticker": "ITCB",
+      "price": 15.1759
+    },
+    {
+      "ticker": "INVA",
+      "price": 15.05
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SSBI",
+      "price": 15.25
+    },
+    {
+      "ticker": "SPAR",
+      "price": 15.425
+    }
+  ]
+}

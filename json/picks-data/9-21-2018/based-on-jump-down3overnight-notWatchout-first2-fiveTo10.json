@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "LEAF",
+      "price": 9.95
+    },
+    {
+      "ticker": "UGLD",
+      "price": 7.89
+    }
+  ],
+  "5": [
+    {
+      "ticker": "LEAF",
+      "price": 10
+    },
+    {
+      "ticker": "UGLD",
+      "price": 7.89
+    }
+  ],
+  "16": [
+    {
+      "ticker": "INTT",
+      "price": 8.15
+    },
+    {
+      "ticker": "LEAF",
+      "price": 10
+    }
+  ],
+  "30": [
+    {
+      "ticker": "INTT",
+      "price": 8.15
+    },
+    {
+      "ticker": "LEAF",
+      "price": 10
+    }
+  ]
+}

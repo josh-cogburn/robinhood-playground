@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "USO",
+      "price": 15
+    },
+    {
+      "ticker": "NORW",
+      "price": 15.005
+    }
+  ],
+  "5": [
+    {
+      "ticker": "USO",
+      "price": 15.0001
+    },
+    {
+      "ticker": "DBO",
+      "price": 13.01
+    }
+  ],
+  "16": [
+    {
+      "ticker": "USO",
+      "price": 14.99
+    },
+    {
+      "ticker": "SEA",
+      "price": 10.395
+    }
+  ],
+  "30": [
+    {
+      "ticker": "PBD",
+      "price": 12.3299
+    },
+    {
+      "ticker": "PXJ",
+      "price": 10.052
+    }
+  ]
+}

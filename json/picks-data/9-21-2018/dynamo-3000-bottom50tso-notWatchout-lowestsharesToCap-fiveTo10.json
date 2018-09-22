@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "PLAB",
+      "price": 9.8
+    },
+    {
+      "ticker": "SOXS",
+      "price": 9.37
+    }
+  ],
+  "40": [
+    {
+      "ticker": "FEIM",
+      "price": 9.52
+    },
+    {
+      "ticker": "SOXS",
+      "price": 9.28
+    }
+  ],
+  "100": [
+    {
+      "ticker": "AXR",
+      "price": 8.6772
+    },
+    {
+      "ticker": "EIGI",
+      "price": 8.9
+    }
+  ],
+  "200": [
+    {
+      "ticker": "LEAF",
+      "price": 9.7
+    },
+    {
+      "ticker": "CMCM",
+      "price": 9.76
+    }
+  ],
+  "260": [
+    {
+      "ticker": "LEAF",
+      "price": 9.7
+    },
+    {
+      "ticker": "COHN",
+      "price": 9.8
+    }
+  ],
+  "351": [
+    {
+      "ticker": "COHN",
+      "price": 9.8027
+    },
+    {
+      "ticker": "CMCM",
+      "price": 9.76
+    }
+  ],
+  "381": [
+    {
+      "ticker": "COHN",
+      "price": 9.61
+    },
+    {
+      "ticker": "PMBC",
+      "price": 9.25
+    }
+  ]
+}

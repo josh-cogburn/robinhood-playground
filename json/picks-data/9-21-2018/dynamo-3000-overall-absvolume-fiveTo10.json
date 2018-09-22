@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "LCI",
+      "price": 5.25
+    },
+    {
+      "ticker": "NEOS",
+      "price": 5.15
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CRBP",
+      "price": 6.4715
+    },
+    {
+      "ticker": "MDXG",
+      "price": 5.94
+    }
+  ],
+  "100": [
+    {
+      "ticker": "AMSC",
+      "price": 6.57
+    },
+    {
+      "ticker": "MDXG",
+      "price": 6.315
+    }
+  ],
+  "200": [
+    {
+      "ticker": "AMSC",
+      "price": 6.4999
+    },
+    {
+      "ticker": "ASTC",
+      "price": 5.54
+    }
+  ],
+  "260": [
+    {
+      "ticker": "USAT",
+      "price": 9.125
+    },
+    {
+      "ticker": "ASTC",
+      "price": 5.1
+    }
+  ],
+  "351": [
+    {
+      "ticker": "USAT",
+      "price": 8.8
+    },
+    {
+      "ticker": "ASTC",
+      "price": 5.29
+    }
+  ],
+  "381": [
+    {
+      "ticker": "RFIL",
+      "price": 7.825
+    },
+    {
+      "ticker": "ASTC",
+      "price": 5.37
+    }
+  ]
+}

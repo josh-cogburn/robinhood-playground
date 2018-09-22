@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "LCI",
+      "price": 5.25
+    },
+    {
+      "ticker": "ADVM",
+      "price": 5.95
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CRBP",
+      "price": 6.4715
+    },
+    {
+      "ticker": "CNAT",
+      "price": 5.2899
+    }
+  ],
+  "100": [
+    {
+      "ticker": "AMSC",
+      "price": 6.57
+    },
+    {
+      "ticker": "CRBP",
+      "price": 6.65
+    }
+  ],
+  "200": [
+    {
+      "ticker": "AMSC",
+      "price": 6.4999
+    },
+    {
+      "ticker": "CRBP",
+      "price": 6.5425
+    }
+  ],
+  "260": [
+    {
+      "ticker": "USAT",
+      "price": 9.125
+    },
+    {
+      "ticker": "AMSC",
+      "price": 6.55
+    }
+  ],
+  "351": [
+    {
+      "ticker": "USAT",
+      "price": 8.8
+    },
+    {
+      "ticker": "AMSC",
+      "price": 6.624
+    }
+  ],
+  "381": [
+    {
+      "ticker": "RFIL",
+      "price": 7.825
+    },
+    {
+      "ticker": "USAT",
+      "price": 8.675
+    }
+  ]
+}

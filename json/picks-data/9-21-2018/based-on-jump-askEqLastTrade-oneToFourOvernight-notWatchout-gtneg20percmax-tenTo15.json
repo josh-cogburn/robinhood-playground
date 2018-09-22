@@ -1,0 +1,52 @@
+{
+  "0": [
+    {
+      "ticker": "TPVG",
+      "price": 13.12
+    },
+    {
+      "ticker": "USO",
+      "price": 14.99
+    },
+    {
+      "ticker": "EROS",
+      "price": 12.5
+    },
+    {
+      "ticker": "CGO",
+      "price": 14.57
+    },
+    {
+      "ticker": "AMRC",
+      "price": 13.5
+    }
+  ],
+  "5": [
+    {
+      "ticker": "TPVG",
+      "price": 13.11
+    },
+    {
+      "ticker": "USO",
+      "price": 15
+    },
+    {
+      "ticker": "EROS",
+      "price": 12.5
+    },
+    {
+      "ticker": "CGO",
+      "price": 14.57
+    },
+    {
+      "ticker": "AMRC",
+      "price": 13.55
+    }
+  ],
+  "16": [
+    {
+      "ticker": "EROS",
+      "price": 12.475
+    }
+  ]
+}

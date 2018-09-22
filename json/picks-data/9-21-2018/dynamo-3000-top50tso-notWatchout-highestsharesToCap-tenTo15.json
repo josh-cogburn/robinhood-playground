@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "NR",
+      "price": 10.05
+    },
+    {
+      "ticker": "AUDC",
+      "price": 10.151
+    }
+  ],
+  "40": [
+    {
+      "ticker": "LTM",
+      "price": 10
+    },
+    {
+      "ticker": "NAII",
+      "price": 10.15
+    }
+  ],
+  "100": [
+    {
+      "ticker": "NAII",
+      "price": 10.1245
+    },
+    {
+      "ticker": "BCRH",
+      "price": 10.4
+    }
+  ],
+  "200": [
+    {
+      "ticker": "NAII",
+      "price": 10.15
+    },
+    {
+      "ticker": "HALL",
+      "price": 10.75
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NAII",
+      "price": 10.15
+    },
+    {
+      "ticker": "HALL",
+      "price": 10.65
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CDOR",
+      "price": 10.4
+    },
+    {
+      "ticker": "RMCF",
+      "price": 10.35
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MHH",
+      "price": 10.29
+    },
+    {
+      "ticker": "RMCF",
+      "price": 10.35
+    }
+  ]
+}

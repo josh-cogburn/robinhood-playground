@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "BB",
+      "price": 10.3
+    },
+    {
+      "ticker": "ABX",
+      "price": 10.3675
+    }
+  ],
+  "40": [
+    {
+      "ticker": "IKNX",
+      "price": 10.52
+    },
+    {
+      "ticker": "LCUT",
+      "price": 10.75
+    }
+  ],
+  "100": [
+    {
+      "ticker": "CLAR",
+      "price": 10.3
+    },
+    {
+      "ticker": "IKNX",
+      "price": 10.52
+    }
+  ],
+  "200": [
+    {
+      "ticker": "IKNX",
+      "price": 10.475
+    },
+    {
+      "ticker": "CDZI",
+      "price": 10.75
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CDZI",
+      "price": 10.6
+    },
+    {
+      "ticker": "MFD",
+      "price": 10.951
+    }
+  ],
+  "351": [
+    {
+      "ticker": "MNTX",
+      "price": 10.61
+    },
+    {
+      "ticker": "CDZI",
+      "price": 10.775
+    }
+  ],
+  "381": [
+    {
+      "ticker": "LXRX",
+      "price": 10.52
+    },
+    {
+      "ticker": "MNTX",
+      "price": 10.46
+    }
+  ]
+}

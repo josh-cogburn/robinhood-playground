@@ -1,0 +1,62 @@
+{
+  "10": [
+    {
+      "ticker": "NUGT",
+      "price": 13.068
+    }
+  ],
+  "50": [
+    {
+      "ticker": "VCEL",
+      "price": 14.1166
+    }
+  ],
+  "200": [
+    {
+      "ticker": "VCEL",
+      "price": 13.95
+    },
+    {
+      "ticker": "NUGT",
+      "price": 13.3899
+    }
+  ],
+  "300": [
+    {
+      "ticker": "VCEL",
+      "price": 13.8
+    },
+    {
+      "ticker": "TMST",
+      "price": 14.52
+    },
+    {
+      "ticker": "NUGT",
+      "price": 13.39
+    }
+  ],
+  "380": [
+    {
+      "ticker": "VCEL",
+      "price": 14.05
+    },
+    {
+      "ticker": "TMST",
+      "price": 14.485
+    },
+    {
+      "ticker": "NUGT",
+      "price": 13.34
+    }
+  ],
+  "600": [
+    {
+      "ticker": "VCEL",
+      "price": 14.1
+    },
+    {
+      "ticker": "TMST",
+      "price": 14.51
+    }
+  ]
+}

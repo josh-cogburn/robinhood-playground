@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "USO",
+      "price": 15
+    },
+    {
+      "ticker": "FATE",
+      "price": 14.13
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CMCM",
+      "price": 9.95
+    },
+    {
+      "ticker": "USO",
+      "price": 15.0001
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CMCM",
+      "price": 10.0096
+    },
+    {
+      "ticker": "USO",
+      "price": 14.99
+    }
+  ],
+  "30": [
+    {
+      "ticker": "PBD",
+      "price": 12.3299
+    },
+    {
+      "ticker": "PXJ",
+      "price": 10.052
+    }
+  ]
+}

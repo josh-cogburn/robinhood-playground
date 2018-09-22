@@ -1,0 +1,406 @@
+{
+  "4": [
+    {
+      "ticker": "MNGA",
+      "price": 0.146
+    },
+    {
+      "ticker": "ALN",
+      "price": 0.1492
+    },
+    {
+      "ticker": "XSPA",
+      "price": 0.15
+    },
+    {
+      "ticker": "LODE",
+      "price": 0.153
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.1638
+    },
+    {
+      "ticker": "NSPR",
+      "price": 0.165
+    },
+    {
+      "ticker": "GLOW",
+      "price": 0.175
+    },
+    {
+      "ticker": "OHRP",
+      "price": 0.179
+    },
+    {
+      "ticker": "WWR",
+      "price": 0.1811
+    },
+    {
+      "ticker": "OHGI",
+      "price": 0.19
+    },
+    {
+      "ticker": "RGLS",
+      "price": 0.1995
+    },
+    {
+      "ticker": "CEI",
+      "price": 0.2068
+    },
+    {
+      "ticker": "IMUC",
+      "price": 0.2072
+    },
+    {
+      "ticker": "BPMX",
+      "price": 0.2124
+    },
+    {
+      "ticker": "CPHI",
+      "price": 0.2182
+    },
+    {
+      "ticker": "HUSA",
+      "price": 0.2236
+    },
+    {
+      "ticker": "HEB",
+      "price": 0.2343
+    },
+    {
+      "ticker": "ANY",
+      "price": 0.2424
+    },
+    {
+      "ticker": "NAVB",
+      "price": 0.244
+    },
+    {
+      "ticker": "AUMN",
+      "price": 0.2451
+    },
+    {
+      "ticker": "AMDA",
+      "price": 0.25
+    },
+    {
+      "ticker": "AKER",
+      "price": 0.2501
+    },
+    {
+      "ticker": "YUMA",
+      "price": 0.2533
+    },
+    {
+      "ticker": "ICON",
+      "price": 0.259
+    },
+    {
+      "ticker": "NEON",
+      "price": 0.2613
+    },
+    {
+      "ticker": "APRI",
+      "price": 0.2877
+    },
+    {
+      "ticker": "ESNC",
+      "price": 0.289
+    },
+    {
+      "ticker": "EARS",
+      "price": 0.2899
+    },
+    {
+      "ticker": "VTL",
+      "price": 0.3213
+    },
+    {
+      "ticker": "CDTI",
+      "price": 0.322
+    },
+    {
+      "ticker": "EYEG",
+      "price": 0.3515
+    },
+    {
+      "ticker": "AGRX",
+      "price": 0.36
+    },
+    {
+      "ticker": "GMO",
+      "price": 0.3657
+    },
+    {
+      "ticker": "EGI",
+      "price": 0.3676
+    },
+    {
+      "ticker": "TRX",
+      "price": 0.371
+    },
+    {
+      "ticker": "XPL",
+      "price": 0.3751
+    },
+    {
+      "ticker": "AMCN",
+      "price": 0.391
+    },
+    {
+      "ticker": "KOOL",
+      "price": 0.3951
+    },
+    {
+      "ticker": "PULM",
+      "price": 0.3996
+    },
+    {
+      "ticker": "GLBS",
+      "price": 0.4
+    },
+    {
+      "ticker": "FLKS",
+      "price": 0.4
+    },
+    {
+      "ticker": "ESES",
+      "price": 0.418
+    },
+    {
+      "ticker": "RGSE",
+      "price": 0.4199
+    },
+    {
+      "ticker": "CYTX",
+      "price": 0.42
+    },
+    {
+      "ticker": "XGTI",
+      "price": 0.42
+    },
+    {
+      "ticker": "PRPO",
+      "price": 0.4274
+    },
+    {
+      "ticker": "NNVC",
+      "price": 0.43
+    },
+    {
+      "ticker": "THM",
+      "price": 0.4323
+    },
+    {
+      "ticker": "DPW",
+      "price": 0.4327
+    },
+    {
+      "ticker": "CLDX",
+      "price": 0.4349
+    }
+  ],
+  "-4": [
+    {
+      "ticker": "IMUC",
+      "price": 0.2072
+    },
+    {
+      "ticker": "CPHI",
+      "price": 0.2182
+    },
+    {
+      "ticker": "NEON",
+      "price": 0.2574
+    },
+    {
+      "ticker": "YUMA",
+      "price": 0.2608
+    },
+    {
+      "ticker": "ESNC",
+      "price": 0.2731
+    },
+    {
+      "ticker": "EYEG",
+      "price": 0.353
+    },
+    {
+      "ticker": "GMO",
+      "price": 0.36
+    },
+    {
+      "ticker": "EGI",
+      "price": 0.3676
+    },
+    {
+      "ticker": "TRX",
+      "price": 0.3729
+    },
+    {
+      "ticker": "XPL",
+      "price": 0.3751
+    },
+    {
+      "ticker": "GLBS",
+      "price": 0.3906
+    },
+    {
+      "ticker": "AMCN",
+      "price": 0.399
+    },
+    {
+      "ticker": "ESES",
+      "price": 0.402
+    },
+    {
+      "ticker": "NNVC",
+      "price": 0.4295
+    },
+    {
+      "ticker": "THM",
+      "price": 0.4378
+    },
+    {
+      "ticker": "KIQ",
+      "price": 0.5041
+    },
+    {
+      "ticker": "VGZ",
+      "price": 0.508
+    },
+    {
+      "ticker": "ABIO",
+      "price": 0.5238
+    },
+    {
+      "ticker": "ACST",
+      "price": 0.5672
+    },
+    {
+      "ticker": "NNA",
+      "price": 0.57
+    },
+    {
+      "ticker": "AAU",
+      "price": 0.6274
+    },
+    {
+      "ticker": "SXE",
+      "price": 0.6481
+    },
+    {
+      "ticker": "DGSE",
+      "price": 0.6677
+    },
+    {
+      "ticker": "GLG",
+      "price": 0.6834
+    },
+    {
+      "ticker": "ENSV",
+      "price": 0.6873
+    },
+    {
+      "ticker": "WRN",
+      "price": 0.6886
+    },
+    {
+      "ticker": "OVAS",
+      "price": 0.7196
+    },
+    {
+      "ticker": "CBAK",
+      "price": 0.72
+    },
+    {
+      "ticker": "RVP",
+      "price": 0.7248
+    },
+    {
+      "ticker": "MLSS",
+      "price": 0.73
+    },
+    {
+      "ticker": "DTRM",
+      "price": 0.7301
+    },
+    {
+      "ticker": "NAUH",
+      "price": 0.76
+    },
+    {
+      "ticker": "CBK",
+      "price": 0.8096
+    },
+    {
+      "ticker": "AKG",
+      "price": 0.87
+    },
+    {
+      "ticker": "TWMC",
+      "price": 0.88
+    },
+    {
+      "ticker": "SHIP",
+      "price": 0.8898
+    },
+    {
+      "ticker": "PLM",
+      "price": 0.8951
+    },
+    {
+      "ticker": "SGOC",
+      "price": 0.9
+    },
+    {
+      "ticker": "USEG",
+      "price": 0.9155
+    },
+    {
+      "ticker": "CGA",
+      "price": 0.9246
+    },
+    {
+      "ticker": "BXE",
+      "price": 0.9303
+    },
+    {
+      "ticker": "OBE",
+      "price": 0.94
+    },
+    {
+      "ticker": "TGC",
+      "price": 0.9466
+    },
+    {
+      "ticker": "NAO",
+      "price": 0.96
+    },
+    {
+      "ticker": "BLIN",
+      "price": 1
+    },
+    {
+      "ticker": "GPL",
+      "price": 1
+    },
+    {
+      "ticker": "PZG",
+      "price": 1.01
+    },
+    {
+      "ticker": "KGJI",
+      "price": 1.01
+    },
+    {
+      "ticker": "ENG",
+      "price": 1.03
+    },
+    {
+      "ticker": "SPEX",
+      "price": 1.03
+    }
+  ]
+}

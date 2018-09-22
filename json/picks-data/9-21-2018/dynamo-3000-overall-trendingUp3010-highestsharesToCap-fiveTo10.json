@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "OCSL",
+      "price": 5
+    },
+    {
+      "ticker": "LLNW",
+      "price": 5.09
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CXE",
+      "price": 5.005
+    },
+    {
+      "ticker": "OCSL",
+      "price": 5.015
+    }
+  ],
+  "100": [
+    {
+      "ticker": "INTT",
+      "price": 8.1
+    },
+    {
+      "ticker": "CXE",
+      "price": 5.005
+    }
+  ],
+  "200": [
+    {
+      "ticker": "INTT",
+      "price": 8.125
+    },
+    {
+      "ticker": "OCSL",
+      "price": 5.0246
+    }
+  ],
+  "260": [
+    {
+      "ticker": "INTT",
+      "price": 8.1
+    },
+    {
+      "ticker": "OCSL",
+      "price": 5.015
+    }
+  ],
+  "351": [
+    {
+      "ticker": "INTT",
+      "price": 7.7
+    },
+    {
+      "ticker": "OCSL",
+      "price": 5.015
+    }
+  ],
+  "381": [
+    {
+      "ticker": "INTT",
+      "price": 7.45
+    },
+    {
+      "ticker": "PTNR",
+      "price": 5.05
+    }
+  ]
+}
