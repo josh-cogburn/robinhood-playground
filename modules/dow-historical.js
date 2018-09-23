@@ -126,17 +126,9 @@ const trendFilter = async (Robinhood, trend) => {
 };
 
 const dowHistorical = {
+    name: 'dow-historical',
     trendFilter,
-    init: Robinhood => {
-        // runs at init
-        regCronIncAfterSixThirty(Robinhood, {
-            name: 'execute dow-historical strategy',
-            run: [13, 73, 196], // 10:41am, 11:31am
-            fn: async (Robinhood, min) => {
-                await executeStrategy(Robinhood, trendFilter, min, 0.3, 'dow-historical');
-            }
-        });
-    }
+    run: [13, 73, 196],
 };
 
 module.exports = dowHistorical;

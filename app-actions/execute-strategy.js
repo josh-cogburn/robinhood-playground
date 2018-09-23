@@ -20,6 +20,8 @@ const GOLDEN_VARIATIONS = [
     // }
 ];
 
+const 
+
 
 const executeStrategy = async (Robinhood, strategyFn, min, ratioToSpend, strategy, pricePermFilter) => {
 

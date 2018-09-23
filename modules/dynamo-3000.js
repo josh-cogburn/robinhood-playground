@@ -169,18 +169,9 @@ const trendFilter = async (Robinhood, trend) => {
 };
 
 const dynamo3000 = {
+    name: 'dynamo-3000',
     trendFilter,
-    init: Robinhood => {
-        // runs at init
-        regCronIncAfterSixThirty(Robinhood, {
-            name: 'execute dynamo-3000 strategy',
-            run: [4, 40, 100, 200, 260, 351, 381], // 10:41am, 11:31am
-            // run: [],
-            fn: async (Robinhood, min) => {
-                await executeStrategy(Robinhood, trendFilter, min, 0.3, 'dynamo-3000');
-            }
-        });
-    }
+    run: [4, 40, 100, 200, 260, 351, 381],
 };
 
 module.exports = dynamo3000;

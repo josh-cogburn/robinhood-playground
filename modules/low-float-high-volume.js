@@ -176,18 +176,10 @@ const trendFilter = async (Robinhood, trend) => {
 };
 
 const lowFloatHighVolume = {
+    name: 'low-float-high-volume',
     trendFilter,
-    init: Robinhood => {
-        // runs at init
-        regCronIncAfterSixThirty(Robinhood, {
-            name: 'execute low-float-high-volume strategy',
-            run: [6, 25, 95, 150, 210, 276, 315, 384], // 10:41am, 11:31am
-            // run: [],
-            fn: async (Robinhood, min) => {
-                await executeStrategy(Robinhood, trendFilter, min, 0.3, 'low-float-high-volume');
-            }
-        });
-    }
+    run: [6, 25, 95, 150, 210, 276, 315, 384], 
+            
 };
 
 module.exports = lowFloatHighVolume;

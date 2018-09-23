@@ -145,20 +145,9 @@ const trendFilter = async (Robinhood, trend) => {
 
 // based on jump
 const basedOnJump = {
+    name: 'based-on-jump',
     trendFilter,
-
-    init: (Robinhood) => {
-        // runs at init
-        regCronIncAfterSixThirty(Robinhood, {
-            name: 'record based-on-jump strategy',
-            run: [0, 5, 16, 30], // 7:00am
-            fn: async (Robinhood, min) => {
-                setTimeout(async () => {
-                    await executeStrategy(Robinhood, trendFilter, min, 0.2, 'based-on-jump');
-                }, 5000);
-            }
-        });
-    }
+    run: [0, 5, 16, 30],
 };
 
 module.exports = basedOnJump;

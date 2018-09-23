@@ -236,18 +236,10 @@ const trendFilter = async (Robinhood, trend) => {
     }, {});
 };
 
-const swings = {
+const technicalIndicators = {
+    name: 'technical indicators',
     trendFilter,
-    init: Robinhood => {
-        // runs at init
-        regCronIncAfterSixThirty(Robinhood, {
-            name: 'execute technical indicators',
-            run: [14, 29, 87, 114, 159, 190, 220, 246, 320, 340, 357, 383],
-            fn: async (Robinhood, min) => {
-                await executeStrategy(Robinhood, trendFilter, min, 0.3, 'technical-indicators');
-            }
-        });
-    }
+    run: [14, 29, 87, 114, 159, 190, 220, 246, 320, 340, 357, 383],
 };
 
-module.exports = swings;
+module.exports = technicalIndicators;

@@ -57,18 +57,9 @@ const trendFilter = async (Robinhood, trend) => {
 };
 
 const bigDayTrendUp = {
+    name: 'big-day-trend-up',
     trendFilter,
-    init: Robinhood => {
-        // runs at init
-        regCronIncAfterSixThirty(Robinhood, {
-            name: 'execute big-day-trend-up strategy',
-            run: [10, 35, 90, 223], // 10:41am, 11:31am
-            // run: [],
-            fn: async (Robinhood, min) => {
-                await executeStrategy(Robinhood, trendFilter, min, 0.3, 'big-day-trend-up');
-            }
-        });
-    }
+    run: [10, 35, 90, 223]
 };
 
 module.exports = bigDayTrendUp;

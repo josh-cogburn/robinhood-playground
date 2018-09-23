@@ -90,18 +90,9 @@ const trendFilter = async (Robinhood, trend) => {
 };
 
 const firstGreens = {
+    name: 'first-greens',
     trendFilter,
-    init: Robinhood => {
-        // runs at init
-        regCronIncAfterSixThirty(Robinhood, {
-            name: 'execute first-greens strategy',
-            run: [12, 190, 250, 600, -15], // 10:41am, 11:31am
-            // run: [],
-            fn: async (Robinhood, min) => {
-                await executeStrategy(Robinhood, trendFilter, min, 0.3, 'first-greens');
-            }
-        });
-    }
+    run: [12, 190, 250, 600, -15],
 };
 
 module.exports = firstGreens;

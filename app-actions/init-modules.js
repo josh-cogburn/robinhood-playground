@@ -1,7 +1,41 @@
 const fs = require('mz/fs');
 const path = require('path');
+const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
 
-const modules = [];
+let modules = [];
+
+
+const initModule = (
+    Robinhood,
+    {
+        name, 
+        run,
+        trendFilter,
+        fn
+    }
+) => {
+    // runs at init
+    regCronIncAfterSixThirty(Robinhood, {
+        name: `execute ${name} strategy`,
+        run,
+        // run: [],
+        fn: async (Robinhood, min) => {
+            return !!fn 
+                ? fn(Robinhood, min) 
+                : executeStrategy(Robinhood, trendFilter, min, 0.3, name);
+        }
+    });
+};
+
+
+const handleModuleFile = (Robinhood, moduleFile) => {
+    const toRun = Array.isArray(moduleFile) ? moduleFile : [moduleFile];
+    toRun.forEach(singleModule => {
+        initModule(Robinhood, singleModule);
+    });
+    modules = [...modules, ...toRun];
+};
+
 
 module.exports = async (Robinhood) => {
 
@@ -15,9 +49,8 @@ module.exports = async (Robinhood) => {
         const isDir = (await fs.lstat(file)).isDirectory();
         // if (!isDir) {
         try {
-            const moduleObj = require(file);
-            moduleObj.init(Robinhood);
-            modules.push(moduleObj);
+            const moduleFile = require(file);
+            handleModuleFile(Robinhood, moduleFile);
         } catch (e) {
             console.log('unable to init', file, e);
         }

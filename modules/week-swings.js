@@ -125,18 +125,9 @@ const trendFilter = async (Robinhood, trend) => {
 };
 
 const weekSwings = {
+    name: 'week-swings',
     trendFilter,
-    init: Robinhood => {
-        // runs at init
-        regCronIncAfterSixThirty(Robinhood, {
-            name: 'execute week-swings strategy',
-            run: [1, 169, 273, 575, 583], // 10:41am, 11:31am
-            // run: [],
-            fn: async (Robinhood, min) => {
-                await executeStrategy(Robinhood, trendFilter, min, 0.3, 'week-swings');
-            }
-        });
-    }
+    run: [1, 169, 273, 575, 583],
 };
 
 module.exports = weekSwings;

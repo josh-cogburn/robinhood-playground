@@ -99,17 +99,9 @@ const trendFilter = async (Robinhood, trend) => {
 };
 
 const constantRisers = {
+    name: 'constant-downers',
     trendFilter,
-    init: Robinhood => {
-        // runs at init
-        regCronIncAfterSixThirty(Robinhood, {
-            name: 'execute constant-downers strategy',
-            run: [77, 242, 309], // 10:41am, 11:31am
-            fn: async (Robinhood, min) => {
-                await executeStrategy(Robinhood, trendFilter, min, 0.3, 'constant-downers');
-            }
-        });
-    }
+    run: [77, 242, 309]
 };
 
 module.exports = constantRisers;

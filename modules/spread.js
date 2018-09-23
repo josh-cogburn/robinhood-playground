@@ -69,17 +69,9 @@ const trendFilter = async (Robinhood, trend) => {
 };
 
 const spread = {
+    name: 'spread',
     trendFilter,
-    init: Robinhood => {
-        // runs at init
-        regCronIncAfterSixThirty(Robinhood, {
-            name: 'execute spread strategy',
-            run: [58, 123, 202],
-            fn: async (Robinhood, min) => {
-                await executeStrategy(Robinhood, trendFilter, min, 0.3, 'spread');
-            }
-        });
-    }
+    run: [58, 123, 202],
 };
 
 module.exports = spread;

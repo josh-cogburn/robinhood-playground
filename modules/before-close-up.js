@@ -44,19 +44,9 @@ const trendFilter = async (Robinhood, trend) => {
 };
 
 const beforeCloseUp = {
+    name: 'before-close-up',
     trendFilter,
-    init: (Robinhood) => {
-        // runs at init
-        regCronIncAfterSixThirty(
-            Robinhood,
-            {
-                name: 'execute before-close-up strategy',
-                run: [350, 380],  // 12:31, 12:50pm
-                // run: [],
-                fn: (Robinhood, min) => executeStrategy(Robinhood, trendFilter, min, 0.35, 'before-close-up')
-            },
-        );
-    }
+    run: [350, 380],  // 12:31, 12:50pm
 };
 
 

@@ -50,25 +50,11 @@ const trendFilter = async (Robinhood, trend) => {
     };
 };
 
-const up10days = {
+const upstreak = {
+    name: 'up-streak',
     trendFilter,
-    init: (Robinhood) => {
-
-        // runs at init
-        regCronIncAfterSixThirty(
-            Robinhood,
-            {
-                name: 'execute up-streak strategy',
-                run: [45, 189],  // 12:31, 12:50pm
-                // run: [],
-                fn: (Robinhood, min) => setTimeout(async () => {
-                    await executeStrategy(Robinhood, trendFilter, min, 0.3, 'up-streak');
-                }, 5000)
-            },
-        );
-
-    }
+    run: [45, 189],
 };
 
 
-module.exports = up10days;
+module.exports = upstreak;

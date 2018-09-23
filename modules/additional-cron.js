@@ -21,7 +21,7 @@ const getAllTickers = require('../rh-actions/get-all-tickers');
 // socket-server
 const stratManager = require('../socket-server/strat-manager');
 
-const additionalCronConfig = [
+const additionalCron = [
     // {
     //     name: 'sell all stocks',
     //     run: [5],
@@ -126,16 +126,5 @@ const additionalCronConfig = [
 
 
 ];
-
-const additionalCron = {
-    init: (Robinhood) => {
-        additionalCronConfig.forEach(cronConfig => {
-            regCronIncAfterSixThirty(
-                Robinhood,
-                cronConfig
-            );
-        });
-    }
-};
 
 module.exports = additionalCron;

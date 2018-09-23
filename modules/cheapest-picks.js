@@ -30,21 +30,9 @@ const trendFilter = async (Robinhood, trend) => {
 };
 
 const cheapestPicks = {
+    name: 'cheapest-picks',
     trendFilter,
-    init: (Robinhood) => {
-        // runs at init
-        regCronIncAfterSixThirty(
-            Robinhood,
-            {
-                name: 'execute cheapest-picks strategy',
-                run: [-4, 4, 65, 125, 175, 225, 386],  // 12:31, 12:50pm
-                // run: [],
-                fn: async (Robinhood, min) => {
-                    await executeStrategy(Robinhood, trendFilter, min, 0.55, 'cheapest-picks', ['under5']);
-                }
-            },
-        );
-    }
+    run: [-4, 4, 65, 125, 175, 225, 386]
 };
 
 
