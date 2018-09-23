@@ -5,7 +5,7 @@ const mapLimit = require('promise-map-limit');
 
 let Robinhood;
 
-const addOvernightJump = require('../app-actions/add-overnight-jump');
+const addOvernightJump = require('../app-actions/add-overnight-jump-and-tso');
 const getUpStreak = require('../app-actions/get-up-streak');
 const { avgArray } = require('../utils/array-math');
 const getTrend = require('../utils/get-trend');
@@ -22,7 +22,7 @@ module.exports = async (Robinhood) => {
     // let trend = require('/Users/johnmurphy/Development/my-stuff/robinhood-playground/json/stock-data/2018-1-23 13:04:23 (+391).json');
     let trend = await getTrendAndSave(Robinhood);
 
-    trend = await addOvernightJump(Robinhood, trend);
+    trend = await addOvernightJumpAndTSO(Robinhood, trend);
 
 
     let cheapBuys = trend

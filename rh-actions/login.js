@@ -8,7 +8,7 @@ module.exports = () => {
 
             // promisfy all functions
             Object.keys(Robinhood).forEach(key => {
-                // console.log('key', key);
+                console.log('key', key);
                 const origFn = Robinhood[key];
                 Robinhood[key] = retryPromise((...callArgs) => {
                     return new Promise((resolve, reject) => {

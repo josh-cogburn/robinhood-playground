@@ -3,7 +3,7 @@ const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
 const getUpStreak = require('../app-actions/get-up-streak');
 const getMultipleHistoricals = require('../app-actions/get-multiple-historicals');
 const executeStrategy = require('../app-actions/execute-strategy');
-const addOvernightJump = require('../app-actions/add-overnight-jump');
+const addOvernightJump = require('../app-actions/add-overnight-jump-and-tso');
 const getTrend = require('../utils/get-trend');
 const { avgArray } = require('../utils/array-math');
 
@@ -15,7 +15,7 @@ const trendFilter = async (Robinhood, trend) => {
     const todaysDay = days[(new Date()).getDay()];
     console.log('todays day', todaysDay);
 
-    let returnArr = await addOvernightJump(Robinhood, trend);
+    let returnArr = await addOvernightJumpAndTSO(Robinhood, trend);
 
     // var allTickers = require('../json/stock-data/allStocks');
     // allTickers = allTickers

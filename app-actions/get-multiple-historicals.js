@@ -12,6 +12,8 @@ module.exports = async (Robinhood, tickers, qs = 'interval=day') => {
         75
     );
 
+    console.log({ tickers, allHistoricals });
+
 
     return allHistoricals.map(obj => {
 

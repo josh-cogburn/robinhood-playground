@@ -18,7 +18,7 @@ const trendFilter = async (Robinhood, trend) => {
     // trending upward
     console.log('running based-on-jump strategy');
 
-    let withOvernight = await addOvernightJump(Robinhood, trend);
+    let withOvernight = await addOvernightJumpAndTSO(Robinhood, trend);
     // withOvernight = withOvernight.filter(buy => buy.fundamentals.volume > 1000);
 
     const filterSortedTicks = async (filter, sort) => {

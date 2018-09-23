@@ -8,22 +8,26 @@ const getTrendAndSave = require('./app-actions/get-trend-and-save');
     console.log(process.argv, 'ps');
     let Robinhood = await login();
     const argPath = process.argv[2];
-    let relatedAnalysisFn = require(`./${argPath}`);
+    let relatedFile = require(`./${argPath}`);
 
     let callArgs = [Robinhood];
     if (argPath.includes('modules/')) {
-        relatedAnalysisFn = relatedAnalysisFn.trendFilter;
-        const trend = await getTrendAndSave(Robinhood);
-
-        console.log('got trend');
-        // console.log(trend);
-        callArgs.push(trend.filter(t => t.last_trade_price < 5));
+        const { trendFilter } = relatedFile;
+        if (trendFilter) {
+            const trend = await getTrendAndSave(Robinhood);
+            console.log('got trend');
+            console.log(trend);
+            callArgs.push(trend.filter(t => t.last_trade_price < 5));
+        } else {
+            callArgs.push(25); // min
+        }
     }
 
     const restArgs = process.argv.slice(3)
         .map(arg => arg === 'true' ? true : arg);
 
-    const response = await relatedAnalysisFn(...callArgs, ...restArgs);
+    const fnToRun = relatedFile.trendFilter || relatedFile.fn || relatedFile;
+    const response = await fnToRun(...callArgs, ...restArgs);
     console.log('response');
     console.log(JSON.stringify(response, null, 2));
 })();

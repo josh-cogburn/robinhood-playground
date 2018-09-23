@@ -3,7 +3,7 @@ const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
 const getMultipleHistoricals = require('../app-actions/get-multiple-historicals');
 const executeStrategy = require('../app-actions/execute-strategy');
 const getTrend = require('../utils/get-trend');
-const addOvernightJump = require('../app-actions/add-overnight-jump');
+const addOvernightJump = require('../app-actions/add-overnight-jump-and-tso');
 
 const trendFilter = async (Robinhood, trend) => {
 
@@ -52,7 +52,7 @@ const trendFilter = async (Robinhood, trend) => {
                 return buy;
             });
 
-        withPercUp = await addOvernightJump(Robinhood, withPercUp);
+        withPercUp = await addOvernightJumpAndTSO(Robinhood, withPercUp);
 
         // console.log('with', JSON.stringify(withPercUp, null, 2));
         const orderBy = (what, trend) => {

@@ -3,7 +3,7 @@ const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
 
 // app-actions
 const executeStrategy = require('../app-actions/execute-strategy');
-const addTrendSinceOpen = require('../app-actions/add-trend-since-open');
+const addOvernightJumpAndTSO = require('../app-actions/add-overnight-jump-and-tso');
 // npm
 const mapLimit = require('promise-map-limit');
 
@@ -17,7 +17,7 @@ const trendFilter = async (Robinhood, trend) => {
     console.log('running big-day-trend-up strategy');
 
     console.log('total trend stocks', trend.length);
-    const withTrendSinceOpen = await addTrendSinceOpen(Robinhood, trend);
+    const withTrendSinceOpen = await addOvernightJumpAndTSO(Robinhood, trend);
     const allUp = withTrendSinceOpen.filter(
         stock => stock.trendSinceOpen && stock.trendSinceOpen > 3
     );

@@ -20,9 +20,6 @@ const GOLDEN_VARIATIONS = [
     // }
 ];
 
-const 
-
-
 const executeStrategy = async (Robinhood, strategyFn, min, ratioToSpend, strategy, pricePermFilter) => {
 
     const executeSingleStrategy = async (trend, strategyName, priceKey) => {
@@ -46,7 +43,6 @@ const executeStrategy = async (Robinhood, strategyFn, min, ratioToSpend, strateg
         };
     };
 
-
     console.log('executing strategy', `${strategy}-${min}`);
 
     const trend = await getTrendAndSave(Robinhood, min + '*');
@@ -57,7 +53,6 @@ const executeStrategy = async (Robinhood, strategyFn, min, ratioToSpend, strateg
         tenTo15: [10, 15],
         fifteenTo20: [15, 20]
     };
-
 
     if (pricePermFilter) {
         Object.keys(pricePerms)

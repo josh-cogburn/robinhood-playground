@@ -3,13 +3,13 @@ const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
 
 const executeStrategy = require('../app-actions/execute-strategy');
 const getMultipleHistoricals = require('../app-actions/get-multiple-historicals');
-const addOvernightJump = require('../app-actions/add-overnight-jump');
+const addOvernightJump = require('../app-actions/add-overnight-jump-and-tso');
 
 const mapLimit = require('promise-map-limit');
 
 const trendFilter = async (Robinhood, trend) => {
 
-    trend = await addOvernightJump(Robinhood, trend);
+    trend = await addOvernightJumpAndTSO(Robinhood, trend);
 
     let allHistoricals = await getMultipleHistoricals(
         Robinhood,

@@ -3,7 +3,7 @@ const login = require('../rh-actions/login');
 
 const mapLimit = require('promise-map-limit');
 
-const addOvernightJump = require('../app-actions/add-overnight-jump');
+const addOvernightJumpAndTSO = require('../app-actions/add-overnight-jump-and-tso');
 const getUpStreak = require('../app-actions/get-up-streak');
 const getTrendAndSave = require('../app-actions/get-trend-and-save');
 const { avgArray } = require('../utils/array-math');
@@ -27,7 +27,7 @@ module.exports = async (Robinhood) => {
         return stock.quoteData.lastTrade > 5 && stock.quoteData.lastTrade < 15;
     });
 
-    cheapBuys = await addOvernightJump(Robinhood, cheapBuys);
+    cheapBuys = await addOvernightJumpAndTSO(Robinhood, cheapBuys);
 
     // var allTickers = require('../json/stock-data/allStocks');
     // allTickers = allTickers

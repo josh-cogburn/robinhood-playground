@@ -5,7 +5,7 @@ const chunkApi = require('../utils/chunk-api');
 
 module.exports = async (Robinhood, trend) => {
 
-    console.log('adding overnight jump')
+    console.log('adding fundamentals')
     let fundamentals = await chunkApi(
         trend.map(t => t.ticker),
         async tickerStr => {
@@ -24,13 +24,6 @@ module.exports = async (Robinhood, trend) => {
         };
     });
 
-    // console.log('with fundame', withFundamentals);
-
-    return withFundamentals.map(stock => ({
-        ...stock,
-        overnightJump: Number(stock.fundamentals.open)
-            ? getTrend(stock.fundamentals.open, stock.quote_data.prevClose)
-            : getTrend(stock.last_trade_price, stock.quote_data.prevClose)
-    })).filter(a => a.fundamentals.open).sort((a, b) => b.overnightJump - a.overnightJump);
+    return withFundamentals;
 
 };

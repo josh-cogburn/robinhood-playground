@@ -4,7 +4,7 @@ const getTrend = require('../utils/get-trend');
 
 const getMultipleHistoricals = require('../app-actions/get-multiple-historicals');
 const executeStrategy = require('../app-actions/execute-strategy');
-const addOvernightJump = require('../app-actions/add-overnight-jump');
+const addOvernightJump = require('../app-actions/add-overnight-jump-and-tso');
 
 const mapLimit = require('promise-map-limit');
 const { OBV, SMA, isTrendingUp } = require('technicalindicators');
@@ -166,7 +166,7 @@ const trendFilter = async (Robinhood, trend) => {
 
     // add overnight jump
     console.log('adding overnight jump')
-    const withOvernightJump = await addOvernightJump(Robinhood, trend);
+    const withOvernightJump = await addOvernightJumpAndTSO(Robinhood, trend);
     console.log('done adding overnight jump')
 
 

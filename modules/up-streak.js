@@ -6,7 +6,7 @@ const executeStrategy = require('../app-actions/execute-strategy');
 
 const getTrendAndSave = require('../app-actions/get-trend-and-save');
 const limitBuyMultiple = require('../app-actions/limit-buy-multiple');
-const addOvernightJump = require('../app-actions/add-overnight-jump');
+const addOvernightJump = require('../app-actions/add-overnight-jump-and-tso');
 const getUpStreak = require('../app-actions/get-up-streak');
 
 const cancelAllOrders = require('../rh-actions/cancel-all-orders');
@@ -22,7 +22,7 @@ const trendFilter = async (Robinhood, trend) => {
         upstreak: await getUpStreak(Robinhood, buy.ticker)
     }));
 
-    const withOvernightJump = await addOvernightJump(Robinhood, withUpstreak);
+    const withOvernightJump = await addOvernightJumpAndTSO(Robinhood, withUpstreak);
 
     console.log('with withOvernightJump and upstreak')
     // console.log(withOvernightJump);
