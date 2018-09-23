@@ -926,6 +926,14 @@ const hadAGoodDay = [
     'sudden-drops-last5trend-first2-fiveTo10-290',
     'sudden-drops-last3trend-first1-100',
 ];
+
+const myImpressionAtTheMoment = [
+    'constant-risers-5minute-percUpHighClose-filtered80-tenTo15-40',
+    'constant-risers-10minute-percUpHighClose-filtered80-tenTo15-40',
+    'constant-risers-10minute-percUpCloseOnlyPoints-filtered80-fiveTo10-40',
+    'constant-risers-10minute-percUpCloseOnly-filtered80-100',
+];
+
 module.exports = {
     'wild n crazy': [
         'week-swings-tenTo15-1',  // wild
