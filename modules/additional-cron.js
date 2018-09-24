@@ -52,7 +52,7 @@ const additionalCron = [
     {
         name: 'sellAllBasedOnPlayout',
         run: [3],
-        fn: sellAllBasedOnPlayout
+        fn: () => sellAllBasedOnPlayout(Robinhood)
     },
 
     // sell all if went up

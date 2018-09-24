@@ -27,7 +27,7 @@ module.exports = (Robinhood, { ticker, quantity }) => {
 
     return new Promise(async (resolve, reject) => {
 
-        console.log(ticker, quantity, 'feafea')
+        console.log('active-sell', ticker, quantity);
 
         try {
             if (keepers.includes(ticker)) {
