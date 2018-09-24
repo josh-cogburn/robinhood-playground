@@ -1,11 +1,11 @@
 // utils
-const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
 const getTrend = require('../utils/get-trend');
 
+// app-actions
 const getMultipleHistoricals = require('../app-actions/get-multiple-historicals');
-const executeStrategy = require('../app-actions/execute-strategy');
-const addOvernightJump = require('../app-actions/add-overnight-jump-and-tso');
+const addOvernightJumpAndTSO = require('../app-actions/add-overnight-jump-and-tso');
 
+// npm
 const mapLimit = require('promise-map-limit');
 const { OBV, SMA, isTrendingUp } = require('technicalindicators');
 

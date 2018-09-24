@@ -777,7 +777,7 @@ const sepPerfectosMissing = [
     "sudden-drops-last5trend-filter30-280",
     "sudden-drops-last10trend-filter20-221",
     "sudden-drops-last2trend-filter10-tenTo15-328",
-    "low-float-high-volume-volTo2WeekPoints-trenddown7to10-shouldWatchout-tenTo15-6",
+    // "low-float-high-volume-volTo2WeekPoints-trenddown7to10-shouldWatchout-tenTo15-6",
     "sudden-drops-last5trend-filter30-328",
     "low-float-high-volume-volToAvgPoints-trendgt50-tenTo15-315",
     "sudden-drops-last10trend-filter10-tenTo15-280",

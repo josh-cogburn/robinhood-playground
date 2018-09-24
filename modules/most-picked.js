@@ -2,19 +2,18 @@
 // finds the stocks that were recommended the most number of times
 // variations: uniqify strength
 
+// npm
 const fs = require('mz/fs');
+// const mapLimit = require('promise-map-limit');
 
+// app-actions
 const executeStrategy = require('../app-actions/execute-strategy');
 const recordPicks = require('../app-actions/record-picks');
 
-
-const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
-const getTrend = require('../utils/get-trend');
+// utils
 const jsonMgr = require('../utils/json-mgr');
 const { uniqifyArray } = require('../utils/uniqify-stuff');
 
-
-// const mapLimit = require('promise-map-limit');
 
 const mostPicked = {
     name: 'most-picked',

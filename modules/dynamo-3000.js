@@ -1,8 +1,4 @@
-// utils
-const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
-
 // app-actions
-const executeStrategy = require('../app-actions/execute-strategy');
 const addOvernightJumpAndTSO = require('../app-actions/add-overnight-jump-and-tso');
 // npm
 const mapLimit = require('promise-map-limit');
