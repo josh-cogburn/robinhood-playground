@@ -1,20 +1,17 @@
 const fs = require('mz/fs');
 const path = require('path');
 const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
+const executeStrategy = require('./execute-strategy');
 
 let modules = [];
 
-
-const initModule = (
-    Robinhood,
-    {
+const initModule = (Robinhood, module) => {
+    const {
         name, 
         run,
         trendFilter,
         fn
-    }
-) => {
-    // runs at init
+    } = module;
     regCronIncAfterSixThirty(Robinhood, {
         name: `execute ${name} strategy`,
         run,
