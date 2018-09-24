@@ -2,10 +2,10 @@ const mapLimit = require('promise-map-limit');
 const getTrendAndSave = require('../../app-actions/get-trend-and-save');
 const addOvernightJumpAndTSO = require('../../app-actions/add-overnight-jump-and-tso');
 const getMultipleHistoricals = require('../../app-actions/get-multiple-historicals');
-
+const jsonMgr = require('../../utils/json-mgr');
 module.exports = {
     name: 'user-modules',
-    rn: [1, 100, 200, 300],
+    rn: [1, 95, 285, 380],
     fn: async (Robinhood, min) => {
         console.log('running user=modules fool');
         const { 
@@ -34,6 +34,9 @@ module.exports = {
             ...buy,
             historicals: allHistoricals[i]
         }));
+
+        const fileName = `./json/100-most-popular/${(new Date()).toLocaleDateString().split('/').join('-')}.json`;
+        await jsonMgr.save(fileName, withHistoricals);
 
         console.log('--------');
         console.log('withHistoricals', JSON.stringify(withHistoricals, null, 2));
