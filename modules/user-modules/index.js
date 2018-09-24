@@ -35,8 +35,10 @@ module.exports = {
             historicals: allHistoricals[i]
         }));
 
-        const fileName = `./json/100-most-popular/${(new Date()).toLocaleDateString().split('/').join('-')}.json`;
-        await jsonMgr.save(fileName, withHistoricals);
+        await jsonMgr.save(
+            `./json/100-most-popular/${(new Date()).toLocaleDateString().split('/').join('-')}-${min}.json`, 
+            withHistoricals
+        );
 
         console.log('--------');
         console.log('withHistoricals', JSON.stringify(withHistoricals, null, 2));
