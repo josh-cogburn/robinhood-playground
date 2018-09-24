@@ -7,6 +7,9 @@ const compression = require('compression');
 const stratManager = require('./strat-manager');
 const path = require('path');
 
+
+const { lookupTickers } = require('../app-actions/record-strat-perfs');
+
 let app = express();
 let server = http.Server(app);
 let io = new SocketIO(server);
@@ -26,6 +29,12 @@ app.use(express['static'](buildDir));
 io.on('connection', (socket) => {
 
     socket.emit('server:welcome', stratManager.getWelcomeData());
+
+    socket.on('get-current-prices', async tickers => {
+        const response = await lookupTickers(Robinhood, tickers, true);
+        console.log('got current pricessss', response);
+        socket.emit('server:current-prices', response);
+    });
 
     socket.on('disconnect', () => {
         socket.broadcast.emit('userDisconnect');
