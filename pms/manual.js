@@ -901,7 +901,7 @@ const afterhoursdropsGAMBLES = [
 
 const tripleDown = [
     'sudden-drops-last30trend-filter10-fiveTo10-360',
-    'sudden-drops-last10trend-filter10-221',
+    // 'sudden-drops-last10trend-filter10-221',
     'sudden-drops-last30trend-filter20-189',
     'sudden-drops-last30trend-filter20-189',
     'low-float-high-volume-absVolPoints-trenddowngt30-notWatchout-315',

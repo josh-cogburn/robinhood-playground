@@ -20,7 +20,7 @@ const {
 module.exports = {
     // important settings
     sellAllStocksOnNthDay: 2,
-    purchaseAmt: 110,
+    purchaseAmt: 70,
     forPurchase: [
         '[sepPerfectosLowCounts]',
         '[sepPerfectosLowCounts]',
@@ -43,16 +43,20 @@ module.exports = {
 
         '[afterhoursdropsGAMBLES]',
 
-        '[tripleDown]',
-        '[tripleDown]',
-        '[tripleDown]',
+        // '[tripleDown]',
+        // '[tripleDown]',
+        // '[tripleDown]',
 
-        '[singleDown]',  // 5 everydayers,
+        // '[singleDown]',  // 5 everydayers,
         
         '[preMarketDrops]',
-        '[hadAGoodDay]', // 3 everydayers
+        // '[hadAGoodDay]', // 3 everydayers
 
-        'constant-risers-10minute-percUpCloseOnlyPoints-filtered80-fiveTo10-40'
+        'constant-risers-10minute-percUpCloseOnlyPoints-filtered80-fiveTo10-40',
+        'constant-risers-10minute-percUpCloseOnlyPoints-filtered80-fiveTo10-40',
+        'sudden-drops-last3trend-filter10-100',
+        'constant-risers-10minute-percUpHighClosePoints-filtered70-80',
+        'constant-risers-10minute-percUpHighClosePoints-filtered80-fiveTo10-80'
     ],
     fallbackSellStrategy: 'limit3',
     force: {
