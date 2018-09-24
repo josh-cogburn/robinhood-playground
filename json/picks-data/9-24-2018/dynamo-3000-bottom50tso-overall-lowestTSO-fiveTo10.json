@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "FEIM",
+      "price": 9.03
+    },
+    {
+      "ticker": "PDFS",
+      "price": 9.12
+    }
+  ],
+  "40": [
+    {
+      "ticker": "WHLM",
+      "price": 5.9
+    },
+    {
+      "ticker": "APEN",
+      "price": 6.3101
+    }
+  ],
+  "100": [
+    {
+      "ticker": "WHLM",
+      "price": 5.9
+    },
+    {
+      "ticker": "OMEX",
+      "price": 8.2
+    }
+  ],
+  "200": [
+    {
+      "ticker": "WHLM",
+      "price": 5.9
+    },
+    {
+      "ticker": "OMEX",
+      "price": 8.1875
+    }
+  ],
+  "260": [
+    {
+      "ticker": "OMEX",
+      "price": 8.1875
+    },
+    {
+      "ticker": "APEN",
+      "price": 6.35
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SNFCA",
+      "price": 5.3
+    },
+    {
+      "ticker": "OMEX",
+      "price": 8.39
+    }
+  ],
+  "381": [
+    {
+      "ticker": "P",
+      "price": 8.975
+    },
+    {
+      "ticker": "SNFCA",
+      "price": 5.3
+    }
+  ]
+}

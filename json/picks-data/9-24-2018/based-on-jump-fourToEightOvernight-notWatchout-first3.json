@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "IMMP",
+      "price": 3.25
+    },
+    {
+      "ticker": "VRML",
+      "price": 0.76
+    },
+    {
+      "ticker": "XELB",
+      "price": 2.15
+    }
+  ],
+  "5": [
+    {
+      "ticker": "IMMP",
+      "price": 3.25
+    },
+    {
+      "ticker": "VRML",
+      "price": 0.7452
+    },
+    {
+      "ticker": "AKG",
+      "price": 0.8579
+    }
+  ],
+  "16": [
+    {
+      "ticker": "IMMP",
+      "price": 3.2214
+    },
+    {
+      "ticker": "VRML",
+      "price": 0.7452
+    },
+    {
+      "ticker": "VGZ",
+      "price": 0.4959
+    }
+  ],
+  "30": [
+    {
+      "ticker": "IMMP",
+      "price": 3.214
+    },
+    {
+      "ticker": "VRML",
+      "price": 0.7302
+    },
+    {
+      "ticker": "VGZ",
+      "price": 0.4826
+    }
+  ]
+}

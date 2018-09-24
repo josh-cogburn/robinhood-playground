@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "KVHI",
+      "price": 12.9999
+    },
+    {
+      "ticker": "ABX",
+      "price": 10.91
+    }
+  ],
+  "5": [
+    {
+      "ticker": "KVHI",
+      "price": 13
+    },
+    {
+      "ticker": "ABX",
+      "price": 11.025
+    }
+  ],
+  "16": [
+    {
+      "ticker": "KVHI",
+      "price": 12.95
+    },
+    {
+      "ticker": "ABX",
+      "price": 11.1
+    }
+  ],
+  "30": [
+    {
+      "ticker": "KVHI",
+      "price": 12.95
+    },
+    {
+      "ticker": "ABX",
+      "price": 11.0525
+    }
+  ]
+}

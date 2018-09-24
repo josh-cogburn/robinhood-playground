@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "CHK",
+      "price": 4.57
+    },
+    {
+      "ticker": "LTBR",
+      "price": 0.99
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CHK",
+      "price": 4.64
+    },
+    {
+      "ticker": "AVP",
+      "price": 2.48
+    }
+  ],
+  "16": [
+    {
+      "ticker": "PLM",
+      "price": 0.9246
+    },
+    {
+      "ticker": "CHK",
+      "price": 4.5931
+    }
+  ],
+  "30": [
+    {
+      "ticker": "PLM",
+      "price": 0.94
+    },
+    {
+      "ticker": "CHK",
+      "price": 4.66
+    }
+  ]
+}

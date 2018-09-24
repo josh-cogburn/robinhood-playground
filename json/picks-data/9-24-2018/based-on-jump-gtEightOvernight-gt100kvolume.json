@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "ACST",
+      "price": 0.91
+    },
+    {
+      "ticker": "OGEN",
+      "price": 0.954
+    }
+  ],
+  "5": [
+    {
+      "ticker": "ACST",
+      "price": 0.84
+    },
+    {
+      "ticker": "OGEN",
+      "price": 1.03
+    }
+  ],
+  "16": [
+    {
+      "ticker": "ACST",
+      "price": 0.81
+    },
+    {
+      "ticker": "OGEN",
+      "price": 0.9
+    },
+    {
+      "ticker": "AGTC",
+      "price": 5.025
+    },
+    {
+      "ticker": "ESES",
+      "price": 0.35
+    }
+  ],
+  "30": [
+    {
+      "ticker": "ACST",
+      "price": 0.8464
+    },
+    {
+      "ticker": "OGEN",
+      "price": 0.8625
+    },
+    {
+      "ticker": "ESES",
+      "price": 0.37
+    },
+    {
+      "ticker": "WWR",
+      "price": 0.2
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "IAG",
+      "price": 4.04
+    },
+    {
+      "ticker": "CHK",
+      "price": 4.57
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CYCC",
+      "price": 1.4122
+    },
+    {
+      "ticker": "IAG",
+      "price": 4.06
+    }
+  ],
+  "16": [
+    {
+      "ticker": "PLM",
+      "price": 0.9246
+    },
+    {
+      "ticker": "CYCC",
+      "price": 1.4122
+    }
+  ],
+  "30": [
+    {
+      "ticker": "PLM",
+      "price": 0.94
+    },
+    {
+      "ticker": "CYCC",
+      "price": 1.4017
+    }
+  ]
+}

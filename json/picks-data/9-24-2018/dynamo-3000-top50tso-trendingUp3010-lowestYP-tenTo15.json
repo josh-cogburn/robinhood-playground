@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "BRS",
+      "price": 12.37
+    },
+    {
+      "ticker": "CSIQ",
+      "price": 14.97
+    }
+  ],
+  "40": [
+    {
+      "ticker": "LMB",
+      "price": 11.4455
+    },
+    {
+      "ticker": "CSIQ",
+      "price": 14.97
+    }
+  ],
+  "100": [
+    {
+      "ticker": "CSIQ",
+      "price": 14.95
+    },
+    {
+      "ticker": "FEIM",
+      "price": 10.07
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CPE",
+      "price": 12.3
+    },
+    {
+      "ticker": "ADAP",
+      "price": 11.9
+    }
+  ],
+  "260": [
+    {
+      "ticker": "BCRH",
+      "price": 10.2
+    },
+    {
+      "ticker": "WSTG",
+      "price": 12.15
+    }
+  ],
+  "351": [
+    {
+      "ticker": "BCRH",
+      "price": 10.25
+    },
+    {
+      "ticker": "WSTG",
+      "price": 12.25
+    }
+  ],
+  "381": [
+    {
+      "ticker": "BCRH",
+      "price": 10.35
+    },
+    {
+      "ticker": "WSTG",
+      "price": 12.1
+    }
+  ]
+}

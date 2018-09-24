@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "XON",
+      "price": 17.0533
+    },
+    {
+      "ticker": "QUOT",
+      "price": 15.025
+    }
+  ],
+  "40": [
+    {
+      "ticker": "TGP",
+      "price": 15.15
+    },
+    {
+      "ticker": "COT",
+      "price": 15.15
+    }
+  ],
+  "100": [
+    {
+      "ticker": "COT",
+      "price": 15.11
+    },
+    {
+      "ticker": "LNTH",
+      "price": 15.25
+    }
+  ],
+  "200": [
+    {
+      "ticker": "COT",
+      "price": 15.05
+    },
+    {
+      "ticker": "PGRE",
+      "price": 15.215
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PGRE",
+      "price": 15.21
+    },
+    {
+      "ticker": "HRTG",
+      "price": 15.37
+    }
+  ],
+  "351": [
+    {
+      "ticker": "COT",
+      "price": 15.1
+    },
+    {
+      "ticker": "PGRE",
+      "price": 15.2
+    }
+  ],
+  "381": [
+    {
+      "ticker": "COT",
+      "price": 15.05
+    },
+    {
+      "ticker": "PGRE",
+      "price": 15.195
+    }
+  ]
+}

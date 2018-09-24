@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "RIG",
+      "price": 14.04
+    },
+    {
+      "ticker": "CPE",
+      "price": 12.06
+    }
+  ],
+  "5": [
+    {
+      "ticker": "RIG",
+      "price": 14
+    },
+    {
+      "ticker": "CPE",
+      "price": 12.07
+    }
+  ],
+  "16": [
+    {
+      "ticker": "RIG",
+      "price": 14.015
+    },
+    {
+      "ticker": "PXJ",
+      "price": 10.21
+    }
+  ],
+  "30": [
+    {
+      "ticker": "RIG",
+      "price": 13.8737
+    },
+    {
+      "ticker": "NICK",
+      "price": 12.25
+    }
+  ]
+}

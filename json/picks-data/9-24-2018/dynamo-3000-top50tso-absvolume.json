@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "GNC",
+      "price": 4
+    },
+    {
+      "ticker": "FWP",
+      "price": 2.75
+    }
+  ],
+  "40": [
+    {
+      "ticker": "INUV",
+      "price": 0.6669
+    },
+    {
+      "ticker": "FWP",
+      "price": 2.75
+    }
+  ],
+  "100": [
+    {
+      "ticker": "OHAI",
+      "price": 1.55
+    },
+    {
+      "ticker": "ASCMA",
+      "price": 2.19
+    }
+  ],
+  "200": [
+    {
+      "ticker": "TNXP",
+      "price": 0.6405
+    },
+    {
+      "ticker": "CEI",
+      "price": 0.3
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PGLC",
+      "price": 1.1491
+    },
+    {
+      "ticker": "GBR",
+      "price": 3.5239
+    }
+  ],
+  "351": [
+    {
+      "ticker": "BGI",
+      "price": 1.38
+    },
+    {
+      "ticker": "GBR",
+      "price": 3.896
+    }
+  ],
+  "381": [
+    {
+      "ticker": "EVFM",
+      "price": 4.04
+    },
+    {
+      "ticker": "CEI",
+      "price": 0.3694
+    }
+  ]
+}

@@ -1,0 +1,436 @@
+{
+  "4": [
+    {
+      "ticker": "NVUS",
+      "price": 5.01
+    },
+    {
+      "ticker": "ARQL",
+      "price": 5.05
+    },
+    {
+      "ticker": "PFNX",
+      "price": 5.03
+    },
+    {
+      "ticker": "LLNW",
+      "price": 5.03
+    },
+    {
+      "ticker": "NEOS",
+      "price": 5.035
+    },
+    {
+      "ticker": "HBP",
+      "price": 5.04
+    },
+    {
+      "ticker": "NRO",
+      "price": 5.04
+    },
+    {
+      "ticker": "GTIM",
+      "price": 5.05
+    },
+    {
+      "ticker": "LCI",
+      "price": 5.05
+    },
+    {
+      "ticker": "TNAV",
+      "price": 5.05
+    },
+    {
+      "ticker": "AGTC",
+      "price": 5.05
+    },
+    {
+      "ticker": "PTNR",
+      "price": 5.05
+    },
+    {
+      "ticker": "BGFV",
+      "price": 5.05
+    },
+    {
+      "ticker": "EDGW",
+      "price": 5.085
+    },
+    {
+      "ticker": "RELV",
+      "price": 5.1
+    }
+  ],
+  "65": [
+    {
+      "ticker": "NRO",
+      "price": 5.0003
+    },
+    {
+      "ticker": "NVUS",
+      "price": 5.02
+    },
+    {
+      "ticker": "VSLR",
+      "price": 5.025
+    },
+    {
+      "ticker": "HBP",
+      "price": 5.04
+    },
+    {
+      "ticker": "NIHD",
+      "price": 5.045
+    },
+    {
+      "ticker": "BGFV",
+      "price": 5.05
+    },
+    {
+      "ticker": "PTNR",
+      "price": 5.05
+    },
+    {
+      "ticker": "MXC",
+      "price": 5.06
+    },
+    {
+      "ticker": "CALA",
+      "price": 5.075
+    },
+    {
+      "ticker": "HBM",
+      "price": 5.075
+    },
+    {
+      "ticker": "LLNW",
+      "price": 5.08
+    },
+    {
+      "ticker": "HBIO",
+      "price": 5.1
+    },
+    {
+      "ticker": "TNAV",
+      "price": 5.1
+    },
+    {
+      "ticker": "RELV",
+      "price": 5.1
+    },
+    {
+      "ticker": "SJT",
+      "price": 5.115
+    }
+  ],
+  "125": [
+    {
+      "ticker": "PTNR",
+      "price": 5.01
+    },
+    {
+      "ticker": "EDGW",
+      "price": 5.02
+    },
+    {
+      "ticker": "EVC",
+      "price": 5.025
+    },
+    {
+      "ticker": "HBM",
+      "price": 5.025
+    },
+    {
+      "ticker": "NEXT",
+      "price": 5.03
+    },
+    {
+      "ticker": "NIHD",
+      "price": 5.03
+    },
+    {
+      "ticker": "VSLR",
+      "price": 5.0345
+    },
+    {
+      "ticker": "SJT",
+      "price": 5.04
+    },
+    {
+      "ticker": "LLNW",
+      "price": 5.045
+    },
+    {
+      "ticker": "GTIM",
+      "price": 5.05
+    },
+    {
+      "ticker": "HBIO",
+      "price": 5.05
+    },
+    {
+      "ticker": "LLEX",
+      "price": 5.0502
+    },
+    {
+      "ticker": "IVAC",
+      "price": 5.075
+    },
+    {
+      "ticker": "SEED",
+      "price": 5.0964
+    },
+    {
+      "ticker": "TNAV",
+      "price": 5.1
+    }
+  ],
+  "175": [
+    {
+      "ticker": "PTNR",
+      "price": 5.01
+    },
+    {
+      "ticker": "ITUS",
+      "price": 5.01
+    },
+    {
+      "ticker": "WIN",
+      "price": 5.02
+    },
+    {
+      "ticker": "EVC",
+      "price": 5.025
+    },
+    {
+      "ticker": "KNDI",
+      "price": 5.025
+    },
+    {
+      "ticker": "LLNW",
+      "price": 5.03
+    },
+    {
+      "ticker": "AGTC",
+      "price": 5.075
+    },
+    {
+      "ticker": "VSLR",
+      "price": 5.075
+    },
+    {
+      "ticker": "IVAC",
+      "price": 5.075
+    },
+    {
+      "ticker": "EDGW",
+      "price": 5.0873
+    },
+    {
+      "ticker": "SKIS",
+      "price": 5.1
+    },
+    {
+      "ticker": "RELV",
+      "price": 5.1
+    },
+    {
+      "ticker": "SEED",
+      "price": 5.105
+    },
+    {
+      "ticker": "TNAV",
+      "price": 5.125
+    },
+    {
+      "ticker": "GORO",
+      "price": 5.13
+    }
+  ],
+  "225": [
+    {
+      "ticker": "CXE",
+      "price": 5.01
+    },
+    {
+      "ticker": "LLEX",
+      "price": 5.01
+    },
+    {
+      "ticker": "WIN",
+      "price": 5.02
+    },
+    {
+      "ticker": "HBIO",
+      "price": 5.025
+    },
+    {
+      "ticker": "EVC",
+      "price": 5.025
+    },
+    {
+      "ticker": "LLNW",
+      "price": 5.04
+    },
+    {
+      "ticker": "SEED",
+      "price": 5.07
+    },
+    {
+      "ticker": "IVAC",
+      "price": 5.075
+    },
+    {
+      "ticker": "SJT",
+      "price": 5.0769
+    },
+    {
+      "ticker": "EDGW",
+      "price": 5.08
+    },
+    {
+      "ticker": "RELV",
+      "price": 5.09
+    },
+    {
+      "ticker": "TNAV",
+      "price": 5.1
+    },
+    {
+      "ticker": "GORO",
+      "price": 5.11
+    },
+    {
+      "ticker": "VSLR",
+      "price": 5.1112
+    },
+    {
+      "ticker": "AGTC",
+      "price": 5.1305
+    }
+  ],
+  "386": [
+    {
+      "ticker": "SJT",
+      "price": 5.011
+    },
+    {
+      "ticker": "EVC",
+      "price": 5.025
+    },
+    {
+      "ticker": "HBIO",
+      "price": 5.025
+    },
+    {
+      "ticker": "WIN",
+      "price": 5.035
+    },
+    {
+      "ticker": "LLEX",
+      "price": 5.06
+    },
+    {
+      "ticker": "SKIS",
+      "price": 5.05
+    },
+    {
+      "ticker": "PTNR",
+      "price": 5.0551
+    },
+    {
+      "ticker": "GORO",
+      "price": 5.07
+    },
+    {
+      "ticker": "LLNW",
+      "price": 5.07
+    },
+    {
+      "ticker": "EDGW",
+      "price": 5.07
+    },
+    {
+      "ticker": "RELV",
+      "price": 5.09
+    },
+    {
+      "ticker": "TNAV",
+      "price": 5.1
+    },
+    {
+      "ticker": "SEED",
+      "price": 5.1196
+    },
+    {
+      "ticker": "AGTC",
+      "price": 5.125
+    },
+    {
+      "ticker": "IVAC",
+      "price": 5.15
+    }
+  ],
+  "-4": [
+    {
+      "ticker": "NVUS",
+      "price": 5.01
+    },
+    {
+      "ticker": "HBP",
+      "price": 5.01
+    },
+    {
+      "ticker": "NRO",
+      "price": 5.04
+    },
+    {
+      "ticker": "PTNR",
+      "price": 5.05
+    },
+    {
+      "ticker": "VSLR",
+      "price": 5.05
+    },
+    {
+      "ticker": "SEED",
+      "price": 5.06
+    },
+    {
+      "ticker": "LLNW",
+      "price": 5.05
+    },
+    {
+      "ticker": "IVAC",
+      "price": 5.05
+    },
+    {
+      "ticker": "TNAV",
+      "price": 5.05
+    },
+    {
+      "ticker": "GTIM",
+      "price": 5.05
+    },
+    {
+      "ticker": "BGFV",
+      "price": 5.05
+    },
+    {
+      "ticker": "ARQL",
+      "price": 5.15
+    },
+    {
+      "ticker": "LLEX",
+      "price": 5.09
+    },
+    {
+      "ticker": "EDGW",
+      "price": 5.1
+    },
+    {
+      "ticker": "RELV",
+      "price": 5.1
+    }
+  ]
+}

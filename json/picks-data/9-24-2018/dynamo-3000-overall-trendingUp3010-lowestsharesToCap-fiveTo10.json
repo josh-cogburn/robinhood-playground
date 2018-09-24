@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "FEIM",
+      "price": 9.03
+    },
+    {
+      "ticker": "ETJ",
+      "price": 9.9
+    }
+  ],
+  "40": [
+    {
+      "ticker": "BRG",
+      "price": 9.91
+    },
+    {
+      "ticker": "ETJ",
+      "price": 9.93
+    }
+  ],
+  "100": [
+    {
+      "ticker": "BRG",
+      "price": 9.87
+    },
+    {
+      "ticker": "TLI",
+      "price": 10
+    }
+  ],
+  "200": [
+    {
+      "ticker": "OMN",
+      "price": 9.95
+    },
+    {
+      "ticker": "BRG",
+      "price": 9.85
+    }
+  ],
+  "260": [
+    {
+      "ticker": "OMN",
+      "price": 10
+    },
+    {
+      "ticker": "BRG",
+      "price": 9.89
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NAII",
+      "price": 10
+    },
+    {
+      "ticker": "OMN",
+      "price": 10
+    }
+  ],
+  "381": [
+    {
+      "ticker": "NAII",
+      "price": 10
+    },
+    {
+      "ticker": "OMN",
+      "price": 9.95
+    }
+  ]
+}

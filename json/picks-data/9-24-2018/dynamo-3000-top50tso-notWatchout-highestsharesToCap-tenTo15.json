@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "AMRN",
+      "price": 10.58
+    },
+    {
+      "ticker": "GG",
+      "price": 10.85
+    }
+  ],
+  "40": [
+    {
+      "ticker": "FEIM",
+      "price": 9.84
+    },
+    {
+      "ticker": "MNTX",
+      "price": 10.61
+    }
+  ],
+  "100": [
+    {
+      "ticker": "FEIM",
+      "price": 10.07
+    },
+    {
+      "ticker": "MIDZ",
+      "price": 10.463
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ALDX",
+      "price": 10.25
+    },
+    {
+      "ticker": "MIDZ",
+      "price": 10.51
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ALDX",
+      "price": 10.2204
+    },
+    {
+      "ticker": "FEIM",
+      "price": 10.0117
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AMRN",
+      "price": 12.08
+    },
+    {
+      "ticker": "ALDX",
+      "price": 10.225
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AMRN",
+      "price": 12.22
+    },
+    {
+      "ticker": "FEIM",
+      "price": 10.1675
+    }
+  ]
+}

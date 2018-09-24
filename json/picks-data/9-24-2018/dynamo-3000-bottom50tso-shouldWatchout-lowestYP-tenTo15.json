@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "CNCE",
+      "price": 13.5
+    },
+    {
+      "ticker": "TROX",
+      "price": 13.23
+    }
+  ],
+  "40": [
+    {
+      "ticker": "TROX",
+      "price": 13.06
+    },
+    {
+      "ticker": "VECO",
+      "price": 10.425
+    }
+  ],
+  "100": [
+    {
+      "ticker": "TROX",
+      "price": 12.715
+    },
+    {
+      "ticker": "VECO",
+      "price": 10.275
+    }
+  ],
+  "200": [
+    {
+      "ticker": "DERM",
+      "price": 10.08
+    },
+    {
+      "ticker": "TROX",
+      "price": 12.96
+    }
+  ],
+  "260": [
+    {
+      "ticker": "DERM",
+      "price": 10.06
+    },
+    {
+      "ticker": "CENX",
+      "price": 12.08
+    }
+  ],
+  "351": [
+    {
+      "ticker": "TROX",
+      "price": 12.99
+    },
+    {
+      "ticker": "CENX",
+      "price": 12.0099
+    }
+  ],
+  "381": [
+    {
+      "ticker": "TROX",
+      "price": 12.945
+    },
+    {
+      "ticker": "CENX",
+      "price": 11.895
+    }
+  ]
+}

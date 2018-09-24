@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "MCHX",
+      "price": 2.96
+    },
+    {
+      "ticker": "BTX",
+      "price": 2.45
+    }
+  ],
+  "5": [
+    {
+      "ticker": "BTX",
+      "price": 2.4999
+    },
+    {
+      "ticker": "JVA",
+      "price": 4.5001
+    }
+  ],
+  "16": [
+    {
+      "ticker": "BTX",
+      "price": 2.45
+    },
+    {
+      "ticker": "JVA",
+      "price": 4.5238
+    }
+  ],
+  "30": [
+    {
+      "ticker": "BTX",
+      "price": 2.47
+    },
+    {
+      "ticker": "JVA",
+      "price": 4.5238
+    }
+  ]
+}

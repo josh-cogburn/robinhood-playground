@@ -1,0 +1,90 @@
+{
+  "0": [
+    {
+      "ticker": "AMRK",
+      "price": 12.53
+    },
+    {
+      "ticker": "RIG",
+      "price": 14.04
+    },
+    {
+      "ticker": "REI",
+      "price": 11.39
+    },
+    {
+      "ticker": "SIJ",
+      "price": 14.19
+    },
+    {
+      "ticker": "CPE",
+      "price": 12.06
+    }
+  ],
+  "5": [
+    {
+      "ticker": "AMRK",
+      "price": 12.72
+    },
+    {
+      "ticker": "RIG",
+      "price": 14
+    },
+    {
+      "ticker": "REI",
+      "price": 11.375
+    },
+    {
+      "ticker": "SIJ",
+      "price": 14.19
+    },
+    {
+      "ticker": "CPE",
+      "price": 12.07
+    }
+  ],
+  "16": [
+    {
+      "ticker": "AMRK",
+      "price": 12.76
+    },
+    {
+      "ticker": "RIG",
+      "price": 14.015
+    },
+    {
+      "ticker": "REI",
+      "price": 11.41
+    },
+    {
+      "ticker": "SIJ",
+      "price": 13.995
+    },
+    {
+      "ticker": "CRT",
+      "price": 14.4484
+    }
+  ],
+  "30": [
+    {
+      "ticker": "AMRK",
+      "price": 12.76
+    },
+    {
+      "ticker": "MVO",
+      "price": 11.7977
+    },
+    {
+      "ticker": "RIG",
+      "price": 13.8737
+    },
+    {
+      "ticker": "NICK",
+      "price": 12.25
+    },
+    {
+      "ticker": "REI",
+      "price": 11.38
+    }
+  ]
+}

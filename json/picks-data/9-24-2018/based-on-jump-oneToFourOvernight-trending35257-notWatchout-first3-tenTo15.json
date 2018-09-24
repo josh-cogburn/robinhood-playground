@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "RIG",
+      "price": 14.04
+    },
+    {
+      "ticker": "CPE",
+      "price": 12.06
+    },
+    {
+      "ticker": "QEP",
+      "price": 11.34
+    }
+  ],
+  "5": [
+    {
+      "ticker": "RIG",
+      "price": 14
+    },
+    {
+      "ticker": "CPE",
+      "price": 12.07
+    },
+    {
+      "ticker": "QEP",
+      "price": 11.355
+    }
+  ],
+  "16": [
+    {
+      "ticker": "RIG",
+      "price": 14.015
+    },
+    {
+      "ticker": "PXJ",
+      "price": 10.21
+    },
+    {
+      "ticker": "CPE",
+      "price": 12.015
+    }
+  ],
+  "30": [
+    {
+      "ticker": "RIG",
+      "price": 13.8737
+    },
+    {
+      "ticker": "NICK",
+      "price": 12.25
+    },
+    {
+      "ticker": "PXJ",
+      "price": 10.1915
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "AGTC",
+      "price": 5.1
+    },
+    {
+      "ticker": "NTWK",
+      "price": 6.85
+    }
+  ],
+  "5": [
+    {
+      "ticker": "AGTC",
+      "price": 5
+    },
+    {
+      "ticker": "OMEX",
+      "price": 9.28
+    },
+    {
+      "ticker": "NTWK",
+      "price": 6.85
+    }
+  ],
+  "16": [
+    {
+      "ticker": "AMRN",
+      "price": 10.09
+    },
+    {
+      "ticker": "OMEX",
+      "price": 8.785
+    },
+    {
+      "ticker": "NTWK",
+      "price": 6.85
+    }
+  ],
+  "30": [
+    {
+      "ticker": "AMRN",
+      "price": 9.6999
+    },
+    {
+      "ticker": "AGTC",
+      "price": 4.7
+    },
+    {
+      "ticker": "OMEX",
+      "price": 8.195
+    },
+    {
+      "ticker": "NTWK",
+      "price": 6.61
+    }
+  ]
+}

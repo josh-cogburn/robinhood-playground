@@ -1,0 +1,90 @@
+{
+  "0": [
+    {
+      "ticker": "NE",
+      "price": 7.095
+    },
+    {
+      "ticker": "SNFCA",
+      "price": 5.7
+    },
+    {
+      "ticker": "ESV",
+      "price": 8.24
+    },
+    {
+      "ticker": "DNR",
+      "price": 5.75
+    },
+    {
+      "ticker": "WTI",
+      "price": 7.9068
+    }
+  ],
+  "5": [
+    {
+      "ticker": "NE",
+      "price": 7.14
+    },
+    {
+      "ticker": "SNFCA",
+      "price": 5.7
+    },
+    {
+      "ticker": "ESV",
+      "price": 8.31
+    },
+    {
+      "ticker": "DNR",
+      "price": 5.81
+    },
+    {
+      "ticker": "WTI",
+      "price": 7.965
+    }
+  ],
+  "16": [
+    {
+      "ticker": "NE",
+      "price": 7.025
+    },
+    {
+      "ticker": "SNFCA",
+      "price": 5.7
+    },
+    {
+      "ticker": "ESV",
+      "price": 8.125
+    },
+    {
+      "ticker": "DNR",
+      "price": 5.915
+    },
+    {
+      "ticker": "WTI",
+      "price": 7.965
+    }
+  ],
+  "30": [
+    {
+      "ticker": "NE",
+      "price": 7.005
+    },
+    {
+      "ticker": "SNFCA",
+      "price": 5.7
+    },
+    {
+      "ticker": "ESV",
+      "price": 8.04
+    },
+    {
+      "ticker": "DNR",
+      "price": 6.015
+    },
+    {
+      "ticker": "WTI",
+      "price": 7.95
+    }
+  ]
+}

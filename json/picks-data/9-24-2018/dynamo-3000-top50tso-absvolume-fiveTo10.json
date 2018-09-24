@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "AU",
+      "price": 8.945
+    },
+    {
+      "ticker": "ADMA",
+      "price": 6.5
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CEMI",
+      "price": 9.45
+    },
+    {
+      "ticker": "CNAT",
+      "price": 6.3707
+    }
+  ],
+  "100": [
+    {
+      "ticker": "ABUS",
+      "price": 9.5
+    },
+    {
+      "ticker": "CNAT",
+      "price": 6.3
+    }
+  ],
+  "200": [
+    {
+      "ticker": "TZA",
+      "price": 8.4
+    },
+    {
+      "ticker": "CNAT",
+      "price": 6.3302
+    }
+  ],
+  "260": [
+    {
+      "ticker": "RFIL",
+      "price": 7.85
+    },
+    {
+      "ticker": "CNAT",
+      "price": 6.405
+    }
+  ],
+  "351": [
+    {
+      "ticker": "BBGI",
+      "price": 6.75
+    },
+    {
+      "ticker": "GERN",
+      "price": 6.1345
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CO",
+      "price": 6.51
+    },
+    {
+      "ticker": "GERN",
+      "price": 6.1516
+    }
+  ]
+}

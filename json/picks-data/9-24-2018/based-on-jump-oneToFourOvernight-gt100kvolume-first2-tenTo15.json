@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "RIG",
+      "price": 14.04
+    },
+    {
+      "ticker": "SQQQ",
+      "price": 11.94
+    }
+  ],
+  "5": [
+    {
+      "ticker": "RIG",
+      "price": 14
+    },
+    {
+      "ticker": "SQQQ",
+      "price": 11.99
+    }
+  ],
+  "16": [
+    {
+      "ticker": "RIG",
+      "price": 14.015
+    },
+    {
+      "ticker": "SQQQ",
+      "price": 11.836
+    }
+  ],
+  "30": [
+    {
+      "ticker": "RIG",
+      "price": 13.8737
+    },
+    {
+      "ticker": "CPE",
+      "price": 11.965
+    }
+  ]
+}

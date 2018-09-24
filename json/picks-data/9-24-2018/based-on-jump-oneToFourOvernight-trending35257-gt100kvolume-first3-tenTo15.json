@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "RIG",
+      "price": 14.04
+    }
+  ],
+  "5": [
+    {
+      "ticker": "RIG",
+      "price": 14
+    }
+  ],
+  "16": [
+    {
+      "ticker": "RIG",
+      "price": 14.015
+    },
+    {
+      "ticker": "NCMI",
+      "price": 10.28
+    },
+    {
+      "ticker": "DB",
+      "price": 12.4981
+    }
+  ],
+  "30": [
+    {
+      "ticker": "RIG",
+      "price": 13.8737
+    },
+    {
+      "ticker": "CPE",
+      "price": 11.965
+    },
+    {
+      "ticker": "DBO",
+      "price": 13.12
+    }
+  ]
+}

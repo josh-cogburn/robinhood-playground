@@ -1,0 +1,54 @@
+{
+  "0": [
+    {
+      "ticker": "IMMP",
+      "price": 3.25
+    },
+    {
+      "ticker": "VRML",
+      "price": 0.76
+    }
+  ],
+  "5": [
+    {
+      "ticker": "IMMP",
+      "price": 3.25
+    },
+    {
+      "ticker": "VRML",
+      "price": 0.7452
+    },
+    {
+      "ticker": "PLX",
+      "price": 0.73
+    }
+  ],
+  "16": [
+    {
+      "ticker": "IMMP",
+      "price": 3.2214
+    },
+    {
+      "ticker": "VRML",
+      "price": 0.7452
+    },
+    {
+      "ticker": "PLX",
+      "price": 0.7393
+    }
+  ],
+  "30": [
+    {
+      "ticker": "IMMP",
+      "price": 3.214
+    },
+    {
+      "ticker": "VRML",
+      "price": 0.7302
+    },
+    {
+      "ticker": "PLX",
+      "price": 0.748
+    }
+  ]
+}

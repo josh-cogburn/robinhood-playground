@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "FEIM",
+      "price": 9.03
+    },
+    {
+      "ticker": "MDXG",
+      "price": 6.006
+    }
+  ],
+  "40": [
+    {
+      "ticker": "KNDI",
+      "price": 5.2
+    },
+    {
+      "ticker": "AMRN",
+      "price": 9.995
+    }
+  ],
+  "100": [
+    {
+      "ticker": "KNDI",
+      "price": 5.05
+    },
+    {
+      "ticker": "RRD",
+      "price": 5.56
+    }
+  ],
+  "200": [
+    {
+      "ticker": "RRD",
+      "price": 5.505
+    },
+    {
+      "ticker": "ICCC",
+      "price": 8.4538
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GOL",
+      "price": 5.3
+    },
+    {
+      "ticker": "ICCC",
+      "price": 8.4958
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SNFCA",
+      "price": 5.3
+    },
+    {
+      "ticker": "GOL",
+      "price": 5.28
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SNFCA",
+      "price": 5.3
+    },
+    {
+      "ticker": "DXR",
+      "price": 5.5501
+    }
+  ]
+}

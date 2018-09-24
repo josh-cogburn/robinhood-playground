@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "BLMN",
+      "price": 19.5
+    },
+    {
+      "ticker": "OI",
+      "price": 19.715
+    }
+  ],
+  "40": [
+    {
+      "ticker": "BLMN",
+      "price": 19.44
+    },
+    {
+      "ticker": "CNXM",
+      "price": 19.77
+    }
+  ],
+  "100": [
+    {
+      "ticker": "BLMN",
+      "price": 19.23
+    },
+    {
+      "ticker": "CNXM",
+      "price": 19.65
+    }
+  ],
+  "200": [
+    {
+      "ticker": "BLMN",
+      "price": 19.63
+    },
+    {
+      "ticker": "CNXM",
+      "price": 19.7
+    }
+  ],
+  "260": [
+    {
+      "ticker": "BLMN",
+      "price": 19.76
+    },
+    {
+      "ticker": "IGT",
+      "price": 19.805
+    }
+  ],
+  "351": [
+    {
+      "ticker": "BLMN",
+      "price": 19.915
+    },
+    {
+      "ticker": "IGT",
+      "price": 19.755
+    }
+  ],
+  "381": [
+    {
+      "ticker": "BLMN",
+      "price": 19.91
+    },
+    {
+      "ticker": "IGT",
+      "price": 19.68
+    }
+  ]
+}

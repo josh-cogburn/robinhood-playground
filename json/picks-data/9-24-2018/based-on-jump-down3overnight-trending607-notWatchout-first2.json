@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "HSON",
+      "price": 1.63
+    },
+    {
+      "ticker": "BTX",
+      "price": 2.45
+    }
+  ],
+  "5": [
+    {
+      "ticker": "HSON",
+      "price": 1.63
+    },
+    {
+      "ticker": "BTX",
+      "price": 2.4999
+    }
+  ],
+  "16": [
+    {
+      "ticker": "MLSS",
+      "price": 0.7501
+    },
+    {
+      "ticker": "HSON",
+      "price": 1.63
+    }
+  ],
+  "30": [
+    {
+      "ticker": "MLSS",
+      "price": 0.7501
+    },
+    {
+      "ticker": "HSON",
+      "price": 1.58
+    }
+  ]
+}

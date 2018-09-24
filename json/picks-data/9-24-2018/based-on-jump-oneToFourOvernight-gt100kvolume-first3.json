@@ -1,0 +1,50 @@
+{
+  "0": [
+    {
+      "ticker": "NVAX",
+      "price": 1.6181
+    }
+  ],
+  "5": [
+    {
+      "ticker": "NSPR",
+      "price": 0.195
+    },
+    {
+      "ticker": "SHLD",
+      "price": 1.2375
+    },
+    {
+      "ticker": "CHK",
+      "price": 4.64
+    }
+  ],
+  "16": [
+    {
+      "ticker": "NSPR",
+      "price": 0.187
+    },
+    {
+      "ticker": "SHLD",
+      "price": 1.23
+    },
+    {
+      "ticker": "CHK",
+      "price": 4.5931
+    }
+  ],
+  "30": [
+    {
+      "ticker": "NSPR",
+      "price": 0.185
+    },
+    {
+      "ticker": "IAG",
+      "price": 4.075
+    },
+    {
+      "ticker": "CHK",
+      "price": 4.66
+    }
+  ]
+}

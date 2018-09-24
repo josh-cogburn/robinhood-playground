@@ -1,0 +1,54 @@
+{
+  "0": [
+    {
+      "ticker": "IMMP",
+      "price": 3.25
+    },
+    {
+      "ticker": "TURN",
+      "price": 2.18
+    }
+  ],
+  "5": [
+    {
+      "ticker": "IMMP",
+      "price": 3.25
+    },
+    {
+      "ticker": "TURN",
+      "price": 2.2335
+    },
+    {
+      "ticker": "PLX",
+      "price": 0.73
+    }
+  ],
+  "16": [
+    {
+      "ticker": "IMMP",
+      "price": 3.2214
+    },
+    {
+      "ticker": "TURN",
+      "price": 2.24
+    },
+    {
+      "ticker": "PLX",
+      "price": 0.7393
+    }
+  ],
+  "30": [
+    {
+      "ticker": "IMMP",
+      "price": 3.214
+    },
+    {
+      "ticker": "TURN",
+      "price": 2.2435
+    },
+    {
+      "ticker": "PLX",
+      "price": 0.748
+    }
+  ]
+}
