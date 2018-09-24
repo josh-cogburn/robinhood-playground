@@ -1,9 +1,3 @@
-// utils
-const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
-
-// app-actions
-const executeStrategy = require('../app-actions/execute-strategy');
-
 const trendFilter = async (Robinhood, trend) => {
 
     // cheap stocks that have gone down the most since open

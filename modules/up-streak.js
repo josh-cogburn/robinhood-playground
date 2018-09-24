@@ -1,20 +1,12 @@
-// utils
-const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
-
 // app-actions
-const executeStrategy = require('../app-actions/execute-strategy');
-
-const getTrendAndSave = require('../app-actions/get-trend-and-save');
-const limitBuyMultiple = require('../app-actions/limit-buy-multiple');
-const addOvernightJump = require('../app-actions/add-overnight-jump-and-tso');
+const addOvernightJumpAndTSO = require('../app-actions/add-overnight-jump-and-tso');
 const getUpStreak = require('../app-actions/get-up-streak');
 
-const cancelAllOrders = require('../rh-actions/cancel-all-orders');
-
-
+// npm
 const mapLimit = require('promise-map-limit');
 
 const getTicks = arr => arr.map(buy => buy.ticker);
+
 const trendFilter = async (Robinhood, trend) => {
 
     const withUpstreak = await mapLimit(trend, 20, async buy => ({

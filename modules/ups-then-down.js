@@ -1,10 +1,11 @@
+// utils
 const getTrend = require('../utils/get-trend');
-const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
 
-const executeStrategy = require('../app-actions/execute-strategy');
+// app-actions
 const getMultipleHistoricals = require('../app-actions/get-multiple-historicals');
-const addOvernightJump = require('../app-actions/add-overnight-jump-and-tso');
+const addOvernightJumpAndTSO = require('../app-actions/add-overnight-jump-and-tso');
 
+// npm
 const mapLimit = require('promise-map-limit');
 
 const trendFilter = async (Robinhood, trend) => {
