@@ -10,7 +10,7 @@ const mapLimit = require('promise-map-limit');
 // rh-actions
 const getRisk = require('../rh-actions/get-risk');
 const trendingUp = require('../rh-actions/trending-up');
-const addOvernightJump = require('../app-actions/add-overnight-jump');
+const addOvernightJumpAndTSO = require('../app-actions/add-overnight-jump-and-tso');
 
 const getTicks = arr => arr.map(buy => buy.ticker);
 const trendFilter = async (Robinhood, trend) => {

@@ -3,7 +3,7 @@ const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
 
 // app-actions
 const executeStrategy = require('../app-actions/execute-strategy');
-const addTrendSinceOpen = require('../app-actions/add-trend-since-open');
+const addOvernightJumpAndTSO = require('../app-actions/add-overnight-jump-and-tso');
 
 Array.prototype.ticks = function() {
     return this.map(t => t.ticker);
@@ -13,7 +13,7 @@ const trendFilter = async (Robinhood, trend) => {
 
     console.log('total trend stocks', trend.length);
 
-    let withTrendSinceOpen = await addTrendSinceOpen(Robinhood, trend);
+    let withTrendSinceOpen = await addOvernightJumpAndTSO(Robinhood, trend);
     withTrendSinceOpen = withTrendSinceOpen
         .map(t => ({
             ...t,
