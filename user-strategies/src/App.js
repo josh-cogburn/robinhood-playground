@@ -3,8 +3,6 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-
-import lastTrend from './lastTrend';
 import getTrend from './utils/get-trend';
 
 const defaultStrategyString = [
@@ -98,14 +96,18 @@ class App extends Component {
     const recentTrends = await this.getRecentTrends();
     console.log('got most recent trends');
     this.setState({ status: 'running strategy function on recent trends' });
-    const results = objMap(recentTrends, val => fnForm(val));
 
-    const allTickers = Object.keys(results).map(key => results[key]);
+    // const withObjs = objMap(results, val => lastTrend.find(t => t.ticker === val));
+
+    await new Promise(resolve => setTimeout(resolve, 1200));
+    const withObjs = objMap(recentTrends, val => {
+      const result = fnForm(val);
+      const withObj = val.find(t => t.ticker === result);
+      return withObj;
+    });
+
+    const allTickers = Object.keys(withObjs).map(key => withObjs[key].ticker);
     this.socket.emit('get-current-prices', allTickers);
-
-    console.log({results});
-
-    const withObjs = objMap(results, val => lastTrend.find(t => t.ticker === val));
     
     console.log(
       {withObjs}
