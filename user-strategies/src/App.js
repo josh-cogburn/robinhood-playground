@@ -8,7 +8,6 @@ import lastTrend from './lastTrend';
 
 import getTrend from './utils/get-trend';
 
-import * as mostPop from './100-most-popular';
 const firstObj = lastTrend[0];
 delete firstObj.historicals;
 const str = JSON.stringify(firstObj, null, 2);
@@ -63,9 +62,13 @@ const ResultsTable = ({ data }) => {
   )
 };
 
-console.log(mostPop);
 class App extends Component {
-  state = {};
+  state = {
+    status: null,
+    currentPrices: null,
+    recentTrends: null,
+    results: null
+  };
   textarea = null;
   socket = null;
   componentDidMount() {
@@ -77,7 +80,15 @@ class App extends Component {
       this.setState({ currentPrices: data });
     });
   }
-  runStrategy = () => {
+  getRecentTrends = () => new Promise(resolve => {
+    if (this.state.recentTrends) {
+      return setTimeout(() => resolve(this.state.recentTrends), 1200);
+    }
+    this.socket.emit('getRecentTrends', recentTrends => {
+      this.setState({ recentTrends }, () => resolve(recentTrends));
+    });
+  });
+  runStrategy = async () => {
     let fnForm;
     try {
       fnForm = eval(`(${this.textarea.value})`);
@@ -86,9 +97,15 @@ class App extends Component {
       return;
     }
     
-    console.log({mostPop});
-
-    const results = objMap(mostPop, val => fnForm(val));
+    console.log('getting recent trends');
+    this.setState({ 
+      status: 'loading recent trends',
+      results: null
+    });
+    const recentTrends = await this.getRecentTrends();
+    console.log('got most recent trends');
+    this.setState({ status: 'running strategy function on recent trends' });
+    const results = objMap(recentTrends, val => fnForm(val));
 
     const allTickers = Object.keys(results).map(key => results[key]);
     this.socket.emit('get-current-prices', allTickers);
@@ -103,10 +120,12 @@ class App extends Component {
 
     this.setState({ results: withObjs });
 
+    this.setState({ status: '' });
+
     // console.log(lastTrend, this.textarea.value, this.textarea);
   }
   render() {
-    const { results, currentPrices } = this.state;
+    const { results, currentPrices, status } = this.state;
     const resultsWithThenPrice = objMap(results, trendObj => ({
       ticker: trendObj.ticker,
       thenPrice: trendObj.quote_data.lastTrade,
@@ -137,6 +156,7 @@ class App extends Component {
             />
           <br/>
           <button style={{ width: '60%', fontSize: '200%'}} onClick={this.runStrategy}>Run strategy!</button>
+          <div><i>{status}</i></div>
           <ResultsTable data={resultsData} />
           {/* <textarea value={JSON.stringify(resultsData, null, 2)} />
           <code>
