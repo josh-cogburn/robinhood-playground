@@ -41,10 +41,12 @@ io.on('connection', (socket) => {
 
     socket.on('getRecentTrends', async (cb) => {
         const mostPopularFiles = await getFilesSortedByDate('100-most-popular');
+        console.log({ mostPopularFiles })
         const withJSON = await mapLimit(mostPopularFiles, 1, async file => ({
             file,
             json: await jsonMgr.get(`./json/100-most-popular/${file}.json`)
         }));
+        console.log({ withJSON})
         const obj = withJSON.reduce((acc, { file, json }) => ({
             ...acc,
             [file]: json
