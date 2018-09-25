@@ -5,16 +5,9 @@ import './App.css';
 
 
 import lastTrend from './lastTrend';
-
 import getTrend from './utils/get-trend';
 
-const firstObj = lastTrend[0];
-delete firstObj.historicals;
-const str = JSON.stringify(firstObj, null, 2);
-const withComments = str.split('\n').map(l => `// ${l}`).join('\n');
 const defaultStrategyString = [
-  withComments,
-  '',
   `function trendFilter(trend) {
     return trend
       .sort((a, b) => b.trendSinceOpen - a.trendSinceOpen)[0].ticker
