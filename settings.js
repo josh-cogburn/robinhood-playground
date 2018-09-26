@@ -20,7 +20,7 @@ const {
 module.exports = {
     // important settings
     sellAllStocksOnNthDay: 1,
-    purchaseAmt: 50,
+    purchaseAmt: 35,
     forPurchase: [
 
         // anycountperfectos from spm
