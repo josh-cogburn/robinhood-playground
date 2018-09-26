@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "TOPS",
+      "price": 1.1366
+    },
+    {
+      "ticker": "CEI",
+      "price": 0.6562
+    }
+  ],
+  "40": [
+    {
+      "ticker": "INPX",
+      "price": 0.1509
+    },
+    {
+      "ticker": "TOPS",
+      "price": 1.07
+    }
+  ],
+  "100": [
+    {
+      "ticker": "INPX",
+      "price": 0.1507
+    },
+    {
+      "ticker": "CEI",
+      "price": 0.5662
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CEI",
+      "price": 0.5146
+    },
+    {
+      "ticker": "OGEN",
+      "price": 0.5999
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CEI",
+      "price": 0.4991
+    },
+    {
+      "ticker": "OGEN",
+      "price": 0.5849
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CEI",
+      "price": 0.5
+    },
+    {
+      "ticker": "YUMA",
+      "price": 0.3245
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CEI",
+      "price": 0.4573
+    },
+    {
+      "ticker": "FCSC",
+      "price": 2.2599
+    }
+  ]
+}

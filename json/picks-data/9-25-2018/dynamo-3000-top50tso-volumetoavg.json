@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "CLDX",
+      "price": 0.454
+    },
+    {
+      "ticker": "FRED",
+      "price": 2
+    }
+  ],
+  "40": [
+    {
+      "ticker": "PGLC",
+      "price": 1.25
+    },
+    {
+      "ticker": "FLKS",
+      "price": 0.45
+    }
+  ],
+  "100": [
+    {
+      "ticker": "AMCN",
+      "price": 0.3998
+    },
+    {
+      "ticker": "FLKS",
+      "price": 0.4577
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ASFI",
+      "price": 4.045
+    },
+    {
+      "ticker": "SRNE",
+      "price": 4.61
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ASFI",
+      "price": 4.045
+    },
+    {
+      "ticker": "FVE",
+      "price": 0.9795
+    }
+  ],
+  "351": [
+    {
+      "ticker": "QUMU",
+      "price": 2.75
+    },
+    {
+      "ticker": "FLKS",
+      "price": 0.466
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ELGX",
+      "price": 1.965
+    },
+    {
+      "ticker": "ABIO",
+      "price": 0.5849
+    }
+  ]
+}

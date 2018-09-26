@@ -1,0 +1,134 @@
+{
+  "10": [
+    {
+      "ticker": "IGC",
+      "price": 2.8
+    },
+    {
+      "ticker": "RAVE",
+      "price": 1.39
+    },
+    {
+      "ticker": "CARV",
+      "price": 4.45
+    },
+    {
+      "ticker": "OCC",
+      "price": 4.3914
+    },
+    {
+      "ticker": "INOD",
+      "price": 1.35
+    }
+  ],
+  "50": [
+    {
+      "ticker": "RAVE",
+      "price": 1.3808
+    },
+    {
+      "ticker": "CARV",
+      "price": 4.45
+    },
+    {
+      "ticker": "TRCH",
+      "price": 1.0367
+    },
+    {
+      "ticker": "OCC",
+      "price": 4.55
+    },
+    {
+      "ticker": "INOD",
+      "price": 1.35
+    }
+  ],
+  "200": [
+    {
+      "ticker": "TOPS",
+      "price": 1.2286
+    },
+    {
+      "ticker": "QUMU",
+      "price": 2.7155
+    },
+    {
+      "ticker": "RAVE",
+      "price": 1.33
+    },
+    {
+      "ticker": "CARV",
+      "price": 4.53
+    },
+    {
+      "ticker": "TRCH",
+      "price": 1.03
+    }
+  ],
+  "300": [
+    {
+      "ticker": "TOPS",
+      "price": 1.2
+    },
+    {
+      "ticker": "QUMU",
+      "price": 2.78
+    },
+    {
+      "ticker": "CARV",
+      "price": 4.5135
+    },
+    {
+      "ticker": "TRCH",
+      "price": 1.0223
+    },
+    {
+      "ticker": "INOD",
+      "price": 1.36
+    }
+  ],
+  "380": [
+    {
+      "ticker": "TOPS",
+      "price": 1.2
+    },
+    {
+      "ticker": "QUMU",
+      "price": 2.75
+    },
+    {
+      "ticker": "RAVE",
+      "price": 1.3676
+    },
+    {
+      "ticker": "FTK",
+      "price": 2.42
+    },
+    {
+      "ticker": "CARV",
+      "price": 4.55
+    }
+  ],
+  "600": [
+    {
+      "ticker": "TOPS",
+      "price": 1.1801
+    },
+    {
+      "ticker": "QUMU",
+      "price": 2.7
+    },
+    {
+      "ticker": "RAVE",
+      "price": 1.37
+    },
+    {
+      "ticker": "FTK",
+      "price": 2.4
+    },
+    {
+      "ticker": "CARV",
+      "price": 4.55
+    }
+  ]
+}

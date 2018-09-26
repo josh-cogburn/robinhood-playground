@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "CEI",
+      "price": 0.666
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CEI",
+      "price": 0.719
+    },
+    {
+      "ticker": "ASNA",
+      "price": 4.31
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CEI",
+      "price": 0.5466
+    },
+    {
+      "ticker": "ASNA",
+      "price": 4.22
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CEI",
+      "price": 0.53
+    },
+    {
+      "ticker": "YUMA",
+      "price": 0.496
+    },
+    {
+      "ticker": "ASNA",
+      "price": 4.2599
+    }
+  ]
+}

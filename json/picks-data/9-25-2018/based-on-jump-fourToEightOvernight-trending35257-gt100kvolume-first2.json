@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "NVAX",
+      "price": 1.9401
+    },
+    {
+      "ticker": "TRVN",
+      "price": 2.042
+    }
+  ],
+  "5": [
+    {
+      "ticker": "NVAX",
+      "price": 1.97
+    },
+    {
+      "ticker": "TRVN",
+      "price": 2.08
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CRMD",
+      "price": 0.7215
+    },
+    {
+      "ticker": "NVAX",
+      "price": 2.09
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CRMD",
+      "price": 0.7308
+    },
+    {
+      "ticker": "NVAX",
+      "price": 2.02
+    }
+  ]
+}

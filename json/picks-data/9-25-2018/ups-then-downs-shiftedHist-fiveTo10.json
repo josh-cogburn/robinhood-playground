@@ -1,0 +1,46 @@
+{
+  "10": [
+    {
+      "ticker": "MDXG",
+      "price": 6.0215
+    }
+  ],
+  "300": [
+    {
+      "ticker": "GOL",
+      "price": 5.31
+    },
+    {
+      "ticker": "OCC",
+      "price": 5.005
+    }
+  ],
+  "380": [
+    {
+      "ticker": "GOL",
+      "price": 5.3
+    },
+    {
+      "ticker": "OCC",
+      "price": 5.414
+    },
+    {
+      "ticker": "ELP",
+      "price": 5.255
+    }
+  ],
+  "600": [
+    {
+      "ticker": "GOL",
+      "price": 5.3
+    },
+    {
+      "ticker": "OCC",
+      "price": 5.895
+    },
+    {
+      "ticker": "ELP",
+      "price": 5.27
+    }
+  ]
+}

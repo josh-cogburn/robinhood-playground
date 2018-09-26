@@ -1,0 +1,62 @@
+{
+  "10": [
+    {
+      "ticker": "DPLO",
+      "price": 19.66
+    }
+  ],
+  "50": [
+    {
+      "ticker": "DPLO",
+      "price": 19.81
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ISDR",
+      "price": 15.85
+    },
+    {
+      "ticker": "DPLO",
+      "price": 19.37
+    }
+  ],
+  "300": [
+    {
+      "ticker": "BRZU",
+      "price": 17.69
+    },
+    {
+      "ticker": "ISDR",
+      "price": 15.7
+    },
+    {
+      "ticker": "DPLO",
+      "price": 19.35
+    }
+  ],
+  "380": [
+    {
+      "ticker": "BRZU",
+      "price": 17.6801
+    },
+    {
+      "ticker": "ISDR",
+      "price": 15.7
+    },
+    {
+      "ticker": "DPLO",
+      "price": 19.39
+    }
+  ],
+  "600": [
+    {
+      "ticker": "BRZU",
+      "price": 17.68
+    },
+    {
+      "ticker": "DPLO",
+      "price": 19.44
+    }
+  ]
+}

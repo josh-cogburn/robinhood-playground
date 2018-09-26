@@ -1,0 +1,34 @@
+{
+  "200": [
+    {
+      "ticker": "FATE",
+      "price": 15.5
+    },
+    {
+      "ticker": "AMC",
+      "price": 19.7
+    }
+  ],
+  "300": [
+    {
+      "ticker": "FATE",
+      "price": 15.66
+    },
+    {
+      "ticker": "AMC",
+      "price": 19.725
+    }
+  ],
+  "380": [
+    {
+      "ticker": "FATE",
+      "price": 15.63
+    }
+  ],
+  "600": [
+    {
+      "ticker": "FATE",
+      "price": 15.63
+    }
+  ]
+}

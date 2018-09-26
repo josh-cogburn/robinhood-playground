@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "NETE",
+      "price": 5.3524
+    },
+    {
+      "ticker": "VIPS",
+      "price": 6.005
+    }
+  ],
+  "40": [
+    {
+      "ticker": "VIPS",
+      "price": 5.955
+    },
+    {
+      "ticker": "TGTX",
+      "price": 6.1305
+    }
+  ],
+  "100": [
+    {
+      "ticker": "XNET",
+      "price": 8.1075
+    },
+    {
+      "ticker": "TGTX",
+      "price": 6.075
+    }
+  ],
+  "200": [
+    {
+      "ticker": "TGTX",
+      "price": 5.825
+    },
+    {
+      "ticker": "XNET",
+      "price": 8.09
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TGTX",
+      "price": 5.875
+    },
+    {
+      "ticker": "LIVE",
+      "price": 9.16
+    }
+  ],
+  "351": [
+    {
+      "ticker": "TGTX",
+      "price": 5.675
+    },
+    {
+      "ticker": "LIVE",
+      "price": 9.21
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CMT",
+      "price": 7.21
+    },
+    {
+      "ticker": "TGTX",
+      "price": 5.275
+    }
+  ]
+}

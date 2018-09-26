@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "JKS",
+      "price": 12.2184
+    },
+    {
+      "ticker": "DVAX",
+      "price": 12.7
+    }
+  ],
+  "40": [
+    {
+      "ticker": "DVAX",
+      "price": 12.75
+    },
+    {
+      "ticker": "ITUB",
+      "price": 10.32
+    }
+  ],
+  "100": [
+    {
+      "ticker": "BFR",
+      "price": 11.16
+    },
+    {
+      "ticker": "VIIX",
+      "price": 11.31
+    }
+  ],
+  "200": [
+    {
+      "ticker": "BFR",
+      "price": 11.71
+    },
+    {
+      "ticker": "DVAX",
+      "price": 12.8285
+    }
+  ],
+  "260": [
+    {
+      "ticker": "VIIX",
+      "price": 11.34
+    },
+    {
+      "ticker": "BFR",
+      "price": 11.95
+    }
+  ],
+  "351": [
+    {
+      "ticker": "VIIX",
+      "price": 11.3418
+    },
+    {
+      "ticker": "WBAI",
+      "price": 11.16
+    }
+  ],
+  "381": [
+    {
+      "ticker": "VIIX",
+      "price": 11.32
+    },
+    {
+      "ticker": "WBAI",
+      "price": 11.16
+    }
+  ]
+}

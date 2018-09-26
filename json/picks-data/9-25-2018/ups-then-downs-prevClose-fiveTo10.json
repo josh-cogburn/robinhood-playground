@@ -1,0 +1,50 @@
+{
+  "200": [
+    {
+      "ticker": "CNAT",
+      "price": 6.18
+    },
+    {
+      "ticker": "MXC",
+      "price": 5.2
+    }
+  ],
+  "300": [
+    {
+      "ticker": "CNAT",
+      "price": 6.0591
+    },
+    {
+      "ticker": "MXC",
+      "price": 5.38
+    },
+    {
+      "ticker": "OMEX",
+      "price": 8.27
+    }
+  ],
+  "380": [
+    {
+      "ticker": "CNAT",
+      "price": 6.04
+    },
+    {
+      "ticker": "NTWK",
+      "price": 6.55
+    },
+    {
+      "ticker": "MXC",
+      "price": 5.5
+    }
+  ],
+  "600": [
+    {
+      "ticker": "CNAT",
+      "price": 5.99
+    },
+    {
+      "ticker": "MXC",
+      "price": 5.29
+    }
+  ]
+}

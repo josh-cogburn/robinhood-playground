@@ -1,0 +1,134 @@
+{
+  "10": [
+    {
+      "ticker": "NCTY",
+      "price": 1.83
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.62
+    },
+    {
+      "ticker": "ACST",
+      "price": 0.7897
+    },
+    {
+      "ticker": "SGRP",
+      "price": 1.1133
+    },
+    {
+      "ticker": "UAMY",
+      "price": 0.9201
+    }
+  ],
+  "50": [
+    {
+      "ticker": "NCTY",
+      "price": 1.9001
+    },
+    {
+      "ticker": "ACST",
+      "price": 0.7832
+    },
+    {
+      "ticker": "CAW",
+      "price": 2.836
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.6573
+    },
+    {
+      "ticker": "WMLP",
+      "price": 2.1
+    }
+  ],
+  "200": [
+    {
+      "ticker": "NLST",
+      "price": 0.6201
+    },
+    {
+      "ticker": "ACST",
+      "price": 0.8027
+    },
+    {
+      "ticker": "CAW",
+      "price": 2.836
+    },
+    {
+      "ticker": "SGRP",
+      "price": 1.12
+    },
+    {
+      "ticker": "WMLP",
+      "price": 2.064
+    }
+  ],
+  "300": [
+    {
+      "ticker": "ACST",
+      "price": 0.8
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.645
+    },
+    {
+      "ticker": "SDPI",
+      "price": 3.16
+    },
+    {
+      "ticker": "UAMY",
+      "price": 0.8823
+    },
+    {
+      "ticker": "CAW",
+      "price": 2.836
+    }
+  ],
+  "380": [
+    {
+      "ticker": "NCTY",
+      "price": 1.9157
+    },
+    {
+      "ticker": "ACST",
+      "price": 0.7566
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.629
+    },
+    {
+      "ticker": "SDPI",
+      "price": 3.12
+    },
+    {
+      "ticker": "UAMY",
+      "price": 0.8801
+    }
+  ],
+  "600": [
+    {
+      "ticker": "NCTY",
+      "price": 1.89
+    },
+    {
+      "ticker": "ACST",
+      "price": 0.7516
+    },
+    {
+      "ticker": "WMLP",
+      "price": 1.97
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.6359
+    },
+    {
+      "ticker": "SDPI",
+      "price": 3.17
+    }
+  ]
+}

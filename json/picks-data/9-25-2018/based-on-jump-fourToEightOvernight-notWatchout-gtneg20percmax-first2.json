@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "OCC",
+      "price": 4.15
+    },
+    {
+      "ticker": "DNN",
+      "price": 0.5887
+    }
+  ],
+  "5": [
+    {
+      "ticker": "OCC",
+      "price": 4.3867
+    },
+    {
+      "ticker": "DNN",
+      "price": 0.6
+    }
+  ],
+  "16": [
+    {
+      "ticker": "OCC",
+      "price": 4.45
+    },
+    {
+      "ticker": "DNN",
+      "price": 0.596
+    }
+  ],
+  "30": [
+    {
+      "ticker": "OCC",
+      "price": 4.65
+    },
+    {
+      "ticker": "DNN",
+      "price": 0.581
+    }
+  ]
+}

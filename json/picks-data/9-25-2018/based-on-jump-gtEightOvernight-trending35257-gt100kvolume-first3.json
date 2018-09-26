@@ -1,0 +1,50 @@
+{
+  "0": [
+    {
+      "ticker": "CEI",
+      "price": 0.666
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CEI",
+      "price": 0.719
+    },
+    {
+      "ticker": "YUMA",
+      "price": 0.523
+    },
+    {
+      "ticker": "APDN",
+      "price": 1.7512
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CEI",
+      "price": 0.5466
+    },
+    {
+      "ticker": "YUMA",
+      "price": 0.5122
+    },
+    {
+      "ticker": "APDN",
+      "price": 1.65
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CEI",
+      "price": 0.53
+    },
+    {
+      "ticker": "YUMA",
+      "price": 0.496
+    },
+    {
+      "ticker": "APDN",
+      "price": 1.7154
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "ALDX",
+      "price": 9.9
+    },
+    {
+      "ticker": "EPM",
+      "price": 11.225
+    },
+    {
+      "ticker": "SA",
+      "price": 13.175
+    }
+  ],
+  "5": [
+    {
+      "ticker": "EPM",
+      "price": 11.225
+    },
+    {
+      "ticker": "SA",
+      "price": 13.2
+    },
+    {
+      "ticker": "SPN",
+      "price": 10.065
+    }
+  ],
+  "16": [
+    {
+      "ticker": "EPM",
+      "price": 11.2
+    },
+    {
+      "ticker": "PXJ",
+      "price": 10.27
+    },
+    {
+      "ticker": "SA",
+      "price": 13.12
+    }
+  ],
+  "30": [
+    {
+      "ticker": "EPM",
+      "price": 11.2
+    },
+    {
+      "ticker": "DDF",
+      "price": 13.028
+    },
+    {
+      "ticker": "PXJ",
+      "price": 10.25
+    }
+  ]
+}

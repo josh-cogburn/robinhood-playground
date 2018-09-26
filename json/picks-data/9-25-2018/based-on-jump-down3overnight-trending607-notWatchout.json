@@ -1,0 +1,78 @@
+{
+  "0": [
+    {
+      "ticker": "MLSS",
+      "price": 0.78
+    },
+    {
+      "ticker": "UQM",
+      "price": 1.27
+    },
+    {
+      "ticker": "CYRN",
+      "price": 3
+    }
+  ],
+  "5": [
+    {
+      "ticker": "MLSS",
+      "price": 0.78
+    },
+    {
+      "ticker": "UQM",
+      "price": 1.32
+    },
+    {
+      "ticker": "CYRN",
+      "price": 3
+    },
+    {
+      "ticker": "DAC",
+      "price": 1.6
+    }
+  ],
+  "16": [
+    {
+      "ticker": "MLSS",
+      "price": 0.78
+    },
+    {
+      "ticker": "UQM",
+      "price": 1.3099
+    },
+    {
+      "ticker": "PESI",
+      "price": 4.45
+    },
+    {
+      "ticker": "CYRN",
+      "price": 3
+    },
+    {
+      "ticker": "DAC",
+      "price": 1.55
+    }
+  ],
+  "30": [
+    {
+      "ticker": "MLSS",
+      "price": 0.78
+    },
+    {
+      "ticker": "UQM",
+      "price": 1.29
+    },
+    {
+      "ticker": "PESI",
+      "price": 4.45
+    },
+    {
+      "ticker": "CYRN",
+      "price": 3.005
+    },
+    {
+      "ticker": "DAC",
+      "price": 1.575
+    }
+  ]
+}

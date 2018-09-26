@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "HIMX",
+      "price": 5.86
+    },
+    {
+      "ticker": "DFRG",
+      "price": 8.45
+    }
+  ],
+  "40": [
+    {
+      "ticker": "DFRG",
+      "price": 8.45
+    },
+    {
+      "ticker": "SNMP",
+      "price": 7.3
+    }
+  ],
+  "100": [
+    {
+      "ticker": "TRIL",
+      "price": 6.2
+    },
+    {
+      "ticker": "SNMP",
+      "price": 7.295
+    }
+  ],
+  "200": [
+    {
+      "ticker": "TRIL",
+      "price": 6.2
+    },
+    {
+      "ticker": "SNMP",
+      "price": 7.1
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SNMP",
+      "price": 7.025
+    },
+    {
+      "ticker": "CMCM",
+      "price": 9.48
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NYNY",
+      "price": 8.45
+    },
+    {
+      "ticker": "JP",
+      "price": 8.06
+    }
+  ],
+  "381": [
+    {
+      "ticker": "NYNY",
+      "price": 8.65
+    },
+    {
+      "ticker": "JP",
+      "price": 8.2
+    }
+  ]
+}

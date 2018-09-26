@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "DXYN",
+      "price": 1.8
+    },
+    {
+      "ticker": "CAPR",
+      "price": 1.07
+    },
+    {
+      "ticker": "FBIO",
+      "price": 1.49
+    }
+  ],
+  "5": [
+    {
+      "ticker": "DXYN",
+      "price": 1.75
+    },
+    {
+      "ticker": "CAPR",
+      "price": 1.07
+    },
+    {
+      "ticker": "VRML",
+      "price": 0.6923
+    }
+  ],
+  "16": [
+    {
+      "ticker": "DXYN",
+      "price": 1.75
+    },
+    {
+      "ticker": "CAPR",
+      "price": 1.09
+    },
+    {
+      "ticker": "VRML",
+      "price": 0.69
+    }
+  ],
+  "30": [
+    {
+      "ticker": "DXYN",
+      "price": 1.75
+    },
+    {
+      "ticker": "CAPR",
+      "price": 1.09
+    },
+    {
+      "ticker": "VRML",
+      "price": 0.71
+    }
+  ]
+}

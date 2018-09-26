@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "USLV",
+      "price": 6.3
+    },
+    {
+      "ticker": "ICCC",
+      "price": 8.67
+    }
+  ],
+  "5": [
+    {
+      "ticker": "ALDX",
+      "price": 10
+    },
+    {
+      "ticker": "USLV",
+      "price": 6.3
+    }
+  ],
+  "16": [
+    {
+      "ticker": "ALDX",
+      "price": 8.95
+    },
+    {
+      "ticker": "USLV",
+      "price": 6.315
+    }
+  ],
+  "30": [
+    {
+      "ticker": "ALDX",
+      "price": 9.5
+    },
+    {
+      "ticker": "USLV",
+      "price": 6.333
+    }
+  ]
+}

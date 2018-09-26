@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "DERM",
+      "price": 10.345
+    },
+    {
+      "ticker": "AKRX",
+      "price": 13.11
+    }
+  ],
+  "40": [
+    {
+      "ticker": "PRTA",
+      "price": 14.01
+    },
+    {
+      "ticker": "DERM",
+      "price": 10.3187
+    }
+  ],
+  "100": [
+    {
+      "ticker": "PRTA",
+      "price": 13.57
+    },
+    {
+      "ticker": "DERM",
+      "price": 10.13
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PRTA",
+      "price": 13.36
+    },
+    {
+      "ticker": "WATT",
+      "price": 10.1815
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PRTA",
+      "price": 13.18
+    },
+    {
+      "ticker": "WATT",
+      "price": 10.29
+    }
+  ],
+  "351": [
+    {
+      "ticker": "PRTA",
+      "price": 13.1455
+    },
+    {
+      "ticker": "WATT",
+      "price": 10.16
+    }
+  ],
+  "381": [
+    {
+      "ticker": "PRTA",
+      "price": 13.06
+    },
+    {
+      "ticker": "WATT",
+      "price": 10.17
+    }
+  ]
+}

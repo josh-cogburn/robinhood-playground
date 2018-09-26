@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "AGTC",
+      "price": 5.1
+    },
+    {
+      "ticker": "EVRI",
+      "price": 9.71
+    }
+  ],
+  "40": [
+    {
+      "ticker": "AGTC",
+      "price": 5.5889
+    },
+    {
+      "ticker": "TRT",
+      "price": 5.101
+    }
+  ],
+  "100": [
+    {
+      "ticker": "AGTC",
+      "price": 6.025
+    },
+    {
+      "ticker": "WTI",
+      "price": 8.72
+    }
+  ],
+  "200": [
+    {
+      "ticker": "AGTC",
+      "price": 6.255
+    },
+    {
+      "ticker": "WTI",
+      "price": 8.845
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AGTC",
+      "price": 6.5
+    },
+    {
+      "ticker": "PIRS",
+      "price": 5.745
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AGTC",
+      "price": 6.3
+    },
+    {
+      "ticker": "OCC",
+      "price": 5.2
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AGTC",
+      "price": 6.35
+    },
+    {
+      "ticker": "OCC",
+      "price": 5.45
+    }
+  ]
+}

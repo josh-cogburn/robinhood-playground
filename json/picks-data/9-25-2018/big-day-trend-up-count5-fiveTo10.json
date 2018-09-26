@@ -1,0 +1,82 @@
+{
+  "10": [
+    {
+      "ticker": "WTI",
+      "price": 8.4875
+    },
+    {
+      "ticker": "AMRS",
+      "price": 8.2699
+    },
+    {
+      "ticker": "IMGN",
+      "price": 9.63
+    }
+  ],
+  "35": [
+    {
+      "ticker": "AGTC",
+      "price": 5.5
+    },
+    {
+      "ticker": "WTI",
+      "price": 8.58
+    },
+    {
+      "ticker": "AMRS",
+      "price": 8.285
+    },
+    {
+      "ticker": "CNFR",
+      "price": 6
+    },
+    {
+      "ticker": "ONDK",
+      "price": 7.45
+    }
+  ],
+  "90": [
+    {
+      "ticker": "AGTC",
+      "price": 6.025
+    },
+    {
+      "ticker": "WTI",
+      "price": 8.75
+    },
+    {
+      "ticker": "PIRS",
+      "price": 5.5879
+    },
+    {
+      "ticker": "SOXS",
+      "price": 9.79
+    },
+    {
+      "ticker": "VUZI",
+      "price": 6.85
+    }
+  ],
+  "223": [
+    {
+      "ticker": "AGTC",
+      "price": 6.25
+    },
+    {
+      "ticker": "WTI",
+      "price": 8.83
+    },
+    {
+      "ticker": "PIRS",
+      "price": 5.72
+    },
+    {
+      "ticker": "TTOO",
+      "price": 6.63
+    },
+    {
+      "ticker": "ARQL",
+      "price": 5.58
+    }
+  ]
+}

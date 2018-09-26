@@ -1,0 +1,50 @@
+{
+  "0": [
+    {
+      "ticker": "TLYS",
+      "price": 19
+    },
+    {
+      "ticker": "ENDP",
+      "price": 16.55
+    }
+  ],
+  "5": [
+    {
+      "ticker": "TLYS",
+      "price": 18.95
+    },
+    {
+      "ticker": "ENDP",
+      "price": 16.65
+    }
+  ],
+  "16": [
+    {
+      "ticker": "TLYS",
+      "price": 18.55
+    },
+    {
+      "ticker": "NGVC",
+      "price": 17.34
+    },
+    {
+      "ticker": "ENDP",
+      "price": 16.29
+    }
+  ],
+  "30": [
+    {
+      "ticker": "TLYS",
+      "price": 18.62
+    },
+    {
+      "ticker": "NGVC",
+      "price": 17.42
+    },
+    {
+      "ticker": "ENDP",
+      "price": 16.22
+    }
+  ]
+}

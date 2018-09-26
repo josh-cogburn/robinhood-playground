@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "AVDL",
+      "price": 4.44
+    },
+    {
+      "ticker": "NWY",
+      "price": 3.88
+    }
+  ],
+  "40": [
+    {
+      "ticker": "VIRC",
+      "price": 4.55
+    },
+    {
+      "ticker": "NWY",
+      "price": 3.95
+    }
+  ],
+  "100": [
+    {
+      "ticker": "VIRC",
+      "price": 4.65
+    },
+    {
+      "ticker": "OCC",
+      "price": 4.65
+    }
+  ],
+  "200": [
+    {
+      "ticker": "OCC",
+      "price": 4.7703
+    },
+    {
+      "ticker": "IMMP",
+      "price": 3.6287
+    }
+  ],
+  "260": [
+    {
+      "ticker": "OCC",
+      "price": 5
+    },
+    {
+      "ticker": "IMMP",
+      "price": 3.8786
+    }
+  ],
+  "351": [
+    {
+      "ticker": "GGB",
+      "price": 4.22
+    },
+    {
+      "ticker": "IMMP",
+      "price": 3.749
+    }
+  ],
+  "381": [
+    {
+      "ticker": "KMPH",
+      "price": 4.7738
+    },
+    {
+      "ticker": "GGB",
+      "price": 4.255
+    }
+  ]
+}

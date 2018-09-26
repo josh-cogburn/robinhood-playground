@@ -1,0 +1,46 @@
+{
+  "0": [
+    {
+      "ticker": "BAS",
+      "price": 9.715
+    },
+    {
+      "ticker": "INFN",
+      "price": 7.36
+    },
+    {
+      "ticker": "GERN",
+      "price": 6.34
+    }
+  ],
+  "5": [
+    {
+      "ticker": "INFN",
+      "price": 7.42
+    },
+    {
+      "ticker": "GERN",
+      "price": 6.555
+    }
+  ],
+  "16": [
+    {
+      "ticker": "INFN",
+      "price": 7.26
+    },
+    {
+      "ticker": "GERN",
+      "price": 6.3599
+    }
+  ],
+  "30": [
+    {
+      "ticker": "INFN",
+      "price": 7.31
+    },
+    {
+      "ticker": "GERN",
+      "price": 6.276
+    }
+  ]
+}

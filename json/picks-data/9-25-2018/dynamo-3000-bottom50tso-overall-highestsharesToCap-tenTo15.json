@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "GCI",
+      "price": 10.19
+    },
+    {
+      "ticker": "EPZM",
+      "price": 10.1
+    }
+  ],
+  "40": [
+    {
+      "ticker": "MNTX",
+      "price": 10.325
+    },
+    {
+      "ticker": "MHH",
+      "price": 10.26
+    }
+  ],
+  "100": [
+    {
+      "ticker": "MNTX",
+      "price": 10.11
+    },
+    {
+      "ticker": "EPZM",
+      "price": 10.1
+    }
+  ],
+  "200": [
+    {
+      "ticker": "MNTX",
+      "price": 10.17
+    },
+    {
+      "ticker": "MHH",
+      "price": 10.08
+    }
+  ],
+  "260": [
+    {
+      "ticker": "MNTX",
+      "price": 10.17
+    },
+    {
+      "ticker": "WATT",
+      "price": 10.29
+    }
+  ],
+  "351": [
+    {
+      "ticker": "DERM",
+      "price": 10.24
+    },
+    {
+      "ticker": "WATT",
+      "price": 10.16
+    }
+  ],
+  "381": [
+    {
+      "ticker": "MHH",
+      "price": 10.07
+    },
+    {
+      "ticker": "DERM",
+      "price": 10.17
+    }
+  ]
+}

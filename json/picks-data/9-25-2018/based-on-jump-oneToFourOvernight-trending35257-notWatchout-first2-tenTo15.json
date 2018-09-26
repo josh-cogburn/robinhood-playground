@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "ABX",
+      "price": 11.49
+    },
+    {
+      "ticker": "ALDX",
+      "price": 9.9
+    }
+  ],
+  "5": [
+    {
+      "ticker": "ABX",
+      "price": 11.515
+    },
+    {
+      "ticker": "EPM",
+      "price": 11.225
+    }
+  ],
+  "16": [
+    {
+      "ticker": "ABX",
+      "price": 11.565
+    },
+    {
+      "ticker": "EPM",
+      "price": 11.2
+    }
+  ],
+  "30": [
+    {
+      "ticker": "ABX",
+      "price": 11.5327
+    },
+    {
+      "ticker": "EPM",
+      "price": 11.2
+    }
+  ]
+}

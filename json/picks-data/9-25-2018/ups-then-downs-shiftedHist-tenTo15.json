@@ -1,0 +1,82 @@
+{
+  "10": [
+    {
+      "ticker": "AWSM",
+      "price": 13.2
+    },
+    {
+      "ticker": "VNET",
+      "price": 10.31
+    }
+  ],
+  "50": [
+    {
+      "ticker": "AWSM",
+      "price": 12.75
+    },
+    {
+      "ticker": "VNET",
+      "price": 10.2
+    },
+    {
+      "ticker": "GPOR",
+      "price": 11.11
+    }
+  ],
+  "200": [
+    {
+      "ticker": "BFR",
+      "price": 11.6501
+    },
+    {
+      "ticker": "VNET",
+      "price": 10.2
+    },
+    {
+      "ticker": "GPOR",
+      "price": 11.19
+    }
+  ],
+  "300": [
+    {
+      "ticker": "BFR",
+      "price": 12.195
+    },
+    {
+      "ticker": "VNET",
+      "price": 10.205
+    },
+    {
+      "ticker": "GPOR",
+      "price": 11.21
+    }
+  ],
+  "380": [
+    {
+      "ticker": "BFR",
+      "price": 12.205
+    },
+    {
+      "ticker": "VNET",
+      "price": 10.195
+    },
+    {
+      "ticker": "GPOR",
+      "price": 11.155
+    }
+  ],
+  "600": [
+    {
+      "ticker": "BFR",
+      "price": 12.15
+    },
+    {
+      "ticker": "VNET",
+      "price": 10.2
+    },
+    {
+      "ticker": "GPOR",
+      "price": 11.15
+    }
+  ]
+}

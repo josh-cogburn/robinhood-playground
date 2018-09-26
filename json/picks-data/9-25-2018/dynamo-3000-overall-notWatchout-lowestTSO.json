@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "NEON",
+      "price": 0.2989
+    },
+    {
+      "ticker": "GNMX",
+      "price": 1.25
+    }
+  ],
+  "40": [
+    {
+      "ticker": "NEON",
+      "price": 0.2971
+    },
+    {
+      "ticker": "GNMX",
+      "price": 1.27
+    }
+  ],
+  "100": [
+    {
+      "ticker": "NEON",
+      "price": 0.285
+    },
+    {
+      "ticker": "GNMX",
+      "price": 1.24
+    }
+  ],
+  "200": [
+    {
+      "ticker": "NEON",
+      "price": 0.2821
+    },
+    {
+      "ticker": "GMO",
+      "price": 0.3338
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AVP",
+      "price": 2.12
+    },
+    {
+      "ticker": "HIHO",
+      "price": 4.2525
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NEON",
+      "price": 0.2821
+    },
+    {
+      "ticker": "AVP",
+      "price": 2.14
+    }
+  ],
+  "381": [
+    {
+      "ticker": "NEON",
+      "price": 0.3
+    },
+    {
+      "ticker": "AVP",
+      "price": 2.11
+    }
+  ]
+}

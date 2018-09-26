@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "GLG",
+      "price": 0.71
+    },
+    {
+      "ticker": "ANY",
+      "price": 0.2401
+    }
+  ],
+  "40": [
+    {
+      "ticker": "GLG",
+      "price": 0.71
+    },
+    {
+      "ticker": "AMDA",
+      "price": 0.25
+    }
+  ],
+  "100": [
+    {
+      "ticker": "NSPR",
+      "price": 0.2196
+    },
+    {
+      "ticker": "AMDA",
+      "price": 0.26
+    }
+  ],
+  "200": [
+    {
+      "ticker": "GLG",
+      "price": 0.7212
+    },
+    {
+      "ticker": "NSPR",
+      "price": 0.22
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GLG",
+      "price": 0.7212
+    },
+    {
+      "ticker": "XSPA",
+      "price": 0.1532
+    }
+  ],
+  "351": [
+    {
+      "ticker": "GLG",
+      "price": 0.7414
+    },
+    {
+      "ticker": "XSPA",
+      "price": 0.1531
+    }
+  ],
+  "381": [
+    {
+      "ticker": "XSPA",
+      "price": 0.1693
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.1925
+    }
+  ]
+}

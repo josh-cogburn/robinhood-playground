@@ -1,0 +1,50 @@
+{
+  "10": [
+    {
+      "ticker": "DVAX",
+      "price": 12.85
+    }
+  ],
+  "35": [
+    {
+      "ticker": "PCOM",
+      "price": 14.02
+    }
+  ],
+  "90": [
+    {
+      "ticker": "BFR",
+      "price": 11.36
+    },
+    {
+      "ticker": "PCOM",
+      "price": 14.02
+    },
+    {
+      "ticker": "DVAX",
+      "price": 12.8
+    }
+  ],
+  "223": [
+    {
+      "ticker": "BFR",
+      "price": 11.78
+    },
+    {
+      "ticker": "PCOM",
+      "price": 14.21
+    },
+    {
+      "ticker": "BOJA",
+      "price": 13.8125
+    },
+    {
+      "ticker": "OMN",
+      "price": 10.361
+    },
+    {
+      "ticker": "LXRX",
+      "price": 11.46
+    }
+  ]
+}
