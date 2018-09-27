@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "TGH",
+      "price": 12.95
+    },
+    {
+      "ticker": "EPZM",
+      "price": 10.2875
+    }
+  ],
+  "40": [
+    {
+      "ticker": "TGH",
+      "price": 12.5
+    },
+    {
+      "ticker": "CENX",
+      "price": 11.97
+    }
+  ],
+  "100": [
+    {
+      "ticker": "NUGT",
+      "price": 13.13
+    },
+    {
+      "ticker": "VECO",
+      "price": 10.225
+    }
+  ],
+  "200": [
+    {
+      "ticker": "NUGT",
+      "price": 13.0901
+    },
+    {
+      "ticker": "CENX",
+      "price": 11.87
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NUGT",
+      "price": 13.05
+    },
+    {
+      "ticker": "CENX",
+      "price": 11.93
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NUGT",
+      "price": 12.91
+    },
+    {
+      "ticker": "CENX",
+      "price": 11.98
+    }
+  ],
+  "381": [
+    {
+      "ticker": "FPRX",
+      "price": 13.82
+    },
+    {
+      "ticker": "NUGT",
+      "price": 12.81
+    }
+  ]
+}

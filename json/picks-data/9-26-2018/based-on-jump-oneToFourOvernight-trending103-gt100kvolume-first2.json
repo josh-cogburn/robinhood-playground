@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "ADMP",
+      "price": 3.9
+    },
+    {
+      "ticker": "NVAX",
+      "price": 1.99
+    }
+  ],
+  "5": [
+    {
+      "ticker": "AKER",
+      "price": 0.267
+    },
+    {
+      "ticker": "ATHX",
+      "price": 2.179
+    }
+  ],
+  "16": [
+    {
+      "ticker": "AKER",
+      "price": 0.271
+    },
+    {
+      "ticker": "CLDX",
+      "price": 0.475
+    }
+  ],
+  "30": [
+    {
+      "ticker": "AKER",
+      "price": 0.2986
+    },
+    {
+      "ticker": "CLDX",
+      "price": 0.472
+    }
+  ]
+}

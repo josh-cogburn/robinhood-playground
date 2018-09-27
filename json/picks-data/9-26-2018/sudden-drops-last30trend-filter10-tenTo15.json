@@ -1,0 +1,44 @@
+{
+  "388": [
+    {
+      "ticker": "ALDX",
+      "price": 13.3888
+    }
+  ],
+  "400": [
+    {
+      "ticker": "ALDX",
+      "price": 13.2
+    }
+  ],
+  "430": [
+    {
+      "ticker": "ALDX",
+      "price": 13.5
+    },
+    {
+      "ticker": "CCXI",
+      "price": 11.5
+    }
+  ],
+  "470": [
+    {
+      "ticker": "ALDX",
+      "price": 13.25
+    },
+    {
+      "ticker": "CCXI",
+      "price": 11.5
+    }
+  ],
+  "500": [
+    {
+      "ticker": "CCXI",
+      "price": 11.5
+    },
+    {
+      "ticker": "ALDX",
+      "price": 13.3
+    }
+  ]
+}

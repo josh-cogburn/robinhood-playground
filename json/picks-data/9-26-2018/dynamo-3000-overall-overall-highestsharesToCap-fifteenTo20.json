@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "USO",
+      "price": 15.1501
+    },
+    {
+      "ticker": "INVA",
+      "price": 15.09
+    }
+  ],
+  "40": [
+    {
+      "ticker": "ITCB",
+      "price": 15.45
+    },
+    {
+      "ticker": "SPOK",
+      "price": 15.05
+    }
+  ],
+  "100": [
+    {
+      "ticker": "COT",
+      "price": 15.105
+    },
+    {
+      "ticker": "USO",
+      "price": 15.169
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ALDX",
+      "price": 15.75
+    },
+    {
+      "ticker": "ITCB",
+      "price": 15.1
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ALDX",
+      "price": 15.825
+    },
+    {
+      "ticker": "ITCB",
+      "price": 15.3398
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CRESY",
+      "price": 15.126
+    },
+    {
+      "ticker": "ITCB",
+      "price": 15.25
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CRESY",
+      "price": 15.19
+    },
+    {
+      "ticker": "ITCB",
+      "price": 15.5
+    }
+  ]
+}

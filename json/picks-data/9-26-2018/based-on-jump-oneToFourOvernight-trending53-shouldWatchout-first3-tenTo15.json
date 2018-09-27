@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "ZFGN",
+      "price": 12.09
+    }
+  ],
+  "5": [
+    {
+      "ticker": "ZFGN",
+      "price": 12.12
+    }
+  ],
+  "16": [
+    {
+      "ticker": "GLMD",
+      "price": 13.3133
+    },
+    {
+      "ticker": "ZFGN",
+      "price": 12
+    },
+    {
+      "ticker": "EIGR",
+      "price": 12.345
+    }
+  ],
+  "30": [
+    {
+      "ticker": "GLMD",
+      "price": 13.2912
+    },
+    {
+      "ticker": "ZFGN",
+      "price": 12.025
+    },
+    {
+      "ticker": "EIGR",
+      "price": 12.1717
+    }
+  ]
+}

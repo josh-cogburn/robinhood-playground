@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "OMEX",
+      "price": 8.25
+    },
+    {
+      "ticker": "INO",
+      "price": 5.1299
+    }
+  ],
+  "5": [
+    {
+      "ticker": "OMEX",
+      "price": 8.25
+    },
+    {
+      "ticker": "INO",
+      "price": 5.1499
+    }
+  ],
+  "16": [
+    {
+      "ticker": "OMEX",
+      "price": 8.25
+    },
+    {
+      "ticker": "INO",
+      "price": 5.22
+    }
+  ],
+  "30": [
+    {
+      "ticker": "OMEX",
+      "price": 8.03
+    },
+    {
+      "ticker": "INO",
+      "price": 5.18
+    }
+  ]
+}

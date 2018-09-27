@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "AMS",
+      "price": 3.25
+    },
+    {
+      "ticker": "PLX",
+      "price": 0.7001
+    }
+  ],
+  "40": [
+    {
+      "ticker": "QRHC",
+      "price": 2.6
+    },
+    {
+      "ticker": "IDSA",
+      "price": 2.35
+    }
+  ],
+  "100": [
+    {
+      "ticker": "QRHC",
+      "price": 2.6
+    },
+    {
+      "ticker": "CPRX",
+      "price": 3.7875
+    }
+  ],
+  "200": [
+    {
+      "ticker": "QRHC",
+      "price": 2.6
+    },
+    {
+      "ticker": "DNN",
+      "price": 0.619
+    }
+  ],
+  "260": [
+    {
+      "ticker": "DNN",
+      "price": 0.6228
+    },
+    {
+      "ticker": "INOD",
+      "price": 1.44
+    }
+  ],
+  "351": [
+    {
+      "ticker": "DNN",
+      "price": 0.636
+    },
+    {
+      "ticker": "ICD",
+      "price": 4.94
+    }
+  ],
+  "381": [
+    {
+      "ticker": "DNN",
+      "price": 0.6252
+    },
+    {
+      "ticker": "ICD",
+      "price": 4.955
+    }
+  ]
+}

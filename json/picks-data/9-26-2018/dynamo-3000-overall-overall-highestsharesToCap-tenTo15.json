@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "ALDX",
+      "price": 12.3
+    },
+    {
+      "ticker": "INSY",
+      "price": 9.7618
+    }
+  ],
+  "40": [
+    {
+      "ticker": "KIRK",
+      "price": 10.04
+    },
+    {
+      "ticker": "ALDX",
+      "price": 14.5
+    }
+  ],
+  "100": [
+    {
+      "ticker": "ALDX",
+      "price": 14.075
+    },
+    {
+      "ticker": "PCYG",
+      "price": 10.1662
+    }
+  ],
+  "200": [
+    {
+      "ticker": "KIRK",
+      "price": 10.24
+    },
+    {
+      "ticker": "FEIM",
+      "price": 10.06
+    }
+  ],
+  "260": [
+    {
+      "ticker": "KIRK",
+      "price": 10.23
+    },
+    {
+      "ticker": "FEIM",
+      "price": 10.02
+    }
+  ],
+  "351": [
+    {
+      "ticker": "PBR.A",
+      "price": 10.03
+    },
+    {
+      "ticker": "KIRK",
+      "price": 10.41
+    }
+  ],
+  "381": [
+    {
+      "ticker": "SOXS",
+      "price": 10.0584
+    },
+    {
+      "ticker": "PBR.A",
+      "price": 10.01
+    }
+  ]
+}

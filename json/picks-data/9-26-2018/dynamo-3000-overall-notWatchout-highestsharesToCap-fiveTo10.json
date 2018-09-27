@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "DLNG",
+      "price": 8.38
+    },
+    {
+      "ticker": "PPT",
+      "price": 5.25
+    }
+  ],
+  "40": [
+    {
+      "ticker": "DLNG",
+      "price": 8.4919
+    },
+    {
+      "ticker": "SJT",
+      "price": 5.1255
+    }
+  ],
+  "100": [
+    {
+      "ticker": "INTT",
+      "price": 7.8
+    },
+    {
+      "ticker": "DLNG",
+      "price": 8.44
+    }
+  ],
+  "200": [
+    {
+      "ticker": "INTT",
+      "price": 7.75
+    },
+    {
+      "ticker": "DLNG",
+      "price": 8.49
+    }
+  ],
+  "260": [
+    {
+      "ticker": "DLNG",
+      "price": 8.4716
+    },
+    {
+      "ticker": "INTT",
+      "price": 7.725
+    }
+  ],
+  "351": [
+    {
+      "ticker": "INTT",
+      "price": 7.7
+    },
+    {
+      "ticker": "DLNG",
+      "price": 8.5
+    }
+  ],
+  "381": [
+    {
+      "ticker": "INTT",
+      "price": 7.675
+    },
+    {
+      "ticker": "DLNG",
+      "price": 8.51
+    }
+  ]
+}

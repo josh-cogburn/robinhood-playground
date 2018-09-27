@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "SQQQ",
+      "price": 11.34
+    },
+    {
+      "ticker": "REI",
+      "price": 10.2693
+    }
+  ],
+  "40": [
+    {
+      "ticker": "BFR",
+      "price": 12.08
+    },
+    {
+      "ticker": "REI",
+      "price": 10.19
+    }
+  ],
+  "100": [
+    {
+      "ticker": "SQQQ",
+      "price": 11.2664
+    },
+    {
+      "ticker": "BFR",
+      "price": 12.1
+    }
+  ],
+  "200": [
+    {
+      "ticker": "SQQQ",
+      "price": 11.2511
+    },
+    {
+      "ticker": "REI",
+      "price": 10.165
+    }
+  ],
+  "260": [
+    {
+      "ticker": "REI",
+      "price": 10.14
+    },
+    {
+      "ticker": "COLL",
+      "price": 14.4911
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SQQQ",
+      "price": 11.174
+    },
+    {
+      "ticker": "COLL",
+      "price": 14.42
+    }
+  ],
+  "381": [
+    {
+      "ticker": "COLL",
+      "price": 14.22
+    },
+    {
+      "ticker": "REI",
+      "price": 10.045
+    }
+  ]
+}

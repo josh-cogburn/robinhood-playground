@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "ATHX",
+      "price": 2.22
+    },
+    {
+      "ticker": "IMMY",
+      "price": 2.86
+    }
+  ],
+  "5": [
+    {
+      "ticker": "TRX",
+      "price": 0.37
+    },
+    {
+      "ticker": "ATHX",
+      "price": 2.179
+    }
+  ],
+  "16": [
+    {
+      "ticker": "TRX",
+      "price": 0.37
+    },
+    {
+      "ticker": "ATHX",
+      "price": 2.21
+    }
+  ],
+  "30": [
+    {
+      "ticker": "TRX",
+      "price": 0.371
+    },
+    {
+      "ticker": "ATHX",
+      "price": 2.15
+    }
+  ]
+}

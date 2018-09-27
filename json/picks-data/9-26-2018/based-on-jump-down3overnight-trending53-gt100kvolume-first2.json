@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "JAGX",
+      "price": 1.385
+    },
+    {
+      "ticker": "NSPR",
+      "price": 0.24
+    }
+  ],
+  "5": [
+    {
+      "ticker": "JAGX",
+      "price": 1.35
+    },
+    {
+      "ticker": "NSPR",
+      "price": 0.2301
+    }
+  ],
+  "16": [
+    {
+      "ticker": "JAGX",
+      "price": 1.2625
+    },
+    {
+      "ticker": "NSPR",
+      "price": 0.235
+    }
+  ],
+  "30": [
+    {
+      "ticker": "JAGX",
+      "price": 1.25
+    },
+    {
+      "ticker": "ESNC",
+      "price": 0.26
+    }
+  ]
+}

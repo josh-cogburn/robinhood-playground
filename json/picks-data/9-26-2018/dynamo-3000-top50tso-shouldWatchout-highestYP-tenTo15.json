@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "AMRN",
+      "price": 13.44
+    },
+    {
+      "ticker": "IOVA",
+      "price": 12.45
+    }
+  ],
+  "40": [
+    {
+      "ticker": "AMRN",
+      "price": 13.78
+    },
+    {
+      "ticker": "NCMI",
+      "price": 10.85
+    }
+  ],
+  "100": [
+    {
+      "ticker": "AMRN",
+      "price": 13.447
+    },
+    {
+      "ticker": "NCMI",
+      "price": 10.81
+    }
+  ],
+  "200": [
+    {
+      "ticker": "AMRN",
+      "price": 13.335
+    },
+    {
+      "ticker": "NCMI",
+      "price": 10.795
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AMRN",
+      "price": 13.28
+    },
+    {
+      "ticker": "NCMI",
+      "price": 10.795
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AMRN",
+      "price": 13.579
+    },
+    {
+      "ticker": "NCMI",
+      "price": 10.78
+    }
+  ],
+  "381": [
+    {
+      "ticker": "AMRN",
+      "price": 13.415
+    },
+    {
+      "ticker": "EXPR",
+      "price": 11.17
+    }
+  ]
+}

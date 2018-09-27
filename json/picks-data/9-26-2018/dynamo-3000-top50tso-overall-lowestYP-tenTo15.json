@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "FPRX",
+      "price": 14.5529
+    },
+    {
+      "ticker": "UCTT",
+      "price": 12.58
+    }
+  ],
+  "40": [
+    {
+      "ticker": "PRTA",
+      "price": 13.36
+    },
+    {
+      "ticker": "FPRX",
+      "price": 14.28
+    }
+  ],
+  "100": [
+    {
+      "ticker": "PRTA",
+      "price": 13.31
+    },
+    {
+      "ticker": "BAS",
+      "price": 10.29
+    }
+  ],
+  "200": [
+    {
+      "ticker": "UCTT",
+      "price": 12.78
+    },
+    {
+      "ticker": "AKRX",
+      "price": 13.07
+    }
+  ],
+  "260": [
+    {
+      "ticker": "DERM",
+      "price": 10.43
+    },
+    {
+      "ticker": "UCTT",
+      "price": 12.86
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CBIO",
+      "price": 10.64
+    },
+    {
+      "ticker": "UCTT",
+      "price": 12.84
+    }
+  ],
+  "381": [
+    {
+      "ticker": "CBIO",
+      "price": 10.62
+    },
+    {
+      "ticker": "UCTT",
+      "price": 12.665
+    }
+  ]
+}

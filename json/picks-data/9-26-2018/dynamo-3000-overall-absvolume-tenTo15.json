@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "AWSM",
+      "price": 10.8975
+    },
+    {
+      "ticker": "SOUHY",
+      "price": 14.185
+    }
+  ],
+  "40": [
+    {
+      "ticker": "AWSM",
+      "price": 10.16
+    },
+    {
+      "ticker": "BOCH",
+      "price": 12.325
+    }
+  ],
+  "100": [
+    {
+      "ticker": "GPOR",
+      "price": 10.105
+    },
+    {
+      "ticker": "BOCH",
+      "price": 12.35
+    }
+  ],
+  "200": [
+    {
+      "ticker": "AWSM",
+      "price": 10.2
+    },
+    {
+      "ticker": "BOCH",
+      "price": 12.425
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GPOR",
+      "price": 10.285
+    },
+    {
+      "ticker": "BOCH",
+      "price": 12.5166
+    }
+  ],
+  "351": [
+    {
+      "ticker": "VSI",
+      "price": 10.225
+    },
+    {
+      "ticker": "BOCH",
+      "price": 12.475
+    }
+  ],
+  "381": [
+    {
+      "ticker": "ISDR",
+      "price": 14.35
+    },
+    {
+      "ticker": "BOCH",
+      "price": 12.475
+    }
+  ]
+}

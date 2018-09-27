@@ -1,0 +1,100 @@
+{
+  "4": [
+    {
+      "ticker": "MPVD",
+      "price": 2.1
+    },
+    {
+      "ticker": "HLTH",
+      "price": 0.9315
+    },
+    {
+      "ticker": "EGY",
+      "price": 2.76
+    }
+  ],
+  "40": [
+    {
+      "ticker": "MPVD",
+      "price": 2.1
+    },
+    {
+      "ticker": "HLTH",
+      "price": 0.9545
+    },
+    {
+      "ticker": "TRT",
+      "price": 4.88
+    }
+  ],
+  "100": [
+    {
+      "ticker": "MPVD",
+      "price": 2.05
+    },
+    {
+      "ticker": "TRT",
+      "price": 4.7527
+    },
+    {
+      "ticker": "EGY",
+      "price": 2.6487
+    }
+  ],
+  "200": [
+    {
+      "ticker": "TRT",
+      "price": 4.7994
+    },
+    {
+      "ticker": "EMES",
+      "price": 4.14
+    },
+    {
+      "ticker": "OSN",
+      "price": 2.1548
+    }
+  ],
+  "260": [
+    {
+      "ticker": "MPVD",
+      "price": 2.075
+    },
+    {
+      "ticker": "EMES",
+      "price": 4.15
+    },
+    {
+      "ticker": "OSN",
+      "price": 2.1548
+    }
+  ],
+  "351": [
+    {
+      "ticker": "MPVD",
+      "price": 2.075
+    },
+    {
+      "ticker": "EGY",
+      "price": 2.7
+    },
+    {
+      "ticker": "EMES",
+      "price": 4.154
+    }
+  ],
+  "381": [
+    {
+      "ticker": "EGY",
+      "price": 2.71
+    },
+    {
+      "ticker": "EMES",
+      "price": 4.18
+    },
+    {
+      "ticker": "OSN",
+      "price": 2.115
+    }
+  ]
+}

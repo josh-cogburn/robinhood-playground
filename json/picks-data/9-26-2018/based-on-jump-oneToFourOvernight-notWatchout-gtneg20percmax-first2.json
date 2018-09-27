@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "IMMY",
+      "price": 2.86
+    },
+    {
+      "ticker": "PER",
+      "price": 2.65
+    }
+  ],
+  "5": [
+    {
+      "ticker": "LINC",
+      "price": 2.17
+    },
+    {
+      "ticker": "IMMY",
+      "price": 2.86
+    }
+  ],
+  "16": [
+    {
+      "ticker": "LINC",
+      "price": 2.17
+    },
+    {
+      "ticker": "IMMY",
+      "price": 2.8599
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CHKR",
+      "price": 1.6801
+    },
+    {
+      "ticker": "LINC",
+      "price": 2.17
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "0": [
+    {
+      "ticker": "DGLY",
+      "price": 2.95
+    },
+    {
+      "ticker": "IGLD",
+      "price": 2.5
+    },
+    {
+      "ticker": "PLX",
+      "price": 0.69
+    },
+    {
+      "ticker": "GNMX",
+      "price": 1.26
+    },
+    {
+      "ticker": "VRML",
+      "price": 0.69
+    }
+  ],
+  "5": [
+    {
+      "ticker": "DGLY",
+      "price": 3
+    },
+    {
+      "ticker": "IGLD",
+      "price": 2.55
+    },
+    {
+      "ticker": "PLX",
+      "price": 0.7001
+    },
+    {
+      "ticker": "FENG",
+      "price": 4.11
+    },
+    {
+      "ticker": "DAC",
+      "price": 1.532
+    }
+  ],
+  "16": [
+    {
+      "ticker": "DGLY",
+      "price": 2.9956
+    },
+    {
+      "ticker": "IGLD",
+      "price": 2.55
+    },
+    {
+      "ticker": "PLX",
+      "price": 0.72
+    },
+    {
+      "ticker": "FENG",
+      "price": 4.07
+    },
+    {
+      "ticker": "DAC",
+      "price": 1.53
+    }
+  ],
+  "30": [
+    {
+      "ticker": "DGLY",
+      "price": 2.975
+    },
+    {
+      "ticker": "IGLD",
+      "price": 2.55
+    },
+    {
+      "ticker": "UONEK",
+      "price": 2
+    },
+    {
+      "ticker": "PLX",
+      "price": 0.7163
+    },
+    {
+      "ticker": "FENG",
+      "price": 3.96
+    }
+  ]
+}

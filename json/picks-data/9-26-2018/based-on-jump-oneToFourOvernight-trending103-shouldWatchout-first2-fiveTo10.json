@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "INO",
+      "price": 5.1299
+    },
+    {
+      "ticker": "PBR.A",
+      "price": 9.95
+    }
+  ],
+  "5": [
+    {
+      "ticker": "INO",
+      "price": 5.1499
+    },
+    {
+      "ticker": "PBR.A",
+      "price": 9.94
+    }
+  ],
+  "16": [
+    {
+      "ticker": "INO",
+      "price": 5.22
+    },
+    {
+      "ticker": "PBR.A",
+      "price": 10
+    }
+  ],
+  "30": [
+    {
+      "ticker": "INO",
+      "price": 5.18
+    },
+    {
+      "ticker": "PBR.A",
+      "price": 9.94
+    }
+  ]
+}

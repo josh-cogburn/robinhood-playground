@@ -1,0 +1,58 @@
+{
+  "360": [
+    {
+      "ticker": "ANY",
+      "price": 0.3985
+    }
+  ],
+  "388": [
+    {
+      "ticker": "ANY",
+      "price": 0.381
+    }
+  ],
+  "400": [
+    {
+      "ticker": "ANY",
+      "price": 0.41
+    }
+  ],
+  "430": [
+    {
+      "ticker": "ANY",
+      "price": 0.38
+    },
+    {
+      "ticker": "VERU",
+      "price": 1.38
+    }
+  ],
+  "470": [
+    {
+      "ticker": "ANY",
+      "price": 0.3762
+    }
+  ],
+  "500": [
+    {
+      "ticker": "ANY",
+      "price": 0.3762
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "NLST",
+      "price": 0.469
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "NSPR",
+      "price": 0.239
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.463
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "OMEX",
+      "price": 8.25
+    },
+    {
+      "ticker": "INO",
+      "price": 5.1299
+    },
+    {
+      "ticker": "PACB",
+      "price": 5.04
+    }
+  ],
+  "5": [
+    {
+      "ticker": "OMEX",
+      "price": 8.25
+    },
+    {
+      "ticker": "INO",
+      "price": 5.1499
+    },
+    {
+      "ticker": "PACB",
+      "price": 5.08
+    }
+  ],
+  "16": [
+    {
+      "ticker": "OMEX",
+      "price": 8.25
+    },
+    {
+      "ticker": "INO",
+      "price": 5.22
+    },
+    {
+      "ticker": "PACB",
+      "price": 5.14
+    }
+  ],
+  "30": [
+    {
+      "ticker": "OMEX",
+      "price": 8.03
+    },
+    {
+      "ticker": "INO",
+      "price": 5.18
+    },
+    {
+      "ticker": "PACB",
+      "price": 5.18
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "AWSM",
+      "price": 10.8975
+    },
+    {
+      "ticker": "PDEX",
+      "price": 12.0145
+    }
+  ],
+  "40": [
+    {
+      "ticker": "AWSM",
+      "price": 10.16
+    },
+    {
+      "ticker": "TGH",
+      "price": 12.5
+    }
+  ],
+  "100": [
+    {
+      "ticker": "CORT",
+      "price": 13.51
+    },
+    {
+      "ticker": "IOVA",
+      "price": 12
+    }
+  ],
+  "200": [
+    {
+      "ticker": "AWSM",
+      "price": 10.2
+    },
+    {
+      "ticker": "PDEX",
+      "price": 11.65
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CORT",
+      "price": 13.39
+    },
+    {
+      "ticker": "AWSM",
+      "price": 10.3975
+    }
+  ],
+  "351": [
+    {
+      "ticker": "VSI",
+      "price": 10.225
+    },
+    {
+      "ticker": "PDEX",
+      "price": 11.45
+    }
+  ],
+  "381": [
+    {
+      "ticker": "PDEX",
+      "price": 11.3
+    },
+    {
+      "ticker": "VSI",
+      "price": 10.325
+    }
+  ]
+}

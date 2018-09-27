@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "CBLI",
+      "price": 2
+    },
+    {
+      "ticker": "NVLN",
+      "price": 3.15
+    },
+    {
+      "ticker": "MLNT",
+      "price": 4.2
+    }
+  ],
+  "5": [
+    {
+      "ticker": "AST",
+      "price": 1.3934
+    },
+    {
+      "ticker": "CBLI",
+      "price": 2
+    },
+    {
+      "ticker": "NVLN",
+      "price": 3.13
+    }
+  ],
+  "16": [
+    {
+      "ticker": "AST",
+      "price": 1.3932
+    },
+    {
+      "ticker": "CBLI",
+      "price": 2
+    },
+    {
+      "ticker": "NVLN",
+      "price": 3.05
+    }
+  ],
+  "30": [
+    {
+      "ticker": "AST",
+      "price": 1.4
+    },
+    {
+      "ticker": "CBLI",
+      "price": 1.9563
+    },
+    {
+      "ticker": "NVLN",
+      "price": 3.04
+    }
+  ]
+}

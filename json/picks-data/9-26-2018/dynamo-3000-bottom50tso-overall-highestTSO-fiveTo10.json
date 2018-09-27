@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "NYMT",
+      "price": 6.1
+    },
+    {
+      "ticker": "TWI",
+      "price": 7.5875
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CCRN",
+      "price": 8.65
+    },
+    {
+      "ticker": "NYMT",
+      "price": 6.0701
+    }
+  ],
+  "100": [
+    {
+      "ticker": "PDFS",
+      "price": 8.76
+    },
+    {
+      "ticker": "HOS",
+      "price": 5.16
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PIRS",
+      "price": 5.61
+    },
+    {
+      "ticker": "AKBA",
+      "price": 8.38
+    }
+  ],
+  "260": [
+    {
+      "ticker": "LQDT",
+      "price": 6.3
+    },
+    {
+      "ticker": "STKL",
+      "price": 7.325
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SNDX",
+      "price": 6.93
+    },
+    {
+      "ticker": "GPRO",
+      "price": 7.065
+    }
+  ],
+  "381": [
+    {
+      "ticker": "PIH",
+      "price": 6.45
+    },
+    {
+      "ticker": "EIGI",
+      "price": 8.875
+    }
+  ]
+}

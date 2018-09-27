@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "GERN",
+      "price": 6.43
+    },
+    {
+      "ticker": "NIHD",
+      "price": 5.48
+    }
+  ],
+  "40": [
+    {
+      "ticker": "GERN",
+      "price": 6.425
+    },
+    {
+      "ticker": "NIHD",
+      "price": 5.53
+    }
+  ],
+  "100": [
+    {
+      "ticker": "NIHD",
+      "price": 5.49
+    },
+    {
+      "ticker": "PACB",
+      "price": 5.115
+    }
+  ],
+  "200": [
+    {
+      "ticker": "NIHD",
+      "price": 5.51
+    },
+    {
+      "ticker": "P",
+      "price": 9.345
+    }
+  ],
+  "260": [
+    {
+      "ticker": "OCC",
+      "price": 6.1692
+    },
+    {
+      "ticker": "HTGM",
+      "price": 5.05
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NIHD",
+      "price": 5.535
+    },
+    {
+      "ticker": "OCC",
+      "price": 6.1
+    }
+  ],
+  "381": [
+    {
+      "ticker": "HTGM",
+      "price": 5.08
+    },
+    {
+      "ticker": "PACB",
+      "price": 5.155
+    }
+  ]
+}

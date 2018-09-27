@@ -1,0 +1,122 @@
+{
+  "280": [
+    {
+      "ticker": "DAC",
+      "price": 1.24
+    },
+    {
+      "ticker": "JAGX",
+      "price": 1.05
+    }
+  ],
+  "290": [
+    {
+      "ticker": "DAC",
+      "price": 1.2837
+    },
+    {
+      "ticker": "JAGX",
+      "price": 1.06
+    }
+  ],
+  "328": [
+    {
+      "ticker": "ANY",
+      "price": 0.47
+    },
+    {
+      "ticker": "JAGX",
+      "price": 1.05
+    }
+  ],
+  "360": [
+    {
+      "ticker": "ANY",
+      "price": 0.3985
+    },
+    {
+      "ticker": "JAGX",
+      "price": 1
+    }
+  ],
+  "388": [
+    {
+      "ticker": "ANY",
+      "price": 0.381
+    },
+    {
+      "ticker": "WWR",
+      "price": 0.2577
+    }
+  ],
+  "400": [
+    {
+      "ticker": "ANY",
+      "price": 0.41
+    },
+    {
+      "ticker": "XSPA",
+      "price": 0.1698
+    }
+  ],
+  "430": [
+    {
+      "ticker": "ANY",
+      "price": 0.38
+    },
+    {
+      "ticker": "VERU",
+      "price": 1.38
+    }
+  ],
+  "470": [
+    {
+      "ticker": "ANY",
+      "price": 0.3762
+    },
+    {
+      "ticker": "VERU",
+      "price": 1.49
+    }
+  ],
+  "500": [
+    {
+      "ticker": "ANY",
+      "price": 0.3762
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.535
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "NLST",
+      "price": 0.469
+    },
+    {
+      "ticker": "NSPR",
+      "price": 0.255
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "NLST",
+      "price": 0.48
+    },
+    {
+      "ticker": "NSPR",
+      "price": 0.2498
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "NSPR",
+      "price": 0.239
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.463
+    }
+  ]
+}

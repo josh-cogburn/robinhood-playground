@@ -1,0 +1,50 @@
+{
+  "0": [
+    {
+      "ticker": "ZFGN",
+      "price": 12.09
+    }
+  ],
+  "5": [
+    {
+      "ticker": "ZFGN",
+      "price": 12.12
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CRT",
+      "price": 15
+    },
+    {
+      "ticker": "HALL",
+      "price": 10.99
+    },
+    {
+      "ticker": "ZFGN",
+      "price": 12
+    },
+    {
+      "ticker": "EIGR",
+      "price": 12.345
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CRT",
+      "price": 15
+    },
+    {
+      "ticker": "HALL",
+      "price": 10.99
+    },
+    {
+      "ticker": "ZFGN",
+      "price": 12.025
+    },
+    {
+      "ticker": "EIGR",
+      "price": 12.1717
+    }
+  ]
+}
