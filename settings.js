@@ -19,7 +19,7 @@ const {
 // TODO: flatten list of strategies with PMs for emailObj same way as forPurchase
 module.exports = {
     // important settings
-    sellAllStocksOnNthDay: 1,
+    sellAllStocksOnNthDay: 2,
     purchaseAmt: 40,
     forPurchase: [
         '[bigdawgs]'

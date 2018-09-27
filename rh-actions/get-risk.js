@@ -3,10 +3,14 @@
 const getTrend = require('../utils/get-trend');
 const { avgArray } = require('../utils/array-math');
 
-const shouldWatchout = async (Robinhood, ticker) => {
+const shouldWatchout = async (Robinhood, ticker, historicals) => {
     // console.log('evaluating risk ...', ticker);
-    const historicalDailyUrl = `https://api.robinhood.com/quotes/historicals/${ticker}/?interval=day`;
-    let { historicals: dailyYear} = await Robinhood.url(historicalDailyUrl);
+
+    let dailyYear = historicals ? historicals : await (async () => {
+        const historicalDailyUrl = `https://api.robinhood.com/quotes/historicals/${ticker}/?interval=day`;
+        let response = await Robinhood.url(historicalDailyUrl);
+        return response.historicals;
+    })();
 
     if (!dailyYear.length) {
         return { shouldWatchout: true };
@@ -43,3 +47,4 @@ const shouldWatchout = async (Robinhood, ticker) => {
 };
 
 module.exports = shouldWatchout;
+
