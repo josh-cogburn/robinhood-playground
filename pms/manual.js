@@ -1127,6 +1127,11 @@ const heavydutyhitters = [
     'sudden-drops-last18trend-filter30-280'
 ];
 
+const constantinople = [
+    'constant-risers-10minute-percUpCloseOnlyPoints-filtered70-fiveTo10-40',
+    'constant-downers-10minute-percDownCloseOnly-filtered80-242',
+];
+
 module.exports = {
     'wild n crazy': [
         'week-swings-tenTo15-1',  // wild
@@ -1226,5 +1231,6 @@ module.exports = {
 
     bigdawgs,
     backToTheBasicsPeople,
-    heavydutyhitters
+    heavydutyhitters,
+    constantinople,
 };

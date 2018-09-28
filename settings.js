@@ -23,12 +23,14 @@ module.exports = {
     purchaseAmt: 40,
     forPurchase: [
         '[backToTheBasicsPeople]',
-
+        'low-float-high-volume-floatTimesfloatToVolume-trenddown7to10-25',
+        'low-float-high-volume-floatTimesfloatToVolume-trenddowngt10-shouldWatchout-25',
         '[myRecs-day40-hundredResultCreme]',
         '[myRecs-day30-hundredResultCreme]',
         '[myRecs-day30count7-hundredUpTrendsAllGt1]',
         
         '[heavydutyhitters]',
+        '[constantinople]'
     ],
     fallbackSellStrategy: 'limit3',
     force: {
