@@ -1107,6 +1107,18 @@ const bigdawgs = [
     'constant-risers-10minute-percUpHighClose-filtered70-tenTo15-140'
 ]
 
+const backToTheBasicsPeople = [
+    'low-float-high-volume-floatTimesfloatToVolume-trenddowngt10-notWatchout-95',
+    'based-on-jump-gtEightOvernight-trending607-shouldWatchout-first1-fiveTo10-30',
+    'low-float-high-volume-floatTimesfloatToVolume-trenddown7to10-25',
+    'low-float-high-volume-floatTimesfloatToVolume-trenddowngt10-shouldWatchout-25',
+    'sudden-drops-last3trend-first1-500',
+    'sudden-drops-last3trend-filter10-100',
+    'based-on-jump-gtEightOvernight-trending607-shouldWatchout-first1-fiveTo10-30',
+    'based-on-jump-gtEightOvernight-trending53-notWatchout-gtneg20percmax-first2-30',
+    'constant-risers-10minute-percUpCloseOnlyPoints-filtered70-fiveTo10-40',
+];
+
 module.exports = {
     'wild n crazy': [
         'week-swings-tenTo15-1',  // wild
@@ -1204,5 +1216,6 @@ module.exports = {
     hadAGoodDay,
 
 
-    bigdawgs
+    bigdawgs,
+    backToTheBasicsPeople
 };
