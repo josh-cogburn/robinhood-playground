@@ -22,7 +22,13 @@ module.exports = {
     sellAllStocksOnNthDay: 2,
     purchaseAmt: 40,
     forPurchase: [
-        '[bigdawgs]'
+        '[backToTheBasicsPeople]',
+
+        '[myRecs-day40-hundredResultCreme]',
+        '[myRecs-day30-hundredResultCreme]',
+        '[myRecs-day30count7-hundredUpTrendsAllGt1]',
+        
+        '[heavydutyhitters]',
     ],
     fallbackSellStrategy: 'limit3',
     force: {

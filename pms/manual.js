@@ -1119,6 +1119,14 @@ const backToTheBasicsPeople = [
     'constant-risers-10minute-percUpCloseOnlyPoints-filtered70-fiveTo10-40',
 ];
 
+const heavydutyhitters = [
+    'low-float-high-volume-floatPoints-trenddowngt10-notWatchout-tenTo15-276',
+    'based-on-jump-down8overnight-trending103-gt1milvolume-first3-16',
+    'sudden-drops-last18trend-filter20-280',
+    'low-float-high-volume-floatTimesfloatToVolume-trend10to15-fifteenTo20-150',
+    'sudden-drops-last18trend-filter30-280'
+];
+
 module.exports = {
     'wild n crazy': [
         'week-swings-tenTo15-1',  // wild
@@ -1217,5 +1225,6 @@ module.exports = {
 
 
     bigdawgs,
-    backToTheBasicsPeople
+    backToTheBasicsPeople,
+    heavydutyhitters
 };
