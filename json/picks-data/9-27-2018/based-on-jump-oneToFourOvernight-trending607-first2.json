@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "DNN",
+      "price": 0.66
+    },
+    {
+      "ticker": "ACST",
+      "price": 0.8799
+    }
+  ],
+  "5": [
+    {
+      "ticker": "DNN",
+      "price": 0.6741
+    },
+    {
+      "ticker": "ACST",
+      "price": 0.8701
+    }
+  ],
+  "16": [
+    {
+      "ticker": "DNN",
+      "price": 0.645
+    },
+    {
+      "ticker": "CRMD",
+      "price": 0.7301
+    }
+  ],
+  "30": [
+    {
+      "ticker": "TGC",
+      "price": 1.13
+    },
+    {
+      "ticker": "DNN",
+      "price": 0.6777
+    }
+  ]
+}

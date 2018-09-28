@@ -1,0 +1,58 @@
+{
+  "280": [
+    {
+      "ticker": "BFR",
+      "price": 11.7
+    },
+    {
+      "ticker": "VCEL",
+      "price": 13.9
+    },
+    {
+      "ticker": "CCXI",
+      "price": 11.16
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "GPOR",
+      "price": 10.28
+    },
+    {
+      "ticker": "SOXS",
+      "price": 10
+    },
+    {
+      "ticker": "SLV",
+      "price": 13.37
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "SOXS",
+      "price": 9.9
+    },
+    {
+      "ticker": "ABX",
+      "price": 10.73
+    },
+    {
+      "ticker": "GPOR",
+      "price": 10.28
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "SOXS",
+      "price": 9.9101
+    },
+    {
+      "ticker": "FCX",
+      "price": 13.83
+    },
+    {
+      "ticker": "ABX",
+      "price": 10.75
+    }
+  ]
+}

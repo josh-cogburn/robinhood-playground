@@ -1,0 +1,38 @@
+{
+  "153": [
+    {
+      "ticker": "CDE",
+      "price": 5.2
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "GERN",
+      "price": 2.11
+    },
+    {
+      "ticker": "JNUG",
+      "price": 7.24
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "GERN",
+      "price": 1.96
+    },
+    {
+      "ticker": "JNUG",
+      "price": 7.2
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "GERN",
+      "price": 2
+    },
+    {
+      "ticker": "JNUG",
+      "price": 7.17
+    }
+  ]
+}

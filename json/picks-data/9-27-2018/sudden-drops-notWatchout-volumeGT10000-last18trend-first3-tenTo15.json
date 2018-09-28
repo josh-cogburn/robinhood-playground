@@ -1,0 +1,114 @@
+{
+  "100": [
+    {
+      "ticker": "CCJ",
+      "price": 11.17
+    },
+    {
+      "ticker": "SHSP",
+      "price": 13.25
+    },
+    {
+      "ticker": "CBAY",
+      "price": 11.1
+    }
+  ],
+  "153": [
+    {
+      "ticker": "SA",
+      "price": 12.8
+    },
+    {
+      "ticker": "BFR",
+      "price": 12.31
+    },
+    {
+      "ticker": "MTLS",
+      "price": 13.495
+    }
+  ],
+  "189": [
+    {
+      "ticker": "CDZI",
+      "price": 10.5
+    },
+    {
+      "ticker": "CCXI",
+      "price": 11.03
+    },
+    {
+      "ticker": "BZH",
+      "price": 10.555
+    }
+  ],
+  "221": [
+    {
+      "ticker": "CCXI",
+      "price": 11.09
+    },
+    {
+      "ticker": "CDZI",
+      "price": 10.375
+    },
+    {
+      "ticker": "BVN",
+      "price": 13.18
+    }
+  ],
+  "280": [
+    {
+      "ticker": "BFR",
+      "price": 11.7
+    },
+    {
+      "ticker": "CTSO",
+      "price": 12.9291
+    },
+    {
+      "ticker": "GEOS",
+      "price": 13.365
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "GPOR",
+      "price": 10.28
+    },
+    {
+      "ticker": "SOXS",
+      "price": 10
+    },
+    {
+      "ticker": "SLV",
+      "price": 13.37
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "SOXS",
+      "price": 9.9
+    },
+    {
+      "ticker": "GPOR",
+      "price": 10.28
+    },
+    {
+      "ticker": "SLV",
+      "price": 13.38
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "SOXS",
+      "price": 9.9101
+    },
+    {
+      "ticker": "FCX",
+      "price": 13.83
+    },
+    {
+      "ticker": "SLV",
+      "price": 13.33
+    }
+  ]
+}

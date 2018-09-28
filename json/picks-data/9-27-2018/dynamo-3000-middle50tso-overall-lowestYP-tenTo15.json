@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "SQQQ",
+      "price": 11.24
+    },
+    {
+      "ticker": "CENX",
+      "price": 11.75
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CBIO",
+      "price": 10.63
+    },
+    {
+      "ticker": "BFR",
+      "price": 12.325
+    }
+  ],
+  "100": [
+    {
+      "ticker": "FPRX",
+      "price": 13.8551
+    },
+    {
+      "ticker": "GLRE",
+      "price": 12.575
+    }
+  ],
+  "200": [
+    {
+      "ticker": "BFR",
+      "price": 12.21
+    },
+    {
+      "ticker": "BLDR",
+      "price": 14.96
+    }
+  ],
+  "260": [
+    {
+      "ticker": "REW",
+      "price": 10.75
+    },
+    {
+      "ticker": "DB",
+      "price": 11.89
+    }
+  ]
+}

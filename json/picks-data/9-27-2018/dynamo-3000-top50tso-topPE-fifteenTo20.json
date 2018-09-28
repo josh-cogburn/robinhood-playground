@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "SJR",
+      "price": 19.24
+    },
+    {
+      "ticker": "ERJ",
+      "price": 19.64
+    },
+    {
+      "ticker": "HBI",
+      "price": 18.13
+    }
+  ],
+  "40": [
+    {
+      "ticker": "COT",
+      "price": 15.4
+    },
+    {
+      "ticker": "DOC",
+      "price": 16.63
+    },
+    {
+      "ticker": "RNP",
+      "price": 19.38
+    }
+  ],
+  "100": [
+    {
+      "ticker": "SJR",
+      "price": 19.45
+    },
+    {
+      "ticker": "ERJ",
+      "price": 19.995
+    },
+    {
+      "ticker": "COT",
+      "price": 15.91
+    }
+  ],
+  "200": [
+    {
+      "ticker": "SJR",
+      "price": 19.4739
+    },
+    {
+      "ticker": "COT",
+      "price": 15.915
+    },
+    {
+      "ticker": "GDX",
+      "price": 18.44
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SJR",
+      "price": 19.51
+    },
+    {
+      "ticker": "COT",
+      "price": 15.83
+    },
+    {
+      "ticker": "DOC",
+      "price": 16.685
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "280": [
+    {
+      "ticker": "GPRO",
+      "price": 7.16
+    },
+    {
+      "ticker": "SWN",
+      "price": 5.2
+    },
+    {
+      "ticker": "SIRI",
+      "price": 6.35
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "GERN",
+      "price": 2.11
+    },
+    {
+      "ticker": "JNUG",
+      "price": 7.24
+    },
+    {
+      "ticker": "TZA",
+      "price": 8.46
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "GERN",
+      "price": 1.96
+    },
+    {
+      "ticker": "JNUG",
+      "price": 7.2
+    },
+    {
+      "ticker": "TZA",
+      "price": 8.44
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "GERN",
+      "price": 2
+    },
+    {
+      "ticker": "JNUG",
+      "price": 7.17
+    },
+    {
+      "ticker": "DNR",
+      "price": 6.2001
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "153": [
+    {
+      "ticker": "CDE",
+      "price": 5.2
+    },
+    {
+      "ticker": "LPI",
+      "price": 8.295
+    }
+  ],
+  "189": [
+    {
+      "ticker": "TGTX",
+      "price": 5.52
+    },
+    {
+      "ticker": "INFN",
+      "price": 7.28
+    }
+  ],
+  "221": [
+    {
+      "ticker": "INFN",
+      "price": 7.3
+    },
+    {
+      "ticker": "LPI",
+      "price": 8.27
+    }
+  ],
+  "280": [
+    {
+      "ticker": "DF",
+      "price": 7.17
+    },
+    {
+      "ticker": "HIMX",
+      "price": 5.7867
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "GERN",
+      "price": 2.11
+    },
+    {
+      "ticker": "JNUG",
+      "price": 7.24
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "GERN",
+      "price": 1.96
+    },
+    {
+      "ticker": "JNUG",
+      "price": 7.2
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "GERN",
+      "price": 2
+    },
+    {
+      "ticker": "JNUG",
+      "price": 7.17
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "280": [
+    {
+      "ticker": "NUAN",
+      "price": 16.855
+    },
+    {
+      "ticker": "HBAN",
+      "price": 15.09
+    },
+    {
+      "ticker": "ON",
+      "price": 18.28
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "WPM",
+      "price": 17.17
+    },
+    {
+      "ticker": "GDX",
+      "price": 18.2501
+    },
+    {
+      "ticker": "AGNC",
+      "price": 18.5501
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "GDX",
+      "price": 18.18
+    },
+    {
+      "ticker": "ECYT",
+      "price": 18.05
+    },
+    {
+      "ticker": "AGNC",
+      "price": 18.5501
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "GDX",
+      "price": 18.18
+    },
+    {
+      "ticker": "ECYT",
+      "price": 18.05
+    },
+    {
+      "ticker": "CS",
+      "price": 15.35
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "280": [
+    {
+      "ticker": "FGP",
+      "price": 2.2954
+    },
+    {
+      "ticker": "TIS",
+      "price": 3.28
+    }
+  ],
+  "290": [
+    {
+      "ticker": "FGP",
+      "price": 2.3
+    },
+    {
+      "ticker": "TIS",
+      "price": 3.27
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "HSGX",
+      "price": 0.615
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.2255
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "PLX",
+      "price": 0.6705
+    },
+    {
+      "ticker": "HSGX",
+      "price": 0.633
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "INPX",
+      "price": 0.22
+    },
+    {
+      "ticker": "PLX",
+      "price": 0.6705
+    }
+  ]
+}

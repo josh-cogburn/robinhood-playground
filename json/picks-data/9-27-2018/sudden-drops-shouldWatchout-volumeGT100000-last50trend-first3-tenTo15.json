@@ -1,0 +1,58 @@
+{
+  "280": [
+    {
+      "ticker": "LNTH",
+      "price": 14.475
+    },
+    {
+      "ticker": "GOV",
+      "price": 11.21
+    },
+    {
+      "ticker": "VSI",
+      "price": 10.45
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "NUGT",
+      "price": 12.39
+    },
+    {
+      "ticker": "PBR",
+      "price": 11.62
+    },
+    {
+      "ticker": "AWSM",
+      "price": 10.54
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "NUGT",
+      "price": 12.23
+    },
+    {
+      "ticker": "HCLP",
+      "price": 10.955
+    },
+    {
+      "ticker": "ALDX",
+      "price": 13.555
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "NUGT",
+      "price": 12.19
+    },
+    {
+      "ticker": "HCLP",
+      "price": 11
+    },
+    {
+      "ticker": "DERM",
+      "price": 10.59
+    }
+  ]
+}

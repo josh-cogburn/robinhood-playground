@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "WTI",
+      "price": 9.07
+    },
+    {
+      "ticker": "MTBC",
+      "price": 5.169
+    }
+  ],
+  "40": [
+    {
+      "ticker": "TRXC",
+      "price": 6.04
+    },
+    {
+      "ticker": "OCC",
+      "price": 5.95
+    }
+  ],
+  "100": [
+    {
+      "ticker": "DLNG",
+      "price": 8.375
+    },
+    {
+      "ticker": "WTI",
+      "price": 8.865
+    }
+  ],
+  "200": [
+    {
+      "ticker": "WTI",
+      "price": 8.975
+    },
+    {
+      "ticker": "TRXC",
+      "price": 6.08
+    }
+  ],
+  "260": [
+    {
+      "ticker": "WTI",
+      "price": 8.955
+    },
+    {
+      "ticker": "TRXC",
+      "price": 6.08
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "100": [
+    {
+      "ticker": "LL",
+      "price": 16.13
+    },
+    {
+      "ticker": "CSTE",
+      "price": 19.9
+    }
+  ],
+  "153": [
+    {
+      "ticker": "XON",
+      "price": 16.98
+    },
+    {
+      "ticker": "BRZU",
+      "price": 19.53
+    }
+  ],
+  "189": [
+    {
+      "ticker": "XON",
+      "price": 17.065
+    },
+    {
+      "ticker": "OXFD",
+      "price": 16.6
+    }
+  ],
+  "221": [
+    {
+      "ticker": "XON",
+      "price": 16.99
+    },
+    {
+      "ticker": "ALDR",
+      "price": 16.65
+    }
+  ],
+  "280": [
+    {
+      "ticker": "PFBI",
+      "price": 18.35
+    },
+    {
+      "ticker": "ATV",
+      "price": 18.95
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "BBBY",
+      "price": 15.8
+    },
+    {
+      "ticker": "BRZU",
+      "price": 18.18
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "BBBY",
+      "price": 15.57
+    },
+    {
+      "ticker": "BRZU",
+      "price": 18.24
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "BBBY",
+      "price": 15.48
+    },
+    {
+      "ticker": "OXFD",
+      "price": 17.15
+    }
+  ]
+}

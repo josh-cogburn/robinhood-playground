@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "TGTX",
+      "price": 5.28
+    },
+    {
+      "ticker": "MGI",
+      "price": 5.56
+    }
+  ],
+  "40": [
+    {
+      "ticker": "XNET",
+      "price": 7.695
+    },
+    {
+      "ticker": "VIPS",
+      "price": 6.19
+    }
+  ],
+  "100": [
+    {
+      "ticker": "XNET",
+      "price": 7.6699
+    },
+    {
+      "ticker": "VIPS",
+      "price": 6.23
+    }
+  ],
+  "200": [
+    {
+      "ticker": "XNET",
+      "price": 7.67
+    },
+    {
+      "ticker": "VIPS",
+      "price": 6.26
+    }
+  ],
+  "260": [
+    {
+      "ticker": "XNET",
+      "price": 7.65
+    },
+    {
+      "ticker": "LIVE",
+      "price": 8.65
+    }
+  ]
+}

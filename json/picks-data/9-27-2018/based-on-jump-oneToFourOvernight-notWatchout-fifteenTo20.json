@@ -1,0 +1,90 @@
+{
+  "0": [
+    {
+      "ticker": "GASL",
+      "price": 20.5286
+    },
+    {
+      "ticker": "TESS",
+      "price": 15.4959
+    },
+    {
+      "ticker": "FF",
+      "price": 18.3712
+    },
+    {
+      "ticker": "BT",
+      "price": 15.18
+    },
+    {
+      "ticker": "AMOV",
+      "price": 16.5
+    }
+  ],
+  "5": [
+    {
+      "ticker": "PMD",
+      "price": 19.175
+    },
+    {
+      "ticker": "TESS",
+      "price": 15.35
+    },
+    {
+      "ticker": "KEN",
+      "price": 17.76
+    },
+    {
+      "ticker": "FF",
+      "price": 18.63
+    },
+    {
+      "ticker": "BT",
+      "price": 15.205
+    }
+  ],
+  "16": [
+    {
+      "ticker": "PMD",
+      "price": 19.175
+    },
+    {
+      "ticker": "TESS",
+      "price": 15.35
+    },
+    {
+      "ticker": "KEN",
+      "price": 17.7
+    },
+    {
+      "ticker": "ITCB",
+      "price": 15.3973
+    },
+    {
+      "ticker": "FF",
+      "price": 18.5871
+    }
+  ],
+  "30": [
+    {
+      "ticker": "PMD",
+      "price": 19.1899
+    },
+    {
+      "ticker": "TESS",
+      "price": 15.35
+    },
+    {
+      "ticker": "KEN",
+      "price": 17.6
+    },
+    {
+      "ticker": "ITCB",
+      "price": 15.3973
+    },
+    {
+      "ticker": "FF",
+      "price": 18.81
+    }
+  ]
+}

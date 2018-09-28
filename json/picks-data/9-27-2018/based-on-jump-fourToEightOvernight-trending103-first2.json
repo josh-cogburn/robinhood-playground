@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "GLBS",
+      "price": 0.49
+    },
+    {
+      "ticker": "DHXM",
+      "price": 1.4367
+    }
+  ],
+  "5": [
+    {
+      "ticker": "BVSN",
+      "price": 1.8
+    },
+    {
+      "ticker": "PED",
+      "price": 2.31
+    }
+  ],
+  "16": [
+    {
+      "ticker": "BVSN",
+      "price": 1.8
+    },
+    {
+      "ticker": "PED",
+      "price": 2.32
+    }
+  ],
+  "30": [
+    {
+      "ticker": "BVSN",
+      "price": 1.65
+    },
+    {
+      "ticker": "PED",
+      "price": 2.2
+    }
+  ]
+}

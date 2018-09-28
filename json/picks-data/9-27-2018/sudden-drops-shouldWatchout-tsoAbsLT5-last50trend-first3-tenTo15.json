@@ -1,0 +1,58 @@
+{
+  "280": [
+    {
+      "ticker": "LNTH",
+      "price": 14.475
+    },
+    {
+      "ticker": "XENE",
+      "price": 12.95
+    },
+    {
+      "ticker": "GOV",
+      "price": 11.21
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "NUGT",
+      "price": 12.39
+    },
+    {
+      "ticker": "PBR",
+      "price": 11.62
+    },
+    {
+      "ticker": "AWSM",
+      "price": 10.54
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "NUGT",
+      "price": 12.23
+    },
+    {
+      "ticker": "CBIO",
+      "price": 10.62
+    },
+    {
+      "ticker": "TZOO",
+      "price": 11.8
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "NUGT",
+      "price": 12.19
+    },
+    {
+      "ticker": "CBIO",
+      "price": 10.62
+    },
+    {
+      "ticker": "DERM",
+      "price": 10.59
+    }
+  ]
+}

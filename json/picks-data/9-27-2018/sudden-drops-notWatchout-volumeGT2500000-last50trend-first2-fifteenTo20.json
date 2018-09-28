@@ -1,0 +1,42 @@
+{
+  "280": [
+    {
+      "ticker": "HBAN",
+      "price": 15.09
+    },
+    {
+      "ticker": "RF",
+      "price": 18.66
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "GDX",
+      "price": 18.2501
+    },
+    {
+      "ticker": "AGNC",
+      "price": 18.5501
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "GDX",
+      "price": 18.18
+    },
+    {
+      "ticker": "AGNC",
+      "price": 18.5501
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "GDX",
+      "price": 18.18
+    },
+    {
+      "ticker": "MRVL",
+      "price": 18.5
+    }
+  ]
+}

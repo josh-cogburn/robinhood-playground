@@ -1,0 +1,102 @@
+{
+  "32": [
+    {
+      "ticker": "USAK",
+      "price": 20
+    },
+    {
+      "ticker": "YPF",
+      "price": 16.03
+    }
+  ],
+  "63": [
+    {
+      "ticker": "CDXS",
+      "price": 18
+    },
+    {
+      "ticker": "PMD",
+      "price": 18.8317
+    }
+  ],
+  "100": [
+    {
+      "ticker": "CDXS",
+      "price": 17.65
+    },
+    {
+      "ticker": "HALO",
+      "price": 18.13
+    }
+  ],
+  "153": [
+    {
+      "ticker": "IRS",
+      "price": 17.21
+    },
+    {
+      "ticker": "SPNE",
+      "price": 15.27
+    }
+  ],
+  "189": [
+    {
+      "ticker": "TGS",
+      "price": 16
+    },
+    {
+      "ticker": "CVRR",
+      "price": 19.8
+    }
+  ],
+  "221": [
+    {
+      "ticker": "CUO",
+      "price": 16.45
+    },
+    {
+      "ticker": "MODN",
+      "price": 15.65
+    }
+  ],
+  "280": [
+    {
+      "ticker": "AMOV",
+      "price": 16.2201
+    },
+    {
+      "ticker": "SXCP",
+      "price": 15.4
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "GDX",
+      "price": 18.2501
+    },
+    {
+      "ticker": "UBS",
+      "price": 16.11
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "CS",
+      "price": 15.33
+    },
+    {
+      "ticker": "GDX",
+      "price": 18.18
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "TMF",
+      "price": 17.34
+    },
+    {
+      "ticker": "EBF",
+      "price": 19.86
+    }
+  ]
+}

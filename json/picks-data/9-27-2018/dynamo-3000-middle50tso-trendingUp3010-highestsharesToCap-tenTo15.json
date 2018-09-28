@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "JRO",
+      "price": 10.22
+    },
+    {
+      "ticker": "CLAR",
+      "price": 10.9455
+    }
+  ],
+  "40": [
+    {
+      "ticker": "EXPR",
+      "price": 11.18
+    },
+    {
+      "ticker": "PMX",
+      "price": 11.5193
+    }
+  ],
+  "100": [
+    {
+      "ticker": "GRX",
+      "price": 11.115
+    },
+    {
+      "ticker": "AWF",
+      "price": 11.67
+    }
+  ],
+  "200": [
+    {
+      "ticker": "GRX",
+      "price": 11.12
+    },
+    {
+      "ticker": "EXPR",
+      "price": 11.18
+    }
+  ],
+  "260": [
+    {
+      "ticker": "IIJI",
+      "price": 10.26
+    },
+    {
+      "ticker": "BIF",
+      "price": 11.2637
+    }
+  ]
+}

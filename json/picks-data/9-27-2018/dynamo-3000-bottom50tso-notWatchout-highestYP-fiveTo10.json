@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "WTI",
+      "price": 9.07
+    },
+    {
+      "ticker": "ICL",
+      "price": 5.905
+    }
+  ],
+  "40": [
+    {
+      "ticker": "RLGT",
+      "price": 5.45
+    },
+    {
+      "ticker": "VNET",
+      "price": 9.71
+    }
+  ],
+  "100": [
+    {
+      "ticker": "DLNG",
+      "price": 8.375
+    },
+    {
+      "ticker": "WTI",
+      "price": 8.865
+    }
+  ],
+  "200": [
+    {
+      "ticker": "WTI",
+      "price": 8.975
+    },
+    {
+      "ticker": "MDWD",
+      "price": 6.475
+    }
+  ],
+  "260": [
+    {
+      "ticker": "WTI",
+      "price": 8.955
+    },
+    {
+      "ticker": "MDWD",
+      "price": 6.3
+    }
+  ]
+}

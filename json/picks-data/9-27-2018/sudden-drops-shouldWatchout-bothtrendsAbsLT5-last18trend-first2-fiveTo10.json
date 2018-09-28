@@ -1,0 +1,82 @@
+{
+  "100": [
+    {
+      "ticker": "OCC",
+      "price": 5.834
+    },
+    {
+      "ticker": "PVG",
+      "price": 7.48
+    }
+  ],
+  "153": [
+    {
+      "ticker": "SNDX",
+      "price": 6.72
+    },
+    {
+      "ticker": "INVE",
+      "price": 5.9662
+    }
+  ],
+  "189": [
+    {
+      "ticker": "CLUB",
+      "price": 8.7
+    },
+    {
+      "ticker": "ASYS",
+      "price": 5.42
+    }
+  ],
+  "221": [
+    {
+      "ticker": "ABUS",
+      "price": 9.675
+    },
+    {
+      "ticker": "LIVE",
+      "price": 8.904
+    }
+  ],
+  "280": [
+    {
+      "ticker": "GOGO",
+      "price": 5.09
+    },
+    {
+      "ticker": "MDXG",
+      "price": 5.96
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "GERN",
+      "price": 2.11
+    },
+    {
+      "ticker": "JNUG",
+      "price": 7.24
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "GERN",
+      "price": 1.96
+    },
+    {
+      "ticker": "JNUG",
+      "price": 7.2
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "GERN",
+      "price": 2
+    },
+    {
+      "ticker": "JNUG",
+      "price": 7.17
+    }
+  ]
+}

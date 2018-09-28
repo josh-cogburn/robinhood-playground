@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "RCII",
+      "price": 14.21
+    },
+    {
+      "ticker": "GE",
+      "price": 11.47
+    }
+  ],
+  "40": [
+    {
+      "ticker": "TSU",
+      "price": 14.69
+    },
+    {
+      "ticker": "NR",
+      "price": 10.25
+    }
+  ],
+  "100": [
+    {
+      "ticker": "SVRA",
+      "price": 11.175
+    },
+    {
+      "ticker": "CBIO",
+      "price": 10.85
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CLF",
+      "price": 12.78
+    },
+    {
+      "ticker": "ECOM",
+      "price": 11.95
+    }
+  ],
+  "260": [
+    {
+      "ticker": "FET",
+      "price": 10.55
+    },
+    {
+      "ticker": "VSI",
+      "price": 10.35
+    }
+  ]
+}

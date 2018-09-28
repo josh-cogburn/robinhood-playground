@@ -1,0 +1,52 @@
+{
+  "280": [
+    {
+      "ticker": "RAD",
+      "price": 1.25
+    },
+    {
+      "ticker": "WWR",
+      "price": 0.235
+    }
+  ],
+  "290": [
+    {
+      "ticker": "WWR",
+      "price": 0.2387
+    },
+    {
+      "ticker": "RAD",
+      "price": 1.25
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "SBGL",
+      "price": 2.5
+    },
+    {
+      "ticker": "GFI",
+      "price": 2.49
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "SBGL",
+      "price": 2.5
+    },
+    {
+      "ticker": "GFI",
+      "price": 2.49
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "SBGL",
+      "price": 2.47
+    },
+    {
+      "ticker": "WWR",
+      "price": 0.2422
+    }
+  ]
+}

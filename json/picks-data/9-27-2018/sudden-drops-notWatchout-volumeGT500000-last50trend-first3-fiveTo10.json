@@ -1,0 +1,58 @@
+{
+  "280": [
+    {
+      "ticker": "BKS",
+      "price": 5.725
+    },
+    {
+      "ticker": "GPRO",
+      "price": 7.16
+    },
+    {
+      "ticker": "NE",
+      "price": 6.795
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "USLV",
+      "price": 5.99
+    },
+    {
+      "ticker": "AU",
+      "price": 8.69
+    },
+    {
+      "ticker": "TZA",
+      "price": 8.46
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "USLV",
+      "price": 6.02
+    },
+    {
+      "ticker": "AU",
+      "price": 8.65
+    },
+    {
+      "ticker": "TZA",
+      "price": 8.44
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "USLV",
+      "price": 5.94
+    },
+    {
+      "ticker": "AU",
+      "price": 8.67
+    },
+    {
+      "ticker": "DNR",
+      "price": 6.2001
+    }
+  ]
+}

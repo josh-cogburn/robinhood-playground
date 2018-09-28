@@ -1,0 +1,42 @@
+{
+  "280": [
+    {
+      "ticker": "OXFD",
+      "price": 16.45
+    },
+    {
+      "ticker": "GRVY",
+      "price": 17.71
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "BBBY",
+      "price": 15.8
+    },
+    {
+      "ticker": "BRZU",
+      "price": 18.18
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "BBBY",
+      "price": 15.57
+    },
+    {
+      "ticker": "BRZU",
+      "price": 18.24
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "BBBY",
+      "price": 15.48
+    },
+    {
+      "ticker": "OXFD",
+      "price": 17.15
+    }
+  ]
+}

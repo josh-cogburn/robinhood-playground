@@ -1,0 +1,72 @@
+{
+  "280": [
+    {
+      "ticker": "SKYS",
+      "price": 0.7
+    },
+    {
+      "ticker": "FGP",
+      "price": 2.2954
+    },
+    {
+      "ticker": "TIS",
+      "price": 3.28
+    }
+  ],
+  "290": [
+    {
+      "ticker": "SKYS",
+      "price": 0.6998
+    },
+    {
+      "ticker": "FGP",
+      "price": 2.3
+    },
+    {
+      "ticker": "TIS",
+      "price": 3.27
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "HSGX",
+      "price": 0.615
+    },
+    {
+      "ticker": "RXII",
+      "price": 1.35
+    },
+    {
+      "ticker": "TOPS",
+      "price": 1.1
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "PLX",
+      "price": 0.6705
+    },
+    {
+      "ticker": "HSGX",
+      "price": 0.633
+    },
+    {
+      "ticker": "SSC",
+      "price": 4.05
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "PLX",
+      "price": 0.6705
+    },
+    {
+      "ticker": "VERU",
+      "price": 1.36
+    },
+    {
+      "ticker": "NVAX",
+      "price": 1.81
+    }
+  ]
+}

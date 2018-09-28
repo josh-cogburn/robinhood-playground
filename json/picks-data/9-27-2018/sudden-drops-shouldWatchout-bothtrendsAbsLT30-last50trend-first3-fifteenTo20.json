@@ -1,0 +1,58 @@
+{
+  "280": [
+    {
+      "ticker": "CSTE",
+      "price": 19.1
+    },
+    {
+      "ticker": "DGAZ",
+      "price": 17.78
+    },
+    {
+      "ticker": "OXFD",
+      "price": 16.45
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "VKTX",
+      "price": 18.4499
+    },
+    {
+      "ticker": "DGAZ",
+      "price": 19.08
+    },
+    {
+      "ticker": "BBBY",
+      "price": 15.8
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "VKTX",
+      "price": 18.4499
+    },
+    {
+      "ticker": "BBBY",
+      "price": 15.57
+    },
+    {
+      "ticker": "DGAZ",
+      "price": 18.88
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "BBBY",
+      "price": 15.48
+    },
+    {
+      "ticker": "VKTX",
+      "price": 18.2801
+    },
+    {
+      "ticker": "DGAZ",
+      "price": 18.95
+    }
+  ]
+}

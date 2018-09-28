@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "NCMI",
+      "price": 10.6
+    },
+    {
+      "ticker": "BRS",
+      "price": 12
+    }
+  ],
+  "40": [
+    {
+      "ticker": "OMN",
+      "price": 10.25
+    },
+    {
+      "ticker": "AWSM",
+      "price": 10.3
+    }
+  ],
+  "100": [
+    {
+      "ticker": "OMN",
+      "price": 10.25
+    },
+    {
+      "ticker": "AWSM",
+      "price": 10.08
+    }
+  ],
+  "200": [
+    {
+      "ticker": "AWSM",
+      "price": 10.3
+    },
+    {
+      "ticker": "MBTF",
+      "price": 11.15
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AWSM",
+      "price": 10.54
+    },
+    {
+      "ticker": "BHR",
+      "price": 11.43
+    }
+  ]
+}

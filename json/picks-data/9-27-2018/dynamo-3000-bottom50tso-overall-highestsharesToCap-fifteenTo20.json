@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "TGP",
+      "price": 15.1
+    },
+    {
+      "ticker": "LTRPA",
+      "price": 15.3
+    }
+  ],
+  "40": [
+    {
+      "ticker": "TESS",
+      "price": 15.35
+    },
+    {
+      "ticker": "HBAN",
+      "price": 15.185
+    }
+  ],
+  "100": [
+    {
+      "ticker": "TESS",
+      "price": 15.4
+    },
+    {
+      "ticker": "FATE",
+      "price": 15.05
+    }
+  ],
+  "200": [
+    {
+      "ticker": "TESS",
+      "price": 15.3989
+    },
+    {
+      "ticker": "FATE",
+      "price": 15.27
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TESS",
+      "price": 15.3989
+    },
+    {
+      "ticker": "HBAN",
+      "price": 15.1301
+    }
+  ]
+}

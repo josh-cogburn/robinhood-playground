@@ -1,0 +1,68 @@
+{
+  "280": [
+    {
+      "ticker": "JAGX",
+      "price": 1.0694
+    },
+    {
+      "ticker": "OHAI",
+      "price": 1.45
+    },
+    {
+      "ticker": "LENS",
+      "price": 1.71
+    },
+    {
+      "ticker": "SUNW",
+      "price": 0.4881
+    },
+    {
+      "ticker": "FSNN",
+      "price": 2.75
+    }
+  ],
+  "290": [
+    {
+      "ticker": "OHAI",
+      "price": 1.45
+    },
+    {
+      "ticker": "HSGX",
+      "price": 0.5799
+    },
+    {
+      "ticker": "JAGX",
+      "price": 1.079
+    },
+    {
+      "ticker": "NSPR",
+      "price": 0.224
+    },
+    {
+      "ticker": "LENS",
+      "price": 1.71
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "HSGX",
+      "price": 0.615
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "HSGX",
+      "price": 0.633
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "NVAX",
+      "price": 1.81
+    },
+    {
+      "ticker": "HSGX",
+      "price": 0.635
+    }
+  ]
+}

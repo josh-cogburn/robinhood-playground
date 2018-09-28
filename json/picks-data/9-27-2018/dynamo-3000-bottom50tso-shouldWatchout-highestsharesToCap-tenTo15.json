@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "EPZM",
+      "price": 10.05
+    },
+    {
+      "ticker": "KIRK",
+      "price": 10.4699
+    }
+  ],
+  "40": [
+    {
+      "ticker": "EPZM",
+      "price": 10.05
+    },
+    {
+      "ticker": "KIRK",
+      "price": 10.225
+    }
+  ],
+  "100": [
+    {
+      "ticker": "KIRK",
+      "price": 10.17
+    },
+    {
+      "ticker": "AWSM",
+      "price": 10.08
+    }
+  ],
+  "200": [
+    {
+      "ticker": "AWSM",
+      "price": 10.3
+    },
+    {
+      "ticker": "HCLP",
+      "price": 10.775
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AWSM",
+      "price": 10.54
+    },
+    {
+      "ticker": "HCLP",
+      "price": 10.75
+    }
+  ]
+}

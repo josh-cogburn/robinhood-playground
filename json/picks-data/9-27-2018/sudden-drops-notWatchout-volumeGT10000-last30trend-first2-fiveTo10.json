@@ -1,0 +1,72 @@
+{
+  "153": [
+    {
+      "ticker": "CDE",
+      "price": 5.2
+    },
+    {
+      "ticker": "DFRG",
+      "price": 8
+    }
+  ],
+  "189": [
+    {
+      "ticker": "CAMT",
+      "price": 8.725
+    },
+    {
+      "ticker": "OMN",
+      "price": 10
+    }
+  ],
+  "221": [
+    {
+      "ticker": "OMN",
+      "price": 9.975
+    },
+    {
+      "ticker": "UGP",
+      "price": 9.62
+    }
+  ],
+  "280": [
+    {
+      "ticker": "MDWD",
+      "price": 6.15
+    },
+    {
+      "ticker": "ARCO",
+      "price": 6.25
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "USLV",
+      "price": 5.99
+    },
+    {
+      "ticker": "AU",
+      "price": 8.69
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "USLV",
+      "price": 6.02
+    },
+    {
+      "ticker": "AU",
+      "price": 8.65
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "USLV",
+      "price": 5.94
+    },
+    {
+      "ticker": "AMRS",
+      "price": 7.94
+    }
+  ]
+}

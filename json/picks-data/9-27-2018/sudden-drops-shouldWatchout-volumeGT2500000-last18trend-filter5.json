@@ -1,0 +1,66 @@
+{
+  "100": [
+    {
+      "ticker": "CEI",
+      "price": 0.3975
+    }
+  ],
+  "189": [
+    {
+      "ticker": "NSPR",
+      "price": 0.23
+    }
+  ],
+  "221": [
+    {
+      "ticker": "NSPR",
+      "price": 0.2239
+    }
+  ],
+  "280": [
+    {
+      "ticker": "CEI",
+      "price": 0.3476
+    },
+    {
+      "ticker": "HSGX",
+      "price": 0.5545
+    }
+  ],
+  "290": [
+    {
+      "ticker": "CEI",
+      "price": 0.3449
+    },
+    {
+      "ticker": "HSGX",
+      "price": 0.5799
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "JAGX",
+      "price": 1.02
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.2255
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "JAGX",
+      "price": 1.0299
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "INPX",
+      "price": 0.22
+    },
+    {
+      "ticker": "NVAX",
+      "price": 1.81
+    }
+  ]
+}

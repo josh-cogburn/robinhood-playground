@@ -1,0 +1,74 @@
+{
+  "0": [
+    {
+      "ticker": "GERN",
+      "price": 1.66
+    },
+    {
+      "ticker": "RAND",
+      "price": 2.43
+    },
+    {
+      "ticker": "WRN",
+      "price": 0.67
+    },
+    {
+      "ticker": "JAGX",
+      "price": 1.0101
+    }
+  ],
+  "5": [
+    {
+      "ticker": "GERN",
+      "price": 2.0201
+    },
+    {
+      "ticker": "RAND",
+      "price": 2.43
+    },
+    {
+      "ticker": "WRN",
+      "price": 0.67
+    },
+    {
+      "ticker": "JAGX",
+      "price": 1.03
+    }
+  ],
+  "16": [
+    {
+      "ticker": "GERN",
+      "price": 2.04
+    },
+    {
+      "ticker": "RAND",
+      "price": 2.5
+    },
+    {
+      "ticker": "WRN",
+      "price": 0.67
+    },
+    {
+      "ticker": "JAGX",
+      "price": 1.2633
+    }
+  ],
+  "30": [
+    {
+      "ticker": "GERN",
+      "price": 2.23
+    },
+    {
+      "ticker": "RAND",
+      "price": 2.5
+    },
+    {
+      "ticker": "WRN",
+      "price": 0.7035
+    },
+    {
+      "ticker": "JAGX",
+      "price": 1.2
+    }
+  ]
+}

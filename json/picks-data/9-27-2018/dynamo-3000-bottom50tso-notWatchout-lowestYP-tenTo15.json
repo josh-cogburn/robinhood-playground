@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "DVAX",
+      "price": 12.3
+    },
+    {
+      "ticker": "BFR",
+      "price": 12.06
+    }
+  ],
+  "40": [
+    {
+      "ticker": "JKS",
+      "price": 11.59
+    },
+    {
+      "ticker": "SQQQ",
+      "price": 11.1
+    }
+  ],
+  "100": [
+    {
+      "ticker": "JKS",
+      "price": 11.57
+    },
+    {
+      "ticker": "SQQQ",
+      "price": 11.065
+    }
+  ],
+  "200": [
+    {
+      "ticker": "JKS",
+      "price": 11.52
+    },
+    {
+      "ticker": "SQQQ",
+      "price": 11.01
+    }
+  ],
+  "260": [
+    {
+      "ticker": "JKS",
+      "price": 11.53
+    },
+    {
+      "ticker": "SQQQ",
+      "price": 11.04
+    }
+  ]
+}

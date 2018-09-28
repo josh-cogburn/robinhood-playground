@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "WIT",
+      "price": 5.25
+    },
+    {
+      "ticker": "AINV",
+      "price": 5.455
+    }
+  ],
+  "40": [
+    {
+      "ticker": "DLNG",
+      "price": 8.47
+    },
+    {
+      "ticker": "SAN",
+      "price": 5.21
+    }
+  ],
+  "100": [
+    {
+      "ticker": "VOC",
+      "price": 5.3834
+    },
+    {
+      "ticker": "SMI",
+      "price": 5.41
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ELP",
+      "price": 5.26
+    },
+    {
+      "ticker": "VSLR",
+      "price": 5.2
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SJT",
+      "price": 5.07
+    },
+    {
+      "ticker": "PTNR",
+      "price": 5.21
+    }
+  ]
+}

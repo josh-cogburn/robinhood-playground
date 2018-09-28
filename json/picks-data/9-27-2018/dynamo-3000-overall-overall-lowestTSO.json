@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "BGI",
+      "price": 1.34
+    },
+    {
+      "ticker": "ALN",
+      "price": 0.1631
+    }
+  ],
+  "40": [
+    {
+      "ticker": "BGI",
+      "price": 1.33
+    },
+    {
+      "ticker": "CCCL",
+      "price": 1.4083
+    }
+  ],
+  "100": [
+    {
+      "ticker": "BGI",
+      "price": 1.2525
+    },
+    {
+      "ticker": "CEI",
+      "price": 0.398
+    }
+  ],
+  "200": [
+    {
+      "ticker": "BGI",
+      "price": 1.305
+    },
+    {
+      "ticker": "CEI",
+      "price": 0.3991
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CEI",
+      "price": 0.34
+    },
+    {
+      "ticker": "BGI",
+      "price": 1.3
+    }
+  ]
+}

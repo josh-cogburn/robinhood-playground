@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "UUUU",
+      "price": 3.13
+    },
+    {
+      "ticker": "LINC",
+      "price": 2.27
+    },
+    {
+      "ticker": "DNN",
+      "price": 0.66
+    }
+  ],
+  "5": [
+    {
+      "ticker": "UUUU",
+      "price": 3.24
+    },
+    {
+      "ticker": "LINC",
+      "price": 2.27
+    },
+    {
+      "ticker": "AT",
+      "price": 2.125
+    }
+  ],
+  "16": [
+    {
+      "ticker": "UUUU",
+      "price": 3.3
+    },
+    {
+      "ticker": "LINC",
+      "price": 2.27
+    },
+    {
+      "ticker": "AT",
+      "price": 2.1616
+    }
+  ],
+  "30": [
+    {
+      "ticker": "UUUU",
+      "price": 3.295
+    },
+    {
+      "ticker": "LINC",
+      "price": 2.27
+    },
+    {
+      "ticker": "AT",
+      "price": 2.15
+    }
+  ]
+}

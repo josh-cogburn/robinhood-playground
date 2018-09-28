@@ -1,0 +1,52 @@
+{
+  "280": [
+    {
+      "ticker": "RAD",
+      "price": 1.25
+    },
+    {
+      "ticker": "KGC",
+      "price": 2.73
+    }
+  ],
+  "290": [
+    {
+      "ticker": "RAD",
+      "price": 1.25
+    },
+    {
+      "ticker": "KGC",
+      "price": 2.735
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "GGB",
+      "price": 4.22
+    },
+    {
+      "ticker": "ABEV",
+      "price": 4.64
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "RAD",
+      "price": 1.27
+    },
+    {
+      "ticker": "GGB",
+      "price": 4.22
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "RAD",
+      "price": 1.2601
+    },
+    {
+      "ticker": "GGB",
+      "price": 4.22
+    }
+  ]
+}

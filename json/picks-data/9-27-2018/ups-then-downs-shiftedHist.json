@@ -1,0 +1,60 @@
+{
+  "10": [
+    {
+      "ticker": "FTFT",
+      "price": 1.26
+    },
+    {
+      "ticker": "LTS",
+      "price": 2.71
+    },
+    {
+      "ticker": "FLKS",
+      "price": 0.446
+    }
+  ],
+  "50": [
+    {
+      "ticker": "NSPR",
+      "price": 0.2415
+    },
+    {
+      "ticker": "FTFT",
+      "price": 1.2101
+    },
+    {
+      "ticker": "CATB",
+      "price": 0.8279
+    },
+    {
+      "ticker": "ELGX",
+      "price": 1.88
+    },
+    {
+      "ticker": "BKTI",
+      "price": 4.15
+    }
+  ],
+  "200": [
+    {
+      "ticker": "NSPR",
+      "price": 0.2298
+    },
+    {
+      "ticker": "FTFT",
+      "price": 1.2101
+    },
+    {
+      "ticker": "ELGX",
+      "price": 1.86
+    },
+    {
+      "ticker": "BKTI",
+      "price": 4.1
+    },
+    {
+      "ticker": "LTS",
+      "price": 2.71
+    }
+  ]
+}

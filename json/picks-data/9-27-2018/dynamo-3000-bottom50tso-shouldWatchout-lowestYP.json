@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "INPX",
+      "price": 0.1962
+    },
+    {
+      "ticker": "TOPS",
+      "price": 1.11
+    }
+  ],
+  "40": [
+    {
+      "ticker": "INPX",
+      "price": 0.2121
+    },
+    {
+      "ticker": "AMDA",
+      "price": 0.26
+    }
+  ],
+  "100": [
+    {
+      "ticker": "INPX",
+      "price": 0.2067
+    },
+    {
+      "ticker": "CEI",
+      "price": 0.398
+    }
+  ],
+  "200": [
+    {
+      "ticker": "INPX",
+      "price": 0.2173
+    },
+    {
+      "ticker": "CEI",
+      "price": 0.3991
+    }
+  ],
+  "260": [
+    {
+      "ticker": "INPX",
+      "price": 0.21
+    },
+    {
+      "ticker": "NSPR",
+      "price": 0.2269
+    }
+  ]
+}

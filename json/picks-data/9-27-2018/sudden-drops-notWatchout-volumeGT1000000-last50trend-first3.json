@@ -1,0 +1,72 @@
+{
+  "280": [
+    {
+      "ticker": "RAD",
+      "price": 1.25
+    },
+    {
+      "ticker": "KGC",
+      "price": 2.73
+    },
+    {
+      "ticker": "TRQ",
+      "price": 2.12
+    }
+  ],
+  "290": [
+    {
+      "ticker": "RAD",
+      "price": 1.25
+    },
+    {
+      "ticker": "KGC",
+      "price": 2.735
+    },
+    {
+      "ticker": "ABEV",
+      "price": 4.675
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "AVP",
+      "price": 2.18
+    },
+    {
+      "ticker": "WWR",
+      "price": 0.2501
+    },
+    {
+      "ticker": "IAG",
+      "price": 3.83
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "RAD",
+      "price": 1.27
+    },
+    {
+      "ticker": "GGB",
+      "price": 4.22
+    },
+    {
+      "ticker": "ABEV",
+      "price": 4.64
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "WWR",
+      "price": 0.2422
+    },
+    {
+      "ticker": "RAD",
+      "price": 1.2601
+    },
+    {
+      "ticker": "IAG",
+      "price": 3.7801
+    }
+  ]
+}

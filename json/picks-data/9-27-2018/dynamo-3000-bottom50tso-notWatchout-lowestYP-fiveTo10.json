@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "MGI",
+      "price": 5.56
+    },
+    {
+      "ticker": "CDE",
+      "price": 5.3
+    }
+  ],
+  "40": [
+    {
+      "ticker": "MGI",
+      "price": 5.445
+    },
+    {
+      "ticker": "NL",
+      "price": 5.9798
+    }
+  ],
+  "100": [
+    {
+      "ticker": "MGI",
+      "price": 5.45
+    },
+    {
+      "ticker": "NL",
+      "price": 6.05
+    }
+  ],
+  "200": [
+    {
+      "ticker": "MGI",
+      "price": 5.51
+    },
+    {
+      "ticker": "DFRG",
+      "price": 8.075
+    }
+  ],
+  "260": [
+    {
+      "ticker": "MGI",
+      "price": 5.5
+    },
+    {
+      "ticker": "DFRG",
+      "price": 8.05
+    }
+  ]
+}

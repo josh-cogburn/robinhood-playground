@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "RAND",
+      "price": 2.43
+    },
+    {
+      "ticker": "OHRP",
+      "price": 0.186
+    }
+  ],
+  "5": [
+    {
+      "ticker": "RAND",
+      "price": 2.43
+    },
+    {
+      "ticker": "OHRP",
+      "price": 0.1801
+    }
+  ],
+  "16": [
+    {
+      "ticker": "RAND",
+      "price": 2.5
+    },
+    {
+      "ticker": "OHRP",
+      "price": 0.1802
+    }
+  ],
+  "30": [
+    {
+      "ticker": "RAND",
+      "price": 2.5
+    },
+    {
+      "ticker": "OHRP",
+      "price": 0.1893
+    }
+  ]
+}

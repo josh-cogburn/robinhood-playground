@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "GERN",
+      "price": 1.66
+    },
+    {
+      "ticker": "RAND",
+      "price": 2.43
+    }
+  ],
+  "5": [
+    {
+      "ticker": "GERN",
+      "price": 2.0201
+    },
+    {
+      "ticker": "RAND",
+      "price": 2.43
+    }
+  ],
+  "16": [
+    {
+      "ticker": "GERN",
+      "price": 2.04
+    },
+    {
+      "ticker": "RAND",
+      "price": 2.5
+    }
+  ],
+  "30": [
+    {
+      "ticker": "GERN",
+      "price": 2.23
+    },
+    {
+      "ticker": "RAND",
+      "price": 2.5
+    }
+  ]
+}

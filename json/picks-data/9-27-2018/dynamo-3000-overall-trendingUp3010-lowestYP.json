@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "INPX",
+      "price": 0.1962
+    },
+    {
+      "ticker": "NSPR",
+      "price": 0.24
+    }
+  ],
+  "40": [
+    {
+      "ticker": "INPX",
+      "price": 0.2121
+    },
+    {
+      "ticker": "NSPR",
+      "price": 0.244
+    }
+  ],
+  "100": [
+    {
+      "ticker": "INPX",
+      "price": 0.2067
+    },
+    {
+      "ticker": "NSPR",
+      "price": 0.242
+    }
+  ],
+  "200": [
+    {
+      "ticker": "INPX",
+      "price": 0.2173
+    },
+    {
+      "ticker": "NSPR",
+      "price": 0.2265
+    }
+  ],
+  "260": [
+    {
+      "ticker": "INPX",
+      "price": 0.21
+    },
+    {
+      "ticker": "NSPR",
+      "price": 0.2269
+    }
+  ]
+}

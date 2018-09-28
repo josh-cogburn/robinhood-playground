@@ -1,0 +1,58 @@
+{
+  "280": [
+    {
+      "ticker": "GPRO",
+      "price": 7.16
+    },
+    {
+      "ticker": "LPI",
+      "price": 8.26
+    },
+    {
+      "ticker": "TGTX",
+      "price": 5.55
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "GERN",
+      "price": 2.11
+    },
+    {
+      "ticker": "JNUG",
+      "price": 7.24
+    },
+    {
+      "ticker": "AU",
+      "price": 8.69
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "GERN",
+      "price": 1.96
+    },
+    {
+      "ticker": "JNUG",
+      "price": 7.2
+    },
+    {
+      "ticker": "AU",
+      "price": 8.65
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "GERN",
+      "price": 2
+    },
+    {
+      "ticker": "JNUG",
+      "price": 7.17
+    },
+    {
+      "ticker": "AU",
+      "price": 8.67
+    }
+  ]
+}

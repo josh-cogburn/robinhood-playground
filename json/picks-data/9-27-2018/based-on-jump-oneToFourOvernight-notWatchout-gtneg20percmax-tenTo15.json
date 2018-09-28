@@ -1,0 +1,90 @@
+{
+  "0": [
+    {
+      "ticker": "URA",
+      "price": 13.35
+    },
+    {
+      "ticker": "PSO",
+      "price": 11.73
+    },
+    {
+      "ticker": "CWBC",
+      "price": 12.1
+    },
+    {
+      "ticker": "RIG",
+      "price": 13.71
+    },
+    {
+      "ticker": "CPE",
+      "price": 11.92
+    }
+  ],
+  "5": [
+    {
+      "ticker": "URA",
+      "price": 13.37
+    },
+    {
+      "ticker": "PSO",
+      "price": 11.705
+    },
+    {
+      "ticker": "CWBC",
+      "price": 12.1
+    },
+    {
+      "ticker": "RIG",
+      "price": 13.705
+    },
+    {
+      "ticker": "BHR",
+      "price": 11.55
+    }
+  ],
+  "16": [
+    {
+      "ticker": "URA",
+      "price": 13.4027
+    },
+    {
+      "ticker": "PSO",
+      "price": 11.715
+    },
+    {
+      "ticker": "CWBC",
+      "price": 12.1
+    },
+    {
+      "ticker": "RIG",
+      "price": 13.78
+    },
+    {
+      "ticker": "BHR",
+      "price": 11.49
+    }
+  ],
+  "30": [
+    {
+      "ticker": "MHE",
+      "price": 12.4301
+    },
+    {
+      "ticker": "URA",
+      "price": 13.38
+    },
+    {
+      "ticker": "PSO",
+      "price": 11.725
+    },
+    {
+      "ticker": "CWBC",
+      "price": 12.1
+    },
+    {
+      "ticker": "PNF",
+      "price": 11.72
+    }
+  ]
+}

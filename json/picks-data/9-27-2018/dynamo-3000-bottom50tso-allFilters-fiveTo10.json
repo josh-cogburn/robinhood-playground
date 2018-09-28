@@ -1,0 +1,112 @@
+{
+  "4": [
+    {
+      "ticker": "ICL",
+      "price": 5.905
+    },
+    {
+      "ticker": "WTI",
+      "price": 9.07
+    },
+    {
+      "ticker": "MUFG",
+      "price": 6.25
+    },
+    {
+      "ticker": "AU",
+      "price": 8.595
+    },
+    {
+      "ticker": "GPM",
+      "price": 8.79
+    }
+  ],
+  "40": [
+    {
+      "ticker": "DLHC",
+      "price": 5.7739
+    },
+    {
+      "ticker": "SVA",
+      "price": 7.62
+    },
+    {
+      "ticker": "RLGT",
+      "price": 5.45
+    },
+    {
+      "ticker": "VUZI",
+      "price": 6.4629
+    },
+    {
+      "ticker": "IAE",
+      "price": 9.535
+    }
+  ],
+  "100": [
+    {
+      "ticker": "WTI",
+      "price": 8.865
+    },
+    {
+      "ticker": "VUZI",
+      "price": 6.432
+    },
+    {
+      "ticker": "DLHC",
+      "price": 5.825
+    },
+    {
+      "ticker": "IAE",
+      "price": 9.5396
+    },
+    {
+      "ticker": "SVBI",
+      "price": 9.65
+    }
+  ],
+  "200": [
+    {
+      "ticker": "OMN",
+      "price": 9.975
+    },
+    {
+      "ticker": "VUZI",
+      "price": 6.3
+    },
+    {
+      "ticker": "TXMD",
+      "price": 6.55
+    },
+    {
+      "ticker": "IAE",
+      "price": 9.52
+    },
+    {
+      "ticker": "SVBI",
+      "price": 9.66
+    }
+  ],
+  "260": [
+    {
+      "ticker": "OMN",
+      "price": 9.875
+    },
+    {
+      "ticker": "VUZI",
+      "price": 6.3253
+    },
+    {
+      "ticker": "IAE",
+      "price": 9.52
+    },
+    {
+      "ticker": "WTI",
+      "price": 8.955
+    },
+    {
+      "ticker": "SPWR",
+      "price": 7.44
+    }
+  ]
+}

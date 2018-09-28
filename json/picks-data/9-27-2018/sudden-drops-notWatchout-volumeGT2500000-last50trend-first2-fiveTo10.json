@@ -1,0 +1,42 @@
+{
+  "280": [
+    {
+      "ticker": "GPRO",
+      "price": 7.16
+    },
+    {
+      "ticker": "SWN",
+      "price": 5.2
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "TZA",
+      "price": 8.46
+    },
+    {
+      "ticker": "WTI",
+      "price": 9.09
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "TZA",
+      "price": 8.44
+    },
+    {
+      "ticker": "F",
+      "price": 9.3101
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "DNR",
+      "price": 6.2001
+    },
+    {
+      "ticker": "WTI",
+      "price": 9.14
+    }
+  ]
+}

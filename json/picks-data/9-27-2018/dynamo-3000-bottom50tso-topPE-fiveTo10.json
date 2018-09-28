@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "AU",
+      "price": 8.595
+    },
+    {
+      "ticker": "DF",
+      "price": 7.265
+    },
+    {
+      "ticker": "OCC",
+      "price": 6.05
+    }
+  ],
+  "40": [
+    {
+      "ticker": "DLHC",
+      "price": 5.7739
+    },
+    {
+      "ticker": "OCC",
+      "price": 5.95
+    },
+    {
+      "ticker": "PCYG",
+      "price": 9.8
+    }
+  ],
+  "100": [
+    {
+      "ticker": "MITK",
+      "price": 6.85
+    },
+    {
+      "ticker": "PVG",
+      "price": 7.46
+    },
+    {
+      "ticker": "DLHC",
+      "price": 5.825
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PVG",
+      "price": 7.47
+    },
+    {
+      "ticker": "DF",
+      "price": 7.18
+    },
+    {
+      "ticker": "PFSW",
+      "price": 7.36
+    }
+  ],
+  "260": [
+    {
+      "ticker": "MITK",
+      "price": 6.975
+    },
+    {
+      "ticker": "DF",
+      "price": 7.17
+    },
+    {
+      "ticker": "PFSW",
+      "price": 7.36
+    }
+  ]
+}

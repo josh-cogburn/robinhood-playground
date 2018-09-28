@@ -1,0 +1,90 @@
+{
+  "0": [
+    {
+      "ticker": "DNN",
+      "price": 0.66
+    },
+    {
+      "ticker": "ACST",
+      "price": 0.8799
+    },
+    {
+      "ticker": "CRMD",
+      "price": 0.7363
+    },
+    {
+      "ticker": "IDXG",
+      "price": 1.58
+    },
+    {
+      "ticker": "AGRX",
+      "price": 0.3745
+    }
+  ],
+  "5": [
+    {
+      "ticker": "DNN",
+      "price": 0.6741
+    },
+    {
+      "ticker": "ACST",
+      "price": 0.8701
+    },
+    {
+      "ticker": "CRMD",
+      "price": 0.7316
+    },
+    {
+      "ticker": "AGRX",
+      "price": 0.39
+    },
+    {
+      "ticker": "IDXG",
+      "price": 1.57
+    }
+  ],
+  "16": [
+    {
+      "ticker": "DNN",
+      "price": 0.645
+    },
+    {
+      "ticker": "CRMD",
+      "price": 0.7301
+    },
+    {
+      "ticker": "ACST",
+      "price": 1.08
+    },
+    {
+      "ticker": "VHC",
+      "price": 4.55
+    },
+    {
+      "ticker": "IDXG",
+      "price": 1.55
+    }
+  ],
+  "30": [
+    {
+      "ticker": "TGC",
+      "price": 1.13
+    },
+    {
+      "ticker": "DNN",
+      "price": 0.6777
+    },
+    {
+      "ticker": "ACST",
+      "price": 0.9969
+    },
+    {
+      "ticker": "CRMD",
+      "price": 0.745
+    },
+    {
+      "ticker": "VHC",
+      "price": 4.585
+    }
+  ]
+}

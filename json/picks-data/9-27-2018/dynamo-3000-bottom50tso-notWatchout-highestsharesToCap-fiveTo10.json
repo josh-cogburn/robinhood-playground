@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "CDE",
+      "price": 5.3
+    },
+    {
+      "ticker": "MGI",
+      "price": 5.56
+    }
+  ],
+  "40": [
+    {
+      "ticker": "PFNX",
+      "price": 5.05
+    },
+    {
+      "ticker": "VSLR",
+      "price": 5.1
+    }
+  ],
+  "100": [
+    {
+      "ticker": "DLNG",
+      "price": 8.375
+    },
+    {
+      "ticker": "VSLR",
+      "price": 5.125
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PFNX",
+      "price": 5.06
+    },
+    {
+      "ticker": "CNFR",
+      "price": 5.6
+    }
+  ],
+  "260": [
+    {
+      "ticker": "MOBL",
+      "price": 5.175
+    },
+    {
+      "ticker": "CNFR",
+      "price": 5.6132
+    }
+  ]
+}

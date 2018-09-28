@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "NOG",
+      "price": 3.95
+    },
+    {
+      "ticker": "SDPI",
+      "price": 3.3434
+    }
+  ],
+  "40": [
+    {
+      "ticker": "NOG",
+      "price": 4.03
+    },
+    {
+      "ticker": "SDPI",
+      "price": 3.2
+    }
+  ],
+  "100": [
+    {
+      "ticker": "NOG",
+      "price": 4.0222
+    },
+    {
+      "ticker": "IGC",
+      "price": 3.52
+    }
+  ],
+  "200": [
+    {
+      "ticker": "IGC",
+      "price": 3.84
+    },
+    {
+      "ticker": "NOG",
+      "price": 3.98
+    }
+  ],
+  "260": [
+    {
+      "ticker": "IGC",
+      "price": 3.8798
+    },
+    {
+      "ticker": "NOG",
+      "price": 4.005
+    }
+  ]
+}

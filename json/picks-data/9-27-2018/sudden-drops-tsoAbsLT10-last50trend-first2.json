@@ -1,0 +1,52 @@
+{
+  "280": [
+    {
+      "ticker": "TIS",
+      "price": 3.28
+    },
+    {
+      "ticker": "JAGX",
+      "price": 1.0694
+    }
+  ],
+  "290": [
+    {
+      "ticker": "OHAI",
+      "price": 1.45
+    },
+    {
+      "ticker": "HSGX",
+      "price": 0.5799
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "HSGX",
+      "price": 0.615
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.2255
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "PLX",
+      "price": 0.6705
+    },
+    {
+      "ticker": "HSGX",
+      "price": 0.633
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "INPX",
+      "price": 0.22
+    },
+    {
+      "ticker": "PLX",
+      "price": 0.6705
+    }
+  ]
+}

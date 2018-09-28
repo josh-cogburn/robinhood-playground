@@ -1,0 +1,42 @@
+{
+  "280": [
+    {
+      "ticker": "GOV",
+      "price": 11.21
+    },
+    {
+      "ticker": "VGR",
+      "price": 13.8275
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "NUGT",
+      "price": 12.39
+    },
+    {
+      "ticker": "GPOR",
+      "price": 10.28
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "NUGT",
+      "price": 12.23
+    },
+    {
+      "ticker": "HCLP",
+      "price": 10.955
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "NUGT",
+      "price": 12.19
+    },
+    {
+      "ticker": "HCLP",
+      "price": 11
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "URA",
+      "price": 13.35
+    },
+    {
+      "ticker": "PSO",
+      "price": 11.73
+    }
+  ],
+  "5": [
+    {
+      "ticker": "URA",
+      "price": 13.37
+    },
+    {
+      "ticker": "PSO",
+      "price": 11.705
+    }
+  ],
+  "16": [
+    {
+      "ticker": "URA",
+      "price": 13.4027
+    },
+    {
+      "ticker": "PSO",
+      "price": 11.715
+    }
+  ],
+  "30": [
+    {
+      "ticker": "MHE",
+      "price": 12.4301
+    },
+    {
+      "ticker": "URA",
+      "price": 13.38
+    }
+  ]
+}

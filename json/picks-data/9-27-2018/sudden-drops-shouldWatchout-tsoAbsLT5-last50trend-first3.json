@@ -1,0 +1,72 @@
+{
+  "280": [
+    {
+      "ticker": "JAGX",
+      "price": 1.0694
+    },
+    {
+      "ticker": "LENS",
+      "price": 1.71
+    },
+    {
+      "ticker": "AQMS",
+      "price": 2.65
+    }
+  ],
+  "290": [
+    {
+      "ticker": "LENS",
+      "price": 1.71
+    },
+    {
+      "ticker": "SEII",
+      "price": 2.9962
+    },
+    {
+      "ticker": "EARS",
+      "price": 0.3042
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "HSGX",
+      "price": 0.615
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.2255
+    },
+    {
+      "ticker": "RXII",
+      "price": 1.35
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "HSGX",
+      "price": 0.633
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.23
+    },
+    {
+      "ticker": "RXII",
+      "price": 1.37
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "INPX",
+      "price": 0.22
+    },
+    {
+      "ticker": "HSGX",
+      "price": 0.635
+    },
+    {
+      "ticker": "AGRX",
+      "price": 0.3611
+    }
+  ]
+}

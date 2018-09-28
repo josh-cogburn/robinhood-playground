@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "ITUB",
+      "price": 10.92
+    },
+    {
+      "ticker": "PBR.A",
+      "price": 10.19
+    }
+  ],
+  "5": [
+    {
+      "ticker": "ITUB",
+      "price": 10.95
+    },
+    {
+      "ticker": "PBR.A",
+      "price": 10.255
+    }
+  ],
+  "16": [
+    {
+      "ticker": "MNTX",
+      "price": 10.48
+    },
+    {
+      "ticker": "ITUB",
+      "price": 10.94
+    }
+  ],
+  "30": [
+    {
+      "ticker": "MHE",
+      "price": 12.4301
+    },
+    {
+      "ticker": "MNTX",
+      "price": 10.28
+    }
+  ]
+}

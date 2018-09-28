@@ -1,0 +1,50 @@
+{
+  "100": [
+    {
+      "ticker": "WTI",
+      "price": 8.85
+    }
+  ],
+  "153": [
+    {
+      "ticker": "BBD",
+      "price": 7.255
+    }
+  ],
+  "189": [
+    {
+      "ticker": "DRIP",
+      "price": 5.45
+    }
+  ],
+  "221": [
+    {
+      "ticker": "HIMX",
+      "price": 5.805
+    }
+  ],
+  "280": [
+    {
+      "ticker": "SWN",
+      "price": 5.2
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "USLV",
+      "price": 5.99
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "USLV",
+      "price": 6.02
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "USLV",
+      "price": 5.94
+    }
+  ]
+}

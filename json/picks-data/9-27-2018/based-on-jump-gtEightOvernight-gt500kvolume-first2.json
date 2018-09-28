@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "ACHV",
+      "price": 4
+    },
+    {
+      "ticker": "CEI",
+      "price": 0.4804
+    }
+  ],
+  "5": [
+    {
+      "ticker": "ACHV",
+      "price": 4.4
+    },
+    {
+      "ticker": "CEI",
+      "price": 0.4813
+    }
+  ],
+  "16": [
+    {
+      "ticker": "ACHV",
+      "price": 4.25
+    },
+    {
+      "ticker": "CEI",
+      "price": 0.4585
+    }
+  ],
+  "30": [
+    {
+      "ticker": "ACHV",
+      "price": 4.0905
+    },
+    {
+      "ticker": "CEI",
+      "price": 0.4459
+    }
+  ]
+}

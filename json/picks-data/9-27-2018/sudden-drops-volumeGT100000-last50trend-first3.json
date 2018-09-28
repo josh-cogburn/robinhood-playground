@@ -1,0 +1,72 @@
+{
+  "280": [
+    {
+      "ticker": "CEI",
+      "price": 0.3476
+    },
+    {
+      "ticker": "FGP",
+      "price": 2.2954
+    },
+    {
+      "ticker": "HSGX",
+      "price": 0.5545
+    }
+  ],
+  "290": [
+    {
+      "ticker": "CEI",
+      "price": 0.3449
+    },
+    {
+      "ticker": "FGP",
+      "price": 2.3
+    },
+    {
+      "ticker": "RXII",
+      "price": 1.61
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "HSGX",
+      "price": 0.615
+    },
+    {
+      "ticker": "JAGX",
+      "price": 1.02
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.2255
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "PLX",
+      "price": 0.6705
+    },
+    {
+      "ticker": "HSGX",
+      "price": 0.633
+    },
+    {
+      "ticker": "JAGX",
+      "price": 1.0299
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "INPX",
+      "price": 0.22
+    },
+    {
+      "ticker": "JAGX",
+      "price": 1.01
+    },
+    {
+      "ticker": "PLX",
+      "price": 0.6705
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "VERU",
+      "price": 1.3611
+    },
+    {
+      "ticker": "RAND",
+      "price": 2.43
+    },
+    {
+      "ticker": "WRN",
+      "price": 0.67
+    }
+  ],
+  "5": [
+    {
+      "ticker": "VERU",
+      "price": 1.3831
+    },
+    {
+      "ticker": "RAND",
+      "price": 2.43
+    },
+    {
+      "ticker": "RCG",
+      "price": 1.77
+    }
+  ],
+  "16": [
+    {
+      "ticker": "VERU",
+      "price": 1.3799
+    },
+    {
+      "ticker": "RAND",
+      "price": 2.5
+    },
+    {
+      "ticker": "RCG",
+      "price": 1.76
+    }
+  ],
+  "30": [
+    {
+      "ticker": "VERU",
+      "price": 1.3985
+    },
+    {
+      "ticker": "RAND",
+      "price": 2.5
+    },
+    {
+      "ticker": "RCG",
+      "price": 1.79
+    }
+  ]
+}

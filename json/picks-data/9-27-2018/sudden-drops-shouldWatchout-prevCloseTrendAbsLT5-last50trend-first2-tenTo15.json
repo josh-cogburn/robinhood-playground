@@ -1,0 +1,42 @@
+{
+  "280": [
+    {
+      "ticker": "INAP",
+      "price": 12.57
+    },
+    {
+      "ticker": "LNTH",
+      "price": 14.475
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "PBR",
+      "price": 11.62
+    },
+    {
+      "ticker": "AWSM",
+      "price": 10.54
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "EPZM",
+      "price": 10.15
+    },
+    {
+      "ticker": "TACO",
+      "price": 11.48
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "CBIO",
+      "price": 10.62
+    },
+    {
+      "ticker": "NXEOU",
+      "price": 13.05
+    }
+  ]
+}

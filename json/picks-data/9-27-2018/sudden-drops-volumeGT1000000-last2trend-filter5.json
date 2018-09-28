@@ -1,0 +1,44 @@
+{
+  "14": [
+    {
+      "ticker": "INPX",
+      "price": 0.22
+    },
+    {
+      "ticker": "NSPR",
+      "price": 0.23
+    }
+  ],
+  "32": [
+    {
+      "ticker": "CEI",
+      "price": 0.4486
+    },
+    {
+      "ticker": "JAGX",
+      "price": 1.1801
+    }
+  ],
+  "280": [
+    {
+      "ticker": "HSGX",
+      "price": 0.5545
+    },
+    {
+      "ticker": "IGC",
+      "price": 3.85
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "ALN",
+      "price": 0.17
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "OGEN",
+      "price": 0.68
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "32": [
+    {
+      "ticker": "GDX",
+      "price": 18.2701
+    }
+  ],
+  "63": [
+    {
+      "ticker": "GDX",
+      "price": 18.391
+    }
+  ],
+  "100": [
+    {
+      "ticker": "GDX",
+      "price": 18.31
+    }
+  ],
+  "153": [
+    {
+      "ticker": "GDX",
+      "price": 18.3581
+    },
+    {
+      "ticker": "KMI",
+      "price": 17.56
+    }
+  ],
+  "189": [
+    {
+      "ticker": "EMLC",
+      "price": 16.5
+    },
+    {
+      "ticker": "RF",
+      "price": 18.72
+    }
+  ],
+  "221": [
+    {
+      "ticker": "MRVL",
+      "price": 18.66
+    },
+    {
+      "ticker": "HBAN",
+      "price": 15.185
+    }
+  ],
+  "280": [
+    {
+      "ticker": "HBAN",
+      "price": 15.09
+    },
+    {
+      "ticker": "KMI",
+      "price": 17.5678
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "GDX",
+      "price": 18.2501
+    },
+    {
+      "ticker": "AGNC",
+      "price": 18.5501
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "GDX",
+      "price": 18.18
+    },
+    {
+      "ticker": "AGNC",
+      "price": 18.5501
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "MRVL",
+      "price": 18.5
+    },
+    {
+      "ticker": "RRC",
+      "price": 16.53
+    }
+  ]
+}

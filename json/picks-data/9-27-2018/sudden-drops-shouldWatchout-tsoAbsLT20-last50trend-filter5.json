@@ -1,0 +1,76 @@
+{
+  "280": [
+    {
+      "ticker": "SKYS",
+      "price": 0.7
+    },
+    {
+      "ticker": "TIS",
+      "price": 3.28
+    },
+    {
+      "ticker": "HSGX",
+      "price": 0.5545
+    },
+    {
+      "ticker": "JAGX",
+      "price": 1.0694
+    },
+    {
+      "ticker": "OHAI",
+      "price": 1.45
+    }
+  ],
+  "290": [
+    {
+      "ticker": "SKYS",
+      "price": 0.6998
+    },
+    {
+      "ticker": "TIS",
+      "price": 3.27
+    },
+    {
+      "ticker": "RXII",
+      "price": 1.61
+    },
+    {
+      "ticker": "OHAI",
+      "price": 1.45
+    },
+    {
+      "ticker": "HSGX",
+      "price": 0.5799
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "HSGX",
+      "price": 0.615
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.2255
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "HSGX",
+      "price": 0.633
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "INPX",
+      "price": 0.22
+    },
+    {
+      "ticker": "NVAX",
+      "price": 1.81
+    },
+    {
+      "ticker": "HSGX",
+      "price": 0.635
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "280": [
+    {
+      "ticker": "HBNC",
+      "price": 19.74
+    },
+    {
+      "ticker": "OXFD",
+      "price": 16.45
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "BBBY",
+      "price": 15.8
+    },
+    {
+      "ticker": "WPM",
+      "price": 17.17
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "BBBY",
+      "price": 15.57
+    },
+    {
+      "ticker": "GDX",
+      "price": 18.18
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "BBBY",
+      "price": 15.48
+    },
+    {
+      "ticker": "GDX",
+      "price": 18.18
+    }
+  ]
+}

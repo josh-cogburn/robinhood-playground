@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "OHRP",
+      "price": 0.1801
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.1962
+    }
+  ],
+  "40": [
+    {
+      "ticker": "INPX",
+      "price": 0.2121
+    },
+    {
+      "ticker": "CEI",
+      "price": 0.4389
+    }
+  ],
+  "100": [
+    {
+      "ticker": "INPX",
+      "price": 0.2067
+    },
+    {
+      "ticker": "AKER",
+      "price": 0.2824
+    }
+  ],
+  "200": [
+    {
+      "ticker": "INPX",
+      "price": 0.2173
+    },
+    {
+      "ticker": "AKER",
+      "price": 0.274
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NSPR",
+      "price": 0.2269
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.21
+    }
+  ]
+}

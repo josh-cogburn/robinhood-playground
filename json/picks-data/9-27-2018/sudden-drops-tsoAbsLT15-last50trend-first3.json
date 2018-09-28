@@ -1,0 +1,72 @@
+{
+  "280": [
+    {
+      "ticker": "FGP",
+      "price": 2.2954
+    },
+    {
+      "ticker": "TIS",
+      "price": 3.28
+    },
+    {
+      "ticker": "HSGX",
+      "price": 0.5545
+    }
+  ],
+  "290": [
+    {
+      "ticker": "FGP",
+      "price": 2.3
+    },
+    {
+      "ticker": "TIS",
+      "price": 3.27
+    },
+    {
+      "ticker": "OHAI",
+      "price": 1.45
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "HSGX",
+      "price": 0.615
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.2255
+    },
+    {
+      "ticker": "RXII",
+      "price": 1.35
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "PLX",
+      "price": 0.6705
+    },
+    {
+      "ticker": "HSGX",
+      "price": 0.633
+    },
+    {
+      "ticker": "SSC",
+      "price": 4.05
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "INPX",
+      "price": 0.22
+    },
+    {
+      "ticker": "PLX",
+      "price": 0.6705
+    },
+    {
+      "ticker": "VERU",
+      "price": 1.36
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "0": [
+    {
+      "ticker": "CAMT",
+      "price": 8.983
+    },
+    {
+      "ticker": "WTI",
+      "price": 9.165
+    }
+  ],
+  "5": [
+    {
+      "ticker": "CAMT",
+      "price": 8.9
+    },
+    {
+      "ticker": "WTI",
+      "price": 9.05
+    },
+    {
+      "ticker": "IAE",
+      "price": 9.7309
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CAMT",
+      "price": 9.1573
+    },
+    {
+      "ticker": "WTI",
+      "price": 9.14
+    },
+    {
+      "ticker": "JCTCF",
+      "price": 8.8971
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CAMT",
+      "price": 9.07
+    },
+    {
+      "ticker": "WTI",
+      "price": 9.05
+    },
+    {
+      "ticker": "JCTCF",
+      "price": 8.8971
+    }
+  ]
+}

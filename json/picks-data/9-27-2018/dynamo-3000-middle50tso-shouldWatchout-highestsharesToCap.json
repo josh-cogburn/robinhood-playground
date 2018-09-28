@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "LODE",
+      "price": 0.1499
+    },
+    {
+      "ticker": "BPMX",
+      "price": 0.2133
+    }
+  ],
+  "40": [
+    {
+      "ticker": "BPMX",
+      "price": 0.2139
+    },
+    {
+      "ticker": "VTL",
+      "price": 0.2792
+    }
+  ],
+  "100": [
+    {
+      "ticker": "AMCN",
+      "price": 0.42
+    },
+    {
+      "ticker": "XGTI",
+      "price": 0.4299
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PRPO",
+      "price": 0.396
+    },
+    {
+      "ticker": "AMPE",
+      "price": 0.51
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AMDA",
+      "price": 0.2641
+    },
+    {
+      "ticker": "PRPO",
+      "price": 0.3957
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "GERN",
+      "price": 1.66
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.483
+    },
+    {
+      "ticker": "OHRP",
+      "price": 0.186
+    }
+  ],
+  "5": [
+    {
+      "ticker": "GERN",
+      "price": 2.0201
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.49
+    },
+    {
+      "ticker": "OHRP",
+      "price": 0.1801
+    }
+  ],
+  "16": [
+    {
+      "ticker": "GERN",
+      "price": 2.04
+    },
+    {
+      "ticker": "GLG",
+      "price": 0.75
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.495
+    }
+  ],
+  "30": [
+    {
+      "ticker": "GERN",
+      "price": 2.23
+    },
+    {
+      "ticker": "GLG",
+      "price": 0.7935
+    },
+    {
+      "ticker": "NLST",
+      "price": 0.5285
+    }
+  ]
+}

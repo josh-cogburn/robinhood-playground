@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "BT",
+      "price": 15.205
+    },
+    {
+      "ticker": "HRTG",
+      "price": 15.105
+    }
+  ],
+  "40": [
+    {
+      "ticker": "BT",
+      "price": 15.3149
+    },
+    {
+      "ticker": "SPOK",
+      "price": 15.15
+    }
+  ],
+  "100": [
+    {
+      "ticker": "SPOK",
+      "price": 15.25
+    },
+    {
+      "ticker": "TGP",
+      "price": 15.525
+    }
+  ],
+  "200": [
+    {
+      "ticker": "SPOK",
+      "price": 15.375
+    },
+    {
+      "ticker": "TGP",
+      "price": 15.675
+    }
+  ],
+  "260": [
+    {
+      "ticker": "COLL",
+      "price": 15.06
+    },
+    {
+      "ticker": "PGRE",
+      "price": 15.02
+    }
+  ]
+}

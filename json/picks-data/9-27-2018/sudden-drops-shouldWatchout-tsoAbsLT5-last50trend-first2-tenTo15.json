@@ -1,0 +1,42 @@
+{
+  "280": [
+    {
+      "ticker": "LNTH",
+      "price": 14.475
+    },
+    {
+      "ticker": "XENE",
+      "price": 12.95
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "NUGT",
+      "price": 12.39
+    },
+    {
+      "ticker": "PBR",
+      "price": 11.62
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "NUGT",
+      "price": 12.23
+    },
+    {
+      "ticker": "CBIO",
+      "price": 10.62
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "NUGT",
+      "price": 12.19
+    },
+    {
+      "ticker": "CBIO",
+      "price": 10.62
+    }
+  ]
+}

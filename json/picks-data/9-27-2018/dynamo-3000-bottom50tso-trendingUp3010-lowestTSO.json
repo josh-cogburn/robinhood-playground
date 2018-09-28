@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "INPX",
+      "price": 0.1962
+    },
+    {
+      "ticker": "GLBS",
+      "price": 0.49
+    }
+  ],
+  "40": [
+    {
+      "ticker": "REFR",
+      "price": 1.4901
+    },
+    {
+      "ticker": "CEI",
+      "price": 0.4389
+    }
+  ],
+  "100": [
+    {
+      "ticker": "CEI",
+      "price": 0.398
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.2067
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CEI",
+      "price": 0.3991
+    },
+    {
+      "ticker": "NCTY",
+      "price": 1.59
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CEI",
+      "price": 0.34
+    },
+    {
+      "ticker": "OHAI",
+      "price": 1.4001
+    }
+  ]
+}

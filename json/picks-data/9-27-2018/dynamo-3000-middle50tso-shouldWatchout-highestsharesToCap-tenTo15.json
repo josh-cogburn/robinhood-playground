@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "EXPR",
+      "price": 11.21
+    },
+    {
+      "ticker": "CENX",
+      "price": 11.75
+    }
+  ],
+  "40": [
+    {
+      "ticker": "CBIO",
+      "price": 10.63
+    },
+    {
+      "ticker": "EXPR",
+      "price": 11.18
+    }
+  ],
+  "100": [
+    {
+      "ticker": "QNST",
+      "price": 13.18
+    },
+    {
+      "ticker": "FPRX",
+      "price": 13.8551
+    }
+  ],
+  "200": [
+    {
+      "ticker": "TCS",
+      "price": 10.895
+    },
+    {
+      "ticker": "EXPR",
+      "price": 11.18
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SHLO",
+      "price": 11.17
+    },
+    {
+      "ticker": "EDUC",
+      "price": 11.024
+    }
+  ]
+}

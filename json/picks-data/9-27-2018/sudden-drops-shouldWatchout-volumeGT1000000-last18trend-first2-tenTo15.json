@@ -1,0 +1,82 @@
+{
+  "100": [
+    {
+      "ticker": "BBBY",
+      "price": 14.5
+    },
+    {
+      "ticker": "AMRN",
+      "price": 13.93
+    }
+  ],
+  "153": [
+    {
+      "ticker": "ALDX",
+      "price": 13.7
+    },
+    {
+      "ticker": "AMRN",
+      "price": 14.1684
+    }
+  ],
+  "189": [
+    {
+      "ticker": "ALDX",
+      "price": 13.75
+    },
+    {
+      "ticker": "PBR.A",
+      "price": 10.635
+    }
+  ],
+  "221": [
+    {
+      "ticker": "ALDX",
+      "price": 13.775
+    },
+    {
+      "ticker": "NUGT",
+      "price": 12.68
+    }
+  ],
+  "280": [
+    {
+      "ticker": "PBR.A",
+      "price": 10.61
+    },
+    {
+      "ticker": "HCLP",
+      "price": 10.75
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "NUGT",
+      "price": 12.39
+    },
+    {
+      "ticker": "PBR",
+      "price": 11.62
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "NUGT",
+      "price": 12.23
+    },
+    {
+      "ticker": "HCLP",
+      "price": 10.955
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "NUGT",
+      "price": 12.19
+    },
+    {
+      "ticker": "HCLP",
+      "price": 11
+    }
+  ]
+}

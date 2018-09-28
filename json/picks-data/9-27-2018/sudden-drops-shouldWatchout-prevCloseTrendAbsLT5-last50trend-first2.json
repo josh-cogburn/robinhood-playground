@@ -1,0 +1,52 @@
+{
+  "280": [
+    {
+      "ticker": "HSGX",
+      "price": 0.5545
+    },
+    {
+      "ticker": "JAGX",
+      "price": 1.0694
+    }
+  ],
+  "290": [
+    {
+      "ticker": "HSGX",
+      "price": 0.5799
+    },
+    {
+      "ticker": "JAGX",
+      "price": 1.079
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "HSGX",
+      "price": 0.615
+    },
+    {
+      "ticker": "ALN",
+      "price": 0.17
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "HSGX",
+      "price": 0.633
+    },
+    {
+      "ticker": "ALN",
+      "price": 0.176
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "HSGX",
+      "price": 0.635
+    },
+    {
+      "ticker": "AGRX",
+      "price": 0.3611
+    }
+  ]
+}

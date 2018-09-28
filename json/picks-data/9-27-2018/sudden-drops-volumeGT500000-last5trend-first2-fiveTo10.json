@@ -1,0 +1,102 @@
+{
+  "32": [
+    {
+      "ticker": "CDE",
+      "price": 5.095
+    },
+    {
+      "ticker": "VSTM",
+      "price": 6.81
+    }
+  ],
+  "63": [
+    {
+      "ticker": "VSTM",
+      "price": 6.7701
+    },
+    {
+      "ticker": "GPRO",
+      "price": 7.25
+    }
+  ],
+  "100": [
+    {
+      "ticker": "WTI",
+      "price": 8.85
+    },
+    {
+      "ticker": "JNUG",
+      "price": 7.01
+    }
+  ],
+  "153": [
+    {
+      "ticker": "DRIP",
+      "price": 5.46
+    },
+    {
+      "ticker": "INFN",
+      "price": 7.28
+    }
+  ],
+  "189": [
+    {
+      "ticker": "DF",
+      "price": 7.215
+    },
+    {
+      "ticker": "PACB",
+      "price": 5.67
+    }
+  ],
+  "221": [
+    {
+      "ticker": "ENPH",
+      "price": 5.0725
+    },
+    {
+      "ticker": "HIMX",
+      "price": 5.805
+    }
+  ],
+  "280": [
+    {
+      "ticker": "GOGO",
+      "price": 5.09
+    },
+    {
+      "ticker": "VSTM",
+      "price": 7.0721
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "GERN",
+      "price": 2.11
+    },
+    {
+      "ticker": "USLV",
+      "price": 5.99
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "GERN",
+      "price": 1.96
+    },
+    {
+      "ticker": "CCJ",
+      "price": 11.2
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "DNR",
+      "price": 6.2001
+    },
+    {
+      "ticker": "USLV",
+      "price": 5.94
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "0": [
+    {
+      "ticker": "GPRO",
+      "price": 7.1272
+    }
+  ],
+  "5": [
+    {
+      "ticker": "LXP",
+      "price": 8
+    },
+    {
+      "ticker": "BBD",
+      "price": 7.235
+    },
+    {
+      "ticker": "WTI",
+      "price": 9.05
+    }
+  ],
+  "16": [
+    {
+      "ticker": "CRBP",
+      "price": 7
+    },
+    {
+      "ticker": "LXP",
+      "price": 8.055
+    },
+    {
+      "ticker": "CVE",
+      "price": 9.68
+    }
+  ],
+  "30": [
+    {
+      "ticker": "CRBP",
+      "price": 6.9
+    },
+    {
+      "ticker": "LXP",
+      "price": 8.1
+    },
+    {
+      "ticker": "CVE",
+      "price": 9.6
+    }
+  ]
+}

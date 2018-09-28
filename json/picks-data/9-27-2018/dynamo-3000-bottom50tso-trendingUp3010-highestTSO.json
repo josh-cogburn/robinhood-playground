@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "TOPS",
+      "price": 1.11
+    },
+    {
+      "ticker": "PTIE",
+      "price": 1.0822
+    }
+  ],
+  "40": [
+    {
+      "ticker": "EMX",
+      "price": 1.15
+    },
+    {
+      "ticker": "SDPI",
+      "price": 3.2
+    }
+  ],
+  "100": [
+    {
+      "ticker": "GLBS",
+      "price": 0.4987
+    },
+    {
+      "ticker": "CDTX",
+      "price": 4.45
+    }
+  ],
+  "200": [
+    {
+      "ticker": "LEU",
+      "price": 2.68
+    },
+    {
+      "ticker": "JCP",
+      "price": 1.815
+    }
+  ],
+  "260": [
+    {
+      "ticker": "EVFM",
+      "price": 4.2312
+    },
+    {
+      "ticker": "TMQ",
+      "price": 1.98
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "BPMX",
+      "price": 0.2133
+    },
+    {
+      "ticker": "CATB",
+      "price": 0.8187
+    }
+  ],
+  "40": [
+    {
+      "ticker": "BPMX",
+      "price": 0.2139
+    },
+    {
+      "ticker": "PLM",
+      "price": 0.9012
+    }
+  ],
+  "100": [
+    {
+      "ticker": "CRMD",
+      "price": 0.7383
+    },
+    {
+      "ticker": "MVIS",
+      "price": 1.245
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CRMD",
+      "price": 0.7391
+    },
+    {
+      "ticker": "SGOC",
+      "price": 1.0052
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PLX",
+      "price": 0.6927
+    },
+    {
+      "ticker": "CRMD",
+      "price": 0.7366
+    }
+  ]
+}

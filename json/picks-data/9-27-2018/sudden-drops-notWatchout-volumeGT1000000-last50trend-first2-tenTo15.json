@@ -1,0 +1,42 @@
+{
+  "280": [
+    {
+      "ticker": "CCJ",
+      "price": 11.4
+    },
+    {
+      "ticker": "SQQQ",
+      "price": 11.0621
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "GPOR",
+      "price": 10.28
+    },
+    {
+      "ticker": "SLV",
+      "price": 13.37
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "ABX",
+      "price": 10.73
+    },
+    {
+      "ticker": "GPOR",
+      "price": 10.28
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "FCX",
+      "price": 13.83
+    },
+    {
+      "ticker": "ABX",
+      "price": 10.75
+    }
+  ]
+}
