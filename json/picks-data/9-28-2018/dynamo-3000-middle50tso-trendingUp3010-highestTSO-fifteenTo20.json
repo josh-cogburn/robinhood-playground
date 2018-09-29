@@ -1,0 +1,32 @@
+{
+  "100": [
+    {
+      "ticker": "BGB",
+      "price": 15.99
+    },
+    {
+      "ticker": "NEO",
+      "price": 15.42
+    }
+  ],
+  "200": [
+    {
+      "ticker": "OSBC",
+      "price": 15.45
+    },
+    {
+      "ticker": "UBS",
+      "price": 15.79
+    }
+  ],
+  "260": [
+    {
+      "ticker": "BGB",
+      "price": 15.995
+    },
+    {
+      "ticker": "INVA",
+      "price": 15.32
+    }
+  ]
+}

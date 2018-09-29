@@ -1,0 +1,44 @@
+{
+  "100": [
+    {
+      "ticker": "ONDK",
+      "price": 7.56
+    },
+    {
+      "ticker": "DLHC",
+      "price": 5.93
+    },
+    {
+      "ticker": "OCC",
+      "price": 5.9798
+    }
+  ],
+  "200": [
+    {
+      "ticker": "OCC",
+      "price": 6.05
+    },
+    {
+      "ticker": "KTCC",
+      "price": 7.75
+    },
+    {
+      "ticker": "DLNG",
+      "price": 8.659
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SRC",
+      "price": 8.02
+    },
+    {
+      "ticker": "OCC",
+      "price": 6.1
+    },
+    {
+      "ticker": "KTCC",
+      "price": 7.75
+    }
+  ]
+}

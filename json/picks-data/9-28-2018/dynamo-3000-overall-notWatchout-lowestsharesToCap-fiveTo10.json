@@ -1,0 +1,32 @@
+{
+  "100": [
+    {
+      "ticker": "FEIM",
+      "price": 9.8047
+    },
+    {
+      "ticker": "GCI",
+      "price": 9.975
+    }
+  ],
+  "200": [
+    {
+      "ticker": "GCI",
+      "price": 10.0001
+    },
+    {
+      "ticker": "SOXS",
+      "price": 9.78
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SOXS",
+      "price": 9.72
+    },
+    {
+      "ticker": "VIV",
+      "price": 9.77
+    }
+  ]
+}

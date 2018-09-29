@@ -1,0 +1,42 @@
+{
+  "100": [
+    {
+      "ticker": "CVM",
+      "price": 4.28
+    },
+    {
+      "ticker": "TEUM",
+      "price": 2.95
+    }
+  ],
+  "200": [
+    {
+      "ticker": "OIIM",
+      "price": 2.3
+    },
+    {
+      "ticker": "DHT",
+      "price": 4.745
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TMQ",
+      "price": 2.01
+    },
+    {
+      "ticker": "OIIM",
+      "price": 2.3
+    }
+  ],
+  "351": [
+    {
+      "ticker": "TMQ",
+      "price": 2.0061
+    },
+    {
+      "ticker": "OIIM",
+      "price": 2.31
+    }
+  ]
+}

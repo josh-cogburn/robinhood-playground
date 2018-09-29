@@ -1,0 +1,42 @@
+{
+  "100": [
+    {
+      "ticker": "CRMD",
+      "price": 0.8153
+    },
+    {
+      "ticker": "INOD",
+      "price": 1.429
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CRMD",
+      "price": 0.8431
+    },
+    {
+      "ticker": "INOD",
+      "price": 1.44
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CRMD",
+      "price": 0.8918
+    },
+    {
+      "ticker": "REFR",
+      "price": 1.5815
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CRMD",
+      "price": 0.9411
+    },
+    {
+      "ticker": "STKS",
+      "price": 3.5899
+    }
+  ]
+}

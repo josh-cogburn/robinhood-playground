@@ -1,0 +1,32 @@
+{
+  "100": [
+    {
+      "ticker": "WTI",
+      "price": 9.51
+    },
+    {
+      "ticker": "CCLP",
+      "price": 5.05
+    }
+  ],
+  "200": [
+    {
+      "ticker": "WTI",
+      "price": 9.7
+    },
+    {
+      "ticker": "TK",
+      "price": 6.71
+    }
+  ],
+  "260": [
+    {
+      "ticker": "WTI",
+      "price": 9.81
+    },
+    {
+      "ticker": "TK",
+      "price": 6.6876
+    }
+  ]
+}

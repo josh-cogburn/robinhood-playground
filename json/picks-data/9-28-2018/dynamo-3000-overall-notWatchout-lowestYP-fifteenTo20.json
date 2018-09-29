@@ -1,0 +1,32 @@
+{
+  "100": [
+    {
+      "ticker": "RDUS",
+      "price": 17.52
+    },
+    {
+      "ticker": "TTM",
+      "price": 15.405
+    }
+  ],
+  "200": [
+    {
+      "ticker": "TTM",
+      "price": 15.3
+    },
+    {
+      "ticker": "RDUS",
+      "price": 17.62
+    }
+  ],
+  "260": [
+    {
+      "ticker": "TTM",
+      "price": 15.33
+    },
+    {
+      "ticker": "RDUS",
+      "price": 17.78
+    }
+  ]
+}

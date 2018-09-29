@@ -1,0 +1,32 @@
+{
+  "100": [
+    {
+      "ticker": "HLX",
+      "price": 9.8
+    },
+    {
+      "ticker": "USDP",
+      "price": 9.5
+    }
+  ],
+  "200": [
+    {
+      "ticker": "HLX",
+      "price": 9.845
+    },
+    {
+      "ticker": "USDP",
+      "price": 9.525
+    }
+  ],
+  "260": [
+    {
+      "ticker": "HLX",
+      "price": 9.91
+    },
+    {
+      "ticker": "USDP",
+      "price": 9.63
+    }
+  ]
+}

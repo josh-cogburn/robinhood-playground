@@ -1,0 +1,68 @@
+{
+  "100": [
+    {
+      "ticker": "CNSL",
+      "price": 13.02
+    },
+    {
+      "ticker": "ADAP",
+      "price": 13.185
+    },
+    {
+      "ticker": "PICO",
+      "price": 12.55
+    },
+    {
+      "ticker": "TPH",
+      "price": 12.745
+    },
+    {
+      "ticker": "DVAX",
+      "price": 12.35
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PICO",
+      "price": 12.5
+    },
+    {
+      "ticker": "BOCH",
+      "price": 12.2
+    },
+    {
+      "ticker": "BPFH",
+      "price": 13.625
+    },
+    {
+      "ticker": "CNX",
+      "price": 14.49
+    },
+    {
+      "ticker": "MMLP",
+      "price": 11.5
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SPAR",
+      "price": 14.725
+    },
+    {
+      "ticker": "CCJ",
+      "price": 11.54
+    },
+    {
+      "ticker": "CSPI",
+      "price": 13.35
+    },
+    {
+      "ticker": "QEP",
+      "price": 11.45
+    },
+    {
+      "ticker": "CZR",
+      "price": 10.3
+    }
+  ]
+}

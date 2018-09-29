@@ -1,0 +1,42 @@
+{
+  "100": [
+    {
+      "ticker": "FFHL",
+      "price": 1.7815
+    },
+    {
+      "ticker": "PFMT",
+      "price": 1.9552
+    }
+  ],
+  "200": [
+    {
+      "ticker": "FFHL",
+      "price": 1.7815
+    },
+    {
+      "ticker": "SANW",
+      "price": 2.4
+    }
+  ],
+  "260": [
+    {
+      "ticker": "UONEK",
+      "price": 2.05
+    },
+    {
+      "ticker": "SANW",
+      "price": 2.4
+    }
+  ],
+  "351": [
+    {
+      "ticker": "UONEK",
+      "price": 2.05
+    },
+    {
+      "ticker": "LWAY",
+      "price": 2.61
+    }
+  ]
+}

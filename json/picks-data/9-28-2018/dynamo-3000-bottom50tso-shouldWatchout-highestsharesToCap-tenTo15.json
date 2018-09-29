@@ -1,0 +1,32 @@
+{
+  "100": [
+    {
+      "ticker": "VECO",
+      "price": 10.1327
+    },
+    {
+      "ticker": "VSI",
+      "price": 10.1
+    }
+  ],
+  "200": [
+    {
+      "ticker": "VSI",
+      "price": 10.125
+    },
+    {
+      "ticker": "KIRK",
+      "price": 10.04
+    }
+  ],
+  "260": [
+    {
+      "ticker": "KIRK",
+      "price": 10.13
+    },
+    {
+      "ticker": "CBIO",
+      "price": 10.66
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "100": [
+    {
+      "ticker": "JASN",
+      "price": 3.49
+    },
+    {
+      "ticker": "CORV",
+      "price": 3.7817
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CORV",
+      "price": 3.78
+    },
+    {
+      "ticker": "DHT",
+      "price": 4.745
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PRSS",
+      "price": 1.46
+    },
+    {
+      "ticker": "PED",
+      "price": 2.2449
+    }
+  ],
+  "351": [
+    {
+      "ticker": "TRX",
+      "price": 0.3604
+    },
+    {
+      "ticker": "AREX",
+      "price": 2.22
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "100": [
+    {
+      "ticker": "TAST",
+      "price": 14.3
+    },
+    {
+      "ticker": "WSR",
+      "price": 13.76
+    },
+    {
+      "ticker": "JDD",
+      "price": 10.9092
+    }
+  ],
+  "200": [
+    {
+      "ticker": "BVN",
+      "price": 13.37
+    },
+    {
+      "ticker": "YLCO",
+      "price": 11.9481
+    },
+    {
+      "ticker": "HYI",
+      "price": 14.5243
+    }
+  ],
+  "260": [
+    {
+      "ticker": "MDRX",
+      "price": 14.17
+    },
+    {
+      "ticker": "YLCO",
+      "price": 11.9481
+    },
+    {
+      "ticker": "HYI",
+      "price": 14.535
+    }
+  ]
+}

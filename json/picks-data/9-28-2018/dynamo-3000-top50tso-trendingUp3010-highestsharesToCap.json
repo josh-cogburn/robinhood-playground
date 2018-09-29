@@ -1,0 +1,42 @@
+{
+  "100": [
+    {
+      "ticker": "HUSA",
+      "price": 0.235
+    },
+    {
+      "ticker": "YUMA",
+      "price": 0.4249
+    }
+  ],
+  "200": [
+    {
+      "ticker": "YUMA",
+      "price": 0.365
+    },
+    {
+      "ticker": "OGEN",
+      "price": 0.9969
+    }
+  ],
+  "260": [
+    {
+      "ticker": "YUMA",
+      "price": 0.381
+    },
+    {
+      "ticker": "OGEN",
+      "price": 0.9712
+    }
+  ],
+  "351": [
+    {
+      "ticker": "YUMA",
+      "price": 0.3799
+    },
+    {
+      "ticker": "OGEN",
+      "price": 1.0178
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "100": [
+    {
+      "ticker": "YUMA",
+      "price": 0.4249
+    },
+    {
+      "ticker": "CRMD",
+      "price": 0.8153
+    }
+  ],
+  "200": [
+    {
+      "ticker": "OGEN",
+      "price": 0.9969
+    },
+    {
+      "ticker": "YUMA",
+      "price": 0.365
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CRMD",
+      "price": 0.8918
+    },
+    {
+      "ticker": "YUMA",
+      "price": 0.381
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CRMD",
+      "price": 0.9411
+    },
+    {
+      "ticker": "OGEN",
+      "price": 1.0178
+    }
+  ]
+}

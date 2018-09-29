@@ -1,0 +1,32 @@
+{
+  "100": [
+    {
+      "ticker": "TSU",
+      "price": 14.7
+    },
+    {
+      "ticker": "HYT",
+      "price": 10.547
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ACCO",
+      "price": 11.475
+    },
+    {
+      "ticker": "CPE",
+      "price": 12.05
+    }
+  ],
+  "260": [
+    {
+      "ticker": "EDF",
+      "price": 13.005
+    },
+    {
+      "ticker": "WNEB",
+      "price": 10.825
+    }
+  ]
+}

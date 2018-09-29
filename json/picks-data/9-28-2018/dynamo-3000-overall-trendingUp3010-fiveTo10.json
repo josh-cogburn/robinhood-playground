@@ -1,0 +1,68 @@
+{
+  "100": [
+    {
+      "ticker": "FEIM",
+      "price": 9.8047
+    },
+    {
+      "ticker": "HTGM",
+      "price": 5.0101
+    },
+    {
+      "ticker": "AGTC",
+      "price": 7.1
+    },
+    {
+      "ticker": "KFFB",
+      "price": 7.8
+    },
+    {
+      "ticker": "VLRS",
+      "price": 7.88
+    }
+  ],
+  "200": [
+    {
+      "ticker": "VLRS",
+      "price": 7.54
+    },
+    {
+      "ticker": "AGTC",
+      "price": 6.9
+    },
+    {
+      "ticker": "HTGM",
+      "price": 5.1376
+    },
+    {
+      "ticker": "TXMD",
+      "price": 6.525
+    },
+    {
+      "ticker": "PHII",
+      "price": 9
+    }
+  ],
+  "260": [
+    {
+      "ticker": "VLRS",
+      "price": 7.54
+    },
+    {
+      "ticker": "AGTC",
+      "price": 6.973
+    },
+    {
+      "ticker": "ABUS",
+      "price": 9.45
+    },
+    {
+      "ticker": "PHII",
+      "price": 9
+    },
+    {
+      "ticker": "TXMD",
+      "price": 6.555
+    }
+  ]
+}

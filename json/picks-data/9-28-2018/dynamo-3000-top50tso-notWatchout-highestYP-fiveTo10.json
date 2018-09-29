@@ -1,0 +1,32 @@
+{
+  "100": [
+    {
+      "ticker": "WTI",
+      "price": 9.51
+    },
+    {
+      "ticker": "ESV",
+      "price": 8.64
+    }
+  ],
+  "200": [
+    {
+      "ticker": "DLNG",
+      "price": 8.659
+    },
+    {
+      "ticker": "WTI",
+      "price": 9.7
+    }
+  ],
+  "260": [
+    {
+      "ticker": "WTI",
+      "price": 9.81
+    },
+    {
+      "ticker": "DRYS",
+      "price": 6.13
+    }
+  ]
+}

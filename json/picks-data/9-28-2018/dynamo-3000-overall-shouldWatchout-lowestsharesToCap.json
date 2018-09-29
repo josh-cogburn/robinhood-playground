@@ -1,0 +1,42 @@
+{
+  "100": [
+    {
+      "ticker": "CASI",
+      "price": 4.9
+    },
+    {
+      "ticker": "EVC",
+      "price": 4.875
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CASI",
+      "price": 4.7402
+    },
+    {
+      "ticker": "EVC",
+      "price": 4.875
+    }
+  ],
+  "260": [
+    {
+      "ticker": "HTGM",
+      "price": 5
+    },
+    {
+      "ticker": "CASI",
+      "price": 4.755
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CASI",
+      "price": 4.675
+    },
+    {
+      "ticker": "EVC",
+      "price": 4.825
+    }
+  ]
+}

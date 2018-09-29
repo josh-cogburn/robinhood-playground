@@ -1,0 +1,32 @@
+{
+  "100": [
+    {
+      "ticker": "WATT",
+      "price": 9.92
+    },
+    {
+      "ticker": "ABUS",
+      "price": 9.45
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ABUS",
+      "price": 9.45
+    },
+    {
+      "ticker": "CLUB",
+      "price": 8.7327
+    }
+  ],
+  "260": [
+    {
+      "ticker": "VSI",
+      "price": 9.975
+    },
+    {
+      "ticker": "ABUS",
+      "price": 9.45
+    }
+  ]
+}

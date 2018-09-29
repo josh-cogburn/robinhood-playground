@@ -1,0 +1,42 @@
+{
+  "100": [
+    {
+      "ticker": "GNCA",
+      "price": 0.7799
+    },
+    {
+      "ticker": "SLS",
+      "price": 1.19
+    }
+  ],
+  "200": [
+    {
+      "ticker": "AVEO",
+      "price": 3.34
+    },
+    {
+      "ticker": "ENPH",
+      "price": 4.92
+    }
+  ],
+  "260": [
+    {
+      "ticker": "EVFM",
+      "price": 4.05
+    },
+    {
+      "ticker": "CVM",
+      "price": 4.08
+    }
+  ],
+  "351": [
+    {
+      "ticker": "LIFE",
+      "price": 0.8224
+    },
+    {
+      "ticker": "NBY",
+      "price": 1.8
+    }
+  ]
+}

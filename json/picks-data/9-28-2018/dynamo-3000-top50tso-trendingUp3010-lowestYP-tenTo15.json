@@ -1,0 +1,32 @@
+{
+  "100": [
+    {
+      "ticker": "BAS",
+      "price": 10.09
+    },
+    {
+      "ticker": "BFR",
+      "price": 12.08
+    }
+  ],
+  "200": [
+    {
+      "ticker": "BFR",
+      "price": 12.0698
+    },
+    {
+      "ticker": "GMLP",
+      "price": 14.23
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GMLP",
+      "price": 14.36
+    },
+    {
+      "ticker": "LMB",
+      "price": 11.25
+    }
+  ]
+}

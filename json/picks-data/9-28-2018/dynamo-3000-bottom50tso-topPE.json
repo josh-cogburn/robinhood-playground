@@ -1,0 +1,50 @@
+{
+  "100": [
+    {
+      "ticker": "ARCI",
+      "price": 0.9104
+    }
+  ],
+  "200": [
+    {
+      "ticker": "SINO",
+      "price": 1.16
+    },
+    {
+      "ticker": "TST",
+      "price": 2.1001
+    },
+    {
+      "ticker": "ARCI",
+      "price": 0.9167
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SINO",
+      "price": 1.16
+    },
+    {
+      "ticker": "VHI",
+      "price": 2.21
+    },
+    {
+      "ticker": "ARCI",
+      "price": 0.9143
+    }
+  ],
+  "351": [
+    {
+      "ticker": "SINO",
+      "price": 1.1428
+    },
+    {
+      "ticker": "VHI",
+      "price": 2.25
+    },
+    {
+      "ticker": "ARCI",
+      "price": 0.92
+    }
+  ]
+}

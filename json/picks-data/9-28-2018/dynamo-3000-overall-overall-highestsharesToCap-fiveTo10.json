@@ -1,0 +1,32 @@
+{
+  "100": [
+    {
+      "ticker": "INTT",
+      "price": 7.75
+    },
+    {
+      "ticker": "DLNG",
+      "price": 8.6
+    }
+  ],
+  "200": [
+    {
+      "ticker": "DLNG",
+      "price": 8.659
+    },
+    {
+      "ticker": "INTT",
+      "price": 7.75
+    }
+  ],
+  "260": [
+    {
+      "ticker": "DLNG",
+      "price": 8.66
+    },
+    {
+      "ticker": "INTT",
+      "price": 7.775
+    }
+  ]
+}

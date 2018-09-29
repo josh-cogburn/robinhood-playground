@@ -1,0 +1,32 @@
+{
+  "100": [
+    {
+      "ticker": "USAT",
+      "price": 6.925
+    },
+    {
+      "ticker": "CLBS",
+      "price": 5.76
+    }
+  ],
+  "200": [
+    {
+      "ticker": "VLRS",
+      "price": 7.54
+    },
+    {
+      "ticker": "TRXC",
+      "price": 5.585
+    }
+  ],
+  "260": [
+    {
+      "ticker": "VLRS",
+      "price": 7.54
+    },
+    {
+      "ticker": "USAT",
+      "price": 7.175
+    }
+  ]
+}

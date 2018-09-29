@@ -1,0 +1,32 @@
+{
+  "100": [
+    {
+      "ticker": "GIFI",
+      "price": 9.9
+    },
+    {
+      "ticker": "MRNS",
+      "price": 9.82
+    }
+  ],
+  "200": [
+    {
+      "ticker": "WTI",
+      "price": 9.7
+    },
+    {
+      "ticker": "AKBA",
+      "price": 8.92
+    }
+  ],
+  "260": [
+    {
+      "ticker": "MRNS",
+      "price": 9.81
+    },
+    {
+      "ticker": "WTI",
+      "price": 9.81
+    }
+  ]
+}

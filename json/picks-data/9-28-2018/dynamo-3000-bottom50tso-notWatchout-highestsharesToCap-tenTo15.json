@@ -1,0 +1,32 @@
+{
+  "100": [
+    {
+      "ticker": "LOR",
+      "price": 10.3504
+    },
+    {
+      "ticker": "IRL",
+      "price": 10.56
+    }
+  ],
+  "200": [
+    {
+      "ticker": "FTF",
+      "price": 10.13
+    },
+    {
+      "ticker": "FEIM",
+      "price": 10.24
+    }
+  ],
+  "260": [
+    {
+      "ticker": "FTF",
+      "price": 10.14
+    },
+    {
+      "ticker": "FEIM",
+      "price": 10.31
+    }
+  ]
+}

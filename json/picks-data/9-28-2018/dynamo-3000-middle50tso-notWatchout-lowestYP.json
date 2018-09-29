@@ -1,0 +1,42 @@
+{
+  "100": [
+    {
+      "ticker": "TGB",
+      "price": 0.7802
+    },
+    {
+      "ticker": "JE",
+      "price": 3.1
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CHNR",
+      "price": 1.816
+    },
+    {
+      "ticker": "TKC",
+      "price": 4.815
+    }
+  ],
+  "260": [
+    {
+      "ticker": "MLNT",
+      "price": 3.925
+    },
+    {
+      "ticker": "NNA",
+      "price": 0.5225
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NNA",
+      "price": 0.5207
+    },
+    {
+      "ticker": "ECR",
+      "price": 1.185
+    }
+  ]
+}

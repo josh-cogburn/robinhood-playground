@@ -1,0 +1,32 @@
+{
+  "100": [
+    {
+      "ticker": "NOA",
+      "price": 10.2
+    },
+    {
+      "ticker": "INSY",
+      "price": 10.1
+    }
+  ],
+  "200": [
+    {
+      "ticker": "GIFI",
+      "price": 10.15
+    },
+    {
+      "ticker": "CZR",
+      "price": 10.25
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GIFI",
+      "price": 10.15
+    },
+    {
+      "ticker": "CZR",
+      "price": 10.3
+    }
+  ]
+}

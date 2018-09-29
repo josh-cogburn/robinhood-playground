@@ -1,0 +1,32 @@
+{
+  "100": [
+    {
+      "ticker": "KIRK",
+      "price": 10.23
+    },
+    {
+      "ticker": "LOR",
+      "price": 10.3504
+    }
+  ],
+  "200": [
+    {
+      "ticker": "KIRK",
+      "price": 10.04
+    },
+    {
+      "ticker": "FEIM",
+      "price": 10.24
+    }
+  ],
+  "260": [
+    {
+      "ticker": "KIRK",
+      "price": 10.13
+    },
+    {
+      "ticker": "FEIM",
+      "price": 10.31
+    }
+  ]
+}

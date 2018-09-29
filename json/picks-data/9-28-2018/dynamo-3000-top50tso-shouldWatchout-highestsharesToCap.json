@@ -1,0 +1,42 @@
+{
+  "100": [
+    {
+      "ticker": "HUSA",
+      "price": 0.235
+    },
+    {
+      "ticker": "ICON",
+      "price": 0.3205
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ICON",
+      "price": 0.3088
+    },
+    {
+      "ticker": "EARS",
+      "price": 0.359
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ICON",
+      "price": 0.3083
+    },
+    {
+      "ticker": "EARS",
+      "price": 0.3593
+    }
+  ],
+  "351": [
+    {
+      "ticker": "ICON",
+      "price": 0.3202
+    },
+    {
+      "ticker": "EARS",
+      "price": 0.3697
+    }
+  ]
+}

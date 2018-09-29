@@ -1,0 +1,42 @@
+{
+  "100": [
+    {
+      "ticker": "PPR",
+      "price": 4.9769
+    },
+    {
+      "ticker": "ENPH",
+      "price": 4.8535
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PPR",
+      "price": 4.95
+    },
+    {
+      "ticker": "ENPH",
+      "price": 4.92
+    }
+  ],
+  "260": [
+    {
+      "ticker": "HTGM",
+      "price": 5
+    },
+    {
+      "ticker": "PPR",
+      "price": 4.945
+    }
+  ],
+  "351": [
+    {
+      "ticker": "PPR",
+      "price": 4.94
+    },
+    {
+      "ticker": "ENPH",
+      "price": 4.87
+    }
+  ]
+}

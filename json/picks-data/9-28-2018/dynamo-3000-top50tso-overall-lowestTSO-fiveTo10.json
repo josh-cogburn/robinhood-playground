@@ -1,0 +1,32 @@
+{
+  "100": [
+    {
+      "ticker": "USDP",
+      "price": 9.5
+    },
+    {
+      "ticker": "OCC",
+      "price": 5.9798
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ADMA",
+      "price": 6.3
+    },
+    {
+      "ticker": "ELMD",
+      "price": 6.7
+    }
+  ],
+  "260": [
+    {
+      "ticker": "VUZI",
+      "price": 6.35
+    },
+    {
+      "ticker": "SSW",
+      "price": 8.25
+    }
+  ]
+}

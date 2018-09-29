@@ -1,0 +1,42 @@
+{
+  "100": [
+    {
+      "ticker": "MICR",
+      "price": 3.51
+    },
+    {
+      "ticker": "CIG",
+      "price": 1.755
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ODP",
+      "price": 3.235
+    },
+    {
+      "ticker": "SCYX",
+      "price": 1.2118
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GGB",
+      "price": 4.24
+    },
+    {
+      "ticker": "TRIB",
+      "price": 3.9601
+    }
+  ],
+  "351": [
+    {
+      "ticker": "ESNC",
+      "price": 0.2697
+    },
+    {
+      "ticker": "AEMD",
+      "price": 1.1888
+    }
+  ]
+}

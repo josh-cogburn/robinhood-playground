@@ -1,0 +1,32 @@
+{
+  "100": [
+    {
+      "ticker": "NMI",
+      "price": 10.1985
+    },
+    {
+      "ticker": "EIA",
+      "price": 10.25
+    }
+  ],
+  "200": [
+    {
+      "ticker": "BCRH",
+      "price": 10.15
+    },
+    {
+      "ticker": "NMI",
+      "price": 10.2001
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NMI",
+      "price": 10.1907
+    },
+    {
+      "ticker": "RMT",
+      "price": 10.22
+    }
+  ]
+}

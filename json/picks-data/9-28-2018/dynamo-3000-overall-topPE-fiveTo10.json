@@ -1,0 +1,44 @@
+{
+  "100": [
+    {
+      "ticker": "PRGX",
+      "price": 8.9
+    },
+    {
+      "ticker": "DAKT",
+      "price": 7.84
+    },
+    {
+      "ticker": "PTNR",
+      "price": 5.0652
+    }
+  ],
+  "200": [
+    {
+      "ticker": "DAKT",
+      "price": 7.83
+    },
+    {
+      "ticker": "PTNR",
+      "price": 5.0652
+    },
+    {
+      "ticker": "AU",
+      "price": 8.58
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PRGX",
+      "price": 8.75
+    },
+    {
+      "ticker": "DAKT",
+      "price": 7.83
+    },
+    {
+      "ticker": "PTNR",
+      "price": 5.0652
+    }
+  ]
+}

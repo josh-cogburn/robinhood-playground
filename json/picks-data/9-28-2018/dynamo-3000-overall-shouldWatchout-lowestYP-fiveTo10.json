@@ -1,0 +1,32 @@
+{
+  "100": [
+    {
+      "ticker": "NETE",
+      "price": 5.3999
+    },
+    {
+      "ticker": "CMT",
+      "price": 6.85
+    }
+  ],
+  "200": [
+    {
+      "ticker": "NETE",
+      "price": 5.3001
+    },
+    {
+      "ticker": "DXR",
+      "price": 5.31
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NETE",
+      "price": 5.3912
+    },
+    {
+      "ticker": "DXR",
+      "price": 5.31
+    }
+  ]
+}

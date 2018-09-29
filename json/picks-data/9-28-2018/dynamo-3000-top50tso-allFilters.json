@@ -1,0 +1,74 @@
+{
+  "100": [
+    {
+      "ticker": "HIHO",
+      "price": 4.3627
+    },
+    {
+      "ticker": "BXE",
+      "price": 1.0285
+    },
+    {
+      "ticker": "INOD",
+      "price": 1.429
+    },
+    {
+      "ticker": "RAVE",
+      "price": 1.4799
+    }
+  ],
+  "200": [
+    {
+      "ticker": "BXE",
+      "price": 1.0314
+    },
+    {
+      "ticker": "RAVE",
+      "price": 1.4701
+    },
+    {
+      "ticker": "INOD",
+      "price": 1.44
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SMTX",
+      "price": 2.92
+    },
+    {
+      "ticker": "RAVE",
+      "price": 1.48
+    },
+    {
+      "ticker": "JTPY",
+      "price": 1.9701
+    },
+    {
+      "ticker": "INOD",
+      "price": 1.44
+    }
+  ],
+  "351": [
+    {
+      "ticker": "RAVE",
+      "price": 1.4599
+    },
+    {
+      "ticker": "STKS",
+      "price": 3.5899
+    },
+    {
+      "ticker": "JTPY",
+      "price": 1.96
+    },
+    {
+      "ticker": "BXE",
+      "price": 1.04
+    },
+    {
+      "ticker": "INOD",
+      "price": 1.46
+    }
+  ]
+}

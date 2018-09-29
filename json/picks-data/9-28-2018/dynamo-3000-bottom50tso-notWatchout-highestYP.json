@@ -1,0 +1,42 @@
+{
+  "100": [
+    {
+      "ticker": "PFMT",
+      "price": 1.9552
+    },
+    {
+      "ticker": "CYCC",
+      "price": 1.33
+    }
+  ],
+  "200": [
+    {
+      "ticker": "TST",
+      "price": 2.1001
+    },
+    {
+      "ticker": "UONEK",
+      "price": 2.15
+    }
+  ],
+  "260": [
+    {
+      "ticker": "UONEK",
+      "price": 2.05
+    },
+    {
+      "ticker": "HBP",
+      "price": 4.25
+    }
+  ],
+  "351": [
+    {
+      "ticker": "UONEK",
+      "price": 2.05
+    },
+    {
+      "ticker": "APTO",
+      "price": 2.5592
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "100": [
+    {
+      "ticker": "BKS",
+      "price": 5.725
+    },
+    {
+      "ticker": "DLHC",
+      "price": 5.93
+    },
+    {
+      "ticker": "CO",
+      "price": 7.1098
+    },
+    {
+      "ticker": "ESV",
+      "price": 8.64
+    },
+    {
+      "ticker": "NE",
+      "price": 7.03
+    }
+  ],
+  "200": [
+    {
+      "ticker": "BKS",
+      "price": 5.75
+    },
+    {
+      "ticker": "HNRG",
+      "price": 6.33
+    },
+    {
+      "ticker": "DRYS",
+      "price": 6.08
+    },
+    {
+      "ticker": "WTI",
+      "price": 9.7
+    }
+  ],
+  "260": [
+    {
+      "ticker": "HNRG",
+      "price": 6.28
+    },
+    {
+      "ticker": "WETF",
+      "price": 8.47
+    },
+    {
+      "ticker": "NE",
+      "price": 7.005
+    },
+    {
+      "ticker": "DRYS",
+      "price": 6.13
+    },
+    {
+      "ticker": "WTI",
+      "price": 9.81
+    }
+  ]
+}

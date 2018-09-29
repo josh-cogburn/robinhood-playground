@@ -1,0 +1,42 @@
+{
+  "100": [
+    {
+      "ticker": "GMO",
+      "price": 0.3801
+    },
+    {
+      "ticker": "FBIO",
+      "price": 1.57
+    }
+  ],
+  "200": [
+    {
+      "ticker": "GMO",
+      "price": 0.3799
+    },
+    {
+      "ticker": "RCG",
+      "price": 1.9
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NEON",
+      "price": 0.3389
+    },
+    {
+      "ticker": "GMO",
+      "price": 0.3796
+    }
+  ],
+  "351": [
+    {
+      "ticker": "NEON",
+      "price": 0.3321
+    },
+    {
+      "ticker": "FBIO",
+      "price": 1.61
+    }
+  ]
+}

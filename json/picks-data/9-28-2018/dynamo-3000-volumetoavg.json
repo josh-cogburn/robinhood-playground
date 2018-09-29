@@ -1,0 +1,42 @@
+{
+  "100": [
+    {
+      "ticker": "CEI",
+      "price": 0.275
+    },
+    {
+      "ticker": "FAX",
+      "price": 4.13
+    }
+  ],
+  "200": [
+    {
+      "ticker": "JAGX",
+      "price": 0.82
+    },
+    {
+      "ticker": "URG",
+      "price": 0.8139
+    }
+  ],
+  "260": [
+    {
+      "ticker": "JAGX",
+      "price": 0.8292
+    },
+    {
+      "ticker": "GGN",
+      "price": 4.701
+    }
+  ],
+  "351": [
+    {
+      "ticker": "JAGX",
+      "price": 0.85
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.2049
+    }
+  ]
+}

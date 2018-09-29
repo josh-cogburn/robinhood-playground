@@ -1,0 +1,32 @@
+{
+  "100": [
+    {
+      "ticker": "DVAX",
+      "price": 12.35
+    },
+    {
+      "ticker": "BFR",
+      "price": 12.08
+    }
+  ],
+  "200": [
+    {
+      "ticker": "BFR",
+      "price": 12.0698
+    },
+    {
+      "ticker": "AOSL",
+      "price": 11.67
+    }
+  ],
+  "260": [
+    {
+      "ticker": "DVAX",
+      "price": 12.35
+    },
+    {
+      "ticker": "AOSL",
+      "price": 11.67
+    }
+  ]
+}

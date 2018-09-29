@@ -1,0 +1,32 @@
+{
+  "100": [
+    {
+      "ticker": "LIVE",
+      "price": 8.9042
+    },
+    {
+      "ticker": "MACK",
+      "price": 5.39
+    }
+  ],
+  "200": [
+    {
+      "ticker": "JP",
+      "price": 8.76
+    },
+    {
+      "ticker": "TGTX",
+      "price": 6.025
+    }
+  ],
+  "260": [
+    {
+      "ticker": "JP",
+      "price": 8.74
+    },
+    {
+      "ticker": "TGTX",
+      "price": 5.925
+    }
+  ]
+}

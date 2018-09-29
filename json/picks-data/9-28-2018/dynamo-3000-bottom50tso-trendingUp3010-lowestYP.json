@@ -1,0 +1,42 @@
+{
+  "100": [
+    {
+      "ticker": "NSPR",
+      "price": 0.2099
+    },
+    {
+      "ticker": "CEI",
+      "price": 0.275
+    }
+  ],
+  "200": [
+    {
+      "ticker": "NSPR",
+      "price": 0.21
+    },
+    {
+      "ticker": "CEI",
+      "price": 0.2892
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CEI",
+      "price": 0.3061
+    },
+    {
+      "ticker": "ACHV",
+      "price": 3.3661
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CEI",
+      "price": 0.2891
+    },
+    {
+      "ticker": "ACHV",
+      "price": 3.24
+    }
+  ]
+}

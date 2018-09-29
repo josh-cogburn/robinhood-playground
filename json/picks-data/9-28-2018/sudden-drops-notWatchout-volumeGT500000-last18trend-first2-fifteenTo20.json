@@ -1,0 +1,72 @@
+{
+  "100": [
+    {
+      "ticker": "MAT",
+      "price": 15.645
+    },
+    {
+      "ticker": "AGNC",
+      "price": 18.525
+    }
+  ],
+  "153": [
+    {
+      "ticker": "MAT",
+      "price": 15.555
+    },
+    {
+      "ticker": "JBLU",
+      "price": 19.47
+    }
+  ],
+  "189": [
+    {
+      "ticker": "JBLU",
+      "price": 19.375
+    },
+    {
+      "ticker": "MIK",
+      "price": 16.095
+    }
+  ],
+  "221": [
+    {
+      "ticker": "JBLU",
+      "price": 19.405
+    },
+    {
+      "ticker": "RDC",
+      "price": 18.86
+    }
+  ],
+  "280": [
+    {
+      "ticker": "RDC",
+      "price": 18.75
+    },
+    {
+      "ticker": "KMI",
+      "price": 17.76
+    }
+  ],
+  "290": [
+    {
+      "ticker": "WPX",
+      "price": 20.005
+    },
+    {
+      "ticker": "KMI",
+      "price": 17.75
+    }
+  ],
+  "328": [
+    {
+      "ticker": "AR",
+      "price": 17.785
+    },
+    {
+      "ticker": "RF",
+      "price": 18.425
+    }
+  ]
+}

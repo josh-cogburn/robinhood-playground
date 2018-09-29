@@ -1,0 +1,42 @@
+{
+  "100": [
+    {
+      "ticker": "MICR",
+      "price": 3.51
+    },
+    {
+      "ticker": "CIG",
+      "price": 1.755
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PDLI",
+      "price": 2.58
+    },
+    {
+      "ticker": "UQM",
+      "price": 1.33
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GGB",
+      "price": 4.24
+    },
+    {
+      "ticker": "TRIB",
+      "price": 3.9601
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AEMD",
+      "price": 1.1888
+    },
+    {
+      "ticker": "PLX",
+      "price": 0.72
+    }
+  ]
+}

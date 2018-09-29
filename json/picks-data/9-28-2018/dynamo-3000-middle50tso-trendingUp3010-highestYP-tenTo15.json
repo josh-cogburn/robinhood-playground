@@ -1,0 +1,32 @@
+{
+  "100": [
+    {
+      "ticker": "ADES",
+      "price": 11.67
+    },
+    {
+      "ticker": "TACT",
+      "price": 14.43
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CDOR",
+      "price": 10.6
+    },
+    {
+      "ticker": "CPE",
+      "price": 12.05
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NERV",
+      "price": 12.575
+    },
+    {
+      "ticker": "DZSI",
+      "price": 14.395
+    }
+  ]
+}

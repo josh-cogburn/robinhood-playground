@@ -1,0 +1,68 @@
+{
+  "100": [
+    {
+      "ticker": "TROX",
+      "price": 12.21
+    },
+    {
+      "ticker": "TACO",
+      "price": 11.89
+    },
+    {
+      "ticker": "GMLP",
+      "price": 14.1147
+    },
+    {
+      "ticker": "BPI",
+      "price": 10.37
+    },
+    {
+      "ticker": "HCLP",
+      "price": 10.85
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PBR",
+      "price": 12.29
+    },
+    {
+      "ticker": "MTG",
+      "price": 13.21
+    },
+    {
+      "ticker": "LNTH",
+      "price": 14.775
+    },
+    {
+      "ticker": "CCXI",
+      "price": 12.63
+    },
+    {
+      "ticker": "ECOM",
+      "price": 12.3
+    }
+  ],
+  "260": [
+    {
+      "ticker": "EXPR",
+      "price": 11.17
+    },
+    {
+      "ticker": "TCS",
+      "price": 11.1
+    },
+    {
+      "ticker": "CCXI",
+      "price": 12.66
+    },
+    {
+      "ticker": "QNST",
+      "price": 13.48
+    },
+    {
+      "ticker": "VECO",
+      "price": 10.4
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "100": [
+    {
+      "ticker": "OCC",
+      "price": 5.9798
+    },
+    {
+      "ticker": "PETX",
+      "price": 5.9
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ELMD",
+      "price": 6.7
+    },
+    {
+      "ticker": "JNUG",
+      "price": 7.44
+    }
+  ],
+  "260": [
+    {
+      "ticker": "FRD",
+      "price": 9.4761
+    },
+    {
+      "ticker": "UEPS",
+      "price": 8.01
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "100": [
+    {
+      "ticker": "ADES",
+      "price": 11.67
+    },
+    {
+      "ticker": "MITL",
+      "price": 11.025
+    }
+  ],
+  "200": [
+    {
+      "ticker": "LFVN",
+      "price": 11.42
+    },
+    {
+      "ticker": "MITL",
+      "price": 11.01
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NERV",
+      "price": 12.575
+    },
+    {
+      "ticker": "DZSI",
+      "price": 14.395
+    }
+  ]
+}

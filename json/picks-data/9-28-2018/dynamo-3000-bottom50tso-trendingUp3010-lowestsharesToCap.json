@@ -1,0 +1,42 @@
+{
+  "100": [
+    {
+      "ticker": "ENPH",
+      "price": 4.8535
+    },
+    {
+      "ticker": "ADMP",
+      "price": 3.275
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ENPH",
+      "price": 4.92
+    },
+    {
+      "ticker": "CVM",
+      "price": 4.07
+    }
+  ],
+  "260": [
+    {
+      "ticker": "HTGM",
+      "price": 5
+    },
+    {
+      "ticker": "ENPH",
+      "price": 4.91
+    }
+  ],
+  "351": [
+    {
+      "ticker": "ENPH",
+      "price": 4.87
+    },
+    {
+      "ticker": "CVM",
+      "price": 4.02
+    }
+  ]
+}

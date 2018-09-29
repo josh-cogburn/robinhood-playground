@@ -1,0 +1,32 @@
+{
+  "100": [
+    {
+      "ticker": "PBPB",
+      "price": 12.325
+    },
+    {
+      "ticker": "GRX",
+      "price": 11.0001
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CHU",
+      "price": 11.685
+    },
+    {
+      "ticker": "RYI",
+      "price": 11.5
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CHI",
+      "price": 12.07
+    },
+    {
+      "ticker": "HCAP",
+      "price": 10.86
+    }
+  ]
+}

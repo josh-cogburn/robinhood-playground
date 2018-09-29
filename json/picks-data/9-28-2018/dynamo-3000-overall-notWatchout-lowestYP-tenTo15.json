@@ -1,0 +1,32 @@
+{
+  "100": [
+    {
+      "ticker": "SCO",
+      "price": 13.56
+    },
+    {
+      "ticker": "JKS",
+      "price": 11.03
+    }
+  ],
+  "200": [
+    {
+      "ticker": "SCO",
+      "price": 13.55
+    },
+    {
+      "ticker": "JKS",
+      "price": 10.8475
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SCO",
+      "price": 13.5285
+    },
+    {
+      "ticker": "JKS",
+      "price": 10.775
+    }
+  ]
+}

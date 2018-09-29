@@ -1,0 +1,32 @@
+{
+  "100": [
+    {
+      "ticker": "OCC",
+      "price": 5.9798
+    },
+    {
+      "ticker": "BKS",
+      "price": 5.725
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ELMD",
+      "price": 6.7
+    },
+    {
+      "ticker": "BKS",
+      "price": 5.75
+    }
+  ],
+  "260": [
+    {
+      "ticker": "HNRG",
+      "price": 6.28
+    },
+    {
+      "ticker": "WETF",
+      "price": 8.47
+    }
+  ]
+}

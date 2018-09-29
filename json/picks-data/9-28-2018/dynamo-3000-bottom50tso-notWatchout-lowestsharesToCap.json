@@ -1,0 +1,42 @@
+{
+  "100": [
+    {
+      "ticker": "HBP",
+      "price": 4.22
+    },
+    {
+      "ticker": "NVLN",
+      "price": 2.97
+    }
+  ],
+  "200": [
+    {
+      "ticker": "HBP",
+      "price": 4.225
+    },
+    {
+      "ticker": "NVLN",
+      "price": 2.99
+    }
+  ],
+  "260": [
+    {
+      "ticker": "HBP",
+      "price": 4.25
+    },
+    {
+      "ticker": "NVLN",
+      "price": 2.98
+    }
+  ],
+  "351": [
+    {
+      "ticker": "HBP",
+      "price": 4.2499
+    },
+    {
+      "ticker": "NVLN",
+      "price": 2.96
+    }
+  ]
+}

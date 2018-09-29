@@ -1,0 +1,32 @@
+{
+  "100": [
+    {
+      "ticker": "TROX",
+      "price": 12.21
+    },
+    {
+      "ticker": "TACO",
+      "price": 11.89
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PBR",
+      "price": 12.29
+    },
+    {
+      "ticker": "PICO",
+      "price": 12.5
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SPAR",
+      "price": 14.725
+    },
+    {
+      "ticker": "CCJ",
+      "price": 11.54
+    }
+  ]
+}

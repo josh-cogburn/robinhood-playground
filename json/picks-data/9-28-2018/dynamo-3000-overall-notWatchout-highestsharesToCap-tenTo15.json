@@ -1,0 +1,32 @@
+{
+  "100": [
+    {
+      "ticker": "NOA",
+      "price": 10.2
+    },
+    {
+      "ticker": "SMM",
+      "price": 10.09
+    }
+  ],
+  "200": [
+    {
+      "ticker": "SMM",
+      "price": 10.18
+    },
+    {
+      "ticker": "GXG",
+      "price": 10.01
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SMM",
+      "price": 10.18
+    },
+    {
+      "ticker": "GXG",
+      "price": 10.01
+    }
+  ]
+}

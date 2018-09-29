@@ -1,0 +1,40 @@
+{
+  "50": [
+    {
+      "ticker": "ANY",
+      "price": 0.36
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ANY",
+      "price": 0.36
+    },
+    {
+      "ticker": "PTIE",
+      "price": 1.0455
+    }
+  ],
+  "300": [
+    {
+      "ticker": "ANY",
+      "price": 0.3699
+    },
+    {
+      "ticker": "PTIE",
+      "price": 1.0301
+    }
+  ],
+  "380": [
+    {
+      "ticker": "ANY",
+      "price": 0.3801
+    }
+  ],
+  "600": [
+    {
+      "ticker": "ANY",
+      "price": 0.385
+    }
+  ]
+}

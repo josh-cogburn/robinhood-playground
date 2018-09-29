@@ -1,0 +1,42 @@
+{
+  "100": [
+    {
+      "ticker": "JASN",
+      "price": 3.49
+    },
+    {
+      "ticker": "GSV",
+      "price": 1.76
+    }
+  ],
+  "200": [
+    {
+      "ticker": "DHT",
+      "price": 4.745
+    },
+    {
+      "ticker": "DHF",
+      "price": 3.255
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PRSS",
+      "price": 1.46
+    },
+    {
+      "ticker": "WFT",
+      "price": 2.735
+    }
+  ],
+  "351": [
+    {
+      "ticker": "AREX",
+      "price": 2.22
+    },
+    {
+      "ticker": "ALO",
+      "price": 0.7914
+    }
+  ]
+}

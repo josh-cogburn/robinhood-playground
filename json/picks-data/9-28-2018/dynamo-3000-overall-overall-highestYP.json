@@ -1,0 +1,42 @@
+{
+  "100": [
+    {
+      "ticker": "GLG",
+      "price": 0.78
+    },
+    {
+      "ticker": "NOG",
+      "price": 4.015
+    }
+  ],
+  "200": [
+    {
+      "ticker": "GLG",
+      "price": 0.805
+    },
+    {
+      "ticker": "NOG",
+      "price": 3.9999
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GLG",
+      "price": 0.805
+    },
+    {
+      "ticker": "NOG",
+      "price": 4.01
+    }
+  ],
+  "351": [
+    {
+      "ticker": "GLG",
+      "price": 0.804
+    },
+    {
+      "ticker": "GVP",
+      "price": 3.625
+    }
+  ]
+}

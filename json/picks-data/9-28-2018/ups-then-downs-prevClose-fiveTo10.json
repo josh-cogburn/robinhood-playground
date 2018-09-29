@@ -1,0 +1,52 @@
+{
+  "50": [
+    {
+      "ticker": "HTGM",
+      "price": 5.15
+    }
+  ],
+  "200": [
+    {
+      "ticker": "AGTC",
+      "price": 6.9
+    },
+    {
+      "ticker": "HTGM",
+      "price": 5.1376
+    }
+  ],
+  "300": [
+    {
+      "ticker": "AGTC",
+      "price": 7.1
+    },
+    {
+      "ticker": "HTGM",
+      "price": 5.01
+    },
+    {
+      "ticker": "GOL",
+      "price": 5.485
+    }
+  ],
+  "380": [
+    {
+      "ticker": "HTGM",
+      "price": 5.01
+    },
+    {
+      "ticker": "GOL",
+      "price": 5.46
+    }
+  ],
+  "600": [
+    {
+      "ticker": "HTGM",
+      "price": 5.05
+    },
+    {
+      "ticker": "GOL",
+      "price": 5.46
+    }
+  ]
+}

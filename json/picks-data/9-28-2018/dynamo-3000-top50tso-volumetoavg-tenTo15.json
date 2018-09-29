@@ -1,0 +1,32 @@
+{
+  "100": [
+    {
+      "ticker": "TROX",
+      "price": 12.21
+    },
+    {
+      "ticker": "TGH",
+      "price": 12.7
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PBR",
+      "price": 12.29
+    },
+    {
+      "ticker": "DENN",
+      "price": 14.71
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SPAR",
+      "price": 14.725
+    },
+    {
+      "ticker": "ADAP",
+      "price": 13.37
+    }
+  ]
+}

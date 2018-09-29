@@ -1,0 +1,32 @@
+{
+  "100": [
+    {
+      "ticker": "NIHD",
+      "price": 6
+    },
+    {
+      "ticker": "TA",
+      "price": 5.625
+    }
+  ],
+  "200": [
+    {
+      "ticker": "MCF",
+      "price": 6.37
+    },
+    {
+      "ticker": "HQCL",
+      "price": 8.12
+    }
+  ],
+  "260": [
+    {
+      "ticker": "HQCL",
+      "price": 8.1211
+    },
+    {
+      "ticker": "ELMD",
+      "price": 6.561
+    }
+  ]
+}

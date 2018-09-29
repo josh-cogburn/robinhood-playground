@@ -1,0 +1,44 @@
+{
+  "100": [
+    {
+      "ticker": "ERJ",
+      "price": 19.76
+    },
+    {
+      "ticker": "DPLO",
+      "price": 19.47
+    },
+    {
+      "ticker": "PDM",
+      "price": 18.73
+    }
+  ],
+  "200": [
+    {
+      "ticker": "SJR",
+      "price": 19.53
+    },
+    {
+      "ticker": "COT",
+      "price": 16.125
+    },
+    {
+      "ticker": "DNOW",
+      "price": 16.77
+    }
+  ],
+  "260": [
+    {
+      "ticker": "ERJ",
+      "price": 19.755
+    },
+    {
+      "ticker": "DPLO",
+      "price": 19.46
+    },
+    {
+      "ticker": "DEA",
+      "price": 19.245
+    }
+  ]
+}

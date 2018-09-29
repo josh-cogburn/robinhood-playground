@@ -1,0 +1,90 @@
+{
+  "100": [
+    {
+      "ticker": "CEI",
+      "price": 0.275
+    },
+    {
+      "ticker": "ADMP",
+      "price": 3.275
+    },
+    {
+      "ticker": "JAGX",
+      "price": 0.91
+    },
+    {
+      "ticker": "EYPT",
+      "price": 3.3796
+    },
+    {
+      "ticker": "CLRO",
+      "price": 2.1708
+    }
+  ],
+  "200": [
+    {
+      "ticker": "JAGX",
+      "price": 0.82
+    },
+    {
+      "ticker": "ADMP",
+      "price": 3.3778
+    },
+    {
+      "ticker": "CEI",
+      "price": 0.2892
+    },
+    {
+      "ticker": "EYPT",
+      "price": 3.4129
+    },
+    {
+      "ticker": "CLRO",
+      "price": 2.16
+    }
+  ],
+  "260": [
+    {
+      "ticker": "JAGX",
+      "price": 0.8292
+    },
+    {
+      "ticker": "RXII",
+      "price": 1.275
+    },
+    {
+      "ticker": "ADMP",
+      "price": 3.5
+    },
+    {
+      "ticker": "HTBX",
+      "price": 2.01
+    },
+    {
+      "ticker": "CEI",
+      "price": 0.3061
+    }
+  ],
+  "351": [
+    {
+      "ticker": "JAGX",
+      "price": 0.85
+    },
+    {
+      "ticker": "RXII",
+      "price": 1.2099
+    },
+    {
+      "ticker": "ADMP",
+      "price": 3.35
+    },
+    {
+      "ticker": "CEI",
+      "price": 0.2891
+    },
+    {
+      "ticker": "ACHV",
+      "price": 3.24
+    }
+  ]
+}

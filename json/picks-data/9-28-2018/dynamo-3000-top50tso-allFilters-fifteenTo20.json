@@ -1,0 +1,68 @@
+{
+  "100": [
+    {
+      "ticker": "FXN",
+      "price": 17.68
+    },
+    {
+      "ticker": "FRAK",
+      "price": 17.23
+    },
+    {
+      "ticker": "RES",
+      "price": 15.665
+    },
+    {
+      "ticker": "USO",
+      "price": 15.49
+    },
+    {
+      "ticker": "XES",
+      "price": 16.9063
+    }
+  ],
+  "200": [
+    {
+      "ticker": "ENBL",
+      "price": 16.91
+    },
+    {
+      "ticker": "USO",
+      "price": 15.509
+    },
+    {
+      "ticker": "XES",
+      "price": 16.87
+    },
+    {
+      "ticker": "RDC",
+      "price": 18.86
+    },
+    {
+      "ticker": "RES",
+      "price": 15.78
+    }
+  ],
+  "260": [
+    {
+      "ticker": "XES",
+      "price": 16.88
+    },
+    {
+      "ticker": "RDC",
+      "price": 18.83
+    },
+    {
+      "ticker": "USO",
+      "price": 15.51
+    },
+    {
+      "ticker": "ENBL",
+      "price": 16.98
+    },
+    {
+      "ticker": "FEYE",
+      "price": 17.06
+    }
+  ]
+}

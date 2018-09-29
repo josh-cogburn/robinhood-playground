@@ -1,0 +1,32 @@
+{
+  "100": [
+    {
+      "ticker": "INSY",
+      "price": 10.1
+    },
+    {
+      "ticker": "BAS",
+      "price": 10.09
+    }
+  ],
+  "200": [
+    {
+      "ticker": "GIFI",
+      "price": 10.15
+    },
+    {
+      "ticker": "EPZM",
+      "price": 10.6
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GIFI",
+      "price": 10.15
+    },
+    {
+      "ticker": "EPZM",
+      "price": 10.575
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "100": [
+    {
+      "ticker": "BKN",
+      "price": 13.38
+    },
+    {
+      "ticker": "TACT",
+      "price": 14.43
+    }
+  ],
+  "200": [
+    {
+      "ticker": "LAND",
+      "price": 12.34
+    },
+    {
+      "ticker": "ESND",
+      "price": 12.8
+    }
+  ],
+  "260": [
+    {
+      "ticker": "YLCO",
+      "price": 11.9481
+    },
+    {
+      "ticker": "ETY",
+      "price": 12.8299
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "100": [
+    {
+      "ticker": "LNTH",
+      "price": 15.1
+    },
+    {
+      "ticker": "BBBY",
+      "price": 15.04
+    }
+  ],
+  "200": [
+    {
+      "ticker": "BBBY",
+      "price": 15.05
+    },
+    {
+      "ticker": "INVA",
+      "price": 15.21
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AMRN",
+      "price": 15.31
+    },
+    {
+      "ticker": "BBBY",
+      "price": 15.05
+    }
+  ]
+}

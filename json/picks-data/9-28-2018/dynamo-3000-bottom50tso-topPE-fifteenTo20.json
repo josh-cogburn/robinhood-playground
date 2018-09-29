@@ -1,0 +1,44 @@
+{
+  "100": [
+    {
+      "ticker": "CSTE",
+      "price": 18.8
+    },
+    {
+      "ticker": "GTS",
+      "price": 18.87
+    },
+    {
+      "ticker": "ESBA",
+      "price": 16.32
+    }
+  ],
+  "200": [
+    {
+      "ticker": "OSUR",
+      "price": 15.345
+    },
+    {
+      "ticker": "CSTE",
+      "price": 18.8
+    },
+    {
+      "ticker": "TTGT",
+      "price": 19.3875
+    }
+  ],
+  "260": [
+    {
+      "ticker": "OSUR",
+      "price": 15.42
+    },
+    {
+      "ticker": "CSTE",
+      "price": 18.4
+    },
+    {
+      "ticker": "TTGT",
+      "price": 19.34
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "100": [
+    {
+      "ticker": "USAT",
+      "price": 6.925
+    },
+    {
+      "ticker": "CLBS",
+      "price": 5.76
+    },
+    {
+      "ticker": "FEIM",
+      "price": 9.8047
+    },
+    {
+      "ticker": "HTGM",
+      "price": 5.0101
+    },
+    {
+      "ticker": "XNET",
+      "price": 7.2
+    }
+  ],
+  "200": [
+    {
+      "ticker": "VLRS",
+      "price": 7.54
+    },
+    {
+      "ticker": "TRXC",
+      "price": 5.585
+    },
+    {
+      "ticker": "AGTC",
+      "price": 6.9
+    },
+    {
+      "ticker": "USAT",
+      "price": 7.225
+    },
+    {
+      "ticker": "XNET",
+      "price": 7.19
+    }
+  ],
+  "260": [
+    {
+      "ticker": "VLRS",
+      "price": 7.54
+    },
+    {
+      "ticker": "TRIL",
+      "price": 5.85
+    },
+    {
+      "ticker": "USAT",
+      "price": 7.175
+    },
+    {
+      "ticker": "AGTC",
+      "price": 6.973
+    },
+    {
+      "ticker": "DRIP",
+      "price": 5.3
+    }
+  ]
+}

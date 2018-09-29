@@ -1,0 +1,32 @@
+{
+  "100": [
+    {
+      "ticker": "PFNX",
+      "price": 5.03
+    },
+    {
+      "ticker": "FRSH",
+      "price": 5.2355
+    }
+  ],
+  "200": [
+    {
+      "ticker": "LLNW",
+      "price": 5.075
+    },
+    {
+      "ticker": "SEED",
+      "price": 5.2496
+    }
+  ],
+  "260": [
+    {
+      "ticker": "FRSH",
+      "price": 5.26
+    },
+    {
+      "ticker": "LLNW",
+      "price": 5.06
+    }
+  ]
+}

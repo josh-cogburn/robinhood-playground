@@ -1,0 +1,42 @@
+{
+  "100": [
+    {
+      "ticker": "AUMN",
+      "price": 0.2091
+    },
+    {
+      "ticker": "CPHI",
+      "price": 0.2036
+    }
+  ],
+  "200": [
+    {
+      "ticker": "AUMN",
+      "price": 0.2034
+    },
+    {
+      "ticker": "CPHI",
+      "price": 0.2026
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AUMN",
+      "price": 0.2085
+    },
+    {
+      "ticker": "CPHI",
+      "price": 0.2027
+    }
+  ],
+  "351": [
+    {
+      "ticker": "CPHI",
+      "price": 0.2026
+    },
+    {
+      "ticker": "WWR",
+      "price": 0.2283
+    }
+  ]
+}

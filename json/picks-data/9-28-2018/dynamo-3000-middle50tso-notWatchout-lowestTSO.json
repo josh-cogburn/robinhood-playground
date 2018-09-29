@@ -1,0 +1,42 @@
+{
+  "100": [
+    {
+      "ticker": "MICR",
+      "price": 3.51
+    },
+    {
+      "ticker": "CIG",
+      "price": 1.755
+    }
+  ],
+  "200": [
+    {
+      "ticker": "AIRI",
+      "price": 1.4099
+    },
+    {
+      "ticker": "SAND",
+      "price": 3.746
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GGB",
+      "price": 4.24
+    },
+    {
+      "ticker": "TRIB",
+      "price": 3.9601
+    }
+  ],
+  "351": [
+    {
+      "ticker": "PLX",
+      "price": 0.72
+    },
+    {
+      "ticker": "UWN",
+      "price": 2.3982
+    }
+  ]
+}

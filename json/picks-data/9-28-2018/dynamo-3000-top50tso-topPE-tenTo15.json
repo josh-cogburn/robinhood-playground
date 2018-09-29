@@ -1,0 +1,44 @@
+{
+  "100": [
+    {
+      "ticker": "ECA",
+      "price": 13.345
+    },
+    {
+      "ticker": "DGII",
+      "price": 13.575
+    },
+    {
+      "ticker": "ERF",
+      "price": 12.46
+    }
+  ],
+  "200": [
+    {
+      "ticker": "DGII",
+      "price": 13.55
+    },
+    {
+      "ticker": "CLAR",
+      "price": 11.15
+    },
+    {
+      "ticker": "MMLP",
+      "price": 11.5
+    }
+  ],
+  "260": [
+    {
+      "ticker": "DGII",
+      "price": 13.425
+    },
+    {
+      "ticker": "CLAR",
+      "price": 11.2
+    },
+    {
+      "ticker": "MMLP",
+      "price": 11.533
+    }
+  ]
+}

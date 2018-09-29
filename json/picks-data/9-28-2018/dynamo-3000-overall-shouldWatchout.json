@@ -1,0 +1,90 @@
+{
+  "100": [
+    {
+      "ticker": "CEI",
+      "price": 0.275
+    },
+    {
+      "ticker": "ADMP",
+      "price": 3.275
+    },
+    {
+      "ticker": "OHGI",
+      "price": 0.1729
+    },
+    {
+      "ticker": "JAGX",
+      "price": 0.91
+    },
+    {
+      "ticker": "GERN",
+      "price": 1.77
+    }
+  ],
+  "200": [
+    {
+      "ticker": "JAGX",
+      "price": 0.82
+    },
+    {
+      "ticker": "GERN",
+      "price": 1.71
+    },
+    {
+      "ticker": "FGP",
+      "price": 2.0297
+    },
+    {
+      "ticker": "OHGI",
+      "price": 0.172
+    },
+    {
+      "ticker": "ADMP",
+      "price": 3.3778
+    }
+  ],
+  "260": [
+    {
+      "ticker": "JAGX",
+      "price": 0.8292
+    },
+    {
+      "ticker": "RGLS",
+      "price": 0.1955
+    },
+    {
+      "ticker": "OHGI",
+      "price": 0.1709
+    },
+    {
+      "ticker": "FGP",
+      "price": 2.08
+    },
+    {
+      "ticker": "RXII",
+      "price": 1.275
+    }
+  ],
+  "351": [
+    {
+      "ticker": "JAGX",
+      "price": 0.85
+    },
+    {
+      "ticker": "RXII",
+      "price": 1.2099
+    },
+    {
+      "ticker": "ADMP",
+      "price": 3.35
+    },
+    {
+      "ticker": "OHGI",
+      "price": 0.1702
+    },
+    {
+      "ticker": "DTEA",
+      "price": 2.7
+    }
+  ]
+}

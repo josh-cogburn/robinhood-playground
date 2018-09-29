@@ -1,0 +1,68 @@
+{
+  "100": [
+    {
+      "ticker": "VKTX",
+      "price": 17.0755
+    },
+    {
+      "ticker": "GTS",
+      "price": 18.87
+    },
+    {
+      "ticker": "SUM",
+      "price": 18.09
+    },
+    {
+      "ticker": "TRNC",
+      "price": 16.301
+    },
+    {
+      "ticker": "LL",
+      "price": 15.4414
+    }
+  ],
+  "200": [
+    {
+      "ticker": "VKTX",
+      "price": 16.775
+    },
+    {
+      "ticker": "GTS",
+      "price": 18.72
+    },
+    {
+      "ticker": "SUM",
+      "price": 18.08
+    },
+    {
+      "ticker": "TRNC",
+      "price": 16.25
+    },
+    {
+      "ticker": "LL",
+      "price": 15.49
+    }
+  ],
+  "260": [
+    {
+      "ticker": "VKTX",
+      "price": 17.13
+    },
+    {
+      "ticker": "GTS",
+      "price": 18.85
+    },
+    {
+      "ticker": "HIBB",
+      "price": 18.95
+    },
+    {
+      "ticker": "TRNC",
+      "price": 16.17
+    },
+    {
+      "ticker": "CSTE",
+      "price": 18.4
+    }
+  ]
+}

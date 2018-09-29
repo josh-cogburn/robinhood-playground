@@ -1,0 +1,44 @@
+{
+  "100": [
+    {
+      "ticker": "MDRX",
+      "price": 14.205
+    },
+    {
+      "ticker": "CY",
+      "price": 14.37
+    },
+    {
+      "ticker": "ECA",
+      "price": 13.345
+    }
+  ],
+  "200": [
+    {
+      "ticker": "MDRX",
+      "price": 14.08
+    },
+    {
+      "ticker": "CY",
+      "price": 14.511
+    },
+    {
+      "ticker": "ECA",
+      "price": 13.24
+    }
+  ],
+  "260": [
+    {
+      "ticker": "MDRX",
+      "price": 14.17
+    },
+    {
+      "ticker": "CY",
+      "price": 14.55
+    },
+    {
+      "ticker": "ECA",
+      "price": 13.275
+    }
+  ]
+}
