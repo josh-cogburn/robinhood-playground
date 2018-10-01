@@ -237,7 +237,7 @@ const trendFilter = async (Robinhood, trend) => {
 };
 
 const technicalIndicators = {
-    name: 'technical indicators',
+    name: 'technical-indicators',
     trendFilter,
     run: [14, 29, 87, 114, 159, 190, 220, 246, 320, 340, 357, 383],
 };

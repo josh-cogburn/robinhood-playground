@@ -30,7 +30,14 @@ module.exports = {
         '[myRecs-day30count7-hundredUpTrendsAllGt1]',
         
         '[heavydutyhitters]',
-        '[constantinople]'
+        '[constantinople]',
+
+        'sudden-drops-notWatchout-prevCloseTrendAbsLT30-last3trend-filter5-100',
+        'sudden-drops-notWatchout-prevCloseTrendAbsLT30-last3trend-filter5-100',
+        'sudden-drops-notWatchout-prevCloseTrendAbsLT30-last3trend-filter5-100',
+
+        'sudden-drops-volumeGT1000000-last3trend-first2-fiveTo10-280',
+        'dynamo-3000-overall-overall-lowestYP-40'
     ],
     fallbackSellStrategy: 'limit3',
     force: {
