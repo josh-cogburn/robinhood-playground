@@ -65,9 +65,14 @@ const stratManager = {
         };
     },
     newPick(data) {
-        if (!this.tickersOfInterest.includes(data.ticker)) {
-            this.tickersOfInterest.push(data.ticker);
-        }
+
+        const { withPrices } = data;
+        withPrices.forEach(({ ticker, price }) => {
+            if (!this.tickersOfInterest.includes(ticker)) {
+                this.tickersOfInterest.push(ticker);
+            }
+        });
+
         // console.log('new pick', data);
         if (this.curDate !== getToday()) {
             return;
