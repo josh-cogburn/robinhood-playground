@@ -335,7 +335,7 @@ const stratManager = {
     },
     async getAndWaitPrices() {
         await this.getRelatedPrices();
-        setTimeout(this.getAndWaitPrices, 40000);
+        setTimeout(() => this.getAndWaitPrices(), 40000);
     },
     async getRelatedPrices() {
         // console.log(this.picks);
