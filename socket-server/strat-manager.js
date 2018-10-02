@@ -26,6 +26,7 @@ const stratManager = {
     Robinhood: null,
     io: null,
     picks: [],
+    tickersOfInterest: [],
     relatedPrices: {},
     curDate: null,
 
@@ -43,7 +44,7 @@ const stratManager = {
         console.log('init picks')
         await this.initPicksAndPMs();
         console.log('get prices')
-        await this.getRelatedPrices();
+        this.getAndWaitPrices();
         // console.log('send report init')
         // try {
         //     await this.sendStrategyReport();
@@ -53,8 +54,6 @@ const stratManager = {
         console.log('initd strat manager');
 
         new CronJob(`40 7 * * 1-5`, () => this.newDay(), null, true);
-
-        setInterval(() => this.getRelatedPrices(), 40000);
     },
     getWelcomeData() {
         return {
@@ -66,6 +65,9 @@ const stratManager = {
         };
     },
     newPick(data) {
+        if (!this.tickersOfInterest.includes(data.ticker)) {
+            this.tickersOfInterest.push(data.ticker);
+        }
         // console.log('new pick', data);
         if (this.curDate !== getToday()) {
             return;
@@ -90,6 +92,7 @@ const stratManager = {
         }
         await this.refreshPastData();
         this.picks = [];
+        this.tickersOfInterest = [];
         await this.initPicksAndPMs();
         await this.getRelatedPrices();
         this.sendToAll('server:welcome', this.getWelcomeData());
@@ -141,7 +144,12 @@ const stratManager = {
                 });
             }
         }
+        let tickersOfInterest = flatten(picks.map(pick => {
+            return pick.withPrices.map(tickerObj => tickerObj.ticker);
+        }));
+        tickersOfInterest = [...new Set(tickersToLookup)];     // uniquify duplicate tickers
 
+        this.tickersOfInterest = tickersOfInterest;
         this.picks = picks;
     },
     async sendStrategyReport() {
@@ -320,13 +328,14 @@ const stratManager = {
             fiveDay: stratPerfObj
         };
     },
+    async getAndWaitPrices() {
+        await this.getRelatedPrices();
+        setTimeout(this.getAndWaitPrices, 40000);
+    },
     async getRelatedPrices() {
         // console.log(this.picks);
-        console.log('get related');
-        let tickersToLookup = flatten(this.picks.map(pick => {
-            return pick.withPrices.map(tickerObj => tickerObj.ticker);
-        }));
-        tickersToLookup = [...new Set(tickersToLookup)];     // uniquify duplicate tickers
+        console.log('getRelatedPrices');
+        const tickersToLookup = this.tickersOfInterest;
         console.log('getting related prices', tickersToLookup.length);
         // console.log(JSON.stringify(tickersToLookup));
         const relatedPrices = await lookupTickers(
