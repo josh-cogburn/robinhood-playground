@@ -2,7 +2,11 @@ const { lookupTickers } = require('../app-actions/record-strat-perfs');
 const jsonMgr = require('../utils/json-mgr');
 const { CronJob } = require('cron');
 const fs = require('mz/fs');
+
+// pms
 const manualPMs = require('../pms/manual');
+const fiftytwodaySPMs = require('../pms/spm');
+
 const settings = require('../settings');
 
 // predictions and past data
@@ -263,7 +267,7 @@ const stratManager = {
         });
 
         const myRecs = await getMyRecs(this.Robinhood);
-
+        const fiftytwodaySPMs = await fiftytwodaySPMs(this.Robinhood);
         let strategies = {
 
             ...manualPMs,
@@ -272,6 +276,12 @@ const stratManager = {
             ...Object.keys(myRecs).reduce((acc, val) => ({
                 ...acc,
                 [`myRecs-${val}`]: myRecs[val]
+            }), {}),
+            
+            //fiftytwodaySPMs
+            ...Object.keys(fiftytwodaySPMs).reduce((acc, val) => ({
+                ...acc,
+                [`spm-52day-${val}`]: myRecs[val]
             }), {}),
 
             ...await getTipTop(this.Robinhood)

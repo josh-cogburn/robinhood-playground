@@ -11,17 +11,22 @@ const uniqifyArray = (array, strength = 0.85) => {
 };
 
 const uniqifyArrayOfStrategies = (array, strength = 0.99) => {
-    // const createFastSimilarity = (() => {
-    //     const cache = {};
-    //     return {
-    //         get:
-    //     }
-    // })();
+    
     const trendCache = {};
 
+    if (!Array.isArray(array) || !array.length) return [];
+
+    const keysToCheck = [
+        'name',
+        'strategy',
+        'trend',
+        'maxs',
+        // 'count'
+    ].filter(k => Object.keys(array[0]).includes(k))
+    console.log('keystocheck', keysToCheck);
     return array
         .reduce((acc, val) => {
-            const foundInTrendCache = !!trendCache[val.trends];
+            const foundInTrendCache = !!trendCache[val.trends || val.maxs];
             const shouldInclude = !foundInTrendCache && acc.every(strat => {
                 const getSimilarity = (str1, str2) => {
                     str1 = str1.toString();
@@ -31,17 +36,22 @@ const uniqifyArrayOfStrategies = (array, strength = 0.99) => {
                         : stringSimilarity.compareTwoStrings(str1, str2);
                 };
 
-                const trendSimilarity = getSimilarity(strat.trends, val.trends);
-                const nameSimilarity = getSimilarity(strat.name, val.name);
-                const valParts = val.name.split('-');
-                const foundValRatio = valParts.filter(part => strat.name.includes(part)).length / valParts.length;
-                // const
-                // console.log(foundValRatio);
-                // console.log('between', strat.name, ' and ', val.name, )
-                return [trendSimilarity, nameSimilarity].every(similarity => similarity < strength) && foundValRatio < 0.8;
+                return keysToCheck.every(key => {
+                    if (key === 'name' || key === 'strategy') {
+                        const valParts = val[key].split('-');
+                        const foundValRatio = valParts.filter(part => strat[key].includes(part)).length / valParts.length;
+                        if (foundValRatio >= 0.8) {
+                            console.log('ouch', key, 'foundValRatio', foundValRatio, strat, val)
+                            return false;
+                        }
+                    }
+                    const similarity = getSimilarity(strat[key], val[key]);
+                    return similarity < strength;
+                });
+
             });
 
-            trendCache[val.trends] = true;
+            trendCache[val.trends || val.maxs] = true;
             return shouldInclude ? acc.concat(val) : acc;
         }, []);
 };

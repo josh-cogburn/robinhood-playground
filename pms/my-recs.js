@@ -120,6 +120,7 @@ module.exports = async (Robinhood) => {
             const isSame = names.toString() === uniqNames.toString();
             return {
                 [`${prefix}-${name}`]: getNames(list),
+                [`${prefix}-slice16-uniq-${name}`]: getNames(uniqifyArrayOfStrategies(list.slice(0, 16))),
                 ...!isSame && { [`${prefix}-uniq-${name}`]: uniqNames }
             };
         };
