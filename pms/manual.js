@@ -1116,7 +1116,6 @@ const backToTheBasicsPeople = [
     'sudden-drops-last3trend-filter10-100',
     'based-on-jump-gtEightOvernight-trending607-shouldWatchout-first1-fiveTo10-30',
     'based-on-jump-gtEightOvernight-trending53-notWatchout-gtneg20percmax-first2-30',
-    'constant-risers-10minute-percUpCloseOnlyPoints-filtered70-fiveTo10-40',
 ];
 
 const heavydutyhitters = [
@@ -1131,6 +1130,19 @@ const constantinople = [
     'constant-risers-10minute-percUpCloseOnlyPoints-filtered70-fiveTo10-40',
     'constant-downers-10minute-percDownCloseOnly-filtered80-242',
 ];
+
+
+const moreITELLYOUMORE = [
+    'technical indicators-day-year-topSMAoverUnderHist-114',
+    'sudden-drops-volumeGT1000000-last1trend-first1-280',
+    'sudden-drops-shouldWatchout-last18trend-first1-fiveTo10-280',
+    'low-float-high-volume-twoWeekVolToAvgPoints-shouldWatchout-fiveTo10-276',
+    'sudden-drops-tsoAbsLT15-last18trend-first2-fiveTo10-280',
+    'sudden-drops-bothtrendsAbsLT20-last30trend-filter10-221',
+    'constant-risers-5minute-percUpHighClose-filtered60-fiveTo10-80',
+    'low-float-high-volume-volTo2WeekPoints-notWatchout-6',
+    'sudden-drops-shouldWatchout-bothtrendsAbsLT30-last18trend-first2-221'
+]
 
 module.exports = {
     'wild n crazy': [
@@ -1233,4 +1245,5 @@ module.exports = {
     backToTheBasicsPeople,
     heavydutyhitters,
     constantinople,
+    moreITELLYOUMORE
 };

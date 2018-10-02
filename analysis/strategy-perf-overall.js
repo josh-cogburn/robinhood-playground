@@ -152,8 +152,8 @@ module.exports = async (Robinhood, includeToday, daysBack = NUM_DAYS, minCount =
         })
         .slice(0);
 
-    // console.log('sorted by perc up')
-    // console.table(sortedByPercUp);
+    console.log('sorted by perc up')
+    console.table(sortedByPercUp);
 
     const sortedByHundredResult = withData
         // .filter(t => t.trend.length > 30)
