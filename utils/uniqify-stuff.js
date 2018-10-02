@@ -19,7 +19,7 @@ const uniqifyArrayOfStrategies = (array, strength = 0.99) => {
     const keysToCheck = [
         'name',
         'strategy',
-        'trend',
+        'trends',
         'maxs',
         // 'count'
     ].filter(k => Object.keys(array[0]).includes(k))
@@ -41,7 +41,7 @@ const uniqifyArrayOfStrategies = (array, strength = 0.99) => {
                         const valParts = val[key].split('-');
                         const foundValRatio = valParts.filter(part => strat[key].includes(part)).length / valParts.length;
                         if (foundValRatio >= 0.8) {
-                            console.log('ouch', key, 'foundValRatio', foundValRatio, strat, val)
+                            // console.log('ouch', key, 'foundValRatio', foundValRatio, strat, val)
                             return false;
                         }
                     }

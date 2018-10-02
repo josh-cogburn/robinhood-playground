@@ -267,7 +267,7 @@ const stratManager = {
         });
 
         const myRecs = await getMyRecs(this.Robinhood);
-        const fiftytwodaySPMs = await fiftytwodaySPMs(this.Robinhood);
+        const fiftytwo = await fiftytwodaySPMs(this.Robinhood);
         let strategies = {
 
             ...manualPMs,
@@ -279,9 +279,9 @@ const stratManager = {
             }), {}),
             
             //fiftytwodaySPMs
-            ...Object.keys(fiftytwodaySPMs).reduce((acc, val) => ({
+            ...Object.keys(fiftytwo).reduce((acc, val) => ({
                 ...acc,
-                [`spm-52day-${val}`]: myRecs[val]
+                [`spm-52day-${val}`]: fiftytwo[val]
             }), {}),
 
             ...await getTipTop(this.Robinhood)

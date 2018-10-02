@@ -117,11 +117,12 @@ module.exports = async (Robinhood) => {
         const withUniq = (name, list) => {
             const names = getNames(list);
             const uniqNames = getNames(uniqifyArrayOfStrategies(list));
-            const isSame = names.toString() === uniqNames.toString();
+            const slice16Uniq = getNames(uniqifyArrayOfStrategies(list.slice(0, 16)));
+            const isSame = arr => names.toString() === arr.toString();
             return {
                 [`${prefix}-${name}`]: getNames(list),
-                [`${prefix}-slice16-uniq-${name}`]: getNames(uniqifyArrayOfStrategies(list.slice(0, 16))),
-                ...!isSame && { [`${prefix}-uniq-${name}`]: uniqNames }
+                ...!isSame(uniqNames) && { [`${prefix}-uniq-${name}`]: uniqNames },
+                ...!isSame(slice16Uniq) && { [`${prefix}-slice16-uniq-${name}`]: slice16Uniq },
             };
         };
         const picksObjWithUniq = Object.keys(picksObj).reduce((acc, val) => ({
