@@ -152,7 +152,7 @@ const stratManager = {
         let tickersOfInterest = flatten(picks.map(pick => {
             return pick.withPrices.map(tickerObj => tickerObj.ticker);
         }));
-        tickersOfInterest = [...new Set(tickersToLookup)];     // uniquify duplicate tickers
+        tickersOfInterest = [...new Set(tickersOfInterest)];     // uniquify duplicate tickers
 
         this.tickersOfInterest = tickersOfInterest;
         this.picks = picks;
