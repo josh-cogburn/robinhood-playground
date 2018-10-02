@@ -1,0 +1,102 @@
+{
+  "32": [
+    {
+      "ticker": "BB",
+      "price": 11.53
+    },
+    {
+      "ticker": "GE",
+      "price": 12.63
+    }
+  ],
+  "63": [
+    {
+      "ticker": "GE",
+      "price": 12.63
+    },
+    {
+      "ticker": "CLF",
+      "price": 12.445
+    }
+  ],
+  "100": [
+    {
+      "ticker": "CY",
+      "price": 14.6266
+    },
+    {
+      "ticker": "GE",
+      "price": 12.48
+    }
+  ],
+  "153": [
+    {
+      "ticker": "SCO",
+      "price": 13.087
+    },
+    {
+      "ticker": "ISBC",
+      "price": 12.125
+    }
+  ],
+  "189": [
+    {
+      "ticker": "CVE",
+      "price": 10.58
+    },
+    {
+      "ticker": "TPH",
+      "price": 12.31
+    }
+  ],
+  "221": [
+    {
+      "ticker": "GE",
+      "price": 12.315
+    },
+    {
+      "ticker": "ALDX",
+      "price": 13.31
+    }
+  ],
+  "280": [
+    {
+      "ticker": "FOLD",
+      "price": 12.88
+    },
+    {
+      "ticker": "OAS",
+      "price": 14.35
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "PBR",
+      "price": 12
+    },
+    {
+      "ticker": "ABX",
+      "price": 11.05
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "ABX",
+      "price": 11.08
+    },
+    {
+      "ticker": "SLV",
+      "price": 13.68
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "NUGT",
+      "price": 12.71
+    },
+    {
+      "ticker": "SLV",
+      "price": 13.5199
+    }
+  ]
+}

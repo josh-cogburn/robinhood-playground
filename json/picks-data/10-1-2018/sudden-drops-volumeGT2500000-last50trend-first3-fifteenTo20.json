@@ -1,0 +1,58 @@
+{
+  "280": [
+    {
+      "ticker": "INSM",
+      "price": 16.2801
+    },
+    {
+      "ticker": "DGAZ",
+      "price": 16.845
+    },
+    {
+      "ticker": "AMRN",
+      "price": 17.1502
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "AMRN",
+      "price": 17.3
+    },
+    {
+      "ticker": "AGNC",
+      "price": 18.5801
+    },
+    {
+      "ticker": "MRVL",
+      "price": 19.3
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "AGNC",
+      "price": 18.58
+    },
+    {
+      "ticker": "KEY",
+      "price": 19.89
+    },
+    {
+      "ticker": "MRVL",
+      "price": 19.3
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "KEY",
+      "price": 19.89
+    },
+    {
+      "ticker": "SUM",
+      "price": 18.18
+    },
+    {
+      "ticker": "MRVL",
+      "price": 19.3
+    }
+  ]
+}

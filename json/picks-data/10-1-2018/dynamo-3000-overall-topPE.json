@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "GTE",
+      "price": 3.9
+    },
+    {
+      "ticker": "FRAN",
+      "price": 3.69
+    },
+    {
+      "ticker": "EXK",
+      "price": 2.27
+    }
+  ],
+  "40": [
+    {
+      "ticker": "GTE",
+      "price": 3.885
+    },
+    {
+      "ticker": "FRAN",
+      "price": 3.7
+    },
+    {
+      "ticker": "III",
+      "price": 4.6329
+    }
+  ],
+  "100": [
+    {
+      "ticker": "GTE",
+      "price": 3.81
+    },
+    {
+      "ticker": "FRAN",
+      "price": 3.735
+    },
+    {
+      "ticker": "III",
+      "price": 4.64
+    }
+  ],
+  "200": [
+    {
+      "ticker": "GTE",
+      "price": 3.88
+    },
+    {
+      "ticker": "FRAN",
+      "price": 3.72
+    },
+    {
+      "ticker": "EXK",
+      "price": 2.2701
+    }
+  ],
+  "260": [
+    {
+      "ticker": "GTE",
+      "price": 3.87
+    },
+    {
+      "ticker": "III",
+      "price": 4.505
+    },
+    {
+      "ticker": "LTRX",
+      "price": 4.03
+    }
+  ]
+}

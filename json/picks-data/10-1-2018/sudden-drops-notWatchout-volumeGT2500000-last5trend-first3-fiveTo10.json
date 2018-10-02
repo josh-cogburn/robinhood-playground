@@ -1,0 +1,130 @@
+{
+  "32": [
+    {
+      "ticker": "F",
+      "price": 9.41
+    }
+  ],
+  "100": [
+    {
+      "ticker": "DNR",
+      "price": 6.045
+    },
+    {
+      "ticker": "F",
+      "price": 9.4263
+    }
+  ],
+  "153": [
+    {
+      "ticker": "DNR",
+      "price": 6.12
+    },
+    {
+      "ticker": "SIRI",
+      "price": 6.235
+    },
+    {
+      "ticker": "F",
+      "price": 9.415
+    }
+  ],
+  "189": [
+    {
+      "ticker": "SWN",
+      "price": 5.17
+    },
+    {
+      "ticker": "F",
+      "price": 9.3968
+    },
+    {
+      "ticker": "SIRI",
+      "price": 6.2452
+    }
+  ],
+  "221": [
+    {
+      "ticker": "SWN",
+      "price": 5.165
+    },
+    {
+      "ticker": "SIRI",
+      "price": 6.235
+    },
+    {
+      "ticker": "DNR",
+      "price": 6.145
+    }
+  ],
+  "280": [
+    {
+      "ticker": "SWN",
+      "price": 5.155
+    },
+    {
+      "ticker": "VER",
+      "price": 7.225
+    },
+    {
+      "ticker": "F",
+      "price": 9.4
+    }
+  ],
+  "290": [
+    {
+      "ticker": "VER",
+      "price": 7.205
+    },
+    {
+      "ticker": "F",
+      "price": 9.39
+    },
+    {
+      "ticker": "DNR",
+      "price": 6.165
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "IBN",
+      "price": 8.49
+    },
+    {
+      "ticker": "SIRI",
+      "price": 6.3601
+    },
+    {
+      "ticker": "F",
+      "price": 9.4301
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "SIRI",
+      "price": 6.32
+    },
+    {
+      "ticker": "F",
+      "price": 9.4201
+    },
+    {
+      "ticker": "VER",
+      "price": 7.26
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "VER",
+      "price": 7.26
+    },
+    {
+      "ticker": "BBD",
+      "price": 7.07
+    },
+    {
+      "ticker": "ESV",
+      "price": 8.47
+    }
+  ]
+}

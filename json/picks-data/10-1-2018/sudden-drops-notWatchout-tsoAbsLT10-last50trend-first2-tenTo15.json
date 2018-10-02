@@ -1,0 +1,42 @@
+{
+  "280": [
+    {
+      "ticker": "NERV",
+      "price": 11.84
+    },
+    {
+      "ticker": "SCO",
+      "price": 12.91
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "ABX",
+      "price": 11.05
+    },
+    {
+      "ticker": "FCX",
+      "price": 13.8
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "AVVIY",
+      "price": 12.64
+    },
+    {
+      "ticker": "RIG",
+      "price": 14.12
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "SLV",
+      "price": 13.5199
+    },
+    {
+      "ticker": "RIG",
+      "price": 14.13
+    }
+  ]
+}

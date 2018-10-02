@@ -1,0 +1,82 @@
+{
+  "100": [
+    {
+      "ticker": "GDX",
+      "price": 18.555
+    },
+    {
+      "ticker": "AMRN",
+      "price": 17.885
+    }
+  ],
+  "153": [
+    {
+      "ticker": "AMRN",
+      "price": 17.89
+    },
+    {
+      "ticker": "GDX",
+      "price": 18.575
+    }
+  ],
+  "189": [
+    {
+      "ticker": "MRVL",
+      "price": 19.315
+    },
+    {
+      "ticker": "GDX",
+      "price": 18.585
+    }
+  ],
+  "221": [
+    {
+      "ticker": "RF",
+      "price": 18.185
+    },
+    {
+      "ticker": "MRVL",
+      "price": 19.335
+    }
+  ],
+  "280": [
+    {
+      "ticker": "AMRN",
+      "price": 17.1502
+    },
+    {
+      "ticker": "INSM",
+      "price": 16.2801
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "AMRN",
+      "price": 17.3
+    },
+    {
+      "ticker": "KEY",
+      "price": 19.89
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "AMRN",
+      "price": 16.99
+    },
+    {
+      "ticker": "AGNC",
+      "price": 18.58
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "AMRN",
+      "price": 17.0999
+    },
+    {
+      "ticker": "KEY",
+      "price": 19.89
+    }
+  ]
+}

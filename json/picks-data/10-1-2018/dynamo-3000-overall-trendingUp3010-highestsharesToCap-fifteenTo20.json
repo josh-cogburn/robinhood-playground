@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "USO",
+      "price": 15.47
+    },
+    {
+      "ticker": "INVA",
+      "price": 15.15
+    }
+  ],
+  "40": [
+    {
+      "ticker": "AFTY",
+      "price": 15.34
+    },
+    {
+      "ticker": "USO",
+      "price": 15.56
+    }
+  ],
+  "100": [
+    {
+      "ticker": "SBLK",
+      "price": 15.15
+    },
+    {
+      "ticker": "AFTY",
+      "price": 15.53
+    }
+  ],
+  "200": [
+    {
+      "ticker": "SBLK",
+      "price": 15.105
+    },
+    {
+      "ticker": "VALE",
+      "price": 15.055
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SPE",
+      "price": 15.0878
+    },
+    {
+      "ticker": "AFTY",
+      "price": 15.34
+    }
+  ]
+}

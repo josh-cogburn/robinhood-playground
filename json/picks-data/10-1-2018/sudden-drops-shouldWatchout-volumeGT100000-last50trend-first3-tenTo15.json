@@ -1,0 +1,58 @@
+{
+  "280": [
+    {
+      "ticker": "CORT",
+      "price": 13.7
+    },
+    {
+      "ticker": "AOBC",
+      "price": 14.92
+    },
+    {
+      "ticker": "KIRK",
+      "price": 10.09
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "AKRX",
+      "price": 6.9
+    },
+    {
+      "ticker": "PBR",
+      "price": 12
+    },
+    {
+      "ticker": "ABEO",
+      "price": 12.8
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "AKRX",
+      "price": 6.9
+    },
+    {
+      "ticker": "PBR",
+      "price": 12
+    },
+    {
+      "ticker": "IOVA",
+      "price": 11.25
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "AKRX",
+      "price": 6.9
+    },
+    {
+      "ticker": "INSY",
+      "price": 10.08
+    },
+    {
+      "ticker": "GOV",
+      "price": 11.1
+    }
+  ]
+}

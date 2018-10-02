@@ -1,0 +1,136 @@
+{
+  "32": [
+    {
+      "ticker": "F",
+      "price": 9.41
+    }
+  ],
+  "63": [
+    {
+      "ticker": "F",
+      "price": 9.404
+    }
+  ],
+  "100": [
+    {
+      "ticker": "DNR",
+      "price": 6.045
+    },
+    {
+      "ticker": "F",
+      "price": 9.4263
+    }
+  ],
+  "153": [
+    {
+      "ticker": "DNR",
+      "price": 6.12
+    },
+    {
+      "ticker": "SIRI",
+      "price": 6.235
+    },
+    {
+      "ticker": "F",
+      "price": 9.415
+    }
+  ],
+  "189": [
+    {
+      "ticker": "SWN",
+      "price": 5.17
+    },
+    {
+      "ticker": "DNR",
+      "price": 6.145
+    },
+    {
+      "ticker": "SIRI",
+      "price": 6.2452
+    }
+  ],
+  "221": [
+    {
+      "ticker": "DNR",
+      "price": 6.145
+    },
+    {
+      "ticker": "SWN",
+      "price": 5.165
+    },
+    {
+      "ticker": "SIRI",
+      "price": 6.235
+    }
+  ],
+  "280": [
+    {
+      "ticker": "SWN",
+      "price": 5.155
+    },
+    {
+      "ticker": "VER",
+      "price": 7.225
+    },
+    {
+      "ticker": "F",
+      "price": 9.4
+    }
+  ],
+  "290": [
+    {
+      "ticker": "VER",
+      "price": 7.205
+    },
+    {
+      "ticker": "DNR",
+      "price": 6.165
+    },
+    {
+      "ticker": "SIRI",
+      "price": 6.275
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "IBN",
+      "price": 8.49
+    },
+    {
+      "ticker": "F",
+      "price": 9.4301
+    },
+    {
+      "ticker": "VER",
+      "price": 7.26
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "VER",
+      "price": 7.26
+    },
+    {
+      "ticker": "IBN",
+      "price": 8.49
+    },
+    {
+      "ticker": "BBD",
+      "price": 7.07
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "SWN",
+      "price": 5.26
+    },
+    {
+      "ticker": "SIRI",
+      "price": 6.3301
+    },
+    {
+      "ticker": "IBN",
+      "price": 8.65
+    }
+  ]
+}

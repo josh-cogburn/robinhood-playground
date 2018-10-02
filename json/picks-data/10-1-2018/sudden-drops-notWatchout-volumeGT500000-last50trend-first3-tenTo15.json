@@ -1,0 +1,58 @@
+{
+  "280": [
+    {
+      "ticker": "SCO",
+      "price": 12.91
+    },
+    {
+      "ticker": "BB",
+      "price": 11.06
+    },
+    {
+      "ticker": "GE",
+      "price": 12.2015
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "ABX",
+      "price": 11.05
+    },
+    {
+      "ticker": "FCX",
+      "price": 13.8
+    },
+    {
+      "ticker": "RIG",
+      "price": 14.12
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "RIG",
+      "price": 14.12
+    },
+    {
+      "ticker": "SCO",
+      "price": 13.51
+    },
+    {
+      "ticker": "ABX",
+      "price": 11.08
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "SLV",
+      "price": 13.5199
+    },
+    {
+      "ticker": "RIG",
+      "price": 14.13
+    },
+    {
+      "ticker": "DB",
+      "price": 11.31
+    }
+  ]
+}

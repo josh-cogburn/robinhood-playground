@@ -1,0 +1,92 @@
+{
+  "280": [
+    {
+      "ticker": "JAGX",
+      "price": 0.8999
+    },
+    {
+      "ticker": "ABAC",
+      "price": 1.8693
+    },
+    {
+      "ticker": "ANY",
+      "price": 0.3365
+    },
+    {
+      "ticker": "SMRT",
+      "price": 2.211
+    },
+    {
+      "ticker": "CGEN",
+      "price": 3.49
+    }
+  ],
+  "290": [
+    {
+      "ticker": "JAGX",
+      "price": 0.885
+    },
+    {
+      "ticker": "ABAC",
+      "price": 1.8693
+    },
+    {
+      "ticker": "CGEN",
+      "price": 3.5
+    },
+    {
+      "ticker": "SMRT",
+      "price": 2.211
+    },
+    {
+      "ticker": "YECO",
+      "price": 1.41
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "PTX",
+      "price": 0.9
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "INPX",
+      "price": 0.22
+    },
+    {
+      "ticker": "HUSA",
+      "price": 0.2389
+    },
+    {
+      "ticker": "PTX",
+      "price": 0.9
+    },
+    {
+      "ticker": "MNGA",
+      "price": 0.16
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "HUSA",
+      "price": 0.23
+    },
+    {
+      "ticker": "SSC",
+      "price": 3.55
+    },
+    {
+      "ticker": "INPX",
+      "price": 0.2244
+    },
+    {
+      "ticker": "PTX",
+      "price": 0.9
+    },
+    {
+      "ticker": "ADMP",
+      "price": 3.45
+    }
+  ]
+}

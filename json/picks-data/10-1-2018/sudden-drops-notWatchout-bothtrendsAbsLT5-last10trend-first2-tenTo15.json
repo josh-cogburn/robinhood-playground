@@ -1,0 +1,92 @@
+{
+  "63": [
+    {
+      "ticker": "BB",
+      "price": 11.34
+    },
+    {
+      "ticker": "AOSL",
+      "price": 11.67
+    }
+  ],
+  "100": [
+    {
+      "ticker": "CNX",
+      "price": 14.05
+    },
+    {
+      "ticker": "DZSI",
+      "price": 14.04
+    }
+  ],
+  "153": [
+    {
+      "ticker": "RYI",
+      "price": 11.23
+    },
+    {
+      "ticker": "SCO",
+      "price": 13.087
+    }
+  ],
+  "189": [
+    {
+      "ticker": "NOM",
+      "price": 12.22
+    },
+    {
+      "ticker": "AMRK",
+      "price": 12.77
+    }
+  ],
+  "221": [
+    {
+      "ticker": "NOM",
+      "price": 12.22
+    },
+    {
+      "ticker": "SVRA",
+      "price": 10.84
+    }
+  ],
+  "280": [
+    {
+      "ticker": "DVAX",
+      "price": 12.12
+    },
+    {
+      "ticker": "INS",
+      "price": 10.7857
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "GE",
+      "price": 12.96
+    },
+    {
+      "ticker": "ABX",
+      "price": 11.05
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "AVVIY",
+      "price": 12.64
+    },
+    {
+      "ticker": "ABX",
+      "price": 11.08
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "SLV",
+      "price": 13.5199
+    },
+    {
+      "ticker": "AVVIY",
+      "price": 12.64
+    }
+  ]
+}

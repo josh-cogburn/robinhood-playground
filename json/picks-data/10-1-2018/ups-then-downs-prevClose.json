@@ -1,0 +1,48 @@
+{
+  "10": [
+    {
+      "ticker": "PTX",
+      "price": 0.9271
+    },
+    {
+      "ticker": "PFMT",
+      "price": 2.04
+    }
+  ],
+  "50": [
+    {
+      "ticker": "PTX",
+      "price": 0.91
+    },
+    {
+      "ticker": "PFMT",
+      "price": 2.04
+    },
+    {
+      "ticker": "DEST",
+      "price": 4.44
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PTX",
+      "price": 0.8775
+    },
+    {
+      "ticker": "ZN",
+      "price": 1.185
+    },
+    {
+      "ticker": "CPRX",
+      "price": 3.66
+    },
+    {
+      "ticker": "PFMT",
+      "price": 1.99
+    },
+    {
+      "ticker": "DNN",
+      "price": 0.6432
+    }
+  ]
+}

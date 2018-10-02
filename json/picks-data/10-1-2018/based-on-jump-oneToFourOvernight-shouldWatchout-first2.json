@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "PTIE",
+      "price": 1.05
+    },
+    {
+      "ticker": "VTVT",
+      "price": 0.8
+    }
+  ],
+  "5": [
+    {
+      "ticker": "PTIE",
+      "price": 1.0101
+    },
+    {
+      "ticker": "VTVT",
+      "price": 0.8
+    }
+  ],
+  "16": [
+    {
+      "ticker": "PTIE",
+      "price": 1.01
+    },
+    {
+      "ticker": "VTVT",
+      "price": 0.8
+    }
+  ],
+  "30": [
+    {
+      "ticker": "PTIE",
+      "price": 1.03
+    },
+    {
+      "ticker": "VTVT",
+      "price": 0.8
+    }
+  ]
+}

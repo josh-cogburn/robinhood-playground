@@ -1,0 +1,114 @@
+{
+  "153": [
+    {
+      "ticker": "RAD",
+      "price": 1.23
+    },
+    {
+      "ticker": "UEC",
+      "price": 1.55
+    },
+    {
+      "ticker": "SAN",
+      "price": 4.97
+    }
+  ],
+  "189": [
+    {
+      "ticker": "UEC",
+      "price": 1.53
+    },
+    {
+      "ticker": "RAD",
+      "price": 1.23
+    },
+    {
+      "ticker": "SAN",
+      "price": 4.9598
+    }
+  ],
+  "221": [
+    {
+      "ticker": "UEC",
+      "price": 1.525
+    },
+    {
+      "ticker": "RAD",
+      "price": 1.23
+    },
+    {
+      "ticker": "SAN",
+      "price": 4.9665
+    }
+  ],
+  "280": [
+    {
+      "ticker": "AGEN",
+      "price": 2.27
+    },
+    {
+      "ticker": "UEC",
+      "price": 1.525
+    },
+    {
+      "ticker": "ZNGA",
+      "price": 4.02
+    }
+  ],
+  "290": [
+    {
+      "ticker": "UEC",
+      "price": 1.5252
+    },
+    {
+      "ticker": "AGEN",
+      "price": 2.2573
+    },
+    {
+      "ticker": "GRPN",
+      "price": 3.89
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "GRPN",
+      "price": 3.8
+    },
+    {
+      "ticker": "HK",
+      "price": 4.46
+    },
+    {
+      "ticker": "GGB",
+      "price": 4.21
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "GRPN",
+      "price": 3.8
+    },
+    {
+      "ticker": "HK",
+      "price": 4.46
+    },
+    {
+      "ticker": "GGB",
+      "price": 4.21
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "GRPN",
+      "price": 3.8
+    },
+    {
+      "ticker": "SAN",
+      "price": 5.03
+    },
+    {
+      "ticker": "AUY",
+      "price": 2.49
+    }
+  ]
+}

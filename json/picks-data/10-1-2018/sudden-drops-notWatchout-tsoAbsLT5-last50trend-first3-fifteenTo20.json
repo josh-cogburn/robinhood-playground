@@ -1,0 +1,58 @@
+{
+  "280": [
+    {
+      "ticker": "PPC",
+      "price": 17.4067
+    },
+    {
+      "ticker": "TESS",
+      "price": 15.1
+    },
+    {
+      "ticker": "GFF",
+      "price": 15.62
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "UBS",
+      "price": 15.58
+    },
+    {
+      "ticker": "FCAU",
+      "price": 18.11
+    },
+    {
+      "ticker": "CCR",
+      "price": 17.95
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "COWN",
+      "price": 18
+    },
+    {
+      "ticker": "UBS",
+      "price": 15.58
+    },
+    {
+      "ticker": "MRVL",
+      "price": 19.3
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "COWN",
+      "price": 18
+    },
+    {
+      "ticker": "UBS",
+      "price": 15.6
+    },
+    {
+      "ticker": "WPM",
+      "price": 17.5
+    }
+  ]
+}

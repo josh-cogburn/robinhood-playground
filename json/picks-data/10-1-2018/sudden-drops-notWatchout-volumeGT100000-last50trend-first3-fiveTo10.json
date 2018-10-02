@@ -1,0 +1,72 @@
+{
+  "280": [
+    {
+      "ticker": "AMRS",
+      "price": 7.45
+    },
+    {
+      "ticker": "ADMA",
+      "price": 6.0499
+    },
+    {
+      "ticker": "TTOO",
+      "price": 6.95
+    }
+  ],
+  "290": [
+    {
+      "ticker": "ADMA",
+      "price": 5.99
+    },
+    {
+      "ticker": "ONDK",
+      "price": 7.34
+    },
+    {
+      "ticker": "AMRS",
+      "price": 7.48
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "FOMX",
+      "price": 5.85
+    },
+    {
+      "ticker": "IBN",
+      "price": 8.49
+    },
+    {
+      "ticker": "AU",
+      "price": 8.58
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "FOMX",
+      "price": 5.73
+    },
+    {
+      "ticker": "IBN",
+      "price": 8.49
+    },
+    {
+      "ticker": "FIT",
+      "price": 5.35
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "FOMX",
+      "price": 5.95
+    },
+    {
+      "ticker": "USLV",
+      "price": 6.21
+    },
+    {
+      "ticker": "ARQL",
+      "price": 5.7999
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "4": [
+    {
+      "ticker": "SHO",
+      "price": 16.345
+    },
+    {
+      "ticker": "UBS",
+      "price": 15.59
+    },
+    {
+      "ticker": "VNM",
+      "price": 16.715
+    }
+  ],
+  "40": [
+    {
+      "ticker": "FTAI",
+      "price": 18.1414
+    },
+    {
+      "ticker": "DOC",
+      "price": 16.83
+    },
+    {
+      "ticker": "ADX",
+      "price": 16.74
+    }
+  ],
+  "100": [
+    {
+      "ticker": "FTAI",
+      "price": 18.135
+    },
+    {
+      "ticker": "SGDM",
+      "price": 15.6
+    },
+    {
+      "ticker": "HBI",
+      "price": 18.46
+    }
+  ],
+  "200": [
+    {
+      "ticker": "GOEX",
+      "price": 18.58
+    },
+    {
+      "ticker": "PZI",
+      "price": 19.94
+    },
+    {
+      "ticker": "ESRT",
+      "price": 16.5
+    }
+  ],
+  "260": [
+    {
+      "ticker": "SJR",
+      "price": 19.6276
+    },
+    {
+      "ticker": "FTAI",
+      "price": 18.12
+    },
+    {
+      "ticker": "GTS",
+      "price": 19.245
+    }
+  ]
+}

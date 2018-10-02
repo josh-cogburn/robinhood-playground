@@ -1,0 +1,72 @@
+{
+  "280": [
+    {
+      "ticker": "SWN",
+      "price": 5.155
+    },
+    {
+      "ticker": "F",
+      "price": 9.4
+    },
+    {
+      "ticker": "VER",
+      "price": 7.225
+    }
+  ],
+  "290": [
+    {
+      "ticker": "SWN",
+      "price": 5.16
+    },
+    {
+      "ticker": "VER",
+      "price": 7.205
+    },
+    {
+      "ticker": "F",
+      "price": 9.39
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "IBN",
+      "price": 8.49
+    },
+    {
+      "ticker": "SIRI",
+      "price": 6.3601
+    },
+    {
+      "ticker": "VER",
+      "price": 7.26
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "IBN",
+      "price": 8.49
+    },
+    {
+      "ticker": "SIRI",
+      "price": 6.32
+    },
+    {
+      "ticker": "VER",
+      "price": 7.26
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "SIRI",
+      "price": 6.3301
+    },
+    {
+      "ticker": "IBN",
+      "price": 8.65
+    },
+    {
+      "ticker": "VER",
+      "price": 7.26
+    }
+  ]
+}

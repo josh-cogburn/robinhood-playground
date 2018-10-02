@@ -1,0 +1,92 @@
+{
+  "100": [
+    {
+      "ticker": "RAD",
+      "price": 1.23
+    },
+    {
+      "ticker": "BTE",
+      "price": 2.9866
+    }
+  ],
+  "153": [
+    {
+      "ticker": "UEC",
+      "price": 1.55
+    },
+    {
+      "ticker": "RAD",
+      "price": 1.23
+    }
+  ],
+  "189": [
+    {
+      "ticker": "UEC",
+      "price": 1.53
+    },
+    {
+      "ticker": "STNG",
+      "price": 2.05
+    }
+  ],
+  "221": [
+    {
+      "ticker": "UEC",
+      "price": 1.525
+    },
+    {
+      "ticker": "BLRX",
+      "price": 1.1066
+    }
+  ],
+  "280": [
+    {
+      "ticker": "AGEN",
+      "price": 2.27
+    },
+    {
+      "ticker": "RIGL",
+      "price": 3.19
+    }
+  ],
+  "290": [
+    {
+      "ticker": "AVP",
+      "price": 2.185
+    },
+    {
+      "ticker": "RIGL",
+      "price": 3.19
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "GRPN",
+      "price": 3.8
+    },
+    {
+      "ticker": "SBGL",
+      "price": 2.5
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "GRPN",
+      "price": 3.8
+    },
+    {
+      "ticker": "BTG",
+      "price": 2.3
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "GRPN",
+      "price": 3.8
+    },
+    {
+      "ticker": "BLDP",
+      "price": 4.53
+    }
+  ]
+}

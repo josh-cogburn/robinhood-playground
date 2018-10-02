@@ -1,0 +1,52 @@
+{
+  "280": [
+    {
+      "ticker": "RAD",
+      "price": 1.235
+    },
+    {
+      "ticker": "GRPN",
+      "price": 3.885
+    }
+  ],
+  "290": [
+    {
+      "ticker": "RAD",
+      "price": 1.235
+    },
+    {
+      "ticker": "GRPN",
+      "price": 3.89
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "GRPN",
+      "price": 3.8
+    },
+    {
+      "ticker": "GGB",
+      "price": 4.21
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "GRPN",
+      "price": 3.8
+    },
+    {
+      "ticker": "RAD",
+      "price": 1.26
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "GRPN",
+      "price": 3.8
+    },
+    {
+      "ticker": "GGB",
+      "price": 4.21
+    }
+  ]
+}

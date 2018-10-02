@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "FRO",
+      "price": 6.01
+    },
+    {
+      "ticker": "EURN",
+      "price": 8.95
+    }
+  ],
+  "5": [
+    {
+      "ticker": "FRO",
+      "price": 6.02
+    },
+    {
+      "ticker": "EURN",
+      "price": 8.985
+    }
+  ],
+  "16": [
+    {
+      "ticker": "FRO",
+      "price": 6.09
+    },
+    {
+      "ticker": "EURN",
+      "price": 9
+    }
+  ],
+  "30": [
+    {
+      "ticker": "FRO",
+      "price": 6.071
+    },
+    {
+      "ticker": "VOC",
+      "price": 5.66
+    }
+  ]
+}

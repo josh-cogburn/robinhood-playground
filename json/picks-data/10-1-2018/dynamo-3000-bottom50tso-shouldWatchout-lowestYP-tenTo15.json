@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "PRTA",
+      "price": 13.01
+    },
+    {
+      "ticker": "CBIO",
+      "price": 10.85
+    }
+  ],
+  "40": [
+    {
+      "ticker": "FPRX",
+      "price": 13.75
+    },
+    {
+      "ticker": "GOV",
+      "price": 11.05
+    }
+  ],
+  "100": [
+    {
+      "ticker": "CBIO",
+      "price": 10.75
+    },
+    {
+      "ticker": "ASUR",
+      "price": 12.27
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CBIO",
+      "price": 10.61
+    },
+    {
+      "ticker": "UCTT",
+      "price": 12.4
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CBIO",
+      "price": 10.54
+    },
+    {
+      "ticker": "GOV",
+      "price": 11.005
+    }
+  ]
+}

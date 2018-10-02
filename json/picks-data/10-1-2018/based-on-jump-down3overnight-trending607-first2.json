@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "PLM",
+      "price": 1.02
+    },
+    {
+      "ticker": "OHRP",
+      "price": 0.176
+    }
+  ],
+  "5": [
+    {
+      "ticker": "PLM",
+      "price": 0.9621
+    },
+    {
+      "ticker": "OHRP",
+      "price": 0.1796
+    }
+  ],
+  "16": [
+    {
+      "ticker": "PLM",
+      "price": 1.0131
+    },
+    {
+      "ticker": "OHRP",
+      "price": 0.1822
+    }
+  ],
+  "30": [
+    {
+      "ticker": "PLM",
+      "price": 1.005
+    },
+    {
+      "ticker": "OHRP",
+      "price": 0.185
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "280": [
+    {
+      "ticker": "PBR",
+      "price": 12.025
+    },
+    {
+      "ticker": "FLEX",
+      "price": 12.9541
+    },
+    {
+      "ticker": "PBR.A",
+      "price": 10.5
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "PBR",
+      "price": 12
+    },
+    {
+      "ticker": "PBR.A",
+      "price": 10.4
+    },
+    {
+      "ticker": "MTG",
+      "price": 13.31
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "PBR",
+      "price": 12
+    },
+    {
+      "ticker": "PBR.A",
+      "price": 10.4
+    },
+    {
+      "ticker": "MTG",
+      "price": 13.31
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "PBR",
+      "price": 12.13
+    },
+    {
+      "ticker": "ALDX",
+      "price": 13.75
+    },
+    {
+      "ticker": "PBR.A",
+      "price": 10.4
+    }
+  ]
+}

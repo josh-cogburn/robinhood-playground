@@ -1,0 +1,52 @@
+{
+  "280": [
+    {
+      "ticker": "GNMK",
+      "price": 7.0897
+    },
+    {
+      "ticker": "ADMA",
+      "price": 6.0499
+    }
+  ],
+  "290": [
+    {
+      "ticker": "GNMK",
+      "price": 7.1
+    },
+    {
+      "ticker": "ONDK",
+      "price": 7.34
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "FOMX",
+      "price": 5.85
+    },
+    {
+      "ticker": "INFN",
+      "price": 6.41
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "FOMX",
+      "price": 5.73
+    },
+    {
+      "ticker": "INFN",
+      "price": 6.3
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "FOMX",
+      "price": 5.95
+    },
+    {
+      "ticker": "INFN",
+      "price": 6.31
+    }
+  ]
+}

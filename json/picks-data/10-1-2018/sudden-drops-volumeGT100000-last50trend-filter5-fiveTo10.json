@@ -1,0 +1,72 @@
+{
+  "280": [
+    {
+      "ticker": "MRNS",
+      "price": 8.68
+    },
+    {
+      "ticker": "INFN",
+      "price": 5.87
+    },
+    {
+      "ticker": "PACB",
+      "price": 5.125
+    },
+    {
+      "ticker": "SNDX",
+      "price": 7.75
+    },
+    {
+      "ticker": "AMRS",
+      "price": 7.45
+    }
+  ],
+  "290": [
+    {
+      "ticker": "MRNS",
+      "price": 8.675
+    },
+    {
+      "ticker": "SNDX",
+      "price": 7.83
+    },
+    {
+      "ticker": "PACB",
+      "price": 5.14
+    },
+    {
+      "ticker": "ADMA",
+      "price": 5.99
+    },
+    {
+      "ticker": "ONDK",
+      "price": 7.34
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "FOMX",
+      "price": 5.85
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "FOMX",
+      "price": 5.73
+    },
+    {
+      "ticker": "INFN",
+      "price": 6.3
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "FOMX",
+      "price": 5.95
+    },
+    {
+      "ticker": "INFN",
+      "price": 6.31
+    }
+  ]
+}

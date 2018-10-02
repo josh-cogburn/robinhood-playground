@@ -1,0 +1,52 @@
+{
+  "280": [
+    {
+      "ticker": "LQDT",
+      "price": 5.875
+    },
+    {
+      "ticker": "PACB",
+      "price": 5.125
+    }
+  ],
+  "290": [
+    {
+      "ticker": "SNDX",
+      "price": 7.83
+    },
+    {
+      "ticker": "LQDT",
+      "price": 5.88
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "FOMX",
+      "price": 5.85
+    },
+    {
+      "ticker": "INFN",
+      "price": 6.41
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "FOMX",
+      "price": 5.73
+    },
+    {
+      "ticker": "INFN",
+      "price": 6.3
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "FOMX",
+      "price": 5.95
+    },
+    {
+      "ticker": "INFN",
+      "price": 6.31
+    }
+  ]
+}

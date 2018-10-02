@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "INSM",
+      "price": 18.48
+    },
+    {
+      "ticker": "WBK",
+      "price": 19.89
+    }
+  ],
+  "40": [
+    {
+      "ticker": "DMLP",
+      "price": 20
+    },
+    {
+      "ticker": "INSM",
+      "price": 17.02
+    }
+  ],
+  "100": [
+    {
+      "ticker": "AMC",
+      "price": 19.97
+    },
+    {
+      "ticker": "EBF",
+      "price": 19.83
+    }
+  ],
+  "200": [
+    {
+      "ticker": "AMC",
+      "price": 19.88
+    },
+    {
+      "ticker": "EBF",
+      "price": 19.63
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AMC",
+      "price": 19.93
+    },
+    {
+      "ticker": "EBF",
+      "price": 19.575
+    }
+  ]
+}

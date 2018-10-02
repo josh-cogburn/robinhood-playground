@@ -1,0 +1,58 @@
+{
+  "280": [
+    {
+      "ticker": "INSM",
+      "price": 16.2801
+    },
+    {
+      "ticker": "DGAZ",
+      "price": 16.845
+    },
+    {
+      "ticker": "AMRN",
+      "price": 17.1502
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "DGAZ",
+      "price": 17.36
+    },
+    {
+      "ticker": "BRZU",
+      "price": 18.35
+    },
+    {
+      "ticker": "UBS",
+      "price": 15.58
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "DGAZ",
+      "price": 17.51
+    },
+    {
+      "ticker": "BRZU",
+      "price": 18.49
+    },
+    {
+      "ticker": "UBS",
+      "price": 15.58
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "DGAZ",
+      "price": 17.6899
+    },
+    {
+      "ticker": "UBS",
+      "price": 15.6
+    },
+    {
+      "ticker": "BRZU",
+      "price": 18.69
+    }
+  ]
+}

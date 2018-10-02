@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "KNDI",
+      "price": 5.08
+    },
+    {
+      "ticker": "HTGM",
+      "price": 5.1
+    }
+  ],
+  "40": [
+    {
+      "ticker": "KNDI",
+      "price": 5.04
+    },
+    {
+      "ticker": "DXR",
+      "price": 5.11
+    }
+  ],
+  "100": [
+    {
+      "ticker": "DXR",
+      "price": 5.0685
+    },
+    {
+      "ticker": "HTGM",
+      "price": 5.24
+    }
+  ],
+  "200": [
+    {
+      "ticker": "DXR",
+      "price": 5.8
+    },
+    {
+      "ticker": "HTGM",
+      "price": 5.131
+    }
+  ],
+  "260": [
+    {
+      "ticker": "AKS",
+      "price": 5
+    },
+    {
+      "ticker": "DXR",
+      "price": 5.8
+    }
+  ]
+}

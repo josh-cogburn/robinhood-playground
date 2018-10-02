@@ -1,0 +1,54 @@
+{
+  "0": [
+    {
+      "ticker": "HIMX",
+      "price": 6.02
+    },
+    {
+      "ticker": "GOL",
+      "price": 5.54
+    }
+  ],
+  "5": [
+    {
+      "ticker": "HIMX",
+      "price": 6.08
+    },
+    {
+      "ticker": "AP",
+      "price": 6
+    },
+    {
+      "ticker": "GOL",
+      "price": 5.55
+    }
+  ],
+  "16": [
+    {
+      "ticker": "HIMX",
+      "price": 6.08
+    },
+    {
+      "ticker": "AP",
+      "price": 5.9178
+    },
+    {
+      "ticker": "GOL",
+      "price": 5.51
+    }
+  ],
+  "30": [
+    {
+      "ticker": "HIMX",
+      "price": 6.1599
+    },
+    {
+      "ticker": "AP",
+      "price": 5.94
+    },
+    {
+      "ticker": "GOL",
+      "price": 5.475
+    }
+  ]
+}

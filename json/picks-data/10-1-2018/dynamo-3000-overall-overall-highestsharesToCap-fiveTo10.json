@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "KNDI",
+      "price": 5.08
+    },
+    {
+      "ticker": "SAN",
+      "price": 5.0132
+    }
+  ],
+  "40": [
+    {
+      "ticker": "INTT",
+      "price": 7.8701
+    },
+    {
+      "ticker": "KNDI",
+      "price": 5.04
+    }
+  ],
+  "100": [
+    {
+      "ticker": "DLNG",
+      "price": 8.8
+    },
+    {
+      "ticker": "INTT",
+      "price": 7.8669
+    }
+  ],
+  "200": [
+    {
+      "ticker": "INTT",
+      "price": 7.8181
+    },
+    {
+      "ticker": "DLNG",
+      "price": 8.9205
+    }
+  ],
+  "260": [
+    {
+      "ticker": "DLNG",
+      "price": 8.9221
+    },
+    {
+      "ticker": "INTT",
+      "price": 7.812
+    }
+  ]
+}

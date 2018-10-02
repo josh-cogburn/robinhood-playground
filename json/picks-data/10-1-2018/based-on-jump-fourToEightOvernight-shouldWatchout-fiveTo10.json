@@ -1,0 +1,46 @@
+{
+  "0": [
+    {
+      "ticker": "INSE",
+      "price": 6.45
+    }
+  ],
+  "5": [
+    {
+      "ticker": "DXR",
+      "price": 5.0525
+    },
+    {
+      "ticker": "INSE",
+      "price": 6.45
+    }
+  ],
+  "16": [
+    {
+      "ticker": "DXR",
+      "price": 5.11
+    },
+    {
+      "ticker": "INSE",
+      "price": 6.45
+    },
+    {
+      "ticker": "CMT",
+      "price": 7.02
+    }
+  ],
+  "30": [
+    {
+      "ticker": "DXR",
+      "price": 5.11
+    },
+    {
+      "ticker": "INSE",
+      "price": 6.45
+    },
+    {
+      "ticker": "CMT",
+      "price": 7.01
+    }
+  ]
+}

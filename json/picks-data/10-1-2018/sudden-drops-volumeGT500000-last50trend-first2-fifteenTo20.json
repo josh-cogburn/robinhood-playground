@@ -1,0 +1,42 @@
+{
+  "280": [
+    {
+      "ticker": "INSM",
+      "price": 16.2801
+    },
+    {
+      "ticker": "DDD",
+      "price": 18.08
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "DGAZ",
+      "price": 17.36
+    },
+    {
+      "ticker": "BRZU",
+      "price": 18.35
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "DGAZ",
+      "price": 17.51
+    },
+    {
+      "ticker": "BRZU",
+      "price": 18.49
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "DGAZ",
+      "price": 17.6899
+    },
+    {
+      "ticker": "HEAR",
+      "price": 20.1
+    }
+  ]
+}

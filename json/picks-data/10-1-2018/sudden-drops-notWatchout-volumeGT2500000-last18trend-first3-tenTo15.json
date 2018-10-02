@@ -1,0 +1,110 @@
+{
+  "100": [
+    {
+      "ticker": "GE",
+      "price": 12.48
+    },
+    {
+      "ticker": "SQQQ",
+      "price": 10.8906
+    }
+  ],
+  "153": [
+    {
+      "ticker": "GE",
+      "price": 12.3928
+    },
+    {
+      "ticker": "PGX",
+      "price": 14.2616
+    },
+    {
+      "ticker": "SQQQ",
+      "price": 10.93
+    }
+  ],
+  "189": [
+    {
+      "ticker": "GE",
+      "price": 12.385
+    },
+    {
+      "ticker": "BB",
+      "price": 11.15
+    },
+    {
+      "ticker": "PGX",
+      "price": 14.26
+    }
+  ],
+  "221": [
+    {
+      "ticker": "BB",
+      "price": 11.07
+    },
+    {
+      "ticker": "GE",
+      "price": 12.315
+    },
+    {
+      "ticker": "HBAN",
+      "price": 14.925
+    }
+  ],
+  "280": [
+    {
+      "ticker": "GE",
+      "price": 12.2015
+    },
+    {
+      "ticker": "CLF",
+      "price": 12.76
+    },
+    {
+      "ticker": "ECA",
+      "price": 13.5
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "ABX",
+      "price": 11.05
+    },
+    {
+      "ticker": "FCX",
+      "price": 13.8
+    },
+    {
+      "ticker": "RIG",
+      "price": 14.12
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "RIG",
+      "price": 14.12
+    },
+    {
+      "ticker": "ABX",
+      "price": 11.08
+    },
+    {
+      "ticker": "FCX",
+      "price": 13.84
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "SLV",
+      "price": 13.5199
+    },
+    {
+      "ticker": "GE",
+      "price": 13.03
+    },
+    {
+      "ticker": "RIG",
+      "price": 14.13
+    }
+  ]
+}

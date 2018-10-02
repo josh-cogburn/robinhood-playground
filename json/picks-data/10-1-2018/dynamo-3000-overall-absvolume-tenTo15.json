@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "AWSM",
+      "price": 10.51
+    },
+    {
+      "ticker": "SOUHY",
+      "price": 13.86
+    }
+  ],
+  "40": [
+    {
+      "ticker": "AWSM",
+      "price": 10.55
+    },
+    {
+      "ticker": "FOLD",
+      "price": 12.77
+    }
+  ],
+  "100": [
+    {
+      "ticker": "KIN",
+      "price": 13.28
+    },
+    {
+      "ticker": "FOLD",
+      "price": 12.98
+    }
+  ],
+  "200": [
+    {
+      "ticker": "STRL",
+      "price": 13.46
+    },
+    {
+      "ticker": "FOLD",
+      "price": 12.815
+    }
+  ],
+  "260": [
+    {
+      "ticker": "NERV",
+      "price": 11.91
+    },
+    {
+      "ticker": "TROX",
+      "price": 12.62
+    }
+  ]
+}

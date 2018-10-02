@@ -1,0 +1,68 @@
+{
+  "10": [
+    {
+      "ticker": "TRVN",
+      "price": 2.17
+    },
+    {
+      "ticker": "DHXM",
+      "price": 1.5
+    },
+    {
+      "ticker": "AVEO",
+      "price": 3.32
+    },
+    {
+      "ticker": "HTBX",
+      "price": 2.01
+    },
+    {
+      "ticker": "RGLS",
+      "price": 0.2028
+    }
+  ],
+  "50": [
+    {
+      "ticker": "TRVN",
+      "price": 2.205
+    },
+    {
+      "ticker": "EYPT",
+      "price": 3.5701
+    },
+    {
+      "ticker": "HTBX",
+      "price": 2.02
+    },
+    {
+      "ticker": "RGLS",
+      "price": 0.21
+    },
+    {
+      "ticker": "VJET",
+      "price": 4.57
+    }
+  ],
+  "200": [
+    {
+      "ticker": "TRVN",
+      "price": 2.2299
+    },
+    {
+      "ticker": "EYPT",
+      "price": 3.57
+    },
+    {
+      "ticker": "DHXM",
+      "price": 1.5401
+    },
+    {
+      "ticker": "HTBX",
+      "price": 2.02
+    },
+    {
+      "ticker": "RGLS",
+      "price": 0.21
+    }
+  ]
+}

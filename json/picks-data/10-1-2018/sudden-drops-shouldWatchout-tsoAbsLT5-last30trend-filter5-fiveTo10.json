@@ -1,0 +1,54 @@
+{
+  "189": [
+    {
+      "ticker": "SNDX",
+      "price": 8.04
+    },
+    {
+      "ticker": "PACB",
+      "price": 5.19
+    }
+  ],
+  "221": [
+    {
+      "ticker": "SNDX",
+      "price": 7.975
+    },
+    {
+      "ticker": "PACB",
+      "price": 5.165
+    }
+  ],
+  "280": [
+    {
+      "ticker": "IGC",
+      "price": 7.63
+    },
+    {
+      "ticker": "ARCT",
+      "price": 8.7361
+    }
+  ],
+  "290": [
+    {
+      "ticker": "DXR",
+      "price": 5.6784
+    },
+    {
+      "ticker": "ARCT",
+      "price": 8.75
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "INFN",
+      "price": 6.3
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "INFN",
+      "price": 6.31
+    }
+  ]
+}

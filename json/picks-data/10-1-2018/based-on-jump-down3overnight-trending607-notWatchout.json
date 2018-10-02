@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "PLM",
+      "price": 1.02
+    },
+    {
+      "ticker": "PFMT",
+      "price": 2.04
+    }
+  ],
+  "5": [
+    {
+      "ticker": "PLM",
+      "price": 0.9621
+    },
+    {
+      "ticker": "PFMT",
+      "price": 2.04
+    }
+  ],
+  "16": [
+    {
+      "ticker": "PLM",
+      "price": 1.0131
+    },
+    {
+      "ticker": "PFMT",
+      "price": 2.04
+    }
+  ],
+  "30": [
+    {
+      "ticker": "PLM",
+      "price": 1.005
+    },
+    {
+      "ticker": "PFMT",
+      "price": 2.04
+    }
+  ]
+}

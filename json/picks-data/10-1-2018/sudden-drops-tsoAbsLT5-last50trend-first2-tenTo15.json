@@ -1,0 +1,42 @@
+{
+  "280": [
+    {
+      "ticker": "SCO",
+      "price": 12.91
+    },
+    {
+      "ticker": "TZOO",
+      "price": 11.55
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "AKRX",
+      "price": 6.9
+    },
+    {
+      "ticker": "PBR",
+      "price": 12
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "AKRX",
+      "price": 6.9
+    },
+    {
+      "ticker": "PBR",
+      "price": 12
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "AKRX",
+      "price": 6.9
+    },
+    {
+      "ticker": "INSY",
+      "price": 10.08
+    }
+  ]
+}

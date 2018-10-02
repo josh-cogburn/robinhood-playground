@@ -1,0 +1,42 @@
+{
+  "0": [
+    {
+      "ticker": "JCS",
+      "price": 2.99
+    },
+    {
+      "ticker": "BTE",
+      "price": 3.12
+    }
+  ],
+  "5": [
+    {
+      "ticker": "JCS",
+      "price": 2.989
+    },
+    {
+      "ticker": "BTE",
+      "price": 3.04
+    }
+  ],
+  "16": [
+    {
+      "ticker": "JTPY",
+      "price": 2.03
+    },
+    {
+      "ticker": "JCS",
+      "price": 2.989
+    }
+  ],
+  "30": [
+    {
+      "ticker": "JTPY",
+      "price": 2.0839
+    },
+    {
+      "ticker": "JCS",
+      "price": 2.989
+    }
+  ]
+}

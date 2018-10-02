@@ -1,0 +1,52 @@
+{
+  "280": [
+    {
+      "ticker": "JAGX",
+      "price": 0.8999
+    },
+    {
+      "ticker": "ABAC",
+      "price": 1.8693
+    }
+  ],
+  "290": [
+    {
+      "ticker": "JAGX",
+      "price": 0.885
+    },
+    {
+      "ticker": "ABAC",
+      "price": 1.8693
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "MNGA",
+      "price": 0.1627
+    },
+    {
+      "ticker": "ENPH",
+      "price": 4.85
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "INPX",
+      "price": 0.22
+    },
+    {
+      "ticker": "HUSA",
+      "price": 0.2389
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "HUSA",
+      "price": 0.23
+    },
+    {
+      "ticker": "SSC",
+      "price": 3.55
+    }
+  ]
+}

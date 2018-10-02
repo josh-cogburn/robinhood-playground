@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "DNR",
+      "price": 6.145
+    },
+    {
+      "ticker": "WTI",
+      "price": 9.5399
+    }
+  ],
+  "40": [
+    {
+      "ticker": "INTT",
+      "price": 7.8701
+    },
+    {
+      "ticker": "DNR",
+      "price": 6.06
+    }
+  ],
+  "100": [
+    {
+      "ticker": "DLNG",
+      "price": 8.8
+    },
+    {
+      "ticker": "INTT",
+      "price": 7.8669
+    }
+  ],
+  "200": [
+    {
+      "ticker": "INTT",
+      "price": 7.8181
+    },
+    {
+      "ticker": "DLNG",
+      "price": 8.9205
+    }
+  ],
+  "260": [
+    {
+      "ticker": "INTT",
+      "price": 7.812
+    },
+    {
+      "ticker": "DLNG",
+      "price": 8.9221
+    }
+  ]
+}

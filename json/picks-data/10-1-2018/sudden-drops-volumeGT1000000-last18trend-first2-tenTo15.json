@@ -1,0 +1,82 @@
+{
+  "100": [
+    {
+      "ticker": "BB",
+      "price": 11.25
+    },
+    {
+      "ticker": "PBR",
+      "price": 11.965
+    }
+  ],
+  "153": [
+    {
+      "ticker": "GE",
+      "price": 12.3928
+    },
+    {
+      "ticker": "BB",
+      "price": 11.11
+    }
+  ],
+  "189": [
+    {
+      "ticker": "BBBY",
+      "price": 14.76
+    },
+    {
+      "ticker": "GE",
+      "price": 12.385
+    }
+  ],
+  "221": [
+    {
+      "ticker": "BBBY",
+      "price": 14.755
+    },
+    {
+      "ticker": "CY",
+      "price": 14.48
+    }
+  ],
+  "280": [
+    {
+      "ticker": "SBLK",
+      "price": 14.86
+    },
+    {
+      "ticker": "GE",
+      "price": 12.2015
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "PBR",
+      "price": 12
+    },
+    {
+      "ticker": "ABX",
+      "price": 11.05
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "PBR",
+      "price": 12
+    },
+    {
+      "ticker": "RIG",
+      "price": 14.12
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "SLV",
+      "price": 13.5199
+    },
+    {
+      "ticker": "GE",
+      "price": 13.03
+    }
+  ]
+}

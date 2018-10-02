@@ -1,0 +1,82 @@
+{
+  "100": [
+    {
+      "ticker": "BB",
+      "price": 11.25
+    },
+    {
+      "ticker": "SDOW",
+      "price": 13.885
+    }
+  ],
+  "153": [
+    {
+      "ticker": "SCO",
+      "price": 13.087
+    },
+    {
+      "ticker": "BB",
+      "price": 11.11
+    }
+  ],
+  "189": [
+    {
+      "ticker": "SCO",
+      "price": 13.06
+    },
+    {
+      "ticker": "BBBY",
+      "price": 14.76
+    }
+  ],
+  "221": [
+    {
+      "ticker": "ALDX",
+      "price": 13.31
+    },
+    {
+      "ticker": "SCO",
+      "price": 12.973
+    }
+  ],
+  "280": [
+    {
+      "ticker": "SBLK",
+      "price": 14.86
+    },
+    {
+      "ticker": "ALDX",
+      "price": 13.3
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "AKRX",
+      "price": 6.9
+    },
+    {
+      "ticker": "PBR",
+      "price": 12
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "AKRX",
+      "price": 6.9
+    },
+    {
+      "ticker": "PBR",
+      "price": 12
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "AKRX",
+      "price": 6.9
+    },
+    {
+      "ticker": "SLV",
+      "price": 13.5199
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "280": [
+    {
+      "ticker": "SNDX",
+      "price": 7.75
+    },
+    {
+      "ticker": "GNMK",
+      "price": 7.0897
+    },
+    {
+      "ticker": "AGFS",
+      "price": 5.92
+    }
+  ],
+  "290": [
+    {
+      "ticker": "SNDX",
+      "price": 7.83
+    },
+    {
+      "ticker": "ADMA",
+      "price": 5.99
+    },
+    {
+      "ticker": "GNMK",
+      "price": 7.1
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "FOMX",
+      "price": 5.85
+    },
+    {
+      "ticker": "INFN",
+      "price": 6.41
+    },
+    {
+      "ticker": "IBN",
+      "price": 8.49
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "FOMX",
+      "price": 5.73
+    },
+    {
+      "ticker": "INFN",
+      "price": 6.3
+    },
+    {
+      "ticker": "IBN",
+      "price": 8.49
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "FOMX",
+      "price": 5.95
+    },
+    {
+      "ticker": "INFN",
+      "price": 6.31
+    },
+    {
+      "ticker": "ARQL",
+      "price": 5.7999
+    }
+  ]
+}

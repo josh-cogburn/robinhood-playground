@@ -1,0 +1,38 @@
+{
+  "0": [
+    {
+      "ticker": "BRT",
+      "price": 11.5
+    }
+  ],
+  "5": [
+    {
+      "ticker": "BRT",
+      "price": 11.5
+    },
+    {
+      "ticker": "LCUT",
+      "price": 10.53
+    }
+  ],
+  "16": [
+    {
+      "ticker": "BRT",
+      "price": 12.04
+    },
+    {
+      "ticker": "LCUT",
+      "price": 10.53
+    }
+  ],
+  "30": [
+    {
+      "ticker": "BRT",
+      "price": 12.07
+    },
+    {
+      "ticker": "LCUT",
+      "price": 10.67
+    }
+  ]
+}

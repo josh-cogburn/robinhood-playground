@@ -1,0 +1,52 @@
+{
+  "280": [
+    {
+      "ticker": "MRNS",
+      "price": 8.68
+    },
+    {
+      "ticker": "INFN",
+      "price": 5.87
+    }
+  ],
+  "290": [
+    {
+      "ticker": "MRNS",
+      "price": 8.675
+    },
+    {
+      "ticker": "IGC",
+      "price": 7.63
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "INFN",
+      "price": 6.41
+    },
+    {
+      "ticker": "IBN",
+      "price": 8.49
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "INFN",
+      "price": 6.3
+    },
+    {
+      "ticker": "IBN",
+      "price": 8.49
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "INFN",
+      "price": 6.31
+    },
+    {
+      "ticker": "USLV",
+      "price": 6.21
+    }
+  ]
+}

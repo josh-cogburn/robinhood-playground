@@ -1,0 +1,52 @@
+{
+  "280": [
+    {
+      "ticker": "CPRX",
+      "price": 3.62
+    },
+    {
+      "ticker": "DNN",
+      "price": 0.63
+    }
+  ],
+  "290": [
+    {
+      "ticker": "CPRX",
+      "price": 3.62
+    },
+    {
+      "ticker": "ROX",
+      "price": 1.04
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "PTX",
+      "price": 0.9
+    },
+    {
+      "ticker": "GRPN",
+      "price": 3.8
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "PTX",
+      "price": 0.9
+    },
+    {
+      "ticker": "GRPN",
+      "price": 3.8
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "PTX",
+      "price": 0.9
+    },
+    {
+      "ticker": "GRPN",
+      "price": 3.8
+    }
+  ]
+}

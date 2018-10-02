@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "CBB",
+      "price": 15.99
+    },
+    {
+      "ticker": "AMRN",
+      "price": 16.95
+    }
+  ],
+  "40": [
+    {
+      "ticker": "NEO",
+      "price": 15.34
+    },
+    {
+      "ticker": "FATE",
+      "price": 16.34
+    }
+  ],
+  "100": [
+    {
+      "ticker": "CBB",
+      "price": 15.62
+    },
+    {
+      "ticker": "FATE",
+      "price": 16.31
+    }
+  ],
+  "200": [
+    {
+      "ticker": "NEO",
+      "price": 15.17
+    },
+    {
+      "ticker": "HABT",
+      "price": 15.55
+    }
+  ],
+  "260": [
+    {
+      "ticker": "HABT",
+      "price": 15.5
+    },
+    {
+      "ticker": "CBB",
+      "price": 15.6
+    }
+  ]
+}

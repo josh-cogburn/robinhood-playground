@@ -1,0 +1,38 @@
+{
+  "280": [
+    {
+      "ticker": "PBR",
+      "price": 12.025
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "PBR",
+      "price": 12
+    },
+    {
+      "ticker": "PBR.A",
+      "price": 10.4
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "PBR",
+      "price": 12
+    },
+    {
+      "ticker": "PBR.A",
+      "price": 10.4
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "PBR",
+      "price": 12.13
+    },
+    {
+      "ticker": "PBR.A",
+      "price": 10.4
+    }
+  ]
+}

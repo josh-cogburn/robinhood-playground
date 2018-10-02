@@ -1,0 +1,92 @@
+{
+  "100": [
+    {
+      "ticker": "AKRX",
+      "price": 5.995
+    },
+    {
+      "ticker": "BVX",
+      "price": 6.7
+    }
+  ],
+  "153": [
+    {
+      "ticker": "MRNS",
+      "price": 9.1397
+    },
+    {
+      "ticker": "SNDX",
+      "price": 8.17
+    }
+  ],
+  "189": [
+    {
+      "ticker": "MRNS",
+      "price": 9.0566
+    },
+    {
+      "ticker": "SNDX",
+      "price": 8.04
+    }
+  ],
+  "221": [
+    {
+      "ticker": "MRNS",
+      "price": 8.7
+    },
+    {
+      "ticker": "ADMA",
+      "price": 6.04
+    }
+  ],
+  "280": [
+    {
+      "ticker": "MHH",
+      "price": 8.3701
+    },
+    {
+      "ticker": "IGC",
+      "price": 7.63
+    }
+  ],
+  "290": [
+    {
+      "ticker": "IGC",
+      "price": 7.63
+    },
+    {
+      "ticker": "VSTM",
+      "price": 6.7059
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "FOMX",
+      "price": 5.85
+    },
+    {
+      "ticker": "INFN",
+      "price": 6.41
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "FOMX",
+      "price": 5.73
+    },
+    {
+      "ticker": "INFN",
+      "price": 6.3
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "FOMX",
+      "price": 5.95
+    },
+    {
+      "ticker": "USLV",
+      "price": 6.21
+    }
+  ]
+}

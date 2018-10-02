@@ -1,0 +1,58 @@
+{
+  "0": [
+    {
+      "ticker": "DNN",
+      "price": 0.6775
+    },
+    {
+      "ticker": "IDXG",
+      "price": 1.59
+    },
+    {
+      "ticker": "IMMP",
+      "price": 3.81
+    }
+  ],
+  "5": [
+    {
+      "ticker": "DNN",
+      "price": 0.68
+    },
+    {
+      "ticker": "IDXG",
+      "price": 1.59
+    },
+    {
+      "ticker": "IMMP",
+      "price": 3.85
+    }
+  ],
+  "16": [
+    {
+      "ticker": "DNN",
+      "price": 0.6661
+    },
+    {
+      "ticker": "IDXG",
+      "price": 1.59
+    },
+    {
+      "ticker": "FTEK",
+      "price": 1.35
+    }
+  ],
+  "30": [
+    {
+      "ticker": "DNN",
+      "price": 0.6646
+    },
+    {
+      "ticker": "IDXG",
+      "price": 1.66
+    },
+    {
+      "ticker": "FTEK",
+      "price": 1.3144
+    }
+  ]
+}

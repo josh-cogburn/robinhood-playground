@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "PRTA",
+      "price": 13.01
+    },
+    {
+      "ticker": "FPRX",
+      "price": 13.99
+    }
+  ],
+  "40": [
+    {
+      "ticker": "PRTA",
+      "price": 13.0427
+    },
+    {
+      "ticker": "FPRX",
+      "price": 13.75
+    }
+  ],
+  "100": [
+    {
+      "ticker": "PRTA",
+      "price": 13.21
+    },
+    {
+      "ticker": "FPRX",
+      "price": 14.03
+    }
+  ],
+  "200": [
+    {
+      "ticker": "PRTA",
+      "price": 12.98
+    },
+    {
+      "ticker": "FPRX",
+      "price": 14
+    }
+  ],
+  "260": [
+    {
+      "ticker": "PRTA",
+      "price": 12.96
+    },
+    {
+      "ticker": "FPRX",
+      "price": 14.07
+    }
+  ]
+}

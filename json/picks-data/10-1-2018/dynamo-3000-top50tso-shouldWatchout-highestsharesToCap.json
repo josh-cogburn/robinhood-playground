@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "XSPA",
+      "price": 0.153
+    },
+    {
+      "ticker": "OHRP",
+      "price": 0.1787
+    }
+  ],
+  "40": [
+    {
+      "ticker": "OHRP",
+      "price": 0.1849
+    },
+    {
+      "ticker": "RGLS",
+      "price": 0.2086
+    }
+  ],
+  "100": [
+    {
+      "ticker": "OHRP",
+      "price": 0.1877
+    },
+    {
+      "ticker": "RGLS",
+      "price": 0.2101
+    }
+  ],
+  "200": [
+    {
+      "ticker": "MNGA",
+      "price": 0.1871
+    },
+    {
+      "ticker": "OHRP",
+      "price": 0.1944
+    }
+  ],
+  "260": [
+    {
+      "ticker": "MNGA",
+      "price": 0.181
+    },
+    {
+      "ticker": "OHRP",
+      "price": 0.193
+    }
+  ]
+}

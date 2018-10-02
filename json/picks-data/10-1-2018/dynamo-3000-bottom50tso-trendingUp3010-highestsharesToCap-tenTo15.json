@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "BAS",
+      "price": 10.05
+    },
+    {
+      "ticker": "CBIO",
+      "price": 10.85
+    }
+  ],
+  "40": [
+    {
+      "ticker": "GIFI",
+      "price": 10.08
+    },
+    {
+      "ticker": "EPM",
+      "price": 11.21
+    }
+  ],
+  "100": [
+    {
+      "ticker": "CBIO",
+      "price": 10.75
+    },
+    {
+      "ticker": "BB",
+      "price": 11.26
+    }
+  ],
+  "200": [
+    {
+      "ticker": "CEMI",
+      "price": 10.3786
+    },
+    {
+      "ticker": "CBIO",
+      "price": 10.61
+    }
+  ],
+  "260": [
+    {
+      "ticker": "CEMI",
+      "price": 10.3
+    },
+    {
+      "ticker": "CBIO",
+      "price": 10.54
+    }
+  ]
+}

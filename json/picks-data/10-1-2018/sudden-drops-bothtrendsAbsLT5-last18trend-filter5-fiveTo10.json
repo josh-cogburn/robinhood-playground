@@ -1,0 +1,42 @@
+{
+  "100": [
+    {
+      "ticker": "VSI",
+      "price": 9.63
+    }
+  ],
+  "153": [
+    {
+      "ticker": "SNDX",
+      "price": 8.17
+    }
+  ],
+  "189": [
+    {
+      "ticker": "SNDX",
+      "price": 8.04
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "FOMX",
+      "price": 5.85
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "FOMX",
+      "price": 5.73
+    },
+    {
+      "ticker": "INFN",
+      "price": 6.3
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "FOMX",
+      "price": 5.95
+    }
+  ]
+}

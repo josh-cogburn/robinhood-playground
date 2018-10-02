@@ -1,0 +1,114 @@
+{
+  "100": [
+    {
+      "ticker": "INSM",
+      "price": 17.02
+    },
+    {
+      "ticker": "AMC",
+      "price": 19.95
+    },
+    {
+      "ticker": "SCS",
+      "price": 18.19
+    }
+  ],
+  "153": [
+    {
+      "ticker": "COWN",
+      "price": 16.43
+    },
+    {
+      "ticker": "CVA",
+      "price": 15.88
+    },
+    {
+      "ticker": "MDR",
+      "price": 17.715
+    }
+  ],
+  "189": [
+    {
+      "ticker": "COWN",
+      "price": 16.515
+    },
+    {
+      "ticker": "MDR",
+      "price": 17.595
+    },
+    {
+      "ticker": "KPTI",
+      "price": 17.59
+    }
+  ],
+  "221": [
+    {
+      "ticker": "KPTI",
+      "price": 17.48
+    },
+    {
+      "ticker": "BOJA",
+      "price": 16.66
+    },
+    {
+      "ticker": "INSM",
+      "price": 16.715
+    }
+  ],
+  "280": [
+    {
+      "ticker": "INSM",
+      "price": 16.2801
+    },
+    {
+      "ticker": "BOJA",
+      "price": 16.42
+    },
+    {
+      "ticker": "ATTU",
+      "price": 17.91
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "UBS",
+      "price": 15.58
+    },
+    {
+      "ticker": "BOJA",
+      "price": 15.7
+    },
+    {
+      "ticker": "IGT",
+      "price": 19.75
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "UBS",
+      "price": 15.58
+    },
+    {
+      "ticker": "APLE",
+      "price": 17.49
+    },
+    {
+      "ticker": "IGT",
+      "price": 19.75
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "UBS",
+      "price": 15.6
+    },
+    {
+      "ticker": "WPM",
+      "price": 17.5
+    },
+    {
+      "ticker": "ERJ",
+      "price": 19.66
+    }
+  ]
+}

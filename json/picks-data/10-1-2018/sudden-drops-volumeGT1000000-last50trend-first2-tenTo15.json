@@ -1,0 +1,42 @@
+{
+  "280": [
+    {
+      "ticker": "BB",
+      "price": 11.06
+    },
+    {
+      "ticker": "GE",
+      "price": 12.2015
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "PBR",
+      "price": 12
+    },
+    {
+      "ticker": "ABX",
+      "price": 11.05
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "PBR",
+      "price": 12
+    },
+    {
+      "ticker": "RIG",
+      "price": 14.12
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "SLV",
+      "price": 13.5199
+    },
+    {
+      "ticker": "RIG",
+      "price": 14.13
+    }
+  ]
+}

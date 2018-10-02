@@ -1,0 +1,92 @@
+{
+  "100": [
+    {
+      "ticker": "AMRS",
+      "price": 7.7216
+    },
+    {
+      "ticker": "AUPH",
+      "price": 6.4201
+    }
+  ],
+  "153": [
+    {
+      "ticker": "AMRS",
+      "price": 7.695
+    },
+    {
+      "ticker": "AMKR",
+      "price": 7.24
+    }
+  ],
+  "189": [
+    {
+      "ticker": "TRIL",
+      "price": 5.2882
+    },
+    {
+      "ticker": "TXMD",
+      "price": 6.18
+    }
+  ],
+  "221": [
+    {
+      "ticker": "TRIL",
+      "price": 5.2466
+    },
+    {
+      "ticker": "ONDK",
+      "price": 7.395
+    }
+  ],
+  "280": [
+    {
+      "ticker": "TTOO",
+      "price": 6.95
+    },
+    {
+      "ticker": "ADMA",
+      "price": 6.0499
+    }
+  ],
+  "290": [
+    {
+      "ticker": "ADMA",
+      "price": 5.99
+    },
+    {
+      "ticker": "TTOO",
+      "price": 6.86
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "FOMX",
+      "price": 5.85
+    },
+    {
+      "ticker": "IBN",
+      "price": 8.49
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "FOMX",
+      "price": 5.73
+    },
+    {
+      "ticker": "IBN",
+      "price": 8.49
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "FOMX",
+      "price": 5.95
+    },
+    {
+      "ticker": "USLV",
+      "price": 6.21
+    }
+  ]
+}

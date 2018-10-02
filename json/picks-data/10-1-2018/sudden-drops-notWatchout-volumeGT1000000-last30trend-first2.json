@@ -1,0 +1,82 @@
+{
+  "153": [
+    {
+      "ticker": "RAD",
+      "price": 1.23
+    },
+    {
+      "ticker": "UEC",
+      "price": 1.55
+    }
+  ],
+  "189": [
+    {
+      "ticker": "UEC",
+      "price": 1.53
+    },
+    {
+      "ticker": "RAD",
+      "price": 1.23
+    }
+  ],
+  "221": [
+    {
+      "ticker": "UEC",
+      "price": 1.525
+    },
+    {
+      "ticker": "RAD",
+      "price": 1.23
+    }
+  ],
+  "280": [
+    {
+      "ticker": "AGEN",
+      "price": 2.27
+    },
+    {
+      "ticker": "UEC",
+      "price": 1.525
+    }
+  ],
+  "290": [
+    {
+      "ticker": "UEC",
+      "price": 1.5252
+    },
+    {
+      "ticker": "AGEN",
+      "price": 2.2573
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "GRPN",
+      "price": 3.8
+    },
+    {
+      "ticker": "HK",
+      "price": 4.46
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "GRPN",
+      "price": 3.8
+    },
+    {
+      "ticker": "HK",
+      "price": 4.46
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "GRPN",
+      "price": 3.8
+    },
+    {
+      "ticker": "SAN",
+      "price": 5.03
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "280": [
+    {
+      "ticker": "CSTE",
+      "price": 17.95
+    },
+    {
+      "ticker": "NVTA",
+      "price": 16.49
+    }
+  ],
+  "-50": [
+    {
+      "ticker": "DGAZ",
+      "price": 17.36
+    },
+    {
+      "ticker": "UBS",
+      "price": 15.58
+    }
+  ],
+  "-30": [
+    {
+      "ticker": "DGAZ",
+      "price": 17.51
+    },
+    {
+      "ticker": "COWN",
+      "price": 18
+    }
+  ],
+  "-10": [
+    {
+      "ticker": "DGAZ",
+      "price": 17.6899
+    },
+    {
+      "ticker": "HEAR",
+      "price": 20.1
+    }
+  ]
+}

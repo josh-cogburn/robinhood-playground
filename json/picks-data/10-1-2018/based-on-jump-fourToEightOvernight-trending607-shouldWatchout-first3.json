@@ -1,0 +1,54 @@
+{
+  "0": [
+    {
+      "ticker": "AKER",
+      "price": 0.3058
+    },
+    {
+      "ticker": "INFI",
+      "price": 2.8875
+    }
+  ],
+  "5": [
+    {
+      "ticker": "AKER",
+      "price": 0.3072
+    },
+    {
+      "ticker": "INFI",
+      "price": 2.842
+    },
+    {
+      "ticker": "CVRS",
+      "price": 1.4635
+    }
+  ],
+  "16": [
+    {
+      "ticker": "AKER",
+      "price": 0.3
+    },
+    {
+      "ticker": "INFI",
+      "price": 2.7301
+    },
+    {
+      "ticker": "CVRS",
+      "price": 1.475
+    }
+  ],
+  "30": [
+    {
+      "ticker": "AKER",
+      "price": 0.295
+    },
+    {
+      "ticker": "INFI",
+      "price": 2.78
+    },
+    {
+      "ticker": "CVRS",
+      "price": 1.475
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "4": [
+    {
+      "ticker": "NOG",
+      "price": 3.98
+    },
+    {
+      "ticker": "EYPT",
+      "price": 3.4501
+    }
+  ],
+  "40": [
+    {
+      "ticker": "EYPT",
+      "price": 3.4846
+    },
+    {
+      "ticker": "DNN",
+      "price": 0.66
+    }
+  ],
+  "100": [
+    {
+      "ticker": "DNN",
+      "price": 0.6595
+    },
+    {
+      "ticker": "CVRS",
+      "price": 1.41
+    }
+  ],
+  "200": [
+    {
+      "ticker": "DNN",
+      "price": 0.643
+    },
+    {
+      "ticker": "CVRS",
+      "price": 1.386
+    }
+  ],
+  "260": [
+    {
+      "ticker": "DNN",
+      "price": 0.6349
+    },
+    {
+      "ticker": "CVRS",
+      "price": 1.37
+    }
+  ]
+}
