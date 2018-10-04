@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "TRXC",
-      "price": 3.79
-    },
-    {
-      "ticker": "AMMA",
-      "price": 0.4901
-    }
-  ],
-  "5": [
-    {
-      "ticker": "TRXC",
-      "price": 3.74
-    },
-    {
-      "ticker": "AMMA",
-      "price": 0.47
-    }
-  ],
-  "30": [
-    {
-      "ticker": "TRXC",
-      "price": 3.49
-    },
-    {
-      "ticker": "AMMA",
-      "price": 0.4598
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:84bb342e9dc311dcce4bf905dce82e15f941b67f1bbc165519c2d3efeaf17c77
+size 388

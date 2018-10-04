@@ -1,30 +1,3 @@
-{
-  "2": [],
-  "75": [],
-  "120": [
-    {
-      "ticker": "JCP",
-      "price": 2.909
-    },
-    {
-      "ticker": "GSV",
-      "price": 1.595
-    }
-  ],
-  "180": [
-    {
-      "ticker": "JCP",
-      "price": 2.9148
-    },
-    {
-      "ticker": "GSV",
-      "price": 1.584
-    }
-  ],
-  "380": [
-    {
-      "ticker": "JCP",
-      "price": 2.91
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6f5c14a9af24b0b2a8b43f0330aef1c38853e1792d02a038eea369828d6d7933
+size 355

@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "GRPN",
-      "price": 4.35
-    }
-  ],
-  "5": [
-    {
-      "ticker": "GRPN",
-      "price": 4.3
-    }
-  ],
-  "16": [
-    {
-      "ticker": "PACB",
-      "price": 3.57
-    },
-    {
-      "ticker": "GRPN",
-      "price": 4.34
-    }
-  ],
-  "30": [
-    {
-      "ticker": "PACB",
-      "price": 3.625
-    },
-    {
-      "ticker": "GRPN",
-      "price": 4.545
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:faf8a70876af7007e9a709f14146a76ff2ff4227e578d159871969937a941db3
+size 399

@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "ADES",
-      "price": 11.67
-    },
-    {
-      "ticker": "MITL",
-      "price": 11.025
-    }
-  ],
-  "200": [
-    {
-      "ticker": "LFVN",
-      "price": 11.42
-    },
-    {
-      "ticker": "MITL",
-      "price": 11.01
-    }
-  ],
-  "260": [
-    {
-      "ticker": "NERV",
-      "price": 12.575
-    },
-    {
-      "ticker": "DZSI",
-      "price": 14.395
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0257c3ec78ecba812e10753335dff0722f3e8b5eb5e52f2f21df95a2df0b45cd
+size 398

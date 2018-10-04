@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "DRYS",
-      "price": 6.709
-    }
-  ],
-  "5": [
-    {
-      "ticker": "DRYS",
-      "price": 6.6799
-    }
-  ],
-  "16": [
-    {
-      "ticker": "LBY",
-      "price": 8.105
-    },
-    {
-      "ticker": "DRYS",
-      "price": 6.471
-    }
-  ],
-  "30": [
-    {
-      "ticker": "LBY",
-      "price": 8.12
-    },
-    {
-      "ticker": "JMP",
-      "price": 5.4499
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:40cba3097e6d5b978ea5633e2c70d7ae53a3d3054dc6d219aa4df02c0e349ced
+size 402

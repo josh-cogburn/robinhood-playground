@@ -1,33 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "ULBI",
-      "price": 9.5516
-    },
-    {
-      "ticker": "TENX",
-      "price": 7
-    }
-  ],
-  "16": [
-    {
-      "ticker": "ULBI",
-      "price": 9.6759
-    },
-    {
-      "ticker": "TENX",
-      "price": 6.79
-    }
-  ],
-  "30": [
-    {
-      "ticker": "ULBI",
-      "price": 9.8527
-    },
-    {
-      "ticker": "TENX",
-      "price": 6.8857
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:257d2b2da8a5aac3080f2362ca1040e46dce71c4ef9dc43208ae2b2feea68561
+size 401

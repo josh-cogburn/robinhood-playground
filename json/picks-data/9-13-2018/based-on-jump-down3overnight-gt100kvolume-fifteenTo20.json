@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "EXEL",
-      "price": 16.9452
-    }
-  ],
-  "5": [
-    {
-      "ticker": "ACOR",
-      "price": 16.1
-    }
-  ],
-  "16": [
-    {
-      "ticker": "ACOR",
-      "price": 16.8
-    },
-    {
-      "ticker": "FNSR",
-      "price": 19.52
-    }
-  ],
-  "30": [
-    {
-      "ticker": "ACOR",
-      "price": 16.3
-    },
-    {
-      "ticker": "FNSR",
-      "price": 19.34
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:91428402e60ee4bbe68bf014d1dcb4e9a0ebbf5289ecefc5a5406fcb164455ba
+size 403

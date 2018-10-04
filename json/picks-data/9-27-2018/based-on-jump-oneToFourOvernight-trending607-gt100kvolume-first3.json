@@ -1,36 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "AVEO",
-      "price": 3.4
-    }
-  ],
-  "16": [
-    {
-      "ticker": "ACST",
-      "price": 1.08
-    },
-    {
-      "ticker": "AVEO",
-      "price": 3.4
-    },
-    {
-      "ticker": "EARS",
-      "price": 0.32
-    }
-  ],
-  "30": [
-    {
-      "ticker": "DNN",
-      "price": 0.6777
-    },
-    {
-      "ticker": "ACST",
-      "price": 0.9969
-    },
-    {
-      "ticker": "AVEO",
-      "price": 3.32
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:803840da88878d1b89b357cf356de6fd07b154c66096ce7b0a8f671f1d8535fe
+size 443

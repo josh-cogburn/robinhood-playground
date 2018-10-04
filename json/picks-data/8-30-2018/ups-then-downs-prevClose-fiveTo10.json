@@ -1,29 +1,3 @@
-{
-  "10": [
-    {
-      "ticker": "SEED",
-      "price": 6.45
-    }
-  ],
-  "50": [
-    {
-      "ticker": "ISNS",
-      "price": 6.1491
-    }
-  ],
-  "200": [],
-  "300": [
-    {
-      "ticker": "MDXG",
-      "price": 5.2
-    },
-    {
-      "ticker": "STG",
-      "price": 6.31
-    },
-    {
-      "ticker": "AUPH",
-      "price": 5.4491
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0c0cd6de4d4eacf0e3c4874007ce882fda75fd77825b05a1355eb897e99f1c2f
+size 345

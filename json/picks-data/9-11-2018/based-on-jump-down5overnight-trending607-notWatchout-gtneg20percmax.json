@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "OCC",
-      "price": 3.8
-    }
-  ],
-  "5": [
-    {
-      "ticker": "OCC",
-      "price": 3.7738
-    }
-  ],
-  "16": [
-    {
-      "ticker": "OCC",
-      "price": 3.84
-    },
-    {
-      "ticker": "SSNT",
-      "price": 3.9275
-    }
-  ],
-  "30": [
-    {
-      "ticker": "OCC",
-      "price": 3.84
-    },
-    {
-      "ticker": "SSNT",
-      "price": 3.991
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7a89209832f1368e6e5f41a9b2fd7ab050d40a5d0aefd5f037f26dedbd2dadb9
+size 398

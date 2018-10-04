@@ -1,32 +1,3 @@
-{
-  "40": [
-    {
-      "ticker": "RLM",
-      "price": 4.32
-    }
-  ],
-  "80": [
-    {
-      "ticker": "BHTG",
-      "price": 3.42
-    }
-  ],
-  "100": [
-    {
-      "ticker": "BHTG",
-      "price": 3.402
-    }
-  ],
-  "250": [
-    {
-      "ticker": "RRTS",
-      "price": 1.09
-    }
-  ],
-  "300": [
-    {
-      "ticker": "RRTS",
-      "price": 1.09
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:85e48b3cb6a6bd2101f890efc5ed2d775cef562af78999568a4bfca693727398
+size 360

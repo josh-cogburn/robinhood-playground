@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "FERGY",
-      "price": 7.925
-    },
-    {
-      "ticker": "SUPV",
-      "price": 7.549
-    }
-  ],
-  "5": [
-    {
-      "ticker": "SUPV",
-      "price": 7.6
-    },
-    {
-      "ticker": "PFIN",
-      "price": 7.9
-    }
-  ],
-  "16": [
-    {
-      "ticker": "SUPV",
-      "price": 7.2999
-    },
-    {
-      "ticker": "PFIN",
-      "price": 8.01
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:81532d31443a6a30b3e5d64cd317d84c5923a16b553c7e2a60f5ace91b76379d
+size 387

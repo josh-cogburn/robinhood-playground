@@ -1,36 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "TVIX",
-      "price": 10.28
-    },
-    {
-      "ticker": "PHII",
-      "price": 11.1967
-    },
-    {
-      "ticker": "JNUG",
-      "price": 14.96
-    }
-  ],
-  "16": [
-    {
-      "ticker": "TVIX",
-      "price": 10.18
-    },
-    {
-      "ticker": "PHII",
-      "price": 11.243
-    }
-  ],
-  "30": [
-    {
-      "ticker": "TVIX",
-      "price": 10.0748
-    },
-    {
-      "ticker": "PHII",
-      "price": 11.243
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:816feb385fb42a82c3f72a4092c48aa3ba0e19d17f49a94802a0d471f60364f6
+size 455

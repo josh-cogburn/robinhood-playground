@@ -1,32 +1,3 @@
-{
-  "4": [
-    {
-      "ticker": "GLP",
-      "price": 20
-    },
-    {
-      "ticker": "PMT",
-      "price": 19.83
-    }
-  ],
-  "351": [
-    {
-      "ticker": "RNP",
-      "price": 19.63
-    },
-    {
-      "ticker": "MMD",
-      "price": 19.53
-    }
-  ],
-  "381": [
-    {
-      "ticker": "GOOD",
-      "price": 19.93
-    },
-    {
-      "ticker": "BSCP",
-      "price": 19.86
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e45fa2f93af90aa6d187402540f2e25d5cc1f84ecc7b0c9239f9095d4e3b9f67
+size 386

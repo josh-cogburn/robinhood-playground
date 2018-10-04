@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "VSTM",
-      "price": 8.4225
-    }
-  ],
-  "5": [
-    {
-      "ticker": "VSTM",
-      "price": 8.555
-    }
-  ],
-  "16": [
-    {
-      "ticker": "SNDX",
-      "price": 6.945
-    },
-    {
-      "ticker": "VSTM",
-      "price": 8.605
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SNDX",
-      "price": 6.91
-    },
-    {
-      "ticker": "VSTM",
-      "price": 7.465
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:54b7d7037ed807773a3263debf9636793874c371f5b9b8610c1ebde31497e336
+size 404

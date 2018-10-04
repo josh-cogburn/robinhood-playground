@@ -1,28 +1,3 @@
-{
-  "0": [],
-  "5": [],
-  "16": [
-    {
-      "ticker": "CIG",
-      "price": 2.085
-    },
-    {
-      "ticker": "EKSO",
-      "price": 3.04
-    }
-  ],
-  "30": [
-    {
-      "ticker": "CIG",
-      "price": 2.08
-    },
-    {
-      "ticker": "EKSO",
-      "price": 2.9959
-    },
-    {
-      "ticker": "WMIH",
-      "price": 1.445
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:260cded2facb37dfd818b2cca2412e4bd7174ebc3e5be48cfc484c52b8e3688d
+size 339

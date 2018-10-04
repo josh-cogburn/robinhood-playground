@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "NICK",
-      "price": 10.35
-    }
-  ],
-  "5": [
-    {
-      "ticker": "NICK",
-      "price": 10.35
-    }
-  ],
-  "16": [
-    {
-      "ticker": "SPRO",
-      "price": 14.5639
-    },
-    {
-      "ticker": "GASX",
-      "price": 14.9632
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SPRO",
-      "price": 14.03
-    },
-    {
-      "ticker": "GASX",
-      "price": 15.011
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0ac69b601c3eababf95b5436c7b88cff8570c1675b615e349b7222fd1cb8d259
+size 409

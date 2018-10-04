@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "OSPN",
-      "price": 18.9
-    },
-    {
-      "ticker": "CHAU",
-      "price": 19.25
-    }
-  ],
-  "200": [
-    {
-      "ticker": "CBMG",
-      "price": 19.0448
-    },
-    {
-      "ticker": "CHAU",
-      "price": 19.1
-    }
-  ],
-  "260": [
-    {
-      "ticker": "CBMG",
-      "price": 18.35
-    },
-    {
-      "ticker": "BLMN",
-      "price": 19.78
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:08dedc9fb14c65009bea07c7fe4e13399256b48dec48fc042549302a7bfc4c70
+size 395

@@ -1,29 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "GSM",
-      "price": 7.21
-    }
-  ],
-  "16": [
-    {
-      "ticker": "GSM",
-      "price": 7.2986
-    },
-    {
-      "ticker": "IBN",
-      "price": 9.665
-    }
-  ],
-  "30": [
-    {
-      "ticker": "GSM",
-      "price": 7.36
-    },
-    {
-      "ticker": "IBN",
-      "price": 9.675
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:62d7a4ce704b507d164a87b1d53344926fea6409d857f86c52329c7624d5356e
+size 338

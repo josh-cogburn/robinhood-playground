@@ -1,32 +1,3 @@
-{
-  "80": [
-    {
-      "ticker": "VNET",
-      "price": 10.48
-    }
-  ],
-  "100": [
-    {
-      "ticker": "VNET",
-      "price": 10.56
-    }
-  ],
-  "140": [
-    {
-      "ticker": "VNET",
-      "price": 10.52
-    }
-  ],
-  "198": [
-    {
-      "ticker": "VNET",
-      "price": 10.57
-    }
-  ],
-  "250": [
-    {
-      "ticker": "CVE",
-      "price": 10.59
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2f10cd452c51283805c4158651bb6ffa73521fadec9db351210c1fdb189a00c7
+size 365

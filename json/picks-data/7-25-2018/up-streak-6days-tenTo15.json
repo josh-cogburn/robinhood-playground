@@ -1,30 +1,3 @@
-{
-  "45": [
-    {
-      "ticker": "ABCD",
-      "price": 12.46
-    },
-    {
-      "ticker": "SBPH",
-      "price": 12.9
-    },
-    {
-      "ticker": "XAN",
-      "price": 10.52
-    }
-  ],
-  "189": [
-    {
-      "ticker": "ABCD",
-      "price": 12.77
-    },
-    {
-      "ticker": "SBPH",
-      "price": 13.21
-    },
-    {
-      "ticker": "XAN",
-      "price": 10.5
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:70d616ed384caadf7d5bc82d0712aa035a0c3aba2a7db72a552f9aeb4b18f36a
+size 375

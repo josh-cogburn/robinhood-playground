@@ -1,32 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "SIEN",
-      "price": 12.21
-    },
-    {
-      "ticker": "ABCD",
-      "price": 13.39
-    }
-  ],
-  "16": [
-    {
-      "ticker": "SIEN",
-      "price": 12.13
-    },
-    {
-      "ticker": "ABCD",
-      "price": 13.3
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SIEN",
-      "price": 12
-    },
-    {
-      "ticker": "ABCD",
-      "price": 13.53
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f3361e7d9bab5d8a131a525000db600912d47b465545b316c818aec39dd57759
+size 387

@@ -1,33 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "BCRX",
-      "price": 7.89
-    },
-    {
-      "ticker": "ACBFF",
-      "price": 6.81
-    }
-  ],
-  "16": [
-    {
-      "ticker": "BCRX",
-      "price": 7.97
-    },
-    {
-      "ticker": "ACBFF",
-      "price": 6.7783
-    }
-  ],
-  "30": [
-    {
-      "ticker": "BCRX",
-      "price": 7.88
-    },
-    {
-      "ticker": "ACBFF",
-      "price": 6.61
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ba1d2770f9b932d1e19a93285a1a00c653a13b24d280c8407674b48f6b30812b
+size 401

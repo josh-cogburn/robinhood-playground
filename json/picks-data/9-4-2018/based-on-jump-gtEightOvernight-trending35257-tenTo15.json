@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "AAPL",
-      "price": 227.2099
-    },
-    {
-      "ticker": "SPGI",
-      "price": 207.01
-    },
-    {
-      "ticker": "MPWR",
-      "price": 149.49
-    },
-    {
-      "ticker": "LULU",
-      "price": 156.015
-    },
-    {
-      "ticker": "BBH",
-      "price": 133.72
-    }
-  ],
-  "5": [],
-  "16": [],
-  "30": [
-    {
-      "ticker": "MBNAA",
-      "price": 13.0207
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:bbd2ebb0a67c3ffb21f09d432178aba3fcdba7e98b032ae73c2886c69c23752b
+size 410

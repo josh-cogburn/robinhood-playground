@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "GMLP",
-      "price": 14.1147
-    },
-    {
-      "ticker": "ADAP",
-      "price": 13.185
-    }
-  ],
-  "200": [
-    {
-      "ticker": "PBR",
-      "price": 12.29
-    },
-    {
-      "ticker": "MTG",
-      "price": 13.21
-    }
-  ],
-  "260": [
-    {
-      "ticker": "CCJ",
-      "price": 11.54
-    },
-    {
-      "ticker": "EXPR",
-      "price": 11.17
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d2cf48f831d4c49355ba18292d2c436b91e47d58189937c2000bdfd38a172478
+size 395

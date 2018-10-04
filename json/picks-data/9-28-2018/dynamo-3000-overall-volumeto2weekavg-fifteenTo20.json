@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "RYAM",
-      "price": 18.8499
-    },
-    {
-      "ticker": "VKTX",
-      "price": 17.0755
-    }
-  ],
-  "200": [
-    {
-      "ticker": "CBMG",
-      "price": 19.0448
-    },
-    {
-      "ticker": "RYAM",
-      "price": 18.53
-    }
-  ],
-  "260": [
-    {
-      "ticker": "CBMG",
-      "price": 18.35
-    },
-    {
-      "ticker": "RYAM",
-      "price": 18.48
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2b06d8430772b8a53492f001493dd95f2846021cf82b4c81c24dd6926ffe2c10
+size 401

@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "EKSO",
-      "price": 1.58
-    },
-    {
-      "ticker": "KTOV",
-      "price": 2.139
-    }
-  ],
-  "5": [
-    {
-      "ticker": "EKSO",
-      "price": 1.61
-    },
-    {
-      "ticker": "KTOV",
-      "price": 2.23
-    }
-  ],
-  "30": [
-    {
-      "ticker": "EKSO",
-      "price": 1.6101
-    },
-    {
-      "ticker": "KTOV",
-      "price": 2.1999
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b72fe4b4a2340b4c429346599b4cc4f31b1ace51068d7d776939c78c19539dd0
+size 389

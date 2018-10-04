@@ -1,32 +1,3 @@
-{
-  "10": [
-    {
-      "ticker": "DYY",
-      "price": 2.8212
-    },
-    {
-      "ticker": "SFUN",
-      "price": 3.55
-    }
-  ],
-  "50": [
-    {
-      "ticker": "DYY",
-      "price": 2.75
-    },
-    {
-      "ticker": "ALIM",
-      "price": 1.08
-    }
-  ],
-  "200": [
-    {
-      "ticker": "DYY",
-      "price": 2.8
-    },
-    {
-      "ticker": "ATAI",
-      "price": 4.35
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:719c81d75ec4f6b91ccbc2636b147a17fdbb8cf156a74a6d85c3439660bca73b
+size 385

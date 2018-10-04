@@ -1,29 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "USO",
-      "price": 14.2
-    }
-  ],
-  "16": [
-    {
-      "ticker": "HCLP",
-      "price": 12.85
-    },
-    {
-      "ticker": "USO",
-      "price": 14.13
-    }
-  ],
-  "30": [
-    {
-      "ticker": "HCLP",
-      "price": 12.95
-    },
-    {
-      "ticker": "USO",
-      "price": 14.16
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:444d0eacdef39acedfead8fcf18fa97b9169503f9d8a1d6ef71649c445edfc99
+size 340

@@ -1,28 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "URG",
-      "price": 0.8001
-    }
-  ],
-  "5": [
-    {
-      "ticker": "URG",
-      "price": 0.785
-    },
-    {
-      "ticker": "DAC",
-      "price": 1.51
-    }
-  ],
-  "16": [
-    {
-      "ticker": "URG",
-      "price": 0.7899
-    },
-    {
-      "ticker": "DAC",
-      "price": 1.51
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:17b32c371748a0134e1438e75a03081d218c9fb10253339e1df8d6b689b1cf5c
+size 327

@@ -1,32 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "CSBR",
-      "price": 12.94
-    },
-    {
-      "ticker": "SBRCY",
-      "price": 11.88
-    }
-  ],
-  "16": [
-    {
-      "ticker": "CSBR",
-      "price": 13.4
-    },
-    {
-      "ticker": "SBRCY",
-      "price": 11.89
-    }
-  ],
-  "30": [
-    {
-      "ticker": "CSBR",
-      "price": 13.34
-    },
-    {
-      "ticker": "SBRCY",
-      "price": 11.89
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ac011e3a95d9155a49dbc7df764048565b0da4a9c3bef52526def4d49c487c00
+size 393

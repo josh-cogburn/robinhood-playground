@@ -1,18 +1,3 @@
-{
-  "name": "client",
-  "version": "0.1.0",
-  "homepage": "./",
-  "private": true,
-  "dependencies": {
-    "react": "^16.3.1",
-    "react-dom": "^16.3.1",
-    "react-scripts": "1.1.4",
-    "socket.io-client": "^2.1.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8c9a7960498f7100461723bc994067f50414b55ed4b10ee5f76a2fae2a6cc987
+size 397

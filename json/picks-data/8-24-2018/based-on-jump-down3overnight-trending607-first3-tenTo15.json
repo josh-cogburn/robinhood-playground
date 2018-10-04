@@ -1,36 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "PNTR",
-      "price": 12.6
-    },
-    {
-      "ticker": "SCWX",
-      "price": 12.1527
-    }
-  ],
-  "5": [
-    {
-      "ticker": "PNTR",
-      "price": 12.6
-    },
-    {
-      "ticker": "SCWX",
-      "price": 12.48
-    }
-  ],
-  "16": [
-    {
-      "ticker": "PNTR",
-      "price": 12.8
-    },
-    {
-      "ticker": "SCWX",
-      "price": 12.86
-    },
-    {
-      "ticker": "HMG",
-      "price": 14.4
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8ca699a713327ce23890543b0eb89cbf782c5f8091d9d05609693540d124934a
+size 445

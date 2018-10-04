@@ -1,10 +1,3 @@
-[
-  {
-    "type": "buy",
-    "ticker": "SRRA",
-    "bid_price": 3.3917699999999997,
-    "quantity": 41,
-    "strategy": "based-on-jump-down3overnight-trending103-notWatchout-gtneg20percmax-first1",
-    "min": 30
-  }
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:8674f340b90b71d283590c9b44b2527627c466cf8beaab52db89357ba7cd250a
+size 217

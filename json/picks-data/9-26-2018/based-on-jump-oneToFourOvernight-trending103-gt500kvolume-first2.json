@@ -1,28 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "NVAX",
-      "price": 1.99
-    }
-  ],
-  "16": [
-    {
-      "ticker": "NVAX",
-      "price": 1.985
-    },
-    {
-      "ticker": "TRVN",
-      "price": 2.23
-    }
-  ],
-  "30": [
-    {
-      "ticker": "AKER",
-      "price": 0.2986
-    },
-    {
-      "ticker": "NVAX",
-      "price": 1.8806
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e767bc048d472c038c6a3e7381faaca1dc711e8f076437d4eef7ca09a0612389
+size 333

@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "LTRPA",
-      "price": 13.35
-    }
-  ],
-  "5": [
-    {
-      "ticker": "LTRPA",
-      "price": 13.2
-    }
-  ],
-  "16": [
-    {
-      "ticker": "LTRPA",
-      "price": 13.25
-    }
-  ],
-  "30": [
-    {
-      "ticker": "LTRPA",
-      "price": 13.275
-    },
-    {
-      "ticker": "LOOP",
-      "price": 11.6
-    },
-    {
-      "ticker": "ERA",
-      "price": 12.84
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0e703dedd65e083eca29e2ad7a8d5736cc21e0e60a1a7241c8fc4da00f3dcb6e
+size 406

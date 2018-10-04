@@ -1,36 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "CRON",
-      "price": 9.01
-    },
-    {
-      "ticker": "JNUG",
-      "price": 7.8599
-    }
-  ],
-  "5": [
-    {
-      "ticker": "CRON",
-      "price": 9.2833
-    },
-    {
-      "ticker": "JNUG",
-      "price": 7.889
-    }
-  ],
-  "16": [
-    {
-      "ticker": "QD",
-      "price": 6.5375
-    },
-    {
-      "ticker": "CRON",
-      "price": 9.2321
-    },
-    {
-      "ticker": "JNUG",
-      "price": 7.8399
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:31d23120edb928fe763958fd9ae5858f6a22785ba78e9aae8beaf5f89de2e61f
+size 450

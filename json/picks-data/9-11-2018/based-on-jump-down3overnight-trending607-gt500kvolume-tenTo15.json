@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "PBR",
-      "price": 10.56
-    }
-  ],
-  "5": [
-    {
-      "ticker": "PBR",
-      "price": 10.57
-    }
-  ],
-  "16": [
-    {
-      "ticker": "USAT",
-      "price": 10.475
-    },
-    {
-      "ticker": "PBR",
-      "price": 10.51
-    }
-  ],
-  "30": [
-    {
-      "ticker": "USAT",
-      "price": 10.425
-    },
-    {
-      "ticker": "PBR",
-      "price": 10.5
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0e047dd22abc34611a833f07a5529dc514ac576c2f158d9ac708312ebe755f59
+size 401

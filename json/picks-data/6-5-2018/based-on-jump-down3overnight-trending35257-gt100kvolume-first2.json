@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "ASNA",
-      "price": 3.31
-    }
-  ],
-  "5": [
-    {
-      "ticker": "ASNA",
-      "price": 3.4
-    }
-  ],
-  "16": [
-    {
-      "ticker": "ASNA",
-      "price": 3.2801
-    },
-    {
-      "ticker": "VSAR",
-      "price": 1.495
-    }
-  ],
-  "30": [
-    {
-      "ticker": "BDR",
-      "price": 1.4201
-    },
-    {
-      "ticker": "ASNA",
-      "price": 3.56
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b189daae55d7989e88243391c248da6b946e93a056834f04dc6479b7dbd6ea54
+size 401

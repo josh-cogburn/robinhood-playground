@@ -1,30 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "CLBS",
-      "price": 5.76
-    },
-    {
-      "ticker": "USAT",
-      "price": 6.95
-    }
-  ],
-  "189": [
-    {
-      "ticker": "TRXC",
-      "price": 5.545
-    }
-  ],
-  "328": [
-    {
-      "ticker": "USAT",
-      "price": 6.925
-    }
-  ],
-  "400": [
-    {
-      "ticker": "DXR",
-      "price": 5.1
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6adeac3fd65ed50adb961695a9812bd8cda814bbaa9775bb848ad3990f2c54d0
+size 347

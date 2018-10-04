@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "MNGA",
-      "price": 0.2078
-    },
-    {
-      "ticker": "AKER",
-      "price": 0.2699
-    },
-    {
-      "ticker": "CLDX",
-      "price": 0.491
-    }
-  ],
-  "5": [
-    {
-      "ticker": "BRZU",
-      "price": 15.15
-    }
-  ],
-  "16": [
-    {
-      "ticker": "BRZU",
-      "price": 15.13
-    }
-  ],
-  "30": [
-    {
-      "ticker": "BRZU",
-      "price": 15.09
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a468bcb89915d21efc1f7c8af70b02b247ee10f165feb27fa0a8f67ec324dbbe
+size 406

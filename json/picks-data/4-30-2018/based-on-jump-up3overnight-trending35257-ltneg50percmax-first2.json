@@ -1,32 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "DARE",
-      "price": 1.21
-    },
-    {
-      "ticker": "CAPR",
-      "price": 1.42
-    }
-  ],
-  "16": [
-    {
-      "ticker": "DARE",
-      "price": 1.2799
-    },
-    {
-      "ticker": "CAPR",
-      "price": 1.37
-    }
-  ],
-  "30": [
-    {
-      "ticker": "DARE",
-      "price": 1.32
-    },
-    {
-      "ticker": "CAPR",
-      "price": 1.371
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:bb75bfb4e1953f2357a75c8a09825881a4ef41f788568370e814fca31a7c3ab0
+size 388

@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "TELNY",
-      "price": 19.05
-    },
-    {
-      "ticker": "DMLRY",
-      "price": 15.63
-    },
-    {
-      "ticker": "KAOOY",
-      "price": 15.605
-    }
-  ],
-  "5": [
-    {
-      "ticker": "GME",
-      "price": 15.37
-    }
-  ],
-  "16": [
-    {
-      "ticker": "GME",
-      "price": 16.0901
-    }
-  ],
-  "30": [
-    {
-      "ticker": "GME",
-      "price": 15.8376
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f838ecc783d3abde762987a8869c3d18555964b5e6ef0aa448783bcd1df002e3
+size 409

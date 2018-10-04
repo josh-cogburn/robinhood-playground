@@ -1,32 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "ZFGN",
-      "price": 6.79
-    },
-    {
-      "ticker": "WTI",
-      "price": 6.5312
-    }
-  ],
-  "16": [
-    {
-      "ticker": "SCX",
-      "price": 6.9
-    },
-    {
-      "ticker": "ZFGN",
-      "price": 6.8687
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SCX",
-      "price": 7.0639
-    },
-    {
-      "ticker": "ZFGN",
-      "price": 6.8687
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:294b895f4b6f376112c4ae2482249c7fd285230c9b0c43e8f4cddda5bbcd3e62
+size 389

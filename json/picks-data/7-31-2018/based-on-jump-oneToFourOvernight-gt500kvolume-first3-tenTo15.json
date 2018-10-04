@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "RRC",
-      "price": 14.935
-    }
-  ],
-  "5": [
-    {
-      "ticker": "RRC",
-      "price": 14.94
-    }
-  ],
-  "16": [
-    {
-      "ticker": "RRC",
-      "price": 14.825
-    },
-    {
-      "ticker": "SVXY",
-      "price": 13.75
-    }
-  ],
-  "30": [
-    {
-      "ticker": "RRC",
-      "price": 14.745
-    },
-    {
-      "ticker": "SVXY",
-      "price": 13.7194
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:84702608fb46c85b0ce28c85f426b79e114c22f7990ad49ff19642b53867c099
+size 405

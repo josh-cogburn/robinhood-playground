@@ -1,34 +1,3 @@
-{
-  "200": [
-    {
-      "ticker": "UVXY",
-      "price": 12.0201
-    },
-    {
-      "ticker": "KIRK",
-      "price": 11.8
-    }
-  ],
-  "260": [
-    {
-      "ticker": "CENX",
-      "price": 14.935
-    },
-    {
-      "ticker": "XRM",
-      "price": 13.255
-    }
-  ],
-  "351": [
-    {
-      "ticker": "VRNA",
-      "price": 13.8069
-    }
-  ],
-  "381": [
-    {
-      "ticker": "HPE",
-      "price": 14.8
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:24f3e5692a8f6a164f810dc58cf3dd33bc00fb9e9078333fd84ae43402473a13
+size 412

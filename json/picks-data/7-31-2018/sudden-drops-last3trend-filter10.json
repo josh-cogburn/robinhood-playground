@@ -1,34 +1,3 @@
-{
-  "32": [
-    {
-      "ticker": "HMNY",
-      "price": 1.11
-    },
-    {
-      "ticker": "PXS",
-      "price": 0.85
-    },
-    {
-      "ticker": "HBP",
-      "price": 4.31
-    },
-    {
-      "ticker": "OPHC",
-      "price": 4.53
-    },
-    {
-      "ticker": "ATLC",
-      "price": 2.7
-    }
-  ],
-  "63": [
-    {
-      "ticker": "IMNP",
-      "price": 0.1225
-    }
-  ],
-  "221": [],
-  "280": [],
-  "328": [],
-  "388": []
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6cb02a9fb9dd36f2b97de15c11542c522f661563b9a31c739fdf9c2221e8610e
+size 423

@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "BT",
-      "price": 14.85
-    },
-    {
-      "ticker": "TSU",
-      "price": 14.7
-    }
-  ],
-  "200": [
-    {
-      "ticker": "PGP",
-      "price": 14.4237
-    },
-    {
-      "ticker": "HYI",
-      "price": 14.5243
-    }
-  ],
-  "260": [
-    {
-      "ticker": "HYI",
-      "price": 14.535
-    },
-    {
-      "ticker": "BXMX",
-      "price": 14.38
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:41e70760b5a6cff0bb8c30c81d70592466713077d05e0312368368c94bc6632a
+size 393

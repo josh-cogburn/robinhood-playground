@@ -1,28 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "CY",
-      "price": 14.8
-    }
-  ],
-  "16": [
-    {
-      "ticker": "CY",
-      "price": 15.12
-    },
-    {
-      "ticker": "TTM",
-      "price": 16.44
-    }
-  ],
-  "30": [
-    {
-      "ticker": "CY",
-      "price": 15.0647
-    },
-    {
-      "ticker": "BLMN",
-      "price": 19.37
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4a86b955c4a25e1c7344fb14b41311f8ca3bc06066aae7907ad39a965b256719
+size 327

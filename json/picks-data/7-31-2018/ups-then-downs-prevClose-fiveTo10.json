@@ -1,26 +1,3 @@
-{
-  "10": [
-    {
-      "ticker": "PGNX",
-      "price": 7.7168
-    }
-  ],
-  "50": [
-    {
-      "ticker": "PGNX",
-      "price": 7.71
-    },
-    {
-      "ticker": "LSCC",
-      "price": 7.42
-    }
-  ],
-  "200": [
-    {
-      "ticker": "PGNX",
-      "price": 7.8
-    }
-  ],
-  "300": [],
-  "380": []
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b82672c1ac65f25863443e0576f73480fe6b0b861a8106ca9f34e26a01a7b8c6
+size 300

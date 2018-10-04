@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "MTEM",
-      "price": 6.1843
-    }
-  ],
-  "5": [
-    {
-      "ticker": "MTEM",
-      "price": 5.9201
-    }
-  ],
-  "16": [
-    {
-      "ticker": "MTEM",
-      "price": 6.63
-    },
-    {
-      "ticker": "BOM",
-      "price": 10
-    }
-  ],
-  "30": [
-    {
-      "ticker": "MTEM",
-      "price": 6.79
-    },
-    {
-      "ticker": "BOM",
-      "price": 10
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1ee2d0460e538b1fecd86ed62aca2aa08af0fb1f22ce19b04abe6675ebb58bb8
+size 396

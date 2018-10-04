@@ -1,32 +1,3 @@
-{
-  "221": [
-    {
-      "ticker": "ABCD",
-      "price": 12.95
-    },
-    {
-      "ticker": "KRYS",
-      "price": 10.1
-    }
-  ],
-  "328": [
-    {
-      "ticker": "ABCD",
-      "price": 10.56
-    },
-    {
-      "ticker": "AMEH",
-      "price": 14.5053
-    }
-  ],
-  "388": [
-    {
-      "ticker": "DRNA",
-      "price": 11.96
-    },
-    {
-      "ticker": "ABCD",
-      "price": 10.27
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:83eb78748b7aa3d03247b17e02eba7ef625cc248c41544c3bc589dafaafb6742
+size 396

@@ -1,33 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "RGLS",
-      "price": 0.2918
-    }
-  ],
-  "16": [
-    {
-      "ticker": "RGLS",
-      "price": 0.2941
-    },
-    {
-      "ticker": "NEPT",
-      "price": 3.2
-    }
-  ],
-  "30": [
-    {
-      "ticker": "ICON",
-      "price": 0.56
-    },
-    {
-      "ticker": "RGLS",
-      "price": 0.2941
-    },
-    {
-      "ticker": "DPW",
-      "price": 0.5177
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b1e832c0398b15c950ec767e1634f9039e17ffccced61891b4c5c5997dc6ef00
+size 402

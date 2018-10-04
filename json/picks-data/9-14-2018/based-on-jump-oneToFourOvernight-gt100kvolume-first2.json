@@ -1,29 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "MYSZ",
-      "price": 1.2916
-    }
-  ],
-  "16": [
-    {
-      "ticker": "MYSZ",
-      "price": 1.416
-    },
-    {
-      "ticker": "MHLD",
-      "price": 2.82
-    }
-  ],
-  "30": [
-    {
-      "ticker": "MYSZ",
-      "price": 1.3817
-    },
-    {
-      "ticker": "MHLD",
-      "price": 2.75
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1423c24ed2c92da3584db094f906b740a45e0fc123bef9a0b9c588851c140b33
+size 344

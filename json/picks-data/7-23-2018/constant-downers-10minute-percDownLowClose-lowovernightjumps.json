@@ -1,36 +1,3 @@
-{
-  "77": [
-    {
-      "ticker": "RWLK",
-      "price": 0.95
-    },
-    {
-      "ticker": "GST",
-      "price": 0.222
-    }
-  ],
-  "242": [
-    {
-      "ticker": "GST",
-      "price": 0.2348
-    },
-    {
-      "ticker": "RWLK",
-      "price": 0.9371
-    }
-  ],
-  "309": [
-    {
-      "ticker": "JOB",
-      "price": 2.682
-    },
-    {
-      "ticker": "GST",
-      "price": 0.2315
-    },
-    {
-      "ticker": "RWLK",
-      "price": 0.927
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:eb772cbf054a4ef8aeee13ae8a5d644147364adba278e1260ea2df31e32fd641
+size 450

@@ -1,32 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "HOS",
-      "price": 2.995
-    },
-    {
-      "ticker": "PACB",
-      "price": 2.3
-    }
-  ],
-  "16": [
-    {
-      "ticker": "HOS",
-      "price": 2.961
-    },
-    {
-      "ticker": "PACB",
-      "price": 2.2925
-    }
-  ],
-  "30": [
-    {
-      "ticker": "HOS",
-      "price": 3.011
-    },
-    {
-      "ticker": "PACB",
-      "price": 2.305
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:238b369b3f261fda844dbc976dab12930847f03d6653efd0e0be94ce9ec091e6
+size 387

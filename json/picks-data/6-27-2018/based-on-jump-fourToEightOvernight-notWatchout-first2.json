@@ -1,30 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "NEON",
-      "price": 0.4
-    }
-  ],
-  "5": [
-    {
-      "ticker": "NEON",
-      "price": 0.388
-    }
-  ],
-  "16": [
-    {
-      "ticker": "NEON",
-      "price": 0.4125
-    }
-  ],
-  "30": [
-    {
-      "ticker": "NEON",
-      "price": 0.4184
-    },
-    {
-      "ticker": "ENIC",
-      "price": 4.99
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:00c7ded61e3d0128d9179d63b203b989fd518d5e807ad8baa4642f186b92f8bc
+size 345

@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "EMAN",
-      "price": 1.65
-    },
-    {
-      "ticker": "TMQ",
-      "price": 1.34
-    }
-  ],
-  "5": [
-    {
-      "ticker": "SDRL",
-      "price": 0.4328
-    },
-    {
-      "ticker": "EMAN",
-      "price": 1.625
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SDRL",
-      "price": 0.4267
-    },
-    {
-      "ticker": "EMAN",
-      "price": 1.625
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:92c1bce248db623e56bb817fa1438e3c5306179b925178060b2ceafa14dd4342
+size 389

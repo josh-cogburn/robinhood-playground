@@ -1,28 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "NUGT",
-      "price": 13.03
-    },
-    {
-      "ticker": "WMC",
-      "price": 10.68
-    }
-  ],
-  "5": [
-    {
-      "ticker": "NUGT",
-      "price": 13.01
-    },
-    {
-      "ticker": "WMC",
-      "price": 10.64
-    }
-  ],
-  "16": [
-    {
-      "ticker": "BZH",
-      "price": 11.4
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:95e1119687ff83fca6a5d80951926aa1f392583e2ab77bda1c7005e43322c9fb
+size 328

@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "NBEV",
-      "price": 2.3215
-    }
-  ],
-  "5": [
-    {
-      "ticker": "NBEV",
-      "price": 2.2699
-    }
-  ],
-  "16": [
-    {
-      "ticker": "NBEV",
-      "price": 2.19
-    },
-    {
-      "ticker": "MYSZ",
-      "price": 1.04
-    }
-  ],
-  "30": [
-    {
-      "ticker": "AMDA",
-      "price": 0.5111
-    },
-    {
-      "ticker": "ABAC",
-      "price": 2.54
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:98a0790b917266ba256bd6364c1b101fc782e56be0af24a6334837def8a129af
+size 404

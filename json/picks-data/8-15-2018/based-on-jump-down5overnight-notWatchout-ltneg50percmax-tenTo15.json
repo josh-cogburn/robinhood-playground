@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "CASA",
-      "price": 11.87
-    }
-  ],
-  "5": [
-    {
-      "ticker": "CASA",
-      "price": 12.12
-    }
-  ],
-  "16": [
-    {
-      "ticker": "CASA",
-      "price": 11.82
-    },
-    {
-      "ticker": "NUGT",
-      "price": 14.839
-    }
-  ],
-  "30": [
-    {
-      "ticker": "CASA",
-      "price": 11.6501
-    },
-    {
-      "ticker": "NUGT",
-      "price": 14.6401
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:51984a7fe450f01edbd9a2c50f74ea0d6155e25acd2ce036cb68f4b823b7ce57
+size 409

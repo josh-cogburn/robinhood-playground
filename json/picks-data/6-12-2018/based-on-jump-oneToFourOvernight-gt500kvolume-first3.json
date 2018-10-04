@@ -1,29 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "CHK",
-      "price": 4.99
-    }
-  ],
-  "16": [
-    {
-      "ticker": "PULM",
-      "price": 0.5501
-    },
-    {
-      "ticker": "CHK",
-      "price": 4.945
-    }
-  ],
-  "30": [
-    {
-      "ticker": "PULM",
-      "price": 0.57
-    },
-    {
-      "ticker": "GGB",
-      "price": 3.825
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4fac50b65c37bf9189809318a7e2fda258fc535237caf0c82ad56eba5d26ac3a
+size 340

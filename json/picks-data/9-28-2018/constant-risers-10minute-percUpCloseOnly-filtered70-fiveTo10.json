@@ -1,32 +1,3 @@
-{
-  "80": [
-    {
-      "ticker": "TK",
-      "price": 6.55
-    }
-  ],
-  "100": [
-    {
-      "ticker": "TK",
-      "price": 6.56
-    }
-  ],
-  "140": [
-    {
-      "ticker": "NBR",
-      "price": 6.21
-    }
-  ],
-  "198": [
-    {
-      "ticker": "WTI",
-      "price": 9.68
-    }
-  ],
-  "250": [
-    {
-      "ticker": "WTI",
-      "price": 9.795
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cce59b02a2c102286d7203c9f0759cee6458dc77fd9c97d8eff5327e0aee480c
+size 355

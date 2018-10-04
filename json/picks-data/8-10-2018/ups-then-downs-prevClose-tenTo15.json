@@ -1,27 +1,3 @@
-{
-  "10": [],
-  "50": [],
-  "200": [],
-  "300": [
-    {
-      "ticker": "XENE",
-      "price": 11.725
-    }
-  ],
-  "380": [
-    {
-      "ticker": "XENE",
-      "price": 11.7
-    },
-    {
-      "ticker": "MBI",
-      "price": 10.78
-    }
-  ],
-  "600": [
-    {
-      "ticker": "MBI",
-      "price": 10.76
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:37f8a8d43080fed585b83912f878cd1874295d88dfddc883d013b3f4d8e226cb
+size 314

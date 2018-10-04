@@ -1,32 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "SURF",
-      "price": 11.77
-    },
-    {
-      "ticker": "PDEX",
-      "price": 12.8
-    }
-  ],
-  "16": [
-    {
-      "ticker": "SURF",
-      "price": 11.4078
-    },
-    {
-      "ticker": "PDEX",
-      "price": 12.625
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SURF",
-      "price": 11.5
-    },
-    {
-      "ticker": "PDEX",
-      "price": 12.55
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:03aa61b1a209cfb1579f86794f8fb92022a30d8d4e9c25e3bf62747782ca83da
+size 392

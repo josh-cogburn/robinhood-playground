@@ -1,33 +1,3 @@
-{
-  "200": [],
-  "300": [
-    {
-      "ticker": "SSC",
-      "price": 5.07
-    },
-    {
-      "ticker": "SPWH",
-      "price": 5.85
-    }
-  ],
-  "380": [
-    {
-      "ticker": "SSC",
-      "price": 5.01
-    },
-    {
-      "ticker": "SPWH",
-      "price": 5.7201
-    }
-  ],
-  "600": [
-    {
-      "ticker": "SPWH",
-      "price": 5.73
-    },
-    {
-      "ticker": "FAT",
-      "price": 7.9
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9b6772dd8e6e031995a7ff6b99507400d76bc6f7be805092432736c729e82185
+size 400

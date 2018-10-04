@@ -1,30 +1,3 @@
-{
-  "16": [
-    {
-      "ticker": "LEAF",
-      "price": 9.8
-    },
-    {
-      "ticker": "INTT",
-      "price": 8.425
-    },
-    {
-      "ticker": "MBIO",
-      "price": 6.27
-    }
-  ],
-  "30": [
-    {
-      "ticker": "LEAF",
-      "price": 9.8
-    },
-    {
-      "ticker": "INTT",
-      "price": 8.45
-    },
-    {
-      "ticker": "MBIO",
-      "price": 6.35
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6a2ecd11aff18bed42dc65fa63e24043d85e009043d8fa57957432af591aef78
+size 371

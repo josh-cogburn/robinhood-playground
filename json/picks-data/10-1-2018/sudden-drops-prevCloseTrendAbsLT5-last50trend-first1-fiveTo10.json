@@ -1,32 +1,3 @@
-{
-  "280": [
-    {
-      "ticker": "SNDX",
-      "price": 7.75
-    }
-  ],
-  "290": [
-    {
-      "ticker": "SNDX",
-      "price": 7.83
-    }
-  ],
-  "-50": [
-    {
-      "ticker": "FOMX",
-      "price": 5.85
-    }
-  ],
-  "-30": [
-    {
-      "ticker": "FOMX",
-      "price": 5.73
-    }
-  ],
-  "-10": [
-    {
-      "ticker": "FOMX",
-      "price": 5.95
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3b1e20940108099a604079e606177d4599b47f876a0e20f8df5e973c4e101760
+size 362

@@ -1,27 +1,3 @@
-{
-  "10": [
-    {
-      "ticker": "LXU",
-      "price": 8.6
-    }
-  ],
-  "50": [
-    {
-      "ticker": "LXU",
-      "price": 8.72
-    },
-    {
-      "ticker": "AEYE",
-      "price": 8.6
-    }
-  ],
-  "200": [
-    {
-      "ticker": "AEYE",
-      "price": 8.4269
-    }
-  ],
-  "300": [],
-  "380": [],
-  "600": []
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a1f1d2b1244a70c79319f24bd155911805bb0053735fd0f5a9b25df6cf48b8dd
+size 310

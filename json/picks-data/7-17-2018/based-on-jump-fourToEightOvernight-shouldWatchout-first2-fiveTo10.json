@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "HX",
-      "price": 9.8
-    }
-  ],
-  "5": [
-    {
-      "ticker": "HX",
-      "price": 9.58
-    }
-  ],
-  "16": [
-    {
-      "ticker": "CDMO",
-      "price": 5.03
-    },
-    {
-      "ticker": "KONE",
-      "price": 6.1
-    }
-  ],
-  "30": [
-    {
-      "ticker": "CDMO",
-      "price": 5.07
-    },
-    {
-      "ticker": "KONE",
-      "price": 6.35
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:486cd5884bfcaba2f716d1ed0580f23e893bf52d37cb238636de354bab538cc8
+size 392

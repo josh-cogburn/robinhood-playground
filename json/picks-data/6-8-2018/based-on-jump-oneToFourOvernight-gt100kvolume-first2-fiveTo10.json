@@ -1,29 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "SOXS",
-      "price": 9.5249
-    }
-  ],
-  "16": [
-    {
-      "ticker": "AXON",
-      "price": 5.05
-    },
-    {
-      "ticker": "SOXS",
-      "price": 9.469
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SOXS",
-      "price": 9.4368
-    },
-    {
-      "ticker": "SBS",
-      "price": 6.325
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:109f85dc112f10e34842b30287fc65f5efaaa15e9c4028a19ed06b5698482d2a
+size 344

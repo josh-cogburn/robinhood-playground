@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "IGC",
-      "price": 1.12
-    },
-    {
-      "ticker": "AMMA",
-      "price": 0.4428
-    }
-  ],
-  "5": [
-    {
-      "ticker": "IGC",
-      "price": 1.0599
-    },
-    {
-      "ticker": "AMMA",
-      "price": 0.44
-    }
-  ],
-  "16": [
-    {
-      "ticker": "IGC",
-      "price": 1.1
-    },
-    {
-      "ticker": "CYTX",
-      "price": 0.58
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6778c590e446570ea6cc4ab0cd2d3acc47e1d1cfca20462edafac772472dccbd
+size 384

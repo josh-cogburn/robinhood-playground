@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "EJPRY",
-      "price": 15.29
-    },
-    {
-      "ticker": "SSUMY",
-      "price": 16.395
-    },
-    {
-      "ticker": "TEZNY",
-      "price": 16.83
-    }
-  ],
-  "5": [
-    {
-      "ticker": "KRNT",
-      "price": 20.14
-    }
-  ],
-  "16": [
-    {
-      "ticker": "SSG",
-      "price": 15.96
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SSG",
-      "price": 16
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d2689dd03afdafc1a9c2340eaf1e09c411b77ecf9530ff2dec3ae0ced17065b9
+size 403

@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "USAT",
-      "price": 6.925
-    },
-    {
-      "ticker": "IGC",
-      "price": 6.83
-    }
-  ],
-  "200": [
-    {
-      "ticker": "VLRS",
-      "price": 7.54
-    },
-    {
-      "ticker": "NTEC",
-      "price": 5.7
-    }
-  ],
-  "260": [
-    {
-      "ticker": "VLRS",
-      "price": 7.54
-    },
-    {
-      "ticker": "NTEC",
-      "price": 5.675
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ef669f7c937b485cb94ae8b6304d416e988e32ae8442e966c1ea2311f4b021eb
+size 389

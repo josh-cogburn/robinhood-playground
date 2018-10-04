@@ -1,33 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "ARCI",
-      "price": 1.22
-    },
-    {
-      "ticker": "KOOL",
-      "price": 0.491
-    }
-  ],
-  "16": [
-    {
-      "ticker": "ARCI",
-      "price": 1.217
-    },
-    {
-      "ticker": "KOOL",
-      "price": 0.4909
-    }
-  ],
-  "30": [
-    {
-      "ticker": "ARCI",
-      "price": 1.13
-    },
-    {
-      "ticker": "IZEA",
-      "price": 1.81
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5c05fd5241fce33a8f096ea714a4d567643f2863ff9f258f8d4dfbc49acda916
+size 400

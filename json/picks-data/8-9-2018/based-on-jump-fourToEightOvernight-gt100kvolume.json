@@ -1,30 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "RSLS",
-      "price": 0.0689
-    }
-  ],
-  "5": [
-    {
-      "ticker": "RSLS",
-      "price": 0.0561
-    }
-  ],
-  "16": [
-    {
-      "ticker": "RSLS",
-      "price": 0.0569
-    }
-  ],
-  "30": [
-    {
-      "ticker": "RSLS",
-      "price": 0.0545
-    },
-    {
-      "ticker": "IDSA",
-      "price": 2.4
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6d45526ce39039d0e445c0f890f3ab76291cd783c463a0dbc502956706ae65bb
+size 348

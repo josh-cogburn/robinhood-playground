@@ -1,32 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "RIG",
-      "price": 12.67
-    },
-    {
-      "ticker": "CENX",
-      "price": 13.1299
-    }
-  ],
-  "16": [
-    {
-      "ticker": "RIG",
-      "price": 12.7
-    },
-    {
-      "ticker": "CENX",
-      "price": 13.02
-    }
-  ],
-  "30": [
-    {
-      "ticker": "RIG",
-      "price": 12.68
-    },
-    {
-      "ticker": "CENX",
-      "price": 13.065
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:45a016a13b57a8958e5a6da86716837efa2390cc61d06bda9576d3b0f302282a
+size 390

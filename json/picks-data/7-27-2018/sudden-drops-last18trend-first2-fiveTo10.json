@@ -1,32 +1,3 @@
-{
-  "221": [
-    {
-      "ticker": "AWX",
-      "price": 5.6699
-    },
-    {
-      "ticker": "LIVX",
-      "price": 5.15
-    }
-  ],
-  "280": [
-    {
-      "ticker": "MITK",
-      "price": 8.375
-    },
-    {
-      "ticker": "TENX",
-      "price": 6.33
-    }
-  ],
-  "328": [
-    {
-      "ticker": "OMEX",
-      "price": 7.2218
-    },
-    {
-      "ticker": "NIHD",
-      "price": 5.34
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:81e7529a854bd2c471a15a61f941765c77576a9f246a08f80d40e364253c99b6
+size 393

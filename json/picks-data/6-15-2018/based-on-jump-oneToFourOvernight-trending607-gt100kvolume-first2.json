@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "OPK",
-      "price": 4.51
-    }
-  ],
-  "5": [
-    {
-      "ticker": "OPK",
-      "price": 4.49
-    }
-  ],
-  "16": [
-    {
-      "ticker": "OPK",
-      "price": 4.44
-    },
-    {
-      "ticker": "DCIX",
-      "price": 1.5992
-    }
-  ],
-  "30": [
-    {
-      "ticker": "OPK",
-      "price": 4.41
-    },
-    {
-      "ticker": "DCIX",
-      "price": 1.62
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a79633ee17bb0aa79ce53ef6be67f47cc2fa5861598abfb165c86fbce3ab0e97
+size 396

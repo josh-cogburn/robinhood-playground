@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "HSGX",
-      "price": 0.7501
-    }
-  ],
-  "5": [
-    {
-      "ticker": "HSGX",
-      "price": 0.85
-    }
-  ],
-  "16": [
-    {
-      "ticker": "HSGX",
-      "price": 1.03
-    },
-    {
-      "ticker": "VIRC",
-      "price": 4.95
-    }
-  ],
-  "30": [
-    {
-      "ticker": "HSGX",
-      "price": 1.01
-    },
-    {
-      "ticker": "VIRC",
-      "price": 4.95
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:361f8233587928ef98be85125f74207241677250b286694940a690e6fa99356d
+size 400

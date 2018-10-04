@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "HMNY",
-      "price": 0.1047
-    }
-  ],
-  "5": [
-    {
-      "ticker": "HMNY",
-      "price": 0.105
-    }
-  ],
-  "16": [
-    {
-      "ticker": "HMNY",
-      "price": 0.102
-    },
-    {
-      "ticker": "AVEO",
-      "price": 2.245
-    }
-  ],
-  "30": [
-    {
-      "ticker": "HMNY",
-      "price": 0.103
-    },
-    {
-      "ticker": "AVEO",
-      "price": 2.32
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fcc370c4b83e247dff658e430e205b9a7bc213bb3daafce383f513f33a77f6ba
+size 404

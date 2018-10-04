@@ -1,29 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "SGMO",
-      "price": 18.028
-    }
-  ],
-  "16": [
-    {
-      "ticker": "SGMO",
-      "price": 18.05
-    },
-    {
-      "ticker": "SDRL",
-      "price": 19.74
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SGMO",
-      "price": 18.155
-    },
-    {
-      "ticker": "SDRL",
-      "price": 19.9
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:463f0b87a757f38f2917b42e07df8fe4fdb5654f7c7377405a85950ad705f867
+size 345

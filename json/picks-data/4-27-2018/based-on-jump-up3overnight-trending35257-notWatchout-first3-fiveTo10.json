@@ -1,28 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "S",
-      "price": 6.305
-    }
-  ],
-  "16": [
-    {
-      "ticker": "S",
-      "price": 6.455
-    },
-    {
-      "ticker": "MFCB",
-      "price": 6.4497
-    }
-  ],
-  "30": [
-    {
-      "ticker": "S",
-      "price": 6.605
-    },
-    {
-      "ticker": "MFCB",
-      "price": 6.4497
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6b1f1331a573a34484b31e4bbd823c2ee45987ff974277759607d84d4924cfbd
+size 326

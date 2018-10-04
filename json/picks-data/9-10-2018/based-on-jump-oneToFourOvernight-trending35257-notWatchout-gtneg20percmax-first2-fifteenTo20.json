@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "VRA",
-      "price": 16.74
-    },
-    {
-      "ticker": "KZR",
-      "price": 19
-    }
-  ],
-  "5": [
-    {
-      "ticker": "VRA",
-      "price": 16.68
-    },
-    {
-      "ticker": "KZR",
-      "price": 19
-    }
-  ],
-  "30": [
-    {
-      "ticker": "VRA",
-      "price": 16.56
-    },
-    {
-      "ticker": "KZR",
-      "price": 19.095
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0b95c2d0bf9dbcfee0f1e84fcbd23f99d19b75b7b3e9f4bf284a29d0e22a1135
+size 379

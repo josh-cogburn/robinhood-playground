@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "BGI",
-      "price": 2.06
-    },
-    {
-      "ticker": "NAKD",
-      "price": 1.5753
-    }
-  ],
-  "5": [
-    {
-      "ticker": "BGI",
-      "price": 2.047
-    },
-    {
-      "ticker": "NAKD",
-      "price": 1.76
-    }
-  ],
-  "30": [
-    {
-      "ticker": "BGI",
-      "price": 1.8811
-    },
-    {
-      "ticker": "NAKD",
-      "price": 1.522
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:dbf02448e65a6458947d50cd81bfe58bb3ef910b0897dd8112f97dffa67d2176
+size 387

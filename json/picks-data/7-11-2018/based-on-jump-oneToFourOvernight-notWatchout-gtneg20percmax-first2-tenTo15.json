@@ -1,30 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "NVGS",
-      "price": 12.8
-    }
-  ],
-  "5": [
-    {
-      "ticker": "NVGS",
-      "price": 12.85
-    }
-  ],
-  "16": [
-    {
-      "ticker": "NVGS",
-      "price": 12.85
-    }
-  ],
-  "30": [
-    {
-      "ticker": "MSON",
-      "price": 13.4
-    },
-    {
-      "ticker": "GDP",
-      "price": 12.53
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:25f47f9f86cffef9027380d8865ba2b6bf0242d0de1187e30b0044089828517d
+size 343

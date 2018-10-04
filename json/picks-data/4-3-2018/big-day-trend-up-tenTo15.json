@@ -1,36 +1,3 @@
-{
-  "10": [],
-  "35": [],
-  "90": [
-    {
-      "ticker": "CDLX",
-      "price": 14.9
-    },
-    {
-      "ticker": "DO",
-      "price": 14.97
-    }
-  ],
-  "223": [
-    {
-      "ticker": "CLXT",
-      "price": 14.5
-    },
-    {
-      "ticker": "UBCP",
-      "price": 12.95
-    },
-    {
-      "ticker": "ACIU",
-      "price": 10.15
-    },
-    {
-      "ticker": "URA",
-      "price": 12.61
-    },
-    {
-      "ticker": "WAAS",
-      "price": 12.5
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:300cff9cd2368f57cf580d6c15d00c335ab06b923f06e4fb2bfde153aea2d168
+size 455

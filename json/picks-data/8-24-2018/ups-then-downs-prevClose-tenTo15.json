@@ -1,27 +1,3 @@
-{
-  "10": [
-    {
-      "ticker": "PNTR",
-      "price": 12.6
-    }
-  ],
-  "50": [],
-  "200": [],
-  "300": [
-    {
-      "ticker": "ECOR",
-      "price": 14.1926
-    },
-    {
-      "ticker": "GLMD",
-      "price": 12.27
-    }
-  ],
-  "380": [
-    {
-      "ticker": "ECOR",
-      "price": 14.3
-    }
-  ],
-  "600": []
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5407c994f7f4aef2c2cb84bd9757e82fc90863595e16289afb5375cf9c5e1825
+size 316

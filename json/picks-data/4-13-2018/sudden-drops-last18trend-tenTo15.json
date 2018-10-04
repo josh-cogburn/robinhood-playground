@@ -1,32 +1,3 @@
-{
-  "221": [
-    {
-      "ticker": "SYBX",
-      "price": 11.38
-    },
-    {
-      "ticker": "ACY",
-      "price": 14.42
-    }
-  ],
-  "328": [
-    {
-      "ticker": "AP",
-      "price": 10.2
-    },
-    {
-      "ticker": "OMER",
-      "price": 14.08
-    }
-  ],
-  "388": [
-    {
-      "ticker": "CMCM",
-      "price": 12.36
-    },
-    {
-      "ticker": "SPKE",
-      "price": 11.1
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:22defc358024ec7766a9cb0c2b98cb4d89aeb8cb249ebcbe8189c4598146e9c8
+size 390

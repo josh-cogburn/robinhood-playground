@@ -1,31 +1,3 @@
-{
-  "2": [],
-  "12": [],
-  "75": [],
-  "120": [
-    {
-      "ticker": "AVP",
-      "price": 1.66
-    },
-    {
-      "ticker": "HL",
-      "price": 3.71
-    }
-  ],
-  "180": [
-    {
-      "ticker": "HL",
-      "price": 3.7158
-    }
-  ],
-  "380": [
-    {
-      "ticker": "HL",
-      "price": 3.72
-    },
-    {
-      "ticker": "BIOS",
-      "price": 2.48
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5e6fa8eec7a848b112113202cbeaa13226cf08ee0aa3c1d1a34a043583652493
+size 362

@@ -1,33 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "ENPH",
-      "price": 5.18
-    },
-    {
-      "ticker": "SPWR",
-      "price": 6.9
-    }
-  ],
-  "16": [
-    {
-      "ticker": "GALT",
-      "price": 5.7399
-    },
-    {
-      "ticker": "INFN",
-      "price": 9.2
-    }
-  ],
-  "30": [
-    {
-      "ticker": "GALT",
-      "price": 5.9711
-    },
-    {
-      "ticker": "LCI",
-      "price": 5.25
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b826e0814f477e47ac04074a83a062d84f56c75dd4633f0f416313ee6285b3be
+size 397

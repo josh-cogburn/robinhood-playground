@@ -1,32 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "NUGT",
-      "price": 13.1201
-    },
-    {
-      "ticker": "RIG",
-      "price": 12.31
-    }
-  ],
-  "16": [
-    {
-      "ticker": "NUGT",
-      "price": 13.2701
-    },
-    {
-      "ticker": "RIG",
-      "price": 12.33
-    }
-  ],
-  "30": [
-    {
-      "ticker": "NUGT",
-      "price": 13.4
-    },
-    {
-      "ticker": "RIG",
-      "price": 12.415
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:982aa3bf9ad53a28535d30dba635e18d098e5982ef79ab04cdb0aa417d1c4345
+size 392

@@ -1,29 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "DNR",
-      "price": 5.76
-    }
-  ],
-  "16": [
-    {
-      "ticker": "DNR",
-      "price": 5.66
-    },
-    {
-      "ticker": "OPK",
-      "price": 5.79
-    }
-  ],
-  "30": [
-    {
-      "ticker": "DNR",
-      "price": 5.64
-    },
-    {
-      "ticker": "OPK",
-      "price": 5.735
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:126fc5a06dc356803469a38bfd40c6f6b3dffdfa5234bfebe9f55dd0385f39d4
+size 335

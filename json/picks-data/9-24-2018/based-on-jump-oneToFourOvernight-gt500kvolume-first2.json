@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "NVAX",
-      "price": 1.6181
-    }
-  ],
-  "5": [
-    {
-      "ticker": "CHK",
-      "price": 4.64
-    }
-  ],
-  "16": [
-    {
-      "ticker": "CHK",
-      "price": 4.5931
-    },
-    {
-      "ticker": "NVAX",
-      "price": 1.6517
-    }
-  ],
-  "30": [
-    {
-      "ticker": "CHK",
-      "price": 4.66
-    },
-    {
-      "ticker": "CEI",
-      "price": 0.2359
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:178b150ea13045df3e62342ed2e2f9fc824a5b15e1f5d407c3fff5d30f1d4ed6
+size 402

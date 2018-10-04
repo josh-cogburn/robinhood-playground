@@ -1,32 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "SSG",
-      "price": 9
-    },
-    {
-      "ticker": "PFIN",
-      "price": 7.71
-    }
-  ],
-  "16": [
-    {
-      "ticker": "SSG",
-      "price": 9.0702
-    },
-    {
-      "ticker": "PFIN",
-      "price": 7.71
-    }
-  ],
-  "30": [
-    {
-      "ticker": "HRG",
-      "price": 9.67
-    },
-    {
-      "ticker": "SSG",
-      "price": 9.125
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0eb960c3c24de08f3ab8ef685266a61bb38b37cb387384ded29ce65cb4cc72eb
+size 381

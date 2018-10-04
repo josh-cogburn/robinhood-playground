@@ -1,28 +1,3 @@
-{
-  "200": [
-    {
-      "ticker": "SDT",
-      "price": 1.96
-    },
-    {
-      "ticker": "NEON",
-      "price": 0.3925
-    }
-  ],
-  "300": [
-    {
-      "ticker": "SDT",
-      "price": 1.97
-    }
-  ],
-  "380": [
-    {
-      "ticker": "SDT",
-      "price": 1.964
-    },
-    {
-      "ticker": "NEON",
-      "price": 0.365
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a23a2ef50c26e467637e06928e4ddf5ac156dd90f1a6320e5586ab9e6880dc9e
+size 333

@@ -1,33 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "SKIS",
-      "price": 5.2
-    }
-  ],
-  "16": [
-    {
-      "ticker": "SKIS",
-      "price": 5.315
-    },
-    {
-      "ticker": "TRT",
-      "price": 5.14
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SKIS",
-      "price": 5.315
-    },
-    {
-      "ticker": "FAT",
-      "price": 6.202
-    },
-    {
-      "ticker": "TRT",
-      "price": 5.16
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:88730ef1088e3e8a4ae5f6249b1ce27964460eadcfd0f6125fe7dc254a535a27
+size 395

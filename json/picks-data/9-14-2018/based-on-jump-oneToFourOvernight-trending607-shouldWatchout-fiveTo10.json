@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "TRXC",
-      "price": 5.76
-    }
-  ],
-  "5": [
-    {
-      "ticker": "TRXC",
-      "price": 5.81
-    }
-  ],
-  "16": [
-    {
-      "ticker": "TRXC",
-      "price": 5.74
-    },
-    {
-      "ticker": "MCF",
-      "price": 6.355
-    }
-  ],
-  "30": [
-    {
-      "ticker": "TRXC",
-      "price": 5.58
-    },
-    {
-      "ticker": "MCF",
-      "price": 6.28
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0f76556111481ffd075d99d0d15620acf1eeb9376e07f54ebe03cefced865e4c
+size 397

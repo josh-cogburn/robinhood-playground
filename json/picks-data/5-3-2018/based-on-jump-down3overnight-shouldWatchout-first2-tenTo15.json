@@ -1,32 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "NVIV",
-      "price": 10.8055
-    },
-    {
-      "ticker": "CCRN",
-      "price": 11.155
-    }
-  ],
-  "16": [
-    {
-      "ticker": "NVIV",
-      "price": 11.0392
-    },
-    {
-      "ticker": "CCRN",
-      "price": 11.08
-    }
-  ],
-  "30": [
-    {
-      "ticker": "CCRN",
-      "price": 11.275
-    },
-    {
-      "ticker": "RKDA",
-      "price": 10.65
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ff181a5992f769d53252da49d0caef74c811148544865df46145dba218ab7dec
+size 397

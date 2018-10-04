@@ -1,29 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "SSC",
-      "price": 3.58
-    }
-  ],
-  "16": [
-    {
-      "ticker": "LTRX",
-      "price": 4.82
-    },
-    {
-      "ticker": "INSG",
-      "price": 3.18
-    }
-  ],
-  "30": [
-    {
-      "ticker": "CNAT",
-      "price": 4.34
-    },
-    {
-      "ticker": "LTRX",
-      "price": 4.79
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4175d3a1de27c0f355ff1af42c914bdc0dd6c1e655791ca0be19797317708b8f
+size 338

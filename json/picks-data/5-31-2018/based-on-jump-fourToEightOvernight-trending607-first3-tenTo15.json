@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "KIRK",
-      "price": 12.19
-    },
-    {
-      "ticker": "CBAY",
-      "price": 12.2
-    }
-  ],
-  "5": [
-    {
-      "ticker": "KIRK",
-      "price": 12.86
-    },
-    {
-      "ticker": "CBAY",
-      "price": 12.245
-    }
-  ],
-  "16": [
-    {
-      "ticker": "KIRK",
-      "price": 13.296
-    },
-    {
-      "ticker": "CBAY",
-      "price": 13.3925
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7ff004f0d75e831d2d7a1cfd38e29644a3dc3cfbec4454613cf4f8d445039b19
+size 393

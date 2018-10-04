@@ -1,30 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "SSC",
-      "price": 5.15
-    }
-  ],
-  "5": [
-    {
-      "ticker": "SSC",
-      "price": 5.055
-    },
-    {
-      "ticker": "AWX",
-      "price": 5.18
-    }
-  ],
-  "16": [
-    {
-      "ticker": "AWX",
-      "price": 5.245
-    }
-  ],
-  "30": [
-    {
-      "ticker": "AWX",
-      "price": 5.0964
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:496191487350e036f492cd1792332a7e509b0f5ff00a7923c957525d7fd75bea
+size 340

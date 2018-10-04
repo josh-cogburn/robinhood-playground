@@ -1,30 +1,3 @@
-{
-  "4": [
-    {
-      "ticker": "SVXY",
-      "price": 13.59
-    },
-    {
-      "ticker": "NSH",
-      "price": 14.1523
-    }
-  ],
-  "40": [],
-  "100": [
-    {
-      "ticker": "FLEX",
-      "price": 14.045
-    },
-    {
-      "ticker": "LOOP",
-      "price": 11.88
-    }
-  ],
-  "200": [
-    {
-      "ticker": "INNT",
-      "price": 11.2383
-    }
-  ],
-  "260": []
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:34b3b6a2d035b628d027682413517ae303ce388ab44112d240ec9e0f14434314
+size 364

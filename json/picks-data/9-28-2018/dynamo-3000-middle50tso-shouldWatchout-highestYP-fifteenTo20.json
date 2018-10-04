@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "NEO",
-      "price": 15.42
-    },
-    {
-      "ticker": "HABT",
-      "price": 16
-    }
-  ],
-  "200": [
-    {
-      "ticker": "BEL",
-      "price": 18.325
-    },
-    {
-      "ticker": "AOBC",
-      "price": 15.49
-    }
-  ],
-  "260": [
-    {
-      "ticker": "NEO",
-      "price": 15.43
-    },
-    {
-      "ticker": "AMPH",
-      "price": 19.14
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6533feff1addd52fbd340880e8d58b949090880ef684f4c7cebbd10e4eddfac6
+size 390

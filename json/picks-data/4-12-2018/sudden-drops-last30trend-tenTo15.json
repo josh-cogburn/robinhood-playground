@@ -1,32 +1,3 @@
-{
-  "221": [
-    {
-      "ticker": "OMEX",
-      "price": 10.82
-    },
-    {
-      "ticker": "LRN",
-      "price": 12.89
-    }
-  ],
-  "328": [
-    {
-      "ticker": "BCOM",
-      "price": 12.75
-    },
-    {
-      "ticker": "MLP",
-      "price": 12.15
-    }
-  ],
-  "388": [
-    {
-      "ticker": "SCPH",
-      "price": 10.9508
-    },
-    {
-      "ticker": "PHII",
-      "price": 11.35
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:836c476f41273b4bd90e8008cc9e80bd092c0d6db4739754e189def5d15d04b3
+size 395

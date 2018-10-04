@@ -1,33 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "FET",
-      "price": 12.1
-    },
-    {
-      "ticker": "TCS",
-      "price": 11.5
-    }
-  ],
-  "16": [
-    {
-      "ticker": "FET",
-      "price": 11.95
-    },
-    {
-      "ticker": "TCS",
-      "price": 11.45
-    }
-  ],
-  "30": [
-    {
-      "ticker": "FET",
-      "price": 12.05
-    },
-    {
-      "ticker": "TCS",
-      "price": 11.47
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:10328e2d6bd8259deefd6b66f93438e12fa4eb8cd32853a0d641dd319929f083
+size 394

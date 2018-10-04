@@ -1,29 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "FLEX",
-      "price": 14.09
-    }
-  ],
-  "16": [
-    {
-      "ticker": "OAS",
-      "price": 12.67
-    },
-    {
-      "ticker": "CPE",
-      "price": 11.12
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SE",
-      "price": 14.0138
-    },
-    {
-      "ticker": "OAS",
-      "price": 12.9001
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:63463735d7c2b5a99b074144853e58777c7a881fbfb6ab54b755dc69fff68aa5
+size 343

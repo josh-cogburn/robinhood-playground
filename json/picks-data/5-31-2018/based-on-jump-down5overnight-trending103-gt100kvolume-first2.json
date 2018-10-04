@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "SGLB",
-      "price": 1.7
-    }
-  ],
-  "5": [
-    {
-      "ticker": "SGLB",
-      "price": 1.6852
-    }
-  ],
-  "16": [
-    {
-      "ticker": "SGLB",
-      "price": 1.82
-    },
-    {
-      "ticker": "OGEN",
-      "price": 1.68
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SGLB",
-      "price": 1.7384
-    },
-    {
-      "ticker": "OGEN",
-      "price": 1.69
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3df49a64d57cc80864981287685e87dd2f4270acc9e9a6a91844e32900fc56f5
+size 401

@@ -1,32 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "FTR",
-      "price": 9.0348
-    },
-    {
-      "ticker": "MRAM",
-      "price": 7.19
-    }
-  ],
-  "16": [
-    {
-      "ticker": "FTR",
-      "price": 9.44
-    },
-    {
-      "ticker": "MRAM",
-      "price": 7.1998
-    }
-  ],
-  "30": [
-    {
-      "ticker": "FTR",
-      "price": 9.551
-    },
-    {
-      "ticker": "IFMK",
-      "price": 7.087
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b2efd3815e78bf566122d3633c27d136e042ac26a8ceb27d97589597dd8d6e0c
+size 388

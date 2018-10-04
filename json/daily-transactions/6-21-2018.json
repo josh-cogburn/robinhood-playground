@@ -1,16 +1,3 @@
-[
-  {
-    "type": "sell",
-    "ticker": "NAKD",
-    "bid_price": 7.5,
-    "quantity": "11.0000"
-  },
-  {
-    "type": "buy",
-    "ticker": "APVO",
-    "bid_price": 5.68134,
-    "quantity": 17,
-    "strategy": "low-float-high-volume-volTo2WeekPoints-trend5to10-shouldWatchout-fiveTo10",
-    "min": 210
-  }
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:de559d211ffa9c43c0a3cbc11004316e8e0b25d2efd5e68893a04d776c38d70b
+size 305

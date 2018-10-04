@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "QEP",
-      "price": 10.12
-    }
-  ],
-  "5": [
-    {
-      "ticker": "QEP",
-      "price": 10.84
-    }
-  ],
-  "16": [
-    {
-      "ticker": "QEP",
-      "price": 10.64
-    },
-    {
-      "ticker": "SVRA",
-      "price": 11.5
-    }
-  ],
-  "30": [
-    {
-      "ticker": "QEP",
-      "price": 10.595
-    },
-    {
-      "ticker": "SVRA",
-      "price": 11.5
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3e580102a2414cfc17515d04c88bd2b30b8294bfeb2ed713e3e628953d4a7393
+size 399

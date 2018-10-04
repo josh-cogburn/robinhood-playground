@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "OAS",
-      "price": 13.52
-    }
-  ],
-  "5": [
-    {
-      "ticker": "OAS",
-      "price": 13.33
-    },
-    {
-      "ticker": "PBR",
-      "price": 12.595
-    }
-  ],
-  "16": [
-    {
-      "ticker": "OAS",
-      "price": 13.22
-    },
-    {
-      "ticker": "CLF",
-      "price": 10.9529
-    },
-    {
-      "ticker": "PBR",
-      "price": 12.66
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cda49bc88da7dfa90a532fd49ca9053604d6f8a2e66f1f3ebdda28e9771482d1
+size 387

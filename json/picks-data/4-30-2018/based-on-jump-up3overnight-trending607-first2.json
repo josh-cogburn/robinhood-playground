@@ -1,32 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "TRCH",
-      "price": 1.25
-    },
-    {
-      "ticker": "OPHC",
-      "price": 4.8596
-    }
-  ],
-  "16": [
-    {
-      "ticker": "TRCH",
-      "price": 1.21
-    },
-    {
-      "ticker": "OPHC",
-      "price": 4.6605
-    }
-  ],
-  "30": [
-    {
-      "ticker": "TRCH",
-      "price": 1.2113
-    },
-    {
-      "ticker": "OPHC",
-      "price": 4.6605
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cc7fcef97d1163864e0149345b6662bed83d1e1b7a99299c32ffcdc9c6119ea7
+size 393

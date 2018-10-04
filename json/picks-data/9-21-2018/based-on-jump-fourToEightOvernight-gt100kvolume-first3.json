@@ -1,36 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "WWR",
-      "price": 0.1718
-    }
-  ],
-  "16": [
-    {
-      "ticker": "WWR",
-      "price": 0.1809
-    },
-    {
-      "ticker": "OGEN",
-      "price": 0.5047
-    },
-    {
-      "ticker": "RGSE",
-      "price": 0.4106
-    }
-  ],
-  "30": [
-    {
-      "ticker": "WWR",
-      "price": 0.1852
-    },
-    {
-      "ticker": "HSGX",
-      "price": 0.605
-    },
-    {
-      "ticker": "OGEN",
-      "price": 0.5085
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d77767f76b8e1b15ee836a83863820ebe8febe2552a061d47d59dcebb806ccd8
+size 452

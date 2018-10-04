@@ -1,28 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "AKER",
-      "price": 0.4452
-    }
-  ],
-  "5": [
-    {
-      "ticker": "AKER",
-      "price": 0.4326
-    }
-  ],
-  "30": [
-    {
-      "ticker": "TOPS",
-      "price": 1.04
-    },
-    {
-      "ticker": "AKER",
-      "price": 0.3753
-    },
-    {
-      "ticker": "GGB",
-      "price": 4.15
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ed7fc8dec115e098509fa7aee314da4e6057b8f091871842404d78ac96853bb6
+size 332

@@ -1,28 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "GEMP",
-      "price": 5.55
-    }
-  ],
-  "16": [
-    {
-      "ticker": "GEMP",
-      "price": 5.55
-    },
-    {
-      "ticker": "IFMK",
-      "price": 6.5
-    }
-  ],
-  "30": [
-    {
-      "ticker": "GEMP",
-      "price": 5.55
-    },
-    {
-      "ticker": "IFMK",
-      "price": 6.3
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e485c67af183c36c80fe160d677c3a54db0d01da06b6bc8c7a29c535e42e8170
+size 326

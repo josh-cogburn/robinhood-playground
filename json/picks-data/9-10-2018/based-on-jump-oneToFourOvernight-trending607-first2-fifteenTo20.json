@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "VRA",
-      "price": 16.74
-    },
-    {
-      "ticker": "CLDR",
-      "price": 17.47
-    }
-  ],
-  "5": [
-    {
-      "ticker": "VRA",
-      "price": 16.68
-    },
-    {
-      "ticker": "CLDR",
-      "price": 17.46
-    }
-  ],
-  "30": [
-    {
-      "ticker": "VRA",
-      "price": 16.56
-    },
-    {
-      "ticker": "CLDR",
-      "price": 17.335
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ef1e1bf73967f9064f2d9e3bdd8b641624b10c6a82351e6f260da0068e567ed6
+size 388

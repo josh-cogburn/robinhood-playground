@@ -1,32 +1,3 @@
-{
-  "80": [
-    {
-      "ticker": "AGTC",
-      "price": 6
-    }
-  ],
-  "100": [
-    {
-      "ticker": "AGTC",
-      "price": 6.025
-    }
-  ],
-  "140": [
-    {
-      "ticker": "AGTC",
-      "price": 6.05
-    }
-  ],
-  "198": [
-    {
-      "ticker": "AGTC",
-      "price": 6.25
-    }
-  ],
-  "250": [
-    {
-      "ticker": "WTI",
-      "price": 8.795
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:678a102b9e15347edac36d3c2503d23111dd5f165e9972902ea9ba057ce5e3fc
+size 359

@@ -1,32 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "SSBI",
-      "price": 14.9
-    },
-    {
-      "ticker": "ELOX",
-      "price": 12
-    }
-  ],
-  "16": [
-    {
-      "ticker": "SSBI",
-      "price": 14.25
-    },
-    {
-      "ticker": "ELOX",
-      "price": 12.5
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SSBI",
-      "price": 14.25
-    },
-    {
-      "ticker": "ELOX",
-      "price": 12.71
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:da979913c79e32efa0b79a25807fbf2d03699d9da11b265878789b550b4c6415
+size 386

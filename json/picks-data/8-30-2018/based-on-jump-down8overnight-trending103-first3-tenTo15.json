@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "DQJCY",
-      "price": 12.31
-    },
-    {
-      "ticker": "DBOEY",
-      "price": 13.93
-    },
-    {
-      "ticker": "ACGBY",
-      "price": 11.98
-    }
-  ],
-  "5": [
-    {
-      "ticker": "IMTE",
-      "price": 11.7
-    }
-  ],
-  "16": [
-    {
-      "ticker": "IMTE",
-      "price": 11.7
-    }
-  ],
-  "30": [
-    {
-      "ticker": "IMTE",
-      "price": 12.0633
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ec42437e5aacd6a06a5abc145d73767019777a5655ea5857dbddfab4207750f4
+size 407

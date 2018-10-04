@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "GDX",
-      "price": 18.35
-    }
-  ],
-  "5": [
-    {
-      "ticker": "GDX",
-      "price": 18.24
-    }
-  ],
-  "16": [
-    {
-      "ticker": "GDX",
-      "price": 18.16
-    },
-    {
-      "ticker": "EMLC",
-      "price": 16.091
-    }
-  ],
-  "30": [
-    {
-      "ticker": "GDX",
-      "price": 18.21
-    },
-    {
-      "ticker": "EMLC",
-      "price": 16.075
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:055c5b6f748c0cf972c044624e90ab3e0d3ba6b68bb583d237a1684cbbde7bf4
+size 402

@@ -1,29 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "TGC",
-      "price": 1.55
-    }
-  ],
-  "16": [
-    {
-      "ticker": "TGC",
-      "price": 1.8259
-    },
-    {
-      "ticker": "NOG",
-      "price": 3.2201
-    }
-  ],
-  "30": [
-    {
-      "ticker": "TGC",
-      "price": 2.4
-    },
-    {
-      "ticker": "NOG",
-      "price": 3.215
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b55248159cd71010c75c54a7390b2de49a616411bb89301bd457e31ca2e7ecb7
+size 338

@@ -1,32 +1,3 @@
-{
-  "280": [
-    {
-      "ticker": "CGEN",
-      "price": 3.49
-    }
-  ],
-  "290": [
-    {
-      "ticker": "CGEN",
-      "price": 3.5
-    }
-  ],
-  "-50": [
-    {
-      "ticker": "PTX",
-      "price": 0.9
-    }
-  ],
-  "-30": [
-    {
-      "ticker": "PTX",
-      "price": 0.9
-    }
-  ],
-  "-10": [
-    {
-      "ticker": "PTX",
-      "price": 0.9
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f0058fc6be6e0e20c376ea0d2ffad065e2e5115b64b67497506ab8b396ed5f18
+size 355

@@ -1,33 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "SC",
-      "price": 19.99
-    },
-    {
-      "ticker": "COOL",
-      "price": 20.3
-    }
-  ],
-  "16": [
-    {
-      "ticker": "SC",
-      "price": 20.07
-    },
-    {
-      "ticker": "KN",
-      "price": 16.89
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SC",
-      "price": 19.84
-    },
-    {
-      "ticker": "KN",
-      "price": 16.96
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2c2b25c26027f2ce4d1f4c2b90d5a20cde828b4efe25d14306ffce2f20da0158
+size 391

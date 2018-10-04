@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "KIRK",
-      "price": 12.19
-    },
-    {
-      "ticker": "LOOP",
-      "price": 11.99
-    }
-  ],
-  "5": [
-    {
-      "ticker": "KIRK",
-      "price": 12.86
-    },
-    {
-      "ticker": "LOOP",
-      "price": 11.99
-    }
-  ],
-  "16": [
-    {
-      "ticker": "KIRK",
-      "price": 13.296
-    },
-    {
-      "ticker": "LOOP",
-      "price": 11.74
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4d7a3d3d77a4333b639d285fadee52b5944d5c0cec69541afea50dabcf72a040
+size 391

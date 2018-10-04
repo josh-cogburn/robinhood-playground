@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "CTG",
-      "price": 7.04
-    }
-  ],
-  "5": [
-    {
-      "ticker": "CTG",
-      "price": 7.33
-    }
-  ],
-  "16": [
-    {
-      "ticker": "CTG",
-      "price": 7.32
-    },
-    {
-      "ticker": "CMCL",
-      "price": 9.08
-    }
-  ],
-  "30": [
-    {
-      "ticker": "CTG",
-      "price": 7.36
-    },
-    {
-      "ticker": "CMCL",
-      "price": 9.08
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f2aaf004b23e2db6da82e5b3faaa89ff06534593e95e4c610adeba84a30a63fd
+size 394

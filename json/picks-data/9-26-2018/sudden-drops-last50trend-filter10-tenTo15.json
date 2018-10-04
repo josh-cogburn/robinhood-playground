@@ -1,32 +1,3 @@
-{
-  "430": [
-    {
-      "ticker": "CCXI",
-      "price": 11.5
-    },
-    {
-      "ticker": "ALDX",
-      "price": 13.5
-    }
-  ],
-  "470": [
-    {
-      "ticker": "ALDX",
-      "price": 13.25
-    },
-    {
-      "ticker": "CCXI",
-      "price": 11.5
-    }
-  ],
-  "500": [
-    {
-      "ticker": "ALDX",
-      "price": 13.3
-    },
-    {
-      "ticker": "CCXI",
-      "price": 11.5
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:327124916dce260acb1da23e9d5e2be4cc352b63d677f90bb1e1c27f641278bc
+size 390

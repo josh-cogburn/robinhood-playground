@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "IHT",
-      "price": 2.3819
-    }
-  ],
-  "5": [
-    {
-      "ticker": "IHT",
-      "price": 2.5257
-    }
-  ],
-  "16": [
-    {
-      "ticker": "BDR",
-      "price": 0.964
-    },
-    {
-      "ticker": "IHT",
-      "price": 2.4494
-    }
-  ],
-  "30": [
-    {
-      "ticker": "BDR",
-      "price": 0.964
-    },
-    {
-      "ticker": "IHT",
-      "price": 2.4494
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f6217f979a6e8cb80499b60e00a03bf914928497516a53a4dc3b8dc2b5912848
+size 402

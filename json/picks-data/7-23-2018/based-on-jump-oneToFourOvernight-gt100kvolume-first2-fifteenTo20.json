@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "MAT",
-      "price": 16.33
-    }
-  ],
-  "5": [
-    {
-      "ticker": "MAT",
-      "price": 16.42
-    }
-  ],
-  "16": [
-    {
-      "ticker": "MAT",
-      "price": 16.76
-    },
-    {
-      "ticker": "PEGI",
-      "price": 17.915
-    }
-  ],
-  "30": [
-    {
-      "ticker": "MAT",
-      "price": 16.58
-    },
-    {
-      "ticker": "AMRX",
-      "price": 18.98
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:965ea2d64dc07fbe169a9f22f70fe63e46e6f24f8d4b23484c8fc659e0ff01ff
+size 401

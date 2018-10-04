@@ -1,34 +1,3 @@
-{
-  "32": [
-    {
-      "ticker": "LITB",
-      "price": 0.8437
-    },
-    {
-      "ticker": "EVFM",
-      "price": 4.2712
-    }
-  ],
-  "63": [
-    {
-      "ticker": "SEII",
-      "price": 3.12
-    },
-    {
-      "ticker": "EYPT",
-      "price": 3.26
-    }
-  ],
-  "153": [
-    {
-      "ticker": "SEII",
-      "price": 2.95
-    }
-  ],
-  "290": [
-    {
-      "ticker": "ATAI",
-      "price": 1.021
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:df32ee2d3f28a9900eff426c0929793cc3fa5e16d35f774970915e5e078d2ba0
+size 407

@@ -1,32 +1,3 @@
-{
-  "150": [
-    {
-      "ticker": "ANY",
-      "price": 0.31
-    }
-  ],
-  "210": [
-    {
-      "ticker": "DHXM",
-      "price": 1.15
-    }
-  ],
-  "276": [
-    {
-      "ticker": "ANY",
-      "price": 0.3003
-    }
-  ],
-  "315": [
-    {
-      "ticker": "ANY",
-      "price": 0.3037
-    }
-  ],
-  "384": [
-    {
-      "ticker": "VTL",
-      "price": 0.44
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d40dc45c6b1485d1c01b129cdc389e112c87bd48fe0c7c3920bb7aa197ca541f
+size 362

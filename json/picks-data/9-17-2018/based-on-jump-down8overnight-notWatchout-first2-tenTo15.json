@@ -1,30 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "DKILY",
-      "price": 13.55
-    },
-    {
-      "ticker": "RDEIY",
-      "price": 10.545
-    }
-  ],
-  "5": [
-    {
-      "ticker": "GOV",
-      "price": 13.8999
-    }
-  ],
-  "16": [
-    {
-      "ticker": "GOV",
-      "price": 13.9
-    }
-  ],
-  "30": [
-    {
-      "ticker": "GOV",
-      "price": 13.92
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:eb5dca511397d20dae7505ecf94690f62b43b28ee57d564e35d3cf1c507eb3a5
+size 347

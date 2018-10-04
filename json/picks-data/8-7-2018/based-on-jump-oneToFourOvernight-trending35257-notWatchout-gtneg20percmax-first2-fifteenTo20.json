@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "FNKO",
-      "price": 20.26
-    },
-    {
-      "ticker": "WPX",
-      "price": 19.3
-    }
-  ],
-  "5": [
-    {
-      "ticker": "LBRT",
-      "price": 20.0026
-    },
-    {
-      "ticker": "HFBC",
-      "price": 17
-    }
-  ],
-  "16": [
-    {
-      "ticker": "LBRT",
-      "price": 20.11
-    },
-    {
-      "ticker": "HFBC",
-      "price": 17
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:444a0b3ddd35f96d4194c1d7fc77aafeb04243bc5993fb5ed541dcbbb4c0d918
+size 384

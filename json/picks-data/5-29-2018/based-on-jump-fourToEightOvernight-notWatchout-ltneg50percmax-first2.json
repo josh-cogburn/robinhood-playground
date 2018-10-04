@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "BLIN",
-      "price": 1.45
-    },
-    {
-      "ticker": "SPCB",
-      "price": 2
-    }
-  ],
-  "5": [
-    {
-      "ticker": "BVSN",
-      "price": 2.05
-    },
-    {
-      "ticker": "BLIN",
-      "price": 1.32
-    }
-  ],
-  "30": [
-    {
-      "ticker": "BVSN",
-      "price": 1.96
-    },
-    {
-      "ticker": "BLIN",
-      "price": 1.38
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9bf1ee34e3fafe0315664b5838e2cae918eebae4e671d105e89dbb715cccc8ce
+size 381

@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "FATE",
-      "price": 16.41
-    },
-    {
-      "ticker": "ARWR",
-      "price": 19.28
-    }
-  ],
-  "200": [
-    {
-      "ticker": "FATE",
-      "price": 16.295
-    },
-    {
-      "ticker": "RDC",
-      "price": 18.86
-    }
-  ],
-  "260": [
-    {
-      "ticker": "AMRN",
-      "price": 15.31
-    },
-    {
-      "ticker": "FATE",
-      "price": 16.365
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:92dda07430c5648bf16a7c4c49be07a78272a9eab34def59b96057903f2bf218
+size 396

@@ -1,32 +1,3 @@
-{
-  "280": [
-    {
-      "ticker": "JAGX",
-      "price": 0.8999
-    },
-    {
-      "ticker": "ABAC",
-      "price": 1.8693
-    },
-    {
-      "ticker": "SMRT",
-      "price": 2.211
-    }
-  ],
-  "290": [
-    {
-      "ticker": "JAGX",
-      "price": 0.885
-    },
-    {
-      "ticker": "ABAC",
-      "price": 1.8693
-    }
-  ],
-  "-10": [
-    {
-      "ticker": "HUSA",
-      "price": 0.23
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e3af657f09a90fc25e93e73d0aa91500a7e73e61a4784173ffffc53ea8b2fbf4
+size 397

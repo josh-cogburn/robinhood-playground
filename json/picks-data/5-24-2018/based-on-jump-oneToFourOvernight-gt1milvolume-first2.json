@@ -1,29 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "SDRL",
-      "price": 0.438
-    }
-  ],
-  "16": [
-    {
-      "ticker": "SDRL",
-      "price": 0.439
-    },
-    {
-      "ticker": "HMNY",
-      "price": 0.4633
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SDRL",
-      "price": 0.4381
-    },
-    {
-      "ticker": "HMNY",
-      "price": 0.4659
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:23885c0feb01adbb00ea0f0c352539fdccbbfa9432fcef1d7ad4be29bc723e0b
+size 347

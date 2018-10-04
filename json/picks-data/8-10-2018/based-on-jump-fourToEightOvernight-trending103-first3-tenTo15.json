@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "KIN",
-      "price": 14.325
-    }
-  ],
-  "5": [
-    {
-      "ticker": "KIN",
-      "price": 14.5
-    }
-  ],
-  "16": [
-    {
-      "ticker": "DPK",
-      "price": 13.1078
-    },
-    {
-      "ticker": "KIN",
-      "price": 14.3
-    }
-  ],
-  "30": [
-    {
-      "ticker": "DPK",
-      "price": 13.11
-    },
-    {
-      "ticker": "KIN",
-      "price": 14.457
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:44ef49e1281d7fcba09529fc8ed9f40e6517d54af8bce812bf0a90dc8b9fa507
+size 400

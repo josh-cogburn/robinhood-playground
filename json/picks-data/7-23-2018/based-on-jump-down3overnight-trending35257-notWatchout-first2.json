@@ -1,29 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "WIT",
-      "price": 4.98
-    }
-  ],
-  "16": [
-    {
-      "ticker": "GMO",
-      "price": 0.4103
-    },
-    {
-      "ticker": "WIT",
-      "price": 4.97
-    }
-  ],
-  "30": [
-    {
-      "ticker": "GMO",
-      "price": 0.4305
-    },
-    {
-      "ticker": "WIT",
-      "price": 5
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7b6441d7fe0971ed20ecb846e9ce7f81574e4596a616494c4183ff7fca7a9e88
+size 335

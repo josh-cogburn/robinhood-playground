@@ -1,32 +1,3 @@
-{
-  "80": [
-    {
-      "ticker": "CPE",
-      "price": 12.245
-    }
-  ],
-  "100": [
-    {
-      "ticker": "CPE",
-      "price": 12.22
-    }
-  ],
-  "140": [
-    {
-      "ticker": "QEP",
-      "price": 11.555
-    }
-  ],
-  "198": [
-    {
-      "ticker": "VIAV",
-      "price": 11.88
-    }
-  ],
-  "250": [
-    {
-      "ticker": "VIAV",
-      "price": 11.96
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a4ba57fe251a2c705846f898250383fb65b795c6bfa38a3e877a950b9e6c7d44
+size 365

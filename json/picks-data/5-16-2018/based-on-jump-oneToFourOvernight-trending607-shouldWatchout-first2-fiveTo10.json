@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "SND",
-      "price": 6.6883
-    }
-  ],
-  "5": [
-    {
-      "ticker": "SND",
-      "price": 6.7528
-    }
-  ],
-  "16": [
-    {
-      "ticker": "TCS",
-      "price": 6.54
-    },
-    {
-      "ticker": "KONE",
-      "price": 6.5289
-    }
-  ],
-  "30": [
-    {
-      "ticker": "TCS",
-      "price": 6.55
-    },
-    {
-      "ticker": "KONE",
-      "price": 6.5289
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4d2a77466c95b61fec6f19b24e315d58f0c6f926d3a3a1636027c4532848f374
+size 402

@@ -1,32 +1,3 @@
-{
-  "10": [],
-  "50": [],
-  "200": [
-    {
-      "ticker": "NVTA",
-      "price": 10.17
-    },
-    {
-      "ticker": "BEDU",
-      "price": 11.79
-    }
-  ],
-  "300": [
-    {
-      "ticker": "BEDU",
-      "price": 11.93
-    }
-  ],
-  "380": [
-    {
-      "ticker": "BEDU",
-      "price": 11.98
-    }
-  ],
-  "600": [
-    {
-      "ticker": "BEDU",
-      "price": 12.03
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:462b0846449833d6bf1c5cc67ad342fe5001c62d0475549945efe7cf4a937741
+size 376

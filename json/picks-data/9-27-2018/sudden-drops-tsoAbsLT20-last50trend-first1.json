@@ -1,32 +1,3 @@
-{
-  "280": [
-    {
-      "ticker": "SKYS",
-      "price": 0.7
-    }
-  ],
-  "290": [
-    {
-      "ticker": "SKYS",
-      "price": 0.6998
-    }
-  ],
-  "-50": [
-    {
-      "ticker": "HSGX",
-      "price": 0.615
-    }
-  ],
-  "-30": [
-    {
-      "ticker": "PLX",
-      "price": 0.6705
-    }
-  ],
-  "-10": [
-    {
-      "ticker": "INPX",
-      "price": 0.22
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d221af84ce9bcd6a073fa4096d447c8fdb3d72a46afa269bf54382c4e7bd0411
+size 365

@@ -1,28 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "RAIL",
-      "price": 13.97
-    },
-    {
-      "ticker": "ATTU",
-      "price": 9.87
-    }
-  ],
-  "16": [
-    {
-      "ticker": "RAIL",
-      "price": 14.08
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SSBI",
-      "price": 14.9
-    },
-    {
-      "ticker": "RAIL",
-      "price": 14.2
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f46e919f01a46bb996126c4bc04d287f7c5a2a3b41ba46b2e6232a3466cae836
+size 330

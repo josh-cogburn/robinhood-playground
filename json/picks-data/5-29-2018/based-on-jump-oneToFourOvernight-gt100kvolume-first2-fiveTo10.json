@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "DRIP",
-      "price": 7.426
-    },
-    {
-      "ticker": "TXMD",
-      "price": 6.4
-    }
-  ],
-  "5": [
-    {
-      "ticker": "DRIP",
-      "price": 7.2099
-    },
-    {
-      "ticker": "TXMD",
-      "price": 6.37
-    }
-  ],
-  "30": [
-    {
-      "ticker": "DRIP",
-      "price": 7.13
-    },
-    {
-      "ticker": "TXMD",
-      "price": 6.3435
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:eee311381d854031fc6d924ae94402e3fa948a2a7283731ceb8cc2494b30db52
+size 388

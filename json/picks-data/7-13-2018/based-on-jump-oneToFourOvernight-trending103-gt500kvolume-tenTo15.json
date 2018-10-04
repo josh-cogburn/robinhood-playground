@@ -1,30 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "BILI",
-      "price": 14.4
-    }
-  ],
-  "5": [
-    {
-      "ticker": "BILI",
-      "price": 14.53
-    }
-  ],
-  "16": [
-    {
-      "ticker": "BILI",
-      "price": 13.72
-    }
-  ],
-  "30": [
-    {
-      "ticker": "BILI",
-      "price": 13.74
-    },
-    {
-      "ticker": "VALE",
-      "price": 13.0231
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fa59fba77a8aadbd22fb785b29490d8a1308bed336706b0c532323f710575388
+size 347

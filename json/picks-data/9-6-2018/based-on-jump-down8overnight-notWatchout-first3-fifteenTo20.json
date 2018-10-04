@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "CJPRY",
-      "price": 19.16
-    },
-    {
-      "ticker": "TKPYY",
-      "price": 19.955
-    },
-    {
-      "ticker": "SWGAY",
-      "price": 19.815
-    }
-  ],
-  "5": [
-    {
-      "ticker": "FCCY",
-      "price": 18.5
-    }
-  ],
-  "16": [
-    {
-      "ticker": "FCCY",
-      "price": 19.7
-    }
-  ],
-  "30": [
-    {
-      "ticker": "FCCY",
-      "price": 19.75
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8cbd7e7fd993163e467c2d9e265b8f6508c81ba2f0cdef7effbb17e4455e80d6
+size 407

@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "INTT",
-      "price": 7.75
-    },
-    {
-      "ticker": "IGC",
-      "price": 6.83
-    }
-  ],
-  "200": [
-    {
-      "ticker": "INTT",
-      "price": 7.75
-    },
-    {
-      "ticker": "IGC",
-      "price": 6.465
-    }
-  ],
-  "260": [
-    {
-      "ticker": "INTT",
-      "price": 7.775
-    },
-    {
-      "ticker": "IGC",
-      "price": 6.33
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ace1ddecce7d4967afa8a04ad137be70245bca4b402338bfc73aabd71a59b98e
+size 388

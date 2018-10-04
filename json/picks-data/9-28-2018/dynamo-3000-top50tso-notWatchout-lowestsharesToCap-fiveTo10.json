@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "HLX",
-      "price": 9.8
-    },
-    {
-      "ticker": "USDP",
-      "price": 9.5
-    }
-  ],
-  "200": [
-    {
-      "ticker": "HLX",
-      "price": 9.845
-    },
-    {
-      "ticker": "USDP",
-      "price": 9.525
-    }
-  ],
-  "260": [
-    {
-      "ticker": "HLX",
-      "price": 9.91
-    },
-    {
-      "ticker": "USDP",
-      "price": 9.63
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:63d5f1a65c2361582a645c8d484d3869f9c21e59cd176577ad78b873dedf4bb1
+size 386

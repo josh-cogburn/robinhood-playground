@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "BLNK",
-      "price": 3.62
-    }
-  ],
-  "5": [
-    {
-      "ticker": "BLNK",
-      "price": 3.85
-    }
-  ],
-  "16": [
-    {
-      "ticker": "BLNK",
-      "price": 3.7024
-    },
-    {
-      "ticker": "INPX",
-      "price": 0.12
-    }
-  ],
-  "30": [
-    {
-      "ticker": "BLNK",
-      "price": 3.96
-    },
-    {
-      "ticker": "INPX",
-      "price": 0.1217
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2a7bcfe9a69b287da38ad29c8dc5d1afec7bda3ec737ef7e75fe1de46a3d2a37
+size 402

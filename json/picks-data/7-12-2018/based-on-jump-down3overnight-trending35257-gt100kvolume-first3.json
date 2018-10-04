@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "MYOS",
-      "price": 1.65
-    }
-  ],
-  "5": [
-    {
-      "ticker": "MYOS",
-      "price": 1.599
-    }
-  ],
-  "16": [
-    {
-      "ticker": "MYOS",
-      "price": 1.5612
-    },
-    {
-      "ticker": "BLIN",
-      "price": 1.804
-    }
-  ],
-  "30": [
-    {
-      "ticker": "MYOS",
-      "price": 1.534
-    },
-    {
-      "ticker": "BLIN",
-      "price": 1.69
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cc74bbe39babd9126cf34e0ce7b9958c92ea9e8ac65f696886ed95692b668f34
+size 403

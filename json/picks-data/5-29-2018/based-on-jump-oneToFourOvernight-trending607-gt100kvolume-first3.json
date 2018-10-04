@@ -1,36 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "GERN",
-      "price": 4.75
-    }
-  ],
-  "5": [
-    {
-      "ticker": "SDRL",
-      "price": 0.4328
-    },
-    {
-      "ticker": "GERN",
-      "price": 4.7766
-    },
-    {
-      "ticker": "HTBX",
-      "price": 2.3075
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SDRL",
-      "price": 0.4267
-    },
-    {
-      "ticker": "GERN",
-      "price": 4.785
-    },
-    {
-      "ticker": "ACRX",
-      "price": 3.35
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6fe9c1f5c6f6caf9711f23ded3427e676e60309253ba158afe84581077fe2252
+size 450

@@ -1,33 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "SDRL",
-      "price": 0.4615
-    },
-    {
-      "ticker": "OPK",
-      "price": 4.1824
-    }
-  ],
-  "16": [
-    {
-      "ticker": "SSKN",
-      "price": 2.1
-    },
-    {
-      "ticker": "ATHX",
-      "price": 2.79
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SSKN",
-      "price": 2.1255
-    },
-    {
-      "ticker": "ATHX",
-      "price": 2.8
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5625a6f1e6365c6dfeff97080c0ce2eef5ab98fd566b1a50836899bb5a1dc5da
+size 399

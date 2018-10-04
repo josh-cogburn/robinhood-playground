@@ -78,7 +78,7 @@ const min = arr => arr.reduce((min, v) => min <= v ? min : v, Infinity);
 
 const generateBreakdownConfigs = allRoundup => {
 
-    const maxCount = max(...allRoundup.map(o => o.count));
+    const maxCount = max(allRoundup.map(o => o.count));
     // console.log(maxCount, 'maxCount');
 
     const upperCounts = ({ count }) =>

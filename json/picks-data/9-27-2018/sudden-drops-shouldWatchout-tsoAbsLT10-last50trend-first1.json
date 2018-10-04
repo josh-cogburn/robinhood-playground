@@ -1,32 +1,3 @@
-{
-  "280": [
-    {
-      "ticker": "TIS",
-      "price": 3.28
-    }
-  ],
-  "290": [
-    {
-      "ticker": "OHAI",
-      "price": 1.45
-    }
-  ],
-  "-50": [
-    {
-      "ticker": "HSGX",
-      "price": 0.615
-    }
-  ],
-  "-30": [
-    {
-      "ticker": "HSGX",
-      "price": 0.633
-    }
-  ],
-  "-10": [
-    {
-      "ticker": "INPX",
-      "price": 0.22
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3880ae32d09185fa3f16375781a8744d436522d54fc49016ad9bef7030d5e620
+size 363

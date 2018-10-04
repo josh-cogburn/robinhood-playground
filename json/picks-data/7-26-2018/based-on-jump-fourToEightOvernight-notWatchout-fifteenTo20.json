@@ -1,30 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "AMD",
-      "price": 17.315
-    },
-    {
-      "ticker": "TECS",
-      "price": 20.23
-    }
-  ],
-  "5": [
-    {
-      "ticker": "AMD",
-      "price": 17.265
-    }
-  ],
-  "16": [
-    {
-      "ticker": "AMD",
-      "price": 17.09
-    }
-  ],
-  "30": [
-    {
-      "ticker": "AMD",
-      "price": 17.025
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:bec16df6d9b97d771d01ad09e2fe0eeaa79c87ad41353ae8a77fade80149d1b1
+size 345

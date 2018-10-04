@@ -1,30 +1,3 @@
-{
-  "10": [],
-  "50": [],
-  "200": [
-    {
-      "ticker": "FNKO",
-      "price": 14.21
-    }
-  ],
-  "300": [
-    {
-      "ticker": "FNKO",
-      "price": 13.9
-    },
-    {
-      "ticker": "OOMA",
-      "price": 14.9
-    }
-  ],
-  "380": [
-    {
-      "ticker": "FNKO",
-      "price": 13.84
-    },
-    {
-      "ticker": "OOMA",
-      "price": 14.925
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:680cfadb951e20aaa7349f5ede0adecfaf01ef84097cda9f9b57734ac6afdad5
+size 360

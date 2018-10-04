@@ -1,28 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "GTXI",
-      "price": 2.18
-    }
-  ],
-  "5": [
-    {
-      "ticker": "GTXI",
-      "price": 1.98
-    },
-    {
-      "ticker": "ASM",
-      "price": 0.6
-    }
-  ],
-  "16": [
-    {
-      "ticker": "ASM",
-      "price": 0.58
-    },
-    {
-      "ticker": "URG",
-      "price": 0.7899
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6e7716cfb73538b8ea711b69ec1abe6cdf295f482319abf2668d2f5c776c2c11
+size 325

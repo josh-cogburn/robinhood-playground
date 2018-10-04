@@ -1,28 +1,3 @@
-{
-  "1": [
-    {
-      "ticker": "BLFS",
-      "price": 19.25
-    }
-  ],
-  "169": [
-    {
-      "ticker": "SONO",
-      "price": 17.14
-    },
-    {
-      "ticker": "BLFS",
-      "price": 19.71
-    }
-  ],
-  "273": [
-    {
-      "ticker": "SONO",
-      "price": 16.925
-    },
-    {
-      "ticker": "BLFS",
-      "price": 19.69
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ed4f5a561b49a32fbb4689951ed672186ccb56a6355e81936f2674b85d3119bf
+size 336

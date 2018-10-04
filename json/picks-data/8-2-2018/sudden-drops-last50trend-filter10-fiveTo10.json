@@ -1,27 +1,3 @@
-{
-  "280": [
-    {
-      "ticker": "NVUS",
-      "price": 5.55
-    },
-    {
-      "ticker": "DWSN",
-      "price": 6.25
-    },
-    {
-      "ticker": "APOP",
-      "price": 5.3944
-    },
-    {
-      "ticker": "CUE",
-      "price": 8.63
-    }
-  ],
-  "328": [
-    {
-      "ticker": "NVUS",
-      "price": 6
-    }
-  ],
-  "388": []
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:67bd7a2d67a189ee2af7bd86ae612b0f64ef94248b15861460d626c2c28c69ae
+size 328

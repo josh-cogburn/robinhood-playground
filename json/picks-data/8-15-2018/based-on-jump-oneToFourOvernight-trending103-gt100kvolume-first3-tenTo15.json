@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "TERP",
-      "price": 11.16
-    }
-  ],
-  "5": [
-    {
-      "ticker": "TERP",
-      "price": 11.13
-    }
-  ],
-  "16": [
-    {
-      "ticker": "SOXS",
-      "price": 10.59
-    },
-    {
-      "ticker": "TERP",
-      "price": 11.06
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SOXS",
-      "price": 10.79
-    },
-    {
-      "ticker": "TERP",
-      "price": 11.04
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4e2967263375b75dc71e2689e3c6e9e1c0751d97fd8fd6819655a9980a762d88
+size 404

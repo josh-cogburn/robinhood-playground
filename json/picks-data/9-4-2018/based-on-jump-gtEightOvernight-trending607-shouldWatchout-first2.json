@@ -1,30 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "COKE",
-      "price": 168.7
-    },
-    {
-      "ticker": "ITRI",
-      "price": 66.25
-    }
-  ],
-  "5": [
-    {
-      "ticker": "OASM",
-      "price": 2.13
-    }
-  ],
-  "16": [
-    {
-      "ticker": "OASM",
-      "price": 2.13
-    }
-  ],
-  "30": [
-    {
-      "ticker": "OASM",
-      "price": 2.1332
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:315b10bb7b2ee500e4dae079f29fac11e6724d152da7af581a40065b68d61b46
+size 345

@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "OBLN",
-      "price": 2.4
-    },
-    {
-      "ticker": "PFNX",
-      "price": 5.04
-    }
-  ],
-  "5": [
-    {
-      "ticker": "OBLN",
-      "price": 2.4225
-    },
-    {
-      "ticker": "LEJU",
-      "price": 1.68
-    }
-  ],
-  "16": [
-    {
-      "ticker": "OBLN",
-      "price": 2.4
-    },
-    {
-      "ticker": "ZDGE",
-      "price": 2.73
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:be69a7e411aaa85d3f4c6e6d223a29c37ec3a8e8c43cdc4f22021c903b2df2f6
+size 384

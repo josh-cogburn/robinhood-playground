@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "CSBR",
-      "price": 10.8432
-    },
-    {
-      "ticker": "NIO",
-      "price": 12.47
-    }
-  ],
-  "5": [
-    {
-      "ticker": "CSBR",
-      "price": 10.5726
-    },
-    {
-      "ticker": "NIO",
-      "price": 12.7703
-    }
-  ],
-  "16": [
-    {
-      "ticker": "NIO",
-      "price": 10.19
-    }
-  ],
-  "30": [
-    {
-      "ticker": "NIO",
-      "price": 10.8552
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:765663634e2c5a6268a77e073934533eb2422afc046d24eff1ba3be5dc65eba3
+size 408

@@ -1,32 +1,3 @@
-{
-  "221": [
-    {
-      "ticker": "ALRN",
-      "price": 6.28
-    },
-    {
-      "ticker": "OMEX",
-      "price": 9.66
-    }
-  ],
-  "328": [
-    {
-      "ticker": "ALRN",
-      "price": 6.17
-    },
-    {
-      "ticker": "OMEX",
-      "price": 9.361
-    }
-  ],
-  "388": [
-    {
-      "ticker": "IKNX",
-      "price": 9.088
-    },
-    {
-      "ticker": "DXR",
-      "price": 8.12
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b7a5748aa72c3530ab293aa7ab016be8ef01f363e0784ba60ccd841e662def5e
+size 390

@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "EXTR",
-      "price": 5.54
-    }
-  ],
-  "5": [
-    {
-      "ticker": "EXTR",
-      "price": 6
-    }
-  ],
-  "16": [
-    {
-      "ticker": "EXTR",
-      "price": 5.8
-    },
-    {
-      "ticker": "NIHD",
-      "price": 5.055
-    }
-  ],
-  "30": [
-    {
-      "ticker": "EXTR",
-      "price": 5.955
-    },
-    {
-      "ticker": "NIHD",
-      "price": 5.28
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:bdb0ac736e1d186d9c73618a1ab4128041d6a7f7b934b4c227ca7d014fd12ccb
+size 396

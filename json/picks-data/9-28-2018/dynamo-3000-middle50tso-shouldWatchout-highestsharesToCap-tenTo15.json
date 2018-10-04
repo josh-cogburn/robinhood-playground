@@ -1,28 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "EGOV",
-      "price": 14.875
-    }
-  ],
-  "200": [
-    {
-      "ticker": "WATT",
-      "price": 10.0899
-    },
-    {
-      "ticker": "ESND",
-      "price": 12.8
-    }
-  ],
-  "260": [
-    {
-      "ticker": "BPI",
-      "price": 10.19
-    },
-    {
-      "ticker": "ESND",
-      "price": 12.8
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0bfb5b7415f60ca36925f2f59f9285b9f098513a6d1f16f701dde1c66d4c74d5
+size 337

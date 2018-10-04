@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "GGB",
-      "price": 4.08
-    },
-    {
-      "ticker": "CTIB",
-      "price": 4.12
-    }
-  ],
-  "5": [
-    {
-      "ticker": "SID",
-      "price": 2.04
-    },
-    {
-      "ticker": "EBR",
-      "price": 3.9
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SID",
-      "price": 2.095
-    },
-    {
-      "ticker": "EBR",
-      "price": 3.93
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:15355b80715a31d5bb92a0993ff0a12f5d9afc0a43c3ea5ce284c2054b990b77
+size 379

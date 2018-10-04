@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "BKN",
-      "price": 13.38
-    },
-    {
-      "ticker": "EMD",
-      "price": 13.491
-    }
-  ],
-  "200": [
-    {
-      "ticker": "LAND",
-      "price": 12.34
-    },
-    {
-      "ticker": "BWG",
-      "price": 10.89
-    }
-  ],
-  "260": [
-    {
-      "ticker": "YLCO",
-      "price": 11.9481
-    },
-    {
-      "ticker": "BTA",
-      "price": 11.33
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5e4c0f4eac2b73c81f6f3937b70f48235439188e098c7ac060e93e08051d045e
+size 394

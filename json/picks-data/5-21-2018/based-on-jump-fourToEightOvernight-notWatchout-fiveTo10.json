@@ -1,34 +1,3 @@
-{
-  "16": [
-    {
-      "ticker": "AOD",
-      "price": 9.185
-    },
-    {
-      "ticker": "CMFN",
-      "price": 9.25
-    },
-    {
-      "ticker": "ALPN",
-      "price": 10
-    }
-  ],
-  "30": [
-    {
-      "ticker": "AOD",
-      "price": 9.1664
-    },
-    {
-      "ticker": "CMFN",
-      "price": 9.0317
-    },
-    {
-      "ticker": "ALPN",
-      "price": 9.97
-    },
-    {
-      "ticker": "LAZY",
-      "price": 8.6669
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cd20430d2674f6b5e9be050730dd8861d544dbcf71d1710c2e55bb6873fca8fd
+size 432

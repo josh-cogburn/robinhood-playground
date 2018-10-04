@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "XENE",
-      "price": 12.15
-    },
-    {
-      "ticker": "LIVE",
-      "price": 10.6
-    }
-  ],
-  "5": [
-    {
-      "ticker": "XENE",
-      "price": 12.25
-    },
-    {
-      "ticker": "LIVE",
-      "price": 10.5
-    }
-  ],
-  "16": [
-    {
-      "ticker": "XENE",
-      "price": 12.15
-    },
-    {
-      "ticker": "LIVE",
-      "price": 10.5
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:13234ca6dbb0f2bbd2072390e6c06168188d17829fe526a29ea34eee63fb05f5
+size 387

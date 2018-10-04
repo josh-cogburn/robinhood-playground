@@ -1,32 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "LGCY",
-      "price": 6.35
-    },
-    {
-      "ticker": "IBN",
-      "price": 8.45
-    }
-  ],
-  "16": [
-    {
-      "ticker": "LGCY",
-      "price": 6.49
-    },
-    {
-      "ticker": "IBN",
-      "price": 8.44
-    }
-  ],
-  "30": [
-    {
-      "ticker": "LGCY",
-      "price": 6.41
-    },
-    {
-      "ticker": "IBN",
-      "price": 8.405
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d2af7b2bc9c0ea09fb9a30ba46e6065d6d42fff63961d325fe433c4b791c1589
+size 383

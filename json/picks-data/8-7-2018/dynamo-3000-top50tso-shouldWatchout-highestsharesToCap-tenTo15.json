@@ -1,32 +1,3 @@
-{
-  "4": [
-    {
-      "ticker": "TBIO",
-      "price": 10
-    },
-    {
-      "ticker": "RARX",
-      "price": 10.6
-    }
-  ],
-  "351": [
-    {
-      "ticker": "CSSE",
-      "price": 10.05
-    },
-    {
-      "ticker": "TBIO",
-      "price": 10.0825
-    }
-  ],
-  "381": [
-    {
-      "ticker": "CSSE",
-      "price": 10.0546
-    },
-    {
-      "ticker": "XENE",
-      "price": 10.05
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6dd39b18250d0e4ea4c882058ff50509a8fcf54c65457d328c8ca644d745afbc
+size 393

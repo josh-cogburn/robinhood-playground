@@ -1,36 +1,3 @@
-{
-  "221": [],
-  "280": [],
-  "290": [
-    {
-      "ticker": "RSLS",
-      "price": 0.1216
-    }
-  ],
-  "328": [
-    {
-      "ticker": "RSLS",
-      "price": 0.1115
-    }
-  ],
-  "360": [
-    {
-      "ticker": "RSLS",
-      "price": 0.1049
-    },
-    {
-      "ticker": "TIS",
-      "price": 0.7725
-    }
-  ],
-  "388": [
-    {
-      "ticker": "RSLS",
-      "price": 0.1035
-    },
-    {
-      "ticker": "TIS",
-      "price": 0.796
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ea022454b43b06330f90c906b5254a18d5960c7955718a64ea46f9f89b41c6be
+size 439

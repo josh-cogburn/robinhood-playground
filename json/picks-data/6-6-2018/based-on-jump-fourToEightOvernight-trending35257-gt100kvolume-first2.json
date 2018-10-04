@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "SNES",
-      "price": 2.05
-    }
-  ],
-  "5": [
-    {
-      "ticker": "SNES",
-      "price": 2.12
-    }
-  ],
-  "16": [
-    {
-      "ticker": "SNES",
-      "price": 2.2041
-    },
-    {
-      "ticker": "NLST",
-      "price": 0.2407
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SNES",
-      "price": 2.17
-    },
-    {
-      "ticker": "NLST",
-      "price": 0.2342
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:bfe1df702fc976e7eb5cba5f4339830a75d0a2ffb8005690fd35cf8057359dce
+size 404

@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "VEDL",
-      "price": 12.68
-    },
-    {
-      "ticker": "MNOV",
-      "price": 10.33
-    }
-  ],
-  "5": [
-    {
-      "ticker": "VEDL",
-      "price": 12.605
-    },
-    {
-      "ticker": "MNOV",
-      "price": 10.46
-    }
-  ],
-  "16": [
-    {
-      "ticker": "VEDL",
-      "price": 12.615
-    },
-    {
-      "ticker": "MNOV",
-      "price": 10.451
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:edcb117e9a201a2283efe84277028959a3e3fdc10e859b95396cca452a914b87
+size 393

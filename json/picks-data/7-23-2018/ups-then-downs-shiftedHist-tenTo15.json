@@ -1,33 +1,3 @@
-{
-  "10": [],
-  "50": [
-    {
-      "ticker": "INS",
-      "price": 10.62
-    }
-  ],
-  "200": [
-    {
-      "ticker": "INS",
-      "price": 10.6597
-    }
-  ],
-  "300": [
-    {
-      "ticker": "INS",
-      "price": 10.78
-    }
-  ],
-  "380": [
-    {
-      "ticker": "INS",
-      "price": 10.75
-    }
-  ],
-  "600": [
-    {
-      "ticker": "INS",
-      "price": 10.74
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:244ffa8d427f1b1aa5037f2efcb89c733b8fcf9036c678465caa7b2971bdb254
+size 375

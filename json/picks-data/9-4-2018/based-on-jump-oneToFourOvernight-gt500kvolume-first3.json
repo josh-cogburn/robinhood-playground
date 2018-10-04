@@ -1,28 +1,3 @@
-{
-  "0": [],
-  "5": [],
-  "16": [
-    {
-      "ticker": "AMRN",
-      "price": 3.23
-    },
-    {
-      "ticker": "NCTY",
-      "price": 1.94
-    }
-  ],
-  "30": [
-    {
-      "ticker": "AMRN",
-      "price": 3.23
-    },
-    {
-      "ticker": "NCTY",
-      "price": 1.799
-    },
-    {
-      "ticker": "CEI",
-      "price": 0.2369
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:aff80047270bc41d792b9be1469ed496fb0f772079ecf29801e886019bdc335f
+size 339

@@ -1,30 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "HIMX",
-      "price": 7.545
-    }
-  ],
-  "5": [
-    {
-      "ticker": "HIMX",
-      "price": 7.555
-    }
-  ],
-  "16": [
-    {
-      "ticker": "HIMX",
-      "price": 7.575
-    }
-  ],
-  "30": [
-    {
-      "ticker": "TPIV",
-      "price": 5.3
-    },
-    {
-      "ticker": "BOXL",
-      "price": 6.7875
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d4a004cf3b589a299b874d2a15e717570ff55b6421d7789361dc013594266b57
+size 345

@@ -1,32 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "HCHC",
-      "price": 7.57
-    }
-  ],
-  "16": [
-    {
-      "ticker": "HCHC",
-      "price": 7.2
-    },
-    {
-      "ticker": "ASPU",
-      "price": 8.4
-    }
-  ],
-  "30": [
-    {
-      "ticker": "HCHC",
-      "price": 7.1001
-    },
-    {
-      "ticker": "PRCP",
-      "price": 9.6
-    },
-    {
-      "ticker": "ASPU",
-      "price": 8.349
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:dc00f45ec8b239923a0cdea60ca885351fb39f41c4d7b63d1a43c7906bd8a539
+size 385

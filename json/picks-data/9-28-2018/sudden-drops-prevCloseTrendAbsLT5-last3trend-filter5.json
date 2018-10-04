@@ -1,34 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "AMTX",
-      "price": 0.9501
-    }
-  ],
-  "153": [
-    {
-      "ticker": "STRM",
-      "price": 1.2001
-    },
-    {
-      "ticker": "DTEA",
-      "price": 2.8
-    }
-  ],
-  "189": [
-    {
-      "ticker": "SNOA",
-      "price": 1.5
-    },
-    {
-      "ticker": "AMTX",
-      "price": 0.95
-    }
-  ],
-  "400": [
-    {
-      "ticker": "NAUH",
-      "price": 0.8
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:264e918dda1c74d9434a92a03a2fb3bc547fbcad266e40e7c8c007272fcae016
+size 405

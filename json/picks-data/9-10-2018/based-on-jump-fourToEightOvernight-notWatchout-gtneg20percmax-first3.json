@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "URG",
-      "price": 0.77
-    }
-  ],
-  "5": [
-    {
-      "ticker": "URG",
-      "price": 0.797
-    }
-  ],
-  "16": [
-    {
-      "ticker": "URG",
-      "price": 0.7725
-    },
-    {
-      "ticker": "EMX",
-      "price": 1.2231
-    }
-  ],
-  "30": [
-    {
-      "ticker": "URG",
-      "price": 0.786
-    },
-    {
-      "ticker": "EMX",
-      "price": 1.2231
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5cd9ae624433df0f8736a1395d24760d29cfa922c84da20e63ad9720c9edb8d4
+size 400

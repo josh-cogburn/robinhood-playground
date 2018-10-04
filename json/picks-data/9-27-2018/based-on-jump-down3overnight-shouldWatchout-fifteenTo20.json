@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "BBBY",
-      "price": 15.1325
-    },
-    {
-      "ticker": "XON",
-      "price": 17.64
-    }
-  ],
-  "5": [
-    {
-      "ticker": "BBBY",
-      "price": 14.98
-    },
-    {
-      "ticker": "XON",
-      "price": 17.4201
-    }
-  ],
-  "16": [
-    {
-      "ticker": "XON",
-      "price": 17.73
-    }
-  ],
-  "30": [
-    {
-      "ticker": "XON",
-      "price": 17.8
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:09506ca333caf26ec062d31ffc8af79ae022c60ae18c85f9f092a52c54d648e4
+size 403

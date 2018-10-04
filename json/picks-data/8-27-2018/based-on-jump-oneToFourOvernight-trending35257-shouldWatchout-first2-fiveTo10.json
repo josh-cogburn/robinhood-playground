@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "SSC",
-      "price": 5.4
-    },
-    {
-      "ticker": "ALDX",
-      "price": 7.65
-    }
-  ],
-  "5": [
-    {
-      "ticker": "SSC",
-      "price": 4.8801
-    },
-    {
-      "ticker": "ALDX",
-      "price": 7.65
-    }
-  ],
-  "16": [
-    {
-      "ticker": "ALDX",
-      "price": 7.75
-    },
-    {
-      "ticker": "VLRS",
-      "price": 7.6
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:520b3ddba408e0437a6230027076af7f3b20eac1ec630d4ce8495b7f5910c139
+size 382

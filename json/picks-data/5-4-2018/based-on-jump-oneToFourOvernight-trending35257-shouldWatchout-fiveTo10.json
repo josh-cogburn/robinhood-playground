@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "RIOT",
-      "price": 7.855
-    }
-  ],
-  "5": [
-    {
-      "ticker": "RIOT",
-      "price": 7.84
-    }
-  ],
-  "16": [
-    {
-      "ticker": "RIOT",
-      "price": 7.8595
-    },
-    {
-      "ticker": "HCHC",
-      "price": 6.96
-    }
-  ],
-  "30": [
-    {
-      "ticker": "RIOT",
-      "price": 7.9029
-    },
-    {
-      "ticker": "HCHC",
-      "price": 6.9106
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b13f816ae7e73b6c0af983664f47c1532e2be2841c7b3700092bf2d30dbc07fc
+size 405

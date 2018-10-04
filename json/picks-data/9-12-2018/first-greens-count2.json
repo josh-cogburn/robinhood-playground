@@ -1,32 +1,3 @@
-{
-  "190": [
-    {
-      "ticker": "CVEO",
-      "price": 3.4
-    },
-    {
-      "ticker": "ASNS",
-      "price": 1.84
-    }
-  ],
-  "250": [
-    {
-      "ticker": "CVEO",
-      "price": 3.42
-    },
-    {
-      "ticker": "ASNS",
-      "price": 1.84
-    }
-  ],
-  "600": [
-    {
-      "ticker": "CVEO",
-      "price": 3.48
-    },
-    {
-      "ticker": "ASNS",
-      "price": 1.86
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e219fa1bb9c7cb0ce95470211ebc7a3a921aafaade07d8eff5d2a10c5f00dab3
+size 388

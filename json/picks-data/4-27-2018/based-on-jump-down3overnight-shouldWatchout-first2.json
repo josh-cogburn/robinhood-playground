@@ -1,32 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "CLDC",
-      "price": 2.02
-    },
-    {
-      "ticker": "AKTX",
-      "price": 1.85
-    }
-  ],
-  "16": [
-    {
-      "ticker": "CLDC",
-      "price": 2.234
-    },
-    {
-      "ticker": "AKTX",
-      "price": 1.9
-    }
-  ],
-  "30": [
-    {
-      "ticker": "CLDC",
-      "price": 2.234
-    },
-    {
-      "ticker": "AKTX",
-      "price": 1.89
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:eeba6a9884a5940308a0393f8c73a3bbff7c5942931416caef8e05d505b5e1ae
+size 386

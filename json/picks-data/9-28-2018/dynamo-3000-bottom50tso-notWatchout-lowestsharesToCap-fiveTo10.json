@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "FEIM",
-      "price": 9.8047
-    },
-    {
-      "ticker": "GCI",
-      "price": 9.975
-    }
-  ],
-  "200": [
-    {
-      "ticker": "SOXS",
-      "price": 9.78
-    },
-    {
-      "ticker": "VIV",
-      "price": 9.77
-    }
-  ],
-  "260": [
-    {
-      "ticker": "SOXS",
-      "price": 9.72
-    },
-    {
-      "ticker": "VIV",
-      "price": 9.77
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fbe30a8f28b225ffce1a3230e8910194b1ea94f57a33de611ba6e90fe3628fa1
+size 389

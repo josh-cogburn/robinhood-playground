@@ -1,30 +1,3 @@
-{
-  "16": [
-    {
-      "ticker": "SDR",
-      "price": 1.475
-    },
-    {
-      "ticker": "CLNE",
-      "price": 2.52
-    },
-    {
-      "ticker": "DDE",
-      "price": 2.0472
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SDR",
-      "price": 1.491
-    },
-    {
-      "ticker": "CLNE",
-      "price": 2.44
-    },
-    {
-      "ticker": "DDE",
-      "price": 2.1281
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ecf0cc74816141f0a38c8a46bf5fc723d3d593d69ee124caeee1cb3b9e7e0dd2
+size 374

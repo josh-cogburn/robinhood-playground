@@ -1,28 +1,3 @@
-{
-  "10": [],
-  "50": [],
-  "200": [
-    {
-      "ticker": "ELOX",
-      "price": 12.5865
-    }
-  ],
-  "300": [
-    {
-      "ticker": "ELOX",
-      "price": 13
-    }
-  ],
-  "380": [
-    {
-      "ticker": "ELOX",
-      "price": 12.96
-    }
-  ],
-  "600": [
-    {
-      "ticker": "ELOX",
-      "price": 13.06
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a05dad4f5b077e111430e5c2a570765888ed6262a9761e0251e1aca48e34159e
+size 317

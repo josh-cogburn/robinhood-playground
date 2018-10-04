@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "VLRX",
-      "price": 1.6583
-    }
-  ],
-  "5": [
-    {
-      "ticker": "VLRX",
-      "price": 1.6343
-    }
-  ],
-  "16": [
-    {
-      "ticker": "OCX",
-      "price": 3.25
-    },
-    {
-      "ticker": "VLRX",
-      "price": 1.6538
-    }
-  ],
-  "30": [
-    {
-      "ticker": "OCX",
-      "price": 3.05
-    },
-    {
-      "ticker": "VLRX",
-      "price": 1.6235
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:68a432cbf8e1cacbbdb5d35d0f69f9b24bf4584c3856f893f222c4f55336ebef
+size 404

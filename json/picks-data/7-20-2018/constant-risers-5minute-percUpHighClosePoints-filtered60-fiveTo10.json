@@ -1,29 +1,3 @@
-{
-  "40": [
-    {
-      "ticker": "CDMO",
-      "price": 5.99
-    }
-  ],
-  "80": [
-    {
-      "ticker": "CDMO",
-      "price": 6.03
-    }
-  ],
-  "100": [
-    {
-      "ticker": "DRIP",
-      "price": 6.17
-    }
-  ],
-  "140": [
-    {
-      "ticker": "CLF",
-      "price": 9.74
-    }
-  ],
-  "198": [],
-  "250": [],
-  "300": []
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:24e9e86c4cb70d70f630c7812713964ff63bff64c37d05eadfd84919bd7eb9c4
+size 326

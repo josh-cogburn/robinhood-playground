@@ -1,32 +1,3 @@
-{
-  "80": [
-    {
-      "ticker": "HOS",
-      "price": 5.96
-    }
-  ],
-  "100": [
-    {
-      "ticker": "VSTM",
-      "price": 7.44
-    }
-  ],
-  "140": [
-    {
-      "ticker": "GALT",
-      "price": 6.306
-    }
-  ],
-  "198": [
-    {
-      "ticker": "WTI",
-      "price": 9.68
-    }
-  ],
-  "250": [
-    {
-      "ticker": "WTI",
-      "price": 9.795
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:bc169469b0f81efa3261369407829ed0365ee20a8288b19b5045f14e9f5b1039
+size 360

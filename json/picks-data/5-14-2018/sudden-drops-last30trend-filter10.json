@@ -1,33 +1,3 @@
-{
-  "221": [
-    {
-      "ticker": "OMNT",
-      "price": 1.57
-    },
-    {
-      "ticker": "SPCB",
-      "price": 2
-    },
-    {
-      "ticker": "PRPO",
-      "price": 0.517
-    }
-  ],
-  "280": [],
-  "328": [
-    {
-      "ticker": "PRPO",
-      "price": 0.485
-    }
-  ],
-  "388": [
-    {
-      "ticker": "OMNT",
-      "price": 1.26
-    },
-    {
-      "ticker": "LIFE",
-      "price": 1.6
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:472a4b4fd71c1bd1a2b88f8d3272e77988efdec253ddc01b426cca3623dd9bad
+size 400

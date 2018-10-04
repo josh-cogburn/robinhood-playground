@@ -1,33 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "EKSO",
-      "price": 2.4634
-    }
-  ],
-  "16": [
-    {
-      "ticker": "SEAC",
-      "price": 1.4418
-    },
-    {
-      "ticker": "EKSO",
-      "price": 2.4159
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SEAC",
-      "price": 1.5
-    },
-    {
-      "ticker": "BBOX",
-      "price": 1.5765
-    },
-    {
-      "ticker": "EKSO",
-      "price": 2.38
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:057460726bc181f00ebb4f410a1e99d65c4730b70772f86f90a125e2804edaaf
+size 403

@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "ALDX",
-      "price": 8.15
-    }
-  ],
-  "5": [
-    {
-      "ticker": "ALDX",
-      "price": 8.3851
-    }
-  ],
-  "16": [
-    {
-      "ticker": "BOXL",
-      "price": 9.9
-    },
-    {
-      "ticker": "ALDX",
-      "price": 8.5
-    }
-  ],
-  "30": [
-    {
-      "ticker": "BOXL",
-      "price": 9.5
-    },
-    {
-      "ticker": "ALDX",
-      "price": 8.452
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:36854b841ea37e151681495666fa3820f32b4834f9aa18d1b0d3138775a83147
+size 398

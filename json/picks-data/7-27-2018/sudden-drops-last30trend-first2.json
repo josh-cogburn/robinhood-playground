@@ -1,32 +1,3 @@
-{
-  "221": [
-    {
-      "ticker": "HMNY",
-      "price": 2.63
-    },
-    {
-      "ticker": "HYRE",
-      "price": 3.2458
-    }
-  ],
-  "280": [
-    {
-      "ticker": "HMNY",
-      "price": 2.33
-    },
-    {
-      "ticker": "BSPM",
-      "price": 2.18
-    }
-  ],
-  "328": [
-    {
-      "ticker": "HMNY",
-      "price": 2.1
-    },
-    {
-      "ticker": "GST",
-      "price": 0.1251
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:72e4ed3c9d35254f7c987e1b60198440dd2a711eb58c1b81568eb460ff0c0224
+size 391

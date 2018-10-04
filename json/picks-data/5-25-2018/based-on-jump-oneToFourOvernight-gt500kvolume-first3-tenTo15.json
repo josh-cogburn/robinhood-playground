@@ -1,30 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "UVXY",
-      "price": 11.09
-    }
-  ],
-  "5": [
-    {
-      "ticker": "UVXY",
-      "price": 11.24
-    }
-  ],
-  "16": [
-    {
-      "ticker": "UVXY",
-      "price": 11.275
-    }
-  ],
-  "30": [
-    {
-      "ticker": "UVXY",
-      "price": 11.15
-    },
-    {
-      "ticker": "PBR.A",
-      "price": 11.27
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e00ab89be4ed7ab3b7cfaf165c69c7c369972ca3ba96fca51c5752f286172259
+size 348

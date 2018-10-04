@@ -1,32 +1,3 @@
-{
-  "10": [
-    {
-      "ticker": "NFEC",
-      "price": 5.1163
-    }
-  ],
-  "50": [],
-  "200": [],
-  "300": [
-    {
-      "ticker": "MCF",
-      "price": 5.75
-    },
-    {
-      "ticker": "SPWH",
-      "price": 5.1101
-    }
-  ],
-  "380": [
-    {
-      "ticker": "MCF",
-      "price": 5.795
-    }
-  ],
-  "600": [
-    {
-      "ticker": "MCF",
-      "price": 5.8
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5b2b3a2773284cb43f52963cb9645c3b9c067620772568f03c47e2de87c02bde
+size 372

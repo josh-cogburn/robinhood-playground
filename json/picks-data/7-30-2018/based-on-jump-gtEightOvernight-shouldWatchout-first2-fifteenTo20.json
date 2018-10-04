@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "AWX",
-      "price": 17.8883
-    }
-  ],
-  "5": [
-    {
-      "ticker": "AWX",
-      "price": 16.3
-    },
-    {
-      "ticker": "APLS",
-      "price": 17.31
-    }
-  ],
-  "16": [
-    {
-      "ticker": "AWX",
-      "price": 13.58
-    },
-    {
-      "ticker": "APLS",
-      "price": 17.39
-    }
-  ],
-  "30": [
-    {
-      "ticker": "APLS",
-      "price": 18.2
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f3f8d86014dedacb0efd49d9f3e31758c445b269ea60efbff8609076318ecc2e
+size 401

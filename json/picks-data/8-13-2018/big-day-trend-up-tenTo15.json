@@ -1,29 +1,3 @@
-{
-  "10": [],
-  "35": [
-    {
-      "ticker": "ROAD",
-      "price": 11.8
-    }
-  ],
-  "90": [
-    {
-      "ticker": "ROAD",
-      "price": 11.76
-    }
-  ],
-  "223": [
-    {
-      "ticker": "ROAD",
-      "price": 11.735
-    },
-    {
-      "ticker": "FENC",
-      "price": 10.51
-    },
-    {
-      "ticker": "VIIX",
-      "price": 13.28
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:175d4197958ecbb706eec1706c612145dfa0a678b42b2e943342a8e99a07db49
+size 347

@@ -1,31 +1,3 @@
-{
-  "10": [],
-  "50": [
-    {
-      "ticker": "RAD",
-      "price": 2.035
-    }
-  ],
-  "200": [
-    {
-      "ticker": "RAD",
-      "price": 1.99
-    }
-  ],
-  "300": [
-    {
-      "ticker": "RAD",
-      "price": 1.9199
-    }
-  ],
-  "380": [
-    {
-      "ticker": "RAD",
-      "price": 1.96
-    },
-    {
-      "ticker": "MDLY",
-      "price": 3.6
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a417bfa9bb3b9008a7d88c04660da6f16e68662d79464989e4efda5b82634d8c
+size 356

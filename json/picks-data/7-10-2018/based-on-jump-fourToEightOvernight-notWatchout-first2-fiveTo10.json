@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "MGIC",
-      "price": 8.55
-    },
-    {
-      "ticker": "HMI",
-      "price": 10
-    }
-  ],
-  "5": [
-    {
-      "ticker": "MGIC",
-      "price": 8.55
-    }
-  ],
-  "16": [
-    {
-      "ticker": "MGIC",
-      "price": 8.5
-    },
-    {
-      "ticker": "HMI",
-      "price": 9.9105
-    }
-  ],
-  "30": [
-    {
-      "ticker": "MGIC",
-      "price": 8.5
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:38f7bd883efe90024682c77e0416c38bf88bfd40546f041e6855cea54d346e71
+size 394

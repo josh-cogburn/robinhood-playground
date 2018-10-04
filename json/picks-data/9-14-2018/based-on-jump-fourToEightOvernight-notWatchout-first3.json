@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "CPSH",
-      "price": 1.8
-    }
-  ],
-  "5": [
-    {
-      "ticker": "CPSH",
-      "price": 1.82
-    }
-  ],
-  "16": [
-    {
-      "ticker": "CPSH",
-      "price": 1.71
-    }
-  ],
-  "30": [
-    {
-      "ticker": "CPSH",
-      "price": 1.67
-    },
-    {
-      "ticker": "ONS",
-      "price": 0.8999
-    },
-    {
-      "ticker": "HYRE",
-      "price": 2.6597
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7cbe7a1120b6af716fac7cb5ffd002ec727f9e117c17efb4c26a86ddc8ea058b
+size 400

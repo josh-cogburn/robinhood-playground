@@ -1,30 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "GFN",
-      "price": 13.85
-    }
-  ],
-  "5": [
-    {
-      "ticker": "GFN",
-      "price": 13.85
-    }
-  ],
-  "16": [
-    {
-      "ticker": "GFN",
-      "price": 13.9
-    }
-  ],
-  "30": [
-    {
-      "ticker": "GFN",
-      "price": 14
-    },
-    {
-      "ticker": "LOV",
-      "price": 12.7163
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:21ac89370d1f528d2c00dca7f23ebac25bf51957cb188c64740852635011df31
+size 339

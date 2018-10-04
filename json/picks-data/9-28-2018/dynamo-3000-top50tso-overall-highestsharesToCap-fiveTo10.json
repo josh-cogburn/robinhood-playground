@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "IGC",
-      "price": 6.83
-    },
-    {
-      "ticker": "CCLP",
-      "price": 5.05
-    }
-  ],
-  "200": [
-    {
-      "ticker": "DLNG",
-      "price": 8.659
-    },
-    {
-      "ticker": "IGC",
-      "price": 6.465
-    }
-  ],
-  "260": [
-    {
-      "ticker": "IGC",
-      "price": 6.33
-    },
-    {
-      "ticker": "CCLP",
-      "price": 5.09
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:53aea35ebaf880fb389d6fe4fa4ac3aa9f690c3fecd2d11716886d9cb3f6e214
+size 388

@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "ETM",
-      "price": 8.075
-    }
-  ],
-  "5": [
-    {
-      "ticker": "ETM",
-      "price": 8.125
-    }
-  ],
-  "16": [
-    {
-      "ticker": "RFL",
-      "price": 9.39
-    },
-    {
-      "ticker": "ETM",
-      "price": 8.2
-    }
-  ],
-  "30": [
-    {
-      "ticker": "RFL",
-      "price": 9.39
-    },
-    {
-      "ticker": "ETM",
-      "price": 8.25
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:266012d91c122992e355324de7c4b185781645833292b688f43a31433faf963b
+size 393

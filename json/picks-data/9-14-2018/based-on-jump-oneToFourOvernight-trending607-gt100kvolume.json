@@ -1,33 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "MYSZ",
-      "price": 1.2916
-    }
-  ],
-  "16": [
-    {
-      "ticker": "MYSZ",
-      "price": 1.416
-    },
-    {
-      "ticker": "INSG",
-      "price": 4.4
-    }
-  ],
-  "30": [
-    {
-      "ticker": "MYSZ",
-      "price": 1.3817
-    },
-    {
-      "ticker": "JMU",
-      "price": 1.26
-    },
-    {
-      "ticker": "INSG",
-      "price": 4.3236
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9c35bd7e1be9d010e7704e22089ab47559c907e8ae76ca082d8ca053573eb5d4
+size 401

@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "GFN",
-      "price": 15.85
-    },
-    {
-      "ticker": "DIAX",
-      "price": 19.66
-    }
-  ],
-  "200": [
-    {
-      "ticker": "CDXS",
-      "price": 17.35
-    },
-    {
-      "ticker": "DNOW",
-      "price": 16.77
-    }
-  ],
-  "260": [
-    {
-      "ticker": "GTN",
-      "price": 17.55
-    },
-    {
-      "ticker": "HZNP",
-      "price": 19.59
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:dc5c07ae86124061b6fe1926b9123401b5a946bad0aff2a01f2436bb02540b79
+size 393

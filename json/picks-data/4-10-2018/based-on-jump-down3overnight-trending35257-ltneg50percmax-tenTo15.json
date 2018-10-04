@@ -1,32 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "SOXS",
-      "price": 12.36
-    }
-  ],
-  "16": [
-    {
-      "ticker": "SELB",
-      "price": 10.1501
-    },
-    {
-      "ticker": "SOXS",
-      "price": 12.561
-    },
-    {
-      "ticker": "TVIX",
-      "price": 10.03
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SOXS",
-      "price": 12.642
-    },
-    {
-      "ticker": "TVIX",
-      "price": 10.1199
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:eb434bf1e74983dcce9e09e2d87ed903a5ba683860845fe35c21ebd057e340b4
+size 397

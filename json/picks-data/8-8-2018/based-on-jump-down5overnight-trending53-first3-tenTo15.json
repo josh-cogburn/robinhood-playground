@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "CMT",
-      "price": 12.15
-    },
-    {
-      "ticker": "NCSM",
-      "price": 16.625
-    }
-  ],
-  "5": [
-    {
-      "ticker": "ERA",
-      "price": 12.9801
-    },
-    {
-      "ticker": "CMT",
-      "price": 9.9156
-    }
-  ],
-  "16": [
-    {
-      "ticker": "ERA",
-      "price": 13
-    }
-  ],
-  "30": [
-    {
-      "ticker": "ERA",
-      "price": 13
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3cd76d57308f694ec6f600a2106c9bc4b6a0f1378d2369c8373c511950095005
+size 397

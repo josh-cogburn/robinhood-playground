@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "OXBR",
-      "price": 1.6
-    }
-  ],
-  "5": [
-    {
-      "ticker": "OXBR",
-      "price": 1.6
-    }
-  ],
-  "16": [
-    {
-      "ticker": "EVFM",
-      "price": 2.4155
-    },
-    {
-      "ticker": "OXBR",
-      "price": 1.6
-    }
-  ],
-  "30": [
-    {
-      "ticker": "EVFM",
-      "price": 2.35
-    },
-    {
-      "ticker": "OXBR",
-      "price": 1.6
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:78cfd904291de99969b9743847ac869ab270e8181364252822131f501679f654
+size 396

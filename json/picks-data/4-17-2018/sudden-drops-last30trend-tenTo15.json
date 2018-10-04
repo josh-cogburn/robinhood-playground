@@ -1,32 +1,3 @@
-{
-  "221": [
-    {
-      "ticker": "OMEX",
-      "price": 10.7032
-    },
-    {
-      "ticker": "UVXY",
-      "price": 14.74
-    }
-  ],
-  "328": [
-    {
-      "ticker": "OMEX",
-      "price": 10.51
-    },
-    {
-      "ticker": "IOR",
-      "price": 11.4
-    }
-  ],
-  "388": [
-    {
-      "ticker": "IOR",
-      "price": 11.4
-    },
-    {
-      "ticker": "PHII",
-      "price": 11.4801
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6aa3502c3a724bbc398528cd8a41a413fd903b8b694d1aa65706309e68e57735
+size 395

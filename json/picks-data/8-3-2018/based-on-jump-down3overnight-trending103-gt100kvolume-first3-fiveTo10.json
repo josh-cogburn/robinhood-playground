@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "MFA",
-      "price": 7.69
-    }
-  ],
-  "5": [
-    {
-      "ticker": "MFA",
-      "price": 7.69
-    }
-  ],
-  "16": [
-    {
-      "ticker": "MFA",
-      "price": 7.725
-    },
-    {
-      "ticker": "NE",
-      "price": 6.065
-    }
-  ],
-  "30": [
-    {
-      "ticker": "MFA",
-      "price": 7.715
-    },
-    {
-      "ticker": "NE",
-      "price": 6.09
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7a72ded2f406a94d4bdbbb0886f811482f62b60e733eabe12bc7b5834b5dd011
+size 393

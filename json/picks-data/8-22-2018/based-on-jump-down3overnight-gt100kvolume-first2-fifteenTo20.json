@@ -1,33 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "SMCI",
-      "price": 15.45
-    },
-    {
-      "ticker": "FNSR",
-      "price": 19.12
-    }
-  ],
-  "16": [
-    {
-      "ticker": "SMCI",
-      "price": 15.475
-    },
-    {
-      "ticker": "FNSR",
-      "price": 18.825
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SMCI",
-      "price": 15.675
-    },
-    {
-      "ticker": "SCO",
-      "price": 16.52
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:dcf0ed676cb30c39b930625af3aa05336979cda7ed2627eec463a676a2ae1a37
+size 404

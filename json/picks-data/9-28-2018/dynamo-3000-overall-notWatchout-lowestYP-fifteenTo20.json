@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "RDUS",
-      "price": 17.52
-    },
-    {
-      "ticker": "TTM",
-      "price": 15.405
-    }
-  ],
-  "200": [
-    {
-      "ticker": "TTM",
-      "price": 15.3
-    },
-    {
-      "ticker": "RDUS",
-      "price": 17.62
-    }
-  ],
-  "260": [
-    {
-      "ticker": "TTM",
-      "price": 15.33
-    },
-    {
-      "ticker": "RDUS",
-      "price": 17.78
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:eb7ff251128da30afbee623c1860e8c1b6c9b9e5e75ed2077c88fddd8431e22f
+size 392

@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "SRRA",
-      "price": 3.1399
-    }
-  ],
-  "5": [
-    {
-      "ticker": "SRRA",
-      "price": 3.16
-    }
-  ],
-  "16": [
-    {
-      "ticker": "SRRA",
-      "price": 3.28
-    },
-    {
-      "ticker": "DNN",
-      "price": 0.53
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SRRA",
-      "price": 3.385
-    },
-    {
-      "ticker": "DNN",
-      "price": 0.5469
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c6b3811f39e89047c19447ef0096e7632e5dc05a590185f7b639adccf6456877
+size 401

@@ -1,32 +1,3 @@
-{
-  "10": [
-    {
-      "ticker": "BFR",
-      "price": 13.23
-    }
-  ],
-  "90": [
-    {
-      "ticker": "OMN",
-      "price": 10.4
-    },
-    {
-      "ticker": "TAST",
-      "price": 14.475
-    },
-    {
-      "ticker": "LMRK",
-      "price": 13.54
-    }
-  ],
-  "223": [
-    {
-      "ticker": "OMN",
-      "price": 10.65
-    },
-    {
-      "ticker": "TAST",
-      "price": 14.725
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:df2e4ed184e890641a6c5edc8d4253e12808f081e036cf2ed116c18769b451ea
+size 391

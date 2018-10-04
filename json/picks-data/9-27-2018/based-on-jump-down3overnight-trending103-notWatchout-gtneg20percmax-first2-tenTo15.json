@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "CCXI",
-      "price": 11.78
-    }
-  ],
-  "5": [
-    {
-      "ticker": "CCXI",
-      "price": 11.45
-    }
-  ],
-  "16": [
-    {
-      "ticker": "CCXI",
-      "price": 11.494
-    },
-    {
-      "ticker": "LNDC",
-      "price": 14.15
-    }
-  ],
-  "30": [
-    {
-      "ticker": "CCXI",
-      "price": 11.42
-    },
-    {
-      "ticker": "LNDC",
-      "price": 14.15
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:88af8327439d85ccd8fad8f7ad20e5ef6e75f7c2618fcddf82ea93fa459599c2
+size 405

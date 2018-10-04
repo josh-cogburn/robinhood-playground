@@ -1,33 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "PBR.A",
-      "price": 9.19
-    },
-    {
-      "ticker": "DRIP",
-      "price": 5.99
-    }
-  ],
-  "16": [
-    {
-      "ticker": "PBR.A",
-      "price": 9.23
-    },
-    {
-      "ticker": "ARQL",
-      "price": 6.67
-    }
-  ],
-  "30": [
-    {
-      "ticker": "ADVM",
-      "price": 7.2
-    },
-    {
-      "ticker": "PBR.A",
-      "price": 9.19
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8a7329f5582861fa72a66c8f3cc50b8ee067432042c34b10601be415ca64600d
+size 398

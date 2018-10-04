@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "WSCI",
-      "price": 5
-    },
-    {
-      "ticker": "CMFN",
-      "price": 9.35
-    }
-  ],
-  "5": [
-    {
-      "ticker": "CMFN",
-      "price": 9.15
-    }
-  ],
-  "16": [
-    {
-      "ticker": "CMFN",
-      "price": 9.05
-    }
-  ],
-  "30": [
-    {
-      "ticker": "WSCI",
-      "price": 5.24
-    },
-    {
-      "ticker": "CMFN",
-      "price": 9.0498
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7d17e4f5060cc1fccf26a49acfcb15152deeb4ebca25f91de931c18cacdaec98
+size 397

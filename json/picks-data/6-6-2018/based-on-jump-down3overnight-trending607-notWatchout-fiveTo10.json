@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "SGMA",
-      "price": 7.16
-    }
-  ],
-  "5": [
-    {
-      "ticker": "SGMA",
-      "price": 7.16
-    }
-  ],
-  "16": [
-    {
-      "ticker": "SGMA",
-      "price": 7.3
-    },
-    {
-      "ticker": "CMCL",
-      "price": 9.08
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SGMA",
-      "price": 7.47
-    },
-    {
-      "ticker": "CMCL",
-      "price": 9.08
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6f5119b2fe8b3592e593d4a8285bdd94ebf09aaa72ae9625bed35cf91e2b233a
+size 397

@@ -1,32 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "INS",
-      "price": 9.6
-    },
-    {
-      "ticker": "NRT",
-      "price": 8.3584
-    }
-  ],
-  "16": [
-    {
-      "ticker": "INS",
-      "price": 9.447
-    },
-    {
-      "ticker": "NRT",
-      "price": 8.27
-    }
-  ],
-  "30": [
-    {
-      "ticker": "INS",
-      "price": 9.4188
-    },
-    {
-      "ticker": "NRT",
-      "price": 8.12
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f77e56e539d2c4426ae165a0bf4ccea1930f9f127699de6ca31a84aca6fef89d
+size 383

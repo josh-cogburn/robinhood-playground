@@ -1,30 +1,3 @@
-{
-  "280": [
-    {
-      "ticker": "CPRX",
-      "price": 3.62
-    },
-    {
-      "ticker": "DNN",
-      "price": 0.63
-    }
-  ],
-  "-50": [
-    {
-      "ticker": "PTX",
-      "price": 0.9
-    }
-  ],
-  "-30": [
-    {
-      "ticker": "PTX",
-      "price": 0.9
-    }
-  ],
-  "-10": [
-    {
-      "ticker": "PTX",
-      "price": 0.9
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:989b7f7297681b007106b9f5a4d2da2d75fe951fde6e3be43254d9bd2a818a65
+size 340

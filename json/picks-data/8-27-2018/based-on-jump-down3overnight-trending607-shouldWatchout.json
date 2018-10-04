@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "ATAI",
-      "price": 0.8899
-    }
-  ],
-  "5": [
-    {
-      "ticker": "ATAI",
-      "price": 0.8689
-    },
-    {
-      "ticker": "UAVS",
-      "price": 1.8593
-    }
-  ],
-  "16": [
-    {
-      "ticker": "ATAI",
-      "price": 0.86
-    },
-    {
-      "ticker": "UAVS",
-      "price": 1.8593
-    },
-    {
-      "ticker": "RWLK",
-      "price": 1.0076
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1b6252faf613758e4ec93828c0b7f0b7631bdc0828161891cfee05c345c7074a
+size 394

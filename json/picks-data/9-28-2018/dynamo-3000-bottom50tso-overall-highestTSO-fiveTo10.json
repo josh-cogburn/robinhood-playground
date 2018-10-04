@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "NEXT",
-      "price": 5.41
-    },
-    {
-      "ticker": "ERII",
-      "price": 8.9
-    }
-  ],
-  "200": [
-    {
-      "ticker": "SEED",
-      "price": 5.2496
-    },
-    {
-      "ticker": "BBD",
-      "price": 7.0701
-    }
-  ],
-  "260": [
-    {
-      "ticker": "MGIC",
-      "price": 8.5725
-    },
-    {
-      "ticker": "DRV",
-      "price": 9.4542
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f095b9ca1de2a424e883404ec130882ecfff605118198b2c1f1ca902e86db1e0
+size 394

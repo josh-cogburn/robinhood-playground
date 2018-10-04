@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "GSAT",
-      "price": 0.67
-    }
-  ],
-  "5": [
-    {
-      "ticker": "GSAT",
-      "price": 0.669
-    }
-  ],
-  "16": [
-    {
-      "ticker": "CKPT",
-      "price": 3.9116
-    },
-    {
-      "ticker": "GSAT",
-      "price": 0.6697
-    }
-  ],
-  "30": [
-    {
-      "ticker": "CKPT",
-      "price": 3.7
-    },
-    {
-      "ticker": "GSAT",
-      "price": 0.66
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:68e98b5027776d6be653a83138381d069a6a959e2b2bae84d76dfc59305ff755
+size 402

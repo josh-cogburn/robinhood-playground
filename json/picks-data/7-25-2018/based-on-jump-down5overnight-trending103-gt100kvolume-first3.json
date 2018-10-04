@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "MARA",
-      "price": 1.35
-    }
-  ],
-  "5": [
-    {
-      "ticker": "MARA",
-      "price": 1.3166
-    }
-  ],
-  "16": [
-    {
-      "ticker": "MYSZ",
-      "price": 0.9355
-    },
-    {
-      "ticker": "MARA",
-      "price": 1.33
-    }
-  ],
-  "30": [
-    {
-      "ticker": "MYSZ",
-      "price": 0.9211
-    },
-    {
-      "ticker": "MARA",
-      "price": 1.3362
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8a415c73698bb72bfcb6fc35e110b5418b6d8434315c00fc3b08508d08670fb2
+size 406

@@ -1,29 +1,3 @@
-{
-  "221": [
-    {
-      "ticker": "OCC",
-      "price": 3.55
-    },
-    {
-      "ticker": "HMNY",
-      "price": 0.245
-    }
-  ],
-  "280": [
-    {
-      "ticker": "OCC",
-      "price": 3.6
-    }
-  ],
-  "328": [],
-  "388": [
-    {
-      "ticker": "HMNY",
-      "price": 0.22
-    },
-    {
-      "ticker": "PED",
-      "price": 2.0366
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ddffdb0592f76d61931b50c04e4ad8d2af54182643a65e92f75359d32e8f202d
+size 344

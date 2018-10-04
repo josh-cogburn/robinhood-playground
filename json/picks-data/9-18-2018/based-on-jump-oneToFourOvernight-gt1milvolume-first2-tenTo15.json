@@ -1,30 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "CRON",
-      "price": 10.488
-    }
-  ],
-  "5": [
-    {
-      "ticker": "CRON",
-      "price": 10.7494
-    }
-  ],
-  "16": [
-    {
-      "ticker": "CRON",
-      "price": 10.92
-    }
-  ],
-  "30": [
-    {
-      "ticker": "CRON",
-      "price": 11.38
-    },
-    {
-      "ticker": "RIG",
-      "price": 11.98
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9e4d09ff2cf17383b6f18a604b8231d792b70b473916a550866921f9cf3d2d2c
+size 348

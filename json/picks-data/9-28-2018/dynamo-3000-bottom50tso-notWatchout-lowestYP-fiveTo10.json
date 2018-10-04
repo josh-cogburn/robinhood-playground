@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "DRIP",
-      "price": 5.3
-    },
-    {
-      "ticker": "AP",
-      "price": 5.76
-    }
-  ],
-  "200": [
-    {
-      "ticker": "DRIP",
-      "price": 5.295
-    },
-    {
-      "ticker": "AP",
-      "price": 5.8308
-    }
-  ],
-  "260": [
-    {
-      "ticker": "DRIP",
-      "price": 5.3
-    },
-    {
-      "ticker": "AP",
-      "price": 5.875
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e210111440ad7e5786b23c4c61f4f740d82e4f9d12660717e69a2ca587e34fd9
+size 385

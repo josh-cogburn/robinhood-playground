@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "IGC",
-      "price": 2.8357
-    },
-    {
-      "ticker": "ASCMA",
-      "price": 2.7863
-    }
-  ],
-  "5": [
-    {
-      "ticker": "IGC",
-      "price": 2.869
-    },
-    {
-      "ticker": "ASCMA",
-      "price": 2.7
-    }
-  ],
-  "16": [
-    {
-      "ticker": "IGC",
-      "price": 3.39
-    },
-    {
-      "ticker": "REED",
-      "price": 3.65
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7f2f80d804c62fde26f7e9c41479126d20adecf012481e0000b897b6b6d81fdc
+size 387

@@ -1,36 +1,3 @@
-{
-  "0": [],
-  "5": [],
-  "16": [
-    {
-      "ticker": "AMRH",
-      "price": 1.47
-    },
-    {
-      "ticker": "PED",
-      "price": 2.4101
-    },
-    {
-      "ticker": "SBGL",
-      "price": 2.2566
-    }
-  ],
-  "30": [
-    {
-      "ticker": "AMRH",
-      "price": 1.3727
-    },
-    {
-      "ticker": "PED",
-      "price": 2.4224
-    },
-    {
-      "ticker": "OHGI",
-      "price": 0.47
-    },
-    {
-      "ticker": "SBGL",
-      "price": 2.25
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:10c1cae333cd76b136d3341bb227350ee0962c5b2b1363797f2e100d637096e5
+size 457

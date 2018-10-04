@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "ARLO",
-      "price": 19.605
-    }
-  ],
-  "5": [
-    {
-      "ticker": "ARLO",
-      "price": 19.4803
-    }
-  ],
-  "16": [
-    {
-      "ticker": "ARLO",
-      "price": 19.55
-    },
-    {
-      "ticker": "LBJ",
-      "price": 19.828
-    }
-  ],
-  "30": [
-    {
-      "ticker": "ARLO",
-      "price": 19.6
-    },
-    {
-      "ticker": "LBJ",
-      "price": 19.5
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:369de720818d4267027b189c8fc88b63a8dcc0616fd45667e623563a0d6f609e
+size 404

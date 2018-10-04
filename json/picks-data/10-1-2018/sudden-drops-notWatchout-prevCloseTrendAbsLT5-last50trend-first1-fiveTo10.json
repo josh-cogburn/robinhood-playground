@@ -1,32 +1,3 @@
-{
-  "280": [
-    {
-      "ticker": "AGFS",
-      "price": 5.92
-    }
-  ],
-  "290": [
-    {
-      "ticker": "ADMA",
-      "price": 5.99
-    }
-  ],
-  "-50": [
-    {
-      "ticker": "FOMX",
-      "price": 5.85
-    }
-  ],
-  "-30": [
-    {
-      "ticker": "FOMX",
-      "price": 5.73
-    }
-  ],
-  "-10": [
-    {
-      "ticker": "FOMX",
-      "price": 5.95
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:89e4d065d584ad25fca4093a1e19efdfda111faa0dc060cb7c6efdcf1ae01c5e
+size 362

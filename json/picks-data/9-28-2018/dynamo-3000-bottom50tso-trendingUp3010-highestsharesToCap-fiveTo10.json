@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "LLNW",
-      "price": 5.0826
-    },
-    {
-      "ticker": "MTBC",
-      "price": 5.23
-    }
-  ],
-  "200": [
-    {
-      "ticker": "LLNW",
-      "price": 5.075
-    },
-    {
-      "ticker": "HTGM",
-      "price": 5.1376
-    }
-  ],
-  "260": [
-    {
-      "ticker": "LLNW",
-      "price": 5.06
-    },
-    {
-      "ticker": "CALA",
-      "price": 5.3
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:25c1f884af310c9db7c490289f062c810b094797acae9bd99965040ce803f60e
+size 393

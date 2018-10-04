@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "UEPS",
-      "price": 7.45
-    },
-    {
-      "ticker": "CLBS",
-      "price": 6.66
-    }
-  ],
-  "5": [
-    {
-      "ticker": "UEPS",
-      "price": 7.4
-    },
-    {
-      "ticker": "CLBS",
-      "price": 6.65
-    }
-  ],
-  "16": [
-    {
-      "ticker": "KNDI",
-      "price": 6.05
-    },
-    {
-      "ticker": "AXTI",
-      "price": 7.525
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fd590d5f540e0582825ae9d30a67799cf442bcc0d7e04626df6da5f08babecd5
+size 384

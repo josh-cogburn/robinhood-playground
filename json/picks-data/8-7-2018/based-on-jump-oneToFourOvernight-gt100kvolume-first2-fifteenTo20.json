@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "FNKO",
-      "price": 20.26
-    },
-    {
-      "ticker": "FCX",
-      "price": 15.7201
-    }
-  ],
-  "5": [
-    {
-      "ticker": "CDEV",
-      "price": 18.66
-    },
-    {
-      "ticker": "FCX",
-      "price": 15.7
-    }
-  ],
-  "16": [
-    {
-      "ticker": "CDEV",
-      "price": 18.94
-    },
-    {
-      "ticker": "FCX",
-      "price": 15.735
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1466817ce2d4f01f6477f98e48c139fd65af21d72afd4328b9caedebbbb77b20
+size 389

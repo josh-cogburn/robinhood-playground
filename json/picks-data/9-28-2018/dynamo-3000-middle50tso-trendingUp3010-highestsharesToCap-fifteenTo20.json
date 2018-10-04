@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "NEO",
-      "price": 15.42
-    },
-    {
-      "ticker": "GFN",
-      "price": 15.85
-    }
-  ],
-  "200": [
-    {
-      "ticker": "UCI",
-      "price": 15.36
-    },
-    {
-      "ticker": "OSBC",
-      "price": 15.45
-    }
-  ],
-  "260": [
-    {
-      "ticker": "INVA",
-      "price": 15.32
-    },
-    {
-      "ticker": "NEO",
-      "price": 15.43
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fff5388ef02d3c8fef973f1a3295a885e41bca9ea5b1dbcca50b524518bd01ac
+size 391

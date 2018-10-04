@@ -1,32 +1,3 @@
-{
-  "150": [
-    {
-      "ticker": "VTL",
-      "price": 7.6696
-    }
-  ],
-  "210": [
-    {
-      "ticker": "WTI",
-      "price": 7.87
-    }
-  ],
-  "276": [
-    {
-      "ticker": "NBR",
-      "price": 6.695
-    }
-  ],
-  "315": [
-    {
-      "ticker": "NBR",
-      "price": 6.69
-    }
-  ],
-  "384": [
-    {
-      "ticker": "DNR",
-      "price": 5.22
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cf7e0fb2a3e7e54112716db0ceac86a74a003e48638ccf70cc1d27aceffb6e79
+size 360

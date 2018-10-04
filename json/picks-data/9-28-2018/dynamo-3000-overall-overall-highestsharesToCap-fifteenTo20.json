@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "LNTH",
-      "price": 15.1
-    },
-    {
-      "ticker": "SMLP",
-      "price": 15.05
-    }
-  ],
-  "200": [
-    {
-      "ticker": "ARRY",
-      "price": 15.05
-    },
-    {
-      "ticker": "BBBY",
-      "price": 15.05
-    }
-  ],
-  "260": [
-    {
-      "ticker": "AMRN",
-      "price": 15.31
-    },
-    {
-      "ticker": "BOJA",
-      "price": 15.5
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d2c23640a57623eed70285c22e94599d0bb365fd79b112b170284cbed04ec921
+size 393

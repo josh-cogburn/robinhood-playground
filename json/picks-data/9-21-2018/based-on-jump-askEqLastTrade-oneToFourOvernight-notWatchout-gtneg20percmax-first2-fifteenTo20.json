@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "GLQ",
-      "price": 15.3
-    },
-    {
-      "ticker": "DO",
-      "price": 18.89
-    }
-  ],
-  "5": [
-    {
-      "ticker": "CHIX",
-      "price": 17.232
-    },
-    {
-      "ticker": "GLQ",
-      "price": 15.22
-    }
-  ],
-  "16": [
-    {
-      "ticker": "GLQ",
-      "price": 15.09
-    },
-    {
-      "ticker": "DBE",
-      "price": 17.47
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:02f1d147eb62a698e1bfc279a1fb44ce3e6f63fd89ec78860187d7afe911dfcd
+size 384

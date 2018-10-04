@@ -1,30 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "OGZPY",
-      "price": 4.51
-    },
-    {
-      "ticker": "FRED",
-      "price": 2.11
-    }
-  ],
-  "5": [
-    {
-      "ticker": "FRED",
-      "price": 2.251
-    }
-  ],
-  "16": [
-    {
-      "ticker": "FRED",
-      "price": 2.271
-    }
-  ],
-  "30": [
-    {
-      "ticker": "FRED",
-      "price": 2.2799
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:205fa760f0196ecd24a076333b45a96d18aba71df1f0c0a34ea14d52c5aeb455
+size 346

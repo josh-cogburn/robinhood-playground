@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "AVP",
-      "price": 2.495
-    },
-    {
-      "ticker": "ECT",
-      "price": 1.895
-    }
-  ],
-  "5": [
-    {
-      "ticker": "AVP",
-      "price": 2.5099
-    },
-    {
-      "ticker": "ECT",
-      "price": 1.895
-    }
-  ],
-  "16": [
-    {
-      "ticker": "AVP",
-      "price": 2.5
-    },
-    {
-      "ticker": "UEC",
-      "price": 1.736
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:067634d15795e6a5750f4fdb4b872590de9832ed70b61b997614ed865051c0f7
+size 383

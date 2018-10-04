@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "ARCO",
-      "price": 6.275
-    },
-    {
-      "ticker": "BBDO",
-      "price": 6.42
-    }
-  ],
-  "200": [
-    {
-      "ticker": "TI",
-      "price": 6.03
-    },
-    {
-      "ticker": "CMCM",
-      "price": 9.7564
-    }
-  ],
-  "260": [
-    {
-      "ticker": "TI",
-      "price": 6.05
-    },
-    {
-      "ticker": "SMI",
-      "price": 5.44
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:766406f5b492935023822d1fd1a1051d895e23d44b64f04c101f292567be3fc4
+size 387

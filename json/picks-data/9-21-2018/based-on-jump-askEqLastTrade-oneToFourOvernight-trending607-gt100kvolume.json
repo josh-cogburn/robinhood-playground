@@ -1,36 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "BLDP",
-      "price": 4.6
-    },
-    {
-      "ticker": "AMRN",
-      "price": 2.95
-    }
-  ],
-  "5": [
-    {
-      "ticker": "AVP",
-      "price": 2.5099
-    },
-    {
-      "ticker": "BLDP",
-      "price": 4.5578
-    },
-    {
-      "ticker": "AMRN",
-      "price": 2.9084
-    }
-  ],
-  "16": [
-    {
-      "ticker": "AVP",
-      "price": 2.5
-    },
-    {
-      "ticker": "BLDP",
-      "price": 4.52
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8263916680b65379bf48c82a20e778565bc062eb3fc2e32f8e07c150002e654a
+size 443

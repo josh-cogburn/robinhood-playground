@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "SOXS",
-      "price": 9.97
-    }
-  ],
-  "5": [
-    {
-      "ticker": "SOXS",
-      "price": 9.86
-    }
-  ],
-  "16": [
-    {
-      "ticker": "IPIC",
-      "price": 6.793
-    },
-    {
-      "ticker": "FTSI",
-      "price": 10.0001
-    }
-  ],
-  "30": [
-    {
-      "ticker": "IPIC",
-      "price": 6.78
-    },
-    {
-      "ticker": "SOXS",
-      "price": 9.878
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b082fa0f82f57ade343c6e67e3181096ca83c34e3f1e2e38d96241698718cfdb
+size 403

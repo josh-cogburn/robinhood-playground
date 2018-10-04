@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "RIBT",
-      "price": 3
-    }
-  ],
-  "5": [
-    {
-      "ticker": "RIBT",
-      "price": 2.8701
-    }
-  ],
-  "16": [
-    {
-      "ticker": "RIBT",
-      "price": 2.87
-    },
-    {
-      "ticker": "ALIM",
-      "price": 0.9459
-    }
-  ],
-  "30": [
-    {
-      "ticker": "RIBT",
-      "price": 2.845
-    },
-    {
-      "ticker": "KOSS",
-      "price": 2.7931
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ac6c718313d939e2f7e03af6b41490197a4e335630e3ec3ff97bf401ff0e248a
+size 402

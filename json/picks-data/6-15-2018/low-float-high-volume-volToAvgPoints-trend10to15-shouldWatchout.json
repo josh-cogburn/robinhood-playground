@@ -1,32 +1,3 @@
-{
-  "95": [
-    {
-      "ticker": "SPEX",
-      "price": 1.2401
-    }
-  ],
-  "150": [
-    {
-      "ticker": "TCON",
-      "price": 2.975
-    }
-  ],
-  "210": [
-    {
-      "ticker": "AKTX",
-      "price": 2.1399
-    }
-  ],
-  "276": [
-    {
-      "ticker": "TCON",
-      "price": 2.9
-    }
-  ],
-  "384": [
-    {
-      "ticker": "FRED",
-      "price": 1.985
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2bc92b060000d098638af71c173f8a720cb6669996a080a165c60c51a55d39aa
+size 366

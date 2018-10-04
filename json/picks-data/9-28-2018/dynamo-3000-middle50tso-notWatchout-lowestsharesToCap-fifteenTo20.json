@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "ERJ",
-      "price": 19.76
-    },
-    {
-      "ticker": "DIAX",
-      "price": 19.66
-    }
-  ],
-  "200": [
-    {
-      "ticker": "DIAX",
-      "price": 19.6601
-    },
-    {
-      "ticker": "CVRR",
-      "price": 19.675
-    }
-  ],
-  "260": [
-    {
-      "ticker": "SWIR",
-      "price": 20
-    },
-    {
-      "ticker": "ERJ",
-      "price": 19.755
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:820ff3ca92a0b0fb355fe92fd496235d2bdb6c575ce4353ab7a793af528bbffc
+size 394

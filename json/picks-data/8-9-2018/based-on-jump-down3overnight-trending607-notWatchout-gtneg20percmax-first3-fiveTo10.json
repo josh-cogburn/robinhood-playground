@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "NE",
-      "price": 5.93
-    }
-  ],
-  "5": [
-    {
-      "ticker": "NE",
-      "price": 5.9099
-    }
-  ],
-  "16": [
-    {
-      "ticker": "NE",
-      "price": 5.93
-    },
-    {
-      "ticker": "TLF",
-      "price": 7.55
-    }
-  ],
-  "30": [
-    {
-      "ticker": "NE",
-      "price": 5.88
-    },
-    {
-      "ticker": "TLF",
-      "price": 7.55
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6a2ba20148421622f7e09c20ec2bc9db2fba5adf4d73d32e4cd42e2ce1816bc7
+size 390

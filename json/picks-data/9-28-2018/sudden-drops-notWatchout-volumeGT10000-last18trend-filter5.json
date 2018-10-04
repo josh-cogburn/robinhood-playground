@@ -1,28 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "PRSS",
-      "price": 1.46
-    }
-  ],
-  "400": [
-    {
-      "ticker": "EXFO",
-      "price": 3.65
-    },
-    {
-      "ticker": "DXYN",
-      "price": 1.6
-    }
-  ],
-  "430": [
-    {
-      "ticker": "EXFO",
-      "price": 3.65
-    },
-    {
-      "ticker": "DXYN",
-      "price": 1.6
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d9bd94023966bed02252f2a2338041a3ddd2d746de7f004a2f396035b3e50b6f
+size 330

@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "RYAM",
-      "price": 18.8499
-    },
-    {
-      "ticker": "KRO",
-      "price": 16.19
-    }
-  ],
-  "200": [
-    {
-      "ticker": "CBMG",
-      "price": 19.0448
-    },
-    {
-      "ticker": "SOYB",
-      "price": 15.8698
-    }
-  ],
-  "260": [
-    {
-      "ticker": "CBMG",
-      "price": 18.35
-    },
-    {
-      "ticker": "HBMD",
-      "price": 17.65
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:72592c0085e190b156c285ce3f42cd36e3a7c77498f07fab0a757f2068f36859
+size 400

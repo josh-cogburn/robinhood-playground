@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "XON",
-      "price": 14.19
-    }
-  ],
-  "5": [
-    {
-      "ticker": "XON",
-      "price": 14.33
-    },
-    {
-      "ticker": "OSUR",
-      "price": 14.6925
-    }
-  ],
-  "16": [
-    {
-      "ticker": "XON",
-      "price": 14.75
-    }
-  ],
-  "30": [
-    {
-      "ticker": "INNT",
-      "price": 14.75
-    },
-    {
-      "ticker": "XON",
-      "price": 14.87
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f5903bf45f98a4b849d1e5da59d773bb07d6239b2df4b86b30166de26f93fc4b
+size 402

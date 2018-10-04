@@ -1,32 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "DARE",
-      "price": 1.3399
-    },
-    {
-      "ticker": "BXE",
-      "price": 1.37
-    }
-  ],
-  "16": [
-    {
-      "ticker": "DARE",
-      "price": 1.34
-    },
-    {
-      "ticker": "BXE",
-      "price": 1.4148
-    }
-  ],
-  "30": [
-    {
-      "ticker": "DARE",
-      "price": 1.3348
-    },
-    {
-      "ticker": "BXE",
-      "price": 1.41
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2cc6d3151374e1b54f668286c9c4f395337ba88cf51ea1e817b8b1773fef1ffa
+size 388

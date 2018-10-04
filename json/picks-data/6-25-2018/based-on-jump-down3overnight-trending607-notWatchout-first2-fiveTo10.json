@@ -1,32 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "VTL",
-      "price": 6.225
-    },
-    {
-      "ticker": "IBN",
-      "price": 8.45
-    }
-  ],
-  "16": [
-    {
-      "ticker": "VTL",
-      "price": 5.975
-    },
-    {
-      "ticker": "IBN",
-      "price": 8.44
-    }
-  ],
-  "30": [
-    {
-      "ticker": "VTL",
-      "price": 5.9
-    },
-    {
-      "ticker": "IBN",
-      "price": 8.405
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8f3d7c267f636646923383406d365daa72209dd2b66fe15cd6551d87410b6d11
+size 381

@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "ABIO",
-      "price": 1.1801
-    }
-  ],
-  "5": [
-    {
-      "ticker": "ABIO",
-      "price": 1.1692
-    }
-  ],
-  "16": [
-    {
-      "ticker": "ABIO",
-      "price": 1.19
-    },
-    {
-      "ticker": "GSAT",
-      "price": 0.61
-    }
-  ],
-  "30": [
-    {
-      "ticker": "ABIO",
-      "price": 1.0308
-    },
-    {
-      "ticker": "GSAT",
-      "price": 0.62
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f31db8f5921f06f8338644d6f4bce97cd8dced7c070feba15fbfdd03455ef1b3
+size 404

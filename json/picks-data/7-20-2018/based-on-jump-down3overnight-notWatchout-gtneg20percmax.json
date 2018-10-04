@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "IMI",
-      "price": 1.56
-    }
-  ],
-  "5": [
-    {
-      "ticker": "IMI",
-      "price": 1.56
-    }
-  ],
-  "16": [
-    {
-      "ticker": "OESX",
-      "price": 1.02
-    },
-    {
-      "ticker": "IMI",
-      "price": 1.56
-    }
-  ],
-  "30": [
-    {
-      "ticker": "OESX",
-      "price": 1.02
-    },
-    {
-      "ticker": "IMI",
-      "price": 1.59
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f501563125d348ec8e5a2b31216ea4d647790ba1f4aae61e43c5124bc7adca32
+size 394

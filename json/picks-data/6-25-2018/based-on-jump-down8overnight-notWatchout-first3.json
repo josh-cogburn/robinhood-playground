@@ -1,32 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "SPHS",
-      "price": 2.05
-    },
-    {
-      "ticker": "CPHI",
-      "price": 0.2001
-    }
-  ],
-  "16": [
-    {
-      "ticker": "SPHS",
-      "price": 2.2171
-    },
-    {
-      "ticker": "CPHI",
-      "price": 0.2145
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SPHS",
-      "price": 2.271
-    },
-    {
-      "ticker": "CPHI",
-      "price": 0.2147
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:26e29a55c6ca95558797dbf25e1b88600c58084830c458cc7f2aecee1d224338
+size 394

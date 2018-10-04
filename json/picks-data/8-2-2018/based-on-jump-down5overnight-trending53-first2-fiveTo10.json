@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "CCRN",
-      "price": 7.7105
-    }
-  ],
-  "5": [
-    {
-      "ticker": "CCRN",
-      "price": 7.9675
-    }
-  ],
-  "16": [
-    {
-      "ticker": "CCRN",
-      "price": 8.15
-    },
-    {
-      "ticker": "BVXV",
-      "price": 5.66
-    }
-  ],
-  "30": [
-    {
-      "ticker": "CCRN",
-      "price": 8.3657
-    },
-    {
-      "ticker": "CLGN",
-      "price": 6.15
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:af0510e1e4da4d60905c1544f5e30d38cf0457bffeb00f073415e802c20ddddf
+size 404

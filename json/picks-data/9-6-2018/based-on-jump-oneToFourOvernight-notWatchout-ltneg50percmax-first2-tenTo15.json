@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "IRS",
-      "price": 14.89
-    }
-  ],
-  "5": [
-    {
-      "ticker": "IRS",
-      "price": 14.62
-    }
-  ],
-  "16": [
-    {
-      "ticker": "ACH",
-      "price": 10.32
-    },
-    {
-      "ticker": "IRS",
-      "price": 14.66
-    }
-  ],
-  "30": [
-    {
-      "ticker": "ACH",
-      "price": 10.28
-    },
-    {
-      "ticker": "IRS",
-      "price": 14.88
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b1a202d7021b3cc5eb08368e98e8499580ca613275294bb895d278023373016c
+size 398

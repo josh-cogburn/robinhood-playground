@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "INTX",
-      "price": 2.09
-    }
-  ],
-  "5": [
-    {
-      "ticker": "INTX",
-      "price": 2.09
-    }
-  ],
-  "16": [
-    {
-      "ticker": "IHT",
-      "price": 1.77
-    },
-    {
-      "ticker": "INTX",
-      "price": 2.09
-    }
-  ],
-  "30": [
-    {
-      "ticker": "IHT",
-      "price": 1.77
-    },
-    {
-      "ticker": "INTX",
-      "price": 2.09
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:19c044f11c9469b80d26d21df23e2552f2123e4720ceb2299fa371b9ec4b103b
+size 396

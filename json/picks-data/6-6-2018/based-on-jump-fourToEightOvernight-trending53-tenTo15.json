@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "FATE",
-      "price": 11.9138
-    }
-  ],
-  "5": [
-    {
-      "ticker": "FATE",
-      "price": 12.27
-    }
-  ],
-  "16": [
-    {
-      "ticker": "LOV",
-      "price": 12.2499
-    },
-    {
-      "ticker": "FATE",
-      "price": 12.13
-    }
-  ],
-  "30": [
-    {
-      "ticker": "LOV",
-      "price": 12.2499
-    },
-    {
-      "ticker": "FATE",
-      "price": 12.2475
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:02ada1f39675c4309bd8be516cfffec4a1820efb6cc905c9147ad7acbb272bd8
+size 410

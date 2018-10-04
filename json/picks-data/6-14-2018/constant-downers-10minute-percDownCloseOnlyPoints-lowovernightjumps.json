@@ -1,32 +1,3 @@
-{
-  "77": [
-    {
-      "ticker": "CLRO",
-      "price": 4.6
-    },
-    {
-      "ticker": "SNOA",
-      "price": 3.13
-    }
-  ],
-  "242": [
-    {
-      "ticker": "SNOA",
-      "price": 3.14
-    },
-    {
-      "ticker": "CLRO",
-      "price": 4.6
-    }
-  ],
-  "309": [
-    {
-      "ticker": "CLRO",
-      "price": 4.65
-    },
-    {
-      "ticker": "SNOA",
-      "price": 3.18
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:01c2cf86119c98e1274cf1d3e0babff73a5327e8eb9c04c62307dabc704dbc57
+size 386

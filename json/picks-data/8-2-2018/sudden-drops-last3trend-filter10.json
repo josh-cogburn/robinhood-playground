@@ -1,36 +1,3 @@
-{
-  "32": [
-    {
-      "ticker": "NSYS",
-      "price": 4.9478
-    },
-    {
-      "ticker": "HMNY",
-      "price": 0.161
-    },
-    {
-      "ticker": "IHT",
-      "price": 2.0543
-    }
-  ],
-  "63": [
-    {
-      "ticker": "MOC",
-      "price": 1.8675
-    }
-  ],
-  "221": [],
-  "280": [
-    {
-      "ticker": "AMMA",
-      "price": 0.15
-    }
-  ],
-  "328": [],
-  "388": [
-    {
-      "ticker": "HMNY",
-      "price": 0.1
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:94d3c9a4a81aa345955b3a13d6058419f3236c1d0f92a9f119aead159653b2ac
+size 432

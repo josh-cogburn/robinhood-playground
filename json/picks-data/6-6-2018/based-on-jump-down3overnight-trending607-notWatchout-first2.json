@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "FGP",
-      "price": 3.74
-    }
-  ],
-  "5": [
-    {
-      "ticker": "FGP",
-      "price": 3.77
-    }
-  ],
-  "16": [
-    {
-      "ticker": "FGP",
-      "price": 3.837
-    },
-    {
-      "ticker": "CCCL",
-      "price": 1.5801
-    }
-  ],
-  "30": [
-    {
-      "ticker": "FGP",
-      "price": 3.84
-    },
-    {
-      "ticker": "CCCL",
-      "price": 1.5801
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:39356b9323dd41a5519f52bbca729d2413db3f21eac69f049de26305ae118bed
+size 399

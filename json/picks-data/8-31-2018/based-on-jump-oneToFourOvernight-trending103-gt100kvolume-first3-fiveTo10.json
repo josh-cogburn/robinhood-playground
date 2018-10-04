@@ -1,33 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "UVXY",
-      "price": 8.67
-    }
-  ],
-  "16": [
-    {
-      "ticker": "ARQL",
-      "price": 6.67
-    },
-    {
-      "ticker": "UVXY",
-      "price": 8.53
-    }
-  ],
-  "30": [
-    {
-      "ticker": "ADVM",
-      "price": 7.2
-    },
-    {
-      "ticker": "GALT",
-      "price": 6.2275
-    },
-    {
-      "ticker": "ARQL",
-      "price": 6.64
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a57fed6df15ecbb11d84441b977e04e7db8db19a4b94202da38a48c26a84c30b
+size 397

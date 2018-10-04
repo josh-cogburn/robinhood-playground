@@ -1,32 +1,3 @@
-{
-  "150": [
-    {
-      "ticker": "SYBX",
-      "price": 9.565
-    }
-  ],
-  "210": [
-    {
-      "ticker": "SYBX",
-      "price": 9.6001
-    }
-  ],
-  "276": [
-    {
-      "ticker": "SYBX",
-      "price": 9.5205
-    }
-  ],
-  "315": [
-    {
-      "ticker": "OMEX",
-      "price": 8.93
-    }
-  ],
-  "384": [
-    {
-      "ticker": "NVUS",
-      "price": 7.8301
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:990da113b78afb951bafec11b12297746c6cbe29a20d0ef61953cb2498a3ed1a
+size 369

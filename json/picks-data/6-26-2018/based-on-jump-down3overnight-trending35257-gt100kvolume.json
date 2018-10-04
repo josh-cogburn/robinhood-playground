@@ -1,33 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "XBIO",
-      "price": 4.3807
-    }
-  ],
-  "5": [],
-  "16": [
-    {
-      "ticker": "XBIO",
-      "price": 4.411
-    },
-    {
-      "ticker": "YECO",
-      "price": 4.51
-    },
-    {
-      "ticker": "SBGL",
-      "price": 2.5822
-    }
-  ],
-  "30": [
-    {
-      "ticker": "YECO",
-      "price": 4.14
-    },
-    {
-      "ticker": "SBGL",
-      "price": 2.56
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8e45143f90e81b6645937ad45f5784e76fbe522651386866d1f04ff4467981c6
+size 401

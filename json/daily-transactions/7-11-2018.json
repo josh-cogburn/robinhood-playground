@@ -1,24 +1,3 @@
-[
-  {
-    "type": "sell",
-    "ticker": "CUI",
-    "bid_price": 2.9041800000000006,
-    "quantity": "34.0000"
-  },
-  {
-    "type": "buy",
-    "ticker": "NNVC",
-    "bid_price": 0.4001,
-    "quantity": 249,
-    "strategy": "low-float-high-volume-twoWeekVolToAvgPoints-trenddown7to10-notWatchout",
-    "min": 25
-  },
-  {
-    "type": "buy",
-    "ticker": "MYOS",
-    "bid_price": 2.37,
-    "quantity": 42,
-    "strategy": "low-float-high-volume-volToAvgPoints-trendgt50",
-    "min": 315
-  }
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:43129c044fe80e45933cf87b2337803662e5e7939c551a2f2b401f707642e59d
+size 489

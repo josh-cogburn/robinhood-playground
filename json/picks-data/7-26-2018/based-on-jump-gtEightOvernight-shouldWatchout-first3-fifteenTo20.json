@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "PCMI",
-      "price": 18.725
-    }
-  ],
-  "5": [
-    {
-      "ticker": "PCMI",
-      "price": 19.95
-    },
-    {
-      "ticker": "FTNW",
-      "price": 17.8924
-    }
-  ],
-  "16": [
-    {
-      "ticker": "FTNW",
-      "price": 17.325
-    }
-  ],
-  "30": [
-    {
-      "ticker": "PCMI",
-      "price": 19.8298
-    },
-    {
-      "ticker": "FTNW",
-      "price": 17.45
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:516d8650cc87452184ab128135ea1c1fdd93ba498742c6c092096948d35876b6
+size 410

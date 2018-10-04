@@ -1,33 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "OESX",
-      "price": 0.8559
-    },
-    {
-      "ticker": "LEE",
-      "price": 2.375
-    }
-  ],
-  "16": [
-    {
-      "ticker": "OESX",
-      "price": 0.8559
-    },
-    {
-      "ticker": "LEE",
-      "price": 2.375
-    }
-  ],
-  "30": [
-    {
-      "ticker": "EMX",
-      "price": 1.025
-    },
-    {
-      "ticker": "OESX",
-      "price": 0.88
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:23dfc7104ed961f4abffaffe6a0b2cdbed0075dc1ffb14128e3af40d08424ef8
+size 400

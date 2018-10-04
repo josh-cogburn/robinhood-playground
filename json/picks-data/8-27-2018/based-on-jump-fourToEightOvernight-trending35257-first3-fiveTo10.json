@@ -1,36 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "CNAT",
-      "price": 5.33
-    },
-    {
-      "ticker": "NOA",
-      "price": 8.19
-    }
-  ],
-  "5": [
-    {
-      "ticker": "CNAT",
-      "price": 5.01
-    },
-    {
-      "ticker": "NOA",
-      "price": 8.2
-    }
-  ],
-  "16": [
-    {
-      "ticker": "CNAT",
-      "price": 5.1985
-    },
-    {
-      "ticker": "TSRI",
-      "price": 8.6
-    },
-    {
-      "ticker": "NOA",
-      "price": 8.25
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:35dbe04df4a659f14515743d3d100fc9207394dd25fac2df9defae8720a662a8
+size 438

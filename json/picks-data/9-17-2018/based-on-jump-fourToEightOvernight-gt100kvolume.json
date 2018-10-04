@@ -1,36 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "INPX",
-      "price": 0.158
-    }
-  ],
-  "16": [
-    {
-      "ticker": "RGLS",
-      "price": 0.2048
-    },
-    {
-      "ticker": "INPX",
-      "price": 0.149
-    }
-  ],
-  "30": [
-    {
-      "ticker": "DHXM",
-      "price": 0.94
-    },
-    {
-      "ticker": "RGLS",
-      "price": 0.2001
-    },
-    {
-      "ticker": "MNGA",
-      "price": 0.1591
-    },
-    {
-      "ticker": "INPX",
-      "price": 0.1517
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a5ab375bc79da3151a6a2e1fd62274da1b98278edb6b22a005127f400e56684d
+size 452

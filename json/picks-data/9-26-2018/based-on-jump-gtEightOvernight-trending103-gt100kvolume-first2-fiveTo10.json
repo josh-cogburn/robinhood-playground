@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "GPRO",
-      "price": 7.39
-    }
-  ],
-  "5": [
-    {
-      "ticker": "GPRO",
-      "price": 7.42
-    }
-  ],
-  "16": [
-    {
-      "ticker": "ONTX",
-      "price": 7.13
-    },
-    {
-      "ticker": "MTBC",
-      "price": 5.03
-    }
-  ],
-  "30": [
-    {
-      "ticker": "ONTX",
-      "price": 7.1414
-    },
-    {
-      "ticker": "MTBC",
-      "price": 5.02
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f381540d2d62c3c345a2e831e2cc354e89f35e6b2b633b167d6f4896d0470d64
+size 400

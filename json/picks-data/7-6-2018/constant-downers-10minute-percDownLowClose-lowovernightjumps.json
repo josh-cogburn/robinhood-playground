@@ -1,28 +1,3 @@
-{
-  "77": [
-    {
-      "ticker": "RGLS",
-      "price": 0.385
-    }
-  ],
-  "242": [
-    {
-      "ticker": "MBVX",
-      "price": 0.532
-    },
-    {
-      "ticker": "RGLS",
-      "price": 0.351
-    }
-  ],
-  "309": [
-    {
-      "ticker": "RGLS",
-      "price": 0.351
-    },
-    {
-      "ticker": "CEI",
-      "price": 0.545
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:30228c193707a7450745395aa17cc0ef2cddcba2b12093787f0c5beee53c7755
+size 335

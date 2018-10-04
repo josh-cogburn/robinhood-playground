@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "TSU",
-      "price": 14.7
-    },
-    {
-      "ticker": "AWF",
-      "price": 11.6799
-    }
-  ],
-  "200": [
-    {
-      "ticker": "CPE",
-      "price": 12.05
-    },
-    {
-      "ticker": "CDOR",
-      "price": 10.6
-    }
-  ],
-  "260": [
-    {
-      "ticker": "VLT",
-      "price": 13.71
-    },
-    {
-      "ticker": "NERV",
-      "price": 12.575
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:96ea735c1cea909f40ce48d3118d36e67b44a17385a2fbefd70ea8e67f9b47cd
+size 392

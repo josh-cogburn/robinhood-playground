@@ -1,10 +1,3 @@
-[
-  {
-    "type": "buy",
-    "ticker": "CCCL",
-    "bid_price": 1.58,
-    "quantity": 63,
-    "strategy": "low-float-high-volume-floatTimesfloatToVolume-trenddown7to10-notWatchout",
-    "min": 276
-  }
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:bb5d9028029c90070e32e187012db326bd707d198a476e79b6ff1da736039505
+size 202

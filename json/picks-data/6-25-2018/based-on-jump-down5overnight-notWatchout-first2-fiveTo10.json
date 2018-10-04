@@ -1,32 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "MACK",
-      "price": 6.24
-    },
-    {
-      "ticker": "BDD",
-      "price": 8.29
-    }
-  ],
-  "16": [
-    {
-      "ticker": "MACK",
-      "price": 6.28
-    },
-    {
-      "ticker": "BDD",
-      "price": 8.29
-    }
-  ],
-  "30": [
-    {
-      "ticker": "MACK",
-      "price": 6.04
-    },
-    {
-      "ticker": "BDD",
-      "price": 8.29
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cf3478c61017fc56ff070fb6d69d2e1da88e8a33c98b8680718affce1b2fbebd
+size 382

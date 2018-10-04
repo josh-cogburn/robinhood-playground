@@ -1,27 +1,3 @@
-{
-  "32": [
-    {
-      "ticker": "KOOL",
-      "price": 0.32
-    },
-    {
-      "ticker": "CLDC",
-      "price": 1
-    }
-  ],
-  "63": [
-    {
-      "ticker": "SYN",
-      "price": 3.09
-    }
-  ],
-  "221": [],
-  "280": [
-    {
-      "ticker": "MICT",
-      "price": 1.31
-    }
-  ],
-  "290": [],
-  "328": []
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:791f10be43262eb5316d23f33a45d6b60794723adc19ba90286e7eaaf51ad652
+size 308

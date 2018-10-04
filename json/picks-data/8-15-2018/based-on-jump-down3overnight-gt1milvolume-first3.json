@@ -1,33 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "RSLS",
-      "price": 0.0908
-    },
-    {
-      "ticker": "ENPH",
-      "price": 4.4925
-    }
-  ],
-  "5": [],
-  "16": [
-    {
-      "ticker": "RSLS",
-      "price": 0.081
-    },
-    {
-      "ticker": "ENPH",
-      "price": 4.5079
-    }
-  ],
-  "30": [
-    {
-      "ticker": "RSLS",
-      "price": 0.085
-    },
-    {
-      "ticker": "ENPH",
-      "price": 4.625
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4c23b8ec3f4054273518469cbdae7d90e38e30a63492d349a1581df946489520
+size 405

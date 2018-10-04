@@ -1,32 +1,3 @@
-{
-  "221": [
-    {
-      "ticker": "GBR",
-      "price": 2.1201
-    },
-    {
-      "ticker": "SAEX",
-      "price": 1.54
-    }
-  ],
-  "280": [
-    {
-      "ticker": "CVM",
-      "price": 1.08
-    },
-    {
-      "ticker": "PED",
-      "price": 2.2201
-    }
-  ],
-  "328": [
-    {
-      "ticker": "CVM",
-      "price": 1.01
-    },
-    {
-      "ticker": "MNGA",
-      "price": 0.616
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:735568c5124cf7641dac0a139379a4bb0b0823b371375c0d4cc605ec7e39afe3
+size 390

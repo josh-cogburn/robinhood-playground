@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "TELL",
-      "price": 8.455
-    },
-    {
-      "ticker": "METC",
-      "price": 8.46
-    }
-  ],
-  "5": [
-    {
-      "ticker": "TELL",
-      "price": 8.3855
-    },
-    {
-      "ticker": "METC",
-      "price": 8.5
-    }
-  ],
-  "16": [
-    {
-      "ticker": "TELL",
-      "price": 8.33
-    },
-    {
-      "ticker": "METC",
-      "price": 8.429
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:404da3d9cc62c8bd1fccc62cdaaaf834e4f6d39c0ef5198c36f2047058145575
+size 387

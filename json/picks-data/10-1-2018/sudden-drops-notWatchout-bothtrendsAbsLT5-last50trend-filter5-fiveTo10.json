@@ -1,36 +1,3 @@
-{
-  "280": [
-    {
-      "ticker": "ADMA",
-      "price": 6.0499
-    }
-  ],
-  "290": [
-    {
-      "ticker": "ONDK",
-      "price": 7.34
-    },
-    {
-      "ticker": "AAC",
-      "price": 7.54
-    }
-  ],
-  "-50": [
-    {
-      "ticker": "FOMX",
-      "price": 5.85
-    }
-  ],
-  "-30": [
-    {
-      "ticker": "FOMX",
-      "price": 5.73
-    }
-  ],
-  "-10": [
-    {
-      "ticker": "FOMX",
-      "price": 5.95
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cc072649502e56d1072e34f3fe5962fbe50366c72642d610cffb71f094c0e3a2
+size 420

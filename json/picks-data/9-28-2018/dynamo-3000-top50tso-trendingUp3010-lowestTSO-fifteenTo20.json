@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "OXFD",
-      "price": 16.34
-    },
-    {
-      "ticker": "FXN",
-      "price": 17.68
-    }
-  ],
-  "200": [
-    {
-      "ticker": "ENBL",
-      "price": 16.91
-    },
-    {
-      "ticker": "USO",
-      "price": 15.509
-    }
-  ],
-  "260": [
-    {
-      "ticker": "XES",
-      "price": 16.88
-    },
-    {
-      "ticker": "RDC",
-      "price": 18.83
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ac124f6cd5cd927dc342656f1a4751e2eb4dcf83cc2a922bb692c08dde13dae7
+size 392

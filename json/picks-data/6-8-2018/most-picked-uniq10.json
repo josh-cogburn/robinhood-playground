@@ -1,36 +1,3 @@
-{
-  "8": [
-    {
-      "ticker": "CPST",
-      "price": 1.5199
-    }
-  ],
-  "19": [
-    {
-      "ticker": "SOXS",
-      "price": 9.45
-    }
-  ],
-  "55": [
-    {
-      "ticker": "ONTX",
-      "price": 0.5941
-    }
-  ],
-  "183": [
-    {
-      "ticker": "ONTX",
-      "price": 0.62
-    },
-    {
-      "ticker": "SVRA",
-      "price": 12.4
-    }
-  ],
-  "236": [
-    {
-      "ticker": "SVRA",
-      "price": 11.51
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ee027129c6293ea779ffb9dbb53e9da1cc85ce35c92b8c6a001b87314b9c287a
+size 420

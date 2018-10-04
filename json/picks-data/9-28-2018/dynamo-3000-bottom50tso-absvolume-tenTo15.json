@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "ZFGN",
-      "price": 11.56
-    },
-    {
-      "ticker": "PBPB",
-      "price": 12.325
-    }
-  ],
-  "200": [
-    {
-      "ticker": "CNCE",
-      "price": 14.59
-    },
-    {
-      "ticker": "CHU",
-      "price": 11.685
-    }
-  ],
-  "260": [
-    {
-      "ticker": "AWSM",
-      "price": 12.4393
-    },
-    {
-      "ticker": "CHI",
-      "price": 12.07
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ff685ecba15fdfdfeecdee7766be24f21cabcc762a6a26cd8fc6b9e85aad06db
+size 397

@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "CRWS",
-      "price": 5.65
-    }
-  ],
-  "5": [
-    {
-      "ticker": "CRWS",
-      "price": 5.65
-    }
-  ],
-  "16": [
-    {
-      "ticker": "INTT",
-      "price": 7.82
-    },
-    {
-      "ticker": "CRWS",
-      "price": 5.65
-    }
-  ],
-  "30": [
-    {
-      "ticker": "INTT",
-      "price": 7.82
-    },
-    {
-      "ticker": "CRWS",
-      "price": 5.65
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:46a4aaa86a090872068b02ef240a52fccc40520dc7622119d7caf61f2b368420
+size 398

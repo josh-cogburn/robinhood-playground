@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "NMI",
-      "price": 10.1985
-    },
-    {
-      "ticker": "EIA",
-      "price": 10.25
-    }
-  ],
-  "200": [
-    {
-      "ticker": "BCRH",
-      "price": 10.15
-    },
-    {
-      "ticker": "WATT",
-      "price": 10.0899
-    }
-  ],
-  "260": [
-    {
-      "ticker": "BPI",
-      "price": 10.19
-    },
-    {
-      "ticker": "NMI",
-      "price": 10.1907
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:dd4b6ccc79e65f28c650114998fc63a3ddb1bbee248c380d639d19cb28a3f620
+size 397

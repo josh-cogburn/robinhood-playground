@@ -1,36 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "CHKR",
-      "price": 1.6
-    },
-    {
-      "ticker": "BXE",
-      "price": 1.471
-    }
-  ],
-  "16": [
-    {
-      "ticker": "CHKR",
-      "price": 1.5972
-    },
-    {
-      "ticker": "BXE",
-      "price": 1.47
-    }
-  ],
-  "30": [
-    {
-      "ticker": "CHKR",
-      "price": 1.5964
-    },
-    {
-      "ticker": "BXE",
-      "price": 1.45
-    },
-    {
-      "ticker": "SACH",
-      "price": 3.6
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8138fc74794d896d39ea2adaf1c4b0ab33fafe9b4ca919cee7b49c976f4dabc4
+size 442

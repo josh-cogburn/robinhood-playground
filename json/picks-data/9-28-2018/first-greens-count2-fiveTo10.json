@@ -1,32 +1,3 @@
-{
-  "190": [
-    {
-      "ticker": "HZN",
-      "price": 7.1
-    },
-    {
-      "ticker": "CELP",
-      "price": 7.17
-    }
-  ],
-  "250": [
-    {
-      "ticker": "HZN",
-      "price": 7.06
-    },
-    {
-      "ticker": "CELP",
-      "price": 7.2
-    }
-  ],
-  "600": [
-    {
-      "ticker": "HZN",
-      "price": 7.13
-    },
-    {
-      "ticker": "CELP",
-      "price": 7.2
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1f6d9f5684e75f1902afcc468f80b566bb569b845848bfc940eaac47d006fc8b
+size 383

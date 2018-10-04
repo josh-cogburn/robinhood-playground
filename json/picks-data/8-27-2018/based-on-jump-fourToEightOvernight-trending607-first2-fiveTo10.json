@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "ROSE",
-      "price": 8.7
-    },
-    {
-      "ticker": "CNAT",
-      "price": 5.33
-    }
-  ],
-  "5": [
-    {
-      "ticker": "ROSE",
-      "price": 8.5885
-    },
-    {
-      "ticker": "CNAT",
-      "price": 5.01
-    }
-  ],
-  "16": [
-    {
-      "ticker": "AMBO",
-      "price": 6.3542
-    },
-    {
-      "ticker": "ROSE",
-      "price": 8.33
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3085e71adeba9e499170b6db8c7e64d9d6be7cb9bf48008f3e04bf43f68dbeb1
+size 387

@@ -1,30 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "AMPH",
-      "price": 17.6
-    }
-  ],
-  "5": [
-    {
-      "ticker": "AMPH",
-      "price": 17.39
-    }
-  ],
-  "16": [
-    {
-      "ticker": "AMPH",
-      "price": 17.57
-    }
-  ],
-  "30": [
-    {
-      "ticker": "AMPH",
-      "price": 17.43
-    },
-    {
-      "ticker": "ACAD",
-      "price": 15.04
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:21b55031ad734476984d4f40bf87c38309399f78d381d3002e8c1ee737035ca7
+size 345

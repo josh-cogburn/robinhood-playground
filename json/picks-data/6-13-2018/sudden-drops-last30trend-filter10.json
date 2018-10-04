@@ -1,30 +1,3 @@
-{
-  "221": [
-    {
-      "ticker": "OHRP",
-      "price": 0.274
-    }
-  ],
-  "280": [
-    {
-      "ticker": "AMMA",
-      "price": 0.389
-    }
-  ],
-  "328": [
-    {
-      "ticker": "AMMA",
-      "price": 0.3618
-    },
-    {
-      "ticker": "KONA",
-      "price": 2.2
-    }
-  ],
-  "388": [
-    {
-      "ticker": "FLKS",
-      "price": 1.08
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4247714883375e5319065183905af7befd6933c775af1da998ec9131fdb50f6a
+size 350

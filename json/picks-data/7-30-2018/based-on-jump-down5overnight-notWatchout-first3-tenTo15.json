@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "SNNA",
-      "price": 13.21
-    },
-    {
-      "ticker": "BILI",
-      "price": 11.1364
-    }
-  ],
-  "5": [
-    {
-      "ticker": "SNNA",
-      "price": 15.25
-    },
-    {
-      "ticker": "BILI",
-      "price": 11.64
-    }
-  ],
-  "16": [
-    {
-      "ticker": "BILI",
-      "price": 11.7101
-    }
-  ],
-  "30": [
-    {
-      "ticker": "BILI",
-      "price": 11.8327
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fc173e27e103a79ff6d2613d62fa93011c681505abe21cf28c32b58364940590
+size 410

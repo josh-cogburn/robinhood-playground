@@ -1,30 +1,3 @@
-{
-  "16": [
-    {
-      "ticker": "OGEN",
-      "price": 1.43
-    },
-    {
-      "ticker": "CRMD",
-      "price": 1.2099
-    },
-    {
-      "ticker": "ACST",
-      "price": 1.6701
-    }
-  ],
-  "30": [
-    {
-      "ticker": "OGEN",
-      "price": 1.38
-    },
-    {
-      "ticker": "CRMD",
-      "price": 1.23
-    },
-    {
-      "ticker": "ACST",
-      "price": 1.78
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ec8a2df7d1239d79b07658f6aac29d7eec22c8bd7655fb12ae1849d82a4c0f92
+size 376

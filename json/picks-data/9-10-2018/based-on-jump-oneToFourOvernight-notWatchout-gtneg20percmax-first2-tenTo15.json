@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "MNOV",
-      "price": 11.651
-    },
-    {
-      "ticker": "ARDS",
-      "price": 12.5
-    }
-  ],
-  "5": [
-    {
-      "ticker": "MNOV",
-      "price": 11.651
-    },
-    {
-      "ticker": "ARDS",
-      "price": 12.5
-    }
-  ],
-  "30": [
-    {
-      "ticker": "MNOV",
-      "price": 11.701
-    },
-    {
-      "ticker": "ARDS",
-      "price": 12.19
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:75ce0f1cd6007c153804e26a3e8e23c20388b9c860ca749f62b27b46370947ad
+size 391

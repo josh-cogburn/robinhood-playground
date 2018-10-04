@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "OXFD",
-      "price": 16.34
-    },
-    {
-      "ticker": "DRNA",
-      "price": 15.515
-    }
-  ],
-  "200": [
-    {
-      "ticker": "SPPI",
-      "price": 16.71
-    },
-    {
-      "ticker": "PFBI",
-      "price": 18.3484
-    }
-  ],
-  "260": [
-    {
-      "ticker": "IO",
-      "price": 15.55
-    },
-    {
-      "ticker": "HBI",
-      "price": 18.4832
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b5c85c8693fe6c28aa7efe7b1909447e336e82885b7f71eb5be499f2ea9c06a4
+size 397

@@ -1,33 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "ATRS",
-      "price": 3.24
-    },
-    {
-      "ticker": "DNR",
-      "price": 4.6723
-    }
-  ],
-  "16": [
-    {
-      "ticker": "DBD",
-      "price": 4.7
-    },
-    {
-      "ticker": "ATRS",
-      "price": 3.2086
-    }
-  ],
-  "30": [
-    {
-      "ticker": "EGLT",
-      "price": 0.2993
-    },
-    {
-      "ticker": "DBD",
-      "price": 4.85
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:26a622e8d77d9e20fc4a3bc0891d6fc2fceb75ca9aed43865c73a217747a57c0
+size 398

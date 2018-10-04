@@ -1,34 +1,3 @@
-{
-  "40": [
-    {
-      "ticker": "GME",
-      "price": 15.53
-    }
-  ],
-  "80": [
-    {
-      "ticker": "GME",
-      "price": 16.2899
-    }
-  ],
-  "100": [
-    {
-      "ticker": "GME",
-      "price": 16.1598
-    }
-  ],
-  "140": [
-    {
-      "ticker": "AMC",
-      "price": 19.925
-    }
-  ],
-  "198": [
-    {
-      "ticker": "OI",
-      "price": 17.749
-    }
-  ],
-  "250": [],
-  "300": []
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b08621cd87d214b5a52a1cf944b10cb43556451e0a48851184b3839ecb200e0a
+size 391

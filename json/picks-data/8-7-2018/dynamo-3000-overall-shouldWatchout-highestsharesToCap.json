@@ -1,32 +1,3 @@
-{
-  "4": [
-    {
-      "ticker": "HMNY",
-      "price": 0.1
-    },
-    {
-      "ticker": "NLST",
-      "price": 0.114
-    }
-  ],
-  "351": [
-    {
-      "ticker": "HMNY",
-      "price": 0.0715
-    },
-    {
-      "ticker": "NLST",
-      "price": 0.1151
-    }
-  ],
-  "381": [
-    {
-      "ticker": "HMNY",
-      "price": 0.0725
-    },
-    {
-      "ticker": "NLST",
-      "price": 0.1164
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9f02ed979ad7c32d209912d92615747f83e0f4ef33d481c8742a9256317420d8
+size 395

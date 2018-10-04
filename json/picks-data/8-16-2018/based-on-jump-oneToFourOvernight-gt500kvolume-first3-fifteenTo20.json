@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "PDD",
-      "price": 18.59
-    }
-  ],
-  "5": [
-    {
-      "ticker": "GDX",
-      "price": 18.93
-    }
-  ],
-  "16": [
-    {
-      "ticker": "PDD",
-      "price": 18.58
-    },
-    {
-      "ticker": "GDX",
-      "price": 18.865
-    }
-  ],
-  "30": [
-    {
-      "ticker": "PDD",
-      "price": 18.98
-    },
-    {
-      "ticker": "GDX",
-      "price": 18.755
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6062d4e99c26cbf8bb3be2acc22fe8e758fccd0be279813a04138f6f1984f796
+size 400

@@ -1,29 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "PES",
-      "price": 4.8
-    }
-  ],
-  "16": [
-    {
-      "ticker": "PES",
-      "price": 4.85
-    },
-    {
-      "ticker": "BKYI",
-      "price": 2.58
-    }
-  ],
-  "30": [
-    {
-      "ticker": "PES",
-      "price": 4.825
-    },
-    {
-      "ticker": "BKYI",
-      "price": 2.5689
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f231e854092f4364b4c540cc3056f65cb0674067442e8680341d097df5ee2e64
+size 338

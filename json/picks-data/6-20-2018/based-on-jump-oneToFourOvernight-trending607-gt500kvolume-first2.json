@@ -1,29 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "CHK",
-      "price": 4.8277
-    }
-  ],
-  "16": [
-    {
-      "ticker": "DNR",
-      "price": 4.21
-    },
-    {
-      "ticker": "STNG",
-      "price": 3.06
-    }
-  ],
-  "30": [
-    {
-      "ticker": "DNR",
-      "price": 4.26
-    },
-    {
-      "ticker": "STNG",
-      "price": 3.055
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:bd0a1362f7fdafe4bc50d760c9774538b74fc08ac764a10f263b72c4910db432
+size 339

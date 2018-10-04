@@ -1,32 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "LPI",
-      "price": 9.26
-    },
-    {
-      "ticker": "CPG",
-      "price": 8.4
-    }
-  ],
-  "16": [
-    {
-      "ticker": "LPI",
-      "price": 9.2802
-    },
-    {
-      "ticker": "CPG",
-      "price": 8.41
-    }
-  ],
-  "30": [
-    {
-      "ticker": "LPI",
-      "price": 9.1654
-    },
-    {
-      "ticker": "CPG",
-      "price": 8.38
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:319c7cd2bb4a6ebc5124ec626db45c500d1fbc35fb607b281b4967cc3cf10245
+size 382

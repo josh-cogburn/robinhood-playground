@@ -1,28 +1,3 @@
-{
-  "10": [],
-  "50": [],
-  "200": [
-    {
-      "ticker": "ENBL",
-      "price": 17.9901
-    }
-  ],
-  "300": [
-    {
-      "ticker": "ENBL",
-      "price": 17.99
-    }
-  ],
-  "380": [
-    {
-      "ticker": "ENBL",
-      "price": 17.895
-    }
-  ],
-  "600": [
-    {
-      "ticker": "ENBL",
-      "price": 18.01
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:244cf73314411abc06b3c89d7975f591deaae97953fd9ee47c68db3f32382191
+size 321

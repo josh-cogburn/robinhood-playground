@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "GPOR",
-      "price": 10.74
-    }
-  ],
-  "5": [
-    {
-      "ticker": "GPOR",
-      "price": 10.66
-    }
-  ],
-  "16": [
-    {
-      "ticker": "GPOR",
-      "price": 10.75
-    }
-  ],
-  "30": [
-    {
-      "ticker": "GPOR",
-      "price": 10.91
-    },
-    {
-      "ticker": "CLSD",
-      "price": 14.84
-    },
-    {
-      "ticker": "IRDM",
-      "price": 13.875
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:387f0bc7cfe8138a9ded8574a2b911137d5f96715948a77c5d19500a21072417
+size 405

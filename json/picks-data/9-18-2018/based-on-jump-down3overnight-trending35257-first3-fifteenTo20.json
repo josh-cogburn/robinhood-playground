@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "TRYIY",
-      "price": 15.46
-    },
-    {
-      "ticker": "NSANY",
-      "price": 19.23
-    },
-    {
-      "ticker": "SMNNY",
-      "price": 16.59
-    }
-  ],
-  "5": [
-    {
-      "ticker": "EXPI",
-      "price": 17.575
-    }
-  ],
-  "16": [
-    {
-      "ticker": "EXPI",
-      "price": 17.75
-    }
-  ],
-  "30": [
-    {
-      "ticker": "EXPI",
-      "price": 17.935
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fd06a1f1f448f94b50262f351f66b24bb36c1b9683626a4954ea142ddc30b84e
+size 409

@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "HMG",
-      "price": 14.4719
-    },
-    {
-      "ticker": "CLCT",
-      "price": 14.896
-    }
-  ],
-  "200": [
-    {
-      "ticker": "PDEX",
-      "price": 11.0783
-    },
-    {
-      "ticker": "PRTA",
-      "price": 12.95
-    }
-  ],
-  "260": [
-    {
-      "ticker": "CBIO",
-      "price": 10.66
-    },
-    {
-      "ticker": "EDUC",
-      "price": 11.4068
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6f201919bf65a081d7a6497cf2c7c59350ca1100e094f10257ea7addcaba7fde
+size 401

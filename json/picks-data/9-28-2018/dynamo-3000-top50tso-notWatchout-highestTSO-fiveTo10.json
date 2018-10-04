@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "WTI",
-      "price": 9.51
-    },
-    {
-      "ticker": "CCLP",
-      "price": 5.05
-    }
-  ],
-  "200": [
-    {
-      "ticker": "WTI",
-      "price": 9.7
-    },
-    {
-      "ticker": "TK",
-      "price": 6.71
-    }
-  ],
-  "260": [
-    {
-      "ticker": "WTI",
-      "price": 9.81
-    },
-    {
-      "ticker": "TK",
-      "price": 6.6876
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:068a77ffd39daab06c7827c8777eb483b1934af391bb9b788e47ae66de56c571
+size 383

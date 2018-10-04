@@ -1,25 +1,3 @@
-{
-  "200": [
-    {
-      "ticker": "RARX",
-      "price": 10.36
-    }
-  ],
-  "300": [
-    {
-      "ticker": "SVRA",
-      "price": 12.06
-    },
-    {
-      "ticker": "RARX",
-      "price": 10.51
-    }
-  ],
-  "380": [],
-  "600": [
-    {
-      "ticker": "RARX",
-      "price": 10.5
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8570bf79c5078b1cb99343f775bf93474235f08d64a307543f53ecf1bdb7a050
+size 291

@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "KALV",
-      "price": 18.6343
-    },
-    {
-      "ticker": "NSTG",
-      "price": 17.81
-    }
-  ],
-  "5": [
-    {
-      "ticker": "KALV",
-      "price": 19
-    },
-    {
-      "ticker": "CHIQ",
-      "price": 15.875
-    }
-  ],
-  "16": [
-    {
-      "ticker": "CHIQ",
-      "price": 15.875
-    },
-    {
-      "ticker": "IRS",
-      "price": 17.2
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:51ce3f349549513f5cff27c3452d95ffc5a34ef66f0eecf6100b53000be35ff1
+size 389

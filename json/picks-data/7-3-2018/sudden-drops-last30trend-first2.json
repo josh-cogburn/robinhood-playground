@@ -1,32 +1,3 @@
-{
-  "221": [
-    {
-      "ticker": "BBOX",
-      "price": 0.775
-    },
-    {
-      "ticker": "GBR",
-      "price": 4.2
-    }
-  ],
-  "280": [
-    {
-      "ticker": "BBOX",
-      "price": 0.75
-    },
-    {
-      "ticker": "GBR",
-      "price": 4.11
-    }
-  ],
-  "328": [
-    {
-      "ticker": "BBOX",
-      "price": 0.75
-    },
-    {
-      "ticker": "GBR",
-      "price": 4.11
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4d4a4de4bbcbd0fcb86c06f220fbe7c720adf55b253b0618ccfba9204754df56
+size 386

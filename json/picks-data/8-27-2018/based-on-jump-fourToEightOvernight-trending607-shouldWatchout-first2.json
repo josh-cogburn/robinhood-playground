@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "NEPT",
-      "price": 3.89
-    },
-    {
-      "ticker": "TWMC",
-      "price": 1.05
-    }
-  ],
-  "5": [
-    {
-      "ticker": "NEPT",
-      "price": 3.785
-    },
-    {
-      "ticker": "TWMC",
-      "price": 1
-    }
-  ],
-  "16": [
-    {
-      "ticker": "NEPT",
-      "price": 3.86
-    },
-    {
-      "ticker": "TWMC",
-      "price": 1.05
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:852af550b63f1ab81a92a6e95fa89c7feaf07ad38a42cd629ac9a3837d1e7c73
+size 382

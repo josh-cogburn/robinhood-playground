@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "ARWR",
-      "price": 18.78
-    }
-  ],
-  "5": [
-    {
-      "ticker": "ARWR",
-      "price": 19.25
-    },
-    {
-      "ticker": "CLDR",
-      "price": 17.19
-    }
-  ],
-  "16": [
-    {
-      "ticker": "ARWR",
-      "price": 20.0799
-    },
-    {
-      "ticker": "CLDR",
-      "price": 17.53
-    }
-  ],
-  "30": [
-    {
-      "ticker": "CLDR",
-      "price": 17.57
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5f41bca575214118b2202fc73634174ae9c2d8e186200f5592a24f9bf669dd05
+size 406

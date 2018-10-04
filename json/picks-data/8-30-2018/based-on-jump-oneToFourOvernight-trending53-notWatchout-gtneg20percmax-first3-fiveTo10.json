@@ -1,29 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "FOMX",
-      "price": 5.75
-    }
-  ],
-  "16": [
-    {
-      "ticker": "FOMX",
-      "price": 5.68
-    },
-    {
-      "ticker": "LLEX",
-      "price": 5.18
-    }
-  ],
-  "30": [
-    {
-      "ticker": "FOMX",
-      "price": 5.7
-    },
-    {
-      "ticker": "LLEX",
-      "price": 5.18
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:20e103eeb03323666f5bc94ea1ec6e5c040a240f259449d32921c950c23d5286
+size 338

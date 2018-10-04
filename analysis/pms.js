@@ -51,7 +51,7 @@ module.exports = async (Robinhood, daysBack = 5, minCount = 5) => {
         .sort((a, b) => b.avgTrend - a.avgTrend)
         .sort((a, b) => b.percUp - a.percUp)
         // .filter(t => !t.pm.includes('myRecs'))
-        .filter(t => t.trends.every(v => v > -5))
+        // .filter(t => t.trends.every(v => v > -5))
         // .filter(t => t.hundredResult > 110)
         .filter(t => t.trends.length >= minCount)// && t.trends.every(a => a > -1));
     console.log(JSON.stringify(sortedArray, null, 2));

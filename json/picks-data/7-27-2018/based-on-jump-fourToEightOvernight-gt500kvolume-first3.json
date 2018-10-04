@@ -1,29 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "CRMD",
-      "price": 0.444
-    }
-  ],
-  "16": [
-    {
-      "ticker": "GST",
-      "price": 0.115
-    },
-    {
-      "ticker": "CRMD",
-      "price": 0.4378
-    }
-  ],
-  "30": [
-    {
-      "ticker": "GST",
-      "price": 0.1145
-    },
-    {
-      "ticker": "CRMD",
-      "price": 0.4586
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6358af36c8e2f47a2c76feae16774064af045ec08df00758c1480a8a5635deac
+size 345

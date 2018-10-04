@@ -1,26 +1,3 @@
-{
-  "32": [
-    {
-      "ticker": "AMMA",
-      "price": 0.3706
-    }
-  ],
-  "63": [],
-  "100": [],
-  "153": [],
-  "189": [],
-  "221": [],
-  "280": [],
-  "328": [],
-  "360": [
-    {
-      "ticker": "NNVC",
-      "price": 0.2825
-    },
-    {
-      "ticker": "ARDM",
-      "price": 1.34
-    }
-  ],
-  "388": []
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fde80106b5155ebc7e57c21a5ba3f19ad40886507a14b5f590354145f3c803f0
+size 309

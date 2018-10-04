@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "ODP",
-      "price": 2.95
-    }
-  ],
-  "5": [
-    {
-      "ticker": "ODP",
-      "price": 2.8999
-    }
-  ],
-  "16": [
-    {
-      "ticker": "ODP",
-      "price": 2.92
-    },
-    {
-      "ticker": "ACRX",
-      "price": 3.15
-    }
-  ],
-  "30": [
-    {
-      "ticker": "CASM",
-      "price": 2.56
-    },
-    {
-      "ticker": "ODP",
-      "price": 2.925
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:48f2ad0fa1eabe71d76d3d588ed8d2f3bfb01d70d21f3750f249522bd9026a2d
+size 397

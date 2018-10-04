@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "SYMC",
-      "price": 18.105
-    }
-  ],
-  "5": [
-    {
-      "ticker": "SYMC",
-      "price": 18.04
-    }
-  ],
-  "16": [
-    {
-      "ticker": "SYMC",
-      "price": 17.97
-    },
-    {
-      "ticker": "WU",
-      "price": 19.475
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SYMC",
-      "price": 18
-    },
-    {
-      "ticker": "WU",
-      "price": 19.4
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:146d6ab5b2b44508d551af536034bbaee6a9026b879ba20f7fa2de704cea147d
+size 398

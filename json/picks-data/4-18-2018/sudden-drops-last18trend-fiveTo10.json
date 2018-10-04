@@ -1,32 +1,3 @@
-{
-  "221": [
-    {
-      "ticker": "NTN",
-      "price": 5.34
-    },
-    {
-      "ticker": "EAST",
-      "price": 6.8
-    }
-  ],
-  "328": [
-    {
-      "ticker": "KONE",
-      "price": 5.76
-    },
-    {
-      "ticker": "SVA",
-      "price": 7.2035
-    }
-  ],
-  "388": [
-    {
-      "ticker": "NVIV",
-      "price": 8.8
-    },
-    {
-      "ticker": "WTID",
-      "price": 9.02
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:32aa9cf1efd3042b5528b11dbd609bde2582ba98c0ad8f12ef79076cc0335aff
+size 387

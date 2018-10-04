@@ -1,10 +1,3 @@
-[
-  {
-    "type": "buy",
-    "ticker": "MGTX",
-    "bid_price": 8.26,
-    "quantity": 44,
-    "strategy": "low-float-high-volume-floatTimesfloatToVolume-trenddown5to7-fiveTo10",
-    "min": 276
-  }
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:89fd19ae9330a6262de2461dd6a598c043c1d6f63536729d1365211aac060aa7
+size 198

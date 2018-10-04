@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "CZR",
-      "price": 10.975
-    }
-  ],
-  "5": [
-    {
-      "ticker": "CZR",
-      "price": 11.15
-    }
-  ],
-  "16": [
-    {
-      "ticker": "CNHI",
-      "price": 11.8
-    },
-    {
-      "ticker": "CZR",
-      "price": 11.025
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SGMO",
-      "price": 13.75
-    },
-    {
-      "ticker": "CNHI",
-      "price": 11.81
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1c39cd6ac325f169ca6dc10861acda8c0bc1ca826b04673dea4ad1a30c467b42
+size 402

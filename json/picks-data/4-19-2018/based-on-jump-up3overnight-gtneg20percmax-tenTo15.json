@@ -1,36 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "GDP",
-      "price": 12.8099
-    },
-    {
-      "ticker": "ABCD",
-      "price": 13.39
-    }
-  ],
-  "16": [
-    {
-      "ticker": "GDP",
-      "price": 12.8099
-    },
-    {
-      "ticker": "ABCD",
-      "price": 13.3
-    }
-  ],
-  "30": [
-    {
-      "ticker": "OBSV",
-      "price": 13.7
-    },
-    {
-      "ticker": "GDP",
-      "price": 12.3999
-    },
-    {
-      "ticker": "ABCD",
-      "price": 13.53
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:bff1f8c69a2509678cd980776d0f9c1059b424d6706a5acb3a88050a2076bf79
+size 450

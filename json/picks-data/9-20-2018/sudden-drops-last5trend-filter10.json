@@ -1,34 +1,3 @@
-{
-  "32": [
-    {
-      "ticker": "EGLT",
-      "price": 0.1375
-    },
-    {
-      "ticker": "SANW",
-      "price": 2.75
-    }
-  ],
-  "63": [
-    {
-      "ticker": "EGLT",
-      "price": 0.08
-    }
-  ],
-  "430": [
-    {
-      "ticker": "PIR",
-      "price": 1.5
-    }
-  ],
-  "-10": [
-    {
-      "ticker": "NAK",
-      "price": 0.5477
-    },
-    {
-      "ticker": "LITB",
-      "price": 0.86
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:768b2624a5178f0472bcdbcf7d820094ce8e779becbaa8fde8c120d7aefebc22
+size 403

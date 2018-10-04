@@ -1,33 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "AWX",
-      "price": 5.2995
-    },
-    {
-      "ticker": "PVG",
-      "price": 8.75
-    }
-  ],
-  "16": [
-    {
-      "ticker": "AWX",
-      "price": 6.39
-    },
-    {
-      "ticker": "PVG",
-      "price": 9.015
-    }
-  ],
-  "30": [
-    {
-      "ticker": "AWX",
-      "price": 6.4
-    },
-    {
-      "ticker": "MDLY",
-      "price": 5.25
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:812db3f0ecc95e4bf8b88ba332e724cf22e51f171649a196ae347f8b849eca6a
+size 393

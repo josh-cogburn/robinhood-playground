@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "LMRK",
-      "price": 14.9
-    }
-  ],
-  "5": [
-    {
-      "ticker": "LMRK",
-      "price": 14.9
-    }
-  ],
-  "16": [
-    {
-      "ticker": "LMRK",
-      "price": 14.7265
-    },
-    {
-      "ticker": "EEI",
-      "price": 12.9655
-    }
-  ],
-  "30": [
-    {
-      "ticker": "LMRK",
-      "price": 14.55
-    },
-    {
-      "ticker": "EEI",
-      "price": 13.1501
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6a11ce7fd748bd895af47316ada7f56694faa70366be760e7e050f5fafaca51f
+size 406

@@ -1,30 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "CPAH",
-      "price": 3.4401
-    }
-  ],
-  "5": [
-    {
-      "ticker": "CPAH",
-      "price": 4.07
-    }
-  ],
-  "16": [
-    {
-      "ticker": "CPAH",
-      "price": 4.78
-    }
-  ],
-  "30": [
-    {
-      "ticker": "CPAH",
-      "price": 4.37
-    },
-    {
-      "ticker": "MTBC",
-      "price": 4.46
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f5718f64bd442a99ed21b3121768c1fec5536a2beaa6f804031c1962c8916eb9
+size 343

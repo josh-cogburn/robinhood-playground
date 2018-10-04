@@ -1,33 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "RENN",
-      "price": 2.6299
-    }
-  ],
-  "16": [
-    {
-      "ticker": "CLDC",
-      "price": 4.3786
-    },
-    {
-      "ticker": "RENN",
-      "price": 2.58
-    }
-  ],
-  "30": [
-    {
-      "ticker": "CLDC",
-      "price": 4.54
-    },
-    {
-      "ticker": "SDRL",
-      "price": 0.306
-    },
-    {
-      "ticker": "RENN",
-      "price": 2.5215
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ec42466e9b96ca9ca3f8e7ea5681fad0fcec9d3741f4e9f3ae515fd2c52c91d7
+size 403

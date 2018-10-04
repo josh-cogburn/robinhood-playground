@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "DRIP",
-      "price": 7.426
-    },
-    {
-      "ticker": "DWT",
-      "price": 8.68
-    }
-  ],
-  "5": [
-    {
-      "ticker": "DRIP",
-      "price": 7.2099
-    },
-    {
-      "ticker": "WTID",
-      "price": 9.3
-    }
-  ],
-  "30": [
-    {
-      "ticker": "DRIP",
-      "price": 7.13
-    },
-    {
-      "ticker": "WTID",
-      "price": 9.3
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:747b0447ca0eea1327ad603b7e539770fd2f47f8665788d076154353fe56a710
+size 384

@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "BRZU",
-      "price": 14.975
-    }
-  ],
-  "5": [
-    {
-      "ticker": "BRZU",
-      "price": 15.16
-    }
-  ],
-  "16": [
-    {
-      "ticker": "BRZU",
-      "price": 15.16
-    },
-    {
-      "ticker": "MBNAA",
-      "price": 15.5
-    }
-  ],
-  "30": [
-    {
-      "ticker": "BRZU",
-      "price": 14.98
-    },
-    {
-      "ticker": "MBNAA",
-      "price": 15.5
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2bd5ad2cc0351802c713e71fd65077524d19b38a4d592450a26575c9528d0b50
+size 405

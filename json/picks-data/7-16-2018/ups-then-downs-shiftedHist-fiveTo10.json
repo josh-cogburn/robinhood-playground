@@ -1,33 +1,3 @@
-{
-  "10": [
-    {
-      "ticker": "OPK",
-      "price": 5.83
-    }
-  ],
-  "50": [],
-  "200": [
-    {
-      "ticker": "OPK",
-      "price": 5.9
-    }
-  ],
-  "300": [
-    {
-      "ticker": "OPK",
-      "price": 6.0401
-    }
-  ],
-  "380": [
-    {
-      "ticker": "OPK",
-      "price": 6.065
-    }
-  ],
-  "600": [
-    {
-      "ticker": "OPK",
-      "price": 6.05
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6d20663bc690c3a1c32bb0980910a4e77032b69c402f194b67edf1cb0d0997d6
+size 370

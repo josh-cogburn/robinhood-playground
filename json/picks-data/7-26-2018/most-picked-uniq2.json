@@ -1,36 +1,3 @@
-{
-  "8": [
-    {
-      "ticker": "UUUU",
-      "price": 2.66
-    }
-  ],
-  "19": [
-    {
-      "ticker": "UUUU",
-      "price": 2.6366
-    }
-  ],
-  "55": [
-    {
-      "ticker": "UUUU",
-      "price": 2.59
-    },
-    {
-      "ticker": "GST",
-      "price": 0.095
-    }
-  ],
-  "183": [
-    {
-      "ticker": "GST",
-      "price": 0.093
-    }
-  ],
-  "236": [
-    {
-      "ticker": "GST",
-      "price": 0.0936
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:73680caa09d266224cec3e2865471f52546cf34f93641a628fe762db834264c8
+size 418

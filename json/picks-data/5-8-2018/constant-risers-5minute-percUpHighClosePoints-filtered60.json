@@ -1,35 +1,3 @@
-{
-  "40": [
-    {
-      "ticker": "AMDA",
-      "price": 2.1485
-    },
-    {
-      "ticker": "UUU",
-      "price": 2.55
-    },
-    {
-      "ticker": "IPAS",
-      "price": 0.3125
-    }
-  ],
-  "80": [
-    {
-      "ticker": "AMDA",
-      "price": 2.7262
-    },
-    {
-      "ticker": "EGY",
-      "price": 1.52
-    },
-    {
-      "ticker": "OCSL",
-      "price": 4.665
-    }
-  ],
-  "100": [],
-  "140": [],
-  "198": [],
-  "250": [],
-  "300": []
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:42851aa4d47878aec448f5da3a39bb79f9e24936bb366af1fa831ffe74c9babb
+size 442

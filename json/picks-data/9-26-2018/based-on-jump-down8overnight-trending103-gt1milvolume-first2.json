@@ -1,28 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "CEI",
-      "price": 0.3661
-    }
-  ],
-  "16": [
-    {
-      "ticker": "NSPR",
-      "price": 0.235
-    },
-    {
-      "ticker": "CEI",
-      "price": 0.3944
-    }
-  ],
-  "30": [
-    {
-      "ticker": "NSPR",
-      "price": 0.2321
-    },
-    {
-      "ticker": "CEI",
-      "price": 0.363
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:675a67495f4705cc43ddc5a8df3c5b17383a5ec03c20f6917eaa2af95af6be26
+size 333

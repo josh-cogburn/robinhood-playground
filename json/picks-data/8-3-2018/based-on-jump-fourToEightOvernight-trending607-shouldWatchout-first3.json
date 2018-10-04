@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "ASCMA",
-      "price": 3.1
-    }
-  ],
-  "5": [
-    {
-      "ticker": "ASCMA",
-      "price": 2.941
-    }
-  ],
-  "16": [
-    {
-      "ticker": "TGC",
-      "price": 1.11
-    },
-    {
-      "ticker": "ASCMA",
-      "price": 3.145
-    }
-  ],
-  "30": [
-    {
-      "ticker": "TGC",
-      "price": 1.0922
-    },
-    {
-      "ticker": "ASCMA",
-      "price": 3.03
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:aa48f5d3a7f2d75d75078b52988b9ad70b906e7acb2c23d425d614481740f522
+size 403

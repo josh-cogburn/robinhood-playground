@@ -1,32 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "FTR",
-      "price": 9.0348
-    },
-    {
-      "ticker": "NPTN",
-      "price": 5.64
-    }
-  ],
-  "16": [
-    {
-      "ticker": "FTR",
-      "price": 9.44
-    },
-    {
-      "ticker": "NPTN",
-      "price": 5.63
-    }
-  ],
-  "30": [
-    {
-      "ticker": "FTR",
-      "price": 9.551
-    },
-    {
-      "ticker": "NPTN",
-      "price": 5.7
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9c58f8cb93b09638daefda17bd5029913b45bec85f7fe503a72c11dab0c140c4
+size 384

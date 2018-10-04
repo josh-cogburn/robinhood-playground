@@ -1,32 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "APLS",
-      "price": 18.35
-    },
-    {
-      "ticker": "TMST",
-      "price": 15.31
-    }
-  ],
-  "16": [
-    {
-      "ticker": "APLS",
-      "price": 18.48
-    },
-    {
-      "ticker": "TMST",
-      "price": 15.12
-    }
-  ],
-  "30": [
-    {
-      "ticker": "APLS",
-      "price": 18.83
-    },
-    {
-      "ticker": "TMST",
-      "price": 15.07
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:dc703e30390bad6c3d19f77ba00076b885f79dc35712d7b61daaa8eb38af34a2
+size 391

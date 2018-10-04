@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "URG",
-      "price": 0.8001
-    },
-    {
-      "ticker": "GSV",
-      "price": 1.7001
-    }
-  ],
-  "5": [
-    {
-      "ticker": "URG",
-      "price": 0.785
-    },
-    {
-      "ticker": "GSV",
-      "price": 1.71
-    }
-  ],
-  "16": [
-    {
-      "ticker": "URG",
-      "price": 0.7899
-    },
-    {
-      "ticker": "GSS",
-      "price": 0.7596
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0ce44942c0d9a88d776820ce6c5a2e7158f59cb0b504f59af69df5a3035f28b6
+size 387

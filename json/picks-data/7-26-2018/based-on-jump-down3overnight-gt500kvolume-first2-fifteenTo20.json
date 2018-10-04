@@ -1,33 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "MAT",
-      "price": 15.58
-    },
-    {
-      "ticker": "PTEN",
-      "price": 15.23
-    }
-  ],
-  "16": [
-    {
-      "ticker": "MAT",
-      "price": 15.42
-    },
-    {
-      "ticker": "PTEN",
-      "price": 15.27
-    }
-  ],
-  "30": [
-    {
-      "ticker": "MAT",
-      "price": 15.01
-    },
-    {
-      "ticker": "PTEN",
-      "price": 15.64
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8a54e99240980f4c4ae9db3022ea4fec1c0e453e128b22a178687fadc417432b
+size 399

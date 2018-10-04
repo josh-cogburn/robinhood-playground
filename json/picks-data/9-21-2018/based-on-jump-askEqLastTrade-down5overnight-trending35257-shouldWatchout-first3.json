@@ -1,28 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "GTXI",
-      "price": 2.18
-    }
-  ],
-  "5": [
-    {
-      "ticker": "GTXI",
-      "price": 1.98
-    },
-    {
-      "ticker": "LODE",
-      "price": 0.153
-    },
-    {
-      "ticker": "IBIO",
-      "price": 0.8241
-    }
-  ],
-  "16": [
-    {
-      "ticker": "LODE",
-      "price": 0.1479
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cf7f03a4b0501312ff65d3487879b76903bde181d100a3549d5494f987e987d9
+size 332

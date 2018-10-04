@@ -1,34 +1,3 @@
-{
-  "280": [
-    {
-      "ticker": "MRNS",
-      "price": 8.68
-    },
-    {
-      "ticker": "INFN",
-      "price": 5.87
-    }
-  ],
-  "290": [
-    {
-      "ticker": "MRNS",
-      "price": 8.675
-    },
-    {
-      "ticker": "IGC",
-      "price": 7.63
-    }
-  ],
-  "-30": [
-    {
-      "ticker": "INFN",
-      "price": 6.3
-    }
-  ],
-  "-10": [
-    {
-      "ticker": "INFN",
-      "price": 6.31
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b72e8c73f6e5f552bfbd646225440cf71820f28bd92a021cd86d847000474041
+size 403

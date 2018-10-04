@@ -1,28 +1,3 @@
-{
-  "10": [],
-  "50": [
-    {
-      "ticker": "PRQR",
-      "price": 16.4433
-    }
-  ],
-  "200": [
-    {
-      "ticker": "PRQR",
-      "price": 16.15
-    }
-  ],
-  "300": [],
-  "380": [
-    {
-      "ticker": "PRQR",
-      "price": 15.8
-    }
-  ],
-  "600": [
-    {
-      "ticker": "PRQR",
-      "price": 16.1
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:479c04bb1b61ff9695a6235184dccfdb2d45f391d168da4452cd536552036aff
+size 318

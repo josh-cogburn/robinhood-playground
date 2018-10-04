@@ -1,32 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "FNJN",
-      "price": 3
-    },
-    {
-      "ticker": "CPST",
-      "price": 1.41
-    }
-  ],
-  "16": [
-    {
-      "ticker": "FNJN",
-      "price": 3.0799
-    },
-    {
-      "ticker": "CPST",
-      "price": 1.4382
-    }
-  ],
-  "30": [
-    {
-      "ticker": "FNJN",
-      "price": 3.06
-    },
-    {
-      "ticker": "CPST",
-      "price": 1.4912
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:749cee82cf5fc14d429bd98d3e3bcd7fcc0f675aa40e443a550280bc54cb6173
+size 388

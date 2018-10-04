@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "DAKT",
-      "price": 9.045
-    }
-  ],
-  "5": [
-    {
-      "ticker": "DAKT",
-      "price": 8.92
-    }
-  ],
-  "16": [
-    {
-      "ticker": "DAKT",
-      "price": 8.1
-    },
-    {
-      "ticker": "CEL",
-      "price": 6.74
-    }
-  ],
-  "30": [
-    {
-      "ticker": "DAKT",
-      "price": 7.9599
-    },
-    {
-      "ticker": "FINZ",
-      "price": 8.05
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6b5a1f64b0eee82bf0e63f2dde915905a22deb7b84ad896982557a6b9235e298
+size 399

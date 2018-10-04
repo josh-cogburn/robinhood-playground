@@ -1,29 +1,3 @@
-{
-  "63": [
-    {
-      "ticker": "IPCI",
-      "price": 0.438
-    },
-    {
-      "ticker": "ARCI",
-      "price": 0.82
-    }
-  ],
-  "221": [],
-  "280": [],
-  "328": [],
-  "388": [
-    {
-      "ticker": "FLKS",
-      "price": 1.08
-    },
-    {
-      "ticker": "SPI",
-      "price": 0.4402
-    },
-    {
-      "ticker": "ONS",
-      "price": 0.9889
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cced673d767fce97310cd69f338816e326be08df2f81cced4b6c4d89742d5c20
+size 358

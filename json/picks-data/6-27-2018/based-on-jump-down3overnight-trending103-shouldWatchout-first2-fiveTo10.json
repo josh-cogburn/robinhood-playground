@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "TSRI",
-      "price": 8.95
-    }
-  ],
-  "5": [
-    {
-      "ticker": "TSRI",
-      "price": 8.55
-    }
-  ],
-  "16": [
-    {
-      "ticker": "CLDC",
-      "price": 6.07
-    },
-    {
-      "ticker": "TSRI",
-      "price": 8.2
-    }
-  ],
-  "30": [
-    {
-      "ticker": "CLDC",
-      "price": 5.7042
-    },
-    {
-      "ticker": "ABIL",
-      "price": 9.5787
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:12c1527eba8f8c151c187f50a01a1db80cf97f6d8d2dd70ae275cf2880b090af
+size 401

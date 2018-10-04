@@ -1,30 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "OCIP",
-      "price": 11.3352
-    }
-  ],
-  "5": [
-    {
-      "ticker": "OCIP",
-      "price": 11.36
-    }
-  ],
-  "16": [
-    {
-      "ticker": "OCIP",
-      "price": 11.44
-    }
-  ],
-  "30": [
-    {
-      "ticker": "OCIP",
-      "price": 11.45
-    },
-    {
-      "ticker": "MSON",
-      "price": 13.3474
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:db16357be4b40475dc4c72659471549096c7e1631f2d77239526320573da0f0a
+size 350

@@ -1,32 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "NL",
-      "price": 8.305
-    }
-  ],
-  "16": [
-    {
-      "ticker": "NRT",
-      "price": 8.53
-    },
-    {
-      "ticker": "NL",
-      "price": 8.305
-    }
-  ],
-  "30": [
-    {
-      "ticker": "EVFM",
-      "price": 5.6955
-    },
-    {
-      "ticker": "NRT",
-      "price": 8.5466
-    },
-    {
-      "ticker": "NL",
-      "price": 8.305
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6110db77913c72356d0f39d90d4d23ce35a908ec6f56626195f4797d446c615c
+size 384

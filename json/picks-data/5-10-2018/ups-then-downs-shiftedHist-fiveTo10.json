@@ -1,33 +1,3 @@
-{
-  "10": [],
-  "50": [
-    {
-      "ticker": "YRIV",
-      "price": 5.19
-    }
-  ],
-  "200": [
-    {
-      "ticker": "EVRI",
-      "price": 7.65
-    }
-  ],
-  "300": [
-    {
-      "ticker": "EVRI",
-      "price": 7.675
-    }
-  ],
-  "380": [
-    {
-      "ticker": "EVRI",
-      "price": 7.7
-    }
-  ],
-  "600": [
-    {
-      "ticker": "EVRI",
-      "price": 7.72
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7a236a36bdc60889b7c470b26778b5b26d9012345fd757846e363aa004b9c037
+size 373

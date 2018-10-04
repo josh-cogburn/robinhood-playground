@@ -1,32 +1,3 @@
-{
-  "40": [
-    {
-      "ticker": "SIEB",
-      "price": 15.04
-    }
-  ],
-  "80": [
-    {
-      "ticker": "RUSS",
-      "price": 18.43
-    }
-  ],
-  "100": [
-    {
-      "ticker": "ZYME",
-      "price": 16.48
-    }
-  ],
-  "250": [
-    {
-      "ticker": "INVA",
-      "price": 15.52
-    }
-  ],
-  "300": [
-    {
-      "ticker": "INVA",
-      "price": 15.645
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:df04ace40d213be4dff6db6405ec63de007f3e30274e5524939864efb49d0c7c
+size 366

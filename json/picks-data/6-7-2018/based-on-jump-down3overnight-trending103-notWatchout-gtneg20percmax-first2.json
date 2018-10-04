@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "UONEK",
-      "price": 2.2
-    },
-    {
-      "ticker": "BCLI",
-      "price": 5.025
-    }
-  ],
-  "5": [
-    {
-      "ticker": "UONEK",
-      "price": 2.1
-    }
-  ],
-  "16": [
-    {
-      "ticker": "UONEK",
-      "price": 2.1
-    }
-  ],
-  "30": [
-    {
-      "ticker": "UONEK",
-      "price": 2.1
-    },
-    {
-      "ticker": "BCLI",
-      "price": 4.9604
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0ab5683afbcae8403796b9d643217899c0f169d899f963ebbe907efd7cd2e8a9
+size 401

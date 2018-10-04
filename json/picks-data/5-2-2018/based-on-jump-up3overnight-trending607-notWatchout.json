@@ -1,36 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "OCN",
-      "price": 4.29
-    }
-  ],
-  "16": [
-    {
-      "ticker": "BXE",
-      "price": 1.61
-    },
-    {
-      "ticker": "OCN",
-      "price": 4.36
-    },
-    {
-      "ticker": "UUUU",
-      "price": 1.94
-    }
-  ],
-  "30": [
-    {
-      "ticker": "BXE",
-      "price": 1.6036
-    },
-    {
-      "ticker": "UUUU",
-      "price": 1.9278
-    },
-    {
-      "ticker": "OCN",
-      "price": 4.38
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d6d4abfebbc4270f8a03c3475e4bfa8822f50379723778b8da44f3e630f10ec5
+size 441

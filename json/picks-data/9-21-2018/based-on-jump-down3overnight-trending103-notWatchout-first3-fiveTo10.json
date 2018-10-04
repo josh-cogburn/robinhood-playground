@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "UGLD",
-      "price": 7.89
-    }
-  ],
-  "5": [
-    {
-      "ticker": "UGLD",
-      "price": 7.89
-    }
-  ],
-  "16": [
-    {
-      "ticker": "INTT",
-      "price": 8.15
-    },
-    {
-      "ticker": "UGLD",
-      "price": 7.94
-    }
-  ],
-  "30": [
-    {
-      "ticker": "INTT",
-      "price": 8.15
-    },
-    {
-      "ticker": "UGLD",
-      "price": 8
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8d97b503f0aa5e7fa4e5387d8dcc4f219296cbf4c9505001e53b75a93f60b4ef
+size 395

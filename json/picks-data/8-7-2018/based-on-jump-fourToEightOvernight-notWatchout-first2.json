@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "HBM",
-      "price": 5.1
-    }
-  ],
-  "5": [
-    {
-      "ticker": "DNR",
-      "price": 4.7
-    }
-  ],
-  "16": [
-    {
-      "ticker": "TAT",
-      "price": 1.08
-    },
-    {
-      "ticker": "DNR",
-      "price": 4.64
-    }
-  ],
-  "30": [
-    {
-      "ticker": "TAT",
-      "price": 1.08
-    },
-    {
-      "ticker": "DNR",
-      "price": 4.69
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1f2152d6958d53d75213d9dcd4a4c1aea03f19333a748f0df389c252fdd80931
+size 390

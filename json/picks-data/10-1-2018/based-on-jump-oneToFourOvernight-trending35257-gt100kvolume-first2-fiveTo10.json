@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "GPRO",
-      "price": 7.3701
-    }
-  ],
-  "5": [
-    {
-      "ticker": "GPRO",
-      "price": 7.3
-    }
-  ],
-  "16": [
-    {
-      "ticker": "SNDX",
-      "price": 8.38
-    },
-    {
-      "ticker": "GPRO",
-      "price": 7.38
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SNDX",
-      "price": 8.56
-    },
-    {
-      "ticker": "GPRO",
-      "price": 7.31
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b1830371c68b0695ae1898f99dabbd3c10ba723598dafe38c580f612f00e2317
+size 399

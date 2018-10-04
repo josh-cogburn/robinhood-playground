@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "NIHD",
-      "price": 6
-    },
-    {
-      "ticker": "BGFV",
-      "price": 5.175
-    }
-  ],
-  "200": [
-    {
-      "ticker": "MCRB",
-      "price": 7.56
-    },
-    {
-      "ticker": "IDT",
-      "price": 5.37
-    }
-  ],
-  "260": [
-    {
-      "ticker": "TEDU",
-      "price": 8.13
-    },
-    {
-      "ticker": "NOK",
-      "price": 5.5873
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4970fba77eac7c22f0aeff5dc6395e4c5af50707977ca29b342b1142b50f61f6
+size 387

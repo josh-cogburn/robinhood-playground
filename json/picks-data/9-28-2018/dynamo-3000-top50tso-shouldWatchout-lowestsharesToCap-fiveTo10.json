@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "GIFI",
-      "price": 9.9
-    },
-    {
-      "ticker": "MRNS",
-      "price": 9.82
-    }
-  ],
-  "200": [
-    {
-      "ticker": "BKD",
-      "price": 9.825
-    },
-    {
-      "ticker": "FRD",
-      "price": 9.49
-    }
-  ],
-  "260": [
-    {
-      "ticker": "MRNS",
-      "price": 9.81
-    },
-    {
-      "ticker": "BKD",
-      "price": 9.81
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:aeec3443415f26fcdc0d8c421d0cc63c16ea9e681b23e1772d479f2487096348
+size 386

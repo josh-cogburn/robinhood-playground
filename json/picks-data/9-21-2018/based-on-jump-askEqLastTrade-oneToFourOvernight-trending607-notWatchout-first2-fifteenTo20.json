@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "BRID",
-      "price": 17.15
-    },
-    {
-      "ticker": "DO",
-      "price": 18.89
-    }
-  ],
-  "5": [
-    {
-      "ticker": "BRID",
-      "price": 17.15
-    },
-    {
-      "ticker": "DO",
-      "price": 18.94
-    }
-  ],
-  "16": [
-    {
-      "ticker": "DBE",
-      "price": 17.47
-    },
-    {
-      "ticker": "GSG",
-      "price": 17.68
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:39d30013701884ec07310088df1a163801dc261cc26753bafcadab96332ca2d6
+size 384

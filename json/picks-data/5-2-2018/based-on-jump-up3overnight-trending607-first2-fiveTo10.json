@@ -1,32 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "NOA",
-      "price": 6.15
-    },
-    {
-      "ticker": "OCLR",
-      "price": 8.13
-    }
-  ],
-  "16": [
-    {
-      "ticker": "NOA",
-      "price": 6.3
-    },
-    {
-      "ticker": "OCLR",
-      "price": 8.159
-    }
-  ],
-  "30": [
-    {
-      "ticker": "NOA",
-      "price": 6.3
-    },
-    {
-      "ticker": "PRCP",
-      "price": 9.6
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:08fa6d9d60671c777a17d5afe99a9390715f8273874896bf1da96318ce73fd82
+size 380

@@ -1,35 +1,3 @@
-{
-  "10": [],
-  "50": [
-    {
-      "ticker": "FNKO",
-      "price": 19.2599
-    }
-  ],
-  "200": [
-    {
-      "ticker": "FNKO",
-      "price": 19.24
-    }
-  ],
-  "300": [
-    {
-      "ticker": "UMRX",
-      "price": 15.2056
-    },
-    {
-      "ticker": "FNKO",
-      "price": 19.32
-    }
-  ],
-  "380": [
-    {
-      "ticker": "UMRX",
-      "price": 15.05
-    },
-    {
-      "ticker": "FNKO",
-      "price": 19.1801
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d27e0716111d8b49885ed056a4b5b95db61a41e4aaac48f23685acd27d43a470
+size 427

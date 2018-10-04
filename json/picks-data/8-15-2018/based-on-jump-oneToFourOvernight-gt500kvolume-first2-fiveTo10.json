@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "VRAY",
-      "price": 9.83
-    }
-  ],
-  "5": [
-    {
-      "ticker": "VRAY",
-      "price": 9.775
-    }
-  ],
-  "16": [
-    {
-      "ticker": "IDRA",
-      "price": 9.3001
-    },
-    {
-      "ticker": "VRAY",
-      "price": 9.83
-    }
-  ],
-  "30": [
-    {
-      "ticker": "DRIP",
-      "price": 7.32
-    },
-    {
-      "ticker": "TZA",
-      "price": 8.7744
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c9b094530ddb2b940e194ead14597d23b98598a37012beb9ad57d796dda89e86
+size 402

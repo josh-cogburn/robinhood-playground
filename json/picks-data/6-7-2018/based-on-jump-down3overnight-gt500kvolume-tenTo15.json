@@ -1,29 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "REVG",
-      "price": 13.5005
-    }
-  ],
-  "16": [
-    {
-      "ticker": "REVG",
-      "price": 13.4048
-    },
-    {
-      "ticker": "BGCP",
-      "price": 11.4
-    }
-  ],
-  "30": [
-    {
-      "ticker": "REVG",
-      "price": 13.975
-    },
-    {
-      "ticker": "BGCP",
-      "price": 11.4
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f05e6fe7447ee0244868626a48a5ccc4b61578b46169d4d30713d283bdcaa70e
+size 347

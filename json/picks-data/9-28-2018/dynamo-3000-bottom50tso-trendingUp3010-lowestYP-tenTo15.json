@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "CRESY",
-      "price": 14.48
-    },
-    {
-      "ticker": "TWM",
-      "price": 13.6302
-    }
-  ],
-  "200": [
-    {
-      "ticker": "TSU",
-      "price": 14.47
-    },
-    {
-      "ticker": "CRESY",
-      "price": 14.32
-    }
-  ],
-  "260": [
-    {
-      "ticker": "CRESY",
-      "price": 14.01
-    },
-    {
-      "ticker": "TSU",
-      "price": 14.5
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:554edf0f5904a906f2523bf5525a86d181c92524653de2550cc1aab8f349f0ca
+size 396

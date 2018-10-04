@@ -1,36 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "CTIB",
-      "price": 3.95
-    }
-  ],
-  "16": [
-    {
-      "ticker": "DAC",
-      "price": 1.1
-    },
-    {
-      "ticker": "CADC",
-      "price": 2.3011
-    },
-    {
-      "ticker": "CTIB",
-      "price": 3.95
-    }
-  ],
-  "30": [
-    {
-      "ticker": "DAC",
-      "price": 1.1
-    },
-    {
-      "ticker": "CADC",
-      "price": 2.35
-    },
-    {
-      "ticker": "ELSE",
-      "price": 3.972
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e5ef1228dd633f7e9f5965493edfe6877af02221a20f33a223d900fc6dedabc3
+size 441

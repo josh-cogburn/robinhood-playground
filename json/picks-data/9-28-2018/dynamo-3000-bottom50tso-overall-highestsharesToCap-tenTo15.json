@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "VECO",
-      "price": 10.1327
-    },
-    {
-      "ticker": "VSI",
-      "price": 10.1
-    }
-  ],
-  "200": [
-    {
-      "ticker": "VSI",
-      "price": 10.125
-    },
-    {
-      "ticker": "FTF",
-      "price": 10.13
-    }
-  ],
-  "260": [
-    {
-      "ticker": "FTF",
-      "price": 10.14
-    },
-    {
-      "ticker": "KIRK",
-      "price": 10.13
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4d7e31c1e63163b0522d7c1733b5f74ddc99883e923ad0b5ed4f6ceb9aa6d04b
+size 393

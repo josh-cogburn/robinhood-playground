@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "ZFGN",
-      "price": 12.09
-    }
-  ],
-  "5": [
-    {
-      "ticker": "ZFGN",
-      "price": 12.12
-    }
-  ],
-  "16": [
-    {
-      "ticker": "GLMD",
-      "price": 13.3133
-    },
-    {
-      "ticker": "ZFGN",
-      "price": 12
-    }
-  ],
-  "30": [
-    {
-      "ticker": "GLMD",
-      "price": 13.2912
-    },
-    {
-      "ticker": "ZFGN",
-      "price": 12.025
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:90744da37a70b63a97d8d4d3ec8283b1a6eb27e09c27ba1c4875c62b882f826b
+size 406

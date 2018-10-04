@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "VEDL",
-      "price": 12.885
-    },
-    {
-      "ticker": "TSU",
-      "price": 14.7
-    }
-  ],
-  "200": [
-    {
-      "ticker": "BCRH",
-      "price": 10.15
-    },
-    {
-      "ticker": "NOM",
-      "price": 12.3012
-    }
-  ],
-  "260": [
-    {
-      "ticker": "COTY",
-      "price": 12.57
-    },
-    {
-      "ticker": "LFC",
-      "price": 11.395
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:958b63eda04cea8d14205cb2886061c0ac6747cc6cce89a0efb22af9cefe1290
+size 395

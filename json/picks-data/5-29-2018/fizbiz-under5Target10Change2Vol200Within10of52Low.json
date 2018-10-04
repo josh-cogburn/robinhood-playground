@@ -1,33 +1,3 @@
-{
-  "12": [],
-  "75": [
-    {
-      "ticker": "GSAT",
-      "price": 0.5767
-    }
-  ],
-  "120": [
-    {
-      "ticker": "GSAT",
-      "price": 0.576
-    }
-  ],
-  "380": [
-    {
-      "ticker": "GSAT",
-      "price": 0.5804
-    },
-    {
-      "ticker": "JCP",
-      "price": 2.375
-    },
-    {
-      "ticker": "JE",
-      "price": 3.71
-    },
-    {
-      "ticker": "SBGL",
-      "price": 2.5
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:29a184b58c1000b8a24289a80c33cdc23260487bb015b42c1436ab59b508406b
+size 402

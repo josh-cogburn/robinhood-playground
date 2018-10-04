@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "IZEA",
-      "price": 2.1899
-    }
-  ],
-  "5": [
-    {
-      "ticker": "IZEA",
-      "price": 1.905
-    }
-  ],
-  "16": [
-    {
-      "ticker": "IZEA",
-      "price": 1.99
-    },
-    {
-      "ticker": "ANY",
-      "price": 0.4297
-    }
-  ],
-  "30": [
-    {
-      "ticker": "IZEA",
-      "price": 2.0082
-    },
-    {
-      "ticker": "ANY",
-      "price": 0.431
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d706ec99209551ace5ede4d53b03a12cf7567af44088f7fbd7ce5024069e3e70
+size 404

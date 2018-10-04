@@ -1,32 +1,3 @@
-{
-  "221": [],
-  "280": [],
-  "328": [
-    {
-      "ticker": "FCRE",
-      "price": 0.4605
-    },
-    {
-      "ticker": "ADOM",
-      "price": 1.381
-    }
-  ],
-  "388": [
-    {
-      "ticker": "FCRE",
-      "price": 0.473
-    },
-    {
-      "ticker": "ADOM",
-      "price": 1.332
-    },
-    {
-      "ticker": "NVIV",
-      "price": 3.403
-    },
-    {
-      "ticker": "NFEC",
-      "price": 2.51
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b5453ede75f02be593195426e31b7ed01b32486ed1f42cf12b2007a866e06ca8
+size 406

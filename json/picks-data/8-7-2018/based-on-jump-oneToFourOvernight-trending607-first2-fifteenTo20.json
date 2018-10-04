@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "TAST",
-      "price": 15.05
-    },
-    {
-      "ticker": "FNKO",
-      "price": 20.26
-    }
-  ],
-  "5": [
-    {
-      "ticker": "TAST",
-      "price": 16.2
-    },
-    {
-      "ticker": "LBRT",
-      "price": 20.0026
-    }
-  ],
-  "16": [
-    {
-      "ticker": "TAST",
-      "price": 16.05
-    },
-    {
-      "ticker": "LBRT",
-      "price": 20.11
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:acc2e3cf385b996434c95ae83474ace1936b805ef2f654f841005746dea2b084
+size 391

@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "USDP",
-      "price": 9.5
-    },
-    {
-      "ticker": "BKS",
-      "price": 5.725
-    }
-  ],
-  "200": [
-    {
-      "ticker": "ADMA",
-      "price": 6.3
-    },
-    {
-      "ticker": "DLNG",
-      "price": 8.659
-    }
-  ],
-  "260": [
-    {
-      "ticker": "VUZI",
-      "price": 6.35
-    },
-    {
-      "ticker": "SSW",
-      "price": 8.25
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:74332c59a39483dc89e94751ae9a024b806970d4713a14a03d122f760a8b2976
+size 387

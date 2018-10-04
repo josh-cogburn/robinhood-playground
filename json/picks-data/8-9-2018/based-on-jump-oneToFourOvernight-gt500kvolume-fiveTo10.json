@@ -1,33 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "CRON",
-      "price": 6.05
-    },
-    {
-      "ticker": "VSTM",
-      "price": 8.3899
-    }
-  ],
-  "16": [
-    {
-      "ticker": "VSTM",
-      "price": 8.47
-    }
-  ],
-  "30": [
-    {
-      "ticker": "OPK",
-      "price": 5.5
-    },
-    {
-      "ticker": "VSTM",
-      "price": 8.52
-    },
-    {
-      "ticker": "CZR",
-      "price": 10
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:622d3363722aa364e8c24f79d3c28f74b34b44720776510f988acd21649c6040
+size 393

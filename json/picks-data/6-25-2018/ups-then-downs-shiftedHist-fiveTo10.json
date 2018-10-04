@@ -1,28 +1,3 @@
-{
-  "10": [],
-  "50": [],
-  "200": [
-    {
-      "ticker": "XBIO",
-      "price": 5.8106
-    }
-  ],
-  "300": [
-    {
-      "ticker": "XBIO",
-      "price": 5.44
-    }
-  ],
-  "380": [
-    {
-      "ticker": "XBIO",
-      "price": 5.17
-    }
-  ],
-  "600": [
-    {
-      "ticker": "XBIO",
-      "price": 5.75
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:93d3e58cbc70177d7fc6929c63454ccc90d20093b67290d56f8c2558b6a90110
+size 316

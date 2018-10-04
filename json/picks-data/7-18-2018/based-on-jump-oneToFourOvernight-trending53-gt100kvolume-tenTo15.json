@@ -1,29 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "ENDP",
-      "price": 10.93
-    }
-  ],
-  "16": [
-    {
-      "ticker": "ENDP",
-      "price": 10.94
-    },
-    {
-      "ticker": "VALE",
-      "price": 13.3
-    }
-  ],
-  "30": [
-    {
-      "ticker": "ENDP",
-      "price": 11.01
-    },
-    {
-      "ticker": "VALE",
-      "price": 13.34
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4995cef5d32a0e3caf3e254348cfbdb0f05420538e832a18488ba72619b56ae9
+size 343

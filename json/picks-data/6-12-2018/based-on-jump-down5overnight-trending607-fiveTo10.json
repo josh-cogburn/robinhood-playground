@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "ENZ",
-      "price": 6.14
-    }
-  ],
-  "5": [
-    {
-      "ticker": "ENZ",
-      "price": 6.0201
-    }
-  ],
-  "16": [
-    {
-      "ticker": "ENZ",
-      "price": 6.05
-    },
-    {
-      "ticker": "EDRY",
-      "price": 7.16
-    }
-  ],
-  "30": [
-    {
-      "ticker": "ENZ",
-      "price": 6.05
-    },
-    {
-      "ticker": "EDRY",
-      "price": 7.11
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:80eab8dcba85b177d7eaea4a08308677f469f319bd48d95d0efa9fb7c358a690
+size 396

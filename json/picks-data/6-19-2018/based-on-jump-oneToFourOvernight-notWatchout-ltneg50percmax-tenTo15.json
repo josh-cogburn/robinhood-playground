@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "SQQQ",
-      "price": 13.655
-    }
-  ],
-  "5": [
-    {
-      "ticker": "SQQQ",
-      "price": 13.6
-    },
-    {
-      "ticker": "SSG",
-      "price": 14.948
-    }
-  ],
-  "16": [
-    {
-      "ticker": "SQQQ",
-      "price": 13.5857
-    },
-    {
-      "ticker": "SSG",
-      "price": 14.93
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SQQQ",
-      "price": 13.7556
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:06e08daadbcb926cbf23c6b1b4fc1102afac019cbe64931528110c9820cf567a
+size 407

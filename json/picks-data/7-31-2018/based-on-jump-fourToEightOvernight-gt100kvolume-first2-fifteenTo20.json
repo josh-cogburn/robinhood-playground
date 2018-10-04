@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "BRX",
-      "price": 17.78
-    }
-  ],
-  "5": [
-    {
-      "ticker": "BRX",
-      "price": 17.295
-    }
-  ],
-  "16": [
-    {
-      "ticker": "QTNA",
-      "price": 16.435
-    },
-    {
-      "ticker": "KBR",
-      "price": 19.5
-    }
-  ],
-  "30": [
-    {
-      "ticker": "QTNA",
-      "price": 16.07
-    },
-    {
-      "ticker": "KBR",
-      "price": 19.62
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b215fa8bfe86968ae1a862ad8af103ca8446ed783d082e5c2327d1855ba39486
+size 401

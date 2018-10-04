@@ -1,30 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "ETM",
-      "price": 9.8
-    },
-    {
-      "ticker": "SRCI",
-      "price": 11.53
-    }
-  ],
-  "5": [
-    {
-      "ticker": "SRCI",
-      "price": 11.589
-    }
-  ],
-  "16": [
-    {
-      "ticker": "SRCI",
-      "price": 11.45
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SRCI",
-      "price": 11.54
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1fa64b45a79be7e682aac3783128f478f016d7cd3c155b9044911afe6fa1c621
+size 344

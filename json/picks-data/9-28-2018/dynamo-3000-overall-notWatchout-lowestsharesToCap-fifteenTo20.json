@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "BLMN",
-      "price": 19.9
-    },
-    {
-      "ticker": "KEY",
-      "price": 19.97
-    }
-  ],
-  "200": [
-    {
-      "ticker": "CBMG",
-      "price": 19.0448
-    },
-    {
-      "ticker": "BLMN",
-      "price": 19.895
-    }
-  ],
-  "260": [
-    {
-      "ticker": "CBMG",
-      "price": 18.35
-    },
-    {
-      "ticker": "SWIR",
-      "price": 20
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a360aa8c10786d262e96c1e680cac502c0fadf305683dfaf5932137761831be7
+size 393

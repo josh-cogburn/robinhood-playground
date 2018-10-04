@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "VRA",
-      "price": 16.74
-    },
-    {
-      "ticker": "SONO",
-      "price": 19.7499
-    }
-  ],
-  "5": [
-    {
-      "ticker": "VRA",
-      "price": 16.68
-    },
-    {
-      "ticker": "NSSC",
-      "price": 15.55
-    }
-  ],
-  "30": [
-    {
-      "ticker": "VRA",
-      "price": 16.56
-    },
-    {
-      "ticker": "SONO",
-      "price": 19.6
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4f6ace345bfb203cd3df01ed3c0d60026647d585f9de366b01d524c431a28cba
+size 388

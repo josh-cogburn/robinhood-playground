@@ -1,32 +1,3 @@
-{
-  "280": [
-    {
-      "ticker": "CEI",
-      "price": 0.3476
-    }
-  ],
-  "290": [
-    {
-      "ticker": "CEI",
-      "price": 0.3449
-    }
-  ],
-  "-50": [
-    {
-      "ticker": "HSGX",
-      "price": 0.615
-    }
-  ],
-  "-30": [
-    {
-      "ticker": "HSGX",
-      "price": 0.633
-    }
-  ],
-  "-10": [
-    {
-      "ticker": "INPX",
-      "price": 0.22
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d950a1f07b99230d3a9c3a67c56c04fe7d27cb3724260612a5d1b52c852e1477
+size 366

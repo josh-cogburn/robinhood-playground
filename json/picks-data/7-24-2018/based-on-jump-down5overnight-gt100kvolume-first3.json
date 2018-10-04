@@ -1,33 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "GST",
-      "price": 0.1562
-    },
-    {
-      "ticker": "DDE",
-      "price": 2.894
-    }
-  ],
-  "16": [
-    {
-      "ticker": "GST",
-      "price": 0.1523
-    },
-    {
-      "ticker": "DDE",
-      "price": 2.95
-    }
-  ],
-  "30": [
-    {
-      "ticker": "GST",
-      "price": 0.1501
-    },
-    {
-      "ticker": "DDE",
-      "price": 2.9275
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:97d215bce27ff19b5b15b209e80aff204a88425fd4d6b948bd7430e79fb66863
+size 399

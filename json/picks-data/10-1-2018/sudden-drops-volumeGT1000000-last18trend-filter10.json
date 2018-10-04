@@ -1,36 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "AVEO",
-      "price": 2.925
-    }
-  ],
-  "221": [
-    {
-      "ticker": "OGEN",
-      "price": 1.4857
-    }
-  ],
-  "-50": [
-    {
-      "ticker": "ACST",
-      "price": 1.67
-    }
-  ],
-  "-30": [
-    {
-      "ticker": "ACST",
-      "price": 1.59
-    }
-  ],
-  "-10": [
-    {
-      "ticker": "ACST",
-      "price": 1.55
-    },
-    {
-      "ticker": "ACHV",
-      "price": 2.92
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3fa876b91e63c98f732ac7a31158f8bc0c6cb67a622d5daf56fd85c1040f296f
+size 422

@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "LPTX",
-      "price": 7.357
-    }
-  ],
-  "5": [
-    {
-      "ticker": "LPTX",
-      "price": 7.5228
-    }
-  ],
-  "16": [
-    {
-      "ticker": "SCPH",
-      "price": 5.4242
-    },
-    {
-      "ticker": "LPTX",
-      "price": 7.43
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SCPH",
-      "price": 5.08
-    },
-    {
-      "ticker": "LPTX",
-      "price": 7.4125
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:34b72dbf49d72e219c36e3836ce42102c26b3558771c2a027ce8a56c6beb2938
+size 405

@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "TTM",
-      "price": 19.27
-    }
-  ],
-  "5": [
-    {
-      "ticker": "TTM",
-      "price": 19.295
-    }
-  ],
-  "16": [
-    {
-      "ticker": "TTM",
-      "price": 19.27
-    },
-    {
-      "ticker": "GPRE",
-      "price": 17.6
-    }
-  ],
-  "30": [
-    {
-      "ticker": "TTM",
-      "price": 19.15
-    },
-    {
-      "ticker": "GPRE",
-      "price": 17.4
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2bd88a29286b5a7e0d6c43db38b048ed53e531bbd23e5aae1abfa94b7b6b772d
+size 399

@@ -1,29 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "NLST",
-      "price": 0.21
-    }
-  ],
-  "16": [
-    {
-      "ticker": "JAGX",
-      "price": 2.34
-    },
-    {
-      "ticker": "CODX",
-      "price": 3.86
-    }
-  ],
-  "30": [
-    {
-      "ticker": "JAGX",
-      "price": 2.14
-    },
-    {
-      "ticker": "CODX",
-      "price": 4.1032
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:939cba7fc312c08f5ed525fe13f317b6db038077c5f2633a79ff9a641a3f388d
+size 341

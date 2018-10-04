@@ -1,28 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "ABX",
-      "price": 11.515
-    }
-  ],
-  "16": [
-    {
-      "ticker": "ABX",
-      "price": 11.565
-    },
-    {
-      "ticker": "RIG",
-      "price": 13.995
-    }
-  ],
-  "30": [
-    {
-      "ticker": "ABX",
-      "price": 11.5327
-    },
-    {
-      "ticker": "CLF",
-      "price": 12.72
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:28902a58f38f65ef06b3c736765001af96bb2a0b71b5127aa79290602026ad44
+size 333

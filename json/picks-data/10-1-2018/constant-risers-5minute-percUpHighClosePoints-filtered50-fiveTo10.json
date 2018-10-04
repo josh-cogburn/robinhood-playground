@@ -1,32 +1,3 @@
-{
-  "80": [
-    {
-      "ticker": "USAT",
-      "price": 7.72
-    }
-  ],
-  "100": [
-    {
-      "ticker": "USAT",
-      "price": 7.58
-    }
-  ],
-  "140": [
-    {
-      "ticker": "USAT",
-      "price": 7.625
-    }
-  ],
-  "198": [
-    {
-      "ticker": "NBR",
-      "price": 6.395
-    }
-  ],
-  "250": [
-    {
-      "ticker": "NBR",
-      "price": 6.415
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ecd6c6121ff80716a41edf33c4ce988dd2a5f7f938d27bb1c9b2db313f77745b
+size 362

@@ -1,32 +1,3 @@
-{
-  "221": [
-    {
-      "ticker": "CXRX",
-      "price": 0.29
-    },
-    {
-      "ticker": "AVGR",
-      "price": 1.4201
-    }
-  ],
-  "328": [
-    {
-      "ticker": "MTP",
-      "price": 1.22
-    },
-    {
-      "ticker": "MOC",
-      "price": 2.25
-    }
-  ],
-  "388": [
-    {
-      "ticker": "MTP",
-      "price": 1.01
-    },
-    {
-      "ticker": "ABIL",
-      "price": 3.04
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7c23c9fb16aaa6caad51dbb9189f278a731b11b71e425db4dc05af9c076cb9e6
+size 388

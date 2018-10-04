@@ -1,29 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "AKS",
-      "price": 4.325
-    }
-  ],
-  "16": [
-    {
-      "ticker": "AKS",
-      "price": 4.33
-    }
-  ],
-  "30": [
-    {
-      "ticker": "ABEV",
-      "price": 4.54
-    },
-    {
-      "ticker": "NVAX",
-      "price": 1.465
-    },
-    {
-      "ticker": "AKS",
-      "price": 4.33
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b8e0006c5283a4e2a4c22abab4358532d0ebfc66343d3ba237c96a2967255c9c
+size 338

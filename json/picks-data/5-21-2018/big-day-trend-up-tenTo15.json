@@ -1,32 +1,3 @@
-{
-  "35": [
-    {
-      "ticker": "CIX",
-      "price": 14.3
-    },
-    {
-      "ticker": "UBX",
-      "price": 14.06
-    }
-  ],
-  "90": [
-    {
-      "ticker": "CIX",
-      "price": 14.3
-    },
-    {
-      "ticker": "CMCM",
-      "price": 12.44
-    }
-  ],
-  "223": [
-    {
-      "ticker": "CIX",
-      "price": 14.3
-    },
-    {
-      "ticker": "SCPH",
-      "price": 13.6619
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7e389fa4a63c671330f59da45949bee1107150cc43886591ca7bf54421e7dd9d
+size 388

@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "RNET",
-      "price": 16.15
-    },
-    {
-      "ticker": "KINS",
-      "price": 19.05
-    }
-  ],
-  "5": [
-    {
-      "ticker": "DBE",
-      "price": 16.99
-    },
-    {
-      "ticker": "RNET",
-      "price": 16.15
-    }
-  ],
-  "16": [
-    {
-      "ticker": "DBE",
-      "price": 16.9701
-    },
-    {
-      "ticker": "RNET",
-      "price": 16.05
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:16c61fe367a857cc0c7a35c862541d67698dfb8ae49c9adcf973b669a696bd47
+size 390

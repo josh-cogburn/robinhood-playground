@@ -1,29 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "ADMP",
-      "price": 4.9502
-    }
-  ],
-  "16": [
-    {
-      "ticker": "SENS",
-      "price": 4.4374
-    },
-    {
-      "ticker": "ADMP",
-      "price": 4.73
-    }
-  ],
-  "30": [
-    {
-      "ticker": "RCON",
-      "price": 1.504
-    },
-    {
-      "ticker": "SENS",
-      "price": 4.475
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:57a59438406f8b921319143b422531a05dd27427f7bde161f5400e0cd6de43f3
+size 345

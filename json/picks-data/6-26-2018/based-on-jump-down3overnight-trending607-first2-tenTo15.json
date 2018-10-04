@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "YRIV",
-      "price": 10.11
-    }
-  ],
-  "5": [
-    {
-      "ticker": "YRIV",
-      "price": 10.6
-    }
-  ],
-  "16": [
-    {
-      "ticker": "ABIL",
-      "price": 12.5
-    },
-    {
-      "ticker": "YRIV",
-      "price": 10.44
-    }
-  ],
-  "30": [
-    {
-      "ticker": "ABIL",
-      "price": 12.53
-    },
-    {
-      "ticker": "YRIV",
-      "price": 10.4922
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:af1f118c9164abda23583289e272cdb4be950fdab442b1e06798cffa4c2508f8
+size 404

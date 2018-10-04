@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "TA",
-      "price": 5.625
-    },
-    {
-      "ticker": "EGLE",
-      "price": 5.65
-    }
-  ],
-  "200": [
-    {
-      "ticker": "PTNR",
-      "price": 5.0652
-    },
-    {
-      "ticker": "ITI",
-      "price": 5.26
-    }
-  ],
-  "260": [
-    {
-      "ticker": "ITI",
-      "price": 5.25
-    },
-    {
-      "ticker": "ELP",
-      "price": 5.27
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:16b1769f7cf68b0d17f4bbc27947e3b4f38860f8a9351c37878aa5a09144f7e0
+size 387

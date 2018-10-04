@@ -1,29 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "SAUC",
-      "price": 0.9799
-    }
-  ],
-  "16": [
-    {
-      "ticker": "SAUC",
-      "price": 0.98
-    },
-    {
-      "ticker": "CEI",
-      "price": 0.4325
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SAUC",
-      "price": 1
-    },
-    {
-      "ticker": "CEI",
-      "price": 0.4443
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:523d5cad11a45af9e580651f4260aa805d1bc99049ba7013e31ce823f513b01e
+size 340

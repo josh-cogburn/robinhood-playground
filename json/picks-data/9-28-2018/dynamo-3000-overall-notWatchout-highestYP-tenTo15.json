@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "SHSP",
-      "price": 14.16
-    },
-    {
-      "ticker": "VCEL",
-      "price": 14.1
-    }
-  ],
-  "200": [
-    {
-      "ticker": "SHSP",
-      "price": 14.08
-    },
-    {
-      "ticker": "VCEL",
-      "price": 14.2
-    }
-  ],
-  "260": [
-    {
-      "ticker": "VCEL",
-      "price": 14.15
-    },
-    {
-      "ticker": "SHSP",
-      "price": 13.93
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2bc56d600bdce3ec6344a254506a4044efddf190d41ce4b2d44a7e7c318ff193
+size 393

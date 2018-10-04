@@ -1,29 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "RWLK",
-      "price": 1.008
-    }
-  ],
-  "16": [
-    {
-      "ticker": "GST",
-      "price": 0.25
-    },
-    {
-      "ticker": "RWLK",
-      "price": 1.0164
-    }
-  ],
-  "30": [
-    {
-      "ticker": "GST",
-      "price": 0.2446
-    },
-    {
-      "ticker": "RWLK",
-      "price": 0.9999
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5449ac801226d8c8b9c6f42dd36e9b3b949bb26bcc6598b811787095a2db6357
+size 344

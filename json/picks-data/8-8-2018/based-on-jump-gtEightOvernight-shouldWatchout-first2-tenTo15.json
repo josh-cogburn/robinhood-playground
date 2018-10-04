@@ -1,30 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "CBB",
-      "price": 12.75
-    }
-  ],
-  "5": [
-    {
-      "ticker": "CBB",
-      "price": 11.95
-    }
-  ],
-  "16": [
-    {
-      "ticker": "CBB",
-      "price": 11.7
-    }
-  ],
-  "30": [
-    {
-      "ticker": "VSI",
-      "price": 10.1
-    },
-    {
-      "ticker": "IMRN",
-      "price": 10.5898
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8854f36d15ca92d4e6733dd7edd03ab0672c4300b6a19d51d145cc108b405c1b
+size 342

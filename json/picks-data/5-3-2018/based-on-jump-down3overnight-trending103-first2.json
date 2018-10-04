@@ -1,32 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "PACB",
-      "price": 2.3
-    },
-    {
-      "ticker": "JONE",
-      "price": 0.65
-    }
-  ],
-  "16": [
-    {
-      "ticker": "PACB",
-      "price": 2.2925
-    },
-    {
-      "ticker": "JONE",
-      "price": 0.6602
-    }
-  ],
-  "30": [
-    {
-      "ticker": "PACB",
-      "price": 2.305
-    },
-    {
-      "ticker": "JONE",
-      "price": 0.6486
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:02cce5e6aae72a869f6bed21c06605360cf98bcf2f89b4c519b743e46033d8bc
+size 391

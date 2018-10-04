@@ -1,32 +1,3 @@
-{
-  "10": [
-    {
-      "ticker": "PDEX",
-      "price": 11.8
-    }
-  ],
-  "50": [
-    {
-      "ticker": "PDEX",
-      "price": 12.75
-    }
-  ],
-  "300": [
-    {
-      "ticker": "PDEX",
-      "price": 12.3615
-    }
-  ],
-  "380": [
-    {
-      "ticker": "PDEX",
-      "price": 12.4582
-    }
-  ],
-  "600": [
-    {
-      "ticker": "PDEX",
-      "price": 12.45
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1ecda9a2f2099d19e30ec75fec0ac4d0ca3a357345efe761bd80a1e0b11039ea
+size 368

@@ -1,32 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "PED",
-      "price": 0.3496
-    },
-    {
-      "ticker": "ADMP",
-      "price": 4.05
-    }
-  ],
-  "16": [
-    {
-      "ticker": "PED",
-      "price": 0.335
-    },
-    {
-      "ticker": "ADMP",
-      "price": 4
-    }
-  ],
-  "30": [
-    {
-      "ticker": "PED",
-      "price": 0.3448
-    },
-    {
-      "ticker": "ADMP",
-      "price": 3.99
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a6ef1a964c056e651b7739b7ac73c6b29f256e7f52dd6142734cebb09d42a9e8
+size 384

@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "SSC",
-      "price": 5.4
-    },
-    {
-      "ticker": "TELL",
-      "price": 8.945
-    }
-  ],
-  "5": [
-    {
-      "ticker": "SSC",
-      "price": 4.8801
-    },
-    {
-      "ticker": "TELL",
-      "price": 8.9899
-    }
-  ],
-  "16": [
-    {
-      "ticker": "TELL",
-      "price": 9.0201
-    },
-    {
-      "ticker": "GLUU",
-      "price": 7.52
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:119f79589956f48efed67b200318eac8bdebb3085c0a7cf2f1cbcf1e11dbc7fe
+size 388

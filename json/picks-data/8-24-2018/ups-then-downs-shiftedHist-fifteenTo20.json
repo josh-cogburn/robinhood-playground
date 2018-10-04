@@ -1,28 +1,3 @@
-{
-  "10": [
-    {
-      "ticker": "KALV",
-      "price": 15.2124
-    }
-  ],
-  "50": [
-    {
-      "ticker": "KALV",
-      "price": 15.291
-    }
-  ],
-  "200": [],
-  "300": [
-    {
-      "ticker": "KALV",
-      "price": 15.34
-    }
-  ],
-  "380": [
-    {
-      "ticker": "KALV",
-      "price": 15.305
-    }
-  ],
-  "600": []
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:61d1c54cdf588b3b48a7457a0b70ab228402a64040e2f1c18486bb9437807371
+size 322

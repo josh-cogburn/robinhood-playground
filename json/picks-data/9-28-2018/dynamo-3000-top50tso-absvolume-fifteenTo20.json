@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "RNET",
-      "price": 19.6
-    },
-    {
-      "ticker": "TGP",
-      "price": 16.65
-    }
-  ],
-  "200": [
-    {
-      "ticker": "DCOM",
-      "price": 17.65
-    },
-    {
-      "ticker": "TGP",
-      "price": 16.7
-    }
-  ],
-  "260": [
-    {
-      "ticker": "CTRE",
-      "price": 17.53
-    },
-    {
-      "ticker": "BOJA",
-      "price": 15.5
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:551fcbef2a2f8580ce5b965a3bd31db291256bb67ec7ffe2572b289cc5fabab5
+size 390

@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "SVVC",
-      "price": 16.4355
-    },
-    {
-      "ticker": "CSWC",
-      "price": 18.91
-    }
-  ],
-  "200": [
-    {
-      "ticker": "SVVC",
-      "price": 16.7522
-    },
-    {
-      "ticker": "SPNE",
-      "price": 15.5047
-    }
-  ],
-  "260": [
-    {
-      "ticker": "CDXS",
-      "price": 17.2
-    },
-    {
-      "ticker": "SVVC",
-      "price": 16.66
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cf01d428a64f04786b411e7a5815c34c11a11dff553fc2f5243f4217abc9a247
+size 400

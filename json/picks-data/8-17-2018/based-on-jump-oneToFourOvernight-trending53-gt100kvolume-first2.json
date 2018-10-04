@@ -1,29 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "AVP",
-      "price": 2.035
-    }
-  ],
-  "16": [
-    {
-      "ticker": "AVP",
-      "price": 2.075
-    },
-    {
-      "ticker": "UPL",
-      "price": 1.085
-    }
-  ],
-  "30": [
-    {
-      "ticker": "RVLT",
-      "price": 2.51
-    },
-    {
-      "ticker": "IHT",
-      "price": 1.7199
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e019efacdb76a150e59552943e5d1cbeabd799937850be98fd0072a9073be8ce
+size 340

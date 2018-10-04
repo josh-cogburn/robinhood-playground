@@ -1,32 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "UBX",
-      "price": 19.226
-    },
-    {
-      "ticker": "VNDA",
-      "price": 19.45
-    }
-  ],
-  "16": [
-    {
-      "ticker": "LCNB",
-      "price": 18.775
-    },
-    {
-      "ticker": "UBX",
-      "price": 18.88
-    }
-  ],
-  "30": [
-    {
-      "ticker": "LCNB",
-      "price": 19
-    },
-    {
-      "ticker": "UBX",
-      "price": 18
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:40803e1a4ca73bac8f9a174ff77eae6ab8fcce11b5da7dc62df432c7fc20becf
+size 384

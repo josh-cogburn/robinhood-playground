@@ -1,36 +1,3 @@
-{
-  "0": [],
-  "5": [],
-  "16": [
-    {
-      "ticker": "CEI",
-      "price": 0.4465
-    },
-    {
-      "ticker": "UMC",
-      "price": 2.9
-    },
-    {
-      "ticker": "NOG",
-      "price": 3.455
-    }
-  ],
-  "30": [
-    {
-      "ticker": "CEI",
-      "price": 0.444
-    },
-    {
-      "ticker": "UMC",
-      "price": 2.885
-    },
-    {
-      "ticker": "BTX",
-      "price": 2.4901
-    },
-    {
-      "ticker": "NOG",
-      "price": 3.46
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:04608b2cbf41283f7b257938da82765e1e489e90779cd9f9a2e31b6e4d9cca19
+size 450

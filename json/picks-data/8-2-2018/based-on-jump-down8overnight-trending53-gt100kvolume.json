@@ -1,29 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "AVP",
-      "price": 1.455
-    }
-  ],
-  "16": [
-    {
-      "ticker": "SYN",
-      "price": 0.1403
-    },
-    {
-      "ticker": "AVP",
-      "price": 1.46
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SYN",
-      "price": 0.141
-    },
-    {
-      "ticker": "AVP",
-      "price": 1.49
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9dc54e79f98342af2759495c4f110bf0175dd9293d269e08fe06ea0bd8ade876
+size 338

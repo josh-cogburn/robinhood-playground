@@ -1,30 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "YRD",
-      "price": 20.32
-    },
-    {
-      "ticker": "CASA",
-      "price": 15.85
-    }
-  ],
-  "5": [
-    {
-      "ticker": "CASA",
-      "price": 15.87
-    }
-  ],
-  "16": [
-    {
-      "ticker": "CASA",
-      "price": 15.86
-    }
-  ],
-  "30": [
-    {
-      "ticker": "CASA",
-      "price": 15.65
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:041ae231ee42a3b1d3bc079c4610dc8e820ad912e2703b5433dfbbc739c56d12
+size 345

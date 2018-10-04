@@ -1,34 +1,3 @@
-{
-  "10": [
-    {
-      "ticker": "DVAX",
-      "price": 12.85
-    }
-  ],
-  "35": [
-    {
-      "ticker": "PCOM",
-      "price": 14.02
-    }
-  ],
-  "90": [
-    {
-      "ticker": "BFR",
-      "price": 11.36
-    },
-    {
-      "ticker": "PCOM",
-      "price": 14.02
-    }
-  ],
-  "223": [
-    {
-      "ticker": "BFR",
-      "price": 11.78
-    },
-    {
-      "ticker": "PCOM",
-      "price": 14.21
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ba7f65b32116d74c01cf84703281c45b41e05004a0cd68f9e57b222e42832183
+size 405

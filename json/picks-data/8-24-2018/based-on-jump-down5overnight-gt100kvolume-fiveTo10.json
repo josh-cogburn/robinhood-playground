@@ -1,28 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "DWT",
-      "price": 6.5
-    }
-  ],
-  "5": [
-    {
-      "ticker": "SUPV",
-      "price": 7.6
-    },
-    {
-      "ticker": "DWT",
-      "price": 6.5
-    }
-  ],
-  "16": [
-    {
-      "ticker": "SUPV",
-      "price": 7.2999
-    },
-    {
-      "ticker": "DWT",
-      "price": 6.52
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6913d611177cbc010b9219837cd2d175b8cfd2996e3f4907b80d4a1b1123df82
+size 323

@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "SGC",
-      "price": 19.44
-    },
-    {
-      "ticker": "DO",
-      "price": 18.89
-    }
-  ],
-  "5": [
-    {
-      "ticker": "SGC",
-      "price": 19.44
-    },
-    {
-      "ticker": "CHIQ",
-      "price": 15.875
-    }
-  ],
-  "16": [
-    {
-      "ticker": "CHIQ",
-      "price": 15.875
-    },
-    {
-      "ticker": "IRS",
-      "price": 17.2
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:15e593d7516fe4127d4d223a08720cdd54bc2c1828f9c6893b6744c8b63a5b1c
+size 386

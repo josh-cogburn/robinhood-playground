@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "AYTU",
-      "price": 0.385
-    }
-  ],
-  "5": [
-    {
-      "ticker": "AYTU",
-      "price": 0.3646
-    }
-  ],
-  "16": [
-    {
-      "ticker": "SNOA",
-      "price": 3.1603
-    },
-    {
-      "ticker": "AYTU",
-      "price": 0.3499
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SNOA",
-      "price": 3.2042
-    },
-    {
-      "ticker": "AYTU",
-      "price": 0.3585
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b6b6b566ccf0911dc9697c61aaf7b2f8139ce8c9df28ac19d195f2827ac03417
+size 409

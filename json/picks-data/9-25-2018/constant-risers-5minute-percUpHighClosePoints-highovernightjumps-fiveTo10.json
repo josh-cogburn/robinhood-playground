@@ -1,32 +1,3 @@
-{
-  "80": [
-    {
-      "ticker": "TRT",
-      "price": 5.08
-    }
-  ],
-  "100": [
-    {
-      "ticker": "TRT",
-      "price": 5.025
-    }
-  ],
-  "140": [
-    {
-      "ticker": "OCC",
-      "price": 5.2
-    }
-  ],
-  "250": [
-    {
-      "ticker": "TRT",
-      "price": 5.1
-    }
-  ],
-  "300": [
-    {
-      "ticker": "OCC",
-      "price": 5.005
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f725eddeaa8b44e7c5378ef7bda9b3f10bfda9b34eede537a9216892f4b5d35b
+size 356

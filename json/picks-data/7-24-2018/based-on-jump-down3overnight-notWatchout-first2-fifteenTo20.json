@@ -1,30 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "TECS",
-      "price": 19.733
-    }
-  ],
-  "5": [
-    {
-      "ticker": "TECS",
-      "price": 19.79
-    }
-  ],
-  "16": [
-    {
-      "ticker": "TECS",
-      "price": 19.8166
-    }
-  ],
-  "30": [
-    {
-      "ticker": "HVBC",
-      "price": 15.6
-    },
-    {
-      "ticker": "TECS",
-      "price": 19.7846
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:97b4f4537409a3c43f9bd9ac21389b4204fee2f41e0595fa0130e2f19cd120e8
+size 350

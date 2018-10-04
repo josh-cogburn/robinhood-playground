@@ -1,32 +1,3 @@
-{
-  "221": [
-    {
-      "ticker": "GLMD",
-      "price": 12.22
-    },
-    {
-      "ticker": "BAF",
-      "price": 13.75
-    }
-  ],
-  "280": [
-    {
-      "ticker": "FTSI",
-      "price": 14.8
-    },
-    {
-      "ticker": "BRS",
-      "price": 14.3
-    }
-  ],
-  "328": [
-    {
-      "ticker": "PRCP",
-      "price": 10.09
-    },
-    {
-      "ticker": "CHRA",
-      "price": 10.05
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9eab54c8f72822c5b962c9e9bf7ae02a9fd6cc40b1c1d681cbb5ae38ac228081
+size 391

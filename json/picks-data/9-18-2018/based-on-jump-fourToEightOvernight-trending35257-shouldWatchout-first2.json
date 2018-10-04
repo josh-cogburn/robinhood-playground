@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "ONCY",
-      "price": 4.71
-    }
-  ],
-  "5": [
-    {
-      "ticker": "ONCY",
-      "price": 4.5
-    }
-  ],
-  "16": [
-    {
-      "ticker": "SKYS",
-      "price": 0.98
-    },
-    {
-      "ticker": "ONCY",
-      "price": 4.5199
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SKYS",
-      "price": 1.0083
-    },
-    {
-      "ticker": "ONCY",
-      "price": 4.5199
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7af43c705b76ab3dfbbb47da2f29096331e5b41908de189e88ddc0366b7d1ef2
+size 403

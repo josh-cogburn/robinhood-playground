@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "PDLI",
-      "price": 2.93
-    }
-  ],
-  "5": [
-    {
-      "ticker": "PDLI",
-      "price": 2.92
-    }
-  ],
-  "16": [
-    {
-      "ticker": "SES",
-      "price": 3.03
-    },
-    {
-      "ticker": "PDLI",
-      "price": 2.91
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SES",
-      "price": 3.03
-    },
-    {
-      "ticker": "PDLI",
-      "price": 2.9
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:688bf3ff8d816ed028d2b55d0ca6e057699a0875db1f20b1edd3fe1acdffa7b3
+size 395

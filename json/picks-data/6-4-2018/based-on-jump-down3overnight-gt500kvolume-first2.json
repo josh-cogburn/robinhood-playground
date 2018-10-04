@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "TVIX",
-      "price": 4.855
-    }
-  ],
-  "5": [
-    {
-      "ticker": "TVIX",
-      "price": 4.8
-    }
-  ],
-  "16": [
-    {
-      "ticker": "CODX",
-      "price": 4.4
-    },
-    {
-      "ticker": "IDRA",
-      "price": 1.8001
-    }
-  ],
-  "30": [
-    {
-      "ticker": "IDRA",
-      "price": 1.83
-    },
-    {
-      "ticker": "TVIX",
-      "price": 4.8366
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1de4385662ebf61971c04599250d0d20d91084a0b90a4ebde2e1661fbebd3941
+size 401

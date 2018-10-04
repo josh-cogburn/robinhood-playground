@@ -1,32 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "EVFM",
-      "price": 7
-    },
-    {
-      "ticker": "SIEB",
-      "price": 7.92
-    }
-  ],
-  "16": [
-    {
-      "ticker": "EVFM",
-      "price": 7.025
-    },
-    {
-      "ticker": "SIEB",
-      "price": 8.16
-    }
-  ],
-  "30": [
-    {
-      "ticker": "EVFM",
-      "price": 7.24
-    },
-    {
-      "ticker": "SIEB",
-      "price": 8.16
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:91ada3a2ecd8320c84f5b7d763247b77d641bad870cae4f8daf48687e0c5b049
+size 383

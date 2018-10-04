@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "AMRN",
-      "price": 14.6901
-    },
-    {
-      "ticker": "RIG",
-      "price": 14.25
-    }
-  ],
-  "200": [
-    {
-      "ticker": "AMRN",
-      "price": 14.86
-    },
-    {
-      "ticker": "GIFI",
-      "price": 10.15
-    }
-  ],
-  "260": [
-    {
-      "ticker": "SBLK",
-      "price": 14.365
-    },
-    {
-      "ticker": "GIFI",
-      "price": 10.15
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2ec7f2c16d081e5505de76307b09a8a730ada53e33cf4a75e49bbde44c8a2588
+size 397

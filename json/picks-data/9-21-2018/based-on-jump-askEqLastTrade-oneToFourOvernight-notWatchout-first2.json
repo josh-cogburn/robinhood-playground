@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "AVP",
-      "price": 2.495
-    },
-    {
-      "ticker": "GURE",
-      "price": 1.11
-    }
-  ],
-  "5": [
-    {
-      "ticker": "AVP",
-      "price": 2.5099
-    },
-    {
-      "ticker": "GURE",
-      "price": 1.11
-    }
-  ],
-  "16": [
-    {
-      "ticker": "AVP",
-      "price": 2.5
-    },
-    {
-      "ticker": "NAO",
-      "price": 0.99
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:decf3138400f9f6d3d91dab0306f3cc14b802512f085dad0defdbc98914c09ba
+size 382

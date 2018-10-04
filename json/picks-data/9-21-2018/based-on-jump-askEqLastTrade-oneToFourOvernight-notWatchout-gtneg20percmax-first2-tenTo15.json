@@ -1,28 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "TPVG",
-      "price": 13.12
-    },
-    {
-      "ticker": "USO",
-      "price": 14.99
-    }
-  ],
-  "5": [
-    {
-      "ticker": "TPVG",
-      "price": 13.11
-    },
-    {
-      "ticker": "USO",
-      "price": 15
-    }
-  ],
-  "16": [
-    {
-      "ticker": "EROS",
-      "price": 12.475
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e2f65da234a7e9f94fbe67ccc0336b807369f04910f8c811b93bd37acd7f98a0
+size 328

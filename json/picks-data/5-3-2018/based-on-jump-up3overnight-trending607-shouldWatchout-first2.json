@@ -1,32 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "PIXY",
-      "price": 2.84
-    },
-    {
-      "ticker": "CYTR",
-      "price": 1.817
-    }
-  ],
-  "16": [
-    {
-      "ticker": "PIXY",
-      "price": 2.77
-    },
-    {
-      "ticker": "CYTR",
-      "price": 1.8192
-    }
-  ],
-  "30": [
-    {
-      "ticker": "PIXY",
-      "price": 2.7336
-    },
-    {
-      "ticker": "CYTR",
-      "price": 1.82
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e665f87df7f989177adbde77aabd5c810145362d0c23f7a515187c64d3acf38e
+size 390

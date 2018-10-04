@@ -1,34 +1,3 @@
-{
-  "40": [
-    {
-      "ticker": "OMI",
-      "price": 17.415
-    }
-  ],
-  "80": [
-    {
-      "ticker": "GME",
-      "price": 16.2899
-    }
-  ],
-  "100": [
-    {
-      "ticker": "OMI",
-      "price": 17.66
-    }
-  ],
-  "140": [
-    {
-      "ticker": "OI",
-      "price": 17.77
-    }
-  ],
-  "198": [
-    {
-      "ticker": "BBBY",
-      "price": 18.35
-    }
-  ],
-  "250": [],
-  "300": []
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ad4070b74df7bd90535cf8e74ab5e5d3c02cfebe8e8eefa64564363230e342b1
+size 389

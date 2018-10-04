@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "SYPR",
-      "price": 1.62
-    }
-  ],
-  "5": [
-    {
-      "ticker": "SYPR",
-      "price": 1.62
-    }
-  ],
-  "16": [
-    {
-      "ticker": "SSNT",
-      "price": 4.1437
-    },
-    {
-      "ticker": "SYPR",
-      "price": 1.62
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SSNT",
-      "price": 4.1437
-    },
-    {
-      "ticker": "SYPR",
-      "price": 1.6
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fb7f610ec020e3dffbf2dfc0c0c4568dbcd7a83556901b4b69ff1801fefddcca
+size 401

@@ -1,36 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "SIGM",
-      "price": 0.22
-    },
-    {
-      "ticker": "ATAI",
-      "price": 0.8899
-    },
-    {
-      "ticker": "ESES",
-      "price": 0.3901
-    }
-  ],
-  "5": [
-    {
-      "ticker": "ATAI",
-      "price": 0.8689
-    },
-    {
-      "ticker": "ESES",
-      "price": 0.396
-    }
-  ],
-  "16": [
-    {
-      "ticker": "ATAI",
-      "price": 0.86
-    },
-    {
-      "ticker": "ESES",
-      "price": 0.396
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:410ef68e1c6a11ad283877e82c37cccfdf9005c342cbba060acb35ee04291c8b
+size 449

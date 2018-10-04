@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "CBIO",
-      "price": 10.975
-    },
-    {
-      "ticker": "HX",
-      "price": 10.22
-    }
-  ],
-  "5": [
-    {
-      "ticker": "CBIO",
-      "price": 10.41
-    },
-    {
-      "ticker": "HX",
-      "price": 8.96
-    }
-  ],
-  "16": [
-    {
-      "ticker": "CBIO",
-      "price": 10.8907
-    }
-  ],
-  "30": [
-    {
-      "ticker": "CBIO",
-      "price": 11.3
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4d075b28a0e2b723fcd8cab77fae2451c4fc2dc18dcd3080344948f19a704e4b
+size 401

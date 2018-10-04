@@ -1,29 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "WTI",
-      "price": 9.02
-    }
-  ],
-  "16": [
-    {
-      "ticker": "AXTI",
-      "price": 8.525
-    },
-    {
-      "ticker": "LLNW",
-      "price": 5.085
-    }
-  ],
-  "30": [
-    {
-      "ticker": "AXTI",
-      "price": 8.475
-    },
-    {
-      "ticker": "LLNW",
-      "price": 5.1
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3fcea7fe184daf0fb173281c7c97f59bc41a76cf760742d55df21f735b34e1d5
+size 340

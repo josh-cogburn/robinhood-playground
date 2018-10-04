@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "TSU",
-      "price": 14.7
-    },
-    {
-      "ticker": "HYT",
-      "price": 10.547
-    }
-  ],
-  "200": [
-    {
-      "ticker": "ACCO",
-      "price": 11.475
-    },
-    {
-      "ticker": "CPE",
-      "price": 12.05
-    }
-  ],
-  "260": [
-    {
-      "ticker": "EDF",
-      "price": 13.005
-    },
-    {
-      "ticker": "WNEB",
-      "price": 10.825
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5883f3f2100de25d1b37f2db2a354f148ec5fe2f186a25887d45d341153db1a3
+size 394

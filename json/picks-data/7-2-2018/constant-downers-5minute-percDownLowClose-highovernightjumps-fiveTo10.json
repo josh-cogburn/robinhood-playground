@@ -1,36 +1,3 @@
-{
-  "77": [
-    {
-      "ticker": "XSPL",
-      "price": 8
-    }
-  ],
-  "242": [
-    {
-      "ticker": "XSPL",
-      "price": 8.15
-    },
-    {
-      "ticker": "SALM",
-      "price": 5.2
-    },
-    {
-      "ticker": "MRNS",
-      "price": 7.41
-    }
-  ],
-  "309": [
-    {
-      "ticker": "SALM",
-      "price": 5.2
-    },
-    {
-      "ticker": "XSPL",
-      "price": 8.0491
-    },
-    {
-      "ticker": "MRNS",
-      "price": 7.46
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:be0bb03e11051fcccef90998f1aea2d624ca514b5529479672339bce8fcac9c3
+size 442

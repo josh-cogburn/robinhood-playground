@@ -1,32 +1,3 @@
-{
-  "25": [
-    {
-      "ticker": "USAT",
-      "price": 11.45
-    }
-  ],
-  "95": [
-    {
-      "ticker": "USAT",
-      "price": 11.2834
-    }
-  ],
-  "150": [
-    {
-      "ticker": "USAT",
-      "price": 11.15
-    }
-  ],
-  "210": [
-    {
-      "ticker": "CIFS",
-      "price": 10.9
-    }
-  ],
-  "315": [
-    {
-      "ticker": "MNLO",
-      "price": 10.17
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f4bc120ddfcccfd83219bfb68b461ceab41d20a4766089ff2e1400187aab98da
+size 366

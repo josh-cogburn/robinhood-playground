@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "TGS",
-      "price": 14.8
-    },
-    {
-      "ticker": "CRESY",
-      "price": 14.48
-    }
-  ],
-  "200": [
-    {
-      "ticker": "TGS",
-      "price": 14.86
-    },
-    {
-      "ticker": "VIVO",
-      "price": 14.7
-    }
-  ],
-  "260": [
-    {
-      "ticker": "TGS",
-      "price": 14.44
-    },
-    {
-      "ticker": "TSU",
-      "price": 14.5
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:944ec4420b6052e693a0acf3408b8b459a102747624b7396f0a036f5dfab92fc
+size 389

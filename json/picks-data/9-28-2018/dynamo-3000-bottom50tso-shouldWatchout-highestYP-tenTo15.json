@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "ZFGN",
-      "price": 11.56
-    },
-    {
-      "ticker": "EDUC",
-      "price": 11.4068
-    }
-  ],
-  "200": [
-    {
-      "ticker": "ZFGN",
-      "price": 11.51
-    },
-    {
-      "ticker": "EDUC",
-      "price": 11.4068
-    }
-  ],
-  "260": [
-    {
-      "ticker": "ZFGN",
-      "price": 11.51
-    },
-    {
-      "ticker": "EDUC",
-      "price": 11.4068
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7ff20abc92b0497fa14f473fe933c68da1891702cc98923f14db5de3181d17d7
+size 401

@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "IGC",
-      "price": 1.1759
-    }
-  ],
-  "5": [
-    {
-      "ticker": "IGC",
-      "price": 1.319
-    }
-  ],
-  "16": [
-    {
-      "ticker": "IGC",
-      "price": 1.2701
-    },
-    {
-      "ticker": "SBGL",
-      "price": 2.34
-    }
-  ],
-  "30": [
-    {
-      "ticker": "IGC",
-      "price": 1.3561
-    },
-    {
-      "ticker": "SBGL",
-      "price": 2.42
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8c387d421328bf3e871f18fda1b1c49e120d8e612223a63b7cce8320a97175bd
+size 401

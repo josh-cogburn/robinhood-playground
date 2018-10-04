@@ -1,32 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "RIG",
-      "price": 12.67
-    },
-    {
-      "ticker": "ARDS",
-      "price": 13.07
-    }
-  ],
-  "16": [
-    {
-      "ticker": "RIG",
-      "price": 12.7
-    },
-    {
-      "ticker": "ARDS",
-      "price": 13.07
-    }
-  ],
-  "30": [
-    {
-      "ticker": "RIG",
-      "price": 12.68
-    },
-    {
-      "ticker": "ARDS",
-      "price": 13.07
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f21ab3f269fcfcdb404dcec3796a4f91d7ae3ea816ac7fc26ffe5713962ade72
+size 387

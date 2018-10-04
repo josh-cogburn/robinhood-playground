@@ -1,32 +1,3 @@
-{
-  "32": [
-    {
-      "ticker": "ANW",
-      "price": 0.8408
-    }
-  ],
-  "63": [
-    {
-      "ticker": "NAKD",
-      "price": 1.7947
-    }
-  ],
-  "221": [],
-  "280": [
-    {
-      "ticker": "NFEC",
-      "price": 4.124
-    }
-  ],
-  "328": [],
-  "388": [
-    {
-      "ticker": "PLM",
-      "price": 0.9
-    },
-    {
-      "ticker": "VICL",
-      "price": 1.0744
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a90ae45be8fefd7cf60ecf9e60b46d27381fb53332d9f1c2757bf20115239756
+size 375

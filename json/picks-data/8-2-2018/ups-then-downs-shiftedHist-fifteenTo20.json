@@ -1,36 +1,3 @@
-{
-  "10": [
-    {
-      "ticker": "UMRX",
-      "price": 15.04
-    },
-    {
-      "ticker": "SOI",
-      "price": 15.4
-    }
-  ],
-  "50": [
-    {
-      "ticker": "SOI",
-      "price": 15.94
-    }
-  ],
-  "200": [
-    {
-      "ticker": "SOI",
-      "price": 15.82
-    }
-  ],
-  "300": [
-    {
-      "ticker": "SOI",
-      "price": 16.04
-    }
-  ],
-  "380": [
-    {
-      "ticker": "SOI",
-      "price": 16.06
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:924fcbdbef496899ba1ee8f5eff1fb1335436d0c1c88bcd5880de4ffc6050f73
+size 417

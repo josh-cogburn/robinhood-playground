@@ -1,32 +1,3 @@
-{
-  "4": [
-    {
-      "ticker": "RAIL",
-      "price": 19
-    },
-    {
-      "ticker": "OMI",
-      "price": 15.865
-    }
-  ],
-  "351": [
-    {
-      "ticker": "SMB",
-      "price": 17.25
-    },
-    {
-      "ticker": "NCSM",
-      "price": 15.88
-    }
-  ],
-  "381": [
-    {
-      "ticker": "RNP",
-      "price": 19.65
-    },
-    {
-      "ticker": "SMB",
-      "price": 17.25
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:14bd11688c4eacccf2b0d1495611cdc174f69154deea33ead792db2ae62942e7
+size 387

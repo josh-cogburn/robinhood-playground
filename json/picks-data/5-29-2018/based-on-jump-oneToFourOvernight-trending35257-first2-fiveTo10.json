@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "TXMD",
-      "price": 6.4
-    },
-    {
-      "ticker": "AXTI",
-      "price": 7.611
-    }
-  ],
-  "5": [
-    {
-      "ticker": "GNE",
-      "price": 5.44
-    },
-    {
-      "ticker": "TXMD",
-      "price": 6.37
-    }
-  ],
-  "30": [
-    {
-      "ticker": "GNE",
-      "price": 5.375
-    },
-    {
-      "ticker": "TXMD",
-      "price": 6.3435
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1fbe77a4167594f9bddaf9e8408456300fc99a0f141c0db51a2fa11049926056
+size 385

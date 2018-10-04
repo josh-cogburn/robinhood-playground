@@ -1,28 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "EGOV",
-      "price": 14.875
-    }
-  ],
-  "200": [
-    {
-      "ticker": "WATT",
-      "price": 10.0899
-    },
-    {
-      "ticker": "EGOV",
-      "price": 14.85
-    }
-  ],
-  "260": [
-    {
-      "ticker": "AKRX",
-      "price": 13.08
-    },
-    {
-      "ticker": "GLYC",
-      "price": 14.56
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e015956114f1d4cb9c0269994315e6541314dccaedbe4588ae1188e67faf4ea2
+size 340

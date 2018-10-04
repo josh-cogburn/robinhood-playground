@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "IAC",
-      "price": 198.12
-    },
-    {
-      "ticker": "MIDD",
-      "price": 120.505
-    },
-    {
-      "ticker": "SRPT",
-      "price": 137.49
-    }
-  ],
-  "5": [
-    {
-      "ticker": "REPH",
-      "price": 7.75
-    }
-  ],
-  "16": [
-    {
-      "ticker": "REPH",
-      "price": 7.4405
-    }
-  ],
-  "30": [
-    {
-      "ticker": "REPH",
-      "price": 7.73
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:307ea60030d6d31cf72de535b2fec71e41a422e919d92ad0d367a6ccacc7c934
+size 406

@@ -1,36 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "VDMCY",
-      "price": 8.18
-    },
-    {
-      "ticker": "BDORY",
-      "price": 6.55
-    },
-    {
-      "ticker": "KGFHY",
-      "price": 7.03
-    }
-  ],
-  "16": [
-    {
-      "ticker": "INTT",
-      "price": 7.95
-    },
-    {
-      "ticker": "LEAF",
-      "price": 9.85
-    }
-  ],
-  "30": [
-    {
-      "ticker": "INTT",
-      "price": 7.94
-    },
-    {
-      "ticker": "LEAF",
-      "price": 9.8
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8c7ecf7ec9f6e5c7521e21381bd53161cc4ed93bfdb52a9ec1a4cbb02f7ec546
+size 444

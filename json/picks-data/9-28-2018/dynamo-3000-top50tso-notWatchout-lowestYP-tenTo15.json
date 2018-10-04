@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "DVAX",
-      "price": 12.35
-    },
-    {
-      "ticker": "BFR",
-      "price": 12.08
-    }
-  ],
-  "200": [
-    {
-      "ticker": "BFR",
-      "price": 12.0698
-    },
-    {
-      "ticker": "AOSL",
-      "price": 11.67
-    }
-  ],
-  "260": [
-    {
-      "ticker": "DVAX",
-      "price": 12.35
-    },
-    {
-      "ticker": "AOSL",
-      "price": 11.67
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6fc00ae4951e7b9228359cd2bd0a84100f3f41fbc86ca3eaa352d7e02fd4ef27
+size 395

@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "STKS",
-      "price": 3.14
-    },
-    {
-      "ticker": "NSU",
-      "price": 3.7204
-    },
-    {
-      "ticker": "HIO",
-      "price": 4.8144
-    }
-  ],
-  "5": [
-    {
-      "ticker": "UUGRY",
-      "price": 18.418
-    }
-  ],
-  "16": [
-    {
-      "ticker": "UUGRY",
-      "price": 18.39
-    }
-  ],
-  "30": [
-    {
-      "ticker": "UUGRY",
-      "price": 18.32
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a7bfe8c8bae60243ba5bd92b74487bdc41a8c50d365367b2d0955ecc601287ff
+size 407

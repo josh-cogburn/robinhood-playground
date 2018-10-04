@@ -1,32 +1,3 @@
-{
-  "-50": [
-    {
-      "ticker": "GERN",
-      "price": 2.11
-    },
-    {
-      "ticker": "JNUG",
-      "price": 7.24
-    }
-  ],
-  "-30": [
-    {
-      "ticker": "GERN",
-      "price": 1.96
-    },
-    {
-      "ticker": "JNUG",
-      "price": 7.2
-    }
-  ],
-  "-10": [
-    {
-      "ticker": "GERN",
-      "price": 2
-    },
-    {
-      "ticker": "JNUG",
-      "price": 7.17
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2958c419abbf79b7a263bf46394ab96a39c7420413301d1f3efae4f2e13745df
+size 385

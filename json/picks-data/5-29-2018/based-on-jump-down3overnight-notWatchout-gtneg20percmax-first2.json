@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "GGB",
-      "price": 4.08
-    },
-    {
-      "ticker": "DNR",
-      "price": 3.76
-    }
-  ],
-  "5": [
-    {
-      "ticker": "GGB",
-      "price": 4.08
-    },
-    {
-      "ticker": "GMO",
-      "price": 0.3906
-    }
-  ],
-  "30": [
-    {
-      "ticker": "GGB",
-      "price": 4.15
-    },
-    {
-      "ticker": "GMO",
-      "price": 0.3941
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:edeb1a54a6e476a750df4d887c15063f34e09eea4a9cd0066f03a2d09fd7b01f
+size 382

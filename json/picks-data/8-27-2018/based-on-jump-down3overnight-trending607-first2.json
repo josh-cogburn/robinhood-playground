@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "ATAI",
-      "price": 0.8899
-    },
-    {
-      "ticker": "YVR",
-      "price": 1.1035
-    }
-  ],
-  "5": [
-    {
-      "ticker": "ATAI",
-      "price": 0.8689
-    },
-    {
-      "ticker": "YVR",
-      "price": 1.21
-    }
-  ],
-  "16": [
-    {
-      "ticker": "ATAI",
-      "price": 0.86
-    },
-    {
-      "ticker": "YVR",
-      "price": 1.21
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:52d169ad80fc5d61d5be123add8911d19044ddd906dc635e155c4ea179403ca4
+size 387

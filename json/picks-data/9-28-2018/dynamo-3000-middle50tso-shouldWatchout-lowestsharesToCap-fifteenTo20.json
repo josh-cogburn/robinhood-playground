@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "ACOR",
-      "price": 19.85
-    },
-    {
-      "ticker": "DPLO",
-      "price": 19.47
-    }
-  ],
-  "200": [
-    {
-      "ticker": "BEL",
-      "price": 18.325
-    },
-    {
-      "ticker": "SGMO",
-      "price": 16.925
-    }
-  ],
-  "260": [
-    {
-      "ticker": "DPLO",
-      "price": 19.46
-    },
-    {
-      "ticker": "AMPH",
-      "price": 19.14
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4eeb81d924f7886ea68610cd3bbc46a22bf2968229b296aea63fb1a50c21539f
+size 396

@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "ENT",
-      "price": 2.2801
-    }
-  ],
-  "5": [
-    {
-      "ticker": "ENT",
-      "price": 2.33
-    }
-  ],
-  "16": [
-    {
-      "ticker": "ENT",
-      "price": 2.39
-    },
-    {
-      "ticker": "NTIP",
-      "price": 2.9
-    }
-  ],
-  "30": [
-    {
-      "ticker": "FSI",
-      "price": 1.6201
-    },
-    {
-      "ticker": "ENT",
-      "price": 2.345
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:bce8cd3613e55738c00bf06ea0233ea9b2406ab92d9d608e47c0751a681e37d7
+size 397

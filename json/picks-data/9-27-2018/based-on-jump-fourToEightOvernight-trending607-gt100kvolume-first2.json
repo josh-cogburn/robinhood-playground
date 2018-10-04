@@ -1,32 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "NSPR",
-      "price": 0.236
-    },
-    {
-      "ticker": "CLDX",
-      "price": 0.4569
-    }
-  ],
-  "16": [
-    {
-      "ticker": "NSPR",
-      "price": 0.2298
-    },
-    {
-      "ticker": "CLDX",
-      "price": 0.45
-    }
-  ],
-  "30": [
-    {
-      "ticker": "NSPR",
-      "price": 0.2358
-    },
-    {
-      "ticker": "CLDX",
-      "price": 0.4495
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ec20070856f0365695da8ba7ce780cbbf9e6741d808b6ea1b9bd738206e8d784
+size 394

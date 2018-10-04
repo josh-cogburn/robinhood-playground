@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "MNGA",
-      "price": 0.195
-    }
-  ],
-  "5": [
-    {
-      "ticker": "MNGA",
-      "price": 0.208
-    }
-  ],
-  "16": [
-    {
-      "ticker": "MNGA",
-      "price": 0.2059
-    },
-    {
-      "ticker": "CVM",
-      "price": 2.6792
-    }
-  ],
-  "30": [
-    {
-      "ticker": "MNGA",
-      "price": 0.205
-    },
-    {
-      "ticker": "CVM",
-      "price": 2.66
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:09bbf5aed24cfd1a055d52bdeaeb1174cd832f50338f62aea041c9d400345fae
+size 403

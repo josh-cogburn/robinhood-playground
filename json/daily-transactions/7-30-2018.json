@@ -1,18 +1,3 @@
-[
-  {
-    "type": "buy",
-    "ticker": "ALPN",
-    "bid_price": 7.47936,
-    "quantity": 40,
-    "strategy": "low-float-high-volume-floatTimesfloatToVolume-trenddown5to7-fiveTo10",
-    "min": 276
-  },
-  {
-    "type": "buy",
-    "ticker": "CTXR",
-    "bid_price": 2.65,
-    "quantity": 11,
-    "strategy": "low-float-high-volume-floatPoints-trend10to15",
-    "min": 384
-  }
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:3aec4def21849deaf842e7737a568061d429da7745d71290c291aa6e048da940
+size 374

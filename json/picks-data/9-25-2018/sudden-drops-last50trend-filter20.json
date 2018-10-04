@@ -1,36 +1,3 @@
-{
-  "280": [
-    {
-      "ticker": "YUMA",
-      "price": 0.3298
-    }
-  ],
-  "290": [
-    {
-      "ticker": "YUMA",
-      "price": 0.3254
-    }
-  ],
-  "430": [
-    {
-      "ticker": "JAGX",
-      "price": 1.6
-    }
-  ],
-  "470": [
-    {
-      "ticker": "JAGX",
-      "price": 1.55
-    }
-  ],
-  "500": [
-    {
-      "ticker": "JAGX",
-      "price": 1.57
-    },
-    {
-      "ticker": "ESNC",
-      "price": 0.22
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0cf2665221f0b44ffbb436096654eae2e4e77eada22285b51acfed10aaf8f5c3
+size 422

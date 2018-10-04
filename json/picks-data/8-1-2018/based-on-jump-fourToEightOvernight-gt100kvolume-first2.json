@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "MEET",
-      "price": 4.38
-    }
-  ],
-  "5": [
-    {
-      "ticker": "MEET",
-      "price": 4.54
-    }
-  ],
-  "16": [
-    {
-      "ticker": "SNES",
-      "price": 1.36
-    },
-    {
-      "ticker": "MEET",
-      "price": 4.52
-    }
-  ],
-  "30": [
-    {
-      "ticker": "SNES",
-      "price": 1.37
-    },
-    {
-      "ticker": "EDGE",
-      "price": 0.978
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:31ca9885a69c35d8bf96307742f5ab3c4f902033e17507a8223ebe3b615f8911
+size 399

@@ -1,29 +1,3 @@
-{
-  "40": [
-    {
-      "ticker": "FRED",
-      "price": 2.5599
-    }
-  ],
-  "80": [
-    {
-      "ticker": "NLST",
-      "price": 0.44
-    }
-  ],
-  "100": [
-    {
-      "ticker": "SSC",
-      "price": 4.47
-    }
-  ],
-  "140": [],
-  "198": [],
-  "250": [],
-  "300": [
-    {
-      "ticker": "NLST",
-      "price": 0.5888
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:22f009158d2e965302e841ecc96b87bb9d892810eaa530bb78a0b563290a90e9
+size 330

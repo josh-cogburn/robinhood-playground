@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "CEI",
-      "price": 0.666
-    }
-  ],
-  "5": [
-    {
-      "ticker": "CEI",
-      "price": 0.719
-    }
-  ],
-  "16": [
-    {
-      "ticker": "CEI",
-      "price": 0.5466
-    },
-    {
-      "ticker": "ASNA",
-      "price": 4.22
-    }
-  ],
-  "30": [
-    {
-      "ticker": "CEI",
-      "price": 0.53
-    },
-    {
-      "ticker": "JAGX",
-      "price": 1.4962
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:80d7c8eac8c09654acc1d1e6b33fde12d86db2755423fe0b9a931f7ba63e14f3
+size 400

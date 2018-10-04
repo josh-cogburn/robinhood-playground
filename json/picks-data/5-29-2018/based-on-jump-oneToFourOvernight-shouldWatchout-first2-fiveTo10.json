@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "MTEM",
-      "price": 7.24
-    },
-    {
-      "ticker": "SPWR",
-      "price": 8.809
-    }
-  ],
-  "5": [
-    {
-      "ticker": "TVIZ",
-      "price": 9.4
-    },
-    {
-      "ticker": "MTEM",
-      "price": 7.24
-    }
-  ],
-  "30": [
-    {
-      "ticker": "TVIZ",
-      "price": 9.4
-    },
-    {
-      "ticker": "MTEM",
-      "price": 7.07
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1246b61a9d779b2d7855348af53c5bf49ce6322695e136365799642d9f98e39b
+size 383

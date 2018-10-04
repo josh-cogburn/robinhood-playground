@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "KRO",
-      "price": 16.19
-    },
-    {
-      "ticker": "OI",
-      "price": 18.81
-    }
-  ],
-  "200": [
-    {
-      "ticker": "SOYB",
-      "price": 15.8698
-    },
-    {
-      "ticker": "ACOR",
-      "price": 19.75
-    }
-  ],
-  "260": [
-    {
-      "ticker": "HBMD",
-      "price": 17.65
-    },
-    {
-      "ticker": "GPRE",
-      "price": 17.375
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a1c1a624f87feaa39cd753c0adb135fb4dbb1d802650f0fcab7e660a0e4f97b1
+size 395

@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "GOL",
-      "price": 6.11
-    }
-  ],
-  "5": [
-    {
-      "ticker": "GOL",
-      "price": 6.02
-    }
-  ],
-  "16": [
-    {
-      "ticker": "GOL",
-      "price": 6.12
-    },
-    {
-      "ticker": "TRIL",
-      "price": 5.65
-    }
-  ],
-  "30": [
-    {
-      "ticker": "GOL",
-      "price": 6.22
-    },
-    {
-      "ticker": "TRIL",
-      "price": 5.65
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:60e7556a496039733c692fefb4fd6a72484e4735c4e6d77f8d7da69c6ec491b1
+size 394

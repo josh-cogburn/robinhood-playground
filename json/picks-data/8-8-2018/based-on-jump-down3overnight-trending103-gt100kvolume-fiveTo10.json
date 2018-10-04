@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "EXTR",
-      "price": 5.54
-    }
-  ],
-  "5": [
-    {
-      "ticker": "EXTR",
-      "price": 6
-    }
-  ],
-  "16": [
-    {
-      "ticker": "EXTR",
-      "price": 5.8
-    },
-    {
-      "ticker": "DEPO",
-      "price": 8.129
-    }
-  ],
-  "30": [
-    {
-      "ticker": "EXTR",
-      "price": 5.955
-    },
-    {
-      "ticker": "DEPO",
-      "price": 7.87
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cbf37700ad9c995a75d8723d53918073ce8820b86cde881eaf03eb6381a2cd79
+size 396

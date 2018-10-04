@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "GPL",
-      "price": 0.8938
-    }
-  ],
-  "5": [
-    {
-      "ticker": "GPL",
-      "price": 0.9
-    }
-  ],
-  "16": [
-    {
-      "ticker": "MLSS",
-      "price": 0.7501
-    },
-    {
-      "ticker": "GPL",
-      "price": 0.9101
-    }
-  ],
-  "30": [
-    {
-      "ticker": "MLSS",
-      "price": 0.7501
-    },
-    {
-      "ticker": "GPL",
-      "price": 0.95
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b3e2e2205e89a796806c6e02bb66f4cabce1640fd4aa4f3e27173c01cc65d71c
+size 401

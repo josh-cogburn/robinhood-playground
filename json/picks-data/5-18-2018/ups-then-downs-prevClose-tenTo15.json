@@ -1,33 +1,3 @@
-{
-  "10": [],
-  "50": [
-    {
-      "ticker": "EIGR",
-      "price": 15.25
-    }
-  ],
-  "200": [
-    {
-      "ticker": "EIGR",
-      "price": 14.6
-    }
-  ],
-  "300": [
-    {
-      "ticker": "EIGR",
-      "price": 13.9
-    }
-  ],
-  "380": [
-    {
-      "ticker": "EIGR",
-      "price": 13.95
-    }
-  ],
-  "600": [
-    {
-      "ticker": "EIGR",
-      "price": 13.9
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a2cb7290008c0d59cc856fc344d4af4376b1a54b76c8a76e0a7429fda6ac6114
+size 375

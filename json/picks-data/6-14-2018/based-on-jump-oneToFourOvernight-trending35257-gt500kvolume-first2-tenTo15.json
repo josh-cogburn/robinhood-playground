@@ -1,33 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "USLV",
-      "price": 11.2101
-    },
-    {
-      "ticker": "NUAN",
-      "price": 14.37
-    }
-  ],
-  "16": [
-    {
-      "ticker": "USLV",
-      "price": 11.2321
-    },
-    {
-      "ticker": "NUAN",
-      "price": 14.37
-    }
-  ],
-  "30": [
-    {
-      "ticker": "USLV",
-      "price": 11.23
-    },
-    {
-      "ticker": "SVXY",
-      "price": 14.04
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:de1390cd52aa4add360321c8f4574cf79ab816ed271e55c91743b278d2caaf95
+size 406

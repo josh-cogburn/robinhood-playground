@@ -1,33 +1,3 @@
-{
-  "10": [],
-  "35": [
-    {
-      "ticker": "TGS",
-      "price": 14.2536
-    },
-    {
-      "ticker": "LOOP",
-      "price": 10.3999
-    }
-  ],
-  "90": [
-    {
-      "ticker": "TGS",
-      "price": 14.45
-    },
-    {
-      "ticker": "LOOP",
-      "price": 10.3999
-    }
-  ],
-  "223": [
-    {
-      "ticker": "TGS",
-      "price": 14.3301
-    },
-    {
-      "ticker": "AUDC",
-      "price": 10.78
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7d6bcd09c48dedded426cebf63adb06f8fb0b77a91f5b3d5424ca2f2669bdf11
+size 410

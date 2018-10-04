@@ -1,29 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "ATNM",
-      "price": 0.68
-    }
-  ],
-  "16": [
-    {
-      "ticker": "ATNM",
-      "price": 0.696
-    },
-    {
-      "ticker": "XBIO",
-      "price": 4.9
-    }
-  ],
-  "30": [
-    {
-      "ticker": "BLPH",
-      "price": 2.825
-    },
-    {
-      "ticker": "PLM",
-      "price": 1.0799
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:edaafd70a9779cba967c161211212e3771ec5fadc192dac7de08e5979acd1464
+size 341

@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "TMQ",
-      "price": 1.6
-    }
-  ],
-  "5": [
-    {
-      "ticker": "TMQ",
-      "price": 1.55
-    }
-  ],
-  "16": [
-    {
-      "ticker": "CPSS",
-      "price": 4.12
-    },
-    {
-      "ticker": "TMQ",
-      "price": 1.55
-    }
-  ],
-  "30": [
-    {
-      "ticker": "CPSS",
-      "price": 4.1
-    },
-    {
-      "ticker": "TMQ",
-      "price": 1.5282
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:62c17a6e090abe493ebc38e4ed46753de8ce22b2fc9701ac68629f4865698ef9
+size 394

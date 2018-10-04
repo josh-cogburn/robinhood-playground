@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "GRX",
-      "price": 11.0001
-    },
-    {
-      "ticker": "LOR",
-      "price": 10.3504
-    }
-  ],
-  "200": [
-    {
-      "ticker": "RYI",
-      "price": 11.5
-    },
-    {
-      "ticker": "ITUB",
-      "price": 10.89
-    }
-  ],
-  "260": [
-    {
-      "ticker": "NXC",
-      "price": 13.94
-    },
-    {
-      "ticker": "ABX",
-      "price": 11.115
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7e94c03aba73679db0f139f4032b89d372f9a34f6513d3b3a14d0eb2d53c2ed5
+size 394

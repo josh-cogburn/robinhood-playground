@@ -1,32 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "NOK",
-      "price": 5.43
-    },
-    {
-      "ticker": "OMEX",
-      "price": 7.5963
-    }
-  ],
-  "16": [
-    {
-      "ticker": "INTT",
-      "price": 8.425
-    },
-    {
-      "ticker": "MBIO",
-      "price": 6.27
-    }
-  ],
-  "30": [
-    {
-      "ticker": "INTT",
-      "price": 8.45
-    },
-    {
-      "ticker": "MBIO",
-      "price": 6.35
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7fa21cfc7c21fdfade61126829ac160db264c1130ff790347f478740d59d000a
+size 387

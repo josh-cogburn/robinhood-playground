@@ -1,30 +1,3 @@
-{
-  "200": [
-    {
-      "ticker": "AIQ",
-      "price": 14.895
-    }
-  ],
-  "260": [
-    {
-      "ticker": "CDNA",
-      "price": 11.765
-    }
-  ],
-  "351": [
-    {
-      "ticker": "INFN",
-      "price": 10.07
-    }
-  ],
-  "381": [
-    {
-      "ticker": "RPXC",
-      "price": 10.48
-    },
-    {
-      "ticker": "AQ",
-      "price": 11.61
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:45dc9c7134ccb22a61c0cf8073dcd4ac555facc03aa5d42d3799085d0d6b6f70
+size 351

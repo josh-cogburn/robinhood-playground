@@ -1,36 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "XRM",
-      "price": 13.211
-    },
-    {
-      "ticker": "GTN",
-      "price": 14.02
-    }
-  ],
-  "16": [
-    {
-      "ticker": "XRM",
-      "price": 13.2201
-    },
-    {
-      "ticker": "GTN",
-      "price": 14.1422
-    }
-  ],
-  "30": [
-    {
-      "ticker": "XRM",
-      "price": 13.24
-    },
-    {
-      "ticker": "GTN",
-      "price": 14.025
-    },
-    {
-      "ticker": "BHAC",
-      "price": 11.95
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e9e409a5b2a3a9df24c2f02fb7432daed96fb77d89a418ada9a499e8d6a4e2f3
+size 449

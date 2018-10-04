@@ -1,33 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "SESN",
-      "price": 1.98
-    },
-    {
-      "ticker": "AKS",
-      "price": 4.8777
-    }
-  ],
-  "16": [
-    {
-      "ticker": "NLST",
-      "price": 0.1605
-    },
-    {
-      "ticker": "SESN",
-      "price": 1.9599
-    }
-  ],
-  "30": [
-    {
-      "ticker": "NLST",
-      "price": 0.1645
-    },
-    {
-      "ticker": "SESN",
-      "price": 2.08
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:07e20f146e508fe9b542cf13afd852c5a76b6dffb8145ae5064c64616d262b91
+size 403

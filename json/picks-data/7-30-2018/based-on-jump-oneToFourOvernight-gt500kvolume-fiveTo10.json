@@ -1,28 +1,3 @@
-{
-  "0": [],
-  "5": [],
-  "16": [
-    {
-      "ticker": "NOK",
-      "price": 5.53
-    },
-    {
-      "ticker": "IBN",
-      "price": 8.93
-    }
-  ],
-  "30": [
-    {
-      "ticker": "NOK",
-      "price": 5.515
-    },
-    {
-      "ticker": "IBN",
-      "price": 8.89
-    },
-    {
-      "ticker": "ESV",
-      "price": 7.34
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:739864ce4890898aab551d1fd284d114707beb885933f05b89ddbc3c5947d7fa
+size 333

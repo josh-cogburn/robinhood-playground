@@ -1,29 +1,3 @@
-{
-  "40": [
-    {
-      "ticker": "SENS",
-      "price": 4.61
-    }
-  ],
-  "80": [
-    {
-      "ticker": "NLST",
-      "price": 0.44
-    }
-  ],
-  "100": [
-    {
-      "ticker": "SSC",
-      "price": 4.47
-    }
-  ],
-  "140": [],
-  "198": [],
-  "250": [],
-  "300": [
-    {
-      "ticker": "NLST",
-      "price": 0.5888
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:339a13becb53a85922e1f461d045dc2b6cf8ea6b2e4933b6af77757c8d0b463b
+size 328

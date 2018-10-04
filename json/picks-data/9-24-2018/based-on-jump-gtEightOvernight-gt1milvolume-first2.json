@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "OGEN",
-      "price": 0.954
-    }
-  ],
-  "5": [
-    {
-      "ticker": "OGEN",
-      "price": 1.03
-    }
-  ],
-  "16": [
-    {
-      "ticker": "ACST",
-      "price": 0.81
-    },
-    {
-      "ticker": "OGEN",
-      "price": 0.9
-    }
-  ],
-  "30": [
-    {
-      "ticker": "ACST",
-      "price": 0.8464
-    },
-    {
-      "ticker": "OGEN",
-      "price": 0.8625
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3af6c1769015d19d77ff61ed65f25edfc264d8b9946613cb0e1414a9cc3cadee
+size 402

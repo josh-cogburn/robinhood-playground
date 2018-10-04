@@ -1,36 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "KALV",
-      "price": 18.6343
-    },
-    {
-      "ticker": "NSTG",
-      "price": 17.81
-    },
-    {
-      "ticker": "TLYS",
-      "price": 18.88
-    }
-  ],
-  "5": [
-    {
-      "ticker": "KALV",
-      "price": 19
-    },
-    {
-      "ticker": "NSTG",
-      "price": 17.81
-    },
-    {
-      "ticker": "TLYS",
-      "price": 18.9171
-    }
-  ],
-  "16": [
-    {
-      "ticker": "TLYS",
-      "price": 19.01
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:24bc89443e6cc17f2d058a1ddb6a1162bf74a607c706202ef7cd7aaeff09f265
+size 449

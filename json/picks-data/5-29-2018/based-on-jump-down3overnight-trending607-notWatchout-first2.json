@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "CTIB",
-      "price": 4.12
-    },
-    {
-      "ticker": "GSS",
-      "price": 0.695
-    }
-  ],
-  "5": [
-    {
-      "ticker": "CTIB",
-      "price": 4.3001
-    },
-    {
-      "ticker": "GMO",
-      "price": 0.3906
-    }
-  ],
-  "30": [
-    {
-      "ticker": "CTIB",
-      "price": 4.3001
-    },
-    {
-      "ticker": "GMO",
-      "price": 0.3941
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d78a0fc5a06696132bee35b31514feddfa212aff412316d44c4cf4e12b652c91
+size 390

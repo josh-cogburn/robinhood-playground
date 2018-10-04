@@ -1,33 +1,3 @@
-{
-  "10": [
-    {
-      "ticker": "CLAR",
-      "price": 10.6
-    }
-  ],
-  "50": [
-    {
-      "ticker": "CLAR",
-      "price": 10.55
-    }
-  ],
-  "200": [
-    {
-      "ticker": "CLAR",
-      "price": 10.625
-    }
-  ],
-  "300": [
-    {
-      "ticker": "CLAR",
-      "price": 10.525
-    }
-  ],
-  "380": [
-    {
-      "ticker": "CLAR",
-      "price": 10.525
-    }
-  ],
-  "600": []
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:65c2bdccaf7189e36a234affb98404b101c13eefadd578830be1ebb214f3966a
+size 380

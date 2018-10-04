@@ -1,32 +1,3 @@
-{
-  "280": [
-    {
-      "ticker": "JAGX",
-      "price": 0.8999
-    }
-  ],
-  "290": [
-    {
-      "ticker": "JAGX",
-      "price": 0.885
-    }
-  ],
-  "-50": [
-    {
-      "ticker": "PTX",
-      "price": 0.9
-    }
-  ],
-  "-30": [
-    {
-      "ticker": "INPX",
-      "price": 0.22
-    }
-  ],
-  "-10": [
-    {
-      "ticker": "HUSA",
-      "price": 0.23
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b81fccf729f10501445ec337e25c0bc8082c387536228a8e6c09f430b1ae5ff6
+size 363

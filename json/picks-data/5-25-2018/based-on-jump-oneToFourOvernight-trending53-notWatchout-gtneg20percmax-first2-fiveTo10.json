@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "GORO",
-      "price": 6.07
-    }
-  ],
-  "5": [
-    {
-      "ticker": "GORO",
-      "price": 6.13
-    }
-  ],
-  "16": [
-    {
-      "ticker": "GORO",
-      "price": 6.12
-    },
-    {
-      "ticker": "ADMA",
-      "price": 5.3
-    }
-  ],
-  "30": [
-    {
-      "ticker": "GORO",
-      "price": 6.15
-    },
-    {
-      "ticker": "ADMA",
-      "price": 5.34
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7c3b4451257d0c08c135983d321ff1d0185b28a782c7fd940f877daf26859c67
+size 397

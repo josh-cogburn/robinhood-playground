@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "MDXG",
-      "price": 4.3423
-    }
-  ],
-  "5": [
-    {
-      "ticker": "MDXG",
-      "price": 4.39
-    }
-  ],
-  "16": [
-    {
-      "ticker": "MDXG",
-      "price": 4.51
-    },
-    {
-      "ticker": "SWN",
-      "price": 4.9999
-    }
-  ],
-  "30": [
-    {
-      "ticker": "MDXG",
-      "price": 4.5
-    },
-    {
-      "ticker": "SWN",
-      "price": 4.905
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0c46af55ea645633b94f63c8e959298bffbb15eaa5fa17702784f7323ef48ee9
+size 400

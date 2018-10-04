@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "SENS",
-      "price": 4.509
-    }
-  ],
-  "5": [
-    {
-      "ticker": "SENS",
-      "price": 4.43
-    }
-  ],
-  "16": [
-    {
-      "ticker": "LEU",
-      "price": 3.7401
-    },
-    {
-      "ticker": "XPLR",
-      "price": 4.19
-    }
-  ],
-  "30": [
-    {
-      "ticker": "LEU",
-      "price": 3.59
-    },
-    {
-      "ticker": "XPLR",
-      "price": 4.09
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d9df59b2124b4e7b3647a3da2a39a403531c0bb5c28d0a380dd882206c7dc31a
+size 399

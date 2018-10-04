@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "SNAP",
-      "price": 11.22
-    },
-    {
-      "ticker": "VALE",
-      "price": 13.745
-    }
-  ],
-  "5": [
-    {
-      "ticker": "SNAP",
-      "price": 11.22
-    },
-    {
-      "ticker": "VALE",
-      "price": 13.705
-    }
-  ],
-  "16": [
-    {
-      "ticker": "LXRX",
-      "price": 11.15
-    },
-    {
-      "ticker": "SNAP",
-      "price": 11.45
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9a02e819036faf287f012b4e26d7e9ba2145ba64025252e343f2c2cf07e584e3
+size 392

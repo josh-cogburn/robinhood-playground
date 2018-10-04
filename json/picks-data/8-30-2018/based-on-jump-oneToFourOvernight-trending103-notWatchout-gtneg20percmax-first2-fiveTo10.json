@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "NOA",
-      "price": 8.1
-    }
-  ],
-  "5": [
-    {
-      "ticker": "NOA",
-      "price": 8
-    }
-  ],
-  "16": [
-    {
-      "ticker": "NOA",
-      "price": 8.06
-    },
-    {
-      "ticker": "LLEX",
-      "price": 5.18
-    }
-  ],
-  "30": [
-    {
-      "ticker": "NOA",
-      "price": 8
-    },
-    {
-      "ticker": "LLEX",
-      "price": 5.18
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fdc8d2676f1c5c601fa08220314ab59fec3967439d8c3c050f25f21ba8aeff40
+size 387

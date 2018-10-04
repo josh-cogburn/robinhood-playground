@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "ILMN",
-      "price": 351.54
-    },
-    {
-      "ticker": "BDX",
-      "price": 261.87
-    },
-    {
-      "ticker": "ROLL",
-      "price": 149.5
-    }
-  ],
-  "5": [
-    {
-      "ticker": "TA",
-      "price": 6
-    }
-  ],
-  "16": [
-    {
-      "ticker": "TA",
-      "price": 5.95
-    }
-  ],
-  "30": [
-    {
-      "ticker": "TA",
-      "price": 5.695
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:53ccdc2827c19419531e4a4e91c512643a34619bf6664d11dd63cb92bafeab90
+size 394

@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "QTT",
-      "price": 9.8
-    }
-  ],
-  "5": [
-    {
-      "ticker": "ACBFF",
-      "price": 7.6765
-    }
-  ],
-  "16": [
-    {
-      "ticker": "ACBFF",
-      "price": 7.6765
-    },
-    {
-      "ticker": "QTT",
-      "price": 9.7473
-    }
-  ],
-  "30": [
-    {
-      "ticker": "ACBFF",
-      "price": 7.6765
-    },
-    {
-      "ticker": "QTT",
-      "price": 9.7495
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:513b4448c9547dc20e509b07b2b8bb2d28734fd5b2878f848dc21b666dc9bf05
+size 407

@@ -1,32 +1,3 @@
-{
-  "13": [
-    {
-      "ticker": "SNFCA",
-      "price": 5.3
-    },
-    {
-      "ticker": "OMEX",
-      "price": 7.1498
-    }
-  ],
-  "73": [
-    {
-      "ticker": "SNFCA",
-      "price": 5.3001
-    },
-    {
-      "ticker": "OMEX",
-      "price": 7.39
-    }
-  ],
-  "196": [
-    {
-      "ticker": "DXR",
-      "price": 5.1566
-    },
-    {
-      "ticker": "SNFCA",
-      "price": 5.35
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:965ea47db8b1f52da4321bb73b9fa3c41cd92b64338ca3d85cf8167a24c0d98d
+size 394

@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "URG",
-      "price": 0.8001
-    },
-    {
-      "ticker": "BBOX",
-      "price": 1.0599
-    }
-  ],
-  "5": [
-    {
-      "ticker": "URG",
-      "price": 0.785
-    },
-    {
-      "ticker": "BBOX",
-      "price": 1.0369
-    }
-  ],
-  "16": [
-    {
-      "ticker": "URG",
-      "price": 0.7899
-    },
-    {
-      "ticker": "GSAT",
-      "price": 0.5184
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b154095c96e648f26fb516d7b4bf258ad02b9d96748fef4b1eebc561a5148fca
+size 392

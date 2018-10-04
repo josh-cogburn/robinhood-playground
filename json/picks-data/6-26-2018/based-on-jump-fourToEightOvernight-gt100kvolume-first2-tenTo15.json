@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "GE",
-      "price": 13.58
-    }
-  ],
-  "5": [
-    {
-      "ticker": "GE",
-      "price": 13.5501
-    }
-  ],
-  "16": [
-    {
-      "ticker": "GE",
-      "price": 13.6901
-    },
-    {
-      "ticker": "CBIO",
-      "price": 11
-    }
-  ],
-  "30": [
-    {
-      "ticker": "GE",
-      "price": 13.685
-    },
-    {
-      "ticker": "CBIO",
-      "price": 11.0942
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4e853a2f8eeeeb4a5dd277b3ea3678810165381648b59611ecd42ecc915c3e77
+size 400

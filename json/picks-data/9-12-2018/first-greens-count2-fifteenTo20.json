@@ -1,32 +1,3 @@
-{
-  "190": [
-    {
-      "ticker": "GASL",
-      "price": 19.912
-    },
-    {
-      "ticker": "ZLAB",
-      "price": 18.01
-    }
-  ],
-  "250": [
-    {
-      "ticker": "ZLAB",
-      "price": 18.065
-    },
-    {
-      "ticker": "RRC",
-      "price": 15.555
-    }
-  ],
-  "600": [
-    {
-      "ticker": "GASL",
-      "price": 19.25
-    },
-    {
-      "ticker": "ZLAB",
-      "price": 18.3
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fd638265a5e0ac9ec07d5758bb3921977e5f30021554ddb12d4174819bcf2a62
+size 396

@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "CLPHY",
-      "price": 11.78
-    },
-    {
-      "ticker": "BNTGY",
-      "price": 12.185
-    },
-    {
-      "ticker": "NRBAY",
-      "price": 10.84
-    }
-  ],
-  "5": [
-    {
-      "ticker": "CRON",
-      "price": 11.68
-    }
-  ],
-  "16": [
-    {
-      "ticker": "CRON",
-      "price": 11.8399
-    }
-  ],
-  "30": [
-    {
-      "ticker": "CRON",
-      "price": 11.6876
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cebc336864c1d78b43c8b678411943d57401476f2e688456817262d88c3def17
+size 412

@@ -1,27 +1,3 @@
-{
-  "10": [],
-  "50": [],
-  "200": [],
-  "300": [
-    {
-      "ticker": "CRVS",
-      "price": 13.12
-    },
-    {
-      "ticker": "BLFS",
-      "price": 10.059
-    }
-  ],
-  "380": [
-    {
-      "ticker": "CRVS",
-      "price": 13.22
-    }
-  ],
-  "600": [
-    {
-      "ticker": "CRVS",
-      "price": 13.18
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0e433a8c9541dd26dfae0f6c284dc34cd3ba1564c797cc7bc8ed3647eed15415
+size 317

@@ -1,34 +1,3 @@
-{
-  "200": [
-    {
-      "ticker": "FATE",
-      "price": 15.5
-    },
-    {
-      "ticker": "AMC",
-      "price": 19.7
-    }
-  ],
-  "300": [
-    {
-      "ticker": "FATE",
-      "price": 15.66
-    },
-    {
-      "ticker": "AMC",
-      "price": 19.725
-    }
-  ],
-  "380": [
-    {
-      "ticker": "FATE",
-      "price": 15.63
-    }
-  ],
-  "600": [
-    {
-      "ticker": "FATE",
-      "price": 15.63
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1811723b1c7a7426551c8af9d016bc5d293967888c0db13fbe9fcc3520a2f8d7
+size 407

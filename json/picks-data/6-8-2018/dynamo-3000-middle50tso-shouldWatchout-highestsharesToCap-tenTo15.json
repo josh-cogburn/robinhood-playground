@@ -1,30 +1,3 @@
-{
-  "4": [
-    {
-      "ticker": "RPXC",
-      "price": 10.485
-    },
-    {
-      "ticker": "FINL",
-      "price": 13.545
-    }
-  ],
-  "40": [],
-  "100": [
-    {
-      "ticker": "LOOP",
-      "price": 11.88
-    },
-    {
-      "ticker": "FINL",
-      "price": 13.52
-    }
-  ],
-  "200": [
-    {
-      "ticker": "INNT",
-      "price": 11.2383
-    }
-  ],
-  "260": []
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6eb22c7c20bd2857dc90c1e05fc698d4752553b424bf8d094381ef32aecc4771
+size 364

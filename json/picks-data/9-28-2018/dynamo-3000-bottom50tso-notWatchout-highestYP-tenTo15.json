@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "NDLS",
-      "price": 12.15
-    },
-    {
-      "ticker": "LFVN",
-      "price": 11.31
-    }
-  ],
-  "200": [
-    {
-      "ticker": "SHSP",
-      "price": 14.08
-    },
-    {
-      "ticker": "NDLS",
-      "price": 11.93
-    }
-  ],
-  "260": [
-    {
-      "ticker": "SHSP",
-      "price": 13.93
-    },
-    {
-      "ticker": "NDLS",
-      "price": 12.05
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9cda283df21d79aa124008708de18b973529b75103b44400676acdf475511b97
+size 395

@@ -1,32 +1,3 @@
-{
-  "77": [
-    {
-      "ticker": "LEDS",
-      "price": 5.875
-    },
-    {
-      "ticker": "HALL",
-      "price": 9.38
-    }
-  ],
-  "242": [
-    {
-      "ticker": "LEDS",
-      "price": 6.1
-    },
-    {
-      "ticker": "HALL",
-      "price": 9.3708
-    }
-  ],
-  "309": [
-    {
-      "ticker": "LEDS",
-      "price": 6.38
-    },
-    {
-      "ticker": "HALL",
-      "price": 9.42
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:dbc08f60e40d8e18b324b248929a09b4571e6dabb9a503db596903ecd1160046
+size 390

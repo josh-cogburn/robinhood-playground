@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "ECOM",
-      "price": 14.5582
-    }
-  ],
-  "5": [
-    {
-      "ticker": "ECOM",
-      "price": 14.3
-    },
-    {
-      "ticker": "SLD",
-      "price": 14.9
-    }
-  ],
-  "16": [
-    {
-      "ticker": "ECOM",
-      "price": 14.2
-    },
-    {
-      "ticker": "SLD",
-      "price": 14.95
-    }
-  ],
-  "30": [
-    {
-      "ticker": "ECOM",
-      "price": 14.225
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a3e8db8cffee535bfdd6f710667791d83d53587bc65279d82523ec81a8ad8766
+size 402

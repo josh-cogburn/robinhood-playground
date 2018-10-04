@@ -1,29 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "NGD",
-      "price": 1.505
-    }
-  ],
-  "16": [
-    {
-      "ticker": "MOSY",
-      "price": 1.32
-    },
-    {
-      "ticker": "NGD",
-      "price": 1.505
-    }
-  ],
-  "30": [
-    {
-      "ticker": "MOSY",
-      "price": 1.3
-    },
-    {
-      "ticker": "NGD",
-      "price": 1.51
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e007e0ac1534def6a62dd713656a982775a3bbd8a549cc156c6cf2e85facc22c
+size 337

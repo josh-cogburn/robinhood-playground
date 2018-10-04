@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "FCAU",
-      "price": 17.44
-    },
-    {
-      "ticker": "TZOO",
-      "price": 15.205
-    }
-  ],
-  "5": [
-    {
-      "ticker": "FCAU",
-      "price": 17.35
-    },
-    {
-      "ticker": "TZOO",
-      "price": 13.611
-    }
-  ],
-  "16": [
-    {
-      "ticker": "FCAU",
-      "price": 17.32
-    }
-  ],
-  "30": [
-    {
-      "ticker": "FCAU",
-      "price": 17.135
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:29c8181165c1a7fe69b21f2629031785529cceedfd3b17d80ad380589718fc53
+size 407

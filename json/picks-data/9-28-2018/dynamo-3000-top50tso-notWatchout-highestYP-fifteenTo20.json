@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "ECYT",
-      "price": 18
-    },
-    {
-      "ticker": "CDXS",
-      "price": 17.75
-    }
-  ],
-  "200": [
-    {
-      "ticker": "ECYT",
-      "price": 18.15
-    },
-    {
-      "ticker": "ATTU",
-      "price": 18.8362
-    }
-  ],
-  "260": [
-    {
-      "ticker": "ECYT",
-      "price": 18.07
-    },
-    {
-      "ticker": "ATTU",
-      "price": 18.88
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d6704a086315455e5d184e984a09770777cc3c13e0b4bd014d13ccaf257801cc
+size 394

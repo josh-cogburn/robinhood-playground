@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "CNCE",
-      "price": 14.76
-    },
-    {
-      "ticker": "LTRPA",
-      "price": 14.7
-    }
-  ],
-  "200": [
-    {
-      "ticker": "CNCE",
-      "price": 14.59
-    },
-    {
-      "ticker": "LTRPA",
-      "price": 14.725
-    }
-  ],
-  "260": [
-    {
-      "ticker": "CNCE",
-      "price": 14.63
-    },
-    {
-      "ticker": "LTRPA",
-      "price": 14.875
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fa024f38f5cb9f5866e47ef94c42356c457f06d6d6aaf7bb31c838c90a28e462
+size 399

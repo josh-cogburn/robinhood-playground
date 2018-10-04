@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "EVOL",
-      "price": 3.55
-    }
-  ],
-  "5": [
-    {
-      "ticker": "EVOL",
-      "price": 3.55
-    }
-  ],
-  "16": [
-    {
-      "ticker": "EVOL",
-      "price": 3.5
-    },
-    {
-      "ticker": "DGLY",
-      "price": 2.584
-    }
-  ],
-  "30": [
-    {
-      "ticker": "EVOL",
-      "price": 3.539
-    },
-    {
-      "ticker": "DGLY",
-      "price": 2.584
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c76710d18ec79b234936c467811e4bb3d6982cf8500fac8c02811f28056dfc69
+size 400

@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "AOI",
-      "price": 19.14
-    },
-    {
-      "ticker": "GLOG",
-      "price": 17.3
-    }
-  ],
-  "5": [
-    {
-      "ticker": "AOI",
-      "price": 18.99
-    },
-    {
-      "ticker": "GLOG",
-      "price": 17.2
-    }
-  ],
-  "16": [
-    {
-      "ticker": "AOI",
-      "price": 18.7
-    },
-    {
-      "ticker": "GLOG",
-      "price": 17.25
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f7497d6876d33dfb6743cf44b53558b30945ccef83f3fb298881245d77ccd2ff
+size 384

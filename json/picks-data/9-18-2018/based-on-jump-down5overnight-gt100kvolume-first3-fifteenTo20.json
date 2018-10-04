@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "PNGAY",
-      "price": 19.3
-    },
-    {
-      "ticker": "EJPRY",
-      "price": 15.42
-    },
-    {
-      "ticker": "PSDO",
-      "price": 15.04
-    }
-  ],
-  "5": [
-    {
-      "ticker": "PSDO",
-      "price": 15.31
-    }
-  ],
-  "16": [
-    {
-      "ticker": "PSDO",
-      "price": 15.47
-    }
-  ],
-  "30": [
-    {
-      "ticker": "PSDO",
-      "price": 15.63
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:31dd6b901267f6501520431c44a24d92fe2bfda10d70df4cc101612db6ab562c
+size 405

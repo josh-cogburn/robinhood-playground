@@ -1,32 +1,3 @@
-{
-  "200": [
-    {
-      "ticker": "AYTU",
-      "price": 0.6193
-    },
-    {
-      "ticker": "CIDM",
-      "price": 1.3969
-    }
-  ],
-  "300": [
-    {
-      "ticker": "AYTU",
-      "price": 0.6386
-    },
-    {
-      "ticker": "CIDM",
-      "price": 1.375
-    }
-  ],
-  "380": [
-    {
-      "ticker": "AYTU",
-      "price": 0.6147
-    },
-    {
-      "ticker": "CIDM",
-      "price": 1.37
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:532e2ad9fe779546a7370747090c444f4fc395a94079ac41a82eb203b24e1632
+size 398

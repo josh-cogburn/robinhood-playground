@@ -1,29 +1,3 @@
-{
-  "10": [
-    {
-      "ticker": "MNOV",
-      "price": 10.01
-    },
-    {
-      "ticker": "HMI",
-      "price": 9.9
-    }
-  ],
-  "35": [
-    {
-      "ticker": "MNOV",
-      "price": 10.2375
-    },
-    {
-      "ticker": "CMT",
-      "price": 14.7049
-    }
-  ],
-  "90": [],
-  "223": [
-    {
-      "ticker": "CLPR",
-      "price": 10.0756
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fc097a9d7f7f3038069658d84ebbc68f489014c11115d40c62c21cee20d69536
+size 349

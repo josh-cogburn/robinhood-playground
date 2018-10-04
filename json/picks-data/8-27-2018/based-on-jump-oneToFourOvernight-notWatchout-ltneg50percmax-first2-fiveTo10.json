@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "YIN",
-      "price": 7.04
-    },
-    {
-      "ticker": "BFR",
-      "price": 9.6
-    }
-  ],
-  "5": [
-    {
-      "ticker": "SHNY",
-      "price": 5.4681
-    },
-    {
-      "ticker": "YIN",
-      "price": 7.0865
-    }
-  ],
-  "16": [
-    {
-      "ticker": "BBDO",
-      "price": 6.275
-    },
-    {
-      "ticker": "SHNY",
-      "price": 5.4509
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:375d05b1145bc7a9d48345ba7fc7ceed595472c4ea4337b8310b83c200197eaa
+size 387

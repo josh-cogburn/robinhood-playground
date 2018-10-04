@@ -1,32 +1,3 @@
-{
-  "280": [
-    {
-      "ticker": "SNES",
-      "price": 1.3623
-    },
-    {
-      "ticker": "ANY",
-      "price": 0.5515
-    }
-  ],
-  "328": [
-    {
-      "ticker": "RHE",
-      "price": 0.2768
-    },
-    {
-      "ticker": "AMMA",
-      "price": 0.515
-    }
-  ],
-  "388": [
-    {
-      "ticker": "ANY",
-      "price": 0.527
-    },
-    {
-      "ticker": "CDTI",
-      "price": 1.03
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8a31c09293e397df66791d60b6cced3b372dcdb0b6b25cb0d12357c5337e3884
+size 394

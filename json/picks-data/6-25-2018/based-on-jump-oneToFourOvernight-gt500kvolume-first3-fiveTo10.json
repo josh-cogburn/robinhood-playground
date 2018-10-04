@@ -1,36 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "ABIL",
-      "price": 6.77
-    }
-  ],
-  "16": [
-    {
-      "ticker": "ABIL",
-      "price": 7.001
-    },
-    {
-      "ticker": "PBR",
-      "price": 9.47
-    },
-    {
-      "ticker": "ESV",
-      "price": 6.385
-    }
-  ],
-  "30": [
-    {
-      "ticker": "ABIL",
-      "price": 6.78
-    },
-    {
-      "ticker": "PBR",
-      "price": 9.385
-    },
-    {
-      "ticker": "ESV",
-      "price": 6.25
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0f29c10219074e3582374b8ce6b4b1090ed5db7ddd71980e65a40922881b4a10
+size 441

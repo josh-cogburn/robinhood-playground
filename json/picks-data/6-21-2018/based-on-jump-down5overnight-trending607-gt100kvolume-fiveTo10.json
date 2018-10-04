@@ -1,29 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "GEVO",
-      "price": 8.3825
-    }
-  ],
-  "16": [
-    {
-      "ticker": "GEVO",
-      "price": 8.28
-    }
-  ],
-  "30": [
-    {
-      "ticker": "GEVO",
-      "price": 8.45
-    },
-    {
-      "ticker": "NAKD",
-      "price": 7.53
-    },
-    {
-      "ticker": "BKS",
-      "price": 5.925
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9e90521e11ea2381157968c9db9a66d2ac055edc20082e701e760199cd9ca988
+size 341

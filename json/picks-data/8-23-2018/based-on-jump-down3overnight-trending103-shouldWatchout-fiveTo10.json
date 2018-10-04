@@ -1,30 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "QD",
-      "price": 6.885
-    }
-  ],
-  "5": [
-    {
-      "ticker": "QD",
-      "price": 6.901
-    }
-  ],
-  "16": [
-    {
-      "ticker": "QD",
-      "price": 6.905
-    }
-  ],
-  "30": [
-    {
-      "ticker": "QD",
-      "price": 6.965
-    },
-    {
-      "ticker": "EDRY",
-      "price": 6.8
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:800e056cc1b4b2f1b66dff3f27c5b06f6a283d3d79893fc0b7c0c563424758ae
+size 336

@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "FPRX",
-      "price": 15
-    }
-  ],
-  "5": [
-    {
-      "ticker": "FPRX",
-      "price": 14.9328
-    }
-  ],
-  "16": [
-    {
-      "ticker": "FPRX",
-      "price": 14.22
-    },
-    {
-      "ticker": "HFFG",
-      "price": 14.7
-    }
-  ],
-  "30": [
-    {
-      "ticker": "FPRX",
-      "price": 14.33
-    },
-    {
-      "ticker": "HFFG",
-      "price": 14.555
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:79f1f53556171c07523dde271af9c34966a762f346bfa576c0ca6aa8af08f64e
+size 403

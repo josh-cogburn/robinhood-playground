@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "CIBEY",
-      "price": 4.65
-    },
-    {
-      "ticker": "EVOL",
-      "price": 2.2
-    }
-  ],
-  "5": [
-    {
-      "ticker": "EVOL",
-      "price": 2.2
-    }
-  ],
-  "16": [
-    {
-      "ticker": "EVOL",
-      "price": 2.2
-    }
-  ],
-  "30": [
-    {
-      "ticker": "NAO",
-      "price": 0.98
-    },
-    {
-      "ticker": "EVOL",
-      "price": 2.2
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1e10369b9caa5ecbd40889903e011a03160ca7d2157449a3c0a3b21760ba38f8
+size 394

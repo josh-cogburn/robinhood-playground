@@ -1,33 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "GNC",
-      "price": 3.57
-    }
-  ],
-  "16": [
-    {
-      "ticker": "GNC",
-      "price": 3.48
-    },
-    {
-      "ticker": "CEI",
-      "price": 0.3618
-    }
-  ],
-  "30": [
-    {
-      "ticker": "GNC",
-      "price": 3.27
-    },
-    {
-      "ticker": "CEI",
-      "price": 0.3568
-    },
-    {
-      "ticker": "PKD",
-      "price": 0.345
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:44243432a52e89978caf3f4124fd217ac5bb7bb9374c329421bde373376c8641
+size 395

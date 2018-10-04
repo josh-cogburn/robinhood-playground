@@ -1,32 +1,3 @@
-{
-  "100": [
-    {
-      "ticker": "ADES",
-      "price": 11.67
-    },
-    {
-      "ticker": "TACT",
-      "price": 14.43
-    }
-  ],
-  "200": [
-    {
-      "ticker": "CDOR",
-      "price": 10.6
-    },
-    {
-      "ticker": "CPE",
-      "price": 12.05
-    }
-  ],
-  "260": [
-    {
-      "ticker": "NERV",
-      "price": 12.575
-    },
-    {
-      "ticker": "DZSI",
-      "price": 14.395
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e5cb787ee8cb56280e975314bef962ce9c88616f5d4321f54004894c1210d111
+size 395

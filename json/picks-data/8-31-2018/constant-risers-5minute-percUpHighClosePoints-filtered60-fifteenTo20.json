@@ -1,29 +1,3 @@
-{
-  "40": [
-    {
-      "ticker": "COT",
-      "price": 15.64
-    }
-  ],
-  "80": [
-    {
-      "ticker": "COT",
-      "price": 15.66
-    }
-  ],
-  "100": [
-    {
-      "ticker": "WU",
-      "price": 18.965
-    }
-  ],
-  "140": [
-    {
-      "ticker": "NVTA",
-      "price": 15.25
-    }
-  ],
-  "198": [],
-  "250": [],
-  "300": []
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:31f2c9054daa8a3705a7f1ff1e9f7984100d302343d0bc10b21c2109121f6994
+size 328

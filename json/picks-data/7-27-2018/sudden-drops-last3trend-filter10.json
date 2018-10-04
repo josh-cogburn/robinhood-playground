@@ -1,34 +1,3 @@
-{
-  "32": [
-    {
-      "ticker": "GNPX",
-      "price": 4.8339
-    }
-  ],
-  "63": [
-    {
-      "ticker": "HMNY",
-      "price": 3.47
-    },
-    {
-      "ticker": "GNPX",
-      "price": 3.46
-    },
-    {
-      "ticker": "JMU",
-      "price": 0.2703
-    },
-    {
-      "ticker": "ESNC",
-      "price": 0.33
-    }
-  ],
-  "221": [],
-  "280": [
-    {
-      "ticker": "HMNY",
-      "price": 2.33
-    }
-  ],
-  "328": []
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f5de0869e1b25ec061f35a13fde744cded5e360a016adf5972ad00e41bca68bb
+size 416

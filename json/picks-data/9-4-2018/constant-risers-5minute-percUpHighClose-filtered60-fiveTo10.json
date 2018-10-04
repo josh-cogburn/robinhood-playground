@@ -1,28 +1,3 @@
-{
-  "40": [
-    {
-      "ticker": "RRD",
-      "price": 5.6956
-    }
-  ],
-  "80": [
-    {
-      "ticker": "WTI",
-      "price": 7.15
-    }
-  ],
-  "100": [
-    {
-      "ticker": "INNT",
-      "price": 8.07
-    }
-  ],
-  "198": [
-    {
-      "ticker": "PPDF",
-      "price": 6.89
-    }
-  ],
-  "250": [],
-  "300": []
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f6ff7e8861c1b11ced2ead3b627306cc18bc410d3f141a76cd25e09ab4b1701d
+size 314

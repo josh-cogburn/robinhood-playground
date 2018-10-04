@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "CRIS",
-      "price": 2.01
-    }
-  ],
-  "5": [
-    {
-      "ticker": "CRIS",
-      "price": 1.879
-    }
-  ],
-  "16": [
-    {
-      "ticker": "CRIS",
-      "price": 1.98
-    },
-    {
-      "ticker": "TNK",
-      "price": 1.01
-    }
-  ],
-  "30": [
-    {
-      "ticker": "CRIS",
-      "price": 1.9019
-    },
-    {
-      "ticker": "TNK",
-      "price": 1.02
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f59731d5a0587780fb62fd79c6a1780905a102dd3b665052a2054175bcd1fd38
+size 399

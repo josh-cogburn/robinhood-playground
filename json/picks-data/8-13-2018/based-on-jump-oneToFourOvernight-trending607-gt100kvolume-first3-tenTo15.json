@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "VIAV",
-      "price": 10.97
-    }
-  ],
-  "5": [
-    {
-      "ticker": "VIAV",
-      "price": 10.88
-    }
-  ],
-  "16": [
-    {
-      "ticker": "VIAV",
-      "price": 10.9
-    },
-    {
-      "ticker": "TRUE",
-      "price": 12.45
-    }
-  ],
-  "30": [
-    {
-      "ticker": "VIAV",
-      "price": 10.89
-    },
-    {
-      "ticker": "TRUE",
-      "price": 12.015
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ffb4f5f9abd451b802ff2d12c4c24cfa7730cffaabfbe16d1e13ad93954732a6
+size 404

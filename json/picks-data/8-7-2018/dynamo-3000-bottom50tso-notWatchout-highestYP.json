@@ -1,32 +1,3 @@
-{
-  "4": [
-    {
-      "ticker": "OESX",
-      "price": 1.02
-    },
-    {
-      "ticker": "APTO",
-      "price": 2.6
-    }
-  ],
-  "351": [
-    {
-      "ticker": "URG",
-      "price": 0.7252
-    },
-    {
-      "ticker": "IMI",
-      "price": 1.275
-    }
-  ],
-  "381": [
-    {
-      "ticker": "URG",
-      "price": 0.73
-    },
-    {
-      "ticker": "SREV",
-      "price": 3.305
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f0db232c28dd397ca32f35834b352de328fdba5a9cd2866a1b59a711e7b9ccae
+size 387

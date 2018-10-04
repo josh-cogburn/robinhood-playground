@@ -1,28 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "PCYO",
-      "price": 11.37
-    }
-  ],
-  "16": [
-    {
-      "ticker": "PCYO",
-      "price": 11.337
-    },
-    {
-      "ticker": "CRT",
-      "price": 15
-    }
-  ],
-  "30": [
-    {
-      "ticker": "PCYO",
-      "price": 11.337
-    },
-    {
-      "ticker": "CRT",
-      "price": 15
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d3a3e64e93d14f635821598f5487a3610304411dac8908c51c4e152e13301b7e
+size 327

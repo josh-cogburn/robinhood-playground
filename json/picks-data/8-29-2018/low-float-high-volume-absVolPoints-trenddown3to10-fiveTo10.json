@@ -1,32 +1,3 @@
-{
-  "150": [
-    {
-      "ticker": "CHS",
-      "price": 8.4299
-    }
-  ],
-  "210": [
-    {
-      "ticker": "EXPR",
-      "price": 9.52
-    }
-  ],
-  "276": [
-    {
-      "ticker": "EXPR",
-      "price": 9.68
-    }
-  ],
-  "315": [
-    {
-      "ticker": "EXPR",
-      "price": 9.785
-    }
-  ],
-  "384": [
-    {
-      "ticker": "AFMD",
-      "price": 6.225
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:db921735e9880cfbf10a6a10479b33e9acc679ade2e705a9ef4c4282430da3ea
+size 365

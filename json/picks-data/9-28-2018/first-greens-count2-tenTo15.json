@@ -1,32 +1,3 @@
-{
-  "190": [
-    {
-      "ticker": "RLH",
-      "price": 12.4
-    },
-    {
-      "ticker": "WATT",
-      "price": 10.08
-    }
-  ],
-  "250": [
-    {
-      "ticker": "RLH",
-      "price": 12.375
-    },
-    {
-      "ticker": "WATT",
-      "price": 10
-    }
-  ],
-  "600": [
-    {
-      "ticker": "RLH",
-      "price": 12.5
-    },
-    {
-      "ticker": "WATT",
-      "price": 10.12
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5317a74a19608d884c18c91ef4b26c25fdab720525682c1abd8990d881cbb00b
+size 388

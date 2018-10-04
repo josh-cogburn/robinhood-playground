@@ -1,33 +1,3 @@
-{
-  "4": [],
-  "40": [
-    {
-      "ticker": "OBCI",
-      "price": 3.85
-    }
-  ],
-  "100": [],
-  "200": [],
-  "260": [
-    {
-      "ticker": "GSS",
-      "price": 0.695
-    }
-  ],
-  "351": [
-    {
-      "ticker": "CCCL",
-      "price": 1.83
-    }
-  ],
-  "381": [
-    {
-      "ticker": "INOD",
-      "price": 1.14
-    },
-    {
-      "ticker": "ALIM",
-      "price": 1.14
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f9ab03535ce99bf455cae12d0eaf6c27e4288cb146fab27645fd57831e6f6b00
+size 383

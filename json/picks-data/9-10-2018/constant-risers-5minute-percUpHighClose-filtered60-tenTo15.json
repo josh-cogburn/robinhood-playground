@@ -1,34 +1,3 @@
-{
-  "40": [
-    {
-      "ticker": "VSI",
-      "price": 12.8
-    }
-  ],
-  "80": [
-    {
-      "ticker": "RES",
-      "price": 13.64
-    }
-  ],
-  "100": [
-    {
-      "ticker": "SGMO",
-      "price": 14.68
-    }
-  ],
-  "140": [
-    {
-      "ticker": "FTSI",
-      "price": 10.28
-    }
-  ],
-  "198": [],
-  "250": [],
-  "300": [
-    {
-      "ticker": "FRAC",
-      "price": 11.205
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:35ed7b53453938d18120256fae0789f5a1e22582828846def2d731be128a6987
+size 389

@@ -1,32 +1,3 @@
-{
-  "190": [
-    {
-      "ticker": "NVLN",
-      "price": 2.99
-    },
-    {
-      "ticker": "NNVC",
-      "price": 0.3662
-    }
-  ],
-  "250": [
-    {
-      "ticker": "NVLN",
-      "price": 3.02
-    },
-    {
-      "ticker": "NNVC",
-      "price": 0.36
-    }
-  ],
-  "600": [
-    {
-      "ticker": "NVLN",
-      "price": 2.96
-    },
-    {
-      "ticker": "NNVC",
-      "price": 0.36
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2bd5fc7559f64261deeb9d10d17b0bc8b2648ce9e522b5f9c0f7cce8ee06c2dd
+size 391

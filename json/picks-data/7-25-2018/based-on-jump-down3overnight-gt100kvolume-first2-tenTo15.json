@@ -1,33 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "FNB",
-      "price": 12.8
-    },
-    {
-      "ticker": "HCLP",
-      "price": 13.375
-    }
-  ],
-  "16": [
-    {
-      "ticker": "TZOO",
-      "price": 13.1001
-    },
-    {
-      "ticker": "FNB",
-      "price": 12.815
-    }
-  ],
-  "30": [
-    {
-      "ticker": "TZOO",
-      "price": 13.3
-    },
-    {
-      "ticker": "FNB",
-      "price": 12.79
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0b59e3b9d5873ccdaafef6397887bcf98f6b041892053c0383235097c5200a45
+size 401

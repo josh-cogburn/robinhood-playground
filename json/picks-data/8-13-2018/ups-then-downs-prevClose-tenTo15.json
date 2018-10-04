@@ -1,35 +1,3 @@
-{
-  "10": [],
-  "50": [
-    {
-      "ticker": "RFIL",
-      "price": 10.375
-    }
-  ],
-  "200": [
-    {
-      "ticker": "IMMR",
-      "price": 11.14
-    }
-  ],
-  "300": [
-    {
-      "ticker": "RFIL",
-      "price": 10.15
-    },
-    {
-      "ticker": "IMMR",
-      "price": 11.16
-    }
-  ],
-  "380": [
-    {
-      "ticker": "RFIL",
-      "price": 10.1762
-    },
-    {
-      "ticker": "IMMR",
-      "price": 11.155
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4c54221659b0420c693066e803df2e84de849248ec6a257895461b624c9569cf
+size 425

@@ -1,36 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "GTXI",
-      "price": 2.18
-    },
-    {
-      "ticker": "PIR",
-      "price": 1.505
-    },
-    {
-      "ticker": "BBOX",
-      "price": 1.0599
-    }
-  ],
-  "5": [
-    {
-      "ticker": "GTXI",
-      "price": 1.98
-    },
-    {
-      "ticker": "PIR",
-      "price": 1.46
-    },
-    {
-      "ticker": "BBOX",
-      "price": 1.0369
-    }
-  ],
-  "16": [
-    {
-      "ticker": "APRI",
-      "price": 0.2818
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d4de08b35e12d14c70ab3ddca70308fc622ba90d14d336b00c3303de49a003a4
+size 446

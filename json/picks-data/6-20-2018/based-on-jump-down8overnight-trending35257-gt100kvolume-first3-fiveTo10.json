@@ -1,30 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "ASTC",
-      "price": 5.47
-    }
-  ],
-  "5": [
-    {
-      "ticker": "ASTC",
-      "price": 5.6132
-    }
-  ],
-  "16": [
-    {
-      "ticker": "ASTC",
-      "price": 5.58
-    }
-  ],
-  "30": [
-    {
-      "ticker": "ASTC",
-      "price": 5.1452
-    },
-    {
-      "ticker": "HZN",
-      "price": 6.69
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b2fd74ee4ea2121bd3c8b74d3961262a568bcf7eec344ab015f86c2bc2007fab
+size 344

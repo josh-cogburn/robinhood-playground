@@ -1,32 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "CVE",
-      "price": 9.27
-    },
-    {
-      "ticker": "PFIN",
-      "price": 7.48
-    }
-  ],
-  "16": [
-    {
-      "ticker": "CVE",
-      "price": 9.375
-    },
-    {
-      "ticker": "PFIN",
-      "price": 7.48
-    }
-  ],
-  "30": [
-    {
-      "ticker": "CVE",
-      "price": 9.495
-    },
-    {
-      "ticker": "PFIN",
-      "price": 7.48
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:da72d046351b08e6a048599caa2a1093dd9d84ad81f490499c6ec27e7deb6fa9
+size 384

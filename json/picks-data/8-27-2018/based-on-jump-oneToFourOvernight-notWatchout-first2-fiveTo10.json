@@ -1,32 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "XSPL",
-      "price": 6.33
-    },
-    {
-      "ticker": "SMI",
-      "price": 5.86
-    }
-  ],
-  "5": [
-    {
-      "ticker": "XSPL",
-      "price": 6.33
-    },
-    {
-      "ticker": "SMI",
-      "price": 5.88
-    }
-  ],
-  "16": [
-    {
-      "ticker": "XSPL",
-      "price": 6.33
-    },
-    {
-      "ticker": "BBDO",
-      "price": 6.275
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9f45f4cd565c9ec1e7d4807773ba0ebdd6ea948b67465a8e0efed1c5c2ff4d31
+size 383

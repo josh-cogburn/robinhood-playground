@@ -1,36 +1,3 @@
-{
-  "77": [
-    {
-      "ticker": "LMFA",
-      "price": 0.6
-    },
-    {
-      "ticker": "USAS",
-      "price": 3.8054
-    }
-  ],
-  "242": [
-    {
-      "ticker": "IMTE",
-      "price": 1.9
-    },
-    {
-      "ticker": "USAS",
-      "price": 3.89
-    }
-  ],
-  "309": [
-    {
-      "ticker": "IMTE",
-      "price": 1.9
-    },
-    {
-      "ticker": "USAS",
-      "price": 3.8
-    },
-    {
-      "ticker": "AMDA",
-      "price": 1.17
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:66d3fd303fcc4745f64d8fa428c2ce42a747a0f3cde09ca581385e0c7fede9d3
+size 443

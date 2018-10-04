@@ -1,30 +1,3 @@
-{
-  "242": [
-    {
-      "ticker": "MLP",
-      "price": 11.25
-    },
-    {
-      "ticker": "SNMP",
-      "price": 12.355
-    },
-    {
-      "ticker": "NAII",
-      "price": 10.2
-    }
-  ],
-  "309": [
-    {
-      "ticker": "BDD",
-      "price": 10.3167
-    },
-    {
-      "ticker": "NAII",
-      "price": 10.2
-    },
-    {
-      "ticker": "ZMLP",
-      "price": 14.6877
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ddb33329ff16c71d52683fa48701ca20af6ebcb60be72ae086d93ab77d7be5f6
+size 381

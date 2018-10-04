@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "CAMT",
-      "price": 10.5
-    }
-  ],
-  "5": [
-    {
-      "ticker": "CAMT",
-      "price": 10.51
-    }
-  ],
-  "16": [
-    {
-      "ticker": "JAX",
-      "price": 12.35
-    },
-    {
-      "ticker": "CAMT",
-      "price": 10.48
-    }
-  ],
-  "30": [
-    {
-      "ticker": "JAX",
-      "price": 12.35
-    },
-    {
-      "ticker": "AKP",
-      "price": 14.08
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:deec79787d9a79ee82ffa9cb6938b80b729ed2a4e5b18a72a34b420d4e8e2884
+size 400

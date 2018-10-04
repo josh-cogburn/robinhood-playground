@@ -1,36 +1,3 @@
-{
-  "77": [
-    {
-      "ticker": "RUN",
-      "price": 10.86
-    },
-    {
-      "ticker": "ECOM",
-      "price": 14.0085
-    }
-  ],
-  "242": [
-    {
-      "ticker": "ECOM",
-      "price": 14.5
-    },
-    {
-      "ticker": "OBSV",
-      "price": 12.66
-    }
-  ],
-  "309": [
-    {
-      "ticker": "ECOM",
-      "price": 14.4
-    },
-    {
-      "ticker": "HEAR",
-      "price": 11.2658
-    },
-    {
-      "ticker": "OBSV",
-      "price": 12.66
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fd99d00da80e21ccf31d66e84c2acf6947a9e0fd097ef7c4b8b8b7f7b26c480d
+size 453

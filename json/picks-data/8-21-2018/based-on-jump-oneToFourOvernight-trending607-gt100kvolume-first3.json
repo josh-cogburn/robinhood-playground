@@ -1,29 +1,3 @@
-{
-  "0": [],
-  "5": [
-    {
-      "ticker": "DNR",
-      "price": 4.84
-    }
-  ],
-  "16": [
-    {
-      "ticker": "NOG",
-      "price": 3.13
-    },
-    {
-      "ticker": "DNR",
-      "price": 4.88
-    }
-  ],
-  "30": [
-    {
-      "ticker": "NOG",
-      "price": 3.155
-    },
-    {
-      "ticker": "DNR",
-      "price": 4.96
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:dd27301f3531277fc185125e2be1325b461cea956edfb1f65c40b98b0dc0b352
+size 335

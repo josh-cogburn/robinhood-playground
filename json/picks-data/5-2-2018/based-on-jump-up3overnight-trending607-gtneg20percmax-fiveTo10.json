@@ -1,32 +1,3 @@
-{
-  "5": [
-    {
-      "ticker": "NOA",
-      "price": 6.15
-    }
-  ],
-  "16": [
-    {
-      "ticker": "NOA",
-      "price": 6.3
-    },
-    {
-      "ticker": "ASPU",
-      "price": 8.4
-    }
-  ],
-  "30": [
-    {
-      "ticker": "NOA",
-      "price": 6.3
-    },
-    {
-      "ticker": "PRCP",
-      "price": 9.6
-    },
-    {
-      "ticker": "ASPU",
-      "price": 8.349
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1974ae2c6451f2e7c7c75f3998319fae2a3726af2fa52491e6d50bdfaacb1912
+size 379

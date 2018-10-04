@@ -1,32 +1,3 @@
-{
-  "280": [
-    {
-      "ticker": "LOOP",
-      "price": 12.65
-    },
-    {
-      "ticker": "SYBX",
-      "price": 11.095
-    }
-  ],
-  "328": [
-    {
-      "ticker": "SYBX",
-      "price": 11.01
-    },
-    {
-      "ticker": "UBX",
-      "price": 14.75
-    }
-  ],
-  "388": [
-    {
-      "ticker": "TORC",
-      "price": 11.39
-    },
-    {
-      "ticker": "SYBX",
-      "price": 10.52
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f90e6ea317d906cfc578c6e987dffbe8160b8ea2d536ba4aa83cfdcc8fa1a661
+size 395

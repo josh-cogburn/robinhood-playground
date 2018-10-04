@@ -1,36 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "ICCC",
-      "price": 8.51
-    },
-    {
-      "ticker": "DLHC",
-      "price": 6.099
-    },
-    {
-      "ticker": "TXMD",
-      "price": 6.8
-    }
-  ],
-  "5": [
-    {
-      "ticker": "ICCC",
-      "price": 8.51
-    },
-    {
-      "ticker": "DLHC",
-      "price": 6.2
-    },
-    {
-      "ticker": "TXMD",
-      "price": 6.79
-    }
-  ],
-  "16": [
-    {
-      "ticker": "RLGT",
-      "price": 5.5195
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:179a221e72ea803e35b302ac22d6db17674e72e276e122bc61e5d6cd0f03d395
+size 442

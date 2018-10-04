@@ -1,34 +1,3 @@
-{
-  "45": [
-    {
-      "ticker": "TELL",
-      "price": 10.27
-    },
-    {
-      "ticker": "QEP",
-      "price": 12.34
-    },
-    {
-      "ticker": "SLDB",
-      "price": 10.86
-    }
-  ],
-  "189": [
-    {
-      "ticker": "TELL",
-      "price": 10.2676
-    },
-    {
-      "ticker": "QEP",
-      "price": 12.46
-    },
-    {
-      "ticker": "SLDB",
-      "price": 11
-    },
-    {
-      "ticker": "KEG",
-      "price": 15
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1e542e7c0c6e0acbd376cb3282326630a856936fc1c5058fcfd61cb05016ee87
+size 430

@@ -1,34 +1,3 @@
-{
-  "0": [
-    {
-      "ticker": "JNCE",
-      "price": 8.1
-    }
-  ],
-  "5": [
-    {
-      "ticker": "JNCE",
-      "price": 8.15
-    }
-  ],
-  "16": [
-    {
-      "ticker": "FEDU",
-      "price": 5.1
-    },
-    {
-      "ticker": "JNCE",
-      "price": 8.26
-    }
-  ],
-  "30": [
-    {
-      "ticker": "FEDU",
-      "price": 5.1
-    },
-    {
-      "ticker": "JNCE",
-      "price": 8.2
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4f27c462e1e75beb0bf33f648534bbad42dd6029226833fea0219a22b2cd20dd
+size 394
