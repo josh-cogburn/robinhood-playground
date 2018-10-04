@@ -72,9 +72,13 @@ const runBreakdown = (
     return includeAll ? sorted : sorted.slice(0, 15);
 };
 
+
+const max = arr => arr.reduce((max, v) => max >= v ? max : v, -Infinity);
+const min = arr => arr.reduce((min, v) => min <= v ? min : v, Infinity);
+
 const generateBreakdownConfigs = allRoundup => {
 
-    const maxCount = Math.max(...allRoundup.map(o => o.count));
+    const maxCount = max(...allRoundup.map(o => o.count));
     // console.log(maxCount, 'maxCount');
 
     const upperCounts = ({ count }) =>
