@@ -22,12 +22,37 @@ const sellAllStocks = require('./app-actions/sell-all-stocks');
 
 const sellAllOlderThanTwoDays = require('./app-actions/sell-all-older-than-two-days');
 
+const mongoose = require('mongoose');
+const { mongoConnectionString } = require('./config');
+
+const Pick = require('./models/Pick');
+
+mongoose.connect(mongoConnectionString);
+
 process.on('unhandledRejection', (reason, p) => {
   console.log('Unhandled Rejection at: Promise', p, 'reason:', reason);
   // application specific logging, throwing an error, or other logic here
 });
 
 (async () => {
+
+    // console.log(
+    //     await Pick.create({
+    //         date: '10-4-2018',
+    //         strategyName: 'based-on-jump',
+    //         min: 20,
+    //         picks: [
+    //             {
+    //                 ticker: 'APPL',
+    //                 price: 32.93
+    //             },
+    //             {
+    //                 ticker: 'BPMX',
+    //                 price: 3.93
+    //             }
+    //         ]
+    //     })
+    // );
 
     Robinhood = await login();
     global.Robinhood = Robinhood;

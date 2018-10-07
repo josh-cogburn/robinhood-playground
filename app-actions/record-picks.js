@@ -42,13 +42,23 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
     //     }
     // });
 
-    console.log('saving', strategy, 'picks', withPrices);
-    const curData = await jsonMgr.get(fileLocation);
-    const savedData = {
-        ...curData,
-        [min]: withPrices
-    };
-    await jsonMgr.save(fileLocation, savedData);
+    // save to mongo
+    await Pick.create({
+        date: dateStr, 
+        strategyName: strategy,
+        min,
+        picks: withPrices
+    });
+
+    // save to /json
+
+    // console.log('saving', strategy, 'picks', withPrices);
+    // const curData = await jsonMgr.get(fileLocation);
+    // const savedData = {
+    //     ...curData,
+    //     [min]: withPrices
+    // };
+    // await jsonMgr.save(fileLocation, savedData);
 
     // for socket-server
     stratManager.newPick({
