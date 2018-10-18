@@ -1,3 +1,42 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:76c485c7695cab2d0d9a80887a003947e5d02961fcb6f7f34e5e7fd3ad108b0b
-size 1258
+{
+  "name": "robinhood-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "pm2 start index.js --node-args='--max-old-space-size=8000 --trace-warnings'",
+    "startnode": "node --trace-warnings index.js --max-old-space-size=8000",
+    "52day": "pm2 start run.js --no-autorestart --node-args='--max-old-space-size=8000' -- analysis/strategy-perf-multiple 52 next-day-330",
+    "build-client": "cd client && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.6.0",
+    "auto-retry": "^1.4.0",
+    "brain": "^1.0.0",
+    "brain.js": "^1.1.2",
+    "compression": "^1.7.1",
+    "console.table": "^0.10.0",
+    "cron": "^1.3.0",
+    "express": "^4.16.2",
+    "gmail-send": "^1.2.14",
+    "http": "0.0.0",
+    "js-combinatorics": "^0.5.3",
+    "mongoose": "^5.3.1",
+    "mz": "^2.7.0",
+    "nodemailer": "^4.6.4",
+    "pm2": "^3.1.3",
+    "promise-map-limit": "^1.0.0",
+    "promise-retry": "^1.1.1",
+    "puppeteer": "^0.13.0",
+    "retriable-promise": "^1.0.0",
+    "robinhood": "^1.6.0",
+    "socket.io": "^2.0.4",
+    "string-similarity": "^1.2.0",
+    "technicalindicators": "^1.1.12",
+    "twitter": "^1.7.1",
+    "yahoo-stocks": "^2.0.1"
+  }
+}
