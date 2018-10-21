@@ -5,6 +5,7 @@ const mapLimit = require('promise-map-limit');
 const { lookupTickers } = require('./record-strat-perfs');
 const { email } = require('../settings');
 const stratManager = require('../socket-server/strat-manager');
+const Pick = require('../models/Pick');
 
 const purchaseStocks = require('./purchase-stocks');
 const sendEmail = require('../utils/send-email');
