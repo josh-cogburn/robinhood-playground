@@ -27,7 +27,7 @@ const { mongoConnectionString } = require('./config');
 
 const Pick = require('./models/Pick');
 
-mongoose.connect(mongoConnectionString);
+mongoose.connect(mongoConnectionString, { useNewUrlParser: true });
 
 process.on('unhandledRejection', (reason, p) => {
   console.log('Unhandled Rejection at: Promise', p, 'reason:', reason);

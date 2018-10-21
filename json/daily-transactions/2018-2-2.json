@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:96a498c4f95ac963cad5437be3cdddecc7a18961e270d14f48e7ceff85f91ffc
-size 327
+[
+  {
+    "type": "sell",
+    "ticker": "ATOS",
+    "bid_price": 0.6332,
+    "quantity": "1.0000"
+  },
+  {
+    "type": "sell",
+    "ticker": "NLST",
+    "bid_price": 0.2946135,
+    "quantity": "1001.0000"
+  },
+  {
+    "type": "sell",
+    "ticker": "INPX",
+    "bid_price": 0.27491350000000003,
+    "quantity": "1200.0000"
+  }
+]

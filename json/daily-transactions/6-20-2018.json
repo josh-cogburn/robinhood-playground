@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5bfbc10cfa860a119bc4c8700ed2e515833a0257d06211a85a60e19bedd692d5
-size 411
+[
+  {
+    "type": "sell",
+    "ticker": "NEPT",
+    "bid_price": 3.401,
+    "quantity": "29.0000"
+  },
+  {
+    "type": "sell",
+    "ticker": "CLBS",
+    "bid_price": 11.4495,
+    "quantity": "20.0000"
+  },
+  {
+    "type": "buy",
+    "ticker": "NAKD",
+    "bid_price": 8.91,
+    "quantity": 11,
+    "strategy": "low-float-high-volume-floatTimesvolToAvgPoints-trendgt30-notWatchout-fiveTo10",
+    "min": 315
+  }
+]

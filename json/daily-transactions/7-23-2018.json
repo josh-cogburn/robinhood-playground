@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9c34822d08202c3a08601758170f28c23446ca7ebbe654cd80852af6ffa3e96c
-size 226
+[
+  {
+    "type": "buy",
+    "ticker": "ARCT",
+    "bid_price": 8.683539999999999,
+    "quantity": 13,
+    "strategy": "low-float-high-volume-floatTimesfloatToVolume-trenddown3to10-shouldWatchout-fiveTo10",
+    "min": 95
+  }
+]

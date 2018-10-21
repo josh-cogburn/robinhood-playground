@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4b162a5f6101044dfc38912a5ca8bd46fd8ffa7256480f6d8ae48102537de231
-size 427
+[
+  {
+    "type": "sell",
+    "ticker": "MARPS",
+    "bid_price": 3.76,
+    "quantity": "43.0000"
+  },
+  {
+    "type": "sell",
+    "ticker": "ASLN",
+    "bid_price": 7.87,
+    "quantity": "15.0000"
+  },
+  {
+    "type": "buy",
+    "ticker": "LPTX",
+    "bid_price": 8.426340000000001,
+    "quantity": 20,
+    "strategy": "low-float-high-volume-floatTimesfloatToVolume-trenddown3to10-shouldWatchout-fiveTo10",
+    "min": 95
+  }
+]

@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4bf32b9bcc78e21931a816b4e959c50b0ae67bb5b418991015410d000cc9a7e3
-size 623
+[
+  {
+    "type": "sell",
+    "ticker": "CCCL",
+    "bid_price": 1.53,
+    "quantity": "63.0000"
+  },
+  {
+    "type": "sell",
+    "ticker": "SRRA",
+    "bid_price": 3.5382300000000004,
+    "quantity": "46.0000"
+  },
+  {
+    "type": "buy",
+    "ticker": "CLBS",
+    "bid_price": 4.8451,
+    "quantity": 20,
+    "strategy": "low-float-high-volume-floatTimesvolTo2WeekPoints-trend15to25-notWatchout",
+    "min": 150
+  },
+  {
+    "type": "buy",
+    "ticker": "NEPT",
+    "bid_price": 3.4466796,
+    "quantity": 29,
+    "strategy": "low-float-high-volume-floatTimesvolTo2WeekPoints-trend15to25-notWatchout",
+    "min": 276
+  }
+]

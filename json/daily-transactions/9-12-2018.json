@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2983b073e1fc6d3b05303ca92585de83c820c7f67973828ff3fb5357f7d25e69
-size 319
+[
+  {
+    "type": "buy",
+    "ticker": "NUGT",
+    "bid_price": 12.495,
+    "quantity": 12,
+    "strategy": "low-float-high-volume-volToAvgPoints-trend10to15-shouldWatchout-tenTo15",
+    "min": 276
+  },
+  {
+    "type": "sell",
+    "ticker": "OHRP",
+    "bid_price": 0.19361200000000006,
+    "quantity": "476.0000"
+  }
+]

@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b80db7ffd8bcc9d3081ca01bd9e5d42ebd09e1ef00aca08f2710cc636585bb25
-size 181
+[
+  {
+    "type": "buy",
+    "ticker": "STAF",
+    "bid_price": 4.1664996,
+    "quantity": 24,
+    "strategy": "low-float-high-volume-volToAvgPoints-trendgt50",
+    "min": 315
+  }
+]

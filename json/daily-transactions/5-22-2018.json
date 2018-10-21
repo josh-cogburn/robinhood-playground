@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ef53f93117e2fb4912133c60bbe51bb167ec74ae507ed93146d1b0cbcd4747ee
-size 501
+[
+  {
+    "type": "sell",
+    "ticker": "FUV",
+    "bid_price": 3.25,
+    "quantity": "111.0000"
+  },
+  {
+    "type": "buy",
+    "ticker": "TRXC",
+    "bid_price": 3.3299,
+    "quantity": 103,
+    "strategy": "low-float-high-volume-floatTimesabsVolPoints-trenddown3to10",
+    "min": 6
+  },
+  {
+    "type": "buy",
+    "ticker": "MFD",
+    "bid_price": 11.9702,
+    "quantity": 27,
+    "strategy": "based-on-jump-down3overnight-trending607-notWatchout-gtneg20percmax-first1-tenTo15",
+    "min": 16
+  }
+]

@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e85b21cade1e99a204da997f2dec7f1e796dd92346a3e2e42947e3619e11498e
-size 301
+[
+  {
+    "type": "sell",
+    "ticker": "STAF",
+    "bid_price": 4.69765,
+    "quantity": "24.0000"
+  },
+  {
+    "type": "buy",
+    "ticker": "CUI",
+    "bid_price": 2.94,
+    "quantity": 34,
+    "strategy": "low-float-high-volume-twoWeekVolToAvgPoints-trenddown7to10-notWatchout",
+    "min": 25
+  }
+]

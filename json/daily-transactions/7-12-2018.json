@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9ccc8798f65331e43d590e5b53eec78cec2b1ea7767af9882879571faa85c4ee
-size 381
+[
+  {
+    "type": "sell",
+    "ticker": "NNVC",
+    "bid_price": 0.3706,
+    "quantity": "249.0000"
+  },
+  {
+    "type": "sell",
+    "ticker": "MYOS",
+    "bid_price": 1.6083900000000002,
+    "quantity": "42.0000"
+  },
+  {
+    "type": "buy",
+    "ticker": "ANY",
+    "bid_price": 0.5188,
+    "quantity": 192,
+    "strategy": "sudden-drops-last5trend-filter10",
+    "min": 221
+  }
+]

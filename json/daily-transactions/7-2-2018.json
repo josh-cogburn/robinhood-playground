@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d987e611894c464868f3d06667d844ad58f02156196b6e3889510f6357de01a3
-size 298
+[
+  {
+    "type": "sell",
+    "ticker": "LINK",
+    "bid_price": 3.3394294500000004,
+    "quantity": 14
+  },
+  {
+    "type": "sell",
+    "ticker": "LINK",
+    "bid_price": 3.32,
+    "quantity": 7
+  },
+  {
+    "type": "sell",
+    "ticker": "SDRL",
+    "bid_price": 0.1346,
+    "quantity": 1000
+  }
+]

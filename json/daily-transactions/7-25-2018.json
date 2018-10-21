@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ca00ac7d5a20131ff682610a39dc4feb72d7c34d78eb4d87c1f068fd99c89737
-size 222
+[
+  {
+    "type": "sell",
+    "ticker": "RFIL",
+    "bid_price": 8.541450000000001,
+    "quantity": "19.0000"
+  },
+  {
+    "type": "sell",
+    "ticker": "WMLP",
+    "bid_price": 1.6647930000000009,
+    "quantity": 44
+  }
+]
