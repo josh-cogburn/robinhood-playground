@@ -3,6 +3,9 @@ const { uniqifyArrayOfStrategies } = require('../utils/uniqify-stuff');
 module.exports = async (Robinhood) => {
     const files = await getFilesSortedByDate('strat-perf-multiples');
     console.log(files);
+    if (!files.length) {
+        return {};
+    }
     const spm = require(`../json/strat-perf-multiples/${files[0]}`);
     console.log(Object.keys(spm));
 
