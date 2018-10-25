@@ -1,5 +1,8 @@
 const fs = require('mz/fs');
 
+const Pick = require('../models/Pick');
+const StratPerf = require('../models/StratPerf');
+
 const getTrend = require('../utils/get-trend');
 const { avgArray } = require('../utils/array-math');
 const jsonMgr = require('../utils/json-mgr');
@@ -35,33 +38,22 @@ const lookupTickers = async (Robinhood, tickersToLookup, includeAfterHours) => {
 
 const analyzeDay = async (Robinhood, day) => {
 
-    let files = await fs.readdir(`./json/picks-data/${day}`);
-    console.log(`analyzing ${day}: ${files.length} files`);
+    // let files = await fs.readdir(`./json/picks-data/${day}`);
+    console.log('analyzeDay');
+    let pickObjs = await Pick.find({ date: day });
+    console.log(`analyzing ${day}: ${pickObjs.length} strategies`);
 
     let tickerLookups = {};
     const strategyPicks = {};
 
     // load data from picks-data and keep track of tickers to lookup
-    for (let file of files) {
-        const strategyName = file.split('.')[0];
-        const obj = await jsonMgr.get(`./json/picks-data/${day}/${file}`);
-        // console.log(strategyName);
-        // console.log(obj);
-
-        for (let min of Object.keys(obj)) {
-            // for each strategy run
-            strategyPicks[`${strategyName}-${min}`] = obj[min];
-            // if (obj[min].length) {
-            //     strategyPicks[`${strategyName}-single-${min}`] = obj[min].slice(0, 1);
-            // }
-            // if (obj[min].length >= 3) {
-            //     strategyPicks[`${strategyName}-first3-${min}`] = obj[min].slice(0, 3);
-            // }
-            obj[min].forEach(({ticker}) => {
-                tickerLookups[ticker] = null;
-            });
-        }
-    }
+    pickObjs.forEach(pickObj => {
+        strategyPicks[`${pickObj.strategyName}-${pickObj.min}`] = pickObj;
+        const tickers = pickObj.picks.map(p => p.ticker);
+        tickers.forEach(t => {
+            tickerLookups[t] = null;
+        });
+    });
 
     // lookup prices of all tickers (chunked)
     const tickersToLookup = Object.keys(tickerLookups);
@@ -71,9 +63,9 @@ const analyzeDay = async (Robinhood, day) => {
 
     // calc trend and avg for each strategy-min
     const withTrend = [];
-    Object.keys(strategyPicks).forEach(stratMin => {
-        // console.log('handling', stratMin);
-        const picks = strategyPicks[stratMin]
+    pickObjs.forEach(pickObj => {
+        // console.log('handling', pickObj);
+        const picks = pickObj.picks
             .filter(({ticker}) => filterByTradeable([ticker]).length);
         const picksWithTrend = picks.map(({ticker, price}) => ({
             ticker,
@@ -82,7 +74,8 @@ const analyzeDay = async (Robinhood, day) => {
             trend: getTrend(tickerLookups[ticker], price)
         }));
         withTrend.push({
-            strategyName: stratMin,
+            strategyName: pickObj.strategyName,
+            min: pickObj.min,
             avgTrend: avgArray(picksWithTrend.map(pick => pick.trend)),
             picks: picksWithTrend.map(t => t.ticker).join(', ')
         });
@@ -106,10 +99,11 @@ module.exports = {
 
         // console.log('running record')
         // console.log(Robinhood, min);
-        let folders = await fs.readdir('./json/picks-data');
+        const distinctDates = await Pick.find().distinct('date');
+        console.log({ distinctDates });
         // console.log(folders);
 
-        let sortedFolders = folders.sort((a, b) => {
+        let sortedFolders = distinctDates.sort((a, b) => {
             return new Date(a) - new Date(b);
         });
 
@@ -134,13 +128,29 @@ module.exports = {
                 break;
             }
             const analyzed = await analyzeDay(Robinhood, pastDayDate);
-
-            const curStratPerfs = await jsonMgr.get(`./json/strat-perfs/${pastDayDate}.json`) || {};
-            curStratPerfs[`${key}-${min}`] = analyzed;
-            await jsonMgr.save(`./json/strat-perfs/${pastDayDate}.json`, curStratPerfs);
+            const period = `${key}-${min}`;
+            console.log('done analyzing', pastDayDate, analyzed);
+            await StratPerf.bulkWrite(
+                analyzed.map(stratPerf => ({
+                    updateOne: {
+                        filter: {
+                            date: pastDayDate,
+                            stratMin: `${stratPerf.strategyName}-${stratPerf.min}`
+                        },
+                        update: {
+                            '$push': {
+                                perfs: {
+                                    period,
+                                    avgTrend: stratPerf.avgTrend
+                                }
+                            }
+                        },
+                        upsert: true
+                    }
+                }))
+            );
             console.log(key, 'saved strat-perf');
-        }
-
+        };
         console.log('done saving strat-perfs!');
     }
 

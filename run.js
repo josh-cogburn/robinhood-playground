@@ -1,6 +1,14 @@
 const login = require('./rh-actions/login');
 const getTrendAndSave = require('./app-actions/get-trend-and-save');
 
+const mongoose = require('mongoose');
+const { mongoConnectionString } = require('./config');
+
+const Pick = require('./models/Pick');
+
+mongoose.connect(mongoConnectionString, { useNewUrlParser: true });
+
+
 // node run [filename goes here]
 
 (async () => {
@@ -26,8 +34,10 @@ const getTrendAndSave = require('./app-actions/get-trend-and-save');
     const restArgs = process.argv.slice(3)
         .map(arg => arg === 'true' ? true : arg);
 
-    const fnToRun = relatedFile.trendFilter || relatedFile.fn || relatedFile;
+    const fnToRun = relatedFile.trendFilter || relatedFile.fn || relatedFile.default || relatedFile;
     const response = await fnToRun(...callArgs, ...restArgs);
     console.log('response');
     console.log(JSON.stringify(response, null, 2));
+
+    mongoose.connection.close();
 })();

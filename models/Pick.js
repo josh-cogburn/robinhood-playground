@@ -10,5 +10,5 @@ const schema = {
     }]
 };
 
-const Pick = mongoose.model('Pick', schema);
+const Pick = mongoose.model('Pick', schema, 'picks');
 module.exports = Pick;
