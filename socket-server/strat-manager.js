@@ -3,6 +3,9 @@ const jsonMgr = require('../utils/json-mgr');
 const { CronJob } = require('cron');
 const fs = require('mz/fs');
 
+// mongo
+const Pick = require('../models/Pick');
+
 // pms
 const manualPMs = require('../pms/manual');
 const fiftytwodaySPMs = require('../pms/spm');
@@ -119,10 +122,11 @@ const stratManager = {
         const isWeekday = day >= 1 && day <= 5;
         const dateStr = formatDate(now);
 
-        const hasPicksData = await fs.exists(`./json/picks-data/${dateStr}`);
+        const hasPicksData = (await Pick.countDocuments({ date: dateStr })) > 0;
+        console.log('hasPicksData', hasPicksData);
         if (!isWeekday || hasPicksData) {
             // from most recent day (weekend will get friday)
-            await this.initPicks();
+            await this.initPicks(dateStr);
         } else {
             this.curDate = dateStr;
         }
@@ -130,29 +134,16 @@ const stratManager = {
         await this.refreshPredictionModels();
     },
     async initPicks(dateStr) {
-        console.log('init picks')
-        const picks = [];
+        console.log('init picks', dateStr)
+        const dbPicks = await Pick.find({ date: dateStr });
+        console.log('dbPicks', dbPicks);
+        const picks = dbPicks.map(pick => ({
+            stratMin: `${pick.strategyName}-${pick.min}`,
+            withPrices: pick.picks
+        }));
+        console.log('mostRecentDay', dateStr);
+        this.curDate = dateStr;
 
-        let folders = await fs.readdir('./json/picks-data');
-        let sortedFolders = folders.sort((a, b) => {
-            return new Date(a) - new Date(b);
-        });
-
-        const mostRecentDay = sortedFolders[sortedFolders.length - 1];
-        console.log('mostRecentDay', mostRecentDay);
-        this.curDate = mostRecentDay;
-        let files = await fs.readdir(`./json/picks-data/${mostRecentDay}`);
-        for (let file of files) {
-            const strategyName = file.split('.')[0];
-            const obj = await jsonMgr.get(`./json/picks-data/${mostRecentDay}/${file}`);
-            for (let min of Object.keys(obj)) {
-                // for each strategy run
-                picks.push({
-                    stratMin: `${strategyName}-${min}`,
-                    withPrices: obj[min]
-                });
-            }
-        }
         let tickersOfInterest = flatten(picks.map(pick => {
             return pick.withPrices.map(tickerObj => tickerObj.ticker);
         }));
@@ -160,6 +151,9 @@ const stratManager = {
 
         this.tickersOfInterest = tickersOfInterest;
         this.picks = picks;
+
+        console.log('numPicks', picks.length);
+        console.log('numTickersOfInterest', tickersOfInterest.length)
     },
     async sendStrategyReport() {
         console.log('sending strategy report');
