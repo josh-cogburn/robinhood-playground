@@ -36,23 +36,23 @@ process.on('unhandledRejection', (reason, p) => {
 
 (async () => {
 
-    // console.log(
-    //     await Pick.create({
-    //         date: '10-4-2018',
-    //         strategyName: 'based-on-jump',
-    //         min: 20,
-    //         picks: [
-    //             {
-    //                 ticker: 'APPL',
-    //                 price: 32.93
-    //             },
-    //             {
-    //                 ticker: 'BPMX',
-    //                 price: 3.93
-    //             }
-    //         ]
-    //     })
-    // );
+    console.log(
+        await Pick.create({
+            date: '10-4-2018',
+            strategyName: 'based-on-jump',
+            min: 20,
+            picks: [
+                {
+                    ticker: 'APPL',
+                    price: 32.93
+                },
+                {
+                    ticker: 'BPMX',
+                    price: 3.93
+                }
+            ]
+        })
+    );
 
     Robinhood = await login();
     global.Robinhood = Robinhood;
