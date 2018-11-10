@@ -3,7 +3,7 @@ const initStratPerfs = require('./init-strat-perfs');
 const calcUniqStrategies = require('./calc-uniq-strategies');
 const analyzeStrategy = require('./analyze-strategy');
 const { analyzeRoundup } = require('./generate-breakdowns');
-const { isBreakdownKey } = require('./breakdown-key-compares');
+const { isBreakdownKey } = require('../../utils/breakdown-key-compares');
 const saveToJson = require('./save-to-json');
 
 module.exports = async (Robinhood, daysBack = 2, ...strategiesArgs) => {

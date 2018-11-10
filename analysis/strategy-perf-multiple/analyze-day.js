@@ -1,7 +1,7 @@
 const {
     compareTwoBreakdowns,
     // orderBreakdownKeys
-} = require('./breakdown-key-compares');
+} = require('../../utils/breakdown-key-compares');
 
 const analyzeDay = ({ strategyName, stratPerf, date, maxBreakdownKey }) => {
 

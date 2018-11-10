@@ -2,28 +2,26 @@
 const fs = require('mz/fs');
 const jsonMgr = require('../../utils/json-mgr');
 const { avgArray } = require('../../utils/array-math');
+const StratPerf = require('../../models/StratPerf');
 
 module.exports = async (daysBack) => {
 
-    let files = await fs.readdir('./json/strat-perfs');
+    console.log('initing strat-perfs')
 
-    let sortedFiles = files
-        .map(f => f.split('.')[0])
-        .sort((a, b) => new Date(a) - new Date(b));
-
-    let days = sortedFiles.slice(0 - daysBack);
-    console.log('selected days', days);
+    let dates = await StratPerf.getUniqueDates();
+    let datesOfInterest = dates.slice(0 - daysBack);
+    console.log('selected days', datesOfInterest, dates);
 
     const stratObj = {};
-    for (let day of days) {
-        const dayStrats = await jsonMgr.get(`./json/strat-perfs/${day}.json`);
+    for (let date of datesOfInterest) {
+        const dayStrats = await StratPerf.getByDate(date);
         stratObj[day] = dayStrats;
     }
 
     console.log('loaded strats into memory');
 
     return {
-        days,
+        days: dates,
         stratObj
     };
 

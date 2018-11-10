@@ -10,7 +10,7 @@ const {
 const {
     // compareTwoBreakdowns,
     orderBreakdownKeys
-} = require('./breakdown-key-compares');
+} = require('../../utils/breakdown-key-compares');
 
 const runPlayout = (playoutObj, breakdowns) => {
 
