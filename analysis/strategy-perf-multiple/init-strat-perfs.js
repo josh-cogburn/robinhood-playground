@@ -15,7 +15,7 @@ module.exports = async (daysBack) => {
     const stratObj = {};
     for (let date of datesOfInterest) {
         const dayStrats = await StratPerf.getByDate(date);
-        stratObj[day] = dayStrats;
+        stratObj[date] = dayStrats;
     }
 
     console.log('loaded strats into memory');

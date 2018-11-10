@@ -20,6 +20,7 @@ module.exports = async (Robinhood, daysBack = 2, ...strategiesArgs) => {
     })();
 
     const { days, stratObj } = await initStratPerfs(daysBack);
+    console.log({ days, stratObj });
     let allStrategies = calcUniqStrategies(stratObj);
 
     const suppliedStrategies = strategiesArgs.length;
