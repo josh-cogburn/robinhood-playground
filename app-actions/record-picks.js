@@ -6,6 +6,7 @@ const { lookupTickers } = require('./record-strat-perfs');
 const { email } = require('../settings');
 const stratManager = require('../socket-server/strat-manager');
 const Pick = require('../models/Pick');
+const stratsOfInterest = require('../strats-of-interest');
 
 const purchaseStocks = require('./purchase-stocks');
 const sendEmail = require('../utils/send-email');
@@ -44,12 +45,15 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
     // });
 
     // save to mongo
-    await Pick.create({
-        date: dateStr, 
-        strategyName: strategy,
-        min,
-        picks: withPrices
-    });
+    if (stratsOfInterest.includes(strategy)) {
+        console.log(`saving ${strategy} to mongo`);
+        await Pick.create({
+            date: dateStr, 
+            strategyName: strategy,
+            min,
+            picks: withPrices
+        });
+    }
 
     // save to /json
 

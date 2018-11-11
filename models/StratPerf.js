@@ -13,7 +13,7 @@ const schema = new Schema({
 });
 
 schema.statics.getUniqueDates = async function() {
-    return this.distinct('date');
+    return (await this.distinct('date')).reverse();
 }
 
 schema.statics.getByDate = async function(date) {
@@ -31,9 +31,8 @@ schema.statics.getByDate = async function(date) {
         });
     });
 
-    const keyOrder = orderBreakdownKeys(Object.keys(byBreakdown));
-    return keyOrder.reduce((acc, key) => [ ...acc, byBreakdown[key]], []);
-};
+    return byBreakdown;
+};  
 
 const StratPerf = mongoose.model('StratPerf', schema, 'stratPerfs');
 module.exports = StratPerf;
