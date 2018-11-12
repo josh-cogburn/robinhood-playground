@@ -14,9 +14,12 @@ const tweeter = require('./tweeter');
 
 const saveToFile = async (Robinhood, strategy, min, withPrices) => {
 
-    if (!strategy.includes('cheapest-picks')) withPrices = withPrices.slice(0, 5);  // take only 5 picks
 
     const stratMin = `${strategy}-${min}`;
+
+    if (!stratsOfInterest.includes(stratMin)) return;
+
+    if (!strategy.includes('cheapest-picks')) withPrices = withPrices.slice(0, 5);  // take only 5 picks
 
     withPrices = withPrices.filter(tickerPrice => !!tickerPrice);
     if (!withPrices.length) {
@@ -45,15 +48,13 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
     // });
 
     // save to mongo
-    if (stratsOfInterest.includes(strategy)) {
-        console.log(`saving ${strategy} to mongo`);
-        await Pick.create({
-            date: dateStr, 
-            strategyName: strategy,
-            min,
-            picks: withPrices
-        });
-    }
+    console.log(`saving ${strategy} to mongo`);
+    await Pick.create({
+        date: dateStr, 
+        strategyName: strategy,
+        min,
+        picks: withPrices
+    });
 
     // save to /json
 
