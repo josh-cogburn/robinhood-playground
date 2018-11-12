@@ -1,4 +1,4 @@
-[
+module.exports = [
     "week-swings-tenTo15-1",
     "constant-risers-10minute-percUpHighClosePoints-300",
     "based-on-jump-down3overnight-trending35257-5",
@@ -6013,4 +6013,4 @@
     "low-float-high-volume-floatTimesfloatToVolume-trenddown7to10-25",
     "low-float-high-volume-absVolPoints-trendgt50-shouldWatchout-tenTo15-315",
     "based-on-jump-down8overnight-trending607-gt1milvolume-first3-fiveTo10-16"
-  ]
+  ];
