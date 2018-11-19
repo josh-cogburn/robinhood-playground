@@ -36,26 +36,32 @@ process.on('unhandledRejection', (reason, p) => {
 
 (async () => {
 
-    console.log(
-        await Pick.create({
-            date: '10-4-2018',
-            strategyName: 'based-on-jump',
-            min: 20,
-            picks: [
-                {
-                    ticker: 'APPL',
-                    price: 32.93
-                },
-                {
-                    ticker: 'BPMX',
-                    price: 3.93
-                }
-            ]
-        })
-    );
+    
+    // console.log(
+    //     await Pick.create({
+    //         date: '10-4-2018',
+    //         strategyName: 'based-on-jump',
+    //         min: 20,
+    //         picks: [
+    //             {
+    //                 ticker: 'APPL',
+    //                 price: 32.93
+    //             },
+    //             {
+    //                 ticker: 'BPMX',
+    //                 price: 3.93
+    //             }
+    //         ]
+    //     })
+    // );
 
     Robinhood = await login();
     global.Robinhood = Robinhood;
+
+    const accounts = await Robinhood.accounts();
+    // const ratioToSpend = Math.max(0.3, getMinutesFrom630() / 390);
+    const cashAvailable = Number(accounts.results[0].margin_balances.unallocated_margin_cash);
+    console.log({ cashAvailable });
 
     require('./socket-server');
     // console.log(await getUpStreak(Robinhood, 'AAPL', 3));
