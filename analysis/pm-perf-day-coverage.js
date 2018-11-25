@@ -4,9 +4,7 @@
 const fs = require('mz/fs');
 const stratPerfMultiple = require('./strategy-perf-multiple');
 const manualPms = require('../pms/manual');
-const flatten = list => list.reduce(
-    (a, b) => a.concat(Array.isArray(b) ? flatten(b) : b), []
-);
+const flatten = require('../utils/flatten-array');
 
 const getFilesSortedByDate = require('../utils/get-files-sorted-by-date');
 

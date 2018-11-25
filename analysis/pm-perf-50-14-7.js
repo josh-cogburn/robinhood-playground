@@ -1,7 +1,5 @@
 const manualPms = require('../pms/manual');
-const flatten = list => list.reduce(
-    (a, b) => a.concat(Array.isArray(b) ? flatten(b) : b), []
-);
+const flatten = require('../utils/flatten-array');
 
 const getFilesSortedByDate = require('../utils/get-files-sorted-by-date');
 const jsonMgr = require('../utils/json-mgr');

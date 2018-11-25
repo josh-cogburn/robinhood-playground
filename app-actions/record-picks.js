@@ -3,7 +3,6 @@ const jsonMgr = require('../utils/json-mgr');
 const lookup = require('../utils/lookup');
 const mapLimit = require('promise-map-limit');
 const { lookupTickers } = require('./record-strat-perfs');
-const { email } = require('../settings');
 const stratManager = require('../socket-server/strat-manager');
 const Pick = require('../models/Pick');
 const stratsOfInterest = require('../strats-of-interest');
@@ -17,9 +16,9 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
 
     const stratMin = `${strategy}-${min}`;
 
-    if (!stratsOfInterest.includes(stratMin)) return;
+    if (!stratsOfInterest.includes(stratMin)) return;   // cant handle too many strategies apparently
 
-    if (!strategy.includes('cheapest-picks')) withPrices = withPrices.slice(0, 5);  // take only 5 picks
+    if (!strategy.includes('cheapest-picks')) withPrices = withPrices.slice(0, 50);  // take only 50 picks
 
     withPrices = withPrices.filter(tickerPrice => !!tickerPrice);
     if (!withPrices.length) {
@@ -29,11 +28,11 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
     console.log('recording', stratMin, 'strategy');
 
     const dateStr = (new Date()).toLocaleDateString().split('/').join('-');
-    const fileLocation = `./json/picks-data/${dateStr}/${strategy}.json`;
+    // const fileLocation = `./json/picks-data/${dateStr}/${strategy}.json`;
     // create day directory if needed
-    if (!(await fs.exists(`./json/picks-data/${dateStr}`))) {
-        await fs.mkdir(`./json/picks-data/${dateStr}`);
-    }
+    // if (!(await fs.exists(`./json/picks-data/${dateStr}`))) {
+    //     await fs.mkdir(`./json/picks-data/${dateStr}`);
+    // }
 
     // console.log('getting prices', picks);
     // let withPrices = await mapLimit(picks, 1, async ticker => {
@@ -85,23 +84,22 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
             min
         });
         tweeter.tweet(`BUY ${withPrices.map(({ ticker, price }) => `#${ticker} @ $${price}`).join(' and ')} - ${stratMin}`);
-        await sendEmail(
-            `robinhood-playground: ${stratMin}`,
-            JSON.stringify(withPrices, null, 2)
-        );
     }
 
     // for email
-    const toEmail = Object.keys(email).filter(addr => email[addr].includes(stratMin));
-    for (let addr of toEmail) {
+    const emailsToSend = await calcEmailsFromStrategy(null, stratMin);
+    for (let { email, pm } of emailsToSend) {
         await sendEmail(
-            `robinhood-playground: ${stratMin}`,
+            `robinhood-playground${pm ? `-${pm}` : ''}: ${stratMin}`,
             JSON.stringify(withPrices, null, 2),
-            addr
+            email
         );
     }
 
 };
+
+
+
 
 
 module.exports = async (Robinhood, strategy, min, toPurchase, priceFilterSuffix = '') => {

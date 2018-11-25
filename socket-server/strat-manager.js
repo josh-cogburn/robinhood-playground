@@ -25,9 +25,7 @@ const sendEmail = require('../utils/send-email');
 const formatDate = date => date.toLocaleDateString().split('/').join('-');
 const getToday = () => formatDate(new Date());
 
-const flatten = list => list.reduce(
-    (a, b) => a.concat(Array.isArray(b) ? flatten(b) : b), []
-);
+const flatten = require('../utils/flatten-array');
 
 const stratManager = {
     Robinhood: null,
