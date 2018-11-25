@@ -51,7 +51,11 @@ io.on('connection', (socket) => {
             ...acc,
             [file]: json
         }), {});
-        console.log(obj);
+
+        for (let userStrat of withJSON) {
+            socket.emit('server:user-strat', userStrat);
+        }
+
         return cb(obj);
     });
 

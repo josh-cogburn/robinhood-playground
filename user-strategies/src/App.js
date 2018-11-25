@@ -70,6 +70,13 @@ class App extends Component {
       console.log(data, 'current');
       this.setState({ currentPrices: data });
     });
+    this.socket.on('server:user-strat', userStrat => {
+      console.log('received', userStrat);
+      this.setState(({ recentTrends }) => ({
+        ...recentTrends,
+        userStrat
+      }));
+    });
   }
   getRecentTrends = () => new Promise(resolve => {
     if (this.state.recentTrends) {

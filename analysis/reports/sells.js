@@ -33,7 +33,7 @@ module.exports = async (Robinhood, daysBack = 5) => {
 
     // console.log({ mostRecentOnly });
     const dailyTransactionDates = await getFilesSortedByDate('daily-transactions');
-    // console.log({ dailyTransactionDates })
+    console.log({ dailyTransactionDates })
     const robinhoodTransactions = await loadAllTransactionsSince(Robinhood, Number(daysBack) + 3);
 
     const analyzeDay = async date => {
