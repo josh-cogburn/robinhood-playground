@@ -1142,7 +1142,38 @@ const moreITELLYOUMORE = [
     'constant-risers-5minute-percUpHighClose-filtered60-fiveTo10-80',
     'low-float-high-volume-volTo2WeekPoints-notWatchout-6',
     'sudden-drops-shouldWatchout-bothtrendsAbsLT30-last18trend-first2-221'
-]
+];
+
+const postMongoBigHitters = [
+    // big hitters
+    'low-float-high-volume-floatTimesvolTo2WeekPoints-trenddowngt20-276',
+];
+
+const postMongoTimes2 = [
+    // x2
+    'low-float-high-volume-floatPoints-trendgt5-shouldWatchout-fifteenTo20-95',
+    'low-float-high-volume-absVolPoints-trenddowngt30-6',
+    'sudden-drops-last50trend-filter20-360',
+    'low-float-high-volume-volToAvgPoints-trenddowngt10-notWatchout-fiveTo10-150',
+    'sudden-drops-last30trend-filter20-153',
+    'based-on-jump-down5overnight-trending35257-shouldWatchout-first1-tenTo15-16',
+];
+
+const postMongoCount3 = [
+    // count 3
+    'sudden-drops-last50trend-filter20-360',
+    'low-float-high-volume-floatTimestwoWeekVolToAvgPoints-trenddowngt10-notWatchout-fiveTo10-150',
+    'based-on-jump-down5overnight-trending35257-shouldWatchout-first3-tenTo15-30',
+    'based-on-jump-down5overnight-shouldWatchout-first1-tenTo15-5',
+    'based-on-jump-down5overnight-trending53-shouldWatchout-first2-tenTo15-16',
+    'constant-risers-10minute-percUpCloseOnlyPoints-highovernightjumps-tenTo15-80'
+];
+
+const postMongo = [
+    ...postMongoBigHitters,
+    ...postMongoTimes2,
+    ...postMongoCount3
+];
 
 module.exports = {
     'wild n crazy': [
@@ -1217,8 +1248,8 @@ module.exports = {
     // broken down by count in last 15 days
     sepPerfectosHigherCounts,
     sepPerfectosLowerCounts,
-        sepPerfectosRealLowCounts,
-        sepPerfectosLowCounts,
+    sepPerfectosRealLowCounts,
+    sepPerfectosLowCounts,
 
     sepPerfectosMissing,
 
@@ -1245,5 +1276,11 @@ module.exports = {
     backToTheBasicsPeople,
     heavydutyhitters,
     constantinople,
-    moreITELLYOUMORE
+    moreITELLYOUMORE,
+
+
+    postMongo,
+    postMongoBigHitters,
+    postMongoTimes2,
+    postMongoCount3
 };
