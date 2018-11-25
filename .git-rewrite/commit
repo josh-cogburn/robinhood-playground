@@ -1,0 +1,6 @@
+tree 66a7615f5281b6595b5f30d044d3a17f2d13948b
+parent 544ded6ec8f899817336067ae5dca5c05490524f
+author xTv <chiefsmurph@gmail.com> 1529797627 -0700
+committer xTv <chiefsmurph@gmail.com> 1529797627 -0700
+
+speed up uniqifying stratPerfs using a trendCache

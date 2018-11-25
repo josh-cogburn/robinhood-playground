@@ -1,0 +1,294 @@
+{
+  "all": [
+    {
+      "strategy": "based-on-jump-20",
+      "percUp": 0,
+      "count": 1,
+      "maxs": [
+        -95.38
+      ],
+      "daysDown": 1,
+      "playouts": {
+        "onlyMax": {
+          "percUp": null,
+          "avgTrend": null,
+          "hundredResult": 100
+        }
+      },
+      "score": null
+    }
+  ],
+  "limit5hundredResult": [
+    {
+      "strategy": "based-on-jump-20",
+      "percUp": 0,
+      "count": 1,
+      "maxs": [
+        -95.38
+      ],
+      "daysDown": 1,
+      "playouts": {
+        "limit5": {
+          "percUp": null,
+          "avgTrend": null,
+          "hundredResult": 100,
+          "percHitPlayout": 1,
+          "percHitsPositive": 0
+        }
+      },
+      "score": 100
+    }
+  ],
+  "limit5creme": [
+    {
+      "strategy": "based-on-jump-20",
+      "percUp": 0,
+      "count": 1,
+      "maxs": [
+        -95.38
+      ],
+      "daysDown": 1,
+      "playouts": {
+        "limit5": {
+          "percUp": null,
+          "avgTrend": null,
+          "hundredResult": 100,
+          "percHitPlayout": 1,
+          "percHitsPositive": 0
+        }
+      },
+      "score": null
+    }
+  ],
+  "highestLimitPlayoutsAvgTrend": [
+    {
+      "strategy": "based-on-jump-20",
+      "percUp": 0,
+      "count": 1,
+      "maxs": [
+        -95.38
+      ],
+      "daysDown": 1,
+      "score": null
+    }
+  ],
+  "highestLimitPlayoutsPercUp": [
+    {
+      "strategy": "based-on-jump-20",
+      "percUp": 0,
+      "count": 1,
+      "maxs": [
+        -95.38
+      ],
+      "daysDown": 1,
+      "score": null
+    }
+  ],
+  "highestLimitPlayoutsHundredResult": [
+    {
+      "strategy": "based-on-jump-20",
+      "percUp": 0,
+      "count": 1,
+      "maxs": [
+        -95.38
+      ],
+      "daysDown": 1,
+      "playouts": {
+        "limit1": {
+          "percUp": null,
+          "avgTrend": null,
+          "hundredResult": 100,
+          "percHitPlayout": 1,
+          "percHitsPositive": 0
+        }
+      },
+      "score": 100
+    }
+  ],
+  "highestLimitPlayoutsPercUpCountAvg": [
+    {
+      "strategy": "based-on-jump-20",
+      "percUp": 0,
+      "count": 1,
+      "maxs": [
+        -95.38
+      ],
+      "daysDown": 1,
+      "score": null
+    }
+  ],
+  "highestLimitPlayoutsJohnsSecretRecipe": [
+    {
+      "strategy": "based-on-jump-20",
+      "percUp": 0,
+      "count": 1,
+      "maxs": [
+        -95.38
+      ],
+      "daysDown": 1,
+      "score": null
+    }
+  ],
+  "highestLimitPlayoutsJohnsSecretRecipeWithCount": [
+    {
+      "strategy": "based-on-jump-20",
+      "percUp": 0,
+      "count": 1,
+      "maxs": [
+        -95.38
+      ],
+      "daysDown": 1,
+      "score": null
+    }
+  ],
+  "bestFirstGreenAvgTrend": [
+    {
+      "strategy": "based-on-jump-20",
+      "percUp": 0,
+      "count": 1,
+      "maxs": [
+        -95.38
+      ],
+      "daysDown": 1,
+      "score": null
+    }
+  ],
+  "bestAlwaysLastAvgTrend": [
+    {
+      "strategy": "based-on-jump-20",
+      "percUp": 0,
+      "count": 1,
+      "maxs": [
+        -95.38
+      ],
+      "daysDown": 1,
+      "score": null
+    }
+  ],
+  "bestChangeGt2SinceLastAvgTrend": [
+    {
+      "strategy": "based-on-jump-20",
+      "percUp": 0,
+      "count": 1,
+      "maxs": [
+        -95.38
+      ],
+      "daysDown": 1,
+      "score": null
+    }
+  ],
+  "bestAvgTrendAnyPlayout": [
+    {
+      "strategy": "based-on-jump-20",
+      "percUp": 0,
+      "count": 1,
+      "maxs": [
+        -95.38
+      ],
+      "daysDown": 1,
+      "score": null
+    }
+  ],
+  "bestAvgTrendPlayoutsOfInterest": [
+    {
+      "strategy": "based-on-jump-20",
+      "percUp": 0,
+      "count": 1,
+      "maxs": [
+        -95.38
+      ],
+      "daysDown": 1,
+      "score": null
+    }
+  ],
+  "middleCountsJohnsRecipe": [],
+  "middleCountsJohnsRecipeNoHundredResult": [],
+  "lowestLimitPlayoutsHundredResult": [
+    {
+      "strategy": "based-on-jump-20",
+      "percUp": 0,
+      "count": 1,
+      "maxs": [
+        -95.38
+      ],
+      "daysDown": 1,
+      "playouts": {
+        "limit1": {
+          "percUp": null,
+          "avgTrend": null,
+          "hundredResult": 100,
+          "percHitPlayout": 1,
+          "percHitsPositive": 0
+        }
+      },
+      "score": -100
+    }
+  ],
+  "lowestLimitPlayoutsHundredResultCount": [
+    {
+      "strategy": "based-on-jump-20",
+      "percUp": 0,
+      "count": 1,
+      "maxs": [
+        -95.38
+      ],
+      "daysDown": 1,
+      "playouts": {
+        "limit1": {
+          "percUp": null,
+          "avgTrend": null,
+          "hundredResult": 100,
+          "percHitPlayout": 1,
+          "percHitsPositive": 0
+        }
+      },
+      "score": -100
+    }
+  ],
+  "lowestLimitPlayoutsHundredResultPercUp": [
+    {
+      "strategy": "based-on-jump-20",
+      "percUp": 0,
+      "count": 1,
+      "maxs": [
+        -95.38
+      ],
+      "daysDown": 1,
+      "score": null
+    }
+  ],
+  "lowCountHundredResult": [],
+  "lowCountHundredResultPercUp": [],
+  "anyCountPerfectos": [],
+  "upperCountMagicScore": [
+    {
+      "strategy": "based-on-jump-20",
+      "percUp": 0,
+      "count": 1,
+      "maxs": [
+        -95.38
+      ],
+      "daysDown": 1,
+      "score": null
+    }
+  ],
+  "middleCountMagicScore": [],
+  "topTwoThirdsMagicScore": [
+    {
+      "strategy": "based-on-jump-20",
+      "percUp": 0,
+      "count": 1,
+      "maxs": [
+        -95.38
+      ],
+      "daysDown": 1,
+      "score": null
+    }
+  ],
+  "lowThirdMagicScore": [],
+  "lowThirdMinCount5MagicScore": [],
+  "customCount3to5MagicScore": [],
+  "customCount5to8MagicScore": [],
+  "customCount8to11MagicScore": [],
+  "customCount11to14MagicScore": []
+}
