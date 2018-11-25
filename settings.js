@@ -22,25 +22,14 @@ module.exports = {
     sellAllStocksOnNthDay: 2,
     purchaseAmt: 40,
     forPurchase: [
-        '[backToTheBasicsPeople]',
-        'low-float-high-volume-floatTimesfloatToVolume-trenddown7to10-25',
-        'low-float-high-volume-floatTimesfloatToVolume-trenddowngt10-shouldWatchout-25',
-        '[myRecs-day40-hundredResultCreme]',
-        '[myRecs-day40-hundredResultCreme]',
-        '[myRecs-day30-hundredResultCreme]',
-        '[myRecs-day30count7-hundredUpTrendsAllGt1]',
+        '[postMongoBigHitters]',
+        '[postMongoBigHitters]',
+        '[postMongoBigHitters]',
         
-        '[heavydutyhitters]',
-        '[constantinople]',
+        '[postMongoTimes2]',
+        '[postMongoTimes2]',
 
-        'sudden-drops-notWatchout-prevCloseTrendAbsLT30-last3trend-filter5-100',
-        'sudden-drops-notWatchout-prevCloseTrendAbsLT30-last3trend-filter5-100',
-        'sudden-drops-notWatchout-prevCloseTrendAbsLT30-last3trend-filter5-100',
-
-        'sudden-drops-volumeGT1000000-last3trend-first2-fiveTo10-280',
-        'dynamo-3000-overall-overall-lowestYP-40',
-
-        '[moreITELLYOUMORE]'
+        '[postMongoCount3]',
     ],
     fallbackSellStrategy: 'limit3',
     force: {
