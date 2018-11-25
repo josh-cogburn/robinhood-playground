@@ -7,7 +7,7 @@ const send = gmailSend({
 });
 
 module.exports = (subject, body, to = credentials.username) => new Promise((resolve, reject) => {
-    console.log('sending email...to yourself...');
+    console.log(`sending email...to ${to}...`);
     console.log('subject', subject, 'body', body);
     send({
         subject,

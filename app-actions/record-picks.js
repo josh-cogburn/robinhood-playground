@@ -10,6 +10,7 @@ const stratsOfInterest = require('../strats-of-interest');
 const purchaseStocks = require('./purchase-stocks');
 const sendEmail = require('../utils/send-email');
 const tweeter = require('./tweeter');
+const calcEmailsFromStrategy = require('../utils/calc-emails-from-strategy');
 
 const saveToFile = async (Robinhood, strategy, min, withPrices) => {
 
@@ -72,7 +73,7 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
     });
 
     // for purchase
-    const strategiesEnabled = stratManager.strategies.forPurchase;
+    const strategiesEnabled = stratManager.strategies ? stratManager.strategies.forPurchase : [];
     const enableCount = strategiesEnabled.filter(strat => strat === stratMin).length;
     if (enableCount) {
         console.log('strategy enabled: ', stratMin, 'purchasing');
@@ -86,8 +87,9 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
         tweeter.tweet(`BUY ${withPrices.map(({ ticker, price }) => `#${ticker} @ $${price}`).join(' and ')} - ${stratMin}`);
     }
 
-    // for email
+    // for email$
     const emailsToSend = await calcEmailsFromStrategy(null, stratMin);
+    console.log({ emailsToSend });
     for (let { email, pm } of emailsToSend) {
         await sendEmail(
             `robinhood-playground${pm ? `-${pm}` : ''}: ${stratMin}`,
@@ -137,7 +139,7 @@ module.exports = async (Robinhood, strategy, min, toPurchase, priceFilterSuffix 
     } else {
         console.log('no variety to purchase', toPurchase);
         const tickerLookups = await lookupTickers(Robinhood, toPurchase, true);
-        // console.log('ticker lookups', tickerLookups);
+        console.log('ticker lookups', tickerLookups);
         await record(toPurchase, `${strategy}${priceFilterSuffix}`, tickerLookups);
     }
 
