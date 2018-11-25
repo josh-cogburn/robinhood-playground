@@ -119,16 +119,25 @@ const stratManager = {
         const day = now.getDay();
         const isWeekday = day >= 1 && day <= 5;
         console.log({ day, isWeekday });
-        const dateStr = formatDate(now);
+        let dateStr = formatDate(now);
 
+        if (!isWeekday) {
+            // from most recent day (weekend will get friday)
+            let pms = await fs.readdir('./json/prediction-models');
+            let sortedFiles = pms
+                .map(f => f.split('.')[0])
+                .sort((a, b) => new Date(b) - new Date(a));
+            console.log( sortedFiles[0],'0' )
+            dateStr = sortedFiles[0];
+        }
+        
         const hasPicksData = (await Pick.countDocuments({ date: dateStr })) > 0;
         console.log('hasPicksData', hasPicksData);
-        if (!isWeekday || hasPicksData) {
-            // from most recent day (weekend will get friday)
+        if (hasPicksData) {
             await this.initPicks(dateStr);
-        } else {
-            this.curDate = dateStr;
         }
+
+        this.curDate = dateStr;
         console.log('cur date now', this.curDate);
         await this.refreshPredictionModels();
     },
