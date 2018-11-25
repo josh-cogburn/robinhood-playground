@@ -7,6 +7,7 @@ module.exports = {
         '[postMongoBigHitters]',
         '[postMongoBigHitters]',
         '[postMongoBigHitters]',
+        '[postMongoBigHitters]',
         
         '[postMongoTimes2]',
         '[postMongoTimes2]',
