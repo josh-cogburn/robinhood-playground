@@ -40,7 +40,7 @@ io.on('connection', (socket) => {
     });
 
     socket.on('getRecentTrends', async (cb) => {
-        const mostPopularFiles = await getFilesSortedByDate('100-most-popular');
+        const mostPopularFiles = (await getFilesSortedByDate('100-most-popular')).slice(-3);
         console.log({ mostPopularFiles })
         const withJSON = await mapLimit(mostPopularFiles, 1, async file => ({
             file,

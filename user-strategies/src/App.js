@@ -73,9 +73,12 @@ class App extends Component {
   }
   getRecentTrends = () => new Promise(resolve => {
     if (this.state.recentTrends) {
+      console.log('got from state', this.state.recentTrends)
       return setTimeout(() => resolve(this.state.recentTrends), 1200);
     }
+    console.log('sending getrecenttrends')
     this.socket.emit('getRecentTrends', recentTrends => {
+      console.log({recentTrends})
       this.setState({ recentTrends }, () => resolve(recentTrends));
     });
   });
@@ -137,7 +140,7 @@ class App extends Component {
       ...data,
       trend: getTrend(data.nowPrice, data.thenPrice)
     }));
-    console.log({ resultsData })
+    console.log('render', { resultsData })
     return (
       <div className="App">
         <header className="App-header">
