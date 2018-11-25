@@ -118,6 +118,7 @@ const stratManager = {
         }
         const day = now.getDay();
         const isWeekday = day >= 1 && day <= 5;
+        console.log({ day, isWeekday });
         const dateStr = formatDate(now);
 
         const hasPicksData = (await Pick.countDocuments({ date: dateStr })) > 0;
