@@ -9,6 +9,7 @@ const jsonMgr = require('../utils/json-mgr');
 const { avgArray } = require('../utils/array-math');
 
 const strategyPerfToday = require('./strategy-perf-today');
+const StratPerf = require('../models/StratPerf');
 
 let Robinhood;
 
@@ -37,20 +38,16 @@ module.exports = async (Robinhood, includeToday, daysBack = NUM_DAYS, minCount =
     console.log('mincount', minCount);
 
     const paramTrue = val => val && val.toString() === 'true';
-    let files = await fs.readdir('./json/strat-perfs');
+    let dates = await StratPerf.getUniqueDates();
 
-    let sortedFiles = files
-        .map(f => f.split('.')[0])
-        .sort((a, b) => new Date(a) - new Date(b));
-
-    if (paramTrue(ignoreYesterday)) sortedFiles.pop();
-    let threeMostRecent = sortedFiles.slice(0 - daysBack);
+    if (paramTrue(ignoreYesterday)) dates.pop();
+    let threeMostRecent = dates.slice(0 - daysBack);
     console.log('selected days', threeMostRecent);
 
     const stratResults = new HashTable();
     for (let day of threeMostRecent) {
 
-        const dayStrats = await jsonMgr.get(`./json/strat-perfs/${day}.json`);
+        const dayStrats = await StratPerf.getByDate(day);
         Object.keys(dayStrats).forEach(period => {
 
             const sellMin = Number(period.substring(period.lastIndexOf('-') + 1));
