@@ -26,6 +26,7 @@ const mongoose = require('mongoose');
 const { mongoConnectionString } = require('./config');
 
 const Pick = require('./models/Pick');
+const stocktwits = require('./utils/stocktwits');
 
 mongoose.connect(mongoConnectionString, { useNewUrlParser: true });
 
@@ -54,6 +55,8 @@ process.on('unhandledRejection', (reason, p) => {
     //         ]
     //     })
     // );
+
+    await stocktwits.postBearish('AKER', 'ive been waiting for so long');
 
     Robinhood = await login();
     global.Robinhood = Robinhood;
