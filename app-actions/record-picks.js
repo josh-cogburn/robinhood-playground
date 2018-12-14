@@ -1,7 +1,7 @@
-const fs = require('mz/fs');
-const jsonMgr = require('../utils/json-mgr');
-const lookup = require('../utils/lookup');
-const mapLimit = require('promise-map-limit');
+// const fs = require('mz/fs');
+// const jsonMgr = require('../utils/json-mgr');
+// const lookup = require('../utils/lookup');
+// const mapLimit = require('promise-map-limit');
 const { lookupTickers } = require('./record-strat-perfs');
 const stratManager = require('../socket-server/strat-manager');
 const Pick = require('../models/Pick');
@@ -11,6 +11,7 @@ const purchaseStocks = require('./purchase-stocks');
 const sendEmail = require('../utils/send-email');
 const tweeter = require('./tweeter');
 const calcEmailsFromStrategy = require('../utils/calc-emails-from-strategy');
+const stocktwits = require('../utils/stocktwits');
 
 const saveToFile = async (Robinhood, strategy, min, withPrices) => {
 
@@ -18,7 +19,6 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
     const stratMin = `${strategy}-${min}`;
 
     if (!stratsOfInterest.includes(stratMin)) return;   // cant handle too many strategies apparently
-
     if (!strategy.includes('cheapest-picks')) withPrices = withPrices.slice(0, 50);  // take only 50 picks
 
     withPrices = withPrices.filter(tickerPrice => !!tickerPrice);
@@ -29,23 +29,6 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
     console.log('recording', stratMin, 'strategy');
 
     const dateStr = (new Date()).toLocaleDateString().split('/').join('-');
-    // const fileLocation = `./json/picks-data/${dateStr}/${strategy}.json`;
-    // create day directory if needed
-    // if (!(await fs.exists(`./json/picks-data/${dateStr}`))) {
-    //     await fs.mkdir(`./json/picks-data/${dateStr}`);
-    // }
-
-    // console.log('getting prices', picks);
-    // let withPrices = await mapLimit(picks, 1, async ticker => {
-    //     try {
-    //         return {
-    //             ticker,
-    //             price: (await lookup(Robinhood, ticker)).currentPrice
-    //         };
-    //     } catch (e) {
-    //         return null;
-    //     }
-    // });
 
     // save to mongo
     console.log(`saving ${strategy} to mongo`);
@@ -55,16 +38,6 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
         min,
         picks: withPrices
     });
-
-    // save to /json
-
-    // console.log('saving', strategy, 'picks', withPrices);
-    // const curData = await jsonMgr.get(fileLocation);
-    // const savedData = {
-    //     ...curData,
-    //     [min]: withPrices
-    // };
-    // await jsonMgr.save(fileLocation, savedData);
 
     // for socket-server
     stratManager.newPick({
@@ -83,10 +56,20 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
         );
     }
 
+    // helper
+    const strategyWithinPM = pm => {
+        const stratsWithinPM = stratManager.strategies ? stratManager.strategies[pm] : [];
+        return stratsWithinPM.some(strat => strat === stratMin);
+    };
+
+    // stocktwits
+    if (strategyWithinPM('allShorts') && withPrices.length === 1) {
+        const [{ ticker }] = withPrices;
+        await stocktwits.postBearish(ticker, stratMin);
+    }
+
     // for purchase
-    const strategiesEnabled = stratManager.strategies ? stratManager.strategies.forPurchase : [];
-    const enableCount = strategiesEnabled.filter(strat => strat === stratMin).length;
-    if (enableCount) {
+    if (strategyWithinPM('forPurchase')) {
         console.log('strategy enabled: ', stratMin, 'purchasing');
         const stocksToBuy = withPrices.map(obj => obj.ticker);
         await purchaseStocks(Robinhood, {
