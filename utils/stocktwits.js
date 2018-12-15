@@ -8,13 +8,13 @@ const getProxy = () => {
     return `http://${username}:${password}@${randomHost}`;
 };
 
-const getToken = async () => {
+const getToken = async proxy => {
     const options = {
         method: 'POST',
         uri: 'https://stocktwits.com/api/login',
         body: { user_session: { login: config.username , password: config.password }},
         json: true,
-        proxy: getProxy()
+        proxy
     };
     const response = await request(options);
     console.log(
@@ -25,19 +25,21 @@ const getToken = async () => {
 };
 
 const postBearish = async (ticker, strategy) => {
+    const proxy = getProxy();
+    const token = await getToken(proxy);
     const body = `$${ticker} bearish because ${strategy}`;
     console.log(`stocktwits ${config.username}: posting ${body}`)
     return request({
         method: 'POST',
         uri: 'https://api.stocktwits.com/api/2/messages/create.json',
         headers: {
-            'Authorization': `OAuth ${await getToken()}`
+            'Authorization': `OAuth ${}`
         },
         formData: {
             body,
             sentiment: 'bearish'
         },
-        proxy: getProxy()
+        proxy
     });
 };
 
