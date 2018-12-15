@@ -56,8 +56,6 @@ process.on('unhandledRejection', (reason, p) => {
     //     })
     // );
 
-    await stocktwits.postBearish('AKER', 'ive been waiting for so long');
-
     Robinhood = await login();
     global.Robinhood = Robinhood;
 
