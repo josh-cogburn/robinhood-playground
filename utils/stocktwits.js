@@ -2,17 +2,21 @@ const request = require('request-promise');
 const { stocktwits: config } = require('../config');
 const { proxy: proxyConfig } = require('../config');
 
-const proxyUrl = `http://${proxyConfig.username}:${proxyConfig.password}@104.144.161.156:4444`;
-const proxiedRequest = request.defaults({ proxy: proxyUrl });
+const getProxy = () => {
+    const { username, password, hosts } = proxyConfig;
+    const randomHost = hosts[Math.round(hosts.length * Math.random())];
+    return `http://${username}:${password}@${randomHost}`;
+};
 
-const getToken = async (username, password) => {
+const getToken = async () => {
     const options = {
         method: 'POST',
         uri: 'https://stocktwits.com/api/login',
         body: { user_session: { login: config.username , password: config.password }},
-        json: true // Automatically stringifies the body to JSON
+        json: true,
+        proxy: getProxy()
     };
-    const response = await proxiedRequest(options);
+    const response = await request(options);
     console.log(
         'stocktwits token',
         response.token
@@ -23,7 +27,7 @@ const getToken = async (username, password) => {
 const postBearish = async (ticker, strategy) => {
     const body = `$${ticker} bearish because ${strategy}`;
     console.log(`stocktwits ${config.username}: posting ${body}`)
-    return proxiedRequest({
+    return request({
         method: 'POST',
         uri: 'https://api.stocktwits.com/api/2/messages/create.json',
         headers: {
@@ -33,6 +37,7 @@ const postBearish = async (ticker, strategy) => {
             body,
             sentiment: 'bearish'
         },
+        proxy: getProxy()
     });
 };
 
