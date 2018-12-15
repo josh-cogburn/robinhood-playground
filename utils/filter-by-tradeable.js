@@ -1,9 +1,13 @@
+const isTradeable = stockObj => {
+    return stockObj.tradeable && stockObj.tradability === 'tradable' && stockObj.state === 'active';
+};
+
 const filterByTradeable = stocks => {
     const allStocks = require('../json/stock-data/allStocks');
     const areTradeable = [];
     for (let ticker of stocks) {
         const foundObj = allStocks.find(obj => obj.symbol === ticker);
-        if (foundObj && foundObj.tradeable && foundObj.tradability === 'tradable') {
+        if (foundObj && isTradeable(foundObj)) {
             areTradeable.push(ticker);
         }
     }
@@ -11,4 +15,7 @@ const filterByTradeable = stocks => {
     return areTradeable;
 };
 
-module.exports = filterByTradeable;
+module.exports = {
+    isTradeable,
+    filterByTradeable
+};

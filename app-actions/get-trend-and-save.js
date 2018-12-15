@@ -3,6 +3,7 @@ const jsonMgr = require('../utils/json-mgr');
 const getMinutesFrom630 = require('../utils/get-minutes-from-630');
 
 const getAllTickers = require('../rh-actions/get-all-tickers');
+const { isTradeable } = require('../utils/filter-by-tradeable.js');
 
 const getTrendAndSave = async (Robinhood, min) => {
 
@@ -15,7 +16,7 @@ const getTrendAndSave = async (Robinhood, min) => {
         allTickers = await getAllTickers(Robinhood);
     }
     allTickers = allTickers
-        .filter(stock => stock.tradeable && stock.tradability === 'tradable')
+        .filter(isTradeable)
         .map(stock => stock.symbol);
 
     // step 2 - get trend
