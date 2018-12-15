@@ -33,7 +33,7 @@ const postBearish = async (ticker, strategy) => {
         method: 'POST',
         uri: 'https://api.stocktwits.com/api/2/messages/create.json',
         headers: {
-            'Authorization': `OAuth ${}`
+            'Authorization': `OAuth ${token}`
         },
         formData: {
             body,
