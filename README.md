@@ -6,7 +6,7 @@ this repo is a Node.js stock scanner with Robinhood integration currently focuse
 
 portal: http://192.227.186.138:3000/client
 
-twitter: https://twitter.com/BotJohns
+twitter: https://twitter.com/rh_playground
 
 stocktwits: https://stocktwits.com/robinhood_playground
 
