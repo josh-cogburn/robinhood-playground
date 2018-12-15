@@ -2,7 +2,17 @@
 
 this repo is a Node.js stock scanner with Robinhood integration currently focused on penny stocks.
 
-## to run
+## online at
+
+portal: http://192.227.186.138:3000/client
+
+twitter: https://twitter.com/BotJohns
+
+stocktwits: https://stocktwits.com/robinhood_playground
+
+[add your email here if you'd like to be sent the cheapest 50 stocks trading on Robinhood 4 minutes before market open](https://github.com/chiefsmurph/robinhood-playground/issues/7)
+
+## run locally
 
 `npm install`
 
