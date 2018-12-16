@@ -1,10 +1,10 @@
 # robinhood-playground
 
-this repo is a Node.js stock scanner with Robinhood integration currently focused on penny stocks.
+Node.js stock scanner with Robinhood integration.
 
 ## online at
 
-portal: http://192.227.186.138:3000/client
+portal: http://chiefsmurph.com/robinhood-playground/
 
 twitter: https://twitter.com/rh_playground
 
