@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
-const { mongoConnectionString } = require('./config');
+const { mongoConnectionString } = require('../config');
 
 console.log({ mongoConnectionString})
 mongoose.connect(mongoConnectionString);
 
-const StratPerf = require('./models/StratPerf');
+const StratPerf = require('../models/StratPerf');
 
 const Cat = mongoose.model('Cat', { name: String });
 
