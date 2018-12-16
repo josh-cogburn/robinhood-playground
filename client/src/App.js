@@ -74,7 +74,7 @@ class App extends Component {
   state = { picks: [], relatedPrices: {}, strategyFilter: 'forPurchase', pastData: {}, strategies: {}, afterHoursEnabled: false };
   componentDidMount() {
       let { origin: endPoint } = window.location;
-      const socket = socketIOClient('https://192.227.186.138:3000');
+      const socket = socketIOClient('http://192.227.186.138:3000');
       socket.on('server:picks-data', data => {
           console.log(data);
           this.setState({
