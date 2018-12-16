@@ -1,6 +1,5 @@
 const request = require('request-promise');
-const { stocktwits: config } = require('../config');
-const { proxy: proxyConfig } = require('../config');
+const { stocktwits: config, proxy: proxyConfig } = require('../config');
 
 const getProxy = () => {
     const { username, password, hosts } = proxyConfig;
@@ -24,11 +23,8 @@ const getToken = async proxy => {
     return response.token;
 };
 
-const postBearish = async (ticker, strategy) => {
-    const proxy = getProxy();
-    const token = await getToken(proxy);
-    const body = `$${ticker} bearish because ${strategy}`;
-    console.log(`stocktwits ${config.username}: posting ${body}`)
+const postPublic = async ({ body, sentiment, token, proxy }) => {
+    console.log(`stocktwits ${config.username} posting public: "${body}"`)
     return request({
         method: 'POST',
         uri: 'https://api.stocktwits.com/api/2/messages/create.json',
@@ -37,13 +33,45 @@ const postBearish = async (ticker, strategy) => {
         },
         formData: {
             body,
-            sentiment: 'bearish'
+            sentiment
         },
         proxy
     });
 };
 
+const postToRhRoom = async ({ body, sentiment, proxy }) => {
+    console.log(`stocktwits ${config.username} posting to ROOM "${body}" (${sentiment})`);
+    return request({
+        method: 'POST',
+        uri: 'https://roomapi.stocktwits.com/room/robinhood_playground/message',
+        headers: {
+            'Authorization': `Bearer ${config.bearerToken}`
+        },
+        formData: {
+            alert: 'false',
+            body,
+            user_sentiment: sentiment
+        },
+        proxy
+    });
+};
+
+const postPublicAndRoom = async (ticker, strategy, sentiment) => {
+    const body = `$${ticker} ${sentiment} because ${strategy}`;
+    const proxy = getProxy();
+    const token = await getToken(proxy);
+    await postPublic({ body, sentiment, token, proxy });
+    console.log( await postToRhRoom({ body, sentiment, token, proxy }) )
+};
+
+const postBearish = (ticker, strategy) =>
+    postPublicAndRoom(ticker, strategy, 'bearish');
+
+const postBullish = (ticker, strategy) =>
+    postPublicAndRoom(ticker, strategy, 'bullish');
+
 module.exports = {
     getToken,
-    postBearish
+    postBearish,
+    postBullish
 };
