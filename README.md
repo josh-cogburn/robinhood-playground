@@ -1,6 +1,6 @@
 # robinhood-playground
 
-this repo is a Node.js stock scanner with Robinhood integration.
+Node.js stock scanner with Robinhood integration.
 
 ## online at
 
