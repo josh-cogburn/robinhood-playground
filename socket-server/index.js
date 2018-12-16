@@ -26,7 +26,7 @@ app.use(compression({}));
 
 
 const prependFolder = folder => path.join(__dirname, `../${folder}`);
-app.use('/client', express['static'](prependFolder('client/build')));
+app.use('/', express['static'](prependFolder('client/build')));
 app.use('/user-strategies', express['static'](prependFolder('user-strategies/build')));
 
 io.on('connection', (socket) => {
