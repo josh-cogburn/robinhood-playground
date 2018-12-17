@@ -6013,5 +6013,6 @@ module.exports = [
     "low-float-high-volume-floatTimesfloatToVolume-trenddown7to10-25",
     "low-float-high-volume-absVolPoints-trendgt50-shouldWatchout-tenTo15-315",
     "based-on-jump-down8overnight-trending607-gt1milvolume-first3-fiveTo10-16",
-    "cheapest-picks-chp50--4"
+    "cheapest-picks-chp50--4",
+    'cheapest-picks-chp3--4',
   ];
