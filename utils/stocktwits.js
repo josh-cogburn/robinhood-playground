@@ -65,8 +65,8 @@ const postPublicAndRoom = async (ticker, strategy, sentiment) => {
     const body = `$${ticker} ${sentiment} because ${strategy}`;
     const proxy = getProxy();
     const token = await getToken(proxy);
-    // await postPublic({ body, sentiment, token, proxy });
-    console.log( await postToRhRoom({ body, sentiment, token, proxy }) )
+    console.log('public response', await postPublic({ body, sentiment, token, proxy }) );
+    console.log('room response', await postToRhRoom({ body, sentiment, token, proxy }) )
 };
 
 const postBearish = (ticker, strategy) =>
