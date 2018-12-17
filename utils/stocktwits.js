@@ -61,7 +61,6 @@ const postPublicAndRoom = async (ticker, strategy, sentiment, dontPostPublic) =>
     if (DISABLED) {
         return console.log('stocktwits is disabled');
     }
-    const body = ;
     const proxy = getProxy();
     const token = await getToken(proxy);
     !dontPostPublic && console.log('public response', await postPublic({ body: `$${ticker} ${sentiment}`, sentiment, token, proxy }) );
