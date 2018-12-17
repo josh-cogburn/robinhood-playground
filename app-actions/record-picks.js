@@ -64,9 +64,11 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
     };
 
     // stocktwits
-    if (getEnableCountForPM('allShorts') && withPrices.length === 1) {
-        const [{ ticker }] = withPrices;
-        await stocktwits.postBearish(ticker, stratMin);
+    if (getEnableCountForPM('allShorts')) {
+        if (withPrices.length === 1) {
+            const [{ ticker }] = withPrices;
+            await stocktwits.postBearish(ticker, stratMin);
+        }
         tweeter.tweet(`SHORT ${withPrices.map(({ ticker, price }) => `#${ticker} @ $${price}`).join(' and ')} - ${stratMin}`);
     }
 
@@ -81,7 +83,10 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
             multiplier: forPurchaseMultiplier,
             min
         });
-        await stocktwits.postBullish(ticker, stratMin);
+        if (withPrices.length === 1) {
+            const [{ ticker }] = withPrices;
+            await stocktwits.postBullish(ticker, stratMin);
+        }
         tweeter.tweet(`BUY ${withPrices.map(({ ticker, price }) => `#${ticker} @ $${price}`).join(' and ')} - ${stratMin}`);
     }
 
