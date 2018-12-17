@@ -1,4 +1,4 @@
-const DISABLED = true;
+const DISABLED = false;
 const request = require('request-promise');
 const { stocktwits: config, proxy: proxyConfig } = require('../config');
 
@@ -65,7 +65,7 @@ const postPublicAndRoom = async (ticker, strategy, sentiment) => {
     const body = `$${ticker} ${sentiment} because ${strategy}`;
     const proxy = getProxy();
     const token = await getToken(proxy);
-    await postPublic({ body, sentiment, token, proxy });
+    // await postPublic({ body, sentiment, token, proxy });
     console.log( await postToRhRoom({ body, sentiment, token, proxy }) )
 };
 
