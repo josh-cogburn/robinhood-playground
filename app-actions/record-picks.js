@@ -57,26 +57,28 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
     }
 
     // helper
-    const strategyWithinPM = pm => {
+    const getEnableCountForPM = pm => { 
+        // how many times does this strategy show up in this pm?
         const stratsWithinPM = stratManager.strategies ? stratManager.strategies[pm] : [];
-        return stratsWithinPM.some(strat => strat === stratMin);
+        return stratsWithinPM.filter(strat => strat === stratMin).length;
     };
 
     // stocktwits
-    if (strategyWithinPM('allShorts') && withPrices.length === 1) {
+    if (getEnableCountForPM('allShorts') && withPrices.length === 1) {
         const [{ ticker }] = withPrices;
         await stocktwits.postBearish(ticker, stratMin);
         tweeter.tweet(`SHORT ${withPrices.map(({ ticker, price }) => `#${ticker} @ $${price}`).join(' and ')} - ${stratMin}`);
     }
 
     // for purchase
-    if (strategyWithinPM('forPurchase')) {
+    const forPurchaseMultiplier = getEnableCountForPM('forPurchase');
+    if (forPurchaseMultiplier) {
         console.log('strategy enabled: ', stratMin, 'purchasing');
         const stocksToBuy = withPrices.map(obj => obj.ticker);
         await purchaseStocks(Robinhood, {
             stocksToBuy,
             strategy,
-            multiplier: enableCount,
+            multiplier: forPurchaseMultiplier,
             min
         });
         tweeter.tweet(`BUY ${withPrices.map(({ ticker, price }) => `#${ticker} @ $${price}`).join(' and ')} - ${stratMin}`);
