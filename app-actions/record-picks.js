@@ -81,6 +81,7 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
             multiplier: forPurchaseMultiplier,
             min
         });
+        await stocktwits.postBullish(ticker, stratMin);
         tweeter.tweet(`BUY ${withPrices.map(({ ticker, price }) => `#${ticker} @ $${price}`).join(' and ')} - ${stratMin}`);
     }
 
