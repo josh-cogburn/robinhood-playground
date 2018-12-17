@@ -6,7 +6,7 @@ const StratPerf = require('../models/StratPerf');
 const getTrend = require('../utils/get-trend');
 const { avgArray } = require('../utils/array-math');
 const jsonMgr = require('../utils/json-mgr');
-const filterByTradeable = require('../utils/filter-by-tradeable');
+const { filterByTradeable } = require('../utils/filter-by-tradeable');
 const chunkApi = require('../utils/chunk-api');
 
 const lookupTickers = async (Robinhood, tickersToLookup, includeAfterHours) => {
