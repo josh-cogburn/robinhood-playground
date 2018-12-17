@@ -8,6 +8,7 @@
 
 const fs = require('mz/fs');
 const mapLimit = require('promise-map-limit');
+const StratPerf = require('../models/StratPerf');
 
 // utils
 const jsonMgr = require('../utils/json-mgr');
@@ -31,8 +32,8 @@ const determineSingleBestPlayoutFromMultiOutput = require(
 );
 
 const getStratPerfTrends = async (ticker, buyDate, strategy) => {
-    try {
-        const stratPerfObj = await jsonMgr.get(`./json/strat-perfs/${buyDate}.json`);
+    try { 
+        const stratPerfObj = await StratPerf.getByDate(day);
         const trends = [];
         Object.keys(stratPerfObj).forEach(key => {
             const foundPerf = stratPerfObj[key].find(obj => obj.strategyName === strategy);
@@ -106,9 +107,10 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
 
     const handleUnderNDays = async () => {
         // handle under four days (but not bought today) check for playout strategy
-        let underNDays = nonzero.filter(pos => pos.dayAge >= 1 && pos.dayAge < sellAllStocksOnNthDay);
+        let underNDays = nonzero.filter(pos => pos.dayAge >= 0 && pos.dayAge < sellAllStocksOnNthDay);
+        console.log({ underNDays });
         if (!underNDays.length) return;
-        // console.log({ underNDays });
+        
         const strategiesToLookup = underNDays.map(pos => pos.strategy).filter(v => !!v);
         const highestPlayouts = strategiesToLookup.length ?
             await determineSingleBestPlayoutFromMultiOutput(
@@ -124,7 +126,6 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
             };
         });
 
-        // console.log('underNDays', underNDays);
         for (let pos of underNDays) {
             // const strategy = await findStrategyThatPurchasedTicker(pos.symbol);
             const breakdowns = await getStratPerfTrends(pos.ticker, pos.date, pos.strategy) || [];
@@ -137,6 +138,7 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
                 );
             }
             const playoutToRun = pos.highestPlayout || fallbackSellStrategy;
+            console.log({ breakdowns, playoutToRun, buyStrategy: pos.buyStrategy })
             pos.playoutToRun = playoutToRun;
             const playoutFn = playouts[playoutToRun].fn;
             const { hitFn: hitPlayout } = playoutFn(breakdowns);

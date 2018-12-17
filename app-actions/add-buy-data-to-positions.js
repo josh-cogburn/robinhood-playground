@@ -55,14 +55,13 @@ const addBuyDateToPositions = async nonzero => {
     // calc dayAge
     const pmModelDates = await getFilesSortedByDate('prediction-models');
     const calcDayAgeFromPosition = pos => {
-        const { date, updated_at } = pos;
-        console.log(date, updated_at, pos.ticker)
+        const { buyDate: date, updated_at } = pos;
         if (date) {
             const getIndexFromDateList = dateList => dateList.findIndex(d => d === date);
             const pmIndex = getIndexFromDateList(pmModelDates);
             return pmIndex !== -1 ? pmIndex : getIndexFromDateList(dailyTransactionDates);
         } else {
-            return daysBetween(new Date(), new Date(pos.updated_at));
+            return daysBetween(new Date(), new Date(updated_at));
         }
     };
 

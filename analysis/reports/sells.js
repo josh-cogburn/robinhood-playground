@@ -3,6 +3,7 @@
 
 const mapLimit = require('promise-map-limit');
 const jsonMgr = require('../../utils/json-mgr');
+const StratPerf = require('../../models/StratPerf');
 
 const getAssociatedStrategies = require('../../app-actions/get-associated-strategies');
 
@@ -42,7 +43,7 @@ module.exports = async (Robinhood, daysBack = 5) => {
         const fullPath = `./json/daily-transactions/${date}.json`;
         const transactions = await jsonMgr.get(fullPath) || [];
         const dailyTransactionSells = transactions.filter(t => t.type === 'sell');
-        // console.log({ dailyTransactionSells});
+        console.log({ dailyTransactionSells});
         // next find sells in Robinhood orders
         const rhDate = convertDateToRhFormat(date);
         // console.log({ rhDate });
@@ -70,7 +71,7 @@ module.exports = async (Robinhood, daysBack = 5) => {
         const dailyTransactionTickers = dailyTransactionSells.map(t => t.ticker);
         const robinhoodSellsNotIncluded = rhSellsToday
             .filter(sell => !dailyTransactionTickers.includes(sell.ticker));
-        // console.log({ robinhoodSellsNotIncluded })
+        console.log({ robinhoodSellsNotIncluded })
         const allSellsToday = [
             ...dailyTransactionSells,
             ...robinhoodSellsNotIncluded
@@ -88,6 +89,7 @@ module.exports = async (Robinhood, daysBack = 5) => {
             const relatedDTBuy = associatedBuys.find(matchTicker);
             const relatedRHBuys = rhBuys.filter(matchTicker);
             const avgBuyPrice = calcWeightAvg(relatedRHBuys) || relatedDTBuy.bid_price;
+            console.log({ sell, relatedDTBuy })
             return {
                 ticker: sell.ticker,
                 ...(relatedDTBuy && {
@@ -101,27 +103,38 @@ module.exports = async (Robinhood, daysBack = 5) => {
             };
         });
 
-        // console.log({onlySells, associatedBuys, combined});
+        console.log({ associatedBuys, combined});
 
         const generatePlayouts = async (strategy, day) => {
-            const stratPerf = await jsonMgr.get(`./json/strat-perfs/${day}.json`);
-            const playouts = [];
-            if (!stratPerf) return [];
+            const foundPerf = await StratPerf.findOne({
+                stratMin: strategy,
+                date: day
+            });
+            if (!foundPerf || !foundPerf.perfs) return [];
+            console.log(Object.keys(foundPerf));
+            // console.log('found', foundPerf)
+            console.log('herehere', JSON.stringify(foundPerf, null, 2))
+            // const playouts = [];
+            console.log('perfs');
+            // if (!foundPerf || !foundPerf.perfs) return [];
             // console.log({
             //     stratPerf,
             //     strategy,
             //     day
             // })
-            Object.keys(stratPerf).forEach(breakdown => {
-                const foundPerf = stratPerf[breakdown].find(t => t.strategyName === strategy);
-                foundPerf && playouts.push(foundPerf.avgTrend);
-            });
-            return playouts;
+            // Object.keys(stratPerf).forEach(breakdown => {
+            //     const foundPerf = stratPerf[breakdown].find(t => t.strategyName === strategy);
+            //     foundPerf && playouts.push(foundPerf.avgTrend);
+            // });
+            const foundTrends = foundPerf.toObject().perfs.map(p => p.avgTrend);
+            console.log({ foundPerf, foundTrends });
+            return foundTrends;
         };
 
         const output = await mapLimit(combined, 1, async combination => {
             const playouts = await generatePlayouts(combination.strategy, combination.buyDate);
             const returnPerc = (combination.sellPrice - combination.buyPrice) / combination.sellPrice * 100;
+            console.log({ playouts, returnPerc })
             return {
                 ...combination,
                 playouts: playouts.map(oneDec),
@@ -154,9 +167,10 @@ module.exports = async (Robinhood, daysBack = 5) => {
         return lineOutput.join('\n');
     };
 
-
-    if (daysBack === 1) {
+    console.log({ daysBack })
+    if (daysBack == 1) {
         const todayDate = dailyTransactionDates[0];
+        console.log('analyzing', { todayDate })
         return formatOutput(
             await analyzeDay(todayDate),
             todayDate

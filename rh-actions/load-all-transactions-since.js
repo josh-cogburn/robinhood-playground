@@ -43,6 +43,7 @@ const loadAllRobinhoodTransactions = async (Robinhood, daysBack = 1) => {
     }));
 
     console.log('done loading all robinhood transactions');
+    // console.log({ withTickers })
     return withTickers;
     // console.log({ orders });
 };
