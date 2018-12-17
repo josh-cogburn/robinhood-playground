@@ -138,7 +138,7 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
                 );
             }
             const playoutToRun = pos.highestPlayout || fallbackSellStrategy;
-            console.log({ breakdowns, playoutToRun, buyStrategy: pos.buyStrategy })
+            console.log({ breakdowns, highestPlayout: pos.highestPlayout, playoutToRun, buyStrategy: pos.buyStrategy })
             pos.playoutToRun = playoutToRun;
             const playoutFn = playouts[playoutToRun].fn;
             const { hitFn: hitPlayout } = playoutFn(breakdowns);
