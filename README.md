@@ -1,6 +1,6 @@
 # robinhood-playground
 
-a Node.js script based on the Robinhood API that analyzes many different strategies to make stock recommendations that will go up or down in the next few days
+a Node.js script based on the Robinhood API that makes stock recommendations that will go up or down in the next few days
 
 ## online at
 
