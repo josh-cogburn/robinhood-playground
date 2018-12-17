@@ -11,6 +11,8 @@ module.exports = {
         
         '[postMongoTimes2]',
         '[postMongoTimes2]',
+        '[dec17]',
+        '[dec17]',
 
         '[postMongoCount3]',
     ],

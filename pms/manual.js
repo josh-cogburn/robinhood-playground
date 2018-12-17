@@ -1175,6 +1175,17 @@ const postMongo = [
     ...postMongoCount3
 ];
 
+const dec17 = [
+    "sudden-drops-last10trend-filter10-328",
+    "based-on-jump-down5overnight-shouldWatchout-first3-tenTo15-16",
+    "sudden-drops-last30trend-first1-fiveTo10-328",
+    "based-on-jump-down5overnight-shouldWatchout-tenTo15-16",
+    "low-float-high-volume-floatTimesabsVolPoints-trenddown7to10-shouldWatchout-tenTo15-95",
+    "low-float-high-volume-floatTimesfloatToVolume-trenddown7to10-150",
+    "sudden-drops-last3trend-first1-328",
+    "based-on-jump-down3overnight-shouldWatchout-first1-fiveTo10-5"
+];
+
 module.exports = {
     'wild n crazy': [
         'week-swings-tenTo15-1',  // wild
@@ -1282,5 +1293,8 @@ module.exports = {
     postMongo,
     postMongoBigHitters,
     postMongoTimes2,
-    postMongoCount3
+    postMongoCount3,
+
+
+    dec17
 };
