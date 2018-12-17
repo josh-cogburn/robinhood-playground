@@ -13,7 +13,8 @@ const schema = new Schema({
 });
 
 schema.statics.getUniqueDates = async function() {
-    return this.distinct('date');
+    const response = await this.distinct('date');
+    return response.sort((a, b) => new Date(a) - new Date(b));
 }
 
 schema.statics.getByDate = async function(date) {

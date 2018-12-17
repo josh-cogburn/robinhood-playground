@@ -62,7 +62,7 @@ module.exports = async (Robinhood, ...strategiesForConsideration) => {
     strategiesForConsideration = strategiesForConsideration.filter(v => !!v);
     strategiesForConsideration = strategiesForConsideration.length ? strategiesForConsideration : await getMostRecentForPurchase();
     console.log({ strategiesForConsideration });
-    const pastPerf = await stratPerfMultiple(Robinhood, 50, ...strategiesForConsideration);
+    const pastPerf = await stratPerfMultiple(Robinhood, 10, ...strategiesForConsideration);
     console.log('pastperf', JSON.stringify(pastPerf, null, 2));
     // determineSingleBestPlayoutFromMultiOutput(pastPerf);
     return determineIndividualBestPlayoutsFromMultiOutput(pastPerf);
