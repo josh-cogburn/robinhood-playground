@@ -1,3 +1,4 @@
+const DISABLED = true;
 const request = require('request-promise');
 const { stocktwits: config, proxy: proxyConfig } = require('../config');
 
@@ -57,6 +58,10 @@ const postToRhRoom = async ({ body, sentiment, proxy }) => {
 };
 
 const postPublicAndRoom = async (ticker, strategy, sentiment) => {
+    
+    if (DISABLED) {
+        return console.log('stocktwits is disabled');
+    }
     const body = `$${ticker} ${sentiment} because ${strategy}`;
     const proxy = getProxy();
     const token = await getToken(proxy);
