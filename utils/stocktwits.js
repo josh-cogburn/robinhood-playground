@@ -61,11 +61,11 @@ const postPublicAndRoom = async (ticker, strategy, sentiment, dontPostPublic) =>
     if (DISABLED) {
         return console.log('stocktwits is disabled');
     }
-    const body = `$${ticker} ${sentiment} because ${strategy}`;
+    const body = ;
     const proxy = getProxy();
     const token = await getToken(proxy);
-    !dontPostPublic && console.log('public response', await postPublic({ body, sentiment, token, proxy }) );
-    console.log('room response', await postToRhRoom({ body, sentiment, token, proxy }) )
+    !dontPostPublic && console.log('public response', await postPublic({ body: `$${ticker} ${sentiment}`, sentiment, token, proxy }) );
+    console.log('room response', await postToRhRoom({ body: `$${ticker} ${sentiment} because ${strategy}`, sentiment, token, proxy }) )
 };
 
 const postBearish = (ticker, strategy) =>
