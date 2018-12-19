@@ -5,7 +5,13 @@ const generatePlayouts = async (strategy, day) => {
         stratMin: strategy,
         date: day
     });
+    console.log('generatePlayouts', {
+        strategy,
+        day,
+        found: !!foundPerf
+    })
     if (!foundPerf || !foundPerf.perfs) return [];
+
     console.log(Object.keys(foundPerf));
     // console.log('found', foundPerf)
     console.log('herehere', JSON.stringify(foundPerf, null, 2))
