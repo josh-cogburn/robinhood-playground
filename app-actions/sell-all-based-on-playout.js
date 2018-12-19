@@ -150,14 +150,22 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
 
         // sell all under 4 days that hit the playoutFn
         await mapLimit(underNDays.filter(pos => pos.hitPlayout), 3, async pos => {
-            await sellPosition(pos, `hit ${pos.playoutToRun} playout`);
-            await sendEmail(`robinhood-playground: sold ${pos.symbol}`, [
+            const posData = [
                 `breakdowns: ${pos.breakdowns}`,
                 `playoutToRun: ${pos.playoutToRun}`,
                 `buyStrategy: ${pos.buyStrategy}`,
                 `buyDate: ${pos.buyDate}`,
                 `returnDollars: $${pos.returnDollars}`
-            ].join('\n'));
+            ];
+            try {
+                await sellPosition(pos, `hit ${pos.playoutToRun} playout`);
+                await sendEmail(`robinhood-playground: ERROR selling ${pos.symbol}`, posData.join('\n'));
+            } catch (e) {
+                await sendEmail(`robinhood-playground: sold ${pos.symbol}`, [
+                    ...posData,
+                    `error: ${e}`
+                ].join('\n'));
+            }
         });
     };
 

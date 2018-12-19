@@ -26,7 +26,7 @@ module.exports = [
     // 'limitUp4',
     // 'limitUp5',
     // 'limitUp6',
-    'firstGreen',
+    // 'firstGreen',
     'changeGt1',
     'changeGt2',
     'changeGt3',
