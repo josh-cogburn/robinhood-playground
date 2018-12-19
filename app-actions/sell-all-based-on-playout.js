@@ -117,7 +117,7 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
                 Robinhood,
                 ...strategiesToLookup
             ) : [];
-        // console.log(highestPlayouts, 'highestPlayouts')
+        console.log({ strategiesToLookup, highestPlayouts })
         underNDays = underNDays.map(pos => {
             const foundMatch = highestPlayouts.find(obj => obj.strategy === pos.strategy);
             return {
@@ -143,12 +143,17 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
             const playoutFn = playouts[playoutToRun].fn;
             const { hitFn: hitPlayout } = playoutFn(breakdowns);
             pos.hitPlayout = hitPlayout;
+            pos.breakdowns = breakdowns;
             console.log(pos.ticker, breakdowns, 'playout', playoutToRun, 'hitPlayout', hitPlayout);
         }
 
         // sell all under 4 days that hit the playoutFn
         await mapLimit(underNDays.filter(pos => pos.hitPlayout), 3, async pos => {
             await sellPosition(pos, `hit ${pos.playoutToRun} playout`);
+            await sendEmail(`robinhood-playground: sold ${pos.symbol}`, [
+                `breakdowns: ${pos.breakdowns}`,
+                `playoutToRun: ${pos.playoutToRun}`,
+            ].join('\n'))
         });
     };
 
