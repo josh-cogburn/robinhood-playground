@@ -4,7 +4,7 @@ a Node.js script based on the Robinhood API that makes stock recommendations tha
 
 ## online at
 
-portal: http://192.227.186.138:3000/
+portal: http://chiefsmurph.com/robinhood-playground/
 
 twitter: https://twitter.com/rh_playground
 
