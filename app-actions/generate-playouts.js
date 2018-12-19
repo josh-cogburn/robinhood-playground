@@ -11,10 +11,10 @@ const generatePlayouts = async (strategy, buyDate) => {
         found: !!foundPerf
     })
     if (!foundPerf || !foundPerf.perfs) return [];
-    console.log(Object.keys(foundPerf));
-    console.log('herehere', JSON.stringify(foundPerf, null, 2))
+    // console.log(Object.keys(foundPerf));
+    // console.log('herehere', JSON.stringify(foundPerf, null, 2))
     const foundTrends = foundPerf.toObject().perfs.map(p => p.avgTrend);
-    console.log({ foundPerf, foundTrends });
+    console.log({ foundTrends });
     return foundTrends;
 };
 
