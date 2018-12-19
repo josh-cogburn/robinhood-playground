@@ -2,9 +2,29 @@ const manualPMs = require('../pms/manual');
 const fiftytwodaySPMs = require('../pms/spm');
 const getMyRecs = require('../pms/my-recs');
 const getTipTop = require('../pms/tip-top');
+const settings = require('../settings');
+const flatten = require('../utils/flatten-array');
+const stratPerfOverall = require('../analysis/strategy-perf-overall');
 
 module.exports = async (Robinhood) => {
-    console.log('TESTING');
+
+    pastData = await (async () => {
+        const stratPerfData = await stratPerfOverall(Robinhood, true, 4);
+        const stratPerfObj = {};
+        stratPerfData.sortedByAvgTrend.forEach(({
+            name,
+            avgTrend,
+            count,
+            percUp
+        }) => {
+            stratPerfObj[name] = {
+                avgTrend,
+                percUp,
+                count
+            };
+        });
+        return { fiveDay: stratPerfObj };
+    })();
 
     const myRecs = await getMyRecs(Robinhood);
     const fiftytwo = await fiftytwodaySPMs(Robinhood);
@@ -24,18 +44,23 @@ module.exports = async (Robinhood) => {
             [`spm-52day-${val}`]: fiftytwo[val]
         }), {}),
 
-        ...await getTipTop(this.Robinhood)
+        ...await getTipTop(Robinhood)
     };
 
     console.log('done donezy');
 
     const flattenStrategiesWithPMs = array =>
         flatten(
-            array.map(strat =>
-                strat && strat.startsWith('[')
-                    ? strategies[strat.substring(1, strat.length - 1)]
-                    : strat
-            )
+            array.map(strat => {
+                if (strat && strat.startsWith('[')) {
+                    const pmStrats = strategies[strat.substring(1, strat.length - 1)];
+                    if (!pmStrats) {
+                        console.log('could not find strat', strat);
+                    }
+                    return pmStrats;
+                }
+                return strat;
+            })
         );
 
     const forPurchase = flattenStrategiesWithPMs(settings.forPurchase);
@@ -43,7 +68,7 @@ module.exports = async (Robinhood) => {
     const forPurchaseVariations = (() => {
         const filterBy5DayPercUp = (perc, includeBlanks) => forPurchase
             .filter(strat => {
-                const foundFiveDay = this.pastData.fiveDay[strat];
+                const foundFiveDay = pastData.fiveDay[strat];
                 return (includeBlanks && !foundFiveDay)
                     || (foundFiveDay && foundFiveDay.percUp >= perc / 100);
             });

@@ -6,8 +6,6 @@ const fs = require('mz/fs');
 // mongo
 const Pick = require('../models/Pick');
 
-const settings = require('../settings');
-
 // predictions and past data
 const stratPerfOverall = require('../analysis/strategy-perf-overall');
 const { predictCurrent, stratPerfPredictions } = require('../app-actions/predict-top-performing');
