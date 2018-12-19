@@ -6,17 +6,12 @@ const fs = require('mz/fs');
 // mongo
 const Pick = require('../models/Pick');
 
-// pms
-const manualPMs = require('../pms/manual');
-const fiftytwodaySPMs = require('../pms/spm');
-
 const settings = require('../settings');
 
 // predictions and past data
 const stratPerfOverall = require('../analysis/strategy-perf-overall');
 const { predictCurrent, stratPerfPredictions } = require('../app-actions/predict-top-performing');
-const getMyRecs = require('../pms/my-recs');
-const getTipTop = require('../pms/tip-top');
+const createPredictionModels = require('./create-prediction-models');
 
 const getTrend = require('../utils/get-trend');
 const { avgArray } = require('../utils/array-math');
@@ -223,7 +218,7 @@ const stratManager = {
     },
     async createAndSaveNewPredictionModels(todayPMpath) {
         console.log('creating new prediction models');
-        const newPMs = await this.createPredictionModels();
+        const newPMs = await createPredictionModels(this.Robinhood);
         console.log('saving to', todayPMpath);
         await jsonMgr.save(todayPMpath, newPMs);
         return newPMs;
@@ -242,90 +237,6 @@ const stratManager = {
         console.log('refreshing past data');
         const stratPerfData = await stratPerfOverall(this.Robinhood, false, 5);
         await this.setPastData(stratPerfData);
-    },
-    async createPredictionModels() {
-        console.log('TESTING')
-
-        // const stratPerfData = await stratPerfOverall(this.Robinhood, false, 5);
-        const mapNames = strats => strats.map(({ name }) => name);
-        const getFirstN = (strats, n) => strats.slice(0, n);
-        const createPerms = (set, name, picks) => {
-            return set.reduce((acc, val) => ({
-                ...acc,
-                [`${name}-first${val}`]: getFirstN(picks, val)
-            }), {});
-        };
-
-        const createPermsForObj = (set, name, stratPerf) => {
-            return Object.keys(stratPerf).reduce((acc, val) => ({
-                ...acc,
-                ...createPerms(set, `${name}-${val}`, stratPerf[val])
-            }), {});
-        };
-
-        const filteredCount = trend => trend.filter(strat => {
-            // console.log('STRATMAN', strat);
-            return strat.count >= 5 && strat.count <= 6;
-        });
-
-        const myRecs = await getMyRecs(this.Robinhood);
-        const fiftytwo = await fiftytwodaySPMs(this.Robinhood);
-        let strategies = {
-
-            ...manualPMs,
-
-            // myRecs
-            ...Object.keys(myRecs).reduce((acc, val) => ({
-                ...acc,
-                [`myRecs-${val}`]: myRecs[val]
-            }), {}),
-            
-            //fiftytwodaySPMs
-            ...Object.keys(fiftytwo).reduce((acc, val) => ({
-                ...acc,
-                [`spm-52day-${val}`]: fiftytwo[val]
-            }), {}),
-
-            ...await getTipTop(this.Robinhood)
-        };
-
-        console.log('done donezy');
-
-        const flattenStrategiesWithPMs = array =>
-            flatten(
-                array.map(strat =>
-                    strat && strat.startsWith('[')
-                        ? strategies[strat.substring(1, strat.length - 1)]
-                        : strat
-                )
-            );
-
-        const forPurchase = flattenStrategiesWithPMs(settings.forPurchase);
-
-        const forPurchaseVariations = (() => {
-            const filterBy5DayPercUp = (perc, includeBlanks) => forPurchase
-                .filter(strat => {
-                    const foundFiveDay = this.pastData.fiveDay[strat];
-                    return (includeBlanks && !foundFiveDay)
-                        || (foundFiveDay && foundFiveDay.percUp >= perc / 100);
-                });
-            return [
-                50,
-                75,
-                80,
-                100
-            ].reduce((acc, perc) => ({
-                [`forPurchase${perc}Perc5Day-notincludingblanks`]: filterBy5DayPercUp(perc),
-                [`forPurchase${perc}Perc5Day-yesincludingblanks`]: filterBy5DayPercUp(perc, true),
-                ...acc
-            }), {});
-        })();
-
-        return {
-            ...strategies,
-            forPurchase,
-            ...forPurchaseVariations
-        };
     },
     async setPastData(stratPerfData) {
         const stratPerfObj = {};
