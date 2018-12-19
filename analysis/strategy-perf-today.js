@@ -3,17 +3,14 @@
 const fs = require('mz/fs');
 const login = require('../rh-actions/login');
 const { analyzeDay } = require('../app-actions/record-strat-perfs');
+const Pick = require('../models/Pick');
 
 module.exports = async (Robinhood) => {
-    let folders = await fs.readdir('./json/picks-data');
+    let sortedDates = await Pick.getUniqueDates();
 
-    let sortedFolders = folders.sort((a, b) => {
-        return new Date(a) - new Date(b);
-    });
+    console.log(sortedDates);
 
-    // console.log(sortedFolders);
-
-    let todayReport = await analyzeDay(Robinhood, sortedFolders[sortedFolders.length - 1]);
+    let todayReport = await analyzeDay(Robinhood, sortedDates[sortedDates.length - 1]);
     todayReport = todayReport.filter(strat => !strat.strategyName.includes('-first3') && !strat.strategyName.includes('-single') );
     // console.log(JSON.stringify(todayReport, null, 2));
     return todayReport;
