@@ -41,6 +41,7 @@ module.exports = {
             // 'BOXL',
             // 'SEII',
             // 'AWX'
+            'ESES'
         ]
     }
 };
