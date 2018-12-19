@@ -24,6 +24,7 @@ module.exports = {
         '[sepStars]',
         '[hadAGoodDay]',
         '[filteredDrops]',
+        '[moreCommonDrops]',
 
         '[myRecs-day1-whileLoopCreme]',
         '[myRecs-day7count3-hundredWithHundredCheck]',          /// ??????
@@ -35,6 +36,7 @@ module.exports = {
         '[spm-52day-bestAvgTrendAnyPlayout]',
         '[spm-52day-highLimitPlayoutsAvgTrend-slice16]',        /// ??????
         '[spm-52day-bestFirstGreenAvgTrend-slice16-uniq]',      /// ??????
+        '[tiptop-minCount4]',
         '[tiptop-minCount4]',
 
         '[myRecs-day5count4-uniq-hundredUpPicks]',
