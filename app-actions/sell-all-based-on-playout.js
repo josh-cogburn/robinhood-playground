@@ -108,7 +108,7 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
 
     const handleUnderNDays = async () => {
         // handle under four days (but not bought today) check for playout strategy
-        let underNDays = nonzero.filter(pos => pos.dayAge >= 1 && pos.dayAge < sellAllStocksOnNthDay);
+        let underNDays = nonzero.filter(pos => pos.dayAge >= 0 && pos.dayAge < sellAllStocksOnNthDay);
         console.log({ underNDays });
         if (!underNDays.length) return;
         
