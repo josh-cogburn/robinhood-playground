@@ -112,7 +112,7 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
 
         for (let pos of underNDays) {
             // const strategy = await findStrategyThatPurchasedTicker(pos.symbol);
-            const breakdowns = await generatePlayouts(pos.buyStrategy, pos.date) || [];
+            const breakdowns = await generatePlayouts(pos.buyStrategy, pos.buyDate) || [];
             breakdowns.push(
                 getTrend(
                     pos.currentPrice,
