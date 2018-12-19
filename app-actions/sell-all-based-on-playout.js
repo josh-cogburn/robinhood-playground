@@ -14,6 +14,7 @@ const StratPerf = require('../models/StratPerf');
 const jsonMgr = require('../utils/json-mgr');
 const getFilesSortedByDate = require('../utils/get-files-sorted-by-date');
 const getTrend = require('../utils/get-trend');
+const sendEmail = require('../utils/send-email');
 
 // app-actions
 const detailedNonZero = require('./detailed-non-zero');
@@ -111,15 +112,15 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
         console.log({ underNDays });
         if (!underNDays.length) return;
         
-        const strategiesToLookup = underNDays.map(pos => pos.strategy).filter(v => !!v);
+        const strategiesToLookup = underNDays.map(pos => pos.buyStrategy).filter(v => !!v);
         const highestPlayouts = strategiesToLookup.length ?
             await determineSingleBestPlayoutFromMultiOutput(
                 Robinhood,
                 ...strategiesToLookup
             ) : [];
-        // console.log(highestPlayouts, 'highestPlayouts')
+        console.log({ strategiesToLookup, highestPlayouts })
         underNDays = underNDays.map(pos => {
-            const foundMatch = highestPlayouts.find(obj => obj.strategy === pos.strategy);
+            const foundMatch = highestPlayouts.find(obj => obj.strategy === pos.buyStrategy);
             return {
                 ...pos,
                 ...(foundMatch && { highestPlayout: foundMatch.highestPlayout })
@@ -128,7 +129,7 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
 
         for (let pos of underNDays) {
             // const strategy = await findStrategyThatPurchasedTicker(pos.symbol);
-            const breakdowns = await getStratPerfTrends(pos.ticker, pos.date, pos.strategy) || [];
+            const breakdowns = await getStratPerfTrends(pos.ticker, pos.date, pos.buyStrategy) || [];
             if (!breakdowns.length) {
                 breakdowns.push(
                     getTrend(
@@ -143,12 +144,20 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
             const playoutFn = playouts[playoutToRun].fn;
             const { hitFn: hitPlayout } = playoutFn(breakdowns);
             pos.hitPlayout = hitPlayout;
+            pos.breakdowns = breakdowns;
             console.log(pos.ticker, breakdowns, 'playout', playoutToRun, 'hitPlayout', hitPlayout);
         }
 
         // sell all under 4 days that hit the playoutFn
         await mapLimit(underNDays.filter(pos => pos.hitPlayout), 3, async pos => {
             await sellPosition(pos, `hit ${pos.playoutToRun} playout`);
+            await sendEmail(`robinhood-playground: sold ${pos.symbol}`, [
+                `breakdowns: ${pos.breakdowns}`,
+                `playoutToRun: ${pos.playoutToRun}`,
+                `buyStrategy: ${pos.buyStrategy}`,
+                `buyDate: ${pos.buyDate}`,
+                `returnDollars: $${pos.returnDollars}`
+            ].join('\n'));
         });
     };
 

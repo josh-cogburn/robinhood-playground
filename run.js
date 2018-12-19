@@ -15,6 +15,7 @@ mongoose.connect(mongoConnectionString, { useNewUrlParser: true });
     console.log('asd')
     console.log(process.argv, 'ps');
     let Robinhood = await login();
+    global.Robinhood = Robinhood;
     const argPath = process.argv[2];
     let relatedFile = require(`./${argPath}`);
 

@@ -30,6 +30,7 @@ module.exports = {
         '[unprovenSuddenDropsLast2Filter10]',
         '[unprovenSuddenDropsLast2Filter10]',
     ],
+    forPurchaseVariation: '75Perc5Day-yesincludingblanks',
     fallbackSellStrategy: 'limit3',
     force: {
         sell: [
