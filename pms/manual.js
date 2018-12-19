@@ -10,7 +10,7 @@ const shorting = [
 
 const secondaryShorting = [
     'based-on-jump-gtEightOvernight-gt500kvolume-first1-5',
-    'constant-risers-5minute-percUpHighClosePoints-140',
+    // 'constant-risers-5minute-percUpHighClosePoints-140',
     'based-on-jump-gtEightOvernight-gt1milvolume-first1-0',
     'low-float-high-volume-floatTimesvolToAvgPoints-trendgt30-shouldWatchout-95',
     'low-float-high-volume-floatTimesabsVolPoints-trendgt20-shouldWatchout-25',

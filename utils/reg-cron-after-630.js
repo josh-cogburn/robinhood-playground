@@ -31,6 +31,7 @@ const regCronIncAfterSixThirty = (Robinhood, { name, run, fn }) => {
 regCronIncAfterSixThirty.display = function() {
     allCrons = allCrons.sort((b, a) => b.date - a.date);
     allCrons.forEach(({cronStr, date, name}) => {
+        date.setHours(date.getHours() + 3); // west coast best coast 
         console.log(date.toLocaleTimeString(), cronStr, name, ' - ', );
     });
 };
