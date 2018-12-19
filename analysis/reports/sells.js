@@ -3,7 +3,7 @@
 
 const mapLimit = require('promise-map-limit');
 const jsonMgr = require('../../utils/json-mgr');
-const StratPerf = require('../../models/StratPerf');
+const generatePlayouts = require('../../app-actions/generate-playouts');
 
 const getAssociatedStrategies = require('../../app-actions/get-associated-strategies');
 
@@ -104,32 +104,6 @@ module.exports = async (Robinhood, daysBack = 5) => {
         });
 
         console.log({ associatedBuys, combined});
-
-        const generatePlayouts = async (strategy, day) => {
-            const foundPerf = await StratPerf.findOne({
-                stratMin: strategy,
-                date: day
-            });
-            if (!foundPerf || !foundPerf.perfs) return [];
-            console.log(Object.keys(foundPerf));
-            // console.log('found', foundPerf)
-            console.log('herehere', JSON.stringify(foundPerf, null, 2))
-            // const playouts = [];
-            console.log('perfs');
-            // if (!foundPerf || !foundPerf.perfs) return [];
-            // console.log({
-            //     stratPerf,
-            //     strategy,
-            //     day
-            // })
-            // Object.keys(stratPerf).forEach(breakdown => {
-            //     const foundPerf = stratPerf[breakdown].find(t => t.strategyName === strategy);
-            //     foundPerf && playouts.push(foundPerf.avgTrend);
-            // });
-            const foundTrends = foundPerf.toObject().perfs.map(p => p.avgTrend);
-            console.log({ foundPerf, foundTrends });
-            return foundTrends;
-        };
 
         const output = await mapLimit(combined, 1, async combination => {
             const playouts = await generatePlayouts(combination.strategy, combination.buyDate);

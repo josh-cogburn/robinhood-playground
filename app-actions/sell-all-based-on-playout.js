@@ -19,6 +19,7 @@ const sendEmail = require('../utils/send-email');
 // app-actions
 const detailedNonZero = require('./detailed-non-zero');
 const activeSell = require('./active-sell');
+const generatePlayouts = require('./generate-playouts');
 
 // the magic
 const {
@@ -31,24 +32,6 @@ const playouts = require('../analysis/strategy-perf-multiple/playouts');
 const determineSingleBestPlayoutFromMultiOutput = require(
     '../analysis/strategy-perf-multiple/one-off-scripts/determine-best-playout'
 );
-
-const getStratPerfTrends = async (ticker, buyDate, strategy) => {
-    try { 
-        const stratPerfObj = await StratPerf.getByDate(day);
-        const trends = [];
-        Object.keys(stratPerfObj).forEach(key => {
-            const foundPerf = stratPerfObj[key].find(obj => obj.strategyName === strategy);
-            if (foundPerf) {
-                trends.push(
-                    foundPerf.avgTrend
-                );
-            }
-        });
-        return trends;
-    } catch (e) {
-        return null;
-    }
-};
 
 // do it
 
@@ -129,15 +112,13 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
 
         for (let pos of underNDays) {
             // const strategy = await findStrategyThatPurchasedTicker(pos.symbol);
-            const breakdowns = await getStratPerfTrends(pos.ticker, pos.date, pos.buyStrategy) || [];
-            if (!breakdowns.length) {
-                breakdowns.push(
-                    getTrend(
-                        pos.currentPrice,
-                        pos.average_buy_price
-                    )
-                );
-            }
+            const breakdowns = await generatePlayouts(pos.buyStrategy, pos.date) || [];
+            breakdowns.push(
+                getTrend(
+                    pos.currentPrice,
+                    pos.average_buy_price
+                )
+            );
             const playoutToRun = pos.highestPlayout || fallbackSellStrategy;
             console.log({ breakdowns, highestPlayout: pos.highestPlayout, playoutToRun, buyStrategy: pos.buyStrategy })
             pos.playoutToRun = playoutToRun;
