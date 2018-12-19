@@ -154,6 +154,9 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
             await sendEmail(`robinhood-playground: sold ${pos.symbol}`, [
                 `breakdowns: ${pos.breakdowns}`,
                 `playoutToRun: ${pos.playoutToRun}`,
+                `buyStrategy: ${pos.buyStrategy}`,
+                `buyDate: ${pos.buyDate}`,
+                `returnDollars: ${pos.returnDollars}`
             ].join('\n'))
         });
     };
