@@ -51,7 +51,7 @@ const additionalCron = [
     // sell all based on playout
     {
         name: 'sellAllBasedOnPlayout',
-        run: [3],
+        run: [1],
         fn: () => sellAllBasedOnPlayout(Robinhood)
     },
 
