@@ -159,9 +159,9 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
             ];
             try {
                 await sellPosition(pos, `hit ${pos.playoutToRun} playout`);
-                await sendEmail(`robinhood-playground: ERROR selling ${pos.symbol}`, posData.join('\n'));
+                await sendEmail(`robinhood-playground: selling ${pos.symbol}`, posData.join('\n'));
             } catch (e) {
-                await sendEmail(`robinhood-playground: sold ${pos.symbol}`, [
+                await sendEmail(`robinhood-playground: ERROR sold ${pos.symbol}`, [
                     ...posData,
                     `error: ${e}`
                 ].join('\n'));
