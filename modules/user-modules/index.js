@@ -22,7 +22,7 @@ module.exports = {
         const onlyWithFundamentals = withOvernightJump.filter(stock => stock.fundamentals);
         console.log('trendOfTop100', trendOfTop100.length);
         console.log('--------');
-        console.log('onlyWithFundamentals', onlyWithFundamentals, onlyWithFundamentals.length);
+        console.log('onlyWithFundamentals', onlyWithFundamentals.length);
         // add historicals
         let allHistoricals = await getMultipleHistoricals(
             Robinhood,
@@ -41,6 +41,6 @@ module.exports = {
         );
 
         console.log('--------');
-        console.log('withHistoricals', JSON.stringify(withHistoricals, null, 2));
+        // console.log('withHistoricals', JSON.stringify(withHistoricals, null, 2));
     }
 }

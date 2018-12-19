@@ -73,6 +73,7 @@ module.exports = async (Robinhood) => {
                     || (foundFiveDay && foundFiveDay.percUp >= perc / 100);
             });
         return [
+            25,
             50,
             75,
             80,

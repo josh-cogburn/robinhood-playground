@@ -25,7 +25,7 @@ const trendFilter = async (Robinhood, trend) => {
             trending103: await trendingUp(Robinhood, buy.ticker, [10, 3]),
             trending53: await trendingUp(Robinhood, buy.ticker, [5, 3]),
         }));
-        console.log(withRisk);
+        // console.log(withRisk);
         return (num, secondFilter) => {
             const ofInterest = secondFilter ? withRisk.filter(secondFilter) : withRisk;
             const sortedSliced = ofInterest.sort(sort).slice(0, num);

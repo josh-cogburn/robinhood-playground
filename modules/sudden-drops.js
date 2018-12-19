@@ -151,7 +151,7 @@ const permuteByTrendAndVolume = (trend) => {
         [`volumeGT${val}`]: t => t.fundamentals.volume >= val,
     }), {});
 
-    console.log({volumePerms})
+    // console.log({volumePerms})
 
     const mainPermutations = {
         ...trendPerms,
@@ -174,7 +174,7 @@ const permuteByTrendAndVolume = (trend) => {
 };
 
 const permuteByWatchout = trend => {
-    console.log(trend.filter(t => t.shouldWatchout));
+    // console.log(trend.filter(t => t.shouldWatchout));
     return [true, false].reduce((acc, watchoutValue) => {
         const filteredTrend = trend.filter(t => t.shouldWatchout === watchoutValue);
         const result = {
