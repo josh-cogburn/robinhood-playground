@@ -14,6 +14,7 @@ const StratPerf = require('../models/StratPerf');
 const jsonMgr = require('../utils/json-mgr');
 const getFilesSortedByDate = require('../utils/get-files-sorted-by-date');
 const getTrend = require('../utils/get-trend');
+const sendEmail = require('../utils/send-email');
 
 // app-actions
 const detailedNonZero = require('./detailed-non-zero');
