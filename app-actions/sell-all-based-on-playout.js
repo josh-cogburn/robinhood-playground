@@ -111,7 +111,7 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
         console.log({ underNDays });
         if (!underNDays.length) return;
         
-        const strategiesToLookup = underNDays.map(pos => pos.strategy).filter(v => !!v);
+        const strategiesToLookup = underNDays.map(pos => pos.buyStrategy).filter(v => !!v);
         const highestPlayouts = strategiesToLookup.length ?
             await determineSingleBestPlayoutFromMultiOutput(
                 Robinhood,
@@ -119,7 +119,7 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
             ) : [];
         console.log({ strategiesToLookup, highestPlayouts })
         underNDays = underNDays.map(pos => {
-            const foundMatch = highestPlayouts.find(obj => obj.strategy === pos.strategy);
+            const foundMatch = highestPlayouts.find(obj => obj.strategy === pos.buyStrategy);
             return {
                 ...pos,
                 ...(foundMatch && { highestPlayout: foundMatch.highestPlayout })
