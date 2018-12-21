@@ -25,7 +25,7 @@ const getToken = async proxy => {
 };
 
 const postPublic = async ({ body, sentiment, token, proxy }) => {
-    console.log(`stocktwits ${config.username} posting public: "${body}"`)
+    console.log(`stocktwits ${config.username} posting public: "${body}"`, proxy)
     return request({
         method: 'POST',
         uri: 'https://api.stocktwits.com/api/2/messages/create.json',
@@ -41,7 +41,7 @@ const postPublic = async ({ body, sentiment, token, proxy }) => {
 };
 
 const postToRhRoom = async ({ body, sentiment, proxy }) => {
-    console.log(`stocktwits ${config.username} posting to ROOM "${body}" (${sentiment})`);
+    console.log(`stocktwits ${config.username} posting to ROOM "${body}" (${sentiment})`, proxy);
     return request({
         method: 'POST',
         uri: 'https://roomapi.stocktwits.com/room/robinhood_playground/message',
