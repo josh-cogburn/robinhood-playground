@@ -99,7 +99,7 @@ const additionalCron = [
     // },
     {
         name: 'getAllTickers',
-        run: [1027],
+        run: [1027, 70, 200],
         fn: getAllTickers
     },
 
