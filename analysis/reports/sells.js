@@ -84,7 +84,7 @@ module.exports = async (Robinhood, daysBack = 5) => {
             beforeDate: date
         }, dailyTransactionDates);
 
-        const combined = allSellsToday.map(sell => {
+        let combined = allSellsToday.map(sell => {
             const matchTicker = obj => obj.ticker === sell.ticker;
             const relatedDTBuy = associatedBuys.find(matchTicker);
             const relatedRHBuys = rhBuys.filter(matchTicker);
@@ -125,11 +125,14 @@ module.exports = async (Robinhood, daysBack = 5) => {
 
     const formatOutput = (output, date) => {
 
-        const lineOutput = [];
+        let lineOutput = [];
         const l = text => lineOutput.push(text);
+
+        const totalReturn = output.reduce((acc, { returnDollars }) => acc + returnDollars, 0);
         
         output
                 .filter(c => c.playouts.length)
+                .sort((a, b) => Math.abs(b.returnDollars) - Math.abs(a.returnDollars))
                 .forEach(({ ticker, returnDollars, returnPerc, playouts, buyPrice, sellPrice, quantity, strategy, buyDate }) => {
                     const formattedReturnDollars = returnDollars < 0 ? `-$${Math.abs(returnDollars)}` : `+$${returnDollars}`;
                     l(`${ticker}`);
@@ -138,6 +141,11 @@ module.exports = async (Robinhood, daysBack = 5) => {
                     l(`    buyPrice: $${twoDec(buyPrice)} | sellPrice: $${twoDec(sellPrice)} | quantity: ${quantity}`);
                     l(`    playouts: ${playouts.map(t => `${t}%`).join(' ')}`);
                 });
+        lineOutput = [
+            `Total return: $${twoDec(totalReturn)}`,
+            '-----------------------------------',
+            ...lineOutput
+        ];
         return lineOutput.join('\n');
     };
 
@@ -150,12 +158,9 @@ module.exports = async (Robinhood, daysBack = 5) => {
             todayDate
         );
     } else {
-
-        const allOutput = await mapLimit(dailyTransactionDates.slice(0, daysBack), 1, async date => {
-            const singleOutput = await analyzeDay(date);
-            return formatOutput(singleOutput, date);
-        });
-
+        const allAnalyzed = await mapLimit(dailyTransactionDates.slice(0, daysBack), 1, analyzeDay);
+        const allOutput = allAnalyzed
+            .map((analyzed, i) => formatOutput(analyzed, dailyTransactionDates[i]));
         console.log(allOutput.join('\n'));
         return allOutput.join('\n');
         
