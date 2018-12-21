@@ -4,7 +4,7 @@ const detailedNonZero = require('./detailed-non-zero');
 const activeBuy = require('./active-buy');
 const sendEmail = require('../utils/send-email');
 
-module.exports = async (Robinhood, minPercDown = 10) => {
+module.exports = async (Robinhood, minute, minPercDown = 10) => {
     console.log(`doubling down on stocks bought today and are already down ${minPercDown}%`);
     let nonzero = await detailedNonZero(Robinhood);
     const dateStr = (new Date()).toLocaleDateString().split('/').join('-');
@@ -20,7 +20,7 @@ module.exports = async (Robinhood, minPercDown = 10) => {
             ticker: position.symbol,
             strategy: 'double-down',
             maxPrice: Math.min(150, position.value * 1.2),
-            min: 100    // faked who cares?
+            min: minute
         };
         console.log('doubleDownData', doubleDownData);
         try {

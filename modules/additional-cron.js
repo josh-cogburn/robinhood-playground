@@ -108,7 +108,7 @@ const additionalCron = [
     {
         name: 'doubleDown',
         run: [200, 378],
-        fn: async (Robinhood) => doubleDown(Robinhood, 10)
+        fn: doubleDown
     },
 
     // {
