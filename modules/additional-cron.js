@@ -5,6 +5,8 @@ const stratPerfMultiple = require('../analysis/strategy-perf-multiple');
 const getTrendAndSave = require('../app-actions/get-trend-and-save');
 const logPortfolioValue = require('../app-actions/log-portfolio-value');
 const { default: recordStratPerfs } = require('../app-actions/record-strat-perfs');
+const doubleDown = require('../app-actions/double-down');
+
 // const sellAllOlderThanTwoDays = require('../app-actions/sell-all-older-than-two-days');
 const sellAllBasedOnPlayout = require('../app-actions/sell-all-based-on-playout');
 const sellAllIfWentUp = require('../app-actions/sell-all-if-went-up');
@@ -101,6 +103,12 @@ const additionalCron = [
         name: 'getAllTickers',
         run: [1027, 70, 200],
         fn: getAllTickers
+    },
+
+    {
+        name: 'doubleDown',
+        run: [200, 378],
+        fn: async (Robinhood) => doubleDown(Robinhood, 10)
     },
 
     // {
