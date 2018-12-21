@@ -29,7 +29,7 @@ const getDetailedNonZero = async (Robinhood) => {
 
     // console.log({ formattedWithLookup})
     
-    const finalNonZeroPositions = await addBuyDataToPositions(formattedWithLookup);
+    const finalNonZeroPositions = await addBuyDataToPositions(formattedWithLookup.filter(Boolean));
     // console.log('made it', withTicks);
     return finalNonZeroPositions;
 };
