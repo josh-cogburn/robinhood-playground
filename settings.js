@@ -2,7 +2,7 @@
 module.exports = {
     // important settings
     sellAllStocksOnNthDay: 2,
-    purchaseAmt: 25,
+    purchaseAmt: 32,
     forPurchase: [
         // modern picks
             '[postMongoBigHitters]',

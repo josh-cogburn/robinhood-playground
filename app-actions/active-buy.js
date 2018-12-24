@@ -7,7 +7,7 @@ const jsonMgr = require('../utils/json-mgr');
 const lookup = require('../utils/lookup');
 const mapLimit = require('promise-map-limit');
 
-const TIME_BETWEEN_CHECK = 10; // seconds
+const TIME_BETWEEN_CHECK = 5; // seconds
 const TOTAL_ATTEMPTS = 6;
 
 const addToDailyTransactions = async data => {

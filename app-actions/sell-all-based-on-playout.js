@@ -81,12 +81,12 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
     const handleOverNDays = async () => {
         // handle older than four days
         const olderThanNDays = nonzero.filter(pos => pos.dayAge >= sellAllStocksOnNthDay);
-        await mapLimit(olderThanNDays, 3, async pos => {
-            await sellPosition({
+        await mapLimit(olderThanNDays, 3, pos =>
+            sellPosition({
                 ticker: pos.symbol,
                 quantity: pos.quantity
-            }, `older than ${sellAllStocksOnNthDay} days: ${pos.dayAge}`);
-        });
+            }, `older than ${sellAllStocksOnNthDay} days: ${pos.dayAge}`)
+        );
     };
 
     const handleUnderNDays = async () => {

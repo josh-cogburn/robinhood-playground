@@ -53,7 +53,7 @@ const additionalCron = [
     // sell all based on playout
     {
         name: 'sellAllBasedOnPlayout',
-        run: [1],
+        run: [0, 35],
         fn: () => sellAllBasedOnPlayout(Robinhood)
     },
 
@@ -82,7 +82,6 @@ const additionalCron = [
         fn: async (Robinhood, min) => {
             await recordStratPerfs(Robinhood, min);
             await stratManager.refreshPastData();
-            await sellAllBasedOnPlayout(Robinhood);
         }
     },
     {
