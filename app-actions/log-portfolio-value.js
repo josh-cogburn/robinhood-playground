@@ -16,7 +16,7 @@ module.exports = async (Robinhood) => {
 
     let response = await Robinhood.url('https://api.robinhood.com/portfolios/historicals/5SA80442/?span=year&interval=day');
     let {equity_historicals: hist} = response;
-    console.log(response, 'log port val');
+    // console.log(response, 'log port val');
     hist = hist.map(h => ({
         ...h,
         date: (() => {

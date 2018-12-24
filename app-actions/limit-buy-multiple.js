@@ -4,7 +4,7 @@ const mapLimit = require('promise-map-limit');
 module.exports = async (Robinhood, {stocksToBuy, totalAmtToSpend, strategy, maxNumStocksToPurchase, min }) => {
 
     // you cant attempt to purchase more stocks than you passed in
-    console.log(maxNumStocksToPurchase, 'numstockstopurchase', stocksToBuy.length);
+    // console.log(maxNumStocksToPurchase, 'numstockstopurchase', stocksToBuy.length);
     maxNumStocksToPurchase = maxNumStocksToPurchase ? Math.min(stocksToBuy.length, maxNumStocksToPurchase) : stocksToBuy.length;
 
     let numPurchased = 0;
@@ -25,7 +25,7 @@ module.exports = async (Robinhood, {stocksToBuy, totalAmtToSpend, strategy, maxN
                 min
             });
             console.log('success active buy', stock);
-            console.log('response from limit buy multiple', response);
+            // console.log('response from limit buy multiple', response);
             amtToSpendLeft -= perStock;
             numPurchased++;
         } catch (e) {

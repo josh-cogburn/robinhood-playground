@@ -112,8 +112,8 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
 
         for (let pos of underNDays) {
             // const strategy = await findStrategyThatPurchasedTicker(pos.symbol);
-            console.log('underndays');
-            console.log(pos);
+            console.log('underndays', underNDays.length);
+            // console.log(pos);
             const breakdowns = await generatePlayouts(pos.buyStrategy, pos.buyDate) || [];
             breakdowns.push(
                 getTrend(
@@ -122,7 +122,7 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
                 )
             );
             const playoutToRun = pos.highestPlayout || fallbackSellStrategy;
-            console.log({ breakdowns, highestPlayout: pos.highestPlayout, playoutToRun, buyStrategy: pos.buyStrategy })
+            // console.log({ breakdowns, highestPlayout: pos.highestPlayout, playoutToRun, buyStrategy: pos.buyStrategy })
             pos.playoutToRun = playoutToRun;
             const playoutFn = playouts[playoutToRun].fn;
             const { hitFn: hitPlayout } = playoutFn(breakdowns);

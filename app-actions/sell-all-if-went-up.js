@@ -6,7 +6,7 @@ const MIN_PERC_DOWN = 6;
 
 module.exports = async Robinhood => {
     const nonzero = await detailedNonZero(Robinhood);
-    console.log(nonzero);
+    // console.log(nonzero);
     const goneUp = nonzero.filter(pos => {
         if (!pos) return false;
         const { average_buy_price, prevClose, currentPrice } = pos;
@@ -21,7 +21,7 @@ module.exports = async Robinhood => {
             );
         });
     });
-    console.log(nonzero.length, 'total', goneUp.length, 'gone up');
+    // console.log(nonzero.length, 'total', goneUp.length, 'gone up');
     for (let pos of goneUp) {
         try {
             const response = await activeSell(

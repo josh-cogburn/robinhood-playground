@@ -73,7 +73,7 @@ const trendFilter = async (Robinhood, trend) => {
 
     let baseKeys = Object.keys(withTrendSinceOpen[0])
         .filter(key => ['floatTimes', 'Points'].some(str => key.includes(str)));
-    console.log('baseKeys', baseKeys);
+    // console.log('baseKeys', baseKeys);
     // let baseKeys = [
     //     'sharesToCap',
     //     'volumetoavg',
@@ -97,7 +97,7 @@ const trendFilter = async (Robinhood, trend) => {
     const riskCache = {};
     for (let key of baseKeys) {
 
-        console.log('key', key);
+        // console.log('key', key);
         const sortTrend = (
             [
                 min = Number.NEGATIVE_INFINITY,

@@ -24,8 +24,8 @@ const executeStrategy = async (Robinhood, strategyFn, min, ratioToSpend, strateg
 
     const executeSingleStrategy = async (trend, strategyName, priceKey) => {
         const toPurchase = await strategyFn(Robinhood, trend, min);
-        console.log('strategyName', strategyName);
-        console.log('toPurchase', toPurchase);
+        // console.log('strategyName', strategyName);
+        // console.log('toPurchase', toPurchase);
 
         // gives ability to return an object from a trendFilter with multiple "variations"
         const priceFilterSuffix = (priceKey === 'under5') ? '' : `-${priceKey}`;

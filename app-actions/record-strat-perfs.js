@@ -100,7 +100,7 @@ module.exports = {
         // console.log('running record')
         // console.log(Robinhood, min);
         const distinctDates = await Pick.find().distinct('date');
-        console.log({ distinctDates });
+        // console.log({ distinctDates });
         // console.log(folders);
 
         let sortedFolders = distinctDates.sort((a, b) => {
@@ -108,7 +108,7 @@ module.exports = {
         });
 
 
-        console.log(sortedFolders);
+        // console.log(sortedFolders);
 
         const perms = {
             'next-day': 2,
@@ -120,7 +120,7 @@ module.exports = {
         };
 
         for (let [key, daysBack] of Object.entries(perms)) {
-            console.log(key, daysBack);
+            // console.log(key, daysBack);
 
             const pastDayDate = sortedFolders[sortedFolders.length - daysBack];
             if (!pastDayDate) {

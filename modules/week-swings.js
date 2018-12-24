@@ -23,7 +23,7 @@ const trendFilter = async (Robinhood, trend) => {
     }));
 
     const generateSwing = (buys, bufferSize, minDiff, minSwings) => {
-        console.log(minSwings, 'minSwings');
+        // console.log(minSwings, 'minSwings');
         return buys.map(buy => {
             const { historicals } = buy;
             const closePrices = historicals.map(hist => hist.close_price);
