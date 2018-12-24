@@ -40,7 +40,7 @@ const preOrPostMarketBuy = async ({
         strategy
     };
     console.log('pre or post market buy', data);
-    return await limitBuyLastTrade(
+    return limitBuyLastTrade(
         Robinhood,
         data
     );
@@ -96,7 +96,7 @@ module.exports = async (
                         strategy
                     };
                     console.log({ data, maxPrice });
-                    return await limitBuyLastTrade(
+                    return limitBuyLastTrade(
                         Robinhood,
                         data
                     );
@@ -120,7 +120,7 @@ module.exports = async (
                         attemptPrice,
                         attemptCount
                     })
-                    return await limitBid(attemptPrice);
+                    return limitBid(attemptPrice);
                 };
 
                 const limitLastTrade = async () => {
@@ -130,7 +130,7 @@ module.exports = async (
                         lastTrade,
                         attemptPrice
                     })
-                    return await limitBid(attemptPrice);
+                    return limitBid(attemptPrice);
                 };
 
                 let res = await attemptLimitOrder();

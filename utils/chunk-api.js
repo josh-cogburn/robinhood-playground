@@ -14,8 +14,8 @@ function flatten(array) {
 
 
 module.exports = async (tickers, apiFn, num) => {
-    let nestedArray = await mapLimit(splitIntoChunks(tickers, num), 3, async collection => {
-        return await apiFn(collection.join(','));
-    });
+    let nestedArray = await mapLimit(splitIntoChunks(tickers, num), 3, collection =>
+        apiFn(collection.join(','))
+    );
     return flatten(nestedArray);
 };

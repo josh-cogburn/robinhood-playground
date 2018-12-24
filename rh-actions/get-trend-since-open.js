@@ -167,8 +167,8 @@ const getTrendSinceOpen = {
 
 module.exports = async (Robinhood, input) => {
     if (Array.isArray(input)) {
-        return await getTrendSinceOpen.multiple(Robinhood, input);
+        return getTrendSinceOpen.multiple(Robinhood, input);
     } else {
-        return await getTrendSinceOpen.single(Robinhood, input);
+        return getTrendSinceOpen.single(Robinhood, input);
     }
 };

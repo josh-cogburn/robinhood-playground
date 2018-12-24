@@ -61,12 +61,12 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
     const forceSells = nonzero.filter(pos => forceSell.includes(pos.symbol));
     nonzero = nonzero.filter(pos => !forceSell.includes(pos.symbol));
 
-    await mapLimit(forceSells, 2, async pos => {
-        await sellPosition({
+    await mapLimit(forceSells, 2, pos =>
+        sellPosition({
             ticker: pos.symbol,
             quantity: pos.quantity
-        }, `on force sell list in settings.js`);
-    });
+        }, `on force sell list in settings.js`)
+    );
 
     // console.log(nonzero.length);
 
@@ -132,7 +132,7 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
         }
 
         // sell all under 4 days that hit the playoutFn
-        await mapLimit(underNDays.filter(pos => pos.hitPlayout).sort((a, b) => b.returnDollars - a.returnDollars), 5, async pos => {
+        await mapLimit(underNDays.filter(pos => pos.hitPlayout).sort((a, b) => b.returnDollars - a.returnDollars), 6, async pos => {
             const posData = [
                 `breakdowns: ${pos.breakdowns}`,
                 `playoutToRun: ${pos.playoutToRun}`,

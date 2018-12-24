@@ -126,7 +126,7 @@ module.exports = async (Robinhood, daysBack = 5) => {
     const formatOutput = (output, date) => {
 
         let lineOutput = [];
-        const l = text => lineOutput.push(text);
+        const l = lineOutput.push;
 
         const totalReturn = output.reduce((acc, { returnDollars }) => acc + returnDollars, 0);
         
