@@ -13,11 +13,12 @@ const twoDec = roundTo(2);
 module.exports = async (Robinhood) => {
 
     const nonzero = await detailedNonZero(Robinhood);
-    console.log({ nonzero})
+    const positions = nonzero.sort((a, b) => Math.abs(b.returnDollars) - Math.abs(a.returnDollars))
     const formatReturnDollars = returnDollars => returnDollars < 0 ? `-$${Math.abs(returnDollars)}` : `+$${returnDollars}`;
-    const totalReturn = nonzero.reduce((acc, { returnDollars }) => acc + returnDollars, 0);
-    let formatted = nonzero
-        .sort((a, b) => b.value - a.value)
+    const totalValue = positions.reduce((acc, { value }) => acc + value, 0);
+    const returnAbs = positions.reduce((acc, { returnDollars }) => acc + returnDollars, 0);
+    const returnPerc = returnAbs * 100 / totalValue;
+    let lines = positions
         .map(pos => 
             [
                 pos.symbol,
@@ -27,16 +28,21 @@ module.exports = async (Robinhood) => {
             ].join('\n')
         );
         
-    formatted = [
-        `Total return: $${twoDec(totalReturn)}`,
+    lines = [
+        `Total return: $${twoDec(returnAbs)} (${twoDec(returnPerc)}%)`,
+        `Total value: $${twoDec(totalValue)}`,
         '-----------------------------------',
-        ...formatted
+        ...lines
     ];
 
-    formatted = formatted.join('\n');
+    const formatted = lines.join('\n');
     
-    console.log(formatted);
-    return formatted;
+    return {
+        formatted,
+        positions,
+        returnAbs,
+        returnPerc
+    };
 
 };
 

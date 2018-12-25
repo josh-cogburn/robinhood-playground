@@ -126,37 +126,49 @@ module.exports = async (Robinhood, daysBack = 5) => {
     const formatOutput = (output, date) => {
 
         let lineOutput = [];
-        const l = lineOutput.push;
+        const l = line => lineOutput.push(line);
 
-        const totalReturn = output.reduce((acc, { returnDollars }) => acc + returnDollars, 0);
-        
+        const totalBuyPrice = output.reduce((acc, { buyPrice, quantity }) => acc + (buyPrice * quantity), 0);
+        const returnAbs = output.reduce((acc, { returnDollars }) => acc + returnDollars, 0);
+        const returnPerc = returnAbs * 100 / totalBuyPrice;
+
         output
-                .filter(c => c.playouts.length)
-                .sort((a, b) => Math.abs(b.returnDollars) - Math.abs(a.returnDollars))
-                .forEach(({ ticker, returnDollars, returnPerc, playouts, buyPrice, sellPrice, quantity, strategy, buyDate }) => {
-                    const formattedReturnDollars = returnDollars < 0 ? `-$${Math.abs(returnDollars)}` : `+$${returnDollars}`;
-                    l(`${ticker}`);
-                    l(`    buyDate: ${buyDate}`);
-                    l(`    return: ${formattedReturnDollars} (${returnPerc}%) | strategy: ${strategy}`);
-                    l(`    buyPrice: $${twoDec(buyPrice)} | sellPrice: $${twoDec(sellPrice)} | quantity: ${quantity}`);
-                    l(`    playouts: ${playouts.map(t => `${t}%`).join(' ')}`);
-                });
+            .filter(c => c.playouts.length)
+            .sort((a, b) => Math.abs(b.returnDollars) - Math.abs(a.returnDollars))
+            .forEach(({ ticker, returnDollars, returnPerc, playouts, buyPrice, sellPrice, quantity, strategy, buyDate }) => {
+                const formattedReturnDollars = returnDollars < 0 ? `-$${Math.abs(returnDollars)}` : `+$${returnDollars}`;
+                l(`${ticker}`);
+                l(`    buyDate: ${buyDate}`);
+                l(`    return: ${formattedReturnDollars} (${returnPerc}%) | strategy: ${strategy}`);
+                l(`    buyPrice: $${twoDec(buyPrice)} | sellPrice: $${twoDec(sellPrice)} | quantity: ${quantity}`);
+                l(`    playouts: ${playouts.map(t => `${t}%`).join(' ')}`);
+            });
         lineOutput = [
-            `Total return: $${twoDec(totalReturn)}`,
+            `Total return: $${twoDec(returnAbs)} (${twoDec(returnPerc)}%)`,
+            `Total value: $${twoDec(totalBuyPrice)}`,
             '-----------------------------------',
             ...lineOutput
         ];
-        return lineOutput.join('\n');
+        return {
+            formatted: lineOutput.join('\n'),
+            returnAbs,
+            returnPerc
+        };
     };
 
     console.log({ daysBack })
     if (daysBack == 1) {
         const todayDate = dailyTransactionDates[0];
-        console.log('analyzing', { todayDate })
-        return formatOutput(
-            await analyzeDay(todayDate),
+        console.log('analyzing', { todayDate });
+        const todayAnalyzed = await analyzeDay(todayDate);
+        const output = formatOutput(
+            todayAnalyzed,
             todayDate
         );
+        return {
+            ...output,
+            todayAnalyzed
+        };
     } else {
         const allAnalyzed = await mapLimit(dailyTransactionDates.slice(0, daysBack), 1, analyzeDay);
         const allOutput = allAnalyzed

@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
-const { orderBreakdownKeys } = require('../utils/breakdown-key-compares');
-
 const schema = new Schema({
     date: { type: String, index: true },
     stratMin: { type: String, index: true },
