@@ -30,7 +30,7 @@ const stratManager = {
     predictionModels: {},
     hasInit: false,
 
-    async init(io) {
+    async init({ io, dateOverride }) {
         if (this.hasInit) return;
         this.Robinhood = global.Robinhood;
         this.io = io;
@@ -43,7 +43,7 @@ const stratManager = {
             console.log('error refreshing past', e);
         }
         console.log('init picks')
-        await this.initPicksAndPMs();
+        await this.initPicksAndPMs(dateOverride);
         console.log('get prices')
         await this.getAndWaitPrices();
         // console.log('send report init')
@@ -104,7 +104,7 @@ const stratManager = {
         await this.getRelatedPrices();
         this.sendToAll('server:welcome', this.getWelcomeData());
     },
-    async initPicksAndPMs() {
+    async determineCurrentDay() {
         // calc current date
         const now = new Date();
         const compareDate = new Date();
@@ -127,13 +127,15 @@ const stratManager = {
             console.log( sortedFiles[0],'0' )
             dateStr = sortedFiles[0];
         }
-        
+        return dateStr;
+    },
+    async initPicksAndPMs(dateOverride) {
+        const dateStr = dateOverride || await this.determineCurrentDay();
         const hasPicksData = (await Pick.countDocuments({ date: dateStr })) > 0;
         console.log('hasPicksData', hasPicksData);
         if (hasPicksData) {
             await this.initPicks(dateStr);
         }
-
         this.curDate = dateStr;
         console.log('cur date now', this.curDate);
         await this.refreshPredictionModels();

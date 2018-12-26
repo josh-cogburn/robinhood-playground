@@ -66,6 +66,6 @@ io.on('connection', (socket) => {
 });
 
 server.listen(port, async () => {
-    stratManager.init(io);
+    stratManager.init({ io });
     console.log('[INFO] Listening on *:' + port);
 });

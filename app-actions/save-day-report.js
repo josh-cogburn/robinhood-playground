@@ -14,13 +14,13 @@ const oneDec = roundTo(1);
 const twoDec = roundTo(2);
 
 
-module.exports = async (Robinhood, min) => {
+module.exports = async (Robinhood, min = 515) => {
 
     const todaysDate = (await getFilesSortedByDate('daily-transactions'))[0];
-    console.log(`Creating report for ${todaysDate}`);
+    console.log(`Creating report for ${todaysDate} @ ${min} minutes`);
 
     // get and record pm perfs
-    await stratManager.init();
+    await stratManager.init({ dateOverride: todaysDate });
     const pmReport = stratManager.calcPmPerfs();
     console.log(`loaded ${pmReport.length} prediction models`);
     const pmData = { min, perfs: pmReport };
