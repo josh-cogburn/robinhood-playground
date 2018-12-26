@@ -71,7 +71,7 @@ class Pick extends Component {
 }
 
 class App extends Component {
-  state = { picks: [], relatedPrices: {}, strategyFilter: 'forPurchase', pastData: {}, strategies: {}, afterHoursEnabled: false };
+  state = { picks: [], relatedPrices: {}, strategyFilter: 'forPurchase', pastData: {}, predictionModels: {}, afterHoursEnabled: false };
   componentDidMount() {
       let { origin: endPoint } = window.location;
       const socket = socketIOClient('http://192.227.186.138:3000');
@@ -95,7 +95,7 @@ class App extends Component {
   }
   strategyMove = increment => {
       const curStrategy = this.state.strategyFilter;
-      const listOfStrategies = [...Object.keys(this.state.strategies), 'no filter'];
+      const listOfStrategies = [...Object.keys(this.state.predictionModels), 'no filter'];
       const index = listOfStrategies.findIndex(strat => strat === curStrategy);
       let nextIndex = (index + increment) % listOfStrategies.length;
       console.info(nextIndex);
@@ -106,11 +106,10 @@ class App extends Component {
   }
   toggleAfterHours = () => this.setState({ afterHoursEnabled: !this.state.afterHoursEnabled })
   render() {
-      let { picks, relatedPrices, strategies, strategyFilter, pastData, curDate, afterHoursEnabled } = this.state;
+      let { picks, relatedPrices, predictionModels, strategyFilter, pastData, curDate, afterHoursEnabled } = this.state;
       const { fiveDay } = pastData;
-      if (!strategies.forPurchase) return <h1 style={{ textAlign: 'center' }}>loading</h1>;
-      let showingPicks = strategyFilter !== 'no filter' ? picks.filter(pick => strategies[strategyFilter].includes(pick.stratMin)) : picks;
-
+      if (!predictionModels.forPurchase) return <h1 style={{ textAlign: 'center' }}>loading</h1>;
+      let showingPicks = strategyFilter !== 'no filter' ? picks.filter(pick => predictionModels[strategyFilter].includes(pick.stratMin)) : picks;
       showingPicks = showingPicks.map(pick => {
           const calcedTrends = pick.withPrices.map(({ ticker, price }) => {
               const foundPrice = relatedPrices[ticker];
@@ -153,8 +152,8 @@ class App extends Component {
                     {'<<'}
                   </button>
                   <select value={strategyFilter} onChange={this.setStrategyFilter}>
-                      {strategies && Object.keys(strategies).map(strategy => (
-                          <option value={strategy}>{strategy}</option>
+                      {predictionModels && Object.keys(predictionModels).map(pm => (
+                          <option value={pm}>{pm}</option>
                       ))}
                       <option>no filter</option>
                   </select>
