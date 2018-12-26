@@ -2,7 +2,7 @@
 module.exports = {
     // important settings
     sellAllStocksOnNthDay: 2,
-    purchaseAmt: 32,
+    purchaseAmt: 24,
     forPurchase: [
         // modern picks
             '[postMongoBigHitters]',
@@ -15,6 +15,7 @@ module.exports = {
         // drops
             '[filteredDrops]',
             '[moreCommonDrops]',
+            '[moreCommonDrops]',
             '[unprovenSuddenDropsLast2Filter10]',
             '[unprovenSuddenDropsLast2Filter10]',
 
@@ -23,6 +24,7 @@ module.exports = {
             '[unprovenFilter30Drops]',
             '[unprovenFilter30Drops]',
 
+            '[unprovenFilter20Drops]',
             '[unprovenFilter20Drops]',
             '[unprovenFilter20Drops]',
 
@@ -30,6 +32,9 @@ module.exports = {
             '[sepAdds]',
             '[sepHighlights]',
             '[sepStars]',
+            '[sepPerfectosMissing]',
+            '[sepPerfectosLowerCounts]',
+
         
         // more manuals
             '[hadAGoodDay]',
@@ -37,6 +42,7 @@ module.exports = {
         // my-recs
             '[myRecs-day1-whileLoopCreme]',
             '[myRecs-day7count3-hundredWithHundredCheck]',          /// ??????
+            '[myRecs-day10count5-hundredUpAvgGt4]',
             '[myRecs-day10count5-hundredUpAvgGt4]',                 /// ??????
             '[myRecs-day5count4-uniq-hundredUpPicks]',
             '[myRecs-day3count2to4-slice16-uniq-hundredUpAvgGt4]',
@@ -44,9 +50,19 @@ module.exports = {
         // spm's
             '[spm-52day-lowThirdMinCount5MagicScore-slice16-uniq]',
             '[spm-52day-lowThirdMinCount5MagicScore-slice16-uniq]',
-            '[spm-52day-bestAvgTrendAnyPlayout]',
+            '[spm-52day-bestAvgTrendAnyPlayout-slice16-uniq]',
+            '[spm-52day-bestAvgTrendAnyPlayout-slice16-uniq]',
+            '[spm-52day-bestAvgTrendAnyPlayout-slice16-uniq]',
             '[spm-52day-highLimitPlayoutsAvgTrend-slice16]',        /// ??????
             '[spm-52day-bestFirstGreenAvgTrend-slice16-uniq]',      /// ??????
+            '[spm-52day-bestFirstGreenAvgTrend-slice16-uniq]',
+            '[spm-52day-bestAvgTrendPlayoutsOfInterest]',
+            '[spm-52day-highestLimitPlayoutsAvgTrend-slice16-uniq]',
+            '[spm-52day-highestLimitPlayoutsJohnsSecretRecipe-slice16-uniq]',
+            '[spm-52day-highestLimitPlayoutsJohnsSecretRecipe-slice16-uniq]',
+            '[spm-52day-highestLimitPlayoutsJohnsSecretRecipeWithCount-slice16-uniq]',
+            '[spm-52day-customCount8to11MagicScore-slice16-uniq]',
+            '[spm-52day-limit5creme-slice16',
 
         // tiptop
             '[tiptop-minCount4]',

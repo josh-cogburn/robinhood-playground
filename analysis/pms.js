@@ -54,7 +54,8 @@ module.exports = async (Robinhood, daysBack = 5, minCount = 5) => {
         // .filter(t => t.trends.every(v => v > -5))
         // .filter(t => t.hundredResult > 110)
         .filter(t => t.trends.length >= minCount)// && t.trends.every(a => a > -1));
-    console.log(JSON.stringify(sortedArray, null, 2));
+        .filter(t => t.pm.includes('spm'))
+    // console.log(JSON.stringify(sortedArray, null, 2));
 
 
     return sortedArray;
