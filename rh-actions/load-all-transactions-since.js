@@ -32,7 +32,6 @@ const loadAllRobinhoodTransactions = async (Robinhood, daysBack = 1) => {
         ...(orders.next ? await recursiveUrl(Robinhood, orders.next) : [])
     ];
     orders = orders
-        .filter(t => t.state === 'filled')
         .filter(t => t.executions.length);
 
     console.log('looking up robinhood instruments');

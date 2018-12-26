@@ -54,7 +54,7 @@ module.exports = async (Robinhood, daysBack = 5) => {
             side: order.side
         });
         const rhBuys = robinhoodTransactions
-            .filter(t => t.side === 'buy')
+            .filter(t => t.side === 'buy' && t.state === 'filled')
             .map(formatRhTransaction);
         // console.log({ rhBuys})
         const rhSellsToday = robinhoodTransactions
