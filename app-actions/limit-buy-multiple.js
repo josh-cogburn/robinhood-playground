@@ -1,7 +1,7 @@
 const activeBuy = require('./active-buy');
 const mapLimit = require('promise-map-limit');
 
-module.exports = async (Robinhood, {stocksToBuy, totalAmtToSpend, strategy, maxNumStocksToPurchase, min }) => {
+module.exports = async (Robinhood, {stocksToBuy, totalAmtToSpend, strategy, maxNumStocksToPurchase, min, withPrices }) => {
 
     // you cant attempt to purchase more stocks than you passed in
     // console.log(maxNumStocksToPurchase, 'numstockstopurchase', stocksToBuy.length);
@@ -18,11 +18,13 @@ module.exports = async (Robinhood, {stocksToBuy, totalAmtToSpend, strategy, maxN
         const perStock = amtToSpendLeft / (maxNumStocksToPurchase - numPurchased);
         console.log(perStock, 'purchasng ', stock);
         try {
+            const pickPrice = (withPrices.find(obj => obj.ticker === stock) || {}).price;
             const response = await activeBuy(Robinhood, {
                 ticker: stock,
                 maxPrice: perStock,
                 strategy,
-                min
+                min,
+                pickPrice
             });
             console.log('success active buy', stock);
             // console.log('response from limit buy multiple', response);

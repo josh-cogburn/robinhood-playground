@@ -81,7 +81,8 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
             stocksToBuy,
             strategy,
             multiplier: forPurchaseMultiplier,
-            min
+            min,
+            withPrices
         });
         if (withPrices.length === 1) {
             const [{ ticker }] = withPrices;
