@@ -31,7 +31,7 @@ module.exports = async (Robinhood, min) => {
     );
 
     console.log('saved pm perfs...');
-    const forPurchaseAvgTrend = pmReport.find(({ pmName }) => pmName === 'forPurchase').avgTrend;
+    const forPurchaseAvgTrend = (pmReport.find(({ pmName }) => pmName === 'forPurchase') || {}).avgTrend;
     console.log({ forPurchaseAvgTrend });
 
     // get account balance
