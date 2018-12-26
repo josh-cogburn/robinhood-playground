@@ -26,7 +26,7 @@ module.exports = async (Robinhood) => {
         return { fiveDay: stratPerfObj };
     })();
 
-    // const myRecs = await getMyRecs(Robinhood);
+    const myRecs = await getMyRecs(Robinhood);
     const fiftytwo = await spms(Robinhood);
     const eightDay = await spms(Robinhood, 8);
 
@@ -35,10 +35,10 @@ module.exports = async (Robinhood) => {
         ...manualPMs,
 
         // myRecs
-        // ...Object.keys(myRecs).reduce((acc, val) => ({
-        //     ...acc,
-        //     [`myRecs-${val}`]: myRecs[val]
-        // }), {}),
+        ...Object.keys(myRecs).reduce((acc, val) => ({
+            ...acc,
+            [`myRecs-${val}`]: myRecs[val]
+        }), {}),
 
         //8daySPMs
         ...Object.keys(eightDay).reduce((acc, val) => ({
