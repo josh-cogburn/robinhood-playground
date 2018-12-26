@@ -30,7 +30,7 @@ const trendFilter = async (Robinhood, trend) => {
             ...t,
             spreadPerc: Math.round(t.spreadAbs / t.lastTrade * 100)
         }));
-    console.log(JSON.stringify(withTrendSinceOpen, null, 2));
+    // console.log(JSON.stringify(withTrendSinceOpen, null, 2));
 
     const singleHighestSpreadWithFilter = prop => (filter = () => true) => {
         return withTrendSinceOpen
