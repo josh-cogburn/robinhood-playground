@@ -52,7 +52,7 @@ module.exports = {
             '[tiptop-minCount4]',
             '[tiptop-minCount4]',
     ],
-    // forPurchaseVariation: '75Perc5Day-yesincludingblanks',
+    forPurchaseVariation: '75Perc5Day-yesincludingblanks',
     fallbackSellStrategy: 'limit3',
     force: {
         sell: [

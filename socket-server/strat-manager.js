@@ -127,7 +127,7 @@ const stratManager = {
             console.log( sortedFiles[0],'0' )
             dateStr = sortedFiles[0];
         }
-        dateStr = '12-24-2018';
+        
         const hasPicksData = (await Pick.countDocuments({ date: dateStr })) > 0;
         console.log('hasPicksData', hasPicksData);
         if (hasPicksData) {

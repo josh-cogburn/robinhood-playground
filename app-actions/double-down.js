@@ -5,7 +5,7 @@ const activeBuy = require('./active-buy');
 const sendEmail = require('../utils/send-email');
 
 module.exports = async (Robinhood, minute, minPercDown = 10) => {
-    console.log(`doubling down on stocks bought today and are already down ${minPercDown}%`);
+    console.log(`${minute} doubling down on stocks bought today and are already down ${minPercDown}%`);
     let nonzero = await detailedNonZero(Robinhood);
     const dateStr = (new Date()).toLocaleDateString().split('/').join('-');
     const onlyBoughtToday = nonzero.filter(({ buyDate }) => buyDate === dateStr);

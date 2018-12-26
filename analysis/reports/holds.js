@@ -19,7 +19,7 @@ module.exports = async (Robinhood) => {
     const nonzero = await detailedNonZero(Robinhood);
     let positions = nonzero.sort((a, b) => Math.abs(b.returnDollars) - Math.abs(a.returnDollars));
 
-    // calculate effectiveness
+    // calculate pickToExecutionPerc of each position
     positions = await mapLimit(positions, 3, async position => {
         const { buyStrategy, buyDate, average_buy_price } = position;
         if (!buyStrategy) return position;
@@ -40,22 +40,24 @@ module.exports = async (Robinhood) => {
             ...position,
             ...pickPrice && { 
                 pickPrice,
-                premiumPerc: getTrend(average_buy_price, pickPrice)
+                pickToExecutionPerc: getTrend(average_buy_price, pickPrice)
             }
         };
     });
 
+    // aggregate totals
     const formatReturnDollars = returnDollars => returnDollars < 0 ? `-$${Math.abs(returnDollars)}` : `+$${returnDollars}`;
     const totalValue = positions.reduce((acc, { value }) => acc + value, 0);
     const returnAbs = positions.reduce((acc, { returnDollars }) => acc + returnDollars, 0);
     const returnPerc = returnAbs * 100 / totalValue;
     const pickToExecutionPerc = avgArray(
         positions
-            .filter(pos => pos.premiumPerc && Math.abs(pos.premiumPerc) < 25)
-            .map(pos => pos.premiumPerc)
+            .filter(({ pickToExecutionPerc }) => pickToExecutionPerc && Math.abs(pickToExecutionPerc) < 25)
+            .map(({ pickToExecutionPerc }) => pickToExecutionPerc)
     );
     console.log({ pickToExecutionPerc });
-        
+    
+    // format html
     const lines = [
         `Total return: $${twoDec(returnAbs)} (${twoDec(returnPerc)}%)`,
         `Total value: $${twoDec(totalValue)}`,
@@ -68,7 +70,7 @@ module.exports = async (Robinhood) => {
                 `    buyPrice: $${pos.average_buy_price} | currentPrice: $${pos.lastTrade}`,
                 `    buyStrategy: ${pos.buyStrategy} | buyDate: ${pos.buyDate}`,
                 ...pos.pickPrice ? [
-                    `    pickPrice: ${pos.pickPrice} | premiumPerc: ${pos.premiumPerc}%`
+                    `    pickPrice: ${pos.pickPrice} | pickToExecutionPerc: ${pos.pickToExecutionPerc}%`
                 ] : []
             ].join('\n')
         )

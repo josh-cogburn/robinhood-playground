@@ -14,7 +14,7 @@ const oneDec = roundTo(1);
 const twoDec = roundTo(2);
 
 
-module.exports = async Robinhood => {
+module.exports = async (Robinhood, min) => {
 
     const todaysDate = (await getFilesSortedByDate('daily-transactions'))[0];
     console.log(`Creating report for ${todaysDate}`);
@@ -23,9 +23,10 @@ module.exports = async Robinhood => {
     await stratManager.init();
     const pmReport = stratManager.calcPmPerfs();
     console.log(`loaded ${pmReport.length} prediction models`);
+    const pmData = { min, perfs: pmReport };
     await PmPerfs.updateOne(
         { date: todaysDate },
-        { $set: { perfs: pmReport } },
+        { $set: pmData },
         { upsert: true }
     );
 

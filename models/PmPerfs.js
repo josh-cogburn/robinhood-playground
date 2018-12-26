@@ -3,6 +3,7 @@ const { Schema } = mongoose;
 
 const schema = new Schema({
     date: { type: String, index: true },
+    min: Number,
     perfs: [{
         pmName: String,
         avgTrend: Number

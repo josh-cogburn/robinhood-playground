@@ -2,20 +2,20 @@
 const stratPerfMultiple = require('../analysis/strategy-perf-multiple');
 
 // app actions
-const getTrendAndSave = require('../app-actions/get-trend-and-save');
-const logPortfolioValue = require('../app-actions/log-portfolio-value');
+// const getTrendAndSave = require('../app-actions/get-trend-and-save');
+// const logPortfolioValue = require('../app-actions/log-portfolio-value');
 const { default: recordStratPerfs } = require('../app-actions/record-strat-perfs');
 const doubleDown = require('../app-actions/double-down');
 
 // const sellAllOlderThanTwoDays = require('../app-actions/sell-all-older-than-two-days');
 const sellAllBasedOnPlayout = require('../app-actions/sell-all-based-on-playout');
-const sellAllIfWentUp = require('../app-actions/sell-all-if-went-up');
-const sellAllStocks = require('../app-actions/sell-all-stocks');
-const sendDayReport = require('../app-actions/send-day-report');
+// const sellAllIfWentUp = require('../app-actions/sell-all-if-went-up');
+// const sellAllStocks = require('../app-actions/sell-all-stocks');
+const saveDayReport = require('../app-actions/save-day-report');
 
 // utils
-const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
-const timeoutPromise = require('../utils/timeout-promise');
+// const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
+// const timeoutPromise = require('../utils/timeout-promise');
 
 // rh actions
 const getAllTickers = require('../rh-actions/get-all-tickers');
@@ -107,7 +107,7 @@ const additionalCron = [
     {
         name: 'doubleDown',
         run: [200, 378],
-        fn: doubleDown
+        fn: (Robinhood, min) => doubleDown(Robinhood, min, min == 200 ? 5 : undefined)
     },
 
     // {
@@ -118,11 +118,11 @@ const additionalCron = [
     {
         name: 'send day report',
         run: [515],
-        fn: sendDayReport
+        fn: saveDayReport
     },
 
     {
-        name: 'strat perf multiple',
+        name: 'strat perf multiple',    // the big analyze all strategies function
         run: [520],
         fn: (Robinhood) => stratPerfMultiple(Robinhood, 52, 'next-day-330')
     },
