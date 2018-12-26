@@ -4,11 +4,11 @@ module.exports = {
     sellAllStocksOnNthDay: 2,
     purchaseAmt: 24,
     forPurchase: [
-        // modern picks
-            '[postMongoBigHitters]',
-            '[postMongoTimes2]',
-            '[dec17]',
-            '[postMongoCount3]',
+        // modern picks // deleting because bad pm review :(
+            // '[postMongoBigHitters]',
+            // '[postMongoTimes2]',
+            // '[dec17]',
+            // '[postMongoCount3]', 
 
         // old timers thanks to pm analysis
             
