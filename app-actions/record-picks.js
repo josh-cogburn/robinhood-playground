@@ -59,7 +59,7 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
     // helper
     const getEnableCountForPM = pm => { 
         // how many times does this strategy show up in this pm?
-        const stratsWithinPM = stratManager.strategies ? stratManager.strategies[pm] : [];
+        const stratsWithinPM = stratManager.predictionModels ? stratManager.predictionModels[pm] : [];
         return stratsWithinPM.filter(strat => strat === stratMin).length;
     };
 

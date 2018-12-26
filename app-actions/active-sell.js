@@ -58,7 +58,7 @@ module.exports = (Robinhood, { ticker, quantity }) => {
 
                 if (res.detail)  {
                     // dont log transaction if failed
-                    console.log('failed purchasing', ticker);
+                    console.log('failed selling', ticker);
                     return reject(res.detail);
                 }
 

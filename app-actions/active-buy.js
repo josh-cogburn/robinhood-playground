@@ -79,7 +79,7 @@ module.exports = async (
             const attempt = async () => {
 
                 attemptCount++;
-                console.log('attempting ', attemptCount, ticker);
+                console.log('active-buy attempting ', attemptCount, ticker);
 
 
                 // if (!quantity) {
