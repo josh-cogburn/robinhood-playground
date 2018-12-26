@@ -8,7 +8,7 @@ const lookup = require('../utils/lookup');
 const mapLimit = require('promise-map-limit');
 
 const TIME_BETWEEN_CHECK = 5; // seconds
-const TOTAL_ATTEMPTS = 6;
+const TOTAL_ATTEMPTS = 10;
 const PERC_ALLOWED_ABOVE_PICK_PRICE = 7;
 
 const addToDailyTransactions = async data => {
