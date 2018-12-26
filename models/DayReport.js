@@ -20,6 +20,7 @@ const schema = new Schema({
         avgTrend: Number,
         weightedTrend: Number
     },
+    pickToExecutionPerc: Number,
     sp500Trend: Number,
 });
 

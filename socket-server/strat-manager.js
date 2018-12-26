@@ -27,8 +27,11 @@ const stratManager = {
     tickersOfInterest: [],
     relatedPrices: {},
     curDate: null,
+    predictionModels: {},
+    hasInit: false,
 
     async init(io) {
+        if (this.hasInit) return;
         this.Robinhood = global.Robinhood;
         this.io = io;
 
@@ -42,16 +45,17 @@ const stratManager = {
         console.log('init picks')
         await this.initPicksAndPMs();
         console.log('get prices')
-        this.getAndWaitPrices();
+        await this.getAndWaitPrices();
         // console.log('send report init')
         // try {
-        //     await this.sendStrategyReport();
+        //     await this.sendPMReport();
         // } catch (e) {
         //     console.log('error sending report', e);
         // }
         console.log('initd strat manager');
 
         new CronJob(`40 7 * * 1-5`, () => this.newDay(), null, true);
+        this.hasInit = true;
     },
     getWelcomeData() {
         return {
@@ -59,7 +63,7 @@ const stratManager = {
             picks: this.picks,
             relatedPrices: this.relatedPrices,
             pastData: this.pastData,
-            strategies: this.strategies
+            predictionModels: this.predictionModels
         };
     },
     newPick(data) {
@@ -83,13 +87,13 @@ const stratManager = {
     },
     sendToAll(eventName, data) {
         // console.log('sending to all', eventName, data);
-        this.io.emit(eventName, data);
+        this.io && this.io.emit(eventName, data);
     },
     async newDay() {
         console.log('NEW DAY')
         await this.getRelatedPrices();
         try {
-            await this.sendStrategyReport();
+            await this.sendPMReport();
         } catch (e) {
             console.log('error sending report', e);
         }
@@ -123,7 +127,7 @@ const stratManager = {
             console.log( sortedFiles[0],'0' )
             dateStr = sortedFiles[0];
         }
-        
+        dateStr = '12-24-2018';
         const hasPicksData = (await Pick.countDocuments({ date: dateStr })) > 0;
         console.log('hasPicksData', hasPicksData);
         if (hasPicksData) {
@@ -156,10 +160,8 @@ const stratManager = {
         console.log('numPicks', picks.length);
         console.log('numTickersOfInterest', tickersOfInterest.length)
     },
-    async sendStrategyReport() {
-        console.log('sending strategy report');
-        // console.log('STRATS HERE', this.strategies);
-        const strategyReport = Object.entries(this.strategies).map(entry => {
+    calcPmPerfs() {
+        return Object.entries(this.predictionModels).map(entry => {
             const [ stratName, trends ] = entry;
             // const foundStrategies = trends
             //     .filter(stratMin => {
@@ -197,22 +199,23 @@ const stratManager = {
             const overallAvg = avgArray(foundStrategies.filter(val => !!val));
             // console.log(stratName, 'overall', overallAvg);
             return {
-                pm: stratName,
+                pmName: stratName,
                 avgTrend: overallAvg
             };
         })
             .filter(t => !!t.avgTrend)
-            .sort((a, b) => Number(b.avgTrend) - Number(a.avgTrend))
-            .map(({ pm, avgTrend }) => ({
-                pm,
-                avgTrend: avgTrend.toFixed(2) + '%'
-            }));
-        const emailFormatted = strategyReport.map(strat => {
-            return `${strat.avgTrend} ${strat.pm}`;
-        }).join('\n');
+            .sort((a, b) => Number(b.avgTrend) - Number(a.avgTrend));
+    },
+    async sendPMReport() {
+        console.log('sending pm report');
+        // console.log('STRATS HERE', this.predictionModels);
+        const pmPerfs = this.calcPmPerfs();
+        const emailFormatted = pmPerfs
+            .map(pm => `${pm.avgTrend.toFixed(2)}% ${pm.pmName}`)
+            .join('\n');
         await sendEmail(`robinhood-playground: 24hr report for ${this.curDate}`, emailFormatted);
-        await jsonMgr.save(`./json/pm-perfs/${this.curDate}.json`, strategyReport);
-        console.log('send and updated strategy report')
+        await jsonMgr.save(`./json/pm-perfs/${this.curDate}.json`, pmPerfs);
+        console.log('sent and saved pm report');
     },
     async createAndSaveNewPredictionModels(todayPMpath) {
         console.log('creating new prediction models');
@@ -229,7 +232,7 @@ const stratManager = {
             var foundDayPMs = await jsonMgr.get(todayPMpath);
         } catch (e) { }
         // console.log('found pms', foundDayPMs);
-        this.strategies = foundDayPMs ? foundDayPMs : await this.createAndSaveNewPredictionModels(todayPMpath);
+        this.predictionModels = foundDayPMs ? foundDayPMs : await this.createAndSaveNewPredictionModels(todayPMpath);
     },
     async refreshPastData() {
         console.log('refreshing past data');
