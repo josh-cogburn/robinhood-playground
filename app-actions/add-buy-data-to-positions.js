@@ -11,7 +11,7 @@ const daysBetween = (firstDate, secondDate) => {
 };
 
 const addBuyDateToPositions = async nonzero => {
-    console.log('adding buy to positions', nonzero.map(pos => pos.symbol));
+    console.log('adding buy to positions', nonzero.map(pos => pos.ticker));
     // shared var
     const dailyTransactionDates = await getFilesSortedByDate('daily-transactions');
     
@@ -36,14 +36,13 @@ const addBuyDateToPositions = async nonzero => {
     // console.log({associatedBuys})
 
     const withBuys = withReturn.map(pos => {
-        const relatedBuy = associatedBuys.find(obj => obj.ticker === pos.ticker);
-        // console.log({ associatedBuys, relatedBuy, ticker: pos.ticker })
+        const relatedBuys = associatedBuys.filter(obj => obj.ticker === pos.ticker);
+        const [firstBuy] = relatedBuys;
         return {
             ...pos,
-            ...(relatedBuy && {
-                buyStrategy: relatedBuy.strategy,
-                buyPrice: relatedBuy.bid_price,
-                buyDate: relatedBuy.date,
+            ...(firstBuy && {
+                buyStrategy: relatedBuys.length > 1 ? relatedBuys.map(buy => buy.strategy) : firstBuy.strategy,
+                buyDate: firstBuy.date,
             }),
         };
     });

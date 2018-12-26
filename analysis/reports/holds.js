@@ -1,6 +1,7 @@
 // pass in strategies
 // return list of days
 
+const mapLimit = require('promise-map-limit');
 const detailedNonZero = require('../../app-actions/detailed-non-zero');
 const getAssociatedStrategies = require('../../app-actions/get-associated-strategies');
 
@@ -18,21 +19,22 @@ module.exports = async (Robinhood) => {
     const totalValue = positions.reduce((acc, { value }) => acc + value, 0);
     const returnAbs = positions.reduce((acc, { returnDollars }) => acc + returnDollars, 0);
     const returnPerc = returnAbs * 100 / totalValue;
-    let lines = positions
-        .map(pos => 
+
+    // const withBuyPrices = 
+    console.log({ positions });
+        
+    const lines = [
+        `Total return: $${twoDec(returnAbs)} (${twoDec(returnPerc)}%)`,
+        `Total value: $${twoDec(totalValue)}`,
+        '-----------------------------------',
+        ...positions.map(pos => 
             [
                 pos.symbol,
                 `    currentReturn: ${formatReturnDollars(twoDec(pos.returnDollars))} (${pos.returnPerc}%) | total value: $${twoDec(pos.value)}`,
                 `    buyPrice: $${pos.average_buy_price} | currentPrice: $${pos.lastTrade}`,
                 `    buyStrategy: ${pos.buyStrategy} | buyDate: ${pos.buyDate}`
             ].join('\n')
-        );
-        
-    lines = [
-        `Total return: $${twoDec(returnAbs)} (${twoDec(returnPerc)}%)`,
-        `Total value: $${twoDec(totalValue)}`,
-        '-----------------------------------',
-        ...lines
+        )
     ];
 
     const formatted = lines.join('\n');

@@ -26,19 +26,19 @@ const getAssociatedStrategies = async ({
         tickers
             .filter(ticker => !withStrategiesIncludesTicker(ticker))
             .forEach(ticker => {
-                const foundStrategy = transactions.find(transaction =>
+                const foundStrategies = transactions.filter(transaction =>
                     transaction.ticker === ticker
                     && transaction.type === 'buy'
                 );
-                // console.log(ticker, 'found', foundStrategy);
-                if (!foundStrategy)  return;
-                const { strategy, min, bid_price } = foundStrategy;
-                withStrategies.push({
-                    ticker,
-                    strategy: `${strategy}-${min}`,
-                    date: file,
-                    bid_price
-                });
+                for (let foundStrategy of foundStrategies) {
+                    const { strategy, min, bid_price } = foundStrategy;
+                    withStrategies.push({
+                        ticker,
+                        strategy: `${strategy}-${min}`,
+                        date: file,
+                        bid_price
+                    });
+                }
             });
 
         if (tickers.every(withStrategiesIncludesTicker)) {

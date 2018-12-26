@@ -91,11 +91,17 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
 
     const handleUnderNDays = async () => {
         // handle under four days (but not bought today) check for playout strategy
-        let underNDays = nonzero.filter(pos => pos.dayAge >= 1 && pos.dayAge < sellAllStocksOnNthDay);
+        let underNDays = nonzero
+            .filter(pos => pos.dayAge >= 1 && pos.dayAge < sellAllStocksOnNthDay)
+            .map(pos => ({
+                ...pos,
+                firstBuyStrategy: Array.isArray(pos.buyStrategy) ? pos.buyStrategy[0] : pos.buyStrategy
+            }));
+            
         // console.log({ underNDays });
         if (!underNDays.length) return;
         
-        const strategiesToLookup = underNDays.map(pos => pos.buyStrategy).filter(v => !!v);
+        const strategiesToLookup = underNDays.map(pos => pos.firstBuyStrategy).filter(v => !!v);
         const highestPlayouts = strategiesToLookup.length ?
             await determineSingleBestPlayoutFromMultiOutput(
                 Robinhood,
@@ -103,7 +109,7 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
             ) : [];
         console.log({ strategiesToLookup, highestPlayouts })
         underNDays = underNDays.map(pos => {
-            const foundMatch = highestPlayouts.find(obj => obj.strategy === pos.buyStrategy);
+            const foundMatch = highestPlayouts.find(obj => obj.strategy === pos.firstBuyStrategy);
             return {
                 ...pos,
                 ...(foundMatch && { highestPlayout: foundMatch.highestPlayout })
@@ -114,7 +120,7 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
             // const strategy = await findStrategyThatPurchasedTicker(pos.symbol);
             console.log('underndays', underNDays.length);
             // console.log(pos);
-            const breakdowns = await generatePlayouts(pos.buyStrategy, pos.buyDate) || [];
+            const breakdowns = await generatePlayouts(pos.firstBuyStrategy, pos.buyDate) || [];
             breakdowns.push(
                 getTrend(
                     pos.currentPrice,
