@@ -8,7 +8,6 @@ const Pick = require('../models/Pick');
 
 // predictions and past data
 const stratPerfOverall = require('../analysis/strategy-perf-overall');
-const { predictCurrent, stratPerfPredictions } = require('../app-actions/predict-top-performing');
 const createPredictionModels = require('./create-prediction-models');
 
 const getTrend = require('../utils/get-trend');

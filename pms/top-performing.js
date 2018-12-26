@@ -4,6 +4,7 @@ const jsonMgr = require('../utils/json-mgr');
 const { avgArray } = require('../utils/array-math');
 const stratPerfOverall = require('../analysis/strategy-perf-overall');
 const { uniqifyArray } = require('../utils/uniqify-stuff');
+const StratPerf = require('../models/StratPerf');
 
 const uniqifyObj = obj => {
     const removeCheapest = arr => arr
@@ -31,7 +32,7 @@ const predictForDays = async (days, filterFn) => {
     const stratPerfsTrend = {};
     // console.log(allDays);
     for (let file of days) {
-        const obj = await jsonMgr.get(`./json/strat-perfs/${file}`);
+        const obj = await StratPerf.getByDate(file);
         // console.log(strategyName);
         // console.log(file);
         if (!obj['next-day-9']) continue;
@@ -41,9 +42,15 @@ const predictForDays = async (days, filterFn) => {
         });
     }
 
+    console.log(stratPerfsTrend);
+    console.log('stratPerfsTrend')
+
 
     const predictStrategy = (trends) => {
-        console.log('strategy', trends)
+
+        if (trends.length <= 1) return null;
+
+        // console.log('strategy', trends)
         const trainingObjs = (() => {
             const arr = [];
             for (let i = 0; i < trends.length - 1; i++) {
@@ -60,7 +67,7 @@ const predictForDays = async (days, filterFn) => {
         net.train(trainingObjs);
         const prediction = net.run(trends);
         // console.log(strategyName, 'strategy completed');
-        return prediction;
+        return prediction.outputTrend;
         // var net2 = new brain.NeuralNetwork();
         // net2.train([
         //     { input: { r: 0.03, g: 0.7, b: 0.5 }, output: { black: 1 } },
@@ -82,13 +89,14 @@ const predictForDays = async (days, filterFn) => {
         .map((stratName, i, array) => {
             const weighted = stratPerfsTrend[stratName]
                 .filter(trend => trend < 80)
-                .map((trend, i) => Array(i).fill(trend))
+                .map((trend, i) => Array(i + 1).fill(trend))
                 .reduce((a, b) => a.concat(b), [])
+            // console.log({ trends: stratPerfsTrend[stratName], weighted})
             // console.log(i+1, '/', toPredict.length)
             return {
                 name: stratName,
                 myPrediction: avgArray(weighted),
-                // brainPrediction: predictStrategy(stratPerfsTrend[stratName]),
+                brainPrediction: predictStrategy(stratPerfsTrend[stratName]),
                 trend: weighted
             };
         });
@@ -98,33 +106,41 @@ const predictForDays = async (days, filterFn) => {
     return {
         myPredictions: allPredictions
             .slice(0)
-            .sort((a, b) => Number(b.myPrediction) - Number(a.myPrediction)),
+            .sort((a, b) => Number(b.myPrediction) - Number(a.myPrediction))
+            .slice(0, 100),
         brainPredictions: allPredictions
             .slice(0)
             .sort((a, b) => Number(b.brainPrediction) - Number(a.brainPrediction))
+            .slice(0, 100),
     };
 
 };
 
-module.exports = {
-    predictForDays,
-    predictCurrent: async (numDays, filterFn, skipYesterday) => {
-        console.log('predict current', numDays);
-        let allDays = await fs.readdir(`./json/strat-perfs`);
-        if (skipYesterday) allDays.pop();
-        const forDays = numDays ? allDays.slice(0 - numDays) : allDays;
-        const prediction = await predictForDays(forDays, filterFn);
-        return uniqifyObj(prediction);
-    },
-    stratPerfPredictions: async (Robinhood, includeToday, numDays, minCount) => {
-        const stratPerfData = await stratPerfOverall(this.Robinhood, includeToday, numDays, minCount);
-        // console.log('keys', Object.keys(stratPerfData));
-        return uniqifyObj({
-            ...stratPerfData,
-            topPerformers85: stratPerfData.sortedByAvgTrend
-                .filter(strat => strat.percUp > 0.85 && strat.avgTrend > 1.6),
-            topPerformers95: stratPerfData.sortedByAvgTrend
-                .filter(strat => strat.percUp > 0.95 && strat.avgTrend > 1.3)
-        });
-    }
-}
+const predictCurrent = async (numDays, filterFn, skipYesterday) => {
+    console.log('predict current', numDays);
+    let allDays = await StratPerf.getUniqueDates();
+    if (skipYesterday) allDays.pop();
+    const forDays = numDays ? allDays.slice(0 - numDays) : allDays;
+    const prediction = await predictForDays(forDays, filterFn);
+    return uniqifyObj(prediction);
+};
+
+const stratPerfPredictions = async (Robinhood, includeToday, numDays, minCount) => {
+    const stratPerfData = await stratPerfOverall(Robinhood, includeToday, numDays, minCount);
+    // console.log('keys', Object.keys(stratPerfData));
+    return uniqifyObj({
+        ...stratPerfData,
+        topPerformers85: stratPerfData.sortedByAvgTrend
+            .filter(strat => strat.percUp > 0.85 && strat.avgTrend > 1.6),
+        topPerformers95: stratPerfData.sortedByAvgTrend
+            .filter(strat => strat.percUp > 0.95 && strat.avgTrend > 1.3)
+    });
+};
+
+
+module.exports = async (Robinhood) => {
+    return {
+        ...await predictCurrent(8),
+        ...await stratPerfPredictions(Robinhood, true, 10, 1)
+    };
+};

@@ -2,6 +2,8 @@ const manualPMs = require('../pms/manual');
 const spms = require('../pms/spm');
 const getMyRecs = require('../pms/my-recs');
 const getTipTop = require('../pms/tip-top');
+const topPerforming = require('../pms/top-performing');
+
 const settings = require('../settings');
 const flatten = require('../utils/flatten-array');
 const stratPerfOverall = require('../analysis/strategy-perf-overall');
@@ -29,28 +31,28 @@ module.exports = async (Robinhood) => {
     const myRecs = await getMyRecs(Robinhood);
     const fiftytwo = await spms(Robinhood);
     const eightDay = await spms(Robinhood, 8);
+    const tp = await topPerforming(Robinhood);
+
+    const prependKeys = (obj, prefix) => Object.keys(obj).reduce((acc, val) => ({
+        ...acc,
+        [`${prefix}${val}`]: obj[val]
+    }), {});
 
     let strategies = {
 
         ...manualPMs,
 
         // myRecs
-        ...Object.keys(myRecs).reduce((acc, val) => ({
-            ...acc,
-            [`myRecs-${val}`]: myRecs[val]
-        }), {}),
+        ...prependKeys(myRecs, 'myRecs-'),
 
         //8daySPMs
-        ...Object.keys(eightDay).reduce((acc, val) => ({
-            ...acc,
-            [`spm-8day-${val}`]: eightDay[val]
-        }), {}),
+        ...prependKeys(eightDay, 'spm-8day-'),
         
         //fiftytwodaySPMs
-        ...Object.keys(fiftytwo).reduce((acc, val) => ({
-            ...acc,
-            [`spm-52day-${val}`]: fiftytwo[val]
-        }), {}),
+        ...prependKeys(fiftytwo, 'spm-52day-'),
+
+        //top-performers
+        ...prependKeys(tp, 'top-performers-'),
 
         ...await getTipTop(Robinhood)
     };
