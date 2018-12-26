@@ -1,5 +1,5 @@
 const manualPMs = require('../pms/manual');
-const fiftytwodaySPMs = require('../pms/spm');
+const spms = require('../pms/spm');
 const getMyRecs = require('../pms/my-recs');
 const getTipTop = require('../pms/tip-top');
 const settings = require('../settings');
@@ -26,16 +26,24 @@ module.exports = async (Robinhood) => {
         return { fiveDay: stratPerfObj };
     })();
 
-    const myRecs = await getMyRecs(Robinhood);
-    const fiftytwo = await fiftytwodaySPMs(Robinhood);
+    // const myRecs = await getMyRecs(Robinhood);
+    const fiftytwo = await spms(Robinhood);
+    const eightDay = await spms(Robinhood, 8);
+
     let strategies = {
 
         ...manualPMs,
 
         // myRecs
-        ...Object.keys(myRecs).reduce((acc, val) => ({
+        // ...Object.keys(myRecs).reduce((acc, val) => ({
+        //     ...acc,
+        //     [`myRecs-${val}`]: myRecs[val]
+        // }), {}),
+
+        //8daySPMs
+        ...Object.keys(eightDay).reduce((acc, val) => ({
             ...acc,
-            [`myRecs-${val}`]: myRecs[val]
+            [`spm-8day-${val}`]: eightDay[val]
         }), {}),
         
         //fiftytwodaySPMs
