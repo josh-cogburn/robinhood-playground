@@ -27,7 +27,7 @@ module.exports = async (Robinhood) => {
         const split = firstBuyStrategy.split('-');
         const min = split.pop();
         const strategyName = split.join('-');
-        if (!min) return position;
+        if (!isNaN(min)) return position;
         const searchData = {
             date: buyDate,
             strategyName,
