@@ -37,7 +37,7 @@ const stratManager = {
         // init picks?
         console.log('init refresh')
         try {
-            // await this.refreshPastData();
+            await this.refreshPastData();
         } catch (e) {
             console.log('error refreshing past', e);
         }
@@ -47,7 +47,7 @@ const stratManager = {
         await this.getAndWaitPrices();
         // console.log('send report init')
         // try {
-        //     await this.sendPMReport();
+            // await this.sendPMReport();
         // } catch (e) {
         //     console.log('error sending report', e);
         // }
