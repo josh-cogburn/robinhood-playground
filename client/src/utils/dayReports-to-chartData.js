@@ -1,10 +1,11 @@
-const colors = ['green', 'orange', 'yellow', 'pink', 'blue' ];
+const colors = ['green', 'orange', 'yellow', 'pink', 'indigo', 'blue'];
 
 const fields = {
-    'S&P500': d => d.sp500Trend,
+    'SPY trend': d => d.spyTrend,
     'unrealized return': d => d.holdReturn.percentage,
     'realized return': d => d.sellReturn.percentage,
-    'forPurchase PM': d => d.forPurchase.avgTrend,
+    'forPurchase PM avg trend %': d => d.forPurchasePM.avgTrend,
+    'forPurchase PM weighted trend %': d => d.forPurchasePM.weightedTrend,
     'account balance': d => d.accountBalance
 };
 
@@ -42,5 +43,5 @@ const process = fieldsToInclude => dayReports => {
 export default {
     balanceChart: process(['account balance']),
     unrealizedVsRealized: process(['unrealized return', 'realized return']),
-    sp500VsForPurchase: process(['forPurchase PM', 'S&P500'])
+    spyVsForPurchase: process(['forPurchase PM avg trend %', 'forPurchase PM weighted trend %', 'SPY trend'])
 };

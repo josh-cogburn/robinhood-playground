@@ -16,12 +16,12 @@ const schema = new Schema({
         absolute: Number,
         percentage: Number
     },
-    forPurchase: {
+    forPurchasePM: {
         avgTrend: Number,
-        weightedTrend: Number
+        weightedTrend: Number,
     },
     pickToExecutionPerc: Number,
-    sp500Trend: Number,
+    spyTrend: Number,
 });
 
 schema.statics.getUniqueDates = async function() {

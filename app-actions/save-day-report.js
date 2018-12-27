@@ -31,23 +31,25 @@ module.exports = async (Robinhood, min = 515) => {
     );
 
     console.log('saved pm perfs...');
-    const forPurchaseAvgTrend = (pmReport.find(({ pmName }) => pmName === 'forPurchase') || {}).avgTrend || null;
-    console.log({ forPurchaseAvgTrend });
+    const forPurchasePerfs = (pmReport.find(({ pmName }) => pmName === 'forPurchase') || {}) || null;
+    console.log({ forPurchasePerfs });
 
     // get account balance
     const [ account ] = (await Robinhood.accounts()).results;
     const portfolio = await Robinhood.url(account.portfolio);
-    // console.log({ portfolio });
-    const { extended_hours_equity, adjusted_equity_previous_close } = portfolio;
-    const absoluteChange = twoDec(extended_hours_equity - adjusted_equity_previous_close);
-    const percChange = getTrend(extended_hours_equity, adjusted_equity_previous_close);
-    console.log(`Account balance: ${extended_hours_equity}`);
+    console.log({ portfolio });
+    const { equity, adjusted_equity_previous_close } = portfolio;
+    const absoluteChange = twoDec(equity - adjusted_equity_previous_close);
+    const percChange = getTrend(equity, adjusted_equity_previous_close);
+    console.log(`Account balance at close: ${equity}`);
     console.log(`Since previous close: $${absoluteChange} (${percChange}%)`);
 
-    // get sp500 trend
-    const { afterHoursPrice, prevClose } = await lookup(Robinhood, 'SPY');
-    const sp500Trend = getTrend(afterHoursPrice, prevClose);
-    console.log(`S&P500 trend: ${sp500Trend}%`);
+    // get SPY trend
+    const l = await lookup(Robinhood, 'SPY');
+    console.log({ l })
+    const { lastTrade, prevClose } = l;
+    const spyTrend = getTrend(lastTrade, prevClose);
+    console.log(`SPY trend: ${spyTrend}%`);
 
     // analyze sells and holds
     const sellReport = await sells(Robinhood, 1);
@@ -55,7 +57,7 @@ module.exports = async (Robinhood, min = 515) => {
 
     // prep data for mongo
     const mongoData = {
-        accountBalance: twoDec(extended_hours_equity),
+        accountBalance: twoDec(equity),
         actualBalanceTrend: {
             absolute: absoluteChange,
             percentage: percChange
@@ -69,10 +71,8 @@ module.exports = async (Robinhood, min = 515) => {
             percentage: twoDec(sellReport.returnPerc)
         },
         pickToExecutionPerc: twoDec(holdReport.pickToExecutionPerc),
-        sp500Trend,
-        forPurchase: {
-            avgTrend: twoDec(forPurchaseAvgTrend)
-        }
+        spyTrend,
+        forPurchasePM: forPurchasePerfs
     };
     
     await sendEmail(

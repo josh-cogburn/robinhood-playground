@@ -29,7 +29,7 @@ const stratManager = {
     predictionModels: {},
     hasInit: false,
 
-    async init({ io, dateOverride }) {
+    async init({ io, dateOverride } = {}) {
         if (this.hasInit) return;
         this.Robinhood = global.Robinhood;
         this.io = io;
@@ -37,7 +37,7 @@ const stratManager = {
         // init picks?
         console.log('init refresh')
         try {
-            await this.refreshPastData();
+            // await this.refreshPastData();
         } catch (e) {
             console.log('error refreshing past', e);
         }
@@ -162,28 +162,30 @@ const stratManager = {
         console.log('numTickersOfInterest', tickersOfInterest.length)
     },
     calcPmPerfs() {
+
         return Object.entries(this.predictionModels).map(entry => {
             const [ stratName, trends ] = entry;
-            // const foundStrategies = trends
-            //     .filter(stratMin => {
-            //         return stratMin.withPrices;
-            //     });
-            // console.log('found count', foundStrategies.length);
+            // const trends = this.predictionModels[stratName];
+            console.log(entry);
             let foundStrategies = trends
                 .map(stratMin => {
                     const foundStrategy = this.picks.find(pick => pick.stratMin === stratMin);
                     if (!foundStrategy) return null;
                     const { withPrices } = foundStrategy;
-                    if (typeof withPrices[0] === 'string') return;
+                    if (typeof withPrices[0] === 'string') {
+                        console.log(`typeof withPrices[0] === 'string'`, {withPrices});
+                        return;
+                    }
                     const withTrend = withPrices.map(stratObj => {
                         const relPrices = this.relatedPrices[stratObj.ticker];
                         if (!relPrices) {
                             console.log('OH NO DAWG', stratObj.ticker, stratObj);
                             return {};
                         }
-                        // console.log('relPrices', relPrices);
+                        // console.log('relPrices', relPrices, { stratObj });
                         const { lastTradePrice, afterHoursPrice } = relPrices;
-                        const nowPrice = afterHoursPrice || lastTradePrice;
+                        const nowPrice = lastTradePrice;    // afterHoursPrice ||
+                        // console.log('nowPrice', nowPrice)
                         return {
                             ticker: stratObj.ticker,
                             thenPrice: stratObj.price,
@@ -191,21 +193,33 @@ const stratManager = {
                             trend: getTrend(nowPrice, stratObj.price)
                         };
                     });
-                    const avgTrend = avgArray(
-                        withTrend.map(obj => obj.trend)
-                    );
-                    // console.log('avg', avgTrend);
-                    return avgTrend;
+                    return {
+                        avgTrend: avgArray(withTrend.map(obj => obj.trend)),
+                        stratMin
+                    };
                 });
-            const overallAvg = avgArray(foundStrategies.filter(val => !!val));
-            // console.log(stratName, 'overall', overallAvg);
+            
+            foundStrategies = foundStrategies.filter(Boolean);
+            const stratOrder = foundStrategies.map(t => t.stratMin);
+            const withoutDuplicates = [];
+            foundStrategies.forEach((stratObj, i) => {
+                const { stratMin } = stratObj;
+                // console.log({stratOrder, stratMin });
+                if (stratOrder.findIndex(s => s === stratMin) === i) {
+                    withoutDuplicates.push(stratObj)
+                }
+            });
+            
+            console.log({ stratOrder, withoutDuplicates });
             return {
                 pmName: stratName,
-                avgTrend: overallAvg
+                weightedTrend: avgArray(foundStrategies.map(obj => obj.avgTrend)),
+                avgTrend: avgArray(withoutDuplicates.map(obj => obj.avgTrend))
             };
         })
             .filter(t => !!t.avgTrend)
             .sort((a, b) => Number(b.avgTrend) - Number(a.avgTrend));
+
     },
     async sendPMReport() {
         console.log('sending pm report');

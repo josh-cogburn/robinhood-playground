@@ -4,8 +4,12 @@ module.exports = async Robinhood => {
     await stratManager.init();
     // setTimeout(() => {
         console.log(
+            JSON.stringify(
+                stratManager.calcPmPerfs(),
+                null,
+                2
+            ),
             'report',
-            stratManager.calcPmPerfs()
         );
     // }, 60000);
 };

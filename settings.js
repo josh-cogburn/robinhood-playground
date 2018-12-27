@@ -2,7 +2,7 @@
 module.exports = {
     // important settings
     sellAllStocksOnNthDay: 2,
-    purchaseAmt: 24,
+    purchaseAmt: 40,
     forPurchase: [
         // modern picks // deleting because bad pm review :(
             // '[postMongoBigHitters]',
@@ -65,11 +65,12 @@ module.exports = {
             '[spm-52day-limit5creme-slice16',
 
         // tiptop
-            '[tiptop-minCount4]',
-            '[tiptop-minCount4]',
+            // '[tiptop-minCount4]',
+            // '[tiptop-minCount4]',
     ],
-    forPurchaseVariation: '75Perc5Day-yesincludingblanks',
+    // forPurchaseVariation: '75Perc5Day-yesincludingblanks',
     fallbackSellStrategy: 'limit3',
+    uniqifyForPurchase: true,
     force: {
         sell: [
             // 'FIHD'

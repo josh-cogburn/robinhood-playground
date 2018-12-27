@@ -10,12 +10,12 @@ class DayReports extends Component {
         if (!dayReports) return <b>LOADING</b>;
         return (
             <div>
-                <h2>account balance daily trend %</h2>
+                <h2>account balance in absolute $</h2>
                 <Line data={processDayReports.balanceChart(dayReports)} />
                 <h2>unrealized vs realized return %</h2>
                 <Line data={processDayReports.unrealizedVsRealized(dayReports)} />
                 <h2>forPurchase PM vs S&amp;P500  %</h2>
-                <Line data={processDayReports.sp500VsForPurchase(dayReports)} />
+                <Line data={processDayReports.spyVsForPurchase(dayReports)} />
                 <h2>dayReports</h2>
                 <pre>{JSON.stringify(dayReports, null, 2)}</pre>
             </div>

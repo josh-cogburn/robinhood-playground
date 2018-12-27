@@ -6,7 +6,8 @@ const schema = new Schema({
     min: Number,
     perfs: [{
         pmName: String,
-        avgTrend: Number
+        avgTrend: Number,
+        weightedTrend: Number
     }]
 });
 

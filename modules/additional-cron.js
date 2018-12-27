@@ -107,7 +107,7 @@ const additionalCron = [
     {
         name: 'doubleDown',
         run: [200, 378],
-        fn: (Robinhood, min) => doubleDown(Robinhood, min, min == 200 ? 5 : undefined)
+        fn: (Robinhood, min) => doubleDown(Robinhood, min, min == 200 ? 4 : 8)
     },
 
     // {
@@ -117,7 +117,7 @@ const additionalCron = [
     // },
     {
         name: 'send day report',
-        run: [515],
+        run: [400],
         fn: saveDayReport
     },
 
