@@ -28,11 +28,13 @@ module.exports = async (Robinhood) => {
         const min = split.pop();
         const strategyName = split.join('-');
         if (!min) return position;
-        let foundPick = await Pick.findOne({
+        const searchData = {
             date: buyDate,
             strategyName,
             min,
-        });
+        };
+        console.log(searchData)
+        let foundPick = await Pick.findOne(searchData);
         if (!foundPick) return position;
         foundPick = foundPick.toObject();
         const pickPrice = foundPick && foundPick.picks ? foundPick.picks.find(pick => pick.ticker === position.symbol).price : null;
