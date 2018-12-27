@@ -115,16 +115,16 @@ module.exports = async (Robinhood) => {
     }
 
     // uniqfy for purchase .... because avg was doing better than weighted?
-    const { uniqifyForPurchase } = settings;
-    if (uniqifyForPurchase) {
-        const uniqFP = [...new Set(forPurchasePMs.forPurchase)];
-        forPurchasePMs = {
-            ...forPurchasePMs,
-            ['forPurchase-notUniq']: forPurchasePMs.forPurchase,
-            ['forPurchase-uniq']: uniqFP,
-            forPurchase: uniqFP
-        };
-    }
+    // const { uniqifyForPurchase } = settings;
+    // if (uniqifyForPurchase) {
+    //     const uniqFP = [...new Set(forPurchasePMs.forPurchase)];
+    //     forPurchasePMs = {
+    //         ...forPurchasePMs,
+    //         ['forPurchase-notUniq']: forPurchasePMs.forPurchase,
+    //         ['forPurchase-uniq']: uniqFP,
+    //         forPurchase: uniqFP
+    //     };
+    // }
 
     return {
         ...strategies,

@@ -12,6 +12,7 @@ const sendEmail = require('../utils/send-email');
 const tweeter = require('./tweeter');
 const calcEmailsFromStrategy = require('../utils/calc-emails-from-strategy');
 const stocktwits = require('../utils/stocktwits');
+const { disableMultipliers } = require('../settings');
 
 const saveToFile = async (Robinhood, strategy, min, withPrices) => {
 
@@ -80,7 +81,7 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
         await purchaseStocks(Robinhood, {
             stocksToBuy,
             strategy,
-            multiplier: forPurchaseMultiplier,
+            multiplier: !disableMultipliers ? forPurchaseMultiplier : 1,
             min,
             withPrices
         });

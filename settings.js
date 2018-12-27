@@ -81,7 +81,7 @@ module.exports = {
     ],
     // forPurchaseVariation: '75Perc5Day-yesincludingblanks',
     fallbackSellStrategy: 'limit3',
-    uniqifyForPurchase: true,
+    disableMultipliers: true,
     force: {
         sell: [
             // 'FIHD'
