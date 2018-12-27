@@ -2,76 +2,11 @@ import React, { Component } from 'react';
 import getTrend from '../utils/get-trend';
 import avgArray from '../utils/avg-array';
 
-const trendPerc = (num, redAt = 0) => (
-    <span className={ num > redAt ? 'positive' : 'negative'}>
-        {num.toFixed(2)}%
-    </span>
-);
-
-class Pick extends Component {
-  state = {
-      showingDetails: false
-  };
-  toggleDetails = () => {
-      console.log('toggle!');
-      this.setState({ showingDetails: !this.state.showingDetails })
-  };
-  render() {
-      const { showingDetails } = this.state;
-      const { pick, fiveDay } = this.props;
-      let percUpFontSize = fiveDay ? fiveDay.percUp * 100.4 : 100;
-      if (fiveDay && fiveDay.avgTrend > 1) percUpFontSize *= 1.9;
-      return (
-          <div className="pick" style={{ fontSize: Math.max(percUpFontSize, 39) + '%'}}>
-              <button onClick={this.toggleDetails}>
-                  {showingDetails ? '-' : '+'}
-              </button>
-              <b>{trendPerc(pick.avgTrend)}</b>
-              <strong>{' ' + pick.stratMin}</strong>
-              <hr/>
-              {fiveDay && (
-                <i>
-                  5 day - avgTrend {trendPerc(fiveDay.avgTrend)}%
-                  - percUp {trendPerc(fiveDay.percUp * 100, 50)}
-                  - count {fiveDay.count}
-                </i>
-              )}
-              {
-                showingDetails && (
-                    <table>
-                        <thead>
-                            <th>ticker</th>
-                            <th>thenPrice</th>
-                            <th>nowPrice</th>
-                            <th>trend</th>
-                        </thead>
-                        <tbody>
-                            {
-                                pick.withTrend.filter(val => !!val).map(tickerObj => (
-                                    <tr>
-                                        <td>{tickerObj.ticker}</td>
-                                        <td>{tickerObj.thenPrice}</td>
-                                        <td>{tickerObj.nowPrice}</td>
-                                        <td>{tickerObj.trend}%</td>
-                                    </tr>
-                                ))
-                            }
-                        </tbody>
-                    </table>
-                )
-              }
-
-          </div>
-      );
-  }
-}
+import Pick from '../components/Pick';
+import TrendPerc from '../components/TrendPerc';
 
 class TodaysStrategies extends Component {
   state = { picks: [], relatedPrices: {}, pmFilter: 'forPurchase', pastData: {}, predictionModels: {}, afterHoursEnabled: false };
-  componentDidMount() {
-        const { socket } = this.props;
-        
-  }
   setpmFilter = (event) => {
       this.setState({
           pmFilter: event.target.value
@@ -110,7 +45,7 @@ class TodaysStrategies extends Component {
                   trend: getTrend(nowPrice, price)
               };
           });
-          console.log(pick, 'caled trends', calcedTrends);
+        //   console.log(pick, 'caled trends', calcedTrends);
           return {
               ...pick,
               avgTrend: avgArray(calcedTrends.filter(val => !!val).map(t => t.trend)),
@@ -149,7 +84,7 @@ class TodaysStrategies extends Component {
                 <input type="checkbox" checked={afterHoursEnabled} onChange={this.toggleAfterHours} />
             </header>
             <p>
-                <h2>overall average trend: {trendPerc(avgTrendOverall)}</h2>
+                    <h2>overall average trend: <TrendPerc value={avgTrendOverall} /></h2>
             </p>
             <p className="App-intro">
                 {

@@ -9,11 +9,9 @@ import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 
 import TodaysStrategies from './pages/TodaysStrategies';
+import DayReports from './pages/DayReports';
 import socketIOClient from "socket.io-client";
 
-const DayReports = () => (
-    <b>Day Reports</b>
-);
 
 function TabContainer(props) {
     return (
@@ -49,6 +47,10 @@ class App extends Component {
         socket.on('server:related-prices', data => {
             this.setState({ relatedPrices: data });
         });
+        socket.emit('getDayReports', data => {
+            console.log({ data});
+            this.setState(data);
+        });
         this.setState({ socket });
     }
 
@@ -57,7 +59,7 @@ class App extends Component {
     };
 
     render () {
-        const { value, socket } = this.state;
+        const { value, dayReports } = this.state;
         return (
             <div className="App">
                 <AppBar position="static">
@@ -74,7 +76,7 @@ class App extends Component {
                 </AppBar>
 
                 {/* <TabContainer> */}
-                    {value === 0 && <DayReports {...{ socket }} />}
+                    {value === 0 && <DayReports {...{ dayReports }} />}
                     {value === 1 && <TodaysStrategies {...this.state}  />}
                     {/* {value === 2 && <TabContainer>Item Three</TabContainer>} */}
                 {/* </TabContainer> */}

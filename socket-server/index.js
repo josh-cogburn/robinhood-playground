@@ -6,7 +6,7 @@ const SocketIO = require('socket.io');
 const compression = require('compression');
 const stratManager = require('./strat-manager');
 const path = require('path');
-
+const DayReport = require('../models/DayReport');
 
 const mapLimit = require('promise-map-limit');
 const { lookupTickers } = require('../app-actions/record-strat-perfs');
@@ -57,6 +57,11 @@ io.on('connection', (socket) => {
         }
 
         return cb(obj);
+    });
+
+    socket.on('getDayReports', async cb => {
+        console.log('getting day reports');
+        cb({ dayReports: await DayReport.find() });
     });
 
     socket.on('disconnect', () => {
