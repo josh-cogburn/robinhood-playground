@@ -66,7 +66,7 @@ class App extends Component {
                     <Toolbar>
                         <Typography variant="title" color="inherit">
                             robinhood-playground<br/>
-                            <a href="https://github.com/chiefsmurph/robinhood-playground" target='_blank'>
+                            <a href="https://github.com/chiefsmurph/robinhood-playground" target='_blank' style={{ color: 'darkorange', fontSize: '80%'}}>
                                 https://github.com/chiefsmurph/robinhood-playground
                             </a>
                         </Typography>
