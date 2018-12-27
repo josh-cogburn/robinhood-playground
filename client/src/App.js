@@ -1,189 +1,88 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import PropTypes from 'prop-types';
 import './App.css';
+
+import AppBar from '@material-ui/core/AppBar'
+import Toolbar from '@material-ui/core/Toolbar'
+import Typography from '@material-ui/core/Typography'
+import Tabs from '@material-ui/core/Tabs'
+import Tab from '@material-ui/core/Tab'
+
+import TodaysStrategies from './pages/TodaysStrategies';
 import socketIOClient from "socket.io-client";
 
-import getTrend from './utils/get-trend';
-import avgArray from './utils/avg-array';
-
-const trendPerc = (num, redAt = 0) => (
-    <span className={ num > redAt ? 'positive' : 'negative'}>
-        {num.toFixed(2)}%
-    </span>
+const DayReports = () => (
+    <b>Day Reports</b>
 );
 
-class Pick extends Component {
-  state = {
-      showingDetails: false
-  };
-  toggleDetails = () => {
-      console.log('toggle!');
-      this.setState({ showingDetails: !this.state.showingDetails })
-  };
-  render() {
-      const { showingDetails } = this.state;
-      const { pick, fiveDay } = this.props;
-      let percUpFontSize = fiveDay ? fiveDay.percUp * 100.4 : 100;
-      if (fiveDay && fiveDay.avgTrend > 1) percUpFontSize *= 1.9;
-      return (
-          <div className="pick" style={{ fontSize: Math.max(percUpFontSize, 39) + '%'}}>
-              <button onClick={this.toggleDetails}>
-                  {showingDetails ? '-' : '+'}
-              </button>
-              <b>{trendPerc(pick.avgTrend)}</b>
-              <strong>{' ' + pick.stratMin}</strong>
-              <hr/>
-              {fiveDay && (
-                <i>
-                  5 day - avgTrend {trendPerc(fiveDay.avgTrend)}%
-                  - percUp {trendPerc(fiveDay.percUp * 100, 50)}
-                  - count {fiveDay.count}
-                </i>
-              )}
-              {
-                showingDetails && (
-                    <table>
-                        <thead>
-                            <th>ticker</th>
-                            <th>thenPrice</th>
-                            <th>nowPrice</th>
-                            <th>trend</th>
-                        </thead>
-                        <tbody>
-                            {
-                                pick.withTrend.filter(val => !!val).map(tickerObj => (
-                                    <tr>
-                                        <td>{tickerObj.ticker}</td>
-                                        <td>{tickerObj.thenPrice}</td>
-                                        <td>{tickerObj.nowPrice}</td>
-                                        <td>{tickerObj.trend}%</td>
-                                    </tr>
-                                ))
-                            }
-                        </tbody>
-                    </table>
-                )
-              }
-
-          </div>
-      );
-  }
+function TabContainer(props) {
+    return (
+        <Typography component="div" style={{ padding: 8 * 3 }}>
+        {props.children}
+        </Typography>
+    );
 }
+  
+TabContainer.propTypes = {
+    children: PropTypes.node.isRequired
+};
 
 class App extends Component {
-  state = { picks: [], relatedPrices: {}, strategyFilter: 'forPurchase', pastData: {}, predictionModels: {}, afterHoursEnabled: false };
-  componentDidMount() {
-      let { origin: endPoint } = window.location;
-      const socket = socketIOClient('http://192.227.186.138:3000');
-      socket.on('server:picks-data', data => {
-          console.log(data);
-          this.setState({
-              picks: [data].concat(this.state.picks)
-          });
-      });
-      socket.on('server:welcome', data => {
-          this.setState(data);
-      });
-      socket.on('server:related-prices', data => {
-          this.setState({ relatedPrices: data });
-      });
-  }
-  setStrategyFilter = (event) => {
-      this.setState({
-          strategyFilter: event.target.value
-      });
-  }
-  strategyMove = increment => {
-      const curStrategy = this.state.strategyFilter;
-      const listOfStrategies = [...Object.keys(this.state.predictionModels), 'no filter'];
-      const index = listOfStrategies.findIndex(strat => strat === curStrategy);
-      let nextIndex = (index + increment) % listOfStrategies.length;
-      console.info(nextIndex);
-      nextIndex = nextIndex === -1 ? listOfStrategies.length - 1 : nextIndex;
-      this.setState({
-          strategyFilter: listOfStrategies[nextIndex]
-      });
-  }
-  toggleAfterHours = () => this.setState({ afterHoursEnabled: !this.state.afterHoursEnabled })
-  render() {
-      let { picks, relatedPrices, predictionModels, strategyFilter, pastData, curDate, afterHoursEnabled } = this.state;
-      const { fiveDay } = pastData;
-      if (!predictionModels.forPurchase) return <h1 style={{ textAlign: 'center' }}>loading</h1>;
-      let showingPicks = strategyFilter !== 'no filter' ? picks.filter(pick => predictionModels[strategyFilter].includes(pick.stratMin)) : picks;
-      showingPicks = showingPicks.map(pick => {
-          const calcedTrends = pick.withPrices.map(({ ticker, price }) => {
-              const foundPrice = relatedPrices[ticker];
-              if (!foundPrice) {
-                  return console.log(pick, 'not found', ticker, price);
-              }
-              const { lastTradePrice, afterHoursPrice } = foundPrice;
-              const nowPrice = afterHoursEnabled ? afterHoursPrice || lastTradePrice : lastTradePrice;
-              return {
-                  ticker,
-                  thenPrice: price,
-                  nowPrice,
-                  trend: getTrend(nowPrice, price)
-              };
-          });
-          console.log(pick, 'caled trends', calcedTrends);
-          return {
-              ...pick,
-              avgTrend: avgArray(calcedTrends.filter(val => !!val).map(t => t.trend)),
-              withTrend: calcedTrends
-          };
-      });
-      let sortedByAvgTrend = showingPicks
-          .sort(({ avgTrend: a }, { avgTrend: b}) => {
-              return (isNaN(a)) - (isNaN(b)) || -(a>b)||+(a<b);
-          });
-      console.log('rendering!');
-      const avgTrendOverall = avgArray(
-            sortedByAvgTrend
-                .filter(val => !isNaN(val.avgTrend))
-                .map(strat => strat.avgTrend)
-      );
-      return (
-          <div className="App">
-              <header className="App-header">
-                  <h1 className="App-title">robinhood-playground: {curDate}</h1>
-                  strategy filter:
-                  <button
-                    onClick={() => this.strategyMove(-1)}>
-                    {'<<'}
-                  </button>
-                  <select value={strategyFilter} onChange={this.setStrategyFilter}>
-                      {predictionModels && Object.keys(predictionModels).map(pm => (
-                          <option value={pm}>{pm}</option>
-                      ))}
-                      <option>no filter</option>
-                  </select>
-                  <button
-                    onClick={() => this.strategyMove(1)}>
-                    {'>>'}
-                  </button>
-                  <br/>
-                  include after hours:
-                  <input type="checkbox" checked={afterHoursEnabled} onChange={this.toggleAfterHours} />
-              </header>
-              <p>
-                  <h2>overall average trend: {trendPerc(avgTrendOverall)}</h2>
-              </p>
-              <p className="App-intro">
-                  {
-                      sortedByAvgTrend.slice(0).map(pick => (
-                          <div>
-                              <Pick
-                                  pick={pick}
-                                  key={pick.stratMin}
-                                  fiveDay={fiveDay ? fiveDay[pick.stratMin] : null}
-                              />
-                          </div>
-                      ))
-                  }
-              </p>
-          </div>
-      );
-  }
+    state = {
+        value: 0,
+        socket: null
+    };
+
+    componentDidMount() {
+        let { origin } = window.location;
+        const socketEndpoint = origin.includes('localhost') ? 'http://localhost:3000' : 'http://192.227.186.138:3000';
+        const socket = socketIOClient(socketEndpoint);
+        socket.on('server:picks-data', data => {
+            console.log(data);
+            this.setState({
+                picks: [data].concat(this.state.picks)
+            });
+        });
+        socket.on('server:welcome', data => {
+            this.setState(data);
+        });
+        socket.on('server:related-prices', data => {
+            this.setState({ relatedPrices: data });
+        });
+        this.setState({ socket });
+    }
+
+    handleChange = (event, value) => {
+        this.setState({ value });
+    };
+
+    render () {
+        const { value, socket } = this.state;
+        return (
+            <div className="App">
+                <AppBar position="static">
+                    <Toolbar>
+                        <Typography variant="title" color="inherit">
+                        robinhood-playground
+                        </Typography>
+                    </Toolbar>
+                    <Tabs value={value} onChange={this.handleChange}>
+                        <Tab label="Day Reports" />
+                        <Tab label="Today's Strategies" />
+                        <Tab label="Live View" />
+                    </Tabs>
+                </AppBar>
+
+                {/* <TabContainer> */}
+                    {value === 0 && <DayReports {...{ socket }} />}
+                    {value === 1 && <TodaysStrategies {...this.state}  />}
+                    {/* {value === 2 && <TabContainer>Item Three</TabContainer>} */}
+                {/* </TabContainer> */}
+                
+            </div>
+        );
+    }
+    
 }
 
 export default App;
