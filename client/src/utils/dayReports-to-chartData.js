@@ -1,3 +1,5 @@
+import getTrend from './get-trend';
+
 const colors = ['green', 'orange', 'yellow', 'pink', 'indigo', 'blue'];
 
 const fields = {
@@ -6,7 +8,7 @@ const fields = {
     'realized return': d => d.sellReturn.percentage,
     'forPurchase PM avg trend %': d => d.forPurchasePM.avgTrend,
     'forPurchase PM weighted trend %': d => d.forPurchasePM.weightedTrend,
-    'account balance': d => d.accountBalance
+    'account balance': (d, i, array) =>  i === 0 ? 100 : getTrend(d.accountBalance, array[0].accountBalance) + 100
 };
 
 const getColor = field => colors[Object.keys(fields).findIndex(f => f === field)];
