@@ -27,6 +27,7 @@ module.exports = async (Robinhood) => {
         const split = firstBuyStrategy.split('-');
         const min = split.pop();
         const strategyName = split.join('-');
+        if (!min) return position;
         let foundPick = await Pick.findOne({
             date: buyDate,
             strategyName,
