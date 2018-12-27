@@ -46,6 +46,9 @@ module.exports = {
             '[myRecs-day10count5-hundredUpAvgGt4]',                 /// ??????
             '[myRecs-day5count4-uniq-hundredUpPicks]',
             '[myRecs-day3count2to4-slice16-uniq-hundredUpAvgGt4]',
+            '[myRecs-day3count2-slice16-uniq-hundredWithHundredCheck]',
+            '[myRecs-day3count2-uniq-hundredWithHundredCheck]',
+            '[myRecs-day20-hundredResultCreme]',
 
         // spm's
             '[spm-52day-all-slice16-uniq]',
@@ -63,7 +66,8 @@ module.exports = {
             '[spm-52day-customCount8to11MagicScore-slice16-uniq]',
             '[spm-52day-middleCountsJohnsRecipe-slice16-uniq]',
             '[spm-52day-limit5creme-slice16',
-            '[pm-52day-bestAlwaysLastAvgTrend-slice16-uniq]',
+            '[spm-52day-bestAlwaysLastAvgTrend-slice16-uniq]',
+            '[spm-52day-anyCountPerfectos]',
 
         // top performers
             '[top-performers-myPredictions-uniq]',

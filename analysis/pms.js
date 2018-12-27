@@ -3,7 +3,8 @@ const jsonMgr = require('../utils/json-mgr');
 const { avgArray } = require('../utils/array-math');
 const stratManager = require('../socket-server/strat-manager');
 
-module.exports = async (Robinhood, daysBack = 5, minCount = 2, includeToday = true, ...searchString) => {
+module.exports = async (Robinhood, daysBack, minCount = 2, includeToday = true, ...searchString) => {
+    daysBack = daysBack ? Number(daysBack) : 5;
 
     let files = await fs.readdir('./json/pm-perfs');
 
@@ -46,7 +47,7 @@ module.exports = async (Robinhood, daysBack = 5, minCount = 2, includeToday = tr
     Object.keys(pmCache).forEach(key => {
         const trends = pmCache[key].filter(t => Math.abs(t) < 50);
         const weighted = trends
-            .map((trend, i) => Array((i + 1) * (i + 1)).fill(trend))
+            .map((trend, i) => Array(Math.round((Math.pow(i + 1, 2) * Math.max(0 - trend, 1)))).fill(trend))
             .reduce((a, b) => a.concat(b), []);
         pmAnalysis[key] = {
             avgTrend: avgArray(trends),
