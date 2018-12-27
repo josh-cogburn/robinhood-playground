@@ -64,6 +64,12 @@ module.exports = {
             '[spm-52day-customCount8to11MagicScore-slice16-uniq]',
             '[spm-52day-limit5creme-slice16',
 
+        // top performers
+            '[top-performers-myPredictions-uniq]',
+            '[top-performers-brainPredictions-uniq]',
+            '[top-performers-topPerformers95-uniq]',
+            '[top-performers-sortedByAvgTrend-uniq]',
+
         // tiptop
             // '[tiptop-minCount4]',
             // '[tiptop-minCount4]',
@@ -80,7 +86,7 @@ module.exports = {
             // 'BOXL',
             // 'SEII',
             // 'AWX'
-            'ESES'
+            // 'ESES'
         ]
     }
 };

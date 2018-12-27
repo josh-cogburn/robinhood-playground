@@ -107,11 +107,11 @@ const predictForDays = async (days, filterFn) => {
         myPredictions: allPredictions
             .slice(0)
             .sort((a, b) => Number(b.myPrediction) - Number(a.myPrediction))
-            .slice(0, 100),
+            .slice(0, 60),
         brainPredictions: allPredictions
             .slice(0)
             .sort((a, b) => Number(b.brainPrediction) - Number(a.brainPrediction))
-            .slice(0, 100),
+            .slice(0, 60),
     };
 
 };
@@ -129,11 +129,16 @@ const stratPerfPredictions = async (Robinhood, includeToday, numDays, minCount) 
     const stratPerfData = await stratPerfOverall(Robinhood, includeToday, numDays, minCount);
     // console.log('keys', Object.keys(stratPerfData));
     return uniqifyObj({
-        ...stratPerfData,
+        ...Object.keys(stratPerfData).reduce((acc, key) => ({   // slice first 60 or else the same for each key
+            [key]: stratPerfData[key].slice(0, 60),
+            ...acc,
+        }), {}),
         topPerformers85: stratPerfData.sortedByAvgTrend
-            .filter(strat => strat.percUp > 0.85 && strat.avgTrend > 1.6),
+            .filter(strat => strat.percUp > 0.85 && strat.avgTrend > 1.6)
+            .slice(0, 60),
         topPerformers95: stratPerfData.sortedByAvgTrend
             .filter(strat => strat.percUp > 0.95 && strat.avgTrend > 1.3)
+            .slice(0, 60)
     });
 };
 
