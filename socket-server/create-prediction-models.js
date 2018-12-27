@@ -120,7 +120,7 @@ module.exports = async (Robinhood) => {
         const uniqFP = [...new Set(forPurchasePMs.forPurchase)];
         forPurchasePMs = {
             ...forPurchasePMs,
-            ['forPurchase-notUniq']: uniqFP,
+            ['forPurchase-notUniq']: forPurchasePMs.forPurchase,
             ['forPurchase-uniq']: uniqFP,
             forPurchase: uniqFP
         };
