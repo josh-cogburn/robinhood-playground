@@ -2,7 +2,7 @@
 module.exports = {
     // important settings
     sellAllStocksOnNthDay: 2,
-    purchaseAmt: 40,
+    purchaseAmt: 35,
     forPurchase: [
         // modern picks // deleting because bad pm review :(
             // '[postMongoBigHitters]',
@@ -48,8 +48,7 @@ module.exports = {
             '[myRecs-day3count2to4-slice16-uniq-hundredUpAvgGt4]',
 
         // spm's
-            '[spm-52day-lowThirdMinCount5MagicScore-slice16-uniq]',
-            '[spm-52day-lowThirdMinCount5MagicScore-slice16-uniq]',
+            '[spm-52day-all-slice16-uniq]',
             '[spm-52day-bestAvgTrendAnyPlayout-slice16-uniq]',
             '[spm-52day-bestAvgTrendAnyPlayout-slice16-uniq]',
             '[spm-52day-bestAvgTrendAnyPlayout-slice16-uniq]',
@@ -62,7 +61,9 @@ module.exports = {
             '[spm-52day-highestLimitPlayoutsJohnsSecretRecipe-slice16-uniq]',
             '[spm-52day-highestLimitPlayoutsJohnsSecretRecipeWithCount-slice16-uniq]',
             '[spm-52day-customCount8to11MagicScore-slice16-uniq]',
+            '[spm-52day-middleCountsJohnsRecipe-slice16-uniq]',
             '[spm-52day-limit5creme-slice16',
+            '[pm-52day-bestAlwaysLastAvgTrend-slice16-uniq]',
 
         // top performers
             '[top-performers-myPredictions-uniq]',

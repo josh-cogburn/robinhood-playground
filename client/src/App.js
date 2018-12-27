@@ -65,7 +65,10 @@ class App extends Component {
                 <AppBar position="static">
                     <Toolbar>
                         <Typography variant="title" color="inherit">
-                        robinhood-playground
+                            robinhood-playground<br/>
+                            <a href="https://github.com/chiefsmurph/robinhood-playground" target='_blank'>
+                                https://github.com/chiefsmurph/robinhood-playground
+                            </a>
                         </Typography>
                     </Toolbar>
                     <Tabs value={value} onChange={this.handleChange}>

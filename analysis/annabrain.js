@@ -77,7 +77,6 @@ module.exports = async Robinhood => {
                     .filter(trend => trend < 80)
                     .map((trend, i) => Array(i).fill(trend))
                     .reduce((a, b) => a.concat(b), [])
-                console.log()
                 return {
                     stratName,
                     prediction: avgArray(

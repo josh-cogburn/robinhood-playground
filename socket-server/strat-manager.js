@@ -210,7 +210,7 @@ const stratManager = {
                 }
             });
             
-            console.log({ stratOrder, withoutDuplicates });
+            // console.log({ stratOrder, withoutDuplicates });
             return {
                 pmName: stratName,
                 weightedTrend: avgArray(foundStrategies.map(obj => obj.avgTrend)),
