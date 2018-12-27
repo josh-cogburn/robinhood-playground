@@ -1,4 +1,4 @@
-const colors = ['green', 'blue', 'yellow', 'pink', 'orange'];
+const colors = ['green', 'orange', 'yellow', 'pink', 'blue' ];
 
 const fields = {
     'S&P500': d => d.sp500Trend,
@@ -8,13 +8,15 @@ const fields = {
     'account balance': d => d.accountBalance
 };
 
+const getColor = field => colors[Object.keys(fields).findIndex(f => f === field)];
+
 const process = fieldsToInclude => dayReports => {
-    const datasets = fieldsToInclude.map((key, i) => ({
+    const datasets = fieldsToInclude.map(key => ({
         label: key,
         fill: false,
         lineTension: 0.1,
         backgroundColor: 'rgba(75,192,192,0.4)',
-        borderColor: colors[i],
+        borderColor: getColor(key),
         borderCapStyle: 'butt',
         borderDash: [],
         borderDashOffset: 0.0,
@@ -39,5 +41,6 @@ const process = fieldsToInclude => dayReports => {
 
 export default {
     balanceChart: process(['account balance']),
-    percChart: process(Object.keys(fields).filter(key => key !== 'account balance'))
+    unrealizedVsRealized: process(['unrealized return', 'realized return']),
+    sp500VsForPurchase: process(['forPurchase PM', 'S&P500'])
 };

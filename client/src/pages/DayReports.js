@@ -12,8 +12,10 @@ class DayReports extends Component {
             <div>
                 <h2>account balance daily trend %</h2>
                 <Line data={processDayReports.balanceChart(dayReports)} />
-                <h2>daily percentage changes</h2>
-                <Line data={processDayReports.percChart(dayReports)} />
+                <h2>unrealized vs realized return %</h2>
+                <Line data={processDayReports.unrealizedVsRealized(dayReports)} />
+                <h2>forPurchase PM vs S&amp;P500  %</h2>
+                <Line data={processDayReports.sp500VsForPurchase(dayReports)} />
                 <h2>dayReports</h2>
                 <pre>{JSON.stringify(dayReports, null, 2)}</pre>
             </div>
