@@ -106,8 +106,8 @@ const additionalCron = [
 
     {
         name: 'doubleDown',
-        run: [200, 378],
-        fn: (Robinhood, min) => doubleDown(Robinhood, min, min == 200 ? 4 : 8)
+        run: [100, 200, 378],
+        fn: (Robinhood, min) => doubleDown(Robinhood, min, min == 378 ? 7 : 3.5)
     },
 
     // {
