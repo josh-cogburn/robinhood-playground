@@ -7,9 +7,9 @@ const jsonMgr = require('../utils/json-mgr');
 const lookup = require('../utils/lookup');
 const mapLimit = require('promise-map-limit');
 
-const TIME_BETWEEN_CHECK = 5; // seconds
+const TIME_BETWEEN_CHECK = 10; // seconds
 const TOTAL_ATTEMPTS = 10;
-const PERC_ALLOWED_ABOVE_PICK_PRICE = 7;
+const PERC_ALLOWED_ABOVE_PICK_PRICE = 3;
 
 const addToDailyTransactions = async data => {
     const fileName = `./json/daily-transactions/${(new Date()).toLocaleDateString().split('/').join('-')}.json`;
@@ -89,9 +89,9 @@ module.exports = async (
                 let lastBidPrice;
                 let quantity;
                 const limitBid = async bidPrice => {
-                    lastBidPrice = bidPrice;
-                    const quantity = calcQuantity(maxPrice, bidPrice);
                     const finalBidPrice = pickPrice ? Math.min(pickPrice * (PERC_ALLOWED_ABOVE_PICK_PRICE / 100 + 1), bidPrice) : bidPrice;
+                    lastBidPrice = finalBidPrice;
+                    const quantity = calcQuantity(maxPrice, finalBidPrice);
                     console.log({ bidPrice, finalBidPrice });
                     const data = {
                         ticker,
@@ -171,11 +171,11 @@ module.exports = async (
                     // console.log(relOrder);
                     if (relOrder) {
                         console.log('canceling last attempt', ticker);
-                        await Robinhood.cancel_order(relOrder);
                         if (attemptCount < TOTAL_ATTEMPTS) {
+                            await Robinhood.cancel_order(relOrder);
                             return attempt();
                         } else {
-                            const errMessage = 'reached max attempts, unable to BUY';
+                            const errMessage = 'reached max attempts, unable to BUY though leaving placed order';
                             console.log(errMessage, ticker);
                             return limitLastTrade();
                             // return reject(errMessage);

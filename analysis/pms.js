@@ -4,7 +4,7 @@ const { avgArray } = require('../utils/array-math');
 const stratManager = require('../socket-server/strat-manager');
 
 module.exports = async (Robinhood, daysBack, minCount = 2, includeToday = true, ...searchString) => {
-    daysBack = daysBack ? Number(daysBack) : 5;
+    daysBack = typeof daysBack !== undefined ? Number(daysBack) : 5;
 
     let files = await fs.readdir('./json/pm-perfs');
 
@@ -15,7 +15,7 @@ module.exports = async (Robinhood, daysBack, minCount = 2, includeToday = true, 
     
     const filesOfInterest = daysBack ? sortedFiles.slice(0 - daysBack) : [];
 
-    console.log({ daysBack, filesOfInterest});
+    console.log({ daysBack, includeToday, filesOfInterest});
 
 
     const pmCache = {};
@@ -28,6 +28,8 @@ module.exports = async (Robinhood, daysBack, minCount = 2, includeToday = true, 
     for (let file of filesOfInterest) {
         const json = await jsonMgr.get(`./json/pm-perfs/${file}.json`);
         json.forEach(({ pm, avgTrend }) => {
+            if (!pm || !avgTrend) return;
+            console.log({ pm, avgTrend });
             addTrend(pm, avgTrend.slice(0, -1));
         });
     }
@@ -47,7 +49,7 @@ module.exports = async (Robinhood, daysBack, minCount = 2, includeToday = true, 
     Object.keys(pmCache).forEach(key => {
         const trends = pmCache[key].filter(t => Math.abs(t) < 50);
         const weighted = trends
-            .map((trend, i) => Array(Math.round((Math.pow(i + 1, 2) * Math.max(0 - trend, 1)))).fill(trend))
+            .map((trend, i) => Array(i+1).fill(trend))
             .reduce((a, b) => a.concat(b), []);
         pmAnalysis[key] = {
             avgTrend: avgArray(trends),
@@ -79,7 +81,15 @@ module.exports = async (Robinhood, daysBack, minCount = 2, includeToday = true, 
         .filter(t => t.trends.length >= minCount)// && t.trends.every(a => a > -1));
         // .sort((a, b) => b.avgTrend - a.avgTrend)
         // .sort((a, b) => b.percUp - a.percUp)
-        .sort((a, b) => b.weightedTrend - a.weightedTrend)
+        .sort((a, b) => {
+            if (!a.weightedTrend) {
+                return 1;
+            } else if (!b.weightedTrend) {
+                return -1;
+            }
+            return a.weightedTrend < b.weightedTrend ? 1 : -1;
+            // return b.weightedTrend - a.weightedTrend 
+        })
         // .filter(t => !t.pm.includes('myRecs'))
         // .filter(t => t.trends.every(v => v > -5))
         // .filter(t => t.hundredResult > 110)

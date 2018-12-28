@@ -7,7 +7,7 @@ module.exports = async (Robinhood, numDaysBack = 5, includeToday = true) => {
 
     const analyzePms = async pms => {
         const output = await pmsAnalysis(Robinhood, Number(numDaysBack), 0);
-        // console.log({ output });
+        console.log({ output, numDaysBack });
         return pms
             .map(pm => ({
                 pmName: pm,
@@ -16,7 +16,7 @@ module.exports = async (Robinhood, numDaysBack = 5, includeToday = true) => {
             .sort((a, b) => b.avgTrend - a.avgTrend);
     };
 
-    console.log(settings );
+    console.log( settings );
     const { forPurchase } = settings;
 
     let pms = [];
