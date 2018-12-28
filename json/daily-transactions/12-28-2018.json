@@ -1,0 +1,242 @@
+[
+  {
+    "type": "buy",
+    "ticker": "EYES",
+    "bid_price": 0.8533333333333333,
+    "strategy": "low-float-high-volume-absVolPoints-trenddown3to10-notWatchout",
+    "min": 25
+  },
+  {
+    "type": "sell",
+    "ticker": "BTN",
+    "bid_price": 1.3101,
+    "quantity": 26
+  },
+  {
+    "type": "sell",
+    "ticker": "JOB",
+    "bid_price": 0.7,
+    "quantity": 21
+  },
+  {
+    "type": "sell",
+    "ticker": "ERX",
+    "bid_price": 15.31,
+    "quantity": 5
+  },
+  {
+    "type": "sell",
+    "ticker": "GUSH",
+    "bid_price": 7.9861049500000005,
+    "quantity": 4
+  },
+  {
+    "type": "sell",
+    "ticker": "LIVE",
+    "bid_price": 7.82,
+    "quantity": 4
+  },
+  {
+    "type": "sell",
+    "ticker": "KZMYY",
+    "bid_price": 3.32,
+    "quantity": 20
+  },
+  {
+    "type": "sell",
+    "ticker": "AEYE",
+    "bid_price": 8.362437500000002,
+    "quantity": 4
+  },
+  {
+    "type": "sell",
+    "ticker": "CYTK",
+    "bid_price": 6.265,
+    "quantity": 2
+  },
+  {
+    "type": "sell",
+    "ticker": "OMED",
+    "bid_price": 0.7039,
+    "quantity": 26
+  },
+  {
+    "type": "sell",
+    "ticker": "WISA",
+    "bid_price": 3.5,
+    "quantity": 1
+  },
+  {
+    "type": "sell",
+    "ticker": "MRIN",
+    "bid_price": 6.16,
+    "quantity": 1
+  },
+  {
+    "type": "sell",
+    "ticker": "SIF",
+    "bid_price": 3.05,
+    "quantity": 11
+  },
+  {
+    "type": "sell",
+    "ticker": "UWT",
+    "bid_price": 8.49285145,
+    "quantity": 1
+  },
+  {
+    "type": "sell",
+    "ticker": "ARCW",
+    "bid_price": 0.95,
+    "quantity": 16
+  },
+  {
+    "type": "sell",
+    "ticker": "COE",
+    "bid_price": 6.588796000000002,
+    "quantity": 5
+  },
+  {
+    "type": "sell",
+    "ticker": "AVCO",
+    "bid_price": 2.1,
+    "quantity": 3
+  },
+  {
+    "type": "sell",
+    "ticker": "SSKN",
+    "bid_price": 2.65,
+    "quantity": 6
+  },
+  {
+    "type": "sell",
+    "ticker": "ESES",
+    "bid_price": 0.062,
+    "quantity": 2288
+  },
+  {
+    "type": "sell",
+    "ticker": "HIL",
+    "bid_price": 2.7647,
+    "quantity": 80
+  },
+  {
+    "type": "buy",
+    "ticker": "MAXR",
+    "bid_price": 11.008888888888889,
+    "strategy": "constant-risers-5minute-percUpHighClosePoints-filtered40-tenTo15",
+    "min": 80
+  },
+  {
+    "type": "sell",
+    "ticker": "EQ",
+    "bid_price": 7.49,
+    "quantity": 1
+  },
+  {
+    "type": "sell",
+    "ticker": "DXR",
+    "bid_price": 9.2,
+    "quantity": 5
+  },
+  {
+    "type": "sell",
+    "ticker": "UCO",
+    "bid_price": 12.5441,
+    "quantity": 3
+  },
+  {
+    "type": "sell",
+    "ticker": "ENG",
+    "bid_price": 0.6306,
+    "quantity": 75
+  },
+  {
+    "type": "sell",
+    "ticker": "WATT",
+    "bid_price": 6.2949,
+    "quantity": 6
+  },
+  {
+    "type": "sell",
+    "ticker": "MLNT",
+    "bid_price": 0.86466745,
+    "quantity": 37
+  },
+  {
+    "type": "sell",
+    "ticker": "ADIL",
+    "bid_price": 5.3673150000000005,
+    "quantity": 26
+  },
+  {
+    "type": "buy",
+    "ticker": "PRAN",
+    "bid_price": 1.277777777777778,
+    "strategy": "low-float-high-volume-volTo2WeekPoints-trend5to10-shouldWatchout",
+    "min": 95
+  },
+  {
+    "type": "buy",
+    "ticker": "APHA",
+    "bid_price": 6.07,
+    "strategy": "low-float-high-volume-volToAvgPoints-trenddown3to5-fiveTo10",
+    "min": 95
+  },
+  {
+    "type": "buy",
+    "ticker": "IZEA",
+    "bid_price": 0.8888666666666667,
+    "strategy": "dynamo-3000-top50tso-absvolume",
+    "min": 100
+  },
+  {
+    "type": "buy",
+    "ticker": "VTVT",
+    "bid_price": 3.0699,
+    "strategy": "dynamo-3000-top50tso-absvolume",
+    "min": 100
+  },
+  {
+    "type": "buy",
+    "ticker": "MITK",
+    "bid_price": 10.578888888888889,
+    "strategy": "dynamo-3000-bottom50tso-trendingUp3010-tenTo15",
+    "min": 100
+  },
+  {
+    "type": "buy",
+    "ticker": "VTVT",
+    "bid_price": 3.049,
+    "strategy": "constant-risers-5minute-percUpHighClosePoints",
+    "min": 140
+  },
+  {
+    "type": "buy",
+    "ticker": "PLL",
+    "bid_price": 7.247777777777777,
+    "strategy": "constant-risers-10minute-percUpCloseOnly-lowovernightjumps-fiveTo10",
+    "min": 140
+  },
+  {
+    "type": "buy",
+    "ticker": "CPIX",
+    "bid_price": 6.47,
+    "strategy": "constant-risers-5minute-percUpHighClosePoints-lowovernightjumps-fiveTo10",
+    "min": 140
+  },
+  {
+    "type": "buy",
+    "ticker": "VTVT",
+    "bid_price": 2.83,
+    "strategy": "low-float-high-volume-absVolPoints-trendgt40-shouldWatchout",
+    "min": 150
+  },
+  {
+    "type": "buy",
+    "ticker": "AWSM",
+    "bid_price": 2.5433333333333334,
+    "strategy": "low-float-high-volume-floatTimesvolToAvgPoints-trendgt50-shouldWatchout",
+    "min": 150
+  }
+]
