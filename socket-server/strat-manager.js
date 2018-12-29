@@ -1,4 +1,4 @@
-const { lookupTickers } = require('../app-actions/record-strat-perfs');
+
 const jsonMgr = require('../utils/json-mgr');
 const { CronJob } = require('cron');
 const fs = require('mz/fs');
@@ -18,21 +18,26 @@ const formatDate = date => date.toLocaleDateString().split('/').join('-');
 const getToday = () => formatDate(new Date());
 
 const flatten = require('../utils/flatten-array');
+const TickerWatcher = require('./ticker-watcher');
 
 const stratManager = {
     Robinhood: null,
     io: null,
     picks: [],
     tickersOfInterest: [],
-    relatedPrices: {},
+    // relatedPrices: {},
     curDate: null,
     predictionModels: {},
     hasInit: false,
+    tickerWatcher: null,    // TickerWatcher instance
 
     async init({ io, dateOverride } = {}) {
         if (this.hasInit) return;
         this.Robinhood = global.Robinhood;
         this.io = io;
+        this.tickerWatcher = new TickerWatcher(this.Robinhood, relatedPrices => {
+            this.sendToAll('server:related-prices', relatedPrices);
+        });
 
         // init picks?
         console.log('init refresh')
@@ -43,8 +48,8 @@ const stratManager = {
         }
         console.log('init picks')
         await this.initPicksAndPMs(dateOverride);
-        console.log('get prices')
-        await this.getAndWaitPrices();
+        console.log('get prices');
+        await this.tickerWatcher.start();
         // console.log('send report init')
         // try {
             // await this.sendPMReport();
@@ -60,20 +65,13 @@ const stratManager = {
         return {
             curDate: this.curDate,
             picks: this.picks,
-            relatedPrices: this.relatedPrices,
+            relatedPrices: this.tickerWatcher.relatedPrices,
             pastData: this.pastData,
             predictionModels: this.predictionModels
         };
     },
     newPick(data) {
-
-        const { withPrices } = data;
-        withPrices.forEach(({ ticker, price }) => {
-            if (!this.tickersOfInterest.includes(ticker)) {
-                this.tickersOfInterest.push(ticker);
-            }
-        });
-
+        this.tickerWatcher.addTickers(data.withPrices.map(o => o.ticker));
         // console.log('new pick', data);
         if (this.curDate !== getToday()) {
             return;
@@ -90,7 +88,7 @@ const stratManager = {
     },
     async newDay() {
         console.log('NEW DAY')
-        await this.getRelatedPrices();
+        await this.tickerWatcher.lookupRelatedPrices();
         try {
             await this.sendPMReport();
         } catch (e) {
@@ -98,7 +96,7 @@ const stratManager = {
         }
         await this.refreshPastData();
         this.picks = [];
-        this.tickersOfInterest = [];
+        this.tickerWatcher.clearTickers();
         await this.initPicksAndPMs();
         await this.getRelatedPrices();
         this.sendToAll('server:welcome', this.getWelcomeData());
@@ -147,22 +145,31 @@ const stratManager = {
             stratMin: `${pick.strategyName}-${pick.min}`,
             withPrices: pick.picks
         }));
+
+        console.log('numPicks', picks.length);
+
         console.log('mostRecentDay', dateStr);
         this.curDate = dateStr;
 
-        let tickersOfInterest = flatten(picks.map(pick => {
-            return pick.withPrices.map(tickerObj => tickerObj.ticker);
-        }));
-        tickersOfInterest = [...new Set(tickersOfInterest)];     // uniquify duplicate tickers
+        const tickersOfInterest = flatten(
+            picks.map(pick =>
+                pick.withPrices.map(tickerObj => tickerObj.ticker)
+            )
+        );
 
-        this.tickersOfInterest = tickersOfInterest;
+        const uniqTickers = [...new Set(tickersOfInterest)];
+
+        console.log('numUniqTickersOfInterest', uniqTickers.length)
+
+        this.tickerWatcher.clearTickers();
+        this.tickerWatcher.addTickers(uniqTickers);
+        
         this.picks = picks;
 
-        console.log('numPicks', picks.length);
-        console.log('numTickersOfInterest', tickersOfInterest.length)
+        
     },
     calcPmPerfs() {
-
+        const {relatedPrices} = this.tickerWatcher;
         return Object.entries(this.predictionModels).map(entry => {
             const [ stratName, trends ] = entry;
             // const trends = this.predictionModels[stratName];
@@ -177,7 +184,7 @@ const stratManager = {
                         return;
                     }
                     const withTrend = withPrices.map(stratObj => {
-                        const relPrices = this.relatedPrices[stratObj.ticker];
+                        const relPrices = relatedPrices[stratObj.ticker];
                         if (!relPrices) {
                             console.log('OH NO DAWG', stratObj.ticker, stratObj);
                             return {};
@@ -271,28 +278,6 @@ const stratManager = {
         this.pastData = {
             fiveDay: stratPerfObj
         };
-    },
-    async getAndWaitPrices() {
-        await this.getRelatedPrices();
-        setTimeout(() => this.getAndWaitPrices(), 40000);
-    },
-    async getRelatedPrices() {
-        // console.log(this.picks);
-        console.log('getRelatedPrices');
-        const tickersToLookup = this.tickersOfInterest;
-        console.log('getting related prices', tickersToLookup.length);
-        // console.log(JSON.stringify(tickersToLookup));
-        const relatedPrices = await lookupTickers(
-            this.Robinhood,
-            tickersToLookup,
-            true
-        );
-
-        // console.log(relatedPrices)
-        this.relatedPrices = relatedPrices;
-        this.sendToAll('server:related-prices', relatedPrices);
-        console.log('done getting related prices');
-        // console.log(JSON.stringify(relatedPrices, null, 2));
     }
 };
 
