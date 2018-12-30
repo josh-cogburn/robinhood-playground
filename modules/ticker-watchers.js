@@ -47,11 +47,10 @@ module.exports = {
             fn: () => tickerWatcher.clearPriceCache()
         });
 
-
-        setTimeout(async () => {
-            console.log('recording based-on-jump-fourToEightOvernight-trending35257-gt500kvolume-first2-5');
-            await recordPicks(Robinhood, 'based-on-jump-fourToEightOvernight-trending35257-gt500kvolume-first2', 5, ['BPMX']);
-        }, 10000);
+        // setTimeout(async () => {
+        //     console.log('recording based-on-jump-fourToEightOvernight-trending35257-gt500kvolume-first2-5');
+        //     await recordPicks(Robinhood, 'based-on-jump-fourToEightOvernight-trending35257-gt500kvolume-first2', 5, ['BPMX']);
+        // }, 10000);
 
         const handler = async relatedPrices => {
             // console.log({ relatedPrices, two });
