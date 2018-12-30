@@ -35,8 +35,12 @@ const stratManager = {
         if (this.hasInit) return;
         this.Robinhood = global.Robinhood;
         this.io = io;
-        this.tickerWatcher = new TickerWatcher(this.Robinhood, relatedPrices => {
-            this.sendToAll('server:related-prices', relatedPrices);
+        this.tickerWatcher = new TickerWatcher({
+            name: 'stratManager', 
+            Robinhood: this.Robinhood, 
+            handler: relatedPrices => {
+                this.sendToAll('server:related-prices', relatedPrices);
+            }
         });
 
         // init picks?

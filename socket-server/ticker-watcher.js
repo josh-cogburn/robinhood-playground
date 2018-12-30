@@ -1,7 +1,8 @@
 const { lookupTickers } = require('../app-actions/record-strat-perfs');
 
 class TickerWatcher {
-    constructor(Robinhood, handler, timeout = 40000) {
+    constructor({ name, Robinhood, handler, timeout = 40000 }) {
+        this.name = name;
         this.Robinhood = Robinhood;
         this.handler = handler;
         this.relatedPrices = {};
@@ -35,8 +36,8 @@ class TickerWatcher {
     async lookupRelatedPrices() {
         const { Robinhood, tickersWatching, handler } = this;
         // console.log(this.picks);
-        console.log('getRelatedPrices');
-        console.log('getting related prices', tickersWatching.length);
+        console.log(this.name, 'getRelatedPrices');
+        console.log(this.name, 'getting related prices', tickersWatching.length);
         // console.log(JSON.stringify(tickersToLookup));
         const relatedPrices = await lookupTickers(
             Robinhood,
@@ -45,7 +46,7 @@ class TickerWatcher {
         );
 
         this.relatedPrices = relatedPrices;
-        console.log('done getting related prices');
+        console.log(this.name, 'done getting related prices');
         return handler(relatedPrices);
 
         // console.log(relatedPrices)

@@ -3,6 +3,10 @@ const allStocks = require('../../json/stock-data/allStocks');
 const HistoricalTickerWatcher = require('../../socket-server/historical-ticker-watcher');
 const { lookupTickers } = require('../../app-actions/record-strat-perfs');
 const getTrend = require('../../utils/get-trend');
+const { isTradeable } = require('../../utils/filter-by-tradeable');
+const { avgArray } = require('../../utils/array-math');
+const sendEmail = require('../../utils/send-email');
+const regCronIncAfterSixThirty = require('../../utils/reg-cron-after-630');
 
 let tickerWatcher;
 let bigJumps = [];
@@ -19,39 +23,81 @@ const onEnd = () => {
             ...jump,
             trend: getTrend(jump.finalPrice, jump.jumpPrice)
         }))
-    bigJumps.forEach(console.log);
+        .sort((a, b) => b.trendFromMin - a.trendFromMin);
+    
+    console.log('HERE');
+    console.log(JSON.stringify(bigJumps, null ,2))
+
+
+    const avgTrend = avgArray(bigJumps.map(j => j.trend));
+    console.log({ avgTrend });
+    bigJumps.forEach(jump => console.log(jump));
 };
 
 
 module.exports = {
     name: 'ticker-watchers',
-    run: [0],
-    fn: async (Robinhood, min) => {
-        console.log({ stocks, allStocks });
+    init: async (Robinhood) => {
 
+        regCronIncAfterSixThirty(Robinhood, {
+            name: `clear ticker-watchers price cache`,
+            run: [0],
+            fn: async (Robinhood, min) => {
+                tickerWatcher.clearPriceCache();
+            }
+        });
 
-        const tickPrices = await lookupTickers(Robinhood, allStocks.map(o => o.symbol));
-        const allUnder5 = Object.keys(tickPrices).filter(ticker => tickPrices[ticker] < 5);
+        // console.log({ stocks, allStocks });
+
+        console.log(
+            {
+                all: allStocks.length,
+                filterd: allStocks.filter(isTradeable).length
+            }
+        )
+        const tickPrices = await lookupTickers(Robinhood, allStocks.filter(isTradeable).map(o => o.symbol));
+        const allUnder5 = Object.keys(tickPrices).filter(ticker => tickPrices[ticker] < 5 && tickPrices[ticker] > 1);
         
         console.log({ allUnder5 })
-        
-        tickerWatcher = new HistoricalTickerWatcher(Robinhood, (relatedPrices, two) => {
+
+        const handler = async relatedPrices => {
             // console.log({ relatedPrices, two });
             relatedP = relatedPrices;
+            const newJumps = [];
             Object.keys(relatedPrices).forEach(key => {
                 const allPrices = relatedPrices[key].map(obj => obj.lastTradePrice);
                 const mostRecent = allPrices.pop();
-                const bigJump = allPrices.every(p => mostRecent < p * 0.98);
+                const min = Math.min(...allPrices);
+                const trendFromMin = getTrend(mostRecent, min);
+                const bigJump = trendFromMin < -10;
+                // console.log({ min, trendFromMin })
                 if (bigJump && allPrices.length) {
                     console.log('found big jump', key, mostRecent, allPrices.length);
-                    bigJumps.push({
+                    newJumps.push({
                         ticker: key,
-                        jumpPrice: mostRecent
+                        jumpPrice: mostRecent,
+                        trendFromMin
                     });
                 }
             });
 
-        }, 50, true, onEnd);
+            for (let jump of newJumps) {
+                await sendEmail(`robinhood-playground: NEW JUMP DOWN ${jump.ticker}`, JSON.stringify(jump, null, 2));
+            }
+
+            bigJumps = [ ...bigJumps, ...newJumps];
+
+        };
+        
+        tickerWatcher = new HistoricalTickerWatcher({
+            name: 'ticker-watchers',
+            Robinhood,
+            handler,
+            timeout: 60000 * 5, // 5 min,
+            runAgainstPastData: false,
+            onEnd
+        });
+        
         tickerWatcher.addTickers(allUnder5);
         tickerWatcher.start();
     }

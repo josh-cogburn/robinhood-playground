@@ -10,8 +10,13 @@ const initModule = (Robinhood, module) => {
         name, 
         run,
         trendFilter,
-        fn
+        fn,
+        init
     } = module;
+    if (init) {
+        console.log('initializing ', name);
+        return init(Robinhood);
+    }
     regCronIncAfterSixThirty(Robinhood, {
         name: `execute ${name} strategy`,
         run,

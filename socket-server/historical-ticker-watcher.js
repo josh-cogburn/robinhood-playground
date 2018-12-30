@@ -16,15 +16,15 @@ const getHistoricalData = async (tickers) => {
     }), {});
 
 
-    console.log(JSON.stringify(withHistoricals, null, 2));
+    // console.log(JSON.stringify(withHistoricals, null, 2));
 
     return withHistoricals;
 }
 
 
 class HistoricalTickerWatcher extends TickerWatcher {
-    constructor(Robinhood, handler, timeout, shouldPullHistoricals, onEnd) {
-        super(Robinhood, handler, timeout);
+    constructor({ name, Robinhood, handler, timeout, runAgainstPastData, onEnd }) {
+        super({ name, Robinhood, handler, timeout });
 
         this.iteration = 0;
         this.priceCache = {};
@@ -42,13 +42,17 @@ class HistoricalTickerWatcher extends TickerWatcher {
             });
             return handler(this.priceCache, 5);
         }
-        console.log({ shouldPullHistoricals })
-        this.shouldPullHistoricals = shouldPullHistoricals;
+        console.log({ runAgainstPastData })
+        this.runAgainstPastData = runAgainstPastData;
 
+    }
+    clearPriceCache() {
+        console.log("clearing price cache");
+        this.priceCache = {};
     }
     async addTickers(tickers) {
         console.log('adding ticers', tickers);
-        if (this.shouldPullHistoricals) {
+        if (this.runAgainstPastData) {
             this.historicals = await getHistoricalData(tickers);
         }
         super.addTickers(tickers);
@@ -58,7 +62,7 @@ class HistoricalTickerWatcher extends TickerWatcher {
         this.onEnd();
     }
     async lookupRelatedPrices() {
-        if (!this.shouldPullHistoricals) {
+        if (!this.runAgainstPastData) {
             return super.lookupRelatedPrices();
         }
         const { Robinhood, tickersWatching, handler, iteration, historicals } = this;
