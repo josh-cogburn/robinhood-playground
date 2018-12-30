@@ -29,7 +29,7 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
 
     // console.log('recording', stratMin, 'strategy');
 
-    const dateStr = '12-28-2018' || (new Date()).toLocaleDateString().split('/').join('-');
+    const dateStr = (new Date()).toLocaleDateString().split('/').join('-');
 
     // save to mongo
     console.log(`saving ${strategy} to mongo`);
