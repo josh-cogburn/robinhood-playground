@@ -43,6 +43,7 @@ class TickerWatcher {
             tickersWatching,
             true
         );
+
         this.relatedPrices = relatedPrices;
         console.log('done getting related prices');
         return handler(relatedPrices);
