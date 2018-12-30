@@ -7,6 +7,7 @@ class TickerWatcher {
         this.relatedPrices = {};
         this.running = false;
         this.timeout = timeout;
+        this.tickersWatching = [];
     }
     // tickersRegistered = {}; // { AAPL: ['strategies'] }
     addTickers(tickers) {
