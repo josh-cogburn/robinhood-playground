@@ -1,15 +1,40 @@
 const stocks = require('../../stocks');
+const allStocks = require('../../json/stock-data/allStocks');
 const HistoricalTickerWatcher = require('../../socket-server/historical-ticker-watcher');
+const { lookupTickers } = require('../../app-actions/record-strat-perfs');
+const getTrend = require('../../utils/get-trend');
 
 let tickerWatcher;
-const bigJumps = [];
+let bigJumps = [];
 let relatedP;
+
+const onEnd = () => {
+    console.log();
+    bigJumps = bigJumps
+        .map(jump => ({
+            ...jump,
+            finalPrice: relatedP[jump.ticker].pop().lastTradePrice
+        }))
+        .map(jump => ({
+            ...jump,
+            trend: getTrend(jump.finalPrice, jump.jumpPrice)
+        }))
+    bigJumps.forEach(console.log);
+};
+
 
 module.exports = {
     name: 'ticker-watchers',
     run: [0],
     fn: async (Robinhood, min) => {
-        console.log({ stocks })
+        console.log({ stocks, allStocks });
+
+
+        const tickPrices = await lookupTickers(Robinhood, allStocks.map(o => o.symbol));
+        const allUnder5 = Object.keys(tickPrices).filter(ticker => tickPrices[ticker] < 5);
+        
+        console.log({ allUnder5 })
+        
         tickerWatcher = new HistoricalTickerWatcher(Robinhood, (relatedPrices, two) => {
             // console.log({ relatedPrices, two });
             relatedP = relatedPrices;
@@ -26,16 +51,8 @@ module.exports = {
                 }
             });
 
-        }, 50, true, () => {
-            console.log()
-            bigJumps.forEach(jump => {
-                console.log(
-                    jump,
-                    relatedP[jump.ticker].pop().lastTradePrice
-                )
-            });
-        });
-        tickerWatcher.addTickers(stocks);
+        }, 50, true, onEnd);
+        tickerWatcher.addTickers(allUnder5);
         tickerWatcher.start();
     }
 };
