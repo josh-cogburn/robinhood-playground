@@ -77,9 +77,9 @@ const stratManager = {
     newPick(data) {
         this.tickerWatcher.addTickers(data.withPrices.map(o => o.ticker));
         // console.log('new pick', data);
-        if (this.curDate !== getToday()) {
-            return;
-        }
+        // if (this.curDate !== getToday()) {
+        //     return;
+        // }
         this.picks.push(data);
         this.sendToAll('server:picks-data', data);
     },

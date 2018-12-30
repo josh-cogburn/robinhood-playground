@@ -29,6 +29,7 @@ class TodaysStrategies extends Component {
       let { picks, relatedPrices, predictionModels, pastData, curDate } = this.props;
       const { fiveDay } = pastData;
       if (!predictionModels.forPurchase) return <h1 style={{ textAlign: 'center' }}>loading</h1>;
+
       let showingPicks = pmFilter !== 'no filter' ? picks.filter(pick => predictionModels[pmFilter].includes(pick.stratMin)) : picks;
       showingPicks = showingPicks.map(pick => {
           const calcedTrends = pick.withPrices.map(({ ticker, price }) => {

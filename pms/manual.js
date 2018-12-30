@@ -1186,6 +1186,10 @@ const dec17 = [
     "based-on-jump-down3overnight-shouldWatchout-first1-fiveTo10-5"
 ];
 
+const tickerWatchers = [
+    'ticker-watchers-under5-5000'
+];
+
 module.exports = {
     'wild n crazy': [
         'week-swings-tenTo15-1',  // wild
@@ -1296,5 +1300,7 @@ module.exports = {
     postMongoCount3,
 
 
-    dec17
+    dec17,
+
+    tickerWatchers
 };

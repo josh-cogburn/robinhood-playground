@@ -17,7 +17,7 @@ const purchaseStocks = async (Robinhood, { stocksToBuy, strategy, multiplier, mi
     }
     // console.log('actually purchasing', strategy, 'count', stocksToBuy.length);
     // console.log('ratioToSpend', ratioToSpend);
-    // console.log('totalAmtToSpend', totalAmtToSpend, 'amtperbuy', amountPerBuy);
+    console.log('totalAmtToSpend', totalAmtToSpend, 'amtperbuy', amountPerBuy);
     console.log({ stocksToBuy, totalAmtToSpend });
     await limitBuyMultiple(Robinhood, {
         stocksToBuy,
