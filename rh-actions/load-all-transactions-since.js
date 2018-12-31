@@ -27,8 +27,9 @@ const loadAllRobinhoodTransactions = async (Robinhood, daysBack = 1) => {
     let orders = await Robinhood.orders({
         updated_at: rhDate,
     });
+    console.log({ orders });
     orders = [
-        ...orders.results,
+        ...orders.results || [],
         ...(orders.next ? await recursiveUrl(Robinhood, orders.next) : [])
     ];
     orders = orders
