@@ -4,12 +4,12 @@ const lookup = require('../utils/lookup');
 const alreadyBoughtToday = require('./already-bought-today');
 
 const boughtThisStockToday = async (Robinhood, ticker) => {
-    // const fileName = `./json/daily-transactions/${(new Date()).toLocaleDateString().split('/').join('-')}.json`;
-    // const curTransactions = await jsonMgr.get(fileName) || [];
-    // return curTransactions.some(transaction => {
-    //     return transaction.ticker === ticker && transaction.type === 'buy';
-    // });
-    return alreadyBoughtToday(Robinhood, ticker);
+    const fileName = `./json/daily-transactions/${(new Date()).toLocaleDateString().split('/').join('-')}.json`;
+    const curTransactions = await jsonMgr.get(fileName) || [];
+    return curTransactions.some(transaction => {
+        return transaction.ticker === ticker && transaction.type === 'buy';
+    });
+    // return alreadyBoughtToday(Robinhood, ticker);
 };
 
 module.exports = async (Robinhood, {
