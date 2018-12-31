@@ -2,7 +2,7 @@ const TickerWatcher = require('./ticker-watcher');
 const getMultipleHistoricals = require('../app-actions/get-multiple-historicals');
 
 const getHistoricalData = async (tickers) => {
-    let histQS = `interval=5minute&bounds=extended`;
+    let histQS = `interval=5minute`;
 
     let allHistoricals = await getMultipleHistoricals(
         Robinhood,

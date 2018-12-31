@@ -2,33 +2,42 @@
 module.exports = {
     // important settings
     sellAllStocksOnNthDay: 2,
-    purchaseAmt: 40,
+    purchaseAmt: 60,
     forPurchase: [
 
 
         // creme
 
-        '[unprovenFilter30Drops]',
-        '[sepAdds]',
-        '[unprovenSuddenDropsLast2Filter10]',
-        '[heavydutyhitters]',
+        // '[unprovenFilter30Drops]',
+        // '[sepAdds]',
+        // '[unprovenSuddenDropsLast2Filter10]',
+        // '[heavydutyhitters]',
 
-        '[spm-52day-bestFirstGreenAvgTrend-slice16-uniq]',
-        '[spm-52day-bestAvgTrendAnyPlayout-slice16-uniq]',
-        '[spm-52day-all-slice16-uniq]',
-        '[spm-52day-highestLimitPlayoutsJohnsSecretRecipeWithCount]',
+        // '[spm-52day-bestFirstGreenAvgTrend-slice16-uniq]',
+        // '[spm-52day-bestAvgTrendAnyPlayout-slice16-uniq]',
+        // '[spm-52day-all-slice16-uniq]',
+        // '[spm-52day-highestLimitPlayoutsJohnsSecretRecipeWithCount]',
 
-        '[myRecs-day3count2to4-slice16-uniq-hundredUpAvgGt4]',
-        '[myRecs-day20-hundredResultCreme]',
-        '[myRecs-day15count5-hundredWithHundredCheck]',
-        '[myRecs-day15count5-hundredUpAvgGt4]',
-        '[myRecs-day3count2to4-slice16-uniq-hundredUpAvgGt4]',
+        // '[myRecs-day3count2to4-slice16-uniq-hundredUpAvgGt4]',
+        // '[myRecs-day20-hundredResultCreme]',
+        // '[myRecs-day15count5-hundredWithHundredCheck]',
+        // '[myRecs-day15count5-hundredUpAvgGt4]',
+        // '[myRecs-day3count2to4-slice16-uniq-hundredUpAvgGt4]',
         
-        '[top-performers-topPerformers95-uniq]',
-        '[top-performers-brainPredictions-uniq]',
-        '[top-performers-myPredictions-uniq]',
-        '[top-performers-sortedByHundredResult-uniq]',
-        '[top-performers-sortedByPercUp-uniq]',
+        // '[top-performers-topPerformers95-uniq]',
+        // '[top-performers-brainPredictions-uniq]',
+        // '[top-performers-myPredictions-uniq]',
+        // '[top-performers-sortedByHundredResult-uniq]',
+        // '[top-performers-sortedByPercUp-uniq]',
+
+
+
+        '[tickerWatchers]'
+
+
+
+
+
 
         // modern picks // deleting because bad pm review :(
             // '[postMongoBigHitters]',

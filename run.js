@@ -35,7 +35,7 @@ mongoose.connect(mongoConnectionString, { useNewUrlParser: true });
     const restArgs = process.argv.slice(3)
         .map(arg => arg === 'true' ? true : arg);
 
-    const fnToRun = relatedFile.trendFilter || relatedFile.fn || relatedFile.default || relatedFile;
+    const fnToRun = relatedFile.trendFilter || relatedFile.fn || relatedFile.init || relatedFile.default || relatedFile;
     const response = await fnToRun(...callArgs, ...restArgs);
     console.log('response');
     console.log(JSON.stringify(response, null, 2));

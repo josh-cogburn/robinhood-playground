@@ -18,6 +18,11 @@ class TickerWatcher {
             )
         ];
     }
+    removeTickers(tickers) {
+        console.log('before', this.tickersWatching.length);
+        this.tickersWatching = this.tickersWatching.filter(t => !tickers.includes(t));
+        console.log('after', this.tickersWatching.length);
+    }
     clearTickers() {
         this.tickersWatching = [];
     }
