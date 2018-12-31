@@ -40,7 +40,7 @@ const preOrPostMarketBuy = async ({
         quantity,
         strategy
     };
-    console.log('pre or post market buy', data);
+    console.log('pre or post market buy', data, maxPrice);
     return limitBuyLastTrade(
         Robinhood,
         data
