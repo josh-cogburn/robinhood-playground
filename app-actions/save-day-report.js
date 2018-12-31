@@ -40,11 +40,15 @@ module.exports = async (Robinhood, min = 515) => {
     console.log({ portfolio });
 
     const uniqDates = await DayReport.getUniqueDates();
-    console.log({ uniqDates, todaysDate });
+    const todayIndex = uniqDates.findIndex(t => t === todaysDate) || uniqDates.length;
+    const prevDay = await DayReport.findOne({ date: uniqDates[todayIndex - 1] });
+    const prevBalance = prevDay.accountBalance;
+    console.log({ prevBalance });
     // const prevDay = await DayReport.findOne({ date: uniqDates[] })
     const { equity, adjusted_equity_previous_close } = portfolio;
-    const absoluteChange = twoDec(equity - adjusted_equity_previous_close);
-    const percChange = getTrend(equity, adjusted_equity_previous_close);
+    const useForYesterday = prevBalance || adjusted_equity_previous_close;
+    const absoluteChange = twoDec(equity - useForYesterday);
+    const percChange = getTrend(equity, useForYesterday);
     console.log(`Account balance at close: ${equity}`);
     console.log(`Since previous close: $${absoluteChange} (${percChange}%)`);
 
