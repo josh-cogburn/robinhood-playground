@@ -58,7 +58,7 @@ module.exports = async (
     }
 ) => {
 
-    if (min < 0 || min > 390) {
+    if ((min < 0 || min > 390) && min != 5000) {
         return preOrPostMarketBuy({
             ticker,
             strategy,
