@@ -6015,4 +6015,5 @@ module.exports = [
     "based-on-jump-down8overnight-trending607-gt1milvolume-first3-fiveTo10-16",
     "cheapest-picks-chp50--4",
     'cheapest-picks-chp3--4',
+    'ticker-watchers-under5-5000'
   ];

@@ -102,7 +102,7 @@ const stratManager = {
         this.picks = [];
         this.tickerWatcher.clearTickers();
         await this.initPicksAndPMs();
-        await this.getRelatedPrices();
+        await this.tickerWatcher.lookupRelatedPrices();
         this.sendToAll('server:welcome', this.getWelcomeData());
     },
     async determineCurrentDay() {
