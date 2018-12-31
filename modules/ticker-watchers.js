@@ -95,15 +95,16 @@ module.exports = {
         })();
         console.log({ allUnder15 });
 
-        tickerWatcher.addTickers(allUnder15);
-
         regCronIncAfterSixThirty(Robinhood, {
             name: `clear ticker-watchers price cache`,
             run: [0],
             fn: () => tickerWatcher.clearPriceCache()
         });
 
-        const removeBigOvernightJumps = async () => {
+        const setTickers = async () => {
+            // all under $15 and no big overnight jumps
+            tickerWatcher.clearTickers();
+            tickerWatcher.addTickers(allUnder15);
             const trend = await getTrendSinceOpen(Robinhood, allUnder15);
             const withOvernightJumps = await addOvernightJumpAndTSO(Robinhood, trend);
             const bigOvernightJumps = withOvernightJumps.filter(o => o.overnightJump > 7);
@@ -112,9 +113,9 @@ module.exports = {
         };
 
         regCronIncAfterSixThirty(Robinhood, {
-            name: `remove big overnight jumps from ticker-watchers`,
+            name: `set ticker-watchers tickers (< $15 and no overnight jumps)`,
             run: [2],
-            fn: removeBigOvernightJumps
+            fn: setTickers
         });
 
         regCronIncAfterSixThirty(Robinhood, {
@@ -123,9 +124,7 @@ module.exports = {
             fn: () => tickerWatcher.stop()
         });
 
-        if (tickerWatcher.runAgainstPastData) {
-            await removeBigOvernightJumps();
-        }
+        await setTickers();
         tickerWatcher.start();
 
     }
