@@ -174,6 +174,8 @@ const stratManager = {
     },
     calcPmPerfs() {
         const {relatedPrices} = this.tickerWatcher;
+        console.log({ relatedPrices });
+        
         return Object.entries(this.predictionModels).map(entry => {
             const [ stratName, trends ] = entry;
             // const trends = this.predictionModels[stratName];

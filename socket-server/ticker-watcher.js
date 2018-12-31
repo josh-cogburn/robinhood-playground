@@ -26,16 +26,16 @@ class TickerWatcher {
     clearTickers() {
         this.tickersWatching = [];
     }
-    start() {
+    async start() {
         this.running = true;
-        this.lookupAndWaitPrices();
+        await this.lookupAndWaitPrices();
     }
     stop() {
         this.running = false;
     }
-    lookupAndWaitPrices() {
+    async lookupAndWaitPrices() {
         if (!this.running) return;
-        this.lookupRelatedPrices();
+        await this.lookupRelatedPrices();
         setTimeout(() => this.lookupAndWaitPrices(), this.timeout);
     }
     async lookupRelatedPrices() {
