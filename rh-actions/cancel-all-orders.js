@@ -2,6 +2,7 @@ const cancelAllOrders = async (Robinhood) => {
     console.log('canceling all orders...');
     try {
         const orders = await Robinhood.orders();
+        console.log(JSON.stringify(orders.results, null, 2));
         const pendingOrders = orders.results.filter(order => {
             return !['cancelled', 'filled', 'confirmed'].includes(order.state);
         });

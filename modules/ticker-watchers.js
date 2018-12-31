@@ -61,8 +61,8 @@ module.exports = {
                 const trendFromMin = getTrend(mostRecent, min);
                 const bigJump = trendFromMin < -10;
                 // console.log({ min, trendFromMin })
-                if (bigJump && allPrices.length >= 4) {
-                    console.log('found big jump', key, mostRecent, allPrices.length);
+                if (bigJump && allPrices.length >= 3) {
+                    console.log('found big jump', key, mostRecent, allPrices);
                     newJumps.push({
                         ticker: key,
                         jumpPrice: mostRecent,
