@@ -42,7 +42,7 @@ module.exports = async (Robinhood, min = 515) => {
     const uniqDates = await DayReport.getUniqueDates();
     const todayIndex = uniqDates.findIndex(t => t === todaysDate);
     const prevDate = todayIndex === -1 ? uniqDates.length - 1 : gouniqDates[todayIndex - 1];
-    console.log({ todayIndex, prevDate });
+    console.log({ todayIndex, prevDate, uniqDates });
     const prevDay = await DayReport.findOne({ date: uniqDates[prevDate] });
     console.log({ prevDay })
     const prevBalance = prevDay.accountBalance;
