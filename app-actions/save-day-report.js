@@ -41,9 +41,12 @@ module.exports = async (Robinhood, min = 515) => {
 
     const uniqDates = await DayReport.getUniqueDates();
     const todayIndex = uniqDates.findIndex(t => t === todaysDate) || uniqDates.length;
-    const prevDay = await DayReport.findOne({ date: uniqDates[todayIndex - 1] });
+    const prevDate = uniqDates[todayIndex - 1];
+    console.log({ todayIndex, prevDate });
+    const prevDay = await DayReport.findOne({ date: prevDate });
+    console.log({ prevDay })
     const prevBalance = prevDay.accountBalance;
-    console.log({ prevBalance });
+    console.log({ prevDay, prevBalance });
     // const prevDay = await DayReport.findOne({ date: uniqDates[] })
     const { equity, adjusted_equity_previous_close } = portfolio;
     const useForYesterday = prevBalance || adjusted_equity_previous_close;
