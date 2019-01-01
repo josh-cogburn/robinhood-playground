@@ -13,6 +13,7 @@ const createPredictionModels = require('./create-prediction-models');
 const getTrend = require('../utils/get-trend');
 const { avgArray } = require('../utils/array-math');
 const sendEmail = require('../utils/send-email');
+const marketClosures = require('../market-closures');
 
 const formatDate = date => date.toLocaleDateString().split('/').join('-');
 const getToday = () => formatDate(new Date());
@@ -116,10 +117,11 @@ const stratManager = {
         }
         const day = now.getDay();
         const isWeekday = day >= 1 && day <= 5;
-        console.log({ day, isWeekday });
         let dateStr = formatDate(now);
 
-        if (!isWeekday) {
+        console.log({ day, isWeekday, dateStr });
+
+        if (!isWeekday || marketClosures.includes(dateStr)) {
             // from most recent day (weekend will get friday)
             let pms = await fs.readdir('./json/prediction-models');
             let sortedFiles = pms
