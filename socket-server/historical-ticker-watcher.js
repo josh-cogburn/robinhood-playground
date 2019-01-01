@@ -40,10 +40,12 @@ class HistoricalTickerWatcher extends TickerWatcher {
                     related
                 ];
             });
-            return handler(this.priceCache, 5);
+            return handler(this.priceCache);
         }
         console.log({ runAgainstPastData })
         this.runAgainstPastData = runAgainstPastData;
+        this.disableOnPick = runAgainstPastData;
+        this.historicals = {};
 
     }
     clearPriceCache() {
@@ -53,13 +55,12 @@ class HistoricalTickerWatcher extends TickerWatcher {
     async addTickers(tickers) {
         console.log('adding ticers', tickers);
         if (this.runAgainstPastData) {
-            this.historicals = await getHistoricalData(tickers);
+            this.historicals = {
+                ...this.historicals,
+                ...await getHistoricalData(tickers)
+            };
         }
         super.addTickers(tickers);
-    }
-    stop() {
-        super.stop();
-        this.onEnd();
     }
     async lookupRelatedPrices() {
         if (!this.runAgainstPastData) {
@@ -83,9 +84,10 @@ class HistoricalTickerWatcher extends TickerWatcher {
         }, {});
         if (outOfData) {
             console.log('out of data, stopping')
-            return this.stop();
+            this.stop();
+            return this.onEnd();
         }
-        console.log('increasied tieration')
+        console.log('increasied iteration')
         this.iteration++;
         return handler(prices);
     }
