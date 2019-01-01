@@ -40,8 +40,8 @@ module.exports = async (Robinhood, min = 515) => {
     console.log({ portfolio });
 
     const uniqDates = await DayReport.getUniqueDates();
-    const todayIndex = uniqDates.findIndex(t => t === todaysDate) || uniqDates.length;
-    const prevDate = uniqDates[todayIndex - 1];
+    const todayIndex = uniqDates.findIndex(t => t === todaysDate);
+    const prevDate = todayIndex === -1 ? uniqDates.length - 1 : gouniqDates[todayIndex - 1];
     console.log({ todayIndex, prevDate });
     const prevDay = await DayReport.findOne({ date: prevDate });
     console.log({ prevDay })
