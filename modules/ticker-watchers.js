@@ -10,6 +10,8 @@ const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
 const recordPicks = require('../app-actions/record-picks');
 const addOvernightJumpAndTSO = require('../app-actions/add-overnight-jump-and-tso');
 const getTrendSinceOpen = require('../rh-actions/get-trend-since-open');
+const getMultipleHistoricals = require('../app-actions/get-multiple-historicals');
+
 
 let tickerWatcher;
 let relatedP;
@@ -49,11 +51,11 @@ module.exports = {
         //     await recordPicks(Robinhood, 'based-on-jump-fourToEightOvernight-trending35257-gt500kvolume-first2', 5, ['BPMX']);
         // }, 10000);
 
-        const handler = relatedPrices => {
+        const handler = async relatedPrices => {
             // console.log({ relatedPrices, two });
             relatedP = relatedPrices;
             const newJumps = [];
-            Object.keys(relatedPrices).forEach(key => {
+            for (let key of Object.keys(relatedPrices)) {
                 const allPrices = relatedPrices[key].map(obj => obj.lastTradePrice);
                 const mostRecent = allPrices.pop();
                 const min = Math.min(...allPrices);
@@ -68,7 +70,7 @@ module.exports = {
                         trendFromMin
                     });
                 }
-            });
+            }
 
             return newJumps;
 
@@ -78,9 +80,18 @@ module.exports = {
             name: 'ticker-watchers',
             Robinhood,
             handler,
-            timeout: 10,//60000 * 5, // 5 min,
-            runAgainstPastData: true,
+            timeout: 60000 * 5, // 5 min,
+            runAgainstPastData: false,
             onPick: async pick => {
+
+                let [allHistoricals] = await getMultipleHistoricals(
+                    Robinhood,
+                    [key],
+                    'interval=5minute&span=day'
+                );
+                console.log('allhistoricals');
+                console.log(JSON.stringify(allHistoricals.map(o => o.close_price)));
+
                 await sendEmail(`robinhood-playground: NEW JUMP DOWN ${pick.ticker}`, JSON.stringify(pick, null, 2));
                 await recordPicks(Robinhood, 'ticker-watchers-under5', 5000, [pick.ticker]);
             },
@@ -94,11 +105,11 @@ module.exports = {
         
         console.log({ allUnder15 });
 
-        // regCronIncAfterSixThirty(Robinhood, {
-        //     name: `clear ticker-watchers price cache`,
-        //     run: [0],
-        //     fn: () => tickerWatcher.clearPriceCache()
-        // });
+        regCronIncAfterSixThirty(Robinhood, {
+            name: `clear ticker-watchers price cache`,
+            run: [-330],    // start of pre market
+            fn: () => tickerWatcher.clearPriceCache()
+        });
 
         const setTickers = async () => {
             // all under $15 and no big overnight jumps
@@ -113,17 +124,17 @@ module.exports = {
             // console.log(JSON.stringify({ bigOvernightJumps }, null, 2));
         };
 
-        // regCronIncAfterSixThirty(Robinhood, {
-        //     name: `set ticker-watchers tickers (< $15 and no overnight jumps)`,
-        //     run: [2],
-        //     fn: setTickers
-        // });
+        regCronIncAfterSixThirty(Robinhood, {
+            name: `set ticker-watchers tickers (< $15 and no overnight jumps)`,
+            run: [2],
+            fn: setTickers
+        });
 
-        // regCronIncAfterSixThirty(Robinhood, {
-        //     name: `stop ticker-watchers`,
-        //     run: [330],
-        //     fn: () => tickerWatcher.stop()
-        // });
+        regCronIncAfterSixThirty(Robinhood, {
+            name: `stop ticker-watchers`,
+            run: [500],
+            fn: () => tickerWatcher.stop()
+        });
 
         await setTickers();
         tickerWatcher.start();

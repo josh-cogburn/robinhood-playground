@@ -89,8 +89,8 @@ class HistoricalTickerWatcher extends TickerWatcher {
         }
         console.log('increasied iteration')
         this.iteration++;
-        const newPicks = handler(prices);
-        console.log({ newPicks })
+        const newPicks = await handler(prices);
+        // console.log({ newPicks })
         this.handlePicks(newPicks);
     }
 }
