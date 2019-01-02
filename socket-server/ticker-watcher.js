@@ -11,6 +11,7 @@ class TickerWatcher {
         this.tickersWatching = [];
         this.onPick = onPick;
         this.disableOnPick = disableOnPick;
+        this.allPicks = [];
     }
     // tickersRegistered = {}; // { AAPL: ['strategies'] }
     addTickers(tickers) {
@@ -56,16 +57,19 @@ class TickerWatcher {
         console.log(this.name, 'done getting related prices');
 
         const newPicks = await handler(relatedPrices);
+        return this.handlePicks(newPicks);
+    }
+    async handlePicks(newPicks) {
+        const { disableOnPick, onPick, allPicks } = this;
         if (!disableOnPick && newPicks && newPicks.length) {
             for (let pick of newPicks) {
                 await onPick(pick);
             }
         }
-
-        return newPicks;
-
-        // console.log(relatedPrices)
-        // console.log(JSON.stringify(relatedPrices, null, 2));
+        this.allPicks = [
+            ...allPicks,
+            ...newPicks.filter(Boolean)
+        ];
     }
 }
 

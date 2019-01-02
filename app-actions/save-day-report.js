@@ -2,6 +2,7 @@ const sells = require('../analysis/reports/sells');
 const holds = require('../analysis/reports/holds');
 const sendEmail = require('../utils/send-email');
 const getFilesSortedByDate = require('../utils/get-files-sorted-by-date');
+const getIndexes = require('../utils/get-indexes');
 const DayReport = require('../models/DayReport');
 const lookup = require('../utils/lookup');
 const getTrend = require('../utils/get-trend');
@@ -41,9 +42,9 @@ module.exports = async (Robinhood, min = 515) => {
 
     const uniqDates = await DayReport.getUniqueDates();
     const todayIndex = uniqDates.findIndex(t => t === todaysDate);
-    const prevDate = todayIndex === -1 ? uniqDates.length - 1 : gouniqDates[todayIndex - 1];
+    const prevDate = todayIndex === -1 ? uniqDates.length - 1 : uniqDates[todayIndex - 1];
     console.log({ todayIndex, prevDate, uniqDates });
-    const prevDay = await DayReport.findOne({ date: uniqDates[prevDate] });
+    const prevDay = await DayReport.findOne({ date: prevDate });
     console.log({ prevDay })
     const prevBalance = prevDay.accountBalance;
     console.log({ prevDay, prevBalance });
@@ -55,12 +56,9 @@ module.exports = async (Robinhood, min = 515) => {
     console.log(`Account balance at close: ${equity}`);
     console.log(`Since previous close: $${absoluteChange} (${percChange}%)`);
 
-    // get SPY trend
-    const l = await lookup(Robinhood, 'SPY');
-    console.log({ l })
-    const { lastTrade, prevClose } = l;
-    const spyTrend = getTrend(lastTrade, prevClose);
-    console.log(`SPY trend: ${spyTrend}%`);
+    // get index prices
+    const indexPrices = await getIndexes();
+    console.log({ indexPrices });
 
     // analyze sells and holds
     const sellReport = await sells(Robinhood, 1);
@@ -82,8 +80,8 @@ module.exports = async (Robinhood, min = 515) => {
             percentage: twoDec(sellReport.returnPerc)
         },
         pickToExecutionPerc: twoDec(holdReport.pickToExecutionPerc),
-        spyTrend,
-        forPurchasePM: forPurchasePerfs
+        forPurchasePM: forPurchasePerfs,
+        indexPrices
     };
     
     await sendEmail(

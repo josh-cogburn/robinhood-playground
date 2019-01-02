@@ -12,12 +12,11 @@ const addOvernightJumpAndTSO = require('../app-actions/add-overnight-jump-and-ts
 const getTrendSinceOpen = require('../rh-actions/get-trend-since-open');
 
 let tickerWatcher;
-let bigJumps = [];
 let relatedP;
 
-const onEnd = () => {
-    console.log();
-    bigJumps = bigJumps
+const onEnd = allPicks => {
+    console.log(allPicks);
+    allPicks = allPicks
         .map(jump => ({
             ...jump,
             finalPrice: relatedP[jump.ticker].pop().lastTradePrice
@@ -29,12 +28,14 @@ const onEnd = () => {
         .sort((a, b) => b.trendFromMin - a.trendFromMin);
     
     console.log('HERE');
-    console.log(JSON.stringify(bigJumps, null ,2))
+    console.log(JSON.stringify(allPicks, null ,2))
 
 
-    const avgTrend = avgArray(bigJumps.map(j => j.trend));
+    const avgTrend = avgArray(allPicks.map(j => j.trend));
     console.log({ avgTrend });
-    bigJumps.forEach(jump => console.log(jump));
+    allPicks.forEach(jump => console.log(jump));
+    tickerWatcher.stop();
+    tickerWatcher = null;
 };
 
 
@@ -48,7 +49,7 @@ module.exports = {
         //     await recordPicks(Robinhood, 'based-on-jump-fourToEightOvernight-trending35257-gt500kvolume-first2', 5, ['BPMX']);
         // }, 10000);
 
-        const handler = async relatedPrices => {
+        const handler = relatedPrices => {
             // console.log({ relatedPrices, two });
             relatedP = relatedPrices;
             const newJumps = [];
@@ -69,8 +70,6 @@ module.exports = {
                 }
             });
 
-            bigJumps = [...bigJumps, ...newJumps];
-
             return newJumps;
 
         };
@@ -79,8 +78,8 @@ module.exports = {
             name: 'ticker-watchers',
             Robinhood,
             handler,
-            timeout: 60000 * 5, // 5 min,
-            runAgainstPastData: false,
+            timeout: 10,//60000 * 5, // 5 min,
+            runAgainstPastData: true,
             onPick: async pick => {
                 await sendEmail(`robinhood-playground: NEW JUMP DOWN ${pick.ticker}`, JSON.stringify(pick, null, 2));
                 await recordPicks(Robinhood, 'ticker-watchers-under5', 5000, [pick.ticker]);
@@ -90,15 +89,16 @@ module.exports = {
 
         const allUnder15 = await (async () => {
             const tickPrices = await lookupTickers(Robinhood, allStocks.filter(isTradeable).map(o => o.symbol));
-            return Object.keys(tickPrices).filter(ticker => tickPrices[ticker] < 15 && tickPrices[ticker] > 1);
+            return Object.keys(tickPrices).filter(ticker => tickPrices[ticker] < 5 && tickPrices[ticker] > 1);
         })();
+        
         console.log({ allUnder15 });
 
-        regCronIncAfterSixThirty(Robinhood, {
-            name: `clear ticker-watchers price cache`,
-            run: [0],
-            fn: () => tickerWatcher.clearPriceCache()
-        });
+        // regCronIncAfterSixThirty(Robinhood, {
+        //     name: `clear ticker-watchers price cache`,
+        //     run: [0],
+        //     fn: () => tickerWatcher.clearPriceCache()
+        // });
 
         const setTickers = async () => {
             // all under $15 and no big overnight jumps
@@ -113,20 +113,28 @@ module.exports = {
             // console.log(JSON.stringify({ bigOvernightJumps }, null, 2));
         };
 
-        regCronIncAfterSixThirty(Robinhood, {
-            name: `set ticker-watchers tickers (< $15 and no overnight jumps)`,
-            run: [2],
-            fn: setTickers
-        });
+        // regCronIncAfterSixThirty(Robinhood, {
+        //     name: `set ticker-watchers tickers (< $15 and no overnight jumps)`,
+        //     run: [2],
+        //     fn: setTickers
+        // });
 
-        regCronIncAfterSixThirty(Robinhood, {
-            name: `stop ticker-watchers`,
-            run: [330],
-            fn: () => tickerWatcher.stop()
-        });
+        // regCronIncAfterSixThirty(Robinhood, {
+        //     name: `stop ticker-watchers`,
+        //     run: [330],
+        //     fn: () => tickerWatcher.stop()
+        // });
 
         await setTickers();
         tickerWatcher.start();
 
     }
 };
+
+
+
+// module.exports = {
+//     name: 'quick-drops',
+//     crons: 
+
+// }

@@ -21,7 +21,11 @@ const schema = new Schema({
         weightedTrend: Number,
     },
     pickToExecutionPerc: Number,
-    spyTrend: Number,
+    indexPrices: {
+        sp500: Number,
+        nasdaq: Number,
+        russell2000: Number
+    }
 });
 
 schema.statics.getUniqueDates = async function() {

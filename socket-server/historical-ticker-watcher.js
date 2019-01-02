@@ -66,7 +66,7 @@ class HistoricalTickerWatcher extends TickerWatcher {
         if (!this.runAgainstPastData) {
             return super.lookupRelatedPrices();
         }
-        const { Robinhood, tickersWatching, handler, iteration, historicals } = this;
+        const { Robinhood, tickersWatching, handler, iteration, historicals, allPicks } = this;
         if (!historicals) return;
         let outOfData = false;
         const prices = tickersWatching.reduce((acc, ticker) => {
@@ -85,11 +85,13 @@ class HistoricalTickerWatcher extends TickerWatcher {
         if (outOfData) {
             console.log('out of data, stopping')
             this.stop();
-            return this.onEnd();
+            return this.onEnd(allPicks);
         }
         console.log('increasied iteration')
         this.iteration++;
-        return handler(prices);
+        const newPicks = handler(prices);
+        console.log({ newPicks })
+        this.handlePicks(newPicks);
     }
 }
 
