@@ -74,13 +74,13 @@ module.exports = async (Robinhood, min = 515) => {
         },
         holdReturn: {
             absolute: twoDec(holdReport.returnAbs),
-            percentage: twoDec(holdReport.returnPerc)
+            percentage: twoDec(holdReport.returnPerc) || 0
         },
         sellReturn: {
             absolute: twoDec(sellReport.returnAbs),
-            percentage: twoDec(sellReport.returnPerc)
+            percentage: twoDec(sellReport.returnPerc) || 0
         },
-        pickToExecutionPerc: twoDec(holdReport.pickToExecutionPerc),
+        pickToExecutionPerc: twoDec(holdReport.pickToExecutionPerc) || 0,
         forPurchasePM: forPurchasePerfs,
         indexPrices
     };
