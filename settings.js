@@ -2,13 +2,13 @@
 module.exports = {
     // important settings
     sellAllStocksOnNthDay: 2,
-    purchaseAmt: 100,
+    purchaseAmt: 120,
     forPurchase: [
 
 
         // creme
 
-        // '[unprovenFilter30Drops]',
+        '[unprovenFilter30Drops]',
         // '[sepAdds]',
         // '[unprovenSuddenDropsLast2Filter10]',
         // '[heavydutyhitters]',
