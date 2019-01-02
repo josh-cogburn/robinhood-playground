@@ -86,7 +86,7 @@ module.exports = {
 
                 let [allHistoricals] = await getMultipleHistoricals(
                     Robinhood,
-                    [key],
+                    [pick.ticker],
                     'interval=5minute&span=day'
                 );
                 console.log('allhistoricals');
