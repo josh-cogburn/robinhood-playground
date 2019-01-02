@@ -43,8 +43,6 @@ module.exports = {
     name: 'ticker-watchers',
     init: async (Robinhood) => {
 
-        
-
         // setTimeout(async () => {
         //     console.log('recording based-on-jump-fourToEightOvernight-trending35257-gt500kvolume-first2-5');
         //     await recordPicks(Robinhood, 'based-on-jump-fourToEightOvernight-trending35257-gt500kvolume-first2', 5, ['BPMX']);
@@ -71,12 +69,9 @@ module.exports = {
                 }
             });
 
-            for (let jump of newJumps) {
-                await sendEmail(`robinhood-playground: NEW JUMP DOWN ${jump.ticker}`, JSON.stringify(jump, null, 2));
-                await recordPicks(Robinhood, 'ticker-watchers-under5', 5000, [jump.ticker]);
-            }
-
             bigJumps = [...bigJumps, ...newJumps];
+
+            return newJumps;
 
         };
         
@@ -86,6 +81,10 @@ module.exports = {
             handler,
             timeout: 60000 * 5, // 5 min,
             runAgainstPastData: false,
+            onPick: async pick => {
+                await sendEmail(`robinhood-playground: NEW JUMP DOWN ${pick.ticker}`, JSON.stringify(pick, null, 2));
+                await recordPicks(Robinhood, 'ticker-watchers-under5', 5000, [pick.ticker]);
+            },
             onEnd
         });
 
@@ -107,8 +106,10 @@ module.exports = {
             tickerWatcher.addTickers(allUnder15);
             const trend = await getTrendSinceOpen(Robinhood, allUnder15);
             const withOvernightJumps = await addOvernightJumpAndTSO(Robinhood, trend);
-            const bigOvernightJumps = withOvernightJumps.filter(o => o.overnightJump > 7);
-            tickerWatcher.removeTickers(bigOvernightJumps.map(t => t.ticker));
+            const bigOvernightJumps = withOvernightJumps
+                .filter(o => o.overnightJump > 7)
+                .map(t => t.ticker);
+            tickerWatcher.removeTickers(bigOvernightJumps);
             // console.log(JSON.stringify({ bigOvernightJumps }, null, 2));
         };
 

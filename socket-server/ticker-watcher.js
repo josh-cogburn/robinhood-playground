@@ -1,7 +1,7 @@
 const { lookupTickers } = require('../app-actions/record-strat-perfs');
 
 class TickerWatcher {
-    constructor({ name, Robinhood, handler, timeout = 40000 }) {
+    constructor({ name, Robinhood, handler, timeout = 40000, onPick, disableOnPick }) {
         this.name = name;
         this.Robinhood = Robinhood;
         this.handler = handler;
@@ -9,6 +9,8 @@ class TickerWatcher {
         this.running = false;
         this.timeout = timeout;
         this.tickersWatching = [];
+        this.onPick = onPick;
+        this.disableOnPick = disableOnPick;
     }
     // tickersRegistered = {}; // { AAPL: ['strategies'] }
     addTickers(tickers) {
@@ -39,7 +41,7 @@ class TickerWatcher {
         setTimeout(() => this.lookupAndWaitPrices(), this.timeout);
     }
     async lookupRelatedPrices() {
-        const { Robinhood, tickersWatching, handler } = this;
+        const { Robinhood, tickersWatching, handler, onPick, disableOnPick } = this;
         // console.log(this.picks);
         console.log(this.name, 'getRelatedPrices');
         console.log(this.name, 'getting related prices', tickersWatching.length);
@@ -52,7 +54,15 @@ class TickerWatcher {
 
         this.relatedPrices = relatedPrices;
         console.log(this.name, 'done getting related prices');
-        return handler(relatedPrices);
+
+        const newPicks = await handler(relatedPrices);
+        if (!disableOnPick && newPicks && newPicks.length) {
+            for (let pick of newPicks) {
+                await onPick(pick);
+            }
+        }
+
+        return newPicks;
 
         // console.log(relatedPrices)
         // console.log(JSON.stringify(relatedPrices, null, 2));
