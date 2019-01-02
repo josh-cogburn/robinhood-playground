@@ -23,8 +23,8 @@ const getHistoricalData = async (tickers) => {
 
 
 class HistoricalTickerWatcher extends TickerWatcher {
-    constructor({ name, Robinhood, handler, timeout, runAgainstPastData, onEnd }) {
-        super({ name, Robinhood, handler, timeout });
+    constructor({ name, Robinhood, handler, timeout, runAgainstPastData, onPick, onEnd }) {
+        super({ name, Robinhood, handler, timeout, onPick });
 
         this.iteration = 0;
         this.priceCache = {};
