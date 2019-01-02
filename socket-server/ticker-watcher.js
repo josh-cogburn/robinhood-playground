@@ -60,8 +60,9 @@ class TickerWatcher {
         return this.handlePicks(newPicks);
     }
     async handlePicks(newPicks) {
+        if (!newPicks || !newPicks.length) return;
         const { disableOnPick, onPick, allPicks } = this;
-        if (!disableOnPick && newPicks && newPicks.length) {
+        if (!disableOnPick) {
             for (let pick of newPicks) {
                 await onPick(pick);
             }
