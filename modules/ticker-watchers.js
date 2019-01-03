@@ -80,8 +80,8 @@ module.exports = {
             name: 'ticker-watchers',
             Robinhood,
             handler,
-            timeout: 60000 * 5, // 5 min,
-            runAgainstPastData: false,
+            timeout: 50,//60000 * 5, // 5 min,
+            runAgainstPastData: true,
             onPick: async pick => {
 
                 let [allHistoricals] = await getMultipleHistoricals(
@@ -89,8 +89,17 @@ module.exports = {
                     [pick.ticker],
                     'interval=5minute&span=day'
                 );
+                allHistoricals = allHistoricals.map(o => o.close_price);
                 console.log('allhistoricals');
-                console.log(JSON.stringify(allHistoricals.map(o => o.close_price)));
+                console.log(JSON.stringify(allHistoricals));
+                const price = pick.jumpPrice;
+                console.log({ price });
+
+                // check against 5 minute historical data???
+                if (allHistoricals.some(p => getTrend(p, price) < 5)) {
+                    console.log('did not pass historical data test');
+                    return;
+                }
 
                 await sendEmail(`robinhood-playground: NEW JUMP DOWN ${pick.ticker}`, JSON.stringify(pick, null, 2));
                 await recordPicks(Robinhood, 'ticker-watchers-under5', 5000, [pick.ticker]);
