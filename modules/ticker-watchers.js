@@ -60,7 +60,7 @@ module.exports = {
                 const mostRecent = allPrices.pop();
                 const min = Math.min(...allPrices);
                 const trendFromMin = getTrend(mostRecent, min);
-                const bigJump = trendFromMin < -7;
+                const bigJump = trendFromMin < -8;
                 // console.log({ min, trendFromMin })
                 if (bigJump && allPrices.length >= 3) {
                     console.log('found big jump', key, mostRecent, allPrices);
@@ -80,8 +80,8 @@ module.exports = {
             name: 'ticker-watchers',
             Robinhood,
             handler,
-            timeout: 50,//60000 * 5, // 5 min,
-            runAgainstPastData: true,
+            timeout: 60000 * 5, // 5 min,
+            runAgainstPastData: false,
             onPick: async pick => {
 
                 let [allHistoricals] = await getMultipleHistoricals(
