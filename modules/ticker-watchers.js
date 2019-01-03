@@ -60,7 +60,7 @@ module.exports = {
                 const mostRecent = allPrices.pop();
                 const min = Math.min(...allPrices);
                 const trendFromMin = getTrend(mostRecent, min);
-                const bigJump = trendFromMin < -10;
+                const bigJump = trendFromMin < -7;
                 // console.log({ min, trendFromMin })
                 if (bigJump && allPrices.length >= 3) {
                     console.log('found big jump', key, mostRecent, allPrices);
@@ -96,7 +96,7 @@ module.exports = {
                 console.log({ price });
 
                 // check against 5 minute historical data???
-                if (allHistoricals.some(p => getTrend(p, price) < 5)) {
+                if (allHistoricals.slice(0, -1).some(p => getTrend(p, price) < 5)) {
                     console.log('did not pass historical data test');
                     return;
                 }
