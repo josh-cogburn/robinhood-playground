@@ -2,38 +2,67 @@
 module.exports = {
     // important settings
     sellAllStocksOnNthDay: 2,
-    purchaseAmt: 120,
+    purchaseAmt: 40,
     forPurchase: [
+
+        '[unprovenFilter30Drops]',
+        '[unprovenFilter30Drops]',
+        '[unprovenFilter30Drops]',
+        '[sepPerfectosMissing]',
+        '[myRecs-day3count2to4-slice16-uniq-hundredWithHundredCheck]',
+        '[myRecs-day15count9-hundredUpTrendsAllGt1]',
+        '[postMongo]',
+        '[spm-52day-bestFirstGreenAvgTrend-slice16]',
+        '[spm-52day-bestAvgTrendAnyPlayout-slice16]',
+        '[sepPerfectosLowerCounts]',
+        '[unprovenSuddenDropsLast2Filter10]',
+        '[spm-52day-highestLimitPlayoutsHundredResult-slice16-uniq]',
+        '[sepPerfectos]',
+        '[moreCommonDrops]',
+        '[unprovenFilter20Drops]',
+        '[heavydutyhitters]',
+        '[myRecs-day15count5-hundredUpTrendsAllGt1]',
+        '[myRecs-day3count2to4-uniq-hundredWithHundredCheck]',
+        '[postMongoTimes2]',
+        '[sepPerfectosLowerCounts]',
+        '[sepStars]',
+        '[myRecs-day3count2to4-slice16-uniq-hundredUpTrendsAllGt1]',
+        '[tiptop-minCount4]',
+        '[spm-52day-highestLimitPlayoutsJohnsSecretRecipeWithCount-slice16]',
+        '[spm-52day-customCount3to5MagicScore-slice16-uniq]',
 
 
         // creme
 
         '[unprovenFilter30Drops]',
-        // '[sepAdds]',
-        // '[unprovenSuddenDropsLast2Filter10]',
-        // '[heavydutyhitters]',
+        '[sepAdds]',
+        '[unprovenSuddenDropsLast2Filter10]',
+        '[heavydutyhitters]',
 
-        // '[spm-52day-bestFirstGreenAvgTrend-slice16-uniq]',
-        // '[spm-52day-bestAvgTrendAnyPlayout-slice16-uniq]',
-        // '[spm-52day-all-slice16-uniq]',
-        // '[spm-52day-highestLimitPlayoutsJohnsSecretRecipeWithCount]',
+        '[spm-52day-bestFirstGreenAvgTrend-slice16-uniq]',
+        '[spm-52day-bestAvgTrendAnyPlayout-slice16-uniq]',
+        '[spm-52day-all-slice16-uniq]',
+        '[spm-52day-highestLimitPlayoutsJohnsSecretRecipeWithCount]',
 
-        // '[myRecs-day3count2to4-slice16-uniq-hundredUpAvgGt4]',
-        // '[myRecs-day20-hundredResultCreme]',
-        // '[myRecs-day15count5-hundredWithHundredCheck]',
-        // '[myRecs-day15count5-hundredUpAvgGt4]',
-        // '[myRecs-day3count2to4-slice16-uniq-hundredUpAvgGt4]',
+        '[myRecs-day3count2to4-slice16-uniq-hundredUpAvgGt4]',
+        '[myRecs-day20-hundredResultCreme]',
+        '[myRecs-day15count5-hundredWithHundredCheck]',
+        '[myRecs-day15count5-hundredUpAvgGt4]',
+        '[myRecs-day3count2to4-slice16-uniq-hundredUpAvgGt4]',
         
-        // '[top-performers-topPerformers95-uniq]',
-        // '[top-performers-brainPredictions-uniq]',
-        // '[top-performers-myPredictions-uniq]',
-        // '[top-performers-sortedByHundredResult-uniq]',
-        // '[top-performers-sortedByPercUp-uniq]',
+        '[top-performers-topPerformers95-uniq]',
+        '[top-performers-brainPredictions-uniq]',
+        '[top-performers-myPredictions-uniq]',
+        '[top-performers-sortedByHundredResult-uniq]',
+        '[top-performers-sortedByPercUp-uniq]',
 
+        
 
-
-        '[tickerWatchers]'
-
+        '[tickerWatchers]',
+        '[tickerWatchers]',
+        '[tickerWatchers]',
+        '[tickerWatchers]',
+        
 
 
 
@@ -114,9 +143,9 @@ module.exports = {
             // '[tiptop-minCount4]',
             // '[tiptop-minCount4]',
     ],
-    // forPurchaseVariation: '75Perc5Day-yesincludingblanks',
+    forPurchaseVariation: '80Perc5Day-notincludingblanks',
     fallbackSellStrategy: 'limit3',
-    disableMultipliers: true,
+    disableMultipliers: false,
     force: {
         sell: [
             // 'FIHD'

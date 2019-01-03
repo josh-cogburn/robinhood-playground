@@ -69,7 +69,11 @@ module.exports = async (Robinhood, daysBack, minCount = 2, includeToday = true, 
     let sortedArray = Object.keys(pmAnalysis)
         .map(pm => ({
             pm,
-            ...pmAnalysis[pm]
+            ...pmAnalysis[pm],
+        }))
+        .map(pm => ({
+            ...pm,
+            johnScore: (pm.weightedTrend * pm.percUp) + Math.min(...pm.trends) + pm.trends.filter(t => t > 3 && t < 10).length
         }));
 
     if (searchString.length) {
@@ -82,12 +86,12 @@ module.exports = async (Robinhood, daysBack, minCount = 2, includeToday = true, 
         // .sort((a, b) => b.avgTrend - a.avgTrend)
         // .sort((a, b) => b.percUp - a.percUp)
         .sort((a, b) => {
-            if (!a.weightedTrend) {
+            if (!a.johnScore) {
                 return 1;
-            } else if (!b.weightedTrend) {
+            } else if (!b.johnScore) {
                 return -1;
             }
-            return a.weightedTrend < b.weightedTrend ? 1 : -1;
+            return a.johnScore < b.johnScore ? 1 : -1;
             // return b.weightedTrend - a.weightedTrend 
         })
         // .filter(t => !t.pm.includes('myRecs'))

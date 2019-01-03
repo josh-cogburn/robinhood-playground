@@ -10,7 +10,7 @@ module.exports = async (Robinhood, numDaysBack = 5, includeToday = true) => {
         console.log({ output, numDaysBack });
         return pms
             .map(pm => ({
-                pmName: pm,
+                // pmName: pm,
                 ...output.find(obj => obj.pm === pm)
             }))
             .sort((a, b) => b.avgTrend - a.avgTrend);
