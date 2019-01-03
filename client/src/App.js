@@ -59,7 +59,8 @@ class App extends Component {
     };
 
     render () {
-        const { value, dayReports } = this.state;
+        const { value, dayReports, predictionModels } = this.state;
+        const isLoading = !predictionModels || !predictionModels.forPurchase;
         return (
             <div className="App">
                 <AppBar position="static">
@@ -72,16 +73,23 @@ class App extends Component {
                         </Typography>
                     </Toolbar>
                     <Tabs value={value} onChange={this.handleChange}>
-                        <Tab label="Day Reports" />
                         <Tab label="Today's Strategies" />
-                        <Tab label="Live View" />
+                        <Tab label="Day Reports" />
                     </Tabs>
                 </AppBar>
 
+
+                { isLoading ? (
+                    <h1 style={{ textAlign: 'center' }}>loading</h1>
+                ) : (
+                    <div>
+                        {value === 0 && <TodaysStrategies {...this.state}  />}
+                        {value === 1 && <DayReports {...{ dayReports }} />}
+                    </div>
+                )}
+
                 {/* <TabContainer> */}
-                    {value === 0 && <DayReports {...{ dayReports }} />}
-                    {value === 1 && <TodaysStrategies {...this.state}  />}
-                    {/* {value === 2 && <TabContainer>Item Three</TabContainer>} */}
+                    
                 {/* </TabContainer> */}
                 
             </div>
