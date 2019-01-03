@@ -2,7 +2,7 @@
 module.exports = {
     // important settings
     sellAllStocksOnNthDay: 2,
-    purchaseAmt: 40,
+    purchaseAmt: 30,
     forPurchase: [
 
         '[unprovenFilter30Drops]',
@@ -63,6 +63,9 @@ module.exports = {
         '[tickerWatchers]',
         '[tickerWatchers]',
         
+        '[simpleAsThat]',
+        '[simpleAsThat]',
+        '[simpleAsThat]',
 
 
 

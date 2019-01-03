@@ -1186,6 +1186,10 @@ const dec17 = [
     "based-on-jump-down3overnight-shouldWatchout-first1-fiveTo10-5"
 ];
 
+const simpleAsThat = [
+    'low-float-high-volume-absVolPoints-trenddowngt20-6'
+];
+
 const tickerWatchers = [
     'ticker-watchers-under5-5000'
 ];
@@ -1302,5 +1306,6 @@ module.exports = {
 
     dec17,
 
-    tickerWatchers
+    tickerWatchers,
+    simpleAsThat
 };
