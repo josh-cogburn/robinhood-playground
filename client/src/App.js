@@ -33,7 +33,7 @@ class App extends Component {
 
     componentDidMount() {
         let { origin } = window.location;
-        const socketEndpoint = origin.includes('localhost') ? 'http://localhost:3000' : 'http://192.227.186.138:3000';
+        const socketEndpoint = origin.includes('localhost') ? 'http://localhost:3000' : 'http://107.173.6.167:3000';
         const socket = socketIOClient(socketEndpoint);
         socket.on('server:picks-data', data => {
             console.log(data);
@@ -66,7 +66,7 @@ class App extends Component {
                 <AppBar position="static">
                     <Toolbar>
                         <Typography variant="title" color="inherit">
-                            robinhood-playground<br/>
+                            robinhood-playground from the new server<br/>
                             <a href="https://github.com/chiefsmurph/robinhood-playground" target='_blank' style={{ color: 'darkorange', fontSize: '80%'}}>
                                 https://github.com/chiefsmurph/robinhood-playground
                             </a>
