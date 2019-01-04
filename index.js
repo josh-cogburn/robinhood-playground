@@ -1,4 +1,4 @@
-
+require('./utils/fix-locale-date-string');
 
 // console.log(stocks);
 const login = require('./rh-actions/login');

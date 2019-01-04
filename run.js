@@ -10,6 +10,7 @@ mongoose.connect(mongoConnectionString, { useNewUrlParser: true });
 
 
 // node run [filename goes here]
+require('./utils/fix-locale-date-string');
 
 (async () => {
     console.log('asd')
