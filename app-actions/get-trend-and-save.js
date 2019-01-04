@@ -4,6 +4,7 @@ const getMinutesFrom630 = require('../utils/get-minutes-from-630');
 
 const getAllTickers = require('../rh-actions/get-all-tickers');
 const { isTradeable } = require('../utils/filter-by-tradeable.js');
+const blacklist = require('../blacklist');
 
 const getTrendAndSave = async (Robinhood, min) => {
 
@@ -21,7 +22,8 @@ const getTrendAndSave = async (Robinhood, min) => {
 
     // step 2 - get trend
     console.log(`getting trend since open for all stocks - 6:31am + ${min} minutes`);
-    const trendingArray = await getTrendSinceOpen(Robinhood, allTickers);
+    let trendingArray = await getTrendSinceOpen(Robinhood, allTickers);
+    trendingArray = trendingArray.filter(o => !blacklist.includes(o.ticker));
     const dateStr = (new Date()).toLocaleString().split('/').join('-').split(',').join('');
 
     // step 3 - save trend
