@@ -6,11 +6,12 @@ class DayReports extends Component {
     componentDidMount() {
     }
     render () {
-        const { dayReports } = this.props;
+        let { dayReports } = this.props;
+        dayReports = dayReports.slice(-4)
         if (!dayReports) return <b>LOADING</b>;
         return (
             <div>
-                <h2>account balance in absolute $</h2>
+                <h2>account balance vs S&amp;P</h2>
                 <Line data={processDayReports.balanceChart(dayReports)} />
                 <h2>unrealized vs realized return %</h2>
                 <Line data={processDayReports.unrealizedVsRealized(dayReports)} />

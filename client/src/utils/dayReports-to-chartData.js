@@ -3,7 +3,8 @@ import getTrend from './get-trend';
 const colors = ['green', 'orange', 'yellow', 'pink', 'indigo', 'blue', 'violet'];
 
 const fields = {
-    'SPY trend': d => d.spyTrend,
+    // 'SPY trend': d => d.spyTrend,
+    'SP500': (d, i, array) =>  i === 0 ? 100 : getTrend(d.indexPrices.sp500, array[0].indexPrices.sp500) + 100,
     'unrealized return': d => d.holdReturn.percentage,
     'realized return': d => d.sellReturn.percentage,
     'forPurchase PM avg trend %': d => d.forPurchasePM.avgTrend,
@@ -44,8 +45,8 @@ const process = fieldsToInclude => dayReports => {
 };
 
 export default {
-    balanceChart: process(['account balance']),
+    balanceChart: process(['account balance', 'SP500']),
     unrealizedVsRealized: process(['unrealized return', 'realized return']),
-    spyVsForPurchase: process(['forPurchase PM avg trend %', 'forPurchase PM weighted trend %', 'SPY trend']),
+    spyVsForPurchase: process(['forPurchase PM avg trend %', 'forPurchase PM weighted trend %']),
     pickToExecutionPerc: process(['pick to execution %'])
 };
