@@ -73,11 +73,10 @@ module.exports = async (Robinhood, includeToday, daysBack = NUM_DAYS, minCount =
         console.log('adding today');
         const todayPerf = typeof includeToday === 'object' ? includeToday : await strategyPerfToday(Robinhood);
         todayPerf.forEach(perf => {
-            let { strategyName, avgTrend } = perf;
+            let { strategyName, avgTrend, min } = perf;
+            console.log({ strategyName, avgTrend, min });
             const lastDash = strategyName.lastIndexOf('-');
-            const buyMin = Number(strategyName.substring(lastDash + 1));
-
-
+            const buyMin = typeof min !== 'undefined' ? min : Number(strategyName.substring(lastDash + 1));
             strategyName = strategyName.substring(0, lastDash);
             const key = {
                 strategyName,
