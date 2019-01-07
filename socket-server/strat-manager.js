@@ -13,6 +13,8 @@ const createPredictionModels = require('./create-prediction-models');
 const getTrend = require('../utils/get-trend');
 const { avgArray } = require('../utils/array-math');
 const sendEmail = require('../utils/send-email');
+const getSettingsString = require('../utils/get-settings-string');
+
 const marketClosures = require('../market-closures');
 
 const formatDate = date => date.toLocaleDateString().split('/').join('-');
@@ -31,7 +33,8 @@ const stratManager = {
     predictionModels: {},
     hasInit: false,
     tickerWatcher: null,    // TickerWatcher instance
-
+    settingsString: null,
+    
     async init({ io, dateOverride } = {}) {
         if (this.hasInit) return;
         this.Robinhood = global.Robinhood;
@@ -64,6 +67,8 @@ const stratManager = {
         console.log('initd strat manager');
 
         new CronJob(`40 7 * * 1-5`, () => this.newDay(), null, true);
+
+        this.settingsString = await getSettingsString();
         this.hasInit = true;
     },
     getWelcomeData() {
@@ -72,7 +77,8 @@ const stratManager = {
             picks: this.picks,
             relatedPrices: this.tickerWatcher.relatedPrices,
             pastData: this.pastData,
-            predictionModels: this.predictionModels
+            predictionModels: this.predictionModels,
+            settingsString: this.settingsString
         };
     },
     newPick(data) {
