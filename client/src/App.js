@@ -14,6 +14,8 @@ import Settings from './pages/Settings';
 
 import socketIOClient from "socket.io-client";
 
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-131761952-1', { debug: true });
 
 function TabContainer(props) {
     return (
@@ -26,6 +28,29 @@ function TabContainer(props) {
 TabContainer.propTypes = {
     children: PropTypes.node.isRequired
 };
+
+function camelize(str) {
+    return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function(letter, index) {
+        return index == 0 ? letter.toLowerCase() : letter.toUpperCase();
+    }).replace(/\s+/g, '');
+}
+
+const pages = [
+    {
+        label: "Today's Strategies",
+        render: state  => <TodaysStrategies {...state} />
+    },
+    {
+        label: 'Day Reports',
+        render: state => <DayReports {...state } />,
+    },
+    {
+        label: 'Settings',
+        render: state => <Settings {...state} />
+    }
+];
+
+
 
 class App extends Component {
     state = {
@@ -54,15 +79,20 @@ class App extends Component {
             this.setState(data);
         });
         this.setState({ socket });
+        ReactGA.pageview(window.location.pathname + 'index');
     }
 
     handleChange = (event, value) => {
+        ReactGA.pageview(window.location.pathname + camelize(pages[value].label.replace(/'/g, '')));
         this.setState({ value });
     };
 
     render () {
         const { value, dayReports, predictionModels } = this.state;
         const isLoading = !predictionModels || !predictionModels.forPurchase;
+
+        
+
         return (
             <div className="App">
                 <AppBar position="static">
@@ -75,9 +105,7 @@ class App extends Component {
                         </Typography>
                     </Toolbar>
                     <Tabs value={value} onChange={this.handleChange}>
-                        <Tab label="Today's Strategies" />
-                        <Tab label="Day Reports" />
-                        <Tab label="Settings" />
+                        { pages.map(({ label }) => <Tab label={label} />) }
                     </Tabs>
                 </AppBar>
 
@@ -86,6 +114,7 @@ class App extends Component {
                     <h1 style={{ textAlign: 'center' }}>loading</h1>
                 ) : (
                     <div>
+                            {/* // pages[value].render({ state: this.state }) */}
                         {value === 0 && <TodaysStrategies {...this.state}  />}
                         {value === 1 && <DayReports {...{ dayReports }} />}
                         {value === 2 && <Settings {...this.state} />}
