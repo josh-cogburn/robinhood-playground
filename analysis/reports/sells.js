@@ -88,7 +88,7 @@ module.exports = async (Robinhood, daysBack = 5) => {
             const matchTicker = obj => obj.ticker === sell.ticker;
             const relatedDTBuy = associatedBuys.find(matchTicker);
             const relatedRHBuys = rhBuys.filter(matchTicker);
-            const avgBuyPrice = calcWeightAvg(relatedRHBuys) || relatedDTBuy.bid_price;
+            const avgBuyPrice = calcWeightAvg(relatedRHBuys) || (relatedDTBuy || {}).bid_price;
             console.log({ sell, relatedDTBuy })
             return {
                 ticker: sell.ticker,
