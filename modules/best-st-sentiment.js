@@ -44,7 +44,7 @@ module.exports = {
                 .slice(0)
                 .filter(o => o[key])
                 .sort((a, b) => b[key] - a[key])
-                .slice(0, 3)
+                .slice(0, 1)
                 .map(o => o.ticker);
 
         const handleTrend = async (nameStr, subTrend) => {
