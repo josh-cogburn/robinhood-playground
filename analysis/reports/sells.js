@@ -131,7 +131,7 @@ module.exports = async (Robinhood, daysBack = 5) => {
         const { totalBuyPrice, returnAbs } = output.reduce((acc, { returnDollars, buyPrice, quantity }) => {
             if (!returnDollars) return acc;
             return {
-                totalBuyPrice: acc.buyPrice + (buyPrice * quantity),
+                totalBuyPrice: acc.totalBuyPrice + (buyPrice * quantity),
                 returnAbs: acc.returnDollars + returnDollars
             };
         }, {
