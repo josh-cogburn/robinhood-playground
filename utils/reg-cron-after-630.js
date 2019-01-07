@@ -28,12 +28,14 @@ const regCronIncAfterSixThirty = (Robinhood, { name, run, fn }) => {
     });
 };
 
-regCronIncAfterSixThirty.display = function() {
+regCronIncAfterSixThirty.toString = function() {
+    const lines = [];
     allCrons = allCrons.sort((b, a) => b.date - a.date);
     allCrons.forEach(({cronStr, date, name}) => {
-        date.setHours(date.getHours() - 3); // west coast best coast 
-        console.log(date.toLocaleTimeString(), cronStr, name, ' - ', );
+        date.setHours(date.getHours());
+        lines.push(date.toLocaleTimeString(), cronStr, name, ' - ', );
     });
+    return lines.join('\n');
 };
 
 module.exports = regCronIncAfterSixThirty;

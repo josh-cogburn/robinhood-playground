@@ -11,6 +11,7 @@ import Tab from '@material-ui/core/Tab'
 import TodaysStrategies from './pages/TodaysStrategies';
 import DayReports from './pages/DayReports';
 import Settings from './pages/Settings';
+import Cron from './pages/Cron';
 
 import socketIOClient from "socket.io-client";
 
@@ -47,6 +48,10 @@ const pages = [
     {
         label: 'Settings',
         render: state => <Settings {...state} />
+    },
+    {
+        label: 'Cron',
+        render: state => <Cron {...state} />
     }
 ];
 

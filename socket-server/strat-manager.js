@@ -14,6 +14,7 @@ const getTrend = require('../utils/get-trend');
 const { avgArray } = require('../utils/array-math');
 const sendEmail = require('../utils/send-email');
 const getSettingsString = require('../utils/get-settings-string');
+const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
 
 const marketClosures = require('../market-closures');
 
@@ -78,7 +79,8 @@ const stratManager = {
             relatedPrices: this.tickerWatcher.relatedPrices,
             pastData: this.pastData,
             predictionModels: this.predictionModels,
-            settingsString: this.settingsString
+            settingsString: this.settingsString,
+            cronString: regCronIncAfterSixThirty.display()
         };
     },
     newPick(data) {

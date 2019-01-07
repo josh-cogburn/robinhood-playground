@@ -89,7 +89,7 @@ process.on('unhandledRejection', (reason, p) => {
 
 
     await initModules(Robinhood);
-    regCronIncAfterSixThirty.display();
+    console.log(regCronIncAfterSixThirty.toString());
 
 
     const accounts = await Robinhood.accounts();
