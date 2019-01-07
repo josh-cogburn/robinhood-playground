@@ -74,6 +74,7 @@ class App extends Component {
             });
         });
         socket.on('server:welcome', data => {
+            console.log(data, 'welcome')
             this.setState(data);
         });
         socket.on('server:related-prices', data => {
@@ -123,6 +124,7 @@ class App extends Component {
                         {value === 0 && <TodaysStrategies {...this.state}  />}
                         {value === 1 && <DayReports {...{ dayReports }} />}
                         {value === 2 && <Settings {...this.state} />}
+                        {value === 3 && <Cron {...this.state} />}
                     </div>
                 )}
 
