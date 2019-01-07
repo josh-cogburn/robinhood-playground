@@ -24,17 +24,22 @@ module.exports = async (Robinhood, ticker, detailed) => {
     
         let detailedData = {};
         if (detailed && totalCount > 3) {
-            const { data: sentimentData } = await stReq(`https://api.stocktwits.com/api/2/symbols/${ticker}/sentiment.json`)
+            const sentimentUrl = `https://api.stocktwits.com/api/2/symbols/${ticker}/sentiment.json`;
+            const { data: sentimentData } = await stReq(sentimentUrl);
             const [{ bullish: mostRecentSentiment }] = sentimentData;
             const withSentiment = avgArray([bullBearScore, mostRecentSentiment]);
             detailedData = {
                 mostRecentSentiment,
                 withSentiment
             };
-    
-            const { data: volumeData } = await stReq(`https://api.stocktwits.com/api/2/symbols/${ticker}/volume.json`)
+            
+            const volumeUrl = `https://api.stocktwits.com/api/2/symbols/${ticker}/volume.json`;
+            const { data: volumeData } = await stReq(volumeUrl);
             const [{ volume_change: todayVolumeChange }] = volumeData;
-            const withSentAndVol = avgArray([withSentiment, withSentiment, withSentiment, withSentiment, withSentiment, withSentiment * (1 + todayVolumeChange / 8) ]);
+            const withSentAndVol = avgArray([
+                ...new Array(6).fill(withSentiment),
+                withSentiment * (1 + todayVolumeChange / 8)
+            ]);
             detailedData = {
                 ...detailedData,
                 todayVolumeChange,

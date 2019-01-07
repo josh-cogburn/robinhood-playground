@@ -2,19 +2,17 @@
 module.exports = {
     // important settings
     sellAllStocksOnNthDay: 2,
-    purchaseAmt: 30,
+    purchaseAmt: 14,
     forPurchase: [
 
 
         // how bout this folks????
-        'best-st-sentiment-bullBearScore--25',
-        'best-st-sentiment-withSentiment--25',
-        'best-st-sentiment-withSentAndVol--25',
-        'best-st-sentiment-bullBearScore-300',
-        'best-st-sentiment-withSentiment-300',
-        'best-st-sentiment-withSentAndVol-300',
+        '[stSentimentUnder5]',
+        '[stSentimentUnder5]',
+        '[stSentimentUnder5]',
 
 
+        // something or other
         '[unprovenFilter30Drops]',
         '[unprovenFilter30Drops]',
         '[unprovenFilter30Drops]',
@@ -71,9 +69,7 @@ module.exports = {
         '[tickerWatchers]',
         '[tickerWatchers]',
         '[tickerWatchers]',
-        '[tickerWatchers]',
         
-        '[simpleAsThat]',
         '[simpleAsThat]',
         '[simpleAsThat]',
 

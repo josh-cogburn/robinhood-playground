@@ -1194,22 +1194,70 @@ const tickerWatchers = [
     'ticker-watchers-under5-5000'
 ];
 
+const stSentimentUnder5 = [
+
+    "best-st-sentiment-under5-bullBearScore--25",
+    "best-st-sentiment-under5-withSentiment--25",
+    "best-st-sentiment-under5-withSentAndVol--25",
+
+    "best-st-sentiment-under5-bullBearScore-150",
+    "best-st-sentiment-under5-withSentiment-150",
+    "best-st-sentiment-under5-withSentAndVol-150",
+
+    "best-st-sentiment-under5-bullBearScore-300",
+    "best-st-sentiment-under5-withSentiment-300",
+    "best-st-sentiment-under5-withSentAndVol-300",
+
+    "best-st-sentiment-under5-bullBearScore-600",
+    "best-st-sentiment-under5-withSentiment-600",
+    "best-st-sentiment-under5-withSentAndVol-600",
+    
+];
+
+const stSentimentSP500 = [
+    "best-st-sentiment-sp500-bullBearScore--25",
+    "best-st-sentiment-sp500-withSentiment--25",
+    "best-st-sentiment-sp500-withSentAndVol--25",
+
+    
+    "best-st-sentiment-sp500-bullBearScore-150",
+    "best-st-sentiment-sp500-withSentiment-150",
+    "best-st-sentiment-sp500-withSentAndVol-150",
+
+    "best-st-sentiment-sp500-bullBearScore-300",
+    "best-st-sentiment-sp500-withSentiment-300",
+    "best-st-sentiment-sp500-withSentAndVol-300",
+
+    "best-st-sentiment-sp500-bullBearScore-600",
+    "best-st-sentiment-sp500-withSentiment-600",
+    "best-st-sentiment-sp500-withSentAndVol-600",
+
+
+]
+
+const stSentimentTop100RH = [
+    
+    "best-st-sentiment-top100RH-bullBearScore--25",
+    "best-st-sentiment-top100RH-withSentiment--25",
+    "best-st-sentiment-top100RH-withSentAndVol--25",
+
+    "best-st-sentiment-top100RH-bullBearScore-150",
+    "best-st-sentiment-top100RH-withSentiment-150",
+    "best-st-sentiment-top100RH-withSentAndVol-150",
+    
+    "best-st-sentiment-top100RH-bullBearScore-300",
+    "best-st-sentiment-top100RH-withSentiment-300",
+    "best-st-sentiment-top100RH-withSentAndVol-300",
+    
+    "best-st-sentiment-top100RH-bullBearScore-600",
+    "best-st-sentiment-top100RH-withSentiment-600",
+    "best-st-sentiment-top100RH-withSentAndVol-600"
+];
+
 const stSentiment = [
-    'best-st-sentiment-bullBearScore--25',
-    'best-st-sentiment-withSentiment--25',
-    'best-st-sentiment-withSentAndVol--25',
-
-    'best-st-sentiment-bullBearScore-150',
-    'best-st-sentiment-withSentiment-150',
-    'best-st-sentiment-withSentAndVol-150',
-
-    'best-st-sentiment-bullBearScore-300',
-    'best-st-sentiment-withSentiment-300',
-    'best-st-sentiment-withSentAndVol-300',
-
-    'best-st-sentiment-bullBearScore-600',
-    'best-st-sentiment-withSentiment-600',
-    'best-st-sentiment-withSentAndVol-600',
+    ...stSentimentUnder5,
+    ...stSentimentSP500,
+    ...stSentimentTop100RH,
 ];
 
 module.exports = {
@@ -1307,6 +1355,7 @@ module.exports = {
     singleDown,
     preMarketDrops,
     hadAGoodDay,
+    myImpressionAtTheMoment,
 
 
     bigdawgs,
@@ -1326,5 +1375,13 @@ module.exports = {
 
     tickerWatchers,
     simpleAsThat,
-    stSentiment
+    
+
+
+    stSentiment,
+
+    stSentimentUnder5,
+    stSentimentSP500,
+    stSentimentTop100RH,
+
 };
