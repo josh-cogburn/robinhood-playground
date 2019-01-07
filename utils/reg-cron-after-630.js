@@ -33,7 +33,7 @@ regCronIncAfterSixThirty.toString = function() {
     allCrons = allCrons.sort((b, a) => b.date - a.date);
     allCrons.forEach(({cronStr, date, name}) => {
         date.setHours(date.getHours());
-        lines.push(date.toLocaleTimeString(), cronStr, name, ' - ', );
+        lines.push([date.toLocaleTimeString(), cronStr, name, ' - '].join(' '));
     });
     return lines.join('\n');
 };

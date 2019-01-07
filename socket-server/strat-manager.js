@@ -80,7 +80,7 @@ const stratManager = {
             pastData: this.pastData,
             predictionModels: this.predictionModels,
             settingsString: this.settingsString,
-            cronString: regCronIncAfterSixThirty.display()
+            cronString: regCronIncAfterSixThirty.toString()
         };
     },
     newPick(data) {
