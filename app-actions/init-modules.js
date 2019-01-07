@@ -15,7 +15,7 @@ const initModule = (Robinhood, module) => {
         pricePermFilter
     } = module;
     if (init) {
-        console.log('initializing ', name);,
+        console.log('initializing ', name);
         return init(Robinhood);
     }
     regCronIncAfterSixThirty(Robinhood, {
