@@ -135,7 +135,7 @@ module.exports = async (Robinhood, daysBack = 5) => {
             }
             return {
                 totalBuyPrice: acc.totalBuyPrice + (buyPrice * quantity),
-                returnAbs: acc.returnDollars + returnDollars
+                returnAbs: acc.returnAbs + returnDollars
             };
         }, {
             totalBuyPrice: 0,
