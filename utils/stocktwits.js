@@ -4,7 +4,7 @@ const { stocktwits: config, proxy: proxyConfig } = require('../config');
 
 const getProxy = () => {
     const { username, password, hosts } = proxyConfig;
-    const randomHost = hosts[Math.round(hosts.length * Math.random())];
+    const randomHost = hosts[Math.floor(hosts.length * Math.random())];
     return `http://${username}:${password}@${randomHost}`;
 };
 
@@ -74,6 +74,7 @@ const postBullish = (ticker, strategy) =>
     postPublicAndRoom(ticker, strategy, 'bullish', true);   // dont post public
 
 module.exports = {
+    getProxy,
     getToken,
     postBearish,
     postBullish
