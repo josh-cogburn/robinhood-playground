@@ -6015,5 +6015,23 @@ module.exports = [
     "based-on-jump-down8overnight-trending607-gt1milvolume-first3-fiveTo10-16",
     "cheapest-picks-chp50--4",
     'cheapest-picks-chp3--4',
-    'ticker-watchers-under5-5000'
+    'ticker-watchers-under5-5000',
+
+
+     // best-st-sentiment
+    'best-st-sentiment-bullBearScore--25',
+    'best-st-sentiment-withSentiment--25',
+    'best-st-sentiment-withSentAndVol--25',
+
+    'best-st-sentiment-bullBearScore-150',
+    'best-st-sentiment-withSentiment-150',
+    'best-st-sentiment-withSentAndVol-150',
+
+    'best-st-sentiment-bullBearScore-300',
+    'best-st-sentiment-withSentiment-300',
+    'best-st-sentiment-withSentAndVol-300',
+
+    'best-st-sentiment-bullBearScore-600',
+    'best-st-sentiment-withSentiment-600',
+    'best-st-sentiment-withSentAndVol-600',
   ];

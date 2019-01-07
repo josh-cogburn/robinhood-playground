@@ -23,7 +23,7 @@ const GOLDEN_VARIATIONS = [
 const executeStrategy = async (Robinhood, strategyFn, min, ratioToSpend, strategy, pricePermFilter) => {
 
     const executeSingleStrategy = async (trend, strategyName, priceKey) => {
-        const toPurchase = await strategyFn(Robinhood, trend, min);
+        const toPurchase = await strategyFn(Robinhood, trend, min, priceKey);
         // console.log('strategyName', strategyName);
         // console.log('toPurchase', toPurchase);
 

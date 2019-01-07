@@ -1194,6 +1194,24 @@ const tickerWatchers = [
     'ticker-watchers-under5-5000'
 ];
 
+const stSentiment = [
+    'best-st-sentiment-bullBearScore--25',
+    'best-st-sentiment-withSentiment--25',
+    'best-st-sentiment-withSentAndVol--25',
+
+    'best-st-sentiment-bullBearScore-150',
+    'best-st-sentiment-withSentiment-150',
+    'best-st-sentiment-withSentAndVol-150',
+
+    'best-st-sentiment-bullBearScore-300',
+    'best-st-sentiment-withSentiment-300',
+    'best-st-sentiment-withSentAndVol-300',
+
+    'best-st-sentiment-bullBearScore-600',
+    'best-st-sentiment-withSentiment-600',
+    'best-st-sentiment-withSentAndVol-600',
+];
+
 module.exports = {
     'wild n crazy': [
         'week-swings-tenTo15-1',  // wild
@@ -1307,5 +1325,6 @@ module.exports = {
     dec17,
 
     tickerWatchers,
-    simpleAsThat
+    simpleAsThat,
+    stSentiment
 };

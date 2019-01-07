@@ -20,7 +20,7 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
     const stratMin = `${strategy}-${min}`;
 
     if (!stratsOfInterest.includes(stratMin)) return;   // cant handle too many strategies apparently
-    if (!strategy.includes('cheapest-picks')) withPrices = withPrices.slice(0, 50);  // take only 50 picks
+    if (!strategy.includes('cheapest-picks')) withPrices = withPrices.slice(0, 3);  // take only 3 picks
 
     withPrices = withPrices.filter(tickerPrice => !!tickerPrice);
     if (!withPrices.length) {

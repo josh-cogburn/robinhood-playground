@@ -1,10 +1,10 @@
-const trendFilter = async (Robinhood, trend) => {
+const trendFilter = async (Robinhood, trend, min, priceKey) => {
 
     // cheap stocks that have gone down the most since open
     // but still going up recently 30 & 7 day trending
     // dont buy stocks that have fluctuated a lot before today
 
-    console.log('running cheapest-picks strategy');
+    console.log('running cheapest-picks strategy', priceKey);
 
     trend = trend.sort((a, b) => a.last_trade_price - b.last_trade_price);
 
@@ -26,7 +26,8 @@ const trendFilter = async (Robinhood, trend) => {
 const cheapestPicks = {
     name: 'cheapest-picks',
     trendFilter,
-    run: [-4, 4, 65, 125, 175, 225, 386]
+    run: [-4, 4, 65, 125, 175, 225, 386],
+    priceFilter: ['under5'] // only run under5
 };
 
 

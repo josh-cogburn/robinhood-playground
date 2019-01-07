@@ -11,10 +11,11 @@ const initModule = (Robinhood, module) => {
         run,
         trendFilter,
         fn,
-        init
+        init,
+        pricePermFilter
     } = module;
     if (init) {
-        console.log('initializing ', name);
+        console.log('initializing ', name);,
         return init(Robinhood);
     }
     regCronIncAfterSixThirty(Robinhood, {
@@ -24,7 +25,7 @@ const initModule = (Robinhood, module) => {
         fn: async (Robinhood, min) => {
             return !!fn 
                 ? fn(Robinhood, min) 
-                : executeStrategy(Robinhood, trendFilter, min, 0.3, name);
+                : executeStrategy(Robinhood, trendFilter, min, 0.3, name, pricePermFilter);
         }
     });
 };
