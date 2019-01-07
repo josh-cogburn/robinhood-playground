@@ -128,8 +128,16 @@ module.exports = async (Robinhood, daysBack = 5) => {
         let lineOutput = [];
         const l = line => lineOutput.push(line);
 
-        const totalBuyPrice = output.reduce((acc, { buyPrice, quantity }) => acc + (buyPrice * quantity), 0);
-        const returnAbs = output.reduce((acc, { returnDollars }) => acc + returnDollars, 0);
+        const { totalBuyPrice, returnAbs } = output.reduce((acc, { returnDollars, buyPrice, quantity }) => {
+            if (!returnDollars) return acc;
+            return {
+                totalBuyPrice: acc.buyPrice + (buyPrice * quantity),
+                returnAbs: acc.returnDollars + returnDollars
+            };
+        }, {
+            totalBuyPrice: 0,
+            returnAbs: 0
+        });
         const returnPerc = returnAbs * 100 / totalBuyPrice;
 
         output
