@@ -57,7 +57,7 @@ module.exports = {
         const withFundamentals = await addFundamentals(Robinhood, trend);
         const topVolume = withFundamentals
             .sort((a, b) => Number(b.fundamentals.volume) - Number(a.fundamentals.volume))
-            .slice(0, 50);
+            .slice(0, 100);
         console.log(topVolume)
 
 
