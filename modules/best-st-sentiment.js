@@ -13,7 +13,7 @@ module.exports = {
         let stReqCount = 0;
 
         // helper fns
-        const limitTrendByVolume = async (subTrend, countLimit = 10) => {
+        const limitTrendByVolume = async (subTrend, countLimit = 45) => {
             const withFundamentals = await addFundamentals(Robinhood, subTrend);
             return withFundamentals
                 .sort((a, b) => Number(b.fundamentals.volume) - Number(a.fundamentals.volume))
