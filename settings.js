@@ -5,6 +5,16 @@ module.exports = {
     purchaseAmt: 30,
     forPurchase: [
 
+
+        // how bout this folks????
+        'best-st-sentiment-bullBearScore--25',
+        'best-st-sentiment-withSentiment--25',
+        'best-st-sentiment-withSentAndVol--25',
+        'best-st-sentiment-bullBearScore-300',
+        'best-st-sentiment-withSentiment-300',
+        'best-st-sentiment-withSentAndVol-300',
+
+
         '[unprovenFilter30Drops]',
         '[unprovenFilter30Drops]',
         '[unprovenFilter30Drops]',
