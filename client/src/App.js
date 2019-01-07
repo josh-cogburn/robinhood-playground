@@ -10,6 +10,8 @@ import Tab from '@material-ui/core/Tab'
 
 import TodaysStrategies from './pages/TodaysStrategies';
 import DayReports from './pages/DayReports';
+import Settings from './pages/Settings';
+
 import socketIOClient from "socket.io-client";
 
 
@@ -75,6 +77,7 @@ class App extends Component {
                     <Tabs value={value} onChange={this.handleChange}>
                         <Tab label="Today's Strategies" />
                         <Tab label="Day Reports" />
+                        <Tab label="Settings" />
                     </Tabs>
                 </AppBar>
 
@@ -85,6 +88,7 @@ class App extends Component {
                     <div>
                         {value === 0 && <TodaysStrategies {...this.state}  />}
                         {value === 1 && <DayReports {...{ dayReports }} />}
+                        {value === 2 && <Settings {...this.state} />}
                     </div>
                 )}
 
