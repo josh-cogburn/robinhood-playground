@@ -12,6 +12,8 @@ module.exports = {
         '[stSentimentUnder5]',
         '[stSentimentUnder5]',
         '[stSentimentUnder5]',
+        '[stSentimentUnder5]',
+        '[stSentimentUnder5]',
 
 
         // something or other
