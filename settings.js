@@ -164,6 +164,7 @@ module.exports = {
             // 'FIHD'
         ],
         keep: [
+            'HSGX'
             // 'NSPR',
             // 'BOXL',
             // 'SEII',
