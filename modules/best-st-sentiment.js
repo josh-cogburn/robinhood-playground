@@ -10,8 +10,10 @@ module.exports = {
     name: 'best-st-sentiment',
     trendFilter: async (Robinhood, trend, min, priceKey) => {
 
+        let stReqCount = 0;
+
         // helper fns
-        const limitTrendByVolume = async (subTrend, countLimit = 4) => {
+        const limitTrendByVolume = async (subTrend, countLimit = 10) => {
             const withFundamentals = await addFundamentals(Robinhood, subTrend);
             return withFundamentals
                 .sort((a, b) => Number(b.fundamentals.volume) - Number(a.fundamentals.volume))
@@ -23,10 +25,14 @@ module.exports = {
             console.log(trendTicks.length);
             console.log([...new Set(trendTicks)].length);
 
-            let withSentiment = await mapLimit(trend, 3, async obj => ({
-                ...obj,
-                ...await getStSentiment(null, obj.ticker, true)
-            }));
+            let withSentiment = await mapLimit(trend, 3, async obj => {
+                stReqCount = stReqCount + 3;
+                console.log({ stReqCount });
+                return {
+                    ...obj,
+                    ...await getStSentiment(null, obj.ticker, true)
+                };
+            });
 
             console.log(withSentiment);
 
@@ -62,10 +68,11 @@ module.exports = {
         // under5
         const under5perms = await handleTrend('under5', trend);
         // sp500
+        const sp500url = 'https://pkgstore.datahub.io/core/s-and-p-500-companies/constituents_json/data/64dd3e9582b936b0352fdd826ecd3c95/constituents_json.json';
         const sp500perms = await handleTrend(
             'sp500',
             JSON.parse(
-                await request('https://pkgstore.datahub.io/core/s-and-p-500-companies/constituents_json/data/64dd3e9582b936b0352fdd826ecd3c95/constituents_json.json')
+                await request(sp500url)
             ).map(o => ({ 
                 ticker: o.Symbol 
             }))
@@ -93,10 +100,9 @@ module.exports = {
         };
 
         console.log(JSON.stringify(returnObj, null, 2));
+        console.log(`total stocktwits requests: ${stReqCount}`);
 
         return returnObj;
-
-        
         
     },
     run: [-25, 150, 300, 600],

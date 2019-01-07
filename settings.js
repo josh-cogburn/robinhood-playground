@@ -2,11 +2,12 @@
 module.exports = {
     // important settings
     sellAllStocksOnNthDay: 2,
-    purchaseAmt: 14,
+    purchaseAmt: 4,
     forPurchase: [
 
 
         // how bout this folks????
+        '[stSentimentUnder5]',
         '[stSentimentUnder5]',
         '[stSentimentUnder5]',
         '[stSentimentUnder5]',
