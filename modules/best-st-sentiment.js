@@ -53,7 +53,15 @@ module.exports = {
             const withSentimented = await addSentimentToTrend(limitedByVolume);
             const sortedByFn = sortedByGenerator(withSentimented);
 
-            const highestKeys = ['bullBearScore', 'withSentiment', 'withSentAndVol'];
+            const highestKeys = [
+                'bullBearScore', 
+                'withSentiment', 
+                'withSentAndVol', 
+                'mostRecentSentiment', 
+                'todayVolumeChange', 
+                'bearishCount', 
+                'bullishCount'
+            ];
             const perms = highestKeys.reduce((acc, key) => ({
                 ...acc,
                 [`${nameStr}-${key}`]: sortedByFn(key)
@@ -105,6 +113,6 @@ module.exports = {
         return returnObj;
         
     },
-    run: [-25, 150, 300, 600],
+    run: [-25, 150, 300, 400, 600],
     pricePermFilter: ['under5'] // only run under5
 };

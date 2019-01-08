@@ -1194,71 +1194,128 @@ const tickerWatchers = [
     'ticker-watchers-under5-5000'
 ];
 
-const stSentimentUnder5 = [
-
-    "best-st-sentiment-under5-bullBearScore--25",
-    "best-st-sentiment-under5-withSentiment--25",
-    "best-st-sentiment-under5-withSentAndVol--25",
-
-    "best-st-sentiment-under5-bullBearScore-150",
-    "best-st-sentiment-under5-withSentiment-150",
-    "best-st-sentiment-under5-withSentAndVol-150",
-
-    "best-st-sentiment-under5-bullBearScore-300",
-    "best-st-sentiment-under5-withSentiment-300",
-    "best-st-sentiment-under5-withSentAndVol-300",
-
-    "best-st-sentiment-under5-bullBearScore-600",
-    "best-st-sentiment-under5-withSentiment-600",
-    "best-st-sentiment-under5-withSentAndVol-600",
-    
-];
-
-const stSentimentSP500 = [
-    "best-st-sentiment-sp500-bullBearScore--25",
-    "best-st-sentiment-sp500-withSentiment--25",
-    "best-st-sentiment-sp500-withSentAndVol--25",
-
-    
-    "best-st-sentiment-sp500-bullBearScore-150",
-    "best-st-sentiment-sp500-withSentiment-150",
-    "best-st-sentiment-sp500-withSentAndVol-150",
-
-    "best-st-sentiment-sp500-bullBearScore-300",
-    "best-st-sentiment-sp500-withSentiment-300",
-    "best-st-sentiment-sp500-withSentAndVol-300",
-
-    "best-st-sentiment-sp500-bullBearScore-600",
-    "best-st-sentiment-sp500-withSentiment-600",
-    "best-st-sentiment-sp500-withSentAndVol-600",
-
-
-]
-
-const stSentimentTop100RH = [
-    
-    "best-st-sentiment-top100RH-bullBearScore--25",
-    "best-st-sentiment-top100RH-withSentiment--25",
-    "best-st-sentiment-top100RH-withSentAndVol--25",
-
-    "best-st-sentiment-top100RH-bullBearScore-150",
-    "best-st-sentiment-top100RH-withSentiment-150",
-    "best-st-sentiment-top100RH-withSentAndVol-150",
-    
-    "best-st-sentiment-top100RH-bullBearScore-300",
-    "best-st-sentiment-top100RH-withSentiment-300",
-    "best-st-sentiment-top100RH-withSentAndVol-300",
-    
-    "best-st-sentiment-top100RH-bullBearScore-600",
-    "best-st-sentiment-top100RH-withSentiment-600",
-    "best-st-sentiment-top100RH-withSentAndVol-600"
+const stSentimentBearish = [
+    "best-st-sentiment-under5-bearishCount--25",
+    "best-st-sentiment-sp500-bearishCount--25",
+    "best-st-sentiment-top100RH-bearishCount--25",
+    "best-st-sentiment-under5-bearishCount-150",
+    "best-st-sentiment-sp500-bearishCount-150",
+    "best-st-sentiment-top100RH-bearishCount-150",
+    "best-st-sentiment-under5-bearishCount-300",
+    "best-st-sentiment-sp500-bearishCount-300",
+    "best-st-sentiment-top100RH-bearishCount-300",
+    "best-st-sentiment-under5-bearishCount-400",
+    "best-st-sentiment-sp500-bearishCount-400",
+    "best-st-sentiment-under5-bearishCount-600",
+    "best-st-sentiment-top100RH-bearishCount-600",
+    "best-st-sentiment-top100RH-bearishCount-400",
+    "best-st-sentiment-sp500-bearishCount-600",
 ];
 
 const stSentiment = [
-    ...stSentimentUnder5,
-    ...stSentimentSP500,
-    ...stSentimentTop100RH,
+    "best-st-sentiment-under5-bullBearScore--25",
+    "best-st-sentiment-under5-withSentiment--25",
+    "best-st-sentiment-under5-withSentAndVol--25",
+    "best-st-sentiment-under5-mostRecentSentiment--25",
+    "best-st-sentiment-under5-todayVolumeChange--25",
+    "best-st-sentiment-under5-bullishCount--25",
+    "best-st-sentiment-sp500-bullBearScore--25",
+    "best-st-sentiment-sp500-withSentiment--25",
+    "best-st-sentiment-sp500-withSentAndVol--25",
+    "best-st-sentiment-sp500-mostRecentSentiment--25",
+    "best-st-sentiment-sp500-todayVolumeChange--25",
+    "best-st-sentiment-sp500-bullishCount--25",
+    "best-st-sentiment-top100RH-bullBearScore--25",
+    "best-st-sentiment-top100RH-withSentiment--25",
+    "best-st-sentiment-top100RH-withSentAndVol--25",
+    "best-st-sentiment-top100RH-mostRecentSentiment--25",
+    "best-st-sentiment-top100RH-todayVolumeChange--25",
+    "best-st-sentiment-top100RH-bullishCount--25",
+    "best-st-sentiment-under5-bullBearScore-150",
+    "best-st-sentiment-under5-withSentiment-150",
+    "best-st-sentiment-under5-withSentAndVol-150",
+    "best-st-sentiment-under5-mostRecentSentiment-150",
+    "best-st-sentiment-under5-todayVolumeChange-150",
+    "best-st-sentiment-under5-bullishCount-150",
+    "best-st-sentiment-sp500-bullBearScore-150",
+    "best-st-sentiment-sp500-withSentiment-150",
+    "best-st-sentiment-sp500-withSentAndVol-150",
+    "best-st-sentiment-sp500-mostRecentSentiment-150",
+    "best-st-sentiment-sp500-todayVolumeChange-150",
+    "best-st-sentiment-sp500-bullishCount-150",
+    "best-st-sentiment-top100RH-bullBearScore-150",
+    "best-st-sentiment-top100RH-withSentiment-150",
+    "best-st-sentiment-top100RH-withSentAndVol-150",
+    "best-st-sentiment-top100RH-mostRecentSentiment-150",
+    "best-st-sentiment-top100RH-todayVolumeChange-150",
+    "best-st-sentiment-top100RH-bullishCount-150",
+    "best-st-sentiment-under5-bullBearScore-300",
+    "best-st-sentiment-under5-withSentiment-300",
+    "best-st-sentiment-under5-withSentAndVol-300",
+    "best-st-sentiment-under5-mostRecentSentiment-300",
+    "best-st-sentiment-under5-todayVolumeChange-300",
+    "best-st-sentiment-under5-bullishCount-300",
+    "best-st-sentiment-sp500-bullBearScore-300",
+    "best-st-sentiment-sp500-withSentiment-300",
+    "best-st-sentiment-sp500-withSentAndVol-300",
+    "best-st-sentiment-sp500-mostRecentSentiment-300",
+    "best-st-sentiment-sp500-todayVolumeChange-300",
+    "best-st-sentiment-sp500-bullishCount-300",
+    "best-st-sentiment-top100RH-bullBearScore-300",
+    "best-st-sentiment-top100RH-withSentiment-300",
+    "best-st-sentiment-top100RH-withSentAndVol-300",
+    "best-st-sentiment-top100RH-mostRecentSentiment-300",
+    "best-st-sentiment-top100RH-todayVolumeChange-300",
+    "best-st-sentiment-top100RH-bullishCount-300",
+    "best-st-sentiment-under5-bullBearScore-400",
+    "best-st-sentiment-under5-withSentiment-400",
+    "best-st-sentiment-under5-withSentAndVol-400",
+    "best-st-sentiment-under5-mostRecentSentiment-400",
+    "best-st-sentiment-under5-todayVolumeChange-400",
+    "best-st-sentiment-under5-bullishCount-400",
+    "best-st-sentiment-sp500-bullBearScore-400",
+    "best-st-sentiment-sp500-withSentiment-400",
+    "best-st-sentiment-sp500-withSentAndVol-400",
+    "best-st-sentiment-sp500-mostRecentSentiment-400",
+    "best-st-sentiment-sp500-todayVolumeChange-400",
+    "best-st-sentiment-sp500-bullishCount-400",
+    "best-st-sentiment-top100RH-bullBearScore-400",
+    "best-st-sentiment-top100RH-withSentiment-400",
+    "best-st-sentiment-top100RH-withSentAndVol-400",
+    "best-st-sentiment-top100RH-mostRecentSentiment-400",
+    "best-st-sentiment-top100RH-todayVolumeChange-400",
+    "best-st-sentiment-top100RH-bullishCount-400",
+    "best-st-sentiment-under5-bullBearScore-600",
+    "best-st-sentiment-under5-withSentiment-600",
+    "best-st-sentiment-under5-withSentAndVol-600",
+    "best-st-sentiment-under5-mostRecentSentiment-600",
+    "best-st-sentiment-under5-todayVolumeChange-600",
+    "best-st-sentiment-under5-bullishCount-600",
+    "best-st-sentiment-sp500-bullBearScore-600",
+    "best-st-sentiment-sp500-withSentiment-600",
+    "best-st-sentiment-sp500-withSentAndVol-600",
+    "best-st-sentiment-sp500-mostRecentSentiment-600",
+    "best-st-sentiment-sp500-todayVolumeChange-600",
+    "best-st-sentiment-sp500-bullishCount-600",
+    "best-st-sentiment-top100RH-bullBearScore-600",
+    "best-st-sentiment-top100RH-withSentiment-600",
+    "best-st-sentiment-top100RH-withSentAndVol-600",
+    "best-st-sentiment-top100RH-mostRecentSentiment-600",
+    "best-st-sentiment-top100RH-todayVolumeChange-600",
+    "best-st-sentiment-top100RH-bullishCount-600"
 ];
+
+const filterStSentiment = key => stSentiment.filter(s => s.includes(key));
+  
+const stSentimentUnder5 = filterStSentiment('under5');
+const stSentimentSP500 = filterStSentiment('sp500');
+const stSentimentTop100RH = filterStSentiment('top100RH');
+
+const stSentimentBullBearScore = filterStSentiment('bullBearScore');
+const stSentimentWithSentiment = filterStSentiment('withSentiment');
+const stSentimentWithSentAndVol = filterStSentiment('withSentAndVol');
+const stSentimentMostRecentSentiment = filterStSentiment('mostRecentSentiment');
+const stSentimentTodayVolumeChange = filterStSentiment('todayVolumeChange');
 
 module.exports = {
     'wild n crazy': [
@@ -1383,5 +1440,15 @@ module.exports = {
     stSentimentUnder5,
     stSentimentSP500,
     stSentimentTop100RH,
+
+    stSentimentBullBearScore,
+    stSentimentWithSentiment,
+    stSentimentWithSentAndVol,
+    stSentimentMostRecentSentiment,
+    stSentimentTodayVolumeChange,
+
+
+    stSentimentBearish
+
 
 };
