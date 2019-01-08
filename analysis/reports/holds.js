@@ -37,8 +37,9 @@ module.exports = async (Robinhood) => {
         let foundPick = await Pick.findOne(searchData);
         if (!foundPick) return position;
         foundPick = foundPick.toObject();
-        const foundPickObj = foundPick && foundPick.picks ? foundPick.picks.find(pick => pick.ticker === position.symbol);
-        const pickPrice = foundPickObj ? foundPickObj.price : null;
+        const foundPickObj = foundPick && foundPick.picks ? foundPick.picks.find(pick => pick.ticker === position.symbol) : null;
+        if (!foundPickObj) return position;
+        const pickPrice = foundPickObj.price;
         console.log({ pickPrice });
         return {
             ...position,
