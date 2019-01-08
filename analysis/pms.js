@@ -91,7 +91,7 @@ module.exports = async (Robinhood, daysBack, minCount = 2, includeToday = true, 
             } else if (!b.johnScore) {
                 return -1;
             }
-            return a.johnScore < b.johnScore ? 1 : -1;
+            return b.johnScore - a.johnScore;
             // return b.weightedTrend - a.weightedTrend 
         })
         // .filter(t => !t.pm.includes('myRecs'))
