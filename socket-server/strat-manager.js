@@ -84,7 +84,9 @@ const stratManager = {
         };
     },
     newPick(data) {
-        this.tickerWatcher.addTickers(data.withPrices.map(o => o.ticker));
+        this.tickerWatcher.addTickers(
+            data.withPrices.map(o => o.ticker)
+        );
         // console.log('new pick', data);
         // if (this.curDate !== getToday()) {
         //     return;
@@ -167,7 +169,7 @@ const stratManager = {
 
         const tickersOfInterest = flatten(
             picks.map(pick =>
-                pick.withPrices.map(tickerObj => tickerObj.ticker)
+                pick.withPrices.map(({ ticker }) => ticker)
             )
         );
 

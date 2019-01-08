@@ -106,5 +106,5 @@ module.exports = {
         
     },
     run: [-25, 150, 300, 600],
-    priceFilter: ['under5'] // only run under5
+    pricePermFilter: ['under5'] // only run under5
 };

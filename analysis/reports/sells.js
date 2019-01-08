@@ -128,19 +128,21 @@ module.exports = async (Robinhood, daysBack = 5) => {
         let lineOutput = [];
         const l = line => lineOutput.push(line);
 
-        const { totalBuyPrice, returnAbs } = output.reduce((acc, { returnDollars, buyPrice, quantity, ticker }) => {
-            if (!returnDollars) {
-                console.log('not found',ticker );
-                return acc;
+        const { totalBuyPrice, returnAbs } = output.reduce(
+            (acc, { returnDollars, buyPrice, quantity, ticker }) => {
+                if (!returnDollars) {
+                    console.log('not found',ticker );
+                    return acc;
+                }
+                return {
+                    totalBuyPrice: acc.totalBuyPrice + (buyPrice * quantity),
+                    returnAbs: acc.returnAbs + returnDollars
+                };
+            }, {
+                totalBuyPrice: 0,
+                returnAbs: 0
             }
-            return {
-                totalBuyPrice: acc.totalBuyPrice + (buyPrice * quantity),
-                returnAbs: acc.returnAbs + returnDollars
-            };
-        }, {
-            totalBuyPrice: 0,
-            returnAbs: 0
-        });
+        );
         const returnPerc = returnAbs * 100 / totalBuyPrice;
 
         output

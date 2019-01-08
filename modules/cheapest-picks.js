@@ -27,7 +27,7 @@ const cheapestPicks = {
     name: 'cheapest-picks',
     trendFilter,
     run: [-4, 4, 65, 125, 175, 225, 386],
-    priceFilter: ['under5'] // only run under5
+    pricePermFilter: ['under5'] // only run under5
 };
 
 
