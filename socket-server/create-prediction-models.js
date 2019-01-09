@@ -65,7 +65,7 @@ module.exports = async (Robinhood) => {
                 if (strat && strat.startsWith('[')) {
                     const pmStrats = strategies[strat.substring(1, strat.length - 1)];
                     if (!pmStrats) {
-                        console.log('could not find strat', strat);
+                        console.log('could not find pm', strat);
                     }
                     return pmStrats;
                 }

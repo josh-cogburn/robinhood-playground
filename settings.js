@@ -6,15 +6,7 @@ module.exports = {
     forPurchase: [
 
 
-        // how bout this folks????
-        '[stSentimentUnder5]',
-        '[stSentimentUnder5]',
-        '[stSentimentUnder5]',
-        '[stSentimentUnder5]',
-        '[stSentimentUnder5]',
-        '[stSentimentUnder5]',
-        '[stSentimentUnder5]',
-
+        // no st sentiment for now
 
         // something or other
         '[unprovenFilter30Drops]',
@@ -73,7 +65,10 @@ module.exports = {
         '[tickerWatchers]',
         '[tickerWatchers]',
         '[tickerWatchers]',
+        '[tickerWatchers]',
+        '[tickerWatchers]',
         
+        '[simpleAsThat]',
         '[simpleAsThat]',
         '[simpleAsThat]',
 
