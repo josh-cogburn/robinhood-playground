@@ -6,6 +6,13 @@ const addFundamentals = require('../app-actions/add-fundamentals');
 
 const request = require('request-promise');
 
+
+const fieldSorter = (fields) => (a, b) => fields.map(o => {
+    let dir = 1;
+    if (o[0] === '-') { dir = -1; o=o.substring(1); }
+    return a[o] > b[o] ? dir : a[o] < b[o] ? -(dir) : 0;
+}).reduce((p, n) => p ? p : n, 0);
+
 module.exports = {
     name: 'best-st-sentiment',
     trendFilter: async (Robinhood, trend, min, priceKey) => {
@@ -13,10 +20,15 @@ module.exports = {
         let stReqCount = 0;
 
         // helper fns
-        const limitTrendByVolume = async (subTrend, countLimit = 45) => {
+        const limitTrendByVolume = async (subTrend, countLimit = 3) => {
             const withFundamentals = await addFundamentals(Robinhood, subTrend);
             return withFundamentals
-                .sort((a, b) => Number(b.fundamentals.volume) - Number(a.fundamentals.volume))
+                .map(o => ({
+                    ...o,
+                    volToAvg: Number(o.fundamentals.volume) / Number(o.fundamentals.average_volume_2_weeks)
+                }))
+                .filter(o => o.volToAvg)
+                .sort((a, b) => b.volToAvg - a.volToAvg)
                 .slice(0, countLimit);
         };
 
@@ -34,23 +46,30 @@ module.exports = {
                 };
             });
 
-            console.log(withSentiment);
+            // console.log(withSentiment);
 
             return withSentiment;
         };
 
         const sortedByGenerator = withSentiment => 
-            key => withSentiment
-                .slice(0)
-                .filter(o => o[key])
-                .sort((a, b) => b[key] - a[key])
-                .slice(0, 1)
-                .map(o => o.ticker);
+            (key, order, count = 1) => {
+
+                const keyStr = `${order === 'highest' ? '-' : ''}${key}`;
+                const sortFn = fieldSorter([keyStr, '-volToAvg'])
+
+                return withSentiment
+                    .slice(0)
+                    .filter(o => typeof o[key] !== 'undefined')
+                    .sort(sortFn)
+                    .slice(0, count)
+                    .map(o => o.ticker);
+            };
 
         const handleTrend = async (nameStr, subTrend) => {
             console.log(`handle ${nameStr} trend...`);
             const limitedByVolume = await limitTrendByVolume(subTrend);
-            const withSentimented = await addSentimentToTrend(limitedByVolume);
+            const withSentimented = (await addSentimentToTrend(limitedByVolume))
+                .filter(o => typeof o.bullBearScore !== 'undefined');
             const sortedByFn = sortedByGenerator(withSentimented);
 
             const highestKeys = [
@@ -64,7 +83,10 @@ module.exports = {
             ];
             const perms = highestKeys.reduce((acc, key) => ({
                 ...acc,
-                [`${nameStr}-${key}`]: sortedByFn(key)
+                [`${nameStr}-highest-${key}`]: sortedByFn(key, 'highest'),
+                [`${nameStr}-lowest-${key}`]: sortedByFn(key, 'lowest'),
+                [`${nameStr}-highest-${key}-first2`]: sortedByFn(key, 'highest', 2),
+                [`${nameStr}-lowest-${key}-first2`]: sortedByFn(key, 'lowest', 2)
             }), {});
             return perms;
         };
