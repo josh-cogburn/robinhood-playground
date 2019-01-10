@@ -44,12 +44,13 @@ const getAndSaveBalanceReport = async () => {
         ...await getAccountBalance(Robinhood),
         indexPrices: await getIndexes()
     };
+    const mongoDoc = await BalanceReport.create(report);
     console.log(
         'mongodb',
-        await BalanceReport.create(report)
+        mongoDoc
     );
-    allBalanceReports.push(report);
-    onReport(report);
+    allBalanceReports.push(mongoDoc);
+    onReport(mongoDoc);
 };
 
 const getAllBalanceReports = () => allBalanceReports;

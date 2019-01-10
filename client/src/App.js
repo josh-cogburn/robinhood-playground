@@ -84,6 +84,10 @@ class App extends Component {
             console.log({ data});
             this.setState(data);
         });
+        socket.on('server:balance-report', data => {
+            // this.setState({ balance: data });
+            console.log(data, 'balcn')
+        });
         this.setState({ socket });
         ReactGA.pageview(window.location.pathname + 'index');
     }

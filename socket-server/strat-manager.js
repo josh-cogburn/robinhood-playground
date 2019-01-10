@@ -76,6 +76,7 @@ const stratManager = {
 
         console.log('about to init balance report')
         await balanceReportManager.init(global.Robinhood, report => {
+            console.log('onReport', report);
             this.sendToAll('server:balance-report', { report });
         });
         balanceReportManager.start();
