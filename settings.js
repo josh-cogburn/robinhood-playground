@@ -152,7 +152,7 @@ module.exports = {
             // '[tiptop-minCount4]',
     ],
     // forPurchaseVariation: '80Perc5Day-notincludingblanks',
-    fallbackSellStrategy: 'limit3',
+    fallbackSellStrategy: 'limit8',
     disableMultipliers: false,
     force: {
         sell: [

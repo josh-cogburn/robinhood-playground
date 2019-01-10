@@ -80,8 +80,6 @@ const stratManager = {
             console.log('onReport', report, Object.keys(this));
             this.sendToAll('server:balance-report', { report });
         });
-        balanceReportManager.start();
-
 
         console.log('initd strat manager');
     },

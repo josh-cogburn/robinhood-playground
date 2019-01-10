@@ -1,3 +1,5 @@
+const START_MIN = -300;
+const STOP_MIN = 600;
 const TIMEOUT_SECONDS = 15;
 
 const BalanceReport = require('../models/BalanceReport');
@@ -6,6 +8,7 @@ const getIndexes = require('../utils/get-indexes');
 
 const stratManager = require('./strat-manager');
 const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
+const getMinutesFrom630 = require('../utils/get-minutes-from-630');
 
 // inner
 let timeout;
@@ -23,14 +26,24 @@ const init = async (rh, onReportFn) => {
     allBalanceReports = foundReports;
     regCronIncAfterSixThirty(rh, {
         name: 'start balance report manager',
-        run: [-300],
+        run: [START_MIN],
         fn: start
     });
     regCronIncAfterSixThirty(rh, {
         name: 'stop balance report manager',
-        run: [600],
+        run: [STOP_MIN],
         fn: stop
     });
+
+    // if between start and end times then start() on init
+    const min = getMinutesFrom630();
+    if (min > START_MIN && min < STOP_MIN) {
+        console.log('starting because day in progress');
+        await start();
+    } else {
+        console.log('not starting because outside of balance report times');
+    }
+
     return allBalanceReports;
 };
 
