@@ -43,7 +43,7 @@ const process = fieldsToInclude => dayReports => {
     }));
     console.log(datasets, Object.keys(fields))
     return {
-        labels: dayReports.map(day => new Date(day.time).toLocaleString() || day.date),
+        labels: dayReports.map(day => day.date || new Date(day.time).toLocaleString()),
         datasets
     };
 };
