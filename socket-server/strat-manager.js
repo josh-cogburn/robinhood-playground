@@ -53,21 +53,22 @@ const stratManager = {
         // init picks?
         console.log('init refresh')
         try {
-            // await this.refreshPastData();
+            await this.refreshPastData();
         } catch (e) {
             console.log('error refreshing past', e);
         }
         console.log('init picks')
-        // await this.initPicksAndPMs(dateOverride);
+        await this.initPicksAndPMs(dateOverride);
         console.log('get prices');
-        // await this.tickerWatcher.start();
+        await this.tickerWatcher.start();
+
         // console.log('send report init')
         // try {
             // await this.sendPMReport();
         // } catch (e) {
         //     console.log('error sending report', e);
         // }
-        console.log('initd strat manager');
+        
 
         new CronJob(`40 7 * * 1-5`, () => this.newDay(), null, true);
 
@@ -80,7 +81,9 @@ const stratManager = {
             this.sendToAll('server:picks-data', { report });
         });
         balanceReportManager.start();
-        console.log('really')
+
+
+        console.log('initd strat manager');
     },
     getWelcomeData() {
         return {
@@ -109,7 +112,7 @@ const stratManager = {
         return this.picks;
     },
     sendToAll(eventName, data) {
-        // console.log('sending to all', eventName, data);
+        console.log('sending to all', eventName, data);
         this.io && this.io.emit(eventName, data);
     },
     async newDay() {
