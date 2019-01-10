@@ -1,5 +1,5 @@
 const START_MIN = -30;
-const STOP_MIN = 350;
+const STOP_MIN = 360;
 const TIMEOUT_SECONDS = 15;
 
 const BalanceReport = require('../models/BalanceReport');
@@ -82,6 +82,7 @@ const getAndSaveBalanceReport = async () => {
 const getAllBalanceReports = () => allBalanceReports;
 
 const stop = () => {
+    console.log('stopping balance reports')
     isRunning = false;
     clearTimeout(timeout);
     timeout = null;
