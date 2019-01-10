@@ -24,6 +24,8 @@ const getToday = () => formatDate(new Date());
 const flatten = require('../utils/flatten-array');
 const TickerWatcher = require('./ticker-watcher');
 
+const balanceReportManager = require('./balance-report-manager');
+
 const stratManager = {
     Robinhood: null,
     io: null,
@@ -51,14 +53,14 @@ const stratManager = {
         // init picks?
         console.log('init refresh')
         try {
-            await this.refreshPastData();
+            // await this.refreshPastData();
         } catch (e) {
             console.log('error refreshing past', e);
         }
         console.log('init picks')
-        await this.initPicksAndPMs(dateOverride);
+        // await this.initPicksAndPMs(dateOverride);
         console.log('get prices');
-        await this.tickerWatcher.start();
+        // await this.tickerWatcher.start();
         // console.log('send report init')
         // try {
             // await this.sendPMReport();
@@ -71,6 +73,13 @@ const stratManager = {
 
         this.settingsString = await getSettingsString();
         this.hasInit = true;
+
+        console.log('about to init balance report')
+        await balanceReportManager.init(global.Robinhood, report => {
+            this.sendToAll('server:balance-report', { report });
+        });
+        balanceReportManager.start();
+        console.log('really')
     },
     getWelcomeData() {
         return {
@@ -80,7 +89,8 @@ const stratManager = {
             pastData: this.pastData,
             predictionModels: this.predictionModels,
             settingsString: this.settingsString,
-            cronString: regCronIncAfterSixThirty.toString()
+            cronString: regCronIncAfterSixThirty.toString(),
+            balanceReports: balanceReportManager.getAllBalanceReports()
         };
     },
     newPick(data) {
