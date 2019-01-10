@@ -1,10 +1,11 @@
-const TIMEOUT_SECONDS = 12;
+const TIMEOUT_SECONDS = 15;
 
 const BalanceReport = require('../models/BalanceReport');
 const getAccountBalance = require('../utils/get-account-balance');
 const getIndexes = require('../utils/get-indexes');
 
 const stratManager = require('./strat-manager');
+const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
 
 // inner
 let timeout;
@@ -20,6 +21,16 @@ const init = async (rh, onReportFn) => {
     console.log('init balance reports', Object.keys(stratManager));
     console.log('foundReports', foundReports);
     allBalanceReports = foundReports;
+    regCronIncAfterSixThirty(rh, {
+        name: 'start balance report manager',
+        run: [-300],
+        fn: start
+    });
+    regCronIncAfterSixThirty(rh, {
+        name: 'stop balance report manager',
+        run: [600],
+        fn: stop
+    });
     return allBalanceReports;
 };
 
@@ -27,6 +38,7 @@ const start = async () => {
     if (isRunning) {
         return console.log('balance report manager already running');
     }
+    console.log('starting balance report manager');
     isRunning = true;
     return runAndSetTimeout();
 };

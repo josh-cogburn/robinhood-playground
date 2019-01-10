@@ -13,7 +13,8 @@ const regCronIncAfterSixThirty = (Robinhood, { name, run, fn }) => {
         allCrons.push({
             date: newDateObj,
             cronStr,
-            name
+            name,
+            min
         });
         // console.log('push all', allCrons);
         new CronJob(cronStr, () => {
@@ -31,9 +32,9 @@ const regCronIncAfterSixThirty = (Robinhood, { name, run, fn }) => {
 regCronIncAfterSixThirty.toString = function() {
     const lines = [];
     allCrons = allCrons.sort((b, a) => b.date - a.date);
-    allCrons.forEach(({cronStr, date, name}) => {
+    allCrons.forEach(({cronStr, date, name, min}) => {
         date.setHours(date.getHours());
-        lines.push([date.toLocaleTimeString(), cronStr, name, ' - '].join(' '));
+        lines.push([date.toLocaleTimeString(), cronStr, name, ' - ', min].join(' '));
     });
     return lines.join('\n');
 };

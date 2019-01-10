@@ -20,10 +20,17 @@ const getIndexPrice = async index => {
     };
 };
 
+let lastPrices = {};
+
 module.exports = async () => {
     const asArray = await mapLimit(Object.keys(indexes), 1, getIndexPrice);
-    return asArray.reduce((acc, { index, price }) => ({
+    const response = asArray.reduce((acc, { index, price }) => ({
         ...acc,
-        [index]: price
+        [index]: price ? price : (() => {
+            console.log('retreiving from lastPrices because !price', index);
+            return lastPrices[index];
+        })()
     }), {});
+    lastPrices = response;
+    return response;
 };
