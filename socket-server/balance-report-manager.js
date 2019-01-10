@@ -37,6 +37,7 @@ const init = async (rh, onReportFn) => {
 
     // if between start and end times then start() on init
     const min = getMinutesFrom630();
+    console.log({ currentMin: min });
     if (min > START_MIN && min < STOP_MIN) {
         console.log('starting because day in progress');
         await start();
