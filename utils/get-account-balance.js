@@ -5,7 +5,7 @@ const roundTo = numDec => num => Math.round(num * Math.pow(10, numDec)) / Math.p
 const oneDec = roundTo(1);
 const twoDec = roundTo(2);
 
-module.exports = async (Robinhood, includeTrend) => {
+module.exports = async (Robinhood, includeTrend, todaysDate) => {
 
     const [ account ] = (await Robinhood.accounts()).results;
     const portfolio = await Robinhood.url(account.portfolio);

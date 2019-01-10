@@ -37,7 +37,7 @@ module.exports = async (Robinhood, min = 515) => {
     console.log({ forPurchasePerfs });
 
     // get account balance
-    const { accountBalance, accountBalanceTrend } = await getAccountBalance(Robinhood, true);
+    const { accountBalance, accountBalanceTrend } = await getAccountBalance(Robinhood, true, todaysDate);
 
     // get index prices
     const indexPrices = await getIndexes();
