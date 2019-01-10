@@ -1,0 +1,224 @@
+[
+  {
+    "type": "sell",
+    "ticker": "ZBIO",
+    "bid_price": 15.94,
+    "quantity": 1
+  },
+  {
+    "type": "sell",
+    "ticker": "PLXP",
+    "bid_price": 2.2865650000000004,
+    "quantity": 28
+  },
+  {
+    "type": "buy",
+    "ticker": "RBZ",
+    "bid_price": 1.493603,
+    "strategy": "ticker-watchers-under5",
+    "min": 5000
+  },
+  {
+    "type": "buy",
+    "ticker": "VCNX",
+    "bid_price": 3.32,
+    "strategy": "ticker-watchers-under5",
+    "min": 5000
+  },
+  {
+    "type": "buy",
+    "ticker": "YRIV",
+    "bid_price": 3.02,
+    "strategy": "ticker-watchers-under5",
+    "min": 5000
+  },
+  {
+    "type": "sell",
+    "ticker": "CHK",
+    "bid_price": 2.505,
+    "quantity": 6
+  },
+  {
+    "type": "sell",
+    "ticker": "OZM",
+    "bid_price": 10.8015,
+    "quantity": 1
+  },
+  {
+    "type": "sell",
+    "ticker": "WFT",
+    "bid_price": 0.5234,
+    "quantity": 28
+  },
+  {
+    "type": "sell",
+    "ticker": "CFRX",
+    "bid_price": 0.8949,
+    "quantity": 200
+  },
+  {
+    "type": "sell",
+    "ticker": "ASNS",
+    "bid_price": 3.2025,
+    "quantity": 7
+  },
+  {
+    "type": "sell",
+    "ticker": "SPN",
+    "bid_price": 4.0229875,
+    "quantity": 2
+  },
+  {
+    "type": "sell",
+    "ticker": "RWLK",
+    "bid_price": 0.23,
+    "quantity": 41
+  },
+  {
+    "type": "sell",
+    "ticker": "CLRB",
+    "bid_price": 1.8322,
+    "quantity": 3
+  },
+  {
+    "type": "sell",
+    "ticker": "MAXR",
+    "bid_price": 5.3,
+    "quantity": 2
+  },
+  {
+    "type": "sell",
+    "ticker": "OPK",
+    "bid_price": 3.61,
+    "quantity": 29
+  },
+  {
+    "type": "sell",
+    "ticker": "COLL",
+    "bid_price": 14.757617500000002,
+    "quantity": 1
+  },
+  {
+    "type": "sell",
+    "ticker": "GSUM",
+    "bid_price": 1.72,
+    "quantity": 67
+  },
+  {
+    "type": "sell",
+    "ticker": "MYND",
+    "bid_price": 1.01949,
+    "quantity": 25
+  },
+  {
+    "type": "sell",
+    "ticker": "LJPC",
+    "bid_price": 5.247375,
+    "quantity": 25
+  },
+  {
+    "type": "sell",
+    "ticker": "ADXS",
+    "bid_price": 0.37,
+    "quantity": 28
+  },
+  {
+    "type": "sell",
+    "ticker": "HCLP",
+    "bid_price": 3.745,
+    "quantity": 3
+  },
+  {
+    "type": "sell",
+    "ticker": "GNMX",
+    "bid_price": 0.2426,
+    "quantity": 1123
+  },
+  {
+    "type": "sell",
+    "ticker": "NHTC",
+    "bid_price": 14.411120000000002,
+    "quantity": 1
+  },
+  {
+    "type": "buy",
+    "ticker": "CCNI",
+    "bid_price": 4.3775,
+    "strategy": "ticker-watchers-under5",
+    "min": 5000
+  },
+  {
+    "type": "buy",
+    "ticker": "SITO",
+    "bid_price": 1.2855555555555556,
+    "strategy": "ticker-watchers-under5",
+    "min": 5000
+  },
+  {
+    "type": "buy",
+    "ticker": "RHE",
+    "bid_price": 2.22,
+    "strategy": "constant-risers-5minute-percUpHighClosePoints",
+    "min": 140
+  },
+  {
+    "type": "buy",
+    "ticker": "RHE",
+    "bid_price": 2.22,
+    "strategy": "low-float-high-volume-volToAvgPoints-trendgt40-shouldWatchout",
+    "min": 150
+  },
+  {
+    "type": "buy",
+    "ticker": "CCNI",
+    "bid_price": 4.297777777777778,
+    "strategy": "low-float-high-volume-floatTimesfloatToVolume-trenddown7to10",
+    "min": 150
+  },
+  {
+    "type": "buy",
+    "ticker": "RHE",
+    "bid_price": 1.9673,
+    "strategy": "sudden-drops-last2trend-first1",
+    "min": 189
+  },
+  {
+    "type": "buy",
+    "ticker": "RHE",
+    "bid_price": 1.9673,
+    "strategy": "sudden-drops-last5trend-filter10",
+    "min": 189
+  },
+  {
+    "type": "buy",
+    "ticker": "RHE",
+    "bid_price": 1.95,
+    "strategy": "double-down",
+    "min": 200
+  },
+  {
+    "type": "sell",
+    "ticker": "NOVN",
+    "bid_price": 1.12,
+    "quantity": 59
+  },
+  {
+    "type": "sell",
+    "ticker": "RVLT",
+    "bid_price": 0.5301,
+    "quantity": 138
+  },
+  {
+    "type": "sell",
+    "ticker": "KONA",
+    "bid_price": 1.2204,
+    "quantity": 20
+  },
+  {
+    "type": "buy",
+    "ticker": "CLD",
+    "bid_price": 0.3766888888888889,
+    "strategy": "best-st-sentiment-under5-bullBearScore",
+    "min": 300
+  }
+]
