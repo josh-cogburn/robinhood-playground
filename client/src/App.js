@@ -8,6 +8,7 @@ import Typography from '@material-ui/core/Typography'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 
+import BalanceReports from './pages/BalanceReports';
 import TodaysStrategies from './pages/TodaysStrategies';
 import DayReports from './pages/DayReports';
 import Settings from './pages/Settings';
@@ -38,6 +39,10 @@ function camelize(str) {
 
 const pages = [
     {
+        label: 'Balance Reports',
+        // render: state => 
+    },
+    {
         label: "Today's Strategies",
         render: state  => <TodaysStrategies {...state} />
     },
@@ -65,7 +70,7 @@ class App extends Component {
 
     componentDidMount() {
         let { origin } = window.location;
-        const socketEndpoint = origin.includes('localhost') && false ? 'http://localhost:3000' : 'http://107.173.6.167:3000';
+        const socketEndpoint = origin.includes('localhost') ? 'http://localhost:3000' : 'http://107.173.6.167:3000';
         const socket = socketIOClient(socketEndpoint);
         socket.on('server:picks-data', data => {
             console.log(data);
@@ -78,6 +83,7 @@ class App extends Component {
             this.setState(data);
         });
         socket.on('server:related-prices', data => {
+            console.log({ relatedPrices: data });
             this.setState({ relatedPrices: data });
         });
         socket.emit('getDayReports', data => {
@@ -86,7 +92,10 @@ class App extends Component {
         });
         socket.on('server:balance-report', data => {
             // this.setState({ balance: data });
-            console.log(data, 'balcn')
+            console.log(data, 'balcn');
+            this.setState(({ balanceReports }) => ({
+                balanceReports: balanceReports.concat(data.report)
+            }));
         });
         this.setState({ socket });
         ReactGA.pageview(window.location.pathname + 'index');
@@ -98,10 +107,10 @@ class App extends Component {
     };
 
     render () {
-        const { value, dayReports, predictionModels } = this.state;
+        const { value, dayReports, predictionModels, balanceReports } = this.state;
         const isLoading = !predictionModels || !predictionModels.forPurchase;
 
-        
+        // console.log({isLoading}, predictionModels.forPurchase)
 
         return (
             <div className="App">
@@ -125,10 +134,11 @@ class App extends Component {
                 ) : (
                     <div>
                             {/* // pages[value].render({ state: this.state }) */}
-                        {value === 0 && <TodaysStrategies {...this.state}  />}
-                        {value === 1 && <DayReports {...{ dayReports }} />}
-                        {value === 2 && <Settings {...this.state} />}
-                        {value === 3 && <Cron {...this.state} />}
+                        {value === 0 && <BalanceReports reports={balanceReports} />}
+                        {value === 1 && <TodaysStrategies {...this.state}  />}
+                        {value === 2 && <DayReports {...{ dayReports }} />}
+                        {value === 3 && <Settings {...this.state} />}
+                        {value === 4 && <Cron {...this.state} />}
                     </div>
                 )}
 

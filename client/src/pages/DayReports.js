@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Line } from 'react-chartjs-2';
-import processDayReports from '../utils/dayReports-to-chartData';
+import processDayReports from '../utils/reports-to-chartData';
 
 class DayReports extends Component {
     componentDidMount() {

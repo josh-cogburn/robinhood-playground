@@ -78,7 +78,7 @@ const stratManager = {
         console.log('about to init balance report')
         await balanceReportManager.init(global.Robinhood, report => {
             console.log('onReport', report, Object.keys(this));
-            this.sendToAll('server:picks-data', { report });
+            this.sendToAll('server:balance-report', { report });
         });
         balanceReportManager.start();
 
@@ -112,7 +112,7 @@ const stratManager = {
         return this.picks;
     },
     sendToAll(eventName, data) {
-        console.log('sending to all', eventName, data);
+        // console.log('sending to all', eventName, data, !!this.io);
         this.io && this.io.emit(eventName, data);
     },
     async newDay() {
