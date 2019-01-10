@@ -1,7 +1,7 @@
 module.exports = () => {
 
     let sixthirty = new Date();
-    sixthirty.setHours(9);
+    sixthirty.setHours(10);
     sixthirty.setMinutes(30);
     var now = new Date();
     var diffMs = now - sixthirty;
