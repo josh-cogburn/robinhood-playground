@@ -10,6 +10,7 @@ module.exports = {
         'best-st-sentiment-top100RH-highest-todayVolumeChange-first2--25',
         'best-st-sentiment-top100RH-highest-todayVolumeChange-first2--25',
         'best-st-sentiment-top100RH-highest-todayVolumeChange-first2--25',
+        'best-st-sentiment-top100RH-highest-todayVolumeChange-first2--25',
 
         // something or other
         // '[unprovenFilter30Drops]',
