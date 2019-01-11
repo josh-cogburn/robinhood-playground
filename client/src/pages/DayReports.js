@@ -20,7 +20,7 @@ class DayReports extends Component {
                 <h2>pick to execution %</h2>
                 <Line data={processDayReports.pickToExecutionPerc(dayReports)} />
                 <h2>dayReports</h2>
-                <pre>{JSON.stringify(dayReports, null, 2)}</pre>
+                {/* <pre>{JSON.stringify(dayReports, null, 2)}</pre> */}
             </div>
         )
     }
