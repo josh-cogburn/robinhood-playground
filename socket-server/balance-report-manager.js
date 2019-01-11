@@ -1,5 +1,5 @@
-const START_MIN = -30;
-const STOP_MIN = 390+33;
+const START_MIN = -331;
+const STOP_MIN = 631;
 const TIMEOUT_SECONDS = 15;
 
 const BalanceReport = require('../models/BalanceReport');
@@ -66,9 +66,11 @@ const runAndSetTimeout = async () => {
 
 const getAndSaveBalanceReport = async () => {
     console.log('hereee')
+    const min = getMinutesFrom630();
     const report = {
         ...await getAccountBalance(Robinhood),
-        indexPrices: await getIndexes()
+        indexPrices: await getIndexes(),
+        isRegularHours: min > 0 && min < 390
     };
     const mongoDoc = await BalanceReport.create(report);
     console.log(
