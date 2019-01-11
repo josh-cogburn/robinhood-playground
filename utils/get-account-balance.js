@@ -9,7 +9,9 @@ module.exports = async (Robinhood, includeTrend, todaysDate) => {
 
     const [ account ] = (await Robinhood.accounts()).results;
     const portfolio = await Robinhood.url(account.portfolio);
-    const { equity, extended_hours_equity: accountBalance } = portfolio;
+    const { equity, extended_hours_equity } = portfolio;
+
+    const accountBalance = extended_hours_equity || equity;
 
     console.log({ equity, accountBalance });
     let returnObj = { accountBalance };
