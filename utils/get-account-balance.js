@@ -9,8 +9,9 @@ module.exports = async (Robinhood, includeTrend, todaysDate) => {
 
     const [ account ] = (await Robinhood.accounts()).results;
     const portfolio = await Robinhood.url(account.portfolio);
-    const { extended_hours_equity: accountBalance } = portfolio;
+    const { equity, extended_hours_equity: accountBalance } = portfolio;
 
+    console.log({ equity, accountBalance });
     let returnObj = { accountBalance };
 
     if (includeTrend) {
@@ -26,8 +27,8 @@ module.exports = async (Robinhood, includeTrend, todaysDate) => {
         // const prevDay = await DayReport.findOne({ date: uniqDates[] })
         const { adjusted_equity_previous_close } = portfolio;
         const useForYesterday = prevBalance || adjusted_equity_previous_close;
-        const absoluteChange = twoDec(equity - useForYesterday);
-        const percChange = getTrend(equity, useForYesterday);
+        const absoluteChange = twoDec(accountBalance - useForYesterday);
+        const percChange = getTrend(accountBalance, useForYesterday);
         returnObj = {
             ...returnObj,
             accountBalanceTrend: {
