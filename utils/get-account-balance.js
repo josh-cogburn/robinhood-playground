@@ -9,9 +9,9 @@ module.exports = async (Robinhood, includeTrend, todaysDate) => {
 
     const [ account ] = (await Robinhood.accounts()).results;
     const portfolio = await Robinhood.url(account.portfolio);
-    const { equity } = portfolio;
+    const { extended_hours_equity: accountBalance } = portfolio;
 
-    let returnObj = { accountBalance: equity };
+    let returnObj = { accountBalance };
 
     if (includeTrend) {
         const uniqDates = await DayReport.getUniqueDates();

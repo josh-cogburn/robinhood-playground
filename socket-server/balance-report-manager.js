@@ -1,5 +1,5 @@
 const START_MIN = -30;
-const STOP_MIN = 390+33;
+const STOP_MIN = 100000;//390+33;
 const TIMEOUT_SECONDS = 15;
 
 const BalanceReport = require('../models/BalanceReport');
@@ -58,10 +58,10 @@ const start = async () => {
 };
 
 const runAndSetTimeout = async () => {
-    console.log('runAndSetTimeout')
+    console.log('runAndSetTimeout', { isRunning });
+    if (!isRunning) return;
     await getAndSaveBalanceReport();
-    const toFn = () => isRunning && runAndSetTimeout();
-    timeout = setTimeout(toFn, TIMEOUT_SECONDS * 1000);
+    timeout = setTimeout(runAndSetTimeout, TIMEOUT_SECONDS * 1000);
 };
 
 const getAndSaveBalanceReport = async () => {

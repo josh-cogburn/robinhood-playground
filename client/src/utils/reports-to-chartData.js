@@ -1,6 +1,21 @@
 import getTrend from './get-trend';
 
-const colors = ['blue', 'green', 'orange', 'yellow', 'pink', 'indigo', 'purple', 'brown', 'yellow', 'violet'];
+const colors = ['blue', 'green', 'orange', 'yellow', 'pink', 'indigo', 'blue', 'brown', 'yellow', 'blue'];
+// const colors = [
+//     'orange',
+//     'orange',
+//     'orange',
+//     'orange',
+//     'orange',
+//     'orange',
+//     'orange',
+//     'orange',
+//     'orange',
+//     'orange',
+//     'orange',
+//     'orange',
+//     'orange'
+// ]
 
 const fields = {
     // dayReports
@@ -11,10 +26,10 @@ const fields = {
     'pick to execution %': d => d.pickToExecutionPerc,
 
     // balanceReports
-    'account balance': (d, i, array) =>  i === 0 ? 100 : getTrend(d.accountBalance, array[0].accountBalance) + 100,
-    'SP500': (d, i, array) =>  i === 0 ? 100 : getTrend(d.indexPrices.sp500, array[0].indexPrices.sp500) + 100,
-    'nasdaq': (d, i, array) =>  i === 0 ? 100 : getTrend(d.indexPrices.nasdaq, array[0].indexPrices.nasdaq) + 100,
-    'russell2000': (d, i, array) =>  i === 0 ? 100 : getTrend(d.indexPrices.russell2000, array[0].indexPrices.russell2000) + 100
+    'account balance': (d, i, array) =>  i === 0 ? 100 : getTrend(d.accountBalance, array[0].accountBalance) + 102.2,
+    'SP500': (d, i, array) =>  i === 0 ? 100 : getTrend(d.indexPrices.sp500, array[0].indexPrices.sp500) + 100.7,
+    'nasdaq': (d, i, array) =>  i === 0 ? 100 : getTrend(d.indexPrices.nasdaq, array[0].indexPrices.nasdaq) + 100.7,
+    'russell2000': (d, i, array) =>  i === 0 ? 100 : getTrend(d.indexPrices.russell2000, array[0].indexPrices.russell2000) + 100.7
 };
 
 const getColor = field => colors[Object.keys(fields).findIndex(f => f === field)];
@@ -22,17 +37,19 @@ const getColor = field => colors[Object.keys(fields).findIndex(f => f === field)
 const process = fieldsToInclude => dayReports => {
     const datasets = fieldsToInclude.map(key => ({
         label: key,
-        fill: false,
-        lineTension: 0.1,
-        backgroundColor: 'rgba(75,192,192,0.4)',
-        borderColor: getColor(key),
+        fill: true,
+        lineTension: 1,
+        backgroundColor: 'rgba(75,192,192,0.2)',
+        pointBorderColor: key === 'account balance' ? 'black' : getColor(key),
+        // pointBorderWidth: 10,
+        borderColor: key === 'account balance' ? 'black' : getColor(key),
         borderCapStyle: 'butt',
-        borderDash: [],
+        borderWidth: key === 'account balance' ? 5 : 40,
         borderDashOffset: 0.0,
         borderJoinStyle: 'miter',
-        pointBorderColor: getColor(key),
+        // pointBorderColor: key === 'account balance' ? 'black' : getColor(key),
         pointBackgroundColor: '#fff',
-        pointBorderWidth: 1,
+        pointBorderWidth: key === 'account balance' ? 5 : 20,
         pointHoverRadius: 5,
         pointHoverBackgroundColor: getColor(key),
         pointHoverBorderColor: 'black',
