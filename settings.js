@@ -64,6 +64,12 @@ module.exports = {
         '[fiveForTens]',
         '[portalPepper]',
 
+        // x3
+        '[fourForFives]',
+        '[threeForFours]',
+        '[fiveForTens]',
+        '[portalPepper]',
+
 
         // creme
 
