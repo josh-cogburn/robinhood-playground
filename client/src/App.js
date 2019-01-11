@@ -39,7 +39,7 @@ function camelize(str) {
 
 const pages = [
     {
-        label: 'Balance Reports',
+        label: 'Realtime',
         // render: state => 
     },
     {

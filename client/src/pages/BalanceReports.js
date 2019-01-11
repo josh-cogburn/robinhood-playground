@@ -9,11 +9,11 @@ class DayReports extends Component {
         let { reports } = this.props;
         if (!reports) return <b>LOADING</b>;
         return (
-            <div>
+            <div style={{ padding: '40px' }}>
                 <Line data={reportsToChartData.balanceChart(reports)} />
-                <pre>
+                {/* <pre>   
                     {JSON.stringify(reports, null, 2)}
-                </pre>
+                </pre> */}
             </div>
         )
     }

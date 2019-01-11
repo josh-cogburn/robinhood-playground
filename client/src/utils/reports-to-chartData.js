@@ -1,6 +1,6 @@
 import getTrend from './get-trend';
 
-const colors = ['blue', 'green', 'orange', 'yellow', 'pink', 'indigo', 'blue', 'brown', 'yellow', 'blue'];
+const colors = ['blue', 'green', 'orange', 'rgba(240, 255, 0, 0.6)', 'pink', 'indigo', 'rgba(83, 51, 237, 10.6)', 'brown', 'yellow', 'blue'];
 // const colors = [
 //     'orange',
 //     'orange',
@@ -26,7 +26,7 @@ const fields = {
     'pick to execution %': d => d.pickToExecutionPerc,
 
     // balanceReports
-    'account balance': (d, i, array) =>  i === 0 ? 100 : getTrend(d.accountBalance, array[0].accountBalance) + 102.2,
+    'account balance': (d, i, array) =>  i === 0 ? 100 : getTrend(d.accountBalance, array[0].accountBalance) + 101.9,
     'SP500': (d, i, array) =>  i === 0 ? 100 : getTrend(d.indexPrices.sp500, array[0].indexPrices.sp500) + 100.7,
     'nasdaq': (d, i, array) =>  i === 0 ? 100 : getTrend(d.indexPrices.nasdaq, array[0].indexPrices.nasdaq) + 100.7,
     'russell2000': (d, i, array) =>  i === 0 ? 100 : getTrend(d.indexPrices.russell2000, array[0].indexPrices.russell2000) + 100.7
@@ -38,18 +38,18 @@ const process = fieldsToInclude => dayReports => {
     const datasets = fieldsToInclude.map(key => ({
         label: key,
         fill: true,
-        lineTension: 1,
+        lineTension: 0.1,
         backgroundColor: 'rgba(75,192,192,0.2)',
         pointBorderColor: key === 'account balance' ? 'black' : getColor(key),
         // pointBorderWidth: 10,
         borderColor: key === 'account balance' ? 'black' : getColor(key),
         borderCapStyle: 'butt',
-        borderWidth: key === 'account balance' ? 5 : 40,
+        borderWidth: key === 'account balance' ? 5 : 5,
         borderDashOffset: 0.0,
-        borderJoinStyle: 'miter',
+        borderJoinStyle: 'round',
         // pointBorderColor: key === 'account balance' ? 'black' : getColor(key),
         pointBackgroundColor: '#fff',
-        pointBorderWidth: key === 'account balance' ? 5 : 20,
+        pointBorderWidth: key === 'account balance' ? 2 : 10,
         pointHoverRadius: 5,
         pointHoverBackgroundColor: getColor(key),
         pointHoverBorderColor: 'black',
@@ -58,7 +58,7 @@ const process = fieldsToInclude => dayReports => {
         pointHitRadius: 10,
         data: dayReports.map(fields[key])
     }));
-    console.log(datasets, Object.keys(fields))
+    // console.log(datasets, Object.keys(fields))
     return {
         labels: dayReports.map(day => day.date || new Date(day.time).toLocaleString()),
         datasets
