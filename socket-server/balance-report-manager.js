@@ -60,17 +60,19 @@ const start = async () => {
 const runAndSetTimeout = async () => {
     console.log('runAndSetTimeout', { isRunning });
     if (!isRunning) return;
-    await getAndSaveBalanceReport();
-    timeout = setTimeout(runAndSetTimeout, TIMEOUT_SECONDS * 1000);
+    const min = getMinutesFrom630();
+    const isRegularHours = min > 0 && min < 390;
+    await getAndSaveBalanceReport(isRegularHours);
+    const toSeconds = isRegularHours ? TIMEOUT_SECONDS : TIMEOUT_SECONDS * 3;
+    timeout = setTimeout(runAndSetTimeout, toSeconds * 1000);
 };
 
-const getAndSaveBalanceReport = async () => {
+const getAndSaveBalanceReport = async (isRegularHours) => {
     console.log('hereee')
-    const min = getMinutesFrom630();
     const report = {
         ...await getAccountBalance(Robinhood),
         indexPrices: await getIndexes(),
-        isRegularHours: min > 0 && min < 390
+        isRegularHours
     };
     const mongoDoc = await BalanceReport.create(report);
     console.log(
