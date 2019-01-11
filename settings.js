@@ -2,7 +2,7 @@
 module.exports = {
     // important settings
     sellAllStocksOnNthDay: 2,
-    purchaseAmt: 10,
+    purchaseAmt: 15,
     forPurchase: [
 
 
