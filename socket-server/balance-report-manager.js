@@ -68,19 +68,23 @@ const runAndSetTimeout = async () => {
 };
 
 const getAndSaveBalanceReport = async (isRegularHours) => {
-    console.log('hereee')
-    const report = {
-        ...await getAccountBalance(Robinhood),
-        indexPrices: await getIndexes(),
-        isRegularHours
-    };
-    const mongoDoc = await BalanceReport.create(report);
-    console.log(
-        'mongodb',
-        mongoDoc
-    );
-    allBalanceReports.push(mongoDoc);
-    onReport(mongoDoc);
+    console.log('hereee');
+    try {
+        const report = {
+            ...await getAccountBalance(Robinhood),
+            indexPrices: await getIndexes(),
+            isRegularHours
+        };
+        const mongoDoc = await BalanceReport.create(report);
+        console.log(
+            'mongodb',
+            mongoDoc
+        );
+        allBalanceReports.push(mongoDoc);
+        onReport(mongoDoc);
+    } catch (e) {
+        console.error(e);
+    }
 };
 
 const getAllBalanceReports = () => allBalanceReports;
