@@ -1665,6 +1665,35 @@ const stSentimentLowestBullish = filterBearish('bullishCount');
 const stSentimentHighestBearish = filterBearish('bearishCount');
 
 
+const fourForFives = [
+    'sudden-drops-last1trend-first1-100',
+    'low-float-high-volume-twoWeekVolToAvgPoints-trendgt30-315',
+    'based-on-jump-down5overnight-trending103-notWatchout-16',
+    'dynamo-3000-bottom50tso-notWatchout-100',
+    'low-float-high-volume-floatTimesfloatToVolume-trenddowngt10-shouldWatchout-25',
+    'based-on-jump-down3overnight-trending103-5',
+];
+const threeForFours = [
+    'constant-downers-5minute-percDownCloseOnly-lowovernightjumps-309',
+    'based-on-jump-down5overnight-trending53-notWatchout-ltneg50percmax-30',
+    'based-on-jump-fourToEightOvernight-trending53-shouldWatchout-16',
+];
+
+const fiveForTens = [
+    'based-on-jump-oneToFourOvernight-gt500kvolume-first1-5',
+    'sudden-drops-last2trend-first2-100',
+    'based-on-jump-down5overnight-trending35257-first1-fiveTo10-30',
+    'sudden-drops-last30trend-first2-fiveTo10-280',
+    'sudden-drops-last2trend-first2-290',
+    'sudden-drops-last1trend-first1-14',
+    'cheapest-picks-chp3--4',
+];
+
+const portalPepper = [
+    'low-float-high-volume-floatPoints-trenddown7to10-notWatchout-95',
+    'based-on-jump-down3overnight-trending103-first2-0'
+];
+
 module.exports = {
     'wild n crazy': [
         'week-swings-tenTo15-1',  // wild
@@ -1818,6 +1847,15 @@ module.exports = {
         stSentimentLowestTodayVolumeChange,
         stSentimentLowestBullish,
         stSentimentHighestBearish,
+
+    
+
+    // fors
+
+    fourForFives,
+    threeForFours,
+    fiveForTens,
+    portalPepper,
 
 
 };

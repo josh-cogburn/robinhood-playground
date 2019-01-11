@@ -27,10 +27,11 @@ module.exports = async (Robinhood, daysBack, minCount = 2, includeToday = true, 
 
     for (let file of filesOfInterest) {
         const json = await jsonMgr.get(`./json/pm-perfs/${file}.json`);
-        json.forEach(({ pm, avgTrend }) => {
-            if (!pm || !avgTrend) return;
-            console.log({ pm, avgTrend });
-            addTrend(pm, avgTrend.slice(0, -1));
+        json.forEach(data => {
+            const { pmName, avgTrend } = data;
+            console.log({ pmName, avgTrend });
+            if (!pmName || !avgTrend) return;
+            addTrend(pmName, avgTrend);
         });
     }
 
@@ -43,7 +44,7 @@ module.exports = async (Robinhood, daysBack, minCount = 2, includeToday = true, 
         // console.log({ pmPerfs, pmCache });
     }
 
-    // console.log(pmCache);
+    console.log({pmCache});
 
     const pmAnalysis = {};
     Object.keys(pmCache).forEach(key => {
@@ -63,7 +64,7 @@ module.exports = async (Robinhood, daysBack, minCount = 2, includeToday = true, 
         };
     });
 
-    // console.log(pmAnalysis);
+    console.log({pmAnalysis});
 
 
     let sortedArray = Object.keys(pmAnalysis)
@@ -76,13 +77,14 @@ module.exports = async (Robinhood, daysBack, minCount = 2, includeToday = true, 
             johnScore: (pm.weightedTrend * pm.percUp) + Math.min(...pm.trends) + pm.trends.filter(t => t > 3 && t < 10).length
         }));
 
+    console.log({ searchString })
     if (searchString.length) {
         sortedArray = sortedArray.filter(t => searchString.every(p => t.pm.includes(p)));
     }
         
-
+    console.log(sortedArray.length, 'backa', minCount)
     sortedArray = sortedArray
-        .filter(t => t.trends.length >= minCount)// && t.trends.every(a => a > -1));
+        // .filter(t => t.trends.length >= minCount)// && t.trends.every(a => a > -1));
         // .sort((a, b) => b.avgTrend - a.avgTrend)
         // .sort((a, b) => b.percUp - a.percUp)
         .sort((a, b) => {

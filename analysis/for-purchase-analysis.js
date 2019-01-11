@@ -3,7 +3,7 @@ const pmsAnalysis = require('./pms')
 const stratManager = require('../socket-server/strat-manager');
 
 
-module.exports = async (Robinhood, numDaysBack = 5, includeToday = true) => {
+module.exports = async (Robinhood, numDaysBack = 5, includeToday = false) => {
 
     const analyzePms = async pms => {
         const output = await pmsAnalysis(Robinhood, Number(numDaysBack), 0);
