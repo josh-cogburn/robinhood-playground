@@ -1,5 +1,7 @@
 # robinhood-playground
 
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/6h-GAnsdc40/0.jpg)](https://www.youtube.com/watch?v=6h-GAnsdc40)
+
 a Node.js script based on the Robinhood API that makes stock recommendations that will go up or down in the next few days
 
 ## online at
