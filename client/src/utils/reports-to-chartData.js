@@ -25,17 +25,23 @@ const fields = {
     'forPurchase PM weighted trend %': d => d.forPurchasePM.weightedTrend,
     'pick to execution %': d => d.pickToExecutionPerc,
 
+        // 100.7, 
     // balanceReports
-    'account balance': (d, i, array) =>  i === 0 ? 100 : getTrend(d.accountBalance, array[0].accountBalance) + 101.9,
-    'SP500': (d, i, array) =>  i === 0 ? 100 : getTrend(d.indexPrices.sp500, array[0].indexPrices.sp500) + 100.7,
-    'nasdaq': (d, i, array) =>  i === 0 ? 100 : getTrend(d.indexPrices.nasdaq, array[0].indexPrices.nasdaq) + 100.7,
-    'russell2000': (d, i, array) =>  i === 0 ? 100 : getTrend(d.indexPrices.russell2000, array[0].indexPrices.russell2000) + 100.7
+    'account balance': (d, i, array) =>  i === 0 ? 100 : getTrend(d.accountBalance, array[0].accountBalance) + 100,
+    'SP500': (d, i, array) =>  i === 0 ? 100 : getTrend(d.indexPrices.sp500, array[0].indexPrices.sp500) + 100,
+    'nasdaq': (d, i, array) =>  i === 0 ? 100 : getTrend(d.indexPrices.nasdaq, array[0].indexPrices.nasdaq) + 100,
+    'russell2000': (d, i, array) =>  i === 0 ? 100 : getTrend(d.indexPrices.russell2000, array[0].indexPrices.russell2000) + 100
 };
 
 const getColor = field => colors[Object.keys(fields).findIndex(f => f === field)];
 
+const thick = i => {
+    const re = [50, 5, 15, 20, 200][i];
+    console.log(i, re)
+    return re
+};
 const process = fieldsToInclude => dayReports => {
-    const datasets = fieldsToInclude.map(key => ({
+    const datasets = fieldsToInclude.map((key, i) => ({
         label: key,
         fill: true,
         lineTension: 0.1,
@@ -44,18 +50,18 @@ const process = fieldsToInclude => dayReports => {
         // pointBorderWidth: 10,
         borderColor: key === 'account balance' ? 'black' : getColor(key),
         borderCapStyle: 'butt',
-        borderWidth: key === 'account balance' ? 5 : 5,
+        borderWidth: key === 'account balance' ? 5 : thick(i),
         borderDashOffset: 0.0,
         borderJoinStyle: 'round',
         // pointBorderColor: key === 'account balance' ? 'black' : getColor(key),
         pointBackgroundColor: '#fff',
-        pointBorderWidth: key === 'account balance' ? 2 : 10,
+        pointBorderWidth: key === 'account balance' ? 2 : thick(i),
         pointHoverRadius: 5,
         pointHoverBackgroundColor: getColor(key),
         pointHoverBorderColor: 'black',
         pointHoverBorderWidth: 2,
         pointRadius: 1,
-        pointHitRadius: 10,
+        pointHitRadius: 100,
         data: dayReports.map(fields[key])
     }));
     // console.log(datasets, Object.keys(fields))
