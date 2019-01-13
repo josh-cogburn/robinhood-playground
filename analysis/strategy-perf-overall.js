@@ -116,9 +116,16 @@ module.exports = async (Robinhood, includeToday, daysBack = NUM_DAYS, minCount =
 
     const withoutPerms = allPerfs
         .filter(({ strategyName }) => {
-            const lastChunk = strategyName.substring(strategyName.lastIndexOf('-') + 1);
-            return !['single', 'first3'].includes(lastChunk);
+            // console.lop('filter, st', strategyName, strategyName.includes('best-st'));
+            return strategyName.includes('best-st');
         })
+        // .filter(({ strategyName }) => {
+        //     const lastChunk = strategyName.substring(strategyName.lastIndexOf('-') + 1);
+        //     return ![
+        //         // 'single', 
+        //         'first3'
+        //     ].includes(lastChunk);
+        // })
         .filter(perf => perf.count >= minCount && perf.count <= maxCount);
 
     const withData = withoutPerms.map(({ strategyName, avgTrend, buyMin, trends, count }) => ({
