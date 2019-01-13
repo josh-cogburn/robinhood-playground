@@ -4,18 +4,17 @@ module.exports = {
     sellAllStocksOnNthDay: 2,
     purchaseAmt: 15,
     forPurchase: [
-
+        
+        // st sent broken because rate limited ouch
 
         // taking a gamble on some st-sentiment
-        'best-st-sentiment-top100RH-highest-todayVolumeChange-first2--25',
-        'best-st-sentiment-top100RH-highest-todayVolumeChange-first2--25',
-        'best-st-sentiment-top100RH-highest-todayVolumeChange-first2--25',
-        'best-st-sentiment-top100RH-highest-todayVolumeChange-first2--25',
+        // 'best-st-sentiment-top100RH-highest-todayVolumeChange-first2--25',
+        // 'best-st-sentiment-top100RH-highest-todayVolumeChange-first2--25',
+        // 'best-st-sentiment-top100RH-highest-todayVolumeChange-first2--25',
+        // 'best-st-sentiment-top100RH-highest-todayVolumeChange-first2--25',
 
         // something or other
-        // '[unprovenFilter30Drops]',
-        // '[unprovenFilter30Drops]',
-        // '[unprovenFilter30Drops]',
+
         // '[sepPerfectosMissing]',
         // '[myRecs-day3count2to4-slice16-uniq-hundredWithHundredCheck]',
         // '[myRecs-day15count9-hundredUpTrendsAllGt1]',
@@ -40,17 +39,21 @@ module.exports = {
         // '[spm-52day-customCount3to5MagicScore-slice16-uniq]',
 
 
+        '[unprovenFilter30Drops]',
+        '[unprovenFilter30Drops]',
+        '[unprovenFilter30Drops]',
+
+
+        '[tiptop-minCount4]',
+        '[tiptop-minCount4]',
+        '[tiptop-minCount4]',
+        '[tiptop-minCount4]',
 
 
         // hot stuff
-        '[postMongo]',
-        '[postMongo]',
-        '[postMongo]',
-        '[tiptop-minCount4]',
-        '[tiptop-minCount4]',
-        '[tiptop-minCount4]',
-        '[tiptop-minCount4]',
-        '[tiptop-minCount4]',
+        // '[postMongo]',
+        // '[postMongo]',
+        // '[postMongo]',
 
         // current stuff
         '[fourForFives]',
@@ -71,29 +74,33 @@ module.exports = {
         '[portalPepper]',
 
 
+        '[portalPepper]',
+        '[portalPepper]',
+
+
         // creme
 
-        '[unprovenFilter30Drops]',
+        // '[unprovenFilter30Drops]',
         // '[sepAdds]',
         // '[unprovenSuddenDropsLast2Filter10]',
-        '[heavydutyhitters]',
+        // '[heavydutyhitters]',
 
-        '[spm-52day-bestFirstGreenAvgTrend-slice16-uniq]',
+        // '[spm-52day-bestFirstGreenAvgTrend-slice16-uniq]',
         // '[spm-52day-bestAvgTrendAnyPlayout-slice16-uniq]',
-        '[spm-52day-all-slice16-uniq]',
+        // '[spm-52day-all-slice16-uniq]',
         // '[spm-52day-highestLimitPlayoutsJohnsSecretRecipeWithCount]',
 
         // '[myRecs-day3count2to4-slice16-uniq-hundredUpAvgGt4]',
         // '[myRecs-day20-hundredResultCreme]',
-        '[myRecs-day15count5-hundredWithHundredCheck]',
+        // '[myRecs-day15count5-hundredWithHundredCheck]',
         // '[myRecs-day15count5-hundredUpAvgGt4]',
         // '[myRecs-day3count2to4-slice16-uniq-hundredUpAvgGt4]',
         
-        '[top-performers-topPerformers95-uniq]',
+        // '[top-performers-topPerformers95-uniq]',
         // '[top-performers-brainPredictions-uniq]',
         // '[top-performers-myPredictions-uniq]',
         // '[top-performers-sortedByHundredResult-uniq]',
-        '[top-performers-sortedByPercUp-uniq]',
+        // '[top-performers-sortedByPercUp-uniq]',
 
         
 
@@ -105,12 +112,6 @@ module.exports = {
         
         '[simpleAsThat]',
         '[simpleAsThat]',
-
-
-
-
-
-
 
 
 
