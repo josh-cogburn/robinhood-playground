@@ -32,7 +32,7 @@ class HashTable {
     }
 }
 
-module.exports = async (Robinhood, includeToday, daysBack = NUM_DAYS, minCount = 0, ignoreYesterday, maxCount = Number.POSITIVE_INFINITY) => {
+module.exports = async (Robinhood, includeToday, daysBack = NUM_DAYS, minCount = 0, ignoreYesterday, maxCount = Number.POSITIVE_INFINITY, stratFilter = '') => {
     console.log('includeToday', includeToday);
     console.log('days back', daysBack);
     console.log('mincount', minCount);
@@ -53,17 +53,24 @@ module.exports = async (Robinhood, includeToday, daysBack = NUM_DAYS, minCount =
             const sellMin = Number(period.substring(period.lastIndexOf('-') + 1));
             if (period !== 'next-day-9') return; // only consider 9 minute sell times
             dayStrats[period].forEach(stratPerf => {
-                if (!stratPerf.strategyName.includes('best-st-sentiment-under5-lowest-bullBearScore--25')) return;
-                if (stratPerf.avgTrend > 100) return;       // rudimentary filter out reverse splits's
-                const split = stratPerf.strategyName.split('-');
-                const buyMin = Number(split.pop());
-                const strategyName = split.join('-');
+                const { strategyName, avgTrend } = stratPerf;
+                if (!strategyName.includes(stratFilter)) return;
+                if (avgTrend > 100) return;       // rudimentary filter out reverse splits's
+                const negMin = strategyName.includes('--');
+                const split = strategyName.split('-');
+                let buyMin = Number(split.pop());
+                buyMin = negMin ? 0 - buyMin : buyMin;
+                let strategyWithoutMin = split.join('-');
+                if (strategyWithoutMin.endsWith('-')){
+                    strategyWithoutMin = strategyWithoutMin.substring(0, strategyWithoutMin.length-1);
+                }
                 const key = {
-                    strategyName,
+                    strategyName: strategyWithoutMin,
                     buyMin,
                     // sellMin
                 };
-                stratResults.put(key, (stratResults.get(key) || []).concat(stratPerf.avgTrend));
+                
+                stratResults.put(key, (stratResults.get(key) || []).concat(avgTrend));
             });
 
         });
@@ -72,17 +79,21 @@ module.exports = async (Robinhood, includeToday, daysBack = NUM_DAYS, minCount =
     // should includetoday?
     if (paramTrue(includeToday) || typeof includeToday === 'object') {
         console.log('adding today');
-        const todayPerf = typeof includeToday === 'object' ? includeToday : await strategyPerfToday(Robinhood);
+        let todayPerf = typeof includeToday === 'object' ? includeToday : await strategyPerfToday(Robinhood);
+        todayPerf = todayPerf.filter(p => p.strategyName.includes(stratFilter));
+        // console.log(JSON.stringify({ todayPerf }, null, 0))
         todayPerf.forEach(perf => {
             let { strategyName, avgTrend, min } = perf;
-            if (!strategyName.includes('best-st-sentiment-under5-lowest-bullBearScore--25')) return;
+            // if (!strategyName.includes('best-st-sentiment-under5')) return;
             console.log({ strategyName, avgTrend, min });
-            const lastDash = strategyName.lastIndexOf('-');
-            const buyMin = typeof min !== 'undefined' ? min : Number(strategyName.substring(lastDash + 1));
-            strategyName = strategyName.substring(0, lastDash);
+            // const minDelim = strategyName.includes('--') ? '--' : '-';
+            // const lastDash = strategyName.lastIndexOf(minDelim);
+            // const buyMin = typeof min !== 'undefined' ? min : Number(strategyName.substring(lastDash + 1));
+            // strategyName = strategyName.substring(0, lastDash);
+
             const key = {
                 strategyName,
-                buyMin
+                buyMin: min
             };
 
             // const curCount = (stratResults.get(key) || []).length;
@@ -117,17 +128,17 @@ module.exports = async (Robinhood, includeToday, daysBack = NUM_DAYS, minCount =
     // console.log('all', JSON.stringify(allPerfs, null, 2));
 
     const withoutPerms = allPerfs
-        .filter(({ strategyName }) => {
-            // console.lop('filter, st', strategyName, strategyName.includes('best-st'));
-            return strategyName.includes('best-st');
-        })
         // .filter(({ strategyName }) => {
-        //     const lastChunk = strategyName.substring(strategyName.lastIndexOf('-') + 1);
-        //     return ![
-        //         // 'single', 
-        //         'first3'
-        //     ].includes(lastChunk);
+        //     console.lop('filter, st', strategyName, strategyName.includes('best-st'));
+        //     return strategyName.includes('best-st');
         // })
+        .filter(({ strategyName }) => {
+            const lastChunk = strategyName.substring(strategyName.lastIndexOf('-') + 1);
+            return ![
+                // 'single', 
+                'first3'
+            ].includes(lastChunk);
+        })
         .filter(perf => perf.count >= minCount && perf.count <= maxCount);
 
     const withData = withoutPerms.map(({ strategyName, avgTrend, buyMin, trends, count }) => ({
