@@ -53,6 +53,7 @@ module.exports = async (Robinhood, includeToday, daysBack = NUM_DAYS, minCount =
             const sellMin = Number(period.substring(period.lastIndexOf('-') + 1));
             if (period !== 'next-day-9') return; // only consider 9 minute sell times
             dayStrats[period].forEach(stratPerf => {
+                if (!stratPerf.strategyName.includes('best-st-sentiment-under5-lowest-bullBearScore--25')) return;
                 if (stratPerf.avgTrend > 100) return;       // rudimentary filter out reverse splits's
                 const split = stratPerf.strategyName.split('-');
                 const buyMin = Number(split.pop());
@@ -74,6 +75,7 @@ module.exports = async (Robinhood, includeToday, daysBack = NUM_DAYS, minCount =
         const todayPerf = typeof includeToday === 'object' ? includeToday : await strategyPerfToday(Robinhood);
         todayPerf.forEach(perf => {
             let { strategyName, avgTrend, min } = perf;
+            if (!strategyName.includes('best-st-sentiment-under5-lowest-bullBearScore--25')) return;
             console.log({ strategyName, avgTrend, min });
             const lastDash = strategyName.lastIndexOf('-');
             const buyMin = typeof min !== 'undefined' ? min : Number(strategyName.substring(lastDash + 1));
