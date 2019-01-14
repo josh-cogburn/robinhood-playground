@@ -7,6 +7,7 @@ const stReq = async url => {
         url,
         proxy: getProxy()
     });
+    await new Promise(resolve => setTimeout(resolve, 150)); // rate limited
     return JSON.parse(res);
 };
     
