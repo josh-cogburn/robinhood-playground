@@ -1694,6 +1694,39 @@ const portalPepper = [
     'based-on-jump-down3overnight-trending103-first2-0'
 ];
 
+const blueMoons = [
+    'low-float-high-volume-absVolPoints-trendgt50-shouldWatchout-tenTo15-315',
+    'low-float-high-volume-volToAvgPoints-trendgt50-tenTo15-315',
+    
+    'based-on-jump-down5overnight-trending35257-gt1milvolume-fiveTo10-0',
+    'low-float-high-volume-floatPoints-trenddowngt20-tenTo15-25',
+    'based-on-jump-fourToEightOvernight-trending35257-gt500kvolume-5',
+    // 'low-float-high-volume-floatTimesvolToAvgPoints-trenddowngt20-notWatchout-tenTo15-25',
+    'low-float-high-volume-floatTimesvolTo2WeekPoints-trenddowngt10-notWatchout-tenTo15-25',
+    'low-float-high-volume-floatPoints-trenddowngt30-notWatchout-150',
+    'based-on-jump-down5overnight-gt1milvolume-fiveTo10-0',
+    'low-float-high-volume-floatPoints-trenddowngt10-notWatchout-tenTo15-25',
+    'based-on-jump-down3overnight-trending35257-notWatchout-ltneg50percmax-fiveTo10-5',
+    'low-float-high-volume-floatPoints-trenddowngt20-tenTo15-95',
+    'sudden-drops-last3trend-filter10-fiveTo10-280',
+    'sudden-drops-last30trend-filter30-388',
+    'based-on-jump-down5overnight-notWatchout-ltneg50percmax-first1-tenTo15-0',
+    'sudden-drops-last18trend-filter30-290',
+];
+
+const lilMore = [
+    'based-on-jump-down5overnight-trending35257-shouldWatchout-tenTo15-16',
+    'sudden-drops-last18trend-filter10-fiveTo10-360',
+    'sudden-drops-last5trend-filter10-360',
+    'low-float-high-volume-floatTimesvolToAvgPoints-trenddowngt10-tenTo15-6',
+    'sudden-drops-last50trend-filter20-360',
+    'low-float-high-volume-floatPoints-trenddowngt10-tenTo15-25',
+    'sudden-drops-last5trend-filter10-290',
+    'based-on-jump-down5overnight-trending35257-shouldWatchout-first1-fiveTo10-0',
+    'sudden-drops-last3trend-filter10-290',
+    'sudden-drops-last30trend-filter20-fiveTo10-388'
+];
+
 module.exports = {
     'wild n crazy': [
         'week-swings-tenTo15-1',  // wild
@@ -1856,6 +1889,10 @@ module.exports = {
     threeForFours,
     fiveForTens,
     portalPepper,
+
+
+    blueMoons,
+    lilMore
 
 
 };

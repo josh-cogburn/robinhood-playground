@@ -2,7 +2,7 @@
 module.exports = {
     // important settings
     sellAllStocksOnNthDay: 2,
-    purchaseAmt: 22,
+    purchaseAmt: 20,
     forPurchase: [
         
         // st sent broken because rate limited ouch
@@ -76,6 +76,13 @@ module.exports = {
 
         '[portalPepper]',
         '[portalPepper]',
+        '[portalPepper]',
+        '[portalPepper]',
+
+        '[blueMoons]',
+        '[lilMore]',
+        '[blueMoons]',
+        '[lilMore]',
 
 
         // creme

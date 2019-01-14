@@ -10,3 +10,4 @@ Date.prototype.toLocaleDateString = function() {
 
 global.log = console.log;
 global.str = obj => log(JSON.stringify(obj, null, 2));
+global.mapLimit = require('promise-map-limit');
