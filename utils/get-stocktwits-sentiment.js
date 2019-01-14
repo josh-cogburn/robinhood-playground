@@ -3,12 +3,19 @@ const { getProxy } = require('./stocktwits');
 const { avgArray } = require('./array-math');
 
 const stReq = async url => {
-    const res = await request({
-        url,
-        proxy: getProxy()
-    });
-    await new Promise(resolve => setTimeout(resolve, 1050)); // rate limited
-    return JSON.parse(res);
+    try {
+        const res = await request({
+            url,
+            proxy: getProxy()
+        });
+        return JSON.parse(res);
+    } catch (e) {
+        console.error(JSON.parse(e.response.body).response.status);
+        throw JSON.parse(e.response.body).response;
+    } finally {
+        await new Promise(resolve => setTimeout(resolve, 2200)); // rate limited
+    }
+    
 };
     
 
@@ -57,7 +64,7 @@ module.exports = async (Robinhood, ticker, detailed) => {
         console.log(ticker, returnObj);
         return returnObj;
     } catch (e) {
-        console.error(e);
+        // console.error(e);
         return null;
     }
     

@@ -37,7 +37,7 @@ module.exports = {
             console.log(trendTicks.length);
             console.log([...new Set(trendTicks)].length);
 
-            let withSentiment = await mapLimit(trend, 3, async obj => {
+            let withSentiment = await mapLimit(trend, 1, async obj => {
                 stReqCount = stReqCount + 3;
                 console.log({ stReqCount });
                 return {

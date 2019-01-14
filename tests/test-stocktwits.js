@@ -18,7 +18,11 @@ const stReq = async (url, host) => {
     for (let host of proxyConfig.hosts) {
         const sentimentUrl = `https://api.stocktwits.com/api/2/symbols/AAPL/sentiment.json`;
         console.log({host});
-        console.log(await stReq(sentimentUrl, host));
+        try {
+            console.log(await stReq(sentimentUrl, host));
+        } catch (e) {
+            console.error(JSON.parse(e.response.body).response.status);
+        }
     }
 
     // console.log(
