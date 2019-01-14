@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TrendPerc from './TrendPerc';
+import TradingViewWidget from 'react-tradingview-widget';
 
 class Pick extends Component {
     state = {
@@ -30,30 +31,34 @@ class Pick extends Component {
                   </i>
                 )}
                 {
-                  showingDetails && (
-                      <table>
-                          <thead>
-                              <th>ticker</th>
-                              <th>thenPrice</th>
-                              <th>nowPrice</th>
-                              <th>trend</th>
-                          </thead>
-                          <tbody>
-                              {
-                                  pick.withTrend.filter(val => !!val).map(tickerObj => (
-                                      <tr>
-                                          <td>{tickerObj.ticker}</td>
-                                          <td>{tickerObj.thenPrice}</td>
-                                          <td>{tickerObj.nowPrice}</td>
-                                          <td>{tickerObj.trend}%</td>
-                                      </tr>
-                                  ))
-                              }
-                          </tbody>
-                      </table>
-                  )
+                    showingDetails 
+                        ? pick.withTrend
+                            .filter(val => !!val)
+                            .map(tickerObj => (
+                                <div>
+                                    <table>
+                                        <thead>
+                                            <th>ticker</th>
+                                            <th>thenPrice</th>
+                                            <th>nowPrice</th>
+                                            <th>trend</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>{tickerObj.ticker}</td>
+                                                <td>{tickerObj.thenPrice}</td>
+                                                <td>{tickerObj.nowPrice}</td>
+                                                <td>{tickerObj.trend}%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div style={{ width: '980px', height: '610px'}}>
+                                        <TradingViewWidget symbol={tickerObj.ticker} range='5d' style='8' width={980} height={610} /> 
+                                    </div>
+                                </div>
+                            ))
+                        : null                    
                 }
-  
             </div>
         );
     }

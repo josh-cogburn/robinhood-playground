@@ -6907,6 +6907,11 @@ react-scripts@1.1.4:
   optionalDependencies:
     fsevents "^1.1.3"
 
+react-tradingview-widget@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/react-tradingview-widget/-/react-tradingview-widget-1.3.0.tgz#6fcf84cda7f7f6aecda3a1342eba81a69b3aa495"
+  integrity sha512-eXBYqRTIMCWua7q5kM9mdEsDLRLgD+LAfdHAWbk88vEHo0efkkbq/rWBK8qJMjx3nv29DcgKlcDdbUiOp+O6mg==
+
 react-transition-group@^2.2.1:
   version "2.5.2"
   resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-2.5.2.tgz#9457166a9ba6ce697a3e1b076b3c049b9fb2c408"

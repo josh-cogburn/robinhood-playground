@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import getTrend from '../utils/get-trend';
 import avgArray from '../utils/avg-array';
 
