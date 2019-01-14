@@ -40,6 +40,7 @@ module.exports = {
             let withSentiment = await mapLimit(trend, 3, async obj => {
                 stReqCount = stReqCount + 3;
                 console.log({ stReqCount });
+                await new Promise(resolve => setTimeout(resolve, 100)); // rate limited
                 return {
                     ...obj,
                     ...await getStSentiment(null, obj.ticker, true)
