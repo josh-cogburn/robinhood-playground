@@ -8,7 +8,7 @@ const settings = require('../settings');
 const flatten = require('../utils/flatten-array');
 const stratPerfOverall = require('../analysis/strategy-perf-overall');
 
-module.exports = async (Robinhood) => {
+module.exports = async (Robinhood, manualOnly) => {
 
     pastData = await (async () => {
         const stratPerfData = await stratPerfOverall(Robinhood, true, 4);
@@ -28,11 +28,21 @@ module.exports = async (Robinhood) => {
         return { fiveDay: stratPerfObj };
     })();
 
-    const myRecs = await getMyRecs(Robinhood);
-    const fiftytwo = await spms(Robinhood);
-    const eightDay = await spms(Robinhood, 8);
-    const tp = await topPerforming(Robinhood);
+    // const sources = [
+    //     {
+    //         pms: getMyRecs,
+    //         prefix: 'myRecs'
+    //     },
+    //     {
+    //         pms: spms,
+    //         prefix: 'spm-52day'
+    //     },
+    //     {
+    //         pms: () => 
+    //     }
+    // ]
 
+    
     const prependKeys = (obj, prefix) => Object.keys(obj).reduce((acc, val) => ({
         ...acc,
         [`${prefix}${val}`]: obj[val]
@@ -42,19 +52,31 @@ module.exports = async (Robinhood) => {
 
         ...manualPMs,
 
-        // myRecs
-        ...prependKeys(myRecs, 'myRecs-'),
+        ...!manualOnly ? await (async () => {
 
-        //8daySPMs
-        ...prependKeys(eightDay, 'spm-8day-'),
+            const myRecs = await getMyRecs(Robinhood);
+            const fiftytwo = await spms(Robinhood);
+            const eightDay = await spms(Robinhood, 8);
+            const tp = await topPerforming(Robinhood);
         
-        //fiftytwodaySPMs
-        ...prependKeys(fiftytwo, 'spm-52day-'),
+            return {
+                // myRecs
+                ...prependKeys(myRecs, 'myRecs-'),
 
-        //top-performers
-        ...prependKeys(tp, 'top-performers-'),
+                //8daySPMs
+                ...prependKeys(eightDay, 'spm-8day-'),
 
-        ...await getTipTop(Robinhood)
+                //fiftytwodaySPMs
+                ...prependKeys(fiftytwo, 'spm-52day-'),
+
+                //top-performers
+                ...prependKeys(tp, 'top-performers-'),
+
+                ...await getTipTop(Robinhood)
+            };
+        })() : {}
+
+        
     };
 
     console.log('done donezy');

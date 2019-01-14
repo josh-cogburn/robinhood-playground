@@ -7,3 +7,6 @@ Date.prototype.toLocaleDateString = function() {
     const [year, month, day] = prevOutput.split('-');
     return [month, day, year].join('-');
 };
+
+global.log = console.log;
+global.str = obj => log(JSON.stringify(obj, null, 2));
