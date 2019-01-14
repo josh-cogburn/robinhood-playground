@@ -49,6 +49,10 @@ module.exports = {
         '[tiptop-minCount4]',
         '[tiptop-minCount4]',
 
+        '[backToTheBasicsPeople]',
+        '[backToTheBasicsPeople]',
+        '[backToTheBasicsPeople]',
+
 
         // hot stuff
         // '[postMongo]',
