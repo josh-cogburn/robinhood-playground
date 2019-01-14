@@ -10,8 +10,8 @@ module.exports = {
         // taking a gamble on some st-sentiment
         // 'best-st-sentiment-top100RH-highest-todayVolumeChange-first2--25',
         // 'best-st-sentiment-top100RH-highest-todayVolumeChange-first2--25',
-        // 'best-st-sentiment-top100RH-highest-todayVolumeChange-first2--25',
-        // 'best-st-sentiment-top100RH-highest-todayVolumeChange-first2--25',
+        'best-st-sentiment-top100RH-highest-todayVolumeChange-first2--25',
+        'best-st-sentiment-top100RH-highest-todayVolumeChange-first2--25',
 
         // something or other
 
