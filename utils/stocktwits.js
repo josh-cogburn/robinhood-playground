@@ -2,10 +2,10 @@ const DISABLED = false;
 const request = require('request-promise');
 const { stocktwits: config, proxy: proxyConfig } = require('../config');
 
-const getProxy = () => {
+const getProxy = host => {
     const { username, password, hosts } = proxyConfig;
-    const randomHost = hosts[Math.floor(hosts.length * Math.random())];
-    return `http://${username}:${password}@${randomHost}`;
+    host = host || hosts[Math.floor(hosts.length * Math.random())];
+    return `http://${username}:${password}@${host}`;
 };
 
 const getToken = async proxy => {
