@@ -88,10 +88,10 @@ module.exports = async (
                 // }
                 let lastBidPrice;
                 let quantity;
-                const limitBid = async bidPrice => {
+                const limitBid = async (bidPrice, quantity) => {
                     const finalBidPrice = pickPrice ? Math.min(pickPrice * (PERC_ALLOWED_ABOVE_PICK_PRICE / 100 + 1), bidPrice) : bidPrice;
                     lastBidPrice = finalBidPrice;
-                    const quantity = calcQuantity(maxPrice, finalBidPrice);
+                    quantity = quantity || calcQuantity(maxPrice, finalBidPrice);
                     console.log({ bidPrice, finalBidPrice });
                     const data = {
                         ticker,
@@ -142,6 +142,12 @@ module.exports = async (
                 str({ res })
 
                 if (!res || res.detail) {
+                    const onlyShares = res.detail.match(/You can only purchase (\d*) shares/);
+                    if (onlyShares) {
+                        const recShares = onlyShares[1];
+                        console.log('found only shares error message', lastBidPrice, recShares);
+                        return limitBid(lastBidPrice, Number(recShares));
+                    }
                     return reject(res.detail || 'unable to purchase' + ticker);
                 }
 
