@@ -13,7 +13,7 @@ const stReq = async url => {
         console.error(JSON.parse(e.response.body).response.status);
         throw JSON.parse(e.response.body).response;
     } finally {
-        await new Promise(resolve => setTimeout(resolve, 2200)); // rate limited
+        await new Promise(resolve => setTimeout(resolve, 2600)); // rate limited
     }
     
 };
