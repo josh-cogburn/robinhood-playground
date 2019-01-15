@@ -70,7 +70,7 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
             const [{ ticker }] = withPrices;
             await stocktwits.postBearish(ticker, stratMin);
         }
-        tweeter.tweet(`SHORT ${withPrices.map(({ ticker, price }) => `#${ticker} @ $${price}`).join(' and ')} - ${stratMin}`);
+        // tweeter.tweet(`SHORT ${withPrices.map(({ ticker, price }) => `#${ticker} @ $${price}`).join(' and ')} - ${stratMin}`);
     }
 
     // for purchase
@@ -89,7 +89,7 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
             const [{ ticker }] = withPrices;
             await stocktwits.postBullish(ticker, stratMin);
         }
-        tweeter.tweet(`BUY ${withPrices.map(({ ticker, price }) => `#${ticker} @ $${price}`).join(' and ')} - ${stratMin}`);
+        // tweeter.tweet(`BUY ${withPrices.map(({ ticker, price }) => `#${ticker} @ $${price}`).join(' and ')} - ${stratMin}`);
     }
 
 };

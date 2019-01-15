@@ -68,7 +68,7 @@ const postPublicAndRoom = async (ticker, strategy, sentiment, dontPostPublic) =>
 };
 
 const postBearish = (ticker, strategy) =>
-    postPublicAndRoom(ticker, strategy, 'bearish');
+    postPublicAndRoom(ticker, strategy, 'bearish', true);
 
 const postBullish = (ticker, strategy) =>
     postPublicAndRoom(ticker, strategy, 'bullish', true);   // dont post public
