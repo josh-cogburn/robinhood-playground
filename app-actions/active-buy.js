@@ -141,13 +141,6 @@ module.exports = async (
 
                 str({ res })
 
-                await new Promise(resolve => setTimeout(resolve, 1000));
-
-                console.log('here')
-                str(
-                    await Robinhood.url(res.url)
-                );
-
                 if (!res || res.detail) {
                     return reject(res.detail || 'unable to purchase' + ticker);
                 }
@@ -162,46 +155,46 @@ module.exports = async (
                     res = await limitBid(newBid);
                 }
 
+
                 const timeout = ((0.8 * TIME_BETWEEN_CHECK) + (Math.random() * TIME_BETWEEN_CHECK * 0.8)) * 1000;
-                setTimeout(async () => {
+                await new Promise(resolve => setTimeout(resolve, timeout));
 
-                    // check state of order
-                    const { state } = await Robinhood.url(res.url);
-                    const filled = state === 'filled';
-                    str({ filled });
-                    // console.log(relOrder);
-                    if (!filled) {
-                        console.log('canceling last attempt', ticker);
-                        if (attemptCount < TOTAL_ATTEMPTS) {
-                            await Robinhood.cancel_order(res);
-                            return attempt();
-                        } else {
-                            const errMessage = 'reached max attempts, unable to BUY though leaving placed order';
-                            console.log(errMessage, ticker);
-                            await limitLastTrade();
-                            return reject(errMessage);
-                        }
+                // check state of order
+                const { state } = await Robinhood.url(res.url);
+                const filled = state === 'filled';
+                str({ filled });
+                // console.log(relOrder);
+                if (!filled) {
+                    console.log('canceling last attempt', ticker);
+                    if (attemptCount < TOTAL_ATTEMPTS) {
+                        await Robinhood.cancel_order(res);
+                        return attempt();
                     } else {
-
-                        // update daily transactions
-                        const successObj = {
-                            type: 'buy',
-                            ticker,
-                            bid_price: lastBidPrice,
-                            quantity,
-                            strategy,
-                            min
-                        };
-                        await addToDailyTransactions(successObj);
-
-                        if (attemptCount) {
-                            console.log('successfully bought with attemptcount', attemptCount, ticker);
-                        }
-
-                        return resolve(successObj);
-
+                        const errMessage = 'reached max attempts, unable to BUY though leaving placed order';
+                        console.log(errMessage, ticker);
+                        await limitLastTrade();
+                        return reject(errMessage);
                     }
-                }, timeout);
+                } else {
+
+                    // update daily transactions
+                    const successObj = {
+                        type: 'buy',
+                        ticker,
+                        bid_price: lastBidPrice,
+                        quantity,
+                        strategy,
+                        min
+                    };
+                    await addToDailyTransactions(successObj);
+
+                    if (attemptCount) {
+                        console.log('successfully bought with attemptcount', attemptCount, ticker);
+                    }
+
+                    return resolve(successObj);
+
+                }
 
             };
 
