@@ -1686,7 +1686,6 @@ const fiveForTens = [
     'sudden-drops-last30trend-first2-fiveTo10-280',
     'sudden-drops-last2trend-first2-290',
     'sudden-drops-last1trend-first1-14',
-    'cheapest-picks-chp3--4',
 ];
 
 const portalPepper = [

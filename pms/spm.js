@@ -29,8 +29,9 @@ module.exports = async (Robinhood, daysBack) => {
         return {
             ...acc,
             [key]: spm[key].map(list => list.strategy),
-            [`${key}-slice16`]: spm[key].slice(0, 16).map(list => list.strategy),
-            [`${key}-slice16-uniq`]: uniqifyArrayOfStrategies(spm[key].slice(0, 16)).map(list => list.strategy),
+            [`${key}-slice7`]: spm[key].slice(0, 16).map(list => list.strategy),
+            [`${key}-slice7-uniq`]: uniqifyArrayOfStrategies(spm[key].slice(0, 16)).map(list => list.strategy),
+            [`${key}-single`]: spm[key].slice(0, 1).map(list => list.strategy),
         };
     }, {});
 }

@@ -139,6 +139,15 @@ module.exports = async (
 
                 let res = await attemptLimitOrder();
 
+                str({ res })
+
+                await new Promise(resolve => setTimeout(resolve, 1000));
+
+                console.log('here')
+                str(
+                    await Robinhood.url(res.url)
+                );
+
                 if (!res || res.detail) {
                     return reject(res.detail || 'unable to purchase' + ticker);
                 }
@@ -156,29 +165,21 @@ module.exports = async (
                 const timeout = ((0.8 * TIME_BETWEEN_CHECK) + (Math.random() * TIME_BETWEEN_CHECK * 0.8)) * 1000;
                 setTimeout(async () => {
 
-                    // get orders, check if still pending
-                    let {results: orders} = await Robinhood.orders();
-                    orders = orders.filter(order => ['filled', 'cancelled'].indexOf(order.state) === -1);
-
-                    orders = await mapLimit(orders, 1, async order => ({
-                        ...order,
-                        instrument: await Robinhood.url(order.instrument)
-                    }));
-
-                    const relOrder = orders.find(order => {
-                        return order.instrument.symbol === ticker;
-                    });
+                    // check state of order
+                    const { state } = await Robinhood.url(res.url);
+                    const filled = state === 'filled';
+                    str({ filled });
                     // console.log(relOrder);
-                    if (relOrder) {
+                    if (!filled) {
                         console.log('canceling last attempt', ticker);
                         if (attemptCount < TOTAL_ATTEMPTS) {
-                            await Robinhood.cancel_order(relOrder);
+                            await Robinhood.cancel_order(res);
                             return attempt();
                         } else {
                             const errMessage = 'reached max attempts, unable to BUY though leaving placed order';
                             console.log(errMessage, ticker);
-                            return limitLastTrade();
-                            // return reject(errMessage);
+                            await limitLastTrade();
+                            return reject(errMessage);
                         }
                     } else {
 

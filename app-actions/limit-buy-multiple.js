@@ -1,5 +1,6 @@
 const activeBuy = require('./active-buy');
 const mapLimit = require('promise-map-limit');
+const sendEmail = require('../utils/send-email');
 
 module.exports = async (Robinhood, {stocksToBuy, totalAmtToSpend, strategy, maxNumStocksToPurchase, min, withPrices }) => {
 
@@ -40,5 +41,7 @@ module.exports = async (Robinhood, {stocksToBuy, totalAmtToSpend, strategy, maxN
     console.log('finished purchasing', stocksToBuy.length, 'stocks');
     console.log('attempted amount', totalAmtToSpend);
     console.log('amount leftover', amtToSpendLeft);
-    failedStocks.length && console.log('failed stocks', JSON.stringify(failedStocks));
+    if (failedStocks.length) {
+        await sendEmail(`robinhood-playground: failed to purchase`, JSON.stringify(failedStocks));
+    }
 };

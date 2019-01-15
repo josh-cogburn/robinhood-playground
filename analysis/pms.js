@@ -84,6 +84,7 @@ module.exports = async (Robinhood, daysBack, minCount = 2, includeToday = true, 
         
     console.log(sortedArray.length, 'backa', minCount)
     sortedArray = sortedArray
+        .filter(t => t.trends.length >= Number(minCount))
         // .filter(t => t.trends.length >= minCount)// && t.trends.every(a => a > -1));
         // .sort((a, b) => b.avgTrend - a.avgTrend)
         // .sort((a, b) => b.percUp - a.percUp)

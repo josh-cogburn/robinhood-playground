@@ -10,8 +10,11 @@ module.exports = {
         // taking a gamble on some st-sentiment
         // 'best-st-sentiment-top100RH-highest-todayVolumeChange-first2--25',
         // 'best-st-sentiment-top100RH-highest-todayVolumeChange-first2--25',
-        'best-st-sentiment-top100RH-highest-todayVolumeChange-first2--25',
-        'best-st-sentiment-top100RH-highest-todayVolumeChange-first2--25',
+        // 'best-st-sentiment-top100RH-highest-todayVolumeChange-first2--25',
+        // 'best-st-sentiment-top100RH-highest-todayVolumeChange-first2--25',
+        'best-st-sentiment-under5-withSentiment-300',
+        'best-st-sentiment-under5-lowest-bullBearScore--25',
+        'best-st-sentiment-under5-lowest-todayVolumeChange-150',
 
         // something or other
 
@@ -44,10 +47,10 @@ module.exports = {
         '[unprovenFilter30Drops]',
 
 
-        '[tiptop-minCount4]',
-        '[tiptop-minCount4]',
-        '[tiptop-minCount4]',
-        '[tiptop-minCount4]',
+        // '[tiptop-minCount4]',
+        // '[tiptop-minCount4]',
+        // '[tiptop-minCount4]',
+        // '[tiptop-minCount4]',
 
         '[backToTheBasicsPeople]',
         '[backToTheBasicsPeople]',
@@ -65,19 +68,6 @@ module.exports = {
         '[fiveForTens]',
         '[portalPepper]',
 
-        // x2
-        '[fourForFives]',
-        '[threeForFours]',
-        '[fiveForTens]',
-        '[portalPepper]',
-
-        // x3
-        '[fourForFives]',
-        '[threeForFours]',
-        '[fiveForTens]',
-        '[portalPepper]',
-
-
         '[portalPepper]',
         '[portalPepper]',
         '[portalPepper]',
@@ -85,9 +75,6 @@ module.exports = {
 
         '[blueMoons]',
         '[lilMore]',
-        '[blueMoons]',
-        '[lilMore]',
-
 
         // creme
 
@@ -120,11 +107,22 @@ module.exports = {
         '[tickerWatchers]',
         '[tickerWatchers]',
         '[tickerWatchers]',
+        '[tickerWatchers]',
+        '[tickerWatchers]',
+        '[tickerWatchers]',
+        '[tickerWatchers]',
+        '[tickerWatchers]',
+        '[tickerWatchers]',
+        '[tickerWatchers]',
+        '[tickerWatchers]',
+        '[tickerWatchers]',
         
         '[simpleAsThat]',
         '[simpleAsThat]',
 
-
+        '[myRecs-day40-hundredResultCreme]',
+        '[myRecs-day5-hundredResultCreme-allGt1]',
+        '[bigdawgs]',
 
 
 

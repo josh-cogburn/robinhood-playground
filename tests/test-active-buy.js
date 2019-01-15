@@ -27,7 +27,7 @@ process.on('unhandledRejection', (reason, p) => {
   // application specific logging, throwing an error, or other logic here
 });
 
-(async () => {
+module.exports = async Robinhood => {
 
     Robinhood = await login();
     global.Robinhood = Robinhood;
@@ -77,8 +77,8 @@ process.on('unhandledRejection', (reason, p) => {
     await activeBuy(Robinhood, {
         ticker: 'BPMX',
         strategy: 'testing',
-        maxPrice: 5,
+        maxPrice: 1,
         min: 242
     });
 
-})();
+};
