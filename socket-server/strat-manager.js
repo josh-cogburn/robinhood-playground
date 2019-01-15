@@ -167,7 +167,7 @@ const stratManager = {
     },
     async initPicks(dateStr) {
         console.log('init picks', dateStr)
-        const dbPicks = await Pick.find({ date: dateStr });
+        const dbPicks = await Pick.find({ date: dateStr }).lean();
         console.log('dbPicks', dbPicks);
         const picks = dbPicks.map(pick => ({
             stratMin: `${pick.strategyName}-${pick.min}`,

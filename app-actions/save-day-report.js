@@ -9,6 +9,7 @@ const getTrend = require('../utils/get-trend');
 const stratManager = require('../socket-server/strat-manager');
 const PmPerfs = require('../models/PmPerfs');
 const getAccountBalance = require('../utils/get-account-balance');
+const fillPerc = require('../analysis/fill-perc');
 
 // helpers
 const roundTo = numDec => num => Math.round(num * Math.pow(10, numDec)) / Math.pow(10, numDec);
@@ -47,6 +48,9 @@ module.exports = async (Robinhood, min = 515) => {
     const sellReport = await sells(Robinhood, 1);
     const holdReport = await holds(Robinhood);
 
+    // fill perc
+    const fillPerc = await fillPerc(Robinhood);
+
     // prep data for mongo
     const mongoData = {
         accountBalance: twoDec(accountBalance),
@@ -60,6 +64,7 @@ module.exports = async (Robinhood, min = 515) => {
             percentage: twoDec(sellReport.returnPerc) || 0
         },
         pickToExecutionPerc: twoDec(holdReport.pickToExecutionPerc) || 0,
+        fillPerc: twoDec(fillPerc) || 0,
         forPurchasePM: forPurchasePerfs,
         indexPrices
     };

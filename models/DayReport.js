@@ -21,6 +21,7 @@ const schema = new Schema({
         weightedTrend: Number,
     },
     pickToExecutionPerc: Number,
+    fillPerc: Number,
     indexPrices: {
         sp500: Number,
         nasdaq: Number,
