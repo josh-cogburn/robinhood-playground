@@ -1,8 +1,8 @@
 // TODO: flatten list of strategies with PMs for emailObj same way as forPurchase
 module.exports = {
     // important settings
-    sellAllStocksOnNthDay: 2,
-    purchaseAmt: 20,
+    sellAllStocksOnNthDay: 1,
+    purchaseAmt: 13,
     forPurchase: [
         
         // st sent broken because rate limited ouch
