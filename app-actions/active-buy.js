@@ -8,8 +8,8 @@ const lookup = require('../utils/lookup');
 const mapLimit = require('promise-map-limit');
 
 const TIME_BETWEEN_CHECK = 3; // seconds
-const TOTAL_ATTEMPTS = 17;
-const PERC_ALLOWED_ABOVE_PICK_PRICE = 12;
+const TOTAL_ATTEMPTS = 20;
+const PERC_ALLOWED_ABOVE_PICK_PRICE = 7;
 
 const addToDailyTransactions = async data => {
     const fileName = `./json/daily-transactions/${(new Date()).toLocaleDateString().split('/').join('-')}.json`;
