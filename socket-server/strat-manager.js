@@ -34,6 +34,7 @@ const stratManager = {
     // relatedPrices: {},
     curDate: null,
     predictionModels: {},
+    pmPerfs: [],
     hasInit: false,
     tickerWatcher: null,    // TickerWatcher instance
     settingsString: null,
@@ -46,6 +47,7 @@ const stratManager = {
             name: 'stratManager', 
             Robinhood: this.Robinhood, 
             handler: relatedPrices => {
+                this.sendToAll('server:pm-perfs', this.calcPmPerfs());;
                 this.sendToAll('server:related-prices', relatedPrices);
             }
         });
@@ -92,7 +94,8 @@ const stratManager = {
             predictionModels: this.predictionModels,
             settingsString: this.settingsString,
             cronString: regCronIncAfterSixThirty.toString(),
-            balanceReports: balanceReportManager.getAllBalanceReports()
+            balanceReports: balanceReportManager.getAllBalanceReports(),
+            pmPerfs: this.pmPerfs
         };
     },
     newPick(data) {
@@ -198,9 +201,8 @@ const stratManager = {
     },
     calcPmPerfs() {
         const {relatedPrices} = this.tickerWatcher;
-        console.log({ relatedPrices });
         
-        return Object.entries(this.predictionModels).map(entry => {
+        const pmPerfs = Object.entries(this.predictionModels).map(entry => {
             const [ stratName, trends ] = entry;
             // const trends = this.predictionModels[stratName];
             console.log(entry);
@@ -238,23 +240,21 @@ const stratManager = {
                     const withTrends = foundStrategies.map(handlePick);
                     const analyzed = withTrends.map(withTrend => ({
                         avgTrend: avgArray(withTrend.map(obj => obj.trend)),
-                        stratMin
+                        stratMin,
+                        tickers: withTrend.map(obj => obj.ticker)
                     }));
                     return [
                         ...acc,
                         ...analyzed
                     ];
                 }, []);
-
-            str({ foundStrategies });
             
             foundStrategies = foundStrategies.filter(Boolean);
-            const stratOrder = foundStrategies.map(t => t.stratMin);
+            let copy = [...foundStrategies];
             const withoutDuplicates = [];
             foundStrategies.forEach((stratObj, i) => {
-                const { stratMin } = stratObj;
                 // console.log({stratOrder, stratMin });
-                if (stratOrder.findIndex(s => s === stratMin) === i) {
+                if (copy.findIndex(s => JSON.stringify(s) === JSON.stringify(stratObj)) === i) {
                     withoutDuplicates.push(stratObj)
                 }
             });
@@ -268,6 +268,9 @@ const stratManager = {
         })
             .filter(t => !!t.avgTrend)
             .sort((a, b) => Number(b.avgTrend) - Number(a.avgTrend));
+        
+        this.pmPerfs = pmPerfs;
+        return pmPerfs;
 
     },
     async sendPMReport() {
