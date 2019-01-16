@@ -80,8 +80,8 @@ module.exports = {
             name: 'ticker-watchers',
             Robinhood,
             handler,
-            timeout: 60000 * 5, // 5 min,
-            runAgainstPastData: false,
+            timeout: 100,//60000 * 5, // 5 min,
+            runAgainstPastData: true,
             onPick: async pick => {
 
                 let [allHistoricals] = await getMultipleHistoricals(
@@ -126,9 +126,40 @@ module.exports = {
             tickerWatcher.addTickers(allUnder15);
             const trend = await getTrendSinceOpen(Robinhood, allUnder15);
             const withOvernightJumps = await addOvernightJumpAndTSO(Robinhood, trend);
+            // str({ withOvernightJumps })
             const bigOvernightJumps = withOvernightJumps
                 .filter(o => o.overnightJump > 7)
                 .map(t => t.ticker);
+            let i = 1;
+            const withPopularity = await mapLimit(withOvernightJumps, 3, async o => {
+                const { quote_data, fundamentals } = o;
+                const instrument = (quote_data || {}).instrument || (fundamentals || {}).instrument;
+                if (!instrument) {
+                    console.log('no instrument found', o.ticker, o);
+                }
+                const popularity = await Robinhood.url(`${instrument}popularity/`);
+                if (popularity.detail) {
+                    await new Promise(resolve => setTimeout(resolve, 10000))
+                }
+                await new Promise(resolve => setTimeout(resolve, 2000))
+                console.log('about', i, popularity, o.ticker)
+                i++;
+                return {
+                    ...o,
+                    ...instrument ? {
+                        popularity: popularity.num_open_positions
+                    } : {}
+                };
+            });
+
+            str({
+                total: withPopularity.length,
+                above1000: withPopularity.filter(o => o.popularity > 1000).length,
+                above5000: withPopularity.filter(o => o.popularity > 5000).length,
+                above10000: withPopularity.filter(o => o.popularity > 10000).length,
+                above500: withPopularity.filter(o => o.popularity > 500).length
+            })
+            str({ withPopularity })
             tickerWatcher.removeTickers(bigOvernightJumps);
             // console.log(JSON.stringify({ bigOvernightJumps }, null, 2));
         };

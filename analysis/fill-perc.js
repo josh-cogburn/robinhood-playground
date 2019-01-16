@@ -54,11 +54,16 @@ module.exports = async Robinhood => {
         filled: filled.some(t => t.instrument.symbol === ticker)
     }));
 
+    const notFilled = tickersWithFilled
+        .filter(t => !t.filled)
+        .map(t => t.ticker);
+
     const fillPerc = tickersWithFilled.filter(t => t.filled).length / tickersWithFilled.length * 100;
 
     return {
+        fillPerc,
         tickersWithFilled,
-        fillPerc
+        notFilled
     };
 
 };
