@@ -80,8 +80,8 @@ module.exports = {
             name: 'ticker-watchers',
             Robinhood,
             handler,
-            timeout: 100,//60000 * 5, // 5 min,
-            runAgainstPastData: true,
+            timeout: 60000 * 5, // 5 min,
+            runAgainstPastData: false,
             onPick: async pick => {
 
                 let [allHistoricals] = await getMultipleHistoricals(
@@ -90,8 +90,6 @@ module.exports = {
                     'interval=5minute&span=day'
                 );
                 allHistoricals = allHistoricals.map(o => o.close_price);
-                console.log('allhistoricals');
-                console.log(JSON.stringify(allHistoricals));
                 const price = pick.jumpPrice;
                 console.log({ price });
 
