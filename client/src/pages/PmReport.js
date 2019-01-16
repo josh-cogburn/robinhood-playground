@@ -10,7 +10,7 @@ class TodaysStrategies extends Component {
     constructor() {
         super();
         this.state = {
-            forPurchaseOnly: false
+            forPurchaseOnly: true
         };
     }
     toggleForPurchaseOnly = () => this.setState({ forPurchaseOnly: !this.state.forPurchaseOnly })
