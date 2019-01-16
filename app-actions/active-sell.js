@@ -10,9 +10,9 @@ const lookup = require('../utils/lookup');
 const mapLimit = require('promise-map-limit');
 
 
-const MIN_SELL_RATIO = 0.99; // before gives up
-const TIME_BETWEEN_CHECK = 4; // seconds
-const SELL_RATIO_INCREMENT = 0.0008;
+const MIN_SELL_RATIO = 0.95; // before gives up
+const TIME_BETWEEN_CHECK = 2; // seconds
+const SELL_RATIO_INCREMENT = 0.01;
 
 
 const addToDailyTransactions = async data => {
@@ -35,7 +35,7 @@ module.exports = (Robinhood, { ticker, quantity }) => {
                 return reject('ticker on keeper list');
             }
 
-            let curSellRatio = 1.1;
+            let curSellRatio = 1.05;
             let attemptCount = 0;
 
             const attempt = async () => {
@@ -63,51 +63,42 @@ module.exports = (Robinhood, { ticker, quantity }) => {
                 }
 
                 const timeout = ((0.8 * TIME_BETWEEN_CHECK) + (Math.random() * TIME_BETWEEN_CHECK * 0.8)) * 1000;
-                setTimeout(async () => {
-
-                    // get orders, check if still pending
-                    let {results: orders} = await Robinhood.orders();
-                    orders = orders.filter(order => ['filled', 'cancelled'].indexOf(order.state) === -1);
-
-                    orders = await mapLimit(orders, 1, async order => ({
-                        ...order,
-                        instrument: await Robinhood.url(order.instrument)
-                    }));
-
-                    const relOrder = orders.find(order => {
-                        return order.instrument.symbol === ticker;
-                    });
-                    // console.log(relOrder);
-                    if (relOrder) {
-                        console.log('canceling last attempt', ticker);
-                        await Robinhood.cancel_order(relOrder);
-                        await new Promise(resolve => setTimeout(resolve, 1000));
-                        curSellRatio -= SELL_RATIO_INCREMENT;
-                        if (curSellRatio > MIN_SELL_RATIO) {
-                            return attempt();
-                        } else {
-                            const errMessage = 'reached MIN_SELL_RATIO, unable to sell';
-                            console.log(errMessage, ticker);
-                            return reject(errMessage);
-                        }
+                await new Promise(resolve => setTimeout(resolve, timeout));
+                
+                // check state of order
+                const { state } = await Robinhood.url(res.url);
+                const filled = state === 'filled';
+                str({ filled });
+                // console.log(relOrder);
+                if (!filled) {
+                    console.log('canceling last attempt', ticker);
+                    await Robinhood.cancel_order(res);
+                    await new Promise(resolve => setTimeout(resolve, 1000));
+                    curSellRatio -= SELL_RATIO_INCREMENT;
+                    if (curSellRatio > MIN_SELL_RATIO) {
+                        return attempt();
                     } else {
-
-                        const successObj = {
-                            type: 'sell',
-                            ticker,
-                            bid_price: bidPrice,
-                            quantity
-                        };
-                        await addToDailyTransactions(successObj);
-
-                        if (attemptCount) {
-                            console.log('successfully sold with attemptcount', attemptCount, ticker);
-                        }
-
-                        return resolve(successObj);
-
+                        const errMessage = 'reached MIN_SELL_RATIO, unable to sell';
+                        console.log(errMessage, ticker);
+                        return reject(errMessage);
                     }
-                }, timeout);
+                } else {
+
+                    const successObj = {
+                        type: 'sell',
+                        ticker,
+                        bid_price: bidPrice,
+                        quantity
+                    };
+                    await addToDailyTransactions(successObj);
+
+                    if (attemptCount) {
+                        console.log('successfully sold with attemptcount', attemptCount, ticker);
+                    }
+
+                    return resolve(successObj);
+
+                }
 
             };
 
