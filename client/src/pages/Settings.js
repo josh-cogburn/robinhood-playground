@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default ({ settingsString }) => (
+export default ({ settings }) => (
     <div style={{ padding: '20px' }}>
         <h2>Settings</h2>
-        <pre>{settingsString}</pre>
+        <pre>{JSON.stringify(settings, null, 2)}</pre>
     </div>
 );

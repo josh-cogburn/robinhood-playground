@@ -27,7 +27,7 @@ class TodaysStrategies extends Component {
   toggleAfterHours = () => this.setState({ afterHoursEnabled: !this.state.afterHoursEnabled })
   render() {
       let { pmFilter, afterHoursEnabled } = this.state;
-      let { picks, relatedPrices, predictionModels, pastData, curDate } = this.props;
+      let { picks, relatedPrices, predictionModels, pastData, curDate, pmPerfs } = this.props;
       const { fiveDay } = pastData;
 
       let showingPicks = pmFilter !== 'no filter' ? picks.filter(pick => predictionModels[pmFilter].includes(pick.stratMin)) : picks;
@@ -63,6 +63,8 @@ class TodaysStrategies extends Component {
                 .filter(val => !isNaN(val.avgTrend))
                 .map(strat => strat.avgTrend)
       );
+
+      const perfs = pmPerfs.find(perf => perf.pmName === pmFilter) || {};
       return (
         <div>
             <header className="App-header">
@@ -84,9 +86,15 @@ class TodaysStrategies extends Component {
                 include after hours:
                 <input type="checkbox" checked={afterHoursEnabled} onChange={this.toggleAfterHours} />
             </header>
-            <p>
-                    <h2>overall average trend: <TrendPerc value={avgTrendOverall} /></h2>
+            <p style={{ marginLeft: '20px' }}>
+                    {
+                        perfs.avgTrend !== perfs.weightedTrend && (
+                            <b>weighted trend: <TrendPerc value={perfs.weightedTrend} />&nbsp;&nbsp;&nbsp;</b>
+                        )
+                    }
+                    <b>average trend: <TrendPerc value={perfs.avgTrend} /></b>
             </p>
+            <hr/>
             <p className="App-intro">
                 {
                     sortedByAvgTrend.slice(0).map(pick => (

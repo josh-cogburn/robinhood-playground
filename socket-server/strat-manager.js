@@ -25,6 +25,7 @@ const flatten = require('../utils/flatten-array');
 const TickerWatcher = require('./ticker-watcher');
 
 const balanceReportManager = require('./balance-report-manager');
+const settings = require('../settings');
 
 const stratManager = {
     Robinhood: null,
@@ -37,7 +38,6 @@ const stratManager = {
     pmPerfs: [],
     hasInit: false,
     tickerWatcher: null,    // TickerWatcher instance
-    settingsString: null,
     
     async init({ io, dateOverride } = {}) {
         if (this.hasInit) return;
@@ -74,7 +74,6 @@ const stratManager = {
 
         new CronJob(`40 7 * * 1-5`, () => this.newDay(), null, true);
 
-        this.settingsString = await getSettingsString();
         this.hasInit = true;
 
         console.log('about to init balance report')
@@ -92,7 +91,7 @@ const stratManager = {
             relatedPrices: this.tickerWatcher.relatedPrices,
             pastData: this.pastData,
             predictionModels: this.predictionModels,
-            settingsString: this.settingsString,
+            settings,
             cronString: regCronIncAfterSixThirty.toString(),
             balanceReports: balanceReportManager.getAllBalanceReports(),
             pmPerfs: this.pmPerfs

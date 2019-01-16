@@ -8,6 +8,7 @@ import Typography from '@material-ui/core/Typography'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 
+import PmReport from './pages/PmReport';
 import BalanceReports from './pages/BalanceReports';
 import TodaysStrategies from './pages/TodaysStrategies';
 import DayReports from './pages/DayReports';
@@ -43,7 +44,11 @@ const pages = [
         // render: state => 
     },
     {
-        label: "Today's Strategies",
+        label: "Live PM's",
+        render: state  => <PmReport {...state} />
+    },
+    {
+        label: "Live Strategies",
         render: state  => <TodaysStrategies {...state} />
     },
     {
@@ -85,6 +90,10 @@ class App extends Component {
         socket.on('server:related-prices', data => {
             console.log({ relatedPrices: data });
             this.setState({ relatedPrices: data });
+        });
+        socket.on('server:pm-perfs', data => {
+            console.log({ pmPerfs: data });
+            this.setState({ pmPerfs: data });
         });
         socket.emit('getDayReports', data => {
             console.log({ data});
@@ -135,10 +144,11 @@ class App extends Component {
                     <div>
                             {/* // pages[value].render({ state: this.state }) */}
                         {value === 0 && <BalanceReports reports={balanceReports} />}
-                        {value === 1 && <TodaysStrategies {...this.state}  />}
-                        {value === 2 && <DayReports {...{ dayReports }} />}
-                        {value === 3 && <Settings {...this.state} />}
-                        {value === 4 && <Cron {...this.state} />}
+                        {value === 1 && <PmReport {...this.state}  />}
+                        {value === 2 && <TodaysStrategies {...this.state}  />}
+                        {value === 3 && <DayReports {...{ dayReports }} />}
+                        {value === 4 && <Settings {...this.state} />}
+                        {value === 5 && <Cron {...this.state} />}
                     </div>
                 )}
 
