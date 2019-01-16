@@ -241,10 +241,12 @@ const stratManager = {
                         stratMin
                     }));
                     return [
-                        acc,
+                        ...acc,
                         ...analyzed
                     ];
                 }, []);
+
+            str({ foundStrategies });
             
             foundStrategies = foundStrategies.filter(Boolean);
             const stratOrder = foundStrategies.map(t => t.stratMin);
