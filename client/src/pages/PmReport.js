@@ -17,16 +17,21 @@ class TodaysStrategies extends Component {
     render() {
         let { pmPerfs, settings, predictionModels } = this.props;
         let { forPurchaseOnly } = this.state;
+
         if (forPurchaseOnly) {
+            const forPurchasePMs = settings.forPurchase.map(line =>
+                line.substring(1, line.length - 1)
+            );
+            console.log({ forPurchasePMs })
             pmPerfs = pmPerfs.filter(perf => 
-                predictionModels['forPurchase'].includes(perf.pmName)
+                forPurchasePMs.includes(perf.pmName)
             );
         }
         return (
-            <div>
+            <div style={{ padding: '15px' }}>
 
                 <input type="checkbox" checked={forPurchaseOnly} onChange={this.toggleForPurchaseOnly} />
-
+                forPurchase PM's only
                 <table>
                     <thead>
                         <th>prediction model</th>
@@ -37,7 +42,7 @@ class TodaysStrategies extends Component {
                             pmPerfs.map(perf => (
                                 <tr>
                                     <td>{perf.pmName}</td>
-                                    <td>{perf.avgTrend}</td>
+                                    <td><TrendPerc value={perf.avgTrend} /></td>
                                 </tr>
                             ))
                         }
