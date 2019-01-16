@@ -22,16 +22,15 @@ module.exports = async (Robinhood, daysBack) => {
         spm = await strategyPerfMultiple(Robinhood, daysBack);
 
     }
-    
 
     return Object.keys(spm).reduce((acc, key) => {
-        // console.log('key', key)
+        const results = spm[key].filter(({ strategy }) => !strategy.includes('ticker-watchers'));
         return {
             ...acc,
-            [key]: spm[key].map(list => list.strategy),
-            [`${key}-slice7`]: spm[key].slice(0, 16).map(list => list.strategy),
-            [`${key}-slice7-uniq`]: uniqifyArrayOfStrategies(spm[key].slice(0, 16)).map(list => list.strategy),
-            [`${key}-single`]: spm[key].slice(0, 1).map(list => list.strategy),
+            [key]: results.map(list => list.strategy),
+            [`${key}-slice7`]: results.slice(0, 16).map(list => list.strategy),
+            [`${key}-slice7-uniq`]: uniqifyArrayOfStrategies(results.slice(0, 16)).map(list => list.strategy),
+            [`${key}-single`]: results.slice(0, 1).map(list => list.strategy),
         };
     }, {});
 }

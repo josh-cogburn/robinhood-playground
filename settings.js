@@ -12,9 +12,6 @@ module.exports = {
         // 'best-st-sentiment-top100RH-highest-todayVolumeChange-first2--25',
         // 'best-st-sentiment-top100RH-highest-todayVolumeChange-first2--25',
         // 'best-st-sentiment-top100RH-highest-todayVolumeChange-first2--25',
-        'best-st-sentiment-under5-withSentiment-300',
-        'best-st-sentiment-under5-lowest-bullBearScore--25',
-        'best-st-sentiment-under5-lowest-todayVolumeChange-150',
 
         // something or other
 
@@ -66,11 +63,7 @@ module.exports = {
         '[fourForFives]',
         '[threeForFours]',
         '[fiveForTens]',
-        '[portalPepper]',
 
-        '[portalPepper]',
-        '[portalPepper]',
-        '[portalPepper]',
         '[portalPepper]',
 
         '[blueMoons]',
@@ -109,14 +102,18 @@ module.exports = {
         '[tickerWatchers]',
         
         '[simpleAsThat]',
-        '[simpleAsThat]',
 
         '[myRecs-day40-hundredResultCreme]',
         '[myRecs-day5-hundredResultCreme-allGt1]',
-        '[bigdawgs]',
+        '[postMongoCount3]',
+        '[spm-8day-lowestLimitPlayoutsHundredResultCount-single]',
+        '[spm-52day-middleCountsJohnsRecipe-single]',
+        'low-float-high-volume-floatTimesfloatToVolume-trenddowngt10-shouldWatchout-25',
+        'low-float-high-volume-floatTimesfloatToVolume-trenddowngt10-shouldWatchout-25',
 
-
-
+        '[tenFives-sortedByAvgTrend-uniqd-five]',
+        '[tenFives-sortedByPercUp-uniqd-three]',
+        
         // modern picks // deleting because bad pm review :(
             // '[postMongoBigHitters]',
             // '[postMongoTimes2]',

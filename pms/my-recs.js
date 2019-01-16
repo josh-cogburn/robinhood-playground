@@ -121,6 +121,7 @@ module.exports = async (Robinhood) => {
             const isSame = arr => names.toString() === arr.toString();
             return {
                 [`${prefix}-${name}`]: getNames(list),
+                [`${prefix}-${name}-single`]: getNames(list.slice(0, 1)),
                 ...!isSame(uniqNames) && { [`${prefix}-uniq-${name}`]: uniqNames },
                 ...!isSame(slice16Uniq) && { [`${prefix}-slice16-uniq-${name}`]: slice16Uniq },
             };
@@ -152,7 +153,7 @@ module.exports = async (Robinhood) => {
             hundredUpPicks,
             hundredUpAvgGt4,
             hundredUpTrendsAllGt1,
-            hundredWithHundredCheck
+            hundredWithHundredCheck,
         };
 
         return picksObj;

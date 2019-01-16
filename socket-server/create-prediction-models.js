@@ -3,6 +3,7 @@ const spms = require('../pms/spm');
 const getMyRecs = require('../pms/my-recs');
 const getTipTop = require('../pms/tip-top');
 const topPerforming = require('../pms/top-performing');
+const tenFives = require('../pms/ten-fives');
 
 const settings = require('../settings');
 const flatten = require('../utils/flatten-array');
@@ -45,7 +46,7 @@ module.exports = async (Robinhood, manualOnly) => {
     
     const prependKeys = (obj, prefix) => Object.keys(obj).reduce((acc, val) => ({
         ...acc,
-        [`${prefix}${val}`]: obj[val]
+        [`${prefix}-${val}`]: obj[val]
     }), {});
 
     let strategies = {
@@ -58,19 +59,24 @@ module.exports = async (Robinhood, manualOnly) => {
             const fiftytwo = await spms(Robinhood);
             const eightDay = await spms(Robinhood, 8);
             const tp = await topPerforming(Robinhood);
-        
+            
             return {
                 // myRecs
-                ...prependKeys(myRecs, 'myRecs-'),
+                ...prependKeys(myRecs, 'myRecs'),
 
                 //8daySPMs
-                ...prependKeys(eightDay, 'spm-8day-'),
+                ...prependKeys(eightDay, 'spm-8day'),
 
                 //fiftytwodaySPMs
-                ...prependKeys(fiftytwo, 'spm-52day-'),
+                ...prependKeys(fiftytwo, 'spm-52day'),
 
                 //top-performers
-                ...prependKeys(tp, 'top-performers-'),
+                ...prependKeys(tp, 'top-performers'),
+
+                ...prependKeys(
+                    await tenFives(Robinhood),
+                    'tenFives'
+                ),
 
                 ...await getTipTop(Robinhood)
             };
