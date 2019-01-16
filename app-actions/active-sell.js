@@ -72,7 +72,9 @@ module.exports = (Robinhood, { ticker, quantity }) => {
                 // console.log(relOrder);
                 if (!filled) {
                     console.log('canceling last attempt', ticker);
-                    await Robinhood.cancel_order(res);
+                    console.log('cancel', await Robinhood.cancel_order(res));
+                    str({ res })
+                    await Robinhood.url(res.cancel);
                     await new Promise(resolve => setTimeout(resolve, 1000));
                     curSellRatio -= SELL_RATIO_INCREMENT;
                     if (curSellRatio > MIN_SELL_RATIO) {

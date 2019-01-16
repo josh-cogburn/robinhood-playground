@@ -39,17 +39,13 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
 
     // helper action fns
     const sellPosition = async ({ ticker, quantity }, whySelling) => {
-        try {
-            console.log(`selling ${ticker} because ${whySelling}`);
-            if (dontActuallySellFlag) return;
-            const response = await activeSell(
-                Robinhood,
-                { ticker, quantity }
-            );
-            console.log(`sold ${quantity} shares of ${ticker} because ${whySelling}`, response);
-        } catch (e) {
-            console.log(`error selling ${ticker} because ${whySelling}`, e);
-        }
+        console.log(`selling ${ticker} because ${whySelling}`);
+        if (dontActuallySellFlag) return;
+        const response = await activeSell(
+            Robinhood,
+            { ticker, quantity }
+        );
+        console.log(`sold ${quantity} shares of ${ticker} because ${whySelling}`, response);
     };
 
     const dailyTransactionDates = await getFilesSortedByDate('daily-transactions');
@@ -150,6 +146,7 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
                 await sellPosition(pos, `hit ${pos.playoutToRun} playout`);
                 await sendEmail(`robinhood-playground: sold ${pos.symbol}`, posData.join('\n'));
             } catch (e) {
+                console.log(`error selling ${pos.symbol}`, e);
                 await sendEmail(`robinhood-playground: ERROR sold ${pos.symbol}`, [
                     ...posData,
                     `error: ${e}`
