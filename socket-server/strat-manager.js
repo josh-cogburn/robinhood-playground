@@ -204,37 +204,47 @@ const stratManager = {
             const [ stratName, trends ] = entry;
             // const trends = this.predictionModels[stratName];
             console.log(entry);
-            let foundStrategies = trends
-                .map(stratMin => {
-                    const foundStrategy = this.picks.find(pick => pick.stratMin === stratMin);
-                    if (!foundStrategy) return null;
-                    const { withPrices } = foundStrategy;
-                    if (typeof withPrices[0] === 'string') {
-                        console.log(`typeof withPrices[0] === 'string'`, {withPrices});
-                        return;
+
+            const handlePick = pick => {
+                const { withPrices } = pick;
+                if (typeof withPrices[0] === 'string') {
+                    console.log(`typeof withPrices[0] === 'string'`, {withPrices});
+                    return;
+                }
+                const withTrend = withPrices.map(stratObj => {
+                    const relPrices = relatedPrices[stratObj.ticker];
+                    if (!relPrices) {
+                        console.log('OH NO DAWG', stratObj.ticker, stratObj);
+                        return {};
                     }
-                    const withTrend = withPrices.map(stratObj => {
-                        const relPrices = relatedPrices[stratObj.ticker];
-                        if (!relPrices) {
-                            console.log('OH NO DAWG', stratObj.ticker, stratObj);
-                            return {};
-                        }
-                        // console.log('relPrices', relPrices, { stratObj });
-                        const { lastTradePrice, afterHoursPrice } = relPrices;
-                        const nowPrice = lastTradePrice;    // afterHoursPrice ||
-                        // console.log('nowPrice', nowPrice)
-                        return {
-                            ticker: stratObj.ticker,
-                            thenPrice: stratObj.price,
-                            nowPrice,
-                            trend: getTrend(nowPrice, stratObj.price)
-                        };
-                    });
+                    // console.log('relPrices', relPrices, { stratObj });
+                    const { lastTradePrice, afterHoursPrice } = relPrices;
+                    const nowPrice = lastTradePrice;    // afterHoursPrice ||
+                    // console.log('nowPrice', nowPrice)
                     return {
-                        avgTrend: avgArray(withTrend.map(obj => obj.trend)),
-                        stratMin
+                        ticker: stratObj.ticker,
+                        thenPrice: stratObj.price,
+                        nowPrice,
+                        trend: getTrend(nowPrice, stratObj.price)
                     };
                 });
+                return withTrend;
+            };
+
+            let foundStrategies = trends
+                .reduce((acc, stratMin) => {
+                    const foundStrategies = this.picks.filter(pick => pick.stratMin === stratMin);
+                    if (!foundStrategies || !foundStrategies.length) return acc;
+                    const withTrends = foundStrategies.map(handlePick);
+                    const analyzed = withTrends.map(withTrend => ({
+                        avgTrend: avgArray(withTrend.map(obj => obj.trend)),
+                        stratMin
+                    }));
+                    return [
+                        acc,
+                        ...analyzed
+                    ];
+                }, []);
             
             foundStrategies = foundStrategies.filter(Boolean);
             const stratOrder = foundStrategies.map(t => t.stratMin);
