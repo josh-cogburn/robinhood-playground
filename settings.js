@@ -2,7 +2,7 @@
 module.exports = {
     // important settings
     sellAllStocksOnNthDay: 2,
-    purchaseAmt: 25,
+    purchaseAmt: 15,
     forPurchase: [
         
         // st sent broken because rate limited ouch
@@ -67,6 +67,7 @@ module.exports = {
         '[portalPepper]',
 
         '[blueMoons]',
+        '[spm-52day-bestAlwaysLastAvgTrend-single]',
         '[lilMore]',
 
         // creme
@@ -99,8 +100,7 @@ module.exports = {
         '[tickerWatchers]',
         '[tickerWatchers]',
         '[tickerWatchers]',
-        '[tickerWatchers]',
-        
+
         '[simpleAsThat]',
 
         '[myRecs-day40-hundredResultCreme]',
@@ -111,9 +111,8 @@ module.exports = {
         'low-float-high-volume-floatTimesfloatToVolume-trenddowngt10-shouldWatchout-25',
         'low-float-high-volume-floatTimesfloatToVolume-trenddowngt10-shouldWatchout-25',
 
-        '[tenFives-sortedByAvgTrend-uniqd-five]',
         '[tenFives-sortedByPercUp-uniqd-three]',
-        
+        '[iwantthisPARTTWO]',
         // modern picks // deleting because bad pm review :(
             // '[postMongoBigHitters]',
             // '[postMongoTimes2]',
