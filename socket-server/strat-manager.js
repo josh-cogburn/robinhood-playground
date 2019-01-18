@@ -200,11 +200,11 @@ const stratManager = {
     },
     calcPmPerfs() {
         const {relatedPrices} = this.tickerWatcher;
-        
+        console.log('calc pm perfs')
         const pmPerfs = Object.entries(this.predictionModels).map(entry => {
             const [ stratName, trends ] = entry;
             // const trends = this.predictionModels[stratName];
-            console.log(entry);
+            // console.log(entry);
 
             const handlePick = pick => {
                 const { withPrices } = pick;

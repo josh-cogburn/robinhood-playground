@@ -28,8 +28,8 @@ module.exports = async (Robinhood, daysBack) => {
         return {
             ...acc,
             [key]: results.map(list => list.strategy),
-            [`${key}-slice7`]: results.slice(0, 16).map(list => list.strategy),
-            [`${key}-slice7-uniq`]: uniqifyArrayOfStrategies(results.slice(0, 16)).map(list => list.strategy),
+            [`${key}-slice7`]: results.slice(0, 7).map(list => list.strategy),
+            [`${key}-slice7-uniq`]: uniqifyArrayOfStrategies(results.slice(0, 7)).map(list => list.strategy),
             [`${key}-single`]: results.slice(0, 1).map(list => list.strategy),
         };
     }, {});
