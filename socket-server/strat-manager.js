@@ -267,7 +267,9 @@ const stratManager = {
         })
             .filter(t => !!t.avgTrend)
             .sort((a, b) => Number(b.avgTrend) - Number(a.avgTrend));
-        
+    
+            
+        console.log('done calcing pm perfs')
         this.pmPerfs = pmPerfs;
         return pmPerfs;
 
