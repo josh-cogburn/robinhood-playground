@@ -77,7 +77,7 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
     const handleOverNDays = async () => {
         // handle older than four days
         const olderThanNDays = nonzero.filter(pos => pos.dayAge >= sellAllStocksOnNthDay);
-        await mapLimit(olderThanNDays, 3, pos =>
+        await mapLimit(olderThanNDays, 1, pos =>
             sellPosition({
                 ticker: pos.symbol,
                 quantity: pos.quantity
@@ -134,7 +134,7 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
         }
 
         // sell all under 4 days that hit the playoutFn
-        await mapLimit(underNDays.filter(pos => pos.hitPlayout).sort((a, b) => b.returnDollars - a.returnDollars), 6, async pos => {
+        await mapLimit(underNDays.filter(pos => pos.hitPlayout).sort((a, b) => b.returnDollars - a.returnDollars), 1, async pos => {
             const posData = [
                 `breakdowns: ${pos.breakdowns}`,
                 `playoutToRun: ${pos.playoutToRun}`,
@@ -155,10 +155,14 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
         });
     };
 
-    await Promise.all([
-        handleOverNDays(),
-        handleUnderNDays()
-    ]);
+
+    await handleOverNDays();
+    await handleUnderNDays();
+    
+    // await Promise.all([
+    //     handleOverNDays(),
+    //     handleUnderNDays()
+    // ]);
 
 
 
