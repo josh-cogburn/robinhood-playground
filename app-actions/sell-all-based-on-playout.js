@@ -38,14 +38,32 @@ const determineSingleBestPlayoutFromMultiOutput = require(
 module.exports = async (Robinhood, dontActuallySellFlag) => {
 
     // helper action fns
-    const sellPosition = async ({ ticker, quantity }, whySelling) => {
+    const sellPosition = async (pos, whySelling) => {
+        const { ticker, quantity } = pos;
+        console.log('ticler', pos.ticker, 'sumbol,', pos.symbol)
         console.log(`selling ${ticker} because ${whySelling}`);
         if (dontActuallySellFlag) return;
-        const response = await activeSell(
-            Robinhood,
-            { ticker, quantity }
-        );
-        console.log(`sold ${quantity} shares of ${ticker} because ${whySelling}`, response);
+        const posData = [
+            `breakdowns: ${pos.breakdowns}`,
+            `playoutToRun: ${pos.playoutToRun}`,    
+            `buyStrategy: ${pos.buyStrategy}`,
+            `buyDate: ${pos.buyDate}`,
+            `returnDollars: $${pos.returnDollars}`
+        ];
+        try {
+            const response = await activeSell(
+                Robinhood,
+                { ticker, quantity }
+            );
+            console.log(`sold ${quantity} shares of ${ticker} because ${whySelling}`, response);
+            await sendEmail(`robinhood-playground: sold ${ticker}`, posData.join('\n'));
+        } catch (e) {
+            console.log(`error selling ${pos.symbol}`, e);
+            await sendEmail(`robinhood-playground: ERROR selling ${ticker}`, [
+                ...posData,
+                `error: ${e}`
+            ].join('\n'));
+        }
     };
 
     const dailyTransactionDates = await getFilesSortedByDate('daily-transactions');
@@ -58,10 +76,7 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
     nonzero = nonzero.filter(pos => !forceSell.includes(pos.symbol));
 
     await mapLimit(forceSells, 2, pos =>
-        sellPosition({
-            ticker: pos.symbol,
-            quantity: pos.quantity
-        }, `on force sell list in settings.js`)
+        sellPosition(pos, `on force sell list in settings.js`)
     );
 
     // console.log(nonzero.length);
@@ -78,10 +93,7 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
         // handle older than four days
         const olderThanNDays = nonzero.filter(pos => pos.dayAge >= sellAllStocksOnNthDay);
         await mapLimit(olderThanNDays, 1, pos =>
-            sellPosition({
-                ticker: pos.symbol,
-                quantity: pos.quantity
-            }, `older than ${sellAllStocksOnNthDay} days: ${pos.dayAge}`)
+            sellPosition(pos, `older than ${sellAllStocksOnNthDay} days: ${pos.dayAge}`)
         );
     };
 
@@ -135,23 +147,7 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
 
         // sell all under 4 days that hit the playoutFn
         await mapLimit(underNDays.filter(pos => pos.hitPlayout).sort((a, b) => b.returnDollars - a.returnDollars), 1, async pos => {
-            const posData = [
-                `breakdowns: ${pos.breakdowns}`,
-                `playoutToRun: ${pos.playoutToRun}`,
-                `buyStrategy: ${pos.buyStrategy}`,
-                `buyDate: ${pos.buyDate}`,
-                `returnDollars: $${pos.returnDollars}`
-            ];
-            try {
-                await sellPosition(pos, `hit ${pos.playoutToRun} playout`);
-                await sendEmail(`robinhood-playground: sold ${pos.symbol}`, posData.join('\n'));
-            } catch (e) {
-                console.log(`error selling ${pos.symbol}`, e);
-                await sendEmail(`robinhood-playground: ERROR sold ${pos.symbol}`, [
-                    ...posData,
-                    `error: ${e}`
-                ].join('\n'));
-            }
+            await sellPosition(pos, `hit ${pos.playoutToRun} playout`);
         });
     };
 
