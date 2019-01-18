@@ -160,17 +160,18 @@ module.exports = async (Robinhood) => {
     };
 
     for (let { dayCount, minCounts } of perms) {
-        console.log('here')
-        const { sortedByPercUp } = await stratPerfOverall(Robinhood, todayPerf, dayCount);
-        console.log('hi')
+        // console.log('here')
+        let { sortedByPercUp } = await stratPerfOverall(Robinhood, todayPerf, dayCount);
+        sortedByPercUp = sortedByPercUp.filter(o => !o.name.includes('ticker-watchers'));
+        // console.log('hi')
         const filterSortedByPercUpAndAddToResults = (variationName, filterFn) => {
             const prefix = `day${dayCount}${variationName}`;
             const filteredStratPerf = sortedByPercUp.filter(filterFn);
-            console.log('---filtered')
+            // console.log('---filtered')
             const picksObj = createPicksObjFromSortedByPercUp(filteredStratPerf, dayCount);
-            console.log('---picksobj')
+            // console.log('---picksobj')
             uniqifyAndAddPM(prefix, picksObj);
-            console.log('---uniq')
+            // console.log('---uniq')
         };
         console.log('defined');
 
