@@ -13,12 +13,14 @@ const oneDec = roundTo(1);
 const twoDec = roundTo(2);
 
 const Pick = require('../../models/Pick');
+const { force: { keep }} = require('../../settings');
 
 module.exports = async (Robinhood) => {
 
     const nonzero = await detailedNonZero(Robinhood);
     let positions = nonzero.sort((a, b) => Math.abs(b.returnDollars) - Math.abs(a.returnDollars));
-
+    positions = positions.filter(({ ticker }) => !keep.includes(ticker));
+    
     // calculate pickToExecutionPerc of each position
     positions = await mapLimit(positions, 3, async position => {
         const { buyStrategy, buyDate, average_buy_price } = position;
