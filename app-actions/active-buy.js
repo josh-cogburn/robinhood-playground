@@ -7,7 +7,7 @@ const jsonMgr = require('../utils/json-mgr');
 const lookup = require('../utils/lookup');
 const mapLimit = require('promise-map-limit');
 
-const TIME_BETWEEN_CHECK = 3; // seconds
+const TIME_BETWEEN_CHECK = 6; // seconds
 const TOTAL_ATTEMPTS = 20;
 const PERC_ALLOWED_ABOVE_PICK_PRICE = 6;
 
@@ -109,9 +109,15 @@ module.exports = async (
 
                 const attemptLimitOrder = async () => {
                     const { askPrice, bidPrice, lastTrade } = await lookup(Robinhood, ticker);
-                    const allPrices = askPrice ? [askPrice, bidPrice, lastTrade] : [lastTrade, lastTrade * 1.05];    // if askPrice is not set use lastTrade * 1.05 as upper limit
+                    const allPrices = askPrice 
+                        ? [
+                            askPrice, 
+                            // bidPrice,
+                            lastTrade
+                        ]
+                        : [lastTrade, lastTrade * 1.05];    // if askPrice is not set use lastTrade * 1.05 as upper limit
                     const upperTarget = Math.max(...allPrices) * 1.2;
-                    const lowerTarget = Math.min(...allPrices);
+                    const lowerTarget = Math.min(...allPrices) * 0.9;
                     const spread = upperTarget - lowerTarget;
                     const aboveBid = spread * (attemptCount - 1) / (TOTAL_ATTEMPTS - 1);
                     const attemptPrice = lowerTarget + aboveBid;

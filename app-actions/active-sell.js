@@ -35,7 +35,7 @@ module.exports = (Robinhood, { ticker, quantity }) => {
                 return reject('ticker on keeper list');
             }
 
-            let curSellRatio = 1.03;
+            let curSellRatio = 1.01;
             let attemptCount = 0;
 
             const attempt = async () => {
