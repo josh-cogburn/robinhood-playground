@@ -93,7 +93,10 @@ const getResults = withHistoricals => {
 const prepareTrend = async (Robinhood, trend, min) => {
     // add fundamentals
     const withOvernightJump = await addOvernightJumpAndTSO(Robinhood, trend);
-    const onlyWithFundamentals = withOvernightJump.filter(stock => stock.fundamentals);
+    const onlyWithFundamentals = withOvernightJump
+        .filter(stock => stock.fundamentals)
+        .filter(stock => Math.abs(stock.overnightJump) < 6)
+        .filter(stock => stock.trendSinceOpen < 8);
 
     // add historicals
 
