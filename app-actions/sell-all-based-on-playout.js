@@ -146,9 +146,13 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
         }
 
         // sell all under 4 days that hit the playoutFn
-        await mapLimit(underNDays.filter(pos => pos.hitPlayout).sort((a, b) => b.returnDollars - a.returnDollars), 1, async pos => {
-            await sellPosition(pos, `hit ${pos.playoutToRun} playout`);
-        });
+        await mapLimit(
+            underNDays
+                .filter(pos => pos.hitPlayout)
+                .sort((a, b) => b.returnDollars - a.returnDollars), 
+            2, 
+            pos => sellPosition(pos, `hit ${pos.playoutToRun} playout`)
+        );
     };
 
 
