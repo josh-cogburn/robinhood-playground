@@ -27,6 +27,15 @@
                 "2",
                 "0"
              ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "get-trend-and-save",
+            "program": "${workspaceFolder}/run.js",
+            "args": [
+                "app-actions/get-trend-and-save",
+             ]
         }
     ]
 }
