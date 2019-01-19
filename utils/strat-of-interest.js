@@ -1,12 +1,16 @@
-const stratsOfInterest = require('../strats-of-interest');
-const protectedModules = [
-    'sudden-drops',
+const exactMatches = require('../strats-of-interest');
+const keywordMatches = [
+    // 'sudden-drops',
     'best-st-sentiment'
 ];
-module.exports = strat => {
-    const explicitListed = () => stratsOfInterest.includes(strat);
-    const isProtected = () => protectedModules.some(
+const functionMatches = [
+    (s, numPicks) => s.includes('sudden-drops') && numPicks === 1
+];
+module.exports = (strat, numPicks) => {
+    const matchesExact = () => exactMatches.includes(strat);
+    const matchesKeyword = () => keywordMatches.some(
         test => strat.includes(test)
     );
-    return [explicitListed, isProtected].some(t => t());
+    const matchesFunction = () => functionMatches.some(fn => fn(strat, numPicks))
+    return [matchesKeyword, matchesFunction, matchesExact].some(t => t());
 };
