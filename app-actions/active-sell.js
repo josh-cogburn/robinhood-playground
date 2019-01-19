@@ -11,8 +11,8 @@ const mapLimit = require('promise-map-limit');
 
 
 const MIN_SELL_RATIO = 0.95; // before gives up
-const TIME_BETWEEN_CHECK = 3; // seconds
-const SELL_RATIO_INCREMENT = 0.005;
+const TIME_BETWEEN_CHECK = 5; // seconds
+const SELL_RATIO_INCREMENT = 0.004;
 
 
 const addToDailyTransactions = async data => {
@@ -35,7 +35,7 @@ module.exports = (Robinhood, { ticker, quantity }) => {
                 return reject('ticker on keeper list');
             }
 
-            let curSellRatio = 1.03;
+            let curSellRatio = 1.00;
             let attemptCount = 0;
 
             const attempt = async () => {

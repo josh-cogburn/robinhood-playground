@@ -14,8 +14,9 @@ const mapLimit = require('promise-map-limit');
 const PERMUTATIONS = {
     inners: {
         firsts: [1, 2, 3],
-        trendCounts: [1, 2, 3, 5, 10, 18, 30, 50],
-        filterPercs: [5, 10, 20, 30]
+        trendCounts: [1, 2, 3, 4],
+            // 5, 10, 18, 30, 50],
+        filterPercs: [7, 12, 17, 26]
     },
     outers: {
         trendPercs: [5, 10, 15, 20, 30],
@@ -52,10 +53,10 @@ const getResults = withHistoricals => {
     const mapTicks = trend => trend.map(buy => buy.ticker);
     const firstPerms = (lastVal, ofInterest) => ({
 
-        ...PERMUTATIONS.inners.firsts.reduce((acc, val) => ({
-            ...acc,
-            [`last${lastVal}trend-first${val}`]: mapTicks(ofInterest.slice(0, val)),
-        }), {}),
+        // ...PERMUTATIONS.inners.firsts.reduce((acc, val) => ({
+        //     ...acc,
+        //     [`last${lastVal}trend-first${val}`]: mapTicks(ofInterest.slice(0, val)),
+        // }), {}),
 
         ...PERMUTATIONS.inners.filterPercs.reduce((acc, val) => ({
             ...acc,
@@ -93,14 +94,17 @@ const getResults = withHistoricals => {
 const prepareTrend = async (Robinhood, trend, min) => {
     // add fundamentals
     const withOvernightJump = await addOvernightJumpAndTSO(Robinhood, trend);
-    const onlyWithFundamentals = withOvernightJump.filter(stock => stock.fundamentals);
+    const onlyWithFundamentals = withOvernightJump
+        .filter(stock => stock.fundamentals)
+        .filter(stock => Math.abs(stock.overnightJump) < 6)
+        .filter(stock => stock.trendSinceOpen < 8);
 
     // add historicals
 
     let histQS = `interval=5minute`;
     const isNotRegularTrading = min < 0 || min >= 390;
-    if (isNotRegularTrading) histQS += '&bounds=extended';
-
+    if (false && isNotRegularTrading) histQS += '&bounds=extended';
+    // log({ isNotRegularTrading })
     let allHistoricals = await getMultipleHistoricals(
         Robinhood,
         onlyWithFundamentals.map(buy => buy.ticker),
@@ -195,11 +199,33 @@ const permuteByWatchout = trend => {
 
 const trendFilter = async (Robinhood, trend, min) => {
     trend = await prepareTrend(Robinhood, trend, min);
-    return {
+    let returnObj = {
         ...getResults(trend),
         ...permuteByTrendAndVolume(trend),
         ...permuteByWatchout(trend)
     };
+    const tickers = {};
+    returnObj = Object.keys(returnObj)
+        .filter(key => returnObj[key].length === 1)
+        .reduce((acc, key) => {
+            returnObj[key].forEach(ticker => {
+                tickers[ticker] = ++tickers[ticker] || 1;
+            });
+            return {
+                ...acc,
+                [key]: returnObj[key]
+            };
+        }, {});
+    Object.keys(tickers).forEach(ticker => {
+        const count = tickers[ticker];
+        const key = `count${count}`;
+        returnObj[key] = [
+            ...returnObj[key] || [],
+            ticker
+        ];
+    });
+    returnObj.allTicks = Object.keys(tickers);
+    return returnObj;
 };
 
 const suddenDrops = {

@@ -5,7 +5,7 @@
 const { lookupTickers } = require('./record-strat-perfs');
 const stratManager = require('../socket-server/strat-manager');
 const Pick = require('../models/Pick');
-const stratsOfInterest = require('../strats-of-interest');
+const stratOfInterest = require('../utils/strat-of-interest');
 
 const purchaseStocks = require('./purchase-stocks');
 const sendEmail = require('../utils/send-email');
@@ -19,7 +19,7 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
 
     const stratMin = `${strategy}-${min}`;
 
-    if (!stratsOfInterest.includes(stratMin)) return;   // cant handle too many strategies apparently
+    if (!stratOfInterest(stratMin, withPrices.length)) return;   // cant handle too many strategies apparently
     if (!strategy.includes('cheapest-picks')) withPrices = withPrices.slice(0, 3);  // take only 3 picks
 
     withPrices = withPrices.filter(tickerPrice => !!tickerPrice);

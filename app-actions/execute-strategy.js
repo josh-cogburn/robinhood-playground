@@ -45,7 +45,14 @@ const executeStrategy = async (Robinhood, strategyFn, min, ratioToSpend, strateg
 
     console.log('executing strategy', `${strategy}-${min}`);
 
-    const trend = await getTrendAndSave(Robinhood, min + '*');
+    let trend = await getTrendAndSave(Robinhood, min + '*');
+
+    // limit to only low spread
+    trend = trend.filter(o =>
+        o.quote_data &&
+        o.quote_data.askPrice && 
+        o.quote_data.askPrice < o.quote_data.currentPrice * 1.004
+    );
 
     let pricePerms = {
         under5: [0, 5],
