@@ -9,7 +9,7 @@ const mapLimit = require('promise-map-limit');
 
 const TIME_BETWEEN_CHECK = 6; // seconds
 const TOTAL_ATTEMPTS = 20;
-const PERC_ALLOWED_ABOVE_PICK_PRICE = 3;
+const PERC_ALLOWED_ABOVE_PICK_PRICE = 2;
 
 const addToDailyTransactions = async data => {
     const fileName = `./json/daily-transactions/${(new Date()).toLocaleDateString().split('/').join('-')}.json`;
@@ -88,10 +88,10 @@ module.exports = async (
                 // }
                 let lastBidPrice;
                 let quantity;
-                const limitBid = async (bidPrice, quantity) => {
+                const limitBid = async (bidPrice, q) => {
                     const finalBidPrice = pickPrice ? Math.min(pickPrice * (PERC_ALLOWED_ABOVE_PICK_PRICE / 100 + 1), bidPrice) : bidPrice;
                     lastBidPrice = finalBidPrice;
-                    quantity = quantity || calcQuantity(maxPrice, finalBidPrice);
+                    quantity = q || calcQuantity(maxPrice, finalBidPrice);
                     console.log({ bidPrice, finalBidPrice });
                     const data = {
                         ticker,
