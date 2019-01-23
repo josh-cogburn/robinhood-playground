@@ -1726,6 +1726,10 @@ const lilMore = [
     'sudden-drops-last30trend-filter20-fiveTo10-388'
 ];
 
+const aGreatStrategy = [
+    'low-float-high-volume-volToAvgPoints-shouldWatchout-fiveTo10-150'
+];
+
 module.exports = {
     'wild n crazy': [
         'week-swings-tenTo15-1',  // wild
@@ -1891,7 +1895,9 @@ module.exports = {
 
 
     blueMoons,
-    lilMore
+    lilMore,
+
+    aGreatStrategy
 
 
 };

@@ -53,6 +53,9 @@ module.exports = {
         '[backToTheBasicsPeople]',
         '[backToTheBasicsPeople]',
 
+        '[aGreatStrategy]',
+        '[aGreatStrategy]',
+
 
         // hot stuff
         // '[postMongo]',
