@@ -121,6 +121,12 @@ module.exports = {
         '[spm-8day-middleCountsJohnsRecipeNoHundredResult-slice7]',
         '[spm-52day-middleCountsJohnsRecipe-slice7-uniq]',
         '[spm-52day-lowestLimitPlayoutsHundredResultCount]',
+
+        '[coupleNothers]',
+        '[aGreatStrategy]',
+        '[coupleNothers]',
+        '[aGreatStrategy]',
+        
         // modern picks // deleting because bad pm review :(
             // '[postMongoBigHitters]',
             // '[postMongoTimes2]',

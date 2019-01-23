@@ -1730,6 +1730,11 @@ const aGreatStrategy = [
     'low-float-high-volume-volToAvgPoints-shouldWatchout-fiveTo10-150'
 ];
 
+const coupleNothers = [
+    'low-float-high-volume-volToAvgPoints-trendup1to3-shouldWatchout-150',
+    'low-float-high-volume-volToAvgPoints-trendgt10-150',
+];
+
 module.exports = {
     'wild n crazy': [
         'week-swings-tenTo15-1',  // wild
@@ -1897,7 +1902,8 @@ module.exports = {
     blueMoons,
     lilMore,
 
-    aGreatStrategy
+    aGreatStrategy,
+    coupleNothers,
 
 
 };
