@@ -80,7 +80,7 @@ module.exports = {
             name: 'ticker-watchers',
             Robinhood,
             handler,
-            timeout: 60000 * 5, // 5 min,
+            timeout: 60000 * 2, // 5 min,
             runAgainstPastData: false,
             onPick: async pick => {
 

@@ -11,5 +11,11 @@ module.exports = async (Robinhood, ticker) => {
     const mostRecentDay = sortedFiles[sortedFiles.length - 1];
     const todayFile = `./json/daily-transactions/${mostRecentDay}`;
     const todayTransactions = await jsonMgr.get(todayFile) || [];
-    str({ todayTransactions })
+
+    const matchedTs = todayTransactions.filter(t => t.type === 'buy' && t.ticker === ticker);
+
+
+    const total = matchedTs.reduce((acc, { bid_price, quantity }) => acc + (bid_price * quantity), 0);
+
+    return total;
 }

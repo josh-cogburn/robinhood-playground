@@ -1,8 +1,10 @@
 const exactMatches = require('../strats-of-interest');
 const keywordMatches = [
     'sudden-drops',
-    'best-st-sentiment'
+    'best-st-sentiment',
+    'double-down'
 ];
+
 const functionMatches = [
     // (s, numPicks) => s.includes('sudden-drops') && numPicks === 1,
     (strat, numPicks) => numPicks === 1,

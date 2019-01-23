@@ -94,7 +94,7 @@ module.exports = {
         // '[top-performers-sortedByHundredResult-uniq]',
         // '[top-performers-sortedByPercUp-uniq]',
 
-        
+        '[top-performers-myPredictions-uniq]',
 
         '[tickerWatchers]',
         '[tickerWatchers]',
@@ -113,6 +113,11 @@ module.exports = {
 
         '[tenFives-sortedByPercUp-uniqd-three]',
         '[iwantthisPARTTWO]',
+
+        '[spm-8day-customCount3to5MagicScore]',
+        '[spm-8day-middleCountsJohnsRecipeNoHundredResult-slice7]',
+        '[spm-52day-middleCountsJohnsRecipe-slice7-uniq]',
+        '[spm-52day-lowestLimitPlayoutsHundredResultCount]',
         // modern picks // deleting because bad pm review :(
             // '[postMongoBigHitters]',
             // '[postMongoTimes2]',
@@ -188,7 +193,7 @@ module.exports = {
             // '[tiptop-minCount4]',
             // '[tiptop-minCount4]',
     ],
-    // forPurchaseVariation: '80Perc5Day-notincludingblanks',
+    forPurchaseVariation: '75Perc5Day-yesincludingblanks',
     fallbackSellStrategy: 'limit8',
     disableMultipliers: false,
     force: {
@@ -196,7 +201,7 @@ module.exports = {
             // 'FIHD'
         ],
         keep: [
-            'HSGX'
+            // 'HSGX'
             // 'NSPR',
             // 'BOXL',
             // 'SEII',

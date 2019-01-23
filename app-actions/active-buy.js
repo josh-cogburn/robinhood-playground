@@ -1,15 +1,17 @@
 // starts attempting to buy at 100% of current stock price
 // every attempt it goes up from there until it successfully gets sold or it reaches MAX_BUY_RATIO
 
+const howMuchBoughtToday = require('./how-much-bought-today');
 const limitBuyLastTrade = require('../rh-actions/limit-buy-last-trade');
 const jsonMgr = require('../utils/json-mgr');
 
 const lookup = require('../utils/lookup');
 const mapLimit = require('promise-map-limit');
 
+const MAX_BUY_PER_STOCK = 230;
 const TIME_BETWEEN_CHECK = 6; // seconds
 const TOTAL_ATTEMPTS = 20;
-const PERC_ALLOWED_ABOVE_PICK_PRICE = 2;
+const PERC_ALLOWED_ABOVE_PICK_PRICE = 3.2;
 
 const addToDailyTransactions = async data => {
     const fileName = `./json/daily-transactions/${(new Date()).toLocaleDateString().split('/').join('-')}.json`;
@@ -57,6 +59,14 @@ module.exports = async (
         pickPrice
     }
 ) => {
+
+    const boughtToday = await howMuchBoughtToday(Robinhood, ticker) || 0;
+    const remaining = MAX_BUY_PER_STOCK - boughtToday;
+    maxPrice = Math.min(maxPrice, remaining);
+
+    if (maxPrice < 15) {
+        throw 'hit max price for ticker';
+    }
 
     if ((min < 0 || min > 390) && min != 5000) {
         return preOrPostMarketBuy({
