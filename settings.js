@@ -99,10 +99,10 @@ module.exports = {
 
         '[top-performers-myPredictions-uniq]',
 
-        '[tickerWatchers]',
-        '[tickerWatchers]',
-        '[tickerWatchers]',
-        '[tickerWatchers]',
+        '[tickerWatchersNotWatchoutUnder15]',
+        '[tickerWatchersNotWatchoutUnder15]',
+        '[tickerWatchersNotWatchoutUnder15]',
+        '[tickerWatchersNotWatchoutUnder15]',
 
         '[simpleAsThat]',
 

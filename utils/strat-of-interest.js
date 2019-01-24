@@ -2,7 +2,8 @@ const exactMatches = require('../strats-of-interest');
 const keywordMatches = [
     'sudden-drops',
     'best-st-sentiment',
-    'double-down'
+    'double-down',
+    'ticker-watchers'
 ];
 
 const functionMatches = [

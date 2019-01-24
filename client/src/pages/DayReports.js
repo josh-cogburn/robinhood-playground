@@ -6,15 +6,22 @@ class DayReports extends Component {
     componentDidMount() {
     }
     render () {
-        let { dayReports } = this.props;
-        dayReports = dayReports.slice(4);
+        let { dayReports, admin } = this.props;
         if (!dayReports) return <b>LOADING</b>;
+        dayReports = dayReports.slice(4);
+        console.log({ admin })
         return (
             <div>
-                <h2>account balance vs indexes</h2>
-                <Line data={processDayReports.balanceChart(dayReports)} />
-                <h2>unrealized vs realized return %</h2>
-                <Line data={processDayReports.unrealizedVsRealized(dayReports)} />
+                {
+                    admin && (
+                        <div>
+                            <h2>account balance vs indexes</h2>
+                            <Line data={processDayReports.balanceChart(dayReports)} />
+                            <h2>unrealized vs realized return %</h2>
+                            <Line data={processDayReports.unrealizedVsRealized(dayReports)} />
+                        </div>
+                    )
+                }
                 <h2>forPurchase PM</h2>
                 <Line data={processDayReports.spyVsForPurchase(dayReports)} />
                 <h2>pick to execution %</h2>

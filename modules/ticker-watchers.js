@@ -11,7 +11,7 @@ const recordPicks = require('../app-actions/record-picks');
 const addOvernightJumpAndTSO = require('../app-actions/add-overnight-jump-and-tso');
 const getTrendSinceOpen = require('../rh-actions/get-trend-since-open');
 const getMultipleHistoricals = require('../app-actions/get-multiple-historicals');
-
+const getRisk = require('../rh-actions/get-risk');
 
 let tickerWatcher;
 let relatedP;
@@ -84,13 +84,13 @@ module.exports = {
             runAgainstPastData: false,
             onPick: async pick => {
 
+                const { jumpPrice: price, ticker } = pick;
                 let [allHistoricals] = await getMultipleHistoricals(
                     Robinhood,
-                    [pick.ticker],
+                    [ticker],
                     'interval=5minute&span=day'
                 );
                 allHistoricals = allHistoricals.map(o => o.close_price);
-                const price = pick.jumpPrice;
                 console.log({ price });
 
                 // check against 5 minute historical data???
@@ -99,15 +99,22 @@ module.exports = {
                     return;
                 }
 
-                await sendEmail(`robinhood-playground: NEW JUMP DOWN ${pick.ticker}`, JSON.stringify(pick, null, 2));
-                await recordPicks(Robinhood, 'ticker-watchers-under5', 5000, [pick.ticker]);
+                const { shouldWatchout } = await getRisk(Robinhood, ticker);
+                const watchoutKey = shouldWatchout ? '-shouldWatchout' : '';
+                const priceKeys = [1, 5, 10, 15, 20];
+                const priceKey = priceKeys.find(key => price < key);
+
+                const strategyName = `ticker-watchers-under${priceKey}${watchoutKey}`;
+
+                await sendEmail(`robinhood-playground: NEW JUMP DOWN ${ticker}`, JSON.stringify(pick, null, 2));
+                await recordPicks(Robinhood, strategyName, 5000, [ticker]);
             },
             onEnd
         });
 
         const allUnder15 = await (async () => {
             const tickPrices = await lookupTickers(Robinhood, allStocks.filter(isTradeable).map(o => o.symbol));
-            return Object.keys(tickPrices).filter(ticker => tickPrices[ticker] < 8 && tickPrices[ticker] > 1);
+            return Object.keys(tickPrices).filter(ticker => tickPrices[ticker] < 20 && tickPrices[ticker] > 1);
         })();
         
         console.log({ allUnder15 });

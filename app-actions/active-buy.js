@@ -143,14 +143,14 @@ module.exports = async (
                     return limitBid(attemptPrice);
                 };
 
-                const limitLastTrade = async () => {
-                    const { lastTrade } = await lookup(Robinhood, ticker);
-                    const attemptPrice = lastTrade;
-                    console.log('limit buy last trade', {
+                const fakeMarketOrder = async () => {
+                    const { askPrice } = await lookup(Robinhood, ticker);
+                    const attemptPrice = askPrice;
+                    console.log('fake market order for', ticker, {
                         lastTrade,
                         attemptPrice
-                    })
-                    return limitBid(attemptPrice);
+                    });
+                    return limitBid(attemptPrice, 1);
                 };
 
                 let res = await attemptLimitOrder();
@@ -192,9 +192,9 @@ module.exports = async (
                         await Robinhood.cancel_order(res);
                         return attempt();
                     } else {
-                        const errMessage = 'reached max attempts, unable to BUY though leaving placed order';
+                        const errMessage = 'reached max attempts, unable to BUY though leaving fakeMarketOrder though';
                         console.log(errMessage, ticker);
-                        await limitLastTrade();
+                        await fakeMarketOrder();
                         return reject(errMessage);
                     }
                 } else {

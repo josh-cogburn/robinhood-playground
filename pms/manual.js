@@ -1190,8 +1190,27 @@ const simpleAsThat = [
     'low-float-high-volume-absVolPoints-trenddowngt20-6'
 ];
 
-const tickerWatchers = [
-    'ticker-watchers-under5-5000'
+const tickerWatchersNotWatchoutUnder15 = [
+    'ticker-watchers-under1-notWatchout-5000',
+    'ticker-watchers-under5-notWatchout-5000',
+    'ticker-watchers-under10-notWatchout-5000',
+    'ticker-watchers-under15-notWatchout-5000',
+];
+
+const tickerWatchersNotWatchout = [
+    'ticker-watchers-under1-notWatchout-5000',
+    'ticker-watchers-under5-notWatchout-5000',
+    'ticker-watchers-under10-notWatchout-5000',
+    'ticker-watchers-under15-notWatchout-5000',
+    'ticker-watchers-under20-notWatchout-5000',
+];
+
+const tickerWatchersShouldWatchout = [
+    'ticker-watchers-under1-shouldWatchout-5000',
+    'ticker-watchers-under5-shouldWatchout-5000',
+    'ticker-watchers-under10-shouldWatchout-5000',
+    'ticker-watchers-under15-shouldWatchout-5000',
+    'ticker-watchers-under20-shouldWatchout-5000',
 ];
 
 const stSentimentBearish = [
@@ -1848,7 +1867,6 @@ module.exports = {
 
     dec17,
 
-    tickerWatchers,
     simpleAsThat,
     
 
@@ -1904,6 +1922,11 @@ module.exports = {
 
     aGreatStrategy,
     coupleNothers,
+
+
+    tickerWatchersNotWatchout,
+    tickerWatchersShouldWatchout,
+    tickerWatchersNotWatchoutUnder15,
 
 
 };

@@ -3,7 +3,7 @@
 const getTrend = require('../utils/get-trend');
 const { avgArray } = require('../utils/array-math');
 
-const shouldWatchout = async (Robinhood, ticker, historicals) => {
+const getRisk = async (Robinhood, ticker, historicals) => {
     // console.log('evaluating risk ...', ticker);
 
     let dailyYear = historicals ? historicals : await (async () => {
@@ -33,10 +33,13 @@ const shouldWatchout = async (Robinhood, ticker, historicals) => {
             };
         });
 
-    const shouldWatchout = (
-        dailyYear.slice(-90).some(historical => historical.trend > 25) ||
-        dailyYear.some(historical => historical.trend < -15)
-    );
+    const downJumpped = dailyYear.some(historical => historical.trend < -15);
+    const last30UpJumpped = dailyYear.slice(-4).some(historical => historical.trend > 25);
+    console.log({
+        downJumpped,
+        last30UpJumpped
+    });
+    const shouldWatchout = last30UpJumpped;
 
     return {
         shouldWatchout,
@@ -46,5 +49,5 @@ const shouldWatchout = async (Robinhood, ticker, historicals) => {
     // console.log(JSON.stringify(dailyYear, null, 2));
 };
 
-module.exports = shouldWatchout;
+module.exports = getRisk;
 

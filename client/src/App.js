@@ -115,6 +115,14 @@ class App extends Component {
         this.setState({ value });
     };
 
+    auth = () => {
+        const rabbit = window.prompt('heyyyy there?');
+        if (rabbit === 'johnny') {
+            console.log({ rabbit })
+            this.setState({ admin: true }, () => console.log(this.state));
+        }
+    }
+
     render () {
         const { value, dayReports, predictionModels, balanceReports } = this.state;
         const isLoading = !predictionModels || !predictionModels.forPurchase;
@@ -126,7 +134,7 @@ class App extends Component {
                 <AppBar position="static">
                     <Toolbar>
                         <Typography variant="title" color="inherit">
-                            robinhood-playground from the new server<br/>
+                            robinhood-playground from the <a href="#" onClick={this.auth}>new</a> server<br/>
                             <a href="https://github.com/chiefsmurph/robinhood-playground" target='_blank' style={{ color: 'darkorange', fontSize: '80%'}}>
                                 https://github.com/chiefsmurph/robinhood-playground
                             </a>
