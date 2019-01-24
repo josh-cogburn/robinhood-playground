@@ -259,10 +259,12 @@ const stratManager = {
             // });
             
             // console.log({ stratOrder, withoutDuplicates });
+
+            const weightedTrend = avgArray(foundStrategies.map(obj => obj.avgTrend));
             return {
                 pmName: stratName,
-                weightedTrend: avgArray(foundStrategies.map(obj => obj.avgTrend)),
-                avgTrend: weightedTrend
+                weightedTrend,
+                // avgTrend: weightedTrend
                 // avgTrend: avgArray(withoutDuplicates.map(obj => obj.avgTrend))
             };
         })
