@@ -8,7 +8,7 @@ class DayReports extends Component {
     }
     render () {
         let { reports } = this.props;
-        if (!reports) return <b>LOADING</b>;
+        if (!reports || !reports.length) return <b>LOADING</b>;
         const chartData = reportsToChartData.balanceChart(reports);
         const [{ data }] = chartData.datasets;
         const curTrend = data[data.length - 1] - 100;
