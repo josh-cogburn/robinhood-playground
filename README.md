@@ -110,6 +110,9 @@ this can be combined with the `next-day-330` option shown here along with the ab
 
 `node analysis/run past-on-today` - look at strategy-perf-overall... if you were to have enabled the top 10 avgPerc and top 10 percUp strategies, how well would they have done today?
 
+## "are you ever going to clean up this mess and finally write some tests?"
+
+maybe
 
 ## todo
 
