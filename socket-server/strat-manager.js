@@ -257,7 +257,7 @@ const stratManager = {
                 pmName: stratName,
                 weightedTrend,
                 // avgTrend: weightedTrend
-                avgTrend: stratName.includes('forPurchase') ? (() => {
+                avgTrend: pmName.includes('forPurchase') ? (() => {
                     let copy = [...foundStrategies];
                     const withoutDuplicates = [];
                     foundStrategies.forEach((stratObj, i) => {
@@ -267,7 +267,7 @@ const stratManager = {
                         }
                     });
                     return avgArray(withoutDuplicates.map(obj => obj.avgTrend));
-                }) : weightedTrend
+                })() : weightedTrend
             };
         })
             .filter(t => !!t.avgTrend)
