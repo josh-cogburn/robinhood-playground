@@ -154,7 +154,7 @@ class App extends Component {
                         {value === 0 && <BalanceReports reports={balanceReports} />}
                         {value === 1 && <PmReport {...this.state}  />}
                         {value === 2 && <TodaysStrategies {...this.state}  />}
-                        {value === 3 && <DayReports {...{ dayReports }} />}
+                        {value === 3 && <DayReports {...this.state} />}
                         {value === 4 && <Settings {...this.state} />}
                         {value === 5 && <Cron {...this.state} />}
                     </div>
