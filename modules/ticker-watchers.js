@@ -100,11 +100,11 @@ module.exports = {
                 }
 
                 const { shouldWatchout } = await getRisk(Robinhood, ticker);
-                const watchoutKey = shouldWatchout ? '-shouldWatchout' : '';
+                const watchoutKey = shouldWatchout ? 'shouldWatchout' : 'notWatchout';
                 const priceKeys = [1, 5, 10, 15, 20];
                 const priceKey = priceKeys.find(key => price < key);
 
-                const strategyName = `ticker-watchers-under${priceKey}${watchoutKey}`;
+                const strategyName = `ticker-watchers-under${priceKey}-${watchoutKey}`;
 
                 await sendEmail(`robinhood-playground: NEW JUMP DOWN ${strategyName}: ${ticker}`, JSON.stringify(pick, null, 2));
                 await recordPicks(Robinhood, strategyName, 5000, [ticker]);

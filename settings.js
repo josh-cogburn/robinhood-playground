@@ -103,12 +103,14 @@ module.exports = {
         '[tickerWatchersNotWatchoutUnder15]',
         '[tickerWatchersNotWatchoutUnder15]',
         '[tickerWatchersNotWatchoutUnder15]',
-
+        '[tickerWatchersNotWatchoutUnder15]',
+        
         '[simpleAsThat]',
 
         '[myRecs-day40-hundredResultCreme]',
         '[myRecs-day5-hundredResultCreme-allGt1]',
         '[postMongoCount3]',
+        '[spm-52day-middleCountsJohnsRecipeNoHundredResult-slice7-uniq]',
         '[spm-8day-lowestLimitPlayoutsHundredResultCount-single]',
         '[spm-52day-middleCountsJohnsRecipe-single]',
         'low-float-high-volume-floatTimesfloatToVolume-trenddowngt10-shouldWatchout-25',
