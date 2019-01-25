@@ -264,7 +264,7 @@ const stratManager = {
             return {
                 pmName: stratName,
                 weightedTrend,
-                // avgTrend: weightedTrend
+                avgTrend: weightedTrend
                 // avgTrend: avgArray(withoutDuplicates.map(obj => obj.avgTrend))
             };
         })
