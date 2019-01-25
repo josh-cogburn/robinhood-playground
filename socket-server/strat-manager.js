@@ -249,14 +249,14 @@ const stratManager = {
                 }, []);
             
             foundStrategies = foundStrategies.filter(Boolean);
-            // let copy = [...foundStrategies];
-            // const withoutDuplicates = [];
-            // foundStrategies.forEach((stratObj, i) => {
-            //     // console.log({stratOrder, stratMin });
-            //     if (copy.findIndex(s => JSON.stringify(s) === JSON.stringify(stratObj)) === i) {
-            //         withoutDuplicates.push(stratObj)
-            //     }
-            // });
+            let copy = [...foundStrategies];
+            const withoutDuplicates = [];
+            foundStrategies.forEach((stratObj, i) => {
+                // console.log({stratOrder, stratMin });
+                if (copy.findIndex(s => JSON.stringify(s) === JSON.stringify(stratObj)) === i) {
+                    withoutDuplicates.push(stratObj)
+                }
+            });
             
             // console.log({ stratOrder, withoutDuplicates });
 
@@ -264,8 +264,8 @@ const stratManager = {
             return {
                 pmName: stratName,
                 weightedTrend,
-                avgTrend: weightedTrend
-                // avgTrend: avgArray(withoutDuplicates.map(obj => obj.avgTrend))
+                // avgTrend: weightedTrend
+                avgTrend: avgArray(withoutDuplicates.map(obj => obj.avgTrend))
             };
         })
             .filter(t => !!t.avgTrend)
