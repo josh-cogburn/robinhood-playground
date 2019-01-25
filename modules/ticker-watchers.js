@@ -106,7 +106,7 @@ module.exports = {
 
                 const strategyName = `ticker-watchers-under${priceKey}${watchoutKey}`;
 
-                await sendEmail(`robinhood-playground: NEW JUMP DOWN ${ticker}`, JSON.stringify(pick, null, 2));
+                await sendEmail(`robinhood-playground: NEW JUMP DOWN ${strategyName}: ${ticker}`, JSON.stringify(pick, null, 2));
                 await recordPicks(Robinhood, strategyName, 5000, [ticker]);
             },
             onEnd

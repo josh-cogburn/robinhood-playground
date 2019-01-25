@@ -2,7 +2,7 @@
 module.exports = {
     // important settings
     sellAllStocksOnNthDay: 2,
-    purchaseAmt: 22,
+    purchaseAmt: 25,
     forPurchase: [
         
         // st sent broken because rate limited ouch
