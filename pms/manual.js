@@ -1190,27 +1190,86 @@ const simpleAsThat = [
     'low-float-high-volume-absVolPoints-trenddowngt20-6'
 ];
 
-const tickerWatchersNotWatchoutUnder15 = [
-    'ticker-watchers-under1-notWatchout-5000',
-    'ticker-watchers-under5-notWatchout-5000',
-    'ticker-watchers-under10-notWatchout-5000',
-    'ticker-watchers-under15-notWatchout-5000',
+const tickerWatchersNotWatchout = [
+    'ticker-watchers-under1-notWatchout-morning-5000',
+    'ticker-watchers-under5-notWatchout-morning-5000',
+    'ticker-watchers-under10-notWatchout-morning-5000',
+    'ticker-watchers-under15-notWatchout-morning-5000',
+    'ticker-watchers-under20-notWatchout-morning-5000',
+
+    'ticker-watchers-under1-notWatchout-later-5000',
+    'ticker-watchers-under5-notWatchout-later-5000',
+    'ticker-watchers-under10-notWatchout-later-5000',
+    'ticker-watchers-under15-notWatchout-later-5000',
+    'ticker-watchers-under20-notWatchout-later-5000',
+
+    'ticker-watchers-under1-notWatchout-muchlater-5000',
+    'ticker-watchers-under5-notWatchout-muchlater-5000',
+    'ticker-watchers-under10-notWatchout-muchlater-5000',
+    'ticker-watchers-under15-notWatchout-muchlater-5000',
+    'ticker-watchers-under20-notWatchout-muchlater-5000',
 ];
 
-const tickerWatchersNotWatchout = [
-    'ticker-watchers-under1-notWatchout-5000',
-    'ticker-watchers-under5-notWatchout-5000',
-    'ticker-watchers-under10-notWatchout-5000',
-    'ticker-watchers-under15-notWatchout-5000',
-    'ticker-watchers-under20-notWatchout-5000',
+const tickerWatchersMinorJumps = [
+    'ticker-watchers-under1-shouldWatchout-minorJump-morning-5000',
+    'ticker-watchers-under5-shouldWatchout-minorJump-morning-5000',
+    'ticker-watchers-under10-shouldWatchout-minorJump-morning-5000',
+    'ticker-watchers-under15-shouldWatchout-minorJump-morning-5000',
+    'ticker-watchers-under20-shouldWatchout-minorJump-morning-5000',
+
+    'ticker-watchers-under1-shouldWatchout-minorJump-later-5000',
+    'ticker-watchers-under5-shouldWatchout-minorJump-later-5000',
+    'ticker-watchers-under10-shouldWatchout-minorJump-later-5000',
+    'ticker-watchers-under15-shouldWatchout-minorJump-later-5000',
+    'ticker-watchers-under20-shouldWatchout-minorJump-later-5000',
+
+    'ticker-watchers-under1-shouldWatchout-minorJump-muchlater-5000',
+    'ticker-watchers-under5-shouldWatchout-minorJump-muchlater-5000',
+    'ticker-watchers-under10-shouldWatchout-minorJump-muchlater-5000',
+    'ticker-watchers-under15-shouldWatchout-minorJump-muchlater-5000',
+    'ticker-watchers-under20-shouldWatchout-minorJump-muchlater-5000',
+
+    'ticker-watchers-under1-notWatchout-minorJump-morning-5000',
+    'ticker-watchers-under5-notWatchout-minorJump-morning-5000',
+    'ticker-watchers-under10-notWatchout-minorJump-morning-5000',
+    'ticker-watchers-under15-notWatchout-minorJump-morning-5000',
+    'ticker-watchers-under20-notWatchout-minorJump-morning-5000',
+
+    'ticker-watchers-under1-notWatchout-minorJump-later-5000',
+    'ticker-watchers-under5-notWatchout-minorJump-later-5000',
+    'ticker-watchers-under10-notWatchout-minorJump-later-5000',
+    'ticker-watchers-under15-notWatchout-minorJump-later-5000',
+    'ticker-watchers-under20-notWatchout-minorJump-later-5000',
+
+    'ticker-watchers-under1-notWatchout-minorJump-muchlater-5000',
+    'ticker-watchers-under5-notWatchout-minorJump-muchlater-5000',
+    'ticker-watchers-under10-notWatchout-minorJump-muchlater-5000',
+    'ticker-watchers-under15-notWatchout-minorJump-muchlater-5000',
+    'ticker-watchers-under20-notWatchout-minorJump-muchlater-5000',
 ];
 
 const tickerWatchersShouldWatchout = [
-    'ticker-watchers-under1-shouldWatchout-5000',
-    'ticker-watchers-under5-shouldWatchout-5000',
-    'ticker-watchers-under10-shouldWatchout-5000',
-    'ticker-watchers-under15-shouldWatchout-5000',
-    'ticker-watchers-under20-shouldWatchout-5000',
+    'ticker-watchers-under1-shouldWatchout-morning-5000',
+    'ticker-watchers-under5-shouldWatchout-morning-5000',
+    'ticker-watchers-under10-shouldWatchout-morning-5000',
+    'ticker-watchers-under15-shouldWatchout-morning-5000',
+    'ticker-watchers-under20-shouldWatchout-morning-5000',
+
+    'ticker-watchers-under1-shouldWatchout-later-5000',
+    'ticker-watchers-under5-shouldWatchout-later-5000',
+    'ticker-watchers-under10-shouldWatchout-later-5000',
+    'ticker-watchers-under15-shouldWatchout-later-5000',
+    'ticker-watchers-under20-shouldWatchout-later-5000',
+
+    'ticker-watchers-under1-shouldWatchout-muchlater-5000',
+    'ticker-watchers-under5-shouldWatchout-muchlater-5000',
+    'ticker-watchers-under10-shouldWatchout-muchlater-5000',
+    'ticker-watchers-under15-shouldWatchout-muchlater-5000',
+    'ticker-watchers-under20-shouldWatchout-muchlater-5000',
+]
+
+const myTickerWatchers = [
+    ...tickerWatchersNotWatchout
 ];
 
 const stSentimentBearish = [
@@ -1926,7 +1985,9 @@ module.exports = {
 
     tickerWatchersNotWatchout,
     tickerWatchersShouldWatchout,
-    tickerWatchersNotWatchoutUnder15,
+    tickerWatchersMinorJumps,
+
+    myTickerWatchers,
 
 
 };

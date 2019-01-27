@@ -12,7 +12,7 @@ const addOvernightJumpAndTSO = require('../app-actions/add-overnight-jump-and-ts
 const getTrendSinceOpen = require('../rh-actions/get-trend-since-open');
 const getMultipleHistoricals = require('../app-actions/get-multiple-historicals');
 const getRisk = require('../rh-actions/get-risk');
-
+const getMinutesFrom630 = require('../utils/get-minutes-from-630');
 let tickerWatcher;
 let relatedP;
 
@@ -60,7 +60,7 @@ module.exports = {
                 const mostRecent = allPrices.pop();
                 const min = Math.min(...allPrices);
                 const trendFromMin = getTrend(mostRecent, min);
-                const bigJump = trendFromMin < -8;
+                const bigJump = trendFromMin < -5;
                 // console.log({ min, trendFromMin })
                 if (bigJump && allPrices.length >= 3) {
                     console.log('found big jump', key, mostRecent, allPrices);
@@ -84,7 +84,7 @@ module.exports = {
             runAgainstPastData: false,
             onPick: async pick => {
 
-                const { jumpPrice: price, ticker } = pick;
+                const { jumpPrice: price, ticker, trendFromMin } = pick;
                 let [allHistoricals] = await getMultipleHistoricals(
                     Robinhood,
                     [ticker],
@@ -100,11 +100,18 @@ module.exports = {
                 }
 
                 const { shouldWatchout } = await getRisk(Robinhood, ticker);
-                const watchoutKey = shouldWatchout ? 'shouldWatchout' : 'notWatchout';
+                const jumpKey = trendFromMin > -8 ? '-minorJump' : '';
+                const watchoutKey = shouldWatchout ? '-shouldWatchout' : '-notWatchout';
                 const priceKeys = [1, 5, 10, 15, 20];
                 const priceKey = priceKeys.find(key => price < key);
+                const min = getMinutesFrom630();
+                const minKey = (() => {
+                    if (min > 200) return '-muchlater';
+                    if (min > 40) return '-later';
+                    return '-morning';
+                })();
 
-                const strategyName = `ticker-watchers-under${priceKey}-${watchoutKey}`;
+                const strategyName = `ticker-watchers-under${priceKey}${watchoutKey}${jumpKey}${minKey}`;
 
                 await sendEmail(`robinhood-playground: NEW JUMP DOWN ${strategyName}: ${ticker}`, JSON.stringify(pick, null, 2));
                 await recordPicks(Robinhood, strategyName, 5000, [ticker]);
