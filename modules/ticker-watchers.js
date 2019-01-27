@@ -85,33 +85,39 @@ module.exports = {
             onPick: async pick => {
 
                 const { jumpPrice: price, ticker, trendFromMin } = pick;
-                let [allHistoricals] = await getMultipleHistoricals(
+
+                // check against 5 minute historical data???
+                let [fiveMinuteHistoricals] = await getMultipleHistoricals(
                     Robinhood,
                     [ticker],
                     'interval=5minute&span=day'
                 );
-                allHistoricals = allHistoricals.map(o => o.close_price);
-                console.log({ price });
-
-                // check against 5 minute historical data???
-                if (allHistoricals.slice(0, -1).some(p => getTrend(p, price) < 5)) {
-                    console.log('did not pass historical data test');
-                    return;
-                }
+                fiveMinuteHistoricals = fiveMinuteHistoricals.map(o => o.close_price);
+                const failedHistoricalCheck = fiveMinuteHistoricals.slice(0, -1).some(p => getTrend(p, price) < 5);
+                const historicalKey = failedHistoricalCheck ? 'failedHistorical' : '';
 
                 const { shouldWatchout } = await getRisk(Robinhood, ticker);
-                const jumpKey = trendFromMin > -8 ? '-minorJump' : '';
-                const watchoutKey = shouldWatchout ? '-shouldWatchout' : '-notWatchout';
+                const jumpKey = trendFromMin > -8 ? 'minorJump' : '';
+                const watchoutKey = shouldWatchout ? 'shouldWatchout' : 'notWatchout';
                 const priceKeys = [1, 5, 10, 15, 20];
                 const priceKey = priceKeys.find(key => price < key);
                 const min = getMinutesFrom630();
                 const minKey = (() => {
-                    if (min > 200) return '-muchlater';
-                    if (min > 40) return '-later';
-                    return '-morning';
+                    if (min > 200) return 'muchlater';
+                    if (min > 40) return 'later';
+                    return 'morning';
                 })();
 
-                const strategyName = `ticker-watchers-under${priceKey}${watchoutKey}${jumpKey}${minKey}`;
+                // const strategyName = `ticker-watchers-under${priceKey}${watchoutKey}${jumpKey}${minKey}${historicalKey}`;
+
+                const strategyName = [
+                    'ticker-watchers',
+                    `under${priceKey}`,
+                    watchoutKey,
+                    jumpKey,
+                    minKey,
+                    historicalKey
+                ].filter(Boolean).join('-');
 
                 await sendEmail(`robinhood-playground: NEW JUMP DOWN ${strategyName}: ${ticker}`, JSON.stringify(pick, null, 2));
                 await recordPicks(Robinhood, strategyName, 5000, [ticker]);
