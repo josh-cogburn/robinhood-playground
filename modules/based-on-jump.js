@@ -141,7 +141,7 @@ const trendFilter = async (Robinhood, trend) => {
 const basedOnJump = {
     name: 'based-on-jump',
     trendFilter,
-    run: [0, 5, 16, 30],
+    // run: [0, 5, 16, 30],
 };
 
 module.exports = basedOnJump;

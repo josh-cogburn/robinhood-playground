@@ -45,7 +45,7 @@ const trendFilter = async (Robinhood, trend) => {
 const upstreak = {
     name: 'up-streak',
     trendFilter,
-    run: [45, 189],
+    // run: [45, 189],
 };
 
 

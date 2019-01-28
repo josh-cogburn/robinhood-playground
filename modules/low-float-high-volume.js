@@ -175,7 +175,7 @@ const trendFilter = async (Robinhood, trend) => {
 const lowFloatHighVolume = {
     name: 'low-float-high-volume',
     trendFilter,
-    run: [-23, -10, 6, 25, 95, 150, 210, 276, 315, 384], 
+    // run: [-23, -10, 6, 25, 95, 150, 210, 276, 315, 384], 
             
 };
 

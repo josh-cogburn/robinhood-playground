@@ -2198,6 +2198,70 @@ const coupleNothers = [
     'low-float-high-volume-volToAvgPoints-trendgt10-150',
 ];
 
+
+const TWmorning = [ 'ticker-watchers-under1-shouldWatchout-minorJump-morning',
+'ticker-watchers-under1-shouldWatchout-morning',
+'ticker-watchers-under1-notWatchout-minorJump-morning',
+'ticker-watchers-under1-notWatchout-morning',
+'ticker-watchers-under5-shouldWatchout-minorJump-morning',
+'ticker-watchers-under5-shouldWatchout-morning',
+'ticker-watchers-under5-notWatchout-minorJump-morning',
+'ticker-watchers-under5-notWatchout-morning',
+'ticker-watchers-under10-shouldWatchout-minorJump-morning',
+'ticker-watchers-under10-shouldWatchout-morning',
+'ticker-watchers-under10-notWatchout-minorJump-morning',
+'ticker-watchers-under10-notWatchout-morning',
+'ticker-watchers-under15-shouldWatchout-minorJump-morning',
+'ticker-watchers-under15-shouldWatchout-morning',
+'ticker-watchers-under15-notWatchout-minorJump-morning',
+'ticker-watchers-under15-notWatchout-morning',
+'ticker-watchers-under20-shouldWatchout-minorJump-morning',
+'ticker-watchers-under20-shouldWatchout-morning',
+'ticker-watchers-under20-notWatchout-minorJump-morning',
+'ticker-watchers-under20-notWatchout-morning' ];
+
+const TWlater = [ 'ticker-watchers-under1-shouldWatchout-minorJump-later',
+'ticker-watchers-under1-shouldWatchout-later',
+'ticker-watchers-under1-notWatchout-minorJump-later',
+'ticker-watchers-under1-notWatchout-later',
+'ticker-watchers-under5-shouldWatchout-minorJump-later',
+'ticker-watchers-under5-shouldWatchout-later',
+'ticker-watchers-under5-notWatchout-minorJump-later',
+'ticker-watchers-under5-notWatchout-later',
+'ticker-watchers-under10-shouldWatchout-minorJump-later',
+'ticker-watchers-under10-shouldWatchout-later',
+'ticker-watchers-under10-notWatchout-minorJump-later',
+'ticker-watchers-under10-notWatchout-later',
+'ticker-watchers-under15-shouldWatchout-minorJump-later',
+'ticker-watchers-under15-shouldWatchout-later',
+'ticker-watchers-under15-notWatchout-minorJump-later',
+'ticker-watchers-under15-notWatchout-later',
+'ticker-watchers-under20-shouldWatchout-minorJump-later',
+'ticker-watchers-under20-shouldWatchout-later',
+'ticker-watchers-under20-notWatchout-minorJump-later',
+'ticker-watchers-under20-notWatchout-later' ];
+
+const TWmuchLater = [ 'ticker-watchers-under1-shouldWatchout-minorJump-muchlater',
+'ticker-watchers-under1-shouldWatchout-muchlater',
+'ticker-watchers-under1-notWatchout-minorJump-muchlater',
+'ticker-watchers-under1-notWatchout-muchlater',
+'ticker-watchers-under5-shouldWatchout-minorJump-muchlater',
+'ticker-watchers-under5-shouldWatchout-muchlater',
+'ticker-watchers-under5-notWatchout-minorJump-muchlater',
+'ticker-watchers-under5-notWatchout-muchlater',
+'ticker-watchers-under10-shouldWatchout-minorJump-muchlater',
+'ticker-watchers-under10-shouldWatchout-muchlater',
+'ticker-watchers-under10-notWatchout-minorJump-muchlater',
+'ticker-watchers-under10-notWatchout-muchlater',
+'ticker-watchers-under15-shouldWatchout-minorJump-muchlater',
+'ticker-watchers-under15-shouldWatchout-muchlater',
+'ticker-watchers-under15-notWatchout-minorJump-muchlater',
+'ticker-watchers-under15-notWatchout-muchlater',
+'ticker-watchers-under20-shouldWatchout-minorJump-muchlater',
+'ticker-watchers-under20-shouldWatchout-muchlater',
+'ticker-watchers-under20-notWatchout-minorJump-muchlater',
+'ticker-watchers-under20-notWatchout-muchlater' ];
+
 module.exports = {
     'wild n crazy': [
         'week-swings-tenTo15-1',  // wild
@@ -2380,6 +2444,10 @@ module.exports = {
     TWshouldWatchout,
     TWminorJumps,
     TWfailedHistorical,
+
+    TWmorning,
+    TWlater,
+    TWmuchLater,
 
 
 };

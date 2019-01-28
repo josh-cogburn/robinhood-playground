@@ -55,7 +55,7 @@ const trendFilter = async (Robinhood, trend) => {
 const bigDayTrendUp = {
     name: 'big-day-trend-up',
     trendFilter,
-    run: [10, 35, 90, 223]
+    // run: [10, 35, 90, 223]
 };
 
 module.exports = bigDayTrendUp;

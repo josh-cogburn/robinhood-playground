@@ -155,7 +155,7 @@ const trendFilter = async (Robinhood, trend) => {
 const swings = {
     name: 'swings',
     trendFilter,
-    run: [193, 253],
+    // run: [193, 253],
 };
 
 module.exports = swings;

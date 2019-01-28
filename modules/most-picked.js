@@ -17,7 +17,7 @@ const { uniqifyArray } = require('../utils/uniqify-stuff');
 
 const mostPicked = {
     name: 'most-picked',
-    run: [8, 19, 55, 183, 236, 307, 387],
+    // run: [8, 19, 55, 183, 236, 307, 387],
     fn: async (Robinhood, min) => {
 
         let strategies = await fs.readdir('./json/picks-data');

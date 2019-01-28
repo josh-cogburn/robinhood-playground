@@ -71,7 +71,7 @@ const trendFilter = async (Robinhood, trend) => {
 const spread = {
     name: 'spread',
     trendFilter,
-    run: [58, 123, 202],
+    // run: [58, 123, 202],
 };
 
 module.exports = spread;

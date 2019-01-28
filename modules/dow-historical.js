@@ -126,7 +126,7 @@ const trendFilter = async (Robinhood, trend) => {
 const dowHistorical = {
     name: 'dow-historical',
     trendFilter,
-    run: [13, 73, 196],
+    // run: [13, 73, 196],
 };
 
 module.exports = dowHistorical;

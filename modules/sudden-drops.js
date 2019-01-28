@@ -231,7 +231,7 @@ const trendFilter = async (Robinhood, trend, min) => {
 const suddenDrops = {
     name: 'sudden-drops',
     trendFilter,
-    run: [-50, -30, -10, 3, 14, 32, 63, 100, 153, 189, 221, 280, 290, 328, 360, 388, 400, 430, 470, 500]
+    // run: [-50, -30, -10, 3, 14, 32, 63, 100, 153, 189, 221, 280, 290, 328, 360, 388, 400, 430, 470, 500]
 };
 
 module.exports = suddenDrops;

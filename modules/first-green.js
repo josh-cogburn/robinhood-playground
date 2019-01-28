@@ -92,7 +92,7 @@ const trendFilter = async (Robinhood, trend) => {
 const firstGreens = {
     name: 'first-greens',
     trendFilter,
-    run: [12, 190, 250, 600, -15],
+    // run: [12, 190, 250, 600, -15],
 };
 
 module.exports = firstGreens;

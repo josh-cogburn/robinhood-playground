@@ -135,6 +135,6 @@ module.exports = {
         return returnObj;
         
     },
-    run: [-25, 150, 300, 400, 600],
+    // run: [-25, 150, 300, 400, 600],
     pricePermFilter: ['under5'] // only run under5
 };

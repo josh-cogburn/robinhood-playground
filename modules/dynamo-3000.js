@@ -167,7 +167,7 @@ const trendFilter = async (Robinhood, trend) => {
 const dynamo3000 = {
     name: 'dynamo-3000',
     trendFilter,
-    run: [4, 40, 100, 200, 260, 351, 381],
+    // run: [4, 40, 100, 200, 260, 351, 381],
 };
 
 module.exports = dynamo3000;

@@ -107,7 +107,7 @@ const trendFilter = async (Robinhood, trend) => {
 
 const upsThenDowns = {
     name: 'ups-then-downs',
-    run: [10, 50, 200, 300, 380, 600],
+    // run: [10, 50, 200, 300, 380, 600],
     trendFilter,
 };
 

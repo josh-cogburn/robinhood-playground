@@ -99,7 +99,7 @@ const trendFilter = async (Robinhood, trend) => {
 const constantRisers = {
     name: 'constant-risers',
     trendFilter,
-    run: [40, 80, 100, 140, 198, 250, 300],
+    // run: [40, 80, 100, 140, 198, 250, 300],
 };
 
 module.exports = constantRisers;
