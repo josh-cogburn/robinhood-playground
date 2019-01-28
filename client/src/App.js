@@ -7,6 +7,7 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
+import Popup from "reactjs-popup";
 
 import PmReport from './pages/PmReport';
 import BalanceReports from './pages/BalanceReports';
@@ -77,12 +78,33 @@ class App extends Component {
         let { origin } = window.location;
         const socketEndpoint = origin.includes('localhost') && false ? 'http://localhost:3000' : 'http://107.173.6.167:3000';
         const socket = socketIOClient(socketEndpoint);
-        socket.on('server:picks-data', data => {
+
+        const handlePick = data => {
             console.log(data);
             this.setState({
-                picks: [data].concat(this.state.picks)
+                picks: [data].concat(this.state.picks),
+                newPicksData: data
             });
-        });
+            setTimeout(() => {
+                this.setState({
+                    newPicksData: null
+                });
+            }, 10000);
+        };
+        socket.on('server:picks-data', handlePick);
+        // setTimeout(() => {
+        //     const fakePick = {
+        //         "stratMin": "fake-pick-fake-pick",
+        //         "withPrices": [
+        //           {
+        //             "_id": "5c4b18084d16ab0849176862",
+        //             "ticker": "OGZPY",
+        //             "price": 4.86
+        //           }
+        //         ]
+        //       };
+        //       handlePick(fakePick);
+        // }, 5000)
         socket.on('server:welcome', data => {
             console.log(data, 'welcome')
             this.setState(data);
@@ -102,6 +124,9 @@ class App extends Component {
         socket.on('server:balance-report', data => {
             // this.setState({ balance: data });
             console.log(data, 'balcn');
+
+
+
             this.setState(({ balanceReports }) => ({
                 balanceReports: balanceReports.concat(data.report)
             }));
@@ -124,7 +149,7 @@ class App extends Component {
     }
 
     render () {
-        const { value, dayReports, predictionModels, balanceReports } = this.state;
+        const { value, predictionModels, balanceReports, newPicksData } = this.state;
         const isLoading = !predictionModels || !predictionModels.forPurchase;
 
         // console.log({isLoading}, predictionModels.forPurchase)
@@ -159,6 +184,11 @@ class App extends Component {
                         {value === 5 && <Cron {...this.state} />}
                     </div>
                 )}
+
+                <Popup position="right center" modal open={newPicksData}>
+                    <h2>ALERT ALERT NEW <b>PICK</b></h2>
+                    <pre>{JSON.stringify(newPicksData, null, 2)}</pre>
+                </Popup>
 
                 {/* <TabContainer> */}
                     
