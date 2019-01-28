@@ -97,9 +97,12 @@ module.exports = {
                 const historicalKey = failedHistoricalCheck ? 'failedHistorical' : '';
 
                 const { shouldWatchout } = await getRisk(Robinhood, ticker);
-                const jumpKey = trendFromMin > -8 ? 'minorJump' : '';
+                const jumpKey = (() => {
+                    if (trendFromMin > -8) return 'minorJump';
+                    if (trendFromMin < -13) return 'majorJump';
+                })();
                 const watchoutKey = shouldWatchout ? 'shouldWatchout' : 'notWatchout';
-                const priceKeys = [1, 5, 10, 15, 20];
+                const priceKeys = [1, 5, 10, 15, 20, 100];
                 const priceKey = priceKeys.find(key => price < key);
                 const min = getMinutesFrom630();
                 const minKey = (() => {
@@ -150,7 +153,7 @@ module.exports = {
                 .map(t => t.ticker);
                 
             tickerWatcher.removeTickers(bigOvernightJumps);
-            // console.log(JSON.stringify({ bigOvernightJumps }, null, 2));
+            console.log(JSON.stringify({ bigOvernightJumps }, null, 2));
         };
 
         regCronIncAfterSixThirty(Robinhood, {

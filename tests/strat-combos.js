@@ -3,7 +3,7 @@ const perms = [
     // 'ticker-watchers',
     priceKeys.map(p => `under${p}`),
     ['shouldWatchout', 'notWatchout'],
-    ['minorJump', ''],
+    ['minorJump', 'majorJump', ''],
     ['morning', 'later', 'muchlater'],
     ['', 'failedHistorical']
 ];
