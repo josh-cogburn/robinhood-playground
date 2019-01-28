@@ -41,15 +41,15 @@ function camelize(str) {
 
 const pages = [
     {
-        label: 'Realtime',
+        label: 'Balance Trend',
         // render: state => 
     },
     {
-        label: "Live PM's",
+        label: "PM's",
         render: state  => <PmReport {...state} />
     },
     {
-        label: "Live Strategies",
+        label: "Strategies",
         render: state  => <TodaysStrategies {...state} />
     },
     {
