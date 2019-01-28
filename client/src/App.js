@@ -19,7 +19,7 @@ import Cron from './pages/Cron';
 import socketIOClient from "socket.io-client";
 
 import ReactGA from 'react-ga';
-ReactGA.initialize('UA-131761952-1', { debug: true });
+ReactGA.initialize('UA-131761952-1', { debug: false });
 
 function TabContainer(props) {
     return (

@@ -19,18 +19,35 @@ class DayReports extends Component {
         let { timeFilter } = this.state;
         if (!balanceReports || !balanceReports.length) return <b>LOADING</b>;
 
-        const lastReport = balanceReports[balanceReports.length - 1];
-        const d = new Date(lastReport.time);
-        const date = d.getDate();
+        let firstOfDay;
+        const chartData = (() => {
+            console.log({timeFilter})
+            if (timeFilter === '2019') {
+                return reportsToChartData.balanceChart(dayReports.slice(4) || []);
+            }
+            // nope not overall
+            // data coming from balance reports
+                
+            const lastReport = balanceReports[balanceReports.length - 1];
+            const d = new Date(lastReport.time);
+            const date = d.getDate();
 
-        const dataSlice = timeFilter === 'onlyToday' 
-            ? balanceReports.length - balanceReports.findIndex(r => 
-                (new Date(r.time)).getDate() === date
-            ) : 0;
+            const dataSlice = timeFilter === 'onlyToday' 
+                ? (() => {
+                    const index = balanceReports.findIndex(r => 
+                        (new Date(r.time)).getDate() === date
+                    );
+                    firstOfDay = balanceReports[index];
+                    return balanceReports.length - index
+                })() : 0;
 
-        const chartData = reportsToChartData.balanceChart(balanceReports, dataSlice);
+            return reportsToChartData.balanceChart(balanceReports.slice(0-dataSlice));
+        })();
+
         const [{ data }] = chartData.datasets;
         const curTrend = data[data.length - 1] - 100;
+
+        const showingSince = firstOfDay ? firstOfDay : balanceReports[0];
         return (
             <div style={{ padding: '10px 40px' }}>
                 {
@@ -51,20 +68,16 @@ class DayReports extends Component {
                     ))
                 }
                 <small>
-                    trend since {new Date(balanceReports[0].time).toLocaleString()}:&nbsp;
+                    trend since {new Date(showingSince.time).toLocaleString()}:&nbsp;
                     <b style={{ fontSize: '160%' }}><TrendPerc value={curTrend} /></b>
                 </small>
                 {/* <h2></h2> */}
 
                 
-                {
-                    timeFilter === '2019'
-                        ? <Line data={reportsToChartData.balanceChart(dayReports.slice(4) || [])} />
-                        : <Line 
-                            data={chartData} 
-                            options={{ animation: false }} 
-                        />
-                }
+                <Line 
+                    data={chartData} 
+                    options={{ animation: !!timeFilter === '2019' }} 
+                />
                 
                 
                 
