@@ -65,13 +65,13 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
     };
 
     // stocktwits
-    if (getEnableCountForPM('allShorts')) {
-        if (withPrices.length === 1) {
-            const [{ ticker }] = withPrices;
-            await stocktwits.postBearish(ticker, stratMin);
-        }
-        // tweeter.tweet(`SHORT ${withPrices.map(({ ticker, price }) => `#${ticker} @ $${price}`).join(' and ')} - ${stratMin}`);
-    }
+    // if (getEnableCountForPM('allShorts')) {
+    //     if (withPrices.length === 1) {
+    //         const [{ ticker }] = withPrices;
+    //         await stocktwits.postBearish(ticker, stratMin);
+    //     }
+    //     // tweeter.tweet(`SHORT ${withPrices.map(({ ticker, price }) => `#${ticker} @ $${price}`).join(' and ')} - ${stratMin}`);
+    // }
 
     // for purchase
     const forPurchaseMultiplier = getEnableCountForPM('forPurchase');
