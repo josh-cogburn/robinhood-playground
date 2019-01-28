@@ -9,7 +9,7 @@ const settings = require('../settings');
 const flatten = require('../utils/flatten-array');
 const stratPerfOverall = require('../analysis/strategy-perf-overall');
 
-module.exports = async (Robinhood, manualOnly) => {
+module.exports = async (Robinhood, manualOnly = true) => {
 
     pastData = await (async () => {
         const stratPerfData = await stratPerfOverall(Robinhood, true, 4);

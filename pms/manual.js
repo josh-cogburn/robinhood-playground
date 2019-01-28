@@ -1379,8 +1379,8 @@ const allTickerWatchers = [
 const TWshouldWatchout = allTickerWatchers.filter(s => s.includes('shouldWatchout'));
 const TWnotWatchout = allTickerWatchers.filter(s => s.includes('notWatchout'));
 
-const TWminorJumps = allTickerWatchers.filter(s => s.includes('minorJumps') && !s.includes('failedHistorical'));
-const TWmajorJumps = allTickerWatchers.filter(s => s.includes('majorJumps') && !s.includes('failedHistorical'));
+const TWminorJumps = allTickerWatchers.filter(s => s.includes('minorJump') && !s.includes('failedHistorical'));
+const TWmajorJumps = allTickerWatchers.filter(s => s.includes('majorJump') && !s.includes('failedHistorical'));
 const TWfailedHistorical = allTickerWatchers.filter(s => s.includes('failedHistorical'));
 const TWnotWatchoutNoFailedHistOrMinorJumps = allTickerWatchers.filter(
     s => s.includes('notWatchout') 
@@ -1996,180 +1996,180 @@ const TWmuchLater = [ 'ticker-watchers-under1-shouldWatchout-minorJump-muchlater
 'ticker-watchers-under20-notWatchout-muchlater' ];
 
 module.exports = {
-    'wild n crazy': [
-        'week-swings-tenTo15-1',  // wild
-        'constant-risers-10minute-percUpHighClosePoints-300'  // crazy
-    ],
-    mySpecialSauce,
-    hothot,
-    longtermhot,
-    honorableMentions105,
-    honorableMentions3,
-    myPicks,
-    realOldSchool,
-    twoPicks,
-    morePicks,
-    myListJune27,
-    topPercUpJuly16,
+    // 'wild n crazy': [
+    //     'week-swings-tenTo15-1',  // wild
+    //     'constant-risers-10minute-percUpHighClosePoints-300'  // crazy
+    // ],
+    // mySpecialSauce,
+    // hothot,
+    // longtermhot,
+    // honorableMentions105,
+    // honorableMentions3,
+    // myPicks,
+    // realOldSchool,
+    // twoPicks,
+    // morePicks,
+    // myListJune27,
+    // topPercUpJuly16,
 
-    // multi day
-    creme,
-    moderates,
-    occasionals,
-    occasionalLowCount,
-    keepAnEyeOn,
+    // // multi day
+    // creme,
+    // moderates,
+    // occasionals,
+    // occasionalLowCount,
+    // keepAnEyeOn,
 
-    shorting,
-    secondaryShorting,
-    secondaryLowCountShorting,
-    allShorts,
-
-
-    aug2HighCounts,
-    aug2LowCounts,
-    august2,
-
-    aug7lowCounts,
-    aug7More,
-
-    filteredDrops,
-    aug7PerfectoLowCounts,
+    // shorting,
+    // secondaryShorting,
+    // secondaryLowCountShorting,
+    // allShorts,
 
 
-    qualityModerates,
-    moreCommonDrops,
-    greatEverydayPerformers,
+    // aug2HighCounts,
+    // aug2LowCounts,
+    // august2,
 
-    filteredDrops,
+    // aug7lowCounts,
+    // aug7More,
 
-
-    anyCountPerfectos,
-    moreaddsons,
-
-    iwantthisPARTONE,
-    iwantthisPARTTWO,
-    iwantthis,
+    // filteredDrops,
+    // aug7PerfectoLowCounts,
 
 
-    weekofaug27,
+    // qualityModerates,
+    // moreCommonDrops,
+    // greatEverydayPerformers,
 
-    aug28basedonperfectos,
-    combinedWeekOfAug27ANDAug28BasedOnPerfectosRealLowCounts,
-    combinedWeekOfAug27ANDAug28BasedOnPerfectosLowAndMedCount,
-    combinedWeekOfAug27ANDAug28BasedOnPerfectosHighCount,
+    // filteredDrops,
 
 
-    aug29LowCountsABQuality,
-    aug29LowCountsGradeC,
-    aug29MedHighCounts,
+    // anyCountPerfectos,
+    // moreaddsons,
 
-    sepPerfectos,
+    // iwantthisPARTONE,
+    // iwantthisPARTTWO,
+    // iwantthis,
+
+
+    // weekofaug27,
+
+    // aug28basedonperfectos,
+    // combinedWeekOfAug27ANDAug28BasedOnPerfectosRealLowCounts,
+    // combinedWeekOfAug27ANDAug28BasedOnPerfectosLowAndMedCount,
+    // combinedWeekOfAug27ANDAug28BasedOnPerfectosHighCount,
+
+
+    // aug29LowCountsABQuality,
+    // aug29LowCountsGradeC,
+    // aug29MedHighCounts,
+
+    // sepPerfectos,
 
     // broken down by count in last 15 days
-    sepPerfectosHigherCounts,
-    sepPerfectosLowerCounts,
-    sepPerfectosRealLowCounts,
-    sepPerfectosLowCounts,
+    // sepPerfectosHigherCounts,
+    // sepPerfectosLowerCounts,
+    // sepPerfectosRealLowCounts,
+    // sepPerfectosLowCounts,
 
-    sepPerfectosMissing,
+    // sepPerfectosMissing,
 
-    sepHighlights,
-    sepStars,
+    // sepHighlights,
+    // sepStars,
 
-    sepAdds,
-
-
-    noGuarantees,
-    unprovenFilter30Drops,
-    unprovenFilter20Drops,
-    unprovenSuddenDropsLast2Filter10,
-
-    sep17MORE,
-    afterhoursdropsGAMBLES,
-    tripleDown,
-    singleDown,
-    preMarketDrops,
-    hadAGoodDay,
-    myImpressionAtTheMoment,
+    // sepAdds,
 
 
-    bigdawgs,
-    backToTheBasicsPeople,
-    heavydutyhitters,
-    constantinople,
-    moreITELLYOUMORE,
+    // noGuarantees,
+    // unprovenFilter30Drops,
+    // unprovenFilter20Drops,
+    // unprovenSuddenDropsLast2Filter10,
+
+    // sep17MORE,
+    // afterhoursdropsGAMBLES,
+    // tripleDown,
+    // singleDown,
+    // preMarketDrops,
+    // hadAGoodDay,
+    // myImpressionAtTheMoment,
 
 
-    postMongo,
-    postMongoBigHitters,
-    postMongoTimes2,
-    postMongoCount3,
+    // bigdawgs,
+    // backToTheBasicsPeople,
+    // heavydutyhitters,
+    // constantinople,
+    // moreITELLYOUMORE,
 
 
-    dec17,
+    // postMongo,
+    // postMongoBigHitters,
+    // postMongoTimes2,
+    // postMongoCount3,
 
-    simpleAsThat,
+
+    // dec17,
+
+    // simpleAsThat,
     
 
     // ST SENTIMENT
 
     // bullish pms
-    stSentimentBullish,
+    // stSentimentBullish,
 
         // grouped by stock group
-        stSentimentUnder5Bullish,
-        stSentimentSP500Bullish,
-        stSentimentTop100RHBullish,
+        // stSentimentUnder5Bullish,
+        // stSentimentSP500Bullish,
+        // stSentimentTop100RHBullish,
 
         // grouped by sentiment key
-        stSentimentHighestBullBearScore,
-        stSentimentHighestWithSentiment,
-        stSentimentHighestWithSentAndVol,
-        stSentimentHighestMostRecentSentiment,
-        stSentimentHighestTodayVolumeChange,
-        stSentimentHighestBullish,
-        stSentimentLowestBearish,
+        // stSentimentHighestBullBearScore,
+        // stSentimentHighestWithSentiment,
+        // stSentimentHighestWithSentAndVol,
+        // stSentimentHighestMostRecentSentiment,
+        // stSentimentHighestTodayVolumeChange,
+        // stSentimentHighestBullish,
+        // stSentimentLowestBearish,
 
 
     // bearish pms
-    stSentimentBearish,
+    // stSentimentBearish,
 
         // grouped by stock group
-        stSentimentUnder5Bearish,
-        stSentimentSP500Bearish,
-        stSentimentTop100RHBearish,
+        // stSentimentUnder5Bearish,
+        // stSentimentSP500Bearish,
+        // stSentimentTop100RHBearish,
 
         // grouped by sentiment key
-        stSentimentLowestBullBearScore,
-        stSentimentLowestWithSentiment,
-        stSentimentLowestWithSentAndVol,
-        stSentimentLowestMostRecentSentiment,
-        stSentimentLowestTodayVolumeChange,
-        stSentimentLowestBullish,
-        stSentimentHighestBearish,
+        // stSentimentLowestBullBearScore,
+        // stSentimentLowestWithSentiment,
+        // stSentimentLowestWithSentAndVol,
+        // stSentimentLowestMostRecentSentiment,
+        // stSentimentLowestTodayVolumeChange,
+        // stSentimentLowestBullish,
+        // stSentimentHighestBearish,
 
     
 
     // fors
 
-    fourForFives,
-    threeForFours,
-    fiveForTens,
-    portalPepper,
+    // fourForFives,
+    // threeForFours,
+    // fiveForTens,
+    // portalPepper,
 
 
-    blueMoons,
-    lilMore,
+    // blueMoons,
+    // lilMore,
 
-    aGreatStrategy,
-    coupleNothers,
+    // aGreatStrategy,
+    // coupleNothers,
 
-    myTickerWatchers,
 
 
     allTickerWatchers,
-    TWnotWatchout,
+    myTickerWatchers,
     TWnotWatchoutNoFailedHistOrMinorJumps,
+    TWnotWatchout,
     TWshouldWatchout,
     TWfailedHistorical,
     TWmajorJumps,
