@@ -147,7 +147,7 @@ module.exports = async (
                     const { askPrice } = await lookup(Robinhood, ticker);
                     const attemptPrice = askPrice;
                     console.log('fake market order for', ticker, {
-                        lastTrade,
+                        askPrice,
                         attemptPrice
                     });
                     return limitBid(attemptPrice, 1);
