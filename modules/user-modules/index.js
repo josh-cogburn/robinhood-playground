@@ -5,7 +5,7 @@ const getMultipleHistoricals = require('../../app-actions/get-multiple-historica
 const jsonMgr = require('../../utils/json-mgr');
 module.exports = {
     name: 'user-modules',
-    run: [1, 95, 285, 380],
+    // run: [1, 95, 285, 380],
     fn: async (Robinhood, min) => {
         console.log('running user=modules fool');
         const { 

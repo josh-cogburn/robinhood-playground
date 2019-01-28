@@ -44,7 +44,7 @@ const trendFilter = async (Robinhood, trend) => {
 const beforeCloseUp = {
     name: 'before-close-up',
     trendFilter,
-    run: [350, 380],  // 12:31, 12:50pm
+    // run: [350, 380],  // 12:31, 12:50pm
 };
 
 
