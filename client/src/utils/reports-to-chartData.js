@@ -36,7 +36,7 @@ const fields = {
 
 const getColor = field => colors[Object.keys(fields).findIndex(f => f === field)];
 
-const process = fieldsToInclude => dayReports => {
+const process = fieldsToInclude => (dayReports, dataSlice = 0) => {
     const datasets = fieldsToInclude.map(key => ({
         label: key,
         fill: true,
@@ -58,11 +58,11 @@ const process = fieldsToInclude => dayReports => {
         pointHoverBorderWidth: 2,
         pointRadius: 1,
         pointHitRadius: 10,
-        data: dayReports.map(fields[key])
+        data: dayReports.map(fields[key]).slice(0 - dataSlice)
     }));
     // console.log(datasets, Object.keys(fields))
     return {
-        labels: dayReports.map(day => day.date || new Date(day.time).toLocaleString()),
+        labels: dayReports.map(day => day.date || new Date(day.time).toLocaleString()).slice(0 - dataSlice),
         datasets
     };
 };

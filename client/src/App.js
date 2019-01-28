@@ -176,7 +176,7 @@ class App extends Component {
                 ) : (
                     <div>
                             {/* // pages[value].render({ state: this.state }) */}
-                        {value === 0 && <BalanceReports reports={balanceReports} />}
+                        {value === 0 && <BalanceReports {...this.state} />}
                         {value === 1 && <PmReport {...this.state}  />}
                         {value === 2 && <TodaysStrategies {...this.state}  />}
                         {value === 3 && <DayReports {...this.state} />}

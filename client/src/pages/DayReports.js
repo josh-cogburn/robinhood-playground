@@ -15,8 +15,6 @@ class DayReports extends Component {
                 {
                     admin && (
                         <div>
-                            <h2>account balance vs indexes</h2>
-                            <Line data={processDayReports.balanceChart(dayReports)} />
                             <h2>unrealized vs realized return %</h2>
                             <Line data={processDayReports.unrealizedVsRealized(dayReports)} />
                         </div>
