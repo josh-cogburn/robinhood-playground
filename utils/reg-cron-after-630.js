@@ -2,7 +2,7 @@ const { CronJob } = require('cron');
 
 let allCrons = [];
 
-const regCronIncAfterSixThirty = (Robinhood, { name, run, fn }) => {
+const regCronIncAfterSixThirty = (Robinhood, { name, run = [], fn }) => {
     const d = new Date();
     d.setHours(9, 30);
     run.forEach((min, index) => {

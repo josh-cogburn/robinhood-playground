@@ -2,7 +2,7 @@ const appConfig = require('../../config');
 const { stockinvestapi } = appConfig;
 
 const config = {
-    RUN: [7, 60, 123, 263],
+    // RUN: [7, 60, 123, 263],
     QUERIES: {
         top100: stockinvestapi.topBuy || 'https://stockinvest.us/list/buy/top100',
         undervalued: stockinvestapi.undervalued || 'https://stockinvest.us/list/undervalued'
