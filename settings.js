@@ -2,7 +2,7 @@
 module.exports = {
     // important settings
     sellAllStocksOnNthDay: 2,
-    purchaseAmt: 215,
+    purchaseAmt: 280,
     forPurchase: [
         '[myTickerWatchers]'
     ],

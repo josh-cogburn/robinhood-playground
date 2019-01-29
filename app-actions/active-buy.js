@@ -8,7 +8,7 @@ const jsonMgr = require('../utils/json-mgr');
 const lookup = require('../utils/lookup');
 const mapLimit = require('promise-map-limit');
 
-const MAX_BUY_PER_STOCK = 325;
+const MAX_BUY_PER_STOCK = 360;
 const TIME_BETWEEN_CHECK = 6; // seconds
 const TOTAL_ATTEMPTS = 20;
 const PERC_ALLOWED_ABOVE_PICK_PRICE = 3.6;
