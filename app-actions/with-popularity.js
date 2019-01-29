@@ -34,7 +34,7 @@ module.exports = async (Robinhood, withOvernightJumps) => {
         above500: withPopularity.filter(o => o.popularity > 500).length,
         above100: withPopularity.filter(o => o.popularity > 100).length,
         above400: withPopularity.filter(o => o.popularity > 400).length
-    })
+    });
     str({ withPopularity })
     return withPopularity;
 };
