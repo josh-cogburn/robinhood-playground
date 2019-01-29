@@ -79,12 +79,24 @@ class App extends Component {
         const socketEndpoint = origin.includes('localhost') && false ? 'http://localhost:3000' : 'http://107.173.6.167:3000';
         const socket = socketIOClient(socketEndpoint);
 
+        const isForPurchase = strat => {
+            const { predictionModels: { forPurchase } = {} } = this.state;
+            if (!forPurchase || !forPurchase.length) {
+                return false;
+            }
+            return forPurchase.includes(strat);
+        };
         const handlePick = data => {
             console.log(data);
             this.setState({
                 picks: [data].concat(this.state.picks),
-                newPicksData: data
             });
+            if (!isForPurchase(data.stratMin)) {
+                return;
+            }
+            this.setState({
+                newPicksData: data
+            })
             setTimeout(() => {
                 this.setState({
                     newPicksData: null
