@@ -195,11 +195,29 @@ const TWnotWatchoutNoFailedHistOrMinorJumps = allTickerWatchers.filter(
     && !s.includes('minorJump')
 );
 
-const myTickerWatchers = TWnotWatchoutNoFailedHistOrMinorJumps;
 
 const TWmorning = allTickerWatchers.filter(s => s.includes('morning'));
 const TWlater = allTickerWatchers.filter(s => s.includes('later') && !s.includes('muchlater'));
 const TWmuchLater = allTickerWatchers.filter(s => s.includes('muchlater'));
+
+
+let myTickerWatchers = [
+    ...TWmajorJumps,
+    ...TWnotWatchoutNoFailedHistOrMinorJumps,
+    ...TWnotWatchoutNoFailedHistOrMinorJumps
+].filter(s => s.includes('under1-') || s.includes('under5'));
+
+const myLaters = [
+    ...new Set(
+        myTickerWatchers
+            .filter(s => s.includes('later'))
+            .filter(s => s.includes('under1-') || s.includes('under5'))
+    )
+];
+    
+myTickerWatchers = myTickerWatchers
+    .concat(myLaters)
+    .filter(s => !(s.includes('shouldWatchout') && s.includes('morning')));
 
 module.exports = {
     allTickerWatchers,
@@ -213,4 +231,5 @@ module.exports = {
     TWmorning,
     TWlater,
     TWmuchLater,
+    myLaters
 };

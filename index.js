@@ -7,6 +7,7 @@ const initModules = require('./app-actions/init-modules');
 
 const getAllTickers = require('./rh-actions/get-all-tickers');
 const cancelAllOrders = require('./rh-actions/cancel-all-orders');
+const alpacaCancelAllOrders = require('./alpaca/cancel-all-orders');
 const logPortfolioValue = require('./app-actions/log-portfolio-value');
 // const getPennyStocks = require('./analysis/get-penny-stocks');
 // const activeBuy = require('./app-actions/active-buy');
@@ -80,6 +81,7 @@ process.on('unhandledRejection', (reason, p) => {
         .map(stock => stock.symbol);
 
     await cancelAllOrders(Robinhood);
+    await alpacaCancelAllOrders();
 
     try {
         await logPortfolioValue(Robinhood);

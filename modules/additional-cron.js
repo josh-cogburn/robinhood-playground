@@ -10,7 +10,9 @@ const doubleDown = require('../app-actions/double-down');
 // const sellAllOlderThanTwoDays = require('../app-actions/sell-all-older-than-two-days');
 const sellAllBasedOnPlayout = require('../app-actions/sell-all-based-on-playout');
 // const sellAllIfWentUp = require('../app-actions/sell-all-if-went-up');
-// const sellAllStocks = require('../app-actions/sell-all-stocks');
+const sellAllStocks = require('../app-actions/sell-all-stocks');
+const alpacaSellAllStocks = require('../alpaca/sell-all-stocks');
+
 const saveDayReport = require('../app-actions/save-day-report');
 
 // utils
@@ -24,26 +26,31 @@ const getAllTickers = require('../rh-actions/get-all-tickers');
 const stratManager = require('../socket-server/strat-manager');
 
 const additionalCron = [
-    // {
-    //     name: 'sell all stocks',
-    //     run: [5],
-    //     fn: (Robinhood) => {
-    //
-    //         setTimeout(async () => {
-    //             // daily at 6:30AM + 4 seconds
-    //             await sellAllStocks(Robinhood);
-    //             console.log('done selling all');
-    //             //
-    //             // timeoutPromise(5000);
-    //             // console.log('selling all stocks that went up');
-    //             // await sellAllIfWentUp(Robinhood);
-    //             // console.log('logging portfolio value');
-    //             // await logPortfolioValue(Robinhood);
-    //
-    //         }, 8);
-    //
-    //     }
-    // },
+    {
+        nane: 'alpaca sell all',
+        run: [-3],
+        fn: alpacaSellAllStocks
+    },
+    {
+        name: 'sell all stocks',
+        run: [0],
+        fn: (Robinhood) => {
+    
+            setTimeout(async () => {
+                // daily at 6:30AM + 4 seconds
+                await sellAllStocks(Robinhood);
+                console.log('done selling all');
+                //
+                // timeoutPromise(5000);
+                // console.log('selling all stocks that went up');
+                // await sellAllIfWentUp(Robinhood);
+                // console.log('logging portfolio value');
+                // await logPortfolioValue(Robinhood);
+    
+            }, 100);
+    
+        }
+    },
     // sell all if went up
     // {
     //     name: 'sellAllIfWentUp',
@@ -51,16 +58,16 @@ const additionalCron = [
     //     fn: sellAllIfWentUp
     // },
     // sell all based on playout
-    {
-        name: 'sellAllBasedOnPlayout',
-        run: [0, 35],
-        fn: () => sellAllBasedOnPlayout(Robinhood)
-    },
+    // {
+    //     name: 'sellAllBasedOnPlayout',
+    //     run: [0, 35],
+    //     fn: () => sellAllBasedOnPlayout(Robinhood)
+    // },
 
     // sell all if went up
     // {
     //     name: 'sellAllStocks',
-    //     run: [8],   // 12pm
+    //     run: [0],   // 12pm
     //     fn: sellAllStocks
     // },
     // log port value
