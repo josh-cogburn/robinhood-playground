@@ -1,5 +1,5 @@
 const activeBuy = require('./active-buy');
-const alpacaMarketBuy = require('../alpaca/market-buy');
+const alpacaLimitBuy = require('../alpaca/limit-buy');
 const mapLimit = require('promise-map-limit');
 const sendEmail = require('../utils/send-email');
 
@@ -22,9 +22,9 @@ module.exports = async (Robinhood, {stocksToBuy, totalAmtToSpend, strategy, maxN
         try {
             const pickPrice = (withPrices.find(obj => obj.ticker === stock) || {}).price;
 
-            // queue alpaca market order
+            // queue alpaca limit order 4% above pickPrice
             const alpacaQuantity = Math.floor(perStock / pickPrice);
-            await alpacaMarketBuy(stock, alpacaQuantity);
+            await alpacaLimitBuy(stock, alpacaQuantity, pickPrice * 1.04);
 
             const response = await activeBuy(Robinhood, {
                 ticker: stock,

@@ -11,7 +11,7 @@ const mapLimit = require('promise-map-limit');
 const MAX_BUY_PER_STOCK = 360;
 const TIME_BETWEEN_CHECK = 6; // seconds
 const TOTAL_ATTEMPTS = 20;
-const PERC_ALLOWED_ABOVE_PICK_PRICE = 3.6;
+const PERC_ALLOWED_ABOVE_PICK_PRICE = 4;
 
 const addToDailyTransactions = async data => {
     const fileName = `./json/daily-transactions/${(new Date()).toLocaleDateString().split('/').join('-')}.json`;
