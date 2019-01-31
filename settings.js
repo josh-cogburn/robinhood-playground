@@ -14,6 +14,7 @@ module.exports = {
             // 'FIHD'
         ],
         keep: [
+            'ACIU',
             // 'HSGX'
             // 'NSPR',
             // 'BOXL',

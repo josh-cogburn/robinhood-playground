@@ -1,7 +1,11 @@
 const { alpaca } = require('.');
+const { force: { keep }} = require('../settings');
 
-module.exports = async () => {
-    const positions = await alpaca.getPositions();
+module.exports = async (_, dontSell) => {
+    let positions = await alpaca.getPositions();
+    positions = positions.filter(pos => !keep.includes(pos.symbol));
+    log('selling' + positions.map(p => p.symbol));
+    if (dontSell) return;
     for (let pos of positions) {
         const order = await alpaca.createOrder({
             symbol: pos.symbol, // any valid ticker symbol
