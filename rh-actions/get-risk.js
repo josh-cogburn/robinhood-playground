@@ -2,6 +2,7 @@
 
 const getTrend = require('../utils/get-trend');
 const { avgArray } = require('../utils/array-math');
+const lookup = require('../utils/lookup');
 
 const getRisk = async (Robinhood, ticker, historicals) => {
     // console.log('evaluating risk ...', ticker);
@@ -32,19 +33,29 @@ const getRisk = async (Robinhood, ticker, historicals) => {
                 trend
             };
         });
+    
+    str({ dailyYear})
 
     const downJumpped = dailyYear.some(historical => historical.trend < -15);
-    const last30UpJumpped = dailyYear.slice(-4).some(historical => historical.trend > 25);
-    console.log({
+    const last4UpJumpped = dailyYear.slice(-4).some(historical => historical.trend > 25);
+    const l = await lookup(Robinhood, ticker);
+    const dayVolatility = Math.abs(
+        getTrend(l.rawQuote.last_trade_price, l.rawQuote.adjusted_previous_close)
+    );
+    const dayVolatile = dayVolatility > 35;
+
+    console.log(ticker, {
         downJumpped,
-        last30UpJumpped
+        last4UpJumpped,
+        dayVolatility,
+        dayVolatile
     });
-    const shouldWatchout = last30UpJumpped;
+    const shouldWatchout = last4UpJumpped || dayVolatile;
 
     return {
         shouldWatchout,
         avgJumpAfterDrop: +(avgArray(overnightJumps).toFixed(2)),
-        percMax: getTrend(dailyYear[dailyYear.length - 1].close_price, maxClose)
+        percMax: getTrend(dailyYear[dailyYear.length - 1].close_price, maxClose),
     };
     // console.log(JSON.stringify(dailyYear, null, 2));
 };
