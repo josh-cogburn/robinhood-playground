@@ -127,7 +127,7 @@ module.exports = async (
                         ]
                         : [lastTrade, lastTrade * 1.05];    // if askPrice is not set use lastTrade * 1.05 as upper limit
                     const upperTarget = Math.max(...allPrices) * 1.2;
-                    const lowerTarget = Math.min(...allPrices);
+                    const lowerTarget = Math.min(...allPrices) * 1.011;
                     const spread = upperTarget - lowerTarget;
                     const aboveBid = spread * (attemptCount - 1) / (TOTAL_ATTEMPTS - 1);
                     const attemptPrice = lowerTarget + aboveBid;
