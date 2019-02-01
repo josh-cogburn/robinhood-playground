@@ -3,6 +3,7 @@ const { getProxy } = require('./stocktwits');
 const { avgArray } = require('./array-math');
 
 const stReq = async url => {
+    console.log({ url })
     try {
         const res = await request({
             url,
@@ -21,13 +22,14 @@ const stReq = async url => {
 
 module.exports = async (Robinhood, ticker, detailed) => {
     try {
+        console.log({ ticker}, 'getting stocktwits sent')
         let { messages } = await stReq(`https://api.stocktwits.com/api/2/streams/symbol/${ticker}.json?filter=top`);
         const last3DaysMessages = messages.filter(o => (Date.now() - new Date(o.created_at).getTime()) < 1000 * 60 * 60 * 24 * 3);
         const totalCount = last3DaysMessages.length;
         const getSentiment = s => last3DaysMessages.filter(o => o.entities.sentiment && o.entities.sentiment.basic === s).length;
         const bearishCount = getSentiment('Bearish')
         const bullishCount = getSentiment('Bullish');
-        console.log(ticker, { totalCount, bearishCount, bullishCount });
+        console.log('got stocktwits sent', ticker, { totalCount, bearishCount, bullishCount });
         const bullBearScore = bullishCount / (bearishCount || 1) / bullishCount * 100 - bearishCount * 2 - (30 - bullishCount) || 0;
     
         let detailedData = {};
