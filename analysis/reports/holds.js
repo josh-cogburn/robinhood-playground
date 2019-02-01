@@ -44,7 +44,7 @@ module.exports = async (Robinhood) => {
         if (!foundPickObj) return position;
         const pickPrice = foundPickObj.price;
         console.log({ pickPrice });
-        const { bullBearScore } = await getStSentiment(null, symbol);
+        const { bullBearScore } = (await getStSentiment(null, symbol)) || {};
         return {
             ...position,
             ...pickPrice && { 
