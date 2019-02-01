@@ -106,9 +106,10 @@ module.exports = {
                 const priceKey = priceKeys.find(key => price < key);
                 const min = getMinutesFrom630();
                 const minKey = (() => {
-                    if (min > 200) return 'muchlater';
-                    if (min > 40) return 'later';
-                    return 'morning';
+                    if (min < 3) return 'initial';
+                    if (min < 60) return 'brunch';
+                    if (min < 200) return 'lunch';
+                    return 'dinner';
                 })();
 
                 // const strategyName = `ticker-watchers-under${priceKey}${watchoutKey}${jumpKey}${minKey}${historicalKey}`;

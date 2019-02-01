@@ -27,7 +27,7 @@ module.exports = async (Robinhood, ticker, detailed) => {
         const getSentiment = s => last3DaysMessages.filter(o => o.entities.sentiment && o.entities.sentiment.basic === s).length;
         const bearishCount = getSentiment('Bearish')
         const bullishCount = getSentiment('Bullish');
-        // console.log(ticker, { totalCount, bearishCount, bullishCount });
+        console.log(ticker, { totalCount, bearishCount, bullishCount });
         const bullBearScore = bullishCount / (bearishCount || 1) / bullishCount * 100 - bearishCount * 2 - (30 - bullishCount) || 0;
     
         let detailedData = {};

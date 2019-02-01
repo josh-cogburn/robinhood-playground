@@ -4,8 +4,9 @@ const perms = [
     priceKeys.map(p => `under${p}`),
     ['shouldWatchout', 'notWatchout'],
     ['minorJump', 'majorJump', ''],
-    ['morning', 'later', 'muchlater'],
-    ['', 'failedHistorical']
+    ['initial', 'breakfast', 'lunch', 'dinner'],
+    ['', 'failedHistorical'],
+    [5000]
 ];
 
 const flatten = arr => [].concat(...arr);  

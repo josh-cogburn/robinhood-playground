@@ -2,7 +2,7 @@
 module.exports = {
     // important settings
     sellAllStocksOnNthDay: 1,
-    purchaseAmt: 140,
+    purchaseAmt: 70,
     forPurchase: [
         '[myTickerWatchers]'
     ],
@@ -11,16 +11,10 @@ module.exports = {
     disableMultipliers: false,
     force: {
         sell: [
-            // 'FIHD'
         ],
         keep: [
             'ACIU',
-            // 'HSGX'
-            // 'NSPR',
-            // 'BOXL',
-            // 'SEII',
-            // 'AWX'
-            // 'ESES'
+            'UEPS',
         ]
     }
 };
