@@ -23,7 +23,16 @@ module.exports = async (Robinhood) => {
     // positions = positions.filter(({ ticker }) => !keep.includes(ticker));
     
     // calculate pickToExecutionPerc of each position
-    positions = await mapLimit(positions, 3, async position => {
+    const withStSent = async position => ({
+        ...position,
+        stSent: await (async () => {
+            const { bullBearScore } = (await getStSentiment(null, position.symbol)) || {};
+            log(position.symbol, { bullBearScore })
+            return bullBearScore;
+        })()
+    });
+    positions = await mapLimit(positions, 1, withStSent);
+    positions = await mapLimit(positions, 1, async position => {
         const { buyStrategy, buyDate, average_buy_price, symbol } = position;
         if (!buyStrategy) return position;
         const firstBuyStrategy = Array.isArray(buyStrategy) ? buyStrategy[0] : buyStrategy;
@@ -44,14 +53,12 @@ module.exports = async (Robinhood) => {
         if (!foundPickObj) return position;
         const pickPrice = foundPickObj.price;
         console.log({ pickPrice });
-        const { bullBearScore } = (await getStSentiment(null, symbol)) || {};
         return {
             ...position,
-            ...pickPrice && { 
+            ...pickPrice && {
                 pickPrice,
                 pickToExecutionPerc: getTrend(average_buy_price, pickPrice)
             },
-            stSent: bullBearScore
         };
     });
 
