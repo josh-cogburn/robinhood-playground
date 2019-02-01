@@ -7,6 +7,7 @@ const getAssociatedStrategies = require('../../app-actions/get-associated-strate
 
 const getTrend = require('../../utils/get-trend');
 const { avgArray } = require('../../utils/array-math');
+const getStSentiment = require('../../utils/get-stocktwits-sentiment');
 
 const roundTo = numDec => num => Math.round(num * Math.pow(10, numDec)) / Math.pow(10, numDec);
 const oneDec = roundTo(1);
@@ -19,11 +20,11 @@ module.exports = async (Robinhood) => {
 
     const nonzero = await detailedNonZero(Robinhood);
     let positions = nonzero.sort((a, b) => Math.abs(b.returnDollars) - Math.abs(a.returnDollars));
-    positions = positions.filter(({ ticker }) => !keep.includes(ticker));
+    // positions = positions.filter(({ ticker }) => !keep.includes(ticker));
     
     // calculate pickToExecutionPerc of each position
     positions = await mapLimit(positions, 3, async position => {
-        const { buyStrategy, buyDate, average_buy_price } = position;
+        const { buyStrategy, buyDate, average_buy_price, symbol } = position;
         if (!buyStrategy) return position;
         const firstBuyStrategy = Array.isArray(buyStrategy) ? buyStrategy[0] : buyStrategy;
         const split = firstBuyStrategy.split('-');
@@ -39,16 +40,18 @@ module.exports = async (Robinhood) => {
         let foundPick = await Pick.findOne(searchData);
         if (!foundPick) return position;
         foundPick = foundPick.toObject();
-        const foundPickObj = foundPick && foundPick.picks ? foundPick.picks.find(pick => pick.ticker === position.symbol) : null;
+        const foundPickObj = foundPick && foundPick.picks ? foundPick.picks.find(pick => pick.ticker === symbol) : null;
         if (!foundPickObj) return position;
         const pickPrice = foundPickObj.price;
         console.log({ pickPrice });
+        const { bullBearScore } = await getStSentiment(null, symbol);
         return {
             ...position,
             ...pickPrice && { 
                 pickPrice,
                 pickToExecutionPerc: getTrend(average_buy_price, pickPrice)
-            }
+            },
+            stSent: bullBearScore
         };
     });
 
@@ -78,7 +81,8 @@ module.exports = async (Robinhood) => {
                 `    buyStrategy: ${pos.buyStrategy} | buyDate: ${pos.buyDate}`,
                 ...pos.pickPrice ? [
                     `    pickPrice: ${pos.pickPrice} | pickToExecutionPerc: ${pos.pickToExecutionPerc}%`
-                ] : []
+                ] : [],
+                `    stSent: ${JSON.stringify(pos.stSent)}`
             ].join('\n')
         )
     ];
