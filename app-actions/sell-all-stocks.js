@@ -24,7 +24,18 @@ const sellAllStocks = async (Robinhood) => {
         }
     };
 
-    const results = mapLimit(allPositions, 5, sellPosition);
+    // const results = mapLimit(allPositions, 5, sellPosition);
+    for (let position of allPositions) {
+        if (Math.random() > 0.5) {
+            setTimeout(
+                () => sellPosition(position), 
+                Math.random() * 1000 * 60 * 20  // rand -> 20 min
+            );
+        } else {
+            await sellPosition(position);
+        }
+    }
+
 };
 
 module.exports = sellAllStocks;
