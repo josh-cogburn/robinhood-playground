@@ -242,14 +242,15 @@ const allTickerWatchers = [
 ]
 
 const onlyQuality = s => !s.includes('failedHistorical') && !s.includes('minorJump');
+
 const TWgoodWatchouts = allTickerWatchers.filter(s => s.includes('shouldWatchout')).filter(onlyQuality);
 const TWgoodNotWatchouts = allTickerWatchers.filter(s => s.includes('notWatchout')).filter(onlyQuality);
-
-
 const TWallWatchout = allTickerWatchers.filter(s => s.includes('shouldWatchout'));
 const TWallNotWatchout = allTickerWatchers.filter(s => s.includes('notWatchout'));
+
 const TWminorJumps = allTickerWatchers.filter(s => s.includes('minorJump') && !s.includes('failedHistorical'));
 const TWmajorJumps = allTickerWatchers.filter(s => s.includes('majorJump') && !s.includes('failedHistorical'));
+const TWmajorJumpsNotWatchouts = TWallNotWatchout.filter(s => s.includes('majorJump') && !s.includes('failedHistorical'));
 const TWfailedHistorical = allTickerWatchers.filter(s => s.includes('failedHistorical'));
 
 
@@ -266,10 +267,13 @@ const noEarlyWatchouts = s => !(s.includes('shouldWatchout') && s.includes('init
 const onlyLaters = s => s.includes('lunch') || s.includes('dinner');
 
 const myTickerWatchersInitial = [
-    ...TWmajorJumps,
+    ...TWmajorJumpsNotWatchouts,
     ...TWgoodNotWatchouts,
     ...TWgoodNotWatchouts
 ].filter(onlyMyDollars);
+
+
+// my addons
 
 const myLaters = [
     ...new Set(
@@ -279,9 +283,8 @@ const myLaters = [
     )
 ];
 
-const tenAndFifteenLaters = allTickerWatchers   /// WOW
+const tenAndFifteenLaters = TWallNotWatchout   /// WOW
     .filter(s => s.includes('under10') || s.includes('under15'))
-    .filter(s => s.includes('notWatchout'))
     .filter(onlyQuality)
     .filter(onlyLaters);
 
@@ -295,17 +298,17 @@ const mySuperBoosters = [
     'ticker-watchers-under1-notWatchout-breakfast-5000'
 ];
 
+const myAddOns = [   
+    // last minute add-ons
+    ...myLaters,
+    ...spicySenoritas,
+    ...tenAndFifteenLaters,
+    ...mySuperBoosters
+];
+
 const myTickerWatchers = myTickerWatchersInitial         // with spice!
-    .concat(myLaters)   // because we want the extra power!
-    .filter(noEarlyWatchouts)
-    .concat([   // last minute add-ons
-        ...spicySenoritas,
-        ...tenAndFifteenLaters
-    ])
-    .concat([
-        // my super boosters for the day!
-        ...mySuperBoosters
-    ]);
+    .concat(myAddOns)   // because we want the extra power!
+    .filter(noEarlyWatchouts);
 
 module.exports = {
     allTickerWatchers,
@@ -319,6 +322,7 @@ module.exports = {
     // based on jump
     TWminorJumps,
     TWmajorJumps,
+    TWmajorJumpsNotWatchouts,
 
     // etc
     TWfailedHistorical,
@@ -331,12 +335,12 @@ module.exports = {
 
     // going for the gold
         myTickerWatchersInitial,
-        myLaters,
-        tenAndFifteenLaters,
-    
-        // flare
-        spicySenoritas,
-        mySuperBoosters,
+        myAddOns,
+            myLaters,
+            tenAndFifteenLaters,
+            spicySenoritas,     // flare
+            mySuperBoosters,    // flare
+
 
         myTickerWatchers,    
 };
