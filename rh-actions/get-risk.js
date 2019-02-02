@@ -38,14 +38,13 @@ const getRisk = async (Robinhood, ticker, historicals) => {
 
     const downJumpped = dailyYear.some(historical => historical.trend < -15);
     const last4 = dailyYear.slice(-4);
+    const lastDay = last4.pop();
     const last4Low = Math.min(...last4.map(obj => obj.low_price));
-    const last4Max = Math.max(...last4.map(obj => obj.high_price));
+    const lastDayMax = lastDay.high_price;
 
-    const last4Volatility = Math.abs(
-        getTrend(last4Max, last4Low)
-    );
-    const last4TooVolatile = last4Volatility > 28;    
-    str({ last4, last4Low, last4Max, last4Volatility, last4TooVolatile });
+    const last4Volatility = getTrend(last4Low, lastDayMax);
+    const last4TooVolatile = last4Volatility < -19;    
+    str({ last4, last4Low, lastDayMax, last4Volatility, last4TooVolatile });
     const last4UpJumpped = last4.some(historical => historical.trend > 25);
     const l = await lookup(Robinhood, ticker);
     const dayVolatility = Math.abs(
@@ -57,7 +56,7 @@ const getRisk = async (Robinhood, ticker, historicals) => {
         downJumpped,
         last4UpJumpped,
         dayVolatility,
-        dayVolatile
+        dayTooVolatile
     });
     const shouldWatchout = last4UpJumpped || dayTooVolatile || last4TooVolatile;
 
