@@ -5,9 +5,7 @@ const limitSellLastTrade = require('../rh-actions/limit-sell-last-trade');
 const jsonMgr = require('../utils/json-mgr');
 const lookup = require('../utils/lookup');
 
-const PERC_ALLOWED_ABOVE_PICK_PRICE = 4;
 const MINUTES_BEFORE_CANCEL = 30;
-const MAX_BUY_PER_STOCK = 360;
 
 const addToDailyTransactions = async data => {
     const fileName = `./json/daily-transactions/${(new Date()).toLocaleDateString().split('/').join('-')}.json`;

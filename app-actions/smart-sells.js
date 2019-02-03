@@ -1,3 +1,5 @@
+const { force: { keep: keepers } } = require('../settings');
+
 const detailedNonZero = require('./detailed-non-zero');
 const shouldYouSellThisStock = require('../analysis/should-you-sell-this-stock');
 const simpleSell = require('./simple-sell');
@@ -5,7 +7,9 @@ const sendEmail = require('../utils/send-email');
 const { sellAllStocksOnNthDay } = require('../settings');
 
 module.exports = async (Robinhood, dontSell) => {
-    const nonZero = await detailedNonZero(Robinhood);
+    let nonZero = await detailedNonZero(Robinhood);
+    nonZero = nonZero.filter(pos => !keepers.includes(pos.ticker));
+
     // str({ nonZero })
     const withShouldSells = await mapLimit(nonZero, 3, async pos => ({
         ...pos,
