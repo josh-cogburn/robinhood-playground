@@ -29,7 +29,7 @@ module.exports = async (Robinhood, ticker, detailed) => {
         const getSentiment = s => last3DaysMessages.filter(o => o.entities.sentiment && o.entities.sentiment.basic === s).length;
         const bearishCount = getSentiment('Bearish')
         const bullishCount = getSentiment('Bullish');
-        console.log('got stocktwits sent', ticker, { totalCount, bearishCount, bullishCount });
+        // console.log('got stocktwits sent', ticker, { totalCount, bearishCount, bullishCount });
         const bullBearScore = bullishCount / (bearishCount || 1) / bullishCount * 100 - bearishCount * 2 - (30 - bullishCount) || 0;
     
         let detailedData = {};
@@ -63,7 +63,7 @@ module.exports = async (Robinhood, ticker, detailed) => {
             bullBearScore,
             ...detailedData
         };
-        console.log(ticker, returnObj);
+        // console.log(ticker, returnObj);
         return returnObj;
     } catch (e) {
         // console.error(e);
