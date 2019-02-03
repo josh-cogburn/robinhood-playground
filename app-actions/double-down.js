@@ -1,7 +1,7 @@
 // buys more of stocks bought today that are already down by minPercDown %
 const mapLimit = require('promise-map-limit');
 const detailedNonZero = require('./detailed-non-zero');
-const activeBuy = require('./active-buy');
+const simpleBuy = require('./simple-buy');
 const sendEmail = require('../utils/send-email');
 
 module.exports = async (Robinhood, minute, minPercDown = 10) => {
@@ -24,7 +24,7 @@ module.exports = async (Robinhood, minute, minPercDown = 10) => {
         };
         console.log('doubleDownData', doubleDownData);
         try {
-            await activeBuy(Robinhood, doubleDownData);
+            await simpleBuy(Robinhood, doubleDownData);
             await sendEmail(`robinhood-playground: doubled down on ${position.symbol}`, JSON.stringify(position, null, 2));
         } catch (e) {
             await sendEmail(`robinhood-playground: failed to double down on ${position.symbol}`, JSON.stringify(position, null, 2));
