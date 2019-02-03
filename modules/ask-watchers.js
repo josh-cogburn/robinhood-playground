@@ -1,6 +1,6 @@
 const stocks = require('../stocks');
 const allStocks = require('../json/stock-data/allStocks');
-const HistoricalTickerWatcher = require('../socket-server/historical-ask-watcher');
+const HistoricalTickerWatcher = require('../socket-server/historical-ticker-watcher');
 const lookupMultiple = require('../utils/lookup-multiple');
 const getTrend = require('../utils/get-trend');
 const { isTradeable } = require('../utils/filter-by-tradeable');
