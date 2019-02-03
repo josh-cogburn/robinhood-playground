@@ -28,10 +28,17 @@ const stratManager = require('../socket-server/strat-manager');
 
 const additionalCron = [
     {
-        nane: 'alpaca smart sells',
-        run: [-3, 120, 300],
-        fn: alpacaSmartSells
+        name: 'alpacaSellAllStocks',
+        run: [-3],
+        fn: alpacaSellAllStocks
     },
+    // {
+    //     nane: 'alpaca smart sells',
+    //     run: [-3, 120, 300],
+    //     fn: alpacaSmartSells
+    // },
+
+
     // {
     //     name: 'sell all stocks',
     //     run: [0],
