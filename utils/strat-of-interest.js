@@ -3,7 +3,8 @@ const keywordMatches = [
     'sudden-drops',
     'best-st-sentiment',
     'double-down',
-    'ticker-watchers'
+    'ticker-watchers',
+    'ask-watchers'
 ];
 
 const functionMatches = [
