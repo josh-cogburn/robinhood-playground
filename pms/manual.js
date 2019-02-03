@@ -301,6 +301,7 @@ const mySuperBoosters = [
 const myAddOns = [   
     // last minute add-ons
     ...myLaters,
+    ...myLaters,
     ...spicySenoritas,
     ...tenAndFifteenLaters,
     ...mySuperBoosters
@@ -309,6 +310,7 @@ const myAddOns = [
 const myTickerWatchers = myTickerWatchersInitial         // with spice!
     .concat(myAddOns)   // because we want the extra power!
     .filter(noEarlyWatchouts);
+
 
 module.exports = {
     allTickerWatchers,
