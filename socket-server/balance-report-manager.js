@@ -76,10 +76,10 @@ const getAndSaveBalanceReport = async (isRegularHours) => {
             isRegularHours
         };
         const mongoDoc = await BalanceReport.create(report);
-        console.log(
-            'mongodb',
-            mongoDoc
-        );
+        // console.log(
+        //     'mongodb',
+        //     mongoDoc
+        // );
         allBalanceReports.push(mongoDoc);
         onReport(mongoDoc);
     } catch (e) {
