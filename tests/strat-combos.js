@@ -6,10 +6,11 @@ const perms = [
     ['minorJump', 'majorJump', ''],
     ['initial', 'breakfast', 'lunch', 'dinner'],
     ['', 'failedHistorical'],
+    ['', 'highVol'],
     [5000]
 ];
 
-const flatten = arr => [].concat(...arr);  
+const flatten = arr => [].concat(...arr);
 module.exports = () => {
 
     let collection = [

@@ -1,18 +1,24 @@
-const stocks = require('../stocks');
 const allStocks = require('../json/stock-data/allStocks');
 const HistoricalTickerWatcher = require('../socket-server/historical-ticker-watcher');
+
+// app-actions
+const recordPicks = require('../app-actions/record-picks');
+const getMultipleHistoricals = require('../app-actions/get-multiple-historicals');
+const addFundamentals = require('../app-actions/add-fundamentals');
+
+// rh-actions
+const getRisk = require('../rh-actions/get-risk');
+
+// utils
+const getMinutesFrom630 = require('../utils/get-minutes-from-630');
 const lookupMultiple = require('../utils/lookup-multiple');
 const getTrend = require('../utils/get-trend');
 const { isTradeable } = require('../utils/filter-by-tradeable');
 const { avgArray } = require('../utils/array-math');
 const sendEmail = require('../utils/send-email');
 const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
-const recordPicks = require('../app-actions/record-picks');
-const addOvernightJumpAndTSO = require('../app-actions/add-overnight-jump-and-tso');
-const getTrendSinceOpen = require('../rh-actions/get-trend-since-open');
-const getMultipleHistoricals = require('../app-actions/get-multiple-historicals');
-const getRisk = require('../rh-actions/get-risk');
-const getMinutesFrom630 = require('../utils/get-minutes-from-630');
+
+
 let tickerWatcher;
 let relatedP;
 
@@ -111,6 +117,13 @@ module.exports = {
                     if (min < 200) return 'lunch';
                     return 'dinner';
                 })();
+                let fundamentals;
+                try {
+                    fundamentals = (await addFundamentals(Robinhood, [{ ticker }]))[0].fundamentals;
+                } catch (e) {}
+                const { volume, average_volume } = fundamentals || {};
+                const highVol = volume > 1000000 || volume > average_volume * 3.5;
+                const volumeKey = highVol ? 'highVol' : '';
 
                 // const strategyName = `ask-watchers-under${priceKey}${watchoutKey}${jumpKey}${minKey}${historicalKey}`;
 
@@ -120,7 +133,8 @@ module.exports = {
                     watchoutKey,
                     jumpKey,
                     minKey,
-                    historicalKey
+                    historicalKey,
+                    volumeKey
                 ].filter(Boolean).join('-');
 
                 await sendEmail(`robinhood-playground: NEW JUMP DOWN ${strategyName}: ${ticker}`, JSON.stringify(pick, null, 2));
