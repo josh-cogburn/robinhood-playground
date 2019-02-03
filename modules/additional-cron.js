@@ -11,8 +11,9 @@ const doubleDown = require('../app-actions/double-down');
 const sellAllBasedOnPlayout = require('../app-actions/sell-all-based-on-playout');
 // const sellAllIfWentUp = require('../app-actions/sell-all-if-went-up');
 const sellAllStocks = require('../app-actions/sell-all-stocks');
+const smartSells = require('../app-actions/smart-sells');
 const alpacaSellAllStocks = require('../alpaca/sell-all-stocks');
-
+const alpacaSmartSells = require('../alpaca/smart-sells');
 const saveDayReport = require('../app-actions/save-day-report');
 
 // utils
@@ -27,29 +28,33 @@ const stratManager = require('../socket-server/strat-manager');
 
 const additionalCron = [
     {
-        nane: 'alpaca sell all',
-        run: [-3],
-        fn: alpacaSellAllStocks
+        nane: 'alpaca smart sells',
+        run: [-3, 120, 300],
+        fn: alpacaSmartSells
     },
+    // {
+    //     name: 'sell all stocks',
+    //     run: [0],
+    //     fn: (Robinhood) => {
+    
+    //         setTimeout(async () => {
+    //             // daily at 6:30AM + 4 seconds
+    //             await sellAllStocks(Robinhood);
+    //             console.log('done selling all');
+    //             //
+    //             // timeoutPromise(5000);
+    //             // console.log('selling all stocks that went up');
+    //             // await sellAllIfWentUp(Robinhood);
+    //             // console.log('logging portfolio value');
+    //             // await logPortfolioValue(Robinhood);
+    
+    //         }, 100);
+    
+    //     }
+    // },
     {
-        name: 'sell all stocks',
-        run: [0],
-        fn: (Robinhood) => {
-    
-            setTimeout(async () => {
-                // daily at 6:30AM + 4 seconds
-                await sellAllStocks(Robinhood);
-                console.log('done selling all');
-                //
-                // timeoutPromise(5000);
-                // console.log('selling all stocks that went up');
-                // await sellAllIfWentUp(Robinhood);
-                // console.log('logging portfolio value');
-                // await logPortfolioValue(Robinhood);
-    
-            }, 100);
-    
-        }
+        name: 'smartSells',
+        run: [0, 150, 350]
     },
     // sell all if went up
     // {

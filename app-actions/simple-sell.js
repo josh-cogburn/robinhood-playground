@@ -29,6 +29,10 @@ module.exports = async (
     { ticker, quantity }
 ) => {
 
+    if (keepers.includes(ticker)) {
+        throw 'ticker on keeper list';
+    }
+
     const boughtToday = await howMuchBoughtToday(Robinhood, ticker) || 0;
     if (boughtToday > 0) {
         throw 'already bought today: ' + ticker;

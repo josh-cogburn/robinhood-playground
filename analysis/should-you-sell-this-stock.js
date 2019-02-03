@@ -6,10 +6,12 @@ module.exports = async (
     ticker, 
     avgBuyPrice,
     bullishLimits = [14, -20],
-    bearishLimits = [7, -10]
+    bearishLimits = [7, -13]
 ) => {
     ticker = ticker.toUpperCase();
     pricePaid = Number(avgBuyPrice);
+
+    log(ticker, pricePaid )
 
     const [stSent, l] = await Promise.all([
         getStSent(null, ticker),
@@ -19,6 +21,8 @@ module.exports = async (
 
     // log({ l, trend });
 
-    const [upper, lower] = stSent.bullBearScore > 50 ? bullishLimits : bearishLimits;
+    const stSentBullish = (stSent || {}).bullBearScore > 50;
+    str({ stSentBullish, stSent })
+    const [upper, lower] = stSentBullish ? bullishLimits : bearishLimits;
     return trend > upper || trend < lower;
 }
