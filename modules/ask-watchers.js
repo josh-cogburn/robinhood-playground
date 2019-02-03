@@ -129,13 +129,13 @@ module.exports = {
             onEnd
         });
 
-        const allUnder15 = await (async () => {
+        const getUnder15 = async () => {
             const tickPrices = await lookupMultiple(Robinhood, allStocks.filter(isTradeable).map(o => o.symbol));
-            return Object.keys(tickPrices).filter(ticker => tickPrices[ticker] < 20 && tickPrices[ticker] > 0.3);
-        })();
+            const allUnder15 = Object.keys(tickPrices).filter(ticker => tickPrices[ticker] < 20 && tickPrices[ticker] > 0.3);
+            console.log({ allUnder15 });
+            return allUnder15;
+        };
         
-        console.log({ allUnder15 });
-
         regCronIncAfterSixThirty(Robinhood, {
             name: `clear ask-watchers price cache`,
             run: [-330],    // start of pre market
@@ -145,20 +145,11 @@ module.exports = {
         const setTickers = async () => {
             // all under $15 and no big overnight jumps
             tickerWatcher.clearTickers();
-            tickerWatcher.addTickers(allUnder15);
-            const trend = await getTrendSinceOpen(Robinhood, allUnder15);
-            const withOvernightJumps = await addOvernightJumpAndTSO(Robinhood, trend);
-            // str({ withOvernightJumps })
-            const bigOvernightJumps = withOvernightJumps
-                .filter(o => o.overnightJump > 7)
-                .map(t => t.ticker);
-                
-            tickerWatcher.removeTickers(bigOvernightJumps);
-            console.log(JSON.stringify({ bigOvernightJumps }, null, 2));
+            tickerWatcher.addTickers(await getUnder15());
         };
 
         regCronIncAfterSixThirty(Robinhood, {
-            name: `set ask-watchers tickers (< $15 and no overnight jumps)`,
+            name: `set ask-watchers tickers (< $15)`,
             run: [2],
             fn: setTickers
         });
