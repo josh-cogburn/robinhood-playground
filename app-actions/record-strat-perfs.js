@@ -7,34 +7,7 @@ const getTrend = require('../utils/get-trend');
 const { avgArray } = require('../utils/array-math');
 const jsonMgr = require('../utils/json-mgr');
 const { filterByTradeable } = require('../utils/filter-by-tradeable');
-const chunkApi = require('../utils/chunk-api');
-
-const lookupTickers = async (Robinhood, tickersToLookup, includeAfterHours) => {
-    // takes in array of tickers
-    // returns object of tickers and current prices
-    let quotes = await chunkApi(
-        tickersToLookup,
-        async (tickerStr) => {
-            const url = `https://api.robinhood.com/quotes/?symbols=${tickerStr}`;
-            // console.log(url);
-            // console.log('ti', tickerStr);
-            const { results } = await Robinhood.url(url);
-            return results;
-        },
-        1630
-    );
-    // console.log(quotes, 'quotes')
-    const tickerLookups = {};
-    quotes.forEach(quote => {
-        if (!quote) return;
-        const {symbol, last_trade_price, last_extended_hours_trade_price} = quote;
-        tickerLookups[symbol] = includeAfterHours ? {
-            lastTradePrice: Number(last_trade_price),
-            afterHoursPrice: Number(last_extended_hours_trade_price)
-        } : Number(last_trade_price);
-    });
-    return tickerLookups;
-};
+const lookupMultiple = require('../utils/lookup-multiple');
 
 const analyzeDay = async (Robinhood, day) => {
 
@@ -59,7 +32,7 @@ const analyzeDay = async (Robinhood, day) => {
     const tickersToLookup = Object.keys(tickerLookups);
     // console.log(tickersToLookup, 'feaf')
 
-    tickerLookups = await lookupTickers(Robinhood, tickersToLookup);
+    tickerLookups = await lookupMultiple(Robinhood, tickersToLookup);
 
     // calc trend and avg for each strategy-min
     const withTrend = [];
@@ -93,7 +66,6 @@ const analyzeDay = async (Robinhood, day) => {
 };
 
 module.exports = {
-    lookupTickers,
     analyzeDay,
     default: async (Robinhood, min) => {
 

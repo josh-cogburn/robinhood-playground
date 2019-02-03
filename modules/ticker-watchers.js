@@ -1,7 +1,7 @@
 const stocks = require('../stocks');
 const allStocks = require('../json/stock-data/allStocks');
 const HistoricalTickerWatcher = require('../socket-server/historical-ticker-watcher');
-const { lookupTickers } = require('../app-actions/record-strat-perfs');
+const lookupMultiple = require('../utils/lookup-multiple');
 const getTrend = require('../utils/get-trend');
 const { isTradeable } = require('../utils/filter-by-tradeable');
 const { avgArray } = require('../utils/array-math');
@@ -130,7 +130,7 @@ module.exports = {
         });
 
         const allUnder15 = await (async () => {
-            const tickPrices = await lookupTickers(Robinhood, allStocks.filter(isTradeable).map(o => o.symbol));
+            const tickPrices = await lookupMultiple(Robinhood, allStocks.filter(isTradeable).map(o => o.symbol));
             return Object.keys(tickPrices).filter(ticker => tickPrices[ticker] < 20 && tickPrices[ticker] > 0.3);
         })();
         

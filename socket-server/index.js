@@ -9,7 +9,7 @@ const path = require('path');
 const DayReport = require('../models/DayReport');
 
 const mapLimit = require('promise-map-limit');
-const { lookupTickers } = require('../app-actions/record-strat-perfs');
+const lookupMultiple = require('../utils/lookup-multiple');
 const getFilesSortedByDate = require('../utils/get-files-sorted-by-date');
 const jsonMgr = require('../utils/json-mgr');
 
@@ -34,7 +34,7 @@ io.on('connection', (socket) => {
     socket.emit('server:welcome', stratManager.getWelcomeData());
 
     socket.on('get-current-prices', async tickers => {
-        const response = await lookupTickers(Robinhood, tickers, true);
+        const response = await lookupMultiple(Robinhood, tickers, true);
         console.log('got current pricessss', response);
         socket.emit('server:current-prices', response);
     });

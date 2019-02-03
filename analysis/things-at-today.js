@@ -1,6 +1,5 @@
 const Pick = require('../models/Pick');
-const lookup = require('../utils/lookup');
-const { lookupTickers } = require('../app-actions/record-strat-perfs');
+const lookupMultiple = require('../utils/lookup-multiple');
 const getTrend = require('../utils/get-trend');
 const { avgArray } = require('../utils/array-math');
 
@@ -28,7 +27,7 @@ module.exports = async (Robinhood, date, strat) => {
         )
     ];
 
-    const tPrices = await lookupTickers(Robinhood, tickersToLookup);
+    const tPrices = await lookupMultiple(Robinhood, tickersToLookup);
 
     const withNowPrices = tickerPrices
         .map(pick => ({
