@@ -1,4 +1,4 @@
-const { lookupTickers } = require('../app-actions/record-strat-perfs');
+const lookupMultiple = require('../utils/lookup-multiple');
 
 class TickerWatcher {
     constructor({ name, Robinhood, handler, timeout = 40000, onPick, disableOnPick }) {
@@ -47,7 +47,7 @@ class TickerWatcher {
         console.log(this.name, 'getRelatedPrices');
         console.log(this.name, 'getting related prices', tickersWatching.length);
         // console.log(JSON.stringify(tickersToLookup));
-        const relatedPrices = await lookupTickers(
+        const relatedPrices = await lookupMultiple(
             Robinhood,
             tickersWatching,
             true

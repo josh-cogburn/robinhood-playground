@@ -1,6 +1,6 @@
 const stocks = require('../stocks');
 const allStocks = require('../json/stock-data/allStocks');
-const HistoricalTickerWatcher = require('../socket-server/historical-ticker-watcher');
+const HistoricalTickerWatcher = require('../socket-server/historical-ask-watcher');
 const lookupMultiple = require('../utils/lookup-multiple');
 const getTrend = require('../utils/get-trend');
 const { isTradeable } = require('../utils/filter-by-tradeable');
@@ -43,7 +43,7 @@ const onEnd = allPicks => {
 
 
 module.exports = {
-    name: 'ticker-watchers',
+    name: 'ask-watchers',
     init: async (Robinhood) => {
 
         // setTimeout(async () => {
@@ -56,7 +56,7 @@ module.exports = {
             relatedP = relatedPrices;
             const newJumps = [];
             for (let key of Object.keys(relatedPrices)) {
-                const allPrices = relatedPrices[key].map(obj => obj.lastTradePrice);
+                const allPrices = relatedPrices[key].map(obj => obj.askPrice);
                 const mostRecent = allPrices.pop();
                 const min = Math.min(...allPrices);
                 const trendFromMin = getTrend(mostRecent, min);
@@ -67,7 +67,7 @@ module.exports = {
                     newJumps.push({
                         ticker: key,
                         jumpPrice: mostRecent,
-                        trendFromMin
+                        trendFromMin,
                     });
                 }
             }
@@ -77,7 +77,7 @@ module.exports = {
         };
         
         tickerWatcher = new HistoricalTickerWatcher({
-            name: 'ticker-watchers',
+            name: 'ask-watchers',
             Robinhood,
             handler,
             timeout: 60000 * 2, // 5 min,
@@ -112,10 +112,10 @@ module.exports = {
                     return 'dinner';
                 })();
 
-                // const strategyName = `ticker-watchers-under${priceKey}${watchoutKey}${jumpKey}${minKey}${historicalKey}`;
+                // const strategyName = `ask-watchers-under${priceKey}${watchoutKey}${jumpKey}${minKey}${historicalKey}`;
 
                 const strategyName = [
-                    'ticker-watchers',
+                    'ask-watchers',
                     `under${priceKey}`,
                     watchoutKey,
                     jumpKey,
@@ -137,7 +137,7 @@ module.exports = {
         console.log({ allUnder15 });
 
         regCronIncAfterSixThirty(Robinhood, {
-            name: `clear ticker-watchers price cache`,
+            name: `clear ask-watchers price cache`,
             run: [-330],    // start of pre market
             fn: () => tickerWatcher.clearPriceCache()
         });
@@ -158,13 +158,13 @@ module.exports = {
         };
 
         regCronIncAfterSixThirty(Robinhood, {
-            name: `set ticker-watchers tickers (< $15 and no overnight jumps)`,
+            name: `set ask-watchers tickers (< $15 and no overnight jumps)`,
             run: [2],
             fn: setTickers
         });
 
         regCronIncAfterSixThirty(Robinhood, {
-            name: `stop ticker-watchers`,
+            name: `stop ask-watchers`,
             run: [500],
             fn: () => tickerWatcher.stop()
         });

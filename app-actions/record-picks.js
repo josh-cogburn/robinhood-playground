@@ -2,7 +2,7 @@
 // const jsonMgr = require('../utils/json-mgr');
 // const lookup = require('../utils/lookup');
 // const mapLimit = require('promise-map-limit');
-const { lookupTickers } = require('./record-strat-perfs');
+const lookupMultiple = require('../utils/lookup-multiple');
 const stratManager = require('../socket-server/strat-manager');
 const Pick = require('../models/Pick');
 const stratOfInterest = require('../utils/strat-of-interest');
@@ -124,7 +124,7 @@ module.exports = async (Robinhood, strategy, min, toPurchase, priceFilterSuffix 
                 .reduce((acc, val) => acc.concat(val), []) // flatten
         )];
         // console.log('alltickers', allTickers);
-        const tickerLookups = await lookupTickers(Robinhood, allTickers, true);
+        const tickerLookups = await lookupMultiple(Robinhood, allTickers, true);
         // console.log('tickerLookups', tickerLookups);
         for (let strategyName of Object.keys(toPurchase)) {
             const subsetToPurchase = toPurchase[strategyName];
@@ -132,7 +132,7 @@ module.exports = async (Robinhood, strategy, min, toPurchase, priceFilterSuffix 
         }
     } else {
         // console.log('no variety to purchase', toPurchase);
-        const tickerLookups = await lookupTickers(Robinhood, toPurchase, true);
+        const tickerLookups = await lookupMultiple(Robinhood, toPurchase, true);
         // console.log('ticker lookups', tickerLookups);
         await record(toPurchase, `${strategy}${priceFilterSuffix}`, tickerLookups);
     }
