@@ -7,8 +7,10 @@ module.exports = async (rh, ticker, amt) => {
 
     const { currentPrice } = await lookup(rh, ticker);
 
-    const alpacaQuantity = Math.floor(amt / currentPrice);
-    await alpacaMarketBuy(ticker, alpacaQuantity);
+    try {
+        const alpacaQuantity = Math.floor(amt / currentPrice);
+        await alpacaMarketBuy(ticker, alpacaQuantity);
+    } catch (e) {}
 
     const response = await simpleBuy(Robinhood, {
         ticker,
