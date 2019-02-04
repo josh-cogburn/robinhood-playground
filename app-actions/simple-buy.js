@@ -3,7 +3,7 @@ const limitBuyLastTrade = require('../rh-actions/limit-buy-last-trade');
 const jsonMgr = require('../utils/json-mgr');
 const lookup = require('../utils/lookup');
 
-const PERC_ALLOWED_ABOVE_PICK_PRICE = 4;
+const PERC_ALLOWED_ABOVE_PICK_PRICE = 7;
 const MINUTES_BEFORE_CANCEL = 10;
 const MAX_BUY_PER_STOCK = 360;
 
@@ -42,12 +42,13 @@ module.exports = async (
     }
 
     const l = await lookup(Robinhood, ticker);
-    const bidPrice = l.askPrice;
+    let bidPrice = l.askPrice;
     const highestAllowed = pickPrice * (PERC_ALLOWED_ABOVE_PICK_PRICE / 100 + 1);
     if (pickPrice && bidPrice > highestAllowed){
         log('bidPrice above highestAllowed', ticker, { bidPrice, pickPrice });
-        // for now just place buy orders at ask
+        bidPrice = Math.min(highestAllowed, bidPrice);
     }
+    
 
     // const quantity = calcQuantity(maxPrice, bidPrice);
     str({
