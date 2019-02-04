@@ -59,7 +59,7 @@ class TodaysStrategies extends Component {
                             ))
                         }
                         {
-                            admin && <tr><td colspan="7"><hr/></td></tr>
+                            admin && <tr><td colspan={Object.keys(toDisplay).length}><hr/></td></tr>
                         }
                         {
                             admin && (

@@ -32,7 +32,8 @@ module.exports = async (Robinhood, ticker, detailed) => {
         // console.log('got stocktwits sent', ticker, { totalCount, bearishCount, bullishCount });
 
         const bullishScore = (bullishCount / totalCount * 100) * 1.75;
-        const bullBearScore = bullishScore - bearishCount;
+        let bullBearScore = bullishScore - bearishCount * 2;
+        bullBearScore = Math.round(bullBearScore * totalCount / 30);
     
         let detailedData = {};
         if (detailed && totalCount > 3) {

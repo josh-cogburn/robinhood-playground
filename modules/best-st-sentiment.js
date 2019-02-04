@@ -20,16 +20,38 @@ module.exports = {
         let stReqCount = 0;
 
         // helper fns
-        const limitTrendByVolume = async (subTrend, countLimit = 35) => {
-            const withFundamentals = await addFundamentals(Robinhood, subTrend);
-            return withFundamentals
+        const limitTrendByVolume = async (subTrend, countLimit = 60) => {
+            let withFundamentals = await addFundamentals(Robinhood, subTrend);
+            withFundamentals = withFundamentals
+                .filter(o => 
+                    o.fundamentals && o.fundamentals.volume && o.fundamentals.average_volume_2_weeks
+                )
                 .map(o => ({
                     ...o,
-                    volToAvg: Number(o.fundamentals.volume) / Number(o.fundamentals.average_volume_2_weeks)
+                    volToAvg: Number(o.fundamentals.volume) / Number(o.fundamentals.average_volume_2_weeks),
+                    volume: o.fundamentals.volume
                 }))
-                .filter(o => o.volToAvg)
-                .sort((a, b) => b.volToAvg - a.volToAvg)
-                .slice(0, countLimit);
+            
+            // str({ withFundamentals })
+            
+            const response = [];
+            ['volToAvg', 'volume'].forEach((sortKey, i) => {
+                const sorted = withFundamentals
+                    .sort((a, b) => b[sortKey] - a[sortKey])
+                    .filter(pos => Boolean(pos[sortKey]));
+                str({ sortKey, sorted })
+                let t = 0;
+                while (response.length < Math.floor(countLimit / 2 * (i + 1))) {
+                    const stock = sorted[t];
+                    if (response.find(obj => obj.ticker === stock.ticker) === undefined) {
+                        response.push(stock);
+                    }
+                    t++;
+                }
+                log('done', sortKey);
+                str({ response: response.map(r => r.ticker) });
+            });
+            return response;
         };
 
         const addSentimentToTrend = async trend => {
@@ -42,7 +64,7 @@ module.exports = {
                 console.log({ stReqCount });
                 return {
                     ...obj,
-                    ...await getStSentiment(null, obj.ticker, true)
+                    ...await getStSentiment(null, obj.ticker)
                 };
             });
 
@@ -68,16 +90,19 @@ module.exports = {
         const handleTrend = async (nameStr, subTrend) => {
             console.log(`handle ${nameStr} trend...`);
             const limitedByVolume = await limitTrendByVolume(subTrend);
+            // log(' done done o')
+            // str({ limitedByVolume })
             const withSentimented = (await addSentimentToTrend(limitedByVolume))
-                .filter(o => typeof o.bullBearScore !== 'undefined');
+                .filter(o => o.bullBearScore);
+            // str({ withSentimented })
             const sortedByFn = sortedByGenerator(withSentimented);
 
             const highestKeys = [
                 'bullBearScore', 
-                'withSentiment', 
-                'withSentAndVol', 
-                'mostRecentSentiment', 
-                'todayVolumeChange', 
+                // 'withSentiment', 
+                // 'withSentAndVol', 
+                // 'mostRecentSentiment', 
+                // 'todayVolumeChange', 
                 'bearishCount', 
                 'bullishCount'
             ];
@@ -135,6 +160,6 @@ module.exports = {
         return returnObj;
         
     },
-    // run: [-25, 150, 300, 400, 600],
+    run: [-25, 80, 180, 270],
     pricePermFilter: ['under5'] // only run under5
 };
