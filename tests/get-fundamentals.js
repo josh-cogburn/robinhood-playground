@@ -3,7 +3,7 @@ module.exports = async (rh, ticker) => {
 
     let fundamentals;
     try {
-        fundamentals = (await addFundamentals(Robinhood, [{ ticker }]))[0].fundamentals;
+        fundamentals = (await addFundamentals(rh, [{ ticker }]))[0].fundamentals;
     } catch (e) {}
     const { volume, average_volume } = fundamentals || {};
     const highVol = volume > 1000000 || volume > average_volume * 3.5;

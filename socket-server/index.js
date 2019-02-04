@@ -7,6 +7,7 @@ const compression = require('compression');
 const stratManager = require('./strat-manager');
 const path = require('path');
 const DayReport = require('../models/DayReport');
+const cachedPositions = require('../utils/cached-positions');
 
 const mapLimit = require('promise-map-limit');
 const lookupMultiple = require('../utils/lookup-multiple');
@@ -62,6 +63,10 @@ io.on('connection', (socket) => {
     socket.on('getDayReports', async cb => {
         console.log('getting day reports');
         cb({ dayReports: await DayReport.find() });
+    });
+
+    socket.on('getPositions', async cb => {
+        cb({ positions: await cachedPositions(Robinhood) });
     });
 
     socket.on('disconnect', () => {

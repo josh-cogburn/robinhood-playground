@@ -15,7 +15,6 @@ class DayReports extends Component {
     setTimeFilter = timeFilter => this.setState({ timeFilter });
     render () {
         let { balanceReports, dayReports, admin } = this.props;
-        debugger;
         let { timeFilter } = this.state;
         if (!balanceReports || !balanceReports.length) return <b>LOADING</b>;
 

@@ -30,19 +30,21 @@ class TodaysStrategies extends Component {
         return (
             <div style={{ padding: '15px' }}>
 
-                <input type="checkbox" checked={forPurchaseOnly} onChange={this.toggleForPurchaseOnly} />
-                forPurchase PM's only
+                <label>
+                    <input type="checkbox" checked={forPurchaseOnly} onChange={this.toggleForPurchaseOnly} />
+                    forPurchase PM's only
+                </label>
                 <table>
                     <thead>
+                        <th width="63px">trends</th>
                         <th>prediction model</th>
-                        <th>trends</th>
                     </thead>
                     <tbody>
                         {
                             pmPerfs.map(perf => (
                                 <tr>
-                                    <td>{perf.pmName}</td>
                                     <td><TrendPerc value={perf.avgTrend} /></td>
+                                    <td>{perf.pmName}</td>
                                 </tr>
                             ))
                         }
