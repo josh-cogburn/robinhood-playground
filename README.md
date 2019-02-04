@@ -4,18 +4,6 @@
 
 a Node.js script based on the Robinhood API that makes stock recommendations that will go up or down in the next few days
 
-## online at
-
-portal: http://chiefsmurph.com/robinhood-playground/
-
-twitter: https://twitter.com/rh_playground
-
-stocktwits: https://stocktwits.com/robinhood_playground
-
-[add your email here if you'd like to be sent the cheapest 50 stocks trading on Robinhood 4 minutes before market open](https://github.com/chiefsmurph/robinhood-playground/issues/7)
-
-## run locally
-
 `npm install`
 
 create a config.js file that exports an object
