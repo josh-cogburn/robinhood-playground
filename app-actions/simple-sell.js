@@ -31,7 +31,7 @@ module.exports = async (
     }
 
     if (await alreadyBoughtToday(Robinhood, ticker)) {
-        throw 'not selling ' + ticker + 'because bought today'};
+        throw 'not selling ' + ticker + 'because bought today';
     }
 
     let { lastTrade, bidPrice: b } = await lookup(Robinhood, ticker);
