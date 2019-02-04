@@ -26,6 +26,11 @@ class TodaysStrategies extends Component {
                 'current': 'currentPrice',
             } : {}
         };
+
+        const totalInvested = positions.reduce((acc, pos) => acc + pos.equity, 0);
+        const totalReturnDollars = positions.reduce((acc, pos) => acc + pos.returnDollars, 0);
+        const totalReturnPerc = totalReturnDollars / totalInvested * 100;
+
         return (
             <div style={{ padding: '15px' }}>
 
@@ -52,6 +57,18 @@ class TodaysStrategies extends Component {
                                     }
                                 </tr>
                             ))
+                        }
+                        {
+                            admin && <tr><td colspan="7"><hr/></td></tr>
+                        }
+                        {
+                            admin && (
+                                <tr>
+                                    <td colspan="3">Totals</td>
+                                    <td>{totalReturnDollars}</td>
+                                    <td><TrendPerc value={totalReturnPerc} /></td>
+                                </tr>
+                            )
                         }
                     </tbody>
                 </table>
