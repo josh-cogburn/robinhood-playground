@@ -11,7 +11,7 @@ class TodaysStrategies extends Component {
         let { pmPerfs, settings, predictionModels, admin, positions } = this.props;
 
         const toDisplay = {
-            dayAge: 'days old',
+            'days old': 'dayAge',
             ticker: 'ticker',
             ...!admin ? {
                 'percent of total invested': pos => pos.percTotal + '%',
