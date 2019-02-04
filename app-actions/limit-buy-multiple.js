@@ -31,7 +31,8 @@ module.exports = async (Robinhood, {stocksToBuy, totalAmtToSpend, strategy, maxN
                 strategy,
                 min,
                 pickPrice,
-                quantity,
+                // quantity,
+                maxPrice: perStock
             });
             console.log('success active buy', stock);
             // console.log('response from limit buy multiple', response);
