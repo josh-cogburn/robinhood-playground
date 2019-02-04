@@ -20,25 +20,26 @@ class TodaysStrategies extends Component {
 
                 <table>
                     <thead>
-                        <th>ticker</th>
                         <th>dayAge</th>
+                        <th>ticker</th>
+                        <th>equity</th>
                         <th>avg</th>
                         <th>current</th>
-                        <th>return</th>
+                        <th>return $</th>
+                        <th>return %</th>
                         <th>buy strategies</th>
                     </thead>
                     <tbody>
                         {
                             positions.map(pos => (
                                 <tr>
-                                    <td>{pos.ticker}</td>
-                                   
                                     <td>{pos.dayAge}</td>
+                                    <td>{pos.ticker}</td>
+                                    <td>${pos.equity.toFixed(2)}</td>
                                     <td>{pos.average_buy_price}</td>
                                     <td>{pos.currentPrice}</td>
-                                    <td>
-                                        {pos.returnDollars} (<TrendPerc value={pos.returnPerc} />)
-                                    </td>
+                                    <td>{pos.returnDollars}</td>
+                                    <td><TrendPerc value={pos.returnPerc} /></td>
                                     <td>{pos.buyStrategy}</td>
                                 </tr>
                             ))
