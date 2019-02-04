@@ -33,7 +33,7 @@ const additionalCron = [
     //     fn: alpacaSellAllStocks
     // },
     {
-        nane: 'alpaca smart sells',
+        name: 'alpaca smart sells',
         run: [5, 120, 300],
         fn: alpacaSmartSells
     },
