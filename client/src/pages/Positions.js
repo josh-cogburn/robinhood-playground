@@ -14,15 +14,17 @@ class TodaysStrategies extends Component {
             'days old': 'dayAge',
             ticker: 'ticker',
             ...!admin ? {
-                'percent of total invested': pos => pos.percTotal + '%',
+                'percent of total': pos => pos.percTotal + '%',
             } : {
                 equity: 'equity',
-                'avg': 'average_buy_price',
-                'current': 'currentPrice',
                 'return $': 'returnDollars',
                 'return %': pos => <TrendPerc value={pos.returnPerc} />,
             },
             'buy strategies': 'buyStrategy',
+            ...admin ? {
+                'avg': 'average_buy_price',
+                'current': 'currentPrice',
+            } : {}
         };
         return (
             <div style={{ padding: '15px' }}>
