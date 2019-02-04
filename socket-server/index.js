@@ -29,7 +29,7 @@ const prependFolder = folder => path.join(__dirname, `../${folder}`);
 app.use('/', express['static'](prependFolder('client/build')));
 app.use('/user-strategies', express['static'](prependFolder('user-strategies/build')));
 
-io.on('connection', (socket) => {
+io.on('connection', async socket => {
 
     socket.emit('server:welcome', await stratManager.getWelcomeData());
 
