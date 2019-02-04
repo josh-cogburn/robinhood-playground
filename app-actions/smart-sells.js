@@ -18,7 +18,10 @@ module.exports = async (Robinhood, dontSell) => {
     // str({ withShouldSells });
 
     const toSell = withShouldSells
-        .filter(pos => pos.shouldSell || pos.dayAge >= sellAllStocksOnNthDay)
+        .filter(pos => 
+            pos.shouldSell 
+            // || pos.dayAge >= sellAllStocksOnNthDay
+        )
         .sort((a, b) => b.returnDollars - a.returnDollars);
 
     log('to sell: ', toSell.map(pos => pos.ticker));
