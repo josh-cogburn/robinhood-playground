@@ -9,38 +9,45 @@ import TrendPerc from '../components/TrendPerc';
 class TodaysStrategies extends Component {
     render() {
         let { pmPerfs, settings, predictionModels, admin, positions } = this.props;
-    
 
-        // const headers = {
-        //     ticker: 'ticker',
-
-        // }
+        const toDisplay = {
+            dayAge: 'days old',
+            ticker: 'ticker',
+            ...!admin ? {
+                'percent of total invested': pos => pos.percTotal + '%',
+            } : {
+                equity: 'equity',
+                'avg': 'average_buy_price',
+                'current': 'currentPrice',
+                'return $': 'returnDollars',
+                'return %': pos => <TrendPerc value={pos.returnPerc} />,
+            },
+            'buy strategies': 'buyStrategy',
+        };
         return (
             <div style={{ padding: '15px' }}>
 
                 <table>
                     <thead>
-                        <th>dayAge</th>
-                        <th>ticker</th>
-                        <th>equity</th>
-                        <th>avg</th>
-                        <th>current</th>
-                        <th>return $</th>
-                        <th>return %</th>
-                        <th>buy strategies</th>
+                        {
+                            Object.keys(toDisplay).map(header => 
+                                <th>{header}</th>
+                            )
+                        }
                     </thead>
                     <tbody>
                         {
                             positions.map(pos => (
                                 <tr>
-                                    <td>{pos.dayAge}</td>
-                                    <td>{pos.ticker}</td>
-                                    <td>${pos.equity.toFixed(2)}</td>
-                                    <td>{pos.average_buy_price}</td>
-                                    <td>{pos.currentPrice}</td>
-                                    <td>{pos.returnDollars}</td>
-                                    <td><TrendPerc value={pos.returnPerc} /></td>
-                                    <td>{pos.buyStrategy}</td>
+                                    {
+                                        Object.keys(toDisplay).map(header => {
+                                            const render = toDisplay[header];
+                                            const v = typeof render === 'function' ? render(pos) : pos[render]; 
+                                            return (
+                                                <td>{v}</td>
+                                            );
+                                        })
+                                    }
                                 </tr>
                             ))
                         }

@@ -35,13 +35,13 @@ const getDetailedNonZero = async (Robinhood) => {
 
     const withEquity = withBuyData.map(pos => ({
         ...pos,
-        equity: pos.currentPrice * pos.quantity
+        equity: (pos.currentPrice * pos.quantity).toFixed(2)
     })).sort((a, b) => b.equity - a.equity);
 
     const totalInvested = withEquity.reduce((acc, pos) => acc + pos.equity, 0);
     const withPercTotal = withEquity.map(pos => ({
         ...pos,
-        percTotal: pos.equity / totalInvested
+        percTotal: (pos.equity / totalInvested * 100).toFixed(2)
     }));
 
     // console.log('made it', withTicks);
