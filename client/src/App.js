@@ -156,7 +156,7 @@ class App extends Component {
 
     auth = () => {
         const rabbit = window.prompt('heyyyy there?');
-        if (rabbit === 'johnny') {
+        if (rabbit === 'j') {
             console.log({ rabbit })
             this.setState({ admin: true }, () => console.log(this.state));
         }
