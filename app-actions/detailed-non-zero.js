@@ -31,9 +31,14 @@ const getDetailedNonZero = async (Robinhood) => {
 
     // console.log({ formattedWithLookup})
     
-    const finalNonZeroPositions = await addBuyDataToPositions(formattedWithLookup);
+    const withBuyData = await addBuyDataToPositions(formattedWithLookup);
+
+    const withEquity = withBuyData.map(pos => ({
+        ...pos,
+        equity: pos.currentPrice * pos.quantity
+    }));
     // console.log('made it', withTicks);
-    return finalNonZeroPositions;
+    return withEquity;
 };
 
 module.exports = getDetailedNonZero;

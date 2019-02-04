@@ -7,17 +7,9 @@ import Pick from '../components/Pick';
 import TrendPerc from '../components/TrendPerc';
 
 class TodaysStrategies extends Component {
-    constructor() {
-        super();
-        this.state = {
-            forPurchaseOnly: true
-        };
-    }
-    toggleForPurchaseOnly = () => this.setState({ forPurchaseOnly: !this.state.forPurchaseOnly })
     render() {
         let { pmPerfs, settings, predictionModels, admin, positions } = this.props;
-        let { forPurchaseOnly } = this.state;
-
+    
 
         // const headers = {
         //     ticker: 'ticker',
@@ -29,16 +21,25 @@ class TodaysStrategies extends Component {
                 <table>
                     <thead>
                         <th>ticker</th>
+                        <th>dayAge</th>
+                        <th>avg</th>
+                        <th>current</th>
                         <th>return</th>
+                        <th>buy strategies</th>
                     </thead>
                     <tbody>
                         {
                             positions.map(pos => (
                                 <tr>
                                     <td>{pos.ticker}</td>
+                                   
+                                    <td>{pos.dayAge}</td>
+                                    <td>{pos.average_buy_price}</td>
+                                    <td>{pos.currentPrice}</td>
                                     <td>
                                         {pos.returnDollars} (<TrendPerc value={pos.returnPerc} />)
                                     </td>
+                                    <td>{pos.buyStrategy}</td>
                                 </tr>
                             ))
                         }

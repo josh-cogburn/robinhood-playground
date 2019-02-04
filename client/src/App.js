@@ -54,12 +54,12 @@ const pages = [
         render: state  => <TodaysStrategies {...state} />
     },
     {
-        label: 'Day Reports',
-        render: state => <DayReports {...state } />,
-    },
-    {
         label: 'Positions',
         render: state => <Positions {...state } />,
+    },
+    {
+        label: 'Day Reports',
+        render: state => <DayReports {...state } />,
     },
     {
         label: 'Settings',
@@ -193,8 +193,8 @@ class App extends Component {
                         {value === 0 && <BalanceReports {...this.state} />}
                         {value === 1 && <PmReport {...this.state}  />}
                         {value === 2 && <TodaysStrategies {...this.state}  />}
-                        {value === 3 && <DayReports {...this.state} />}
-                        {value === 4 && <Positions {...this.state} />}
+                        {value === 3 && <Positions {...this.state} />}
+                        {value === 4 && <DayReports {...this.state} />}
                         {value === 5 && <Settings {...this.state} />}
                         {value === 6 && <Cron {...this.state} />}
                     </div>
