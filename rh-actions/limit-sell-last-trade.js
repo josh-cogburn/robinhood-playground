@@ -3,26 +3,12 @@ const jsonMgr = require('../utils/json-mgr');
 const lookup = require('../utils/lookup');
 const alreadyBoughtToday = require('./already-bought-today');
 
-const boughtThisStockToday = async (Robinhood, ticker) => {
-    const fileName = `./json/daily-transactions/${(new Date()).toLocaleDateString().split('/').join('-')}.json`;
-    const curTransactions = await jsonMgr.get(fileName) || [];
-    const foundInDT = curTransactions.some(transaction => {
-        return transaction.ticker === ticker && transaction.type === 'buy';
-    });
-    return foundInDT || alreadyBoughtToday(Robinhood, ticker);
-};
-
 module.exports = async (Robinhood, {
     ticker,
     quantity = 1,
     bidPrice
 }) => {
     console.log('limit selling', ticker);
-
-    if (await boughtThisStockToday(Robinhood, ticker)) {
-        console.log('not selling ', ticker, 'because bought today');
-        return { detail: 'not selling ' + ticker + 'because bought today'};
-    }
 
     const {
         currentPrice,
