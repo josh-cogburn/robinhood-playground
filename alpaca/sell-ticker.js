@@ -1,8 +1,22 @@
 const { alpaca } = require('.');
 const { force: { keep }} = require('../settings');
 
+const howMuchBoughtToday = require('./how-much-bought-today');
+const alreadyBoughtToday = require('../rh-actions/already-bought-today');
+
 module.exports = async (_, ticker, dontSell) => {
     log({ ticker })
+
+
+    const boughtToday = await howMuchBoughtToday(_, ticker) || 0;
+    if (boughtToday > 0) {
+        throw 'already bought today: ' + ticker;
+    }
+
+    if (await alreadyBoughtToday(_, ticker)) {
+        throw 'not selling ' + ticker + 'because bought today'};
+    }
+
     const positions = await alpaca.getPositions();
     // log({ positions })
     const pos = positions.find(pos => pos.symbol === ticker);

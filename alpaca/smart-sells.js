@@ -4,9 +4,6 @@ const shouldYouSellThisStock = require('../analysis/should-you-sell-this-stock')
 
 module.exports = async (Robinhood, dontSell) => {
 
-    log(
-        await alpaca.getPosition('ACIU')
-    )
     let positions = await alpaca.getPositions();
     positions = positions.filter(pos => !keep.includes(pos.symbol));
     str({ positions })
