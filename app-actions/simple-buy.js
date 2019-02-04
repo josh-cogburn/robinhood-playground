@@ -48,14 +48,19 @@ module.exports = async (
         log('bidPrice above highestAllowed', ticker, { bidPrice, pickPrice });
         // for now just place buy orders at ask
     }
-    const quantity = calcQuantity(maxPrice, bidPrice);
+
+    // const quantity = calcQuantity(maxPrice, bidPrice);
+    str({
+        // quantity,
+        bidPrice,
+        maxPrice
+    })
     const purchase = await limitBuyLastTrade(
         Robinhood,
         {
             ticker,
             bidPrice,
-            quantity,
-            strategy
+            maxPrice
         }
     );
 

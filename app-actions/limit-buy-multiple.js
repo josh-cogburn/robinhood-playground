@@ -23,15 +23,15 @@ module.exports = async (Robinhood, {stocksToBuy, totalAmtToSpend, strategy, maxN
             const pickPrice = (withPrices.find(obj => obj.ticker === stock) || {}).price;
 
             // queue alpaca limit order 4% above pickPrice
-            const alpacaQuantity = Math.floor(perStock / pickPrice);
-            await alpacaMarketBuy(stock, alpacaQuantity);
+            const quantity = Math.floor(perStock / pickPrice);
+            await alpacaMarketBuy(stock, quantity);
 
             const response = await simpleBuy(Robinhood, {
                 ticker: stock,
-                maxPrice: perStock,
                 strategy,
                 min,
-                pickPrice
+                pickPrice,
+                quantity,
             });
             console.log('success active buy', stock);
             // console.log('response from limit buy multiple', response);
