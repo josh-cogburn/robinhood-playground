@@ -2,6 +2,8 @@ const { force: { keep: keepers } } = require('../settings');
 
 const howMuchBoughtToday = require('./how-much-bought-today');
 const limitSellLastTrade = require('../rh-actions/limit-sell-last-trade');
+const alreadyBoughtToday = require('../rh-actions/already-bought-today');
+
 const jsonMgr = require('../utils/json-mgr');
 const lookup = require('../utils/lookup');
 
@@ -14,26 +16,22 @@ const addToDailyTransactions = async data => {
     await jsonMgr.save(fileName, curTransactions);
 };
 
-const calcQuantity = (maxPrice, bidPrice) => {
-    let quantity = Math.floor(maxPrice / bidPrice);
-    if (quantity === 0 && bidPrice < 50) {
-        quantity = 1;
-    }
-    return quantity;
-};
-
 module.exports = async (
     Robinhood,
     { ticker, quantity }
 ) => {
 
     if (keepers.includes(ticker)) {
-        throw 'ticker on keeper list';
+        throw 'ticker on keeper list: ' + ticker;
     }
 
     const boughtToday = await howMuchBoughtToday(Robinhood, ticker) || 0;
     if (boughtToday > 0) {
         throw 'already bought today: ' + ticker;
+    }
+
+    if (await alreadyBoughtToday(Robinhood, ticker)) {
+        throw 'not selling ' + ticker + 'because bought today'};
     }
 
     let { lastTrade, bidPrice: b } = await lookup(Robinhood, ticker);
