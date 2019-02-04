@@ -85,7 +85,7 @@ const stratManager = {
 
         console.log('initd strat manager');
     },
-    getWelcomeData() {
+    async getWelcomeData() {
         return {
             curDate: this.curDate,
             picks: this.picks,
@@ -130,7 +130,7 @@ const stratManager = {
         this.tickerWatcher.clearTickers();
         await this.initPicksAndPMs();
         await this.tickerWatcher.lookupRelatedPrices();
-        this.sendToAll('server:welcome', this.getWelcomeData());
+        this.sendToAll('server:welcome', await this.getWelcomeData());
     },
     async determineCurrentDay() {
         // calc current date
