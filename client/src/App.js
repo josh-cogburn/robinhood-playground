@@ -12,6 +12,7 @@ import Popup from "reactjs-popup";
 import PmReport from './pages/PmReport';
 import BalanceReports from './pages/BalanceReports';
 import TodaysStrategies from './pages/TodaysStrategies';
+import Positions from './pages/Positions';
 import DayReports from './pages/DayReports';
 import Settings from './pages/Settings';
 import Cron from './pages/Cron';
@@ -55,6 +56,10 @@ const pages = [
     {
         label: 'Day Reports',
         render: state => <DayReports {...state } />,
+    },
+    {
+        label: 'Positions',
+        render: state => <Positions {...state } />,
     },
     {
         label: 'Settings',
@@ -136,9 +141,6 @@ class App extends Component {
         socket.on('server:balance-report', data => {
             // this.setState({ balance: data });
             console.log(data, 'balcn');
-
-
-
             this.setState(({ balanceReports }) => ({
                 balanceReports: balanceReports.concat(data.report)
             }));
@@ -192,8 +194,9 @@ class App extends Component {
                         {value === 1 && <PmReport {...this.state}  />}
                         {value === 2 && <TodaysStrategies {...this.state}  />}
                         {value === 3 && <DayReports {...this.state} />}
-                        {value === 4 && <Settings {...this.state} />}
-                        {value === 5 && <Cron {...this.state} />}
+                        {value === 4 && <Positions {...this.state} />}
+                        {value === 5 && <Settings {...this.state} />}
+                        {value === 6 && <Cron {...this.state} />}
                     </div>
                 )}
 

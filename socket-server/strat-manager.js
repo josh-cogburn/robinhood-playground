@@ -15,13 +15,14 @@ const { avgArray } = require('../utils/array-math');
 const sendEmail = require('../utils/send-email');
 const getSettingsString = require('../utils/get-settings-string');
 const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
+const cachedPositions = require('../utils/cached-positions');
+const flatten = require('../utils/flatten-array');
 
 const marketClosures = require('../market-closures');
 
 const formatDate = date => date.toLocaleDateString().split('/').join('-');
 const getToday = () => formatDate(new Date());
 
-const flatten = require('../utils/flatten-array');
 const TickerWatcher = require('./ticker-watcher');
 
 const balanceReportManager = require('./balance-report-manager');
@@ -94,7 +95,8 @@ const stratManager = {
             settings,
             cronString: regCronIncAfterSixThirty.toString(),
             balanceReports: balanceReportManager.getAllBalanceReports(),
-            pmPerfs: this.pmPerfs
+            pmPerfs: this.pmPerfs,
+            positions: await cachedPositions(Robinhood)
         };
     },
     newPick(data) {
