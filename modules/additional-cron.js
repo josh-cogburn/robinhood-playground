@@ -105,7 +105,7 @@ const additionalCron = [
         }
     },
     {
-        name: 'record-strat-perfs, and sell all based on playout',
+        name: 'record-strat-perfs',
         run: [85, 230, 330],
         fn: async (Robinhood, min) => {
             await recordStratPerfs(Robinhood, min);
