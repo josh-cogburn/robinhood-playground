@@ -4,7 +4,8 @@ module.exports = {
     sellAllStocksOnNthDay: 10,
     purchaseAmt: 35,
     forPurchase: [
-        '[myTickerWatchers]'
+        '[myTickerWatchers]',
+        '[myStSents]',
     ],
     // forPurchaseVariation: '75Perc5Day-yesincludingblanks',
     // fallbackSellStrategy: 'limit8',
