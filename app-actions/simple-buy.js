@@ -44,7 +44,7 @@ module.exports = async (
     const l = await lookup(Robinhood, ticker);
     const bidPrice = l.askPrice;
     const highestAllowed = pickPrice * (PERC_ALLOWED_ABOVE_PICK_PRICE / 100 + 1);
-    if (bidPrice > highestAllowed){
+    if (pickPrice && bidPrice > highestAllowed){
         log('bidPrice above highestAllowed', ticker, { bidPrice, pickPrice });
         // for now just place buy orders at ask
     }
