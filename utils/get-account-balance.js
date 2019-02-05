@@ -1,11 +1,21 @@
 const DayReport = require('../models/DayReport');
 const getTrend = require('../utils/get-trend');
+const jsonMgr = require('../utils/json-mgr')
 
 const roundTo = numDec => num => Math.round(num * Math.pow(10, numDec)) / Math.pow(10, numDec);
 const oneDec = roundTo(1);
 const twoDec = roundTo(2);
 
 module.exports = async (Robinhood, includeTrend, todaysDate) => {
+    
+    const getPrevDateBalanceFromPortfolioCache = async () => {
+        const portCache = await jsonMgr.get('./portfolio-cache.json');
+        let lastPortVal = Object.keys(portCache).indexOf(todaysDate);
+        lastPortVal = lastPortVal === -1 ? Object.keys(portCache).length : lastPortVal;
+        const vl = portCache[Object.keys(portCache)[lastPortVal - 1]];
+        // log({portCache, vl, lastPortVal });
+        return vl;
+    };
 
     const [ account ] = (await Robinhood.accounts()).results;
     const portfolio = await Robinhood.url(account.portfolio);
@@ -24,7 +34,7 @@ module.exports = async (Robinhood, includeTrend, todaysDate) => {
         console.log({ todayIndex, prevDateIndex, prevDate, uniqDates });
         const prevDay = await DayReport.findOne({ date: prevDate });
         console.log({ prevDay })
-        const prevBalance = prevDay.accountBalance;
+        const prevBalance = prevDay ? prevDay.accountBalance : await getPrevDateBalanceFromPortfolioCache();
         console.log({ prevDay, prevBalance });
         // const prevDay = await DayReport.findOne({ date: uniqDates[] })
         const { adjusted_equity_previous_close } = portfolio;
