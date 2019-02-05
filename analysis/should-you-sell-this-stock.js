@@ -5,8 +5,8 @@ module.exports = async (
     Robinhood, 
     ticker, 
     avgBuyPrice,
-    bullishLimits = [10, -20],
-    bearishLimits = [7, -13]
+    bullishLimits = [10, -6],
+    bearishLimits = [7, -3]
 ) => {
     ticker = ticker.toUpperCase();
     pricePaid = Number(avgBuyPrice);
