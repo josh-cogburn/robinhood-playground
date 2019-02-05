@@ -5,7 +5,7 @@ module.exports = async (
     Robinhood, 
     ticker, 
     avgBuyPrice,
-    bullishLimits = [10, -6],
+    bullishLimits = [11, -6],
     bearishLimits = [7, -3]
 ) => {
     ticker = ticker.toUpperCase();
