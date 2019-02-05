@@ -19,7 +19,7 @@ const twoDec = roundTo(2);
 
 module.exports = async (Robinhood, min = 515) => {
 
-    const todaysDate = (await getFilesSortedByDate('daily-transactions'))[0];
+    const todaysDate = (await getFilesSortedByDate('prediction-models'))[0];
     console.log(`Creating report for ${todaysDate} @ ${min} minutes`);
 
     // get and record pm perfs
