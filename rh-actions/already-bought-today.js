@@ -1,4 +1,5 @@
 const loadAllTransactionsSince = require('./load-all-transactions-since');
+const jsonMgr = require('../utils/json-mgr');
 
 const inDt = async (ticker) => {
     const fileName = `./json/daily-transactions/${(new Date()).toLocaleDateString().split('/').join('-')}.json`;
