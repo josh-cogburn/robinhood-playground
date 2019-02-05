@@ -26,15 +26,15 @@ module.exports = async (Robinhood, {stocksToBuy, totalAmtToSpend, strategy, maxN
             const quantity = Math.floor(perStock / pickPrice);
             await alpacaLimitBuy(stock, quantity, pickPrice * 1.06);
 
-            const response = await simpleBuy(Robinhood, {
-                ticker: stock,
-                strategy,
-                min,
-                pickPrice,
-                // quantity,
-                maxPrice: perStock
-            });
-            console.log('success active buy', stock);
+            // const response = await simpleBuy(Robinhood, {
+            //     ticker: stock,
+            //     strategy,
+            //     min,
+            //     pickPrice,
+            //     // quantity,
+            //     maxPrice: perStock
+            // });
+            // console.log('success active buy', stock);
             // console.log('response from limit buy multiple', response);
             amtToSpendLeft -= perStock;
             numPurchased++;
