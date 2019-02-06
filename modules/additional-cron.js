@@ -34,7 +34,7 @@ const additionalCron = [
     // },
     {
         name: 'alpaca smart sells',
-        run: [5, 120, 300],
+        run: [5, 24, 45, 60, 100, 140, 180, 220, 280, 300],
         fn: alpacaSmartSells
     },
 
@@ -61,7 +61,7 @@ const additionalCron = [
     // },
     {
         name: 'smartSells',
-        run: [0, 150, 350],
+        run: [5, 24, 45, 60, 100, 140, 180, 220, 280, 300].map(n => n + 5),
         fn: smartSells
     },
     // sell all if went up

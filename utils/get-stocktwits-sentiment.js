@@ -66,7 +66,7 @@ module.exports = async (Robinhood, ticker, detailed) => {
             bullBearScore,
             ...detailedData
         };
-        // console.log(ticker, returnObj);
+        console.log(ticker, returnObj);
         return returnObj;
     } catch (e) {
         // console.error(e);

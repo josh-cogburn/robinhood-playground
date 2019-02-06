@@ -5,7 +5,7 @@ const retryPromise = require('../utils/retry-promise');
 const addFundamentals = require('../app-actions/add-fundamentals');
 
 const request = require('request-promise');
-
+const getTrendSinceOpen = require('../rh-actions/get-trend-since-open');
 
 const fieldSorter = (fields) => (a, b) => fields.map(o => {
     let dir = 1;
@@ -21,29 +21,47 @@ module.exports = {
 
         // helper fns
         const limitTrendByVolume = async (subTrend, countLimit = 60) => {
+
+
+            if (!subTrend[0].hasOwnProperty('quote_data')) {
+                // console.log('before sub', subTrend);
+                subTrend = await getTrendSinceOpen(Robinhood, subTrend.map(t => t.ticker));
+                // console.log('after sub', subTrend);
+            }
+
             let withFundamentals = await addFundamentals(Robinhood, subTrend);
+            // console.log(withFundamentals)
             withFundamentals = withFundamentals
                 .filter(o => 
                     o.fundamentals && o.fundamentals.volume && o.fundamentals.average_volume_2_weeks
-                )
+                );
+            console.log(withFundamentals.length, 'before')
+            withFundamentals = withFundamentals.filter(o => Math.abs(o.trend_since_prev_close) < 2.5);
+            console.log(withFundamentals.length, 'trend2')
+            withFundamentals = withFundamentals
                 .map(o => ({
                     ...o,
                     volToAvg: Number(o.fundamentals.volume) / Number(o.fundamentals.average_volume_2_weeks),
                     volume: o.fundamentals.volume
                 }))
+            withFundamentals = withFundamentals.filter(o => o.volume > 80000);
+            console.log(withFundamentals.length, 'volume gt 80k')
             
             // str({ withFundamentals })
             
             const response = [];
-            ['volToAvg', 'volume'].forEach((sortKey, i) => {
+            [
+                'volToAvg',  
+                'volume'
+            ].forEach((sortKey, i) => {
                 const sorted = withFundamentals
                     .sort((a, b) => b[sortKey] - a[sortKey])
                     .filter(pos => Boolean(pos[sortKey]));
-                str({ sortKey, sorted })
+                // str({ sortKey, sorted })
                 let t = 0;
-                while (response.length < Math.floor(countLimit / 2 * (i + 1))) {
+                while (t < sorted.length && response.length < Math.floor(countLimit / 2 * (i + 1))) {
                     const stock = sorted[t];
-                    if (response.find(obj => obj.ticker === stock.ticker) === undefined) {
+                    if (stock && response.find(obj => obj && obj.ticker === stock.ticker) === undefined) {
                         response.push(stock);
                     }
                     t++;
@@ -52,6 +70,8 @@ module.exports = {
                 str({ response: response.map(r => r.ticker) });
             });
             return response;
+
+            // return withFundamentals.sort((a, b) => b.volume - a.volume).slice(0, countLimit);
         };
 
         const addSentimentToTrend = async trend => {
@@ -89,6 +109,7 @@ module.exports = {
 
         const handleTrend = async (nameStr, subTrend) => {
             console.log(`handle ${nameStr} trend...`);
+            // console.log(subTrend);
             const limitedByVolume = await limitTrendByVolume(subTrend);
             // log(' done done o')
             // str({ limitedByVolume })
@@ -149,7 +170,7 @@ module.exports = {
         const top100RHperms = await handleTrend('top100RH', top100RHtrend);
 
         const returnObj = {
-            ...under5perms,
+            // ...under5perms,
             ...sp500perms,
             ...top100RHperms
         };
@@ -160,6 +181,6 @@ module.exports = {
         return returnObj;
         
     },
-    run: [-25, 80, 180, 270],
+    run: [-25, 80, 130, 190, 270],
     pricePermFilter: ['under5'] // only run under5
 };
