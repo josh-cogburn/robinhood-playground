@@ -34,7 +34,7 @@ const getRisk = async (Robinhood, ticker, historicals) => {
             };
         });
     
-    str({ dailyYear})
+    // str({ dailyYear})
 
     const downJumpped = dailyYear.some(historical => historical.trend < -15);
     const last4 = dailyYear.slice(-4);

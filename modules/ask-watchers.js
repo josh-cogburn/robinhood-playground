@@ -50,7 +50,7 @@ const onEnd = allPicks => {
 
 module.exports = {
     name: 'ask-watchers',
-    init: async (Robinhood) => {
+    disabledInit: async (Robinhood) => {
 
         // setTimeout(async () => {
         //     console.log('recording based-on-jump-fourToEightOvernight-trending35257-gt500kvolume-first2-5');
@@ -179,11 +179,3 @@ module.exports = {
 
     }
 };
-
-
-
-// module.exports = {
-//     name: 'quick-drops',
-//     crons: 
-
-// }
