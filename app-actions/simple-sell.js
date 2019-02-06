@@ -53,24 +53,16 @@ module.exports = async (
     const { state } = await Robinhood.url(purchase.url);
     const filled = state === 'filled';
     str({ ticker, filled });
-
+    const data = {
+        type: 'sell',
+        ticker,
+        bidPrice,
+        quantity
+    };
     if (filled) {
         // update daily transactions
-        await addToDailyTransactions({
-            type: 'buy',
-            ticker,
-            bid_price: bidPrice,
-            quantity,
-            strategy,
-            min
-        });
+        await addToDailyTransactions(data);
     } else {
-        log('failed selling', {
-            ticker,
-            strategy,   // strategy name
-            maxPrice,   // total amount to spend
-            min,
-            pickPrice
-        });
+        log('failed selling', data);
     }
 };
