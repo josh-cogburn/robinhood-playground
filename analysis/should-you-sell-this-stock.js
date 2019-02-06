@@ -5,8 +5,8 @@ module.exports = async (
     Robinhood, 
     ticker, 
     avgBuyPrice,
-    bullishLimits = [12, -7],
-    bearishLimits = [7, -3]
+    bullishLimits = [20, -15],
+    bearishLimits = [7, -10],
 ) => {
     ticker = ticker.toUpperCase();
     pricePaid = Number(avgBuyPrice);
@@ -18,11 +18,13 @@ module.exports = async (
         lookup(Robinhood, ticker)
     ]);
     const trend = getTrend(l.currentPrice, avgBuyPrice);
+    const { trend: dayTrend } = l;
 
-    // log({ l, trend });
+    log({ trend, dayTrend });
 
     const stSentBullish = (stSent || {}).bullBearScore > 50;
-    str({ stSentBullish, stSent })
+    str({ stSentBullish, stSent });
     const [upper, lower] = stSentBullish ? bullishLimits : bearishLimits;
-    return trend > upper || trend < lower;
+    const hitDayTrendLimit = dayTrend > upper;
+    return trend > upper || trend < lower || hitDayTrendLimit;
 }
