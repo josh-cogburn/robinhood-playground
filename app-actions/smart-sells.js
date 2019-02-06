@@ -25,7 +25,7 @@ module.exports = async (Robinhood, dontSell) => {
         .sort((a, b) => b.returnDollars - a.returnDollars);
 
     log('to sell: ', toSell.map(pos => pos.ticker));
-    if (dontSell) return;
+    if (String(dontSell) === 'true') return;
     await mapLimit(toSell, 3, async pos => {
         const { ticker, quantity } = pos;
         try {
