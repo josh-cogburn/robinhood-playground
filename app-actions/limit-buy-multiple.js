@@ -24,7 +24,7 @@ module.exports = async (Robinhood, {stocksToBuy, totalAmtToSpend, strategy, maxN
 
             // queue alpaca limit order 4% above pickPrice
             const quantity = Math.floor(perStock / pickPrice) || 1;
-            await alpacaLimitBuy(stock, quantity, pickPrice * 1.05);
+            await alpacaLimitBuy(stock, quantity, pickPrice * 1.03);
 
             // const response = await simpleBuy(Robinhood, {
             //     ticker: stock,
