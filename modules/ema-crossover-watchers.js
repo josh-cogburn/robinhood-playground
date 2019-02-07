@@ -94,8 +94,8 @@ module.exports = {
                 }
                 return picks;
             },
-            timeout: 100,//60000 * 3, // 5 min,
-            runAgainstPastData: true,
+            timeout: 60000 * 4, // 5 min,
+            runAgainstPastData: false,
             onPick: async pick => {
                 console.log('onPick');
                 const { ticker } = pick;
