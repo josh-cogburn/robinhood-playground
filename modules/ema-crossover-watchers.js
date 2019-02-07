@@ -186,12 +186,12 @@ module.exports = {
             });
         
             // str(withEMA)
-            console.log('starting', startingBelow35Ema.map(t => t.ticker))
+            console.log('starting below 35day ema', startingBelow35Ema.map(t => t.ticker))
 
             const sma180trending = startingBelow35Ema.filter(o => o.sma180trendingUp);
             log(withEMA.length, startingBelow35Ema.length, sma180trending.length )
 
-            tickerWatcher.addTickers(sma180trending.map(o => o.ticker));
+            tickerWatcher.addTickers(startingBelow35Ema.map(o => o.ticker));
         };
 
 
