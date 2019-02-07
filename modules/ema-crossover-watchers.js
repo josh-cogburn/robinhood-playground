@@ -15,6 +15,7 @@ const getTrend = require('../utils/get-trend');
 const { avgArray } = require('../utils/array-math');
 const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
 const getMinutesFrom630 = require('../utils/get-minutes-from-630');
+const sendEmail = require('../utils/send-email');
 
 const addTrendWithHistoricals = async (trend, interval, span) => {
     // add historical data
