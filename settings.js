@@ -2,10 +2,12 @@
 module.exports = {
     // important settings
     sellAllStocksOnNthDay: 10,
-    purchaseAmt: 13,
+    purchaseAmt: 20,
     forPurchase: [
         '[myTickerWatchers]',
         '[myStSents]',
+        '[allEmaTrendingUp180SMA]',
+        '[allEmaCrossoverWatchers]',
     ],
     // forPurchaseVariation: '75Perc5Day-yesincludingblanks',
     // fallbackSellStrategy: 'limit8',

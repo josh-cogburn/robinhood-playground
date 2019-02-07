@@ -21,7 +21,7 @@ const trendFilter = async (Robinhood, trend) => {
 
     const top50Volume = withOvernightJump.sort((a, b) => {
         return b.fundamentals.volume - a.fundamentals.volume;
-    }).slice(0, 200);
+    });
 
 
     const addTrendWithHistoricals = async (trend, interval, span) => {
@@ -69,47 +69,34 @@ const trendFilter = async (Robinhood, trend) => {
     const withEMA = trendWithDayHist.map(o => ({
         ...o,
         sma180trendingUp: smaTrendingUp(o, o.fundamentals.open),
+        prevClose: {
+            ema35: calcEMA(35, o),
+            ema5: calcEMA(5, o),
+        },
         open: {
             ema35: calcEMA(35, o, o.fundamentals.open),
             ema5: calcEMA(5, o, o.fundamentals.open),
         },
     }));
 
-    const startingBelow35Ema = withEMA.filter(o => 
-        o.open.ema5 < o.open.ema35
-    );
-
-    console.log('starting', startingBelow35Ema.map(t => t.ticker))
-
-    const withCrossedEma = startingBelow35Ema.map(o => {
-        let crossedAt;
-        const crossed = o.dayHistoricals.some(hist => {
-            const new5dayEma = calcEMA(5, o, hist.close_price);
-            const crossed = new5dayEma  > o.open.ema35;
-            if (crossed) crossedAt = hist.close_price;
-            return crossed;
-        });
-        return {
-            ...o,
-            crossed,
-            crossedAt
-        };
+    const crossedOvernight = withEMA.filter(o => {
+        const yesterdayBelow = o.prevClose.ema5 < o.prevClose.ema35;
+        const openAbove = o.open.ema5 > o.open.ema35;
+        return yesterdayBelow && openAbove;
     });
 
-    const withTrendFromCross = withCrossedEma
-        .filter(o => o.crossed)
+    const withTrendFromCross = crossedOvernight
         .map(o => ({
             ...o,
-            trendFromCross: getTrend(o.last_trade_price, o.crossedAt)
+            trendFromCross: getTrend(o.last_trade_price, o.fundamentals.open)
         }));
 
-    str({ withTrendFromCross: withTrendFromCross.map(o => _.pick(o, ['ticker', 'sma180trendingUp', 'crossed', 'crossedAt', 'trendFromCross'])) });
-    str(withTrendFromCross.length)
-
+    str({ withTrendFromCross: withTrendFromCross.map(o => _.pick(o, ['ticker', 'sma180trendingUp', 'trendFromCross'])) });
+    
 };
 
 const emaCrossover = {
-    name: 'ema-crossover',
+    name: 'ema-crossover-overnight',
     trendFilter,
     // run: [12, 190, 250, 600, -15],
 };

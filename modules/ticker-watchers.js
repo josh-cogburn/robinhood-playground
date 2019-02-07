@@ -57,7 +57,7 @@ module.exports = {
         // }, 10000);
 
         const handler = async relatedPrices => {
-            // console.log({ relatedPrices, two });
+            // console.log({ relatedPrices });
             relatedP = relatedPrices;
             const newJumps = [];
             for (let key of Object.keys(relatedPrices)) {

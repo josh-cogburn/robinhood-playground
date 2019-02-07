@@ -19,9 +19,9 @@ const trendFilter = async (Robinhood, trend) => {
     console.log('done adding overnight jump')
 
 
-    const top50Volume = withOvernightJump.sort((a, b) => {
-        return b.fundamentals.volume - a.fundamentals.volume;
-    }).slice(0, 200);
+    // const top50Volume = withOvernightJump.sort((a, b) => {
+    //     return b.fundamentals.volume - a.fundamentals.volume;
+    // }).slice(0, 200);
 
 
     const addTrendWithHistoricals = async (trend, interval, span) => {
@@ -41,14 +41,18 @@ const trendFilter = async (Robinhood, trend) => {
     };
 
     
-    const trendWithYearHist = await addTrendWithHistoricals(top50Volume, 'day', 'year');
+    const trendWithYearHist = await addTrendWithHistoricals(withOvernightJump, 'day', 'year');
     const trendWithDayHist = await addTrendWithHistoricals(trendWithYearHist, '5minute', 'day');
 
-    const calcEMA = (period, obj, lastVal) => {
+    const calcEMA = (period, obj, lastVal, daysBack) => {
+        let hists = obj.yearHistoricals.map(hist => hist.close_price);
+        if (daysBack) {
+            hists = hists.slice(0, 0 - daysBack);
+        }
         const array = EMA.calculate({
             period,
             values: [
-                ...obj.yearHistoricals.map(hist => hist.close_price),
+                ...hists,
                 ...lastVal ? [Number(lastVal)] : []
             ]
         });
@@ -69,47 +73,29 @@ const trendFilter = async (Robinhood, trend) => {
     const withEMA = trendWithDayHist.map(o => ({
         ...o,
         sma180trendingUp: smaTrendingUp(o, o.fundamentals.open),
-        open: {
-            ema35: calcEMA(35, o, o.fundamentals.open),
-            ema5: calcEMA(5, o, o.fundamentals.open),
+        twoDaysBack: {
+            ema35: calcEMA(35, o, null, 1),
+            ema5: calcEMA(5, o, null, 1),
+        },
+        prevClose: {
+            ema35: calcEMA(35, o),
+            ema5: calcEMA(5, o),
         },
     }));
-
-    const startingBelow35Ema = withEMA.filter(o => 
-        o.open.ema5 < o.open.ema35
-    );
-
-    console.log('starting', startingBelow35Ema.map(t => t.ticker))
-
-    const withCrossedEma = startingBelow35Ema.map(o => {
-        let crossedAt;
-        const crossed = o.dayHistoricals.some(hist => {
-            const new5dayEma = calcEMA(5, o, hist.close_price);
-            const crossed = new5dayEma  > o.open.ema35;
-            if (crossed) crossedAt = hist.close_price;
-            return crossed;
-        });
-        return {
-            ...o,
-            crossed,
-            crossedAt
-        };
+    // str({ withEMA})
+    const crossedYesterday = withEMA.filter(o => {
+        const twoDaysBelow = o.twoDaysBack.ema5 < o.twoDaysBack.ema35;
+        const prevAbove = o.prevClose.ema5 > o.prevClose.ema35;
+        return twoDaysBelow && prevAbove;
     });
 
-    const withTrendFromCross = withCrossedEma
-        .filter(o => o.crossed)
-        .map(o => ({
-            ...o,
-            trendFromCross: getTrend(o.last_trade_price, o.crossedAt)
-        }));
 
-    str({ withTrendFromCross: withTrendFromCross.map(o => _.pick(o, ['ticker', 'sma180trendingUp', 'crossed', 'crossedAt', 'trendFromCross'])) });
-    str(withTrendFromCross.length)
-
+    str({ crossedYesterday: crossedYesterday.map(o => _.pick(o, ['ticker', 'sma180trendingUp', 'trend_since_prev_close'])) });
+    
 };
 
 const emaCrossover = {
-    name: 'ema-crossover',
+    name: 'ema-crossover-two-days-back',
     trendFilter,
     // run: [12, 190, 250, 600, -15],
 };
