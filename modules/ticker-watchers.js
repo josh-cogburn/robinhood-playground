@@ -125,7 +125,7 @@ module.exports = {
                 const { volume, average_volume } = fundamentals || {};
                 const volumeKey = (() => {
                     if (volume > 1000000 || volume > average_volume * 3.5) return 'highVol';
-                    if (volume < 1000) return 'lowVol';
+                    if (volume < 10000) return 'lowVol';
                     return '';
                 })();
 

@@ -1,29 +1,29 @@
 const priceKeys = [1, 5, 10, 15, 20];
-// const perms = [
-//     // 'ticker-watchers',
-//     priceKeys.map(p => `under${p}`),
-//     ['shouldWatchout', 'notWatchout'],
-//     ['minorJump', 'majorJump', ''],
-//     ['initial', 'breakfast', 'lunch', 'dinner'],
-//     ['', 'failedHistorical'],
-//     ['', 'highVol'],
-//     [5000]
-// ];
-
 const perms = [
-    ['under5', 'top100RH', 'sp500'],
-    ['tscLt2pt5', 'tscPosLt2pt5', ''],
-    ['highest', 'lowest'],
-    ['bullishCount', 'bearishCount', 'bullBearScore'],
-    ['', 'first2'],
-    [-25, 80, 130, 190, 270]
+    // 'ticker-watchers',
+    priceKeys.map(p => `under${p}`),
+    ['shouldWatchout', 'notWatchout'],
+    ['minorJump', 'majorJump', ''],
+    ['premarket', 'initial', 'breakfast', 'lunch', 'dinner', 'afterhours'],
+    ['', 'failedHistorical'],
+    ['', 'highVol', 'lowVol'],
+    [5000]
 ];
+
+// const perms = [
+//     ['under5', 'top100RH', 'sp500'],
+//     ['tscLt2pt5', 'tscPosLt2pt5', ''],
+//     ['highest', 'lowest'],
+//     ['bullishCount', 'bearishCount', 'bullBearScore'],
+//     ['', 'first2'],
+//     [-25, 80, 130, 190, 270]
+// ];
 
 const flatten = arr => [].concat(...arr);
 module.exports = () => {
 
     let collection = [
-        'best-st-sentiment'
+        'ticker-watchers'
     ];
     perms.forEach(perm => {
         // perm.forEach(str => {
