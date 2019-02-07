@@ -7,7 +7,7 @@ module.exports = {
         '[myTickerWatchers]',
         '[myStSents]',
         '[allEmaTrendingUp180SMA]',
-        '[allEmaCrossoverWatchers]',
+        '[myEmaCrossoverWatchers]',
     ],
     // forPurchaseVariation: '75Perc5Day-yesincludingblanks',
     // fallbackSellStrategy: 'limit8',
