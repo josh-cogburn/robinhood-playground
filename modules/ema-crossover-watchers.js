@@ -6,6 +6,7 @@ const addFundamentals = require('../app-actions/add-fundamentals');
 const tickerAnalysis = {};
 
 // const cachedHistorical = cacheThis()
+const recordPicks = require('../app-actions/record-picks');
 const allStocks = require('../json/stock-data/allStocks');
 const HistoricalTickerWatcher = require('../socket-server/historical-ticker-watcher');
 const lookupMultiple = require('../utils/lookup-multiple');
