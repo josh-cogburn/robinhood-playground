@@ -6,6 +6,6 @@ module.exports = async () => {
     });
     str({ orders })
     for (let order of orders) {
-        alpaca.cancelOrder(order.id);
+        log(await alpaca.cancelOrder(order.id));
     }
 };
