@@ -496,10 +496,11 @@ const TWfailedHistorical = allTickerWatchers.filter(s => s.includes('failedHisto
 const TWhighVol = allTickerWatchers.filter(s => s.includes('highVol'));
 const TWgoodHighVol = allTickerWatchers.filter(s => s.includes('highVol')).filter(onlyQuality);
 
-const TWgoodInitial = allTickerWatchers.filter(s => s.includes('initial'));
-const TWgoodbrunch = allTickerWatchers.filter(s => s.includes('brunch'));
-const TWgoodLunch = allTickerWatchers.filter(s => s.includes('lunch'));
-const TWgoodDinner = allTickerWatchers.filter(s => s.includes('dinner'));
+
+const TWgoodInitial = allTickerWatchers.filter(s => s.includes('initial')).filter(onlyQuality);
+const TWgoodBrunch = allTickerWatchers.filter(s => s.includes('brunch')).filter(onlyQuality);
+const TWgoodLunch = allTickerWatchers.filter(s => s.includes('lunch')).filter(onlyQuality);
+const TWgoodDinner = allTickerWatchers.filter(s => s.includes('dinner')).filter(onlyQuality);
 
 
 
@@ -511,7 +512,9 @@ const onlyLaters = s => s.includes('lunch') || s.includes('dinner');
 const myTickerWatchersInitial = [
     ...TWmajorJumpsNotWatchouts,
     ...TWgoodNotWatchouts,
-    ...TWgoodNotWatchouts
+    ...TWgoodNotWatchouts,
+    ...TWgoodLunch,
+    ...TWgoodDinner,
 ].filter(onlyMyDollars);
 
 
@@ -573,7 +576,7 @@ module.exports = {
 
     // time
     TWgoodInitial,
-    TWgoodbrunch,
+    TWgoodBrunch,
     TWgoodLunch,
     TWgoodDinner,
 

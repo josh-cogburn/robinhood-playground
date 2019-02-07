@@ -20,7 +20,7 @@ module.exports = {
         let stReqCount = 0;
 
         // helper fns
-        const limitTrendByVolume = async (subTrend, countLimit = 60) => {
+        const limitTrendByVolume = async (subTrend, countLimit = 4) => {
 
 
             if (!subTrend[0].hasOwnProperty('quote_data')) {
@@ -36,8 +36,8 @@ module.exports = {
                     o.fundamentals && o.fundamentals.volume && o.fundamentals.average_volume_2_weeks
                 );
             console.log(withFundamentals.length, 'before')
-            withFundamentals = withFundamentals.filter(o => Math.abs(o.trend_since_prev_close) < 2.5);
-            console.log(withFundamentals.length, 'trend2')
+            // withFundamentals = withFundamentals.filter(o => Math.abs(o.trend_since_prev_close) < 2.5);
+            // console.log(withFundamentals.length, 'trend2')
             withFundamentals = withFundamentals
                 .map(o => ({
                     ...o,
@@ -94,7 +94,7 @@ module.exports = {
         };
 
         const sortedByGenerator = withSentiment => 
-            (key, order, count = 1) => {
+            (key, order, count = 1, filterFn = () => true) => {
 
                 const keyStr = `${order === 'highest' ? '-' : ''}${key}`;
                 const sortFn = fieldSorter([keyStr, '-volToAvg'])
@@ -102,6 +102,7 @@ module.exports = {
                 return withSentiment
                     .slice(0)
                     .filter(o => typeof o[key] !== 'undefined')
+                    .filter(filterFn)
                     .sort(sortFn)
                     .slice(0, count)
                     .map(o => o.ticker);
@@ -115,7 +116,7 @@ module.exports = {
             // str({ limitedByVolume })
             const withSentimented = (await addSentimentToTrend(limitedByVolume))
                 .filter(o => o.bullBearScore);
-            // str({ withSentimented })
+            str({ withSentimented })
             const sortedByFn = sortedByGenerator(withSentimented);
 
             const highestKeys = [
@@ -127,12 +128,24 @@ module.exports = {
                 'bearishCount', 
                 'bullishCount'
             ];
-            const perms = highestKeys.reduce((acc, key) => ({
+            const trendPerms = {
+                '': undefined,
+                tscPosLt2pt5: o => o.trend_since_prev_close < 2.5 && o.trend_since_prev_close > 0,
+                tscLt2pt5: o => Math.abs(o.trend_since_prev_close < 2.5),
+            };
+            const handleTrendPerm = (trendPermKey, trendPermFn) => {
+                const baseKey = [nameStr, trendPermKey].filter(Boolean).join('-');
+                return highestKeys.reduce((acc, key) => ({
+                    ...acc,
+                    [`${baseKey}-highest-${key}`]: sortedByFn(key, 'highest', undefined, trendPermFn),
+                    [`${baseKey}-lowest-${key}`]: sortedByFn(key, 'lowest', undefined, trendPermFn),
+                    [`${baseKey}-highest-${key}-first2`]: sortedByFn(key, 'highest', 2, trendPermFn),
+                    [`${baseKey}-lowest-${key}-first2`]: sortedByFn(key, 'lowest', 2, trendPermFn),
+                }), {});
+            };
+            const perms = Object.keys(trendPerms).reduce((acc, key) => ({
                 ...acc,
-                [`${nameStr}-highest-${key}`]: sortedByFn(key, 'highest'),
-                [`${nameStr}-lowest-${key}`]: sortedByFn(key, 'lowest'),
-                [`${nameStr}-highest-${key}-first2`]: sortedByFn(key, 'highest', 2),
-                [`${nameStr}-lowest-${key}-first2`]: sortedByFn(key, 'lowest', 2)
+                ...handleTrendPerm(key, trendPerms[key])
             }), {});
             return perms;
         };
@@ -170,7 +183,7 @@ module.exports = {
         const top100RHperms = await handleTrend('top100RH', top100RHtrend);
 
         const returnObj = {
-            // ...under5perms,
+            ...under5perms,
             ...sp500perms,
             ...top100RHperms
         };

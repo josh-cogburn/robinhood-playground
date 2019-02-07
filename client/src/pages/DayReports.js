@@ -8,7 +8,6 @@ class DayReports extends Component {
     render () {
         let { dayReports, admin } = this.props;
         if (!dayReports) return <b>LOADING</b>;
-        dayReports = dayReports.slice(4);
         console.log({ admin })
         return (
             <div>
