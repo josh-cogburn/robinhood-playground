@@ -17,9 +17,18 @@ module.exports = async (_, ticker, quantity, price) => {
     const order = await alpaca.createOrder(data);
 
     log(order);
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise(resolve => setTimeout(resolve, 1000 * 60 * 30));  // 30 min
+    
+    const thatOrder = await alpaca.getOrder(order.id);
     log(
         'that last order',
-        await alpaca,getOrder(order.id)
+        thatOrder
     )
+    if (!thatOrder.filledAt) {
+        log(
+            'canceling purchase',
+            ticker,
+            alpaca.cancelOrder(thatOrder.id)
+        )
+    }
 };
