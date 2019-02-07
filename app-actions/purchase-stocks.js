@@ -9,12 +9,14 @@ const purchaseStocks = async (Robinhood, { stocksToBuy, strategy, multiplier, mi
     // const totalAmtToSpend = cashAvailable * ratioToSpend;
 
     const amountPerBuy = purchaseAmt * multiplier;
-    const totalAmtToSpend = Math.min(amountPerBuy, cashAvailable);
+    const totalAmtToSpend = amountPerBuy;//Math.min(amountPerBuy, cashAvailable);
     // console.log('multiplier', multiplier, 'amountPerBuy', amountPerBuy, 'totalAmtToSpend', totalAmtToSpend);
 
-    if (totalAmtToSpend < 10) {
-        return console.log('not purchasing less than $10 to spend', strategy);
-    }
+    // if (totalAmtToSpend < 10) {
+    //     return console.log('not purchasing less than $10 to spend', strategy);
+    // }
+
+
     // console.log('actually purchasing', strategy, 'count', stocksToBuy.length);
     // console.log('ratioToSpend', ratioToSpend);
     console.log('totalAmtToSpend', totalAmtToSpend, 'amtperbuy', amountPerBuy);
