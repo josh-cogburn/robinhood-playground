@@ -100,7 +100,7 @@ const trendFilter = async (Robinhood, trend) => {
 const emaCrossover = {
     name: 'ema-crossover-last-trade',
     trendFilter,
-    run: [100, 200, 330, 360, 380],
+    run: [24, 100, 200, 330, 360, 380],
 };
 
 module.exports = emaCrossover;

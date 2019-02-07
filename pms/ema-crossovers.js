@@ -38,11 +38,13 @@ const allEmaCrossoverWatchers = [
 ];
 
 const allEmaLastTrades = [
+    "ema-crossover-last-trade-trendingUp180SMA-24",
     "ema-crossover-last-trade-trendingUp180SMA-100",
     "ema-crossover-last-trade-trendingUp180SMA-200",
     "ema-crossover-last-trade-trendingUp180SMA-330",
     "ema-crossover-last-trade-trendingUp180SMA-360",
     "ema-crossover-last-trade-trendingUp180SMA-380",
+    "ema-crossover-last-trade-allOthers-24",
     "ema-crossover-last-trade-allOthers-100",
     "ema-crossover-last-trade-allOthers-200",
     "ema-crossover-last-trade-allOthers-330",
