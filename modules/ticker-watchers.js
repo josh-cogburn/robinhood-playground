@@ -111,18 +111,23 @@ module.exports = {
                 const priceKey = priceKeys.find(key => price < key);
                 const min = getMinutesFrom630();
                 const minKey = (() => {
-                    if (min < 3) return 'initial';
-                    if (min < 60) return 'brunch';
-                    if (min < 200) return 'lunch';
-                    return 'dinner';
+                    if (min > 390) return 'afterhours';
+                    if (min > 200) return 'dinner';
+                    if (min > 60) return 'lunch';
+                    if (min > 3) return 'brunch';
+                    if (min > 0) return 'initial';
+                    return 'premarket'
                 })();
                 let fundamentals;
                 try {
                     fundamentals = (await addFundamentals(Robinhood, [{ ticker }]))[0].fundamentals;
                 } catch (e) {}
                 const { volume, average_volume } = fundamentals || {};
-                const highVol = volume > 1000000 || volume > average_volume * 3.5;
-                const volumeKey = highVol ? 'highVol' : '';
+                const volumeKey = (() => {
+                    if (volume > 1000000 || volume > average_volume * 3.5) return 'highVol';
+                    if (volume < 1000) return 'lowVol';
+                    return '';
+                })();
 
                 // const strategyName = `ticker-watchers-under${priceKey}${watchoutKey}${jumpKey}${minKey}${historicalKey}`;
 

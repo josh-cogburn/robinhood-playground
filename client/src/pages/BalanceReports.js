@@ -22,7 +22,7 @@ class DayReports extends Component {
         const chartData = (() => {
             console.log({timeFilter})
             if (timeFilter === '2019') {
-                return reportsToChartData.balanceChart(dayReports ? dayReports.slice(4) : []);
+                return reportsToChartData.balanceChart(dayReports ? dayReports : []);
             }
             // nope not overall
             // data coming from balance reports
