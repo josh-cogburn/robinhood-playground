@@ -94,7 +94,7 @@ module.exports = {
                         log(data)
                     }
                 }
-                return picks;
+                return picks.length > 4 ? [] : picks;
             },
             timeout: 60000 * 4, // 5 min,
             runAgainstPastData: false,
