@@ -92,13 +92,13 @@ const trendFilter = async (Robinhood, trend) => {
         }));
 
     str({ withTrendFromCross: withTrendFromCross.map(o => _.pick(o, ['ticker', 'sma180trendingUp', 'trendFromCross'])) });
-    
+    return withTrendFromCross.map(t => t.ticker);
 };
 
 const emaCrossover = {
     name: 'ema-crossover-overnight',
     trendFilter,
-    // run: [12, 190, 250, 600, -15],
+    run: [18, 220],
 };
 
 module.exports = emaCrossover;

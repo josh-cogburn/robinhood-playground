@@ -90,14 +90,14 @@ const trendFilter = async (Robinhood, trend) => {
     });
 
 
-    str({ crossedYesterday: crossedYesterday.map(o => _.pick(o, ['ticker', 'sma180trendingUp', 'trend_since_prev_close'])) });
-    
+    // str({ crossedYesterday: crossedYesterday.map(o => _.pick(o, ['ticker', 'sma180trendingUp', 'trend_since_prev_close'])) });
+    return crossedYesterday.map(t => t.ticker);
 };
 
 const emaCrossover = {
     name: 'ema-crossover-two-days-back',
     trendFilter,
-    // run: [12, 190, 250, 600, -15],
+    run: [7, 103],
 };
 
 module.exports = emaCrossover;
