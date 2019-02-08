@@ -17,7 +17,7 @@ module.exports = async (_, ticker, quantity, price) => {
     const order = await alpaca.createOrder(data);
 
     log(order);
-    await new Promise(resolve => setTimeout(resolve, 1000 * 60 * 30));  // 30 min
+    await new Promise(resolve => setTimeout(resolve, 1000 * 60 * 120));  // 2hr
     
     const thatOrder = await alpaca.getOrder(order.id);
     log(
@@ -25,6 +25,7 @@ module.exports = async (_, ticker, quantity, price) => {
         thatOrder
     )
     if (!thatOrder.filledAt) {
+        console.log('would have canceled')
         log(
             'canceling purchase',
             ticker,

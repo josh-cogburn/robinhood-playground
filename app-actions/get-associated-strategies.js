@@ -22,7 +22,6 @@ const getAssociatedStrategies = async ({
     for (let file of dailyTransactionDates) {
         // console.log('checking', file, withStrategies);
         const transactions = await jsonMgr.get(`./json/daily-transactions/${file}.json`);
-        // console.log(transactions);
         tickers
             .filter(ticker => !withStrategiesIncludesTicker(ticker))
             .forEach(ticker => {

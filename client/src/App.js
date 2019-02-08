@@ -142,7 +142,7 @@ class App extends Component {
             // this.setState({ balance: data });
             console.log(data, 'balcn');
             this.setState(({ balanceReports }) => ({
-                balanceReports: balanceReports.concat(data.report)
+                balanceReports: (balanceReports || []).concat(data.report)
             }));
         });
         this.setState({ socket });
