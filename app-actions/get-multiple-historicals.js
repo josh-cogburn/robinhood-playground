@@ -18,7 +18,7 @@ module.exports = async (Robinhood, tickers, qs = 'interval=day') => {
     return allHistoricals.map(obj => {
 
         let prevClose;
-        return obj.historicals.map(hist => {
+        return obj ? obj.historicals.map(hist => {
             ['open_price', 'close_price', 'high_price', 'low_price'].forEach(key => {
                 hist[key] = Number(hist[key]);
             });
@@ -27,7 +27,7 @@ module.exports = async (Robinhood, tickers, qs = 'interval=day') => {
             }
             prevClose = hist.close_price;
             return hist;
-        });
+        }) : [];
 
     });
 

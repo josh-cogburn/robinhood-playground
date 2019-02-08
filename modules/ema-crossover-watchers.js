@@ -194,6 +194,11 @@ module.exports = {
             tickerWatcher.addTickers(startingBelow35Ema.map(o => o.ticker));
         };
 
+        regCronIncAfterSixThirty(Robinhood, {
+            name: `set ema-crossover-watchers tickers (< $15)`,
+            run: [2],
+            fn: setTickers
+        });
 
         regCronIncAfterSixThirty(Robinhood, {
             name: `stop ema-crossover-watchers`,
