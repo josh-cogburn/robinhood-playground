@@ -22,7 +22,7 @@ const trendFilter = async (Robinhood, trend) => {
 
     let withDetails = await mapLimit(allUp, 20, async buy => ({
         ...buy,
-        ...(await getRisk(Robinhood, buy.ticker)),
+        ...(await getRisk(Robinhood, buy)),
     }));
 
     console.log(

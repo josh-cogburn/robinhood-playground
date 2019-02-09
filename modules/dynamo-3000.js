@@ -109,7 +109,7 @@ const trendFilter = async (Robinhood, trend) => {
         console.log('trendFilter', name, 'count', trendFilteredByTSO.length);
         let withTrendingUp = await mapLimit(trendFilteredByTSO, 20, async buy => ({
             ...buy,
-            ...(await getRisk(Robinhood, buy.ticker)),
+            ...(await getRisk(Robinhood, buy)),
             // trendingUp30: await trendingUp(Robinhood, buy.ticker, [ 30 ]),
             trendingUp3010: await trendingUp(Robinhood, buy.ticker, [ 30, 10 ]),
             // trendingUp10: await trendingUp(Robinhood, buy.ticker, [ 10 ]),

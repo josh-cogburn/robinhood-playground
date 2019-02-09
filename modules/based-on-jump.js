@@ -19,7 +19,7 @@ const trendFilter = async (Robinhood, trend) => {
         const passedFirstFilter = withOvernight.filter(filter).sort(sort);
         const withRisk = await mapLimit(passedFirstFilter, 20, async buy => ({
             ...buy,
-            ...(await getRisk(Robinhood, buy.ticker)),
+            ...(await getRisk(Robinhood, buy)),
             trending35257: await trendingUp(Robinhood, buy.ticker, [35, 25, 7]),
             trending607: await trendingUp(Robinhood, buy.ticker, [60, 7]),
             trending103: await trendingUp(Robinhood, buy.ticker, [10, 3]),

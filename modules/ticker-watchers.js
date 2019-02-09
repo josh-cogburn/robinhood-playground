@@ -101,7 +101,7 @@ module.exports = {
                 const failedHistoricalCheck = fiveMinuteHistoricals.slice(0, -1).some(p => getTrend(p, price) < 5);
                 const historicalKey = failedHistoricalCheck ? 'failedHistorical' : '';
 
-                const { shouldWatchout } = await getRisk(Robinhood, ticker);
+                const { shouldWatchout } = await getRisk(Robinhood, { ticker });
                 const jumpKey = (() => {
                     if (trendFromMin > -8) return 'minorJump';
                     if (trendFromMin < -13) return 'majorJump';

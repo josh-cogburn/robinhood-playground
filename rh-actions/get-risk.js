@@ -4,10 +4,16 @@ const getTrend = require('../utils/get-trend');
 const { avgArray } = require('../utils/array-math');
 const lookup = require('../utils/lookup');
 
-const getRisk = async (Robinhood, ticker, historicals) => {
+const getRisk = async (
+    Robinhood, {
+        ticker, 
+        yearHistoricals,
+        quote_data
+    }
+) => {
     // console.log('evaluating risk ...', ticker);
-
-    let dailyYear = historicals ? historicals : await (async () => {
+    
+    let dailyYear = yearHistoricals ? yearHistoricals : await (async () => {
         const historicalDailyUrl = `https://api.robinhood.com/quotes/historicals/${ticker}/?interval=day`;
         let response = await Robinhood.url(historicalDailyUrl);
         return response.historicals;
@@ -37,27 +43,27 @@ const getRisk = async (Robinhood, ticker, historicals) => {
     // str({ dailyYear})
 
     const downJumpped = dailyYear.some(historical => historical.trend < -15);
-    const last4 = dailyYear.slice(-4);
+    const last4 = dailyYear.slice(-6);
     const lastDay = last4.pop();
     const last4Low = Math.min(...last4.map(obj => obj.low_price));
     const lastDayMax = lastDay.high_price;
 
     const last4Volatility = getTrend(last4Low, lastDayMax);
     const last4TooVolatile = last4Volatility < -19;    
-    str({ last4, last4Low, lastDayMax, last4Volatility, last4TooVolatile });
+    // str({ last4, last4Low, lastDayMax, last4Volatility, last4TooVolatile });
     const last4UpJumpped = last4.some(historical => historical.trend > 25);
-    const l = await lookup(Robinhood, ticker);
+    const l = quote_data || await lookup(Robinhood, ticker);
     const dayVolatility = Math.abs(
         getTrend(l.rawQuote.last_trade_price, l.rawQuote.adjusted_previous_close)
     );
     const dayTooVolatile = dayVolatility > 35;
 
-    console.log(ticker, {
-        downJumpped,
-        last4UpJumpped,
-        dayVolatility,
-        dayTooVolatile
-    });
+    // console.log(ticker, {
+    //     downJumpped,
+    //     last4UpJumpped,
+    //     dayVolatility,
+    //     dayTooVolatile
+    // });
     const shouldWatchout = last4UpJumpped || dayTooVolatile || last4TooVolatile;
 
     return {

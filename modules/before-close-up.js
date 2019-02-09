@@ -24,7 +24,7 @@ const trendFilter = async (Robinhood, trend) => {
 
     trendingAbove4 = await mapLimit(trendingAbove4, 20, async buy => ({
         ...buy,
-        ...await getRisk(Robinhood, buy.ticker),
+        ...await getRisk(Robinhood, buy),
         trendingUp: await trendingUp(Robinhood, buy.ticker, [7])
     }));
     // console.log('num watcout', cheapBuys.filter(buy => buy.shouldWatchout).length);

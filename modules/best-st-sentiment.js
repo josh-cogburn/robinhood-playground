@@ -20,7 +20,7 @@ module.exports = {
         let stReqCount = 0;
 
         // helper fns
-        const limitTrendByVolume = async (subTrend, countLimit = 60) => {
+        const limitTrendByVolume = async (subTrend, countLimit = 4) => {
 
 
             if (!subTrend[0].hasOwnProperty('quote_data')) {

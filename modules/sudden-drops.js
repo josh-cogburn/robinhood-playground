@@ -116,26 +116,10 @@ const prepareTrend = async (Robinhood, trend, min) => {
         historicals: allHistoricals[i]
     })).filter(buy => !!buy.historicals && buy.historicals.length);
 
-    // add daily historicals for get-risk
-
-    // add historicals
-
-    allHistoricals = await getMultipleHistoricals(
-        Robinhood,
-        withHistoricals.map(buy => buy.ticker),
-    );
-
-    withHistoricals = withHistoricals.map((buy, i) => ({
-        ...buy,
-        dailyHistoricals: allHistoricals[i]
-    })).filter(buy => !!buy.historicals && buy.historicals.length);
-
-    // add risk variables
-
-    // let withRisk = await mapLimit(withHistoricals, 1, buy => )
+    // get risk (should watchout / not watchout)
     let withRisk = await mapLimit(withHistoricals, 1, async buy => ({
         ...buy,
-        ...await getRisk(Robinhood, buy.ticker, buy.dailyHistoricals)
+        ...await getRisk(Robinhood, buy)
     }));
     return withRisk;
 };

@@ -119,7 +119,7 @@ const trendFilter = async (Robinhood, trend) => {
             const watchouts = {};
             for (let obj of sorted) {
                 const { ticker } = obj;
-                const risk = riskCache[ticker] ? riskCache[ticker] : await getRisk(Robinhood, ticker);
+                const risk = riskCache[ticker] ? riskCache[ticker] : await getRisk(Robinhood, { ticker });
                 riskCache[ticker] = risk;
                 if (risk.shouldWatchout && !watchouts.should) {
                     watchouts.should = ticker;

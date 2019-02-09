@@ -1,5 +1,7 @@
 const _ = require('underscore');
 
+const { calcEMA, smaTrendingUp, addEMAs } = require('./indicators');
+
 // utils
 const getTrend = require('../utils/get-trend');
 
@@ -9,8 +11,6 @@ const addOvernightJumpAndTSO = require('../app-actions/add-overnight-jump-and-ts
 
 // npm
 const mapLimit = require('promise-map-limit');
-const { SMA, EMA } = require('technicalindicators');
-
 
 const trendFilter = async (Robinhood, trend) => {
     // add overnight jump
@@ -44,36 +44,7 @@ const trendFilter = async (Robinhood, trend) => {
     const trendWithYearHist = await addTrendWithHistoricals(top50Volume, 'day', 'year');
     const trendWithDayHist = await addTrendWithHistoricals(trendWithYearHist, '5minute', 'day');
 
-    const calcEMA = (period, obj, lastVal) => {
-        const array = EMA.calculate({
-            period,
-            values: [
-                ...obj.yearHistoricals.map(hist => hist.close_price),
-                ...lastVal ? [Number(lastVal)] : []
-            ]
-        });
-        return array.pop();
-    };
-    const smaTrendingUp = (obj, lastVal) => {
-        const array = SMA.calculate({
-            period: 180,
-            values: [
-                ...obj.yearHistoricals.map(hist => hist.close_price),
-                ...lastVal ? [Number(lastVal)] : []
-            ]
-        });
-        const fiveDaysAgo = array[array.length - 6];
-        const recent = array[array.length - 1];
-        return recent > fiveDaysAgo;
-    };
-    const withEMA = trendWithDayHist.map(o => ({
-        ...o,
-        sma180trendingUp: smaTrendingUp(o, o.fundamentals.open),
-        open: {
-            ema35: calcEMA(35, o, o.fundamentals.open),
-            ema5: calcEMA(5, o, o.fundamentals.open),
-        },
-    }));
+    const withEMA = addEMAs(trendWithDayHist);
 
     const startingBelow35Ema = withEMA.filter(o => 
         o.open.ema5 < o.open.ema35
