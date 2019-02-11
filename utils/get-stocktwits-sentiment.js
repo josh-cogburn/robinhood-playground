@@ -1,23 +1,27 @@
 const request = require('request-promise');
 const { getProxy } = require('./stocktwits');
 const { avgArray } = require('./array-math');
+const cacheThis = require('./cache-this');
 
-const stReq = async url => {
-    console.log({ url })
-    try {
-        const res = await request({
-            url,
-            proxy: getProxy()
-        });
-        return JSON.parse(res);
-    } catch (e) {
-        console.error(JSON.parse(e.response.body).response.status);
-        throw JSON.parse(e.response.body).response;
-    } finally {
-        await new Promise(resolve => setTimeout(resolve, 2600)); // rate limited
-    }
-    
-};
+const stReq = cacheThis(
+    async url => {
+        console.log({ url })
+        try {
+            const res = await request({
+                url,
+                proxy: getProxy()
+            });
+            return JSON.parse(res);
+        } catch (e) {
+            console.error(JSON.parse(e.response.body).response.status);
+            throw JSON.parse(e.response.body).response;
+        } finally {
+            await new Promise(resolve => setTimeout(resolve, 2600)); // rate limited
+        }
+        
+    },
+    10
+);
     
 
 module.exports = async (Robinhood, ticker, detailed) => {

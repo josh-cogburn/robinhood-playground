@@ -2,6 +2,7 @@ const simpleBuy = require('./simple-buy');
 const alpacaLimitBuy = require('../alpaca/limit-buy');
 const mapLimit = require('promise-map-limit');
 const sendEmail = require('../utils/send-email');
+const lookup = require('../utils/lookup');
 
 module.exports = async (Robinhood, {stocksToBuy, totalAmtToSpend, strategy, maxNumStocksToPurchase, min, withPrices }) => {
 
@@ -17,14 +18,17 @@ module.exports = async (Robinhood, {stocksToBuy, totalAmtToSpend, strategy, maxN
     let failedStocks = [];
 
     await mapLimit(stocksToBuy, 3, async stock => {       // 3 buys at a time
-        const perStock = amtToSpendLeft / (maxNumStocksToPurchase - numPurchased);
+        const perStock = totalAmtToSpend;
+        // for now same amt each stock
+        //amtToSpendLeft / (maxNumStocksToPurchase - numPurchased);
         console.log(perStock, 'purchasng ', stock);
         try {
             const pickPrice = (withPrices.find(obj => obj.ticker === stock) || {}).price;
-
+            const { askPrice } = await lookup(Robinhood, stock);
+            const buyPrice = Math.min(askPrice, pickPrice * 1.07);
             // queue alpaca limit order 4% above pickPrice
-            const quantity = Math.floor(perStock / pickPrice) || 1;
-            await alpacaLimitBuy(null, stock, quantity, pickPrice * 0.99);
+            const quantity = Math.floor(perStock / buyPrice) || 1;
+            await alpacaLimitBuy(null, stock, quantity, buyPrice);
 
             // const response = await simpleBuy(Robinhood, {
             //     ticker: stock,
@@ -36,7 +40,7 @@ module.exports = async (Robinhood, {stocksToBuy, totalAmtToSpend, strategy, maxN
             // });
             // console.log('success active buy', stock);
             // console.log('response from limit buy multiple', response);
-            amtToSpendLeft -= perStock;
+            // amtToSpendLeft -= perStock;
             numPurchased++;
         } catch (e) {
             // failed
@@ -47,7 +51,7 @@ module.exports = async (Robinhood, {stocksToBuy, totalAmtToSpend, strategy, maxN
 
     console.log('finished purchasing', stocksToBuy.length, 'stocks');
     console.log('attempted amount', totalAmtToSpend);
-    console.log('amount leftover', amtToSpendLeft);
+    // console.log('amount leftover', amtToSpendLeft);
     if (failedStocks.length) {
         await sendEmail(`robinhood-playground: failed to purchase`, JSON.stringify(failedStocks));
     }

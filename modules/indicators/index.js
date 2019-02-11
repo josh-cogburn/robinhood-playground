@@ -44,12 +44,13 @@ const addEMAs = trend => trend.map(o => ({
         ema35: calcEMA(35, o, o.fundamentals.open),
         ema5: calcEMA(5, o, o.fundamentals.open),
         ema3trend: calcEMAtrend(3, o, o.fundamentals.open),
-        ema5trend: getTrend(
-            o.fundamentals.open,
-            o.yearHistoricals[o.yearHistoricals.length - 5].close_price
-        ),//calcEMAtrend(5, o, o.fundamentals.open),
+        ema5trend: calcEMAtrend(5, o, o.fundamentals.open),
         ema35trend: calcEMAtrend(35, o, o.fundamentals.open),
         ema90trend: calcEMAtrend(90, o, o.fundamentals.open),
+        fiveTrend: getTrend(
+            o.fundamentals.open,
+            o.yearHistoricals[o.yearHistoricals.length - 5].close_price
+        ),
     },
 }));
 

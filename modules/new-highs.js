@@ -6,6 +6,9 @@ const cTable = require('console.table');
 const { avgArray, percUp } = require('../utils/array-math');
 const { omit } = require('underscore');
 const getTrend = require('../utils/get-trend');
+const getStSent = require('../utils/get-stocktwits-sentiment');
+const alpacaLimitBuy = require('../alpaca/limit-buy');
+const lookup = require('../utils/lookup');
 
 const addTrendWithHistoricals = async (trend, interval, span) => {
     // add historical data
@@ -26,6 +29,7 @@ const addTrendWithHistoricals = async (trend, interval, span) => {
 
 const trendFilter = async (Robinhood, trend) => {
 
+    // await new Promise(resolve => setTimeout(resolve, 1000 * 10));   // 10 secs
 
     const response = {};
 
@@ -52,7 +56,7 @@ const trendFilter = async (Robinhood, trend) => {
     };
     const withRatios = withEMAs.map(b => ({
         ...b,
-        fiveTo35ratio: b.open.ema5trend - b.open.ema35trend,
+        fiveTo35ratio: b.open.fiveTrend - b.open.ema35trend,
         thirtyFiveTo90ratio: b.open.ema35trend - b.open.ema90trend,
         volumeRatio: Number(b.fundamentals.average_volume_2_weeks) / Number(b.fundamentals.average_volume),
     }));
@@ -67,20 +71,25 @@ const trendFilter = async (Robinhood, trend) => {
         )
     );
 
-    const onlyQuality = allGoodVol
+    let onlyQuality = allGoodVol
         .filter(b => 
             !b.shouldWatchout
-            && Math.abs(b.overnightJump) < 2
+            && Math.abs(b.overnightJump) < 3
+            // && b.overnightJump >= 0
             && b.open.ema3trend > 0
         )
         .map(t => ({
             ...t,
             hit2down: getTrend(t.fundamentals.low, t.fundamentals.open) < -1,
+            hit2up: getTrend(t.fundamentals.high, t.fundamentals.open) > 1,
         }))
         .map(t => ({
             ...t,
             ...t.hit2down ? {
                 ts2down: getTrend(t.last_trade_price, t.fundamentals.open * .99)
+            } : {},
+            ...t.hit2up ? {
+                ts2up: getTrend(t.last_trade_price, t.fundamentals.open * 1.01)
             } : {}
         }));
 
@@ -92,6 +101,11 @@ const trendFilter = async (Robinhood, trend) => {
         allGoodVol: allGoodVol.length,
         onlyQuality: onlyQuality.length
     });
+
+    // onlyQuality = await mapLimit(onlyQuality, 13, async buy => ({
+    //     ...buy,
+    //     stSent: (await getStSent(Robinhood, buy.ticker) || {}).bullBearScore
+    // }));
 
     str({ onlyQuality: onlyQuality.map(t => omit(t, "yearHistoricals")) })
     const lowestThirtyFiveTo90Ratio = topQuarterBySort(
@@ -112,10 +126,10 @@ const trendFilter = async (Robinhood, trend) => {
         };
         Object.keys(sorts).forEach(key => {
             const sorted = filtered.sort(sorts[key]);
-            const sliced = sorted.slice(0, 8);
+            const sliced = sorted.slice(0, 10);
             log(`${name}-${key}`.toUpperCase());
             log(`count: ${sorted.length}`);
-            response[`${name}-${key}`] = sliced.slice(0, 4).map(t => t.ticker);
+            response[`${name}-${key}`] = sliced.slice(0, 3).map(t => t.ticker);
             console.table(
                 sliced.map(t => ({
                     ticker: t.ticker,
@@ -127,13 +141,12 @@ const trendFilter = async (Robinhood, trend) => {
                     ...t.hit2down ? {
                         ts2down: t.ts2down
                     } : {},
-                    shouldWatchout: t.shouldWatchout
+                    ...t.hit2up ? {
+                        ts2up: t.ts2up
+                    } : {},
+                    stSent: t.stSent
                 }))
             );
-            const nums = [
-                ...sliced.map(b => b.trendSinceOpen),
-                ...sliced.map(b => b.trend_since_prev_close)
-            ];
             const analyze = key => {
                 const exists = sliced.filter(t => t[key]);
                 const count = exists.length;
@@ -147,7 +160,7 @@ const trendFilter = async (Robinhood, trend) => {
                     count
                 );
             };
-            ['trendSinceOpen', 'ts2down'].forEach(analyze);
+            ['trendSinceOpen', 'ts2down', 'ts2up'].forEach(analyze);
             log('\n');
         });
     };
@@ -163,7 +176,7 @@ const trendFilter = async (Robinhood, trend) => {
     };
     const breakdowns = {
         ...filters,
-        both: b => filters.within5(b) && filters.sma180trendingUp(b),
+        within5andSma180Up: b => filters.within5(b) && filters.sma180trendingUp(b),
         lowestThirtyFiveTo90RatioSma180Up: b => filters.lowestThirtyFiveTo90Ratio(b) && filters.sma180trendingUp(b),
         highestThirtyFiveTo90RatioSma180Up: b => filters.highestThirtyFiveTo90Ratio(b) && filters.sma180trendingUp(b),
         lowestThirtyFiveTo90RatioAndSma180UpAndWithin5: b => filters.lowestThirtyFiveTo90Ratio(b) && filters.sma180trendingUp(b) && filters.within5(b),
@@ -177,11 +190,38 @@ const trendFilter = async (Robinhood, trend) => {
     });
 
 
+
+
+    /// force ALPACA BUYS
+
+    // const alpacaBuys = {    // not using values currently
+    //     'highestThirtyFiveTo90Ratio-lowestfiveTo35ratio': -1,
+    //     'overall-lowestfiveTo35ratio': 0,
+    //     'lowestThirtyFiveTo90RatioSma180Up-highestfiveTo35ratio': 0
+    // };
+
+    // const perBuy = 100;
+    // const getQuantity = price => Math.floor(perBuy/ price);
+    // for (let key of Object.keys(alpacaBuys)) {
+    //     log('buying', key);
+    //     const buys = response[key];
+    //     for (let ticker of buys) {
+    //         const { askPrice } = await lookup(Robinhood, ticker);
+    //         log({
+    //             ticker,
+    //             price: askPrice,
+    //             quantity: getQuantity(askPrice)
+    //         });
+    //         alpacaLimitBuy(null, ticker, quantity, askPrice);
+    //     }
+    // }
+
     return response;
 
 };
 
 module.exports = {
     name: 'new-highs',
-    trendFilter
-}
+    trendFilter,
+    run: [0, 90]
+};

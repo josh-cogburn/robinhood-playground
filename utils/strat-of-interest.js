@@ -18,8 +18,10 @@ const functionMatches = [
         }
         return randomMatch;
     },
+
 ];
 module.exports = (strat, numPicks) => {
+    return true;    // for now every logged strat
     const matchesExact = () => exactMatches.includes(strat);
     const matchesKeyword = () => keywordMatches.some(
         test => strat.includes(test)

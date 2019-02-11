@@ -131,7 +131,7 @@ module.exports = {
             const trendPerms = {
                 '': undefined,
                 tscPosLt2pt5: o => o.trend_since_prev_close < 2.5 && o.trend_since_prev_close > 0,
-                tscLt2pt5: o => Math.abs(o.trend_since_prev_close < 2.5),
+                tscLt2pt5: o => Math.abs(o.trend_since_prev_close) < 2.5,
             };
             const handleTrendPerm = (trendPermKey, trendPermFn) => {
                 const baseKey = [nameStr, trendPermKey].filter(Boolean).join('-');
