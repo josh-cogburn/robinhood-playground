@@ -17,7 +17,7 @@ module.exports = async (Robinhood, dontSell) => {
     str({ withShouldSells })
 
     const toSell = withShouldSells.filter(pos => pos.shouldSell);
-    if (dontSell) return;
+    if (dontSell === "true") return;
     for (let pos of toSell) {
         const order = await alpaca.createOrder({
             symbol: pos.symbol, // any valid ticker symbol
