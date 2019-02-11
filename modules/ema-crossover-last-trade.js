@@ -88,10 +88,10 @@ const trendFilter = async (Robinhood, trend) => {
     str({ crossedToday: crossedToday.map(o => _.pick(o, ['ticker', 'sma180trendingUp', 'trendFromCross'])) });
     
     const ticks = arr => arr.map(t => t.ticker);
-    const trendingUp180SMA = ticks(crossedToday.filter(t => t.sma180trendingUp));
+    const sma180trendingUp = ticks(crossedToday.filter(t => t.sma180trendingUp));
     const allOthers = ticks(crossedToday.filter(t => !t.sma180trendingUp));
     return {
-        trendingUp180SMA,
+        sma180trendingUp,
         allOthers
     };
 
