@@ -11,6 +11,7 @@ module.exports = {
 
         '[highVolumePicks]',
         '[newHighPicks]',
+        '[stockInvest]',
     ],
     // forPurchaseVariation: '75Perc5Day-yesincludingblanks',
     // fallbackSellStrategy: 'limit8',

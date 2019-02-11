@@ -52,6 +52,16 @@ const newHighPicks = [
     'new-highs-top100RH-highestThirtyFiveTo90RatioSma180Up-lowestfiveTo35ratio-90',
 ];
 
+const stockInvest = [
+    "stock-invest-top100-4",
+    "stock-invest-top100-104",
+    "stock-invest-top100-200",
+    "stock-invest-undervalued-4",
+    "stock-invest-undervalued-104",
+    "stock-invest-undervalued-200"
+  ];
+
+
 const feelingGoodInTheNeighborhood = [
     ...highVolumePicks,
     ...newHighPicks,
@@ -64,5 +74,7 @@ module.exports = {
 
     feelingGoodInTheNeighborhood,
         highVolumePicks,
-        newHighPicks
+        newHighPicks,
+
+    stockInvest,
 };

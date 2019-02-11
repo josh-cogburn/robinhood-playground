@@ -19,18 +19,22 @@ const priceKeys = [1, 5, 10, 15, 20];
 //     [-25, 80, 130, 190, 270]
 // ];
 
+// const perms = [
+//     ['ema-crossover-last-trade'],
+//     ['trendingUp180SMA', 'allOthers'],
+//     [100, 200, 330, 360, 380]
+// ];
+
 const perms = [
-    // ['ema-crossover-last-trade'],
-    ['trendingUp180SMA', 'allOthers'],
-    [100, 200, 330, 360, 380]
+    ['stock-invest'],
+    ['top100', 'undervalued'],
+    [4, 104, 200]
 ];
 
 const flatten = arr => [].concat(...arr);
 module.exports = () => {
 
-    let collection = [
-        'ema-crossover-last-trade'
-    ];
+    let collection = [null];
     perms.forEach(perm => {
         // perm.forEach(str => {
             collection = flatten(

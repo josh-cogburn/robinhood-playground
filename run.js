@@ -26,8 +26,8 @@ require('./utils/fix-locale-date-string');
         .map(arg => arg === 'false' ? false : arg);
 
     if (argPath.includes('modules/')) {
-        const { trendFilter } = relatedFile;
-        if (trendFilter) {
+        const { trendFilter, trendFilterKey } = relatedFile;
+        if (trendFilter && trendFilterKey !== null) {
             const trendBreakdowns = await getTrendBreakdowns(Robinhood);
             let trendKeyArg = 'under5';
             if (Object.keys(trendBreakdowns).includes(restArgs[0])) {

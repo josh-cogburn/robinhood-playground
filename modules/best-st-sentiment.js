@@ -150,5 +150,5 @@ module.exports = {
         
     },
     run: [-25, 80, 130, 190, 270],
-    trendPermFilter: ['under5', 'sp500', 'top100RH']
+    trendFilterKey: ['under5', 'sp500', 'top100RH']
 };

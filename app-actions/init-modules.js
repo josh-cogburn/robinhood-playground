@@ -12,7 +12,7 @@ const initModule = (Robinhood, module) => {
         trendFilter,
         fn,
         init,
-        trendPermFilter
+        trendFilterKey
     } = module;
 
     console.log('initializing ', name);
@@ -27,7 +27,7 @@ const initModule = (Robinhood, module) => {
         fn: async (Robinhood, min) => {
             return !!fn 
                 ? fn(Robinhood, min) 
-                : executeStrategy(Robinhood, trendFilter, min, 0.3, name, trendPermFilter);
+                : executeStrategy(Robinhood, trendFilter, min, 0.3, name, trendFilterKey);
         }
     });
 };

@@ -2,15 +2,19 @@
 const recordPicks = require('./record-picks');
 const getTrendBreakdowns = require('./get-trend-breakdowns');
 
-const executeStrategy = async (Robinhood, strategyFn, min, ratioToSpend, strategy, trendPermFilter) => {
+const executeStrategy = async (Robinhood, strategyFn, min, ratioToSpend, strategy, trendFilterKey) => {
 
     await new Promise(resolve => setTimeout(resolve, 1000 * 10));   // 10 secs
 
+    if (trendFilterKey === null || !trendFilterKey.length) {
+        return strategyFn(Robinhood, null, min, null);
+    }
+
     const trendBreakdowns = await getTrendBreakdowns(Robinhood, min);
 
-    if (trendPermFilter) {
+    if (trendFilterKey) {
         Object.keys(trendBreakdowns)
-            .filter(trendKey => !trendPermFilter.includes(trendKey))
+            .filter(trendKey => !trendFilterKey.includes(trendKey))
             .forEach(trendKey => {
                 console.log('deleting', trendKey);
                 delete trendBreakdowns[trendKey];
