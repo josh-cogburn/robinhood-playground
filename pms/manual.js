@@ -1,4 +1,20 @@
 const highVolumePicks = [
+
+    'high-volume-sp500-tscPosLt3-absVolume-5',
+    'high-volume-sp500-tscPosLt3-volumeTo2Week-5',
+    'high-volume-sp500-tscPosLt3-twoWeekToAvg-5',
+    'high-volume-sp500-tscPosLt3-volumeToAvg-5',
+
+
+    'high-volume-sp500-tscLt3-absVolume-5',
+    'high-volume-sp500-tscLt3-volumeTo2Week-5',
+    'high-volume-sp500-tscLt3-twoWeekToAvg-5',
+    'high-volume-sp500-tscLt3-volumeToAvg-5',
+
+
+
+
+
     'high-volume-tscPosLt3-absVolume-5',
     'high-volume-tscPosLt3-volumeTo2Week-5',
     'high-volume-tscPosLt3-twoWeekToAvg-5',
