@@ -20,7 +20,7 @@ module.exports = {
         let stReqCount = 0;
 
         // helper fns
-        const limitTrendByVolume = async (subTrend, countLimit = 4) => {
+        const limitTrendByVolume = async (subTrend, countLimit = 16) => {
             let withFundamentals = await addFundamentals(Robinhood, subTrend);
             // console.log(withFundamentals)
             withFundamentals = withFundamentals
