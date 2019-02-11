@@ -575,7 +575,7 @@ const myStSents = [
     'top100RH-highest-bullishCount-first2-190',
     'top100RH-highest-bullBearScore-first2-270',
     'top100RH-highest-bullishCount-first2-270',
-];
+].map(t => `best-st-sentiment-${t}`);
 
 module.exports = {
     allBestSt: allStrats,
