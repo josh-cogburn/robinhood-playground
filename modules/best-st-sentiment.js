@@ -21,14 +21,6 @@ module.exports = {
 
         // helper fns
         const limitTrendByVolume = async (subTrend, countLimit = 4) => {
-
-
-            if (!subTrend[0].hasOwnProperty('quote_data')) {
-                // console.log('before sub', subTrend);
-                subTrend = await getTrendSinceOpen(Robinhood, subTrend.map(t => t.ticker));
-                // console.log('after sub', subTrend);
-            }
-
             let withFundamentals = await addFundamentals(Robinhood, subTrend);
             // console.log(withFundamentals)
             withFundamentals = withFundamentals
@@ -80,7 +72,7 @@ module.exports = {
             console.log([...new Set(trendTicks)].length);
 
             let withSentiment = await mapLimit(trend, 1, async obj => {
-                stReqCount = stReqCount + 3;
+                stReqCount = stReqCount + 1;
                 console.log({ stReqCount });
                 return {
                     ...obj,
@@ -108,92 +100,55 @@ module.exports = {
                     .map(o => o.ticker);
             };
 
-        const handleTrend = async (nameStr, subTrend) => {
-            console.log(`handle ${nameStr} trend...`);
-            // console.log(subTrend);
-            const limitedByVolume = await limitTrendByVolume(subTrend);
-            // log(' done done o')
-            // str({ limitedByVolume })
-            const withSentimented = (await addSentimentToTrend(limitedByVolume))
-                .filter(o => o.bullBearScore);
-            str({ withSentimented })
-            const sortedByFn = sortedByGenerator(withSentimented);
 
-            const highestKeys = [
-                'bullBearScore', 
-                // 'withSentiment', 
-                // 'withSentAndVol', 
-                // 'mostRecentSentiment', 
-                // 'todayVolumeChange', 
-                'bearishCount', 
-                'bullishCount'
-            ];
-            const trendPerms = {
-                '': undefined,
-                tscPosLt2pt5: o => o.trend_since_prev_close < 2.5 && o.trend_since_prev_close > 0,
-                tscLt2pt5: o => Math.abs(o.trend_since_prev_close) < 2.5,
-            };
-            const handleTrendPerm = (trendPermKey, trendPermFn) => {
-                const baseKey = [nameStr, trendPermKey].filter(Boolean).join('-');
-                return highestKeys.reduce((acc, key) => ({
-                    ...acc,
-                    [`${baseKey}-highest-${key}`]: sortedByFn(key, 'highest', undefined, trendPermFn),
-                    [`${baseKey}-lowest-${key}`]: sortedByFn(key, 'lowest', undefined, trendPermFn),
-                    [`${baseKey}-highest-${key}-first2`]: sortedByFn(key, 'highest', 2, trendPermFn),
-                    [`${baseKey}-lowest-${key}-first2`]: sortedByFn(key, 'lowest', 2, trendPermFn),
-                }), {});
-            };
-            const perms = Object.keys(trendPerms).reduce((acc, key) => ({
-                ...acc,
-                ...handleTrendPerm(key, trendPerms[key])
-            }), {});
-            return perms;
-        };
 
         // start
 
         console.log('running best st-sentiment strategy', priceKey);
 
-        // under5
-        const under5perms = await handleTrend('under5', trend);
-        // sp500
-        const sp500url = 'https://pkgstore.datahub.io/core/s-and-p-500-companies/constituents_json/data/64dd3e9582b936b0352fdd826ecd3c95/constituents_json.json';
-        const sp500perms = await handleTrend(
-            'sp500',
-            JSON.parse(
-                await request(sp500url)
-            ).map(o => ({ 
-                ticker: o.Symbol 
-            }))
-        );
+        const limitedByVolume = await limitTrendByVolume(trend);
+        // log(' done done o')
+        // str({ limitedByVolume })
+        const withSentimented = (await addSentimentToTrend(limitedByVolume))
+            .filter(o => o.bullBearScore);
+        str({ withSentimented })
+        const sortedByFn = sortedByGenerator(withSentimented);
 
-        // top100RH instruments tag
-        console.log('getting top100RH');
-        const {
-            instruments: top100RHinstruments
-        } = await Robinhood.url('https://api.robinhood.com/midlands/tags/tag/100-most-popular/')
-        let top100RHtrend = await mapLimit(top100RHinstruments, 3, async instrumentUrl => {
-            const instrumentObj = await Robinhood.url(instrumentUrl);
-            return {
-                ...instrumentObj,
-                instrumentUrl,
-                ticker: instrumentObj.symbol
-            };
-        });
-        const top100RHperms = await handleTrend('top100RH', top100RHtrend);
-
-        const returnObj = {
-            ...under5perms,
-            ...sp500perms,
-            ...top100RHperms
+        const highestKeys = [
+            'bullBearScore', 
+            // 'withSentiment', 
+            // 'withSentAndVol', 
+            // 'mostRecentSentiment', 
+            // 'todayVolumeChange', 
+            'bearishCount', 
+            'bullishCount'
+        ];
+        const trendPerms = {
+            '': undefined,
+            tscPosLt2pt5: o => o.trend_since_prev_close < 2.5 && o.trend_since_prev_close > 0,
+            tscLt2pt5: o => Math.abs(o.trend_since_prev_close) < 2.5,
         };
+        const handleTrendPerm = (trendPermKey, trendPermFn) => {
+            trendPermKey = trendPermKey ? trendPermKey + '-' : trendPermKey;
+            return highestKeys.reduce((acc, key) => ({
+                ...acc,
+                [`${trendPermKey}highest-${key}`]: sortedByFn(key, 'highest', undefined, trendPermFn),
+                [`${trendPermKey}lowest-${key}`]: sortedByFn(key, 'lowest', undefined, trendPermFn),
+                [`${trendPermKey}highest-${key}-first2`]: sortedByFn(key, 'highest', 2, trendPermFn),
+                [`${trendPermKey}lowest-${key}-first2`]: sortedByFn(key, 'lowest', 2, trendPermFn),
+            }), {});
+        };
+        const returnObj = Object.keys(trendPerms).reduce((acc, key) => ({
+            ...acc,
+            ...handleTrendPerm(key, trendPerms[key])
+        }), {});
+        
 
         console.log(JSON.stringify(returnObj, null, 2));
         console.log(`total stocktwits requests: ${stReqCount}`);
-
         return returnObj;
         
     },
     run: [-25, 80, 130, 190, 270],
-    pricePermFilter: ['under5'] // only run under5
+    trendPermFilter: ['under5', 'sp500', 'top100RH']
 };

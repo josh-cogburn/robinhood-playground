@@ -28,6 +28,12 @@ const newHighPicks = [
     'new-highs-highestThirtyFiveTo90Ratio-lowestfiveTo35ratio-90',
     'new-highs-overall-lowestfiveTo35ratio-90',
     'new-highs-lowestThirtyFiveTo90RatioSma180Up-highestfiveTo35ratio-90',
+
+    'new-highs-top100RH-overall-lowestfiveTo35ratio-0',
+    'new-highs-top100RH-overall-lowestfiveTo35ratio-90',
+    
+    'new-highs-top100RH-highestThirtyFiveTo90RatioSma180Up-lowestfiveTo35ratio-0',
+    'new-highs-top100RH-highestThirtyFiveTo90RatioSma180Up-lowestfiveTo35ratio-90',
 ];
 
 const feelingGoodInTheNeighborhood = [

@@ -98,7 +98,7 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
 
 
 
-module.exports = async (Robinhood, strategy, min, toPurchase, priceFilterSuffix = '') => {
+module.exports = async (Robinhood, strategy, min, toPurchase, trendKey = '') => {
 
     const isNotRegularHours = min < 0 || min > 390;
 
@@ -128,13 +128,18 @@ module.exports = async (Robinhood, strategy, min, toPurchase, priceFilterSuffix 
         // console.log('tickerLookups', tickerLookups);
         for (let strategyName of Object.keys(toPurchase)) {
             const subsetToPurchase = toPurchase[strategyName];
-            await record(subsetToPurchase, `${strategy}-${strategyName}${priceFilterSuffix}`, tickerLookups);
+            const stratName = [
+                trendKey, 
+                strategy,
+                strategyName
+            ].filter(Boolean).join('-');
+            await record(subsetToPurchase, stratName, tickerLookups);
         }
     } else {
         // console.log('no variety to purchase', toPurchase);
         const tickerLookups = await lookupMultiple(Robinhood, toPurchase, true);
-        // console.log('ticker lookups', tickerLookups);
-        await record(toPurchase, `${strategy}${priceFilterSuffix}`, tickerLookups);
+        const stratName = [trendKey, strategy].filter(Boolean).join('-');
+        await record(toPurchase, stratName, tickerLookups);
     }
 
 };

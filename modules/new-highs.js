@@ -9,6 +9,8 @@ const getTrend = require('../utils/get-trend');
 const getStSent = require('../utils/get-stocktwits-sentiment');
 const alpacaLimitBuy = require('../alpaca/limit-buy');
 const lookup = require('../utils/lookup');
+const request = require('request-promise');
+const getTrendSinceOpen = require('../rh-actions/get-trend-since-open');
 
 const addTrendWithHistoricals = async (trend, interval, span) => {
     // add historical data
@@ -26,14 +28,9 @@ const addTrendWithHistoricals = async (trend, interval, span) => {
     return withHistoricals;
 };
 
-
 const trendFilter = async (Robinhood, trend) => {
 
-    // await new Promise(resolve => setTimeout(resolve, 1000 * 10));   // 10 secs
-
     const response = {};
-
-
 
     // log({ trend })
     log('adding overnite jump')

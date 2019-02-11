@@ -1,5 +1,5 @@
 const login = require('./rh-actions/login');
-const getTrendAndSave = require('./app-actions/get-trend-and-save');
+const getTrendBreakdowns = require('./app-actions/get-trend-breakdowns');
 
 const mongoose = require('mongoose');
 const { mongoConnectionString } = require('./config');
@@ -21,21 +21,28 @@ require('./utils/fix-locale-date-string');
     let relatedFile = require(`./${argPath}`);
 
     let callArgs = [Robinhood];
+    const restArgs = process.argv.slice(3)
+        .map(arg => arg === 'true' ? true : arg)
+        .map(arg => arg === 'false' ? false : arg);
+
     if (argPath.includes('modules/')) {
         const { trendFilter } = relatedFile;
         if (trendFilter) {
-            const trend = await getTrendAndSave(Robinhood);
-            // console.log('got trend');
-            // console.log(trend);
-            callArgs.push(trend.filter(t => t.last_trade_price < 5));
+            const trendBreakdowns = await getTrendBreakdowns(Robinhood);
+            let trendKeyArg = 'under5';
+            if (Object.keys(trendBreakdowns).includes(restArgs[0])) {
+                trendKeyArg = restArgs.shift();
+                log('supplied', trendKeyArg);
+            }
+            log({ trendKeyArg })
+            const trend = trendBreakdowns[trendKeyArg];
+            callArgs.push(trend);
         } else {
             callArgs.push(25); // min
         }
     }
 
-    const restArgs = process.argv.slice(3)
-        .map(arg => arg === 'true' ? true : arg)
-        .map(arg => arg === 'false' ? false : arg);
+    
 
     const fnToRun = relatedFile.trendFilter || relatedFile.fn || relatedFile.init || relatedFile.default || relatedFile;
     const response = await fnToRun(...callArgs, ...restArgs);
