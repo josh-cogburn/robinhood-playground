@@ -129,8 +129,8 @@ module.exports = async (Robinhood, strategy, min, toPurchase, trendKey = '') => 
         for (let strategyName of Object.keys(toPurchase)) {
             const subsetToPurchase = toPurchase[strategyName];
             const stratName = [
-                trendKey, 
                 strategy,
+                trendKey,
                 strategyName
             ].filter(Boolean).join('-');
             await record(subsetToPurchase, stratName, tickerLookups);
@@ -138,7 +138,7 @@ module.exports = async (Robinhood, strategy, min, toPurchase, trendKey = '') => 
     } else {
         // console.log('no variety to purchase', toPurchase);
         const tickerLookups = await lookupMultiple(Robinhood, toPurchase, true);
-        const stratName = [trendKey, strategy].filter(Boolean).join('-');
+        const stratName = [strategy, trendKey].filter(Boolean).join('-');
         await record(toPurchase, stratName, tickerLookups);
     }
 

@@ -52,7 +52,7 @@ const allEmaLastTrades = [
     "ema-crossover-last-trade-allOthers-380"
 ];
 
-const allEmaTrendingUp180SMA = allEmaLastTrades.filter(s => s.includes('trendingUp180SMA'));
+const allEmaTrendingUp180SMA = allEmaLastTrades.filter(s => s.includes('sma180trendingUp'));
 
 module.exports = { 
     allEmaCrossoverWatchers,

@@ -4,7 +4,7 @@ const getTrendBreakdowns = require('./get-trend-breakdowns');
 
 const executeStrategy = async (Robinhood, strategyFn, min, ratioToSpend, strategy, trendFilterKey) => {
 
-    await new Promise(resolve => setTimeout(resolve, 1000 * 10));   // 10 secs
+    await new Promise(resolve => setTimeout(resolve, 1000 * 5));   // 5 secs
 
     if (trendFilterKey === null || !trendFilterKey.length) {
         return strategyFn(Robinhood, null, min, null);
