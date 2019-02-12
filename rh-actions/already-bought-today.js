@@ -20,6 +20,6 @@ module.exports = async (Robinhood, ticker) => {
         });
     };
     
-    return inDt(ticker) || await inTransactions();
+    return await inDt(ticker) || await inTransactions();
     
 };
