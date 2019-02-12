@@ -552,6 +552,17 @@ const myStSents = [
     'highest-bullBearScore-270',
     'highest-bullishCount-270',
 
+    'lowest-bullBearScore--25',
+    'lowest-bullishCount--25',
+    'lowest-bullBearScore-80',
+    'lowest-bullishCount-80',
+    'lowest-bullBearScore-130',
+    'lowest-bullishCount-130',
+    'lowest-bullBearScore-190',
+    'lowest-bullishCount-190',
+    'lowest-bullBearScore-270',
+    'lowest-bullishCount-270',
+
     
     'sp500-highest-bullBearScore--25',
     'sp500-highest-bullishCount--25',
