@@ -6,8 +6,11 @@ const executeStrategy = async (Robinhood, strategyFn, min, ratioToSpend, strateg
 
     await new Promise(resolve => setTimeout(resolve, 1000 * 5));   // 5 secs
 
+
+    // TODO: refactor this fn
     if (trendFilterKey === null || (trendFilterKey && !trendFilterKey.length)) {
-        return strategyFn(Robinhood, null, min, null);
+        const toPurchase = strategyFn(Robinhood, null, min, null);
+        await recordPicks(Robinhood, strategy, min, toPurchase);
     }
 
     const trendBreakdowns = await getTrendBreakdowns(Robinhood, min);
