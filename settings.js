@@ -6,7 +6,7 @@ module.exports = {
     forPurchase: [
         '[myTickerWatchers]',
         '[myStSents]',
-        '[allEmaTrendingUp180SMA]',
+        // '[allEmaLastTradeTrendingUp180SMA]',
         '[myEmaCrossoverWatchers]',
 
         '[highVolumePicks]',

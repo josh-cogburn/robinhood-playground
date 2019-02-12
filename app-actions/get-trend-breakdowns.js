@@ -27,7 +27,7 @@ module.exports = async (Robinhood, min) => {
         const trendFilteredByPricePerm = trend.filter(stock => {
             return stock.quote_data.lastTrade > lowBounds && stock.quote_data.lastTrade <= highBounds;
         });
-        priceTrends[priceKey] = limitToLowSpread(trendFilteredByPricePerm);
+        priceTrends[priceKey] = trendFilteredByPricePerm;
     });
 
     // sp 500
