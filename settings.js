@@ -4,13 +4,17 @@ module.exports = {
     sellAllStocksOnNthDay: 10,
     purchaseAmt: 40,
     forPurchase: [
-        '[myTickerWatchers]',
-        '[myStSents]',
-        // '[allEmaLastTradeTrendingUp180SMA]',
-        '[myEmaCrossoverWatchers]',
+        '[feb13bestst]',
+        '[feb13tw]',
+        '[feb13highvol]',
+        '[feb13emacrossovers]',
+        '[feb13singlebestst]',
+        '[feb13singletw]',
+        '[feb13singlenewhighs]',
+        '[feb13singlehighvol]',
 
-        '[highVolumePicks]',
-        '[newHighPicks]',
+
+        '[stockInvest]',
         '[stockInvest]',
     ],
     // forPurchaseVariation: '75Perc5Day-yesincludingblanks',

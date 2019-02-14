@@ -72,6 +72,8 @@ module.exports = {
     ...require('./best-st-sentiment'),
     ...require('./ema-crossovers'),
 
+    ...require('./feb13'),
+
     feelingGoodInTheNeighborhood,
         highVolumePicks,
         newHighPicks,

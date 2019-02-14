@@ -46,17 +46,6 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
         withPrices
     });
 
-    // for email$
-    const emailsToSend = await calcEmailsFromStrategy(null, stratMin);
-    // console.log({ emailsToSend });
-    for (let { email, pm } of emailsToSend) {
-        await sendEmail(
-            `robinhood-playground${pm ? `-${pm}` : ''}: ${stratMin}`,
-            JSON.stringify(withPrices, null, 2),
-            email
-        );
-    }
-
     // helper
     const getEnableCountForPM = pm => { 
         // how many times does this strategy show up in this pm?
@@ -91,6 +80,19 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
         }
         // tweeter.tweet(`BUY ${withPrices.map(({ ticker, price }) => `#${ticker} @ $${price}`).join(' and ')} - ${stratMin}`);
     }
+
+    // for email$
+    const emailsToSend = await calcEmailsFromStrategy(null, stratMin);
+    // console.log({ emailsToSend });
+    for (let { email, pm } of emailsToSend) {
+        await sendEmail(
+            `robinhood-playground${pm ? `-${pm}` : ''}: ${stratMin}`,
+            JSON.stringify(withPrices, null, 2),
+            email
+        );
+    }
+
+    
 
 };
 
