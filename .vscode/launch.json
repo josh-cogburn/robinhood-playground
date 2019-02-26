@@ -44,7 +44,7 @@
             "name": "best-st-sentiment",
             "program": "${workspaceFolder}/run.js",
             "args": [
-                "modules/best-st-sentiment"
+                "modules/only-up/history-analyze"
              ]
         },
     ]

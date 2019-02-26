@@ -25,10 +25,40 @@ const priceKeys = [1, 5, 10, 15, 20];
 //     [100, 200, 330, 360, 380]
 // ];
 
+// const perms = [
+//     ['stock-invest'],
+//     ['top100', 'undervalued'],
+//     [4, 104, 200]
+// ];
+
 const perms = [
-    ['stock-invest'],
-    ['top100', 'undervalued'],
-    [4, 104, 200]
+    ['only-up'],
+    ["", "onjn1to1", "onjn1to1AndTSOn1to1", "onj1to4AndTSOn5ton1", "onjn6ton1AndTSO1to3", "yesterdayDown", 'yesterdayDown10to3'],
+    [
+        365,
+        100,
+        90,
+        60,
+        30,
+        20,
+        15,
+        10,
+        7,
+        5,
+    ],
+    [
+        'percUp',
+        'lightTrendScore',
+        'heavyTrendScore',
+        'inverseLightTrendScore',
+        'inverseHeavyTrendScore',
+        'periodTrendVolatilityScore'
+    ],
+    [
+        '',
+        'volatilityPick',
+        'periodTrendVolatilityPick'
+    ]
 ];
 
 const flatten = arr => [].concat(...arr);

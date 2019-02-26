@@ -74,6 +74,8 @@ module.exports = {
 
     ...require('./feb13'),
 
+    onlyUp: require('./only-up'),
+
     feelingGoodInTheNeighborhood,
         highVolumePicks,
         newHighPicks,

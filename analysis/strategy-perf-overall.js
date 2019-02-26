@@ -1,8 +1,6 @@
 // gets current strategy performance of picks looking back n days
 const NUM_DAYS = 2;
 
-const cTable = require('console.table');
-
 const fs = require('mz/fs');
 const { analyzeDay } = require('../app-actions/record-strat-perfs');
 const jsonMgr = require('../utils/json-mgr');

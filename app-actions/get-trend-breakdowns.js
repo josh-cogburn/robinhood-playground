@@ -21,7 +21,9 @@ module.exports = async (Robinhood, min) => {
         tenTo15: [10, 15],
         fifteenTo20: [15, 20]
     };
-    const priceTrends = {};
+    const priceTrends = {
+        all: trend
+    };
     Object.keys(pricePerms).forEach(priceKey => {
         const [lowBounds, highBounds] = pricePerms[priceKey];
         const trendFilteredByPricePerm = trend.filter(stock => {

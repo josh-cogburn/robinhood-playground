@@ -3,11 +3,28 @@ const getTrend = require('../utils/get-trend');
 const chunkApi = require('../utils/chunk-api');
 
 
+
+
+const fundamentalCache = {};
+const REFRESH_CACHE = 1000 * 60;
+
 module.exports = async (Robinhood, trend) => {
+
+    const allTickers = trend.map(t => t.ticker);
+    const tickersInCache = allTickers.filter(ticker =>
+        Object.keys(fundamentalCache).includes(ticker)
+    );
+    const tickersInCacheAndNotExpired = tickersInCache.filter(ticker =>
+        Date.now() - fundamentalCache[ticker].timestamp < REFRESH_CACHE
+    );
+
+    const tickersToLookup = allTickers.filter(ticker => 
+        !tickersInCacheAndNotExpired.includes(ticker)
+    );
 
     console.log('adding fundamentals')
     let fundamentals = await chunkApi(
-        trend.map(t => t.ticker),
+        tickersToLookup,
         async tickerStr => {
             // console.log('tickerstr', tickerStr);
             const { results } = await Robinhood.url(`https://api.robinhood.com/fundamentals/?symbols=${tickerStr}`);
@@ -16,13 +33,18 @@ module.exports = async (Robinhood, trend) => {
         10
     );
 
-    let withFundamentals = trend.map((obj, i) => {
-        let funds = fundamentals[i] || {};
-        return {
-            ...obj,
-            fundamentals: funds
+    fundamentals.forEach((data, i) => {
+        const ticker = tickersToLookup[i];
+        fundamentalCache[ticker] = {
+            timestamp: Date.now(),
+            data
         };
     });
+
+    let withFundamentals = trend.map(obj => ({
+        ...obj,
+        fundamentals: fundamentalCache[obj.ticker].data
+    }));
 
     return withFundamentals;
 
