@@ -33,6 +33,7 @@ const priceKeys = [1, 5, 10, 15, 20];
 
 const perms = [
     ['only-up'],
+    ['', 'sp500'],
     ["", "onjn1to1", "onjn1to1AndTSOn1to1", "onj1to4AndTSOn5ton1", "onjn6ton1AndTSO1to3", "yesterdayDown", 'yesterdayDown10to3'],
     [
         365,

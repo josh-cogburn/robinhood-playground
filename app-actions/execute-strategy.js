@@ -14,7 +14,8 @@ const executeStrategy = async (Robinhood, strategyFn, min, ratioToSpend, strateg
     }
 
     const trendBreakdowns = await getTrendBreakdowns(Robinhood, min);
-
+    delete trendBreakdowns.all;
+    
     if (trendFilterKey) {
         Object.keys(trendBreakdowns)
             .filter(trendKey => !trendFilterKey.includes(trendKey))

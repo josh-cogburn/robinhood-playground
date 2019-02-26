@@ -28,5 +28,6 @@ module.exports = {
 
     },
     run: [4, 95, 180, 250, 345],
+    trendFilterKey: ['under5', 'sp500'],
     name: 'only-up'
 };
