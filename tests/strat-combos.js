@@ -59,7 +59,8 @@ const perms = [
         '',
         'volatilityPick',
         'periodTrendVolatilityPick'
-    ]
+    ],
+    [4, 95, 180, 250, 345],
 ];
 
 const flatten = arr => [].concat(...arr);
