@@ -1,6 +1,7 @@
 node_modules
 config.js
 stock-data/*
+!.gitkeep
 .DS_Store
 outputfile.txt
 portfolio-cache.json
