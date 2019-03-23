@@ -1,6 +1,6 @@
 node_modules
 config.js
-stock-data
+stock-data/*
 .DS_Store
 outputfile.txt
 portfolio-cache.json
