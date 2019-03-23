@@ -32,11 +32,11 @@ const additionalCron = [
     //     run: [-3],
     //     fn: alpacaSellAllStocks
     // },
-    {
-        name: 'alpaca smart sells',
-        run: [5, 24, 45, 60, 100, 140, 180, 220, 280, 300],
-        fn: alpacaSmartSells
-    },
+    // {
+    //     name: 'alpaca smart sells',
+    //     run: [5, 24, 45, 60, 100, 140, 180, 220, 280, 300],
+    //     fn: alpacaSmartSells
+    // },
 
 
     // {
@@ -59,11 +59,11 @@ const additionalCron = [
     
     //     }
     // },
-    {
-        name: 'smartSells',
-        run: [5, 24, 45, 60, 100, 140, 180, 220, 280, 300].map(n => n + 5),
-        fn: smartSells
-    },
+    // {
+    //     name: 'smartSells',
+    //     run: [5, 24, 45, 60, 100, 140, 180, 220, 280, 300].map(n => n + 5),
+    //     fn: smartSells
+    // },
     // sell all if went up
     // {
     //     name: 'sellAllIfWentUp',
@@ -124,11 +124,11 @@ const additionalCron = [
         fn: getAllTickers
     },
 
-    {
-        name: 'doubleDown',
-        run: [100, 200, 378],
-        fn: (Robinhood, min) => doubleDown(Robinhood, min, min == 378 ? 7 : 3.5)
-    },
+    // {
+    //     name: 'doubleDown',
+    //     run: [100, 200, 378],
+    //     fn: (Robinhood, min) => doubleDown(Robinhood, min, min == 378 ? 7 : 3.5)
+    // },
 
     // {
     //     name: 'commit day to git',
