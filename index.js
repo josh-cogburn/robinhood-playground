@@ -29,6 +29,9 @@ const { mongoConnectionString } = require('./config');
 const Pick = require('./models/Pick');
 const stocktwits = require('./utils/stocktwits');
 
+const restartProcess = require('./app-actions/restart-process');
+
+
 mongoose.connect(mongoConnectionString, { useNewUrlParser: true });
 
 process.on('unhandledRejection', (reason, p) => {
