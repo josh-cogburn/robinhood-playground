@@ -1,6 +1,17 @@
 // app-actions
 const getMultipleHistoricals = require('../../app-actions/get-multiple-historicals');
-const strategy = require('./strategy');
+
+
+const strategies = {
+    onlyUp: require('./only-up'),
+    reversingUp: require('./reversing-up')
+};
+
+const prefixKeys = (obj, prefix) =>
+    Object.keys(obj).reduce((acc, key) => ({
+        ...acc,
+        [`${prefix}-${key}`]: obj[key]
+    }), {});
 
 module.exports = {
     trendFilter: async (Robinhood, trend) => {
@@ -23,11 +34,22 @@ module.exports = {
 
         const trendWithHistoricals = (await addTrendWithHistoricals(trend, 'day', 'year'))
             .filter(buy => buy.yearHistoricals && buy.yearHistoricals.length);
-            
-        return strategy(trendWithHistoricals);
+
+        const stratResults = await mapLimit(Object.keys(strategies), 2, async stratName => {
+            const asyncStrat = strategies[stratName];
+            return {
+                stratName,
+                results: await asyncStrat(trendWithHistoricals)
+            };
+        });
+        
+        return stratResults.reduce((acc, { stratName, results }) => ({
+            ...acc,
+            ...prefixKeys(results, stratName)
+        }), {});
 
     },
     run: [4, 95, 180, 250, 345],
     trendFilterKey: ['under5', 'sp500'],
-    name: 'only-up'
+    name: 'analytic'
 };

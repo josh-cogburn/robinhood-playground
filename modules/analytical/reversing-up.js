@@ -42,22 +42,22 @@ const sortByPerms = [
     'percUp',
     'lightTrendScore',
     'heavyTrendScore',
-    'inverseLightTrendScore',
-    'inverseHeavyTrendScore',
+    // 'inverseLightTrendScore',
+    // 'inverseHeavyTrendScore',
     'periodTrendVolatilityScore'
 ];
 
 let outerPerms = {
     '': () => true,
-    onjn1to1: ({ overnightJump }) => overnightJump > -1 && overnightJump < 1,
-    onjn1to1AndTSOn1to1: ({ overnightJump, trendSinceOpen }) => overnightJump > -1 && overnightJump < 1 && trendSinceOpen > -1 && trendSinceOpen < 1,
-    onj1to4AndTSOn5ton1: ({ overnightJump, trendSinceOpen }) => overnightJump > 1 && overnightJump < 4 && trendSinceOpen > -5 && trendSinceOpen < -1,
-    onjn6ton1AndTSO1to3: ({ overnightJump, trendSinceOpen }) => overnightJump > -6 && overnightJump < -1 && trendSinceOpen > 1 && trendSinceOpen < 3,
-    yesterdayDown: ({ yearHistoricals }) => yearHistoricals[yearHistoricals.length - 1].close_price < yearHistoricals[yearHistoricals.length - 2].close_price,
-    yesterdayDown10to3: ({ yearHistoricals }) => {
-        const trend = getTrend(yearHistoricals[yearHistoricals.length - 1].close_price, yearHistoricals[yearHistoricals.length - 2].close_price);
-        return trend > -10 && trend < -3;
-    }
+    // onjn1to1: ({ overnightJump }) => overnightJump > -1 && overnightJump < 1,
+    // onjn1to1AndTSOn1to1: ({ overnightJump, trendSinceOpen }) => overnightJump > -1 && overnightJump < 1 && trendSinceOpen > -1 && trendSinceOpen < 1,
+    // onj1to4AndTSOn5ton1: ({ overnightJump, trendSinceOpen }) => overnightJump > 1 && overnightJump < 4 && trendSinceOpen > -5 && trendSinceOpen < -1,
+    // onjn6ton1AndTSO1to3: ({ overnightJump, trendSinceOpen }) => overnightJump > -6 && overnightJump < -1 && trendSinceOpen > 1 && trendSinceOpen < 3,
+    // yesterdayDown: ({ yearHistoricals }) => yearHistoricals[yearHistoricals.length - 1].close_price < yearHistoricals[yearHistoricals.length - 2].close_price,
+    // yesterdayDown10to3: ({ yearHistoricals }) => {
+    //     const trend = getTrend(yearHistoricals[yearHistoricals.length - 1].close_price, yearHistoricals[yearHistoricals.length - 2].close_price);
+    //     return trend > -10 && trend < -3;
+    // }
 };
 
 
@@ -73,10 +73,37 @@ const getSliceForDayCount = (dayCount, trend) => {
     let results = {};
 
     const copy = [...trend];
-    const slicedHistoricals = copy.map(buy => ({
+    
+    const reversalDays = Math.max(Math.ceil(dayCount * .13), 3);
+    console.log({ dayCount, reversalDays})
+    const withReversalTrends = copy.map(buy => ({
         ...buy,
-        yearHistoricals: buy.yearHistoricals.slice(0 - dayCount)
+        reversalTrend: buy.yearHistoricals.slice(0 - reversalDays)
     }));
+
+    const reversalConfirmed = withReversalTrends.filter(buy => {
+        // console.log(JSON.stringify(buy, null, 2));
+        const trend = getTrend(
+            buy.reversalTrend[buy.reversalTrend.length - 1].close_price,
+            buy.reversalTrend[0].open_price
+        );
+        const avgTrend = trend / buy.reversalTrend.length;
+        return avgTrend > 0.5;
+    });
+
+    console.log(
+        'origj', copy.length,
+        'reversalConfirmed', reversalConfirmed.length
+    );
+
+    const slicedHistoricals = reversalConfirmed.map(buy => ({
+        ...buy,
+        yearHistoricals: buy.yearHistoricals
+            .slice(0, buy.yearHistoricals.length - reversalDays)
+            .slice(0 - dayCount)
+    }));
+
+    console.log(JSON.stringify(slicedHistoricals.find(buy => buy.symbol === 'BW'), null, 2));
 
     let analyzed = slicedHistoricals
         .map(buy => ({
@@ -113,17 +140,17 @@ const getSliceForDayCount = (dayCount, trend) => {
             periodTrendVolatilityScore: buy.periodTrend / buy.volatility,
             lightTrendScore:  buy.percUp + buy.periodTrend / 1000,
             heavyTrendScore:  buy.percUp + buy.periodTrend / 100,
-            inverseLightTrendScore:  buy.percUp - buy.periodTrend / 1000,
-            inverseHeavyTrendScore:  buy.percUp - buy.periodTrend / 100
+            // inverseLightTrendScore:  buy.percUp - buy.periodTrend / 1000,
+            // inverseHeavyTrendScore:  buy.percUp - buy.periodTrend / 100
         }))
-        .filter(buy => buy.avgDailyTrend > 1.1 && buy.volatility);
+        .filter(buy => buy.volatility);
 
 
     const fifthCount = clamp(Math.round(analyzed.length / 5), 15, 60);
     // console.log({ fifthCount })
 
     sortByPerms.forEach(key => {
-        const sorted = analyzed.sort((a, b) => b[key] - a[key]);
+        const sorted = analyzed.sort((a, b) => a[key] - b[key]);
         const resultKey = [dayCount, key].join('-');
         const singlePick = sortFn => sorted
             .slice(0, fifthCount)
@@ -138,7 +165,7 @@ const getSliceForDayCount = (dayCount, trend) => {
                     (a, b) => a.volatility - b.volatility
                 ),
                 [`${resultKey}-periodTrendVolatilityPick`]: singlePick(
-                    (a, b) => b.periodTrendVolatilityScore - a.periodTrendVolatilityScore
+                    (a, b) => a.periodTrendVolatilityScore - b.periodTrendVolatilityScore
                 ),
             }, getTicks)
         };

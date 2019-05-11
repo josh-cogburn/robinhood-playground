@@ -38,6 +38,9 @@ process.on('unhandledRejection', (reason, p) => {
 
 (async () => {
 
+
+    setTimeout(restartProcess, 10000);
+
     
     // console.log(
     //     await Pick.create({

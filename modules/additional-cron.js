@@ -15,6 +15,7 @@ const smartSells = require('../app-actions/smart-sells');
 const alpacaSellAllStocks = require('../alpaca/sell-all-stocks');
 const alpacaSmartSells = require('../alpaca/smart-sells');
 const saveDayReport = require('../app-actions/save-day-report');
+const restartProcess = require('../app-actions/restart-process');
 
 // utils
 // const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
@@ -145,6 +146,12 @@ const additionalCron = [
         name: 'strat perf multiple',    // the big analyze all strategies function
         run: [520],
         fn: (Robinhood) => stratPerfMultiple(Robinhood, 52, 'next-day-330')
+    },
+
+    {
+        name: 'restart pm2 process',
+        run: [700],
+        fn: restartProcess
     },
 
     // {
