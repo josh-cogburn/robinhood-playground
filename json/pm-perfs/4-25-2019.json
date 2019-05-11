@@ -1,0 +1,122 @@
+[
+  {
+    "pmName": "onlyUp",
+    "weightedTrend": 5.626390406800272,
+    "avgTrend": 5.626390406800272
+  },
+  {
+    "pmName": "allEmaLastTradeTrendingUp180SMA",
+    "weightedTrend": 4.75,
+    "avgTrend": 4.75
+  },
+  {
+    "pmName": "allEmaLastTrades",
+    "weightedTrend": 2.529166666666667,
+    "avgTrend": 2.529166666666667
+  },
+  {
+    "pmName": "newHighPicks",
+    "weightedTrend": 2.1805,
+    "avgTrend": 2.1805
+  },
+  {
+    "pmName": "feb13highvol",
+    "weightedTrend": 2.1166666666666663,
+    "avgTrend": 2.1166666666666663
+  },
+  {
+    "pmName": "forPurchase25Perc5Day-yesincludingblanks",
+    "weightedTrend": 1.5987499999999997,
+    "avgTrend": 1.8821428571428567
+  },
+  {
+    "pmName": "forPurchase50Perc5Day-notincludingblanks",
+    "weightedTrend": 1.5987499999999997,
+    "avgTrend": 1.8821428571428567
+  },
+  {
+    "pmName": "forPurchase80Perc5Day-notincludingblanks",
+    "weightedTrend": 1.5987499999999997,
+    "avgTrend": 1.8821428571428567
+  },
+  {
+    "pmName": "forPurchase25Perc5Day-notincludingblanks",
+    "weightedTrend": 1.5987499999999997,
+    "avgTrend": 1.8821428571428567
+  },
+  {
+    "pmName": "forPurchase80Perc5Day-yesincludingblanks",
+    "weightedTrend": 1.5987499999999997,
+    "avgTrend": 1.8821428571428567
+  },
+  {
+    "pmName": "forPurchase50Perc5Day-yesincludingblanks",
+    "weightedTrend": 1.5987499999999997,
+    "avgTrend": 1.8821428571428567
+  },
+  {
+    "pmName": "forPurchase75Perc5Day-yesincludingblanks",
+    "weightedTrend": 1.5987499999999997,
+    "avgTrend": 1.8821428571428567
+  },
+  {
+    "pmName": "forPurchase75Perc5Day-notincludingblanks",
+    "weightedTrend": 1.5987499999999997,
+    "avgTrend": 1.8821428571428567
+  },
+  {
+    "pmName": "forPurchase100Perc5Day-notincludingblanks",
+    "weightedTrend": 1.5987499999999997,
+    "avgTrend": 1.8821428571428567
+  },
+  {
+    "pmName": "forPurchase100Perc5Day-yesincludingblanks",
+    "weightedTrend": 1.5987499999999997,
+    "avgTrend": 1.8821428571428567
+  },
+  {
+    "pmName": "feb13singlehighvol",
+    "weightedTrend": 0.7916666666666667,
+    "avgTrend": 0.7916666666666667
+  },
+  {
+    "pmName": "feb13singlenewhighs",
+    "weightedTrend": -0.010000000000000231,
+    "avgTrend": -0.010000000000000231
+  },
+  {
+    "pmName": "allBestSt",
+    "weightedTrend": -0.27467592592592677,
+    "avgTrend": -0.27467592592592677
+  },
+  {
+    "pmName": "stockInvest",
+    "weightedTrend": -0.7141666666666666,
+    "avgTrend": -0.7141666666666666
+  },
+  {
+    "pmName": "feb13emacrossovers",
+    "weightedTrend": -0.8049999999999998,
+    "avgTrend": -0.8049999999999998
+  },
+  {
+    "pmName": "forPurchase",
+    "weightedTrend": -1.2211594202898552,
+    "avgTrend": -1.2694444444444446
+  },
+  {
+    "pmName": "myStSents",
+    "weightedTrend": -3.684375,
+    "avgTrend": -3.684375
+  },
+  {
+    "pmName": "feb13bestst",
+    "weightedTrend": -4.869999999999999,
+    "avgTrend": -4.869999999999999
+  },
+  {
+    "pmName": "feb13singlebestst",
+    "weightedTrend": -5.040000000000001,
+    "avgTrend": -5.040000000000001
+  }
+]

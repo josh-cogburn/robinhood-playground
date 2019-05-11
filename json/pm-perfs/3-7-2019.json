@@ -1,0 +1,172 @@
+[
+  {
+    "pmName": "TWgoodHighVol",
+    "weightedTrend": 15.83,
+    "avgTrend": 15.83
+  },
+  {
+    "pmName": "tenAndFifteenLaters",
+    "weightedTrend": 15.83,
+    "avgTrend": 15.83
+  },
+  {
+    "pmName": "TWgoodNotWatchouts",
+    "weightedTrend": 7.753333333333333,
+    "avgTrend": 7.753333333333333
+  },
+  {
+    "pmName": "TWgoodDinner",
+    "weightedTrend": 7.09,
+    "avgTrend": 7.09
+  },
+  {
+    "pmName": "myAddOns",
+    "weightedTrend": 5.841428571428572,
+    "avgTrend": 5.841428571428572
+  },
+  {
+    "pmName": "TWhighVol",
+    "weightedTrend": 5.703333333333333,
+    "avgTrend": 5.703333333333333
+  },
+  {
+    "pmName": "TWgoodWatchouts",
+    "weightedTrend": 5.1,
+    "avgTrend": 5.1
+  },
+  {
+    "pmName": "myTickerWatchers",
+    "weightedTrend": 4.5520000000000005,
+    "avgTrend": 4.5520000000000005
+  },
+  {
+    "pmName": "myLaters",
+    "weightedTrend": 4.176666666666667,
+    "avgTrend": 4.176666666666667
+  },
+  {
+    "pmName": "myTickerWatchersInitial",
+    "weightedTrend": 3.42375,
+    "avgTrend": 3.42375
+  },
+  {
+    "pmName": "TWlowVol",
+    "weightedTrend": 2.8125,
+    "avgTrend": 2.8125
+  },
+  {
+    "pmName": "TWallNotWatchout",
+    "weightedTrend": 2.776521739130435,
+    "avgTrend": 2.776521739130435
+  },
+  {
+    "pmName": "TWfailedHistorical",
+    "weightedTrend": 2.7272727272727275,
+    "avgTrend": 2.7272727272727275
+  },
+  {
+    "pmName": "allTickerWatchers",
+    "weightedTrend": 2.5989655172413793,
+    "avgTrend": 2.5989655172413793
+  },
+  {
+    "pmName": "TWallWatchout",
+    "weightedTrend": 1.9183333333333332,
+    "avgTrend": 1.9183333333333332
+  },
+  {
+    "pmName": "TWminorJumps",
+    "weightedTrend": 1.215,
+    "avgTrend": 1.215
+  },
+  {
+    "pmName": "allEmaLastTradeTrendingUp180SMA",
+    "weightedTrend": 0.17,
+    "avgTrend": 0.17
+  },
+  {
+    "pmName": "feb13bestst",
+    "weightedTrend": -0.25,
+    "avgTrend": -0.25
+  },
+  {
+    "pmName": "allBestSt",
+    "weightedTrend": -0.27143518518518495,
+    "avgTrend": -0.27143518518518495
+  },
+  {
+    "pmName": "feb13emacrossovers",
+    "weightedTrend": -0.3198039215686274,
+    "avgTrend": -0.3198039215686274
+  },
+  {
+    "pmName": "forPurchase50Perc5Day-yesincludingblanks",
+    "weightedTrend": -0.32770833333333327,
+    "avgTrend": -0.32770833333333327
+  },
+  {
+    "pmName": "forPurchase50Perc5Day-notincludingblanks",
+    "weightedTrend": -0.3745238095238094,
+    "avgTrend": -0.3745238095238094
+  },
+  {
+    "pmName": "forPurchase25Perc5Day-yesincludingblanks",
+    "weightedTrend": -0.3816269841269841,
+    "avgTrend": -0.3816269841269841
+  },
+  {
+    "pmName": "forPurchase25Perc5Day-notincludingblanks",
+    "weightedTrend": -0.3909349593495935,
+    "avgTrend": -0.3909349593495935
+  },
+  {
+    "pmName": "myStSents",
+    "weightedTrend": -0.47999999999999987,
+    "avgTrend": -0.47999999999999987
+  },
+  {
+    "pmName": "forPurchase",
+    "weightedTrend": -0.49453333333333327,
+    "avgTrend": -0.49453333333333327
+  },
+  {
+    "pmName": "feb13highvol",
+    "weightedTrend": -0.5057575757575757,
+    "avgTrend": -0.5057575757575757
+  },
+  {
+    "pmName": "onlyUp",
+    "weightedTrend": -0.5937617135207527,
+    "avgTrend": -0.5937617135207527
+  },
+  {
+    "pmName": "allEmaLastTrades",
+    "weightedTrend": -0.6877777777777777,
+    "avgTrend": -0.6877777777777777
+  },
+  {
+    "pmName": "myEmaCrossoverWatchers",
+    "weightedTrend": -0.934090909090909,
+    "avgTrend": -0.934090909090909
+  },
+  {
+    "pmName": "allEmaCrossoverWatchers",
+    "weightedTrend": -1.0246875000000002,
+    "avgTrend": -1.0246875000000002
+  },
+  {
+    "pmName": "forPurchase75Perc5Day-yesincludingblanks",
+    "weightedTrend": -1.271111111111111,
+    "avgTrend": -1.271111111111111
+  },
+  {
+    "pmName": "forPurchase75Perc5Day-notincludingblanks",
+    "weightedTrend": -1.9066666666666665,
+    "avgTrend": -1.9066666666666665
+  },
+  {
+    "pmName": "feb13singlebestst",
+    "weightedTrend": -4.02,
+    "avgTrend": -4.02
+  }
+]

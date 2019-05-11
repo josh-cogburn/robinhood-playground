@@ -1,0 +1,32 @@
+[
+  {
+    "type": "sell",
+    "ticker": "HYRE",
+    "bidPrice": 5.36522,
+    "quantity": 64
+  },
+  {
+    "type": "sell",
+    "ticker": "AUPH",
+    "bidPrice": 5.36522,
+    "quantity": 20
+  },
+  {
+    "type": "sell",
+    "ticker": "NBEV",
+    "bidPrice": 5.36522,
+    "quantity": 22
+  },
+  {
+    "type": "sell",
+    "ticker": "FTEK",
+    "bidPrice": 1.25,
+    "quantity": 100
+  },
+  {
+    "type": "sell",
+    "ticker": "TOPS",
+    "bidPrice": 0.83,
+    "quantity": 100
+  }
+]

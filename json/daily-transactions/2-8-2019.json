@@ -4,5 +4,29 @@
     "ticker": "FLDM",
     "bidPrice": 8.531,
     "quantity": 15
+  },
+  {
+    "type": "sell",
+    "ticker": "MTSI",
+    "bidPrice": 16.29,
+    "quantity": 8
+  },
+  {
+    "type": "sell",
+    "ticker": "DPW",
+    "bidPrice": 0.132,
+    "quantity": 350
+  },
+  {
+    "type": "sell",
+    "ticker": "HSGX",
+    "bidPrice": 0.132,
+    "quantity": 1500
+  },
+  {
+    "type": "sell",
+    "ticker": "DVCR",
+    "bidPrice": 3.5,
+    "quantity": 1
   }
 ]

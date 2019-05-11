@@ -1,0 +1,32 @@
+[
+  {
+    "type": "sell",
+    "ticker": "QUAD",
+    "bidPrice": 0.872,
+    "quantity": 10
+  },
+  {
+    "type": "sell",
+    "ticker": "WFT",
+    "bidPrice": 10.99,
+    "quantity": 100
+  },
+  {
+    "type": "sell",
+    "ticker": "LSCC",
+    "bidPrice": 10.99,
+    "quantity": 23
+  },
+  {
+    "type": "sell",
+    "ticker": "SID",
+    "bidPrice": 2.23,
+    "quantity": 40
+  },
+  {
+    "type": "sell",
+    "ticker": "FBIO",
+    "bidPrice": 2.23,
+    "quantity": 100
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "type": "sell",
+    "ticker": "CLLDY",
+    "bidPrice": 2.68,
+    "quantity": 6
+  },
+  {
+    "type": "sell",
+    "ticker": "CDXC",
+    "bidPrice": 2.68,
+    "quantity": 40
+  },
+  {
+    "type": "sell",
+    "ticker": "HSGX",
+    "bidPrice": 2.68,
+    "quantity": 1000
+  },
+  {
+    "type": "sell",
+    "ticker": "PVL",
+    "bidPrice": 2.68,
+    "quantity": 49
+  },
+  {
+    "type": "sell",
+    "ticker": "AEZS",
+    "bidPrice": 3.71,
+    "quantity": 80
+  }
+]
