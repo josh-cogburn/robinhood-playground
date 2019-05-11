@@ -42,7 +42,7 @@ process.on('unhandledRejection', (reason, p) => {
 (async () => {
 
 
-    setTimeout(restartProcess, 10000);
+    // setTimeout(restartProcess, 10000);
 
     
     // console.log(
