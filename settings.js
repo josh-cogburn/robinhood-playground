@@ -4,18 +4,11 @@ module.exports = {
     sellAllStocksOnNthDay: 10,
     purchaseAmt: 40,
     forPurchase: [
-        '[feb13bestst]',
-        '[feb13tw]',
-        '[feb13highvol]',
-        '[feb13emacrossovers]',
-        '[feb13singlebestst]',
+        '[TWmajorJumpsNotWatchouts]',
+        '[mySuperBoosters]',
+        '[TWgoodLunch]',
         '[feb13singletw]',
-        '[feb13singlenewhighs]',
-        '[feb13singlehighvol]',
-
-
-        '[stockInvest]',
-        '[stockInvest]',
+        '[TWgoodLunch]'
     ],
     // forPurchaseVariation: '75Perc5Day-yesincludingblanks',
     // fallbackSellStrategy: 'limit8',
