@@ -1,0 +1,207 @@
+[
+  {
+    "pmName": "TWgoodWatchouts",
+    "weightedTrend": 10.09,
+    "avgTrend": 10.09
+  },
+  {
+    "pmName": "TWgoodDinner",
+    "weightedTrend": 10.09,
+    "avgTrend": 10.09
+  },
+  {
+    "pmName": "myAddOns",
+    "weightedTrend": 10.09,
+    "avgTrend": 10.09
+  },
+  {
+    "pmName": "myLaters",
+    "weightedTrend": 10.09,
+    "avgTrend": 10.09
+  },
+  {
+    "pmName": "TWminorJumps",
+    "weightedTrend": 5.798333333333333,
+    "avgTrend": 5.798333333333333
+  },
+  {
+    "pmName": "TWmajorJumps",
+    "weightedTrend": 5.045,
+    "avgTrend": 5.045
+  },
+  {
+    "pmName": "myTickerWatchers",
+    "weightedTrend": 5.045,
+    "avgTrend": 5.045
+  },
+  {
+    "pmName": "TWallNotWatchout",
+    "weightedTrend": 4.281,
+    "avgTrend": 4.281
+  },
+  {
+    "pmName": "allTickerWatchers",
+    "weightedTrend": 3.2438461538461536,
+    "avgTrend": 3.2438461538461536
+  },
+  {
+    "pmName": "myTickerWatchersInitial",
+    "weightedTrend": 2.5225,
+    "avgTrend": 2.5225
+  },
+  {
+    "pmName": "TWlowVol",
+    "weightedTrend": 0.9771428571428571,
+    "avgTrend": 0.9771428571428571
+  },
+  {
+    "pmName": "feb13highvol",
+    "weightedTrend": 0.09511111111111112,
+    "avgTrend": 0.09511111111111112
+  },
+  {
+    "pmName": "forPurchase75Perc5Day-yesincludingblanks",
+    "weightedTrend": 0.007916666666666683,
+    "avgTrend": 0.007916666666666683
+  },
+  {
+    "pmName": "forPurchase100Perc5Day-yesincludingblanks",
+    "weightedTrend": 0.007916666666666683,
+    "avgTrend": 0.007916666666666683
+  },
+  {
+    "pmName": "forPurchase100Perc5Day-notincludingblanks",
+    "weightedTrend": 0.007916666666666683,
+    "avgTrend": 0.007916666666666683
+  },
+  {
+    "pmName": "forPurchase75Perc5Day-notincludingblanks",
+    "weightedTrend": 0.007916666666666683,
+    "avgTrend": 0.007916666666666683
+  },
+  {
+    "pmName": "forPurchase80Perc5Day-yesincludingblanks",
+    "weightedTrend": 0.007916666666666683,
+    "avgTrend": 0.007916666666666683
+  },
+  {
+    "pmName": "forPurchase80Perc5Day-notincludingblanks",
+    "weightedTrend": 0.007916666666666683,
+    "avgTrend": 0.007916666666666683
+  },
+  {
+    "pmName": "stockInvest",
+    "weightedTrend": -0.0011111111111111124,
+    "avgTrend": -0.0011111111111111124
+  },
+  {
+    "pmName": "newHighPicks",
+    "weightedTrend": -0.03233333333333328,
+    "avgTrend": -0.03233333333333328
+  },
+  {
+    "pmName": "feb13singlehighvol",
+    "weightedTrend": -0.04433333333333332,
+    "avgTrend": -0.04433333333333332
+  },
+  {
+    "pmName": "feb13emacrossovers",
+    "weightedTrend": -0.2057738095238095,
+    "avgTrend": -0.2057738095238095
+  },
+  {
+    "pmName": "TWallWatchout",
+    "weightedTrend": -0.2133333333333335,
+    "avgTrend": -0.2133333333333335
+  },
+  {
+    "pmName": "allBestSt",
+    "weightedTrend": -0.23194444444444443,
+    "avgTrend": -0.23194444444444443
+  },
+  {
+    "pmName": "forPurchase",
+    "weightedTrend": -0.34737237237237234,
+    "avgTrend": -0.3671587301587302
+  },
+  {
+    "pmName": "TWfailedHistorical",
+    "weightedTrend": -0.5420000000000003,
+    "avgTrend": -0.5420000000000003
+  },
+  {
+    "pmName": "myEmaCrossoverWatchers",
+    "weightedTrend": -0.59625,
+    "avgTrend": -0.59625
+  },
+  {
+    "pmName": "feelingGoodInTheNeighborhood",
+    "weightedTrend": -0.643235294117647,
+    "avgTrend": -0.643235294117647
+  },
+  {
+    "pmName": "myStSents",
+    "weightedTrend": -0.6465,
+    "avgTrend": -0.6465
+  },
+  {
+    "pmName": "allEmaCrossoverWatchers",
+    "weightedTrend": -0.6588461538461539,
+    "avgTrend": -0.6588461538461539
+  },
+  {
+    "pmName": "feb13bestst",
+    "weightedTrend": -0.6623076923076923,
+    "avgTrend": -0.6623076923076923
+  },
+  {
+    "pmName": "forPurchase25Perc5Day-notincludingblanks",
+    "weightedTrend": -0.7510919540229883,
+    "avgTrend": -0.7697619047619046
+  },
+  {
+    "pmName": "forPurchase25Perc5Day-yesincludingblanks",
+    "weightedTrend": -0.7510919540229883,
+    "avgTrend": -0.7697619047619046
+  },
+  {
+    "pmName": "forPurchase50Perc5Day-notincludingblanks",
+    "weightedTrend": -0.8390666666666665,
+    "avgTrend": -0.8645138888888888
+  },
+  {
+    "pmName": "forPurchase50Perc5Day-yesincludingblanks",
+    "weightedTrend": -0.8390666666666665,
+    "avgTrend": -0.8645138888888888
+  },
+  {
+    "pmName": "highVolumePicks",
+    "weightedTrend": -0.8977777777777777,
+    "avgTrend": -0.8977777777777777
+  },
+  {
+    "pmName": "feb13singlebestst",
+    "weightedTrend": -1.1775,
+    "avgTrend": -1.1775
+  },
+  {
+    "pmName": "allEmaLastTrades",
+    "weightedTrend": -1.3283333333333334,
+    "avgTrend": -1.3283333333333334
+  },
+  {
+    "pmName": "feb13singlenewhighs",
+    "weightedTrend": -1.7163333333333335,
+    "avgTrend": -1.7163333333333335
+  },
+  {
+    "pmName": "allEmaLastTradeTrendingUp180SMA",
+    "weightedTrend": -2.3790000000000004,
+    "avgTrend": -2.3790000000000004
+  },
+  {
+    "pmName": "TWhighVol",
+    "weightedTrend": -5.365,
+    "avgTrend": -5.365
+  }
+]

@@ -1,0 +1,429 @@
+{
+  "all": [
+    {
+      "strategy": "ema-crossover-watchers-afterhours-highVol-5000",
+      "percUp": 1,
+      "count": 1,
+      "maxs": [
+        0.25
+      ],
+      "daysDown": 0,
+      "playouts": {
+        "onlyMax": {
+          "percUp": 1,
+          "avgTrend": 0.25,
+          "hundredResult": 100.25
+        }
+      },
+      "score": 0.25
+    }
+  ],
+  "limit5hundredResult": [
+    {
+      "strategy": "ema-crossover-watchers-afterhours-highVol-5000",
+      "percUp": 1,
+      "count": 1,
+      "maxs": [
+        0.25
+      ],
+      "daysDown": 0,
+      "playouts": {
+        "limit5": {
+          "percUp": 1,
+          "avgTrend": 0.25,
+          "hundredResult": 100.25,
+          "percHitPlayout": 0,
+          "percHitsPositive": null
+        }
+      },
+      "score": 100.25
+    }
+  ],
+  "limit5creme": [
+    {
+      "strategy": "ema-crossover-watchers-afterhours-highVol-5000",
+      "percUp": 1,
+      "count": 1,
+      "maxs": [
+        0.25
+      ],
+      "daysDown": 0,
+      "playouts": {
+        "limit5": {
+          "percUp": 1,
+          "avgTrend": 0.25,
+          "hundredResult": 100.25,
+          "percHitPlayout": 0,
+          "percHitsPositive": null
+        }
+      },
+      "score": 0.75
+    }
+  ],
+  "highestLimitPlayoutsAvgTrend": [
+    {
+      "strategy": "ema-crossover-watchers-afterhours-highVol-5000",
+      "percUp": 1,
+      "count": 1,
+      "maxs": [
+        0.25
+      ],
+      "daysDown": 0,
+      "playouts": {
+        "limit1": {
+          "percUp": 0,
+          "avgTrend": -1.22,
+          "hundredResult": 98.78,
+          "percHitPlayout": 1,
+          "percHitsPositive": 0
+        }
+      },
+      "score": 0
+    }
+  ],
+  "highestLimitPlayoutsPercUp": [
+    {
+      "strategy": "ema-crossover-watchers-afterhours-highVol-5000",
+      "percUp": 1,
+      "count": 1,
+      "maxs": [
+        0.25
+      ],
+      "daysDown": 0,
+      "playouts": {
+        "limit3": {
+          "percUp": 1,
+          "avgTrend": 0.25,
+          "hundredResult": 100.25,
+          "percHitPlayout": 0,
+          "percHitsPositive": null
+        }
+      },
+      "score": 1
+    }
+  ],
+  "highestLimitPlayoutsHundredResult": [
+    {
+      "strategy": "ema-crossover-watchers-afterhours-highVol-5000",
+      "percUp": 1,
+      "count": 1,
+      "maxs": [
+        0.25
+      ],
+      "daysDown": 0,
+      "playouts": {
+        "limit3": {
+          "percUp": 1,
+          "avgTrend": 0.25,
+          "hundredResult": 100.25,
+          "percHitPlayout": 0,
+          "percHitsPositive": null
+        }
+      },
+      "score": 100.25
+    }
+  ],
+  "highestLimitPlayoutsPercUpCountAvg": [
+    {
+      "strategy": "ema-crossover-watchers-afterhours-highVol-5000",
+      "percUp": 1,
+      "count": 1,
+      "maxs": [
+        0.25
+      ],
+      "daysDown": 0,
+      "playouts": {
+        "limit3": {
+          "percUp": 1,
+          "avgTrend": 0.25,
+          "hundredResult": 100.25,
+          "percHitPlayout": 0,
+          "percHitsPositive": null
+        }
+      },
+      "score": 0.75
+    }
+  ],
+  "highestLimitPlayoutsJohnsSecretRecipe": [
+    {
+      "strategy": "ema-crossover-watchers-afterhours-highVol-5000",
+      "percUp": 1,
+      "count": 1,
+      "maxs": [
+        0.25
+      ],
+      "daysDown": 0,
+      "playouts": {
+        "limit1": {
+          "percUp": 0,
+          "avgTrend": -1.22,
+          "hundredResult": 98.78,
+          "percHitPlayout": 1,
+          "percHitsPositive": 0
+        }
+      },
+      "score": 0
+    }
+  ],
+  "highestLimitPlayoutsJohnsSecretRecipeWithCount": [
+    {
+      "strategy": "ema-crossover-watchers-afterhours-highVol-5000",
+      "percUp": 1,
+      "count": 1,
+      "maxs": [
+        0.25
+      ],
+      "daysDown": 0,
+      "playouts": {
+        "limit1": {
+          "percUp": 0,
+          "avgTrend": -1.22,
+          "hundredResult": 98.78,
+          "percHitPlayout": 1,
+          "percHitsPositive": 0
+        }
+      },
+      "score": 0
+    }
+  ],
+  "bestFirstGreenAvgTrend": [
+    {
+      "strategy": "ema-crossover-watchers-afterhours-highVol-5000",
+      "percUp": 1,
+      "count": 1,
+      "maxs": [
+        0.25
+      ],
+      "daysDown": 0,
+      "playouts": {
+        "firstGreen": {
+          "percUp": 1,
+          "avgTrend": 0.25,
+          "hundredResult": 100.25,
+          "percHitPlayout": 0,
+          "percHitsPositive": null
+        }
+      },
+      "score": 0.25
+    }
+  ],
+  "bestAlwaysLastAvgTrend": [
+    {
+      "strategy": "ema-crossover-watchers-afterhours-highVol-5000",
+      "percUp": 1,
+      "count": 1,
+      "maxs": [
+        0.25
+      ],
+      "daysDown": 0,
+      "playouts": {
+        "alwaysLast": {
+          "percUp": 1,
+          "avgTrend": 0.25,
+          "hundredResult": 100.25
+        }
+      },
+      "score": 0.25
+    }
+  ],
+  "bestChangeGt2SinceLastAvgTrend": [
+    {
+      "strategy": "ema-crossover-watchers-afterhours-highVol-5000",
+      "percUp": 1,
+      "count": 1,
+      "maxs": [
+        0.25
+      ],
+      "daysDown": 0,
+      "playouts": {
+        "changeGt2": {
+          "percUp": 1,
+          "avgTrend": 0.25,
+          "hundredResult": 100.25,
+          "percHitPlayout": 0,
+          "percHitsPositive": null
+        }
+      },
+      "score": 0.25
+    }
+  ],
+  "bestAvgTrendAnyPlayout": [
+    {
+      "strategy": "ema-crossover-watchers-afterhours-highVol-5000",
+      "percUp": 1,
+      "count": 1,
+      "maxs": [
+        0.25
+      ],
+      "daysDown": 0,
+      "playouts": {
+        "limit3": {
+          "percUp": 1,
+          "avgTrend": 0.25,
+          "hundredResult": 100.25,
+          "percHitPlayout": 0,
+          "percHitsPositive": null
+        }
+      },
+      "score": 0.25
+    }
+  ],
+  "bestAvgTrendPlayoutsOfInterest": [
+    {
+      "strategy": "ema-crossover-watchers-afterhours-highVol-5000",
+      "percUp": 1,
+      "count": 1,
+      "maxs": [
+        0.25
+      ],
+      "daysDown": 0,
+      "playouts": {
+        "limit4": {
+          "percUp": 1,
+          "avgTrend": 0.25,
+          "hundredResult": 100.25,
+          "percHitPlayout": 0,
+          "percHitsPositive": null
+        }
+      },
+      "score": 1
+    }
+  ],
+  "middleCountsJohnsRecipe": [],
+  "middleCountsJohnsRecipeNoHundredResult": [],
+  "lowestLimitPlayoutsHundredResult": [
+    {
+      "strategy": "ema-crossover-watchers-afterhours-highVol-5000",
+      "percUp": 1,
+      "count": 1,
+      "maxs": [
+        0.25
+      ],
+      "daysDown": 0,
+      "playouts": {
+        "limit2": {
+          "percUp": 0,
+          "avgTrend": -2.17,
+          "hundredResult": 97.83,
+          "percHitPlayout": 1,
+          "percHitsPositive": 0
+        }
+      },
+      "score": -97.83
+    }
+  ],
+  "lowestLimitPlayoutsHundredResultCount": [
+    {
+      "strategy": "ema-crossover-watchers-afterhours-highVol-5000",
+      "percUp": 1,
+      "count": 1,
+      "maxs": [
+        0.25
+      ],
+      "daysDown": 0,
+      "playouts": {
+        "limit2": {
+          "percUp": 0,
+          "avgTrend": -2.17,
+          "hundredResult": 97.83,
+          "percHitPlayout": 1,
+          "percHitsPositive": 0
+        }
+      },
+      "score": -97.83
+    }
+  ],
+  "lowestLimitPlayoutsHundredResultPercUp": [
+    {
+      "strategy": "ema-crossover-watchers-afterhours-highVol-5000",
+      "percUp": 1,
+      "count": 1,
+      "maxs": [
+        0.25
+      ],
+      "daysDown": 0,
+      "playouts": {
+        "limit1": {
+          "percUp": 0,
+          "avgTrend": -1.22,
+          "hundredResult": 98.78,
+          "percHitPlayout": 1,
+          "percHitsPositive": 0
+        }
+      },
+      "score": 0
+    }
+  ],
+  "lowCountHundredResult": [],
+  "lowCountHundredResultPercUp": [],
+  "anyCountPerfectos": [
+    {
+      "strategy": "ema-crossover-watchers-afterhours-highVol-5000",
+      "percUp": 1,
+      "count": 1,
+      "maxs": [
+        0.25
+      ],
+      "daysDown": 0,
+      "playouts": {
+        "limit3": {
+          "percUp": 1,
+          "avgTrend": 0.25,
+          "hundredResult": 100.25,
+          "percHitPlayout": 0,
+          "percHitsPositive": null
+        }
+      },
+      "score": 0.25
+    }
+  ],
+  "upperCountMagicScore": [
+    {
+      "strategy": "ema-crossover-watchers-afterhours-highVol-5000",
+      "percUp": 1,
+      "count": 1,
+      "maxs": [
+        0.25
+      ],
+      "daysDown": 0,
+      "playouts": {
+        "limit3": {
+          "percUp": 1,
+          "avgTrend": 0.25,
+          "hundredResult": 100.25,
+          "percHitPlayout": 0,
+          "percHitsPositive": null
+        }
+      },
+      "score": 1
+    }
+  ],
+  "middleCountMagicScore": [],
+  "topTwoThirdsMagicScore": [
+    {
+      "strategy": "ema-crossover-watchers-afterhours-highVol-5000",
+      "percUp": 1,
+      "count": 1,
+      "maxs": [
+        0.25
+      ],
+      "daysDown": 0,
+      "playouts": {
+        "limit3": {
+          "percUp": 1,
+          "avgTrend": 0.25,
+          "hundredResult": 100.25,
+          "percHitPlayout": 0,
+          "percHitsPositive": null
+        }
+      },
+      "score": 1
+    }
+  ],
+  "lowThirdMagicScore": [],
+  "lowThirdMinCount5MagicScore": [],
+  "customCount3to5MagicScore": [],
+  "customCount5to8MagicScore": [],
+  "customCount8to11MagicScore": [],
+  "customCount11to14MagicScore": []
+}

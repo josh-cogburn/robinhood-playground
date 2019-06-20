@@ -1,0 +1,14 @@
+[
+  {
+    "type": "sell",
+    "ticker": "ABEV",
+    "bidPrice": 4.58,
+    "quantity": 20
+  },
+  {
+    "type": "sell",
+    "ticker": "IDEX",
+    "bidPrice": 1.86,
+    "quantity": 100
+  }
+]

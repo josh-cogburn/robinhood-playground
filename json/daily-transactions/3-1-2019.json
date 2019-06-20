@@ -1,0 +1,38 @@
+[
+  {
+    "type": "sell",
+    "ticker": "GSB",
+    "bidPrice": 4.33,
+    "quantity": 40
+  },
+  {
+    "type": "sell",
+    "ticker": "AGE",
+    "bidPrice": 2.8,
+    "quantity": 30
+  },
+  {
+    "type": "sell",
+    "ticker": "CFMS",
+    "bidPrice": 2.8,
+    "quantity": 100
+  },
+  {
+    "type": "sell",
+    "ticker": "PRTO",
+    "bidPrice": 2.63,
+    "quantity": 35
+  },
+  {
+    "type": "sell",
+    "ticker": "SITO",
+    "bidPrice": 2.21,
+    "quantity": 27
+  },
+  {
+    "type": "sell",
+    "ticker": "FLNT",
+    "bidPrice": 5.27,
+    "quantity": 63
+  }
+]

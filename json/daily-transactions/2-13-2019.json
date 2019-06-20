@@ -1,0 +1,38 @@
+[
+  {
+    "type": "sell",
+    "ticker": "TRXC",
+    "bidPrice": 0.256,
+    "quantity": 5
+  },
+  {
+    "type": "sell",
+    "ticker": "SUMR",
+    "bidPrice": 0.256,
+    "quantity": 80
+  },
+  {
+    "type": "sell",
+    "ticker": "HMY",
+    "bidPrice": 0.256,
+    "quantity": 50
+  },
+  {
+    "type": "sell",
+    "ticker": "CGIX",
+    "bidPrice": 0.256,
+    "quantity": 107
+  },
+  {
+    "type": "sell",
+    "ticker": "NGD",
+    "bidPrice": 1.29,
+    "quantity": 100
+  },
+  {
+    "type": "sell",
+    "ticker": "CLD",
+    "bidPrice": 0.5879,
+    "quantity": 130
+  }
+]

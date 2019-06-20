@@ -1,0 +1,32 @@
+[
+  {
+    "type": "sell",
+    "ticker": "MTFB",
+    "bidPrice": 1.985215,
+    "quantity": 25
+  },
+  {
+    "type": "sell",
+    "ticker": "KGC",
+    "bidPrice": 7.53,
+    "quantity": 60
+  },
+  {
+    "type": "sell",
+    "ticker": "ENPH",
+    "bidPrice": 7.53,
+    "quantity": 13
+  },
+  {
+    "type": "sell",
+    "ticker": "DSEEY",
+    "bidPrice": 5.14,
+    "quantity": 20
+  },
+  {
+    "type": "sell",
+    "ticker": "AGEN",
+    "bidPrice": 3.23,
+    "quantity": 28
+  }
+]

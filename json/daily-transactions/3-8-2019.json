@@ -1,0 +1,20 @@
+[
+  {
+    "type": "sell",
+    "ticker": "LTBR",
+    "bidPrice": 8.62,
+    "quantity": 240
+  },
+  {
+    "type": "sell",
+    "ticker": "CIFS",
+    "bidPrice": 8.57,
+    "quantity": 50
+  },
+  {
+    "type": "sell",
+    "ticker": "XELB",
+    "bidPrice": 8.57,
+    "quantity": 100
+  }
+]

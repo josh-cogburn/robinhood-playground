@@ -1,0 +1,20 @@
+[
+  {
+    "type": "sell",
+    "ticker": "AEMD",
+    "bidPrice": 1.21,
+    "quantity": 100
+  },
+  {
+    "type": "sell",
+    "ticker": "CRMD",
+    "bidPrice": 2.32,
+    "quantity": 50
+  },
+  {
+    "type": "sell",
+    "ticker": "REFR",
+    "bidPrice": 2.83,
+    "quantity": 50
+  }
+]

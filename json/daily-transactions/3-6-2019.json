@@ -1,0 +1,26 @@
+[
+  {
+    "type": "sell",
+    "ticker": "OTLK",
+    "bidPrice": 2.7,
+    "quantity": 150
+  },
+  {
+    "type": "sell",
+    "ticker": "ATEC",
+    "bidPrice": 4.25,
+    "quantity": 150
+  },
+  {
+    "type": "sell",
+    "ticker": "JASN",
+    "bidPrice": 4.25,
+    "quantity": 44
+  },
+  {
+    "type": "sell",
+    "ticker": "AVGR",
+    "bidPrice": 4.25,
+    "quantity": 200
+  }
+]
