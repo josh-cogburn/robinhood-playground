@@ -74,6 +74,8 @@ module.exports = {
 
     ...require('./feb13'),
 
+    ...require('./rsi-watchers'),
+
     onlyUp: require('./only-up'),
 
     feelingGoodInTheNeighborhood,

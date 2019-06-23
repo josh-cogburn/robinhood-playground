@@ -32,35 +32,30 @@ const priceKeys = [1, 5, 10, 15, 20];
 // ];
 
 const perms = [
-    ['only-up'],
-    ['', 'sp500'],
-    ["", "onjn1to1", "onjn1to1AndTSOn1to1", "onj1to4AndTSOn5ton1", "onjn6ton1AndTSO1to3", "yesterdayDown", 'yesterdayDown10to3'],
-    [
-        365,
-        100,
-        90,
-        60,
-        30,
-        20,
-        15,
-        10,
-        7,
-        5,
-    ],
-    [
-        'percUp',
-        'lightTrendScore',
-        'heavyTrendScore',
-        'inverseLightTrendScore',
-        'inverseHeavyTrendScore',
-        'periodTrendVolatilityScore'
-    ],
+    ['rsi-watchers'],
+    [10, 15, 20, 1000].map(v => `under${v}`),
+    [10, 20, 30].map(v => `rsilt${v}`),
     [
         '',
-        'volatilityPick',
-        'periodTrendVolatilityPick'
+        'firstAlert'
     ],
-    [4, 95, 180, 250, 345],
+    [
+        'shouldWatchout',
+        'notWatchout'
+    ],
+    [
+        'premarket',
+        'brunch',
+        'lunch',
+        'dinner',
+        'afterhours'
+    ],
+    [
+        'highVol',
+        'lowVol',
+        ''
+    ],
+    ['5000']
 ];
 
 const flatten = arr => [].concat(...arr);
