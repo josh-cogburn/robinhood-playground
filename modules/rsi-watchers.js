@@ -82,7 +82,7 @@ module.exports = {
             }
             if (picks.length > 5) {
                 console.log('WOAH WOAH THERE RSI-WATCHERS NOT SO FAST');
-                return [];
+                return picks.filter(pick => pick.ticker === 'SPY');
             }
             return picks;
         };
