@@ -73,7 +73,7 @@ module.exports = {
             for (let key of Object.keys(relatedPrices)) {
                 const allPrices = relatedPrices[key].map(obj => obj.lastTradePrice);
                 const rsi = getRSI(allPrices);
-                if (rsi < 30) {
+                if (rsi < 20) {
                     picks.push({
                         ticker: key,
                         rsi
