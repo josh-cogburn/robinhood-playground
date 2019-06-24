@@ -87,7 +87,7 @@ module.exports = {
             name: 'rsi-watchers',
             Robinhood,
             handler,
-            timeout: 60000 * 3, // 5 min,
+            timeout: 60000 * 5, // 5 min,
             runAgainstPastData: false,
             onPick: async pick => {
 

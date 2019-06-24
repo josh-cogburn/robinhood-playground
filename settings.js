@@ -5,16 +5,21 @@ module.exports = {
     purchaseAmt: 40,
     forPurchase: [
         '[TWmajorJumpsNotWatchouts]',
-        '[mySuperBoosters]',
         '[TWgoodLunch]',
         '[feb13singletw]',
-        '[TWgoodLunch]',
+        '[TWgoodDinner]',
+        '[feb13tw]',
+        '[myAddOns]',
+        '[myLaters]',
+        '[tenAndFifteenLaters]',
+
+        '[murphysAnalytics]',
 
         'high-volume-top100RH-volumeToAvg-60',
         'analytic-onlyUp-onj1to4AndTSOn5ton1-7-lightTrendScore-volatilityPick-4',
         'analytic-onlyUp-onjn1to1-30-lightTrendScore-periodTrendVolatilityPick-4',
     ],
-    // forPurchaseVariation: '75Perc5Day-yesincludingblanks',
+    forPurchaseVariation: '75Perc5Day-yesincludingblanks',
     // fallbackSellStrategy: 'limit8',
     disableMultipliers: false,
     force: {

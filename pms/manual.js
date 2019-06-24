@@ -61,6 +61,13 @@ const stockInvest = [
     "stock-invest-undervalued-200"
   ];
 
+const murphysAnalytics = [
+    'analytic-onlyUp-yesterdayDown-365-heavyTrendScore-volatilityPick-180',
+    'analytic-onlyUp-onjn1to1-90-inverseHeavyTrendScore-periodTrendVolatilityPick-250',
+    'analytic-onlyUp-yesterdayDown-60-inverseHeavyTrendScore-180',
+    'analytic-reversingUp-15-lightTrendScore-95'
+];
+
 
 const feelingGoodInTheNeighborhood = [
     ...highVolumePicks,
@@ -83,4 +90,6 @@ module.exports = {
         newHighPicks,
 
     stockInvest,
+
+    murphysAnalytics
 };
