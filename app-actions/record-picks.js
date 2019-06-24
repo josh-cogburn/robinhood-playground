@@ -7,7 +7,7 @@ const stratManager = require('../socket-server/strat-manager');
 const Pick = require('../models/Pick');
 const stratOfInterest = require('../utils/strat-of-interest');
 
-const purchaseStocks = require('./purchase-stocks');
+// const purchaseStocks = require('./purchase-stocks');
 const sendEmail = require('../utils/send-email');
 const tweeter = require('./tweeter');
 const calcEmailsFromStrategy = require('../utils/calc-emails-from-strategy');
@@ -66,14 +66,14 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
     const forPurchaseMultiplier = getEnableCountForPM('forPurchase');
     if (forPurchaseMultiplier) {
         console.log('strategy enabled: ', stratMin, 'purchasing');
-        const stocksToBuy = withPrices.map(obj => obj.ticker);
-        await purchaseStocks(Robinhood, {
-            stocksToBuy,
-            strategy,
-            multiplier: !disableMultipliers ? forPurchaseMultiplier : 1,
-            min,
-            withPrices
-        });
+        // const stocksToBuy = withPrices.map(obj => obj.ticker);
+        // await purchaseStocks(Robinhood, {
+        //     stocksToBuy,
+        //     strategy,
+        //     multiplier: !disableMultipliers ? forPurchaseMultiplier : 1,
+        //     min,
+        //     withPrices
+        // });
         if (withPrices.length === 1) {
             const [{ ticker }] = withPrices;
             await stocktwits.postBullish(ticker, stratMin);
