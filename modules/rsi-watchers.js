@@ -80,7 +80,7 @@ module.exports = {
                     });
                 }
             }
-            if (pick.length > 5) {
+            if (picks.length > 5) {
                 console.log('WOAH WOAH THERE RSI-WATCHERS NOT SO FAST');
                 return [];
             }
