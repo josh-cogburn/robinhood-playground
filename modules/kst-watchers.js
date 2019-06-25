@@ -24,7 +24,7 @@ let tickerWatcher;
 let relatedP;
 
 
-const getKST = values => {
+const getKST = (values, ticker) => {
     const kstCalced = KST.calculate({
         values,
         ROCPer1: 17,
@@ -36,6 +36,10 @@ const getKST = values => {
         SMAROCPer3: 1,
         SMAROCPer4: 1,
         signalPeriod: 8
+    });
+    console.log({
+        values,
+        ticker
     });
     if (!kstCalced || !kstCalced.length < 2) {
         return {};
@@ -95,7 +99,7 @@ module.exports = {
             const picks = [];
             for (let key of Object.keys(relatedPrices)) {
                 const allPrices = relatedPrices[key].map(obj => obj.lastTradePrice);
-                const { isSignalCross, isZeroCross } = getKST(allPrices);
+                const { isSignalCross, isZeroCross } = getKST(allPrices, key);
                 if (isSignalCross || isZeroCross) {
                     picks.push({
                         ticker: key,
