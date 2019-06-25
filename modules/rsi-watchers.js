@@ -72,11 +72,13 @@ module.exports = {
             const picks = [];
             for (let key of Object.keys(relatedPrices)) {
                 const allPrices = relatedPrices[key].map(obj => obj.lastTradePrice);
+                const mostRecent = allPrices.pop();
                 const rsi = getRSI(allPrices);
                 if (rsi < 30) {
                     picks.push({
                         ticker: key,
-                        rsi
+                        rsi,
+                        price: mostRecent
                     });
                 }
             }
@@ -95,7 +97,7 @@ module.exports = {
             runAgainstPastData: false,
             onPick: async pick => {
 
-                const { ticker, rsi } = pick;
+                const { ticker, rsi, price } = pick;
 
                 const { shouldWatchout } = await getRisk(Robinhood, { ticker });
                 const watchoutKey = shouldWatchout ? 'shouldWatchout' : 'notWatchout';

@@ -102,16 +102,19 @@ module.exports = {
             const picks = [];
             for (let key of Object.keys(relatedPrices)) {
                 const allPrices = relatedPrices[key].map(obj => obj.lastTradePrice);
+                const mostRecent = allPrices.pop();
                 const { isSignalCross, isZeroCross } = getKST(allPrices, key);
                 if (isSignalCross || isZeroCross) {
                     picks.push({
                         ticker: key,
                         isSignalCross,
-                        isZeroCross
+                        isZeroCross,
+                        price: mostRecent
                     });
                 }
             }
             if (picks.length > 5) {
+                console.log(picks);
                 console.log('WOAH WOAH THERE KST-WATCHERS NOT SO FAST', picks.length);
                 return picks.filter(pick => pick.ticker === 'SPY');
             }
@@ -126,7 +129,7 @@ module.exports = {
             runAgainstPastData: false,
             onPick: async pick => {
 
-                const { ticker, isSignalCross, isZeroCross } = pick;
+                const { ticker, isSignalCross, isZeroCross, price } = pick;
 
                 const { shouldWatchout } = await getRisk(Robinhood, { ticker });
                 const watchoutKey = shouldWatchout ? 'shouldWatchout' : 'notWatchout';
