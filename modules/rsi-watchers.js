@@ -73,7 +73,7 @@ module.exports = {
             for (let key of Object.keys(relatedPrices)) {
                 const allPrices = relatedPrices[key].map(obj => obj.lastTradePrice);
                 const rsi = getRSI(allPrices);
-                if (rsi < 20) {
+                if (rsi < 30) {
                     picks.push({
                         ticker: key,
                         rsi
@@ -81,7 +81,7 @@ module.exports = {
                 }
             }
             if (picks.length > 5) {
-                console.log('WOAH WOAH THERE RSI-WATCHERS NOT SO FAST');
+                console.log('WOAH WOAH THERE RSI-WATCHERS NOT SO FAST', picks.length);
                 return picks.filter(pick => pick.ticker === 'SPY');
             }
             return picks;
@@ -148,11 +148,11 @@ module.exports = {
             onEnd
         });
 
-        const getTickers = async () => {
+        const getTickers = async (min, max) => {
             const tickPrices = await lookupMultiple(Robinhood, allStocks.filter(isTradeable).map(o => o.symbol));
-            const tenTo20 = Object.keys(tickPrices).filter(ticker => tickPrices[ticker] < 20 && tickPrices[ticker] > 10);
-            console.log({ tenTo20 });
-            return tenTo20;
+            const tickers = Object.keys(tickPrices).filter(ticker => tickPrices[ticker] < max && tickPrices[ticker] > min);
+            console.log({ rsiTickers: tickers });
+            return tickers;
         };
 
         regCronIncAfterSixThirty(Robinhood, {
@@ -164,7 +164,7 @@ module.exports = {
         const setTickers = async () => {
             // all under $15 and no big overnight jumps
             tickerWatcher.clearTickers();
-            tickerWatcher.addTickers(await getTickers());
+            tickerWatcher.addTickers(await getTickers(2, 4));
             tickerWatcher.addTickers(['SPY']);
             tickersAlerted = [];
             // const trend = await getTrendSinceOpen(Robinhood, allUnder15);

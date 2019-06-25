@@ -12,10 +12,8 @@ module.exports = {
         '[myAddOns]',
         '[myLaters]',
         '[tenAndFifteenLaters]',
-
-        '[murphysAnalytics]',
-
-        'high-volume-top100RH-volumeToAvg-60',
+        '[allRSIwatchers]',
+        // '[murphysAnalytics]',
         'analytic-onlyUp-onj1to4AndTSOn5ton1-7-lightTrendScore-volatilityPick-4',
         'analytic-onlyUp-onjn1to1-30-lightTrendScore-periodTrendVolatilityPick-4',
     ],
