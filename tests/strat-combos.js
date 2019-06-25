@@ -32,9 +32,9 @@ const priceKeys = [1, 5, 10, 15, 20];
 // ];
 
 const perms = [
-    ['rsi-watchers'],
+    ['kst-watchers'],
     [10, 15, 20, 1000].map(v => `under${v}`),
-    [10, 20, 30].map(v => `rsilt${v}`),
+    ['signalCross', 'zeroCross', 'signalCross-zeroCross'],
     [
         '',
         'firstAlert'

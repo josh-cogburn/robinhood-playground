@@ -82,6 +82,7 @@ module.exports = {
     ...require('./feb13'),
 
     ...require('./rsi-watchers'),
+    ...require('./kst-watchers'),
 
     onlyUp: require('./only-up'),
 
