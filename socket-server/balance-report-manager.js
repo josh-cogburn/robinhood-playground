@@ -1,4 +1,4 @@
-const START_MIN = -331;
+const START_MIN = -51;
 const STOP_MIN = 631;
 const TIMEOUT_SECONDS = 15;
 
