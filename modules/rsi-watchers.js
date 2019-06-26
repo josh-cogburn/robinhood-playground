@@ -170,15 +170,15 @@ module.exports = {
         };
 
         regCronIncAfterSixThirty(Robinhood, {
-            name: `clear ticker-watchers price cache`,
-            run: [-330],    // start of pre market
+            name: `clear rsi-watchers price cache`,
+            run: [-330, 0],    // start of pre market
             fn: () => tickerWatcher.clearPriceCache()
         });
 
         const setTickers = async () => {
             // all under $15 and no big overnight jumps
             tickerWatcher.clearTickers();
-            tickerWatcher.addTickers(await getTickers(0, 1));
+            // tickerWatcher.addTickers(await getTickers(0, 1));
             tickerWatcher.addTickers(OPTIONSTICKERS);
             tickersAlerted = [];
             // const trend = await getTrendSinceOpen(Robinhood, allUnder15);

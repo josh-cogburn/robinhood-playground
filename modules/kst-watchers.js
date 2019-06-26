@@ -53,17 +53,10 @@ const getKST = (values, ticker) => {
         SMAROCPer4: 1,
         signalPeriod: 8
     });
-    if (!kstCalced || !kstCalced.length < 2) {
+    if (!kstCalced || kstCalced.length < 2) {
         return {};
     }
     const [secondToLast, lastVal] = kstCalced.slice(-2);
-
-    console.log({
-        values,
-        ticker,
-        secondToLast,
-        lastVal
-    });
     const isSignalCross = (
         secondToLast.kst < secondToLast.signal &&
         lastVal.kst > lastVal.signal
@@ -72,6 +65,14 @@ const getKST = (values, ticker) => {
         secondToLast.kst < 0 &&
         lastVal.kst > 0
     );
+    if (isSignalCross || isZeroCross) {
+        console.log({
+            values,
+            ticker,
+            secondToLast,
+            lastVal
+        });
+    }
     return {
         isSignalCross,
         isZeroCross,
