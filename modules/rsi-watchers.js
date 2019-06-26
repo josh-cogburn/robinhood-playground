@@ -32,7 +32,21 @@ const getRSI = values => {
     return rsiCalced[rsiCalced.length - 1];
 };
 
+const OPTIONSTICKERS = [
+    'SPY',
+    'GDX',
+    'QQQ',
+    'GLD',
+    'VXX',
 
+
+    'AAPL',
+    'NFLX',
+    'AMZN',
+    'GOLD',
+    'ABBV',
+    'TXBA'
+];
 
 const onEnd = allPicks => {
     console.log(allPicks);
@@ -84,7 +98,7 @@ module.exports = {
             }
             if (picks.length > 5) {
                 console.log('WOAH WOAH THERE RSI-WATCHERS NOT SO FAST', picks.length);
-                return picks.filter(pick => pick.ticker === 'SPY');
+                return picks.filter(pick => OPTIONSTICKERS.includes(pick.ticker));
             }
             return picks;
         };
@@ -110,13 +124,11 @@ module.exports = {
                     if (min > 60) return 'lunch';
                     if (min > 3) return 'brunch';
                     if (min > 0) return 'initial';
-                    return 'premarket'
+                    return 'premarket';
                 })();
                 const rsiKey = (() => {
-                    if (rsi < 10) return 'rsilt10';
-                    if (rsi < 20) return 'rsilt20';
-                    if (rsi < 30) return 'rsilt30';
-                    return 'fluke'
+                    const num = [10, 15, 20, 25, 30].find(val => rsi < val);
+                    return num ? `rsilt${num}` : 'fluke';
                 })();
                 let fundamentals;
                 try {
@@ -129,7 +141,7 @@ module.exports = {
                     return '';
                 })();
 
-                const firstAlertkey = tickersAlerted.includes(ticker) ? 'firstAlert' : '';
+                const firstAlertkey = !tickersAlerted.includes(ticker) ? 'firstAlert' : '';
 
                 // const strategyName = `ticker-watchers-under${priceKey}${watchoutKey}${jumpKey}${minKey}${historicalKey}`;
 
@@ -166,8 +178,8 @@ module.exports = {
         const setTickers = async () => {
             // all under $15 and no big overnight jumps
             tickerWatcher.clearTickers();
-            tickerWatcher.addTickers(await getTickers(2, 4));
-            tickerWatcher.addTickers(['SPY']);
+            tickerWatcher.addTickers(await getTickers(0, 1));
+            tickerWatcher.addTickers(OPTIONSTICKERS);
             tickersAlerted = [];
             // const trend = await getTrendSinceOpen(Robinhood, allUnder15);
             // const withOvernightJumps = await addOvernightJumpAndTSO(Robinhood, trend);

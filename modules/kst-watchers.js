@@ -23,6 +23,22 @@ const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
 let tickerWatcher;
 let relatedP;
 
+const OPTIONSTICKERS = [
+    'SPY',
+    'GDX',
+    'QQQ',
+    'GLD',
+    'VXX',
+
+
+    'AAPL',
+    'NFLX',
+    'AMZN',
+    'GOLD',
+    'ABBV',
+    'TXBA'
+];
+
 
 const getKST = (values, ticker) => {
     const kstCalced = KST.calculate({
@@ -58,7 +74,7 @@ const getKST = (values, ticker) => {
     );
     return {
         isSignalCross,
-        isZeroCross
+        isZeroCross,
     };
 };
 
@@ -116,7 +132,7 @@ module.exports = {
             if (picks.length > 5) {
                 console.log(picks);
                 console.log('WOAH WOAH THERE KST-WATCHERS NOT SO FAST', picks.length);
-                return picks.filter(pick => pick.ticker === 'SPY');
+                return picks.filter(pick => OPTIONSTICKERS.includes(pick.ticker));
             }
             return picks;
         };
@@ -125,7 +141,7 @@ module.exports = {
             name: 'kst-watchers',
             Robinhood,
             handler,
-            timeout: 60000 * 5, // 5 min,
+            timeout: 60000 * 9, // minutes
             runAgainstPastData: false,
             onPick: async pick => {
 
@@ -159,7 +175,7 @@ module.exports = {
                     return '';
                 })();
 
-                const firstAlertkey = tickersAlerted.includes(ticker) ? 'firstAlert' : '';
+                const firstAlertkey = !tickersAlerted.includes(ticker) ? 'firstAlert' : '';
 
                 // const strategyName = `ticker-watchers-under${priceKey}${watchoutKey}${jumpKey}${minKey}${historicalKey}`;
 
@@ -196,8 +212,8 @@ module.exports = {
         const setTickers = async () => {
             // all under $15 and no big overnight jumps
             tickerWatcher.clearTickers();
-            tickerWatcher.addTickers(await getTickers(4, 6));
-            tickerWatcher.addTickers(['SPY']);
+            tickerWatcher.addTickers(await getTickers(0, 1));
+            tickerWatcher.addTickers(OPTIONSTICKERS);
             tickersAlerted = [];
         };
 

@@ -61,7 +61,7 @@ const smaTrendingUp = (obj, lastVal) => {
 
 module.exports = {
     name: 'ema-crossover-watchers',
-    init: async (Robinhood) => {
+    disableinit: async (Robinhood) => {
 
         tickerWatcher = new HistoricalTickerWatcher({
             name: 'ema-crossover-watchers',
