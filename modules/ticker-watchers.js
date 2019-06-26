@@ -182,8 +182,8 @@ module.exports = {
 
         const getUnder15 = async () => {
             const tickPrices = await lookupMultiple(Robinhood, allStocks.filter(isTradeable).map(o => o.symbol));
-            const allUnder15 = Object.keys(tickPrices).filter(ticker => tickPrices[ticker] < 20 && tickPrices[ticker] > 0.1);
-            console.log({ allUnder15 });
+            const allUnder15 = Object.keys(tickPrices).filter(ticker => tickPrices[ticker] < 5 && tickPrices[ticker] > 0);
+            // console.log({ allUnder15 });
             return allUnder15;
         };
 
@@ -196,10 +196,19 @@ module.exports = {
         const setTickers = async () => {
             // all under $15 and no big overnight jumps
             tickerWatcher.clearTickers();
-            tickerWatcher.addTickers(await getUnder15());
-            tickerWatcher.addTickers(await getRhStocks('upcoming-earnings'));
-            tickerWatcher.addTickers(await getRhStocks('100-most-popular'));
+            const under15 = await getUnder15();
+            tickerWatcher.addTickers(under15);
+            const upcoming = await getRhStocks('upcoming-earnings');
+            tickerWatcher.addTickers(upcoming);
+            const top100 = await getRhStocks('100-most-popular');
+            tickerWatcher.addTickers(top100);
             tickerWatcher.addTickers(OPTIONSTICKERS);
+            console.log({
+                under15: under15.length,
+                upcoming: upcoming.length,
+                top100: top100.length,
+                OPTIONSTICKERS: OPTIONSTICKERS.length
+            });
         };
 
         regCronIncAfterSixThirty(Robinhood, {
