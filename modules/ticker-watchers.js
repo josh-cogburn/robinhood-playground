@@ -182,7 +182,7 @@ module.exports = {
 
         const getUnder15 = async () => {
             const tickPrices = await lookupMultiple(Robinhood, allStocks.filter(isTradeable).map(o => o.symbol));
-            const allUnder15 = Object.keys(tickPrices).filter(ticker => tickPrices[ticker] < 5 && tickPrices[ticker] > 0);
+            const allUnder15 = Object.keys(tickPrices).filter(ticker => tickPrices[ticker] < 20 && tickPrices[ticker] > 0);
             // console.log({ allUnder15 });
             return allUnder15;
         };
