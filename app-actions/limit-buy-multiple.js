@@ -58,6 +58,6 @@ module.exports = async (Robinhood, {stocksToBuy, totalAmtToSpend, strategy, maxN
     console.log('attempted amount', totalAmtToSpend);
     // console.log('amount leftover', amtToSpendLeft);
     if (failedStocks.length) {
-        await sendEmail(`robinhood-playground: failed to purchase`, JSON.stringify(failedStocks));
+        await sendEmail(`failed to purchase`, JSON.stringify(failedStocks));
     }
 };

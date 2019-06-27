@@ -25,9 +25,9 @@ module.exports = async (Robinhood, minute, minPercDown = 10) => {
         console.log('doubleDownData', doubleDownData);
         try {
             await simpleBuy(Robinhood, doubleDownData);
-            await sendEmail(`robinhood-playground: doubled down on ${position.symbol}`, JSON.stringify(position, null, 2));
+            await sendEmail(`doubled down on ${position.symbol}`, JSON.stringify(position, null, 2));
         } catch (e) {
-            await sendEmail(`robinhood-playground: failed to double down on ${position.symbol}`, JSON.stringify(position, null, 2));
+            await sendEmail(`failed to double down on ${position.symbol}`, JSON.stringify(position, null, 2));
         }
     });
 };

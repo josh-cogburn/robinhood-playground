@@ -56,10 +56,10 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
                 { ticker, quantity }
             );
             console.log(`sold ${quantity} shares of ${ticker} because ${whySelling}`, response);
-            await sendEmail(`robinhood-playground: sold ${ticker}`, posData.join('\n'));
+            await sendEmail(`sold ${ticker}`, posData.join('\n'));
         } catch (e) {
             console.log(`error selling ${pos.symbol}`, e);
-            await sendEmail(`robinhood-playground: ERROR selling ${ticker}`, [
+            await sendEmail(`ERROR selling ${ticker}`, [
                 ...posData,
                 `error: ${e}`
             ].join('\n'));

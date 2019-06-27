@@ -48,7 +48,7 @@ class DayReports extends Component {
 
         const showingSince = firstOfDay ? firstOfDay : balanceReports[0];
         return (
-            <div style={{ padding: '10px 40px' }}>
+            <div style={{ padding: '30px 40px' }}>
                 {
                     [
                         'onlyToday',
@@ -66,6 +66,7 @@ class DayReports extends Component {
                         </div>
                     ))
                 }
+                <br/>
                 <small>
                     trend since {new Date(showingSince.time).toLocaleString()}:&nbsp;
                     <b style={{ fontSize: '160%' }}><TrendPerc value={curTrend} /></b>

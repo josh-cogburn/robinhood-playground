@@ -190,7 +190,7 @@ module.exports = {
                     volumeKey
                 ].filter(Boolean).join('-');
 
-                await sendEmail(`robinhood-playground: NEW KST ALERT ${strategyName}: ${ticker}`, JSON.stringify(pick, null, 2));
+                await sendEmail(`NEW KST ALERT ${strategyName}: ${ticker}`, JSON.stringify(pick, null, 2));
                 await recordPicks(Robinhood, strategyName, 5000, [ticker]);
                 tickersAlerted.push(ticker);
             },

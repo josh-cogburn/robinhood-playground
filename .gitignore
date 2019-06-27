@@ -1,8 +1,12 @@
 node_modules
 config.js
-!.gitkeep
 .DS_Store
 json/stock-data/*
 outputfile.txt
 portfolio-cache.json
 cheapest-picks-email-list.js
+screenshots/*
+
+
+
+!.gitkeep

@@ -6,12 +6,13 @@ const send = gmailSend({
   pass: credentials.password
 });
 
-module.exports = (subject, body, to = credentials.username) => new Promise((resolve, reject) => {
+module.exports = (subject, text, to = credentials.username, files = []) => new Promise((resolve, reject) => {
     console.log(`sending email...to ${to}...`);
-    console.log('subject', subject, 'body', body);
+    console.log('subject', subject, 'text', text);
     send({
-        subject,
-        text: body,
-        to
+        subject: `robinhood-playground: ${subject}`,
+        text,
+        to,
+        files
     }, (err, res) => err ? reject(err) : resolve(res));
 });

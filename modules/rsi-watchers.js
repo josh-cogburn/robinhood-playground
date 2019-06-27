@@ -25,11 +25,11 @@ let relatedP;
 
 
 const getRSI = values => {
-    const rsiCalced = RSI.calculate({
+    return RSI.calculate({
         values,
         period: 14
-    });
-    return rsiCalced[rsiCalced.length - 1];
+    }) || [];
+    // return rsiCalced[rsiCalced.length - 1];
 };
 
 const OPTIONSTICKERS = [
@@ -155,7 +155,7 @@ module.exports = {
                     volumeKey
                 ].filter(Boolean).join('-');
 
-                await sendEmail(`robinhood-playground: NEW RSI ALERT ${strategyName}: ${ticker}`, JSON.stringify(pick, null, 2));
+                await sendEmail(`NEW RSI ALERT ${strategyName}: ${ticker}`, JSON.stringify(pick, null, 2));
                 await recordPicks(Robinhood, strategyName, 5000, [ticker]);
                 tickersAlerted.push(ticker);
             },

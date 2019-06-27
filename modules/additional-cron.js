@@ -16,6 +16,7 @@ const alpacaSellAllStocks = require('../alpaca/sell-all-stocks');
 const alpacaSmartSells = require('../alpaca/smart-sells');
 const saveDayReport = require('../app-actions/save-day-report');
 const restartProcess = require('../app-actions/restart-process');
+const sendScreenshot = require('../app-actions/send-screenshot');
 
 // utils
 // const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
@@ -140,6 +141,12 @@ const additionalCron = [
         name: 'send day report',
         run: [400],
         fn: saveDayReport
+    },
+
+    {
+        name: 'send day screenshot',
+        run: [430],
+        fn: sendScreenshot
     },
 
     {
