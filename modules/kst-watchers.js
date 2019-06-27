@@ -40,6 +40,43 @@ const OPTIONSTICKERS = [
 ];
 
 
+
+const getGroups = async () => {
+
+    const getTickersBetween = async (min, max) => {
+        const tickPrices = await lookupMultiple(Robinhood, allStocks.filter(isTradeable).map(o => o.symbol));
+        const tickers = Object.keys(tickPrices).filter(ticker => tickPrices[ticker] < max && tickPrices[ticker] > min);
+        console.log({ kstTickers: tickers });
+        return tickers;
+    };
+
+    const getRhStocks = async rhTag => {
+        console.log(`getting robinhood ${rhTag} stocks`);
+        const {
+            instruments: top100RHinstruments
+        } = await Robinhood.url(`https://api.robinhood.com/midlands/tags/tag/${rhTag}/`);
+        let top100RHtrend = await mapLimit(top100RHinstruments, 3, async instrumentUrl => {
+            const instrumentObj = await Robinhood.url(instrumentUrl);
+            return {
+                ...instrumentObj,
+                instrumentUrl,
+                ticker: instrumentObj.symbol
+            };
+        });
+        return top100RHtrend.map(t => t.ticker);
+    };
+
+    return {
+        zeroAndOne: await getTickersBetween(0, 1),
+        upcoming: await getRhStocks('upcoming-earnings'),
+        top100: await getRhStocks('100-most-popular'),
+        options: OPTIONSTICKERS
+    };
+
+
+};
+
+
 const getKST = (values, ticker) => {
     const kstCalced = KST.calculate({
         values,
@@ -133,6 +170,11 @@ module.exports = {
     name: 'kst-watchers',
     init: async (Robinhood) => {
 
+        let groups;
+        const refreshGroups = async () => {
+            groups = await getGroups();
+        };
+
         const handler = async relatedPrices => {
             // console.log({ relatedPrices });
             relatedP = relatedPrices;
@@ -172,7 +214,10 @@ module.exports = {
 
                 const { shouldWatchout } = await getRisk(Robinhood, { ticker });
                 const watchoutKey = shouldWatchout ? 'shouldWatchout' : 'notWatchout';
-                const priceKeys = [10, 15, 20, 1000];
+                const groupKey = Object.keys(groups).find(group =>
+                    groups[group].includes(ticker)
+                );
+                const priceKeys = [1, 5, 10, 15, 20, 1000];
                 const priceKey = priceKeys.find(key => price < key);
                 const min = getMinutesFrom630();
                 const minKey = (() => {
@@ -205,6 +250,7 @@ module.exports = {
 
                 const strategyName = [
                     'kst-watchers',
+                    groupKey,
                     `under${priceKey}`,
                     kstKeys,
                     isLowKey,
@@ -221,12 +267,7 @@ module.exports = {
             onEnd
         });
 
-        const getTickers = async (min, max) => {
-            const tickPrices = await lookupMultiple(Robinhood, allStocks.filter(isTradeable).map(o => o.symbol));
-            const tickers = Object.keys(tickPrices).filter(ticker => tickPrices[ticker] < max && tickPrices[ticker] > min);
-            console.log({ kstTickers: tickers });
-            return tickers;
-        };
+        
 
         regCronIncAfterSixThirty(Robinhood, {
             name: `clear ticker-watchers price cache`,
@@ -237,9 +278,14 @@ module.exports = {
         const setTickers = async () => {
             // all under $15 and no big overnight jumps
             tickerWatcher.clearTickers();
-            tickerWatcher.addTickers(await getTickers(0, 1));
-            tickerWatcher.addTickers(OPTIONSTICKERS);
+            await refreshGroups();
+            Object.keys(groups).forEach(group => {
+                const tickers = groups[group];
+                tickerWatcher.addTickers(tickers);
+            });
             tickersAlerted = [];
+
+            console.log('kst', groups);
         };
 
         regCronIncAfterSixThirty(Robinhood, {

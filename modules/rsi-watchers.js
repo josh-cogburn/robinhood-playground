@@ -47,6 +47,41 @@ const OPTIONSTICKERS = [
     'TXBA'
 ];
 
+const getGroups = async () => {
+
+    const getTickersBetween = async (min, max) => {
+        const tickPrices = await lookupMultiple(Robinhood, allStocks.filter(isTradeable).map(o => o.symbol));
+        const tickers = Object.keys(tickPrices).filter(ticker => tickPrices[ticker] < max && tickPrices[ticker] > min);
+        console.log({ kstTickers: tickers });
+        return tickers;
+    };
+
+    const getRhStocks = async rhTag => {
+        console.log(`getting robinhood ${rhTag} stocks`);
+        const {
+            instruments: top100RHinstruments
+        } = await Robinhood.url(`https://api.robinhood.com/midlands/tags/tag/${rhTag}/`);
+        let top100RHtrend = await mapLimit(top100RHinstruments, 3, async instrumentUrl => {
+            const instrumentObj = await Robinhood.url(instrumentUrl);
+            return {
+                ...instrumentObj,
+                instrumentUrl,
+                ticker: instrumentObj.symbol
+            };
+        });
+        return top100RHtrend.map(t => t.ticker);
+    };
+
+    return {
+        zeroAndOne: await getTickersBetween(0, 1),
+        upcoming: await getRhStocks('upcoming-earnings'),
+        top100: await getRhStocks('100-most-popular'),
+        options: OPTIONSTICKERS
+    };
+
+
+};
+
 const onEnd = allPicks => {
     console.log(allPicks);
     allPicks = allPicks
@@ -79,6 +114,12 @@ module.exports = {
     name: 'rsi-watchers',
     init: async (Robinhood) => {
 
+        let groups;
+        const refreshGroups = async () => {
+            groups = await getGroups();
+        };
+
+
         const handler = async relatedPrices => {
             // console.log({ relatedPrices });
             relatedP = relatedPrices;
@@ -104,6 +145,8 @@ module.exports = {
             }
             return picks;
         };
+
+        
         
         tickerWatcher = new HistoricalTickerWatcher({
             name: 'rsi-watchers',
@@ -178,20 +221,15 @@ module.exports = {
         });
 
         const setTickers = async () => {
-            // all under $15 and no big overnight jumps
             tickerWatcher.clearTickers();
-            // tickerWatcher.addTickers(await getTickers(0, 1));
-            tickerWatcher.addTickers(OPTIONSTICKERS);
+            await refreshGroups();
+            Object.keys(groups).forEach(group => {
+                const tickers = groups[group];
+                tickerWatcher.addTickers(tickers);
+            });
             tickersAlerted = [];
-            // const trend = await getTrendSinceOpen(Robinhood, allUnder15);
-            // const withOvernightJumps = await addOvernightJumpAndTSO(Robinhood, trend);
-            // // str({ withOvernightJumps })
-            // const bigOvernightJumps = withOvernightJumps
-            //     .filter(o => o.overnightJump > 7)
-            //     .map(t => t.ticker);
-                
-            // tickerWatcher.removeTickers(bigOvernightJumps);
-            // console.log(JSON.stringify({ bigOvernightJumps }, null, 2));
+
+            console.log('rsi', groups);
         };
 
         regCronIncAfterSixThirty(Robinhood, {

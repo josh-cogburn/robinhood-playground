@@ -33,7 +33,8 @@ const priceKeys = [1, 5, 10, 15, 20];
 
 const perms = [
     ['kst-watchers'],
-    [10, 15, 20, 1000].map(v => `under${v}`),
+    ['zeroAndOne', 'upcoming', 'top100', 'options'],
+    [1, 5, 10, 15, 20, 1000].map(v => `under${v}`),
     ['signalCross', 'zeroCross', 'signalCross-zeroCross'],
     [
         '',
