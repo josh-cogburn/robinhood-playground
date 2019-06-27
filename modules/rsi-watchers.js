@@ -25,11 +25,10 @@ let relatedP;
 
 
 const getRSI = values => {
-    const rsiCalced = RSI.calculate({
+    return RSI.calculate({
         values,
         period: 14
     }) || [];
-    return rsiCalced[rsiCalced.length - 1];
 };
 
 const OPTIONSTICKERS = [
@@ -85,12 +84,14 @@ module.exports = {
             relatedP = relatedPrices;
             const picks = [];
             for (let key of Object.keys(relatedPrices)) {
-                const allPrices = relatedPrices[key].map(obj => obj.lastTradePrice);
+                const allPrices = relatedPrices[key].map(obj => obj.currentPrice);
                 const mostRecent = allPrices.pop();
-                const rsi = getRSI(allPrices);
+                const rsiSeries = getRSI(allPrices);
+                const rsi = rsiSeries[rsiSeries.length - 1];
                 if (rsi < 30) {
                     picks.push({
                         ticker: key,
+                        rsiSeries,
                         rsi,
                         price: mostRecent
                     });
@@ -107,7 +108,7 @@ module.exports = {
             name: 'rsi-watchers',
             Robinhood,
             handler,
-            timeout: 60000 * 5, // 5 min,
+            timeout: 60000 * 8, // 5 min,
             runAgainstPastData: false,
             onPick: async pick => {
 
@@ -171,7 +172,7 @@ module.exports = {
 
         regCronIncAfterSixThirty(Robinhood, {
             name: `clear rsi-watchers price cache`,
-            run: [-330, 0],    // start of pre market
+            run: [-330],    // start of pre market
             fn: () => tickerWatcher.clearPriceCache()
         });
 

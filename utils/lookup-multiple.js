@@ -3,6 +3,7 @@ const chunkApi = require('./chunk-api');
 const lookupMultiple = async (Robinhood, tickersToLookup, detailedQuote) => {
     // takes in array of tickers
     // returns object of tickers and current prices
+    tickersToLookup = tickersToLookup.split(',')
     let quotes = await chunkApi(
         tickersToLookup,
         async (tickerStr) => {
@@ -22,7 +23,8 @@ const lookupMultiple = async (Robinhood, tickersToLookup, detailedQuote) => {
         tickerLookups[symbol] = detailedQuote ? {
             lastTradePrice: Number(last_trade_price),
             afterHoursPrice: Number(last_extended_hours_trade_price),
-            askPrice: Number(ask_price)
+            askPrice: Number(ask_price),
+            currentPrice: Number(last_extended_hours_trade_price || last_trade_price)
         } : Number(last_trade_price);
     });
     return tickerLookups;

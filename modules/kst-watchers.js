@@ -65,17 +65,37 @@ const getKST = (values, ticker) => {
         secondToLast.kst < 0 &&
         lastVal.kst > 0
     );
+    const isLow = (() => {
+        const isBelowZero = val => val < 0;
+        const isBelowLowerQuarter = (() => {
+            const max = Math.max(...kstCalced);
+            const min = Math.min(...kstCalced);
+            const diff = max - min;
+            const lowQuarter = min + (diff * .25);
+            return val => val < lowQuarter;
+        })();
+        const bothTestsPass = val => [isBelowZero, isBelowLowerQuarter].every(
+            test => test(val)
+        );
+        return [lastVal, secondToLast]
+            .map(val => val.kst)
+            .every(bothTestsPass)
+    })();
     if (isSignalCross || isZeroCross) {
         console.log({
             values,
             ticker,
             secondToLast,
-            lastVal
+            lastVal,
+            isSignalCross,
+            isZeroCross,
+            isLow
         });
     }
     return {
         isSignalCross,
         isZeroCross,
+        isLow
     };
 };
 
@@ -118,15 +138,17 @@ module.exports = {
             relatedP = relatedPrices;
             const picks = [];
             for (let key of Object.keys(relatedPrices)) {
-                const allPrices = relatedPrices[key].map(obj => obj.lastTradePrice);
+                const allPrices = relatedPrices[key].map(obj => obj.currentPrice);
                 const mostRecent = allPrices.pop();
-                const { isSignalCross, isZeroCross } = getKST(allPrices, key);
+                const { isSignalCross, isZeroCross, isLow } = getKST(allPrices, key);
                 if (isSignalCross || isZeroCross) {
                     picks.push({
                         ticker: key,
                         isSignalCross,
                         isZeroCross,
-                        price: mostRecent
+                        isLow,
+                        price: mostRecent,
+                        allPrices
                     });
                 }
             }
@@ -146,7 +168,7 @@ module.exports = {
             runAgainstPastData: false,
             onPick: async pick => {
 
-                const { ticker, isSignalCross, isZeroCross, price } = pick;
+                const { ticker, isSignalCross, isZeroCross, isLow, price } = pick;
 
                 const { shouldWatchout } = await getRisk(Robinhood, { ticker });
                 const watchoutKey = shouldWatchout ? 'shouldWatchout' : 'notWatchout';
@@ -165,6 +187,7 @@ module.exports = {
                     isSignalCross ? 'signalCross' : '',
                     isZeroCross ? 'zeroCross' : ''
                 ].filter(Boolean).join('-');
+                const isLowKey = isLow ? 'isLow': '';
                 let fundamentals;
                 try {
                     fundamentals = (await addFundamentals(Robinhood, [{ ticker }]))[0].fundamentals;
@@ -184,6 +207,7 @@ module.exports = {
                     'kst-watchers',
                     `under${priceKey}`,
                     kstKeys,
+                    isLowKey,
                     firstAlertkey,
                     watchoutKey,
                     minKey,

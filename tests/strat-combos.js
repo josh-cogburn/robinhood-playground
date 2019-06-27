@@ -37,6 +37,10 @@ const perms = [
     ['signalCross', 'zeroCross', 'signalCross-zeroCross'],
     [
         '',
+        'isLow'
+    ],
+    [
+        '',
         'firstAlert'
     ],
     [
