@@ -25,11 +25,11 @@ let relatedP;
 
 
 const getRSI = values => {
-    return RSI.calculate({
+    const rsiCalced = RSI.calculate({
         values,
         period: 14
     }) || [];
-    // return rsiCalced[rsiCalced.length - 1];
+    return rsiCalced[rsiCalced.length - 1];
 };
 
 const OPTIONSTICKERS = [
