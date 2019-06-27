@@ -206,7 +206,7 @@ module.exports = {
             name: 'kst-watchers',
             Robinhood,
             handler,
-            timeout: 60000 * 9, // minutes
+            timeout: 60000 * 8, // minutes
             runAgainstPastData: false,
             onPick: async pick => {
 

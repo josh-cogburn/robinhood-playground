@@ -207,13 +207,6 @@ module.exports = {
             onEnd
         });
 
-        const getTickers = async (min, max) => {
-            const tickPrices = await lookupMultiple(Robinhood, allStocks.filter(isTradeable).map(o => o.symbol));
-            const tickers = Object.keys(tickPrices).filter(ticker => tickPrices[ticker] < max && tickPrices[ticker] > min);
-            console.log({ rsiTickers: tickers });
-            return tickers;
-        };
-
         regCronIncAfterSixThirty(Robinhood, {
             name: `clear rsi-watchers price cache`,
             run: [-330],    // start of pre market
