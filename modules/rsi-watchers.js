@@ -85,7 +85,7 @@ module.exports = {
             const picks = [];
             for (let key of Object.keys(relatedPrices)) {
                 const allPrices = relatedPrices[key].map(obj => obj.currentPrice);
-                const mostRecent = allPrices.pop();
+                const mostRecent = allPrices[allPrices.length - 1];
                 const rsiSeries = getRSI(allPrices);
                 const rsi = rsiSeries[rsiSeries.length - 1];
                 if (rsi < 30) {
@@ -93,6 +93,7 @@ module.exports = {
                         ticker: key,
                         rsiSeries,
                         rsi,
+                        allPrices,
                         price: mostRecent
                     });
                 }
