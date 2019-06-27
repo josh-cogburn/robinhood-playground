@@ -7,7 +7,13 @@ module.exports = async () => {
   const todaysDate = (await getFilesSortedByDate('prediction-models'))[0];
   const path = `./screenshots/${todaysDate}.jpg`;
 
-  const browser = await puppeteer.launch({ headless: true });
+  const browser = await puppeteer.launch({ 
+    headless: true,
+    args: [
+      '--no-sandbox', 
+      '--disable-setuid-sandbox', 
+    ],
+  });
   const page = await browser.newPage();
   const dims = {
     width: 1000,
