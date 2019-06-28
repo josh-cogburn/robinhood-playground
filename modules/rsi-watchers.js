@@ -73,10 +73,10 @@ const getGroups = async () => {
     };
 
     return {
-        zeroAndOne: await getTickersBetween(0, 1),
+        options: OPTIONSTICKERS,
+        // zeroAndOne: await getTickersBetween(0, 1),
         upcoming: await getRhStocks('upcoming-earnings'),
         top100: await getRhStocks('100-most-popular'),
-        options: OPTIONSTICKERS
     };
 
 
@@ -139,7 +139,7 @@ module.exports = {
                     });
                 }
             }
-            if (picks.length > 5) {
+            if (picks.length > 7) {
                 console.log('WOAH WOAH THERE RSI-WATCHERS NOT SO FAST', picks.length);
                 return picks.filter(pick => OPTIONSTICKERS.includes(pick.ticker));
             }
@@ -152,7 +152,7 @@ module.exports = {
             name: 'rsi-watchers',
             Robinhood,
             handler,
-            timeout: 60000 * 11, // 5 min,
+            timeout: 60000 * 15, // 5 min,
             runAgainstPastData: false,
             onPick: async pick => {
 
@@ -209,7 +209,7 @@ module.exports = {
 
         regCronIncAfterSixThirty(Robinhood, {
             name: `clear rsi-watchers price cache`,
-            run: [-330],    // start of pre market
+            run: [-330, 0],    // start of pre market
             fn: () => tickerWatcher.clearPriceCache()
         });
 

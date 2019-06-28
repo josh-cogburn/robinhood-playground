@@ -67,10 +67,10 @@ const getGroups = async () => {
     };
 
     return {
-        zeroAndOne: await getTickersBetween(0, 1),
+        options: OPTIONSTICKERS,
+        // zeroAndOne: await getTickersBetween(0, 1),
         upcoming: await getRhStocks('upcoming-earnings'),
         top100: await getRhStocks('100-most-popular'),
-        options: OPTIONSTICKERS
     };
 
 
@@ -105,30 +105,37 @@ const getKST = (values, ticker) => {
     const isLow = (() => {
         const isBelowZero = val => val < 0;
         const isBelowLowerQuarter = (() => {
-            const max = Math.max(...kstCalced);
-            const min = Math.min(...kstCalced);
+            const kstVals = kstCalced
+                .map(({ kst, signal }) => [kst, signal])
+                .flatten()
+                .filter(Boolean)
+            const max = Math.max(...kstVals);
+            const min = Math.min(...kstVals);
             const diff = max - min;
-            const lowQuarter = min + (diff * .25);
+            const lowQuarter = min + (diff * .3);
+            console.log({ min, max, diff, lowQuarter, lastVal, secondToLast})
             return val => val < lowQuarter;
         })();
         const bothTestsPass = val => [isBelowZero, isBelowLowerQuarter].every(
             test => test(val)
         );
         return [lastVal, secondToLast]
-            .map(val => val.kst)
+            .map(({ kst, signal }) => [kst, signal])
+            .flatten()
             .every(bothTestsPass)
     })();
-    if (isSignalCross || isZeroCross) {
-        console.log({
-            values,
-            ticker,
-            secondToLast,
-            lastVal,
-            isSignalCross,
-            isZeroCross,
-            isLow
-        });
-    }
+    // if (isSignalCross || isZeroCross) {
+    //     console.log({
+    //         values,
+    //         ticker,
+    //         secondToLast,
+    //         lastVal,
+    //         isSignalCross,
+    //         isZeroCross,
+    //         isLow,
+    //         kstCalced
+    //     });
+    // }
     return {
         isSignalCross,
         isZeroCross,
@@ -197,7 +204,13 @@ module.exports = {
             if (picks.length > 5) {
                 console.log(picks);
                 console.log('WOAH WOAH THERE KST-WATCHERS NOT SO FAST', picks.length);
-                return picks.filter(pick => OPTIONSTICKERS.includes(pick.ticker));
+                picks.forEach(pick => {
+                    console.log(pick);
+                }); 
+                return picks.filter(pick => 
+                    OPTIONSTICKERS.includes(pick.ticker)
+                    || pick.isLow
+                );
             }
             return picks;
         };
@@ -271,7 +284,7 @@ module.exports = {
 
         regCronIncAfterSixThirty(Robinhood, {
             name: `clear ticker-watchers price cache`,
-            run: [-330],    // start of pre market
+            run: [-330, 0],    // start of pre market
             fn: () => tickerWatcher.clearPriceCache()
         });
 
