@@ -1,0 +1,237 @@
+[
+  {
+    "pmName": "TWmajorJumpsNotWatchouts",
+    "weightedTrend": 10.802499999999998,
+    "avgTrend": 10.802499999999998
+  },
+  {
+    "pmName": "mySuperBoosters",
+    "weightedTrend": 8.42,
+    "avgTrend": 8.42
+  },
+  {
+    "pmName": "TWgoodLunch",
+    "weightedTrend": 8,
+    "avgTrend": 8
+  },
+  {
+    "pmName": "feb13tw",
+    "weightedTrend": 7.388235294117647,
+    "avgTrend": 7.388235294117647
+  },
+  {
+    "pmName": "TWmajorJumps",
+    "weightedTrend": 7.328333333333333,
+    "avgTrend": 7.328333333333333
+  },
+  {
+    "pmName": "feb13singletw",
+    "weightedTrend": 6.665,
+    "avgTrend": 6.665
+  },
+  {
+    "pmName": "TWgoodWatchouts",
+    "weightedTrend": 6.058333333333334,
+    "avgTrend": 6.058333333333334
+  },
+  {
+    "pmName": "myAddOns",
+    "weightedTrend": 5.389999999999999,
+    "avgTrend": 5.389999999999999
+  },
+  {
+    "pmName": "myLaters",
+    "weightedTrend": 5.341666666666668,
+    "avgTrend": 5.341666666666668
+  },
+  {
+    "pmName": "myTickerWatchers",
+    "weightedTrend": 4.659818181818181,
+    "avgTrend": 4.659818181818181
+  },
+  {
+    "pmName": "TWgoodDinner",
+    "weightedTrend": 4.4433333333333325,
+    "avgTrend": 4.4433333333333325
+  },
+  {
+    "pmName": "forPurchase80Perc5Day-yesincludingblanks",
+    "weightedTrend": 4.389166666666667,
+    "avgTrend": 4.389166666666667
+  },
+  {
+    "pmName": "forPurchase75Perc5Day-yesincludingblanks",
+    "weightedTrend": 4.389166666666667,
+    "avgTrend": 4.389166666666667
+  },
+  {
+    "pmName": "forPurchase100Perc5Day-yesincludingblanks",
+    "weightedTrend": 4.389166666666667,
+    "avgTrend": 4.389166666666667
+  },
+  {
+    "pmName": "myTickerWatchersInitial",
+    "weightedTrend": 4.386,
+    "avgTrend": 4.386
+  },
+  {
+    "pmName": "TWlowVol",
+    "weightedTrend": 4.382272727272728,
+    "avgTrend": 4.382272727272728
+  },
+  {
+    "pmName": "TWgoodHighVol",
+    "weightedTrend": 4.329999999999999,
+    "avgTrend": 4.329999999999999
+  },
+  {
+    "pmName": "forPurchase80Perc5Day-notincludingblanks",
+    "weightedTrend": 4.219841269841271,
+    "avgTrend": 4.219841269841271
+  },
+  {
+    "pmName": "forPurchase75Perc5Day-notincludingblanks",
+    "weightedTrend": 4.219841269841271,
+    "avgTrend": 4.219841269841271
+  },
+  {
+    "pmName": "forPurchase100Perc5Day-notincludingblanks",
+    "weightedTrend": 4.219841269841271,
+    "avgTrend": 4.219841269841271
+  },
+  {
+    "pmName": "TWallWatchout",
+    "weightedTrend": 4.136428571428572,
+    "avgTrend": 4.136428571428572
+  },
+  {
+    "pmName": "TWgoodInitial",
+    "weightedTrend": 3.977499999999999,
+    "avgTrend": 3.977499999999999
+  },
+  {
+    "pmName": "TWhighVol",
+    "weightedTrend": 3.6699999999999995,
+    "avgTrend": 3.6699999999999995
+  },
+  {
+    "pmName": "allTickerWatchers",
+    "weightedTrend": 3.2563829787234044,
+    "avgTrend": 3.2563829787234044
+  },
+  {
+    "pmName": "TWgoodNotWatchouts",
+    "weightedTrend": 3.1249999999999996,
+    "avgTrend": 3.1249999999999996
+  },
+  {
+    "pmName": "TWallNotWatchout",
+    "weightedTrend": 2.8830303030303024,
+    "avgTrend": 2.8830303030303024
+  },
+  {
+    "pmName": "TWminorJumps",
+    "weightedTrend": 2.6679999999999997,
+    "avgTrend": 2.6679999999999997
+  },
+  {
+    "pmName": "forPurchase50Perc5Day-yesincludingblanks",
+    "weightedTrend": 2.580897435897435,
+    "avgTrend": 2.580897435897435
+  },
+  {
+    "pmName": "forPurchase50Perc5Day-notincludingblanks",
+    "weightedTrend": 2.2205925925925922,
+    "avgTrend": 2.2205925925925922
+  },
+  {
+    "pmName": "forPurchase25Perc5Day-yesincludingblanks",
+    "weightedTrend": 2.0279894179894176,
+    "avgTrend": 2.0279894179894176
+  },
+  {
+    "pmName": "forPurchase25Perc5Day-notincludingblanks",
+    "weightedTrend": 1.6693452380952376,
+    "avgTrend": 1.6693452380952376
+  },
+  {
+    "pmName": "feb13singlehighvol",
+    "weightedTrend": 1.5616666666666668,
+    "avgTrend": 1.5616666666666668
+  },
+  {
+    "pmName": "feb13singlenewhighs",
+    "weightedTrend": 1.298,
+    "avgTrend": 1.298
+  },
+  {
+    "pmName": "forPurchase",
+    "weightedTrend": 1.005877192982456,
+    "avgTrend": 1.005877192982456
+  },
+  {
+    "pmName": "feb13emacrossovers",
+    "weightedTrend": 0.2285752688172043,
+    "avgTrend": 0.2285752688172043
+  },
+  {
+    "pmName": "highVolumePicks",
+    "weightedTrend": 0.20833333333333334,
+    "avgTrend": 0.20833333333333334
+  },
+  {
+    "pmName": "myEmaCrossoverWatchers",
+    "weightedTrend": 0.17372549019607836,
+    "avgTrend": 0.17372549019607836
+  },
+  {
+    "pmName": "feb13highvol",
+    "weightedTrend": 0.06900000000000005,
+    "avgTrend": 0.06900000000000005
+  },
+  {
+    "pmName": "spicySenoritas",
+    "weightedTrend": -0.09,
+    "avgTrend": -0.09
+  },
+  {
+    "pmName": "allEmaLastTradeTrendingUp180SMA",
+    "weightedTrend": -0.09222222222222222,
+    "avgTrend": -0.09222222222222222
+  },
+  {
+    "pmName": "allEmaCrossoverWatchers",
+    "weightedTrend": -0.274787234042553,
+    "avgTrend": -0.274787234042553
+  },
+  {
+    "pmName": "allBestSt",
+    "weightedTrend": -0.6586382113821135,
+    "avgTrend": -0.6586382113821135
+  },
+  {
+    "pmName": "feb13bestst",
+    "weightedTrend": -0.8684615384615385,
+    "avgTrend": -0.8684615384615385
+  },
+  {
+    "pmName": "myStSents",
+    "weightedTrend": -1.497000000000001,
+    "avgTrend": -1.497000000000001
+  },
+  {
+    "pmName": "allEmaLastTrades",
+    "weightedTrend": -1.606111111111111,
+    "avgTrend": -1.606111111111111
+  },
+  {
+    "pmName": "feb13singlebestst",
+    "weightedTrend": -2.4481249999999997,
+    "avgTrend": -2.4481249999999997
+  },
+  {
+    "pmName": "TWgoodPremarket",
+    "weightedTrend": -3.3550000000000004,
+    "avgTrend": -3.3550000000000004
+  }
+]
