@@ -13,6 +13,8 @@ const tweeter = require('./tweeter');
 const calcEmailsFromStrategy = require('../utils/calc-emails-from-strategy');
 const stocktwits = require('../utils/stocktwits');
 const { disableMultipliers } = require('../settings');
+const pmsHit = require('../utils/pms-hit');
+const { emails } = require('../config');
 
 const saveToFile = async (Robinhood, strategy, min, withPrices) => {
 
@@ -46,25 +48,10 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
         withPrices
     });
 
-    // helper
-    const getEnableCountForPM = pm => { 
-        // how many times does this strategy show up in this pm?
-        const stratsWithinPM = stratManager.predictionModels ? stratManager.predictionModels[pm] : [];
-        return stratsWithinPM.filter(strat => strat === stratMin).length;
-    };
 
-    // stocktwits
-    // if (getEnableCountForPM('allShorts')) {
-    //     if (withPrices.length === 1) {
-    //         const [{ ticker }] = withPrices;
-    //         await stocktwits.postBearish(ticker, stratMin);
-    //     }
-    //     // tweeter.tweet(`SHORT ${withPrices.map(({ ticker, price }) => `#${ticker} @ $${price}`).join(' and ')} - ${stratMin}`);
-    // }
-
-    // for purchase
-    const forPurchaseMultiplier = getEnableCountForPM('forPurchase');
-    if (forPurchaseMultiplier) {
+    const hits = await pmsHit(null, stratMin);
+    // forPurchase
+    if (hits.includes('forPurchase')) {
         console.log('strategy enabled: ', stratMin, 'purchasing');
         // const stocksToBuy = withPrices.map(obj => obj.ticker);
         // await purchaseStocks(Robinhood, {
@@ -74,16 +61,28 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
         //     min,
         //     withPrices
         // });
-        if (withPrices.length === 1) {
-            const [{ ticker }] = withPrices;
-            await stocktwits.postBullish(ticker, stratMin);
-        }
+        // if (withPrices.length === 1) {
+        //     const [{ ticker }] = withPrices;
+        //     await stocktwits.postBullish(ticker, stratMin);
+        // }
         // tweeter.tweet(`BUY ${withPrices.map(({ ticker, price }) => `#${ticker} @ $${price}`).join(' and ')} - ${stratMin}`);
     }
 
-    // for email$
-    const emailsToSend = await calcEmailsFromStrategy(null, stratMin);
-    // console.log({ emailsToSend });
+    // for email
+    const emailsToSend = Object.keys(emails)
+        .reduce((acc, email) => {
+            const pms = emails[email];
+            const toSend = pms.filter(pm => 
+                hits.includes(pm)
+            );
+            return [
+                ...acc,
+                ...toSend.map(pm => ({
+                    pm,
+                    email
+                }))
+            ]
+        }, []);
     for (let { email, pm } of emailsToSend) {
         await sendEmail(
             `robinhood-playground${pm ? `-${pm}` : ''}: ${stratMin}`,

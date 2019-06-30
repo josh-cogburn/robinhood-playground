@@ -28,6 +28,8 @@ const TickerWatcher = require('./ticker-watcher');
 const balanceReportManager = require('./balance-report-manager');
 const settings = require('../settings');
 
+// const RealtimeRunner = ;
+
 const stratManager = {
     Robinhood: null,
     io: null,
@@ -56,7 +58,7 @@ const stratManager = {
         // init picks?
         console.log('init refresh')
         try {
-            await this.refreshPastData();
+            // await this.refreshPastData();
         } catch (e) {
             console.log('error refreshing past', e);
         }
@@ -86,6 +88,8 @@ const stratManager = {
         console.log('initd strat manager');
     },
     async getWelcomeData() {
+        const pms = require('../realtime/RealtimeRunner').getPms();
+        // console.log('we;come', { pms });
         return {
             curDate: this.curDate,
             picks: this.picks,
@@ -96,6 +100,7 @@ const stratManager = {
             cronString: regCronIncAfterSixThirty.toString(),
             balanceReports: balanceReportManager.getAllBalanceReports(),
             pmPerfs: this.pmPerfs,
+            pms,
             positions: await cachedPositions(Robinhood)
         };
     },
@@ -201,12 +206,15 @@ const stratManager = {
         
     },
     calcPmPerfs() {
-        const {relatedPrices} = this.tickerWatcher;
-        console.log('calc pm perfs')
-        const pmPerfs = Object.entries(this.predictionModels).map(entry => {
-            const [ stratName, trends ] = entry;
-            // const trends = this.predictionModels[stratName];
-            // console.log(entry);
+
+
+        const { relatedPrices } = this.tickerWatcher;
+        const realtimePms = require('../realtime/RealtimeRunner').getPms();
+
+        // console.log({ realtimePms})
+        const pmPerfs = Object.keys(realtimePms).map(pmName => {
+
+            const pmParts = realtimePms[pmName];
 
             const handlePick = pick => {
                 const { withPrices } = pick;
@@ -234,32 +242,29 @@ const stratManager = {
                 return withTrend;
             };
 
-            let foundStrategies = trends
-                .reduce((acc, stratMin) => {
-                    const foundStrategies = this.picks.filter(pick => pick.stratMin === stratMin);
-                    if (!foundStrategies || !foundStrategies.length) return acc;
-                    const withTrends = foundStrategies.map(handlePick);
-                    const analyzed = withTrends.map(withTrend => ({
-                        avgTrend: avgArray(withTrend.map(obj => obj.trend)),
-                        stratMin,
-                        tickers: withTrend.map(obj => obj.ticker)
-                    }));
-                    return [
-                        ...acc,
-                        ...analyzed
-                    ];
-                }, []);
-            
-            foundStrategies = foundStrategies.filter(Boolean);
+            const foundStrategies = this.picks
+                .filter(({ stratMin }) => {
+                    // console.log({ pmParts })
+                    return pmParts.every(part => 
+                        stratMin.includes(part)
+                    );
+                })
+                .map(handlePick)
+                .map(withTrend => ({
+                    avgTrend: avgArray(withTrend.map(obj => obj.trend)),
+                    stratMin: withTrend.stratMin,
+                    tickers: withTrend.map(obj => obj.ticker)
+                }))
+                .filter(Boolean);
             
             // console.log({ stratOrder, withoutDuplicates });
 
             const weightedTrend = avgArray(foundStrategies.map(obj => obj.avgTrend));
             return {
-                pmName: stratName,
+                pmName: pmName,
                 weightedTrend,
                 // avgTrend: weightedTrend
-                avgTrend: stratName.includes('forPurchase') ? (() => {
+                avgTrend: pmName.includes('forPurchase') ? (() => {
                     let copy = [...foundStrategies];
                     const withoutDuplicates = [];
                     foundStrategies.forEach((stratObj, i) => {
@@ -274,6 +279,7 @@ const stratManager = {
         })
             .filter(t => !!t.avgTrend)
             .sort((a, b) => Number(b.avgTrend) - Number(a.avgTrend));
+
     
             
         console.log('done calcing pm perfs')

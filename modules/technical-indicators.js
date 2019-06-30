@@ -13,7 +13,7 @@ const { OBV, SMA, isTrendingUp } = require('technicalindicators');
 
 const analyzeTrend = (withHistoricals) => {
     let withTechnicalIndicators = withHistoricals.map((buy, i) => {
-
+        
         const { historicals } = buy;
         // console.log(historicals, 'historicals')
 

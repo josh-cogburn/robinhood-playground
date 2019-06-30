@@ -2,6 +2,9 @@ const flattenEmailObj = require('./flatten-email-obj');
 const flatten = require('./flatten-array');
 
 const calcEmailsFromStrategy = async (_, strategy) => {
+
+
+    
     const emailObj = await flattenEmailObj();
 
     const emailsToSend = [];

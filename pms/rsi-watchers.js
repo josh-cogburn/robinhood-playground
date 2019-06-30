@@ -724,5 +724,7 @@ const allRSIwatchers = [
 
 module.exports = {
   allRSIwatchers,
-  rsiFirstAlerts: allRSIwatchers.filter(strat => strat.includes('firstAlert')),
+  rsiLt20: strat => [
+    'rsilt20',
+  ]
 };
