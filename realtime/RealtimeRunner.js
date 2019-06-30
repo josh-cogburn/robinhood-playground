@@ -28,7 +28,7 @@ module.exports = new (class RealtimeRunner {
       strategies: [],
       priceCaches: {},
       collections: null,
-      fiveMinCountOnDay: 0,
+      runCount: 0,
       todaysPicks: [],
       interval: null
     });
@@ -54,8 +54,17 @@ module.exports = new (class RealtimeRunner {
     }
     
     console.log('INITING REALTIME RUNNER');
-    await this.refreshCollections();
-    await this.refreshPriceCaches();
+    await this.timedAsync(
+      () => this.refreshCollections(),
+      'refreshing collections'
+    );
+
+    const allTickers = Object.values(this.collections).flatten().uniq();
+    await this.timedAsync(
+      () => this.loadPriceCachesWithHistoricals(),
+      `loading price caches with historical data for ${allTickers.length} tickers`
+    );
+
     (await getStrategies()).forEach(strategy => {
       if (strategy.handler && strategy.period) {
         this.strategies.push(strategy);
@@ -85,7 +94,7 @@ module.exports = new (class RealtimeRunner {
     this.hasInit = true;
   }
 
-  async refreshPriceCaches() {
+  async loadPriceCachesWithHistoricals() {
     const allTickers = Object.values(this.collections).flatten().uniq();
     const allStratPeriods = this.strategies.map(strategy => strategy.period).flatten().uniq();
 
@@ -106,9 +115,11 @@ module.exports = new (class RealtimeRunner {
   }
 
   async start() {
+    console.log('start!!')
     this.currentlyRunning = true;
-    this.fiveMinCountOnDay = 0;
-    await this.lookupAndWaitPrices();
+    this.runCount = 0;
+    this.interval = setInterval(() => this.everyFiveMinutes(), 5 * 1000 * 60);  // 5minute
+    this.everyFiveMinutes();
   }
 
   stop() {
@@ -117,16 +128,9 @@ module.exports = new (class RealtimeRunner {
     this.interval = null;
   }
 
-
-  async lookupAndWaitPrices() {
-    if (!this.currentlyRunning) return;
-    this.lookupRelatedPrices();
-    this.interval = setInterval(() => this.lookupAndWaitPrices(), 5 * 1000 * 60);  // 5minute
-  }
-
-  async lookupRelatedPrices() {
-    this.fiveMinCountOnDay++;
+  async addNewQuote(priceCachesToUpdate = Object.keys(this.priceCaches)) {
     
+    console.log('getting new quotes...');
     const allTickers = Object.values(this.collections).flatten().uniq();
 
     const relatedPrices = await lookupMultiple(
@@ -135,86 +139,171 @@ module.exports = new (class RealtimeRunner {
         true
     );
 
-
     const addToPriceCache = period => {
       const curPriceCache = this.priceCaches[period];
       Object.keys(relatedPrices).forEach(ticker => {
         if (curPriceCache[ticker]) {
           const curQuote = relatedPrices[ticker];
-          curPriceCache[ticker].push(curQuote);
+          curPriceCache[ticker].push({
+            timestamp: Date.now(),
+            ...curQuote
+          });
         } else {
           console.log('no price cache found for ', ticker, period);
         }
       });
       this.priceCaches[period] = curPriceCache;
+
+      const last5timestamps = curPriceCache[allTickers[0]]
+        .slice(-5)
+        .map(quote => new Date(quote.timestamp).toLocaleString());
+
+      console.log(`${period}min period, last 5 timestamps...${last5timestamps}`);
     };
 
+    priceCachesToUpdate.forEach(addToPriceCache);
 
-    // always update 5
-    addToPriceCache(5);
-    // sometimes update 10 and 30
-    const sometimesUpdate = [10, 30];
-    const shouldUpdate = sometimesUpdate.filter(period => 
-      this.fiveMinCountOnDay % (period / 5) === 0
-    );
-    shouldUpdate.forEach(period => {
-      console.log('updating ', period, 'because', this.fiveMinCountOnDay);
-      addToPriceCache(period);
-    });
+    console.log('done fetching new quote data');
+  }
 
-    const runningPeriods = [
+  
+  async timedAsync(asyncFn, eventString) {
+    eventString = eventString.toUpperCase();
+    const startTS = Date.now();
+    console.log(`starting ${eventString}...`);
+    const response = await asyncFn();
+    const endTS = Date.now();
+    console.log(`finished ${eventString}, time took to run: ${(endTS - startTS) / 1000}`);
+    return response;
+  }
+
+  printPriceCacheTimestamps(periods = Object.keys(this.priceCaches)) {
+    
+  }
+
+  async everyFiveMinutes() {
+    if (!this.currentlyRunning) {
+      return this.stop();
+    }
+    
+    this.runCount++;
+    const periods = [
       5,
-      ...shouldUpdate
+      ...[10, 30].filter(period => 
+        this.runCount % (period / 5) === 0
+      )
     ];
 
-    const runAllStrategies = async (ticker, period, strategies) => {
-      const allPrices = this.priceCaches[period][ticker];
-      if (!allPrices) {
-        return console.log('no prices found for', {
-          ticker, period, strategies
-        })
-      }
-      
-      for (let { strategyName, handler } of strategies) {
-        const response = await handler({
-          ticker,
-          allPrices
-        });
-        if (response) {
-          await this.handlePick(response, period, strategyName);
-          this.todaysPicks.push({
-            ticker,
-            period,
-            strategyName
-          });
-        }
-      };
-    }
+    console.log('every five minutes...', { periods, runCount: this.runCount });
 
+    await this.timedAsync(
+      () => this.addNewQuote(periods),
+      'adding new quote'
+    );
+    const picks = await this.timedAsync(
+      () => this.runAllStrategies(periods),
+      'running all strategies'
+    );
 
-    for (let period of runningPeriods) {
-      const strategies = this.strategies.filter(strategy => strategy.period.includes(period));
-      console.log(`running ${strategies.map(strategy => strategy.strategyName)}`);
-      console.log({ strategies })
-      for (let ticker of allTickers) {
-        await runAllStrategies(
-          ticker,
-          period,
-          strategies
-        );
-      }
-
-    }
-
-    console.log('RealtimeRunner: done getting related prices', allTickers.length);
+    await this.timedAsync(
+      () => this.handlePicks(picks),
+      `handling ${picks.length} picks`
+    );
 
   }
 
 
+  async runAllStrategies(periods = [5, 10, 30]) {
+    
+    const picks = [];
 
-  async handlePick(pick, period, strategyName) {
+    const runAllStrategiesForPeriod = async period => {
 
-    const { ticker, keys, data } = pick;
+      const relatedPriceCache = this.priceCaches[period];
+
+      // strlog({
+      //   period,
+      //   relatedPriceCache
+      // })
+      const allTickers = Object.keys(relatedPriceCache);
+      
+      for (let { strategyName, handler } of this.strategies) {
+        console.log(`running ${strategyName} against ${period} minute data...`);
+        for (let ticker of allTickers) {
+          const response = await handler({
+            ticker,
+            allPrices: relatedPriceCache[ticker]
+          });
+          if (response) {
+            picks.push({
+              ...response,
+              period,
+              strategyName,
+            });
+          }
+        }
+
+      };
+      
+    };
+  
+    for (let period of periods) {
+      await runAllStrategiesForPeriod(period);
+    }
+
+    return picks;
+  }
+
+  async handlePicks(picks) {
+
+    const uniqTickers = picks.map(pick => pick.ticker).uniq();
+    const tickersToStratHits = uniqTickers.reduce((acc, ticker) => ({
+      ...acc,
+      [ticker]: picks
+        .filter(pick => pick.ticker === ticker)
+        .map(pick => pick.strategyName)
+        .uniq()
+    }), {});
+
+    const multiHitTickers = Object.keys(tickersToStratHits).filter(ticker => 
+      tickersToStratHits[ticker].length > 1
+    );
+
+    multiHitTickers.forEach(ticker => {
+      picks.push({
+        ticker,
+        keys: tickersToStratHits[ticker].reduce((acc, strategyName) => ({
+          ...acc,
+          [strategyName]: true
+        })),
+        strategyName: 'multi-hits'
+      })
+    });
+
+    
+
+    for (let pick of picks) {
+      await this.handlePick(pick);
+    }
+  }
+
+  async handlePick(pick) {
+
+    const { ticker, keys, data, period, strategyName } = pick;
+    console.log({
+      ticker,
+      keys,
+      // data,
+      period,
+      strategyName
+    })
+    this.todaysPicks.push({
+      ticker,
+      period,
+      strategyName
+    });
+
+
     let [price] = this.priceCaches[5][ticker].slice(-1);
     price = price.currentPrice;
 
@@ -223,11 +312,11 @@ module.exports = new (class RealtimeRunner {
     );
     const keyString = Object.keys(keys).filter(key => keys[key]).join('-');
 
-    const periodKey = `${period}min`;
-    const firstAlertkey = !this.todaysPicks.find(pick =>
-      pick.ticker === ticker
-        && pick.period === period
-        && pick.strategyName === strategyName
+    const periodKey = period && `${period}min`;
+    const firstAlertkey = !this.todaysPicks.find(comparePick =>
+      comparePick.ticker === ticker
+        && comparePick.period === period
+        && comparePick.strategyName === strategyName
     ) ? 'firstAlert' : '';
 
     const { shouldWatchout } = await getRisk(Robinhood, { ticker });
@@ -284,14 +373,16 @@ module.exports = new (class RealtimeRunner {
       ...acc,
       ...Object.keys(pms).reduce((inner, key) => ({
         ...inner,
-        [`${strategyName}${key}`]: [
+        [`${strategyName}-${key}`]: [
           ...Array.isArray(pms[key]) ? pms[key] : [pms[key]],
           strategyName
         ]
       }), {
         [strategyName]: [strategyName]
       })
-    }), {})
+    }), {
+      'multi-hits': ['multi-hits']
+    })
   }
 
 

@@ -10,7 +10,7 @@ const indexes = {
 
 const getIndexPrice = async index => {
     const url = indexes[index];
-    console.log({ index, url })
+    // console.log({ index, url })
     const res = await request(url);
     const $ = cheerio.load(res);
     const text = $('#quote-header-info > div:nth-child(3) > div > div span').first().text();

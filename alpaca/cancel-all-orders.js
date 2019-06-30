@@ -4,7 +4,7 @@ module.exports = async () => {
     const orders = await alpaca.getOrders({
         status: 'open'
     });
-    str({ orders })
+    // str({ orders })
     for (let order of orders) {
         log(await alpaca.cancelOrder(order.id));
     }

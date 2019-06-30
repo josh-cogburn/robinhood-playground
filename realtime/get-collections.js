@@ -33,7 +33,7 @@ module.exports = async () => {
     const getTickersBetween = async (min, max) => {
         const tickPrices = await lookupMultiple(Robinhood, allStocks.filter(isTradeable).map(o => o.symbol));
         const tickers = Object.keys(tickPrices).filter(ticker => tickPrices[ticker] < max && tickPrices[ticker] > min);
-        console.log({ kstTickers: tickers });
+        // console.log({ kstTickers: tickers });
         return tickers;
     };
 
@@ -55,9 +55,9 @@ module.exports = async () => {
 
     return {
         options: OPTIONSTICKERS,
-        zeroAndOne: await getTickersBetween(0, 1),
-        upcoming: await getRhStocks('upcoming-earnings'),
-        top100: await getRhStocks('100-most-popular'),
+        // zeroAndOne: await getTickersBetween(0, 1),
+        // upcoming: await getRhStocks('upcoming-earnings'),
+        // top100: await getRhStocks('100-most-popular'),
     };
 
 };

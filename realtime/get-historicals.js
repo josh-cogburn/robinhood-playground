@@ -2,7 +2,7 @@ const chunkApi = require('../utils/chunk-api');
 const getTrend = require('../utils/get-trend');
 
 module.exports = async (Robinhood, tickers, interval = 'day') => {
-    console.log(tickers)
+    // console.log(tickers)
     const allHistoricals = await chunkApi(
         tickers,
         async (tickerStr) => {
@@ -28,6 +28,7 @@ module.exports = async (Robinhood, tickers, interval = 'day') => {
               hist.trend = getTrend(hist.close_price, prevClose);
           }
           hist.currentPrice = hist.close_price;
+          hist.timestamp = new Date(hist.begins_at).getTime() + (1000 * 60 * 5)
           return hist;
         })
       }), {});

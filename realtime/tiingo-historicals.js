@@ -64,7 +64,7 @@ const getHistoricals = async (ticker, period) => {
 };
 
 module.exports = async tickers => {
-  console.log({ tickers })
+  // console.log({ tickers })
   const historicals = {};
   for (let ticker of tickers) {
     try {

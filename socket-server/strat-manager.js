@@ -58,7 +58,7 @@ const stratManager = {
         // init picks?
         console.log('init refresh')
         try {
-            // await this.refreshPastData();
+            await this.refreshPastData();
         } catch (e) {
             console.log('error refreshing past', e);
         }
@@ -177,13 +177,11 @@ const stratManager = {
     async initPicks(dateStr) {
         console.log('init picks', dateStr)
         const dbPicks = await Pick.find({ date: dateStr }).lean();
-        console.log('dbPicks', dbPicks);
+        console.log('dbPicks', dbPicks.length);
         const picks = dbPicks.map(pick => ({
             stratMin: `${pick.strategyName}-${pick.min}`,
             withPrices: pick.picks
         }));
-
-        console.log('numPicks', picks.length);
 
         console.log('mostRecentDay', dateStr);
         this.curDate = dateStr;

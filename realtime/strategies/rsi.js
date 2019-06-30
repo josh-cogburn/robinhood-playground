@@ -35,20 +35,6 @@ module.exports = {
             };
         }
     },
-    pms: [
-        'signalCrosses',
-        'zeroCrosses',
-        'isLow',
-
-        'shouldWatchout',
-        'notWatchout',
-        
-        'firstAlerts',
-
-        '30min',
-        '10min',
-        '5min'
-    ],
     
     pms: {
         
@@ -70,6 +56,8 @@ module.exports = {
 
         '30minoptions': ['30min', 'options'],
 
-        '10minoptions': ['10min', 'options']
+        '10minoptions': ['10min', 'options'],
+
+        lessthan10: 'rsilt10'
     }
 };

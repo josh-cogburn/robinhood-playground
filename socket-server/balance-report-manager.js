@@ -21,8 +21,8 @@ const init = async (rh, onReportFn) => {
     Robinhood = rh;
     onReport = onReportFn;
     const foundReports = await BalanceReport.find().lean();
-    console.log('init balance reports', Object.keys(stratManager));
-    console.log('foundReports', foundReports);
+    // console.log('init balance reports', Object.keys(stratManager));
+    console.log('foundReports', foundReports.length);
     allBalanceReports = foundReports;
     regCronIncAfterSixThirty(rh, {
         name: 'start balance report manager',
@@ -68,7 +68,7 @@ const runAndSetTimeout = async () => {
 };
 
 const getAndSaveBalanceReport = async (isRegularHours) => {
-    console.log('hereee');
+    // console.log('hereee');
     try {
         const report = {
             ...await getAccountBalance(Robinhood),
