@@ -201,12 +201,17 @@ const stratManager = {
         
     },
     calcPmPerfs() {
-        const {relatedPrices} = this.tickerWatcher;
-        console.log('calc pm perfs')
-        const pmPerfs = Object.entries(this.predictionModels).map(entry => {
-            const [ stratName, trends ] = entry;
-            // const trends = this.predictionModels[stratName];
-            // console.log(entry);
+
+
+
+
+
+
+        const { relatedPrices } = this.tickerWatcher;
+        const realtimePms = RealtimeRunner.getPms();
+        const pmPerfs = Object.keys(realtimePms).map(pmName => {
+
+            const pmFunction = realtimePms[pmName];
 
             const handlePick = pick => {
                 const { withPrices } = pick;
@@ -234,23 +239,15 @@ const stratManager = {
                 return withTrend;
             };
 
-            let foundStrategies = trends
-                .reduce((acc, stratMin) => {
-                    const foundStrategies = this.picks.filter(pick => pick.stratMin === stratMin);
-                    if (!foundStrategies || !foundStrategies.length) return acc;
-                    const withTrends = foundStrategies.map(handlePick);
-                    const analyzed = withTrends.map(withTrend => ({
-                        avgTrend: avgArray(withTrend.map(obj => obj.trend)),
-                        stratMin,
-                        tickers: withTrend.map(obj => obj.ticker)
-                    }));
-                    return [
-                        ...acc,
-                        ...analyzed
-                    ];
-                }, []);
-            
-            foundStrategies = foundStrategies.filter(Boolean);
+            const foundStrategies = this.picks
+                .filter(pick => pmFunction(pick.stratMin))
+                .map(handlePick)
+                .map(withTrend => ({
+                    avgTrend: avgArray(withTrend.map(obj => obj.trend)),
+                    stratMin,
+                    tickers: withTrend.map(obj => obj.ticker)
+                }))
+                .filter(Boolean);
             
             // console.log({ stratOrder, withoutDuplicates });
 
@@ -274,6 +271,7 @@ const stratManager = {
         })
             .filter(t => !!t.avgTrend)
             .sort((a, b) => Number(b.avgTrend) - Number(a.avgTrend));
+
     
             
         console.log('done calcing pm perfs')

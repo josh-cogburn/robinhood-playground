@@ -31,6 +31,8 @@ const stocktwits = require('./utils/stocktwits');
 
 const restartProcess = require('./app-actions/restart-process');
 
+const initRealtime = require('./realtime/init');
+
 
 mongoose.connect(mongoConnectionString, { useNewUrlParser: true });
 
@@ -104,6 +106,9 @@ process.on('unhandledRejection', (reason, p) => {
     // const ratioToSpend = Math.max(0.3, getMinutesFrom630() / 390);
     const cashAvailable = Number(accounts.results[0].margin_balances.unallocated_margin_cash);
     console.log({cashAvailable});
+
+    await initRealtime();
+
     // await sellAllStocks(Robinhood);
 
     // startCrons();

@@ -48,7 +48,8 @@ module.exports = async (Robinhood) => {
 
     const files = (await fs.readdir(normalizedPath))
         .filter(fileName => !fileName.startsWith('.'))
-        .map(fileName => `${normalizedPath}/${fileName}`);
+        .map(fileName => `${normalizedPath}/${fileName}`)
+        .filter(fileName => fileName.includes('additional'));
 
     for (let file of files) {
         const isDir = (await fs.lstat(file)).isDirectory();

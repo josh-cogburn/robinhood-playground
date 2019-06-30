@@ -78,6 +78,7 @@ const getGroups = async () => {
 
 
 const getKST = (values, ticker) => {
+    values = (values || []).filter(Boolean);
     const kstCalced = KST.calculate({
         values,
         ROCPer1: 17,
@@ -107,7 +108,6 @@ const getKST = (values, ticker) => {
         const isBelowLowerQuarter = (() => {
             const kstVals = kstCalced
                 .map(({ kst, signal }) => [kst, signal])
-                .flatten()
                 .filter(Boolean)
             const max = Math.max(...kstVals);
             const min = Math.min(...kstVals);
@@ -219,7 +219,7 @@ module.exports = {
             name: 'kst-watchers',
             Robinhood,
             handler,
-            timeout: 60000 * 8, // minutes
+            timeout: 60000 * 10, // minutes
             runAgainstPastData: false,
             onPick: async pick => {
 

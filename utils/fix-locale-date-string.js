@@ -11,12 +11,16 @@ Date.prototype.toLocaleDateString = function() {
 };
 
 global.log = console.log;
-global.str = obj => log(JSON.stringify(obj, null, 2));
+global.str = global.strlog = obj => log(JSON.stringify(obj, null, 2));
 global.mapLimit = require('promise-map-limit');
-global.flatten = arr => [].concat(...arr);
 
+Array.prototype.flatten = function() {
+    return [].concat(...this);
+};
 
-
+Array.prototype.uniq = function() {
+    return [...new Set(this)];
+};
 
 const roundTo = numDec => num => Math.round(num * Math.pow(10, numDec)) / Math.pow(10, numDec);
 const oneDec = roundTo(1);

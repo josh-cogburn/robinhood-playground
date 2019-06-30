@@ -47,9 +47,10 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
     });
 
     // helper
-    const getEnableCountForPM = pm => { 
+    const getEnableCountForPM = pm => {
         // how many times does this strategy show up in this pm?
-        const stratsWithinPM = stratManager.predictionModels ? stratManager.predictionModels[pm] : [];
+        console.log({ pm })
+        const stratsWithinPM = stratManager.predictionModels && stratManager.predictionModels[pm] ? stratManager.predictionModels[pm] : [];
         return stratsWithinPM.filter(strat => strat === stratMin).length;
     };
 
@@ -74,10 +75,10 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
         //     min,
         //     withPrices
         // });
-        if (withPrices.length === 1) {
-            const [{ ticker }] = withPrices;
-            await stocktwits.postBullish(ticker, stratMin);
-        }
+        // if (withPrices.length === 1) {
+        //     const [{ ticker }] = withPrices;
+        //     await stocktwits.postBullish(ticker, stratMin);
+        // }
         // tweeter.tweet(`BUY ${withPrices.map(({ ticker, price }) => `#${ticker} @ $${price}`).join(' and ')} - ${stratMin}`);
     }
 

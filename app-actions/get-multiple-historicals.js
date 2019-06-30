@@ -6,7 +6,7 @@ module.exports = async (Robinhood, tickers, qs = 'interval=day') => {
     const allHistoricals = await chunkApi(
         tickers,
         async (tickerStr) => {
-            const { results } = await Robinhood.url(`https://api.robinhood.com/quotes/historicals/?symbols=${tickerStr}&${qs}`);
+            const { results } = await Robinhood.url(`https://api.robinhood.com/quotes/historicals/?symbols=${tickerStr}&${qs}&bounds=extended`);
             return results;
         },
         75
