@@ -6,6 +6,9 @@ module.exports = {
     forPurchase: [
         '[kst-optionszeroCrosses30Min]',
         '[kst-optionssignalCrossesislow30Min]',
+        '[kst-upcomingZeroCrosses]',
+        '[kst-upcomingLowSignals]',
+        '[kst-top100LowSignals]',
 
         '[rsi-30minoptions]',
         '[rsi-10minoptions]',
