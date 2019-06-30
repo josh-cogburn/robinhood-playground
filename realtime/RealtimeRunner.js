@@ -16,6 +16,8 @@ const sendEmail = require('../utils/send-email');
 const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
 const getStrategies = require('./get-strategies');
 
+const pmsHit = require('../utils/pms-hit');
+
 module.exports = new (class RealtimeRunner {
   
 
@@ -27,7 +29,8 @@ module.exports = new (class RealtimeRunner {
       priceCaches: {},
       collections: null,
       fiveMinCountOnDay: 0,
-      todaysPicks: []
+      todaysPicks: [],
+      interval: null
     });
   }
 
@@ -110,13 +113,15 @@ module.exports = new (class RealtimeRunner {
 
   stop() {
     this.currentlyRunning = false;
+    clearInterval(this.interval);
+    this.interval = null;
   }
 
 
   async lookupAndWaitPrices() {
     if (!this.currentlyRunning) return;
     this.lookupRelatedPrices();
-    setTimeout(() => this.lookupAndWaitPrices(), 5 * 1000 * 60);  // 5minute
+    this.interval = setInterval(() => this.lookupAndWaitPrices(), 5 * 1000 * 60);  // 5minute
   }
 
   async lookupRelatedPrices() {
@@ -263,10 +268,12 @@ module.exports = new (class RealtimeRunner {
         volumeKey
     ].filter(Boolean).join('-');
     console.log({pickName});
-    await sendEmail(`NEW ${strategyName.toUpperCase()} ALERT ${pickName}: ${ticker}`, JSON.stringify(pick, null, 2));
+
+    const pms = await pmsHit(null, pickName);
+    if (pms && pms.length && pms.includes('forPurchase')) {
+      await sendEmail(`NEW ${strategyName.toUpperCase()} ALERT ${pickName}: ${ticker}`, JSON.stringify(pick, null, 2));
+    }
     
-    strlog(recordPicks);
-    strlog(require('../app-actions/record-picks'))
     await recordPicks(Robinhood, pickName, 5000, [ticker]);
   }
 
