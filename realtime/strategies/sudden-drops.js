@@ -20,7 +20,7 @@ module.exports = {
             'interval=5minute&span=day'
         );
         fiveMinuteHistoricals = fiveMinuteHistoricals.map(o => o.close_price);
-        const failedHistoricalCheck = fiveMinuteHistoricals.slice(0, -1).some(p => getTrend(p, price) < 5);
+        const failedHistoricalCheck = fiveMinuteHistoricals.slice(0, -1).some(p => getTrend(p, mostRecent) < 5);
         if (failedHistoricalCheck) {
           return console.log('failed historical check', ticker);
         }
