@@ -15,12 +15,16 @@ module.exports = async () => {
         .filter(fileName => !fileName.startsWith('.'))
         // .map(fileName => `${normalizedPath}/${fileName}`);
 
+    const strategies = [];
     for (let file of files) {
         // const isDir = (await fs.lstat(file)).isDirectory();
         // if (!isDir) {
         try {
             const moduleFile = require(`./strategies/${file}`);
-            RealtimeRunner.addStrategy(moduleFile, file.split('.')[0]);
+            strategies.push({
+                ...moduleFile,
+                strategyName: file.split('.')[0]
+            });
         } catch (e) {
             console.log('unable to init', file, e);
         }
@@ -28,6 +32,6 @@ module.exports = async () => {
     }
 
 
-    await RealtimeRunner.init();
+    return strategies;
 
 };

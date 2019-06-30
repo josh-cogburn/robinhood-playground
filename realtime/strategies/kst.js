@@ -37,7 +37,7 @@ const getKST = (values, ticker) => {
             const min = Math.min(...kstVals);
             const diff = max - min;
             const lowQuarter = min + (diff * .3);
-            console.log({ min, max, diff, lowQuarter, lastVal, secondToLast})
+            // console.log({ min, max, diff, lowQuarter, lastVal, secondToLast})
             return val => val < lowQuarter;
         })();
         const bothTestsPass = val => [isBelowZero, isBelowLowerQuarter].every(
@@ -92,17 +92,20 @@ module.exports = {
         }
     },
     pms: {
-        signalCrosses: strat => strat.includes('isSignalCross'),
-        zeroCrosses: strat => strat.includes('isZeroCross'),
-        isLow: strat => strat.includes('isLow'),
+        signalCrosses: 'isSignalCross',
+        zeroCrosses: 'isZeroCross',
+        isLow: 'isLow',
 
-        shouldWatchout: strat => strat.includes('shouldWatchout'),
-        notWatchout: strat => strat.includes('notWatchout'),
+        shouldWatchout: 'shouldWatchout',
+        notWatchout: 'notWatchout',
 
-        firstAlerts: strat => strat.includes('firstAlert'),
+        firstAlerts: 'firstAlert',
 
-        '30minute': strat => strat.includes('30min'),
-        '10minute': strat => strat.includes('10min'),
-        '5minute': strat => strat.includes('5min'),
+        '30minute': '30min',
+        '10minute': '10min',
+        '5minute': '5min',
+
+        options30minNotWatchout: ['options', '30min', 'notWatchout'],
+        
     }
 };

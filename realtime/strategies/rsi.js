@@ -15,7 +15,7 @@ module.exports = {
         const mostRecent = allCurrents[allCurrents.length - 1];
         const rsiSeries = getRSI(allCurrents);
         const rsi = rsiSeries[rsiSeries.length - 1];
-        console.log({ rsi })
+        // console.log({ rsi })
         if (rsi < 30) {
             return {
                 ticker,
@@ -23,11 +23,11 @@ module.exports = {
                     ...(rsiKey = () => {
                         const num = [10, 15, 20, 25, 30].find(val => rsi < val);
                         const key = num ? `rsilt${num}` : 'fluke';
-                        return { key: true };
+                        return { [key]: true };
                     })()
                 },
                 data: {
-                    allPrices,
+                    allCurrents,
                     mostRecent,
                     rsiSeries,
                     rsi,
@@ -35,21 +35,36 @@ module.exports = {
             };
         }
     },
+    pms: [
+        'signalCrosses',
+        'zeroCrosses',
+        'isLow',
+
+        'shouldWatchout',
+        'notWatchout',
+        
+        'firstAlerts',
+
+        '30min',
+        '10min',
+        '5min'
+    ],
+    
     pms: {
         
-        rsilt20: strat => [
-            'rsilt20',
-            'rsilt15',
-            'rsilt10',
-        ].some(text => strat.includes(text)),
+        // rsilt20: strat => [
+        //     'rsilt20',
+        //     'rsilt15',
+        //     'rsilt10',
+        // ].some(text => strat.includes(text)),
 
-        shouldWatchout: strat => strat.includes('shouldWatchout'),
-        notWatchout: strat => strat.includes('notWatchout'),
+        shouldWatchout: 'shouldWatchout',
+        notWatchout: 'notWatchout',
 
-        firstAlerts: strat => strat.includes('firstAlert'),
+        firstAlerts: 'firstAlert',
 
-        '30minute': strat => strat.includes('30min'),
-        '10minute': strat => strat.includes('10min'),
-        '5minute': strat => strat.includes('5min')
+        '30minute': '30min',
+        '10minute': '10min',
+        '5minute': '5min'
     }
 };

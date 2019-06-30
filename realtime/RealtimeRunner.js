@@ -14,12 +14,14 @@ const getMinutesFrom630 = require('../utils/get-minutes-from-630');
 const lookupMultiple = require('../utils/lookup-multiple');
 const sendEmail = require('../utils/send-email');
 const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
+const getStrategies = require('./get-strategies');
 
 module.exports = new (class RealtimeRunner {
   
 
   constructor() {
     Object.assign(this, {
+      hasInit: false,
       currentlyRunning: false,
       strategies: [],
       priceCaches: {},
@@ -43,11 +45,19 @@ module.exports = new (class RealtimeRunner {
   }
 
   async init() {
+
+    if (this.hasInit) {
+      return;
+    }
     
     console.log('INITING REALTIME RUNNER');
     await this.refreshCollections();
     await this.refreshPriceCaches();
-
+    (await getStrategies()).forEach(strategy => {
+      if (strategy.handler && strategy.period) {
+        this.strategies.push(strategy);
+      }
+    });
 
     regCronIncAfterSixThirty(Robinhood, {
         name: 'start RealtimeRunner',
@@ -67,6 +77,9 @@ module.exports = new (class RealtimeRunner {
     } else {
       console.log('not in progress');
     }
+
+
+    this.hasInit = true;
   }
 
   async refreshPriceCaches() {
@@ -249,8 +262,11 @@ module.exports = new (class RealtimeRunner {
         minKey,
         volumeKey
     ].filter(Boolean).join('-');
-    console.log(pickName);
-    // await sendEmail(`NEW ${strategyName.toUpperCase()} ALERT ${pickName}: ${ticker}`, JSON.stringify(ticker, null, 2));
+    console.log({pickName});
+    await sendEmail(`NEW ${strategyName.toUpperCase()} ALERT ${pickName}: ${ticker}`, JSON.stringify(pick, null, 2));
+    
+    strlog(recordPicks);
+    strlog(require('../app-actions/record-picks'))
     await recordPicks(Robinhood, pickName, 5000, [ticker]);
   }
 
@@ -261,8 +277,13 @@ module.exports = new (class RealtimeRunner {
       ...acc,
       ...Object.keys(pms).reduce((inner, key) => ({
         ...inner,
-        [`${strategyName}${key}`]: strategy => strategy.includes(strategyName) && pms[key](strategy)
-      }), {})
+        [`${strategyName}${key}`]: [
+          ...Array.isArray(pms[key]) ? pms[key] : [pms[key]],
+          strategyName
+        ]
+      }), {
+        [strategyName]: [strategyName]
+      })
     }), {})
   }
 
