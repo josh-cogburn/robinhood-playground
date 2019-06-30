@@ -106,6 +106,12 @@ module.exports = {
         '5minute': '5min',
 
         options30minNotWatchout: ['options', '30min', 'notWatchout'],
+
+        zeroAndOnezeroCrosses30Min: ['zeroAndOne', '30min', 'isZeroCross'],
+        zeroAndOnesignalCrossesislow30Min: ['zeroAndOne', '30min', 'isSignalCross', 'isLow'],
+
+        optionszeroCrosses30Min: ['options', '30min', 'isZeroCross'],
+        optionssignalCrossesislow30Min: ['options', '30min', 'isSignalCross', 'isLow'],
         
     }
 };

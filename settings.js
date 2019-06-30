@@ -4,8 +4,14 @@ module.exports = {
     sellAllStocksOnNthDay: 10,
     purchaseAmt: 40,
     forPurchase: [
-        '[kst]',
-        '[rsinotWatchout]',
+        '[kstoptionszeroCrosses30Min]',
+        '[kstoptionssignalCrossesislow30Min]',
+
+        '[rsi30minoptions]',
+        '[rsi10minoptions]',
+
+        '[majorJumpLunch]',
+        '[majorJumpDinner]',
     ],
     // forPurchaseVariation: '75Perc5Day-yesincludingblanks',
     // fallbackSellStrategy: 'limit8',

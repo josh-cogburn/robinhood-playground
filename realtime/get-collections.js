@@ -8,14 +8,23 @@ const OPTIONSTICKERS = [
     'GDX',
     'QQQ',
     'GLD',
-    'VXX',
+    // 'VXX',
 
 
     'AAPL',
-    'NFLX',
+    // 'NFLX',
     'AMZN',
     'GOLD',
     'ABBV',
+
+
+    'F',
+    'FXC',
+    'RIG',
+    'BAC',
+    'S',
+    'NOK',
+    'AVYA'
     // 'TXBA'
 ];
 
@@ -46,9 +55,9 @@ module.exports = async () => {
 
     return {
         options: OPTIONSTICKERS,
-        // zeroAndOne: await getTickersBetween(0, 1),
-        // upcoming: await getRhStocks('upcoming-earnings'),
-        // top100: await getRhStocks('100-most-popular'),
+        zeroAndOne: await getTickersBetween(0, 1),
+        upcoming: await getRhStocks('upcoming-earnings'),
+        top100: await getRhStocks('100-most-popular'),
     };
 
 };

@@ -50,5 +50,8 @@ module.exports = {
     pms: {
         shouldWatchout: 'shouldWatchout',
         notWatchout: 'notWatchout',
+
+        majorJumpLunch: ['majorJump', 'lunch'],
+        majorJumpDinner: ['majorJump', 'dinner'],
     }
 };

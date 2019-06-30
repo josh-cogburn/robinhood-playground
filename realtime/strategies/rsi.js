@@ -65,6 +65,11 @@ module.exports = {
 
         '30minute': '30min',
         '10minute': '10min',
-        '5minute': '5min'
+        '5minute': '5min',
+
+
+        '30minoptions': ['30min', 'options'],
+
+        '10minoptions': ['10min', 'options']
     }
 };
