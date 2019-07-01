@@ -1,4 +1,4 @@
-const getCollections = require('./get-collections');
+const getCollections = require('./collections/get-collections');
 const dayInProgress = require('./day-in-progress');
 const getHistoricals = require('./get-historicals');
 const tiingoHistoricals = require('./tiingo-historicals');
@@ -299,12 +299,16 @@ module.exports = new (class RealtimeRunner {
     );
 
     multiHitTickers.forEach(ticker => {
+      const uniqStrats = tickersToStratHits[ticker];
       picks.push({
         ticker,
         keys: {
-          [tickersToStratHits[ticker].length]: true,
+          [`${uniqStrats.length}count`]: true,
         },
-        strategyName: 'multi-hits'
+        strategyName: 'multi-hits',
+        data: {
+          uniqStrats
+        }
       })
     });
 
@@ -349,7 +353,7 @@ module.exports = new (class RealtimeRunner {
 
     const { shouldWatchout } = await getRisk(Robinhood, { ticker });
     const watchoutKey = shouldWatchout ? 'shouldWatchout' : 'notWatchout';
-    const priceKeys = [10, 15, 20, 1000];
+    const priceKeys = [2, 8, 20, 80, 300, 1000];
     const priceKey = priceKeys.find(key => price < key);
     const min = getMinutesFrom630();
     const minKey = (() => {
@@ -409,7 +413,14 @@ module.exports = new (class RealtimeRunner {
         [strategyName]: [strategyName]
       })
     }), {
-      'multi-hits': ['multi-hits']
+
+      'multi-hits': ['multi-hits'],
+
+      ...Object.keys(this.collections).reduce((acc, collectionName) => ({
+        ...acc,
+        collectionName: [collectionName]
+      }), {})
+
     })
   }
 

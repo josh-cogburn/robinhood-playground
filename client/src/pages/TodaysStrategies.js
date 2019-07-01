@@ -135,7 +135,7 @@ class TodaysStrategies extends Component {
                 </select>
                 <br/>
                 additional filters:
-                <input type="text" onChange={this.setStateOfProp('additionalFilters')} />
+                <input type="text" value={additionalFilters} onChange={this.setStateOfProp('additionalFilters')} />
                 <br/>
                 include after hours:
                 <input type="checkbox" checked={afterHoursEnabled} onChange={this.toggleAfterHours} />
