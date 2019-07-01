@@ -388,7 +388,7 @@ module.exports = new (class RealtimeRunner {
 
     const pms = await pmsHit(null, pickName);
     if (pms && pms.length && pms.includes('forPurchase')) {
-      await sendEmail(`NEW ${strategyName.toUpperCase()} ALERT ${pickName}: ${ticker}`, JSON.stringify(pick, null, 2));
+      // await sendEmail(`NEW ${strategyName.toUpperCase()} ALERT ${pickName}: ${ticker}`, JSON.stringify(pick, null, 2));
     }
     
     await recordPicks(Robinhood, pickName, 5000, [ticker]);
