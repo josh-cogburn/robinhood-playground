@@ -340,7 +340,7 @@ module.exports = new (class RealtimeRunner {
     price = price.currentPrice;
 
     const collectionKey = Object.keys(this.collections).find(collection => 
-      this.collections[collection].includes(ticker)
+      (this.collections[collection] || []).includes(ticker)
     );
     const keyString = Object.keys(keys).filter(key => keys[key]).join('-');
 
