@@ -15,5 +15,5 @@ module.exports = (subject, text, to = credentials.username, files = []) =>
           text,
           to,
           files
-      }, (err, res) => err ? console.error(err) : resolve(res));
+      }, (err, res) => err ? console.error(err) && resolve() : resolve(res));
   });
