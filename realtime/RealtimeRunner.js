@@ -74,13 +74,13 @@ module.exports = new (class RealtimeRunner {
     regCronIncAfterSixThirty(Robinhood, {
         name: 'start RealtimeRunner',
         run: [5],
-        fn: this.start
+        fn: () => this.start()
     });
 
     regCronIncAfterSixThirty(Robinhood, {
         name: 'stop RealtimeRunner',
         run: [631],
-        fn: this.stop
+        fn: () => this.stop()
     });
 
     if (dayInProgress()) {
@@ -115,7 +115,7 @@ module.exports = new (class RealtimeRunner {
   }
 
   async start() {
-    console.log('start!!')
+    console.log('start!!');
     this.currentlyRunning = true;
     this.runCount = 0;
     this.interval = setInterval(() => this.everyFiveMinutes(), 5 * 1000 * 60);  // 5minute
