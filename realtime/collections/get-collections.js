@@ -66,6 +66,7 @@ module.exports = async () => {
         ...await getFinvizCollections(),
     };
 
+    strlog(response);
     console.log(`total stock count: ${Object.values(response).flatten().uniq().length}`);
 
     return response;

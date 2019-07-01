@@ -76,7 +76,7 @@ module.exports = async (tickers, period) => {
 
   const asArray = await mapLimit(tickers, 3, async ticker => ({
     ticker,
-    historicals: await getHistoricals(ticker, period)
+    historicals: await getHistoricals(ticker, period).catch(console.error)
   }));
 
   return asArray.reduce((acc, { ticker, historicals }) => ({
