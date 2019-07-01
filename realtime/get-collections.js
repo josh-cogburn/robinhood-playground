@@ -54,8 +54,9 @@ module.exports = async () => {
     };
 
     return {
+        testing: ['AAPL'],
         options: OPTIONSTICKERS,
-        // zeroAndOne: await getTickersBetween(0, 1),
+        zeroAndOne: await getTickersBetween(0, 1),
         upcoming: await getRhStocks('upcoming-earnings'),
         top100: await getRhStocks('100-most-popular'),
     };

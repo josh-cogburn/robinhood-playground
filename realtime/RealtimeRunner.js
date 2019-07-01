@@ -85,7 +85,20 @@ module.exports = new (class RealtimeRunner {
 
     if (dayInProgress()) {
       console.log('in progress');
-      await this.start();
+
+      const last5Minute = this.getLastTimestamp(5);
+      console.log({
+        last5Minute,
+        formatted: new Date(last5Minute).toLocaleString()
+      })
+      const diff = Date.now() - last5Minute;
+      const from5 = (5 * 1000 * 60) - diff;
+      console.log({
+        diff: diff / 1000 / 60,
+        from5: from5 / 1000 / 60
+      });
+
+      setTimeout(() => this.start(), from5);
     } else {
       console.log('not in progress');
     }
@@ -111,7 +124,7 @@ module.exports = new (class RealtimeRunner {
         [period]: await historicalMethods[period](allTickers, period)
       }
     }
-    // strlog({ allTickers, priceCaches: this.priceCaches });
+    strlog({ allTickers, priceCaches: this.priceCaches });
   }
 
   async start() {
@@ -177,18 +190,38 @@ module.exports = new (class RealtimeRunner {
     return response;
   }
 
+  getLastTimestamp(period) {
+    const relatedPriceCache = this.priceCaches[period];
+    const firstTicker = Object.keys(relatedPriceCache)[0];
+    const data = relatedPriceCache[firstTicker];
+    const lastData = data[data.length - 1];
+    return lastData.timestamp;
+  }
+
   async everyFiveMinutes() {
     if (!this.currentlyRunning) {
       return this.stop();
     }
     
     this.runCount++;
-    const periods = [
-      5,
-      ...[10, 30].filter(period => 
-        this.runCount % (period / 5) === 0
-      )
-    ];
+
+    const lastTS = Object.keys(this.priceCaches).reduce((acc, period) => ({
+      ...acc,
+      [period]: this.getLastTimestamp(period)
+    }), {});
+    console.log(lastTS)
+    const periods = Object.keys(lastTS).filter(period => {
+      const compareTS = lastTS[period];
+      const diff = Date.now() - compareTS;
+      const shouldUpdate = diff > (period - 2) * 1000 * 60;
+      if (shouldUpdate) {
+        console.log('shouldUpdate', {
+          period,
+          compareTS,
+        });
+      }
+      return shouldUpdate;
+    });
 
     console.log('every five minutes...', { periods, runCount: this.runCount });
 

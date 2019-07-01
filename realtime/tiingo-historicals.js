@@ -7,14 +7,17 @@ const { tiingo: { token }} = require('../config');
 const number = n => Number(n);
 
 const getHistoricals = async (ticker, period) => {
-
+  console.log({
+    ticker,
+    period
+  })
   const sevenDaysDate = (new Date());
   sevenDaysDate.setDate(sevenDaysDate.getDate() - 7);
   const [month, day, year] = sevenDaysDate.toLocaleDateString().split('-');
   const formatted = [year, month, day].join('-');
 
   const requestOptions = {
-    url: `https://api.tiingo.com/iex/${ticker}/prices?startDate=${formatted}&resampleFreq=30min&token=${token}`,
+    url: `https://api.tiingo.com/iex/${ticker}/prices?startDate=${formatted}&resampleFreq=${period}min&token=${token}`,
     headers: {
       'Content-Type': 'application/json'
     }
@@ -58,17 +61,22 @@ const getHistoricals = async (ticker, period) => {
     };
   });
 
+  const withTimestamp = withVolumePerc.map(hist => ({
+    ...hist,
+    timestamp: new Date(hist.date).getTime() + (1000 * 60 * period)
+  }));
+
   console.log(`got historicals for ${ticker}`);
-  return withVolumePerc.reverse();
+  return withTimestamp.reverse();
 
 };
 
-module.exports = async tickers => {
+module.exports = async (tickers, period) => {
   // console.log({ tickers })
   const historicals = {};
   for (let ticker of tickers) {
     try {
-      historicals[ticker] = await getHistoricals(ticker);
+      historicals[ticker] = await getHistoricals(ticker, period);
     } catch (e) {
       console.error(e);
     }

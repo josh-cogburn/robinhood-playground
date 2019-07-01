@@ -13,6 +13,11 @@ module.exports = {
 
         if (!bigJump) return;
 
+        console.log('found sudden drop', {
+          allCurrents,
+          trendFromMin
+        })
+
         // check against 5 minute historical data???
         let [fiveMinuteHistoricals] = await getMultipleHistoricals(
             Robinhood,
