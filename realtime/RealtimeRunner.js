@@ -401,6 +401,7 @@ module.exports = new (class RealtimeRunner {
 
 
   getPms() {
+    if (!this.hasInit) return {};
     return this.strategies.reduce((acc, { pms, strategyName }) => ({
       ...acc,
       ...Object.keys(pms).reduce((inner, key) => ({
