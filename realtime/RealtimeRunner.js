@@ -72,13 +72,19 @@ module.exports = new (class RealtimeRunner {
     });
 
     regCronIncAfterSixThirty(Robinhood, {
-        name: 'start RealtimeRunner',
+        name: 'RealtimeRunner: start',
         run: [5],
         fn: () => this.start()
     });
 
     regCronIncAfterSixThirty(Robinhood, {
-        name: 'stop RealtimeRunner',
+        name: 'RealtimeRunner: refreshCollections',
+        run: [2],
+        fn: () => this.refreshCollections()
+    });
+
+    regCronIncAfterSixThirty(Robinhood, {
+        name: 'RealtimeRunner: stop',
         run: [631],
         fn: () => this.stop()
     });

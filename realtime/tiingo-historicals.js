@@ -73,14 +73,15 @@ const getHistoricals = async (ticker, period) => {
 
 module.exports = async (tickers, period) => {
   // console.log({ tickers })
-  const historicals = {};
-  for (let ticker of tickers) {
-    try {
-      historicals[ticker] = await getHistoricals(ticker, period);
-    } catch (e) {
-      console.error(e);
-    }
-    
-  };
-  return historicals;
+
+  const asArray = await mapLimit(tickers, 3, async ticker => ({
+    ticker,
+    historicals: await getHistoricals(ticker, period)
+  }));
+
+  return asArray.reduce((acc, { ticker, historicals }) => ({
+    ...acc,
+    [ticker]: historicals
+  }), {});
+
 }
