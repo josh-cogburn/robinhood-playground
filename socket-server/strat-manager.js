@@ -58,7 +58,7 @@ const stratManager = {
         // init picks?
         console.log('init refresh')
         try {
-            // await this.refreshPastData();
+            await this.refreshPastData();
         } catch (e) {
             console.log('error refreshing past', e);
         }

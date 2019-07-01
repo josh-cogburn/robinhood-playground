@@ -41,7 +41,7 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
         picks: withPrices
     });
 
-    strlog(mongoResponse);
+    // strlog(mongoResponse);
 
     // for socket-server
     stratManager.newPick({

@@ -177,10 +177,6 @@ module.exports = new (class RealtimeRunner {
     return response;
   }
 
-  printPriceCacheTimestamps(periods = Object.keys(this.priceCaches)) {
-    
-  }
-
   async everyFiveMinutes() {
     if (!this.currentlyRunning) {
       return this.stop();

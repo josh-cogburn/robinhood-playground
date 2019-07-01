@@ -8,6 +8,6 @@ module.exports = () => {
   // if between start and end times then start() on init
   const min = getMinutesFrom630();
   const isBetweenMinutes = Boolean(min > START_MIN && min < STOP_MIN);
-  const isWeekday = true //[0, 6].every(day => (new Date()).getDay() !== day);
+  const isWeekday = [0, 6].every(day => (new Date()).getDay() !== day);
   return isBetweenMinutes && isWeekday;
 };
