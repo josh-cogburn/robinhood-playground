@@ -124,7 +124,7 @@ module.exports = new (class RealtimeRunner {
         [period]: await historicalMethods[period](allTickers, period)
       }
     }
-    strlog({ allTickers, priceCaches: this.priceCaches });
+    // strlog({ allTickers, priceCaches: this.priceCaches });
   }
 
   async start() {
