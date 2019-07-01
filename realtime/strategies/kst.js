@@ -96,6 +96,8 @@ module.exports = {
         zeroCrosses: 'isZeroCross',
         isLow: 'isLow',
 
+        hothotBothZeroAndSignal: ['isSignalCross', 'isZeroCross'],
+
         shouldWatchout: 'shouldWatchout',
         notWatchout: 'notWatchout',
 
@@ -117,8 +119,9 @@ module.exports = {
         upcomingZeroCrosses: ['upcoming', '30min', 'isZeroCross'],
         upcomingLowSignals: ['upcoming', '30min', 'isSignalCross', 'isLow'],
 
-
-        top100LowSignals: ['upcoming', '10min', 'isSignalCross', 'isLow'],
+        top100ZeroCrosses: ['top100', 'isZeroCross'],
+        top100LowSignals10min: ['top100', '10min', 'isSignalCross', 'isLow'],
+        top100LowSignals30min: ['top100', '30min', 'isSignalCross', 'isLow'],
         
     }
 };

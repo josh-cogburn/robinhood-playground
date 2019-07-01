@@ -55,9 +55,9 @@ module.exports = {
 
 
         '30minoptions': ['30min', 'options'],
-
         '10minoptions': ['10min', 'options'],
 
-        lessthan10: 'rsilt10'
+        lessthan10: 'rsilt10',
+        lessthan15: 'rsilt15'
     }
 };

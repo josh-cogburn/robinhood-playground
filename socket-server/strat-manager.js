@@ -58,7 +58,7 @@ const stratManager = {
         // init picks?
         console.log('init refresh')
         try {
-            await this.refreshPastData();
+            // await this.refreshPastData();
         } catch (e) {
             console.log('error refreshing past', e);
         }
@@ -112,7 +112,10 @@ const stratManager = {
         // if (this.curDate !== getToday()) {
         //     return;
         // }
-        this.picks.push(data);
+        this.picks.push({
+            ...data,
+            timestamp: Date.now()
+        });
         this.sendToAll('server:picks-data', data);
     },
     getAllPicks() {
@@ -177,11 +180,18 @@ const stratManager = {
     async initPicks(dateStr) {
         console.log('init picks', dateStr)
         const dbPicks = await Pick.find({ date: dateStr }).lean();
-        console.log('dbPicks', dbPicks.length);
-        const picks = dbPicks.map(pick => ({
-            stratMin: `${pick.strategyName}-${pick.min}`,
-            withPrices: pick.picks
-        }));
+        
+        const picks = dbPicks
+            .filter(pick => pick.timestamp)
+            .map(pick => ({
+                stratMin: `${pick.strategyName}-${pick.min}`,
+                withPrices: pick.picks,
+                timestamp: pick.timestamp
+            }));
+        console.log({
+            dbPicks: dbPicks.length,
+            picks: picks.length
+        });
 
         console.log('mostRecentDay', dateStr);
         this.curDate = dateStr;
@@ -251,7 +261,7 @@ const stratManager = {
                 .map(withTrend => ({
                     avgTrend: avgArray(withTrend.map(obj => obj.trend)),
                     stratMin: withTrend.stratMin,
-                    tickers: withTrend.map(obj => obj.ticker)
+                    tickers: withTrend.map(obj => obj.ticker),
                 }))
                 .filter(Boolean);
             
@@ -272,7 +282,8 @@ const stratManager = {
                         }
                     });
                     return avgArray(withoutDuplicates.map(obj => obj.avgTrend));
-                })() : weightedTrend
+                })() : weightedTrend,
+                count: foundStrategies.length
             };
         })
             .filter(t => !!t.avgTrend)

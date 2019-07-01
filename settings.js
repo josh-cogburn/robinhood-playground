@@ -8,10 +8,14 @@ module.exports = {
         '[kst-optionssignalCrossesislow30Min]',
         '[kst-upcomingZeroCrosses]',
         '[kst-upcomingLowSignals]',
-        '[kst-top100LowSignals]',
+        '[kst-top100ZeroCrosses]',
+        '[kst-top100LowSignals10min]',
+        '[kst-top100LowSignals30min]',
 
         '[rsi-30minoptions]',
         '[rsi-10minoptions]',
+        '[rsi-lessthan15]',
+        '[rsi-lessthan10]',
 
         '[sudden-drops-majorJumpLunch]',
         '[sudden-drops-majorJumpDinner]',

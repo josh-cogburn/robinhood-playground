@@ -37,6 +37,7 @@ class TodaysStrategies extends Component {
                 <table>
                     <thead>
                         <th width="63px">trends</th>
+                        <th>count</th>
                         <th>prediction model</th>
                     </thead>
                     <tbody>
@@ -44,6 +45,7 @@ class TodaysStrategies extends Component {
                             pmPerfs.map(perf => (
                                 <tr>
                                     <td><TrendPerc value={perf.avgTrend} /></td>
+                                    <td>{perf.count}</td>
                                     <td>{perf.pmName}</td>
                                 </tr>
                             ))

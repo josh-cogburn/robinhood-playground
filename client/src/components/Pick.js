@@ -11,17 +11,20 @@ class Pick extends Component {
         this.setState({ showingDetails: !this.state.showingDetails })
     };
     render() {
+        
         const { showingDetails } = this.state;
         const { pick, fiveDay } = this.props;
         let percUpFontSize = fiveDay ? fiveDay.percUp * 100.4 : 100;
         if (fiveDay && fiveDay.avgTrend > 1) percUpFontSize *= 1.9;
+        console.log({ pick })
         return (
             <div className="pick" style={{ fontSize: Math.max(percUpFontSize, 39) + '%'}}>
                 <button onClick={this.toggleDetails}>
                     {showingDetails ? '-' : '+'}
                 </button>
                 <b><TrendPerc value={pick.avgTrend} /></b>
-                <strong>{' ' + pick.stratMin}</strong>
+                <strong>{' ' + pick.stratMin}</strong><br/>
+                <small>{new Date(pick.timestamp).toLocaleTimeString()}</small>
                 <hr/>
                 {fiveDay && (
                   <i>

@@ -18,7 +18,6 @@ const { emails } = require('../config');
 
 const saveToFile = async (Robinhood, strategy, min, withPrices) => {
 
-
     const stratMin = `${strategy}-${min}`;
 
     if (!stratOfInterest(stratMin, withPrices.length)) return;   // cant handle too many strategies apparently
@@ -30,22 +29,25 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
     }
 
     // console.log('recording', stratMin, 'strategy');
-
-    const dateStr = (new Date()).toLocaleDateString().split('/').join('-');
+    const dateStr = stratManager.curDate;
+    // const dateStr = (new Date()).toLocaleDateString().split('/').join('-');
 
     // save to mongo
     console.log(`saving ${strategy} to mongo`);
-    await Pick.create({
+    const mongoResponse = await Pick.create({
         date: dateStr, 
         strategyName: strategy,
         min,
         picks: withPrices
     });
 
+    strlog(mongoResponse);
+
     // for socket-server
     stratManager.newPick({
         stratMin,
-        withPrices
+        withPrices,
+        timestamp: mongoResponse.timestamp
     });
 
 

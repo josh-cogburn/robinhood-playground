@@ -272,10 +272,9 @@ module.exports = new (class RealtimeRunner {
     multiHitTickers.forEach(ticker => {
       picks.push({
         ticker,
-        keys: tickersToStratHits[ticker].reduce((acc, strategyName) => ({
-          ...acc,
-          [strategyName]: true
-        })),
+        keys: {
+          [tickersToStratHits[ticker].length]: true,
+        },
         strategyName: 'multi-hits'
       })
     });

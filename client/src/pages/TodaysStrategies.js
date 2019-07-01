@@ -5,15 +5,10 @@ import avgArray from '../utils/avg-array';
 
 import Pick from '../components/Pick';
 import TrendPerc from '../components/TrendPerc';
-import { partition } from 'underscore';
+import { partition, pick } from 'underscore';
 
 class TodaysStrategies extends Component {
-  state = { picks: [], relatedPrices: {}, pmFilter: 'forPurchase', pastData: {}, predictionModels: {}, afterHoursEnabled: false };
-  setpmFilter = (event) => {
-      this.setState({
-          pmFilter: event.target.value
-      });
-  }
+  state = { picks: [], relatedPrices: {}, pmFilter: 'forPurchase', pastData: {}, predictionModels: {}, afterHoursEnabled: false, sortBy: 'avgTrend', additionalFilters: '' };
   strategyMove = increment => {
       const curStrategy = this.state.pmFilter;
       const listOfStrategies = [...Object.keys(this.props.predictionModels), 'forPurchase', 'no filter'];
@@ -25,16 +20,24 @@ class TodaysStrategies extends Component {
           pmFilter: listOfStrategies[nextIndex]
       });
   }
-  toggleAfterHours = () => this.setState({ afterHoursEnabled: !this.state.afterHoursEnabled })
+  componentWillUnmount() {
+      window.localStorage.setItem('TodaysStrategies', JSON.stringify(pick(this.state, ['pmFilter', 'sortBy', 'additionalFilters'])));
+  }
+  componentDidMount() {
+      this.setState(
+          JSON.parse(window.localStorage.getItem('TodaysStrategies'))
+      )
+  }
+  setStateOfProp = prop => event => this.setState({ [prop]: event.target.value });
+  toggleAfterHours = () => this.setState({ afterHoursEnabled: !this.state.afterHoursEnabled });
   render() {
-      let { pmFilter, afterHoursEnabled } = this.state;
+      let { pmFilter, afterHoursEnabled, sortBy, additionalFilters } = this.state;
       let { picks, relatedPrices, predictionModels, pastData, curDate, pmPerfs, pms, settings } = this.props;
       const { fiveDay } = pastData || {};
-        console.log({ pms, pmFilter });
 
-
+        const additionalFilterParts = additionalFilters.split(',');
+        
         const matchesPm = (strat, pm) => {
-            console.log({ pm })
             return pms[pm] && pms[pm].every(part => strat.includes(`${part}-`));
         }
 
@@ -63,7 +66,9 @@ class TodaysStrategies extends Component {
               );
           }
         //   const picks = pmFilter !== 'no filter' ? picks.filter(pick => pms[pmFilter].every(part => pick.stratMin.includes(`${part}-`))) : picks;
-      })();
+      })().filter(pick => additionalFilterParts.every(part => pick.stratMin.includes(part)));
+
+      console.log({ showingPicks})
       
       showingPicks = showingPicks.map(pick => {
           const calcedTrends = pick.withPrices.map(({ ticker, price }) => {
@@ -88,8 +93,10 @@ class TodaysStrategies extends Component {
           };
       });
       let sortedByAvgTrend = showingPicks
-          .sort(({ avgTrend: a }, { avgTrend: b}) => {
-              return (isNaN(a)) - (isNaN(b)) || -(a>b)||+(a<b);
+          .sort((a, b) => {
+              const aVal = a[sortBy];
+              const bVal = b[sortBy];
+              return (isNaN(aVal)) - (isNaN(bVal)) || -(aVal>bVal)||+(aVal<bVal);
           });
       console.log('rendering!');
       const avgTrendOverall = avgArray(
@@ -109,7 +116,7 @@ class TodaysStrategies extends Component {
                 <button onClick={() => this.strategyMove(-1)}>
                     {'<<'}
                 </button>
-                <select value={pmFilter} onChange={this.setpmFilter}>
+                <select value={pmFilter} onChange={this.setStateOfProp('pmFilter')}>
                     {pmPerfs && pmPerfs.map(({ pmName }) => (
                         <option value={pmName}>{pmName}</option>
                     ))}
@@ -119,6 +126,16 @@ class TodaysStrategies extends Component {
                 <button onClick={() => this.strategyMove(1)}>
                     {'>>'}
                 </button>
+                <br/>
+                sort by:
+                <select value={sortBy} onChange={this.setStateOfProp('sortBy')}>
+                    {['avgTrend', 'timestamp'].map(sortBy => (
+                        <option value={sortBy}>{sortBy}</option>
+                    ))}
+                </select>
+                <br/>
+                additional filters:
+                <input type="text" onChange={this.setStateOfProp('additionalFilters')} />
                 <br/>
                 include after hours:
                 <input type="checkbox" checked={afterHoursEnabled} onChange={this.toggleAfterHours} />
