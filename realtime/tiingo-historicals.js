@@ -81,7 +81,7 @@ module.exports = async (tickers, period) => {
 
   return asArray.reduce((acc, { ticker, historicals }) => ({
     ...acc,
-    [ticker]: historicals
+    ...historicals && { [ticker]: historicals }
   }), {});
 
 }
