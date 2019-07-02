@@ -71,9 +71,10 @@ module.exports = new (class RealtimeRunner {
       }
     });
 
+    const START_MIN = 5;
     regCronIncAfterSixThirty(Robinhood, {
         name: 'RealtimeRunner: start',
-        run: [5],
+        run: [START_MIN],
         fn: () => this.start()
     });
 
@@ -89,7 +90,7 @@ module.exports = new (class RealtimeRunner {
         fn: () => this.stop()
     });
 
-    if (dayInProgress()) {
+    if (dayInProgress(START_MIN)) {
       console.log('in progress');
 
       const last5Minute = this.getLastTimestamp(5);
