@@ -11,7 +11,7 @@ const stratPerfOverall = require('../analysis/strategy-perf-overall');
 const createPredictionModels = require('./create-prediction-models');
 
 const getTrend = require('../utils/get-trend');
-const { avgArray } = require('../utils/array-math');
+const { avgArray, percUp } = require('../utils/array-math');
 const sendEmail = require('../utils/send-email');
 const getSettingsString = require('../utils/get-settings-string');
 const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
@@ -183,6 +183,7 @@ const stratManager = {
         
         const picks = dbPicks
             .filter(pick => pick.timestamp)
+            .filter(pick => !pick.strategyName.includes('afterhours'))
             .map(pick => ({
                 stratMin: `${pick.strategyName}-${pick.min}`,
                 withPrices: pick.picks,
@@ -283,7 +284,8 @@ const stratManager = {
                     });
                     return avgArray(withoutDuplicates.map(obj => obj.avgTrend));
                 })() : weightedTrend,
-                count: foundStrategies.length
+                count: foundStrategies.length,
+                percUp: percUp(foundStrategies.map(obj => obj.avgTrend)) * 100
             };
         })
             .filter(t => !!t.avgTrend)

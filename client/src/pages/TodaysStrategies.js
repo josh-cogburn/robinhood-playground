@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import getTrend from '../utils/get-trend';
-import avgArray from '../utils/avg-array';
+import { avgArray, percUp } from '../utils/array-math';
 
 import Pick from '../components/Pick';
 import TrendPerc from '../components/TrendPerc';
@@ -98,12 +98,13 @@ class TodaysStrategies extends Component {
               const bVal = b[sortBy];
               return (isNaN(aVal)) - (isNaN(bVal)) || -(aVal>bVal)||+(aVal<bVal);
           });
-      console.log('rendering!');
-      const avgTrendOverall = avgArray(
-            sortedByAvgTrend
-                .filter(val => !isNaN(val.avgTrend))
-                .map(strat => strat.avgTrend)
-      );
+
+        const validStrats = sortedByAvgTrend
+            .map(val => val.avgTrend)
+            .filter(avgTrend => avgTrend && !isNaN(avgTrend));
+      const [avgTrendOverall, percUpOverall] = [avgArray, percUp].map(fn => fn(validStrats));
+      const count = showingPicks.length;
+
 
     //   const perfs = pmPerfs.find(perf => perf.pmName === pmFilter) || {};
 
@@ -146,7 +147,9 @@ class TodaysStrategies extends Component {
                             <b>weighted trend: <TrendPerc value={perfs.weightedTrend} />&nbsp;&nbsp;&nbsp;</b>
                         )
                     } */}
-                    <b>average trend: <TrendPerc value={avgTrendOverall} /></b>
+                    <b>average trend: <TrendPerc value={avgTrendOverall} /></b>&nbsp;&nbsp;&nbsp;
+                    <b>percent up: <TrendPerc value={percUpOverall} redAt={50} noPlus={true} round={true} /></b>&nbsp;&nbsp;&nbsp;
+                    <b>count: {count}</b>
             </p>
             <hr/>
             <p className="App-intro">

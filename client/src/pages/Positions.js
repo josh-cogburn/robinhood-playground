@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import getTrend from '../utils/get-trend';
-import avgArray from '../utils/avg-array';
+import { avgArray } from '../utils/array-math';
 
 import Pick from '../components/Pick';
 import TrendPerc from '../components/TrendPerc';

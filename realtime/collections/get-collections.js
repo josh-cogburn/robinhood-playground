@@ -66,8 +66,8 @@ module.exports = async () => {
         // zeroAndOne: await getTickersBetween(0, 1),
         // upcoming: await getRhStocks('upcoming-earnings'),
         rhtop100: await getRhStocks('100-most-popular'),
-        ...await getFinvizCollections(),
-        ...await getStockInvestCollections()
+        // ...await getFinvizCollections(),
+        // ...await getStockInvestCollections()
     };
 
     // remove any tickers that are not available on robinhood
@@ -81,7 +81,7 @@ module.exports = async () => {
     
     response = mapObject(
         response, 
-        tickers => tickers.filter(ticker => 
+        tickers => (tickers || []).filter(ticker => 
             !badTickers.includes(ticker)
         )
     );
