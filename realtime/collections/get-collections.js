@@ -1,8 +1,8 @@
 const getFinvizCollections = require('./get-finviz-collections');
 const getStockInvestCollections = require('./get-stockinvest-collections');
 
-const lookupMultiple = require('../../utils/lookup-multiple');
 const allStocks = require('../../json/stock-data/allStocks');
+const lookupMultiple = require('../../utils/lookup-multiple');
 const { isTradeable } = require('../../utils/filter-by-tradeable');
 const { mapObject } = require('underscore');
 
@@ -61,7 +61,7 @@ module.exports = async () => {
 
     
 
-    const response = {
+    let response = {
         options: OPTIONSTICKERS,
         // zeroAndOne: await getTickersBetween(0, 1),
         // upcoming: await getRhStocks('upcoming-earnings'),
@@ -70,8 +70,24 @@ module.exports = async () => {
         ...await getStockInvestCollections()
     };
 
+    // remove any tickers that are not available on robinhood
+    const getTicks = () => Object.values(response).flatten().uniq();
+    const originalTickers = getTicks();
+    const badTickers = originalTickers.filter(ticker => 
+        !allStocks.find(stock => stock.symbol === ticker)
+    );
+    console.log(`all ticker stock count: ${originalTickers.length}`);
+    strlog({ badTickers });
+    
+    response = mapObject(
+        response, 
+        tickers => tickers.filter(ticker => 
+            !badTickers.includes(ticker)
+        )
+    );
+
     strlog(mapObject(response, v => v.length));
-    console.log(`total stock count: ${Object.values(response).flatten().uniq().length}`);
+    console.log(`without bad stock count: ${getTicks().length}`);
 
     return response;
 
