@@ -408,6 +408,7 @@ module.exports = new (class RealtimeRunner {
 
   getPms() {
     if (!this.hasInit) return {};
+    
     return this.strategies.reduce((acc, { pms, strategyName }) => ({
       ...acc,
       ...Object.keys(pms).reduce((inner, key) => ({
@@ -425,7 +426,7 @@ module.exports = new (class RealtimeRunner {
 
       ...Object.keys(this.collections).reduce((acc, collectionName) => ({
         ...acc,
-        collectionName: [collectionName]
+        [collectionName]: [collectionName]
       }), {})
 
     })

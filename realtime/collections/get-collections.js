@@ -1,7 +1,10 @@
 const getFinvizCollections = require('./get-finviz-collections');
+const getStockInvestCollections = require('./get-stockinvest-collections');
+
 const lookupMultiple = require('../../utils/lookup-multiple');
 const allStocks = require('../../json/stock-data/allStocks');
 const { isTradeable } = require('../../utils/filter-by-tradeable');
+const { mapObject } = require('underscore');
 
 const OPTIONSTICKERS = [
     'SPY',
@@ -62,11 +65,12 @@ module.exports = async () => {
         options: OPTIONSTICKERS,
         // zeroAndOne: await getTickersBetween(0, 1),
         // upcoming: await getRhStocks('upcoming-earnings'),
-        top100: await getRhStocks('100-most-popular'),
+        rhtop100: await getRhStocks('100-most-popular'),
         ...await getFinvizCollections(),
+        ...await getStockInvestCollections()
     };
 
-    strlog(response);
+    strlog(mapObject(response, v => v.length));
     console.log(`total stock count: ${Object.values(response).flatten().uniq().length}`);
 
     return response;
