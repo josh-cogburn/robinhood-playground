@@ -14,7 +14,9 @@ const scrapeStockInvestUrl = async (browser, url) => {
     JSON.parse(document.querySelector("body").innerText)
   );
   await page.close();
-  return json.map(({ ticker }) => ticker);
+  return json
+    .slice(0, 50)
+    .map(({ ticker }) => ticker);
 };
 
 const getStockInvestCollections = async () => {
