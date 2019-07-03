@@ -47,6 +47,19 @@ module.exports = new (class RealtimeRunner {
     this.collections = await getCollections();
   }
 
+  async collectionsAndHistoricals() {
+    await this.timedAsync(
+      'refreshing collections',
+      () => this.refreshCollections(),
+    );
+
+    const allTickers = Object.values(this.collections).flatten().uniq();
+    await this.timedAsync(
+      `loading price caches with historical data for ${allTickers.length} tickers`,
+      () => this.loadPriceCachesWithHistoricals(),
+    );
+  }
+
   async init() {
 
     if (this.hasInit) {
@@ -54,16 +67,7 @@ module.exports = new (class RealtimeRunner {
     }
     
     console.log('INITING REALTIME RUNNER');
-    await this.timedAsync(
-      () => this.refreshCollections(),
-      'refreshing collections'
-    );
-
-    const allTickers = Object.values(this.collections).flatten().uniq();
-    await this.timedAsync(
-      () => this.loadPriceCachesWithHistoricals(),
-      `loading price caches with historical data for ${allTickers.length} tickers`
-    );
+    await this.collectionsAndHistoricals();    
 
     (await getStrategies()).forEach(strategy => {
       if (strategy.handler && strategy.period) {
@@ -79,9 +83,9 @@ module.exports = new (class RealtimeRunner {
     });
 
     regCronIncAfterSixThirty(Robinhood, {
-        name: 'RealtimeRunner: refreshCollections',
-        run: [2],
-        fn: () => this.refreshCollections()
+        name: 'RealtimeRunner: collectionsAndHistoricals',
+        run: [0],
+        fn: () => this.collectionsAndHistoricals()
     });
 
     regCronIncAfterSixThirty(Robinhood, {
@@ -115,10 +119,12 @@ module.exports = new (class RealtimeRunner {
   }
 
   async loadPriceCachesWithHistoricals() {
+    this.priceCaches = {};
     const allTickers = Object.values(this.collections).flatten().uniq();
     const allStratPeriods = this.strategies.map(strategy => strategy.period).flatten().uniq();
 
-    const rhHistoricals = async (allTickers, period) => getHistoricals(Robinhood, allTickers, `${period}minute`);
+    const rhHistoricals = (allTickers, period) => 
+      getHistoricals(Robinhood, allTickers, `${period}minute`);
     const historicalMethods = {
       5: rhHistoricals,
       10: rhHistoricals,
@@ -187,7 +193,7 @@ module.exports = new (class RealtimeRunner {
   }
 
   
-  async timedAsync(asyncFn, eventString) {
+  async timedAsync(eventString, asyncFn) {
     eventString = eventString.toUpperCase();
     const startTS = Date.now();
     console.log(`starting ${eventString}...`);
@@ -218,32 +224,43 @@ module.exports = new (class RealtimeRunner {
     }), {});
     console.log(lastTS)
     const periods = Object.keys(lastTS).filter(period => {
-      const compareTS = lastTS[period];
+      const lastTimestamp = lastTS[period];
+      const fromYesterday = lastTimestamp < Date.now() - 1000 * 60 * 60;
+      const compareTS = fromYesterday ? (() => {
+        const d = new Date();
+        d.setHours(9, 30);
+        return d.getTime();
+      })() : lastTimestamp;
+      
       const diff = Date.now() - compareTS;
       const shouldUpdate = diff > (period - 2) * 1000 * 60;
-      if (shouldUpdate) {
-        console.log('shouldUpdate', {
+      console.log(
+        'everyFiveMinutes REPORT', 
+        this.runCount,
+        {
           period,
-          compareTS,
-        });
-      }
+          fromYesterday,
+          compareTS: new Date(compareTS).toLocaleString(),
+          shouldUpdate
+        }
+      );
       return shouldUpdate;
     });
 
     console.log('every five minutes...', { periods, runCount: this.runCount });
 
     await this.timedAsync(
+      'adding new quote',
       () => this.addNewQuote(periods),
-      'adding new quote'
     );
     const picks = await this.timedAsync(
+      'running all strategies',
       () => this.runAllStrategies(periods),
-      'running all strategies'
     );
 
     await this.timedAsync(
+      `handling ${picks.length} picks`,
       () => this.handlePicks(picks),
-      `handling ${picks.length} picks`
     );
 
   }
