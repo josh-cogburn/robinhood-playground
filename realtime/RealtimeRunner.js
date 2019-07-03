@@ -137,7 +137,9 @@ module.exports = new (class RealtimeRunner {
         [period]: await historicalMethods[period](allTickers, period)
       }
     }
-    // strlog({ allTickers, priceCaches: this.priceCaches });
+
+
+    strlog({ allTickers, priceCaches: this.priceCaches });
   }
 
   async start() {
@@ -208,20 +210,20 @@ module.exports = new (class RealtimeRunner {
     const relatedPriceCache = this.priceCaches[period];
     console.log(Object.keys(relatedPriceCache));
     const firstTicker = Object.keys(relatedPriceCache)[0];
-    const data = relatedPriceCache[firstTicker];
+    const firstTickerData = relatedPriceCache[firstTicker];
     console.log({
       period,
-      data: JSON.stringify(data).slice(0, 40)
+      firstTickerData: JSON.stringify(firstTickerData)
     })
-    const lastData = data[data.length - 1];
-    if (!lastData) {
+    const firstTickerLastHistorical = firstTickerData[firstTickerData.length - 1];
+    if (!firstTickerLastHistorical) {
       console.log('WHAT NO LAST DATA', {
         period,
         firstTicker,
         relatedPriceCache
       })
     }
-    return lastData.timestamp;
+    return firstTickerLastHistorical.timestamp;
   }
 
   async everyFiveMinutes() {

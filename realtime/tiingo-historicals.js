@@ -68,12 +68,12 @@ const getHistoricals = async (ticker, period) => {
     }))
     .filter(hist => hist.timestamp < Date.now());
 
-  console.log(`got historicals for ${ticker}`);
+  console.log(`got historicals for ${ticker}`, withTimestamp.length);
   return withTimestamp.reverse();
 
 };
 
-module.exports = async (_, tickers, period) => {
+module.exports = async (tickers, period) => {
   // console.log({ tickers })
 
   const asArray = await mapLimit(tickers, 3, async ticker => ({
