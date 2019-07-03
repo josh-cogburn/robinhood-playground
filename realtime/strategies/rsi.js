@@ -21,7 +21,7 @@ module.exports = {
                 ticker,
                 keys: {
                     ...(rsiKey = () => {
-                        const num = [10, 15, 20, 25, 30].find(val => rsi < val);
+                        const num = [5, 10, 15, 20, 25, 30].find(val => rsi < val);
                         const key = num ? `rsilt${num}` : 'fluke';
                         return { [key]: true };
                     })()
@@ -61,7 +61,7 @@ module.exports = {
         lessthan15: 'rsilt15',
 
 
-
+        rhtopunder300: ['under300', 'rhtop'],
 
         top10030min: ['30min', 'top100'],
         top100under20: ['30min', 'top100', 'under20'],

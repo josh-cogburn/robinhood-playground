@@ -4,23 +4,10 @@ module.exports = {
     sellAllStocksOnNthDay: 10,
     purchaseAmt: 40,
     forPurchase: [
+        '[kst-top100ZeroCrosses30minUnder300]',
+        '[rsi-rhtopunder300]',
         '[kst-optionszeroCrosses30Min]',
-        '[kst-optionssignalCrossesislow30Min]',
-        '[kst-upcomingZeroCrosses]',
-        '[kst-upcomingLowSignals]',
-        '[kst-top100ZeroCrosses]',
-        '[kst-top100LowSignals10min]',
-        '[kst-top100LowSignals30min]',
-
-        '[rsi-30minoptions]',
-        '[rsi-10minoptions]',
-        '[rsi-lessthan15]',
-        '[rsi-lessthan10]',
-
-        '[sudden-drops-majorJumpLunch]',
-        '[sudden-drops-majorJumpDinner]',
-
-        '[multi-hits]'
+        '[kst-optionszeroCrosses10Min]',
     ],
     // forPurchaseVariation: '75Perc5Day-yesincludingblanks',
     // fallbackSellStrategy: 'limit8',
