@@ -84,7 +84,7 @@ module.exports = new (class RealtimeRunner {
 
     regCronIncAfterSixThirty(Robinhood, {
         name: 'RealtimeRunner: collectionsAndHistoricals',
-        run: [0],
+        run: [2],
         fn: () => this.collectionsAndHistoricals()
     });
 
