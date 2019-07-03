@@ -204,9 +204,15 @@ module.exports = new (class RealtimeRunner {
   }
 
   getLastTimestamp(period) {
+    console.log('getting last timestamp');
     const relatedPriceCache = this.priceCaches[period];
+    console.log(Object.keys(relatedPriceCache));
     const firstTicker = Object.keys(relatedPriceCache)[0];
     const data = relatedPriceCache[firstTicker];
+    console.log({
+      period,
+      data: JSON.stringify(data).slice(0, 40)
+    })
     const lastData = data[data.length - 1];
     if (!lastData) {
       console.log('WHAT NO LAST DATA', {
