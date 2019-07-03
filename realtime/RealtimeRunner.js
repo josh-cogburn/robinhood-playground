@@ -208,6 +208,13 @@ module.exports = new (class RealtimeRunner {
     const firstTicker = Object.keys(relatedPriceCache)[0];
     const data = relatedPriceCache[firstTicker];
     const lastData = data[data.length - 1];
+    if (!lastData) {
+      console.log('WHAT NO LAST DATA', {
+        period,
+        firstTicker,
+        relatedPriceCache
+      })
+    }
     return lastData.timestamp;
   }
 

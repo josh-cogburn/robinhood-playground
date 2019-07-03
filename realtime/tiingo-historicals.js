@@ -61,17 +61,19 @@ const getHistoricals = async (ticker, period) => {
     };
   });
 
-  const withTimestamp = withVolumePerc.map(hist => ({
-    ...hist,
-    timestamp: new Date(hist.date).getTime() + (1000 * 60 * period)
-  }));
+  const withTimestamp = withVolumePerc
+    .map(hist => ({
+      ...hist,
+      timestamp: new Date(hist.date).getTime() + (1000 * 60 * period)
+    }))
+    .filter(hist => hist.timestamp < Date.now());
 
   console.log(`got historicals for ${ticker}`);
   return withTimestamp.reverse();
 
 };
 
-module.exports = async (tickers, period) => {
+module.exports = async (_, tickers, period) => {
   // console.log({ tickers })
 
   const asArray = await mapLimit(tickers, 3, async ticker => ({
@@ -81,7 +83,7 @@ module.exports = async (tickers, period) => {
 
   return asArray.reduce((acc, { ticker, historicals }) => ({
     ...acc,
-    ...historicals && { [ticker]: historicals }
+    ...ticker && historicals && { [ticker]: historicals }
   }), {});
 
 }

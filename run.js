@@ -23,7 +23,10 @@ require('./utils/fix-locale-date-string');
     let callArgs = [Robinhood];
     const restArgs = process.argv.slice(3)
         .map(arg => arg === 'true' ? true : arg)
-        .map(arg => arg === 'false' ? false : arg);
+        .map(arg => arg === 'false' ? false : arg)
+        .map(arg => arg.includes(',') && arg.split(','));
+
+
 
     if (argPath.includes('modules/')) {
         const { trendFilter, trendFilterKey } = relatedFile;
