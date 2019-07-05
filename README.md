@@ -1,8 +1,8 @@
 # robinhood-playground
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/6h-GAnsdc40/0.jpg)](https://www.youtube.com/watch?v=6h-GAnsdc40)
+<img width="526" alt="Screen Shot 2019-07-02 at 4 06 59 PM" src="https://user-images.githubusercontent.com/11671559/60616430-12a5f780-9d97-11e9-949f-b37ef7a76cb7.png">
 
-a Node.js script based on the Robinhood API that makes stock recommendations that will go up or down in the next few days
+a Node.js script that makes stock recommendations
 
 `npm install`
 
