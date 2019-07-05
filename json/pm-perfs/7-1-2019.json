@@ -1,0 +1,116 @@
+[
+  {
+    "pmName": "sudden-drops-majorJumpDinner",
+    "weightedTrend": 8.7075,
+    "avgTrend": 8.7075,
+    "count": 4
+  },
+  {
+    "pmName": "sudden-drops-shouldWatchout",
+    "weightedTrend": 5.085,
+    "avgTrend": 5.085,
+    "count": 2
+  },
+  {
+    "pmName": "sudden-drops",
+    "weightedTrend": 3.940833333333332,
+    "avgTrend": 3.940833333333332,
+    "count": 24
+  },
+  {
+    "pmName": "sudden-drops-notWatchout",
+    "weightedTrend": 3.836818181818181,
+    "avgTrend": 3.836818181818181,
+    "count": 22
+  },
+  {
+    "pmName": "sudden-drops-majorJumpLunch",
+    "weightedTrend": 3.4159999999999995,
+    "avgTrend": 3.4159999999999995,
+    "count": 5
+  },
+  {
+    "pmName": "rsi-lessthan10",
+    "weightedTrend": 0.7859174311926608,
+    "avgTrend": 0.7859174311926608,
+    "count": 872
+  },
+  {
+    "pmName": "rsi-top100under20",
+    "weightedTrend": 0.55,
+    "avgTrend": 0.55,
+    "count": 1
+  },
+  {
+    "pmName": "rsi-top10030min",
+    "weightedTrend": 0.19937500000000002,
+    "avgTrend": 0.19937500000000002,
+    "count": 16
+  },
+  {
+    "pmName": "kst-top100LowSignals30min",
+    "weightedTrend": 0.07750000000000001,
+    "avgTrend": 0.07750000000000001,
+    "count": 12
+  },
+  {
+    "pmName": "rsi-10minoptions",
+    "weightedTrend": 0.05388059701492537,
+    "avgTrend": 0.05388059701492537,
+    "count": 67
+  },
+  {
+    "pmName": "kst-top100ZeroCrosses",
+    "weightedTrend": 0.04011363636363631,
+    "avgTrend": 0.04011363636363631,
+    "count": 528
+  },
+  {
+    "pmName": "kst-top100LowSignals10min",
+    "weightedTrend": -0.03874999999999999,
+    "avgTrend": -0.03874999999999999,
+    "count": 24
+  },
+  {
+    "pmName": "options",
+    "weightedTrend": -0.05004629629629632,
+    "avgTrend": -0.05004629629629632,
+    "count": 432
+  },
+  {
+    "pmName": "rsi-30minoptions",
+    "weightedTrend": -0.052058823529411796,
+    "avgTrend": -0.052058823529411796,
+    "count": 34
+  },
+  {
+    "pmName": "kst-optionssignalCrossesislow30Min",
+    "weightedTrend": -0.12307692307692307,
+    "avgTrend": -0.12307692307692307,
+    "count": 13
+  },
+  {
+    "pmName": "kst-options30minNotWatchout",
+    "weightedTrend": -0.13,
+    "avgTrend": -0.13,
+    "count": 20
+  },
+  {
+    "pmName": "kst-optionszeroCrosses30Min",
+    "weightedTrend": -0.22600000000000003,
+    "avgTrend": -0.22600000000000003,
+    "count": 5
+  },
+  {
+    "pmName": "kst-hothotBothZeroAndSignal",
+    "weightedTrend": -0.8701145662847796,
+    "avgTrend": -0.8701145662847796,
+    "count": 611
+  },
+  {
+    "pmName": "kst-zeroAndOnezeroCrosses30Min",
+    "weightedTrend": -1.6296610169491523,
+    "avgTrend": -1.6296610169491523,
+    "count": 59
+  }
+]

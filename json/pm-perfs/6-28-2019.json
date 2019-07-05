@@ -1,0 +1,92 @@
+[
+  {
+    "pmName": "rsi-10minoptions",
+    "weightedTrend": 5.73,
+    "avgTrend": 5.73,
+    "count": 4
+  },
+  {
+    "pmName": "rsi-10minute",
+    "weightedTrend": 2.5410000000000004,
+    "avgTrend": 2.5410000000000004,
+    "count": 10
+  },
+  {
+    "pmName": "rsi-notWatchout",
+    "weightedTrend": 1.7378571428571434,
+    "avgTrend": 1.7378571428571434,
+    "count": 56
+  },
+  {
+    "pmName": "rsi",
+    "weightedTrend": 1.7378571428571434,
+    "avgTrend": 1.7378571428571434,
+    "count": 56
+  },
+  {
+    "pmName": "rsi-5minute",
+    "weightedTrend": 1.563260869565218,
+    "avgTrend": 1.563260869565218,
+    "count": 46
+  },
+  {
+    "pmName": "kst-isLow",
+    "weightedTrend": 0.05777777777777778,
+    "avgTrend": 0.05777777777777778,
+    "count": 9
+  },
+  {
+    "pmName": "kst-top100LowSignals10min",
+    "weightedTrend": -0.085,
+    "avgTrend": -0.085,
+    "count": 4
+  },
+  {
+    "pmName": "kst-10minute",
+    "weightedTrend": -0.12840909090909092,
+    "avgTrend": -0.12840909090909092,
+    "count": 44
+  },
+  {
+    "pmName": "kst-signalCrosses",
+    "weightedTrend": -0.1304477611940298,
+    "avgTrend": -0.1304477611940298,
+    "count": 67
+  },
+  {
+    "pmName": "kst",
+    "weightedTrend": -0.15233644859813075,
+    "avgTrend": -0.15233644859813075,
+    "count": 107
+  },
+  {
+    "pmName": "kst-notWatchout",
+    "weightedTrend": -0.1537735849056603,
+    "avgTrend": -0.1537735849056603,
+    "count": 106
+  },
+  {
+    "pmName": "kst-5minute",
+    "weightedTrend": -0.169047619047619,
+    "avgTrend": -0.169047619047619,
+    "count": 63
+  },
+  {
+    "pmName": "kst-zeroCrosses",
+    "weightedTrend": -0.23699999999999993,
+    "avgTrend": -0.23699999999999993,
+    "count": 60
+  },
+  {
+    "pmName": "kst-top100ZeroCrosses",
+    "weightedTrend": -0.29527777777777775,
+    "avgTrend": -0.29527777777777775,
+    "count": 36
+  },
+  {
+    "pmName": "kst-hothotBothZeroAndSignal",
+    "weightedTrend": -0.33299999999999996,
+    "avgTrend": -0.33299999999999996,
+    "count": 20
+  }
+]
