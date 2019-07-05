@@ -121,7 +121,7 @@ module.exports = new (class RealtimeRunner {
   async loadPriceCachesWithHistoricals() {
     this.priceCaches = {};
     const allTickers = Object.values(this.collections).flatten().uniq();
-    const allStratPeriods = this.strategies.map(strategy => strategy.period).flatten().uniq();
+    // const allStratPeriods = this.strategies.map(strategy => strategy.period).flatten().uniq();
 
     const rhHistoricals = (allTickers, period) => 
       getHistoricals(Robinhood, allTickers, `${period}minute`);

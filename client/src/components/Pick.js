@@ -16,7 +16,7 @@ class Pick extends Component {
         const { pick, fiveDay } = this.props;
         let percUpFontSize = fiveDay ? fiveDay.percUp * 100.4 : 100;
         if (fiveDay && fiveDay.avgTrend > 1) percUpFontSize *= 1.9;
-        console.log({ pick })
+        // console.log({ pick })
         return (
             <div className="pick" style={{ fontSize: Math.max(percUpFontSize, 39) + '%'}}>
                 <button onClick={this.toggleDetails}>

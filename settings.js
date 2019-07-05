@@ -6,8 +6,8 @@ module.exports = {
     forPurchase: [
         '[kst-top100ZeroCrosses30minUnder300]',
         '[rsi-rhtopunder300]',
+        '[rsi-30minoptions]',
         '[kst-optionszeroCrosses30Min]',
-        '[kst-optionszeroCrosses10Min]',
     ],
     // forPurchaseVariation: '75Perc5Day-yesincludingblanks',
     // fallbackSellStrategy: 'limit8',

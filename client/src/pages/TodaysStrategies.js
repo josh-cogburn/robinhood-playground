@@ -5,7 +5,7 @@ import { avgArray, percUp } from '../utils/array-math';
 
 import Pick from '../components/Pick';
 import TrendPerc from '../components/TrendPerc';
-import { partition, pick } from 'underscore';
+import { partition, pick, sortBy } from 'underscore';
 
 class TodaysStrategies extends Component {
   state = { picks: [], relatedPrices: {}, pmFilter: 'forPurchase', pastData: {}, predictionModels: {}, afterHoursEnabled: false, sortBy: 'avgTrend', additionalFilters: '' };
@@ -31,14 +31,14 @@ class TodaysStrategies extends Component {
   setStateOfProp = prop => event => this.setState({ [prop]: event.target.value });
   toggleAfterHours = () => this.setState({ afterHoursEnabled: !this.state.afterHoursEnabled });
   render() {
-      let { pmFilter, afterHoursEnabled, sortBy, additionalFilters } = this.state;
+      let { pmFilter, afterHoursEnabled, sortBy: sortByFilter, additionalFilters } = this.state;
       let { picks, relatedPrices, predictionModels, pastData, curDate, pmPerfs, pms, settings } = this.props;
       const { fiveDay } = pastData || {};
 
         const additionalFilterParts = additionalFilters.split(',');
         
         const matchesPm = (strat, pm) => {
-            return pms[pm] && pms[pm].every(part => strat.includes(`${part}-`));
+            return pms[pm] && pms[pm].every(part => strat.includes(`${part}-`) || strat.includes(`-${part}`));
         }
 
       let showingPicks = (() => {
@@ -92,17 +92,18 @@ class TodaysStrategies extends Component {
               withTrend: calcedTrends
           };
       });
-      let sortedByAvgTrend = showingPicks
-          .sort((a, b) => {
-              const aVal = a[sortBy];
-              const bVal = b[sortBy];
-              return (isNaN(aVal)) - (isNaN(bVal)) || -(aVal>bVal)||+(aVal<bVal);
-          });
+      let sortedByAvgTrend = sortBy(showingPicks, sortByFilter).reverse();
+        //   .sort((a, b) => {
+        //       const aVal = a[sortBy];
+        //       const bVal = b[sortBy];
+        //       return (isNaN(aVal)) - (isNaN(bVal)) || -(aVal>bVal)||+(aVal<bVal);
+        //   });
 
-        const validStrats = sortedByAvgTrend
-            .map(val => val.avgTrend)
-            .filter(avgTrend => avgTrend && !isNaN(avgTrend));
-      const [avgTrendOverall, percUpOverall] = [avgArray, percUp].map(fn => fn(validStrats));
+        const validStrats = sortedByAvgTrend.map(val => val.avgTrend);
+        const avgTrendOverall = avgArray(
+            validStrats.filter(avgTrend => avgTrend && !isNaN(avgTrend))
+        );
+        const percUpOverall = percUp(validStrats);
       const count = showingPicks.length;
 
 
@@ -129,7 +130,7 @@ class TodaysStrategies extends Component {
                 </button>
                 <br/>
                 sort by:
-                <select value={sortBy} onChange={this.setStateOfProp('sortBy')}>
+                <select value={sortByFilter} onChange={this.setStateOfProp('sortBy')}>
                     {['avgTrend', 'timestamp'].map(sortBy => (
                         <option value={sortBy}>{sortBy}</option>
                     ))}

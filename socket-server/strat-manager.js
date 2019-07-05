@@ -105,6 +105,8 @@ const stratManager = {
         };
     },
     newPick(data) {
+
+        data.timestamp = Date.now();
         this.tickerWatcher.addTickers(
             data.withPrices.map(o => o.ticker)
         );
@@ -112,10 +114,7 @@ const stratManager = {
         // if (this.curDate !== getToday()) {
         //     return;
         // }
-        this.picks.push({
-            ...data,
-            timestamp: Date.now()
-        });
+        this.picks.push(data);
         this.sendToAll('server:picks-data', data);
     },
     getAllPicks() {
