@@ -3,6 +3,7 @@
 const getTrend = require('../utils/get-trend');
 const { avgArray } = require('../utils/array-math');
 const lookup = require('../utils/lookup');
+const cacheThis = require('../utils/cache-this');
 
 const getRisk = async (
     Robinhood, {
@@ -74,5 +75,7 @@ const getRisk = async (
     // console.log(JSON.stringify(dailyYear, null, 2));
 };
 
-module.exports = getRisk;
-
+module.exports = cacheThis(
+    getRisk, 
+    60 * 3  // 3 hours
+);

@@ -393,7 +393,6 @@ module.exports = new (class RealtimeRunner {
     const volumeKey = (() => {
         if (volume > 1000000 || volume > average_volume * 3.5) return 'highVol';
         if (volume < 10000) return 'lowVol';
-        return '';
     })();
 
     // const strategyName = `ticker-watchers-under${priceKey}${watchoutKey}${jumpKey}${minKey}${historicalKey}`;
