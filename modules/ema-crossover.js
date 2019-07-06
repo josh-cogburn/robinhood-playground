@@ -14,7 +14,7 @@ const mapLimit = require('promise-map-limit');
 
 const trendFilter = async (trend) => {
     // add overnight jump
-    console.log('adding overnight jump', Robinhood, trend)
+    console.log('adding overnight jump', trend)
     const withOvernightJump = await addOvernightJumpAndTSO(trend);
     console.log('done adding overnight jump')
 
@@ -27,7 +27,6 @@ const trendFilter = async (trend) => {
     const addTrendWithHistoricals = async (trend, interval, span) => {
         // add historical data
         let allHistoricals = await getMultipleHistoricals(
-            Robinhood,
             trend.map(buy => buy.ticker),
             `interval=${interval}&span=${span}`
         );

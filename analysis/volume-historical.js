@@ -3,8 +3,6 @@ const login = require('../rh-actions/login');
 
 const mapLimit = require('promise-map-limit');
 
-let Robinhood;
-
 const addOvernightJump = require('../app-actions/add-overnight-jump-and-tso');
 const getUpStreak = require('../app-actions/get-up-streak');
 const { avgArray } = require('../utils/array-math');
@@ -55,7 +53,6 @@ module.exports = async () => {
 
             // console.log('about to get upstreak', hist);
             const upstreak = await getUpStreak(
-                Robinhood,
                 buy.ticker,
                 prehistoricals.slice(0, index)
             );

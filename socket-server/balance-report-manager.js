@@ -13,23 +13,21 @@ const getMinutesFrom630 = require('../utils/get-minutes-from-630');
 // inner
 let timeout;
 let isRunning;
-let Robinhood;
 let allBalanceReports = [];
 let onReport;
 
-const init = async (rh, onReportFn) => {
-    Robinhood = rh;
+const init = async (onReportFn) => {
     onReport = onReportFn;
     const foundReports = await BalanceReport.find().lean();
     // console.log('init balance reports', Object.keys(stratManager));
     console.log('foundReports', foundReports.length);
     allBalanceReports = foundReports;
-    regCronIncAfterSixThirty(rh, {
+    regCronIncAfterSixThirty({
         name: 'start balance report manager',
         run: [START_MIN],
         fn: start
     });
-    regCronIncAfterSixThirty(rh, {
+    regCronIncAfterSixThirty({
         name: 'stop balance report manager',
         run: [STOP_MIN],
         fn: stop

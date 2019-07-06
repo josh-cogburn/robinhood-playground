@@ -15,7 +15,6 @@ const getTrendSinceOpen = require('../rh-actions/get-trend-since-open');
 const addTrendWithHistoricals = async (trend, interval, span) => {
     // add historical data
     let allHistoricals = await getMultipleHistoricals(
-        global.Robinhood,
         trend.map(buy => buy.ticker),
         `interval=${interval}&span=${span}`
     );

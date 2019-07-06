@@ -29,10 +29,10 @@ module.exports = async (dontSell) => {
     await mapLimit(toSell, 3, async pos => {
         const { ticker, quantity } = pos;
         try {
-            const response = await simpleSell(
-                Robinhood,
-                { ticker, quantity }
-            );
+            const response = await simpleSell({ 
+                ticker, 
+                quantity 
+            });
             console.log(`sold ${quantity} shares of ${ticker}`, response);
             await sendEmail(`sold ${ticker}`, JSON.stringify(pos));
         } catch (e) {

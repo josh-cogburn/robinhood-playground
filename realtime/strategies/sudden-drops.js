@@ -20,7 +20,6 @@ module.exports = {
 
         // check against 5 minute historical data???
         let [fiveMinuteHistoricals] = await getMultipleHistoricals(
-            Robinhood,
             [ticker],
             'interval=5minute&span=day'
         );

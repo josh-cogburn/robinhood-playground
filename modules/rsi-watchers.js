@@ -150,7 +150,6 @@ module.exports = {
         
         tickerWatcher = new HistoricalTickerWatcher({
             name: 'rsi-watchers',
-            Robinhood,
             handler,
             timeout: 60000 * 15, // 5 min,
             runAgainstPastData: false,

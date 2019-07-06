@@ -25,7 +25,6 @@ module.exports = {
         console.log('onlyWithFundamentals', onlyWithFundamentals.length);
         // add historicals
         let allHistoricals = await getMultipleHistoricals(
-            Robinhood,
             onlyWithFundamentals.map(buy => buy.ticker),
             `interval=day`
         );

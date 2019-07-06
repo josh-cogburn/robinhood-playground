@@ -5,7 +5,6 @@ const getHistoricalData = async (tickers) => {
     let histQS = `interval=5minute`;
 
     let allHistoricals = await getMultipleHistoricals(
-        Robinhood,
         tickers,
         histQS
     );
@@ -23,8 +22,8 @@ const getHistoricalData = async (tickers) => {
 
 
 class HistoricalTickerWatcher extends TickerWatcher {
-    constructor({ name, Robinhood, handler, timeout, runAgainstPastData, onPick, onEnd }) {
-        super({ name, Robinhood, handler, timeout, onPick });
+    constructor({ name, handler, timeout, runAgainstPastData, onPick, onEnd }) {
+        super({ name, handler, timeout, onPick });
 
         this.iteration = 0;
         this.priceCache = {};
@@ -66,7 +65,7 @@ class HistoricalTickerWatcher extends TickerWatcher {
         if (!this.runAgainstPastData) {
             return super.lookupRelatedPrices();
         }
-        const { Robinhood, tickersWatching, handler, iteration, historicals, allPicks } = this;
+        const { tickersWatching, handler, iteration, historicals, allPicks } = this;
         if (!historicals) return;
         let outOfData = false;
         const prices = tickersWatching

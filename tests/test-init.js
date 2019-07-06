@@ -3,20 +3,20 @@
 // console.log(stocks);
 const login = require('../rh-actions/login');
 // const initCrons = require('./app-actions/init-crons');
-const initModules = require('../app-actions/init-modules');
+// const initModules = require('../app-actions/init-modules');
 
-const getAllTickers = require('../rh-actions/get-all-tickers');
-const cancelAllOrders = require('../rh-actions/cancel-all-orders');
+// const getAllTickers = require('../rh-actions/get-all-tickers');
+// const cancelAllOrders = require('../rh-actions/cancel-all-orders');
 const logPortfolioValue = require('../app-actions/log-portfolio-value');
 // const getPennyStocks = require('./analysis/get-penny-stocks');
 // const activeBuy = require('./app-actions/active-buy');
-const detailedNonZero = require('../app-actions/detailed-non-zero');
+// const detailedNonZero = require('../app-actions/detailed-non-zero');
 
-let Robinhood, allTickers;
+// let Robinhood, allTickers;
 
-const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
+// const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
 // const rh = require('./shared-async/rh');
-const sellAllStocks = require('../app-actions/sell-all-stocks');
+// const sellAllStocks = require('../app-actions/sell-all-stocks');
 // const up10days = require('./strategies/up-10-days');
 // const getUpStreak = require('./app-actions/get-up-streak');
 

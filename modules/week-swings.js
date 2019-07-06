@@ -12,7 +12,6 @@ const DEFAULT_OPTS = {
 const trendFilter = async (trend) => {
 
     let allHistoricals = await getMultipleHistoricals(
-        Robinhood,
         trend.map(buy => buy.ticker),
         'interval=10minute&span=week'
     );

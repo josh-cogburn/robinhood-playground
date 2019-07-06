@@ -13,8 +13,7 @@ const perms = {
 };
 
 module.exports = async (
-    Robinhood,
-    numDays = 5,    // number of days to backtest
+        numDays = 5,    // number of days to backtest
     // daysBack = 5,   // number of days to send to smart-pms when calculating smart-pms
     // numChunks = 3   // number of pms to recommend each day
 ) => {

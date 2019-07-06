@@ -116,7 +116,6 @@ module.exports = {
         
         tickerWatcher = new HistoricalTickerWatcher({
             name: 'ticker-watchers',
-            Robinhood,
             handler,
             timeout: 60000 * 3, // 5 min,
             runAgainstPastData: false,
@@ -126,8 +125,7 @@ module.exports = {
 
                 // check against 5 minute historical data???
                 let [fiveMinuteHistoricals] = await getMultipleHistoricals(
-                    Robinhood,
-                    [ticker],
+                                        [ticker],
                     'interval=5minute&span=day'
                 );
                 fiveMinuteHistoricals = fiveMinuteHistoricals.map(o => o.close_price);

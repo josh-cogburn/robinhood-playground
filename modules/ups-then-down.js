@@ -13,7 +13,6 @@ const trendFilter = async (trend) => {
     trend = await addOvernightJumpAndTSO(trend);
 
     let allHistoricals = await getMultipleHistoricals(
-        Robinhood,
         trend.map(buy => buy.ticker)
     );
 

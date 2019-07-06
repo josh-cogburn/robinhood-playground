@@ -48,7 +48,6 @@ module.exports = ({ ticker, quantity }) => {
                 const bidPrice = curPrice * curSellRatio;
                 console.log('attempting ', curSellRatio, ticker, quantity, bidPrice);
                 const res = await limitSellLastTrade(
-                    Robinhood,
                     {
                         ticker,
                         quantity,

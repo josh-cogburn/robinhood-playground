@@ -5,13 +5,11 @@ const { avgArray } = require('../utils/array-math');
 const lookup = require('../utils/lookup');
 const cacheThis = require('../utils/cache-this');
 
-const getRisk = async (
-    Robinhood, {
-        ticker, 
-        yearHistoricals,
-        quote_data
-    }
-) => {
+const getRisk = async ({
+    ticker, 
+    yearHistoricals,
+    quote_data
+}) => {
     // console.log('evaluating risk ...', ticker);
     
     let dailyYear = yearHistoricals ? yearHistoricals : await (async () => {

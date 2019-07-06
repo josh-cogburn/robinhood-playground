@@ -25,7 +25,6 @@ module.exports = async Robinhood => {
     for (let pos of goneUp) {
         try {
             const response = await activeSell(
-                Robinhood,
                 {
                     ticker: pos.symbol,
                     quantity: Math.ceil(pos.quantity / 2)

@@ -9,8 +9,6 @@ const { avgArray } = require('../utils/array-math');
 const strategyPerfToday = require('./strategy-perf-today');
 const StratPerf = require('../models/StratPerf');
 
-let Robinhood;
-
 class HashTable {
     constructor() {
         this.hashes = {};

@@ -52,7 +52,6 @@ module.exports = async (dontActuallySellFlag) => {
         ];
         try {
             const response = await activeSell(
-                Robinhood,
                 { ticker, quantity }
             );
             console.log(`sold ${quantity} shares of ${ticker} because ${whySelling}`, response);
@@ -112,8 +111,7 @@ module.exports = async (dontActuallySellFlag) => {
         const strategiesToLookup = underNDays.map(pos => pos.firstBuyStrategy).filter(v => !!v);
         const highestPlayouts = strategiesToLookup.length ?
             await determineSingleBestPlayoutFromMultiOutput(
-                Robinhood,
-                ...strategiesToLookup
+                                ...strategiesToLookup
             ) : [];
         console.log({ strategiesToLookup, highestPlayouts })
         underNDays = underNDays.map(pos => {

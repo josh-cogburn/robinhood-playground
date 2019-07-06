@@ -9,7 +9,6 @@ const getMultipleHistoricals = require('../app-actions/get-multiple-historicals'
 const trendFilter = async (trend) => {
 
     let allHistoricals = await getMultipleHistoricals(
-        Robinhood,
         trend.map(buy => buy.ticker)
     );
 

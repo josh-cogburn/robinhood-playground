@@ -9,7 +9,6 @@ const sellAllStocks = async () => {
         const instrument = await Robinhood.url(pos.instrument);
         try {
             const response = await activeSell(
-                Robinhood,
                 {
                     ticker: instrument.symbol,
                     quantity: pos.quantity

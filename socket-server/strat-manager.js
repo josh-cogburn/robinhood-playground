@@ -31,7 +31,6 @@ const settings = require('../settings');
 // const RealtimeRunner = ;
 
 const stratManager = {
-    Robinhood: null,
     io: null,
     picks: [],
     tickersOfInterest: [],
@@ -47,8 +46,7 @@ const stratManager = {
         this.Robinhood = global.Robinhood;
         this.io = io;
         this.tickerWatcher = new TickerWatcher({
-            name: 'stratManager', 
-            Robinhood: this.Robinhood, 
+            name: 'stratManager',
             handler: relatedPrices => {
                 this.sendToAll('server:pm-perfs', this.calcPmPerfs());;
                 this.sendToAll('server:related-prices', relatedPrices);
@@ -80,7 +78,7 @@ const stratManager = {
         this.hasInit = true;
 
         console.log('about to init balance report')
-        await balanceReportManager.init(global.Robinhood, report => {
+        await balanceReportManager.init(report => {
             // console.log('onReport', report, Object.keys(this));
             this.sendToAll('server:balance-report', { report });
         });
@@ -327,7 +325,7 @@ const stratManager = {
     },
     async refreshPastData() {
         console.log('refreshing past data');
-        const stratPerfData = await stratPerfOverall(this.Robinhood, false, 5);
+        const stratPerfData = await stratPerfOverall(false, 5);
         await this.setPastData(stratPerfData);
     },
     async setPastData(stratPerfData) {

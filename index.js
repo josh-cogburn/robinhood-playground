@@ -13,7 +13,7 @@ const logPortfolioValue = require('./app-actions/log-portfolio-value');
 // const activeBuy = require('./app-actions/active-buy');
 const detailedNonZero = require('./app-actions/detailed-non-zero');
 
-let Robinhood, allTickers;
+let allTickers;
 
 const regCronIncAfterSixThirty = require('./utils/reg-cron-after-630');
 // const rh = require('./shared-async/rh');

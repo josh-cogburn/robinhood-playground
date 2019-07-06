@@ -22,16 +22,13 @@ const calcQuantity = (maxPrice, bidPrice) => {
     return quantity;
 };
 
-module.exports = async (
-    Robinhood,
-    {
-        ticker,
-        strategy,   // strategy name
-        maxPrice,   // total amount to spend
-        min,
-        pickPrice
-    }
-) => {
+module.exports = async ({
+    ticker,
+    strategy,   // strategy name
+    maxPrice,   // total amount to spend
+    min,
+    pickPrice
+}) => {
 
     const boughtToday = await howMuchBoughtToday(ticker) || 0;
     const remaining = MAX_BUY_PER_STOCK - boughtToday;
@@ -57,8 +54,7 @@ module.exports = async (
         maxPrice
     })
     const purchase = await limitBuyLastTrade(
-        Robinhood,
-        {
+                {
             ticker,
             bidPrice,
             maxPrice

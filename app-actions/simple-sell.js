@@ -16,10 +16,10 @@ const addToDailyTransactions = async data => {
     await jsonMgr.save(fileName, curTransactions);
 };
 
-module.exports = async (
-    Robinhood,
-    { ticker, quantity }
-) => {
+module.exports = async ({ 
+    ticker, 
+    quantity 
+}) => {
 
     if (keepers.includes(ticker)) {
         throw 'ticker on keeper list: ' + ticker;
@@ -38,8 +38,7 @@ module.exports = async (
     bidPrice = Math.max(lastTrade * 0.95, b);
     str({ ticker, lastTrade, bidPrice, b })
     const purchase = await limitSellLastTrade(
-        Robinhood,
-        {
+                {
             ticker,
             bidPrice,
             quantity,

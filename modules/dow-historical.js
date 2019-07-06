@@ -24,7 +24,6 @@ const trendFilter = async (trend) => {
     // console.log('getting historicals', cheapBuys);
 
     let allHistoricals = await getMultipleHistoricals(
-        Robinhood,
         returnArr.map(buy => buy.ticker)
     );
 
@@ -49,8 +48,7 @@ const trendFilter = async (trend) => {
 
             // console.log('about to get upstreak', hist);
             const upstreak = await getUpStreak(
-                Robinhood,
-                buy.ticker,
+                                buy.ticker,
                 prehistoricals.slice(0, index)
             );
             // console.log(index, prehistoricals.slice(0, index));

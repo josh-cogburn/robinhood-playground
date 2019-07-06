@@ -21,7 +21,6 @@ module.exports = {
         const addTrendWithHistoricals = async (trend, interval, span) => {
             // add historical data
             let allHistoricals = await getMultipleHistoricals(
-                Robinhood,
                 trend.map(buy => buy.ticker),
                 `interval=${interval}&span=${span}`
             );

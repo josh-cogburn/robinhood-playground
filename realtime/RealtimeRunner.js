@@ -94,7 +94,7 @@ module.exports = new (class RealtimeRunner {
         fn: () => this.stop()
     });
 
-    if (dayInProgress(START_MIN)) {
+    if (dayInProgress(START_MIN) || true) {
       console.log('in progress');
 
       const last5Minute = this.getLastTimestamp(5);
@@ -111,7 +111,7 @@ module.exports = new (class RealtimeRunner {
 
       setTimeout(() => this.start(), from5);
     } else {
-      console.log('not in progress');
+      console.log('not in progress ');
     }
 
 
@@ -160,9 +160,8 @@ module.exports = new (class RealtimeRunner {
     
     console.log('getting new quotes...');
     const allTickers = Object.values(this.collections).flatten().uniq();
-
+    console.log({ allTickers })
     const relatedPrices = await lookupMultiple(
-        Robinhood,
         allTickers,
         true
     );

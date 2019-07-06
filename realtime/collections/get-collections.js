@@ -65,12 +65,12 @@ module.exports = async () => {
         options: OPTIONSTICKERS,
         // zeroAndOne: await getTickersBetween(0, 1),
         // upcoming: await getRhStocks('upcoming-earnings'),
-        rhtop100: await getRhStocks('100-most-popular'),
-        ...await getFinvizCollections(),
-        ...await getStockInvestCollections()
+        // rhtop100: await getRhStocks('100-most-popular'),
+        // ...await getFinvizCollections(),
+        // ...await getStockInvestCollections()
     };
 
-    // remove any tickers that are not available on robinhood
+    // remove any tickers that are not available on     const getTicks = () => Object.values(response).flatten().uniq();
     const getTicks = () => Object.values(response).flatten().uniq();
     const originalTickers = getTicks();
     const badTickers = originalTickers.filter(ticker => 

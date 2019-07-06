@@ -178,7 +178,6 @@ const trendFilter = async (trend) => {
     const getTrendWithHistoricals = async (interval, span) => {
         // add historical data
         let allHistoricals = await getMultipleHistoricals(
-            Robinhood,
             top50Volume.map(buy => buy.ticker),
             `interval=${interval}&span=${span}`
         );

@@ -106,7 +106,6 @@ const prepareTrend = async (trend, min) => {
     if (false && isNotRegularTrading) histQS += '&bounds=extended';
     // log({ isNotRegularTrading })
     let allHistoricals = await getMultipleHistoricals(
-        Robinhood,
         onlyWithFundamentals.map(buy => buy.ticker),
         histQS
     );

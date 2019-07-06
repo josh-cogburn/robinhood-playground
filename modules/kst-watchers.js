@@ -217,7 +217,6 @@ module.exports = {
         
         tickerWatcher = new HistoricalTickerWatcher({
             name: 'kst-watchers',
-            Robinhood,
             handler,
             timeout: 60000 * 10, // minutes
             runAgainstPastData: false,

@@ -8,7 +8,6 @@ const trendFilter = async (trend) => {
     const analyzeForDowners = async interval => {
 
         let allHistoricals = await getMultipleHistoricals(
-            Robinhood,
             trend.map(buy => buy.ticker),
             `interval=${interval}`
         );

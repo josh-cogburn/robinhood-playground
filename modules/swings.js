@@ -27,7 +27,6 @@ const DAY_PERMS = [
 const trendFilter = async (trend) => {
 
     let allHistoricals = await getMultipleHistoricals(
-        Robinhood,
         trend.map(buy => buy.ticker)
     );
 

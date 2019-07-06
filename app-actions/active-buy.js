@@ -43,15 +43,11 @@ const preOrPostMarketBuy = async ({
         strategy
     };
     console.log('pre or post market buy', data, maxPrice);
-    return limitBuyLastTrade(
-        Robinhood,
-        data
-    );
+    return limitBuyLastTrade(data);
 };
 
 module.exports = async (
-    Robinhood,
-    {
+        {
         ticker,
         strategy,   // strategy name
         maxPrice,   // total amount to spend
@@ -111,8 +107,7 @@ module.exports = async (
                     };
                     console.log({ data, maxPrice });
                     return limitBuyLastTrade(
-                        Robinhood,
-                        data
+                                                data
                     );
 
                 };

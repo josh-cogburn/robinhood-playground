@@ -21,7 +21,6 @@ const sendEmail = require('../utils/send-email');
 const addTrendWithHistoricals = async (trend, interval, span) => {
     // add historical data
     let allHistoricals = await getMultipleHistoricals(
-        Robinhood,
         trend.map(buy => buy.ticker),
         `interval=${interval}&span=${span}`
     );
@@ -65,8 +64,7 @@ module.exports = {
 
         tickerWatcher = new HistoricalTickerWatcher({
             name: 'ema-crossover-watchers',
-            Robinhood,
-            handler: async relatedPrices => {
+                        handler: async relatedPrices => {
                 const picks = [];
                 for (let ticker of Object.keys(relatedPrices)) {
 
