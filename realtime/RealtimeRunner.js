@@ -314,10 +314,10 @@ module.exports = new (class RealtimeRunner {
     const postRunStrategies = this.strategies.filter(strategy => strategy.postRun);
     const postRunPicks = await mapLimit(postRunStrategies, 1, async ({ strategyName, postRun }) => {
       console.log(`running ${strategyName} REALTIME POSTRUN strategy...`);
-      return (await postRun(
+      return ((await postRun(
         picks,            // current picks
         this.todaysPicks  // array of array of past picks
-      )).map(pick => ({
+      )) || []).map(pick => ({
         ...pick,
         strategyName
       }));
