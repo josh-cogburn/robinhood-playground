@@ -20,7 +20,7 @@ const allScrapeModules = Object.keys(scrapesToRun)
         return {
             name: scrapeName,
             run: config.RUN,
-            fn: async (Robinhood, min) => {
+            fn: async (min) => {
                 console.log(`running ${scrapeName}-scrapes`);
                 const browser = await puppeteer.launch({headless: true });
                 const queries = Object.keys(config.QUERIES);
@@ -30,8 +30,8 @@ const allScrapeModules = Object.keys(scrapesToRun)
                     const tradeablePicks = filterByTradeable(queryPicks).slice(0, 15);
                     const strategyName = `${scrapeName}-${queryName}`;
                     // console.log(queryName, queryPicks);
-                    await recordPicks(Robinhood, strategyName, min, tradeablePicks);
-                    await recordPicks(Robinhood, `${strategyName}-first1`, min, tradeablePicks.slice(0, 1));
+                    await recordPicks(strategyName, min, tradeablePicks);
+                    await recordPicks(`${strategyName}-first1`, min, tradeablePicks.slice(0, 1));
                 }
                 await browser.close();
             }

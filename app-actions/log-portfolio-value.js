@@ -1,7 +1,7 @@
 // npm
 const fs = require('mz/fs');
 
-module.exports = async (Robinhood) => {
+module.exports = async () => {
 
     // get portfolio value
 

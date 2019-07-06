@@ -7,14 +7,14 @@ const mapLimit = require('promise-map-limit');
 
 const getTicks = arr => arr.map(buy => buy.ticker);
 
-const trendFilter = async (Robinhood, trend) => {
+const trendFilter = async (trend) => {
 
     const withUpstreak = await mapLimit(trend, 20, async buy => ({
         ...buy,
-        upstreak: await getUpStreak(Robinhood, buy.ticker)
+        upstreak: await getUpStreak(buy.ticker)
     }));
 
-    const withOvernightJump = await addOvernightJumpAndTSO(Robinhood, withUpstreak);
+    const withOvernightJump = await addOvernightJumpAndTSO(withUpstreak);
 
     console.log('with withOvernightJump and upstreak')
     // console.log(withOvernightJump);

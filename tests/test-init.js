@@ -33,35 +33,35 @@ process.on('unhandledRejection', (reason, p) => {
     global.Robinhood = Robinhood;
 
     // require('./socket-server');
-    // console.log(await getUpStreak(Robinhood, 'AAPL', 3));
-    // await up10days.trendFilter(Robinhood, require('/Users/johnmurphy/Development/my-stuff/robinhood-playground/json/stock-data/2018-1-22 12:53:02 (+380*).json'));
+    // console.log(await getUpStreak('AAPL', 3));
+    // await up10days.trendFilter(require('/Users/johnmurphy/Development/my-stuff/robinhood-playground/json/stock-data/2018-1-22 12:53:02 (+380*).json'));
 
-    // console.log(await getPennyStocks(Robinhood, require('/Users/johnmurphy/Development/my-stuff/robinhood-playground/json/stock-data/2018-1-23 13:04:23 (+391).json')));
-    // await logPortfolioValue(Robinhood);
+    // console.log(await getPennyStocks(require('/Users/johnmurphy/Development/my-stuff/robinhood-playground/json/stock-data/2018-1-23 13:04:23 (+391).json')));
+    // await logPortfolioValue();
     // does the list of stocks need updating?
 
-    // const detailed = await detailedNonZero(Robinhood);
+    // const detailed = await detailedNonZero();
     // console.log(detailed);
     // try {
     //     allTickers = require('./json/stock-data/allStocks');
     //     // throw new Error();
     // } catch (e) {
-    //     allTickers = await getAllTickers(Robinhood);
+    //     allTickers = await getAllTickers();
     // }
     // allTickers = allTickers
     //     .filter(stock => stock.tradeable)
     //     .map(stock => stock.symbol);
 
-    // await cancelAllOrders(Robinhood);
+    // await cancelAllOrders();
 
     try {
-        await logPortfolioValue(Robinhood);
+        await logPortfolioValue();
     } catch (e) {
         console.log(e);
     }
 
 
-    // await initModules(Robinhood);
+    // await initModules();
     // regCronIncAfterSixThirty.display();
 
 
@@ -69,7 +69,7 @@ process.on('unhandledRejection', (reason, p) => {
     // const ratioToSpend = Math.max(0.3, getMinutesFrom630() / 390);
     const cashAvailable = Number(accounts.results[0].margin_balances.unallocated_margin_cash);
     console.log(accounts, cashAvailable);
-    // await sellAllStocks(Robinhood);
+    // await sellAllStocks();
 
     // startCrons();
 

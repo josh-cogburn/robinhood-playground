@@ -59,7 +59,7 @@ module.exports = async (
             console.log('Backtesting', day);
             const ignoreDays = numDays - index;
             // console.log('ignoreDays', ignoreDays);
-            const output = await smartPms(Robinhood, daysBack, numChunks, ignoreDays);
+            const output = await smartPms(daysBack, numChunks, ignoreDays);
             // console.log(output);
             if (!output.length) {
                 console.log('no output length');

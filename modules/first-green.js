@@ -6,7 +6,7 @@ const getMultipleHistoricals = require('../app-actions/get-multiple-historicals'
 
 // const mapLimit = require('promise-map-limit');
 
-const trendFilter = async (Robinhood, trend) => {
+const trendFilter = async (trend) => {
 
     let allHistoricals = await getMultipleHistoricals(
         Robinhood,

@@ -23,7 +23,7 @@ const addToDailyTransactions = async data => {
 };
 
 
-module.exports = (Robinhood, { ticker, quantity }) => {
+module.exports = ({ ticker, quantity }) => {
 
     return new Promise(async (resolve, reject) => {
 
@@ -43,7 +43,7 @@ module.exports = (Robinhood, { ticker, quantity }) => {
                 attemptCount++;
 
                 console.log('attempt')
-                const look = (await lookup(Robinhood, ticker));
+                const look = (await lookup(ticker));
                 const curPrice = look.currentPrice;
                 const bidPrice = curPrice * curSellRatio;
                 console.log('attempting ', curSellRatio, ticker, quantity, bidPrice);

@@ -12,10 +12,10 @@ const addOvernightJumpAndTSO = require('../app-actions/add-overnight-jump-and-ts
 // npm
 const mapLimit = require('promise-map-limit');
 
-const trendFilter = async (Robinhood, trend) => {
+const trendFilter = async (trend) => {
     // add overnight jump
     console.log('adding overnight jump', Robinhood, trend)
-    const withOvernightJump = await addOvernightJumpAndTSO(Robinhood, trend);
+    const withOvernightJump = await addOvernightJumpAndTSO(trend);
     console.log('done adding overnight jump')
 
 

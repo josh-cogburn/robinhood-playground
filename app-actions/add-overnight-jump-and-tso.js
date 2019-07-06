@@ -3,11 +3,11 @@ const getTrend = require('../utils/get-trend');
 const chunkApi = require('../utils/chunk-api');
 const addFundamentals = require('./add-fundamentals');
 
-module.exports = async (Robinhood, trend) => {
+module.exports = async (trend) => {
 
     const trendWithFundamentals = trend && trend[0].fundamentals
         ? trend
-        : await addFundamentals(Robinhood, trend);
+        : await addFundamentals(trend);
 
     return trendWithFundamentals
         .map(stock => ({

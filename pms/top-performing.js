@@ -125,8 +125,8 @@ const predictCurrent = async (numDays, filterFn, skipYesterday) => {
     return uniqifyObj(prediction);
 };
 
-const stratPerfPredictions = async (Robinhood, includeToday, numDays, minCount) => {
-    const stratPerfData = await stratPerfOverall(Robinhood, includeToday, numDays, minCount);
+const stratPerfPredictions = async (includeToday, numDays, minCount) => {
+    const stratPerfData = await stratPerfOverall(includeToday, numDays, minCount);
     // console.log('keys', Object.keys(stratPerfData));
     return uniqifyObj({
         ...Object.keys(stratPerfData).reduce((acc, key) => ({   // slice first 60 or else the same for each key
@@ -143,9 +143,9 @@ const stratPerfPredictions = async (Robinhood, includeToday, numDays, minCount) 
 };
 
 
-module.exports = async (Robinhood) => {
+module.exports = async () => {
     return {
         ...await predictCurrent(8),
-        ...await stratPerfPredictions(Robinhood, true, 10, 1)
+        ...await stratPerfPredictions(true, 10, 1)
     };
 };

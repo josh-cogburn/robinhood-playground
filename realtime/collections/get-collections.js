@@ -37,7 +37,7 @@ const OPTIONSTICKERS = [
 module.exports = async () => {
 
     const getTickersBetween = async (min, max) => {
-        const tickPrices = await lookupMultiple(Robinhood, allStocks.filter(isTradeable).map(o => o.symbol));
+        const tickPrices = await lookupMultiple(allStocks.filter(isTradeable).map(o => o.symbol));
         const tickers = Object.keys(tickPrices).filter(ticker => tickPrices[ticker] < max && tickPrices[ticker] > min);
         // console.log({ kstTickers: tickers });
         return tickers;

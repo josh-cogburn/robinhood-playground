@@ -12,10 +12,10 @@ const mapLimit = require('promise-map-limit');
 const { SMA, EMA } = require('technicalindicators');
 
 
-const trendFilter = async (Robinhood, trend) => {
+const trendFilter = async (trend) => {
     // add overnight jump
     console.log('adding overnight jump', Robinhood, trend)
-    const withOvernightJump = await addOvernightJumpAndTSO(Robinhood, trend);
+    const withOvernightJump = await addOvernightJumpAndTSO(trend);
     console.log('done adding overnight jump')
 
 

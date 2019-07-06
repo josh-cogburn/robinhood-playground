@@ -3,7 +3,7 @@ const getTrend = require('../utils/get-trend');
 const cacheThis = require('../utils/cache-this');
 
 module.exports = cacheThis(
-    async (Robinhood, tickers, qs = 'interval=day') => {
+    async (tickers, qs = 'interval=day') => {
 
         const allHistoricals = await chunkApi(
             tickers,

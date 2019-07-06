@@ -50,7 +50,7 @@ const OPTIONSTICKERS = [
 const getGroups = async () => {
 
     const getTickersBetween = async (min, max) => {
-        const tickPrices = await lookupMultiple(Robinhood, allStocks.filter(isTradeable).map(o => o.symbol));
+        const tickPrices = await lookupMultiple(allStocks.filter(isTradeable).map(o => o.symbol));
         const tickers = Object.keys(tickPrices).filter(ticker => tickPrices[ticker] < max && tickPrices[ticker] > min);
         console.log({ kstTickers: tickers });
         return tickers;
@@ -112,7 +112,7 @@ let tickersAlerted = [];
 
 module.exports = {
     name: 'rsi-watchers',
-    init: async (Robinhood) => {
+    init: async () => {
 
         let groups;
         const refreshGroups = async () => {
@@ -158,7 +158,7 @@ module.exports = {
 
                 const { ticker, rsi, price } = pick;
 
-                const { shouldWatchout } = await getRisk(Robinhood, { ticker });
+                const { shouldWatchout } = await getRisk({ ticker });
                 const watchoutKey = shouldWatchout ? 'shouldWatchout' : 'notWatchout';
                 const priceKeys = [10, 15, 20, 1000];
                 const priceKey = priceKeys.find(key => price < key);
@@ -177,7 +177,7 @@ module.exports = {
                 })();
                 let fundamentals;
                 try {
-                    fundamentals = (await addFundamentals(Robinhood, [{ ticker }]))[0].fundamentals;
+                    fundamentals = (await addFundamentals([{ ticker }]))[0].fundamentals;
                 } catch (e) {}
                 const { volume, average_volume } = fundamentals || {};
                 const volumeKey = (() => {
@@ -201,13 +201,13 @@ module.exports = {
                 ].filter(Boolean).join('-');
 
                 await sendEmail(`NEW RSI ALERT ${strategyName}: ${ticker}`, JSON.stringify(pick, null, 2));
-                await recordPicks(Robinhood, strategyName, 5000, [ticker]);
+                await recordPicks(strategyName, 5000, [ticker]);
                 tickersAlerted.push(ticker);
             },
             onEnd
         });
 
-        regCronIncAfterSixThirty(Robinhood, {
+        regCronIncAfterSixThirty({
             name: `clear rsi-watchers price cache`,
             run: [-330, 0],    // start of pre market
             fn: () => tickerWatcher.clearPriceCache()
@@ -225,13 +225,13 @@ module.exports = {
             console.log('rsi', groups);
         };
 
-        regCronIncAfterSixThirty(Robinhood, {
+        regCronIncAfterSixThirty({
             name: `set rsi-watchers tickers`,
             run: [2],
             fn: setTickers
         });
 
-        regCronIncAfterSixThirty(Robinhood, {
+        regCronIncAfterSixThirty({
             name: `stop rsi-watchers`,
             run: [500],
             fn: () => tickerWatcher.stop()

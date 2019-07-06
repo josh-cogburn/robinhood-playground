@@ -1,4 +1,4 @@
-const cancelAllOrders = async (Robinhood) => {
+const cancelAllOrders = async () => {
     console.log('canceling all orders...');
     try {
         const orders = await Robinhood.orders();

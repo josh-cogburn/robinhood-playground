@@ -61,7 +61,7 @@ const smaTrendingUp = (obj, lastVal) => {
 
 module.exports = {
     name: 'ema-crossover-watchers',
-    disableinit: async (Robinhood) => {
+    disableinit: async () => {
 
         tickerWatcher = new HistoricalTickerWatcher({
             name: 'ema-crossover-watchers',
@@ -112,7 +112,7 @@ module.exports = {
                 })();
                 let fundamentals;
                 try {
-                    fundamentals = (await addFundamentals(Robinhood, [{ ticker }]))[0].fundamentals;
+                    fundamentals = (await addFundamentals([{ ticker }]))[0].fundamentals;
                 } catch (e) {}
                 const { volume, average_volume } = fundamentals || {};
                 const volumeKey = (() => {
@@ -129,11 +129,11 @@ module.exports = {
                     volumeKey
                 ].filter(Boolean).join('-');
                 await sendEmail(`NEW EMA CROSSOVER ${strategyName}: ${ticker}`, JSON.stringify(pick, null, 2));
-                await recordPicks(Robinhood, strategyName, 5000, [ticker]);
+                await recordPicks(strategyName, 5000, [ticker]);
             },
             onEnd: async allPicks => {
                 log(allPicks);
-                const ls = await lookupMultiple(Robinhood, allPicks.map(p => p.ticker));
+                const ls = await lookupMultiple(allPicks.map(p => p.ticker));
                 const withAnalysis = allPicks.map(pick => ({
                     ...pick,
                     trendSincePick: getTrend(ls[pick.ticker], pick.crossPrice)
@@ -145,7 +145,7 @@ module.exports = {
         });
 
         const getUnder15 = async () => {
-            const tickPrices = await lookupMultiple(Robinhood, allStocks.filter(isTradeable).map(o => o.symbol));
+            const tickPrices = await lookupMultiple(allStocks.filter(isTradeable).map(o => o.symbol));
             const allUnder15 = Object.keys(tickPrices).filter(ticker => tickPrices[ticker] < 20 && tickPrices[ticker] > 0.3);
             console.log({ allUnder15 });
             return allUnder15;
@@ -157,7 +157,7 @@ module.exports = {
 
             const under15 = await getUnder15();
             const trend = under15.map(ticker => ({ ticker }));
-            const withOvernightJump = await addFundamentals(Robinhood, trend);
+            const withOvernightJump = await addFundamentals(trend);
 
 
             const withYearHistoricals = await addTrendWithHistoricals(
@@ -194,13 +194,13 @@ module.exports = {
             tickerWatcher.addTickers(startingBelow35Ema.map(o => o.ticker));
         };
 
-        regCronIncAfterSixThirty(Robinhood, {
+        regCronIncAfterSixThirty({
             name: `set ema-crossover-watchers tickers (< $15)`,
             run: [2],
             fn: setTickers
         });
 
-        regCronIncAfterSixThirty(Robinhood, {
+        regCronIncAfterSixThirty({
             name: `stop ema-crossover-watchers`,
             run: [440],
             fn: () => tickerWatcher.stop()

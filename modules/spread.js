@@ -9,11 +9,11 @@ Array.prototype.ticks = function() {
     return this.map(t => t.ticker);
 };
 
-const trendFilter = async (Robinhood, trend) => {
+const trendFilter = async (trend) => {
 
     console.log('total trend stocks', trend.length);
 
-    let withTrendSinceOpen = await addOvernightJumpAndTSO(Robinhood, trend);
+    let withTrendSinceOpen = await addOvernightJumpAndTSO(trend);
     withTrendSinceOpen = withTrendSinceOpen
         .map(t => ({
             ...t,

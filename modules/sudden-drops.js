@@ -91,9 +91,9 @@ const getResults = withHistoricals => {
 
 };
 
-const prepareTrend = async (Robinhood, trend, min) => {
+const prepareTrend = async (trend, min) => {
     // add fundamentals
-    const withOvernightJump = await addOvernightJumpAndTSO(Robinhood, trend);
+    const withOvernightJump = await addOvernightJumpAndTSO(trend);
     const onlyWithFundamentals = withOvernightJump
         .filter(stock => stock.fundamentals)
         .filter(stock => Math.abs(stock.overnightJump) < 6)
@@ -119,7 +119,7 @@ const prepareTrend = async (Robinhood, trend, min) => {
     // get risk (should watchout / not watchout)
     let withRisk = await mapLimit(withHistoricals, 1, async buy => ({
         ...buy,
-        ...await getRisk(Robinhood, buy)
+        ...await getRisk(buy)
     }));
     return withRisk;
 };
@@ -181,8 +181,8 @@ const permuteByWatchout = trend => {
     }, {});
 };
 
-const trendFilter = async (Robinhood, trend, min) => {
-    trend = await prepareTrend(Robinhood, trend, min);
+const trendFilter = async (trend, min) => {
+    trend = await prepareTrend(trend, min);
     let returnObj = {
         ...getResults(trend),
         ...permuteByTrendAndVolume(trend),

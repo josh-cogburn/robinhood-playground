@@ -1,7 +1,7 @@
 const chunkApi = require('../utils/chunk-api');
 const getTrend = require('../utils/get-trend');
 
-module.exports = async (Robinhood, tickers, interval = 'day') => {
+module.exports = async (tickers, interval = 'day') => {
     // console.log(tickers)
     const allHistoricals = await chunkApi(
         tickers,

@@ -11,10 +11,10 @@ const limitToLowSpread = trend =>
         o.quote_data.askPrice < o.quote_data.currentPrice * 1.004
     );
 
-module.exports = async (Robinhood, min) => {
+module.exports = async (min) => {
 
     // first calculate pricePerm trends
-    let trend = await getTrendAndSave(Robinhood, min + '*');
+    let trend = await getTrendAndSave(min + '*');
     let pricePerms = {
         under5: [0, 5],
         fiveTo10: [5, 10],

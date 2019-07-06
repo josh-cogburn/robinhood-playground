@@ -2,7 +2,7 @@ const getFilesSortedByDate = require('../utils/get-files-sorted-by-date');
 const { uniqifyArrayOfStrategies } = require('../utils/uniqify-stuff');
 const strategyPerfMultiple = require('../analysis/strategy-perf-multiple');
 
-module.exports = async (Robinhood, daysBack) => {
+module.exports = async (daysBack) => {
 
     let spm;
 
@@ -19,7 +19,7 @@ module.exports = async (Robinhood, daysBack) => {
         console.log(Object.keys(spm));
     } else {
         console.log({ daysBack });
-        spm = await strategyPerfMultiple(Robinhood, daysBack);
+        spm = await strategyPerfMultiple(daysBack);
 
     }
 

@@ -3,7 +3,7 @@ const getMultipleHistoricals = require('../app-actions/get-multiple-historicals'
 const getTrend = require('../utils/get-trend');
 const addOvernightJumpAndTSO = require('../app-actions/add-overnight-jump-and-tso');
 
-const trendFilter = async (Robinhood, trend) => {
+const trendFilter = async (trend) => {
 
     const analyzeForDowners = async interval => {
 
@@ -50,7 +50,7 @@ const trendFilter = async (Robinhood, trend) => {
                 return buy;
             });
 
-        withPercDown = await addOvernightJumpAndTSO(Robinhood, withPercDown);
+        withPercDown = await addOvernightJumpAndTSO(withPercDown);
 
         // console.log('with', JSON.stringify(withPercDown, null, 2));
         const orderBy = (what, trend) => {

@@ -1,7 +1,7 @@
 const fs = require('mz/fs');
 const jsonMgr = require('../utils/json-mgr');
 
-module.exports = async (Robinhood, ticker) => {
+module.exports = async (ticker) => {
     let files = await fs.readdir('./json/daily-transactions');
 
     let sortedFiles = files.sort((a, b) => {

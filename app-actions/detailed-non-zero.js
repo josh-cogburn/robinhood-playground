@@ -3,7 +3,7 @@ const lookup = require('../utils/lookup');
 const addBuyDataToPositions = require('../app-actions/add-buy-data-to-positions');
 // const getAssociatedStrategies = require('./get-associated-strategies');
 
-const getDetailedNonZero = async (Robinhood) => {
+const getDetailedNonZero = async () => {
     const { results: allPositions } = await Robinhood.nonzero_positions();
     const formattedPositions = allPositions.map(pos => ({
         ...pos,
@@ -16,7 +16,7 @@ const getDetailedNonZero = async (Robinhood) => {
         const instrument = await Robinhood.url(pos.instrument);
         console.log('looking up instrument', instrument.symbol);
         try {
-            const lookupObj = await lookup(Robinhood, instrument.symbol);
+            const lookupObj = await lookup(instrument.symbol);
             return {
                 ...pos,
                 ticker: instrument.symbol,

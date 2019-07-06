@@ -71,7 +71,7 @@ const getAndSaveBalanceReport = async (isRegularHours) => {
     // console.log('hereee');
     try {
         const report = {
-            ...await getAccountBalance(Robinhood),
+            ...await getAccountBalance(),
             indexPrices: await getIndexes(),
             isRegularHours
         };

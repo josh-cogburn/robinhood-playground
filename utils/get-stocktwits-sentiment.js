@@ -24,7 +24,7 @@ const stReq = cacheThis(
 );
     
 
-module.exports = async (Robinhood, ticker, detailed) => {
+module.exports = async (ticker, detailed) => {
     try {
         console.log({ ticker}, 'getting stocktwits sent')
         let { messages } = await stReq(`https://api.stocktwits.com/api/2/streams/symbol/${ticker}.json?filter=top`);

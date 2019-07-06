@@ -6,12 +6,12 @@ const jsonMgr = require('../utils/json-mgr');
 const stratPerfMultiple = require('./strategy-perf-multiple');
 const { generateBreakdownConfigs, runBreakdown } = require('./strategy-perf-multiple/generate-breakdowns');
 
-module.exports = async (Robinhood, daysBack, ...pmNames) => {
+module.exports = async (daysBack, ...pmNames) => {
     let pmStrats = flatten(
         pmNames.map(pm => manualPms[pm])
     );
     pmStrats = [...new Set(pmStrats)];
-    const stratPerf = await stratPerfMultiple(Robinhood, daysBack, ...pmStrats);
+    const stratPerf = await stratPerfMultiple(daysBack, ...pmStrats);
     // console.log(stratPerf);
 
     const allStratsPerf = pmStrats

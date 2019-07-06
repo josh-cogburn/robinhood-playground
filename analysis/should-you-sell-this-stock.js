@@ -15,7 +15,7 @@ module.exports = async (
 
     const [stSent, l] = await Promise.all([
         getStSent(null, ticker),
-        lookup(Robinhood, ticker)
+        lookup(ticker)
     ]);
     const trend = getTrend(l.currentPrice, avgBuyPrice);
     const { trend: dayTrend } = l;

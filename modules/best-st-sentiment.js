@@ -15,13 +15,13 @@ const fieldSorter = (fields) => (a, b) => fields.map(o => {
 
 module.exports = {
     name: 'best-st-sentiment',
-    trendFilter: async (Robinhood, trend, min, priceKey) => {
+    trendFilter: async (trend, min, priceKey) => {
 
         let stReqCount = 0;
 
         // helper fns
         const limitTrendByVolume = async (subTrend, countLimit = 16) => {
-            let withFundamentals = await addFundamentals(Robinhood, subTrend);
+            let withFundamentals = await addFundamentals(subTrend);
             // console.log(withFundamentals)
             withFundamentals = withFundamentals
                 .filter(o => 

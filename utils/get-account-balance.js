@@ -6,7 +6,7 @@ const roundTo = numDec => num => Math.round(num * Math.pow(10, numDec)) / Math.p
 const oneDec = roundTo(1);
 const twoDec = roundTo(2);
 
-module.exports = async (Robinhood, includeTrend, todaysDate) => {
+module.exports = async (includeTrend, todaysDate) => {
     
     const getPrevDateBalanceFromPortfolioCache = async () => {
         const portCache = await jsonMgr.get('./portfolio-cache.json');

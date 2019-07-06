@@ -5,15 +5,15 @@ const getFilesSortedByDate = require('../utils/get-files-sorted-by-date');
 const jsonMgr = require('../utils/json-mgr');
 const stratPerfMultiple = require('./strategy-perf-multiple');
 
-module.exports = async (Robinhood, ...pmNames) => {
+module.exports = async (...pmNames) => {
     let pmStrats = flatten(
         pmNames.map(pm => manualPms[pm])
     );
     pmStrats = [...new Set(pmStrats)];  // uniqify
     const stratPerfs = {
-        50: await stratPerfMultiple(Robinhood, 50, ...pmStrats),
-        14: await stratPerfMultiple(Robinhood, 14, ...pmStrats),
-        7: await stratPerfMultiple(Robinhood, 7, ...pmStrats)
+        50: await stratPerfMultiple(50, ...pmStrats),
+        14: await stratPerfMultiple(14, ...pmStrats),
+        7: await stratPerfMultiple(7, ...pmStrats)
     };
 
     const allStratsPerf = {};

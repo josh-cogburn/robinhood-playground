@@ -7,13 +7,13 @@ const { avgArray } = require('../utils/array-math');
 
 const mapLimit = require('promise-map-limit');
 
-const trendFilter = async (Robinhood, trend) => {
+const trendFilter = async (trend) => {
 
     var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
     const todaysDay = days[(new Date()).getDay()];
     console.log('todays day', todaysDay);
 
-    let returnArr = await addOvernightJumpAndTSO(Robinhood, trend);
+    let returnArr = await addOvernightJumpAndTSO(trend);
 
     // var allTickers = require('../json/stock-data/allStocks');
     // allTickers = allTickers

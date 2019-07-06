@@ -44,7 +44,7 @@ const OPTIONSTICKERS = [
 const getGroups = async () => {
 
     const getTickersBetween = async (min, max) => {
-        const tickPrices = await lookupMultiple(Robinhood, allStocks.filter(isTradeable).map(o => o.symbol));
+        const tickPrices = await lookupMultiple(allStocks.filter(isTradeable).map(o => o.symbol));
         const tickers = Object.keys(tickPrices).filter(ticker => tickPrices[ticker] < max && tickPrices[ticker] > min);
         console.log({ kstTickers: tickers });
         return tickers;
@@ -175,7 +175,7 @@ let tickersAlerted = [];
 
 module.exports = {
     name: 'kst-watchers',
-    init: async (Robinhood) => {
+    init: async () => {
 
         let groups;
         const refreshGroups = async () => {
@@ -225,7 +225,7 @@ module.exports = {
 
                 const { ticker, isSignalCross, isZeroCross, isLow, price } = pick;
 
-                const { shouldWatchout } = await getRisk(Robinhood, { ticker });
+                const { shouldWatchout } = await getRisk({ ticker });
                 const watchoutKey = shouldWatchout ? 'shouldWatchout' : 'notWatchout';
                 const groupKey = Object.keys(groups).find(group =>
                     groups[group].includes(ticker)
@@ -248,7 +248,7 @@ module.exports = {
                 const isLowKey = isLow ? 'isLow': '';
                 let fundamentals;
                 try {
-                    fundamentals = (await addFundamentals(Robinhood, [{ ticker }]))[0].fundamentals;
+                    fundamentals = (await addFundamentals([{ ticker }]))[0].fundamentals;
                 } catch (e) {}
                 const { volume, average_volume } = fundamentals || {};
                 const volumeKey = (() => {
@@ -274,7 +274,7 @@ module.exports = {
                 ].filter(Boolean).join('-');
 
                 await sendEmail(`NEW KST ALERT ${strategyName}: ${ticker}`, JSON.stringify(pick, null, 2));
-                await recordPicks(Robinhood, strategyName, 5000, [ticker]);
+                await recordPicks(strategyName, 5000, [ticker]);
                 tickersAlerted.push(ticker);
             },
             onEnd
@@ -282,7 +282,7 @@ module.exports = {
 
         
 
-        regCronIncAfterSixThirty(Robinhood, {
+        regCronIncAfterSixThirty({
             name: `clear ticker-watchers price cache`,
             run: [-330, 0],    // start of pre market
             fn: () => tickerWatcher.clearPriceCache()
@@ -301,13 +301,13 @@ module.exports = {
             console.log('kst', groups);
         };
 
-        regCronIncAfterSixThirty(Robinhood, {
+        regCronIncAfterSixThirty({
             name: `set kst-watchers tickers`,
             run: [2],
             fn: setTickers
         });
 
-        regCronIncAfterSixThirty(Robinhood, {
+        regCronIncAfterSixThirty({
             name: `stop kst-watchers`,
             run: [500],
             fn: () => tickerWatcher.stop()

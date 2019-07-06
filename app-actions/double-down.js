@@ -4,9 +4,9 @@ const detailedNonZero = require('./detailed-non-zero');
 const simpleBuy = require('./simple-buy');
 const sendEmail = require('../utils/send-email');
 
-module.exports = async (Robinhood, minute, minPercDown = 10) => {
+module.exports = async (minute, minPercDown = 10) => {
     console.log(`${minute} doubling down on stocks bought today and are already down ${minPercDown}%`);
-    let nonzero = await detailedNonZero(Robinhood);
+    let nonzero = await detailedNonZero();
     const dateStr = (new Date()).toLocaleDateString().split('/').join('-');
     const onlyBoughtToday = nonzero.filter(({ buyDate }) => buyDate === dateStr);
     const droppedBelowMinPercDown = onlyBoughtToday.filter(({ returnPerc }) => returnPerc <= 0 - minPercDown);
@@ -24,7 +24,7 @@ module.exports = async (Robinhood, minute, minPercDown = 10) => {
         };
         console.log('doubleDownData', doubleDownData);
         try {
-            await simpleBuy(Robinhood, doubleDownData);
+            await simpleBuy(doubleDownData);
             await sendEmail(`doubled down on ${position.symbol}`, JSON.stringify(position, null, 2));
         } catch (e) {
             await sendEmail(`failed to double down on ${position.symbol}`, JSON.stringify(position, null, 2));

@@ -58,11 +58,11 @@ const determineIndividualBestPlayoutsFromMultiOutput = pastPerf => {
     }));
 };
 
-module.exports = async (Robinhood, ...strategiesForConsideration) => {
+module.exports = async (...strategiesForConsideration) => {
     strategiesForConsideration = strategiesForConsideration.filter(v => !!v);
     strategiesForConsideration = strategiesForConsideration.length ? strategiesForConsideration : await getMostRecentForPurchase();
     console.log({ strategiesForConsideration });
-    const pastPerf = await stratPerfMultiple(Robinhood, 25, ...strategiesForConsideration);
+    const pastPerf = await stratPerfMultiple(25, ...strategiesForConsideration);
     console.log('pastperf', JSON.stringify(pastPerf, null, 2));
     // determineSingleBestPlayoutFromMultiOutput(pastPerf);
     return determineIndividualBestPlayoutsFromMultiOutput(pastPerf);

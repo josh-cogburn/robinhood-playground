@@ -3,7 +3,7 @@ const lookupMultiple = require('../utils/lookup-multiple');
 const getTrend = require('../utils/get-trend');
 const { avgArray } = require('../utils/array-math');
 
-module.exports = async (Robinhood, date, strat) => {
+module.exports = async (date, strat) => {
     log({ strat, date })
     const allFound = await Pick.find({
         date,
@@ -27,7 +27,7 @@ module.exports = async (Robinhood, date, strat) => {
         )
     ];
 
-    const tPrices = await lookupMultiple(Robinhood, tickersToLookup);
+    const tPrices = await lookupMultiple(tickersToLookup);
 
     const withNowPrices = tickerPrices
         .map(pick => ({

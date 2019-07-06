@@ -44,18 +44,18 @@ const additionalCron = [
     // {
     //     name: 'sell all stocks',
     //     run: [0],
-    //     fn: (Robinhood) => {
+    //     fn: () => {
     
     //         setTimeout(async () => {
     //             // daily at 6:30AM + 4 seconds
-    //             await sellAllStocks(Robinhood);
+    //             await sellAllStocks();
     //             console.log('done selling all');
     //             //
     //             // timeoutPromise(5000);
     //             // console.log('selling all stocks that went up');
-    //             // await sellAllIfWentUp(Robinhood);
+    //             // await sellAllIfWentUp();
     //             // console.log('logging portfolio value');
-    //             // await logPortfolioValue(Robinhood);
+    //             // await logPortfolioValue();
     
     //         }, 100);
     
@@ -76,7 +76,7 @@ const additionalCron = [
     // {
     //     name: 'sellAllBasedOnPlayout',
     //     run: [0, 35],
-    //     fn: () => sellAllBasedOnPlayout(Robinhood)
+    //     fn: () => sellAllBasedOnPlayout()
     // },
 
     // sell all if went up
@@ -101,17 +101,17 @@ const additionalCron = [
     {
         name: 'record-strat-perfs, refresh past data',
         run: [9],
-        fn: async (Robinhood, min) => {
-            await recordStratPerfs(Robinhood, min);
+        fn: async (min) => {
+            await recordStratPerfs(min);
             await stratManager.refreshPastData();
         }
     },
     {
         name: 'record-strat-perfs',
         run: [85, 230, 330],
-        fn: async (Robinhood, min) => {
-            await recordStratPerfs(Robinhood, min);
-            // await sellAllBasedOnPlayout(Robinhood);
+        fn: async (min) => {
+            await recordStratPerfs(min);
+            // await sellAllBasedOnPlayout();
         }
     },
     //sellAllOlderThanTwoDays
@@ -129,7 +129,7 @@ const additionalCron = [
     // {
     //     name: 'doubleDown',
     //     run: [100, 200, 378],
-    //     fn: (Robinhood, min) => doubleDown(Robinhood, min, min == 378 ? 7 : 3.5)
+    //     fn: (min) => doubleDown(min, min == 378 ? 7 : 3.5)
     // },
 
     // {
@@ -152,7 +152,7 @@ const additionalCron = [
     {
         name: 'strat perf multiple',    // the big analyze all strategies function
         run: [520],
-        fn: (Robinhood) => stratPerfMultiple(Robinhood, 52, 'next-day-330')
+        fn: () => stratPerfMultiple(52, 'next-day-330')
     },
 
     {

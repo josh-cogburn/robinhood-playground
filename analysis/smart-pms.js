@@ -30,7 +30,7 @@ const permutator = (inputArr) => {
      return result;
 };
 
-module.exports = async (Robinhood, daysBack = 5, numChunks = 3, ignoreDays = 0) => {
+module.exports = async (daysBack = 5, numChunks = 3, ignoreDays = 0) => {
 
     console.log('daysBack', daysBack);
     console.log('numChunks', numChunks);

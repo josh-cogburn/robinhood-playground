@@ -162,11 +162,11 @@ const analyzeTrend = (withHistoricals) => {
 
 
 
-const trendFilter = async (Robinhood, trend) => {
+const trendFilter = async (trend) => {
 
     // add overnight jump
     console.log('adding overnight jump')
-    const withOvernightJump = await addOvernightJumpAndTSO(Robinhood, trend);
+    const withOvernightJump = await addOvernightJumpAndTSO(trend);
     console.log('done adding overnight jump')
 
 

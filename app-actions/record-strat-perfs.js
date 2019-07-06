@@ -9,7 +9,7 @@ const jsonMgr = require('../utils/json-mgr');
 const { filterByTradeable } = require('../utils/filter-by-tradeable');
 const lookupMultiple = require('../utils/lookup-multiple');
 
-const analyzeDay = async (Robinhood, day) => {
+const analyzeDay = async (day) => {
 
     // let files = await fs.readdir(`./json/picks-data/${day}`);
     console.log('analyzeDay');
@@ -32,7 +32,7 @@ const analyzeDay = async (Robinhood, day) => {
     const tickersToLookup = Object.keys(tickerLookups);
     // console.log(tickersToLookup, 'feaf')
 
-    tickerLookups = await lookupMultiple(Robinhood, tickersToLookup);
+    tickerLookups = await lookupMultiple(tickersToLookup);
 
     // calc trend and avg for each strategy-min
     const withTrend = [];
@@ -67,10 +67,10 @@ const analyzeDay = async (Robinhood, day) => {
 
 module.exports = {
     analyzeDay,
-    default: async (Robinhood, min) => {
+    default: async (min) => {
 
         // console.log('running record')
-        // console.log(Robinhood, min);
+        // console.log(min);
         const distinctDates = await Pick.find().distinct('date');
         // console.log({ distinctDates });
         // console.log(folders);
@@ -99,7 +99,7 @@ module.exports = {
                 console.log(key, 'not enough picks-data to analyze within record-strat-perfs.');
                 break;
             }
-            const analyzed = await analyzeDay(Robinhood, pastDayDate);
+            const analyzed = await analyzeDay(pastDayDate);
             const period = `${key}-${min}`;
             console.log('done analyzing', pastDayDate, analyzed);
             await StratPerf.bulkWrite(

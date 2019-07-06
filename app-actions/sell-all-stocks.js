@@ -1,7 +1,7 @@
 const activeSell = require('./active-sell');
 const mapLimit = require('promise-map-limit');
 
-const sellAllStocks = async (Robinhood) => {
+const sellAllStocks = async () => {
     const { results: allPositions } = await Robinhood.nonzero_positions();
     console.log('allpos', allPositions);
 

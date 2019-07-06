@@ -33,7 +33,7 @@ const preOrPostMarketBuy = async ({
     strategy,
     maxPrice,
 }) => {
-    const { afterHoursPrice } = await lookup(Robinhood, ticker);
+    const { afterHoursPrice } = await lookup(ticker);
     const bidPrice = afterHoursPrice;
     const quantity = calcQuantity(maxPrice, bidPrice);
     const data = {
@@ -60,7 +60,7 @@ module.exports = async (
     }
 ) => {
 
-    const boughtToday = await howMuchBoughtToday(Robinhood, ticker) || 0;
+    const boughtToday = await howMuchBoughtToday(ticker) || 0;
     const remaining = MAX_BUY_PER_STOCK - boughtToday;
     maxPrice = Math.min(maxPrice, remaining);
 
@@ -118,7 +118,7 @@ module.exports = async (
                 };
 
                 const attemptLimitOrder = async () => {
-                    const { askPrice, bidPrice, lastTrade } = await lookup(Robinhood, ticker);
+                    const { askPrice, bidPrice, lastTrade } = await lookup(ticker);
                     const allPrices = askPrice 
                         ? [
                             askPrice, 
@@ -144,7 +144,7 @@ module.exports = async (
                 };
 
                 const fakeMarketOrder = async () => {
-                    const { askPrice } = await lookup(Robinhood, ticker);
+                    const { askPrice } = await lookup(ticker);
                     const attemptPrice = askPrice;
                     console.log('fake market order for', ticker, {
                         askPrice,

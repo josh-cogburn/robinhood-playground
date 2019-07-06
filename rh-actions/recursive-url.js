@@ -1,4 +1,4 @@
-const recursiveUrl = async (Robinhood, callUrl) => {
+const recursiveUrl = async (callUrl) => {
 
     let allResults = [];
     console.log('recursive url');

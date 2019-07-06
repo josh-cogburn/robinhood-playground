@@ -6,7 +6,7 @@ const jsonMgr = require('../../utils/json-mgr');
 module.exports = {
     name: 'user-modules',
     // run: [1, 95, 285, 380],
-    fn: async (Robinhood, min) => {
+    fn: async (min) => {
         console.log('running user=modules fool');
         const { 
             instruments: top100RHinstruments
@@ -16,9 +16,9 @@ module.exports = {
         const onlyTickers = detailedInstruments.map(t => t.symbol);
         console.log('done getting instrument details');
 
-        const trend = await getTrendAndSave(Robinhood);
+        const trend = await getTrendAndSave();
         const trendOfTop100 = trend.filter(t => onlyTickers.includes(t.ticker));
-        const withOvernightJump = await addOvernightJumpAndTSO(Robinhood, trendOfTop100);
+        const withOvernightJump = await addOvernightJumpAndTSO(trendOfTop100);
         const onlyWithFundamentals = withOvernightJump.filter(stock => stock.fundamentals);
         console.log('trendOfTop100', trendOfTop100.length);
         console.log('--------');

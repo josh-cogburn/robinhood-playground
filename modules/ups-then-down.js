@@ -8,9 +8,9 @@ const addOvernightJumpAndTSO = require('../app-actions/add-overnight-jump-and-ts
 // npm
 const mapLimit = require('promise-map-limit');
 
-const trendFilter = async (Robinhood, trend) => {
+const trendFilter = async (trend) => {
 
-    trend = await addOvernightJumpAndTSO(Robinhood, trend);
+    trend = await addOvernightJumpAndTSO(trend);
 
     let allHistoricals = await getMultipleHistoricals(
         Robinhood,

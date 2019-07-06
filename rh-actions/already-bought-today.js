@@ -10,10 +10,10 @@ const inDt = async (ticker) => {
     return foundInDT;
 };
 
-module.exports = async (Robinhood, ticker) => {
+module.exports = async (ticker) => {
 
     const inTransactions = async () => {
-        const transactions = await loadAllTransactionsSince(Robinhood, 1);
+        const transactions = await loadAllTransactionsSince(1);
         console.log(JSON.stringify(transactions, null, 2));
         return transactions.some(t => {
             return t.side === 'buy' && t.instrument.symbol === ticker;

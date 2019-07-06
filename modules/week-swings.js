@@ -9,7 +9,7 @@ const DEFAULT_OPTS = {
     MIN_DIFF: 120
 };
 
-const trendFilter = async (Robinhood, trend) => {
+const trendFilter = async (trend) => {
 
     let allHistoricals = await getMultipleHistoricals(
         Robinhood,

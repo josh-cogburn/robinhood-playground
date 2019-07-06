@@ -6,7 +6,7 @@ const { analyzeRoundup } = require('./generate-breakdowns');
 const { isBreakdownKey } = require('../../utils/breakdown-key-compares');
 const saveToJson = require('./save-to-json');
 
-module.exports = async (Robinhood, daysBack = 2, ...strategiesArgs) => {
+module.exports = async (daysBack = 2, ...strategiesArgs) => {
     console.log('days back', daysBack);
 
     let maxBreakdownKey = (() => {

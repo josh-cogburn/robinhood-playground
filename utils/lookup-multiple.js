@@ -1,6 +1,6 @@
 const chunkApi = require('./chunk-api');
 
-const lookupMultiple = async (Robinhood, tickersToLookup, detailedQuote) => {
+const lookupMultiple = async (tickersToLookup, detailedQuote) => {
     // takes in array of tickers
     // returns object of tickers and current prices
     let quotes = await chunkApi(

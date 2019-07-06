@@ -5,7 +5,7 @@ const executeStrategy = require('./execute-strategy');
 
 let modules = [];
 
-const initModule = (Robinhood, module) => {
+const initModule = (module) => {
     const {
         name, 
         run,
@@ -18,31 +18,31 @@ const initModule = (Robinhood, module) => {
     console.log('initializing ', name);
     if (init) {
         console.log('running init fn');
-        return init(Robinhood);
+        return init();
     }
-    regCronIncAfterSixThirty(Robinhood, {
+    regCronIncAfterSixThirty({
         name: `execute ${name} strategy`,
         run,
         // run: [],
-        fn: async (Robinhood, min) => {
+        fn: async (min) => {
             return !!fn 
-                ? fn(Robinhood, min) 
-                : executeStrategy(Robinhood, trendFilter, min, 0.3, name, trendFilterKey);
+                ? fn(min) 
+                : executeStrategy(trendFilter, min, 0.3, name, trendFilterKey);
         }
     });
 };
 
 
-const handleModuleFile = (Robinhood, moduleFile) => {
+const handleModuleFile = (moduleFile) => {
     const toRun = Array.isArray(moduleFile) ? moduleFile : [moduleFile];
     toRun.forEach(singleModule => {
-        initModule(Robinhood, singleModule);
+        initModule(singleModule);
     });
     modules = [...modules, ...toRun];
 };
 
 
-module.exports = async (Robinhood) => {
+module.exports = async () => {
 
     var normalizedPath = path.join(__dirname, '../modules');
 
@@ -56,7 +56,7 @@ module.exports = async (Robinhood) => {
         // if (!isDir) {
         try {
             const moduleFile = require(file);
-            handleModuleFile(Robinhood, moduleFile);
+            handleModuleFile(moduleFile);
         } catch (e) {
             console.log('unable to init', file, e);
         }

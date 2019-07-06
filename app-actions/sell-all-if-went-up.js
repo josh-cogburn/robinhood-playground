@@ -5,7 +5,7 @@ const MIN_PERC_UP = 6; // sell if stock rose 18% since yesterdays close
 const MIN_PERC_DOWN = 6;
 
 module.exports = async Robinhood => {
-    const nonzero = await detailedNonZero(Robinhood);
+    const nonzero = await detailedNonZero();
     // console.log(nonzero);
     const goneUp = nonzero.filter(pos => {
         if (!pos) return false;

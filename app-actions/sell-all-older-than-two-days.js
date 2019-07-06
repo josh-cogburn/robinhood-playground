@@ -10,7 +10,7 @@ const daysBetween = (firstDate, secondDate) => {
 };
 
 module.exports = async Robinhood => {
-    const nonzero = await detailedNonZero(Robinhood);
+    const nonzero = await detailedNonZero();
     const withAge = nonzero.map(pos => ({
         ...pos,
         dayAge: daysBetween(new Date(), new Date(pos.updated_at))

@@ -25,16 +25,16 @@ module.exports = async (
         throw 'ticker on keeper list: ' + ticker;
     }
 
-    const boughtToday = await howMuchBoughtToday(Robinhood, ticker) || 0;
+    const boughtToday = await howMuchBoughtToday(ticker) || 0;
     if (boughtToday > 0) {
         throw 'already bought today: ' + ticker;
     }
 
-    if (await alreadyBoughtToday(Robinhood, ticker)) {
+    if (await alreadyBoughtToday(ticker)) {
         throw 'not selling ' + ticker + 'because bought today';
     }
 
-    let { lastTrade, bidPrice: b } = await lookup(Robinhood, ticker);
+    let { lastTrade, bidPrice: b } = await lookup(ticker);
     bidPrice = Math.max(lastTrade * 0.95, b);
     str({ ticker, lastTrade, bidPrice, b })
     const purchase = await limitSellLastTrade(

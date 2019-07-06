@@ -6,14 +6,14 @@ const simpleSell = require('./simple-sell');
 const sendEmail = require('../utils/send-email');
 const { sellAllStocksOnNthDay } = require('../settings');
 
-module.exports = async (Robinhood, dontSell) => {
-    let nonZero = await detailedNonZero(Robinhood);
+module.exports = async (dontSell) => {
+    let nonZero = await detailedNonZero();
     nonZero = nonZero.filter(pos => !keepers.includes(pos.ticker));
 
     // str({ nonZero })
     const withShouldSells = await mapLimit(nonZero, 3, async pos => ({
         ...pos,
-        shouldSell: await shouldYouSellThisStock(Robinhood, pos.ticker, pos.average_buy_price)
+        shouldSell: await shouldYouSellThisStock(pos.ticker, pos.average_buy_price)
     }));
     // str({ withShouldSells });
 

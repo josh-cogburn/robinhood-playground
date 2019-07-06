@@ -8,14 +8,14 @@ const mapLimit = require('promise-map-limit');
 const getRisk = require('../rh-actions/get-risk');
 // const trendingUp = require('../rh-actions/trending-up');
 
-const trendFilter = async (Robinhood, trend) => {
+const trendFilter = async (trend) => {
     // going up at least 3%
 
     console.log('running low-float-high-volume strategy');
 
     console.log('total trend stocks', trend.length);
 
-    let withTrendSinceOpen = await addOvernightJumpAndTSO(Robinhood, trend);
+    let withTrendSinceOpen = await addOvernightJumpAndTSO(trend);
     withTrendSinceOpen = withTrendSinceOpen
         .filter(buy => buy.trendSinceOpen)
         .sort((a, b) => a.trendSinceOpen - b.trendSinceOpen);
@@ -119,7 +119,7 @@ const trendFilter = async (Robinhood, trend) => {
             const watchouts = {};
             for (let obj of sorted) {
                 const { ticker } = obj;
-                const risk = riskCache[ticker] ? riskCache[ticker] : await getRisk(Robinhood, { ticker });
+                const risk = riskCache[ticker] ? riskCache[ticker] : await getRisk({ ticker });
                 riskCache[ticker] = risk;
                 if (risk.shouldWatchout && !watchouts.should) {
                     watchouts.should = ticker;

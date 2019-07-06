@@ -4,7 +4,7 @@ const mapLimit = require('promise-map-limit');
 const sendEmail = require('../utils/send-email');
 const lookup = require('../utils/lookup');
 
-module.exports = async (Robinhood, {stocksToBuy, totalAmtToSpend, strategy, maxNumStocksToPurchase, min, withPrices }) => {
+module.exports = async ({stocksToBuy, totalAmtToSpend, strategy, maxNumStocksToPurchase, min, withPrices }) => {
 
     // you cant attempt to purchase more stocks than you passed in
     // console.log(maxNumStocksToPurchase, 'numstockstopurchase', stocksToBuy.length);
@@ -24,7 +24,7 @@ module.exports = async (Robinhood, {stocksToBuy, totalAmtToSpend, strategy, maxN
         console.log(perStock, 'purchasng ', stock);
         try {
             const pickPrice = (withPrices.find(obj => obj.ticker === stock) || {}).price;
-            const { askPrice } = await lookup(Robinhood, stock);
+            const { askPrice } = await lookup(stock);
             const buyPrice = Math.min(askPrice, pickPrice * 1.07);
             log({
                 askPrice,
@@ -35,7 +35,7 @@ module.exports = async (Robinhood, {stocksToBuy, totalAmtToSpend, strategy, maxN
             const quantity = Math.floor(perStock / buyPrice) || 1;
             alpacaLimitBuy(null, stock, quantity, buyPrice);
 
-            // const response = await simpleBuy(Robinhood, {
+            // const response = await simpleBuy({
             //     ticker: stock,
             //     strategy,
             //     min,

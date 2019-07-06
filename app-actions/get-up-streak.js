@@ -1,4 +1,4 @@
-const getUpStreak = async (Robinhood, ticker, historicals) => {
+const getUpStreak = async (ticker, historicals) => {
     try {
 
         // console.log('trending up n days? ...', ticker);

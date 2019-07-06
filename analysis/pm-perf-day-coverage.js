@@ -8,12 +8,12 @@ const flatten = require('../utils/flatten-array');
 
 const getFilesSortedByDate = require('../utils/get-files-sorted-by-date');
 
-module.exports = async (Robinhood, daysBack, ...pms) => {
+module.exports = async (daysBack, ...pms) => {
 
     const strategies = flatten(pms.map(pm => manualPms[pm]));
     console.log('pms', pms);
     console.log('strategies', strategies)
-    const stratPerfs = await stratPerfMultiple(Robinhood, daysBack, ...strategies);
+    const stratPerfs = await stratPerfMultiple(daysBack, ...strategies);
     // console.log(JSON.stringify(stratPerfs, null, 2));
 
     const allDays = await getFilesSortedByDate('prediction-models');

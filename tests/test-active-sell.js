@@ -1,7 +1,7 @@
 const activeSell = require('../app-actions/active-sell');
-module.exports = async (Robinhood, ticker = 'CHK', quantity = 5) => {
+module.exports = async (ticker = 'CHK', quantity = 5) => {
 
-    await activeSell(Robinhood, {
+    await activeSell({
         ticker,
         quantity: Number(quantity)
     });

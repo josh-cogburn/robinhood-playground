@@ -27,12 +27,12 @@ const formatStock = stock => {
 };
 
 const getTrendSinceOpen = {
-    single: async (Robinhood, ticker) => {
+    single: async (ticker) => {
         console.log('tick', ticker);
         try {
             var [fundamentals, lookup_data] = await Promise.all([
                 Robinhood.fundamentals(ticker),
-                lookup(Robinhood, ticker)
+                lookup(ticker)
             ]);
             fundamentals = fundamentals.results[0];
         } catch (e) {
@@ -50,7 +50,7 @@ const getTrendSinceOpen = {
         };
         return formatStock(stockObj);
     },
-    multiple: async (Robinhood, stocks) => {
+    multiple: async (stocks) => {
 
         console.log('multiple')
         let quotes = await chunkApi(
@@ -139,7 +139,7 @@ const getTrendSinceOpen = {
         //         ticker
         //     );
         //     try {
-        //         const trend = await getTrendSinceOpen.single(Robinhood, ticker);
+        //         const trend = await getTrendSinceOpen.single(ticker);
         //         console.log(trend, 'trend');
         //         return {
         //             ticker,
@@ -165,10 +165,10 @@ const getTrendSinceOpen = {
     }
 };
 
-module.exports = async (Robinhood, input) => {
+module.exports = async (input) => {
     if (Array.isArray(input)) {
-        return getTrendSinceOpen.multiple(Robinhood, input);
+        return getTrendSinceOpen.multiple(input);
     } else {
-        return getTrendSinceOpen.single(Robinhood, input);
+        return getTrendSinceOpen.single(input);
     }
 };

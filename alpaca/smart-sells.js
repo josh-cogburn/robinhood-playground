@@ -2,14 +2,14 @@ const { alpaca } = require('.');
 const { force: { keep }} = require('../settings');
 const shouldYouSellThisStock = require('../analysis/should-you-sell-this-stock');
 
-module.exports = async (Robinhood, dontSell) => {
+module.exports = async (dontSell) => {
 
     let positions = await alpaca.getPositions();
     positions = positions.filter(pos => !keep.includes(pos.symbol));
     str({ positions })
     const withShouldSells = await mapLimit(positions, 3, async pos => ({
         ...pos,
-        shouldSell: await shouldYouSellThisStock(Robinhood, pos.symbol, pos.avg_entry_price)
+        shouldSell: await shouldYouSellThisStock(pos.symbol, pos.avg_entry_price)
     }));
 
     log('selling' + withShouldSells.map(p => p.symbol));

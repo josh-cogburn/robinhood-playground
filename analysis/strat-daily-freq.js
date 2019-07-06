@@ -10,14 +10,14 @@ const NUM_DAYS = [
     52
 ];
 
-module.exports = async (Robinhood, dollars, ...strategies) => {
+module.exports = async (dollars, ...strategies) => {
 
     // strategies = manual.lilMore;
 
     if (!strategies.length) {
         console.log('no strategies supplied.  creating prediction models and using forPurchase');
         strategies = (
-            await createPredictionModels(Robinhood)
+            await createPredictionModels()
         ).forPurchase;
     }
 
@@ -25,7 +25,7 @@ module.exports = async (Robinhood, dollars, ...strategies) => {
     const byStrategy = {};
     const stratPerfCollections = await mapLimit(NUM_DAYS, 1, async dayCount => ({
         dayCount,
-        stratPerfs: (await stratPerfOverall(Robinhood, true, dayCount, 0)).sortedByAvgTrend
+        stratPerfs: (await stratPerfOverall(true, dayCount, 0)).sortedByAvgTrend
     }));
     
     stratPerfCollections.forEach(({ dayCount, stratPerfs }) => {

@@ -1,8 +1,8 @@
 // const login = require('../rh-actions/login');
 const getTrendAndSave = require('../app-actions/get-trend-and-save');
 
-module.exports = async (Robinhood) => {
-    let trend = await getTrendAndSave(Robinhood);
+module.exports = async () => {
+    let trend = await getTrendAndSave();
     const pennies = trend
         .filter(stock => {
             return Number(stock.last_trade_price) < 1;

@@ -14,7 +14,7 @@ const prefixKeys = (obj, prefix) =>
     }), {});
 
 module.exports = {
-    trendFilter: async (Robinhood, trend) => {
+    trendFilter: async (trend) => {
 
         const addTrendWithHistoricals = async (trend, interval, span) => {
             // add historical data

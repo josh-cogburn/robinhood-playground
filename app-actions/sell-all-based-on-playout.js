@@ -35,7 +35,7 @@ const determineSingleBestPlayoutFromMultiOutput = require(
 
 // do it
 
-module.exports = async (Robinhood, dontActuallySellFlag) => {
+module.exports = async (dontActuallySellFlag) => {
 
     // helper action fns
     const sellPosition = async (pos, whySelling) => {
@@ -70,7 +70,7 @@ module.exports = async (Robinhood, dontActuallySellFlag) => {
     // console.log(dailyTransactionDates, 'dailyTransactionDates');
     // console.log(pmModelDates, 'pmModelDates');
 
-    let nonzero = await detailedNonZero(Robinhood);
+    let nonzero = await detailedNonZero();
 
     const forceSells = nonzero.filter(pos => forceSell.includes(pos.symbol));
     nonzero = nonzero.filter(pos => !forceSell.includes(pos.symbol));

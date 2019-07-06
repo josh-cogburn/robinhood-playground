@@ -12,7 +12,7 @@ module.exports = async (rh, ticker, amt) => {
         await alpacaMarketBuy(ticker, alpacaQuantity);
     } catch (e) {}
 
-    const response = await simpleBuy(Robinhood, {
+    const response = await simpleBuy({
         ticker,
         maxPrice: amt,
         strategy: 'manual-buy',

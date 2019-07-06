@@ -16,9 +16,9 @@ const twoDec = roundTo(2);
 const Pick = require('../../models/Pick');
 const { force: { keep }} = require('../../settings');
 
-module.exports = async (Robinhood) => {
+module.exports = async () => {
 
-    const nonzero = await detailedNonZero(Robinhood);
+    const nonzero = await detailedNonZero();
     let positions = nonzero.sort((a, b) => Math.abs(b.returnDollars) - Math.abs(a.returnDollars));
     // positions = positions.filter(({ ticker }) => !keep.includes(ticker));
     

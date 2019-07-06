@@ -34,7 +34,7 @@ io.on('connection', async socket => {
     socket.emit('server:welcome', await stratManager.getWelcomeData());
 
     socket.on('get-current-prices', async tickers => {
-        const response = await lookupMultiple(Robinhood, tickers, true);
+        const response = await lookupMultiple(tickers, true);
         console.log('got current pricessss', response);
         socket.emit('server:current-prices', response);
     });

@@ -33,7 +33,7 @@ module.exports = async (
     }
 ) => {
 
-    const boughtToday = await howMuchBoughtToday(Robinhood, ticker) || 0;
+    const boughtToday = await howMuchBoughtToday(ticker) || 0;
     const remaining = MAX_BUY_PER_STOCK - boughtToday;
     maxPrice = Math.min(maxPrice, remaining);
 
@@ -41,7 +41,7 @@ module.exports = async (
         throw 'hit max price for ticker';
     }
 
-    const l = await lookup(Robinhood, ticker);
+    const l = await lookup(ticker);
     let bidPrice = l.askPrice;
     const highestAllowed = pickPrice * (PERC_ALLOWED_ABOVE_PICK_PRICE / 100 + 1);
     if (pickPrice && bidPrice > highestAllowed){

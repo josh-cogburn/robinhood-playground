@@ -101,7 +101,7 @@ const stratManager = {
             balanceReports: balanceReportManager.getAllBalanceReports(),
             pmPerfs: this.pmPerfs,
             pms,
-            positions: await cachedPositions(Robinhood)
+            positions: await cachedPositions()
         };
     },
     newPick(data) {

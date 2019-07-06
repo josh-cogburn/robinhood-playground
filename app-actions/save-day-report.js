@@ -17,7 +17,7 @@ const oneDec = roundTo(1);
 const twoDec = roundTo(2);
 
 
-module.exports = async (Robinhood, min = 515) => {
+module.exports = async (min = 515) => {
 
     const todaysDate = (await getFilesSortedByDate('prediction-models'))[0];
     console.log(`Creating report for ${todaysDate} @ ${min} minutes`);
@@ -38,18 +38,18 @@ module.exports = async (Robinhood, min = 515) => {
     console.log({ forPurchasePerfs });
 
     // get account balance
-    const { accountBalance, accountBalanceTrend } = await getAccountBalance(Robinhood, true, todaysDate);
+    const { accountBalance, accountBalanceTrend } = await getAccountBalance(true, todaysDate);
 
     // get index prices
     const indexPrices = await getIndexes();
     console.log({ indexPrices });
 
     // analyze sells and holds
-    const sellReport = await sells(Robinhood, 1);
-    const holdReport = await holds(Robinhood);
+    const sellReport = await sells(1);
+    const holdReport = await holds();
 
     // fillPerc
-    const { fillPerc } = await getFillPerc(Robinhood);
+    const { fillPerc } = await getFillPerc();
 
     // prep data for mongo
     const mongoData = {

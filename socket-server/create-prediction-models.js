@@ -9,10 +9,10 @@ const settings = require('../settings');
 const flatten = require('../utils/flatten-array');
 const stratPerfOverall = require('../analysis/strategy-perf-overall');
 
-module.exports = async (Robinhood, manualOnly = true) => {
+module.exports = async (manualOnly = true) => {
 
     pastData = await (async () => {
-        const stratPerfData = await stratPerfOverall(Robinhood, true, 4);
+        const stratPerfData = await stratPerfOverall(true, 4);
         const stratPerfObj = {};
         stratPerfData.sortedByAvgTrend.forEach(({
             name,
@@ -55,10 +55,10 @@ module.exports = async (Robinhood, manualOnly = true) => {
 
         ...!manualOnly ? await (async () => {
 
-            const myRecs = await getMyRecs(Robinhood);
-            const fiftytwo = await spms(Robinhood);
-            const eightDay = await spms(Robinhood, 8);
-            const tp = await topPerforming(Robinhood);
+            const myRecs = await getMyRecs();
+            const fiftytwo = await spms();
+            const eightDay = await spms(8);
+            const tp = await topPerforming();
             
             return {
                 // myRecs
@@ -74,11 +74,11 @@ module.exports = async (Robinhood, manualOnly = true) => {
                 ...prependKeys(tp, 'top-performers'),
 
                 ...prependKeys(
-                    await tenFives(Robinhood),
+                    await tenFives(),
                     'tenFives'
                 ),
 
-                ...await getTipTop(Robinhood)
+                ...await getTipTop()
             };
         })() : {}
 

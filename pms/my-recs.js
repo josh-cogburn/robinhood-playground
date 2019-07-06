@@ -3,9 +3,9 @@ const strategyPerfToday = require('../analysis/strategy-perf-today');
 
 const { uniqifyArrayOfStrategies } = require('../utils/uniqify-stuff');
 
-module.exports = async (Robinhood) => {
+module.exports = async () => {
 
-    const todayPerf = await strategyPerfToday(Robinhood);
+    const todayPerf = await strategyPerfToday();
 
     const perms = [
         {
@@ -161,7 +161,7 @@ module.exports = async (Robinhood) => {
 
     for (let { dayCount, minCounts } of perms) {
         // console.log('here')
-        let { sortedByPercUp } = await stratPerfOverall(Robinhood, todayPerf, dayCount);
+        let { sortedByPercUp } = await stratPerfOverall(todayPerf, dayCount);
         sortedByPercUp = sortedByPercUp.filter(o => !o.name.includes('ticker-watchers'));
         // console.log('hi')
         const filterSortedByPercUpAndAddToResults = (variationName, filterFn) => {

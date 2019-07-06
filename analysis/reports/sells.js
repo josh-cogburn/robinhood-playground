@@ -30,12 +30,12 @@ const calcWeightAvg = transactions => {
     return numerator / totalShares;
 };
 
-module.exports = async (Robinhood, daysBack = 5) => {
+module.exports = async (daysBack = 5) => {
 
     // console.log({ mostRecentOnly });
     const dailyTransactionDates = await getFilesSortedByDate('daily-transactions');
     console.log({ dailyTransactionDates })
-    const robinhoodTransactions = await loadAllTransactionsSince(Robinhood, Number(daysBack) + 3);
+    const robinhoodTransactions = await loadAllTransactionsSince(Number(daysBack) + 3);
 
     const analyzeDay = async date => {
         

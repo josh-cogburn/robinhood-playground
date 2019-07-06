@@ -17,12 +17,12 @@ const getHistorical = async ticker => {
 };
 
 
-module.exports = async (Robinhood) => {
+module.exports = async () => {
 
     // let trend = require('/Users/johnmurphy/Development/my-stuff/robinhood-playground/json/stock-data/2018-1-23 13:04:23 (+391).json');
-    let trend = await getTrendAndSave(Robinhood);
+    let trend = await getTrendAndSave();
 
-    trend = await addOvernightJumpAndTSO(Robinhood, trend);
+    trend = await addOvernightJumpAndTSO(trend);
 
 
     let cheapBuys = trend

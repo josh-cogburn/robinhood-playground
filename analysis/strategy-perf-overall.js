@@ -30,7 +30,7 @@ class HashTable {
     }
 }
 
-module.exports = async (Robinhood, includeToday, daysBack = NUM_DAYS, minCount = 0, ignoreYesterday, maxCount = Number.POSITIVE_INFINITY, stratFilter = '') => {
+module.exports = async (includeToday, daysBack = NUM_DAYS, minCount = 0, ignoreYesterday, maxCount = Number.POSITIVE_INFINITY, stratFilter = '') => {
     console.log('includeToday', includeToday);
     console.log('days back', daysBack);
     console.log('mincount', minCount);
@@ -77,7 +77,7 @@ module.exports = async (Robinhood, includeToday, daysBack = NUM_DAYS, minCount =
     // should includetoday?
     if (paramTrue(includeToday) || typeof includeToday === 'object') {
         console.log('adding today');
-        let todayPerf = typeof includeToday === 'object' ? includeToday : await strategyPerfToday(Robinhood);
+        let todayPerf = typeof includeToday === 'object' ? includeToday : await strategyPerfToday();
         todayPerf = todayPerf.filter(p => p.strategyName.includes(stratFilter));
         // console.log(JSON.stringify({ todayPerf }, null, 0))
         todayPerf.forEach(perf => {

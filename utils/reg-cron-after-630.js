@@ -2,7 +2,7 @@ const { CronJob } = require('cron');
 
 let allCrons = [];
 
-const regCronIncAfterSixThirty = (Robinhood, { name, run = [], fn }) => {
+const regCronIncAfterSixThirty = ({ name, run = [], fn }) => {
     const d = new Date();
     d.setHours(9, 30);
     run.forEach((min, index) => {
@@ -19,7 +19,7 @@ const regCronIncAfterSixThirty = (Robinhood, { name, run = [], fn }) => {
         // console.log('push all', allCrons);
         new CronJob(cronStr, () => {
             console.log('starting cron: ', name);
-            const callFn = () => fn(Robinhood, min, index);
+            const callFn = () => fn(min, index);
             if (min === 0) {
                 setTimeout(callFn, 5000);
             } else {

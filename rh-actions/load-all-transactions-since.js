@@ -9,7 +9,7 @@ const convertDateToRhFormat = date => {
 
 const lookupInstrument = (() => {
     const instrumentCache = {};
-    return async (Robinhood, instrument) => {
+    return async (instrument) => {
         if (instrumentCache[instrument]) {
             return instrumentCache[instrument];
         }
@@ -19,7 +19,7 @@ const lookupInstrument = (() => {
     };
 })();
 
-const loadAllRobinhoodTransactions = async (Robinhood, daysBack = 1) => {
+const loadAllRobinhoodTransactions = async (daysBack = 1) => {
 
     startDate = (await getFilesSortedByDate('daily-transactions'))[daysBack - 1];
     console.log('loading all robinhood transactions since', startDate);
@@ -30,7 +30,7 @@ const loadAllRobinhoodTransactions = async (Robinhood, daysBack = 1) => {
     console.log({ orders });
     orders = [
         ...orders.results || [],
-        ...(orders.next ? await recursiveUrl(Robinhood, orders.next) : [])
+        ...(orders.next ? await recursiveUrl(orders.next) : [])
     ];
     orders = orders
         .filter(t => t.executions.length);
@@ -39,7 +39,7 @@ const loadAllRobinhoodTransactions = async (Robinhood, daysBack = 1) => {
     
     const withTickers = await mapLimit(orders, 1, async order => ({
         ...order,
-        instrument: await lookupInstrument(Robinhood, order.instrument)
+        instrument: await lookupInstrument(order.instrument)
     }));
 
     console.log('done loading all robinhood transactions');

@@ -1,9 +1,9 @@
 const addOvernightJumpAndTSO = require('../app-actions/add-overnight-jump-and-tso');
 module.exports = {
     name: 'high-volume',
-    trendFilter: async (Robinhood, trend) => {
+    trendFilter: async (trend) => {
         log('adding overnite jump')
-        let withOvernight = await addOvernightJumpAndTSO(Robinhood, trend);
+        let withOvernight = await addOvernightJumpAndTSO(trend);
         const withVolumeRatios = withOvernight
             .map(buy => ({
                 ...buy,

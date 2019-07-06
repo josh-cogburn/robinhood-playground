@@ -82,11 +82,11 @@ const onEnd = allPicks => {
 
 module.exports = {
     name: 'ticker-watchers',
-    init: async (Robinhood) => {
+    init: async () => {
 
         // setTimeout(async () => {
         //     console.log('recording based-on-jump-fourToEightOvernight-trending35257-gt500kvolume-first2-5');
-        //     await recordPicks(Robinhood, 'based-on-jump-fourToEightOvernight-trending35257-gt500kvolume-first2', 5, ['BPMX']);
+        //     await recordPicks('based-on-jump-fourToEightOvernight-trending35257-gt500kvolume-first2', 5, ['BPMX']);
         // }, 10000);
 
         const handler = async relatedPrices => {
@@ -134,7 +134,7 @@ module.exports = {
                 const failedHistoricalCheck = fiveMinuteHistoricals.slice(0, -1).some(p => getTrend(p, price) < 5);
                 const historicalKey = failedHistoricalCheck ? 'failedHistorical' : '';
 
-                const { shouldWatchout } = await getRisk(Robinhood, { ticker });
+                const { shouldWatchout } = await getRisk({ ticker });
                 const jumpKey = (() => {
                     if (trendFromMin > -8) return 'minorJump';
                     if (trendFromMin < -13) return 'majorJump';
@@ -153,7 +153,7 @@ module.exports = {
                 })();
                 let fundamentals;
                 try {
-                    fundamentals = (await addFundamentals(Robinhood, [{ ticker }]))[0].fundamentals;
+                    fundamentals = (await addFundamentals([{ ticker }]))[0].fundamentals;
                 } catch (e) {}
                 const { volume, average_volume } = fundamentals || {};
                 const volumeKey = (() => {
@@ -175,19 +175,19 @@ module.exports = {
                 ].filter(Boolean).join('-');
 
                 await sendEmail(`NEW JUMP DOWN ${strategyName}: ${ticker}`, JSON.stringify(pick, null, 2));
-                await recordPicks(Robinhood, strategyName, 5000, [ticker]);
+                await recordPicks(strategyName, 5000, [ticker]);
             },
             onEnd
         });
 
         const getUnder15 = async () => {
-            const tickPrices = await lookupMultiple(Robinhood, allStocks.filter(isTradeable).map(o => o.symbol));
+            const tickPrices = await lookupMultiple(allStocks.filter(isTradeable).map(o => o.symbol));
             const allUnder15 = Object.keys(tickPrices).filter(ticker => tickPrices[ticker] < 20 && tickPrices[ticker] > 0);
             // console.log({ allUnder15 });
             return allUnder15;
         };
 
-        regCronIncAfterSixThirty(Robinhood, {
+        regCronIncAfterSixThirty({
             name: `clear ticker-watchers price cache`,
             run: [-330],    // start of pre market
             fn: () => tickerWatcher.clearPriceCache()
@@ -211,13 +211,13 @@ module.exports = {
             });
         };
 
-        regCronIncAfterSixThirty(Robinhood, {
+        regCronIncAfterSixThirty({
             name: `set ticker-watchers tickers`,
             run: [2],
             fn: setTickers
         });
 
-        regCronIncAfterSixThirty(Robinhood, {
+        regCronIncAfterSixThirty({
             name: `stop ticker-watchers`,
             run: [500],
             fn: () => tickerWatcher.stop()

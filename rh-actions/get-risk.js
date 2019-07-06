@@ -53,7 +53,7 @@ const getRisk = async (
     const last4TooVolatile = last4Volatility < -19;    
     // str({ last4, last4Low, lastDayMax, last4Volatility, last4TooVolatile });
     const last4UpJumpped = last4.some(historical => historical.trend > 25);
-    const l = quote_data || await lookup(Robinhood, ticker);
+    const l = quote_data || await lookup(ticker);
     const dayVolatility = Math.abs(
         getTrend(l.rawQuote.last_trade_price, l.rawQuote.adjusted_previous_close)
     );

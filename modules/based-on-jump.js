@@ -7,23 +7,23 @@ const trendingUp = require('../rh-actions/trending-up');
 const addOvernightJumpAndTSO = require('../app-actions/add-overnight-jump-and-tso');
 
 const getTicks = arr => arr.map(buy => buy.ticker);
-const trendFilter = async (Robinhood, trend) => {
+const trendFilter = async (trend) => {
     // stocks that went up overnight and
     // trending upward
     console.log('running based-on-jump strategy');
 
-    let withOvernight = await addOvernightJumpAndTSO(Robinhood, trend);
+    let withOvernight = await addOvernightJumpAndTSO(trend);
     // withOvernight = withOvernight.filter(buy => buy.fundamentals.volume > 1000);
 
     const filterSortedTicks = async (filter, sort) => {
         const passedFirstFilter = withOvernight.filter(filter).sort(sort);
         const withRisk = await mapLimit(passedFirstFilter, 20, async buy => ({
             ...buy,
-            ...(await getRisk(Robinhood, buy)),
-            trending35257: await trendingUp(Robinhood, buy.ticker, [35, 25, 7]),
-            trending607: await trendingUp(Robinhood, buy.ticker, [60, 7]),
-            trending103: await trendingUp(Robinhood, buy.ticker, [10, 3]),
-            trending53: await trendingUp(Robinhood, buy.ticker, [5, 3]),
+            ...(await getRisk(buy)),
+            trending35257: await trendingUp(buy.ticker, [35, 25, 7]),
+            trending607: await trendingUp(buy.ticker, [60, 7]),
+            trending103: await trendingUp(buy.ticker, [10, 3]),
+            trending53: await trendingUp(buy.ticker, [5, 3]),
         }));
         // console.log(withRisk);
         return (num, secondFilter) => {

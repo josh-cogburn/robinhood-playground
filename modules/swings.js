@@ -24,7 +24,7 @@ const DAY_PERMS = [
     }
 ];
 
-const trendFilter = async (Robinhood, trend) => {
+const trendFilter = async (trend) => {
 
     let allHistoricals = await getMultipleHistoricals(
         Robinhood,

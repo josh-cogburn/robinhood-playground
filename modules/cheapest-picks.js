@@ -1,4 +1,4 @@
-const trendFilter = async (Robinhood, trend, min, priceKey) => {
+const trendFilter = async (trend, min, priceKey) => {
 
     // cheap stocks that have gone down the most since open
     // but still going up recently 30 & 7 day trending

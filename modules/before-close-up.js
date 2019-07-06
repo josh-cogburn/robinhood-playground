@@ -8,7 +8,7 @@ const mapLimit = require('promise-map-limit');
 const getRisk = require('../rh-actions/get-risk');
 const trendingUp = require('../rh-actions/trending-up');
 
-const trendFilter = async (Robinhood, trend) => {
+const trendFilter = async (trend) => {
 
     // cheap stocks that have gone up the most since open
     // trending 7, 5, 3
@@ -16,7 +16,7 @@ const trendFilter = async (Robinhood, trend) => {
 
     console.log('running beforeCloseUp strategy');
 
-    const withTrendSinceOpen = await addOvernightJumpAndTSO(Robinhood, trend);
+    const withTrendSinceOpen = await addOvernightJumpAndTSO(trend);
 
     let trendingAbove4 = withTrendSinceOpen.filter(stock => stock.trendSinceOpen > 3);
     console.log('trending above 3', trendingAbove4.length);
@@ -24,8 +24,8 @@ const trendFilter = async (Robinhood, trend) => {
 
     trendingAbove4 = await mapLimit(trendingAbove4, 20, async buy => ({
         ...buy,
-        ...await getRisk(Robinhood, buy),
-        trendingUp: await trendingUp(Robinhood, buy.ticker, [7])
+        ...await getRisk(buy),
+        trendingUp: await trendingUp(buy.ticker, [7])
     }));
     // console.log('num watcout', cheapBuys.filter(buy => buy.shouldWatchout).length);
     console.log('num not trending', trendingAbove4.filter(buy => !buy.trendingUp).length);

@@ -5,11 +5,11 @@ const getFilesSortedByDate = require('../utils/get-files-sorted-by-date');
 const jsonMgr = require('../utils/json-mgr');
 const stratPerfMultiple = require('./strategy-perf-multiple');
 
-module.exports = async (Robinhood, daysBack, ...pmNames) => {
+module.exports = async (daysBack, ...pmNames) => {
     const pmStrats = flatten(
         pmNames.map(pm => manualPms[pm])
     );
-    const stratPerf = await stratPerfMultiple(Robinhood, daysBack, ...pmStrats);
+    const stratPerf = await stratPerfMultiple(daysBack, ...pmStrats);
     // console.log(stratPerf);
 
     const allStratsPerf = pmStrats

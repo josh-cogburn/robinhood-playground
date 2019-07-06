@@ -47,7 +47,7 @@ module.exports = async Robinhood => {
     str({ uniqTickers });
     // now look if they were filled...
 
-    const transactions = await loadAllTransactionsSince(Robinhood);
+    const transactions = await loadAllTransactionsSince();
     const filled = transactions.filter(t => t.state === 'filled');
     const tickersWithFilled = uniqTickers.map(ticker => ({
         ticker,

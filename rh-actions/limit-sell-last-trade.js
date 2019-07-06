@@ -3,7 +3,7 @@ const jsonMgr = require('../utils/json-mgr');
 const lookup = require('../utils/lookup');
 const alreadyBoughtToday = require('./already-bought-today');
 
-module.exports = async (Robinhood, {
+module.exports = async ({
     ticker,
     quantity = 1,
     bidPrice
@@ -13,7 +13,7 @@ module.exports = async (Robinhood, {
     const {
         currentPrice,
         instrument
-    } = (await lookup(Robinhood, ticker));
+    } = (await lookup(ticker));
     bidPrice = bidPrice || currentPrice;
 
     bidPrice = +(Number(bidPrice).toFixed(2));

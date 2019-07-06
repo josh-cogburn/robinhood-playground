@@ -28,13 +28,13 @@ const addTrendWithHistoricals = async (trend, interval, span) => {
     return withHistoricals;
 };
 
-const trendFilter = async (Robinhood, trend) => {
+const trendFilter = async (trend) => {
 
     const response = {};
 
     // log({ trend })
     log('adding overnite jump')
-    let withOvernight = await addOvernightJumpAndTSO(Robinhood, trend);
+    let withOvernight = await addOvernightJumpAndTSO(trend);
     log('adding historicals')
     const withHistoricals = (
         await addTrendWithHistoricals(withOvernight, 'day', 'year')
@@ -42,7 +42,7 @@ const trendFilter = async (Robinhood, trend) => {
     log('adding risk')
     const withRisk = await mapLimit(withHistoricals, 20, async buy => ({
         ...buy,
-        ...(await getRisk(Robinhood, buy)),
+        ...(await getRisk(buy)),
     }));
     log('burrito wrap up');
     const withEMAs = addEMAs(withRisk);
@@ -101,7 +101,7 @@ const trendFilter = async (Robinhood, trend) => {
 
     // onlyQuality = await mapLimit(onlyQuality, 13, async buy => ({
     //     ...buy,
-    //     stSent: (await getStSent(Robinhood, buy.ticker) || {}).bullBearScore
+    //     stSent: (await getStSent(buy.ticker) || {}).bullBearScore
     // }));
 
     str({ onlyQuality: onlyQuality.map(t => omit(t, "yearHistoricals")) })
@@ -203,7 +203,7 @@ const trendFilter = async (Robinhood, trend) => {
     //     log('buying', key);
     //     const buys = response[key];
     //     for (let ticker of buys) {
-    //         const { askPrice } = await lookup(Robinhood, ticker);
+    //         const { askPrice } = await lookup(ticker);
     //         log({
     //             ticker,
     //             price: askPrice,

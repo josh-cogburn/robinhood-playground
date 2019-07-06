@@ -10,7 +10,7 @@ const { avgArray } = require('../utils/array-math');
 const getTrend = require('../utils/get-trend');
 
 
-module.exports = async (Robinhood) => {
+module.exports = async () => {
 
     const getHistorical = async ticker => {
         const historicalDailyUrl = `https://api.robinhood.com/quotes/historicals/${ticker}/?interval=day`;
@@ -20,14 +20,14 @@ module.exports = async (Robinhood) => {
 
 
     // let trend = require('/Users/johnmurphy/Development/my-stuff/robinhood-playground/json/stock-data/2018-3-10 11:06:43 (+276).json');
-    let trend = await getTrendAndSave(Robinhood);
+    let trend = await getTrendAndSave();
 
 
     let cheapBuys = trend.filter(stock => {
         return stock.quoteData.lastTrade > 5 && stock.quoteData.lastTrade < 15;
     });
 
-    cheapBuys = await addOvernightJumpAndTSO(Robinhood, cheapBuys);
+    cheapBuys = await addOvernightJumpAndTSO(cheapBuys);
 
     // var allTickers = require('../json/stock-data/allStocks');
     // allTickers = allTickers
@@ -74,7 +74,7 @@ module.exports = async (Robinhood) => {
 
         innerBuys = await mapLimit(innerBuys, 20, async buy => ({
             ...buy,
-            upstreak: await getUpStreak(Robinhood, buy.ticker, buy.historicals)
+            upstreak: await getUpStreak(buy.ticker, buy.historicals)
         }));
 
         innerBuys = innerBuys.map(buy => {

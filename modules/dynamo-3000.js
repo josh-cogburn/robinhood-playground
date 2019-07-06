@@ -7,14 +7,14 @@ const mapLimit = require('promise-map-limit');
 const getRisk = require('../rh-actions/get-risk');
 const trendingUp = require('../rh-actions/trending-up');
 
-const trendFilter = async (Robinhood, trend) => {
+const trendFilter = async (trend) => {
     // going up at least 3%
 
     console.log('running dynamo-3000 strategy');
 
     console.log('total trend stocks', trend.length);
 
-    let withTrendSinceOpen = await addOvernightJumpAndTSO(Robinhood, trend);
+    let withTrendSinceOpen = await addOvernightJumpAndTSO(trend);
     withTrendSinceOpen = withTrendSinceOpen
         .filter(buy => buy.trendSinceOpen)
         .sort((a, b) => a.trendSinceOpen - b.trendSinceOpen);
@@ -109,10 +109,10 @@ const trendFilter = async (Robinhood, trend) => {
         console.log('trendFilter', name, 'count', trendFilteredByTSO.length);
         let withTrendingUp = await mapLimit(trendFilteredByTSO, 20, async buy => ({
             ...buy,
-            ...(await getRisk(Robinhood, buy)),
-            // trendingUp30: await trendingUp(Robinhood, buy.ticker, [ 30 ]),
-            trendingUp3010: await trendingUp(Robinhood, buy.ticker, [ 30, 10 ]),
-            // trendingUp10: await trendingUp(Robinhood, buy.ticker, [ 10 ]),
+            ...(await getRisk(buy)),
+            // trendingUp30: await trendingUp(buy.ticker, [ 30 ]),
+            trendingUp3010: await trendingUp(buy.ticker, [ 30, 10 ]),
+            // trendingUp10: await trendingUp(buy.ticker, [ 10 ]),
         }));
 
         console.log(

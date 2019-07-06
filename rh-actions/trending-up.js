@@ -13,7 +13,7 @@ const getRelatedHistorical = (historicals, daysBack) => {
 };
 
 
-const trendingUp = async (Robinhood, ticker, days) => {
+const trendingUp = async (ticker, days) => {
     try {
 
         const quoteData = await Robinhood.quote_data(ticker);

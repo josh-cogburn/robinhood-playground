@@ -208,7 +208,7 @@ const strategy = async (trendWithHistoricals, daysBack, outerPermsLimit) => {
     }
 
 
-    trendWithHistoricals = await addOvernightJumpAndTSO(Robinhood, trendWithHistoricals);
+    trendWithHistoricals = await addOvernightJumpAndTSO(trendWithHistoricals);
 
 
     const hists = trendWithHistoricals[0].yearHistoricals ;

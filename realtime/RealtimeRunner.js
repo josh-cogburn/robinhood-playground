@@ -76,19 +76,19 @@ module.exports = new (class RealtimeRunner {
     });
 
     const START_MIN = 5;
-    regCronIncAfterSixThirty(Robinhood, {
+    regCronIncAfterSixThirty({
         name: 'RealtimeRunner: start',
         run: [START_MIN],
         fn: () => this.start()
     });
 
-    regCronIncAfterSixThirty(Robinhood, {
+    regCronIncAfterSixThirty({
         name: 'RealtimeRunner: collectionsAndHistoricals',
         run: [2],
         fn: () => this.collectionsAndHistoricals()
     });
 
-    regCronIncAfterSixThirty(Robinhood, {
+    regCronIncAfterSixThirty({
         name: 'RealtimeRunner: stop',
         run: [631],
         fn: () => this.stop()
@@ -124,7 +124,7 @@ module.exports = new (class RealtimeRunner {
     // const allStratPeriods = this.strategies.map(strategy => strategy.period).flatten().uniq();
 
     const rhHistoricals = (allTickers, period) => 
-      getHistoricals(Robinhood, allTickers, `${period}minute`);
+      getHistoricals(allTickers, `${period}minute`);
     const historicalMethods = {
       5: rhHistoricals,
       10: rhHistoricals,
@@ -372,7 +372,7 @@ module.exports = new (class RealtimeRunner {
         && comparePick.strategyName === strategyName
     ) ? 'firstAlert' : '';
 
-    const { shouldWatchout } = await getRisk(Robinhood, { ticker });
+    const { shouldWatchout } = await getRisk({ ticker });
     const watchoutKey = shouldWatchout ? 'shouldWatchout' : 'notWatchout';
     const priceKeys = [2, 8, 20, 80, 300, 1000];
     const priceKey = priceKeys.find(key => price < key);
@@ -387,7 +387,7 @@ module.exports = new (class RealtimeRunner {
     })();
     let fundamentals;
     try {
-        fundamentals = (await addFundamentals(Robinhood, [{ ticker }]))[0].fundamentals;
+        fundamentals = (await addFundamentals([{ ticker }]))[0].fundamentals;
     } catch (e) {}
     const { volume, average_volume } = fundamentals || {};
     const volumeKey = (() => {
@@ -415,7 +415,7 @@ module.exports = new (class RealtimeRunner {
       // await sendEmail(`NEW ${strategyName.toUpperCase()} ALERT ${pickName}: ${ticker}`, JSON.stringify(pick, null, 2));
     }
     
-    await recordPicks(Robinhood, pickName, 5000, [ticker]);
+    await recordPicks(pickName, 5000, [ticker]);
   }
 
 

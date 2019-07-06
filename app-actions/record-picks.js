@@ -16,7 +16,7 @@ const { disableMultipliers } = require('../settings');
 const pmsHit = require('../utils/pms-hit');
 const { emails } = require('../config');
 
-const saveToFile = async (Robinhood, strategy, min, withPrices) => {
+const saveToFile = async (strategy, min, withPrices) => {
 
     const stratMin = `${strategy}-${min}`;
 
@@ -56,7 +56,7 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
     if (hits.includes('forPurchase')) {
         console.log('strategy enabled: ', stratMin, 'purchasing');
         // const stocksToBuy = withPrices.map(obj => obj.ticker);
-        // await purchaseStocks(Robinhood, {
+        // await purchaseStocks({
         //     stocksToBuy,
         //     strategy,
         //     multiplier: !disableMultipliers ? forPurchaseMultiplier : 1,
@@ -101,7 +101,7 @@ const saveToFile = async (Robinhood, strategy, min, withPrices) => {
 
 
 
-module.exports = async (Robinhood, strategy, min, toPurchase, trendKey = '') => {
+module.exports = async (strategy, min, toPurchase, trendKey = '') => {
 
     const isNotRegularHours = min < 0 || min > 390;
 
@@ -116,7 +116,7 @@ module.exports = async (Robinhood, strategy, min, toPurchase, trendKey = '') => 
                 price
             };
         });
-        await saveToFile(Robinhood, strategyName, min, withPrices);
+        await saveToFile(strategyName, min, withPrices);
     };
 
     if (!Array.isArray(toPurchase)) {
@@ -127,7 +127,7 @@ module.exports = async (Robinhood, strategy, min, toPurchase, trendKey = '') => 
                 .reduce((acc, val) => acc.concat(val), []) // flatten
         )];
         // console.log('alltickers', allTickers);
-        const tickerLookups = await lookupMultiple(Robinhood, allTickers, true);
+        const tickerLookups = await lookupMultiple(allTickers, true);
         // console.log('tickerLookups', tickerLookups);
         for (let strategyName of Object.keys(toPurchase)) {
             const subsetToPurchase = toPurchase[strategyName];
@@ -140,7 +140,7 @@ module.exports = async (Robinhood, strategy, min, toPurchase, trendKey = '') => 
         }
     } else {
         // console.log('no variety to purchase', toPurchase);
-        const tickerLookups = await lookupMultiple(Robinhood, toPurchase, true);
+        const tickerLookups = await lookupMultiple(toPurchase, true);
         const stratName = [strategy, trendKey].filter(Boolean).join('-');
         await record(toPurchase, stratName, tickerLookups);
     }
