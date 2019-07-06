@@ -77,7 +77,6 @@ module.exports = {
         const { kstSeries, isSignalCross, isZeroCross, isLow } = getKST(allCurrents, ticker);
         if (isSignalCross || isZeroCross) {
             return {
-                ticker,
                 keys: {
                     isSignalCross,
                     isZeroCross,

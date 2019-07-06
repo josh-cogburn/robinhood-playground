@@ -18,7 +18,6 @@ module.exports = {
         // console.log({ rsi })
         if (rsi < 30) {
             return {
-                ticker,
                 keys: {
                     ...(rsiKey = () => {
                         const num = [5, 10, 15, 20, 25, 30].find(val => rsi < val);

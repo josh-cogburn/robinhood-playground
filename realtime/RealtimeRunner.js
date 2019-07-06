@@ -283,18 +283,14 @@ module.exports = new (class RealtimeRunner {
 
   async runAllStrategies(periods = [5, 10, 30]) {
     
-    const picks = [];
-
     const runAllStrategiesForPeriod = async period => {
-
+      const picks = [];
       const relatedPriceCache = this.priceCaches[period];
-
       // strlog({
       //   period,
       //   relatedPriceCache
       // })
       const allTickers = Object.keys(relatedPriceCache);
-      
       for (let { strategyName, handler } of this.strategies) {
         console.log(`running ${strategyName} against ${period} minute data...`);
         for (let ticker of allTickers) {
@@ -305,57 +301,48 @@ module.exports = new (class RealtimeRunner {
           if (response) {
             picks.push({
               ...response,
+              ticker,
               period,
               strategyName,
             });
           }
         }
-
       };
-      
+      return picks;
     };
-  
-    for (let period of periods) {
-      await runAllStrategiesForPeriod(period);
-    }
 
-    return picks;
+    return (
+      await mapLimit(periods, 1, runAllStrategiesForPeriod)
+    ).flatten();
+
+  }
+
+  async runPostRunStrategies(picks) {
+    const postRunStrategies = this.strategies.filter(strategy => strategy.postRun);
+    const postRunPicks = await mapLimit(postRunStrategies, 1, async ({ strategyName, postRun }) => 
+      (await postRun(
+        picks,            // current picks
+        this.todaysPicks  // array of array of past picks
+      )).map(pick => ({
+        ...pick,
+        strategyName
+      }))
+    );
+    return [
+      ...picks,
+      ...postRunPicks.filter(Boolean).flatten()
+    ];
   }
 
   async handlePicks(picks) {
-
-    const uniqTickers = picks.map(pick => pick.ticker).uniq();
-    const tickersToStratHits = uniqTickers.reduce((acc, ticker) => ({
-      ...acc,
-      [ticker]: picks
-        .filter(pick => pick.ticker === ticker)
-        .map(pick => pick.strategyName)
-        .uniq()
-    }), {});
-
-    const multiHitTickers = Object.keys(tickersToStratHits).filter(ticker => 
-      tickersToStratHits[ticker].length > 1
-    );
-
-    multiHitTickers.forEach(ticker => {
-      const uniqStrats = tickersToStratHits[ticker];
-      picks.push({
-        ticker,
-        keys: {
-          [`${uniqStrats.length}count`]: true,
-        },
-        strategyName: 'multi-hits',
-        data: {
-          uniqStrats
-        }
-      })
-    });
-
-    
-
-    for (let pick of picks) {
+    // run post run strategies
+    const withPostRun = await this.runPostRunStrategies(picks);
+    // mongo and socket updates
+    for (let pick of withPostRun) {
       await this.handlePick(pick);
     }
+    // add to todaysPicks
+    this.todaysPicks.push(withPostRun); // array of arrays
   }
 
   async handlePick(pick) {
@@ -365,11 +352,6 @@ module.exports = new (class RealtimeRunner {
       ticker,
       keys,
       // data,
-      period,
-      strategyName
-    })
-    this.todaysPicks.push({
-      ticker,
       period,
       strategyName
     });
@@ -384,7 +366,7 @@ module.exports = new (class RealtimeRunner {
     const keyString = Object.keys(keys).filter(key => keys[key]).join('-');
 
     const periodKey = period && `${period}min`;
-    const firstAlertkey = !this.todaysPicks.find(comparePick =>
+    const firstAlertkey = !this.todaysPicks.flatten().find(comparePick =>
       comparePick.ticker === ticker
         && comparePick.period === period
         && comparePick.strategyName === strategyName

@@ -34,7 +34,6 @@ module.exports = {
         if (allPrices.length >= 3) {
             console.log('found big jump', ticker, trendFromMin);
             return {
-              ticker,
               keys: {
                 ...(jumpKey = () => {
                     const key = (() => {
