@@ -34,15 +34,6 @@ module.exports = new (class RealtimeRunner {
     });
   }
 
-  addStrategy(strategy, strategyName) {
-    if (strategy && strategyName && strategy.handler && strategy.period) {
-      this.strategies.push({
-        ...strategy,
-        strategyName
-      });
-    }
-  }
-
   async refreshCollections() {
     this.collections = await getCollections();
   }
@@ -70,9 +61,8 @@ module.exports = new (class RealtimeRunner {
     await this.collectionsAndHistoricals();    
 
     (await getStrategies()).forEach(strategy => {
-      if (strategy.handler && strategy.period) {
-        this.strategies.push(strategy);
-      }
+      console.log(`init'd ${strategy.strategyName} REALTIME strategy!`);
+      this.strategies.push(strategy);
     });
 
     const START_MIN = 5;
@@ -146,7 +136,7 @@ module.exports = new (class RealtimeRunner {
     console.log('start!!');
     this.currentlyRunning = true;
     this.runCount = 0;
-    this.interval = setInterval(() => this.everyFiveMinutes(), 5 * 1000 * 60);  // 5minute
+    this.interval = setInterval(() => this.everyFiveMinutes(), 5 * 100 * 60);  // 5minute
     this.everyFiveMinutes();
   }
 
@@ -237,29 +227,30 @@ module.exports = new (class RealtimeRunner {
       [period]: this.getLastTimestamp(period)
     }), {});
     console.log(lastTS)
-    const periods = Object.keys(lastTS).filter(period => {
-      const lastTimestamp = lastTS[period];
-      const fromYesterday = lastTimestamp < Date.now() - 1000 * 60 * 60;
-      const compareTS = fromYesterday ? (() => {
-        const d = new Date();
-        d.setHours(9, 30);
-        return d.getTime();
-      })() : lastTimestamp;
+    const periods = [5,10,30]
+    // Object.keys(lastTS).filter(period => {
+    //   const lastTimestamp = lastTS[period];
+    //   const fromYesterday = lastTimestamp < Date.now() - 1000 * 60 * 60;
+    //   const compareTS = fromYesterday ? (() => {
+    //     const d = new Date();
+    //     d.setHours(9, 30);
+    //     return d.getTime();
+    //   })() : lastTimestamp;
       
-      const diff = Date.now() - compareTS;
-      const shouldUpdate = diff > (period - 2) * 1000 * 60;
-      console.log(
-        'everyFiveMinutes REPORT', 
-        this.runCount,
-        {
-          period,
-          fromYesterday,
-          compareTS: new Date(compareTS).toLocaleString(),
-          shouldUpdate
-        }
-      );
-      return shouldUpdate;
-    });
+    //   const diff = Date.now() - compareTS;
+    //   const shouldUpdate = diff > (period - 2) * 1000 * 60;
+    //   console.log(
+    //     'everyFiveMinutes REPORT', 
+    //     this.runCount,
+    //     {
+    //       period,
+    //       fromYesterday,
+    //       compareTS: new Date(compareTS).toLocaleString(),
+    //       shouldUpdate
+    //     }
+    //   );
+    //   return shouldUpdate;
+    // }).map(Number);
 
     console.log('every five minutes...', { periods, runCount: this.runCount });
 
@@ -290,7 +281,10 @@ module.exports = new (class RealtimeRunner {
       //   relatedPriceCache
       // })
       const allTickers = Object.keys(relatedPriceCache);
-      for (let { strategyName, handler } of this.strategies) {
+      const withHandlers = this.strategies
+        .filter(strategy => strategy.handler)
+        .filter(strategy => !strategy.period || strategy.period.includes(period));
+      for (let { strategyName, handler } of withHandlers) {
         console.log(`running ${strategyName} against ${period} minute data...`);
         for (let ticker of allTickers) {
           const response = await handler({
@@ -318,15 +312,16 @@ module.exports = new (class RealtimeRunner {
 
   async runPostRunStrategies(picks) {
     const postRunStrategies = this.strategies.filter(strategy => strategy.postRun);
-    const postRunPicks = await mapLimit(postRunStrategies, 1, async ({ strategyName, postRun }) => 
-      (await postRun(
+    const postRunPicks = await mapLimit(postRunStrategies, 1, async ({ strategyName, postRun }) => {
+      console.log(`running ${strategyName} REALTIME POSTRUN strategy...`);
+      return (await postRun(
         picks,            // current picks
         this.todaysPicks  // array of array of past picks
       )).map(pick => ({
         ...pick,
         strategyName
-      }))
-    );
+      }));
+    });
     return [
       ...picks,
       ...postRunPicks.filter(Boolean).flatten()
@@ -414,7 +409,7 @@ module.exports = new (class RealtimeRunner {
       // await sendEmail(`NEW ${strategyName.toUpperCase()} ALERT ${pickName}: ${ticker}`, JSON.stringify(pick, null, 2));
     }
     
-    await recordPicks(pickName, 5000, [ticker]);
+    // await recordPicks(pickName, 5000, [ticker]);
   }
 
 
@@ -424,7 +419,7 @@ module.exports = new (class RealtimeRunner {
     
     return this.strategies.reduce((acc, { pms, strategyName }) => ({
       ...acc,
-      ...Object.keys(pms).reduce((inner, key) => ({
+      ...Object.keys(pms || {}).reduce((inner, key) => ({
         ...inner,
         [`${strategyName}-${key}`]: [
           ...Array.isArray(pms[key]) ? pms[key] : [pms[key]],

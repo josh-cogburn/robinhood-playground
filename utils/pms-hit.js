@@ -33,7 +33,7 @@ module.exports = async (_, strategy) => {
     ...Object.keys(pms),
     'forPurchase'
   ].filter(matchesPm);
-  console.log({ hits })
+  // console.log({ hits })
   return hits;
   
 };

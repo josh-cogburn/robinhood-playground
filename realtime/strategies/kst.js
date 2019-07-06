@@ -124,6 +124,79 @@ module.exports = {
 
         top100LowSignals10min: ['top100', '10min', 'isSignalCross', 'isLow'],
         top100LowSignals30min: ['top100', '30min', 'isSignalCross', 'isLow'],
+
+
+        // post run 
         
+        precededByRSI5min: ['precededByRSI', '5min'],
+        precededByRSI10min: ['precededByRSI', '10min'],
+        precededByRSI30min: ['precededByRSI', '30min'],
+        
+    },
+
+    postRun: (newPicks, todaysPicks) => {
+
+        // precededByRSI
+        // find tickers who in the last run triggered RSI
+        // and are currently not RSI alerted
+        // but are now KST alerted
+
+        const postRunPicks = [];
+        [5, 10, 30].forEach(period => {
+
+            const todaysFilteredByPeriod = todaysPicks.filter(
+                picks => picks.some(
+                    pick => pick.period === period
+                )
+            );
+            
+            console.log('KST POSTRUN DEBUG...');
+            // console.log({ period, todaysFilteredByPeriod: todaysFilteredByPeriod.length });
+            const picksMatchingPeriod = (picks = []) => {
+                return picks.filter(
+                    pick => pick.period === period
+                );
+            };
+            const relatedNewPicks = picksMatchingPeriod(newPicks);
+            const relatedPreviousPicks = picksMatchingPeriod(todaysFilteredByPeriod.pop());
+            const newKstAlerts = relatedNewPicks
+                .filter(pick => pick.strategyName === 'kst');
+            const filterByRsiTickers = (picks, ticker) => picks.filter(pick => 
+                pick.ticker === ticker
+                && pick.strategyName === 'rsi'
+            );
+            const withoutActiveRSI = newKstAlerts.filter(({ ticker }) => {
+                const filtered = filterByRsiTickers(relatedNewPicks, ticker);
+                return !filtered.length;
+            });
+            // strlog({relatedPreviousPicks})
+            let precededByRSI = withoutActiveRSI
+                .map(kstAlert => ({
+                    ...kstAlert,
+                    prevRsiPicks: filterByRsiTickers(relatedPreviousPicks, kstAlert.ticker)
+                }))
+                .filter(({ prevRsiPicks }) => prevRsiPicks.length);
+
+            // console.log({
+            //     newKstAlerts,
+            //     withoutActiveRSI,
+            //     precededByRSI
+            // })
+            precededByRSI.forEach(({ ticker, prevRsiPicks, keys }) => {
+                postRunPicks.push({
+                    ticker,
+                    keys: {
+                        precededByRSI: true,
+                        [`${period}min`]: true,
+                        ...keys
+                    },
+                    data: {
+                        prevRsiPicks
+                    }
+                });
+            });
+        });
+
+        return postRunPicks;
     }
 };
