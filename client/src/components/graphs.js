@@ -74,6 +74,7 @@ export default [
           'signal'
         ].map(prop => createDataSet({
           label: prop.toUpperCase(),
+          fill: false,
           borderColor: prop === 'signal' ? 'blue' : 'orange',
           data: getDataForProp(prop)
         }))

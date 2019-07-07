@@ -82,7 +82,7 @@ module.exports = new (class RealtimeRunner {
         fn: () => this.stop()
     });
 
-    if (dayInProgress(START_MIN) || true) {
+    if (dayInProgress(START_MIN)) {
       console.log('in progress');
 
       const last5Minute = this.getLastTimestamp(5);
