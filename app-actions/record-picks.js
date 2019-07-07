@@ -16,7 +16,7 @@ const { disableMultipliers } = require('../settings');
 const pmsHit = require('../utils/pms-hit');
 const { emails } = require('../config');
 
-const saveToFile = async (strategy, min, withPrices) => {
+const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
 
     const stratMin = `${strategy}-${min}`;
 
@@ -38,7 +38,9 @@ const saveToFile = async (strategy, min, withPrices) => {
         date: dateStr, 
         strategyName: strategy,
         min,
-        picks: withPrices
+        picks: withPrices,
+        data,
+        keys
     });
 
     // strlog(mongoResponse);
@@ -101,7 +103,7 @@ const saveToFile = async (strategy, min, withPrices) => {
 
 
 
-module.exports = async (strategy, min, toPurchase, trendKey = '') => {
+module.exports = async (strategy, min, toPurchase, trendKey = '', { keys, data }) => {
 
     const isNotRegularHours = min < 0 || min > 390;
 
@@ -116,7 +118,7 @@ module.exports = async (strategy, min, toPurchase, trendKey = '') => {
                 price
             };
         });
-        await saveToFile(strategyName, min, withPrices);
+        await saveToFile(strategyName, min, withPrices, { keys, data });
     };
 
     if (!Array.isArray(toPurchase)) {

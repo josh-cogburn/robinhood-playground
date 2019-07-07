@@ -9,7 +9,9 @@ const schema = new Schema({
     picks: [{
         ticker: String,
         price: Number
-    }]
+    }],
+    data: Schema.Types.Mixed,
+    keys: Schema.Types.Mixed
 });
 
 schema.statics.getUniqueDates = async function() {
