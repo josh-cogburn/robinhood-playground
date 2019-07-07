@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import TrendPerc from './TrendPerc';
-import TradingViewWidget from 'react-tradingview-widget';
+// import TradingViewWidget from 'react-tradingview-widget';
+import ReactModal from 'react-modal';
 
 class Pick extends Component {
     state = {
@@ -34,34 +35,38 @@ class Pick extends Component {
                   </i>
                 )}
                 {
-                    showingDetails || true
-                        ? pick.withTrend
-                            .filter(val => !!val)
-                            .map(tickerObj => (
-                                <div>
-                                    <table>
-                                        <thead>
-                                            <th>ticker</th>
-                                            <th>thenPrice</th>
-                                            <th>nowPrice</th>
-                                            <th>trend</th>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>{tickerObj.ticker}</td>
-                                                <td>{tickerObj.thenPrice}</td>
-                                                <td>{tickerObj.nowPrice}</td>
-                                                <td>{tickerObj.trend}%</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    {/* <div style={{ width: '980px', height: '610px'}}>
-                                        <TradingViewWidget symbol={tickerObj.ticker} range='5d' style='8' width={980} height={610} /> 
-                                    </div> */}
-                                </div>
-                            ))
-                        : null                    
+                    pick.withTrend
+                        .filter(val => !!val)
+                        .map(tickerObj => (
+                            <div>
+                                <table>
+                                    <thead>
+                                        <th>ticker</th>
+                                        <th>thenPrice</th>
+                                        <th>nowPrice</th>
+                                        <th>trend</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>{tickerObj.ticker}</td>
+                                            <td>{tickerObj.thenPrice}</td>
+                                            <td>{tickerObj.nowPrice}</td>
+                                            <td>{tickerObj.trend}%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                {/* <div style={{ width: '980px', height: '610px'}}>
+                                    <TradingViewWidget symbol={tickerObj.ticker} range='5d' style='8' width={980} height={610} /> 
+                                </div> */}
+                            </div>
+                        ))                
                 }
+                <ReactModal isOpen={showingDetails}>
+                    <button onClick={this.toggleDetails}>Close Modal</button>
+                    <pre>
+                        {JSON.stringify(pick.data, null, 2)}
+                    </pre>
+                </ReactModal>
             </div>
         );
     }

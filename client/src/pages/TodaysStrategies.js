@@ -32,7 +32,7 @@ class TodaysStrategies extends Component {
   toggleAfterHours = () => this.setState({ afterHoursEnabled: !this.state.afterHoursEnabled });
   render() {
       let { pmFilter, afterHoursEnabled, sortBy: sortByFilter, additionalFilters } = this.state;
-      let { picks, relatedPrices, predictionModels, pastData, curDate, pmPerfs, pms, settings } = this.props;
+      let { picks, relatedPrices, predictionModels, pastData, curDate, pmPerfs, pms, settings, socket } = this.props;
       const { fiveDay } = pastData || {};
 
         const additionalFilterParts = additionalFilters.split(',');
@@ -92,9 +92,9 @@ class TodaysStrategies extends Component {
           };
       });
       console.log({ sortByFilter })
-      let sortedByAvgTrend = sortBy(showingPicks, sortByFilter).reverse();
+      let sortedPicks = sortBy(showingPicks, sortByFilter).reverse();
 
-        const validStrats = sortedByAvgTrend.map(val => val.avgTrend);
+        const validStrats = sortedPicks.map(val => val.avgTrend);
         const avgTrendOverall = avgArray(
             validStrats.filter(avgTrend => avgTrend && !isNaN(avgTrend))
         );
@@ -150,12 +150,13 @@ class TodaysStrategies extends Component {
             <hr/>
             <p className="App-intro">
                 {
-                    showingPicks.slice(0).map(pick => (
+                    sortedPicks.map(pick => (
                         <div>
                             <Pick
                                 pick={pick}
                                 key={pick.stratMin}
                                 fiveDay={fiveDay ? fiveDay[pick.stratMin] : null}
+                                socket={socket}
                             />
                         </div>
                     ))
