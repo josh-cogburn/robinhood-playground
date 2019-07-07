@@ -1,8 +1,9 @@
-const getTrend = require('../utils/get-trend');
-const cacheThis = require('../utils/cache-this');
 const request = require('request-promise');
 const { mapObject } = require('underscore');
-const { tiingo: { token }} = require('../config');
+
+const { tiingo: { token }} = require('../../config');
+const getTrend = require('../../utils/get-trend');
+const cacheThis = require('../../utils/cache-this');
 
 const number = n => Number(n);
 
@@ -75,6 +76,9 @@ const getHistoricals = async (ticker, period) => {
 
 module.exports = async (tickers, period) => {
   // console.log({ tickers })
+
+  console.log(`tiingo historicals for ${tickers.length} tickers...`);
+
 
   const asArray = await mapLimit(tickers, 3, async ticker => ({
     ticker,

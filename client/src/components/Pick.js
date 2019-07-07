@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import TrendPerc from './TrendPerc';
 // import TradingViewWidget from 'react-tradingview-widget';
 import ReactModal from 'react-modal';
+import PickGraphs from './PickGraphs';
 
 class Pick extends Component {
     state = {
@@ -14,7 +15,7 @@ class Pick extends Component {
     render() {
         
         const { showingDetails } = this.state;
-        const { pick, fiveDay } = this.props;
+        const { pick, fiveDay, socket } = this.props;
         let percUpFontSize = fiveDay ? fiveDay.percUp * 100.4 : 100;
         if (fiveDay && fiveDay.avgTrend > 1) percUpFontSize *= 1.9;
         // pick.keys && console.log({ pick })
@@ -62,10 +63,17 @@ class Pick extends Component {
                         ))                
                 }
                 <ReactModal isOpen={showingDetails}>
-                    <button onClick={this.toggleDetails}>Close Modal</button>
-                    <pre>
-                        {JSON.stringify(pick.data, null, 2)}
-                    </pre>
+                    <button 
+                        onClick={this.toggleDetails} 
+                        style={{
+                            position: 'fixed',
+                            zoom: '250%',
+                            top: '1vh',
+                            left: '1vh',
+                        }}>
+                            Close Modal
+                    </button>
+                    <PickGraphs pick={pick} socket={socket} />
                 </ReactModal>
             </div>
         );

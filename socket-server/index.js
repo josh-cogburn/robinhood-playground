@@ -7,6 +7,7 @@ const compression = require('compression');
 const stratManager = require('./strat-manager');
 const path = require('path');
 const DayReport = require('../models/DayReport');
+const Pick = require('../models/Pick');
 
 const mapLimit = require('promise-map-limit');
 const lookupMultiple = require('../utils/lookup-multiple');
@@ -62,6 +63,15 @@ io.on('connection', async socket => {
     socket.on('getDayReports', async cb => {
         console.log('getting day reports');
         cb({ dayReports: await DayReport.find() });
+    });
+
+    socket.on('getPickData', async (id, cb) => {
+        const pickData = await Pick.findById(id, { data: 1 });
+        if (pickData) {
+            console.log('sending ', pickData.data);
+            cb(pickData.data);
+        }
+        cb(pickData);
     });
 
     socket.on('disconnect', () => {

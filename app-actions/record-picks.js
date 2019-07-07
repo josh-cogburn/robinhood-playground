@@ -47,11 +47,11 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
 
     // for socket-server
     stratManager.newPick({
+        _id: mongoResponse._id,
         stratMin,
         withPrices,
         timestamp: mongoResponse.timestamp,
         keys,
-        data,
     });
 
 

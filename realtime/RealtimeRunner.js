@@ -1,7 +1,6 @@
 const getCollections = require('./collections/get-collections');
 const dayInProgress = require('./day-in-progress');
-const getHistoricals = require('./get-historicals');
-const tiingoHistoricals = require('./tiingo-historicals');
+const getHistoricals = require('./historicals/get');
 
 // app-actions
 const recordPicks = require('../app-actions/record-picks');
@@ -15,7 +14,6 @@ const lookupMultiple = require('../utils/lookup-multiple');
 const sendEmail = require('../utils/send-email');
 const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
 const getStrategies = require('./get-strategies');
-
 const pmsHit = require('../utils/pms-hit');
 
 module.exports = new (class RealtimeRunner {
@@ -113,23 +111,13 @@ module.exports = new (class RealtimeRunner {
     const allTickers = Object.values(this.collections).flatten().uniq();
     // const allStratPeriods = this.strategies.map(strategy => strategy.period).flatten().uniq();
 
-    const rhHistoricals = (allTickers, period) => 
-      getHistoricals(allTickers, `${period}minute`);
-    const historicalMethods = {
-      5: rhHistoricals,
-      10: rhHistoricals,
-      30: tiingoHistoricals
-    };
-
-    for (let period of Object.keys(historicalMethods)) {
+    for (let period of [5, 10, 30]) {
       this.priceCaches = {
         ...this.priceCaches,
-        [period]: await historicalMethods[period](allTickers, period)
+        [period]: await getHistoricals(allTickers, period)
       }
     }
-
-
-    // strlog({ allTickers, priceCaches: this.priceCaches });
+    strlog({ allTickers, priceCaches: this.priceCaches });
   }
 
   async start() {
@@ -146,9 +134,24 @@ module.exports = new (class RealtimeRunner {
     this.interval = null;
   }
 
+  logLastTimestamps() {
+
+    [5, 10, 30].forEach(period => {
+      const curPriceCache = this.priceCaches[period];
+      const firstTicker = Object.keys(curPriceCache)[0];
+      const last5timestamps = curPriceCache[firstTicker]
+        .slice(-5)
+        .map(quote => new Date(quote.timestamp).toLocaleString());
+    
+      console.log(`${period}min period, last 5 timestamps...${last5timestamps}`);
+      
+    });
+  }
   async addNewQuote(priceCachesToUpdate = Object.keys(this.priceCaches)) {
     
     console.log('getting new quotes...');
+    this.logLastTimestamps();
+
     const allTickers = Object.values(this.collections).flatten().uniq();
     console.log({ allTickers })
     const relatedPrices = await lookupMultiple(
@@ -171,11 +174,9 @@ module.exports = new (class RealtimeRunner {
       });
       this.priceCaches[period] = curPriceCache;
 
-      const last5timestamps = curPriceCache[allTickers[0]]
-        .slice(-5)
-        .map(quote => new Date(quote.timestamp).toLocaleString());
 
-      console.log(`${period}min period, last 5 timestamps...${last5timestamps}`);
+      this.logLastTimestamps();
+
     };
 
     priceCachesToUpdate.forEach(addToPriceCache);
@@ -300,7 +301,7 @@ module.exports = new (class RealtimeRunner {
               strategyName,
               data: {
                 ...response.data,
-                allPrices
+                allPrices,
               }
             });
           }
@@ -414,6 +415,7 @@ module.exports = new (class RealtimeRunner {
       // await sendEmail(`NEW ${strategyName.toUpperCase()} ALERT ${pickName}: ${ticker}`, JSON.stringify(pick, null, 2));
     }
     
+    data.period = period;
     await recordPicks(pickName, 5000, [ticker], null, { keys, data });
   }
 
