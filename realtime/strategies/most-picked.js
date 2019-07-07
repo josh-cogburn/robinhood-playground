@@ -14,7 +14,7 @@ module.exports = {
       matches: allPicks.filter(pick => pick.ticker === ticker)
     }));
     const sorted = sortBy(withCount, ({ matches }) => matches.length).reverse();
-    strlog({ sorted });
+    // strlog({ sorted });
     const min = getMinutesFrom630();
     return sorted.slice(0, 1).map(({ ticker, matches }) => ({
       ticker,

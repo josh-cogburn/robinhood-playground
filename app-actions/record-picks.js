@@ -39,8 +39,8 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
         strategyName: strategy,
         min,
         picks: withPrices,
+        keys,
         data,
-        keys
     });
 
     // strlog(mongoResponse);
@@ -49,7 +49,9 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
     stratManager.newPick({
         stratMin,
         withPrices,
-        timestamp: mongoResponse.timestamp
+        timestamp: mongoResponse.timestamp,
+        keys,
+        data,
     });
 
 

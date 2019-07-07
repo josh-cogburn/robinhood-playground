@@ -26,7 +26,7 @@ module.exports = {
                     })()
                 },
                 data: {
-                    allCurrents,
+                    // allCurrents,
                     mostRecent,
                     rsiSeries,
                     rsi,

@@ -83,7 +83,7 @@ module.exports = {
                     isLow
                 },
                 data: {
-                    allCurrents,
+                    // allCurrents,
                     mostRecent: allPrices[allPrices.length - 1],
                     kstSeries,
                 }

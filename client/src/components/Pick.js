@@ -16,7 +16,7 @@ class Pick extends Component {
         const { pick, fiveDay } = this.props;
         let percUpFontSize = fiveDay ? fiveDay.percUp * 100.4 : 100;
         if (fiveDay && fiveDay.avgTrend > 1) percUpFontSize *= 1.9;
-        // console.log({ pick })
+        // pick.keys && console.log({ pick })
         return (
             <div className="pick" style={{ fontSize: Math.max(percUpFontSize, 39) + '%'}}>
                 <button onClick={this.toggleDetails}>
@@ -24,7 +24,7 @@ class Pick extends Component {
                 </button>
                 <b><TrendPerc value={pick.avgTrend} /></b>
                 <strong>{' ' + pick.stratMin}</strong><br/>
-                <small>{new Date(pick.timestamp).toLocaleTimeString()}</small>
+                <small>{new Date(pick.timestamp).toLocaleString()}</small>
                 <hr/>
                 {fiveDay && (
                   <i>
@@ -34,7 +34,7 @@ class Pick extends Component {
                   </i>
                 )}
                 {
-                    showingDetails 
+                    showingDetails || true
                         ? pick.withTrend
                             .filter(val => !!val)
                             .map(tickerObj => (
@@ -55,9 +55,9 @@ class Pick extends Component {
                                             </tr>
                                         </tbody>
                                     </table>
-                                    <div style={{ width: '980px', height: '610px'}}>
+                                    {/* <div style={{ width: '980px', height: '610px'}}>
                                         <TradingViewWidget symbol={tickerObj.ticker} range='5d' style='8' width={980} height={610} /> 
-                                    </div>
+                                    </div> */}
                                 </div>
                             ))
                         : null                    

@@ -129,7 +129,7 @@ module.exports = new (class RealtimeRunner {
     }
 
 
-    strlog({ allTickers, priceCaches: this.priceCaches });
+    // strlog({ allTickers, priceCaches: this.priceCaches });
   }
 
   async start() {
@@ -197,13 +197,13 @@ module.exports = new (class RealtimeRunner {
   getLastTimestamp(period) {
     console.log('getting last timestamp');
     const relatedPriceCache = this.priceCaches[period];
-    console.log(Object.keys(relatedPriceCache));
+    // console.log(Object.keys(relatedPriceCache));
     const firstTicker = Object.keys(relatedPriceCache)[0];
     const firstTickerData = relatedPriceCache[firstTicker];
-    console.log({
-      period,
-      firstTickerData: JSON.stringify(firstTickerData)
-    })
+    // console.log({
+    //   period,
+    //   firstTickerData: JSON.stringify(firstTickerData).slice(0, 20)
+    // })
     const firstTickerLastHistorical = firstTickerData[firstTickerData.length - 1];
     if (!firstTickerLastHistorical) {
       console.log('WHAT NO LAST DATA', {
@@ -224,7 +224,7 @@ module.exports = new (class RealtimeRunner {
 
     const lastTS = Object.keys(this.priceCaches).reduce((acc, period) => ({
       ...acc,
-      [period]: this.getLastTimestamp(period)
+      [period]: this.getLastTimestamp(Number(period))
     }), {});
     console.log(lastTS)
     const periods = [5,10,30]
@@ -287,9 +287,10 @@ module.exports = new (class RealtimeRunner {
       for (let { strategyName, handler } of withHandlers) {
         console.log(`running ${strategyName} against ${period} minute data...`);
         for (let ticker of allTickers) {
+          const allPrices = relatedPriceCache[ticker];
           const response = await handler({
             ticker,
-            allPrices: relatedPriceCache[ticker]
+            allPrices
           });
           if (response) {
             picks.push({
@@ -297,6 +298,10 @@ module.exports = new (class RealtimeRunner {
               ticker,
               period,
               strategyName,
+              data: {
+                ...response.data,
+                allPrices
+              }
             });
           }
         }

@@ -108,7 +108,7 @@ const stratManager = {
         this.tickerWatcher.addTickers(
             data.withPrices.map(o => o.ticker)
         );
-        // console.log('new pick', data);
+        console.log('new pick', data);
         // if (this.curDate !== getToday()) {
         //     return;
         // }

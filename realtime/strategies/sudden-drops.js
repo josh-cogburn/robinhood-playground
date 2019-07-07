@@ -43,7 +43,7 @@ module.exports = {
                 })()
               },
               data: {
-                allCurrents,
+                // allCurrents,
                 mostRecent,
                 trendFromMin
               }

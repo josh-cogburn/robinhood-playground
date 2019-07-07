@@ -4,7 +4,7 @@ const avgArray = arr => {
 };
 
 const percUp = arr => {
-  console.log({ arr })
+  // console.log({ arr })
   return arr.filter(v => v > 0).length / arr.length * 100;
 }
 
