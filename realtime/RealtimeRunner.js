@@ -82,7 +82,7 @@ module.exports = new (class RealtimeRunner {
         fn: () => this.stop()
     });
 
-    if (dayInProgress(START_MIN) || true) {
+    if (dayInProgress(START_MIN)) {
       console.log('in progress');
 
       const last5Minute = this.getLastTimestamp(5);
@@ -228,30 +228,29 @@ module.exports = new (class RealtimeRunner {
       [period]: this.getLastTimestamp(Number(period))
     }), {});
     console.log(lastTS)
-    const periods = [5,10,30]
-    // Object.keys(lastTS).filter(period => {
-    //   const lastTimestamp = lastTS[period];
-    //   const fromYesterday = lastTimestamp < Date.now() - 1000 * 60 * 60;
-    //   const compareTS = fromYesterday ? (() => {
-    //     const d = new Date();
-    //     d.setHours(9, 30);
-    //     return d.getTime();
-    //   })() : lastTimestamp;
+    const periods = Object.keys(lastTS).filter(period => {
+      const lastTimestamp = lastTS[period];
+      const fromYesterday = lastTimestamp < Date.now() - 1000 * 60 * 60;
+      const compareTS = fromYesterday ? (() => {
+        const d = new Date();
+        d.setHours(9, 30);
+        return d.getTime();
+      })() : lastTimestamp;
       
-    //   const diff = Date.now() - compareTS;
-    //   const shouldUpdate = diff > (period - 2) * 1000 * 60;
-    //   console.log(
-    //     'everyFiveMinutes REPORT', 
-    //     this.runCount,
-    //     {
-    //       period,
-    //       fromYesterday,
-    //       compareTS: new Date(compareTS).toLocaleString(),
-    //       shouldUpdate
-    //     }
-    //   );
-    //   return shouldUpdate;
-    // }).map(Number);
+      const diff = Date.now() - compareTS;
+      const shouldUpdate = diff > (period - 2) * 1000 * 60;
+      console.log(
+        'everyFiveMinutes REPORT', 
+        this.runCount,
+        {
+          period,
+          fromYesterday,
+          compareTS: new Date(compareTS).toLocaleString(),
+          shouldUpdate
+        }
+      );
+      return shouldUpdate;
+    }).map(Number);
 
     console.log('every five minutes...', { periods, runCount: this.runCount });
 
