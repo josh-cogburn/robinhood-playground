@@ -67,15 +67,8 @@ class TodaysStrategies extends Component {
           }
         //   const picks = pmFilter !== 'no filter' ? picks.filter(pick => pms[pmFilter].every(part => pick.stratMin.includes(`${part}-`))) : picks;
       })()
-      .filter(pick => pick.stratMin.includes('-min'))
       .filter(pick => additionalFilterParts.every(part => pick.stratMin.includes(part)));
 
-    //   console.log(showingPicks.filter(pick => !pick.timestamp))
-
-    const obj = ({ stratMin, timestamp }) => ({
-        timestamp: (new Date(timestamp)).toLocaleString(),
-        stratMin
-    })
       showingPicks = showingPicks.map(pick => {
           const calcedTrends = pick.withPrices.map(({ ticker, price }) => {
               const foundPrice = relatedPrices[ticker];
@@ -98,20 +91,8 @@ class TodaysStrategies extends Component {
               withTrend: calcedTrends
           };
       });
+      console.log({ sortByFilter })
       let sortedByAvgTrend = sortBy(showingPicks, sortByFilter).reverse();
-
-
-
-    showingPicks.length >= 2 && console.log(JSON.stringify({
-        first: obj(showingPicks[0]),
-        last: obj(showingPicks[showingPicks.length - 1])
-    }, null, 2));
-    
-        //   .sort((a, b) => {
-        //       const aVal = a[sortBy];
-        //       const bVal = b[sortBy];
-        //       return (isNaN(aVal)) - (isNaN(bVal)) || -(aVal>bVal)||+(aVal<bVal);
-        //   });
 
         const validStrats = sortedByAvgTrend.map(val => val.avgTrend);
         const avgTrendOverall = avgArray(
