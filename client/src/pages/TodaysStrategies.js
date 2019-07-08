@@ -92,7 +92,10 @@ class TodaysStrategies extends Component {
           };
       });
       console.log({ sortByFilter })
-      let sortedPicks = sortBy(showingPicks, sortByFilter).reverse();
+      let sortedPicks = sortBy(
+          showingPicks, 
+          pick => sortByFilter === 'timestamp' ? new Date(pick.timestamp).getTime() : pick.avgTrend
+        ).reverse();
 
         const validStrats = sortedPicks.map(val => val.avgTrend);
         const avgTrendOverall = avgArray(
