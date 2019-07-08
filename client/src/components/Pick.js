@@ -16,11 +16,15 @@ class Pick extends Component {
         
         const { showingDetails } = this.state;
         const { pick, fiveDay, socket } = this.props;
-        let percUpFontSize = fiveDay ? fiveDay.percUp * 100.4 : 100;
-        if (fiveDay && fiveDay.avgTrend > 1) percUpFontSize *= 1.9;
+        // let percUpFontSize = fiveDay ? fiveDay.percUp * 100.4 : 100;
+        // if (fiveDay && fiveDay.avgTrend > 1) percUpFontSize *= 1.9;
+        // const style = { fontSize: Math.max(percUpFontSize, 39) + '%'};
+
+
         // pick.keys && console.log({ pick })
+        
         return (
-            <div className="pick" style={{ fontSize: Math.max(percUpFontSize, 39) + '%'}}>
+            <div className="pick">
                 <button onClick={this.toggleDetails}>
                     {showingDetails ? '-' : '+'}
                 </button>
