@@ -124,7 +124,7 @@ module.exports = new (class RealtimeRunner {
     console.log('start!!');
     this.currentlyRunning = true;
     this.runCount = 0;
-    this.interval = setInterval(() => this.everyFiveMinutes(), 5 * 100 * 60);  // 5minute
+    this.interval = setInterval(() => this.everyFiveMinutes(), 5 * 1000 * 60);  // 5minute
     this.everyFiveMinutes();
   }
 
