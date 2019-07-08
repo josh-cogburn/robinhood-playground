@@ -35,7 +35,7 @@ export default class PickGraphs extends Component {
   }
   componentDidMount() {
     if (this.props.pick && !this.props.pick.data) {
-      this.loadStScoreForPick();
+      this.loadStScoreForPick(this.props.pick);
       setTimeout(() => this.loadDataForPick(this.props.pick), 500);
     }
   }
