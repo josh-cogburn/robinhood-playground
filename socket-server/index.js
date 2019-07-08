@@ -13,6 +13,7 @@ const mapLimit = require('promise-map-limit');
 const lookupMultiple = require('../utils/lookup-multiple');
 const getFilesSortedByDate = require('../utils/get-files-sorted-by-date');
 const jsonMgr = require('../utils/json-mgr');
+const getStSentiment = require('../utils/get-stocktwits-sentiment');
 
 let app = express();
 let server = http.Server(app);
@@ -72,6 +73,13 @@ io.on('connection', async socket => {
             cb(pickData.data);
         }
         cb(pickData);
+    });
+
+    socket.on('getStScore', async (ticker, cb) => {
+        console.log(`getting st sent for ${ticker}`);
+        cb(
+            await getStSentiment(ticker)
+        );
     });
 
     socket.on('disconnect', () => {

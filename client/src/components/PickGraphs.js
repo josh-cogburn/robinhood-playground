@@ -24,6 +24,15 @@ export default class PickGraphs extends Component {
         });
     });
   }
+  loadStScoreForPick(pick) {
+    const ticker = pick.withPrices[0].ticker;
+    this.props.socket.emit('getStScore', ticker, data => {
+      console.log(`got st score`, data);
+      this.setState({
+        stScore: data
+      });
+    });
+  }
   componentDidMount() {
     if (this.props.pick && !this.props.pick.data) {
       setTimeout(() => this.loadDataForPick(this.props.pick), 500);
@@ -31,7 +40,8 @@ export default class PickGraphs extends Component {
   }
   render() {
     const { pick, socket } = this.props;
-    const data = pick.data || this.state.fetchedData;
+    const { fetchedData, stScore } = this.state;
+    const data = pick.data || fetchedData;
     const withData = {
       ...pick,
       data
@@ -43,6 +53,11 @@ export default class PickGraphs extends Component {
         <h3>Ticker: {pick.withPrices[0].ticker}</h3>
         { data && data.period && <h3>Period: {data.period}</h3> }
         <hr/>
+        {
+          stScore
+            ? <h3>Stocktwits Sentiment: {JSON.stringify(stScore, null, 2)}</h3>
+            : <button onClick={() => this.loadStScoreForPick(pick)}>Load Stocktwits Score</button>
+        }
         {
           data ? (
             <div>
