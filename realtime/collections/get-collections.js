@@ -7,7 +7,10 @@ const { isTradeable } = require('../../utils/filter-by-tradeable');
 const { mapObject } = require('underscore');
 
 const OPTIONSTICKERS = [
-    'SPY',
+
+    'SPY',  // NOPE!
+
+
     'GDX',
     'QQQ',
     'GLD',
@@ -62,12 +65,13 @@ module.exports = async () => {
     
 
     let response = {
+        spy: ['SPY'],
         options: OPTIONSTICKERS,
         // zeroAndOne: await getTickersBetween(0, 1),
         // upcoming: await getRhStocks('upcoming-earnings'),
         rhtop100: await getRhStocks('100-most-popular'),
-        ...await getFinvizCollections(),
-        ...await getStockInvestCollections()
+        // ...await getFinvizCollections(),
+        // ...await getStockInvestCollections()
     };
 
     // remove any tickers that are not available on     const getTicks = () => Object.values(response).flatten().uniq();

@@ -67,7 +67,9 @@ class TodaysStrategies extends Component {
           }
         //   const picks = pmFilter !== 'no filter' ? picks.filter(pick => pms[pmFilter].every(part => pick.stratMin.includes(`${part}-`))) : picks;
       })()
-      .filter(pick => additionalFilterParts.every(part => pick.stratMin.includes(part)));
+      .filter(pick => additionalFilterParts.every(part => 
+            pick.stratMin.includes(part) || pick.withPrices.some(({ ticker }) => ticker === part)
+        ));
 
       showingPicks = showingPicks.map(pick => {
           const calcedTrends = pick.withPrices.map(({ ticker, price }) => {

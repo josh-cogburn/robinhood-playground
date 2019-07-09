@@ -23,8 +23,14 @@ const getKST = (values, ticker) => {
         lastVal.kst > lastVal.signal
     );
     const isZeroCross = (
-        secondToLast.kst < 0 &&
-        lastVal.kst > 0
+        (   // kst crossing zero
+            secondToLast.kst < 0 && 
+            lastVal.kst > 0
+        ) &&
+        (   // kst is above signal for both last and second to last
+            lastVal.kst > lastVal.signal &&
+            secondToLast.kst > secondToLast.signal
+        )
     );
     const isLow = (() => {
         const isBelowZero = val => val < 0;
@@ -120,7 +126,8 @@ module.exports = {
         upcomingLowSignals: ['upcoming', '30min', 'isSignalCross', 'isLow'],
 
         top100ZeroCrosses: ['top100', 'isZeroCross'],
-        top100ZeroCrosses30minUnder300: ['top100', 'under300', '30min'],
+        top100ZeroCrosses30minUnder300: ['top100', 'under300', '30min', 'isZeroCross'],
+        top100SignalCrosses30minUnder300: ['top100', 'under300', '30min', 'isSignalCross'],
 
         top100LowSignals10min: ['top100', '10min', 'isSignalCross', 'isLow'],
         top100LowSignals30min: ['top100', '30min', 'isSignalCross', 'isLow'],

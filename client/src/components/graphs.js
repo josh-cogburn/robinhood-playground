@@ -21,6 +21,18 @@ const createDataSet = dataSetProps => ({
   ...dataSetProps
 });
 
+const padWithUndefined = (labels, data) => {
+  const diff = labels.length - data.length;
+  console.log('ahhh', [
+    ...Array(diff).fill(undefined),
+    ...data
+  ])
+  return [
+    ...Array(diff).fill(undefined),
+    ...data
+  ];
+};
+
 export default [
   {
     title: 'Current prices',
@@ -51,7 +63,10 @@ export default [
           createDataSet({
             label: 'RSI',
             fill: true,
-            data: rsiSeries
+            data: padWithUndefined(
+              labels,
+              rsiSeries
+            )
           })
         ]
       };
@@ -76,7 +91,10 @@ export default [
           label: prop.toUpperCase(),
           fill: false,
           borderColor: prop === 'signal' ? 'blue' : 'orange',
-          data: getDataForProp(prop)
+          data: padWithUndefined(
+            labels,
+            getDataForProp(prop)
+          )
         }))
       };
     }
