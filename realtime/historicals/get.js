@@ -9,8 +9,8 @@ const tiingoHistoricals = require('./tiingo');
 module.exports = async (tickers, period) => {
 
   const historicalMethods = {
-    5: rhHistoricals,
-    10: rhHistoricals,
+    5: tiingoHistoricals,
+    10: tiingoHistoricals,
     30: tiingoHistoricals
   };
   
