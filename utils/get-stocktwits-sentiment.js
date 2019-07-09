@@ -3,9 +3,12 @@ const { getProxy } = require('./stocktwits');
 const { avgArray } = require('./array-math');
 const cacheThis = require('./cache-this');
 
+
+let fetchCount = 0;
+
 const stReq = cacheThis(
     async url => {
-        console.log({ url })
+        // console.log({ url })
         try {
             const res = await request({
                 url,
@@ -16,6 +19,7 @@ const stReq = cacheThis(
             console.error(JSON.parse(e.response.body).response.status);
             throw JSON.parse(e.response.body).response;
         } finally {
+            fetchCount++;
             await new Promise(resolve => setTimeout(resolve, 2600)); // rate limited
         }
         
@@ -26,7 +30,7 @@ const stReq = cacheThis(
 
 module.exports = async (ticker, detailed) => {
     try {
-        console.log({ ticker}, 'getting stocktwits sent')
+        // console.log({ ticker}, 'getting stocktwits sent')
         let { messages } = await stReq(`https://api.stocktwits.com/api/2/streams/symbol/${ticker}.json?filter=top`);
         const last3DaysMessages = messages.filter(o => (Date.now() - new Date(o.created_at).getTime()) < 1000 * 60 * 60 * 24 * 3);
         const totalCount = last3DaysMessages.length;
@@ -70,7 +74,7 @@ module.exports = async (ticker, detailed) => {
             bullBearScore,
             ...detailedData
         };
-        console.log(ticker, returnObj);
+        console.log('STSENT', ticker, returnObj.bullBearScore, '....', fetchCount);
         return returnObj;
     } catch (e) {
         // console.error(e);

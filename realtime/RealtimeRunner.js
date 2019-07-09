@@ -1,3 +1,5 @@
+const { mapObject } = require('underscore');
+
 const getCollections = require('./collections/get-collections');
 const dayInProgress = require('./day-in-progress');
 const getHistoricals = require('./historicals/get');
@@ -142,7 +144,13 @@ module.exports = new (class RealtimeRunner {
         [period]: await getHistoricals(allTickers, period)
       }
     }
-    strlog({ allTickers, priceCaches: this.priceCaches });
+    strlog({ 
+      allTickers, 
+      priceCaches: mapObject(
+        this.priceCaches, 
+        priceCache => mapObject(priceCache, historicals => historicals.length)
+      )
+    });
   }
 
   async start() {
@@ -184,7 +192,7 @@ module.exports = new (class RealtimeRunner {
     this.logLastTimestamps();
 
     const allTickers = Object.values(this.collections).flatten().uniq();
-    console.log({ allTickers })
+    // console.log({ allTickers })
     const relatedPrices = await lookupMultiple(
         allTickers,
         true
@@ -362,7 +370,27 @@ module.exports = new (class RealtimeRunner {
     return postRunPicks.filter(Boolean).flatten();
   }
 
+  async prefetchStSent(picks) {
+    const allTickers = picks.map(pick => pick.ticker).uniq();
+    // console.log({allTickers});
+    const prefetch = (await mapLimit(allTickers, 3, async ticker => {
+      const sent = await getStSentiment(ticker);
+      // console.log('huzzah', ticker, sent);
+      return {
+        ticker,
+        ...sent
+      };
+    }));
+    console.log({
+      allTickers: allTickers.length,
+      stSentPrefetch: prefetch.length
+    })
+  }
+
   async handlePicks(picks, periods) {
+
+    // prefetch st sent for all picks
+    await this.prefetchStSent(picks);
 
     // mongo and socket updates
     // for PICKS
@@ -373,6 +401,7 @@ module.exports = new (class RealtimeRunner {
     // run post run strategies
     const postRunPicks = await this.runPostRunStrategies(picks, periods);
     console.log(`total post run picks: ${postRunPicks.length}`)
+    
     // mongo and socket updates
     // for POSTRUNPICKS
     for (let pick of postRunPicks) {
@@ -415,7 +444,7 @@ module.exports = new (class RealtimeRunner {
 
     const { shouldWatchout } = await getRisk({ ticker });
     const watchoutKey = shouldWatchout ? 'shouldWatchout' : 'notWatchout';
-    const priceKeys = [2, 8, 20, 80, 300, 1000];
+    const priceKeys = [2, 8, 20, 80, 300, 1000, 5000];
     const priceKey = priceKeys.find(key => price < key);
     const min = getMinutesFrom630();
     const minKey = (() => {

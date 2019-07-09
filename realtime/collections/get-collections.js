@@ -30,8 +30,11 @@ const OPTIONSTICKERS = [
     'BAC',
     'S',
     'NOK',
-    'AVYA'
+    'AVYA',
     // 'TXBA'
+
+
+    'GM',
 ];
 
 
@@ -69,7 +72,7 @@ module.exports = async () => {
         options: OPTIONSTICKERS,
         // zeroAndOne: await getTickersBetween(0, 1),
         // upcoming: await getRhStocks('upcoming-earnings'),
-        // rhtop100: await getRhStocks('100-most-popular'),
+        rhtop100: await getRhStocks('100-most-popular'),
         // ...await getFinvizCollections(),
         // ...await getStockInvestCollections()
     };

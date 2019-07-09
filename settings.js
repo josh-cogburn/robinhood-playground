@@ -8,6 +8,7 @@ module.exports = {
         '[rsi-rhtopunder300]',
         '[rsi-30minoptions]',
         '[kst-optionszeroCrosses30Min]',
+        '[spy]'
     ],
     // forPurchaseVariation: '75Perc5Day-yesincludingblanks',
     // fallbackSellStrategy: 'limit8',

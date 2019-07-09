@@ -15,7 +15,7 @@ module.exports = {
     console.log({allTickers});
     const allStSent = (await mapLimit(allTickers, 3, async ticker => {
       const sent = await getStSentiment(ticker);
-      console.log('huzzah', ticker, sent);
+      // console.log('huzzah', ticker, sent);
       return {
         ticker,
         ...sent
