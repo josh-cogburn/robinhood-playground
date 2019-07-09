@@ -97,7 +97,8 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
         );
     }
 
-    
+
+    return mongoResponse._id;
 
 };
 
@@ -120,7 +121,7 @@ module.exports = async (strategy, min, toPurchase, trendKey = '', { keys, data }
                 price
             };
         });
-        await saveToFile(strategyName, min, withPrices, { keys, data });
+        return saveToFile(strategyName, min, withPrices, { keys, data });
     };
 
     if (!Array.isArray(toPurchase)) {
@@ -143,10 +144,10 @@ module.exports = async (strategy, min, toPurchase, trendKey = '', { keys, data }
             await record(subsetToPurchase, stratName, tickerLookups);
         }
     } else {
-        // console.log('no variety to purchase', toPurchase);
+        console.log('no variety to purchase');
         const tickerLookups = await lookupMultiple(toPurchase, true);
         const stratName = [strategy, trendKey].filter(Boolean).join('-');
-        await record(toPurchase, stratName, tickerLookups);
+        return record(toPurchase, stratName, tickerLookups);
     }
 
 };

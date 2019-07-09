@@ -31,40 +31,40 @@ module.exports = async (ticker, detailed) => {
         const last3DaysMessages = messages.filter(o => (Date.now() - new Date(o.created_at).getTime()) < 1000 * 60 * 60 * 24 * 3);
         const totalCount = last3DaysMessages.length;
         const getSentiment = s => last3DaysMessages.filter(o => o.entities.sentiment && o.entities.sentiment.basic === s).length;
-        const bearishCount = getSentiment('Bearish')
+        const bearishCount = getSentiment('Bearish');
         const bullishCount = getSentiment('Bullish');
         // console.log('got stocktwits sent', ticker, { totalCount, bearishCount, bullishCount });
 
-        const bullishScore = (bullishCount / totalCount * 100) * 1.75;
-        let bullBearScore = bullishScore - bearishCount * 2;
-        bullBearScore = Math.round(bullBearScore * totalCount / 30);
+        // const bullishScore = (bullishCount / totalCount * 100) * 1.75;
+        let bullBearScore = (bullishCount - bearishCount) * 10 - bearishCount - (30 - totalCount);
     
         let detailedData = {};
-        if (detailed && totalCount > 3) {
-            const sentimentUrl = `https://api.stocktwits.com/api/2/symbols/${ticker}/sentiment.json`;
-            const { data: sentimentData } = await stReq(sentimentUrl);
-            const [{ bullish: mostRecentSentiment }] = sentimentData;
-            const withSentiment = avgArray([bullBearScore, mostRecentSentiment]);
-            detailedData = {
-                mostRecentSentiment,
-                withSentiment
-            };
+        // if (detailed && totalCount > 3) {
+        //     const sentimentUrl = `https://api.stocktwits.com/api/2/symbols/${ticker}/sentiment.json`;
+        //     const { data: sentimentData } = await stReq(sentimentUrl);
+        //     const [{ bullish: mostRecentSentiment }] = sentimentData;
+        //     const withSentiment = avgArray([bullBearScore, mostRecentSentiment]);
+        //     detailedData = {
+        //         mostRecentSentiment,
+        //         withSentiment
+        //     };
             
-            const volumeUrl = `https://api.stocktwits.com/api/2/symbols/${ticker}/volume.json`;
-            const { data: volumeData } = await stReq(volumeUrl);
-            const [{ volume_change: todayVolumeChange }] = volumeData;
-            const withSentAndVol = avgArray([
-                ...new Array(6).fill(withSentiment),
-                withSentiment * (1 + todayVolumeChange / 8)
-            ]);
-            detailedData = {
-                ...detailedData,
-                todayVolumeChange,
-                withSentAndVol
-            };
-        }
+        //     const volumeUrl = `https://api.stocktwits.com/api/2/symbols/${ticker}/volume.json`;
+        //     const { data: volumeData } = await stReq(volumeUrl);
+        //     const [{ volume_change: todayVolumeChange }] = volumeData;
+        //     const withSentAndVol = avgArray([
+        //         ...new Array(6).fill(withSentiment),
+        //         withSentiment * (1 + todayVolumeChange / 8)
+        //     ]);
+        //     detailedData = {
+        //         ...detailedData,
+        //         todayVolumeChange,
+        //         withSentAndVol
+        //     };
+        // }
         
         const returnObj = {
+            totalCount,
             bearishCount,
             bullishCount,
             bullBearScore,

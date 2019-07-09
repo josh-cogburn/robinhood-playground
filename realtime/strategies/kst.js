@@ -141,7 +141,7 @@ module.exports = {
         
     },
 
-    postRun: (newPicks, todaysPicks) => {
+    postRun: (newPicks, todaysPicks, periods) => {
 
         // precededByRSI
         // find tickers who in the last run triggered RSI
@@ -149,7 +149,7 @@ module.exports = {
         // but are now KST alerted
 
         const postRunPicks = [];
-        [5, 10, 30].forEach(period => {
+        periods.forEach(period => {
 
             const todaysFilteredByPeriod = todaysPicks.filter(
                 picks => picks.some(

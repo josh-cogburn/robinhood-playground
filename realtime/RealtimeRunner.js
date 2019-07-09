@@ -15,6 +15,7 @@ const sendEmail = require('../utils/send-email');
 const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
 const getStrategies = require('./get-strategies');
 const pmsHit = require('../utils/pms-hit');
+const getStSentiment = require('../utils/get-stocktwits-sentiment');
 
 module.exports = new (class RealtimeRunner {
   
@@ -43,6 +44,30 @@ module.exports = new (class RealtimeRunner {
     );
 
     const allTickers = Object.values(this.collections).flatten().uniq();
+
+
+    // await this.timedAsync(
+    //   'timing get st sent for all tickers',
+    //   async () => {
+    //     strlog((await mapLimit(allTickers, 3, async ticker => {
+    //       const sent = await getStSentiment(ticker);
+    //       console.log('huzzah', ticker, sent);
+    //       return {
+    //         ticker,
+    //         ...sent
+    //       };
+    //     })).sort((a, b) => b.bullBearScore - a.bullBearScore));
+    //     strlog((await mapLimit(allTickers, 3, async ticker => {
+    //       const sent = await getStSentiment(ticker);
+    //       console.log('huzzah', ticker, sent);
+    //       return {
+    //         ticker,
+    //         ...sent
+    //       };
+    //     })).sort((a, b) => b.bullBearScore - a.bullBearScore));
+    //   },
+    // );
+    
     await this.timedAsync(
       `loading price caches with historical data for ${allTickers.length} tickers`,
       () => this.loadPriceCachesWithHistoricals(),
@@ -124,7 +149,13 @@ module.exports = new (class RealtimeRunner {
     console.log('start!!');
     this.currentlyRunning = true;
     this.runCount = 0;
-    this.interval = setInterval(() => this.everyFiveMinutes(), 5 * 1000 * 60);  // 5minute
+    this.interval = setInterval(() => 
+      this.timedAsync(
+        'every five minutes timerrrr',
+        () => this.everyFiveMinutes(),
+      ),
+      5 * 1000 * 60 // 5 minutes
+    );
     this.everyFiveMinutes();
   }
 
@@ -265,7 +296,7 @@ module.exports = new (class RealtimeRunner {
 
     await this.timedAsync(
       `handling ${picks.length} picks`,
-      () => this.handlePicks(picks),
+      () => this.handlePicks(picks, periods),
     );
 
   }
@@ -315,33 +346,44 @@ module.exports = new (class RealtimeRunner {
 
   }
 
-  async runPostRunStrategies(picks) {
+  async runPostRunStrategies(picks, periods) {
     const postRunStrategies = this.strategies.filter(strategy => strategy.postRun);
     const postRunPicks = await mapLimit(postRunStrategies, 1, async ({ strategyName, postRun }) => {
       console.log(`running ${strategyName} REALTIME POSTRUN strategy...`);
       return ((await postRun(
-        picks,            // current picks
-        this.todaysPicks  // array of array of past picks
+        picks,              // current picks
+        this.todaysPicks,   // array of array of past picks,
+        periods             // array of periods that were run
       )) || []).map(pick => ({
         ...pick,
         strategyName
       }));
     });
-    return [
-      ...picks,
-      ...postRunPicks.filter(Boolean).flatten()
-    ];
+    return postRunPicks.filter(Boolean).flatten();
   }
 
-  async handlePicks(picks) {
-    // run post run strategies
-    const withPostRun = await this.runPostRunStrategies(picks);
+  async handlePicks(picks, periods) {
+
     // mongo and socket updates
-    for (let pick of withPostRun) {
+    // for PICKS
+    for (let pick of picks) {
+      pick._id = await this.handlePick(pick);
+    }
+
+    // run post run strategies
+    const postRunPicks = await this.runPostRunStrategies(picks, periods);
+    console.log(`total post run picks: ${postRunPicks.length}`)
+    // mongo and socket updates
+    // for POSTRUNPICKS
+    for (let pick of postRunPicks) {
       await this.handlePick(pick);
     }
+
     // add to todaysPicks
-    this.todaysPicks.push(withPostRun); // array of arrays
+    this.todaysPicks.push([
+      ...picks,
+      ...postRunPicks
+    ]); // array of arrays
   }
 
   async handlePick(pick) {
@@ -415,7 +457,8 @@ module.exports = new (class RealtimeRunner {
     }
     
     data.period = period;
-    await recordPicks(pickName, 5000, [ticker], null, { keys, data });
+    data.stSent = await getStSentiment(ticker);
+    return recordPicks(pickName, 5000, [ticker], null, { keys, data });
   }
 
 
@@ -423,6 +466,17 @@ module.exports = new (class RealtimeRunner {
   getPms() {
     if (!this.hasInit) return {};
     
+    const singles = [
+      ...[
+        'initial',
+        'brunch',
+        'lunch',
+        'dinner'
+      ],
+      ...[5, 10, 30],
+      ...Object.keys(this.collections)
+    ];
+
     return this.strategies.reduce((acc, { pms, strategyName }) => ({
       ...acc,
       ...Object.keys(pms || {}).reduce((inner, key) => ({
@@ -436,9 +490,7 @@ module.exports = new (class RealtimeRunner {
       })
     }), {
 
-      'multi-hits': ['multi-hits'],
-
-      ...Object.keys(this.collections).reduce((acc, collectionName) => ({
+      ...singles.reduce((acc, collectionName) => ({
         ...acc,
         [collectionName]: [collectionName]
       }), {})
