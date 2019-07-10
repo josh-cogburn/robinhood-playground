@@ -5,7 +5,7 @@ import { avgArray, percUp } from '../utils/array-math';
 
 import Pick from '../components/Pick';
 import TrendPerc from '../components/TrendPerc';
-import { partition, pick, sortBy } from 'underscore';
+import { partition, pick, sortBy, mapObject } from 'underscore';
 
 class TodaysStrategies extends Component {
   state = { picks: [], relatedPrices: {}, pmFilter: 'forPurchase', pastData: {}, predictionModels: {}, afterHoursEnabled: false, sortBy: 'avgTrend', additionalFilters: '' };
@@ -30,6 +30,12 @@ class TodaysStrategies extends Component {
   }
   setStateOfProp = prop => event => this.setState({ [prop]: event.target.value });
   toggleAfterHours = () => this.setState({ afterHoursEnabled: !this.state.afterHoursEnabled });
+  addToFilter = ticker => {
+      console.log({ ticker}, 'click')
+      this.setState(({ additionalFilters }) => ({ 
+          additionalFilters: `${additionalFilters},${ticker}` 
+        }));
+  }
   render() {
       let { pmFilter, afterHoursEnabled, sortBy: sortByFilter, additionalFilters } = this.state;
       let { picks, relatedPrices, predictionModels, pastData, curDate, pmPerfs, pms, settings, socket } = this.props;
@@ -107,6 +113,34 @@ class TodaysStrategies extends Component {
       const count = showingPicks.length;
 
 
+
+
+      const allWithTrends = showingPicks
+        .map(pick => pick.withTrend)
+        .reduce((acc, val) => [...acc, ...val], []);
+
+        const byTicker = mapObject(
+            allWithTrends.reduce((acc, { ticker, trend }) => {
+                acc[ticker] = [
+                    ...acc[ticker] || [],
+                    trend
+                ];
+                return acc;
+            }, {}),
+            trends => ({
+                trends,
+                count: trends.length,
+                avgTrend: avgArray(trends),
+            })
+        );
+        
+            
+
+        const byTickerSorted = Object.keys(byTicker).sort((a, b) => byTicker[b].count - byTicker[a].count);
+
+      console.log({ byTicker })
+
+
     //   const perfs = pmPerfs.find(perf => perf.pmName === pmFilter) || {};
 
 
@@ -153,6 +187,32 @@ class TodaysStrategies extends Component {
                     <b>count: {count}</b>
             </p>
             <hr/>
+
+
+            <table style={{ float: 'right', margin: '10px', padding: '10px', background: '#cacaca' }}>
+                <thead>
+                    <tr colspan="3" style={{ textAlign: 'center' }}>
+                        <i>ticker count: {byTickerSorted.length}</i>
+                        <hr/>
+                    </tr>
+                </thead>
+                <thead>
+                    <th>ticker</th>
+                    <th>count</th>
+                    <th>avgTrend</th>
+                </thead>
+                <tbody>
+                    {byTickerSorted.map(ticker => (
+                        <tr>
+                            <td><a onClick={() => this.addToFilter(ticker)}>{ticker}</a></td>
+                            <td>{byTicker[ticker].count}</td>
+                            <td><TrendPerc value={byTicker[ticker].avgTrend}/></td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+
+
             <p className="App-intro">
                 {
                     sortedPicks.map(pick => (
