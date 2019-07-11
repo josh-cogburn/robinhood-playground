@@ -433,7 +433,7 @@ module.exports = new (class RealtimeRunner {
     const collectionKey = Object.keys(this.collections).find(collection => 
       (this.collections[collection] || []).includes(ticker)
     );
-    const keyString = Object.keys(keys).filter(key => keys[key]).join('-');
+    const keyString = Object.keys(keys || {}).filter(key => keys[key]).join('-');
 
     const periodKey = period && `${period}min`;
     const firstAlertkey = !this.todaysPicks.flatten().find(comparePick =>

@@ -120,13 +120,15 @@ class TodaysStrategies extends Component {
         .reduce((acc, val) => [...acc, ...val], []);
 
         const byTicker = mapObject(
-            allWithTrends.reduce((acc, { ticker, trend }) => {
-                acc[ticker] = [
-                    ...acc[ticker] || [],
-                    trend
-                ];
-                return acc;
-            }, {}),
+            allWithTrends
+                .filter(Boolean)
+                .reduce((acc, { ticker, trend }) => {
+                    acc[ticker] = [
+                        ...acc[ticker] || [],
+                        trend
+                    ];
+                    return acc;
+                }, {}),
             trends => ({
                 trends,
                 count: trends.length,

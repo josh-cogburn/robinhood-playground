@@ -19,6 +19,7 @@ const { emails } = require('../config');
 const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
 
     const stratMin = `${strategy}-${min}`;
+    const hits = await pmsHit(null, stratMin);
 
     if (!stratOfInterest(stratMin, withPrices.length)) return;   // cant handle too many strategies apparently
     if (!strategy.includes('cheapest-picks')) withPrices = withPrices.slice(0, 3);  // take only 3 picks
@@ -34,6 +35,7 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
 
     // save to mongo
     console.log(`saving ${strategy} to mongo`);
+                
     const mongoResponse = await Pick.create({
         date: dateStr, 
         strategyName: strategy,
@@ -52,10 +54,11 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
         withPrices,
         timestamp: mongoResponse.timestamp,
         keys,
+        ...hits.includes('forPurchase') && { forPurchasePick: true }
     });
 
 
-    const hits = await pmsHit(null, stratMin);
+    
     // forPurchase
     if (hits.includes('forPurchase')) {
         console.log('strategy enabled: ', stratMin, 'purchasing');
