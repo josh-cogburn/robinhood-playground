@@ -9,6 +9,7 @@ module.exports = {
         // '[stocktwits-mostBearish]',
         // '[rsi-shouldWatchout]',
         '[rsi-lessthan15]',
+        '[rsi-top100under20]',
     ],
     // forPurchaseVariation: '75Perc5Day-yesincludingblanks',
     // fallbackSellStrategy: 'limit8',

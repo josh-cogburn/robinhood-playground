@@ -54,7 +54,9 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
         withPrices,
         timestamp: mongoResponse.timestamp,
         keys,
-        ...hits.includes('forPurchase') && { forPurchasePick: true }
+        ...hits.includes('forPurchase') && { 
+            forPurchasePick: true
+        }
     });
 
 
