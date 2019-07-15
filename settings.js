@@ -6,6 +6,7 @@ module.exports = {
     forPurchase: [
         '[kst-top100ZeroCrosses30minUnder300]',
         '[rsi-rhtopunder300]',
+        '[rsi-30minoptions]',
         // '[stocktwits-mostBearish]',
         // '[rsi-shouldWatchout]',
         // '[rsi-lessthan15]',

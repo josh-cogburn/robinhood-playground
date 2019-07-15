@@ -122,8 +122,8 @@ module.exports = {
         optionssignalCrossesislow30Min: ['options', '30min', 'isSignalCross', 'isLow'],
 
 
-        upcomingZeroCrosses: ['upcoming', '30min', 'isZeroCross'],
-        upcomingLowSignals: ['upcoming', '30min', 'isSignalCross', 'isLow'],
+        // upcomingZeroCrosses: ['upcoming', '30min', 'isZeroCross'],
+        // upcomingLowSignals: ['upcoming', '30min', 'isSignalCross', 'isLow'],
 
         top100ZeroCrosses: ['top100', 'isZeroCross'],
         top100ZeroCrosses30minUnder300: ['top100', 'under300', '30min', 'isZeroCross'],
