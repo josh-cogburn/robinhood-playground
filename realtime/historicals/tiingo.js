@@ -76,10 +76,6 @@ const getHistoricals = async (ticker, period) => {
 
 module.exports = async (tickers, period) => {
   // console.log({ tickers })
-
-  tickers = ['aapl'];
-  period = 5;
-
   console.log(`tiingo historicals for ${tickers.length} tickers...`);
 
 
