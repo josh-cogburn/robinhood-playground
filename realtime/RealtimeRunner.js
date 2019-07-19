@@ -450,8 +450,8 @@ module.exports = new (class RealtimeRunner {
     const minKey = (() => {
         if (min > 390) return 'afterhours';
         if (min > 200) return 'dinner';
-        if (min > 60) return 'lunch';
-        if (min > 3) return 'brunch';
+        if (min > 90) return 'lunch';
+        if (min > 35) return 'brunch';
         if (min > 0) return 'initial';
         return 'premarket';
     })();

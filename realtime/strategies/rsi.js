@@ -16,7 +16,7 @@ module.exports = {
         const rsiSeries = getRSI(allCurrents);
         const rsi = rsiSeries[rsiSeries.length - 1];
         // console.log({ rsi })
-        if (rsi < 30) {
+        if (rsi < 20) {
             return {
                 keys: {
                     ...(rsiKey = () => {
