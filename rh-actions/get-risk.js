@@ -18,6 +18,11 @@ const getRisk = async ({
         return response.historicals;
     })();
 
+    if (!dailyYear) {
+        console.log('cant find', ticker)
+        return {};
+    }
+
     if (!dailyYear.length) {
         return { shouldWatchout: true };
     }

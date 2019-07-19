@@ -1,5 +1,7 @@
 const getFinvizCollections = require('./get-finviz-collections');
 const getStockInvestCollections = require('./get-stockinvest-collections');
+const getRisk = require('../../rh-actions/get-risk');
+const addFundamentals = require('../../app-actions/add-fundamentals');
 
 const allStocks = require('../../json/stock-data/allStocks');
 const lookupMultiple = require('../../utils/lookup-multiple');
@@ -80,10 +82,27 @@ module.exports = async () => {
     // remove any tickers that are not available on     const getTicks = () => Object.values(response).flatten().uniq();
     const getTicks = () => Object.values(response).flatten().uniq();
     const originalTickers = getTicks();
+    
+    // const withRisk = await mapLimit(originalTickers, 3, async ticker => {
+    //     const obj = {
+    //         ticker,
+    //         ...await getRisk({ticker})
+    //     };
+    //     console.log(obj);
+    //     return obj;
+    // });
+
+    // strlog({withRisk});
+
+    console.log(`all ticker stock count: ${originalTickers.length}`);
+
+
+    // ONLY TRADEABLE TICKERS
+
     const badTickers = originalTickers.filter(ticker => 
         !allStocks.find(stock => stock.symbol === ticker)
     );
-    console.log(`all ticker stock count: ${originalTickers.length}`);
+
     strlog({ badTickers });
     
     response = mapObject(
@@ -95,6 +114,53 @@ module.exports = async () => {
 
     strlog(mapObject(response, v => v.length));
     console.log(`without bad stock count: ${getTicks().length}`);
+
+    // ONLY THE "GOOD STUFF"
+
+
+    Array.prototype.cutBottomQuarter = function() {
+        const length = this.length;
+        const quarter = (length / 4);
+        console.log('cutting', quarter);
+        return this.slice(0, length - quarter);
+    };
+
+    const withFundamentals = await addFundamentals(originalTickers.map(ticker => ({ ticker })));
+
+    console.log({ withFundamentals: withFundamentals.length})
+    const withVolToAvg = withFundamentals
+        .map(obj => ({
+            ...obj,
+            volToAvg: obj.fundamentals.volume / obj.fundamentals.average_volume
+        }))
+        .filter(obj => obj.volToAvg)
+        .sort((a, b) => b.volToAvg - a.volToAvg)
+        .cutBottomQuarter();
+
+    console.log({ withVolToAvg: withVolToAvg.length});
+    
+    const sortedByMarketCap = withVolToAvg
+        .sort((a, b) => b.fundamentals.market_cap - a.fundamentals.market_cap)
+        .cutBottomQuarter();
+
+    strlog({sortedByMarketCap: sortedByMarketCap.length});
+
+    const sortedByPrice = sortedByMarketCap
+        .sort((a, b) => b.fundamentals.open - a.fundamentals.open)
+        .cutBottomQuarter();
+    strlog({ sortedByPrice: sortedByPrice.length });
+
+    const theGoodStuff = sortedByPrice.map(obj => obj.ticker);
+
+    response = mapObject(
+        response, 
+        tickers => (tickers || []).filter(ticker => 
+            theGoodStuff.includes(ticker)
+        )
+    );
+
+    strlog(mapObject(response, v => v.length));
+    console.log(`only the good stuff: ${getTicks().length}`);
 
     return response;
 

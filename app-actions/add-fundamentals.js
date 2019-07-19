@@ -33,13 +33,44 @@ module.exports = async (trend) => {
         10
     );
 
-    fundamentals.forEach((data, i) => {
-        const ticker = tickersToLookup[i];
-        fundamentalCache[ticker] = {
-            timestamp: Date.now(),
-            data
-        };
-    });
+    fundamentals
+        .map(data => {
+            [ 
+                'open',
+                'high',
+                'low',
+                'volume',
+                'average_volume_2_weeks',
+                'average_volume',
+                'high_52_weeks',
+                'dividend_yield',
+                'float',
+                'low_52_weeks',
+                'market_cap',
+                'pb_ratio',
+                'pe_ratio',
+                'shares_outstanding',
+                // 'description',
+                // 'instrument',
+                // 'ceo',
+                // 'headquarters_city',
+                // 'headquarters_state',
+                // 'sector',
+                // 'industry',
+                // 'num_employees',
+                // 'year_founded' 
+            ].forEach(key => {
+                data[key] = Number(data[key]);
+            });
+            return data;
+        })
+        .forEach((data, i) => {
+            const ticker = tickersToLookup[i];
+            fundamentalCache[ticker] = {
+                timestamp: Date.now(),
+                data
+            };
+        });
 
     let withFundamentals = trend.map(obj => ({
         ...obj,
