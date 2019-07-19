@@ -74,6 +74,7 @@ const getRisk = async ({
         shouldWatchout,
         avgJumpAfterDrop: +(avgArray(overnightJumps).toFixed(2)),
         percMax: getTrend(dailyYear[dailyYear.length - 1].close_price, maxClose),
+        sumMostRecent: dailyYear.slice(-3).map(hist => hist.trend).reduce((acc, val) => acc + val, 0)
     };
     // console.log(JSON.stringify(dailyYear, null, 2));
 };
