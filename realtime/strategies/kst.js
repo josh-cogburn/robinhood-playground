@@ -173,7 +173,11 @@ module.exports = {
                 && pick.strategyName === 'rsi'
             );
             const withoutActiveRSI = newKstAlerts.filter(({ ticker }) => {
-                const filtered = filterByRsiTickers(relatedNewPicks, ticker);
+                const bothCurrentAndPrevPicks = [
+                    ...relatedNewPicks,
+                    ...todaysPicks.slice(-1),
+                ];
+                const filtered = filterByRsiTickers(bothCurrentAndPrevPicks, ticker);
                 return !filtered.length;
             });
             // strlog({relatedPreviousPicks})

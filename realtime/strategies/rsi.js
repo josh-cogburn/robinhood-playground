@@ -65,5 +65,37 @@ module.exports = {
 
         top10030min: ['30min', 'top100'],
         top100under20: ['30min', 'top100', 'under20'],
+    },
+
+    postRun: (newPicks, todaysPicks, periods) => {
+
+        // 5 period picks with also 10 min and 30min in the last 2 pick segments
+        const fivePeriodPicks = newPicks.filter(pick => pick.period === 5 && pick.strategyName === 'rsi');
+        const tickers = fivePeriodPicks.map(pick => pick.ticker).uniq();
+        const bothCurrentAndPrevPicks = [
+            ...relatedNewPicks,
+            ...todaysPicks.slice(-1),
+        ];
+        const with10and30Rsi = tickers.filter(ticker => {
+            return [10, 30].every(period => {
+                return bothCurrentAndPrevPicks.find(pick => 
+                    pick.ticker === ticker &&
+                    pick.period === period &&
+                    pick.strategyName === 'rsi'
+                );
+            });
+        });
+        const five10and30picks = with10and30Rsi.map(ticker => ({
+            ticker,
+            keys: {
+                '510and30': true
+            }
+        }));
+
+
+
+        return [
+            ...five10and30picks
+        ];
     }
 };
