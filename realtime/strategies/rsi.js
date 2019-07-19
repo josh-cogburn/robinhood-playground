@@ -73,7 +73,7 @@ module.exports = {
         const fivePeriodPicks = newPicks.filter(pick => pick.period === 5 && pick.strategyName === 'rsi');
         const tickers = fivePeriodPicks.map(pick => pick.ticker).uniq();
         const bothCurrentAndPrevPicks = [
-            ...relatedNewPicks,
+            ...newPicks,
             ...todaysPicks.slice(-1),
         ];
         const with10and30Rsi = tickers.filter(ticker => {
