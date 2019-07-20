@@ -6,7 +6,7 @@ const formattedClosures = marketClosures.map(str => (new Date(str)).toLocaleDate
 const rhHistoricals = require('./robinhood');
 const tiingoHistoricals = require('./tiingo');
 
-module.exports = async (tickers, period) => {
+module.exports = async (tickers, period, daysBack) => {
 
   const historicalMethods = {
     5: tiingoHistoricals,
@@ -24,7 +24,7 @@ module.exports = async (tickers, period) => {
     );
 
   return removeClosures(
-    await historicalMethods[period](tickers, period)
+    await historicalMethods[period](tickers, period, daysBack)
   );
 
 };

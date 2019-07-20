@@ -76,7 +76,7 @@ const getKST = (values, ticker) => {
 
 
 module.exports = {
-    period: [5, 10, 30],
+    period: [10, 30],
     // collections: 'all',
     handler: async ({ ticker, allPrices }) => {
         const allCurrents = allPrices.map(obj => obj.currentPrice);

@@ -7,13 +7,13 @@ const cacheThis = require('../../utils/cache-this');
 
 const number = n => Number(n);
 
-const getHistoricals = async (ticker, period) => {
+const getHistoricals = async (ticker, period, daysBack = 7) => {
   console.log({
     ticker,
     period
   })
   const sevenDaysDate = (new Date());
-  sevenDaysDate.setDate(sevenDaysDate.getDate() - 7);
+  sevenDaysDate.setDate(sevenDaysDate.getDate() - daysBack);
   const [month, day, year] = sevenDaysDate.toLocaleDateString().split('-');
   const formatted = [year, month, day].join('-');
 
@@ -74,14 +74,14 @@ const getHistoricals = async (ticker, period) => {
 
 };
 
-module.exports = async (tickers, period) => {
+module.exports = async (tickers, period, daysBack) => {
   // console.log({ tickers })
   console.log(`tiingo historicals for ${tickers.length} tickers...`);
 
 
   const asArray = await mapLimit(tickers, 3, async ticker => ({
     ticker,
-    historicals: await getHistoricals(ticker, period).catch(console.error)
+    historicals: await getHistoricals(ticker, period, daysBack).catch(console.error)
   }));
 
   return asArray.reduce((acc, { ticker, historicals }) => ({
