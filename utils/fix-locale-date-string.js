@@ -27,3 +27,14 @@ const oneDec = roundTo(1);
 const twoDec = roundTo(2);
 
 global.twoDec = twoDec;
+
+
+const cTable = require('console.table');
+
+const _ = require('underscore');
+_.mixin({
+    get: function(obj, path) {
+        if (!obj) return null;
+        return obj[path];
+    }
+});

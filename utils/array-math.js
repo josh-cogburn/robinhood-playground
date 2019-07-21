@@ -3,7 +3,7 @@ const avgArray = arr => {
     return sum / arr.length;
 };
 
-const percUp = arr => arr.filter(v => v > 0).length / arr.length;
+const percUp = arr => arr.filter(v => v > 0).length / arr.length * 100;
 
 const hundredResult = arr =>
     arr.reduce((acc, perc) => acc * (perc / 100 + 1), 100);

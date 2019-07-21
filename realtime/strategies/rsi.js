@@ -15,23 +15,21 @@ module.exports = {
         const mostRecent = allCurrents[allCurrents.length - 1];
         const rsiSeries = getRSI(allCurrents);
         const rsi = rsiSeries[rsiSeries.length - 1];
-        // if (rsi < 20) {
-            return {
-                keys: {
-                    ...(rsiKey = () => {
-                        const num = [5, 10, 15, 20, 25, 30].find(val => rsi < val);
-                        const key = num ? `rsilt${num}` : 'fluke';
-                        return { [key]: true };
-                    })()
-                },
-                data: {
-                    // allCurrents,
-                    mostRecent,
-                    rsiSeries,
-                    rsi,
-                }
-            };
-        // }
+        return {
+            keys: {
+                ...(rsiKey = () => {
+                    const num = [5, 10, 15, 20, 25].find(val => rsi < val);
+                    const key = num ? `rsilt${num}` : 'fluke';
+                    return { [key]: true };
+                })()
+            },
+            data: {
+                // allCurrents,
+                mostRecent,
+                rsiSeries,
+                rsi,
+            }
+        };
     },
     
     pms: {

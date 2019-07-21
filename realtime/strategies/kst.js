@@ -18,6 +18,10 @@ const getKST = (values, ticker) => {
         return {};
     }
     const [secondToLast, lastVal] = kstSeries.slice(-2);
+    const bearishSignal = (
+        secondToLast.kst > secondToLast.signal &&
+        lastVal.kst < lastVal.signal
+    );
     const isSignalCross = (
         secondToLast.kst < secondToLast.signal &&
         lastVal.kst > lastVal.signal
@@ -36,6 +40,7 @@ const getKST = (values, ticker) => {
         const isBelowZero = val => val < 0;
         const isBelowLowerQuarter = (() => {
             const kstVals = kstSeries
+                .slice(-100)
                 .map(({ kst, signal }) => [kst, signal])
                 .flatten()
                 .filter(Boolean)
@@ -70,7 +75,8 @@ const getKST = (values, ticker) => {
         kstSeries,
         isSignalCross,
         isZeroCross,
-        isLow
+        isLow,
+        bearishSignal
     };
 };
 
@@ -80,21 +86,20 @@ module.exports = {
     // collections: 'all',
     handler: async ({ ticker, allPrices }) => {
         const allCurrents = allPrices.map(obj => obj.currentPrice);
-        const { kstSeries, isSignalCross, isZeroCross, isLow } = getKST(allCurrents, ticker);
-        if (isSignalCross || isZeroCross) {
-            return {
-                keys: {
-                    isSignalCross,
-                    isZeroCross,
-                    isLow
-                },
-                data: {
-                    // allCurrents,
-                    mostRecent: allPrices[allPrices.length - 1],
-                    kstSeries,
-                }
-            };
-        }
+        const { kstSeries, isSignalCross, isZeroCross, isLow, bearishSignal } = getKST(allCurrents, ticker);
+        return {
+            keys: {
+                isSignalCross,
+                isZeroCross,
+                isLow,
+                bearishSignal
+            },
+            data: {
+                // allCurrents,
+                mostRecent: allPrices[allPrices.length - 1],
+                kstSeries,
+            }
+        };
     },
     pms: {
         signalCrosses: 'isSignalCross',

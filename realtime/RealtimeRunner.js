@@ -141,7 +141,7 @@ module.exports = new (class RealtimeRunner {
     for (let period of [5, 10, 30]) {
       this.priceCaches = {
         ...this.priceCaches,
-        [period]: await getHistoricals(allTickers, period)
+        [period]: await getHistoricals(allTickers, period, 14)
       }
     }
     strlog({ 

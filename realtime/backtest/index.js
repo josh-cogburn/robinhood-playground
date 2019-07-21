@@ -1,65 +1,133 @@
 const getHistoricals = require('../historicals/get');
 const { handler: rsi } = require('../strategies/rsi');
+const { handler: kst } = require('../strategies/kst');
+const { handler: sma } = require('../strategies/sma');
+const { handler: ema } = require('../strategies/ema');
 const getTrend = require('../../utils/get-trend');
 const { avgArray, percUp } = require('../../utils/array-math');
-const { mapObject } = require('underscore');
+const { mapObject, pick, get } = require('underscore');
+
+
+const NUM_FOLLOWING_PERIODS_TO_ANALYZE = 14;
 
 module.exports = async () => {
-  const { SPY: historicals } = await getHistoricals(['SPY'], 30, 365);
-  
+  let { SPY: thirtyHistoricals } = await getHistoricals(['SPY'], 30, 365);
+
+
+  // strlog({
+  //   thirtyHistoricals,
+  //   fiveHistoricals
+  // })
+
+  thirtyHistoricals = thirtyHistoricals.map(hist => ({
+    ...hist,
+    dateFormatted: (new Date(hist.timestamp)).toLocaleString()
+  }));
+
+  console.log('first historical date: ', thirtyHistoricals[0].dateFormatted)
+5
   let i = 0;
-  const withRSI = await mapLimit(historicals, 1, async hist => {
-    const allPrices = historicals.slice(0, ++i);
+  const withStrategies = await mapLimit(thirtyHistoricals, 1, async hist => {
+    console.log('analyzing', i, '/', thirtyHistoricals.length);
+    const allPrices = thirtyHistoricals.slice(0, ++i);
     const rsiResponse = await rsi({ allPrices });
+    const kstResponse = await kst({ allPrices });
+    const smaResponse = await sma({ allPrices });
+    const emaResponse = await ema({ allPrices });
     // strlog({
     //   hist,
     //   allPrices,
-    //   rsiResponse
+    //   rsiResponse,
+    //   kstResponse
     // });
     return {
       ...hist,
-      rsi: rsiResponse ? rsiResponse.data.rsi : null
+      rsi: rsiResponse ? rsiResponse.data.rsi : null,
+      kst: kstResponse ? kstResponse.keys : null,
+      sma: smaResponse ? smaResponse.keys : null,
+      ema: smaResponse ? emaResponse.keys : null
     };
   });
 
-  const analyzeHits = array => {
-    return array.map((hist, index, arr) => ({
-      ...hist,
-      ...hist.hit && (() => {
-        const { currentPrice } = hist;
-        const nextIndex = index + 1;
-        const followingFive = arr.slice(nextIndex, nextIndex + 3);
-        if (!followingFive.length) return {};
-        const analysis = {
-          trendToMax: getTrend(
-            Math.max(...followingFive.map(hist => hist.high)),
-            currentPrice,
-          ),
-          trendToCloses: getTrend(
-            Math.max(...followingFive.map(hist => hist.close)),
-            currentPrice,
-          ),
-          trendToLow: getTrend(
-            Math.min(...followingFive.map(hist => hist.low)),
-            currentPrice,
-          )
-        };
-        // strlog({
-        //   hist,
-        //   followingFive,
-        //   analysis
-        // })
-        return {
-          analysis
-        };
-      })()
-    }));
-  };
 
-  const analyzeAnalysis = analyzed => {
-    const allAnalysis = analyzed.map(hist => hist.analysis).filter(Boolean);
+  strlog({
+    smaBullishCrosses: withStrategies.filter(hist => hist.sma && hist.sma.bullishCross).map(hist => hist.dateFormatted),
+    smaBearishCrosses: withStrategies.filter(hist => hist.sma && hist.sma.bearishCross).map(hist => hist.dateFormatted),
+  })
+
+
+  const withAnalysis = withStrategies.map((hist, index, arr) => ({
+    ...hist,
+    ...(() => {
+      const { currentPrice } = hist;
+      const nextIndex = index + 1;
+      const histDate = new Date(hist.timestamp);
+      const nextDay = new Date(histDate.getTime() + 1000 * 60 * 60 * 24).getDate();
+      const nextDateIndex = arr.slice(nextIndex).findIndex((compareHist, compareIndex) => {
+
+        // ema crossover bearish
+        return compareHist.ema && compareHist.ema.bearishCross;
+
+        // kst bearish cross
+        return compareHist.kst && compareHist.kst.bearishSignal;
+
+        // sma bearish cross
+        return compareIndex >= 13 && compareHist.sma && compareHist.sma.bearishCross;
+
+
+        // hold until end of next day
+        const compareDate = (new Date(compareHist.timestamp)).getDate();
+        // strlog({
+        //   compareDate,
+        //   histDate
+        // })
+        return compareDate > nextDay;
+      });
+      const restOfDay = arr.slice(nextIndex, nextIndex + nextDateIndex + 1);
+      if (!restOfDay.length) return {};
+      const followingCloses = restOfDay.map(hist => hist.close);
+      const trendTo = val => getTrend(val, currentPrice);
+      const analysis = {
+        trendToMax: trendTo(
+          Math.max(...followingCloses)
+        ),
+        trendToCloses: trendTo(
+          avgArray(followingCloses)
+        ),
+        trendToFinal: trendTo(
+          followingCloses[followingCloses.length - 1]
+        ),
+        trendToLow: trendTo(
+          Math.min(...followingCloses)
+        )
+      };
+      // strlog({
+      //   hist,
+      //   restOfDay,
+      //   analysis
+      // })
+      return {
+        analysis,
+        soldAt: restOfDay[restOfDay.length - 1].dateFormatted,
+        heldForNumPeriods: restOfDay.length
+      };
+    })()
+  }));
+
+  strlog({ withAnalysis })
+
+  
+  const analyzeHits = withHits => {
+    const allAnalysis = withHits
+      .filter(hist => hist.hit)
+      .map(hist => hist.analysis)
+      .filter(Boolean);
     // strlog({ allAnalysis })
-    return Object.keys(allAnalysis[0])
+
+    const heldForNumPeriods = withHits.filter(hist => hist.hit).map(hit => hit.heldForNumPeriods);
+    strlog({ heldForNumPeriods });
+    
+    return allAnalysis.length ? Object.keys(allAnalysis[0])
       .reduce((acc, key) => {
         // console.log({ key })
         const allVals = allAnalysis
@@ -68,23 +136,19 @@ module.exports = async () => {
         return {
           ...acc,
           [key]: {
-            avgArray: avgArray(allVals),
-            percUp: percUp(allVals),
-            count: allVals.length
-          }
+            avgArray: +avgArray(allVals).toFixed(2),
+            percUp: Math.round(percUp(allVals)),
+          },
         };
-      }, {});
+      }, {
+        avgHeldForNumPeriods: Math.round(avgArray(
+          heldForNumPeriods.filter(Boolean)
+        )),
+        count: allAnalysis.length
+      }) : null;
   };
 
-
-  const theBigAnalyze = withHits => {
-    const withAnalysis = analyzeHits(withHits);
-    const analysis = analyzeAnalysis(withAnalysis);
-    return analysis;
-  };
-
-
-  const leavingRSIAlert2Away = withRSI.map((hist, index, arr) => {
+  const leavingRSIAlert2Away = withAnalysis.map((hist, index, arr) => {
     const threeAway = arr[index - 3];
     const prevHists = arr.slice(index - 2, index);
 
@@ -95,44 +159,159 @@ module.exports = async () => {
     return {
       ...hist,
       hit: [
-        hist.rsi > 40,
+        hist.rsi > 30,
         threeAway && threeAway.rsi < 30,
         prevHists.length === 2,
         prevHists.every(prevHist => prevHist.rsi > 30)
       ].every(val => {
-        console.log(val);
+        // console.log(val);
         return !!val;
       })
     };
 
   });
 
-  strlog({ leavingRSIAlert2Away })
+  // strlog({ leavingRSIAlert2Away });
 
-  strlog(
-    mapObject({
 
-      everyRSIUnder30: withRSI.map(hist => ({
+
+  const nextKSTalert = (() => {
+    const copy = [...withAnalysis];
+    let activeRSI = false;
+    copy.forEach(hist => {
+      if (hist.rsi < 30) {
+        activeRSI = true;
+      } else {
+       
+        if (activeRSI && hist.rsi > 30 && hist.kst) {
+          hist.hit = true;
+          activeRSI = false;
+        }
+      }
+    });
+    return copy;
+  })();
+
+
+  const createHitWhen = condition => withAnalysis.map(hist => ({
+    ...hist,
+    hit: condition(hist)
+  }));
+
+
+  const results = mapObject({
+
+
+
+
+    // RSI
+
+
+    everyRSIUnder30: createHitWhen(
+      hist => hist.rsi < 30
+    ),
+
+    everyRSIUnder20: createHitWhen(
+      hist => hist.rsi < 20
+    ),
+
+    everyRSIUnder10: createHitWhen(
+      hist => hist.rsi < 10
+    ),
+
+    leavingRSIAlert: withAnalysis.map((hist, index, arr) => {
+
+      const prevHist = arr[index - 1];
+      return {
         ...hist,
-        hit: hist.rsi < 30
-      })),
+        ...prevHist && prevHist.rsi < 30 && hist.rsi > 30 && {
+          hit: true
+        }
+      };
 
-      leavingRSIAlert: withRSI.map((hist, index, arr) => {
+    }),
 
-        const prevHist = arr[index - 1];
-        return {
-          ...hist,
-          ...prevHist && prevHist.rsi < 30 && hist.rsi > 30 && {
-            hit: true
-          }
-        };
+    leavingRSIAlert2Away,
 
-      }),
 
-      leavingRSIAlert2Away
+    
 
-    }, theBigAnalyze)
+
+
+    nextKSTalert,
+
+    // KST
+
+    allKst: createHitWhen(
+      hist => hist.kst
+    ),
+
+
+    kstSignalCrosses: createHitWhen(
+      hist => get(hist.kst, 'isSignalCross')
+    ),
+
+    kstZeroCrosses: createHitWhen(
+      hist => get(hist.kst, 'isZeroCross')
+    ),
+
+    allLows: createHitWhen(
+      hist => get(hist.kst, 'isLow')
+    ),
+
+    // BOTH
+
+    both: createHitWhen(
+      hist => hist.kst && hist.rsi < 30
+    ),
+
+    // SMA
+
+    smaBullishCrosses: createHitWhen(
+      hist => get(hist.sma, 'bullishCross')
+    ),
+
+
+    // EMA crossovers
+
+    emaCrossover: createHitWhen(
+      hist => get(hist.ema, 'bullishCross')
+    ),
+    
+
+
+  }, withHits => ({
+    dates: withHits
+      .filter(hist => hist.hit)
+      .reduce((acc, hist) => ({
+        ...acc,
+        [hist.dateFormatted]: hist
+      }), {}),
+    analysis: analyzeHits(withHits)
+  }));
+
+  strlog({ results });
+
+
+  console.table(
+    Object.keys(results)
+      .map(key => ({
+        strategy: key,
+        ...results[key]
+      }))
+      .filter(obj => obj.analysis)
+      .map(obj => ({
+        ...pick(obj, ['strategy']),
+        ...obj.analysis.trendToFinal,
+        ...pick(obj.analysis, ['avgHeldForNumPeriods', 'count'])
+      }))
+      .sort((a, b) => b.avgArray - a.avgArray)
   );
 
-  // strlog({ withRSI, rsiHits: rsiHits.map(hist => new Date(hist.timestamp).toLocaleString()) })
+  // strlog(
+  //   withAnalysis
+  //     .filter(a => a.analysis)
+  //     .sort((a, b) => get(b.analysis, 'trendToCloses') - get(a.analysis, 'trendToCloses'))
+  //     .slice(0, 10), 
+  // )
 };
