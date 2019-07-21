@@ -6,7 +6,7 @@ const settings = require('../settings');
 module.exports = async (_, strategy) => {
   await require('../realtime/RealtimeRunner').init();
   const pms = require('../realtime/RealtimeRunner').getPms();
-  // console.log({ strategy, pms, emails });
+  console.log('pms-hit', { strategy, pms }, settings.forPurchase);
 
   const matchesPm = pm => {
     // console.log({ pm })

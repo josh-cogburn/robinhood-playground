@@ -8,7 +8,47 @@ const { avgArray, percUp } = require('../../utils/array-math');
 const { mapObject, pick, get } = require('underscore');
 
 
+
+// SETTINGS
+
+
 const NUM_FOLLOWING_PERIODS_TO_ANALYZE = 14;
+
+const sellWhen = (compareHist, buyHist, compareIndex) => {
+
+
+  const trend = getTrend(
+    compareHist.currentPrice,
+    buyHist.currentPrice
+  );
+
+  // based on trend
+  // return Math.abs(trend) > 1.5;
+
+
+  // ema crossover bearish
+  return compareIndex > 10 && (
+    (compareHist.ema && compareHist.ema.bearishCross)
+    // Math.abs(trend) > 5
+  );
+
+  // kst bearish cross
+  return compareHist.kst && compareHist.kst.bearishSignal;
+
+  // sma bearish cross
+  return compareIndex >= 13 && compareHist.sma && compareHist.sma.bearishCross;
+
+
+  // hold until end of next day
+  const buyHistDate = new Date(buyHist.timestamp);
+  const nextDay = new Date(histDate.getTime() + 1000 * 60 * 60 * 24).getDate();
+  const compareDate = (new Date(compareHist.timestamp)).getDate();
+  return compareDate > nextDay;
+};
+
+
+
+
 
 module.exports = async () => {
   let { SPY: thirtyHistoricals } = await getHistoricals(['SPY'], 30, 365);
@@ -61,29 +101,10 @@ module.exports = async () => {
     ...(() => {
       const { currentPrice } = hist;
       const nextIndex = index + 1;
-      const histDate = new Date(hist.timestamp);
-      const nextDay = new Date(histDate.getTime() + 1000 * 60 * 60 * 24).getDate();
-      const nextDateIndex = arr.slice(nextIndex).findIndex((compareHist, compareIndex) => {
-
-        // ema crossover bearish
-        return compareHist.ema && compareHist.ema.bearishCross;
-
-        // kst bearish cross
-        return compareHist.kst && compareHist.kst.bearishSignal;
-
-        // sma bearish cross
-        return compareIndex >= 13 && compareHist.sma && compareHist.sma.bearishCross;
-
-
-        // hold until end of next day
-        const compareDate = (new Date(compareHist.timestamp)).getDate();
-        // strlog({
-        //   compareDate,
-        //   histDate
-        // })
-        return compareDate > nextDay;
+      const holdFor = arr.slice(nextIndex).findIndex((compareHist, compareIndex) => {
+        return sellWhen(compareHist, hist, compareIndex);
       });
-      const restOfDay = arr.slice(nextIndex, nextIndex + nextDateIndex + 1);
+      const restOfDay = arr.slice(nextIndex, nextIndex + holdFor + 1);
       if (!restOfDay.length) return {};
       const followingCloses = restOfDay.map(hist => hist.close);
       const trendTo = val => getTrend(val, currentPrice);
@@ -198,7 +219,7 @@ module.exports = async () => {
     hit: condition(hist)
   }));
 
-
+  const anyKst = hist => hist.kst && !!Object.keys(hist.kst).find(key => !!hist.kst[key])
   const results = mapObject({
 
 
@@ -242,9 +263,7 @@ module.exports = async () => {
 
     // KST
 
-    allKst: createHitWhen(
-      hist => hist.kst
-    ),
+    allKst: createHitWhen(anyKst),
 
 
     kstSignalCrosses: createHitWhen(
@@ -262,7 +281,7 @@ module.exports = async () => {
     // BOTH
 
     both: createHitWhen(
-      hist => hist.kst && hist.rsi < 30
+      hist => anyKst(hist) && hist.rsi < 30
     ),
 
     // SMA
@@ -277,6 +296,17 @@ module.exports = async () => {
     emaCrossover: createHitWhen(
       hist => get(hist.ema, 'bullishCross')
     ),
+
+
+    // RANDOM hotdogs!
+
+    randomTenth: createHitWhen(
+      hist => Math.random() < 0.1
+    ),
+
+    randomHundredth: createHitWhen(
+      hist => Math.random() < 0.01
+    )
     
 
 

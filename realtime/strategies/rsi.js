@@ -17,9 +17,9 @@ module.exports = {
         const rsi = rsiSeries[rsiSeries.length - 1];
         return {
             keys: {
-                ...(rsiKey = () => {
+                ...rsi < 25 && (rsiKey = () => {
                     const num = [5, 10, 15, 20, 25].find(val => rsi < val);
-                    const key = num ? `rsilt${num}` : 'fluke';
+                    const key = num ? `rsilt${num}` : null;
                     return { [key]: true };
                 })()
             },

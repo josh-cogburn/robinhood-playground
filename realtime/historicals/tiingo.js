@@ -18,7 +18,7 @@ const getHistoricals = async (ticker, period, daysBack = 7) => {
   const formatted = [year, month, day].join('-');
 
   const requestOptions = {
-    url: `https://api.tiingo.com/iex/${ticker}/prices?startDate=${formatted}&resampleFreq=${period}min&token=${token}&afterHours=false`,
+    url: `https://api.tiingo.com/iex/${ticker}/prices?startDate=${formatted}&resampleFreq=${period}min&token=${token}`,
     headers: {
       'Content-Type': 'application/json'
     }
