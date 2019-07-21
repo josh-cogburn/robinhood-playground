@@ -46,7 +46,7 @@ class TodaysStrategies extends Component {
                             pmPerfs.map(perf => (
                                 <tr>
                                     <td><TrendPerc value={perf.avgTrend} /></td>
-                                    <td><TrendPerc value={perf.percUp} redAt={50} noPlus={true} round={true} /></td>
+                                    <td><TrendPerc value={perf.percUp / 100} redAt={50} noPlus={true} round={true} /></td>
                                     <td>{perf.count}</td>
                                     <td>{perf.pmName}</td>
                                 </tr>
