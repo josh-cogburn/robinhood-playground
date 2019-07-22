@@ -175,7 +175,10 @@ const stratManager = {
         await this.refreshPredictionModels();
     },
     async initPicks(dateStr) {
-        console.log('init picks', dateStr)
+        console.log('init picks', dateStr);
+
+        return [];
+        
         const dbPicks = await Pick.find(
             { date: dateStr },
             { data: 0 }
@@ -191,6 +194,7 @@ const stratManager = {
                 withPrices: pick.picks,
                 // timestamp: pick.timestamp
             }));
+
         console.log({
             dbPicks: dbPicks.length,
             picks: picks.length
