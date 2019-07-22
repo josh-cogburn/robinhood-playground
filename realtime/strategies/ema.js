@@ -8,7 +8,7 @@ const getEMA = (values, period) => {
 };
 
 module.exports = {
-  period: [5, 10, 30],
+  period: [10, 30],
   // collections: 'all',
 
   handler: async ({ ticker, allPrices }) => {

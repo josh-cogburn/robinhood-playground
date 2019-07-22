@@ -14,6 +14,21 @@ const { mapObject, pick, get } = require('underscore');
 
 const NUM_FOLLOWING_PERIODS_TO_ANALYZE = 14;
 
+
+const trailingStopLoss = (startPrice, stopAtPerc) => {
+  let min = startPrice;
+  return ({ currentPrice }) => {
+    min = Math.min(min, currentPrice);
+    // strlog({
+    //   max,
+    //   currentPrice,
+    //   stopAtPerc,
+    //   trend: getTrend(currentPrice, max)
+    // })
+    return getTrend(currentPrice, min) > stopAtPerc;
+  };
+}
+
 const sellWhen = (compareHist, buyHist, compareIndex) => {
 
 
@@ -101,8 +116,10 @@ module.exports = async () => {
     ...(() => {
       const { currentPrice } = hist;
       const nextIndex = index + 1;
+      const stopLoss = trailingStopLoss(currentPrice, 1.75);
       const holdFor = arr.slice(nextIndex).findIndex((compareHist, compareIndex) => {
-        return sellWhen(compareHist, hist, compareIndex);
+        return stopLoss(compareHist);
+        // return sellWhen(compareHist, hist, compareIndex);
       });
       const restOfDay = arr.slice(nextIndex, nextIndex + holdFor + 1);
       if (!restOfDay.length) return {};
