@@ -417,7 +417,7 @@ module.exports = new (class RealtimeRunner {
 
   async handlePick(pick) {
 
-    const { ticker, keys, data, period, strategyName } = pick;
+    let { ticker, keys, data, period, strategyName } = pick;
 
     if (!Object.keys(keys || {}).filter(key => !!keys[key]).length) return;
 
