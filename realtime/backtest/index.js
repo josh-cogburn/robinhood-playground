@@ -3,6 +3,7 @@ const { handler: rsi } = require('../strategies/rsi');
 const { handler: kst } = require('../strategies/kst');
 const { handler: sma } = require('../strategies/sma');
 const { handler: ema } = require('../strategies/ema');
+const { handler: smoothKst } = require('../strategies/smooth-kst');
 const getTrend = require('../../utils/get-trend');
 const { avgArray, percUp } = require('../../utils/array-math');
 const { mapObject, pick, get } = require('underscore');
@@ -87,6 +88,7 @@ module.exports = async () => {
     const allPrices = thirtyHistoricals.slice(0, ++i);
     const rsiResponse = await rsi({ allPrices });
     const kstResponse = await kst({ allPrices });
+    const smoothKstResponse = await smoothKst({ allPrices });
     const smaResponse = await sma({ allPrices });
     const emaResponse = await ema({ allPrices });
     // strlog({
@@ -99,6 +101,7 @@ module.exports = async () => {
       ...hist,
       rsi: rsiResponse ? rsiResponse.data.rsi : null,
       kst: kstResponse ? kstResponse.keys : null,
+      smoothKstResponse: smoothKstResponse ? smoothKstResponse.keys : null,
       sma: smaResponse ? smaResponse.keys : null,
       ema: smaResponse ? emaResponse.keys : null
     };
@@ -236,7 +239,9 @@ module.exports = async () => {
     hit: condition(hist)
   }));
 
-  const anyKst = hist => hist.kst && !!Object.keys(hist.kst).find(key => !!hist.kst[key])
+  const anyKst = hist => hist.kst && !!Object.keys(hist.kst).find(key => !!hist.kst[key]);
+  const anySmoothKst = hist => hist.smoothKst && !!Object.keys(hist.smoothKst).find(key => !!hist.smoothKst[key]);
+
   const results = mapObject({
 
 
@@ -293,6 +298,23 @@ module.exports = async () => {
 
     allLows: createHitWhen(
       hist => get(hist.kst, 'isLow')
+    ),
+
+    // KST
+
+    allSmoothKst: createHitWhen(anySmoothKst),
+
+
+    kstSmoothSignalCrosses: createHitWhen(
+      hist => get(hist.smoothKstResponse, 'isSignalCross')
+    ),
+
+    kstSmoothZeroCrosses: createHitWhen(
+      hist => get(hist.smoothKstResponse, 'isZeroCross')
+    ),
+
+    allSmoothLows: createHitWhen(
+      hist => get(hist.smoothKstResponse, 'isLow')
     ),
 
     // BOTH

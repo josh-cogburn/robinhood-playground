@@ -489,8 +489,11 @@ module.exports = new (class RealtimeRunner {
       // await sendEmail(`NEW ${strategyName.toUpperCase()} ALERT ${pickName}: ${ticker}`, JSON.stringify(pick, null, 2));
     }
     
-    data.period = period;
-    data.stSent = await getStSentiment(ticker);
+    data = {
+      ...data,
+      period,
+      stSent: await getStSentiment(ticker)
+    };
     return recordPicks(pickName, 5000, [ticker], null, { keys, data });
   }
 

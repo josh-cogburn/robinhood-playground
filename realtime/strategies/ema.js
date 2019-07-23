@@ -41,5 +41,10 @@ module.exports = {
           }
       };
   },
+
+  pms: {
+    bullishCross: 'bullishCross',
+    bearishCross: 'bearishCross'
+  }
   
 };

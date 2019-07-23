@@ -62,6 +62,13 @@ module.exports = {
 
         top10030min: ['30min', 'top100'],
         top100under20: ['30min', 'top100', 'under20'],
+
+
+
+
+
+        '10minlt5': ['10min', 'lt5'],
+        '5minlt15': ['5min', 'lt15'],
     },
 
     postRun: (newPicks, todaysPicks, periods) => {
