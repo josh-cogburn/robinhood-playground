@@ -177,8 +177,6 @@ const stratManager = {
     async initPicks(dateStr) {
         console.log('init picks', dateStr);
 
-        return [];
-        
         const dbPicks = await Pick.find(
             { date: dateStr },
             { data: 0 }
@@ -187,7 +185,7 @@ const stratManager = {
         const picks = dbPicks
             .filter(pick => pick.timestamp)
             .filter(pick => !pick.strategyName.includes('afterhours'))
-            .filter(pick => !pick.strategyName.includes('ema'))
+            .filter(pick => !pick.strategyName.includes('initial'))
             .map(pick => ({
                 ...pick,
                 stratMin: `${pick.strategyName}-${pick.min}`,
