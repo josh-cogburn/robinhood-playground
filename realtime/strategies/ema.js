@@ -44,7 +44,8 @@ module.exports = {
 
   pms: {
     bullishCross: 'bullishCross',
-    bearishCross: 'bearishCross'
+    bearishCross: 'bearishCross',
+    bullishCross10min: ['10min', 'bearishCross']
   }
   
 };
