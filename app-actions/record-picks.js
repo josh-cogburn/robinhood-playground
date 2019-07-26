@@ -5,9 +5,8 @@
 const lookupMultiple = require('../utils/lookup-multiple');
 const stratManager = require('../socket-server/strat-manager');
 const Pick = require('../models/Pick');
-const stratOfInterest = require('../utils/strat-of-interest');
 
-// const purchaseStocks = require('./purchase-stocks');
+const purchaseStocks = require('./purchase-stocks');
 const sendEmail = require('../utils/send-email');
 const tweeter = require('./tweeter');
 const calcEmailsFromStrategy = require('../utils/calc-emails-from-strategy');
@@ -21,7 +20,6 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
     const stratMin = `${strategy}-${min}`;
     const hits = await pmsHit(null, stratMin);
 
-    if (!stratOfInterest(stratMin, withPrices.length)) return;   // cant handle too many strategies apparently
     if (!strategy.includes('cheapest-picks')) withPrices = withPrices.slice(0, 3);  // take only 3 picks
 
     withPrices = withPrices.filter(tickerPrice => !!tickerPrice);
@@ -64,14 +62,14 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
     // forPurchase
     if (hits.includes('forPurchase')) {
         console.log('strategy enabled: ', stratMin, 'purchasing');
-        // const stocksToBuy = withPrices.map(obj => obj.ticker);
-        // await purchaseStocks({
-        //     stocksToBuy,
-        //     strategy,
-        //     multiplier: !disableMultipliers ? forPurchaseMultiplier : 1,
-        //     min,
-        //     withPrices
-        // });
+        const stocksToBuy = withPrices.map(obj => obj.ticker);
+        await purchaseStocks({
+            stocksToBuy,
+            strategy,
+            multiplier: !disableMultipliers ? forPurchaseMultiplier : 1,
+            min,
+            withPrices
+        });
         // if (withPrices.length === 1) {
         //     const [{ ticker }] = withPrices;
         //     await stocktwits.postBullish(ticker, stratMin);

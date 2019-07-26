@@ -20,10 +20,10 @@ module.exports = async (_, strategy) => {
 
       forPurchasePms = forPurchasePms.map(line => line.substring(1, line.length - 1));
         // console.log({ forPurchasePms })
-      return forPurchaseStrats.includes(strategy) ||
-          forPurchasePms.some(pm => 
-            match(pm)
-          );
+      return (
+        forPurchaseStrats.includes(strategy) ||
+        forPurchasePms.some(match)
+      );
     } else {
       return match(pm);
     }

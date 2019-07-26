@@ -2,7 +2,7 @@
 module.exports = {
     // important settings
     sellAllStocksOnNthDay: 10,
-    purchaseAmt: 40,
+    purchaseAmt: 200,
     forPurchase: [
         '[kst-optionszeroCrosses30Min]',
         '[rsi-10minlt5]',
