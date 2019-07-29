@@ -66,7 +66,7 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
         await purchaseStocks({
             stocksToBuy,
             strategy,
-            multiplier: !disableMultipliers ? forPurchaseMultiplier : 1,
+            // multiplier: !disableMultipliers ? forPurchaseMultiplier : 1,
             min,
             withPrices
         });
