@@ -7,19 +7,27 @@ const getMultipleHistoricals = require('../../app-actions/get-multiple-historica
 // strategies
 
 const addHistoricals = async (tickers, interval, span) => {
+
+  const keyName = `${span}Historicals`;
+  
   // add historical data
   let allHistoricals = await getMultipleHistoricals(
       tickers,
       `interval=${interval}&span=${span}`
   );
 
-  const [single] = allHistoricals;
+  let withHistoricals = tickers
+    .map((ticker, i) => ({
+        ticker,
+        [keyName]: allHistoricals[i]
+    }))
+    .filter(buy => buy[keyName].length);
+
+  const first = withHistoricals;
+  const single = first[keyName];
   console.log('count: ', single.length);
   console.log('last: ', (new Date(single[single.length - 1].begins_at).toLocaleString()));
-  let withHistoricals = tickers.map((ticker, i) => ({
-      ticker,
-      [`${span}Historicals`]: allHistoricals[i]
-  }));
+  
 
   return withHistoricals;
 };

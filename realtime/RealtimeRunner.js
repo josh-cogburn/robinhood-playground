@@ -324,6 +324,8 @@ module.exports = new (class RealtimeRunner {
 
   async runDaily() {
 
+    console.log('RUNNING DAILY');
+
     const tickersAndAllPrices = await daily();
     const withHandlers = this.strategies
         .filter(strategy => strategy.handler)
@@ -490,7 +492,7 @@ module.exports = new (class RealtimeRunner {
     });
 
 
-    let [price] = data.allPrices 
+    let [price] = data && data.allPrices 
       ? data.allPrices.slice(-1)
       : (this.priceCaches[5][ticker] || []).slice(-1);
     price = (price || {}).currentPrice;

@@ -15,7 +15,7 @@ module.exports = cacheThis(
             75
         );
 
-        console.log({ tickers, allHistoricals });
+        // console.log({ tickers, allHistoricals });
 
 
         return allHistoricals.map(obj => {
