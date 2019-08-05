@@ -394,7 +394,7 @@ module.exports = new (class RealtimeRunner {
         picks = [
           ...picks,
 
-          ...await runSingleStrategy(
+          ...await this.runSingleStrategy(
 
             // tickersAndAllPrices
             allTickers.map(ticker => ({
