@@ -3,6 +3,7 @@ const { mapObject } = require('underscore');
 const getCollections = require('./collections/get-collections');
 const dayInProgress = require('./day-in-progress');
 const getHistoricals = require('./historicals/get');
+const daily = require('./historicals/daily');
 
 // app-actions
 const recordPicks = require('../app-actions/record-picks');
@@ -109,7 +110,7 @@ module.exports = new (class RealtimeRunner {
         fn: () => this.stop()
     });
 
-    if (dayInProgress(START_MIN)) {
+    if (dayInProgress(START_MIN) || true) {
       console.log('in progress');
 
       const last5Minute = this.getLastTimestamp(5);
@@ -157,20 +158,32 @@ module.exports = new (class RealtimeRunner {
     console.log('start!!');
     this.currentlyRunning = true;
     this.runCount = 0;
-    this.interval = setInterval(() => 
-      this.timedAsync(
-        'every five minutes timerrrr',
-        () => this.everyFiveMinutes(),
+    this.intervals = [
+      setInterval(() => 
+        this.timedAsync(
+          'every five minutes timerrrr',
+          () => this.everyFiveMinutes(),
+        ),
+        5 * 1000 * 60 // 5 minutes
       ),
-      5 * 1000 * 60 // 5 minutes
-    );
+
+      setInterval(() => 
+        this.timedAsync(
+          'every 3 hours (daily)',
+          () => this.runDaily(),
+        ),
+        60 * 1000 * 60 * 3 // 3 hours
+      ),
+    ];
+
     this.everyFiveMinutes();
+    setTimeout(() => this.runDaily(), 4 * 1000 * 60);
   }
 
   stop() {
     this.currentlyRunning = false;
-    clearInterval(this.interval);
-    this.interval = null;
+    this.intervals.forEach(clearInterval);
+    this.intervals = [];
   }
 
   logLastTimestamps() {
@@ -187,7 +200,7 @@ module.exports = new (class RealtimeRunner {
     });
   }
   async addNewQuote(priceCachesToUpdate = Object.keys(this.priceCaches)) {
-    
+
     console.log('getting new quotes...');
     this.logLastTimestamps();
 
@@ -290,7 +303,7 @@ module.exports = new (class RealtimeRunner {
       );
       return shouldUpdate;
     }).map(Number);
-
+    
     console.log('every five minutes...', { periods, runCount: this.runCount });
 
     await this.timedAsync(
@@ -309,11 +322,65 @@ module.exports = new (class RealtimeRunner {
 
   }
 
+  async runDaily() {
+
+    const tickersAndAllPrices = await daily();
+    const withHandlers = this.strategies
+        .filter(strategy => strategy.handler)
+        .filter(strategy => strategy.period && strategy.period.includes('d'));
+    strlog({ withHandlers });
+    let picks = [];
+    for (let strategy of withHandlers) {
+
+      picks = [
+        ...picks,
+        ...await this.runSingleStrategy(
+          tickersAndAllPrices,
+          strategy,
+          'd'
+        )
+      ];
+        
+    }
+
+    console.log('daily picks count: ', picks.length);
+
+    for (let pick of picks) {
+      strlog({ pick })
+      pick._id = await this.handlePick(pick);
+    }
+
+  }
+
+  async runSingleStrategy(tickersAndAllPrices, strategy, period) {
+    const picks = [];
+    const { strategyName, handler } = strategy;
+    console.log(`running ${strategyName} against ${period} minute data...`);
+    for (let { ticker, allPrices } of tickersAndAllPrices) {
+      const response = await handler({
+        ticker,
+        allPrices
+      });
+      if (response && Object.keys(response.keys || {}).filter(key => !!response.keys[key]).length) {
+        picks.push({
+          ...response,
+          ticker,
+          period,
+          strategyName,
+          data: {
+            ...response.data,
+            allPrices,
+          }
+        });
+      }
+    }
+    return picks;
+  }
 
   async runAllStrategies(periods = [5, 10, 30]) {
     
     const runAllStrategiesForPeriod = async period => {
-      const picks = [];
+      let picks = [];
       const relatedPriceCache = this.priceCaches[period];
       // strlog({
       //   period,
@@ -323,27 +390,22 @@ module.exports = new (class RealtimeRunner {
       const withHandlers = this.strategies
         .filter(strategy => strategy.handler)
         .filter(strategy => !strategy.period || strategy.period.includes(period));
-      for (let { strategyName, handler } of withHandlers) {
-        console.log(`running ${strategyName} against ${period} minute data...`);
-        for (let ticker of allTickers) {
-          const allPrices = relatedPriceCache[ticker];
-          const response = await handler({
-            ticker,
-            allPrices
-          });
-          if (response) {
-            picks.push({
-              ...response,
+      for (let strategy of withHandlers) {
+        picks = [
+          ...picks,
+
+          ...await runSingleStrategy(
+
+            // tickersAndAllPrices
+            allTickers.map(ticker => ({
               ticker,
-              period,
-              strategyName,
-              data: {
-                ...response.data,
-                allPrices,
-              }
-            });
-          }
-        }
+              allPrices: relatedPriceCache[ticker]
+            })),
+            strategy,
+            period
+
+          )
+        ]
       };
       return picks;
     };
@@ -416,11 +478,11 @@ module.exports = new (class RealtimeRunner {
   }
 
   async handlePick(pick) {
-
+    strlog('whatttt')
+    strlog({
+      pick
+    })
     let { ticker, keys, data, period, strategyName } = pick;
-
-    if (!Object.keys(keys || {}).filter(key => !!keys[key]).length) return;
-
 
     console.log({
       ticker,
@@ -431,7 +493,9 @@ module.exports = new (class RealtimeRunner {
     });
 
 
-    let [price] = (this.priceCaches[5][ticker] || []).slice(-1);
+    let [price] = data.allPrices 
+      ? data.allPrices.slice(-1)
+      : (this.priceCaches[5][ticker] || []).slice(-1);
     price = (price || {}).currentPrice;
 
     const collectionKey = Object.keys(this.collections).find(collection => 

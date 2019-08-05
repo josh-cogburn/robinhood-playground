@@ -4,17 +4,18 @@ const cacheThis = require('../utils/cache-this');
 
 module.exports = cacheThis(
     async (tickers, qs = 'interval=day') => {
-
+        console.log({ tickers, qs })
         const allHistoricals = await chunkApi(
             tickers,
             async (tickerStr) => {
-                const { results } = await Robinhood.url(`https://api.robinhood.com/quotes/historicals/?symbols=${tickerStr}&${qs}&bounds=extended`);
+                // console.log({ tickerStr })
+                const { results } = await Robinhood.url(`https://api.robinhood.com/quotes/historicals/?symbols=${tickerStr}&${qs}`);
                 return results;
             },
             75
         );
 
-        // console.log({ tickers, allHistoricals });
+        console.log({ tickers, allHistoricals });
 
 
         return allHistoricals.map(obj => {

@@ -78,7 +78,7 @@ module.exports = async (ticker, detailed) => {
         return returnObj;
     } catch (e) {
         // console.error(e);
-        return null;
+        return {};
     }
     
 };

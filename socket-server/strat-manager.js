@@ -165,7 +165,7 @@ const stratManager = {
     },
     async initPicksAndPMs(dateOverride) {
         const dateStr = dateOverride || await this.determineCurrentDay();
-        const hasPicksData = (await Pick.countDocuments({ date: dateStr })) > 0;
+        const hasPicksData = false//(await Pick.countDocuments({ date: dateStr })) > 0;
         console.log('hasPicksData', hasPicksData);
         if (hasPicksData) {
             await this.initPicks(dateStr);
