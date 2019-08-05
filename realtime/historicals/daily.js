@@ -23,7 +23,7 @@ const addHistoricals = async (tickers, interval, span) => {
     }))
     .filter(buy => buy[keyName].length);
 
-  const first = withHistoricals;
+  const [first] = withHistoricals;
   const single = first[keyName];
   console.log('count: ', single.length);
   console.log('last: ', (new Date(single[single.length - 1].begins_at).toLocaleString()));
