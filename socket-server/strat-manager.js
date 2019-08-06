@@ -132,7 +132,7 @@ const stratManager = {
             console.log('error sending report', e);
         }
         await this.refreshPastData();
-        this.picks = [];
+        this.picks = this.picks.filter(pick => !pick.isRecommended);
         this.tickerWatcher.clearTickers();
         await this.initPicksAndPMs();
         await this.tickerWatcher.lookupRelatedPrices();

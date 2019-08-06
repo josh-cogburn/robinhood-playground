@@ -60,11 +60,11 @@ class TodaysStrategies extends Component {
             forPurchasePms = forPurchasePms.map(line => line.substring(1, line.length - 1));
             console.log({ forPurchasePms, forPurchaseStrats})
 
-            return picks.filter(({ stratMin }) => 
+            return picks.filter(({ stratMin, isRecommended }) => 
                 forPurchaseStrats.includes(stratMin) ||
                 forPurchasePms.some(pm => 
                     matchesPm(stratMin, pm)
-                )
+                ) || isRecommended
             );
           } else {
               return picks.filter(({ stratMin }) =>

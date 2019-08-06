@@ -122,7 +122,7 @@ module.exports = async () => {
 
     Array.prototype.cutBottom = function() {
         const length = this.length;
-        const bottomAmt = (length / 3.6);
+        const bottomAmt = (length / 4.6);
         console.log('cutting', bottomAmt);
         return this.slice(0, length - bottomAmt);
     };

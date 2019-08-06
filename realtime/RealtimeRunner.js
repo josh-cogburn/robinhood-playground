@@ -502,7 +502,10 @@ module.exports = new (class RealtimeRunner {
     );
     const keyString = Object.keys(keys || {}).filter(key => keys[key]).join('-');
 
-    const periodKey = period && `${period}min`;
+    const periodKey = (() => {
+      if (period && 'd') return 'daily';
+      if (period) return `${period}min`;
+    })();
     const firstAlertkey = !this.todaysPicks.flatten().find(comparePick =>
       comparePick.ticker === ticker
         && comparePick.period === period
@@ -572,7 +575,7 @@ module.exports = new (class RealtimeRunner {
         'lunch',
         'dinner'
       ],
-      ...[5, 10, 30],
+      ...[5, 10, 30 , 'daily'],
       ...Object.keys(this.collections)
     ];
 
