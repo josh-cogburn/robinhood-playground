@@ -2,6 +2,7 @@
 const jsonMgr = require('../utils/json-mgr');
 const { CronJob } = require('cron');
 const fs = require('mz/fs');
+const { uniq } = require('underscore');
 
 // mongo
 const Pick = require('../models/Pick');
@@ -65,7 +66,7 @@ const stratManager = {
         console.log('get prices');
         await this.tickerWatcher.start();
 
-        // console.log('send report init')
+        console.log('send report init')
         // try {
             // await this.sendPMReport();
         // } catch (e) {
@@ -165,11 +166,11 @@ const stratManager = {
     },
     async initPicksAndPMs(dateOverride) {
         const dateStr = dateOverride || await this.determineCurrentDay();
-        const hasPicksData = false//(await Pick.countDocuments({ date: dateStr })) > 0;
-        console.log('hasPicksData', hasPicksData);
-        if (hasPicksData) {
+        // const hasPicksData = await Pick.countDocuments({ date: dateStr }) > 0;
+        // console.log('hasPicksData', hasPicksData);
+        // if (hasPicksData) {
             await this.initPicks(dateStr);
-        }
+        // }
         this.curDate = dateStr;
         console.log('cur date now', this.curDate);
         await this.refreshPredictionModels();
@@ -177,10 +178,16 @@ const stratManager = {
     async initPicks(dateStr) {
         console.log('init picks', dateStr);
 
-        const dbPicks = await Pick.find(
-            { date: dateStr },
-            { data: 0 }
-        ).lean();
+        const recentRecommendations = await Pick.getRecentRecommendations();
+        strlog({ recentRecommendations })
+        const dbPicks = uniq([
+            ...await Pick.find(
+                { date: dateStr },
+                { data: 0 }
+            ).lean(),
+            ...recentRecommendations
+        ], '_id');
+
         
         const picks = dbPicks
             .filter(pick => pick.timestamp)

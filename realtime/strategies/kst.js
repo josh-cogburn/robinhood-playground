@@ -87,19 +87,21 @@ module.exports = {
     handler: async ({ ticker, allPrices }) => {
         const allCurrents = allPrices.map(obj => obj.currentPrice);
         const { kstSeries, isSignalCross, isZeroCross, isLow, bearishSignal } = getKST(allCurrents, ticker);
-        return {
-            keys: {
-                isSignalCross,
-                isZeroCross,
-                isLow,
-                bearishSignal
-            },
-            data: {
-                // allCurrents,
-                mostRecent: allPrices[allPrices.length - 1],
-                kstSeries,
-            }
-        };
+        if (isSignalCross || isZeroCross || bearishSignal) {
+            return {
+                keys: {
+                    isSignalCross,
+                    isZeroCross,
+                    isLow,
+                    bearishSignal
+                },
+                data: {
+                    // allCurrents,
+                    mostRecent: allPrices[allPrices.length - 1],
+                    kstSeries,
+                }
+            };
+        }
     },
     pms: {
         signalCrosses: 'isSignalCross',

@@ -19,6 +19,7 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
 
     const stratMin = `${strategy}-${min}`;
     const hits = await pmsHit(null, stratMin);
+    const isRecommended = hits.includes('forPurchase'); // because forPurchase === isRecommended now!
 
     if (!strategy.includes('cheapest-picks')) withPrices = withPrices.slice(0, 3);  // take only 3 picks
 
@@ -33,34 +34,35 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
 
     // save to mongo
     console.log(`saving ${strategy} to mongo`);
-                
-    const mongoResponse = await Pick.create({
+
+    const pickObj = {
         date: dateStr, 
         strategyName: strategy,
         min,
         picks: withPrices,
         keys,
         data,
-    });
+        isRecommended
+    };
+
+    const mongoResponse = await Pick.create(pickObj);
 
     // strlog(mongoResponse);
 
-    // for socket-server
+    // for sockets
     stratManager.newPick({
+        ...pickObj,
         _id: mongoResponse._id,
         stratMin,
         withPrices,
         timestamp: mongoResponse.timestamp,
         keys,
-        ...hits.includes('forPurchase') && { 
-            forPurchasePick: true
-        }
     });
 
 
     
     // forPurchase
-    if (hits.includes('forPurchase')) {
+    if (isRecommended) {
         console.log('strategy enabled: ', stratMin, 'purchasing');
         const stocksToBuy = withPrices.map(obj => obj.ticker);
         await purchaseStocks({
