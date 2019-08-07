@@ -503,7 +503,7 @@ module.exports = new (class RealtimeRunner {
     const keyString = Object.keys(keys || {}).filter(key => keys[key]).join('-');
 
     const periodKey = (() => {
-      if (period && 'd') return 'daily';
+      if (period === 'd') return 'daily';
       if (period) return `${period}min`;
     })();
     const firstAlertkey = !this.todaysPicks.flatten().find(comparePick =>
