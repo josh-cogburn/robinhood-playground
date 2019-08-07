@@ -3,7 +3,7 @@ const { Schema } = mongoose;
 
 const schema = new Schema({
     timestamp: { type : Date, default: Date.now },
-    date: String,
+    date: { type: String, index: true },
     strategyName: String,
     min: Number,
     picks: [{
