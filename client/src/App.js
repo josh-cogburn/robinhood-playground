@@ -162,12 +162,12 @@ class App extends Component {
         }
     }
     pullGit = () => {
-        console.log('refreshProcess')
+        console.log('pull git')
         this.state.socket.emit('pullGit', data => window.alert(data));
     }
-    refreshProcess = () => {
-        console.log('refreshProcess')
-        this.state.socket.emit('refreshProcess', data => window.alert(data));
+    restartProcess = () => {
+        console.log('restartProcess')
+        this.state.socket.emit('restartProcess', data => window.alert(data));
     }
     render () {
         const { value, predictionModels, pms, balanceReports, newPicksData } = this.state;
