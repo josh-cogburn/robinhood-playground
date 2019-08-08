@@ -1,5 +1,8 @@
 'use strict';
 
+const util = require('util');
+const exec = util.promisify(require('child_process').exec);
+
 const express = require('express');
 const http = require('http');
 const SocketIO = require('socket.io');
@@ -14,6 +17,7 @@ const lookupMultiple = require('../utils/lookup-multiple');
 const getFilesSortedByDate = require('../utils/get-files-sorted-by-date');
 const jsonMgr = require('../utils/json-mgr');
 const getStSentiment = require('../utils/get-stocktwits-sentiment');
+const restartProcess = require('../app-actions/restart-process');
 
 let app = express();
 let server = http.Server(app);
@@ -80,6 +84,19 @@ io.on('connection', async socket => {
         cb(
             await getStSentiment(ticker)
         );
+    });
+
+
+    socket.on('pullGit', async cb => {
+        console.log('pulling git')
+        await exec('git pull origin master');
+        cb && cb('DONE PULLING');
+    });
+
+    socket.on('restartProcess', async cb => {
+        console.log('restarting process')
+        await restartProcess();
+        cb && cb('DONE RESTARTING');
     });
 
     socket.on('disconnect', () => {

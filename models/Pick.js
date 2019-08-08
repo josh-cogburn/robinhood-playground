@@ -21,9 +21,10 @@ schema.statics.getUniqueDates = async function() {
 };
 
 schema.statics.getRecentRecommendations = async function() {
+    const NUM_DAYS = 3;
     return this.find({ 
         isRecommended: true,
-        timestamp: { $gt: new Date(Date.now() - 24*60*60 * 1000) }
+        timestamp: { $gt: new Date(Date.now() - 24 * 60 * 60 * 1000 * NUM_DAYS) }
     }).lean();
 };
 

@@ -23,16 +23,17 @@ const getStSentiment = require('../utils/get-stocktwits-sentiment');
 module.exports = new (class RealtimeRunner {
   
 
-  constructor() {
+  constructor(disabled = false) {
     Object.assign(this, {
       hasInit: false,
       currentlyRunning: false,
       strategies: [],
       priceCaches: {},
-      collections: null,
+      collections: {},
       runCount: 0,
       todaysPicks: [],
-      interval: null
+      interval: null,
+      disabled,
     });
   }
 
@@ -77,19 +78,26 @@ module.exports = new (class RealtimeRunner {
     );
   }
 
-  async init() {
+  async init(disabled) {
 
     if (this.hasInit) {
       return;
     }
     
-    console.log('INITING REALTIME RUNNER');
-    await this.collectionsAndHistoricals();    
-
     (await getStrategies()).forEach(strategy => {
       console.log(`init'd ${strategy.strategyName} REALTIME strategy!`);
       this.strategies.push(strategy);
     });
+
+
+    if (disabled) {
+      this.hasInit = true;
+      return console.log('nope DISABLED');
+    }
+
+    console.log('INITING REALTIME RUNNER');
+    await this.refreshCollections();
+    await this.collectionsAndHistoricals();    
 
     const START_MIN = 5;
     regCronIncAfterSixThirty({
@@ -156,6 +164,7 @@ module.exports = new (class RealtimeRunner {
 
   async start() {
     console.log('start!!');
+
     this.currentlyRunning = true;
     this.runCount = 0;
     this.intervals = [
@@ -324,7 +333,7 @@ module.exports = new (class RealtimeRunner {
 
   async runDaily() {
 
-    console.log('RUNNING DAILY');
+    console.log('RUNNING DAILY'); 
 
     const tickersAndAllPrices = await daily();
     const withHandlers = this.strategies

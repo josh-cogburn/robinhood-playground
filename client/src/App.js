@@ -81,7 +81,7 @@ class App extends Component {
 
     componentDidMount() {
         let { origin } = window.location;
-        const socketEndpoint = origin.includes('localhost') && false ? 'http://localhost:3000' : 'http://107.173.6.167:3000';
+        const socketEndpoint = origin.includes('localhost') && true ? 'http://localhost:3000' : 'http://107.173.6.167:3000';
         const socket = socketIOClient(socketEndpoint);
 
         const isForPurchase = strat => {
@@ -161,11 +161,21 @@ class App extends Component {
             this.setState({ admin: true }, () => console.log(this.state));
         }
     }
-
+    pullGit = () => {
+        console.log('refreshProcess')
+        this.state.socket.emit('pullGit', data => window.alert(data));
+    }
+    refreshProcess = () => {
+        console.log('refreshProcess')
+        this.state.socket.emit('refreshProcess', data => window.alert(data));
+    }
     render () {
-        const { value, predictionModels, balanceReports, newPicksData } = this.state;
-        const isLoading = !predictionModels || !predictionModels.forPurchase;
-
+        const { value, predictionModels, pms, balanceReports, newPicksData } = this.state;
+        const isLoading = !pms || !Object.keys(pms).length;
+        console.log({
+            isLoading,
+            pms
+        })
         // console.log({isLoading}, predictionModels.forPurchase)
 
         return (
@@ -177,6 +187,8 @@ class App extends Component {
                             <a href="https://github.com/chiefsmurph/robinhood-playground" target='_blank' style={{ color: 'darkorange', fontSize: '80%'}}>
                                 https://github.com/chiefsmurph/robinhood-playground
                             </a>
+                            <a onClick={this.pullGit}>⬇️</a>&nbsp;
+                            <a onClick={this.restartProcess}>♻️</a>
                         </Typography>
                     </Toolbar>
                     <Tabs value={value} onChange={this.handleChange}>

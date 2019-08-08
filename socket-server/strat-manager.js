@@ -173,7 +173,7 @@ const stratManager = {
         // }
         this.curDate = dateStr;
         console.log('cur date now', this.curDate);
-        await this.refreshPredictionModels();
+        // await this.refreshPredictionModels();
     },
     async initPicks(dateStr) {
         console.log('init picks', dateStr);

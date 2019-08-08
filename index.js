@@ -1,3 +1,8 @@
+const DISABLE_REALTIME = true;
+
+
+
+
 require('./utils/fix-locale-date-string');
 
 // console.log(stocks);
@@ -107,7 +112,7 @@ process.on('unhandledRejection', (reason, p) => {
     const cashAvailable = Number(accounts.results[0].margin_balances.unallocated_margin_cash);
     console.log({cashAvailable});
 
-    await RealtimeRunner.init();
+    await RealtimeRunner.init(DISABLE_REALTIME);
 
     // await sellAllStocks();
 

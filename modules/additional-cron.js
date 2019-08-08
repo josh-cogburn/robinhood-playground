@@ -137,11 +137,11 @@ const additionalCron = [
     //     run: [1027],
     //     fn: getAllTickers
     // },
-    {
-        name: 'send day report',
-        run: [400],
-        fn: saveDayReport
-    },
+    // {
+    //     name: 'send day report',
+    //     run: [400],
+    //     fn: saveDayReport
+    // },
 
     {
         name: 'send day screenshot',
