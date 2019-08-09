@@ -1,4 +1,4 @@
-const DISABLE_REALTIME = true;
+const DISABLE_REALTIME = false;
 
 
 
