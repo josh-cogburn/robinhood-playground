@@ -331,14 +331,16 @@ module.exports = new (class RealtimeRunner {
 
   }
 
-  async runDaily() {
+  async runDaily(skipSave = false, runAll) {
 
     console.log('RUNNING DAILY'); 
 
-    const tickersAndAllPrices = await daily();
+    const dip = dayInProgress();
+    console.log({dip})
+    const tickersAndAllPrices = await daily(dip);
     const withHandlers = this.strategies
         .filter(strategy => strategy.handler)
-        .filter(strategy => strategy.period && strategy.period.includes('d'));
+        .filter(strategy => runAll || (strategy.period && strategy.period.includes('d')));
     strlog({ withHandlers });
     let picks = [];
     for (let strategy of withHandlers) {
@@ -356,10 +358,14 @@ module.exports = new (class RealtimeRunner {
 
     console.log('daily picks count: ', picks.length);
 
-    for (let pick of picks) {
-      strlog({ pick })
-      pick._id = await this.handlePick(pick);
+    if (!skipSave) {
+      for (let pick of picks) {
+        strlog({ pick })
+        pick._id = await this.handlePick(pick);
+      }
     }
+
+    return picks;
 
   }
 
@@ -388,8 +394,8 @@ module.exports = new (class RealtimeRunner {
     return picks;
   }
 
-  async runAllStrategies(periods = [5, 10, 30]) {
-    
+  async runAllStrategies(periods = [5, 10, 30], runAll) {
+    console.log('run all strategies', periods)
     const runAllStrategiesForPeriod = async period => {
       let picks = [];
       const relatedPriceCache = this.priceCaches[period];
@@ -400,7 +406,7 @@ module.exports = new (class RealtimeRunner {
       const allTickers = Object.keys(relatedPriceCache);
       const withHandlers = this.strategies
         .filter(strategy => strategy.handler)
-        .filter(strategy => !strategy.period || strategy.period.includes(period));
+        .filter(strategy => runAll || (!strategy.period || strategy.period.includes(period)));
       for (let strategy of withHandlers) {
         picks = [
           ...picks,

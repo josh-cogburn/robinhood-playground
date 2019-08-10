@@ -26,6 +26,7 @@ const getKST = (values, ticker) => {
         secondToLast.kst < secondToLast.signal &&
         lastVal.kst > lastVal.signal
     );
+    const signalGoingUp = secondToLast.signal < lastVal.signal;
     const isZeroCross = (
         (   // kst crossing zero
             secondToLast.kst < 0 && 
@@ -76,32 +77,36 @@ const getKST = (values, ticker) => {
         isSignalCross,
         isZeroCross,
         isLow,
-        bearishSignal
+        bearishSignal,
+        signalGoingUp
     };
 };
 
 
 module.exports = {
-    period: [10, 30, 'd'],
+    period: [10, 30],
     // collections: 'all',
     handler: async ({ ticker, allPrices }) => {
         const allCurrents = allPrices.map(obj => obj.currentPrice);
-        const { kstSeries, isSignalCross, isZeroCross, isLow, bearishSignal } = getKST(allCurrents, ticker);
-        if (isSignalCross || isZeroCross || bearishSignal) {
-            return {
-                keys: {
+        const { kstSeries, isSignalCross, isZeroCross, isLow, bearishSignal, signalGoingUp } = getKST(allCurrents, ticker);
+        return {
+            keys: {
+                ...signalGoingUp && {
+    
                     isSignalCross,
                     isZeroCross,
-                    isLow,
-                    bearishSignal
+                    ...(isSignalCross || isZeroCross) && {
+                        isLow,
+                    }
+                    
                 },
-                data: {
-                    // allCurrents,
-                    mostRecent: allPrices[allPrices.length - 1],
-                    kstSeries,
-                }
-            };
-        }
+                
+                bearishSignal
+            },
+            data: {
+                kstSeries,
+            }
+        };
     },
     pms: {
         signalCrosses: 'isSignalCross',

@@ -15,12 +15,7 @@ module.exports = {
       const allCurrents = allPrices.map(obj => obj.currentPrice);
       const [tenPrev, tenCur] = getEMA(allCurrents, 5).slice(-2);
       const [hundredPrev, hundredCur] = getEMA(allCurrents, 100).slice(-2);
-      // console.log({
-      //   tenPrev,
-      //   tenCur,
-      //   hundredPrev,
-      //   hundredCur
-      // })
+      
       const bullishCross = (
         tenPrev < hundredPrev &&
         tenCur > hundredCur
@@ -30,6 +25,15 @@ module.exports = {
         tenPrev > hundredPrev &&
         tenCur < hundredCur
       );
+
+      if (bearishCross) {
+        console.log({
+          tenPrev,
+          tenCur,
+          hundredPrev,
+          hundredCur
+        })
+      }
 
       return {
           keys: {

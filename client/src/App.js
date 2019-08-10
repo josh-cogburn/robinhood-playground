@@ -17,6 +17,7 @@ import DayReports from './pages/DayReports';
 import Settings from './pages/Settings';
 import Cron from './pages/Cron';
 import Analysis from './pages/Analysis';
+import Scan from './pages/Scan';
 
 import socketIOClient from "socket.io-client";
 
@@ -62,13 +63,17 @@ const pages = [
         component: Analysis,
     },
     {
-        label: 'Positions',
-        component: Positions,
+        label: 'Scan',
+        component: Scan
     },
-    {
-        label: 'Day Reports',
-        component: DayReports
-    },
+    // {
+    //     label: 'Positions',
+    //     component: Positions,
+    // },
+    // {
+    //     label: 'Day Reports',
+    //     component: DayReports
+    // },
     {
         label: 'Settings',
         component: Settings,

@@ -20,6 +20,7 @@ const getStSentiment = require('../utils/get-stocktwits-sentiment');
 const restartProcess = require('../app-actions/restart-process');
 const pmPerf = require('../analysis/pm-perf-for-real');
 const stratPerf = require('../analysis/strat-perf-for-real');
+const realtimeRunner = require('../realtime/RealtimeRunner');
 
 let app = express();
 let server = http.Server(app);
@@ -113,6 +114,15 @@ io.on('connection', async socket => {
         const data = await stratPerf();
         console.log('got strat analysis')
         socket.emit('server:strat-analysis', data);
+    });
+
+    socket.on('client:run-scan', async ({ period }) => {
+        console.log('run-scan', period);
+        socket.emit('server:scan-results', {
+            results: period === 'd' 
+                ? await require('../realtime/RealtimeRunner').runDaily(true, true)    // skip save
+                : await require('../realtime/RealtimeRunner').runAllStrategies([Number(period)], true)
+        });
     });
 
     socket.on('disconnect', () => {

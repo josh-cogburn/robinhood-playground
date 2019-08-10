@@ -88,22 +88,12 @@ const getKST = (values, ticker) => {
     //     });
     // }
     return {
-        keys: {
-            ...signalGoingUp && {
-
-                isSignalCross,
-                isZeroCross,
-                ...(isSignalCross || isZeroCross) && {
-                    isLow,
-                }
-                
-            },
-            
-            bearishSignal
-        },
-        data: {
-            kstSeries,
-        }
+        kstSeries,
+        isSignalCross,
+        isZeroCross,
+        isLow,
+        bearishSignal,
+        signalGoingUp
     };
 
 };
@@ -114,17 +104,22 @@ module.exports = {
     // collections: 'all',
     handler: async ({ ticker, allPrices }) => {
         const allCurrents = allPrices.map(obj => obj.currentPrice);
-        const { kstSeries, isSignalCross, isZeroCross, isLow, bearishSignal } = getKST(allCurrents, ticker);
+        const { kstSeries, isSignalCross, isZeroCross, isLow, bearishSignal, signalGoingUp } = getKST(allCurrents, ticker);
         return {
             keys: {
-                isSignalCross,
-                isZeroCross,
-                isLow,
+                ...signalGoingUp && {
+    
+                    isSignalCross,
+                    isZeroCross,
+                    ...(isSignalCross || isZeroCross) && {
+                        isLow,
+                    }
+                    
+                },
+                
                 bearishSignal
             },
             data: {
-                // allCurrents,
-                mostRecent: allPrices[allPrices.length - 1],
                 kstSeries,
             }
         };

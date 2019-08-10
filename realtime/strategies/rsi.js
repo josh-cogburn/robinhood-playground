@@ -15,6 +15,7 @@ module.exports = {
         const mostRecent = allCurrents[allCurrents.length - 1];
         const rsiSeries = getRSI(allCurrents);
         const rsi = rsiSeries[rsiSeries.length - 1];
+        console.log({ rsi })
         return {
             keys: {
                 ...rsi < 25 && (rsiKey = () => {

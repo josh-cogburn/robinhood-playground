@@ -50,8 +50,8 @@ export default class PickGraphs extends Component {
     console.log({ data });
     return (
       <div>
-        <h3>Strategy: {pick.stratMin}</h3>
-        <h3>Ticker: {pick.withPrices[0].ticker}</h3>
+        <h3>Strategy: {pick.strategyName || pick.stratMin}</h3>
+        <h3>Ticker: {pick.ticker || pick.withPrices[0].ticker}</h3>
         { data && data.period && <h3>Period: {data.period}</h3> }
         <hr/>
         {
