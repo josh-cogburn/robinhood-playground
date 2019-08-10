@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { MDBDataTable } from 'mdbreact';
 import { pick } from 'underscore';
 
-import "@fortawesome/fontawesome-free/css/all.min.css";
+// import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap-css-only/css/bootstrap.min.css";
-import "mdbreact/dist/css/mdb.css";
+// import "mdbreact/dist/css/mdb.css";
 
 // import getTrend from '../utils/get-trend';
 import { avgArray } from '../utils/array-math';

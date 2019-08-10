@@ -8,7 +8,7 @@ const getRSI = values => {
 };
 
 module.exports = {
-    period: [10, 30],
+    period: [10, 30, 'd'],
     // collections: 'all',
     handler: async ({ ticker, allPrices }) => {
         const allCurrents = allPrices.map(obj => obj.currentPrice);

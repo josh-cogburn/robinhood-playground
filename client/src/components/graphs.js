@@ -76,8 +76,12 @@ export default [
     title: 'KST Series',
     dataProp: 'kstSeries',
     dataFn: ({ allPrices, kstSeries }) => {
+      console.log({
+        kstSeries
+      })
+
       const labels = allPrices.map(hist => (new Date(hist.timestamp).toLocaleString()));
-      const getDataForProp = prop => kstSeries.map(obj => obj[prop]);
+      const getDataForProp = prop => kstSeries.filter(Boolean).map(obj => obj[prop]);
       console.log(['kst', 'signal'].map(prop => ({
         prop,
         data: getDataForProp(prop)

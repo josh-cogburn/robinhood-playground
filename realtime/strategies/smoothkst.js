@@ -1,4 +1,4 @@
-    const { KST, EMA } = require('technicalindicators');
+const { KST, EMA } = require('technicalindicators');
 
 const smoothKST = kstSeries => {
 
@@ -41,6 +41,7 @@ const getKST = (values, ticker) => {
         secondToLast.kst < secondToLast.signal &&
         lastVal.kst > lastVal.signal
     );
+    const signalGoingUp = secondToLast.signal < lastVal.signal;
     const isZeroCross = (
         (   // kst crossing zero
             secondToLast.kst < 0 && 
@@ -87,17 +88,29 @@ const getKST = (values, ticker) => {
     //     });
     // }
     return {
-        kstSeries,
-        isSignalCross,
-        isZeroCross,
-        isLow,
-        bearishSignal
+        keys: {
+            ...signalGoingUp && {
+
+                isSignalCross,
+                isZeroCross,
+                ...(isSignalCross || isZeroCross) && {
+                    isLow,
+                }
+                
+            },
+            
+            bearishSignal
+        },
+        data: {
+            kstSeries,
+        }
     };
+
 };
 
 
 module.exports = {
-    period: [10, 30],
+    period: [10, 30, 'd'],
     // collections: 'all',
     handler: async ({ ticker, allPrices }) => {
         const allCurrents = allPrices.map(obj => obj.currentPrice);
