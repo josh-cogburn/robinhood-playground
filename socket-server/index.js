@@ -19,6 +19,7 @@ const jsonMgr = require('../utils/json-mgr');
 const getStSentiment = require('../utils/get-stocktwits-sentiment');
 const restartProcess = require('../app-actions/restart-process');
 const pmPerf = require('../analysis/pm-perf-for-real');
+const stratPerf = require('../analysis/strat-perf-for-real');
 
 let app = express();
 let server = http.Server(app);
@@ -102,9 +103,16 @@ io.on('connection', async socket => {
 
     socket.on('client:get-pm-analysis', async cb => {
         console.log('get pm analysis');
-        const data = await pmPerf()
+        const data = await pmPerf();
         console.log('got pm perf')
         socket.emit('server:pm-analysis', data);
+    });
+
+    socket.on('client:get-strat-analysis', async cb => {
+        console.log('get strat analysis');
+        const data = await stratPerf();
+        console.log('got strat analysis')
+        socket.emit('server:strat-analysis', data);
     });
 
     socket.on('disconnect', () => {

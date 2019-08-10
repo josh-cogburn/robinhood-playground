@@ -5,7 +5,7 @@ const { avgArray } = require('../utils/array-math');
 
 
 module.exports = async () => {
-
+  
   const allPms = await PmPerfs.find().sort({ _id: -1 }).limit(10).lean();
   strlog({ allPms })
   strlog({ count: allPms.length })
