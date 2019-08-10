@@ -18,6 +18,7 @@ const getFilesSortedByDate = require('../utils/get-files-sorted-by-date');
 const jsonMgr = require('../utils/json-mgr');
 const getStSentiment = require('../utils/get-stocktwits-sentiment');
 const restartProcess = require('../app-actions/restart-process');
+const pmPerf = require('../analysis/pm-perf-for-real');
 
 let app = express();
 let server = http.Server(app);
@@ -97,6 +98,13 @@ io.on('connection', async socket => {
         console.log('restarting process')
         await restartProcess();
         cb && cb('DONE RESTARTING');
+    });
+
+    socket.on('client:get-pm-analysis', async cb => {
+        console.log('get pm analysis');
+        const data = await pmPerf()
+        console.log('got pm perf')
+        socket.emit('server:pm-analysis', data);
     });
 
     socket.on('disconnect', () => {

@@ -22,12 +22,11 @@ Array.prototype.uniq = function() {
     return [...new Set(this)];
 };
 
-const roundTo = numDec => num => Math.round(num * Math.pow(10, numDec)) / Math.pow(10, numDec);
-const oneDec = roundTo(1);
-const twoDec = roundTo(2);
 
-global.twoDec = twoDec;
-
+Number.prototype.twoDec = function() {
+    const roundTo = numDec => num => Math.round(num * Math.pow(10, numDec)) / Math.pow(10, numDec);
+    return roundTo(2)(this);
+};
 
 const cTable = require('console.table');
 

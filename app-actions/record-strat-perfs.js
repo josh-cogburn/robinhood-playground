@@ -83,6 +83,7 @@ module.exports = {
         // console.log(sortedFolders);
 
         const perms = {
+            'same-day': 1,
             'next-day': 2,
             'second-day': 3,
             'third-day': 4,

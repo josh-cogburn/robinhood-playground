@@ -16,6 +16,7 @@ import Positions from './pages/Positions';
 import DayReports from './pages/DayReports';
 import Settings from './pages/Settings';
 import Cron from './pages/Cron';
+import Analysis from './pages/Analysis';
 
 import socketIOClient from "socket.io-client";
 
@@ -43,31 +44,38 @@ function camelize(str) {
 const pages = [
     {
         label: 'Balance Trend',
+        component: BalanceReports,
         // render: state => 
     },
     {
         label: "PM's",
+        component: PmReport,
         render: state  => <PmReport {...state} />
     },
+    
     {
         label: "Strategies",
-        render: state  => <TodaysStrategies {...state} />
+        component: TodaysStrategies,
+    },
+    {
+        label: 'Analysis',
+        component: Analysis,
     },
     {
         label: 'Positions',
-        render: state => <Positions {...state } />,
+        component: Positions,
     },
     {
         label: 'Day Reports',
-        render: state => <DayReports {...state } />,
+        component: DayReports
     },
     {
         label: 'Settings',
-        render: state => <Settings {...state} />
+        component: Settings,
     },
     {
         label: 'Cron',
-        render: state => <Cron {...state} />
+        component: Cron,
     }
 ];
 
@@ -177,7 +185,8 @@ class App extends Component {
             pms
         })
         // console.log({isLoading}, predictionModels.forPurchase)
-
+        const PageComponent = pages[value].component;
+        console.log(value, pages[value], {PageComponent});
         return (
             <div className="App">
                 <AppBar position="static">
@@ -199,18 +208,8 @@ class App extends Component {
 
                 { isLoading ? (
                     <h1 style={{ textAlign: 'center' }}>loading</h1>
-                ) : (
-                    <div>
-                            {/* // pages[value].render({ state: this.state }) */}
-                        {value === 0 && <BalanceReports {...this.state} />}
-                        {value === 1 && <PmReport {...this.state}  />}
-                        {value === 2 && <TodaysStrategies {...this.state}  />}
-                        {value === 3 && <Positions {...this.state} />}
-                        {value === 4 && <DayReports {...this.state} />}
-                        {value === 5 && <Settings {...this.state} />}
-                        {value === 6 && <Cron {...this.state} />}
-                    </div>
-                )}
+                ) : <PageComponent {...this.state} />
+                }
 
                 <Popup position="right center" modal open={newPicksData}>
                     <h2>ALERT ALERT NEW <b>PICK</b></h2>

@@ -147,22 +147,27 @@ const stratManager = {
         if (compareDate - now > 0) {
             now.setDate(now.getDate() - 1);
         }
-        const day = now.getDay();
-        const isWeekday = day >= 1 && day <= 5;
-        let dateStr = formatDate(now);
 
-        console.log({ day, isWeekday, dateStr });
 
-        if (!isWeekday || marketClosures.includes(dateStr)) {
-            // from most recent day (weekend will get friday)
-            let pms = await fs.readdir('./json/prediction-models');
-            let sortedFiles = pms
-                .map(f => f.split('.')[0])
-                .sort((a, b) => new Date(b) - new Date(a));
-            console.log( sortedFiles[0],'0' )
-            dateStr = sortedFiles[0];
-        }
-        return dateStr;
+        const mostRecentViableDate = date => {
+            const day = date.getDay();
+            const dateStr = formatDate(date);
+            const isWeekend = day === 0 || day === 6;
+            const marketClosed = marketClosures.includes(dateStr);
+            console.log({
+                isWeekend,
+                marketClosed,
+                dateStr
+            })
+            return isWeekend || marketClosed
+                ? (() => {
+                    const yesterday = new Date(date.getTime() - 1000 * 60 * 60 * 24);
+                    return mostRecentViableDate(yesterday);
+                })()
+                : date
+        };
+
+        return formatDate(mostRecentViableDate(now));
     },
     async initPicksAndPMs(dateOverride) {
         const dateStr = dateOverride || await this.determineCurrentDay();
@@ -179,12 +184,16 @@ const stratManager = {
         console.log('init picks', dateStr);
 
         const recentRecommendations = await Pick.getRecentRecommendations();
-        strlog({ recentRecommendations })
+        const todaysPicks = await Pick.find(
+            { date: dateStr },
+            { data: 0 }
+        ).lean();
+        strlog({ 
+            recentRecommendations: recentRecommendations.length,
+            todaysPicks: todaysPicks.length 
+        });
         const dbPicks = uniq([
-            ...await Pick.find(
-                { date: dateStr },
-                { data: 0 }
-            ).lean(),
+            ...todaysPicks,
             ...recentRecommendations
         ], '_id');
 
@@ -263,6 +272,7 @@ const stratManager = {
             };
 
             const foundStrategies = this.picks
+                .filter(({ date }) => date === this.curDate)
                 .filter(({ stratMin }) => {
                     // console.log({ pmParts })
                     return pmParts.every(part => 

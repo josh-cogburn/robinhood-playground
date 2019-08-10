@@ -1,4 +1,4 @@
-const { KST, EMA } = require('technicalindicators');
+    const { KST, EMA } = require('technicalindicators');
 
 const smoothKST = kstSeries => {
 
