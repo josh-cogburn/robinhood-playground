@@ -46,7 +46,10 @@ const getTickersBetween = async (min, max) => {
 
 module.exports = async (includeCurrentPrice = true) => {
   console.log({ includeCurrentPrice })
-  const tickerObj = await getTickersBetween(10, 20);
+  const tickerObj = await getTickersBetween(80, Number.POSITIVE_INFINITY);
+  console.log({
+    num: Object.keys(tickerObj).length
+  })
   const withHistoricals = (await addHistoricals(Object.keys(tickerObj), 'day', 'year'))
     .filter(buy => buy.yearHistoricals && buy.yearHistoricals.length);
 

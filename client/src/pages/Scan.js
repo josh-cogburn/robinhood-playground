@@ -17,12 +17,15 @@ import { avgArray } from '../utils/array-math';
 // import TrendPerc from '../components/TrendPerc';
 
 class Scan extends Component {
-  state = {};
+  state = { 
+    loading: {},
+    stSent: {},
+  };
   shouldComponentUpdate(nextProps, nextState) {
     console.log({
       nextProps,
       CUR: this.props
-    })
+    });
 
     return JSON.stringify(this.state) != JSON.stringify(nextState);
   }
@@ -32,38 +35,73 @@ class Scan extends Component {
       displayingPick: pick
     })
   }
-  componentDidMount() {
-    
+
+  getSingleSt = ticker => {
+    return new Promise(resolve => {
+      this.props.socket.emit('getStScore', ticker, data => resolve(data.bullBearScore));
+    });
   }
+  getAllStSent = async tickers => {
+    for (let ticker of tickers) {
+      const score = await this.getSingleSt(ticker);
+      this.setState(({ stSent }) => ({
+        stSent: {
+          ...stSent,
+          [ticker]: score
+        }
+      }));
+    }
+  }
+
+  componentDidMount() {
+  }
+
   scan = () => {
     console.log(
       'SCAN',
       this.selectRef.value
     );
-
+    const period = this.selectRef ? this.selectRef.value : undefined;
     this.props.socket.on('server:scan-results', ({ results }) => {
-      this.setState({
+
+      const allTickers = [...new Set(results.map(result => result.ticker))];
+      console.log({ allTickers });
+      this.getAllStSent(allTickers);
+
+      this.setState(({ loading }) => ({
+        loading: {
+          ...loading,
+          [period]: false
+        },
         results: results
-          .filter(({ strategyName }) => {
-            console.log({ strategyName })
-            return strategyName !== 'baseline';
-          })
           .map(pick => ({
             details: <button onClick={() => this.selectPick(pick)}>details</button>,
-            strategyName: pick.strategyName,
-            keys: Object.keys(pick.keys).filter(key => pick.keys[key]),
             ticker: pick.ticker,
-            k: Object.keys(pick)
+            strategyName: pick.strategyName,
+            keys: pick.keys,
+            // k: Object.keys(pick)
           }))
-          .filter(({ keys }) => keys.every(k => !k.toLowerCase().includes("bear")))
-      })
+      }));
     });
+    this.setState(({ loading }) => ({
+      loading: {
+        ...loading,
+        [period]: true
+      }
+    }))
     this.props.socket.emit(
       'client:run-scan', 
-      { period: this.selectRef.value }
+      { period }
     );
   };
   render() {
+    const { loading, results, stSent, displayingPick } = this.state;
+    const period = this.selectRef ? this.selectRef.value : undefined;
+    const isLoading = !!loading[period];
+    const withStSent = (results || []).map(row => ({
+      ...row,
+      stSent: stSent[row.ticker] || '...'
+    }));
     return (
       <div>
         <h2>Scan</h2>
@@ -75,19 +113,45 @@ class Scan extends Component {
           }
         </select>
         <button onClick={this.scan}>Scan</button>
-
         {
-          this.state.results && (
+          isLoading && (
+            <div>
+              Loading
+            </div>
+          )
+        }
+        {
+          results && (
             // <code>
             //   { JSON.stringify({rows: this.state.results}, null, 2)}
             // </code>
             <MDBDataTable data={{
-              rows: this.state.results
+              columns: [
+                {
+                  label: 'Details',
+                },
+                {
+                  label: 'Ticker',
+                },
+                {
+                  label: 'Strategy Name',
+                },
+                {
+                  label: 'Keys',
+                },
+                {
+                  label: 'Stocktwits Sentiment',
+                },
+                // {
+                //   label: 'Keys',
+                // },
+              ],
+              rows: withStSent
             }} />
           )
         }
 
-        <ReactModal isOpen={!!this.state.displayingPick}>
+        <ReactModal isOpen={!!displayingPick}>
             <button
                 onClick={() => this.selectPick(null)}
                 style={{
@@ -98,7 +162,7 @@ class Scan extends Component {
                 }}>
                     Close Modal
             </button>
-              {this.state.displayingPick && <PickGraphs pick={this.state.displayingPick} socket={this.props.socket} /> }
+              {displayingPick && <PickGraphs pick={displayingPick} socket={this.props.socket} /> }
         </ReactModal>
       </div>
     );

@@ -4,13 +4,13 @@ const { avgArray } = require('../utils/array-math');
 
 
 
-module.exports = async () => {
+module.exports = async (daysBack = 5) => {
 
   const allDates = await StratPerf.getUniqueDates();
   strlog({ allDates });
   
   const response = {};
-  for (let date of allDates.slice(-8)) {
+  for (let date of allDates.slice(0 - daysBack)) {
     console.log({ date });
     const allStratPerfs = await StratPerf.find({ date }).lean();
     const withAnalysis = allStratPerfs.map(stratPerf => ({

@@ -111,17 +111,38 @@ io.on('connection', async socket => {
 
     socket.on('client:get-strat-analysis', async cb => {
         console.log('get strat analysis');
-        const data = await stratPerf();
+        const data = await stratPerf(6);
         console.log('got strat analysis')
         socket.emit('server:strat-analysis', data);
     });
 
     socket.on('client:run-scan', async ({ period }) => {
         console.log('run-scan', period);
+        const results = period === 'd' 
+            ? await require('../realtime/RealtimeRunner').runDaily(true, true)    // skip save
+            : await require('../realtime/RealtimeRunner').runAllStrategies([Number(period)], true);
+        const stepTwo = results
+            .filter(({ strategyName }) => strategyName !== 'baseline')
+            .map(pick => ({
+                ...pick,
+                keys: Object.keys(pick.keys).filter(key => pick.keys[key]),
+            }))
+            .filter(({ keys }) => keys.every(k => !k.toLowerCase().includes("bear")));
+
+        // const withStSent = await mapLimit(
+        //     stepTwo,
+        //     3, 
+        //     async pick => ({
+        //         ...pick,
+        //         data: {
+        //             ...pick.data,
+        //             stSent: await getStSentiment(pick.ticker)
+        //         }
+        //     })
+        // );
+
         socket.emit('server:scan-results', {
-            results: period === 'd' 
-                ? await require('../realtime/RealtimeRunner').runDaily(true, true)    // skip save
-                : await require('../realtime/RealtimeRunner').runAllStrategies([Number(period)], true)
+            results: stepTwo
         });
     });
 
