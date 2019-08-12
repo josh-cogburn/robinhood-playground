@@ -292,6 +292,7 @@ module.exports = new (class RealtimeRunner {
     }), {});
     console.log(lastTS);
     const periods = Object.keys(lastTS).filter(period => {
+      const lastTimestamp = lastTS[period];
       const fromYesterday = lastTimestamp < Date.now() - 1000 * 60 * 60;
       const compareTS = fromYesterday ? (() => {
         const d = new Date();
