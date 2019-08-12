@@ -32,16 +32,14 @@ const addHistoricals = async (tickers, interval, span) => {
   return withHistoricals;
 };
 
-const getTickersBetween = async (min, max) => {
-  const tickPrices = await lookupMultiple(allStocks.filter(isTradeable).map(o => o.symbol));
-  const tickers = Object.keys(tickPrices)
+const createTickerObj = async tickers => {
+  const tickPrices = await lookupMultiple(tickers);
+  return Object.keys(tickPrices)
     .filter(ticker => tickPrices[ticker] < max && tickPrices[ticker] > min)
     .reduce((acc, ticker) => ({
       ...acc,
       [ticker]: tickPrices[ticker]
     }), {});
-  // console.log({ kstTickers: tickers });
-  return tickers;
 };
 
 module.exports = async ({ tickers, includeCurrentPrice = true }) => {
@@ -49,7 +47,7 @@ module.exports = async ({ tickers, includeCurrentPrice = true }) => {
   console.log({ tickers: tickers.length, includeCurrentPrice })
   // tickers = tickers || await getTickersBetween(80, Number.POSITIVE_INFINITY);
 
-
+  const tickerObj = createTickerObj(tickers);
   const withHistoricals = (await addHistoricals(tickers, 'day', 'year'))
     .filter(buy => buy.yearHistoricals && buy.yearHistoricals.length);
 
