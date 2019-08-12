@@ -35,7 +35,6 @@ const addHistoricals = async (tickers, interval, span) => {
 const createTickerObj = async tickers => {
   const tickPrices = await lookupMultiple(tickers);
   return Object.keys(tickPrices)
-    .filter(ticker => tickPrices[ticker] < max && tickPrices[ticker] > min)
     .reduce((acc, ticker) => ({
       ...acc,
       [ticker]: tickPrices[ticker]
