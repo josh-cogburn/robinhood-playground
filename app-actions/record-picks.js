@@ -116,7 +116,11 @@ module.exports = async (strategy, min, toPurchase, trendKey = '', { keys, data }
     const isNotRegularHours = min < 0 || min > 390;
 
     const record = async (stocks, strategyName, tickerLookups) => {
+        
         const withPrices = stocks.map(ticker => {
+            console.log('recording', {
+                ticker
+            })
             const relatedLookup = tickerLookups[ticker];
             const price = isNotRegularHours ? 
                 relatedLookup.afterHoursPrice || relatedLookup.lastTradePrice: 

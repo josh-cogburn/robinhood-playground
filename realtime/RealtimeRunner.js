@@ -543,6 +543,11 @@ module.exports = new (class RealtimeRunner {
       strategyName
     });
 
+    if (!ticker) {
+      console.log('no ticker backing out');
+      return null;
+    }
+
 
     let [price] = data && data.allPrices 
       ? data.allPrices.slice(-1)
