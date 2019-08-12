@@ -373,7 +373,18 @@ module.exports = new (class RealtimeRunner {
     }
 
 
-    await sendEmail('DAILY', JSON.stringify(picks, null, 2));
+    await sendEmail(
+      'DAILY', 
+      JSON.stringify(
+        picks.map(pick => ({
+          strategyName: pick.strategyName,
+          ticker: pick.ticker,
+          keys: Object.keys(pick.keys).filter(key => pick.keys[key])
+        })), 
+        null, 
+        2
+      )
+    );
     return picks;
 
   }
