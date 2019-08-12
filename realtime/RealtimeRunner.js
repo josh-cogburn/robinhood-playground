@@ -186,7 +186,6 @@ module.exports = new (class RealtimeRunner {
     ];
 
     this.everyFiveMinutes();
-    setTimeout(() => this.runDaily(), 4 * 1000 * 60);
   }
 
   stop() {
@@ -288,9 +287,8 @@ module.exports = new (class RealtimeRunner {
       ...acc,
       [period]: this.getLastTimestamp(Number(period))
     }), {});
-    console.log(lastTS)
+    console.log(lastTS);
     const periods = Object.keys(lastTS).filter(period => {
-      const lastTimestamp = lastTS[period];
       const fromYesterday = lastTimestamp < Date.now() - 1000 * 60 * 60;
       const compareTS = fromYesterday ? (() => {
         const d = new Date();
@@ -329,6 +327,15 @@ module.exports = new (class RealtimeRunner {
       () => this.handlePicks(picks, periods),
     );
 
+
+    // should we run daily?
+    const shouldRunDaily = Boolean((new Date()).getMinutes() < 4);
+    if (shouldRunDaily) {
+      console.log('RUNNING DAILY', (new Date()).toLocaleString());
+      await this.runDaily();
+    }
+
+
   }
 
   async runDaily(skipSave = false, runAll) {
@@ -365,6 +372,8 @@ module.exports = new (class RealtimeRunner {
       }
     }
 
+
+    await sendEmail('DAILY', JSON.stringify(picks, null, 2));
     return picks;
 
   }

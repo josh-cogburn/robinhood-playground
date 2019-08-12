@@ -49,7 +49,7 @@ module.exports = async (includeCurrentPrice = true) => {
   const tickerObj = await getTickersBetween(80, Number.POSITIVE_INFINITY);
   console.log({
     num: Object.keys(tickerObj).length
-  })
+  });
   const withHistoricals = (await addHistoricals(Object.keys(tickerObj), 'day', 'year'))
     .filter(buy => buy.yearHistoricals && buy.yearHistoricals.length);
 
