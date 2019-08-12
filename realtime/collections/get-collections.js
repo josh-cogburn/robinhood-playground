@@ -40,6 +40,69 @@ const OPTIONSTICKERS = [
 ];
 
 
+const filterForTheGood = async tickers => {
+
+    Array.prototype.cutBottom = function() {
+        const length = this.length;
+        const bottomAmt = (length / 4.6);
+        console.log('cutting', bottomAmt);
+        return this.slice(0, length - bottomAmt);
+    };
+
+    const withFundamentals = await addFundamentals(
+        tickers
+            .filter(ticker => !OPTIONSTICKERS.includes(ticker))
+            .map(ticker => ({ ticker }))
+    );
+
+    console.log({ withFundamentals: withFundamentals.length})
+
+    const topVol = withFundamentals
+        .sort((a, b) => b.fundamentals.volume - a.fundamentals.volume)
+        .cutBottom();
+
+    console.log({ topVol: topVol.length})
+    
+    const withVolToAvg = topVol
+        .map(obj => ({
+            ...obj,
+            volToAvg: obj.fundamentals.volume / obj.fundamentals.average_volume
+        }))
+        .filter(obj => obj.volToAvg)
+        .sort((a, b) => b.volToAvg - a.volToAvg)
+        .cutBottom();
+
+    console.log({ withVolToAvg: withVolToAvg.length});
+    
+    // const sortedByMarketCap = withVolToAvg
+    //     .sort((a, b) => b.fundamentals.market_cap - a.fundamentals.market_cap)
+    //     .cutBottom();
+
+    // strlog({sortedByMarketCap: sortedByMarketCap.length});
+
+
+
+    let i = 0;
+    const withRisk = await mapLimit(withVolToAvg, 5, async obj => {
+        const response = {
+            ...obj,
+            ...await getRisk({ ticker: obj.ticker })
+        };
+        console.log(++i, '/', withVolToAvg.length );
+        return response;
+    });
+
+    const sortedBySumMostRecent = withRisk
+        // .filter(obj => obj.sumMostRecent > 0)
+        .sort((a, b) => b.sumMostRecent - a.sumMostRecent)
+        .cutBottom();
+
+    console.log({ sortedBySumMostRecent: sortedBySumMostRecent.length})
+
+    const theGoodStuff = sortedBySumMostRecent.map(obj => obj.ticker);
+    return theGoodStuff;
+}
+
 
 
 module.exports = async () => {
@@ -72,7 +135,7 @@ module.exports = async () => {
     let response = {
         spy: ['SPY'],
         options: OPTIONSTICKERS,
-        // zeroAndOne: await getTickersBetween(0, 1),
+        fitty: await getTickersBetween(0, 0.50),
         // upcoming: await getRhStocks('upcoming-earnings'),
         rhtop100: await getRhStocks('100-most-popular'),
         // ...await getFinvizCollections(),
@@ -118,74 +181,17 @@ module.exports = async () => {
     strlog(mapObject(response, v => v.length));
     console.log(`without bad stock count: ${getTicks().length}`);
 
-    // FILTER THE RHTOP100 / ONLY THE "GOOD STUFF"
-
-    Array.prototype.cutBottom = function() {
-        const length = this.length;
-        const bottomAmt = (length / 4.6);
-        console.log('cutting', bottomAmt);
-        return this.slice(0, length - bottomAmt);
-    };
-
-    const withFundamentals = await addFundamentals(
-        response.rhtop100
-            .filter(ticker => !OPTIONSTICKERS.includes(ticker))
-            .map(ticker => ({ ticker }))
-    );
-
-    console.log({ withFundamentals: withFundamentals.length})
-
-    
-    
-    const withVolToAvg = withFundamentals
-        .map(obj => ({
-            ...obj,
-            volToAvg: obj.fundamentals.volume / obj.fundamentals.average_volume
-        }))
-        .filter(obj => obj.volToAvg)
-        .sort((a, b) => b.volToAvg - a.volToAvg)
-        .cutBottom();
-
-    console.log({ withVolToAvg: withVolToAvg.length});
-    
-    const sortedByMarketCap = withVolToAvg
-        .sort((a, b) => b.fundamentals.market_cap - a.fundamentals.market_cap)
-        .cutBottom();
-
-    strlog({sortedByMarketCap: sortedByMarketCap.length});
+    // FILTER FOR ONLY THE "GOOD STUFF"
 
 
 
-    let i = 0;
-    const withRisk = await mapLimit(sortedByMarketCap, 5, async obj => {
-        const response = {
-            ...obj,
-            ...await getRisk({ ticker: obj.ticker })
+    for (let key of ['rhtop100', 'fitty']) {
+        console.log('filtering', key);
+        response = {
+            ...response,
+            [key]: await filterForTheGood(response[key])
         };
-        console.log(++i, '/', sortedByMarketCap.length );
-        return response;
-    });
-
-    const sortedBySumMostRecent = withRisk
-        // .filter(obj => obj.sumMostRecent > 0)
-        .sort((a, b) => b.sumMostRecent - a.sumMostRecent)
-        .cutBottom();
-
-    console.log({ sortedBySumMostRecent: sortedBySumMostRecent.length})
-
-
-
-    const sortedByPrice = sortedBySumMostRecent
-        .sort((a, b) => b.fundamentals.open - a.fundamentals.open)
-        .cutBottom();
-    strlog({ sortedByPrice: sortedByPrice.length });
-
-    const theGoodStuff = sortedByPrice.map(obj => obj.ticker);
-
-    response = {
-        ...response,
-        rhtop100: theGoodStuff
-    };
+    }
 
     strlog(mapObject(response, v => v.length));
     console.log(`only the good stuff: ${getTicks().length}`);

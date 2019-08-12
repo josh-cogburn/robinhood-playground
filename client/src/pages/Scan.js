@@ -63,7 +63,7 @@ class Scan extends Component {
     );
     const period = this.selectRef ? this.selectRef.value : undefined;
     this.props.socket.on('server:scan-results', ({ results }) => {
-
+      console.log('scan results', results)
       const allTickers = [...new Set(results.map(result => result.ticker))];
       console.log({ allTickers });
       this.getAllStSent(allTickers);

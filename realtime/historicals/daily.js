@@ -44,13 +44,13 @@ const getTickersBetween = async (min, max) => {
   return tickers;
 };
 
-module.exports = async (includeCurrentPrice = true) => {
-  console.log({ includeCurrentPrice })
-  const tickerObj = await getTickersBetween(80, Number.POSITIVE_INFINITY);
-  console.log({
-    num: Object.keys(tickerObj).length
-  });
-  const withHistoricals = (await addHistoricals(Object.keys(tickerObj), 'day', 'year'))
+module.exports = async ({ tickers, includeCurrentPrice = true }) => {
+
+  console.log({ tickers: tickers.length, includeCurrentPrice })
+  // tickers = tickers || await getTickersBetween(80, Number.POSITIVE_INFINITY);
+
+
+  const withHistoricals = (await addHistoricals(tickers, 'day', 'year'))
     .filter(buy => buy.yearHistoricals && buy.yearHistoricals.length);
 
   const formattedPrices = withHistoricals.map(({ ticker, yearHistoricals }) => {

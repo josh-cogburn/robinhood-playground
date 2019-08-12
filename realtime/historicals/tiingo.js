@@ -79,7 +79,7 @@ module.exports = async (tickers, period, daysBack) => {
   console.log(`tiingo historicals for ${tickers.length} tickers...`);
 
 
-  const asArray = await mapLimit(tickers, 3, async ticker => ({
+  const asArray = await mapLimit(tickers, 10, async ticker => ({
     ticker,
     historicals: await getHistoricals(ticker, period, daysBack).catch(console.error)
   }));

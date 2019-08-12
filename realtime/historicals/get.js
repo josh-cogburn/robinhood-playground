@@ -10,8 +10,8 @@ const dailyHistoricals = require('./daily');
 module.exports = async (tickers, period, daysBack) => {
 
   const historicalMethods = {
-    5: tiingoHistoricals,
-    10: tiingoHistoricals,
+    5: rhHistoricals,
+    10: rhHistoricals,
     30: tiingoHistoricals,
     'd': dailyHistoricals
   };

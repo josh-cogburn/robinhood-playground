@@ -41,13 +41,17 @@ module.exports = new (class RealtimeRunner {
     this.collections = await getCollections();
   }
 
+  getAllTickers() {
+    return Object.values(this.collections).flatten().uniq();
+  }
+
   async collectionsAndHistoricals() {
     await this.timedAsync(
       'refreshing collections',
       () => this.refreshCollections(),
     );
 
-    const allTickers = Object.values(this.collections).flatten().uniq();
+    const allTickers = this.getAllTickers();
 
 
     // await this.timedAsync(
@@ -96,7 +100,6 @@ module.exports = new (class RealtimeRunner {
     }
 
     console.log('INITING REALTIME RUNNER');
-    await this.refreshCollections();
     await this.collectionsAndHistoricals();    
 
     const START_MIN = 5;
@@ -328,17 +331,17 @@ module.exports = new (class RealtimeRunner {
     );
 
 
-    // should we run daily?
+    // once and hour check?
     const onceAnHour = Boolean((new Date()).getMinutes() < 4);
     if (onceAnHour) {
       const nowStr = (new Date()).toLocaleString();
       await this.timedAsync(
         `ONCE AN HOUR ${nowStr}`,
         async () => {
-          console.log('RUNNING DAILY', (new Date()).toLocaleString());
+          console.log('RUNNING DAILY', nowStr);
           await this.runDaily();
 
-          console.log('COLLECTIONS AND HISTORICALS JUST BECAUSE');
+          console.log('COLLECTIONS AND HISTORICALS JUST BECAUSE', nowStr);
           await this.collectionsAndHistoricals();
         }
       );
@@ -350,11 +353,14 @@ module.exports = new (class RealtimeRunner {
 
   async runDaily(skipSave = false, runAll) {
 
-    console.log('RUNNING DAILY'); 
-
+    console.log('RUNNING DAILY');
     const dip = dayInProgress();
-    console.log({dip})
-    const tickersAndAllPrices = await daily(dip);
+    const allTickers = this.getAllTickers();
+    console.log({ dip, allTickers });
+    const tickersAndAllPrices = await daily({
+      tickers: allTickers,
+      includeCurrentPrice: dip
+    });
     const withHandlers = this.strategies
         .filter(strategy => strategy.handler)
         .filter(strategy => runAll || (strategy.period && strategy.period.includes('d')));
@@ -452,7 +458,7 @@ module.exports = new (class RealtimeRunner {
             period
 
           )
-        ]
+        ];
       };
       return picks;
     };
