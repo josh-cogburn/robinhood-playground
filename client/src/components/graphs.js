@@ -102,5 +102,37 @@ export default [
         }))
       };
     }
+  },
+
+  {
+    title: 'MACD Series',
+    dataProp: 'macdSeries',
+    dataFn: ({ allPrices, macdSeries }) => {
+      console.log({
+        macdSeries
+      })
+
+      const labels = allPrices.map(hist => (new Date(hist.timestamp).toLocaleString()));
+      const getDataForProp = prop => macdSeries.filter(Boolean).map(obj => obj[prop]);
+      console.log(['MACD', 'signal'].map(prop => ({
+        prop,
+        data: getDataForProp(prop)
+      })));
+      return {
+        labels,
+        datasets: [
+          'MACD',
+          'signal'
+        ].map(prop => createDataSet({
+          label: prop.toUpperCase(),
+          fill: false,
+          borderColor: prop === 'signal' ? 'blue' : 'orange',
+          data: padWithUndefined(
+            labels,
+            getDataForProp(prop)
+          )
+        }))
+      };
+    }
   }
 ];
