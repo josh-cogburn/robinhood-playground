@@ -329,11 +329,21 @@ module.exports = new (class RealtimeRunner {
 
 
     // should we run daily?
-    const shouldRunDaily = Boolean((new Date()).getMinutes() < 4);
-    if (shouldRunDaily) {
-      console.log('RUNNING DAILY', (new Date()).toLocaleString());
-      await this.runDaily();
+    const onceAnHour = Boolean((new Date()).getMinutes() < 4);
+    if (onceAnHour) {
+      const nowStr = (new Date()).toLocaleString();
+      await this.timedAsync(
+        `ONCE AN HOUR ${nowStr}`,
+        async () => {
+          console.log('RUNNING DAILY', (new Date()).toLocaleString());
+          await this.runDaily();
+
+          console.log('COLLECTIONS AND HISTORICALS JUST BECAUSE');
+          await this.collectionsAndHistoricals();
+        }
+      );
     }
+
 
 
   }
