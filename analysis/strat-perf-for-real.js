@@ -3,7 +3,6 @@ const { mapObject } = require('underscore');
 const { avgArray } = require('../utils/array-math');
 
 
-
 module.exports = async (daysBack = 5) => {
 
   const allDates = await StratPerf.getUniqueDates();

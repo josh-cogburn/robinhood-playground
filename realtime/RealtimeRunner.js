@@ -7,6 +7,7 @@ const daily = require('./historicals/daily');
 
 // app-actions
 const recordPicks = require('../app-actions/record-picks');
+const pennyScan = require('../app-actions/penny-scan');
 
 // rh-actions
 const getRisk = require('../rh-actions/get-risk');
@@ -333,8 +334,9 @@ module.exports = new (class RealtimeRunner {
 
 
     // once and hour check?
-    const onceAnHour = Boolean((new Date()).getMinutes() < 4);
-    if (onceAnHour) {
+    const min = (new Date()).getMinutes();
+    const topOfHour = Boolean(min < 4);
+    if (topOfHour) {
       const nowStr = (new Date()).toLocaleString();
       await this.timedAsync(
         `ONCE AN HOUR ${nowStr}`,
@@ -349,7 +351,49 @@ module.exports = new (class RealtimeRunner {
     }
 
 
+    const midHour = Boolean(min > 33 && min < 39);
+    if (midHour) {
+      console.log('RUNNING PENNIES', nowStr);
+      await this.runPennies();
+    }
 
+
+
+  }
+
+  async runPennies(skipSave = false) {
+    const response = await pennyScan();
+    const picks = response
+      .filter(pick => pick.stSent > 145)
+      .map(({ ticker, ...rest }) => ({
+        ticker: buy.ticker,
+        strategyName: 'pennyscan',
+        keys: {
+          hotST: true
+        },
+        data: rest
+      }));
+
+    if (!skipSave) {
+      for (let pick of picks) {
+        strlog({ pick })
+        pick._id = await this.handlePick(pick);
+      }
+    }
+
+    await sendEmail(
+      'PENNY SCAN', 
+      JSON.stringify(
+        picks.map(pick => ({
+          strategyName: pick.strategyName,
+          ticker: pick.ticker,
+          data: pick.data,
+        })), 
+        null,
+        2
+      )
+    );
+    return picks;
   }
 
   async runDaily(skipSave = false, runAll) {
@@ -599,7 +643,7 @@ module.exports = new (class RealtimeRunner {
         collectionKey,
         periodKey,
         keyString,
-        `under${priceKey}`,
+        priceKey && `under${priceKey}`,
         firstAlertkey,
         watchoutKey,
         minKey,

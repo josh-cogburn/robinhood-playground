@@ -21,6 +21,7 @@ const restartProcess = require('../app-actions/restart-process');
 const pmPerf = require('../analysis/pm-perf-for-real');
 const stratPerf = require('../analysis/strat-perf-for-real');
 const realtimeRunner = require('../realtime/RealtimeRunner');
+const pennyScan = require('../app-actions/penny-scan');
 
 let app = express();
 let server = http.Server(app);
@@ -144,6 +145,12 @@ io.on('connection', async socket => {
         socket.emit('server:scan-results', {
             results: stepTwo
         });
+    });
+
+
+    socket.on('client:run-penny', async () => {
+        const results = await pennyScan();
+        socket.emit('server:penny-results', { results });
     });
 
     socket.on('disconnect', () => {

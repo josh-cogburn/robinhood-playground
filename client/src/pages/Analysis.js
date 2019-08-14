@@ -54,15 +54,15 @@ class Analysis extends Component {
         }
         return acc;
       }, {});
-
+      console.log({ byStrat })
       const asArray = Object.keys(byStrat).map(stratMin => ({
         stratMin,
         avg: twoDec(avgArray(byStrat[stratMin])),
         values: byStrat[stratMin],
       }));
-
+      console.log({asArray})
       const sorted = asArray
-        .filter(({ values }) => values.length > 2)
+        .filter(({ values }) => values.length > 1)
         .sort((a, b) => b.avg - a.avg);
       console.log({ sorted })
       this.setState({ stratAnalysis: sorted });

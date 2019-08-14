@@ -62,6 +62,9 @@ class Scan extends Component {
       this.selectRef.value
     );
     const period = this.selectRef ? this.selectRef.value : undefined;
+    if (period === 'penny') {
+      return this.pennyScan();
+    }
     this.props.socket.on('server:scan-results', ({ results }) => {
       console.log('scan results', results)
       const allTickers = [...new Set(results.map(result => result.ticker))];
@@ -94,20 +97,62 @@ class Scan extends Component {
       { period }
     );
   };
+
+  pennyScan = () => {
+    console.log(
+      'PENNY SCAN',
+      this.selectRef.value
+    );
+    this.props.socket.on('server:penny-results', ({ results }) => {
+      console.log('penny results', results)
+      
+
+      this.setState(({ loading }) => ({
+        loading: {
+          ...loading,
+          penny: false
+        },
+        results: results
+          .map(pick => ({
+            details: <button onClick={() => this.selectPick(pick)}>details</button>,
+            // ticker: pick.ticker,
+            ...pick,
+          }))
+      }));
+    });
+    this.setState(({ loading }) => ({
+      loading: {
+        ...loading,
+        penny: true
+      }
+    }))
+    this.props.socket.emit('client:run-penny');
+  };
   render() {
-    const { loading, results, stSent, displayingPick } = this.state;
+    const { loading, results = [], stSent, displayingPick } = this.state;
+
+
     const period = this.selectRef ? this.selectRef.value : undefined;
     const isLoading = !!loading[period];
     const withStSent = (results || []).map(row => ({
       ...row,
-      stSent: stSent[row.ticker] || '...'
+      stSent: row.stSent || stSent[row.ticker] || '...'
     }));
+
+
+    const columns = results[0] && !results[0].percMaxVol ? [
+      'Details',
+      'Ticker',
+      'Strategy Name',
+      'Keys',
+      'Stocktwits Sentiment',
+    ] : Object.keys(results[0] || {});
     return (
       <div>
         <h2>Scan</h2>
         <select ref={ref => { this.selectRef = ref }}>
           {
-            [5, 10, 30, 'd'].map(value => (
+            [5, 10, 30, 'd', 'penny'].map(value => (
               <option value={value}>{value}</option>
             ))
           }
@@ -126,43 +171,24 @@ class Scan extends Component {
             //   { JSON.stringify({rows: this.state.results}, null, 2)}
             // </code>
             <MDBDataTable data={{
-              columns: [
-                {
-                  label: 'Details',
-                },
-                {
-                  label: 'Ticker',
-                },
-                {
-                  label: 'Strategy Name',
-                },
-                {
-                  label: 'Keys',
-                },
-                {
-                  label: 'Stocktwits Sentiment',
-                },
-                // {
-                //   label: 'Keys',
-                // },
-              ],
+              columns: columns.map(label => ({ label })),
               rows: withStSent
             }} />
           )
         }
 
         <ReactModal isOpen={!!displayingPick}>
-            <button
-                onClick={() => this.selectPick(null)}
-                style={{
-                    position: 'fixed',
-                    zoom: '250%',
-                    top: '1vh',
-                    left: '1vh',
-                }}>
-                    Close Modal
-            </button>
-              {displayingPick && <PickGraphs pick={displayingPick} socket={this.props.socket} /> }
+          <button
+            onClick={() => this.selectPick(null)}
+            style={{
+                position: 'fixed',
+                zoom: '250%',
+                top: '1vh',
+                left: '1vh',
+            }}>
+              Close Modal
+          </button>
+          {displayingPick && <PickGraphs pick={displayingPick} socket={this.props.socket} /> }
         </ReactModal>
       </div>
     );

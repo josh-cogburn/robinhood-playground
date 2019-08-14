@@ -1,6 +1,6 @@
 const { MACD } = require('technicalindicators');
-
-const getMacd = (values, [fast = 5, slow = 8, signal = 3]) => {
+//[fast = 5, slow = 8, signal = 3]
+const getMacd = (values, [fast = 12, slow = 26, signal = 9]) => {
     values = (values || []).filter(Boolean);
     const macdSeries = MACD.calculate({
         values,

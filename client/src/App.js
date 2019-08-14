@@ -184,7 +184,7 @@ class App extends Component {
     }
     render () {
         const { value, predictionModels, pms, balanceReports, newPicksData } = this.state;
-        const isLoading = !pms || !Object.keys(pms).length;
+        const isLoading = !balanceReports || !balanceReports.length;
         console.log({
             isLoading,
             pms
