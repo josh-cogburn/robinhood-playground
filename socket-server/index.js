@@ -25,7 +25,18 @@ const pennyScan = require('../app-actions/penny-scan');
 
 let app = express();
 let server = http.Server(app);
-let io = new SocketIO(server);
+let io = new SocketIO(server, {
+    handlePreflightRequest: (req, res) => {
+        console.log(req.headers.origin)
+        const headers = {
+            "Access-Control-Allow-Headers": "Content-Type, Authorization, Pragma",
+            "Access-Control-Allow-Origin": req.headers.origin, //or the specific origin you want to give access to,
+            "Access-Control-Allow-Credentials": true
+        };
+        res.writeHead(200, headers);
+        res.end();
+    }
+});
 let port = process.env.PORT || 3000;
 let users = [];
 let sockets = {};
@@ -38,6 +49,7 @@ app.use(compression({}));
 const prependFolder = folder => path.join(__dirname, `../${folder}`);
 app.use('/', express['static'](prependFolder('client/build')));
 app.use('/user-strategies', express['static'](prependFolder('user-strategies/build')));
+
 
 io.on('connection', async socket => {
 

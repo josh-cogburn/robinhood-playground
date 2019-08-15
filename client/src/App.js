@@ -66,10 +66,10 @@ const pages = [
         label: 'Scan',
         component: Scan
     },
-    // {
-    //     label: 'Positions',
-    //     component: Positions,
-    // },
+    {
+        label: 'Positions',
+        component: Positions,
+    },
     // {
     //     label: 'Day Reports',
     //     component: DayReports

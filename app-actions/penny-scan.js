@@ -8,12 +8,15 @@ const getTrend = require('../utils/get-trend');
 const getStSent = require('../utils/get-stocktwits-sentiment');
 
 const getTickersBetween = async (min, max) => {
-  const tickPrices = await lookupMultiple(allStocks.filter(isTradeable).map(o => o.symbol));
-  const tickers = Object.keys(tickPrices).filter(ticker => tickPrices[ticker] < max && tickPrices[ticker] > min);
+  const tickQuotes = await lookupMultiple(allStocks.filter(isTradeable).map(o => o.symbol), true);
+  const tickers = Object.keys(tickQuotes).filter(ticker => {
+    const { currentPrice } = tickQuotes[ticker];
+    return currentPrice < max && currentPrice > min
+  });
   // console.log({ kstTickers: tickers });
   return tickers.map(ticker => ({
     ticker,
-    currentPrice: tickPrices[ticker]
+    quote: tickQuotes[ticker]
   }));
 };
 
@@ -48,23 +51,34 @@ module.exports = async () => {
     min,
     percComplete
   });
-  const withProjectedVolume = withFundamentals.map(buy => ({
-    ...buy,
-    computed: {
-      ...buy.computed,
-      projectedVolume: buy.fundamentals.volume / percComplete
-    }
-  }));
+  const withProjectedVolume = withFundamentals
+    .map(buy => ({
+      ...buy,
+      computed: {
+        ...buy.computed,
+        projectedVolume: buy.fundamentals.volume / percComplete
+      }
+    }))
+    .filter(buy => buy.computed.projectedVolume)
+    .sort((a, b) => b.computed.projectedVolume - a.computed.projectedVolume)
+    .cutBottom(20);
 
+
+  strlog({ withProjectedVolume})
+  
   const withTSO = withProjectedVolume
     .map(buy => ({
       ...buy,
       computed: {
         ...buy.computed,
-        tso: getTrend(buy.currentPrice, buy.fundamentals.open)
+        tso: getTrend(buy.quote.currentPrice, buy.fundamentals.open),
+        tsc: getTrend(buy.quote.currentPrice, buy.quote.prevClose)
       }
     }))
-    .filter(buy => buy.computed.tso > 1.5);
+    .filter(buy => {
+      const { tso, tsc } = buy.computed;
+      return [tso, tsc].every(val => val > 0 && val < 6);
+    });
 
   let allHistoricals = await getMultipleHistoricals(
     withTSO.map(t => t.ticker)
@@ -76,12 +90,15 @@ module.exports = async () => {
     historicals: allHistoricals[i]
   }));
 
+
+  strlog({ withHistoricals})
+
   const withMaxVol = withHistoricals.map(buy => ({
     ...buy,
     computed: {
       ...buy.computed,
       recentMaxVol: Math.max( // % volume compared to max in the last N days
-        ...buy.historicals.slice(-12).map(hist => hist.volume)
+        ...buy.historicals.slice(-20).map(hist => hist.volume)
       ),
     }
   }));
@@ -107,7 +124,7 @@ module.exports = async () => {
       ...buy,
       stSent: (await getStSent(buy.ticker) || {}).bullBearScore
     }))
-  ).filter(buy => buy.stSent > 100)
+  ).filter(buy => buy.stSent > 50)
   .map(buy => {
     delete buy.historicals;
     return {

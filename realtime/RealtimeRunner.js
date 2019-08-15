@@ -346,18 +346,12 @@ module.exports = new (class RealtimeRunner {
 
           console.log('COLLECTIONS AND HISTORICALS JUST BECAUSE', nowStr);
           await this.collectionsAndHistoricals();
+
+          console.log('RUNNING PENNIES', nowStr);
+          await this.runPennies();
         }
       );
     }
-
-
-    const midHour = Boolean(min > 33 && min < 39);
-    if (midHour) {
-      console.log('RUNNING PENNIES', nowStr);
-      await this.runPennies();
-    }
-
-
 
   }
 
