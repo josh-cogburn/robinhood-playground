@@ -125,7 +125,7 @@ module.exports = new (class RealtimeRunner {
     if (dayInProgress(START_MIN)) {
       console.log('in progress');
 
-      const last5Minute = await this.getLastTimestamp(5);
+      const last5Minute = this.getLastTimestamp(5);
       console.log({
         last5Minute,
         formatted: new Date(last5Minute).toLocaleString()
@@ -259,7 +259,7 @@ module.exports = new (class RealtimeRunner {
     return response;
   }
 
-  async getLastTimestamp(period) {
+  getLastTimestamp(period) {
     console.log('getting last timestamp');
     const relatedPriceCache = this.priceCaches[period];
     // console.log(Object.keys(relatedPriceCache));
@@ -276,11 +276,6 @@ module.exports = new (class RealtimeRunner {
         firstTicker,
         relatedPriceCache
       });
-      console.log('HEY LOOK HERE !! FORCING historicals...');
-      await this.loadPriceCachesWithHistoricals();
-      const returnVal = this.getLastTimestamp(period);
-      console.log({ returnVal })
-      return returnVal;
     }
     return firstTickerLastHistorical.timestamp;
   }
@@ -294,8 +289,9 @@ module.exports = new (class RealtimeRunner {
 
     const lastTS = Object.keys(this.priceCaches).reduce(async (acc, period) => ({
       ...acc,
-      [period]: await this.getLastTimestamp(Number(period))
+      [period]: this.getLastTimestamp(Number(period))
     }), {});
+    
     console.log(lastTS);
     const periods = Object.keys(lastTS).filter(period => {
       const lastTimestamp = lastTS[period];
