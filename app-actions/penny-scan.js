@@ -77,7 +77,7 @@ module.exports = async () => {
     }))
     .filter(buy => {
       const { tso, tsc } = buy.computed;
-      return [tso, tsc].every(val => val > 0 && val < 6);
+      return [tso, tsc].every(val => val < 15);
     });
 
   let allHistoricals = await getMultipleHistoricals(
@@ -116,7 +116,7 @@ module.exports = async () => {
     .filter(buy => buy.computed.percMaxVol && buy.computed.recentMaxVol)
     .sort((a, b) => b.computed.percMaxVol - a.computed.percMaxVol)
     // .cutBottom(80)
-    .slice(0, 40);
+    .slice(0, 60);
 
 
   const withStSent = (

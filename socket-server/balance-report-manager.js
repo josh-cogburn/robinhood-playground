@@ -65,11 +65,18 @@ const runAndSetTimeout = async () => {
     timeout = setTimeout(runAndSetTimeout, toSeconds * 1000);
 };
 
+let lastBalance;
 const getAndSaveBalanceReport = async (isRegularHours) => {
     // console.log('hereee');
+
+    let { accountBalance } = await getAccountBalance();
+    if (Math.abs(getTrend(accountBalance, lastBalance)) > 4) {
+        accountBalance = lastBalance;
+    }
+    lastBalance = accountBalance;
     try {
         const report = {
-            ...await getAccountBalance(),
+            accountBalance,
             indexPrices: await getIndexes(),
             isRegularHours
         };
