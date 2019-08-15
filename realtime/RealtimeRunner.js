@@ -125,7 +125,7 @@ module.exports = new (class RealtimeRunner {
     if (dayInProgress(START_MIN)) {
       console.log('in progress');
 
-      const last5Minute = this.getLastTimestamp(5);
+      const last5Minute = await this.getLastTimestamp(5);
       console.log({
         last5Minute,
         formatted: new Date(last5Minute).toLocaleString()
