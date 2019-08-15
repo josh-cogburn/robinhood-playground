@@ -31,9 +31,39 @@ Number.prototype.twoDec = function() {
 const cTable = require('console.table');
 
 const _ = require('underscore');
+
 _.mixin({
     get: function(obj, path) {
-        if (!obj) return null;
-        return obj[path];
+        if (!obj && !path) {
+            return undefined;
+        } else {
+            var paths;
+  
+            if (!_.isEmpty(path.match(/^\[\d\]/))) {
+                paths = path.replace(/^[\[\]]/g, '').split(/\./);
+                nPath = _.first(paths[0].replace(/\]/, ''));
+            } else {
+                paths = path.split(/[\.\[]/);
+                nPath = _.first(paths);
+            }
+  
+            remainingPath = _.reduce(_.rest(paths), function(result, item) {
+                if (!_.isEmpty(item)) {
+                    if (item.match(/^\d\]/)) {
+                        item = "[" + item;
+                }
+                    result.push(item);
+                }
+  
+                return result;
+            }, []).join('.');
+  
+            if (_.isEmpty(remainingPath)) {
+                return obj[nPath];
+            } else {
+                return _.has(obj, nPath) && _.get(obj[nPath], remainingPath);
+            }
+        }
     }
 });
+  

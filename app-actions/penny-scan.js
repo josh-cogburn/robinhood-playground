@@ -6,6 +6,7 @@ const getMultipleHistoricals = require('../app-actions/get-multiple-historicals'
 const getMinutesFrom630 = require('../utils/get-minutes-from-630');
 const getTrend = require('../utils/get-trend');
 const getStSent = require('../utils/get-stocktwits-sentiment');
+const { uniq, get } = require('underscore');
 
 const getTickersBetween = async (min, max) => {
   const tickQuotes = await lookupMultiple(allStocks.filter(isTradeable).map(o => o.symbol), true);
@@ -20,11 +21,12 @@ const getTickersBetween = async (min, max) => {
   }));
 };
 
-Array.prototype.cutBottom = function(percCut = 30) {
+Array.prototype.cutBottom = function(percCut = 30, actuallyTop) {
   const length = this.length;
   const bottomAmt = length * percCut / 100;
-  console.log('cutting', bottomAmt);
-  return this.slice(0, length - bottomAmt);
+  const endIndex = actuallyTop ? bottomAmt : length - bottomAmt;
+  console.log('end', bottomAmt);
+  return this.slice(0, endIndex);
 };
 
 
@@ -38,7 +40,7 @@ module.exports = async () => {
     await addFundamentals(
       tickers
     )
-  )
+  );
 
   // .sort((a, b) => b.fundamentals.volume - a.fundamentals.volume)
   // .cutBottom();
@@ -52,21 +54,55 @@ module.exports = async () => {
     percComplete
   });
   const withProjectedVolume = withFundamentals
-    .map(buy => ({
-      ...buy,
-      computed: {
-        ...buy.computed,
-        projectedVolume: buy.fundamentals.volume / percComplete
-      }
-    }))
-    .filter(buy => buy.computed.projectedVolume)
-    .sort((a, b) => b.computed.projectedVolume - a.computed.projectedVolume)
-    .cutBottom(20);
-
-
-  strlog({ withProjectedVolume})
+    .map(buy => {
+      const projectedVolume = buy.fundamentals.volume / percComplete;
+      return {
+        ...buy,
+        computed: {
+          ...buy.computed,
+          projectedVolume,
+          projectedVolumeTo2WeekAvg: projectedVolume / buy.fundamentals.average_volume_2_weeks,
+          projectedVolumeToOverallAvg: projectedVolume / buy.fundamentals.average_volume,
+        }
+      };
+    })
+    .filter(buy => buy.computed.projectedVolume);
   
-  const withTSO = withProjectedVolume
+  const sortAndCut = (arr, sortKey, percent, actuallyTop) => {
+    return arr
+      .filter(buy => get(buy, sortKey))
+      .sort((a, b) => {
+        console.log({
+          b: get(b, sortKey),
+          a: get(a, sortKey)
+        })
+        return get(b, sortKey) - get(a, sortKey);
+      })
+      .cutBottom(percent, actuallyTop)
+  };
+
+  const topVolTickers = sortAndCut(withProjectedVolume, 'computed.projectedVolume', 20, true);
+  const topVolTo2Week = sortAndCut(withProjectedVolume, 'computed.projectedVolumeTo2WeekAvg', 25, true);
+  const topVolToOverallAvg = sortAndCut(withProjectedVolume, 'computed.projectedVolumeToOverallAvg', 30, true);
+  
+  const volumeTickers = uniq([
+    ...topVolTickers,
+    ...topVolTo2Week,
+    ...topVolToOverallAvg
+  ], 'ticker');
+  
+  strlog({
+
+    topVolTickers: topVolTickers.length,
+    topVolTo2Week: topVolTo2Week.length,
+    topVolToOverallAvg: topVolToOverallAvg.length,
+    volumeTickers: volumeTickers.length,
+    withProjectedVolume: withProjectedVolume.length
+
+  });
+
+
+  const withTSO = volumeTickers
     .map(buy => ({
       ...buy,
       computed: {
@@ -77,7 +113,7 @@ module.exports = async () => {
     }))
     .filter(buy => {
       const { tso, tsc } = buy.computed;
-      return [tso, tsc].every(val => val < 15);
+      return [tso, tsc].some(val => val < 15);
     });
 
   let allHistoricals = await getMultipleHistoricals(
@@ -91,7 +127,7 @@ module.exports = async () => {
   }));
 
 
-  strlog({ withHistoricals})
+  // strlog({ withHistoricals})
 
   const withMaxVol = withHistoricals.map(buy => ({
     ...buy,
@@ -116,8 +152,11 @@ module.exports = async () => {
     .filter(buy => buy.computed.percMaxVol && buy.computed.recentMaxVol)
     .sort((a, b) => b.computed.percMaxVol - a.computed.percMaxVol)
     // .cutBottom(80)
-    .slice(0, 60);
+    .cutBottom(30, true);
 
+    strlog({
+      sortedByPercMaxVol: sortedByPercMaxVol.length
+    })
 
   const withStSent = (
     await mapLimit(sortedByPercMaxVol, 3, async buy => ({
