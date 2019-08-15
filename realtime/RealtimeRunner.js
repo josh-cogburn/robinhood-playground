@@ -287,7 +287,7 @@ module.exports = new (class RealtimeRunner {
     
     this.runCount++;
 
-    const lastTS = Object.keys(this.priceCaches).reduce(async (acc, period) => ({
+    const lastTS = Object.keys(this.priceCaches).reduce((acc, period) => ({
       ...acc,
       [period]: this.getLastTimestamp(Number(period))
     }), {});
