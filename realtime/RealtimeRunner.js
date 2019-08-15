@@ -275,7 +275,12 @@ module.exports = new (class RealtimeRunner {
         period,
         firstTicker,
         relatedPriceCache
-      })
+      });
+      console.log('HEY LOOK HERE !! FORCING historicals...');
+      await this.loadPriceCachesWithHistoricals();
+      const returnVal = this.getLastTimestamp(period);
+      console.log({ returnVal })
+      return returnVal;
     }
     return firstTickerLastHistorical.timestamp;
   }
@@ -360,7 +365,7 @@ module.exports = new (class RealtimeRunner {
     const picks = response
       .filter(pick => pick.stSent > 145)
       .map(({ ticker, ...rest }) => ({
-        ticker: buy.ticker,
+        ticker,
         strategyName: 'pennyscan',
         keys: {
           hotST: true
