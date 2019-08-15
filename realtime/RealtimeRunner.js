@@ -259,7 +259,7 @@ module.exports = new (class RealtimeRunner {
     return response;
   }
 
-  getLastTimestamp(period) {
+  async getLastTimestamp(period) {
     console.log('getting last timestamp');
     const relatedPriceCache = this.priceCaches[period];
     // console.log(Object.keys(relatedPriceCache));
@@ -292,9 +292,9 @@ module.exports = new (class RealtimeRunner {
     
     this.runCount++;
 
-    const lastTS = Object.keys(this.priceCaches).reduce((acc, period) => ({
+    const lastTS = Object.keys(this.priceCaches).reduce(async (acc, period) => ({
       ...acc,
-      [period]: this.getLastTimestamp(Number(period))
+      [period]: await this.getLastTimestamp(Number(period))
     }), {});
     console.log(lastTS);
     const periods = Object.keys(lastTS).filter(period => {
