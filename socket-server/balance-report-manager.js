@@ -9,6 +9,7 @@ const getIndexes = require('../utils/get-indexes');
 const stratManager = require('./strat-manager');
 const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
 const getMinutesFrom630 = require('../utils/get-minutes-from-630');
+const getTrend = require('../utils/get-trend');
 
 // inner
 let timeout;
@@ -71,6 +72,10 @@ const getAndSaveBalanceReport = async (isRegularHours) => {
 
     let { accountBalance } = await getAccountBalance();
     if (Math.abs(getTrend(accountBalance, lastBalance)) > 4) {
+        console.log('WOAH WOAH', {
+            accountBalance,
+            lastBalance
+        })
         accountBalance = lastBalance;
     }
     lastBalance = accountBalance;
