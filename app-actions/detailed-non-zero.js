@@ -2,6 +2,7 @@ const mapLimit = require('promise-map-limit');
 const lookup = require('../utils/lookup');
 const addBuyDataToPositions = require('../app-actions/add-buy-data-to-positions');
 // const getAssociatedStrategies = require('./get-associated-strategies');
+const getStSentiment = require('../utils/get-stocktwits-sentiment');
 
 const getDetailedNonZero = async () => {
     const { results: allPositions } = await Robinhood.nonzero_positions();
@@ -46,7 +47,7 @@ const getDetailedNonZero = async () => {
 
     const withStSent = await mapLimit(withPercTotal, 3, async pos => ({
         ...pos,
-        stSent: (await getStSent(pos.ticker) || {}).bullBearScore
+        stSent: (await getStSentiment(pos.ticker) || {}).bullBearScore
     }));
 
     // console.log('made it', withTicks);
