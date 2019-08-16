@@ -44,8 +44,13 @@ const getDetailedNonZero = async () => {
         percTotal: +(pos.equity / totalInvested * 100).toFixed(2)
     }));
 
+    const withStSent = await mapLimit(withPercTotal, 3, async pos => ({
+        ...pos,
+        stSent: (await getStSent(pos.ticker) || {}).bullBearScore
+    }));
+
     // console.log('made it', withTicks);
-    return withPercTotal;
+    return withStSent;
 };
 
 module.exports = getDetailedNonZero;

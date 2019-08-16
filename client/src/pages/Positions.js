@@ -20,7 +20,8 @@ class TodaysStrategies extends Component {
                 'return $': 'returnDollars',
                 'return %': pos => <TrendPerc value={pos.returnPerc} />,
             },
-            'buy strategies': 'buyStrategy',
+            // 'buy strategies': 'buyStrategy',
+            'stSent': 'stSent',
             ...admin ? {
                 'avg': 'average_buy_price',
                 'current': 'currentPrice',
