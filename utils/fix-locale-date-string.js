@@ -22,6 +22,13 @@ Array.prototype.uniq = function() {
     return [...new Set(this)];
 };
 
+Array.prototype.cutBottom = function(percCut = 30, actuallyTop) {
+    const length = this.length;
+    const bottomAmt = length * percCut / 100;
+    const endIndex = actuallyTop ? bottomAmt : length - bottomAmt;
+    console.log('end', bottomAmt);
+    return this.slice(0, endIndex);
+};
 
 Number.prototype.twoDec = function() {
     const roundTo = numDec => num => Math.round(num * Math.pow(10, numDec)) / Math.pow(10, numDec);

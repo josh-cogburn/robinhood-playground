@@ -21,14 +21,6 @@ const getTickersBetween = async (min, max) => {
   }));
 };
 
-Array.prototype.cutBottom = function(percCut = 30, actuallyTop) {
-  const length = this.length;
-  const bottomAmt = length * percCut / 100;
-  const endIndex = actuallyTop ? bottomAmt : length - bottomAmt;
-  console.log('end', bottomAmt);
-  return this.slice(0, endIndex);
-};
-
 
 module.exports = async () => {
   const tickers = (await getTickersBetween(0, 6)).map(buy => ({

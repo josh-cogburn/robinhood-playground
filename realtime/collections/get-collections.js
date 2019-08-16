@@ -42,13 +42,6 @@ const OPTIONSTICKERS = [
 
 const filterForTheGood = async tickers => {
 
-    Array.prototype.cutBottom = function() {
-        const length = this.length;
-        const bottomAmt = (length / 4.6);
-        console.log('cutting', bottomAmt);
-        return this.slice(0, length - bottomAmt);
-    };
-
     const withFundamentals = await addFundamentals(
         tickers
             .filter(ticker => !OPTIONSTICKERS.includes(ticker))
