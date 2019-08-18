@@ -1,11 +1,13 @@
 const request = require('request-promise');
 const cheerio = require('cheerio');
 const mapLimit = require('promise-map-limit');
+const lookupMultiple = require('./lookup-multiple');
+const { mapObject } = require('underscore');
 
 const indexes = {
-    sp500: 'https://finance.yahoo.com/quote/%5EGSPC?p=^GSPC',
-    nasdaq: 'https://finance.yahoo.com/quote/%5EIXIC?p=^IXIC',
-    russell2000: 'https://finance.yahoo.com/quote/%5ERUT?p=^RUT'
+    sp500: 'SPY',
+    nasdaq: 'QQQ',
+    russell2000: 'IWM'
 };
 
 const getIndexPrice = async index => {
@@ -23,7 +25,12 @@ const getIndexPrice = async index => {
 let lastPrices = {};
 
 module.exports = async () => {
-    const asArray = await mapLimit(Object.keys(indexes), 1, getIndexPrice);
+
+    const lookups = await lookupMultiple(Object.values(indexes));
+
+    return mapObject(indexes, ticker => lookups[ticker]);
+
+    const asArray = await mapLimit(Object.values(indexes), 1, lookupMultiple);
     const response = asArray.reduce((acc, { index, price }) => ({
         ...acc,
         [index]: price ? price : (() => {

@@ -54,6 +54,11 @@ const stratManager = {
             }
         });
 
+        this.positions = await cachedPositions();
+        setInterval(() => {
+            this.positions = await cachedPositions();
+        }, 1000 * 60 * 30);
+
         // init picks?
         console.log('init refresh')
         try {
@@ -100,7 +105,7 @@ const stratManager = {
             balanceReports: balanceReportManager.getAllBalanceReports(),
             pmPerfs: this.pmPerfs,
             pms,
-            positions: await cachedPositions()
+            positions: this.positions
         };
     },
     newPick(data) {

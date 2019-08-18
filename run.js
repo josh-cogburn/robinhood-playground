@@ -20,7 +20,7 @@ require('./utils/fix-locale-date-string');
     const argPath = process.argv[2];
     let relatedFile = require(`./${argPath}`);
 
-    let callArgs = [Robinhood];
+    let callArgs = [];
     const restArgs = process.argv.slice(3)
         .map(arg => arg === 'true' ? true : arg)
         .map(arg => arg === 'false' ? false : arg)

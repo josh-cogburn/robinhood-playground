@@ -19,13 +19,14 @@ const lookupMultiple = async (tickersToLookup, detailedQuote) => {
     quotes.forEach(quote => {
         if (!quote) return;
         const { symbol, last_trade_price, last_extended_hours_trade_price, ask_price, adjusted_previous_close } = quote;
+        const currentPrice = Number(last_extended_hours_trade_price || last_trade_price);
         tickerLookups[symbol] = detailedQuote ? {
             lastTradePrice: Number(last_trade_price),
             afterHoursPrice: Number(last_extended_hours_trade_price),
             askPrice: Number(ask_price),
-            currentPrice: Number(last_extended_hours_trade_price || last_trade_price),
+            currentPrice,
             prevClose: Number(adjusted_previous_close)
-        } : Number(last_trade_price);
+        } : currentPrice;
     });
     return tickerLookups;
 };

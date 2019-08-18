@@ -55,6 +55,9 @@ module.exports = {
         '10minoptions': ['10min', 'options'],
 
         lessthan5: 'rsilt5',
+        lessthan5fittywatchout: ['rsilt5', 'fitty', 'shouldWatchout'],
+
+
         lessthan10: 'rsilt10',
         lessthan15: 'rsilt15',
 

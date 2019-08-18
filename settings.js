@@ -11,6 +11,8 @@ module.exports = {
         '[kst-top100LowSignals10min]',
         '[ema-bullishCross10min]',
         '[sma-bullishCross30min]',
+        '[sudden-drops]',
+        '[lessthan5fittywatchout]',
     ],
     // forPurchaseVariation: '75Perc5Day-yesincludingblanks',
     // fallbackSellStrategy: 'limit8',

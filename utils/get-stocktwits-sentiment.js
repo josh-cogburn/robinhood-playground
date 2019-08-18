@@ -2,7 +2,7 @@ const request = require('request-promise');
 const { getProxy } = require('./stocktwits');
 const { avgArray } = require('./array-math');
 const cacheThis = require('./cache-this');
-
+const Pick = require('../models/Pick');
 
 let fetchCount = 0;
 
@@ -30,9 +30,13 @@ const stReq = cacheThis(
 
 module.exports = async (ticker, detailed) => {
     try {
-        // console.log({ ticker}, 'getting stocktwits sent')
+        console.log({ ticker, detailed }, 'getting stocktwits sent')
         let { messages } = await stReq(`https://api.stocktwits.com/api/2/streams/symbol/${ticker}.json?filter=top`);
-        const last3DaysMessages = messages.filter(o => (Date.now() - new Date(o.created_at).getTime()) < 1000 * 60 * 60 * 24 * 3);
+        const dates = await Pick.getUniqueDates();
+        const twoDaysAgo = dates[dates.length - 3];
+        const timestamp = (new Date(twoDaysAgo)).getTime();
+        strlog( (new Date(twoDaysAgo)).toLocaleString() )
+        const last3DaysMessages = messages.filter(o => (new Date(o.created_at)).getTime() > timestamp)// (Date.now() - new Date(o.created_at).getTime()) < 1000 * 60 * 60 * 24 * 3);
         const totalCount = last3DaysMessages.length;
         const getSentiment = s => last3DaysMessages.filter(o => o.entities.sentiment && o.entities.sentiment.basic === s).length;
         const bearishCount = getSentiment('Bearish');

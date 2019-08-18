@@ -279,7 +279,7 @@ module.exports = new (class RealtimeRunner {
     }
     return firstTickerLastHistorical.timestamp;
   }
-
+  
   async everyFiveMinutes() {
     if (!this.currentlyRunning) {
       return this.stop();
@@ -350,6 +350,11 @@ module.exports = new (class RealtimeRunner {
 
           console.log('RUNNING PENNIES', nowStr);
           await this.runPennies();
+
+          console.log('SENDING RECS');
+          const recs = await getRecs();
+
+
         }
       );
     }
@@ -388,6 +393,7 @@ module.exports = new (class RealtimeRunner {
         2
       )
     );
+    
     return picks;
   }
 
