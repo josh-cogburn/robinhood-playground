@@ -30,7 +30,7 @@ const stReq = cacheThis(
 
 module.exports = async (ticker, detailed) => {
     try {
-        console.log({ ticker, detailed }, 'getting stocktwits sent')
+        // console.log({ ticker, detailed }, 'getting stocktwits sent')
         let { messages } = await stReq(`https://api.stocktwits.com/api/2/streams/symbol/${ticker}.json?filter=top`);
         const dates = await Pick.getUniqueDates();
         const twoDaysAgo = dates[dates.length - 3];
