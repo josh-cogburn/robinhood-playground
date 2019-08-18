@@ -94,20 +94,26 @@ module.exports = async () => {
   });
 
 
+  
   const withTSO = volumeTickers
     .map(buy => ({
       ...buy,
       computed: {
         ...buy.computed,
         tso: getTrend(buy.quote.currentPrice, buy.fundamentals.open),
-        tsc: getTrend(buy.quote.currentPrice, buy.quote.prevClose)
+        tsc: getTrend(buy.quote.currentPrice, buy.quote.prevClose),
+        tsh: getTrend(buy.quote.currentPrice, buy.fundamentals.high)
       }
     }))
-    .filter(buy => {
-      const { tso, tsc } = buy.computed;
-      return [tso, tsc].some(val => val < 15);
-    });
-
+    // .filter(buy => {
+    //   const { tso, tsc } = buy.computed;
+    //   return [tso, tsc].some(val => val < 15);
+    // });
+  
+  // strlog({
+  //   before: volumeTickers.length,
+  //   after: withTSO.length
+  // });
   let allHistoricals = await getMultipleHistoricals(
     withTSO.map(t => t.ticker)
     // `interval=day`
