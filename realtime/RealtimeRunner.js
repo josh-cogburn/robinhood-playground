@@ -8,6 +8,7 @@ const daily = require('./historicals/daily');
 // app-actions
 const recordPicks = require('../app-actions/record-picks');
 const pennyScan = require('../app-actions/penny-scan');
+const sendRecs = require('../app-actions/send-recs');
 
 // rh-actions
 const getRisk = require('../rh-actions/get-risk');
@@ -352,9 +353,7 @@ module.exports = new (class RealtimeRunner {
           await this.runPennies();
 
           console.log('SENDING RECS');
-          const recs = await getRecs();
-
-
+          await sendRecs();
         }
       );
     }
