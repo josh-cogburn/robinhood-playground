@@ -55,7 +55,7 @@ const stratManager = {
         });
 
         this.positions = await cachedPositions();
-        setInterval(() => {
+        setInterval(async () => {
             this.positions = await cachedPositions();
         }, 1000 * 60 * 30);
 
