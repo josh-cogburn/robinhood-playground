@@ -46,7 +46,7 @@ class TodaysStrategies extends Component {
                     <tbody>
                         {
                             positions.map(pos => (
-                                <tr style={{ background: pos.shouldSell ? 'rgb(255,0,0)' : 'inherit' }}>
+                                <tr style={{ background: pos.shouldSell ? 'rgba(255,0,0, 0.6)' : 'inherit' }}>
                                     {
                                         Object.keys(toDisplay).map(header => {
                                             const render = toDisplay[header];
