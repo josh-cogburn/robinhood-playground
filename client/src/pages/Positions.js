@@ -9,7 +9,7 @@ import TrendPerc from '../components/TrendPerc';
 class TodaysStrategies extends Component {
     render() {
         let { pmPerfs, settings, predictionModels, admin, positions } = this.props;
-
+        admin = true;
         const toDisplay = {
             'days old': 'dayAge',
             ticker: 'ticker',
@@ -17,7 +17,7 @@ class TodaysStrategies extends Component {
                 'percent of total': pos => pos.percTotal + '%',
             } : {
                 equity: 'equity',
-                'return $': 'returnDollars',
+                'return $': pos => <TrendPerc value={pos.returnDollars} noPerc={true} />,
                 'return %': pos => <TrendPerc value={pos.returnPerc} />,
             },
             // 'buy strategies': 'buyStrategy',
@@ -46,7 +46,7 @@ class TodaysStrategies extends Component {
                     <tbody>
                         {
                             positions.map(pos => (
-                                <tr>
+                                <tr style={{ background: pos.shouldSell ? 'rgb(255,0,0)' : 'inherit' }}>
                                     {
                                         Object.keys(toDisplay).map(header => {
                                             const render = toDisplay[header];

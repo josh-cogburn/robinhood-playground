@@ -3,6 +3,7 @@ const lookup = require('../utils/lookup');
 const addBuyDataToPositions = require('../app-actions/add-buy-data-to-positions');
 // const getAssociatedStrategies = require('./get-associated-strategies');
 const getStSentiment = require('../utils/get-stocktwits-sentiment');
+const shouldSellPosition = require('../utils/should-sell-position');
 
 const getDetailedNonZero = async () => {
     const { results: allPositions } = await Robinhood.nonzero_positions();
@@ -50,8 +51,13 @@ const getDetailedNonZero = async () => {
         stSent: (await getStSentiment(pos.ticker) || {}).bullBearScore
     }));
 
+    const withShouldSell = withStSent.map(pos => ({
+        ...pos,
+        shouldSell: shouldSellPosition(pos)
+    }));
+
     // console.log('made it', withTicks);
-    return withStSent;
+    return withShouldSell;
 };
 
 module.exports = getDetailedNonZero;

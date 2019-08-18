@@ -24,7 +24,7 @@ const addBuyDateToPositions = async nonzero => {
         }))
         .map(pos => ({
             ...pos,
-            returnDollars: pos.returnPerc / 100 * pos.quantity * pos.lastTrade,
+            returnDollars: +(pos.returnPerc / 100 * pos.quantity * pos.lastTrade).toFixed(2),
             value: pos.lastTrade * pos.quantity,
         }));
 
