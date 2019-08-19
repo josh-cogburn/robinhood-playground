@@ -1,4 +1,4 @@
-const START_MIN = -180;//51;
+const START_MIN = -210;//51;    // 3am
 const STOP_MIN = 631;
 const TIMEOUT_SECONDS = 15;
 
