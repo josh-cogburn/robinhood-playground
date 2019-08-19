@@ -1,5 +1,5 @@
 const cacheThis = require('./cache-this');
-const getNonZero = require('../app-actions/detosailed-non-zero');
+const getNonZero = require('../app-actions/detailed-non-zero');
 
 module.exports = cacheThis(
     getNonZero,
