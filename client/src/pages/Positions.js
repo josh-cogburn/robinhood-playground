@@ -47,11 +47,18 @@ class TodaysStrategies extends Component {
                         {
                             positions
                                 .map(pos => {
-                                    console.log(relatedPrices[pos.ticker], 'hmm')
+                                    const { currentPrice } = relatedPrices[pos.ticker] || {};
+                                    if (currentPrice) {
+                                        console.log(pos);
+                                        pos.currentPrice = currentPrice;
+                                        pos.returnDollars = +(pos.quantity * (pos.currentPrice - pos.average_buy_price)).toFixed(2);
+                                        pos.returnPerc = getTrend(currentPrice, pos.average_buy_price);
+                                    }
+                                    console.log(pos);
                                     return pos;
                                 })
                                 .map(pos => (
-                                    <tr style={{ background: pos.shouldSell ? 'rgba(255,0,0, 0.6)' : 'inherit' }}>
+                                    <tr style={{ background: pos.shouldSell ? Number(pos.returnDollars) > 0 ? 'rgba(0, 255, 0, 0.6)' : 'rgba(255,0,0, 0.6)' : 'inherit' }}>
                                         {
                                             Object.keys(toDisplay).map(header => {
                                                 const render = toDisplay[header];
