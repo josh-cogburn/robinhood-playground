@@ -8,7 +8,7 @@ import TrendPerc from '../components/TrendPerc';
 
 class TodaysStrategies extends Component {
     render() {
-        let { pmPerfs, settings, predictionModels, admin, positions } = this.props;
+        let { pmPerfs, settings, predictionModels, admin, positions, relatedPrices } = this.props;
         admin = true;
         const toDisplay = {
             'days old': 'dayAge',
@@ -45,19 +45,24 @@ class TodaysStrategies extends Component {
                     </thead>
                     <tbody>
                         {
-                            positions.map(pos => (
-                                <tr style={{ background: pos.shouldSell ? 'rgba(255,0,0, 0.6)' : 'inherit' }}>
-                                    {
-                                        Object.keys(toDisplay).map(header => {
-                                            const render = toDisplay[header];
-                                            const v = typeof render === 'function' ? render(pos) : pos[render]; 
-                                            return (
-                                                <td>{v}</td>
-                                            );
-                                        })
-                                    }
-                                </tr>
-                            ))
+                            positions
+                                .map(pos => {
+                                    console.log(relatedPrices[pos.ticker], 'hmm')
+                                    return pos;
+                                })
+                                .map(pos => (
+                                    <tr style={{ background: pos.shouldSell ? 'rgba(255,0,0, 0.6)' : 'inherit' }}>
+                                        {
+                                            Object.keys(toDisplay).map(header => {
+                                                const render = toDisplay[header];
+                                                const v = typeof render === 'function' ? render(pos) : pos[render]; 
+                                                return (
+                                                    <td>{v}</td>
+                                                );
+                                            })
+                                        }
+                                    </tr>
+                                ))
                         }
                         {
                             admin && <tr><td colspan={Object.keys(toDisplay).length}><hr/></td></tr>
