@@ -23,7 +23,7 @@ const getTickersBetween = async (min, max) => {
 
 
 module.exports = async () => {
-  const tickers = (await getTickersBetween(0, 6)).map(buy => ({
+  const tickers = (await getTickersBetween(0, 8)).map(buy => ({
     ...buy,
     computed: {}
   }));
