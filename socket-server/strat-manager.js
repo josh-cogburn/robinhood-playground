@@ -54,9 +54,6 @@ const stratManager = {
             }
         });
 
-        setInterval(() => this.refreshPositions(), 1000 * 60 * 15);
-        await this.refreshPositions();
-
         // init picks?
         console.log('init refresh')
         try {
@@ -66,10 +63,14 @@ const stratManager = {
         }
         console.log('init picks')
         await this.initPicksAndPMs(dateOverride);
+
+        setInterval(() => this.refreshPositions(), 1000 * 60 * 15);
+        await this.refreshPositions();
+
         console.log('get prices');
         await this.tickerWatcher.start();
 
-        console.log('send report init')
+        // console.log('send report init')
         // try {
             // await this.sendPMReport();
         // } catch (e) {
