@@ -58,7 +58,7 @@ module.exports = async () => {
         }
       };
     })
-    .filter(buy => buy.computed.projectedVolume);
+    .filter(buy => buy.computed.projectedVolume > 400000);
   
   const sortAndCut = (arr, sortKey, percent, actuallyTop) => {
     return arr
