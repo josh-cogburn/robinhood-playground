@@ -9,6 +9,7 @@ const daily = require('./historicals/daily');
 const recordPicks = require('../app-actions/record-picks');
 const pennyScan = require('../app-actions/penny-scan');
 const sendRecs = require('../app-actions/send-recs');
+const restartProcess = require('../app-actions/restart-process');
 
 // rh-actions
 const getRisk = require('../rh-actions/get-risk');
@@ -277,6 +278,7 @@ module.exports = new (class RealtimeRunner {
         firstTicker,
         relatedPriceCache
       });
+      restartProcess();
     }
     return firstTickerLastHistorical.timestamp;
   }
@@ -294,6 +296,7 @@ module.exports = new (class RealtimeRunner {
     }), {});
     
     console.log(lastTS);
+
     const periods = Object.keys(lastTS).filter(period => {
       const lastTimestamp = lastTS[period];
       const fromYesterday = lastTimestamp < Date.now() - 1000 * 60 * 60;
