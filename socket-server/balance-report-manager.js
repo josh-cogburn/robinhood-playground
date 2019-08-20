@@ -1,5 +1,5 @@
 const START_MIN = -210;//51;    // 3am
-const STOP_MIN = 631;
+const STOP_MIN = 811;
 const TIMEOUT_SECONDS = 15;
 
 const BalanceReport = require('../models/BalanceReport');

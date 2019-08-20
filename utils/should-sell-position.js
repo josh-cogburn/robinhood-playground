@@ -1,7 +1,7 @@
 const sellBrackets = {
-  bullish: [-9, 14],    // stSent > 130
-  neutral: [-6, 8],     // stSent > 70
-  bearish: [-4, 5],     // stSent < 70
+  bullish: [-11, 17],    // stSent > 130
+  neutral: [-8, 13],     // stSent > 70
+  bearish: [-6, 9],     // stSent < 70
 };
 
 const shouldSell = position => {
