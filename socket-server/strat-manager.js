@@ -57,7 +57,7 @@ const stratManager = {
         this.positions = await cachedPositions();
         setInterval(async () => {
             this.positions = await cachedPositions();
-        }, 1000 * 60 * 30);
+        }, 1000 * 60 * 15);
 
         // init picks?
         console.log('init refresh')
