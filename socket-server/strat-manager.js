@@ -54,14 +54,8 @@ const stratManager = {
             }
         });
 
-        this.positions = await cachedPositions();
-        setInterval(async () => {
-            const positions = await cachedPositions();
-            this.positions = positions;
-            this.tickerWatcher.addTickers(
-                positions.map(pos => pos.ticker)
-            );
-        }, 1000 * 60 * 15);
+        setInterval(this.refreshPositions, 1000 * 60 * 15);
+        await this.refreshPositions();
 
         // init picks?
         console.log('init refresh')
@@ -111,6 +105,13 @@ const stratManager = {
             pms,
             positions: this.positions
         };
+    },
+    refreshPositions = async () => {
+        const positions = await cachedPositions();
+        this.positions = positions;
+        this.tickerWatcher.addTickers(
+            positions.map(pos => pos.ticker)
+        );
     },
     newPick(data) {
 
