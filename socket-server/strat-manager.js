@@ -54,7 +54,7 @@ const stratManager = {
             }
         });
 
-        setInterval(this.refreshPositions, 1000 * 60 * 15);
+        setInterval(() => this.refreshPositions(), 1000 * 60 * 15);
         await this.refreshPositions();
 
         // init picks?
@@ -106,7 +106,7 @@ const stratManager = {
             positions: this.positions
         };
     },
-    refreshPositions = async () => {
+    async refreshPositions() {
         const positions = await cachedPositions();
         this.positions = positions;
         this.tickerWatcher.addTickers(
