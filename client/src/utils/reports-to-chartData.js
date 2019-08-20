@@ -1,6 +1,6 @@
 import getTrend from './get-trend';
 
-const colors = ['blue', 'green', 'orange', 'rgba(240, 255, 0, 0.6)', 'pink', 'indigo', 'rgba(83, 51, 237, 10.6)', 'brown', 'yellow', 'blue'];
+const colors = ['blue', 'green', 'orange', 'rgba(240, 255, 0, 0.6)', 'pink', 'indigo', 'rgba(83, 51, 237, 10.6)', 'brown', 'orange', 'blue'];
 // const colors = [
 //     'orange',
 //     'orange',
@@ -40,18 +40,18 @@ const process = fieldsToInclude => (dayReports, dataSlice = 0) => {
     const datasets = fieldsToInclude.map(key => ({
         label: key,
         fill: true,
-        lineTension: 0.1,
-        backgroundColor: 'rgba(75,192,192,0.2)',
-        pointBorderColor: key === 'account balance' ? 'black' : getColor(key),
+        lineTension: 0,
+        backgroundColor: 'rgba(75,192,192,0.1)',
+        pointBorderColor: key === 'account balance' || false ? 'black' : getColor(key),
         // pointBorderWidth: 10,
-        borderColor: key === 'account balance' ? 'black' : getColor(key),
+        borderColor: key === 'account balance' || false ? 'black' : getColor(key),
         borderCapStyle: 'butt',
-        borderWidth: key === 'account balance' ? 5 : 5,
+        borderWidth: key === 'account balance' ? 6 : 4,
         borderDashOffset: 0.0,
         borderJoinStyle: 'round',
         // pointBorderColor: key === 'account balance' ? 'black' : getColor(key),
         pointBackgroundColor: '#fff',
-        pointBorderWidth: key === 'account balance' ? 2 : 10,
+        pointBorderWidth: key === 'account balance' || false ? 2 : 10,
         pointHoverRadius: 5,
         pointHoverBackgroundColor: getColor(key),
         pointHoverBorderColor: 'black',
