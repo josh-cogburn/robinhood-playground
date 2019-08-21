@@ -7,7 +7,7 @@ const daily = require('./historicals/daily');
 
 // app-actions
 const recordPicks = require('../app-actions/record-picks');
-const pennyScan = require('../app-actions/penny-scan');
+const hotStPennyScan = require('../penny-scans/hot-st');
 const sendRecs = require('../app-actions/send-recs');
 const restartProcess = require('../app-actions/restart-process');
 
@@ -124,7 +124,7 @@ module.exports = new (class RealtimeRunner {
         fn: () => this.stop()
     });
 
-    if (dayInProgress(START_MIN)) {
+    if (dayInProgress(START_MIN) && false) {
       console.log('in progress');
 
       const last5Minute = this.getLastTimestamp(5);
@@ -364,7 +364,7 @@ module.exports = new (class RealtimeRunner {
   }
 
   async runPennies(skipSave = false) {
-    const response = await pennyScan();
+    const response = await hotStPennyScan();
     const picks = response
       .filter(pick => pick.stSent > 145)
       .map(({ ticker, ...rest }) => ({

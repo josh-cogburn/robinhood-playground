@@ -1,5 +1,5 @@
 const lookupMultiple = require('../utils/lookup-multiple');
-const addFundamentals = require('./add-fundamentals');
+const addFundamentals = require('../app-actions/add-fundamentals');
 const allStocks = require('../json/stock-data/allStocks');
 const { isTradeable } = require('../utils/filter-by-tradeable');
 const getMultipleHistoricals = require('../app-actions/get-multiple-historicals');
@@ -105,10 +105,10 @@ module.exports = async () => {
         tsh: getTrend(buy.quote.currentPrice, buy.fundamentals.high)
       }
     }))
-    // .filter(buy => {
-    //   const { tso, tsc } = buy.computed;
-    //   return [tso, tsc].some(val => val < 15);
-    // });
+    .filter(buy => {
+      const { tso, tsc } = buy.computed;
+      return [tso, tsc].some(val => val < -7);
+    });
   
   // strlog({
   //   before: volumeTickers.length,
@@ -162,7 +162,7 @@ module.exports = async () => {
       stSent: (await getStSent(buy.ticker) || {}).bullBearScore
     }))
   )
-  // .filter(buy => buy.stSent > 50)
+  .sort((a, b) => b.stsent - a.stSent)
   .map(buy => {
     delete buy.historicals;
     return {

@@ -62,8 +62,10 @@ class Scan extends Component {
       this.selectRef.value
     );
     const period = this.selectRef ? this.selectRef.value : undefined;
-    if (period === 'penny') {
-      return this.pennyScan();
+    if (period.includes('penny')) {
+      const whichPenny = period.split('penny-')[1];
+      console.log({ whichPenny })
+      return this.pennyScan(whichPenny);
     }
     this.props.socket.on('server:scan-results', ({ results }) => {
       console.log('scan results', results)
@@ -98,7 +100,7 @@ class Scan extends Component {
     );
   };
 
-  pennyScan = () => {
+  pennyScan = (type) => {
     console.log(
       'PENNY SCAN',
       this.selectRef.value
@@ -110,7 +112,7 @@ class Scan extends Component {
       this.setState(({ loading }) => ({
         loading: {
           ...loading,
-          penny: false
+          [type]: false
         },
         results: results
           .map(pick => ({
@@ -123,17 +125,17 @@ class Scan extends Component {
     this.setState(({ loading }) => ({
       loading: {
         ...loading,
-        penny: true
+        [type]: true
       }
     }))
-    this.props.socket.emit('client:run-penny');
+    this.props.socket.emit('client:run-penny', type);
   };
   render() {
     const { loading, results = [], stSent, displayingPick } = this.state;
 
 
     const period = this.selectRef ? this.selectRef.value : undefined;
-    const isLoading = !!loading[period];
+    const isLoading = Object.keys(loading).some(key => !!loading[key]);
     const withStSent = (results || []).map(row => ({
       ...row,
       stSent: row.stSent || stSent[row.ticker] || '...'
@@ -152,7 +154,7 @@ class Scan extends Component {
         <h2>Scan</h2>
         <select ref={ref => { this.selectRef = ref }}>
           {
-            [5, 10, 30, 'd', 'penny'].map(value => (
+            [5, 10, 30, 'd', 'penny-hotSt', 'penny-droppers', 'penny-nowheres'].map(value => (
               <option value={value}>{value}</option>
             ))
           }
@@ -171,7 +173,7 @@ class Scan extends Component {
             //   { JSON.stringify({rows: this.state.results}, null, 2)}
             // </code>
             <MDBDataTable data={{
-              columns: columns.map(label => ({ label })),
+              columns: columns.map((label, i) => ({ label, field: Object.keys(withStSent[0])[i] })),
               rows: withStSent
             }} />
           )
