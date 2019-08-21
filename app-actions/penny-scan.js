@@ -58,7 +58,7 @@ module.exports = async () => {
         }
       };
     })
-    .filter(buy => buy.computed.projectedVolume > 400000);
+    .filter(buy => buy.computed.projectedVolume > 25000);
   
   const sortAndCut = (arr, sortKey, percent, actuallyTop) => {
     return arr
@@ -161,7 +161,8 @@ module.exports = async () => {
       ...buy,
       stSent: (await getStSent(buy.ticker) || {}).bullBearScore
     }))
-  ).filter(buy => buy.stSent > 50)
+  )
+  // .filter(buy => buy.stSent > 50)
   .map(buy => {
     delete buy.historicals;
     return {
