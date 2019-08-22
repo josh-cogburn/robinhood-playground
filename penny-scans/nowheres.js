@@ -168,7 +168,7 @@ module.exports = async () => {
     return {
       ticker: buy.ticker,
       stSent: buy.stSent,
-      highestTrend: Math.max(Math.abs(buy.computed.tsc), Math.abs(buy.computed.tso)),
+      highestTrend: Math.max(Math.abs(buy.computed.tsc), Math.abs(buy.computed.tso), Math.abs(buy.computed.tsh)),
       ...buy.computed
     };
   })
