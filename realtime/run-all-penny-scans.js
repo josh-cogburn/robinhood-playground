@@ -1,0 +1,60 @@
+const breakdowns = picks => {
+  const singleTopVolumeSS = picks
+    .sort((a, b) => b.projectedVolume - a.projectedVolume)
+    .slice(0, 10)
+    .sort((a, b) => b.stSent - a.stSent)
+    .slice(0, 1);
+  const singlePercMaxVolSS = picks
+    .sort((a, b) => b.percMaxVol - a.percMaxVol)
+    .slice(0, 8)
+    .sort((a, b) => b.stSent - a.stSent)
+    .slice(0, 1);
+  const ss190 = picks
+    .sort((a, b) => b.stSent - a.stSent)
+    .filter(pick => pick.stSent >= 190);
+  const ssFirstTwo = picks
+    .sort((a, b) => b.stSent - a.stSent)
+    .slice(0, 2);
+  return {
+    singleTopVolumeSS,
+    singlePercMaxVolSS,
+    ss190,
+    ssFirstTwo
+  };
+};
+
+const scans = [
+  'nowheres',
+  'hot-st',
+  'droppers'
+];
+
+module.exports = async () => {
+
+  const picks = [];
+  for (let scan of scans) {
+    const scanFn = require(`../penny-scans/${scan}`);
+    console.log('running ', scan, 'PENNY SCAN');
+    const response = await scanFn();
+    const brokenDown = breakdowns(response);
+    Object.keys(brokenDown).forEach(subset => {
+
+      brokenDown[subset].forEach(pick => {
+        const { ticker, ...rest } = pick;
+        picks.push({
+          ticker,
+          strategyName: 'pennyscan',
+          keys: {
+            [scan]: true,
+            [subset]: true
+          },
+          data: rest
+        });
+      });
+
+    });
+
+  }
+  return picks;
+
+};

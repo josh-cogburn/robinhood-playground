@@ -7,7 +7,7 @@ const daily = require('./historicals/daily');
 
 // app-actions
 const recordPicks = require('../app-actions/record-picks');
-const hotStPennyScan = require('../penny-scans/hot-st');
+const runAllPennyScans = require('./run-all-penny-scans');
 const sendRecs = require('../app-actions/send-recs');
 const restartProcess = require('../app-actions/restart-process');
 
@@ -110,6 +110,12 @@ module.exports = new (class RealtimeRunner {
         name: 'RealtimeRunner: start',
         run: [START_MIN],
         fn: () => this.start()
+    });
+
+    regCronIncAfterSixThirty({
+        name: 'RealtimeRunner: SPECIAL PRE MARKET SPECIAL',
+        run: [-60, -30, -15, 2],
+        fn: () => this.topOfHour()
     });
 
     regCronIncAfterSixThirty({
@@ -345,36 +351,30 @@ module.exports = new (class RealtimeRunner {
       const nowStr = (new Date()).toLocaleString();
       await this.timedAsync(
         `ONCE AN HOUR ${nowStr}`,
-        async () => {
-          console.log('RUNNING DAILY', nowStr);
-          await this.runDaily();
-
-          console.log('COLLECTIONS AND HISTORICALS JUST BECAUSE', nowStr);
-          await this.collectionsAndHistoricals();
-
-          console.log('RUNNING PENNIES', nowStr);
-          await this.runPennies();
-
-          console.log('SENDING RECS');
-          await sendRecs();
-        }
+        () => this.topOfHour()
       );
     }
 
   }
 
+  async topOfHour() {
+
+    console.log('RUNNING DAILY', nowStr);
+    await this.runDaily();
+
+    console.log('COLLECTIONS AND HISTORICALS JUST BECAUSE', nowStr);
+    await this.collectionsAndHistoricals();
+
+    console.log('RUNNING PENNIES', nowStr);
+    await this.runPennies();
+
+    console.log('SENDING RECS');
+    await sendRecs();
+    
+  }
+
   async runPennies(skipSave = false) {
-    const response = await hotStPennyScan();
-    const picks = response
-      .filter(pick => pick.stSent > 145)
-      .map(({ ticker, ...rest }) => ({
-        ticker,
-        strategyName: 'pennyscan',
-        keys: {
-          hotST: true
-        },
-        data: rest
-      }));
+    const picks = await runAllPennyScans();
 
     if (!skipSave) {
       for (let pick of picks) {
