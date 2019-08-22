@@ -711,9 +711,6 @@ module.exports = new (class RealtimeRunner {
         [collectionName]: [collectionName]
       }), {})
 
-      ...{
-
-      }
 
     })
   }
