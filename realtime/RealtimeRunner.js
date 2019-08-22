@@ -114,7 +114,7 @@ module.exports = new (class RealtimeRunner {
 
     regCronIncAfterSixThirty({
         name: 'RealtimeRunner: SPECIAL PRE MARKET SPECIAL',
-        run: [-60, -30, -15, 2],
+        run: [-90, -60, -45, -30, -15, 2],
         fn: () => this.topOfHour()
     });
 
@@ -699,7 +699,7 @@ module.exports = new (class RealtimeRunner {
     }), {
 
 
-      
+
       ...singles.reduce((acc, collectionName) => ({
         ...acc,
         [collectionName]: [collectionName]
