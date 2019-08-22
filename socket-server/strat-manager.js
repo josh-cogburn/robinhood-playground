@@ -108,6 +108,7 @@ const stratManager = {
         };
     },
     async refreshPositions() {
+        console.log('refreshing positions', (new Date().toLocaleTimeString()));
         const positions = await cachedPositions();
         this.positions = positions;
         this.tickerWatcher.addTickers(
