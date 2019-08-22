@@ -680,7 +680,17 @@ module.exports = new (class RealtimeRunner {
         'dinner'
       ],
       ...[5, 10, 30 , 'daily'],
-      ...Object.keys(this.collections)
+      ...Object.keys(this.collections),
+
+      'pennyscan-singleTopVolumeSS',
+      'pennyscan-singlePercMaxVolSS',
+      'pennyscan-ss190',
+      'pennyscan-ssFirstTwo',
+
+      'pennyscan-nowheres',
+      'pennyscan-hot-st',
+      'pennyscan-droppers',
+
     ];
 
     return this.strategies.reduce((acc, { pms, strategyName }) => ({
@@ -700,6 +710,10 @@ module.exports = new (class RealtimeRunner {
         ...acc,
         [collectionName]: [collectionName]
       }), {})
+
+      ...{
+
+      }
 
     })
   }
