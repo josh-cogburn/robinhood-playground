@@ -348,28 +348,32 @@ module.exports = new (class RealtimeRunner {
     const min = (new Date()).getMinutes();
     const topOfHour = Boolean(min < 4);
     if (topOfHour) {
-      const nowStr = (new Date()).toLocaleString();
-      await this.timedAsync(
-        `ONCE AN HOUR ${nowStr}`,
-        () => this.topOfHour()
-      );
+      await this.topOfHour();
     }
 
   }
 
   async topOfHour() {
 
-    console.log('RUNNING DAILY', nowStr);
-    await this.runDaily();
+    const nowStr = (new Date()).toLocaleString();
 
-    console.log('COLLECTIONS AND HISTORICALS JUST BECAUSE', nowStr);
-    await this.collectionsAndHistoricals();
-
-    console.log('RUNNING PENNIES', nowStr);
-    await this.runPennies();
-
-    console.log('SENDING RECS');
-    await sendRecs();
+    await this.timedAsync(
+      `ONCE AN HOUR ${nowStr}`,
+      async () => {
+        console.log('RUNNING DAILY', nowStr);
+        await this.runDaily();
+    
+        console.log('COLLECTIONS AND HISTORICALS JUST BECAUSE', nowStr);
+        await this.collectionsAndHistoricals();
+    
+        console.log('RUNNING PENNIES', nowStr);
+        await this.runPennies();
+    
+        console.log('SENDING RECS');
+        await sendRecs();
+      }
+    );
+    
     
   }
 
