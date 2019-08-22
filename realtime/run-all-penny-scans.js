@@ -9,17 +9,25 @@ const breakdowns = picks => {
     .slice(0, 8)
     .sort((a, b) => b.stSent - a.stSent)
     .slice(0, 1);
-  const ss190 = picks
+  const ss180 = picks
     .sort((a, b) => b.stSent - a.stSent)
-    .filter(pick => pick.stSent >= 190);
+    .filter(pick => pick.stSent >= 180);
+  const topSS = picks
+    .sort((a, b) => b.stSent - a.stSent)
+    .slice(0, 1);
   const ssFirstTwo = picks
     .sort((a, b) => b.stSent - a.stSent)
     .slice(0, 2);
+  const stTrendRatioFirst3 = picks
+    .sort((a, b) => b.stTrendRatio - a.stTrendRatio)
+    .slice(0, 3);
   return {
     singleTopVolumeSS,
     singlePercMaxVolSS,
-    ss190,
-    ssFirstTwo
+    ss180,
+    topSS,
+    ssFirstTwo,
+    stTrendRatioFirst3
   };
 };
 

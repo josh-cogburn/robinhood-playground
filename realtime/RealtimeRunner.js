@@ -682,14 +682,6 @@ module.exports = new (class RealtimeRunner {
       ...[5, 10, 30 , 'daily'],
       ...Object.keys(this.collections),
 
-      'pennyscan-singleTopVolumeSS',
-      'pennyscan-singlePercMaxVolSS',
-      'pennyscan-ss190',
-      'pennyscan-ssFirstTwo',
-
-      'pennyscan-nowheres',
-      'pennyscan-hot-st',
-      'pennyscan-droppers',
 
     ];
 
@@ -706,9 +698,28 @@ module.exports = new (class RealtimeRunner {
       })
     }), {
 
+
+      
       ...singles.reduce((acc, collectionName) => ({
         ...acc,
         [collectionName]: [collectionName]
+      }), {}),
+
+
+
+      ...[
+        'nowheres',
+        'hot-st',
+        'droppers',
+
+        'singleTopVolumeSS',
+        'singlePercMaxVolSS',
+        'ss180',
+        'ssFirstTwo',
+        'stTrendRatioFirst3'
+      ].reduce((acc, key) => ({
+        ...acc,
+        [`pennyscan-${key}`]: ['pennyscan', key]
       }), {})
 
 
