@@ -10,6 +10,7 @@ const stratManager = require('./strat-manager');
 const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
 const getMinutesFrom630 = require('../utils/get-minutes-from-630');
 const getTrend = require('../utils/get-trend');
+const dayInProgress = require('../realtime/day-in-progress');
 
 // inner
 let timeout;
@@ -37,7 +38,7 @@ const init = async (onReportFn) => {
     // if between start and end times then start() on init
     const min = getMinutesFrom630();
     console.log({ currentMin: min });
-    if (min > START_MIN && min < STOP_MIN) {
+    if (dayInProgress()) {
         console.log('starting because day in progress');
         await start();
     } else {
