@@ -40,11 +40,27 @@ class DayReports extends Component {
                     return balanceReports.length - index
                 })() : 0;
 
-            return reportsToChartData.balanceChart(balanceReports.slice(0-dataSlice));
+            const chartData = reportsToChartData.balanceChart(balanceReports.slice(0-dataSlice));
+
+            const withDiff = {
+                ...chartData,
+                datasets: [
+                    {
+                        ...chartData.datasets[0],
+                        label: 'diff',
+                        data: chartData.datasets[0].data.map((val, i) => val - chartData.datasets[1].data[i]),
+                        borderWidth: 2,
+                        borderColor: 'pink',
+                    },
+                    ...chartData.datasets,
+                    
+                ]
+            };
+            return withDiff
         })();
 
-        const [{ data }] = chartData.datasets;
-        const curTrend = data[data.length - 1] - 100;
+        const { data } = chartData.datasets[1];
+        const curTrend = data[data.length - 1];
 
         const showingSince = firstOfDay ? firstOfDay : balanceReports[0];
         return (

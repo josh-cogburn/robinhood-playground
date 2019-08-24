@@ -14,6 +14,8 @@ module.exports = {
         '[sudden-drops]',
         '[rsi-lessthan5fitty]',
         '[rsi-lessthan10fitty]',
+        '[golden-cross]',
+        '[pennyscan]'
     ],
     // forPurchaseVariation: '75Perc5Day-yesincludingblanks',
     // fallbackSellStrategy: 'limit8',
