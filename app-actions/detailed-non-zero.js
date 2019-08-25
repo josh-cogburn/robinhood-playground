@@ -5,7 +5,8 @@ const addBuyDataToPositions = require('../app-actions/add-buy-data-to-positions'
 const getStSentiment = require('../utils/get-stocktwits-sentiment');
 const shouldSellPosition = require('../utils/should-sell-position');
 
-const getDetailedNonZero = async () => {
+
+const getPositions = async () => {
     const { results: allPositions } = await Robinhood.nonzero_positions();
     const formattedPositions = allPositions.map(pos => ({
         ...pos,
@@ -14,7 +15,7 @@ const getDetailedNonZero = async () => {
     }));
     const atLeastOneShare = formattedPositions.filter(pos => pos.quantity);
     console.log('getting detailed non zero');
-    let formattedWithLookup = await mapLimit(atLeastOneShare, 1, async pos => {
+    return mapLimit(atLeastOneShare, 1, async pos => {
         const instrument = await Robinhood.url(pos.instrument);
         console.log('looking up instrument', instrument.symbol);
         try {
@@ -28,7 +29,11 @@ const getDetailedNonZero = async () => {
             console.log('unable to lookup', instrument.symbol);
         }
     });
+};
 
+const getDetailedNonZero = async () => {
+    
+    let formattedWithLookup = await getPositions();
     formattedWithLookup = formattedWithLookup.filter(Boolean);
 
     // console.log({ formattedWithLookup})
@@ -61,3 +66,4 @@ const getDetailedNonZero = async () => {
 };
 
 module.exports = getDetailedNonZero;
+module.exports.getPositions = getPositions;

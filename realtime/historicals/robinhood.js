@@ -3,6 +3,7 @@ const getTrend = require('../../utils/get-trend');
 
 module.exports = async (tickers, period) => {
 
+    if (typeof tickers === 'string') tickers = [tickers];
     period = Number(period);
 
     // console.log(tickers)
@@ -11,7 +12,7 @@ module.exports = async (tickers, period) => {
         async tickerStr => {
           return (
             await Robinhood.url(
-              `https://api.robinhood.com/quotes/historicals/?symbols=${tickerStr}&interval=${period}minute`
+              `https://api.robinhood.com/quotes/historicals/?symbols=${tickerStr}&interval=${period}minute&bounds=extended`
             )
           ).results;
         },
@@ -21,8 +22,11 @@ module.exports = async (tickers, period) => {
     console.log(`robinhood historicals for ${tickers.length} tickers...`);
     strlog({ allHistoricals })
 
-    const processHistoricals = historicals => 
-      historicals
+    const processHistoricals = historicals => {
+      strlog({
+        historicalCount: historicals.length
+      });
+      return historicals
         .map((hist, index, arr) => {
           const prevClose = (arr[index - 1] || {}).close_price;
           ['open_price', 'close_price', 'high_price', 'low_price'].forEach(key => {
@@ -38,8 +42,8 @@ module.exports = async (tickers, period) => {
           currentPrice: hist.close_price,
           timestamp: new Date(hist.begins_at).getTime() + (1000 * 60 * period)
         }));
-
-      strlog({  });
+    };
+      
     return allHistoricals
       .filter(obj => obj && obj.symbol && obj.historicals)
       .reduce((acc, { symbol, historicals }) => ({

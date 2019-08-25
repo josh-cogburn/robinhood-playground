@@ -7,6 +7,7 @@ const getMinutesFrom630 = require('../utils/get-minutes-from-630');
 const getTrend = require('../utils/get-trend');
 const getStSent = require('../utils/get-stocktwits-sentiment');
 const { uniq, get } = require('underscore');
+const { avgArray } = require('../utils/array-math');
 
 const getTickersBetween = async (min, max) => {
   const tickQuotes = await lookupMultiple(allStocks.filter(isTradeable).map(o => o.symbol), true);
@@ -48,10 +49,20 @@ module.exports = async () => {
   const withProjectedVolume = withFundamentals
     .map(buy => {
       const projectedVolume = buy.fundamentals.volume / percComplete;
+      const avgPrice = avgArray([
+        buy.fundamentals.open,
+        buy.fundamentals.low,
+        buy.fundamentals.high,
+        buy.fundamentals.high,
+        buy.quote.prevClose,
+        buy.quote.currentPrice
+      ]);
       return {
         ...buy,
         computed: {
           ...buy.computed,
+          actualVolume: buy.fundamentals.volume,
+          dollarVolume: buy.fundamentals.volume * avgPrice,
           projectedVolume,
           projectedVolumeTo2WeekAvg: projectedVolume / buy.fundamentals.average_volume_2_weeks,
           projectedVolumeToOverallAvg: projectedVolume / buy.fundamentals.average_volume,
@@ -76,11 +87,13 @@ module.exports = async () => {
   const topVolTickers = sortAndCut(withProjectedVolume, 'computed.projectedVolume', 20, true);
   const topVolTo2Week = sortAndCut(withProjectedVolume, 'computed.projectedVolumeTo2WeekAvg', 25, true);
   const topVolToOverallAvg = sortAndCut(withProjectedVolume, 'computed.projectedVolumeToOverallAvg', 30, true);
+  const topDollarVolume = sortAndCut(withProjectedVolume, 'computed.dollarVolume', 30, true);
   
   const volumeTickers = uniq([
     ...topVolTickers,
     ...topVolTo2Week,
-    ...topVolToOverallAvg
+    ...topVolToOverallAvg,
+    ...topDollarVolume
   ], 'ticker');
   
   strlog({
@@ -89,6 +102,7 @@ module.exports = async () => {
     topVolTo2Week: topVolTo2Week.length,
     topVolToOverallAvg: topVolToOverallAvg.length,
     volumeTickers: volumeTickers.length,
+    topDollarVolume: topDollarVolume.length,
     withProjectedVolume: withProjectedVolume.length
 
   });
@@ -105,10 +119,10 @@ module.exports = async () => {
         tsh: getTrend(buy.quote.currentPrice, buy.fundamentals.high)
       }
     }))
-    // .filter(buy => {
-    //   const { tso, tsc } = buy.computed;
-    //   return [tso, tsc].some(val => val < 15);
-    // });
+    .filter(buy => {
+      const { tso, tsc } = buy.computed;
+      return [tso, tsc].some(val => val > 0);
+    });
   
   // strlog({
   //   before: volumeTickers.length,
