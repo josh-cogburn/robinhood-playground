@@ -26,6 +26,8 @@ const pennyScans = {
     nowheres: require('../penny-scans/nowheres'),
     droppers: require('../penny-scans/droppers'),
     hotSt: require('../penny-scans/hot-st'),
+    'volume-increasing-5min': require('../penny-scans/volume-increasing-5min'),
+    'volume-increasing-10min': require('../penny-scans/volume-increasing-10min'),
 };
 
 let app = express();

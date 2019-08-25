@@ -41,10 +41,10 @@ module.exports = async () => {
   
   const min = getMinutesFrom630();
   const percComplete = Math.max(Math.min(1, min / 390), 0.01);
-  console.log({
-    min,
-    percComplete
-  });
+  // console.log({
+  //   min,
+  //   percComplete
+  // });
   const withProjectedVolume = withFundamentals
     .map(buy => {
       const projectedVolume = buy.fundamentals.volume / percComplete;
@@ -64,10 +64,10 @@ module.exports = async () => {
     return arr
       .filter(buy => get(buy, sortKey))
       .sort((a, b) => {
-        console.log({
-          b: get(b, sortKey),
-          a: get(a, sortKey)
-        })
+        // console.log({
+        //   b: get(b, sortKey),
+        //   a: get(a, sortKey)
+        // })
         return get(b, sortKey) - get(a, sortKey);
       })
       .cutBottom(percent, actuallyTop)

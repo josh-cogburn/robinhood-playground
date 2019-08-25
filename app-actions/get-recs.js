@@ -10,6 +10,8 @@ module.exports = async (_, pennyPicks) => {
   const mostRecent = uniqDates.pop();
   const pennyFinds = (
     await Pick.find({ date: mostRecent, strategyName: /penny/ }).lean()
+  ).filter(pick => 
+    Object.keys(pick.keys || {}).some(key => key.includes('volume-increasing'))
   );
 
   const [lastHour, lastThreeDays] = partition(pennyFinds, pick => {

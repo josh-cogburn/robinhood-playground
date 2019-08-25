@@ -63,6 +63,32 @@ module.exports = async () => {
     });
 
   }
+
+
+  // volume increasing scans 
+  const volIncreasing = [
+    'volume-increasing-5min', 
+    'volume-increasing-10min'
+  ];
+
+  for (let scan of volIncreasing) {
+    const scanFn = require(`../penny-scans/${scan}`);
+    console.log('running ', scan, 'PENNY SCAN');
+    const response = await scanFn();
+    response.forEach(pick => {
+      const { ticker, ...rest } = pick;
+      picks.push({
+        ticker,
+        strategyName: 'pennyscan',
+        keys: {
+          [scan]: true,
+        },
+        data: rest
+      });
+    });
+  }
+
+
   return picks;
 
 };

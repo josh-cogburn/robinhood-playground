@@ -23,9 +23,6 @@ module.exports = async (tickers, period) => {
     strlog({ allHistoricals })
 
     const processHistoricals = historicals => {
-      strlog({
-        historicalCount: historicals.length
-      });
       return historicals
         .map((hist, index, arr) => {
           const prevClose = (arr[index - 1] || {}).close_price;

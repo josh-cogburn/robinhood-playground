@@ -15,7 +15,10 @@ module.exports = {
         '[rsi-lessthan5fitty]',
         '[rsi-lessthan10fitty]',
         '[golden-cross]',
-        '[pennyscan]'
+        '[pennyscan-nowheres]',
+
+        'rsi-fitty-daily-rsilt20-firstAlert-notWatchout-lunch-5000',
+        'rsi-fitty-daily-rsilt20-firstAlert-notWatchout-dinner-5000',
     ],
     // forPurchaseVariation: '75Perc5Day-yesincludingblanks',
     // fallbackSellStrategy: 'limit8',

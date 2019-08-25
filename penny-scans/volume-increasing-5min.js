@@ -2,12 +2,13 @@ const lookupMultiple = require('../utils/lookup-multiple');
 const addFundamentals = require('../app-actions/add-fundamentals');
 const allStocks = require('../json/stock-data/allStocks');
 const { isTradeable } = require('../utils/filter-by-tradeable');
-const getMultipleHistoricals = require('../app-actions/get-multiple-historicals');
+// const getMultipleHistoricals = require('../app-actions/get-multiple-historicals');
 const getMinutesFrom630 = require('../utils/get-minutes-from-630');
 const getTrend = require('../utils/get-trend');
 const getStSent = require('../utils/get-stocktwits-sentiment');
 const { uniq, get } = require('underscore');
 const { avgArray } = require('../utils/array-math');
+const getHistoricals = require('../realtime/historicals/get');
 
 const getTickersBetween = async (min, max) => {
   const tickQuotes = await lookupMultiple(allStocks.filter(isTradeable).map(o => o.symbol), true);
@@ -96,119 +97,84 @@ module.exports = async () => {
     ...topDollarVolume
   ], 'ticker');
   
+
+  // strlog({ volumeTickers })
+  const fiveMinuteHistoricals = await getHistoricals(volumeTickers.map(obj => obj.ticker), 5);
+  // strlog({fiveMinuteHistoricals})
+
+  const withFiveMinuteHistoricals = volumeTickers.map(buy => ({
+    ...buy,
+    fiveMinute: fiveMinuteHistoricals[buy.ticker].filter(hist => hist.session === 'reg')
+  }));
+
+  // strlog({ withFiveMinuteHistoricals })
+
+  const onlyVolumeEverywhere = withFiveMinuteHistoricals.filter(buy => 
+    buy.fiveMinute.every(hist => hist.volume > 200)
+  );
+
   strlog({
+    onlyVolumeEverywhere: onlyVolumeEverywhere.length
+  })
 
-    topVolTickers: topVolTickers.length,
-    topVolTo2Week: topVolTo2Week.length,
-    topVolToOverallAvg: topVolToOverallAvg.length,
-    volumeTickers: volumeTickers.length,
-    topDollarVolume: topDollarVolume.length,
-    withProjectedVolume: withProjectedVolume.length
+  const withVolumeAnalysis = onlyVolumeEverywhere.map(buy => {
 
-  });
+    const { fiveMinute } = buy;
+    
 
+    const getVolRatio = index => {
+      const p1 = fiveMinute.slice(0, index);
+      const p2 = fiveMinute.slice(index);
 
-  
-  const withTSO = volumeTickers
-    .map(buy => ({
+      const getAvgProp = (arr, prop) => avgArray(arr.map(hist => hist[prop]));
+      const [p1Vol, p2Vol] = [p1, p2].map(arr => getAvgProp(arr, 'volume'));
+      const [p1Trend, p2Trend] = [p1, p2].map(arr => getAvgProp(arr, 'trend'));
+      const volRatio = p2Vol / p1Vol;
+      const trendDiff = Math.max(...[p2Trend, p2Trend - p1Trend]);
+      return volRatio;
+    };
+
+    const volRatios = [
+      fiveMinute.length - 3,
+      fiveMinute.length - 5,
+      fiveMinute.length - Math.round(fiveMinute.length / 4),
+      fiveMinute.length - Math.round(fiveMinute.length / 5),
+      fiveMinute.length - Math.round(fiveMinute.length / 3),
+    ].map(getVolRatio).filter(Boolean);
+
+    // strlog({volRatios})
+    const highestVolRatio = Math.max(...volRatios);
+    // strlog({highestVolRatio})
+
+    return {
       ...buy,
       computed: {
         ...buy.computed,
-        tso: getTrend(buy.quote.currentPrice, buy.fundamentals.open),
-        tsc: getTrend(buy.quote.currentPrice, buy.quote.prevClose),
-        tsh: getTrend(buy.quote.currentPrice, buy.fundamentals.high)
+        highestVolRatio
       }
+    }
+  });
+
+  const hits = withVolumeAnalysis
+    .sort((a, b) => b.computed.highestVolRatio - a.computed.highestVolRatio)
+    .filter(buy => buy.computed.highestVolRatio > 7.5)
+    .map(({ ticker, computed }) => ({
+      ticker,
+      ...computed
     }))
-    .filter(buy => {
-      const { tso, tsc } = buy.computed;
-      return [tso, tsc].some(val => val > 0);
-    });
-  
-  // strlog({
-  //   before: volumeTickers.length,
-  //   after: withTSO.length
-  // });
-  let allHistoricals = await getMultipleHistoricals(
-    withTSO.map(t => t.ticker)
-    // `interval=day`
-  );
-
-  let withHistoricals = withTSO.map((buy, i) => ({
-    ...buy,
-    historicals: allHistoricals[i]
-  }));
-
-
-  // strlog({ withHistoricals})
-
-  const withMaxVol = withHistoricals.map(buy => ({
-    ...buy,
-    computed: {
-      ...buy.computed,
-      recentMaxVol: Math.max( // % volume compared to max in the last N days
-        ...buy.historicals.slice(-20).map(hist => hist.volume)
-      ),
-    }
-  }));
-
-  const withPercMaxVol = withMaxVol.map(buy => ({
-    ...buy,
-    computed: {
-      ...buy.computed,
-      percMaxVol: buy.computed.projectedVolume / buy.computed.recentMaxVol
-    }
-  }));
-
-
-  const sortedByPercMaxVol = withPercMaxVol
-    .filter(buy => buy.computed.percMaxVol && buy.computed.recentMaxVol)
-    .sort((a, b) => b.computed.percMaxVol - a.computed.percMaxVol)
-    // .cutBottom(80)
-    .cutBottom(30, true);
-
-    strlog({
-      sortedByPercMaxVol: sortedByPercMaxVol.length
-    })
 
   const withStSent = (
-    await mapLimit(sortedByPercMaxVol, 3, async buy => ({
+    await mapLimit(hits, 3, async buy => ({
       ...buy,
       stSent: (await getStSent(buy.ticker) || {}).bullBearScore
     }))
-  )
-  .filter(buy => buy.stSent > 50)
-  .map(buy => {
-    delete buy.historicals;
-    return {
-      ticker: buy.ticker,
-      stSent: buy.stSent,
-      highestTrend: Math.max(Math.abs(buy.computed.tsc), Math.abs(buy.computed.tso), Math.abs(buy.computed.tsh)),
-      ...buy.computed
-    };
-  })
-  .map(buy => ({
-    ...buy,
-    stTrendRatio: buy.stSent / buy.highestTrend
-  }));
+  );
 
   return withStSent;
 
-  // const stCache = {};
-  // for (let ticker of sortedByPercMaxVol.map(buy => buy.ticker)) {
-  //   const score = (await getStSent(ticker) || {}).bullBearScore;
-  //   if (score > 145) {
-  //     stCache[ticker] = score;
-  //     if (Object.keys(stCache).length >= 5) {
-  //       break;
-  //     }
-  //   }
-  // }
-
-  // return Object.keys(stCache).map(ticker => ({
-  //   ticker,
-  //   stSent: stCache[ticker],
-  //   ...sortedByPercMaxVol.find(buy => buy.ticker === ticker).computed
-  // }));
+  // strlog({historicals})
+  // const withFiveMinHistoricals = await mapLimit(volumeTickers,) 
+    
 
 };
 
