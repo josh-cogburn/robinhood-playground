@@ -21,13 +21,21 @@ const breakdowns = picks => {
   const stTrendRatioFirst3 = picks
     .sort((a, b) => b.stTrendRatio - a.stTrendRatio)
     .slice(0, 3);
+  const worstSsTrendRatio = picks
+    .sort((a, b) => a.stTrendRatio - b.stTrendRatio)
+    .slice(0, 2);
+  const worstSS = picks
+    .sort((a, b) => a.stSent - b.stSent)
+    .slice(0, 2);
   return {
     singleTopVolumeSS,
     singlePercMaxVolSS,
     ss180,
     topSS,
     ssFirstTwo,
-    stTrendRatioFirst3
+    stTrendRatioFirst3,
+    worstSsTrendRatio,
+    worstSS
   };
 };
 

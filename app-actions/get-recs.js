@@ -8,10 +8,16 @@ module.exports = async (_, pennyPicks) => {
   // what to buy
   const uniqDates = await Pick.getUniqueDates();
   const mostRecent = uniqDates.pop();
+
+
+  const badKeys = [
+    'volume-increasing',
+    'worst'
+  ];
   const pennyFinds = (
     await Pick.find({ date: mostRecent, strategyName: /penny/ }).lean()
   ).filter(pick => 
-    Object.keys(pick.keys || {}).some(key => key.includes('volume-increasing'))
+    Object.keys(pick.keys || {}).every(key => badKeys.every(bad => !key.includes(bad)) )
   );
 
   const [lastHour, lastThreeDays] = partition(pennyFinds, pick => {
