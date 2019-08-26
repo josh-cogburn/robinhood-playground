@@ -137,7 +137,7 @@ module.exports = async () => {
         currentPositions: (await getPositions()).map(pos => pos.ticker),
         fitty: await getTickersBetween(0, 0.50),
         // upcoming: await getRhStocks('upcoming-earnings'),
-        rhtop100: await getRhStocks('100-most-popular'),
+        // rhtop100: await getRhStocks('100-most-popular'),
         // ...await getFinvizCollections(),
         // ...await getStockInvestCollections()
     };
