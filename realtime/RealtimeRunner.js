@@ -114,7 +114,7 @@ module.exports = new (class RealtimeRunner {
 
     regCronIncAfterSixThirty({
         name: 'RealtimeRunner: SPECIAL PRE MARKET SPECIAL',
-        run: [-90, -60, -45, -30, -15, 2, 395],
+        run: [-60, -45, -30, -20, -10, 3, 395],
         fn: () => this.topOfHour()
     });
 
@@ -279,6 +279,7 @@ module.exports = new (class RealtimeRunner {
     // })
     const firstTickerLastHistorical = firstTickerData[firstTickerData.length - 1];
     if (!firstTickerLastHistorical) {
+      sendEmail('NO LAST DATA', `no last data ${period}`);
       console.log('WHAT NO LAST DATA', {
         period,
         firstTicker,
@@ -286,7 +287,7 @@ module.exports = new (class RealtimeRunner {
       });
       restartProcess();
     }
-    return firstTickerLastHistorical.timestamp;
+    return (firstTickerLastHistorical || {}).timestamp;
   }
   
   async everyFiveMinutes() {
