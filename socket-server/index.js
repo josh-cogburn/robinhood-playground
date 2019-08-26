@@ -168,6 +168,7 @@ io.on('connection', async socket => {
 
 
     socket.on('client:run-penny', async type => {
+        console.log('running penny scan', type);
         const scan = pennyScans[type];
         const results = await scan();
         socket.emit('server:penny-results', { results });
