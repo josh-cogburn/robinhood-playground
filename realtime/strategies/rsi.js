@@ -42,6 +42,7 @@ module.exports = {
         // ].some(text => strat.includes(text)),
 
         shouldWatchout: 'shouldWatchout',
+        '10minWatchout': ['shouldWatchout', '10min'],
         notWatchout: 'notWatchout',
 
         firstAlerts: 'firstAlert',
