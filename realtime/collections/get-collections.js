@@ -185,7 +185,7 @@ module.exports = async () => {
 
 
 
-    for (let key of ['rhtop100', 'fitty']) {
+    for (let key of ['fitty']) {
         console.log('filtering', key);
         response = {
             ...response,
