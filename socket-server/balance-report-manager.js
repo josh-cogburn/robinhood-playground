@@ -72,7 +72,7 @@ const getAndSaveBalanceReport = async (isRegularHours) => {
     // console.log('hereee');
 
     let { accountBalance } = await getAccountBalance();
-    if (Math.abs(getTrend(accountBalance, lastBalance)) > 0.5) {
+    if (Math.abs(getTrend(accountBalance, lastBalance)) > 0.9) {
         console.log('WOAH WOAH', {
             accountBalance,
             lastBalance
