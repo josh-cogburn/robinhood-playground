@@ -24,7 +24,7 @@ const getTickersBetween = async (min, max) => {
 
 
 module.exports = async () => {
-  const tickers = (await getTickersBetween(0, 8)).map(buy => ({
+  const tickers = (await getTickersBetween(1, 8)).map(buy => ({
     ...buy,
     computed: {}
   }));
@@ -121,7 +121,7 @@ module.exports = async () => {
     }))
     .filter(buy => {
       const { tso, tsc } = buy.computed;
-      return [tso, tsc].some(val => val > 0);
+      return [tso, tsc].some(val => val > 5);
     });
   
   // strlog({

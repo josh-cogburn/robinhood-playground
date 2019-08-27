@@ -717,15 +717,20 @@ module.exports = new (class RealtimeRunner {
         'hot-st',
         'droppers',
 
+        'topSS',
         'singleTopVolumeSS',
         'singlePercMaxVolSS',
         'ss180',
         'ssFirstTwo',
-        'stTrendRatioFirst3'
+        'stTrendRatioFirst3',
+
       ].reduce((acc, key) => ({
         ...acc,
         [`pennyscan-${key}`]: ['pennyscan', key]
-      }), {})
+      }), {}),
+
+      nowheresTopSS: ['nowheres', 'topSS'],
+      nowheresTopSSPREMARKET: ['nowheres', 'topSS', 'premarket'],
 
 
     })
