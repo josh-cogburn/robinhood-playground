@@ -195,7 +195,7 @@ const stratManager = {
     async initPicks(dateStr) {
         console.log('init picks', dateStr);
 
-        const recentRecommendations = await Pick.getRecentRecommendations();
+        const recentRecommendations = [] //await Pick.getRecentRecommendations();
         const todaysPicks = await Pick.find(
             { date: dateStr },
             { data: 0 }
