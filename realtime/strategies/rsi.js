@@ -57,6 +57,7 @@ module.exports = {
 
         lessthan5: 'rsilt5',
         lessthan5fitty: ['rsilt5', 'fitty'],
+        lessthan5fitty10min: ['rsilt5', 'fitty', '10min'],
         lessthan10fitty: ['rsilt10', 'fitty'],
 
 

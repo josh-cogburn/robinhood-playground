@@ -85,14 +85,17 @@ module.exports = async () => {
     const response = await scanFn();
     response.forEach(pick => {
       const { ticker, ...rest } = pick;
-      picks.push({
-        ticker,
-        strategyName: 'pennyscan',
-        keys: {
-          [scan]: true,
-        },
-        data: rest
-      });
+      const { stSent } = rest;
+      if (stSent > 80) {
+        picks.push({
+          ticker,
+          strategyName: 'pennyscan',
+          keys: {
+            [scan]: true,
+          },
+          data: rest
+        });
+      }
     });
   }
 

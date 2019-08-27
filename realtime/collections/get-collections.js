@@ -134,7 +134,7 @@ module.exports = async () => {
     let response = {
         spy: ['SPY'],
         options: OPTIONSTICKERS,
-        currentPositions: (await getPositions()).map(pos => pos.ticker),
+        // currentPositions: (await getPositions()).map(pos => pos.ticker),
         fitty: await getTickersBetween(0, 0.50),
         // upcoming: await getRhStocks('upcoming-earnings'),
         // rhtop100: await getRhStocks('100-most-popular'),

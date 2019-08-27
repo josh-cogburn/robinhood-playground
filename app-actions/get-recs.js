@@ -10,15 +10,25 @@ module.exports = async (_, pennyPicks) => {
   const mostRecent = uniqDates.pop();
 
 
-  const badKeys = [
-    'volume-increasing',
-    'worst'
-  ];
+  const isPennyScanOfInterest = keys => (
+    [
+      'hot-st',
+      'droppers'
+    ].some(k => keys.includes(k))
+  ) && (
+    keys.includes('ssFirstTwo') ||
+    keys.includes('singleTopVolumeSS')
+  );
+  const volumeIncreasingWatchout = ({ strategyName }) => [
+    'volume-increasing-10min', 'shouldWatchout'
+  ].every(k => strategyName.includes(k));
   const pennyFinds = (
     await Pick.find({ date: mostRecent, strategyName: /penny/ }).lean()
-  ).filter(pick => 
-    Object.keys(pick.keys || {}).every(key => badKeys.every(bad => !key.includes(bad)) )
-  );
+  ).filter(pick => {
+    const keys = Object.keys(pick.keys || {});
+    console.log(pick)
+    return volumeIncreasingWatchout(pick) || isPennyScanOfInterest(keys)
+  });
 
   const [lastHour, lastThreeDays] = partition(pennyFinds, pick => {
     return new Date(pick.timestamp).getTime() > Date.now() - 1000 * 60 * 60;

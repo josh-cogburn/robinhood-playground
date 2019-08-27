@@ -62,9 +62,9 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
 
     
     // forPurchase
+    const stocksToBuy = withPrices.map(obj => obj.ticker);
     if (isRecommended) {
         console.log('strategy enabled: ', stratMin, 'purchasing');
-        const stocksToBuy = withPrices.map(obj => obj.ticker);
         await purchaseStocks({
             stocksToBuy,
             strategy,
@@ -97,7 +97,7 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
     for (let { email, pm } of emailsToSend) {
         await sendEmail(
             `robinhood-playground${pm ? `-${pm}` : ''}: ${stratMin}`,
-            JSON.stringify(withPrices, null, 2),
+            stocksToBuy.join(', '),
             email
         );
     }
