@@ -719,13 +719,15 @@ module.exports = new (class RealtimeRunner {
           'hot-st',
           'droppers',
         ],
-        [
-          'topSS',
+        [    
           'singleTopVolumeSS',
           'singlePercMaxVolSS',
           'ss180',
+          'topSS',
           'ssFirstTwo',
           'stTrendRatioFirst3',
+          'worstSsTrendRatio',
+          'worstSS'
         ]
       ).toArray().reduce((acc, arr) => ({
         ...acc,
