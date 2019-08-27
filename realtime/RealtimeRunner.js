@@ -1,3 +1,4 @@
+const Combinatorics = require('js-combinatorics');
 const { mapObject } = require('underscore');
 
 const getCollections = require('./collections/get-collections');
@@ -712,24 +713,25 @@ module.exports = new (class RealtimeRunner {
 
 
 
-      ...[
-        'nowheres',
-        'hot-st',
-        'droppers',
-
-        'topSS',
-        'singleTopVolumeSS',
-        'singlePercMaxVolSS',
-        'ss180',
-        'ssFirstTwo',
-        'stTrendRatioFirst3',
-
-      ].reduce((acc, key) => ({
+      ...Combinatorics.cartesianProduct(
+        [
+          'nowheres',
+          'hot-st',
+          'droppers',
+        ],
+        [
+          'topSS',
+          'singleTopVolumeSS',
+          'singlePercMaxVolSS',
+          'ss180',
+          'ssFirstTwo',
+          'stTrendRatioFirst3',
+        ]
+      ).toArray().reduce((acc, arr) => ({
         ...acc,
-        [`pennyscan-${key}`]: ['pennyscan', key]
+        [`pennyscan-${arr.join('-')}`]: ['pennyscan', ...arr]
       }), {}),
 
-      nowheresTopSS: ['nowheres', 'topSS'],
       nowheresTopSSPREMARKET: ['nowheres', 'topSS', 'premarket'],
 
 
