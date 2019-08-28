@@ -121,7 +121,10 @@ module.exports = async () => {
     }))
     .filter(buy => {
       const { tso, tsc } = buy.computed;
-      return [tso, tsc].some(val => val > 5);
+      return [
+        tsc,
+        ...min < 0 ? tso : []
+      ].every(val => val > 5);
     });
   
   // strlog({

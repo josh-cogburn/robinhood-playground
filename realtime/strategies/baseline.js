@@ -6,8 +6,8 @@ module.exports = {
   handler: () => {
     i++;
     console.log('baseline', i);
-    const isIncremental = Boolean(i % 200 === 0);
-    const isRandom = Boolean(Math.random() > 0.90);
+    const isIncremental = Boolean(i % 40 === 0);
+    const isRandom = Boolean(Math.random() > 0.88);
     return {
       keys: {
         isIncremental,
