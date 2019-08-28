@@ -123,14 +123,14 @@ module.exports = async () => {
       const { tso, tsc } = buy.computed;
       return [
         tsc,
-        ...min < 0 ? [tso] : []
-      ].every(val => val > 5);
+        tso
+      ].every(val => val > 3);
     });
   
-  // strlog({
-  //   before: volumeTickers.length,
-  //   after: withTSO.length
-  // });
+  strlog({
+    before: volumeTickers.length,
+    after: withTSO.length
+  });
   let allHistoricals = await getMultipleHistoricals(
     withTSO.map(t => t.ticker)
     // `interval=day`
@@ -179,7 +179,6 @@ module.exports = async () => {
       stSent: (await getStSent(buy.ticker) || {}).bullBearScore
     }))
   )
-  .filter(buy => buy.stSent > 50)
   .map(buy => {
     delete buy.historicals;
     return {
