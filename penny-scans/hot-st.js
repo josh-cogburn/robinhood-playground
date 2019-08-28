@@ -123,7 +123,7 @@ module.exports = async () => {
       const { tso, tsc } = buy.computed;
       return [
         tsc,
-        ...min < 0 ? tso : []
+        ...min < 0 ? [tso] : []
       ].every(val => val > 5);
     });
   
