@@ -86,7 +86,7 @@ module.exports = async () => {
     response.forEach(pick => {
       const { ticker, ...rest } = pick;
       const { stSent } = rest;
-      if (stSent > 80) {
+      // if (stSent > 80) {
         picks.push({
           ticker,
           strategyName: 'pennyscan',
@@ -95,7 +95,7 @@ module.exports = async () => {
           },
           data: rest
         });
-      }
+      // }
     });
   }
 
