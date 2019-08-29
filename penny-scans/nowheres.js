@@ -133,11 +133,11 @@ module.exports = async () => {
 
   
   let allHistoricals = await getMultipleHistoricals(
-    withTSO.map(t => t.ticker)
+    volumeTickers.map(t => t.ticker)
     // `interval=day`
   );
 
-  let withHistoricals = withTSO.map((buy, i) => ({
+  let withHistoricals = volumeTickers.map((buy, i) => ({
     ...buy,
     historicals: allHistoricals[i]
   }));
@@ -168,17 +168,17 @@ module.exports = async () => {
 
 
   const randomHot = [
-    // ...topVolTickers,
     ...topVolTo2Week,
     ...topVolToOverallAvg,
-    ...topVolTo2Week,
-    ...topVolToOverallAvg,
-    ...topDollarVolume
   ].sort(() => Math.random() > 0.5);
 
   const theGoodStuff = uniq([
     ...topPercMaxVol,
-    ...randomHot
+    ...randomHot,
+
+    ...topDollarVolume,
+    ...topVolTickers,
+    ...withTSO
   ], 'ticker')
     .slice(0, 70)
     .map(({ ticker }) => 
