@@ -182,7 +182,7 @@ module.exports = async () => {
 
     ...topDollarVolume,
     ...topVolTickers,
-    ...withTSO
+    ...volumeTickers
   ], 'ticker')
     .slice(0, 70)
     .map(({ ticker }) => 
