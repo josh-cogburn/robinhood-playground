@@ -117,7 +117,7 @@ module.exports = async () => {
     ...topVolTo2Week,
     ...topVolToOverallAvg,
     ...topDollarVolume,
-    ...volumeTickers,
+    ...withTSO,
   ], 'ticker').slice(0, 70);
   
   strlog({
