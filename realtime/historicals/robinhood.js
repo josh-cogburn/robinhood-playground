@@ -20,7 +20,7 @@ module.exports = async (tickers, period) => {
     );
 
     console.log(`robinhood historicals for ${tickers.length} tickers...`);
-    strlog({ allHistoricals })
+    // strlog({ allHistoricals })
 
     const processHistoricals = historicals => {
       return historicals

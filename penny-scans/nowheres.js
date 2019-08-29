@@ -6,7 +6,8 @@ const getMultipleHistoricals = require('../app-actions/get-multiple-historicals'
 const getMinutesFrom630 = require('../utils/get-minutes-from-630');
 const getTrend = require('../utils/get-trend');
 const getStSent = require('../utils/get-stocktwits-sentiment');
-const { uniq, get } = require('underscore');
+const { uniq, get, mapObject } = require('underscore');
+const { avgArray } = require('../utils/array-math');
 
 const getTickersBetween = async (min, max) => {
   const tickQuotes = await lookupMultiple(allStocks.filter(isTradeable).map(o => o.symbol), true);
@@ -23,7 +24,7 @@ const getTickersBetween = async (min, max) => {
 
 
 module.exports = async () => {
-  const tickers = (await getTickersBetween(1, 10)).map(buy => ({
+  const tickers = (await getTickersBetween(1, 8)).map(buy => ({
     ...buy,
     computed: {}
   }));
@@ -48,18 +49,51 @@ module.exports = async () => {
   const withProjectedVolume = withFundamentals
     .map(buy => {
       const projectedVolume = buy.fundamentals.volume / percComplete;
+      const avgPrice = avgArray([
+        buy.fundamentals.open,
+        buy.fundamentals.low,
+        buy.fundamentals.high,
+        buy.fundamentals.high,
+        buy.quote.prevClose,
+        buy.quote.currentPrice
+      ]);
       return {
         ...buy,
         computed: {
           ...buy.computed,
+          actualVolume: buy.fundamentals.volume,
+          dollarVolume: buy.fundamentals.volume * avgPrice,
           projectedVolume,
           projectedVolumeTo2WeekAvg: projectedVolume / buy.fundamentals.average_volume_2_weeks,
           projectedVolumeToOverallAvg: projectedVolume / buy.fundamentals.average_volume,
         }
       };
     })
-    .filter(buy => buy.computed.projectedVolume > 25000);
+    .filter(buy => buy.computed.projectedVolume > 40000);
+
   
+
+  
+    const withTSO = withProjectedVolume
+      .map(buy => ({
+        ...buy,
+        computed: {
+          ...buy.computed,
+          tso: getTrend(buy.quote.currentPrice, buy.fundamentals.open),
+          tsc: getTrend(buy.quote.currentPrice, buy.quote.prevClose),
+          tsh: getTrend(buy.quote.currentPrice, buy.fundamentals.high)
+        }
+      }))
+      .filter(buy => {
+        const { tso, tsc, tsh } = buy.computed;
+        return [tso, tsc, tsh].every(val => Math.abs(val) < 5);
+      });
+
+  
+    strlog({
+      before: withProjectedVolume.length,
+      after: withTSO.length
+    });
   const sortAndCut = (arr, sortKey, percent, actuallyTop) => {
     return arr
       .filter(buy => get(buy, sortKey))
@@ -73,47 +107,31 @@ module.exports = async () => {
       .cutBottom(percent, actuallyTop)
   };
 
-  const topVolTickers = sortAndCut(withProjectedVolume, 'computed.projectedVolume', 20, true);
-  const topVolTo2Week = sortAndCut(withProjectedVolume, 'computed.projectedVolumeTo2WeekAvg', 25, true);
-  const topVolToOverallAvg = sortAndCut(withProjectedVolume, 'computed.projectedVolumeToOverallAvg', 30, true);
+  const topVolTickers = sortAndCut(withTSO, 'computed.projectedVolume', 20, true);
+  const topVolTo2Week = sortAndCut(withTSO, 'computed.projectedVolumeTo2WeekAvg', 25, true);
+  const topVolToOverallAvg = sortAndCut(withTSO, 'computed.projectedVolumeToOverallAvg', 30, true);
+  const topDollarVolume = sortAndCut(withTSO, 'computed.dollarVolume', 30, true);
   
   const volumeTickers = uniq([
     ...topVolTickers,
     ...topVolTo2Week,
-    ...topVolToOverallAvg
+    ...topVolToOverallAvg,
+    ...topDollarVolume
   ], 'ticker');
   
   strlog({
+
+    withProjectedVolume: withProjectedVolume.length,
+    withTSO: withTSO.length,
 
     topVolTickers: topVolTickers.length,
     topVolTo2Week: topVolTo2Week.length,
     topVolToOverallAvg: topVolToOverallAvg.length,
     volumeTickers: volumeTickers.length,
-    withProjectedVolume: withProjectedVolume.length
-
+    topDollarVolume: topDollarVolume.length,
   });
 
-
   
-  const withTSO = volumeTickers
-    .map(buy => ({
-      ...buy,
-      computed: {
-        ...buy.computed,
-        tso: getTrend(buy.quote.currentPrice, buy.fundamentals.open),
-        tsc: getTrend(buy.quote.currentPrice, buy.quote.prevClose),
-        tsh: getTrend(buy.quote.currentPrice, buy.fundamentals.high)
-      }
-    }))
-    .filter(buy => {
-      const { tso, tsc, tsh } = buy.computed;
-      return [tso, tsc, tsh].every(val => Math.abs(val) < 5);
-    });
-  
-  // strlog({
-  //   before: volumeTickers.length,
-  //   after: withTSO.length
-  // });
   let allHistoricals = await getMultipleHistoricals(
     withTSO.map(t => t.ticker)
     // `interval=day`
@@ -146,28 +164,44 @@ module.exports = async () => {
   }));
 
 
-  const sortedByPercMaxVol = withPercMaxVol
-    .filter(buy => buy.computed.percMaxVol && buy.computed.recentMaxVol)
-    .sort((a, b) => b.computed.percMaxVol - a.computed.percMaxVol)
-    // .cutBottom(80)
-    .cutBottom(30, true);
+  const topPercMaxVol = sortAndCut(withPercMaxVol, 'computed.percMaxVol', 25, true);
 
-    strlog({
-      sortedByPercMaxVol: sortedByPercMaxVol.length
-    })
+
+  const randomHot = [
+    // ...topVolTickers,
+    ...topVolTo2Week,
+    ...topVolToOverallAvg,
+    ...topVolTo2Week,
+    ...topVolToOverallAvg,
+    ...topDollarVolume
+  ].sort(() => Math.random() > 0.5);
+
+  const theGoodStuff = uniq([
+    ...topPercMaxVol,
+    ...randomHot
+  ], 'ticker')
+    .slice(0, 70)
+    .map(({ ticker }) => 
+      withPercMaxVol.find(o => o.ticker === ticker)
+    );
+
+  console.log({
+    topPercMaxVol: topPercMaxVol.length,
+    randomHot: randomHot.length,
+    theGoodStuff: theGoodStuff.length,
+  })
 
   const withStSent = (
-    await mapLimit(sortedByPercMaxVol, 3, async buy => ({
+    await mapLimit(theGoodStuff, 3, async buy => ({
       ...buy,
       stSent: (await getStSent(buy.ticker) || {}).bullBearScore
     }))
   )
-  .sort((a, b) => b.stSent - a.stSent)
   .map(buy => {
     delete buy.historicals;
     return {
       ticker: buy.ticker,
-      stSent: buy.stSent,
+      stSent: buy.stSent || 0,
       highestTrend: Math.max(Math.abs(buy.computed.tsc), Math.abs(buy.computed.tso), Math.abs(buy.computed.tsh)),
       ...buy.computed
     };
@@ -197,5 +231,3 @@ module.exports = async () => {
   // }));
 
 };
-
-
