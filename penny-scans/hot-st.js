@@ -121,7 +121,7 @@ module.exports = async () => {
     ...topVolToOverallAvg,
     ...topDollarVolume,
     ...withTSO,
-  ], 'ticker').slice(0, 70);
+  ], 'ticker');
   
   strlog({
 
@@ -131,8 +131,8 @@ module.exports = async () => {
     topVolTickers: topVolTickers.length,
     topVolTo2Week: topVolTo2Week.length,
     topVolToOverallAvg: topVolToOverallAvg.length,
-    volumeTickers: volumeTickers.length,
     topDollarVolume: topDollarVolume.length,
+    volumeTickers: volumeTickers.length,
   });
 
   
