@@ -9,6 +9,12 @@ const breakdowns = picks => {
     .slice(0, 8)
     .sort((a, b) => b.stSent - a.stSent)
     .slice(0, 1);
+  const singleTopDollarVolume = picks
+    .sort((a, b) => b.dollarVolume - a.dollarVolume)
+    .slice(0, 1);
+  const singleTopProjectedVolume = picks
+    .sort((a, b) => b.projectedVolume	 - a.projectedVolume)
+    .slice(0, 1);
   const ss180 = picks
     .sort((a, b) => b.stSent - a.stSent)
     .filter(pick => pick.stSent >= 180);
@@ -30,6 +36,8 @@ const breakdowns = picks => {
   return {
     singleTopVolumeSS,
     singlePercMaxVolSS,
+    singleTopDollarVolume,
+    singleTopProjectedVolume,
     ss180,
     topSS,
     ssFirstTwo,

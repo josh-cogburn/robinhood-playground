@@ -687,7 +687,8 @@ module.exports = new (class RealtimeRunner {
       ],
       ...[5, 10, 30 , 'daily'],
       ...Object.keys(this.collections),
-
+      
+      'volume-increasing'
 
     ];
 
@@ -723,6 +724,8 @@ module.exports = new (class RealtimeRunner {
           'singleTopVolumeSS',
           'singlePercMaxVolSS',
           'ss180',
+          'singleTopDollarVolume',
+          'singleTopProjectedVolume',
           'topSS',
           'ssFirstTwo',
           'stTrendRatioFirst3',
@@ -735,7 +738,6 @@ module.exports = new (class RealtimeRunner {
       }), {}),
 
       nowheresTopSSPREMARKET: ['nowheres', 'topSS', 'premarket'],
-
 
     })
   }
