@@ -64,16 +64,17 @@ module.exports = async (ticker, detailed) => {
             points: getPoints(o.entities.sentiment.basic, o.min)
         }));
 
-        // console.log('points', withPoints.map(o => o.points));
+        console.log('withMin', withMin.map(o => o.min));
+        console.log('points', withPoints.map(o => o.points));
         const total = withPoints.reduce((acc, { points }) => acc + points, 0);
         const totalCount = messages.length;
 
-        const countPenalty = (30 - totalCount) * 2;
-        const bullBearScore = Math.round(total / 30) - countPenalty;
+        // const countPenalty = (30 - totalCount) * 2;
+        const countBonus = totalCount//
+        const bullBearScore = Math.round(total / 30) + countBonus;
 
         // console.log({finalScore, total, countPenalty});
 
-        // console.log('withMin', withMin.map(o => o.min));
 
         const getSentiment = s => messages.filter(o => o.entities.sentiment && o.entities.sentiment.basic === s).length;
         const response = {

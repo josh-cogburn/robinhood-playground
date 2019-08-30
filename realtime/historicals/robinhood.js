@@ -12,7 +12,7 @@ module.exports = async (tickers, period) => {
         async tickerStr => {
           return (
             await Robinhood.url(
-              `https://api.robinhood.com/quotes/historicals/?symbols=${tickerStr}&interval=${period}minute&bounds=extended`
+              `https://api.robinhood.com/quotes/historicals/?symbols=${tickerStr}&interval=${period}minute&span=week`
             )
           ).results;
         },
