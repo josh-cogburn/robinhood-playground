@@ -136,10 +136,15 @@ class Scan extends Component {
 
     const period = this.selectRef ? this.selectRef.value : undefined;
     const isLoading = Object.keys(loading).some(key => !!loading[key]);
-    const withStSent = (results || []).map(row => ({
-      ...row,
-      stSent: row.stSent || stSent[row.ticker] || '...'
-    }));
+
+
+    const withStSent = (results || []).map(row => {
+      return {
+        ...row,
+        stSent: [row.stSent, stSent[row.ticker], 0].find(val => val !== undefined)
+      };
+      
+    });
 
 
     const columns = results[0] && !results[0].percMaxVol && false ? [
