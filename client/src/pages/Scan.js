@@ -159,7 +159,7 @@ class Scan extends Component {
         <h2>Scan</h2>
         <select ref={ref => { this.selectRef = ref }}>
           {
-            [5, 10, 30, 'd', 'penny-hotSt', 'penny-droppers', 'penny-nowheres', 'penny-volume-increasing-5min', 'penny-volume-increasing-10min'].map(value => (
+            [5, 10, 30, 'd', 'penny-hotSt', 'penny-droppers', 'penny-nowheres', 'penny-unfiltered', 'penny-volume-increasing-5min', 'penny-volume-increasing-10min'].map(value => (
               <option value={value}>{value}</option>
             ))
           }

@@ -50,7 +50,8 @@ const breakdowns = picks => {
 const scans = [
   'nowheres',
   'hot-st',
-  'droppers'
+  'droppers',
+  'unfiltered',
 ];
 
 module.exports = async () => {

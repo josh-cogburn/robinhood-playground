@@ -29,7 +29,7 @@ const runPennyScan = async ({
   minVolume = Number.NEGATIVE_INFINITY,
   filterFn = () => true,
   includeStSent = true
-}) => {
+} = {}) => {
   const tickers = (await getTickersBetween(minPrice, maxPrice)).map(buy => ({
     ...buy,
     computed: {}
