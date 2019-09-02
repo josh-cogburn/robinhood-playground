@@ -724,14 +724,18 @@ module.exports = new (class RealtimeRunner {
         [    
           'singleTopVolumeSS',
           'singlePercMaxVolSS',
-          'ss180',
           'singleTopDollarVolume',
           'singleTopProjectedVolume',
+          'ss180',
           'topSS',
           'ssFirstTwo',
           'stTrendRatioFirst3',
           'worstSsTrendRatio',
-          'worstSS'
+          'worstSS',
+          'highestTrend',
+          'zScoreInverseTrend',
+          'zScoreVolume',
+          'sumZScore'
         ]
       ).toArray().reduce((acc, arr) => ({
         ...acc,

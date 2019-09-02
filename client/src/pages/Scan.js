@@ -62,7 +62,8 @@ class Scan extends Component {
       this.selectRef.value
     );
     const period = this.selectRef ? this.selectRef.value : undefined;
-    if (period.includes('penny')) {
+    const isPenny = period.includes('penny');
+    if (isPenny) {
       const whichPenny = period.split('penny-')[1];
       console.log({ whichPenny })
       return this.pennyScan(whichPenny);
@@ -80,7 +81,7 @@ class Scan extends Component {
         },
         results: results
           .map(pick => ({
-            details: <button onClick={() => this.selectPick(pick)}>details</button>,
+          ...!isPenny && { details: <button onClick={() => this.selectPick(pick)}>details</button> },
             ticker: pick.ticker,
             strategyName: pick.strategyName,
             keys: pick.keys,

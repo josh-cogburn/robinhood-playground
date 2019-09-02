@@ -1,3 +1,5 @@
+const COUNT = 70;
+
 const lookupMultiple = require('../utils/lookup-multiple');
 const addFundamentals = require('../app-actions/add-fundamentals');
 const allStocks = require('../json/stock-data/allStocks');
@@ -7,7 +9,7 @@ const getMinutesFrom630 = require('../utils/get-minutes-from-630');
 const getTrend = require('../utils/get-trend');
 const getStSent = require('../utils/get-stocktwits-sentiment');
 const { uniq, get, mapObject } = require('underscore');
-const { avgArray } = require('../utils/array-math');
+const { avgArray, zScore } = require('../utils/array-math');
 
 const getTickersBetween = async (min, max) => {
   const tickQuotes = await lookupMultiple(allStocks.filter(isTradeable).map(o => o.symbol), true);
@@ -64,34 +66,79 @@ const runPennyScan = async ({
         computed: {
           ...buy.computed,
           actualVolume: buy.fundamentals.volume,
-          dollarVolume: buy.fundamentals.volume * avgPrice,
-          projectedVolume,
-          projectedVolumeTo2WeekAvg: projectedVolume / buy.fundamentals.average_volume_2_weeks,
-          projectedVolumeToOverallAvg: projectedVolume / buy.fundamentals.average_volume,
+          dollarVolume: Math.round(buy.fundamentals.volume * avgPrice),
+          projectedVolume: projectedVolume.twoDec(),
+          // projectedVolumeTo2WeekAvg: (projectedVolume / twoWeekAvgVol).twoDec(),
+          // projectedVolumeToOverallAvg: projectedVolume / buy.fundamentals.average_volume,
         }
       };
     });
 
-  const withTSO = withProjectedVolume.map(buy => ({
-    ...buy,
-    computed: {
-      ...buy.computed,
-      tso: getTrend(buy.quote.currentPrice, buy.fundamentals.open),
-      tsc: getTrend(buy.quote.currentPrice, buy.quote.prevClose),
-      tsh: getTrend(buy.quote.currentPrice, buy.fundamentals.high)
-    }
-  }));
+  const withTSO = withProjectedVolume
+    .map(buy => ({
+      ...buy,
+      computed: {
+        ...buy.computed,
+        tso: getTrend(buy.quote.currentPrice, buy.fundamentals.open),
+        tsc: getTrend(buy.quote.currentPrice, buy.quote.prevClose),
+        tsh: getTrend(buy.quote.currentPrice, buy.fundamentals.high)
+      }
+    }))
+    .map(buy => ({
+      ...buy,
+      computed: {
+        ...buy.computed,
+        highestTrend: Math.max(Math.abs(buy.computed.tsc), Math.abs(buy.computed.tso), Math.abs(buy.computed.tsh)),
+      }
+    }));
+
+    
 
   const filtered = withTSO
     .filter(buy => buy.computed.projectedVolume > minVolume)
     .filter(buy => filterFn(buy.computed));
 
+  
+  // FIX MISSING 2 WEEK VOLUMES
+  const missing2WeekAvg = filtered.filter(buy => !buy.fundamentals.average_volume_2_weeks);
+
+  strlog({
+    missing2WeekAvg: missing2WeekAvg.map(buy => buy.ticker)
+  });
+  const avgVolumes = await getAvg2WeekVolume(missing2WeekAvg.map(buy => buy.ticker));
+  const fixed = filtered
+    .map(buy => ({
+      ...buy,
+      fundamentals: {
+        ...buy.fundamentals,
+        average_volume_2_weeks: buy.fundamentals.average_volume_2_weeks || (() => {
+          console.log('fixing 2 week volume for', buy.ticker, avgVolumes[buy.ticker]);
+          return avgVolumes[buy.ticker]
+        })()
+      }
+    }))
+    .map(buy => ({
+      ...buy,
+      computed: {
+        ...buy.computed,
+        projectedVolumeTo2WeekAvg: (buy.computed.projectedVolume / buy.fundamentals.average_volume_2_weeks).twoDec(),
+      }
+    }))
+    .filter(buy => {
+      if (buy.ticker === 'AMPY') {
+        strlog({ buy })
+      }
+      console.log(buy.computed.projectedVolumeTo2WeekAvg, !!buy.computed.projectedVolumeTo2WeekAvg, !!buy.computed.projectedVolumeTo2WeekAvg && isFinite(buy.computed.projectedVolumeTo2WeekAvg))
+      return !!buy.computed.projectedVolumeTo2WeekAvg && isFinite(buy.computed.projectedVolumeTo2WeekAvg);
+    });
+
+
   strlog({
     before: withProjectedVolume.length,
-    after: filtered.length
+    after: fixed.length
   });
 
-  const sortAndCut = (arr, sortKey, percent, actuallyTop) => {
+  const sortAndCut = (arr, sortKey, num) => {
     return arr
       .filter(buy => get(buy, sortKey))
       .sort((a, b) => {
@@ -101,91 +148,95 @@ const runPennyScan = async ({
         // })
         return get(b, sortKey) - get(a, sortKey);
       })
-      .cutBottom(percent, actuallyTop)
+      .slice(0, num)
   };
 
-  const topVolTickers = sortAndCut(filtered, 'computed.projectedVolume', 20, true);
-  const topVolTo2Week = sortAndCut(filtered, 'computed.projectedVolumeTo2WeekAvg', 25, true);
-  const topVolToOverallAvg = sortAndCut(filtered, 'computed.projectedVolumeToOverallAvg', 30, true);
-  const topDollarVolume = sortAndCut(filtered, 'computed.dollarVolume', 30, true);
-  
+  const topVolTo2Week = sortAndCut(fixed, 'computed.projectedVolumeTo2WeekAvg', COUNT / 3);
+  // const topDollarVolume = sortAndCut(fixed, 'computed.dollarVolume', 30, COUNT / 3);
+  const topVolTickers = sortAndCut(fixed, 'computed.projectedVolume', COUNT);
+
   const volumeTickers = uniq([
-    ...topVolTickers,
     ...topVolTo2Week,
-    ...topVolToOverallAvg,
-    ...topDollarVolume,
-    ...filtered,
+    ...topVolTickers,
   ], 'ticker');
   
   strlog({
 
     withProjectedVolume: withProjectedVolume.length,
-    filtered: filtered.length,
+    fixed: fixed.length,
 
     topVolTickers: topVolTickers.length,
     topVolTo2Week: topVolTo2Week.length,
-    topVolToOverallAvg: topVolToOverallAvg.length,
-    topDollarVolume: topDollarVolume.length,
+    // topDollarVolume: topDollarVolume.length,
     volumeTickers: volumeTickers.length,
   });
+  
+
+
+
+
+
+
+  // let allHistoricals = await getMultipleHistoricals(
+  //   volumeTickers.map(t => t.ticker)
+  //   // `interval=day`
+  // );
+
+  // let withHistoricals = volumeTickers.map((buy, i) => ({
+  //   ...buy,
+  //   historicals: allHistoricals[i]
+  // }));
+
 
   
-  let allHistoricals = await getMultipleHistoricals(
-    volumeTickers.map(t => t.ticker)
-    // `interval=day`
-  );
-
-  let withHistoricals = volumeTickers.map((buy, i) => ({
-    ...buy,
-    historicals: allHistoricals[i]
-  }));
-
 
   // strlog({ withHistoricals})
 
-  const withMaxVol = withHistoricals.map(buy => ({
-    ...buy,
-    computed: {
-      ...buy.computed,
-      recentMaxVol: Math.max( // % volume compared to max in the last N days
-        ...buy.historicals.slice(-20).map(hist => hist.volume)
-      ),
-    }
-  }));
-
-  const withPercMaxVol = withMaxVol.map(buy => ({
-    ...buy,
-    computed: {
-      ...buy.computed,
-      percMaxVol: buy.computed.projectedVolume / buy.computed.recentMaxVol
-    }
-  }));
 
 
-  const topPercMaxVol = sortAndCut(withPercMaxVol, 'computed.percMaxVol', 25, true);
+
+  // const withTwoWeekVolume = withHistoricals.map(buy => {
+  //   const twoWeekAverageVolume = avgArray(
+  //     buy.historicals.slice(-10).map(hist => hist.volume)
+  //   );
+  //   return {
+  //     ...buy,
+  //     computed: {
+  //       ...buy.computed,
+  //       twoWeekAverageVolume,
+  //       projectedVolumeTo2WeekAvg: buy.computed.projectedVolume / twoWeekAverageVolume
+  //     }
+  //   };
+  // });
 
 
-  const randomHot = [
-    ...topVolTo2Week,
-    ...topVolToOverallAvg,
-  ].sort(() => Math.random() > 0.5);
 
-  const theGoodStuff = uniq([
-    ...topPercMaxVol,
-    ...randomHot,
 
-    ...topDollarVolume,
-    ...topVolTickers,
-    ...volumeTickers
-  ], 'ticker')
-    .slice(0, 70)
-    .map(({ ticker }) => 
-      withPercMaxVol.find(o => o.ticker === ticker)
-    );
+
+
+  // const topVolTo2Week = sortAndCut(withTwoWeekVolume, 'computed.projectedVolumeTo2WeekAvg', 25, true);
+
+
+  // const randomHotVol = [
+  //   // ...topVolTo2Week,
+  //   ...topVolToOverallAvg,
+  // ].sort(() => Math.random() > 0.5);
+
+  const theGoodStuff = volumeTickers.slice(0, COUNT);
+
+
+  // uniq([
+  //   ...randomHotVol,
+  //   ...volumeTickers
+  // ], 'ticker')
+    // .slice(0, 70)
+    // .map(({ ticker }) => 
+    //   withTwoWeekVolume.find(o => o.ticker === ticker)
+    // );
     
   console.log({
-    topPercMaxVol: topPercMaxVol.length,
-    randomHot: randomHot.length,
+    // topVolTo2Week: topVolTo2Week.length,
+    // randomHotVol: randomHotVol.length,
     theGoodStuff: theGoodStuff.length,
   })
 
@@ -193,27 +244,134 @@ const runPennyScan = async ({
     return theGoodStuff;
   }
 
-  const withStSent = (
-    await mapLimit(theGoodStuff, 3, async buy => ({
-      ...buy,
-      stSent: (await getStSent(buy.ticker) || {}).bullBearScore
-    }))
-  )
-  .map(buy => {
-    delete buy.historicals;
-    return {
-      ticker: buy.ticker,
-      stSent: buy.stSent || 0,
-      highestTrend: Math.max(Math.abs(buy.computed.tsc), Math.abs(buy.computed.tso), Math.abs(buy.computed.tsh)),
-      ...buy.computed
-    };
-  })
-  .map(buy => ({
+  const withStSent = await mapLimit(theGoodStuff, 3, async buy => ({
     ...buy,
-    stTrendRatio: buy.stSent / buy.highestTrend
+    computed: {
+      ...buy.computed,
+      stSent: (await getStSent(buy.ticker) || {}).bullBearScore || 0
+    }
+  }));
+  
+
+  return finalize(addZScores(withStSent));
+
+};
+
+
+
+const addZScores = array => {
+  strlog({
+    array
+  })
+  const withZScores = array.map((buy, index, arr) => ({
+    ...buy,
+    zScores: [
+      'projectedVolume',
+      'projectedVolumeTo2WeekAvg',
+      'stSent',
+      'highestTrend'
+    ].reduce((acc, key) => ({
+      ...acc,
+      [key]: zScore(
+        arr.map(b => b.computed[key]).filter(Boolean),
+        buy.computed[key]
+      ).twoDec()
+    }), {})
   }));
 
-  return withStSent;
+  strlog({
+    withZScores
+  })
+
+  return withZScores;
+};
+
+
+const finalize = array => {
+
+  
+
+  return array
+    .map(buy => {
+
+      const sumZScores = (keys = Object.keys(buy.zScores)) => keys.reduce((acc, key) => acc + buy.zScores[key], 0).twoDec();
+      const zScoreInverseTrend = (buy.zScores.stSent - buy.zScores.highestTrend).twoDec();
+      const zScoreInverseTrendPlusVol = (avgArray([
+        buy.zScores.projectedVolume,
+        buy.zScores.projectedVolumeTo2WeekAvg
+      ]) + zScoreInverseTrend).twoDec();
+      delete buy.historicals;
+      return {
+        ticker: buy.ticker,
+        ...buy.computed,
+        sumZScore: sumZScores(),
+        zScoreVolume: sumZScores(['projectedVolume', 'projectedVolumeTo2WeekAvg']),
+        zScoreInverseTrend,
+        zScoreInverseTrendPlusVol,
+      };
+    })
+    .map(buy => ({
+      ...buy,
+      stTrendRatio: (buy.stSent / buy.highestTrend).twoDec(),
+    }));
+
+
+  };
+
+
+
+
+  const getAvg2WeekVolume = async tickers => {
+
+    let allHistoricals = await getMultipleHistoricals(
+      tickers
+      // `interval=day`
+    );
+
+    let tickersToHistoricals = tickers.reduce((acc, ticker, index) => ({
+      ...acc,
+      [ticker]: allHistoricals[index]
+    }), {});
+
+    const tickersTo2WeekAvgVol = mapObject(
+      tickersToHistoricals, 
+      (historicals, ticker) => {
+        // if (ticker === 'CCIH') {
+        //   console.log('CCIH CCIH CCIH')
+        //   strlog({
+        //     historicals
+        //   });
+        // }
+        return avgArray(historicals.slice(-10).map(hist => hist.volume))
+      }
+    );
+
+    strlog({ tickersTo2WeekAvgVol})
+
+    return tickersTo2WeekAvgVol;
+
+
+
+    // return tickers.reduce((acc, ticker) => ({
+    //   ...acc,
+    //   [ticker]: 
+    // }))
+
+
+    // const withTwoWeekVolume = withHistoricals.map(buy => {
+    //   const twoWeekAverageVolume = avgArray(
+    //     buy.historicals.slice(-10).map(hist => hist.volume)
+    //   );
+    //   return {
+    //     ...buy,
+    //     computed: {
+    //       ...buy.computed,
+    //       twoWeekAverageVolume,
+    //       projectedVolumeTo2WeekAvg: buy.computed.projectedVolume / twoWeekAverageVolume
+    //     }
+    //   };
+    // });
+
 
 };
 

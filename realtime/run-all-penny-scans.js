@@ -9,6 +9,9 @@ const breakdowns = picks => {
     .slice(0, 8)
     .sort((a, b) => b.stSent - a.stSent)
     .slice(0, 1);
+  const highestTrend = picks
+    .sort((a, b) => b.highestTrend - a.highestTrend)
+    .slice(0, 1);
   const singleTopDollarVolume = picks
     .sort((a, b) => b.dollarVolume - a.dollarVolume)
     .slice(0, 1);
@@ -33,6 +36,21 @@ const breakdowns = picks => {
   const worstSS = picks
     .sort((a, b) => a.stSent - b.stSent)
     .slice(0, 2);
+  const zScoreInverseTrend = picks
+    .sort((a, b) => b.zScoreInverseTrend - a.zScoreInverseTrend)
+    .slice(0, 1);
+  const zScoreVolume = picks
+    .sort((a, b) => b.zScoreVolume - a.zScoreVolume)
+    .slice(0, 1);
+  const sumZScore = picks
+    .sort((a, b) => b.sumZScore - a.sumZScore)
+    .slice(0, 1);
+  const zScoreInverseTrendPlusVol = picks
+    .sort((a, b) => b.zScoreInverseTrendPlusVol - a.zScoreInverseTrendPlusVol)
+    .slice(0, 1);
+  const zScoreInverseTrendPlusVolTwo = picks
+    .sort((a, b) => b.zScoreInverseTrendPlusVol - a.zScoreInverseTrendPlusVol)
+    .slice(0, 2);
   return {
     singleTopVolumeSS,
     singlePercMaxVolSS,
@@ -43,7 +61,13 @@ const breakdowns = picks => {
     ssFirstTwo,
     stTrendRatioFirst3,
     worstSsTrendRatio,
-    worstSS
+    worstSS,
+    highestTrend,
+    zScoreInverseTrend,
+    zScoreVolume,
+    sumZScore,
+    zScoreInverseTrendPlusVol,
+    zScoreInverseTrendPlusVolTwo
   };
 };
 
