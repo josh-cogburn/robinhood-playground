@@ -1,10 +1,9 @@
 const addFundamentals = require('../app-actions/add-fundamentals');
 module.exports = async (ticker) => {
-    ticker = 'AAPL'
     console.log({ ticker })
     let fundamentals;
     try {
-        fundamentals = (await addFundamentals(rh, [{ ticker }]))[0].fundamentals;
+        fundamentals = (await addFundamentals([{ ticker }]))[0].fundamentals;
     } catch (e) {}
     strlog({ fundamentals })
     const { volume, average_volume } = fundamentals || {};
