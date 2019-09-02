@@ -35,11 +35,7 @@ const runPennyScan = async ({
     computed: {}
   }));
 
-  const withFundamentals = (
-    await addFundamentals(
-      tickers
-    )
-  );
+  const withFundamentals = await addFundamentals(tickers);
 
   // .sort((a, b) => b.fundamentals.volume - a.fundamentals.volume)
   // .cutBottom();
