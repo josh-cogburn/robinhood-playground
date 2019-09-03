@@ -313,7 +313,8 @@ const finalize = array => {
     .map(buy => ({
       ...buy,
       stTrendRatio: (buy.stSent / buy.highestTrend).twoDec(),
-    }));
+    }))
+    .sort((a, b) => b.zScoreInverseTrendPlusVol - a.zScoreInverseTrendPlusVol);
 
 
   };
