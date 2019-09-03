@@ -9,7 +9,7 @@ module.exports = (startMin = START_MIN, stopMin = STOP_MIN) => {
   // if between start and end times then start() on init
   const min = getMinutesFrom630();
   console.log({ min })
-  const isBetweenMinutes = Boolean(min > startMin && min < STOP_MIN);
+  const isBetweenMinutes = Boolean(min > startMin && min < stopMin);
   const isWeekday = [0, 6].every(day => (new Date()).getDay() !== day);
 
   const marketClosed = (() => {
