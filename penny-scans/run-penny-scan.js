@@ -74,13 +74,22 @@ const runPennyScan = async ({
       };
     });
 
+  const isPremarket = min < 0;
+  const isAfterHours = min > 390;
+  const irregularHours = isPremarket || isAfterHours;
   const withTSO = withProjectedVolume
     .map(buy => ({
       ...buy,
       computed: {
         ...buy.computed,
-        tso: getTrend(buy.quote.currentPrice, buy.fundamentals.open),
-        tsc: getTrend(buy.quote.currentPrice, buy.quote.prevClose),
+        tso: getTrend(
+          buy.quote.currentPrice, 
+          !irregularHours ? buy.fundamentals.open : buy.quote.lastTradePrice
+        ),
+        tsc: getTrend(
+          buy.quote.currentPrice, 
+          !irregularHours ? buy.fundamentals.prevClose : buy.quote.lastTradePrice
+        ),
         tsh: getTrend(buy.quote.currentPrice, buy.fundamentals.high)
       }
     }))
