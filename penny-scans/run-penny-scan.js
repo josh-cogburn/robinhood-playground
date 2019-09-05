@@ -88,7 +88,7 @@ const runPennyScan = async ({
         ),
         tsc: getTrend(
           buy.quote.currentPrice, 
-          !irregularHours ? buy.fundamentals.prevClose : buy.quote.lastTradePrice
+          !irregularHours ? buy.quote.prevClose : buy.quote.lastTradePrice
         ),
         tsh: getTrend(buy.quote.currentPrice, buy.fundamentals.high)
       }
