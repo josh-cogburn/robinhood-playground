@@ -1,6 +1,6 @@
 const runPennyScan = require('./run-penny-scan');
 
-module.exports = ({ minPrice, maxPrice }) => 
+module.exports = ({ minPrice, maxPrice } = {}) => 
   runPennyScan({
     minPrice,
     maxPrice,
