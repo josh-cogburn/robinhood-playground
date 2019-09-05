@@ -1,7 +1,9 @@
 const runPennyScan = require('./run-penny-scan');
 
-module.exports = () => 
+module.exports = ({ minPrice, maxPrice }) => 
   runPennyScan({
+    minPrice,
+    maxPrice,
     // minVolume: 32000,
     filterFn: ({
       tso, tsc

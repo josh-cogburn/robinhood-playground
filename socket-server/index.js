@@ -168,10 +168,13 @@ io.on('connection', async socket => {
     });
 
 
-    socket.on('client:run-penny', async type => {
-        console.log('running penny scan', type);
+    socket.on('client:run-penny', async ({ type, priceRange: { min, max }}) => {
+        console.log('running penny scan', type, min, max);
         const scan = pennyScans[type];
-        const results = await scan();
+        const results = await scan({
+            minPrice: min,
+            maxPrice: max
+        });
         socket.emit('server:penny-results', { results });
     });
 

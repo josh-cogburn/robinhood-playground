@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { MDBDataTable } from 'mdbreact';
 import ReactModal from 'react-modal';
 import PickGraphs from '../components/PickGraphs';
-
+import InputRange from 'react-input-range';
+import '../../node_modules/react-input-range/lib/bundle/react-input-range.css';
 
 import { pick } from 'underscore';
 
@@ -20,6 +21,10 @@ class Scan extends Component {
   state = { 
     loading: {},
     stSent: {},
+    priceRange: {
+      min: 0.5,
+      max: 7,
+    },
   };
   shouldComponentUpdate(nextProps, nextState) {
     console.log({
@@ -129,7 +134,10 @@ class Scan extends Component {
         [type]: true
       }
     }))
-    this.props.socket.emit('client:run-penny', type);
+    this.props.socket.emit(
+      'client:run-penny', 
+      { type, priceRange: this.state.priceRange }
+    );
   };
   render() {
     const { loading, results = [], stSent, displayingPick } = this.state;
@@ -156,8 +164,20 @@ class Scan extends Component {
       'Stocktwits Sentiment',
     ] : Object.keys(results[0] || {});
     return (
-      <div>
+      <div style={{ padding: '10px'}}>
         <h2>Scan</h2>
+        Price range...<br/><br/>
+        <InputRange
+          maxValue={80}
+          minValue={0}
+          step={0.5}
+          // formatLabel={value => value.toFixed(2)}
+          value={this.state.priceRange}
+          onChange={value => this.setState({ priceRange: value })}
+          // onChange={value => console.log(value)} 
+          />
+        <br/>
+        Scan...
         <select ref={ref => { this.selectRef = ref }}>
           {
             [5, 10, 30, 'd', 'penny-hotSt', 'penny-droppers', 'penny-nowheres', 'penny-unfiltered', 'penny-volume-increasing-5min', 'penny-volume-increasing-10min'].map(value => (
