@@ -1,0 +1,1038 @@
+[
+  {
+    "pmName": "sudden-drops-notWatchout",
+    "weightedTrend": 5.37,
+    "avgTrend": 5.37,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops",
+    "weightedTrend": 5.37,
+    "avgTrend": 5.37,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "rsi-lessthan10",
+    "weightedTrend": 2.7025,
+    "avgTrend": 2.7025,
+    "count": 4,
+    "percUp": 10000
+  },
+  {
+    "pmName": "rsi-lessthan10fitty",
+    "weightedTrend": 2.7025,
+    "avgTrend": 2.7025,
+    "count": 4,
+    "percUp": 10000
+  },
+  {
+    "pmName": "rsi-10minoptions",
+    "weightedTrend": 2.68,
+    "avgTrend": 2.68,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "pennyscan-nowheres-singleTopProjectedVolume",
+    "weightedTrend": 2.628,
+    "avgTrend": 2.628,
+    "count": 10,
+    "percUp": 10000
+  },
+  {
+    "pmName": "rsi-10minute",
+    "weightedTrend": 2.5711111111111107,
+    "avgTrend": 2.5711111111111107,
+    "count": 27,
+    "percUp": 8518.518518518518
+  },
+  {
+    "pmName": "volume-increasing",
+    "weightedTrend": 2.4300000000000006,
+    "avgTrend": 2.4300000000000006,
+    "count": 16,
+    "percUp": 10000
+  },
+  {
+    "pmName": "pennyscan-nowheres-zScoreVolume",
+    "weightedTrend": 2.2250000000000005,
+    "avgTrend": 2.2250000000000005,
+    "count": 10,
+    "percUp": 8000
+  },
+  {
+    "pmName": "rsi-firstAlerts",
+    "weightedTrend": 1.936538461538461,
+    "avgTrend": 1.936538461538461,
+    "count": 26,
+    "percUp": 7692.307692307693
+  },
+  {
+    "pmName": "rsi-lessthan5fitty",
+    "weightedTrend": 1.9330769230769227,
+    "avgTrend": 1.9330769230769227,
+    "count": 13,
+    "percUp": 9230.76923076923
+  },
+  {
+    "pmName": "rsi-lessthan5",
+    "weightedTrend": 1.9330769230769227,
+    "avgTrend": 1.9330769230769227,
+    "count": 13,
+    "percUp": 9230.76923076923
+  },
+  {
+    "pmName": "rsi-notWatchout",
+    "weightedTrend": 1.7820289855072462,
+    "avgTrend": 1.7820289855072462,
+    "count": 69,
+    "percUp": 8260.86956521739
+  },
+  {
+    "pmName": "pennyscan-unfiltered-singleTopProjectedVolume",
+    "weightedTrend": 1.464,
+    "avgTrend": 1.464,
+    "count": 10,
+    "percUp": 7000
+  },
+  {
+    "pmName": "rsi",
+    "weightedTrend": 1.3818367346938774,
+    "avgTrend": 1.3818367346938774,
+    "count": 98,
+    "percUp": 7755.102040816327
+  },
+  {
+    "pmName": "sma-bullishCross30min",
+    "weightedTrend": 1.271333333333333,
+    "avgTrend": 1.271333333333333,
+    "count": 30,
+    "percUp": 6333.333333333333
+  },
+  {
+    "pmName": "rsi-daily",
+    "weightedTrend": 1.1944444444444444,
+    "avgTrend": 1.1944444444444444,
+    "count": 9,
+    "percUp": 8888.888888888889
+  },
+  {
+    "pmName": "kst-optionszeroCrosses10Min",
+    "weightedTrend": 1.1866666666666668,
+    "avgTrend": 1.1866666666666668,
+    "count": 6,
+    "percUp": 10000
+  },
+  {
+    "pmName": "pennyscan-unfiltered-singleTopDollarVolume",
+    "weightedTrend": 1.172,
+    "avgTrend": 1.172,
+    "count": 10,
+    "percUp": 7000
+  },
+  {
+    "pmName": "pennyscan-droppers-singleTopDollarVolume",
+    "weightedTrend": 1.1629999999999998,
+    "avgTrend": 1.1629999999999998,
+    "count": 10,
+    "percUp": 7000
+  },
+  {
+    "pmName": "pennyscan-droppers-singleTopProjectedVolume",
+    "weightedTrend": 1.1629999999999998,
+    "avgTrend": 1.1629999999999998,
+    "count": 10,
+    "percUp": 7000
+  },
+  {
+    "pmName": "ema-bullishCross10min",
+    "weightedTrend": 1.1521052631578945,
+    "avgTrend": 1.1521052631578945,
+    "count": 19,
+    "percUp": 6315.78947368421
+  },
+  {
+    "pmName": "macd-optionszeroCrosses30Min",
+    "weightedTrend": 1.08,
+    "avgTrend": 1.08,
+    "count": 4,
+    "percUp": 10000
+  },
+  {
+    "pmName": "pennyscan-nowheres-highestTrend",
+    "weightedTrend": 0.9699999999999995,
+    "avgTrend": 0.9699999999999995,
+    "count": 10,
+    "percUp": 4000
+  },
+  {
+    "pmName": "ema-bearishCross",
+    "weightedTrend": 0.9461111111111111,
+    "avgTrend": 0.9461111111111111,
+    "count": 36,
+    "percUp": 6111.111111111111
+  },
+  {
+    "pmName": "smoothkst-isLow",
+    "weightedTrend": 0.9249999999999999,
+    "avgTrend": 0.9249999999999999,
+    "count": 2,
+    "percUp": 5000
+  },
+  {
+    "pmName": "ema-bullishCross",
+    "weightedTrend": 0.9236111111111113,
+    "avgTrend": 0.9236111111111113,
+    "count": 36,
+    "percUp": 4166.666666666667
+  },
+  {
+    "pmName": "pennyscan-nowheres-singleTopDollarVolume",
+    "weightedTrend": 0.921,
+    "avgTrend": 0.921,
+    "count": 10,
+    "percUp": 9000
+  },
+  {
+    "pmName": "macd-optionssignalCrossesislow30Min",
+    "weightedTrend": 0.905,
+    "avgTrend": 0.905,
+    "count": 2,
+    "percUp": 5000
+  },
+  {
+    "pmName": "most-picked-30minute",
+    "weightedTrend": 0.8936363636363637,
+    "avgTrend": 0.8936363636363637,
+    "count": 11,
+    "percUp": 6363.636363636363
+  },
+  {
+    "pmName": "rsi-30minute",
+    "weightedTrend": 0.8911290322580645,
+    "avgTrend": 0.8911290322580645,
+    "count": 62,
+    "percUp": 7258.064516129032
+  },
+  {
+    "pmName": "rsi-lessthan15",
+    "weightedTrend": 0.86,
+    "avgTrend": 0.86,
+    "count": 6,
+    "percUp": 10000
+  },
+  {
+    "pmName": "smoothkst-10minute",
+    "weightedTrend": 0.7251063829787232,
+    "avgTrend": 0.7251063829787232,
+    "count": 47,
+    "percUp": 6170.212765957446
+  },
+  {
+    "pmName": "macd-firstAlerts",
+    "weightedTrend": 0.7218867924528303,
+    "avgTrend": 0.7218867924528303,
+    "count": 53,
+    "percUp": 5849.056603773584
+  },
+  {
+    "pmName": "kst-optionszeroCrosses30Min",
+    "weightedTrend": 0.7075,
+    "avgTrend": 0.7075,
+    "count": 4,
+    "percUp": 7500
+  },
+  {
+    "pmName": "kst-isLow",
+    "weightedTrend": 0.6750000000000002,
+    "avgTrend": 0.6750000000000002,
+    "count": 18,
+    "percUp": 5000
+  },
+  {
+    "pmName": "rsi-10minWatchout",
+    "weightedTrend": 0.6749999999999999,
+    "avgTrend": 0.6749999999999999,
+    "count": 6,
+    "percUp": 5000
+  },
+  {
+    "pmName": "pennyscan-nowheres-zScoreInverseTrendPlusVol",
+    "weightedTrend": 0.6686666666666667,
+    "avgTrend": 0.6686666666666667,
+    "count": 30,
+    "percUp": 5666.666666666666
+  },
+  {
+    "pmName": "kst-10minute",
+    "weightedTrend": 0.6436298932384344,
+    "avgTrend": 0.6436298932384344,
+    "count": 281,
+    "percUp": 5480.427046263346
+  },
+  {
+    "pmName": "kst-shouldWatchout",
+    "weightedTrend": 0.6073809523809526,
+    "avgTrend": 0.6073809523809526,
+    "count": 84,
+    "percUp": 4166.666666666667
+  },
+  {
+    "pmName": "baseline",
+    "weightedTrend": 0.5703448275862069,
+    "avgTrend": 0.5703448275862069,
+    "count": 58,
+    "percUp": 5172.413793103448
+  },
+  {
+    "pmName": "brunch",
+    "weightedTrend": 0.5307909604519782,
+    "avgTrend": 0.5307909604519782,
+    "count": 354,
+    "percUp": 5254.237288135594
+  },
+  {
+    "pmName": "macd-notWatchout",
+    "weightedTrend": 0.5048387096774198,
+    "avgTrend": 0.5048387096774198,
+    "count": 341,
+    "percUp": 5337.243401759531
+  },
+  {
+    "pmName": "macd-optionszeroCrosses10Min",
+    "weightedTrend": 0.5014285714285714,
+    "avgTrend": 0.5014285714285714,
+    "count": 7,
+    "percUp": 5714.285714285714
+  },
+  {
+    "pmName": "multi-hits",
+    "weightedTrend": 0.4471250000000002,
+    "avgTrend": 0.4471250000000002,
+    "count": 320,
+    "percUp": 4968.75
+  },
+  {
+    "pmName": "sma-bearishCross",
+    "weightedTrend": 0.4325746268656717,
+    "avgTrend": 0.4325746268656717,
+    "count": 268,
+    "percUp": 5074.626865671642
+  },
+  {
+    "pmName": "rsi-shouldWatchout",
+    "weightedTrend": 0.42965517241379314,
+    "avgTrend": 0.42965517241379314,
+    "count": 29,
+    "percUp": 6551.724137931034
+  },
+  {
+    "pmName": "kst-options30minNotWatchout",
+    "weightedTrend": 0.4036363636363635,
+    "avgTrend": 0.4036363636363635,
+    "count": 22,
+    "percUp": 6363.636363636363
+  },
+  {
+    "pmName": "30",
+    "weightedTrend": 0.384414225941423,
+    "avgTrend": 0.384414225941423,
+    "count": 478,
+    "percUp": 5732.217573221757
+  },
+  {
+    "pmName": "kst",
+    "weightedTrend": 0.38352941176470634,
+    "avgTrend": 0.38352941176470634,
+    "count": 391,
+    "percUp": 5063.938618925832
+  },
+  {
+    "pmName": "stocktwits-mostBearish",
+    "weightedTrend": 0.3781818181818181,
+    "avgTrend": 0.3781818181818181,
+    "count": 11,
+    "percUp": 4545.454545454545
+  },
+  {
+    "pmName": "options",
+    "weightedTrend": 0.37702500000000005,
+    "avgTrend": 0.37702500000000005,
+    "count": 400,
+    "percUp": 6125.000000000001
+  },
+  {
+    "pmName": "kst-zeroCrosses",
+    "weightedTrend": 0.36571428571428566,
+    "avgTrend": 0.36571428571428566,
+    "count": 35,
+    "percUp": 6285.714285714285
+  },
+  {
+    "pmName": "macd-options30minNotWatchout",
+    "weightedTrend": 0.35846153846153855,
+    "avgTrend": 0.35846153846153855,
+    "count": 26,
+    "percUp": 6538.461538461539
+  },
+  {
+    "pmName": "kst-notWatchout",
+    "weightedTrend": 0.32228013029315966,
+    "avgTrend": 0.32228013029315966,
+    "count": 307,
+    "percUp": 5309.446254071661
+  },
+  {
+    "pmName": "10",
+    "weightedTrend": 0.3195083798882673,
+    "avgTrend": 0.3195083798882673,
+    "count": 895,
+    "percUp": 5106.145251396648
+  },
+  {
+    "pmName": "kst-firstAlerts",
+    "weightedTrend": 0.2996031746031747,
+    "avgTrend": 0.2996031746031747,
+    "count": 126,
+    "percUp": 4920.6349206349205
+  },
+  {
+    "pmName": "fitty",
+    "weightedTrend": 0.2802107728337239,
+    "avgTrend": 0.2802107728337239,
+    "count": 1708,
+    "percUp": 4631.147540983607
+  },
+  {
+    "pmName": "spy",
+    "weightedTrend": 0.2428571428571429,
+    "avgTrend": 0.2428571428571429,
+    "count": 14,
+    "percUp": 10000
+  },
+  {
+    "pmName": "pennyscan-nowheres-zScoreInverseTrendPlusVolTwo",
+    "weightedTrend": 0.22399999999999992,
+    "avgTrend": 0.22399999999999992,
+    "count": 20,
+    "percUp": 5000
+  },
+  {
+    "pmName": "rsi-30minoptions",
+    "weightedTrend": 0.21999999999999997,
+    "avgTrend": 0.21999999999999997,
+    "count": 6,
+    "percUp": 1666.6666666666665
+  },
+  {
+    "pmName": "macd-isLow",
+    "weightedTrend": 0.21422222222222223,
+    "avgTrend": 0.21422222222222223,
+    "count": 45,
+    "percUp": 5111.11111111111
+  },
+  {
+    "pmName": "macd-10minute",
+    "weightedTrend": 0.1674647887323945,
+    "avgTrend": 0.1674647887323945,
+    "count": 355,
+    "percUp": 4816.901408450704
+  },
+  {
+    "pmName": "macd-signalCrosses",
+    "weightedTrend": 0.13657608695652174,
+    "avgTrend": 0.13657608695652174,
+    "count": 184,
+    "percUp": 4619.565217391305
+  },
+  {
+    "pmName": "stocktwits",
+    "weightedTrend": 0.12727272727272726,
+    "avgTrend": 0.12727272727272726,
+    "count": 22,
+    "percUp": 4545.454545454545
+  },
+  {
+    "pmName": "lunch",
+    "weightedTrend": 0.11404255319148991,
+    "avgTrend": 0.11404255319148991,
+    "count": 940,
+    "percUp": 4904.255319148936
+  },
+  {
+    "pmName": "macd",
+    "weightedTrend": 0.11015418502202655,
+    "avgTrend": 0.11015418502202655,
+    "count": 454,
+    "percUp": 4757.709251101322
+  },
+  {
+    "pmName": "pennyscan-nowheres-zScoreInverseTrend",
+    "weightedTrend": 0.08799999999999991,
+    "avgTrend": 0.08799999999999991,
+    "count": 40,
+    "percUp": 4250
+  },
+  {
+    "pmName": "sma",
+    "weightedTrend": 0.07707692307692332,
+    "avgTrend": 0.07707692307692332,
+    "count": 520,
+    "percUp": 4365.384615384615
+  },
+  {
+    "pmName": "most-picked",
+    "weightedTrend": 0.030645161290323027,
+    "avgTrend": 0.030645161290323027,
+    "count": 186,
+    "percUp": 5161.290322580645
+  },
+  {
+    "pmName": "smoothkst-options30minNotWatchout",
+    "weightedTrend": 0.002500000000000016,
+    "avgTrend": 0.002500000000000016,
+    "count": 4,
+    "percUp": 5000
+  },
+  {
+    "pmName": "kst-signalCrosses",
+    "weightedTrend": -0.004795918367346844,
+    "avgTrend": -0.004795918367346844,
+    "count": 98,
+    "percUp": 3979.5918367346935
+  },
+  {
+    "pmName": "smoothkst-notWatchout",
+    "weightedTrend": -0.008783783783783755,
+    "avgTrend": -0.008783783783783755,
+    "count": 74,
+    "percUp": 4729.72972972973
+  },
+  {
+    "pmName": "most-picked-5minute",
+    "weightedTrend": -0.011285714285714388,
+    "avgTrend": -0.011285714285714388,
+    "count": 70,
+    "percUp": 5000
+  },
+  {
+    "pmName": "most-picked-overall",
+    "weightedTrend": -0.011285714285714388,
+    "avgTrend": -0.011285714285714388,
+    "count": 70,
+    "percUp": 5000
+  },
+  {
+    "pmName": "smoothkst",
+    "weightedTrend": -0.016162790697674456,
+    "avgTrend": -0.016162790697674456,
+    "count": 86,
+    "percUp": 4767.441860465116
+  },
+  {
+    "pmName": "smoothkst-shouldWatchout",
+    "weightedTrend": -0.06166666666666667,
+    "avgTrend": -0.06166666666666667,
+    "count": 12,
+    "percUp": 5000
+  },
+  {
+    "pmName": "smoothkst-firstAlerts",
+    "weightedTrend": -0.06835820895522392,
+    "avgTrend": -0.06835820895522392,
+    "count": 67,
+    "percUp": 4925.373134328358
+  },
+  {
+    "pmName": "pennyscan-nowheres-worstSS",
+    "weightedTrend": -0.07100000000000004,
+    "avgTrend": -0.07100000000000004,
+    "count": 20,
+    "percUp": 4500
+  },
+  {
+    "pmName": "most-picked-10minute",
+    "weightedTrend": -0.07285714285714286,
+    "avgTrend": -0.07285714285714286,
+    "count": 35,
+    "percUp": 5428.571428571428
+  },
+  {
+    "pmName": "macd-30minute",
+    "weightedTrend": -0.0953535353535354,
+    "avgTrend": -0.0953535353535354,
+    "count": 99,
+    "percUp": 4545.454545454545
+  },
+  {
+    "pmName": "stocktwits-mostBullish",
+    "weightedTrend": -0.12363636363636364,
+    "avgTrend": -0.12363636363636364,
+    "count": 11,
+    "percUp": 4545.454545454545
+  },
+  {
+    "pmName": "daily",
+    "weightedTrend": -0.12666666666666657,
+    "avgTrend": -0.12666666666666657,
+    "count": 33,
+    "percUp": 4848.484848484848
+  },
+  {
+    "pmName": "pennyscan-nowheres-ss180",
+    "weightedTrend": -0.138,
+    "avgTrend": -0.138,
+    "count": 25,
+    "percUp": 5200
+  },
+  {
+    "pmName": "pennyscan-nowheres-worstSsTrendRatio",
+    "weightedTrend": -0.15250000000000002,
+    "avgTrend": -0.15250000000000002,
+    "count": 20,
+    "percUp": 5000
+  },
+  {
+    "pmName": "pennyscan-hot-st-singleTopProjectedVolume",
+    "weightedTrend": -0.15799999999999997,
+    "avgTrend": -0.15799999999999997,
+    "count": 10,
+    "percUp": 5000
+  },
+  {
+    "pmName": "kst-30minute",
+    "weightedTrend": -0.1856976744186047,
+    "avgTrend": -0.1856976744186047,
+    "count": 86,
+    "percUp": 4186.046511627907
+  },
+  {
+    "pmName": "pennyscan-nowheres-stTrendRatioFirst3",
+    "weightedTrend": -0.19399999999999995,
+    "avgTrend": -0.19399999999999995,
+    "count": 30,
+    "percUp": 4000
+  },
+  {
+    "pmName": "pennyscan-unfiltered-zScoreInverseTrendPlusVolTwo",
+    "weightedTrend": -0.2620000000000001,
+    "avgTrend": -0.2620000000000001,
+    "count": 20,
+    "percUp": 6000
+  },
+  {
+    "pmName": "sma-bullishCross",
+    "weightedTrend": -0.3009920634920634,
+    "avgTrend": -0.3009920634920634,
+    "count": 252,
+    "percUp": 3611.111111111111
+  },
+  {
+    "pmName": "smoothkst-signalCrosses",
+    "weightedTrend": -0.30874999999999997,
+    "avgTrend": -0.30874999999999997,
+    "count": 8,
+    "percUp": 3750
+  },
+  {
+    "pmName": "dinner",
+    "weightedTrend": -0.4669617563739376,
+    "avgTrend": -0.4669617563739376,
+    "count": 1412,
+    "percUp": 4582.15297450425
+  },
+  {
+    "pmName": "macd-zeroCrosses",
+    "weightedTrend": -0.5635483870967744,
+    "avgTrend": -0.5635483870967744,
+    "count": 62,
+    "percUp": 3709.6774193548385
+  },
+  {
+    "pmName": "5",
+    "weightedTrend": -0.6377729393468192,
+    "avgTrend": -0.6377729393468192,
+    "count": 3215,
+    "percUp": 4513.219284603421
+  },
+  {
+    "pmName": "pennyscan-nowheres-sumZScore",
+    "weightedTrend": -0.6910000000000002,
+    "avgTrend": -0.6910000000000002,
+    "count": 10,
+    "percUp": 7000
+  },
+  {
+    "pmName": "pennyscan-unfiltered-stTrendRatioFirst3",
+    "weightedTrend": -0.6993333333333333,
+    "avgTrend": -0.6993333333333333,
+    "count": 30,
+    "percUp": 3333.333333333333
+  },
+  {
+    "pmName": "pennyscan-unfiltered-zScoreInverseTrendPlusVol",
+    "weightedTrend": -0.7563333333333333,
+    "avgTrend": -0.7563333333333333,
+    "count": 30,
+    "percUp": 5000
+  },
+  {
+    "pmName": "pennyscan-unfiltered-worstSsTrendRatio",
+    "weightedTrend": -1.0585,
+    "avgTrend": -1.0585,
+    "count": 20,
+    "percUp": 7500
+  },
+  {
+    "pmName": "macd-shouldWatchout",
+    "weightedTrend": -1.0808849557522122,
+    "avgTrend": -1.0808849557522122,
+    "count": 113,
+    "percUp": 3008.849557522124
+  },
+  {
+    "pmName": "pennyscan-unfiltered-worstSS",
+    "weightedTrend": -1.082,
+    "avgTrend": -1.082,
+    "count": 20,
+    "percUp": 7000
+  },
+  {
+    "pmName": "pennyscan-droppers-zScoreInverseTrendPlusVolTwo",
+    "weightedTrend": -1.1444999999999999,
+    "avgTrend": -1.1444999999999999,
+    "count": 20,
+    "percUp": 4500
+  },
+  {
+    "pmName": "pennyscan-unfiltered-zScoreInverseTrend",
+    "weightedTrend": -1.25175,
+    "avgTrend": -1.25175,
+    "count": 40,
+    "percUp": 3750
+  },
+  {
+    "pmName": "smoothkst-30minute",
+    "weightedTrend": -1.3693333333333333,
+    "avgTrend": -1.3693333333333333,
+    "count": 15,
+    "percUp": 2666.666666666667
+  },
+  {
+    "pmName": "pennyscan-droppers-zScoreInverseTrendPlusVol",
+    "weightedTrend": -1.5340000000000005,
+    "avgTrend": -1.5340000000000005,
+    "count": 30,
+    "percUp": 4000
+  },
+  {
+    "pmName": "pennyscan-unfiltered-zScoreVolume",
+    "weightedTrend": -1.5659999999999996,
+    "avgTrend": -1.5659999999999996,
+    "count": 10,
+    "percUp": 6000
+  },
+  {
+    "pmName": "pennyscan-droppers-ss180",
+    "weightedTrend": -1.5827450980392157,
+    "avgTrend": -1.5827450980392157,
+    "count": 51,
+    "percUp": 3333.333333333333
+  },
+  {
+    "pmName": "smoothkst-precededByRSI30min",
+    "weightedTrend": -1.5833333333333333,
+    "avgTrend": -1.5833333333333333,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "kst-precededByRSI30min",
+    "weightedTrend": -1.5833333333333333,
+    "avgTrend": -1.5833333333333333,
+    "count": 6,
+    "percUp": 0
+  },
+  {
+    "pmName": "smoothkst-zeroCrosses",
+    "weightedTrend": -1.75,
+    "avgTrend": -1.75,
+    "count": 4,
+    "percUp": 2500
+  },
+  {
+    "pmName": "pennyscan-droppers-zScoreInverseTrend",
+    "weightedTrend": -1.87475,
+    "avgTrend": -1.87475,
+    "count": 40,
+    "percUp": 3500
+  },
+  {
+    "pmName": "pennyscan-hot-st-singlePercMaxVolSS",
+    "weightedTrend": -2.0069999999999997,
+    "avgTrend": -2.0069999999999997,
+    "count": 10,
+    "percUp": 3000
+  },
+  {
+    "pmName": "pennyscan-droppers-stTrendRatioFirst3",
+    "weightedTrend": -2.2449999999999997,
+    "avgTrend": -2.2449999999999997,
+    "count": 30,
+    "percUp": 1666.6666666666665
+  },
+  {
+    "pmName": "pennyscan-hot-st-stTrendRatioFirst3",
+    "weightedTrend": -2.252333333333333,
+    "avgTrend": -2.252333333333333,
+    "count": 30,
+    "percUp": 3000
+  },
+  {
+    "pmName": "nowheresTopSSPREMARKET",
+    "weightedTrend": -2.302,
+    "avgTrend": -2.302,
+    "count": 5,
+    "percUp": 0
+  },
+  {
+    "pmName": "pennyscan-nowheres-singlePercMaxVolSS",
+    "weightedTrend": -2.322,
+    "avgTrend": -2.322,
+    "count": 10,
+    "percUp": 5000
+  },
+  {
+    "pmName": "pennyscan-nowheres-singleTopVolumeSS",
+    "weightedTrend": -2.3310000000000004,
+    "avgTrend": -2.3310000000000004,
+    "count": 10,
+    "percUp": 5000
+  },
+  {
+    "pmName": "pennyscan-hot-st-zScoreVolume",
+    "weightedTrend": -2.355,
+    "avgTrend": -2.355,
+    "count": 10,
+    "percUp": 5000
+  },
+  {
+    "pmName": "pennyscan-unfiltered-singleTopVolumeSS",
+    "weightedTrend": -2.3600000000000003,
+    "avgTrend": -2.3600000000000003,
+    "count": 10,
+    "percUp": 5000
+  },
+  {
+    "pmName": "pennyscan-unfiltered-singlePercMaxVolSS",
+    "weightedTrend": -2.3890000000000002,
+    "avgTrend": -2.3890000000000002,
+    "count": 10,
+    "percUp": 5000
+  },
+  {
+    "pmName": "pennyscan-droppers-worstSsTrendRatio",
+    "weightedTrend": -2.3909999999999996,
+    "avgTrend": -2.3909999999999996,
+    "count": 20,
+    "percUp": 3500
+  },
+  {
+    "pmName": "pennyscan-hot-st-singleTopVolumeSS",
+    "weightedTrend": -2.4109999999999996,
+    "avgTrend": -2.4109999999999996,
+    "count": 10,
+    "percUp": 2000
+  },
+  {
+    "pmName": "pennyscan-nowheres-topSS",
+    "weightedTrend": -2.4339999999999997,
+    "avgTrend": -2.4339999999999997,
+    "count": 10,
+    "percUp": 0
+  },
+  {
+    "pmName": "pennyscan-droppers-worstSS",
+    "weightedTrend": -2.4365,
+    "avgTrend": -2.4365,
+    "count": 20,
+    "percUp": 4000
+  },
+  {
+    "pmName": "pennyscan-droppers-ssFirstTwo",
+    "weightedTrend": -2.537,
+    "avgTrend": -2.537,
+    "count": 20,
+    "percUp": 3000
+  },
+  {
+    "pmName": "pennyscan-hot-st-worstSsTrendRatio",
+    "weightedTrend": -2.5769999999999995,
+    "avgTrend": -2.5769999999999995,
+    "count": 20,
+    "percUp": 4500
+  },
+  {
+    "pmName": "pennyscan-droppers-topSS",
+    "weightedTrend": -2.687,
+    "avgTrend": -2.687,
+    "count": 10,
+    "percUp": 3000
+  },
+  {
+    "pmName": "pennyscan-hot-st-zScoreInverseTrendPlusVol",
+    "weightedTrend": -2.7379999999999995,
+    "avgTrend": -2.7379999999999995,
+    "count": 30,
+    "percUp": 2333.333333333333
+  },
+  {
+    "pmName": "pennyscan-hot-st-highestTrend",
+    "weightedTrend": -2.786,
+    "avgTrend": -2.786,
+    "count": 10,
+    "percUp": 5000
+  },
+  {
+    "pmName": "ema",
+    "weightedTrend": -2.7863683304647227,
+    "avgTrend": -2.7863683304647227,
+    "count": 581,
+    "percUp": 3339.07056798623
+  },
+  {
+    "pmName": "pennyscan-nowheres-ssFirstTwo",
+    "weightedTrend": -2.822999999999999,
+    "avgTrend": -2.822999999999999,
+    "count": 20,
+    "percUp": 1000
+  },
+  {
+    "pmName": "pennyscan-hot-st-zScoreInverseTrend",
+    "weightedTrend": -2.8804999999999996,
+    "avgTrend": -2.8804999999999996,
+    "count": 40,
+    "percUp": 2250
+  },
+  {
+    "pmName": "pennyscan-hot-st-zScoreInverseTrendPlusVolTwo",
+    "weightedTrend": -2.9715000000000003,
+    "avgTrend": -2.9715000000000003,
+    "count": 20,
+    "percUp": 2000
+  },
+  {
+    "pmName": "pennyscan-unfiltered-ss180",
+    "weightedTrend": -3.388977272727271,
+    "avgTrend": -3.388977272727271,
+    "count": 88,
+    "percUp": 3181.8181818181815
+  },
+  {
+    "pmName": "pennyscan-hot-st-worstSS",
+    "weightedTrend": -3.910500000000001,
+    "avgTrend": -3.910500000000001,
+    "count": 20,
+    "percUp": 4000
+  },
+  {
+    "pmName": "pennyscan-unfiltered-highestTrend",
+    "weightedTrend": -3.95,
+    "avgTrend": -3.95,
+    "count": 10,
+    "percUp": 4000
+  },
+  {
+    "pmName": "pennyscan-droppers-highestTrend",
+    "weightedTrend": -4.836,
+    "avgTrend": -4.836,
+    "count": 10,
+    "percUp": 4000
+  },
+  {
+    "pmName": "pennyscan-droppers-singlePercMaxVolSS",
+    "weightedTrend": -5.1080000000000005,
+    "avgTrend": -5.1080000000000005,
+    "count": 10,
+    "percUp": 2000
+  },
+  {
+    "pmName": "pennyscan-droppers-singleTopVolumeSS",
+    "weightedTrend": -5.1080000000000005,
+    "avgTrend": -5.1080000000000005,
+    "count": 10,
+    "percUp": 2000
+  },
+  {
+    "pmName": "pennyscan-droppers-sumZScore",
+    "weightedTrend": -5.146000000000002,
+    "avgTrend": -5.146000000000002,
+    "count": 10,
+    "percUp": 2000
+  },
+  {
+    "pmName": "pennyscan-hot-st-ss180",
+    "weightedTrend": -5.303561643835617,
+    "avgTrend": -5.303561643835617,
+    "count": 73,
+    "percUp": 1780.821917808219
+  },
+  {
+    "pmName": "pennyscan-droppers-zScoreVolume",
+    "weightedTrend": -5.326000000000001,
+    "avgTrend": -5.326000000000001,
+    "count": 10,
+    "percUp": 2000
+  },
+  {
+    "pmName": "pennyscan-hot-st-ssFirstTwo",
+    "weightedTrend": -6.477500000000001,
+    "avgTrend": -6.477500000000001,
+    "count": 20,
+    "percUp": 500
+  },
+  {
+    "pmName": "pennyscan-unfiltered-topSS",
+    "weightedTrend": -6.5489999999999995,
+    "avgTrend": -6.5489999999999995,
+    "count": 10,
+    "percUp": 1000
+  },
+  {
+    "pmName": "pennyscan-hot-st-singleTopDollarVolume",
+    "weightedTrend": -7.049999999999999,
+    "avgTrend": -7.049999999999999,
+    "count": 10,
+    "percUp": 0
+  },
+  {
+    "pmName": "pennyscan-unfiltered-ssFirstTwo",
+    "weightedTrend": -7.350999999999999,
+    "avgTrend": -7.350999999999999,
+    "count": 20,
+    "percUp": 500
+  },
+  {
+    "pmName": "pennyscan-hot-st-topSS",
+    "weightedTrend": -8.653,
+    "avgTrend": -8.653,
+    "count": 10,
+    "percUp": 0
+  },
+  {
+    "pmName": "pennyscan-hot-st-sumZScore",
+    "weightedTrend": -10.123999999999999,
+    "avgTrend": -10.123999999999999,
+    "count": 10,
+    "percUp": 1000
+  },
+  {
+    "pmName": "pennyscan-unfiltered-sumZScore",
+    "weightedTrend": -13.033000000000001,
+    "avgTrend": -13.033000000000001,
+    "count": 10,
+    "percUp": 0
+  }
+]
