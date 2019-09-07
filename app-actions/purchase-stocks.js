@@ -2,7 +2,7 @@ const limitBuyMultiple = require('./limit-buy-multiple');
 const getMinutesFrom630 = require('../utils/get-minutes-from-630');
 const { purchaseAmt } = require('../settings');
 
-const purchaseStocks = async ({ stocksToBuy, strategy, multiplier, min, withPrices }) => {
+const purchaseStocks = async ({ stocksToBuy, strategy, multiplier = 1, min, withPrices }) => {
     const accounts = await Robinhood.accounts();
     // const ratioToSpend = Math.max(0.3, getMinutesFrom630() / 390);
     const cashAvailable = Number(accounts.results[0].margin_balances.unallocated_margin_cash);
