@@ -31,20 +31,32 @@ const data = {
     pennyscan-droppers-worstSsTrendRatio-firstAlert-notWatchout-dinner-5000
     pennyscan-droppers-worstSS-firstAlert-shouldWatchout-initial-5000
     pennyscan-nowheres-worstSS-firstAlert-notWatchout-dinner-5000
+
+    pennyscan-hot-st-singleTopProjectedVolume-firstAlert-notWatchout-dinner-5000
+    pennyscan-unfiltered-singleTopVolumeSS-firstAlert-notWatchout-lunch-5000
+    pennyscan-droppers-worstSS-firstAlert-shouldWatchout-lunch-5000
   `,
 
   smoothKST: `
     smoothkst-fitty-10min-bearishSignal-under2-firstAlert-notWatchout-dinner-5000
     smoothkst-fitty-precededByRSI-10min-isSignalCross-under2-firstAlert-notWatchout-initial-5000
   `,
-
+  sma: `
+    sma-fitty-5min-bearishCross-under2-notWatchout-brunch-5000
+    sma-fitty-10min-bearishCross-under2-firstAlert-notWatchout-lunch-5000
+  `,
   ema: `
     ema-fitty-30min-bullishCross-under2-firstAlert-shouldWatchout-lunch-5000
     ema-fitty-30min-bearishCross-under2-shouldWatchout-lunch-5000
     ema-fitty-10min-bearishCross-under2-notWatchout-dinner-5000
   `,
 
-  macd: `macd-fitty-30min-bearishSignal-under2-notWatchout-dinner-5000`
+  macd: `macd-fitty-30min-bearishSignal-under2-notWatchout-dinner-5000`,
+
+  multiHits: `
+    multi-hits-fitty-4count-under2-notWatchout-lunch-5000
+    multi-hits-fitty-3count-under2-firstAlert-notWatchout-lunch-5000
+  `
 
 };
 

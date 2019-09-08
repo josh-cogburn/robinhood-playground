@@ -8,15 +8,9 @@ module.exports = {
         // '[rsi-daily]',
         
 
-        ...[ 
-            'rsi30',
-            'rsiDaily',
-            'rsi10',
-            'pennyscans',
-            'smoothKST',
-            'ema',
-            'macd' 
-        ].map(w => `[sep2019-${w}]`)
+        ...Object.keys(
+            require('./pms/sep-2019')
+        ).map(v => `[${v}]`)
 
     ],
     // forPurchaseVariation: '75Perc5Day-yesincludingblanks',
