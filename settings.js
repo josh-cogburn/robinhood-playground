@@ -14,7 +14,7 @@ module.exports = {
         'sep2019-pennyscans',
         'sep2019-smoothKST',
         'sep2019-ema',
-        'sep2019-macd' ]
+        'sep2019-macd' ].map(w => `[${w}]`)
     ],
     // forPurchaseVariation: '75Perc5Day-yesincludingblanks',
     // fallbackSellStrategy: 'limit8',
