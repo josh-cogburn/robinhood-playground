@@ -25,7 +25,7 @@ module.exports = async ({stocksToBuy, totalAmtToSpend, strategy, maxNumStocksToP
         try {
             const pickPrice = (withPrices.find(obj => obj.ticker === stock) || {}).price;
             const { askPrice } = await lookup(stock);
-            const buyPrice = Math.min(askPrice, pickPrice * 1.07);
+            const buyPrice = Math.min(askPrice, pickPrice * .985);
             log({
                 askPrice,
                 pickPrice,

@@ -43,8 +43,13 @@ class TodaysStrategies extends Component {
 
         const additionalFilterParts = additionalFilters.split(',');
         
-        const matchesPm = (strat, pm) => {
-            return pms[pm] && pms[pm].every(part => strat === part || strat.includes(`${part}-`) || strat.includes(`-${part}`));
+        const matchesPm = (stratMin, pm) => {
+            const arrayOfArrays = pms[pm];
+            return arrayOfArrays.some(parts => {
+                parts = Array.isArray(parts) ? parts : [parts];
+                return parts.every(part => stratMin.includes(part));
+            });
+            // return pms[pm] && pms[pm].every(part => strat === part || strat.includes(`${part}-`) || strat.includes(`-${part}`));
         }
 
       let showingPicks = (() => {

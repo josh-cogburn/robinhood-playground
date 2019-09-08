@@ -2,7 +2,7 @@
 module.exports = {
     // important settings
     sellAllStocksOnNthDay: 10,
-    purchaseAmt: 200,
+    purchaseAmt: 10,
     forPurchase: [
         '[sudden-drops]',
         // '[rsi-daily]',

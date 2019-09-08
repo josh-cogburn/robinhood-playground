@@ -692,7 +692,7 @@ module.exports = new (class RealtimeRunner {
 
     ];
 
-    return this.strategies.reduce((acc, { pms, strategyName }) => ({
+    const mustIncludeAll = this.strategies.reduce((acc, { pms, strategyName }) => ({
       ...acc,
       ...Object.keys(pms || {}).reduce((inner, key) => ({
         ...inner,
@@ -704,10 +704,6 @@ module.exports = new (class RealtimeRunner {
         [strategyName]: [strategyName]
       })
     }), {
-
-
-
-      ...require('../pms/sep-2019'),
 
 
 
@@ -752,7 +748,14 @@ module.exports = new (class RealtimeRunner {
 
 
 
-    })
+    });
+
+    strlog({ mustIncludeAll });
+
+    return {
+      ...mapObject(mustIncludeAll, arr => [arr]),
+      ...require('../pms/sep-2019'),
+    };
   }
 
 

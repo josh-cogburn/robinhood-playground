@@ -255,7 +255,7 @@ const stratManager = {
         // console.log({ realtimePms})
         const pmPerfs = Object.keys(realtimePms).map(pmName => {
 
-            const pmParts = realtimePms[pmName];
+            const arrayOfArrays = realtimePms[pmName];
 
             const handlePick = pick => {
                 const { withPrices } = pick;
@@ -287,9 +287,10 @@ const stratManager = {
                 .filter(({ date }) => date === this.curDate)
                 .filter(({ stratMin }) => {
                     // console.log({ pmParts })
-                    return pmParts.every(part => 
-                        stratMin.includes(part)
-                    );
+                    return arrayOfArrays.some(parts => {
+                        parts = Array.isArray(parts) ? parts : [parts];
+                        return parts.every(part => stratMin.includes(part));
+                    });
                 })
                 .map(handlePick)
                 .map(withTrend => ({

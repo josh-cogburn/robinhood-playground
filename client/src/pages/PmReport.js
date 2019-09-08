@@ -18,14 +18,12 @@ class TodaysStrategies extends Component {
         let { pmPerfs, settings, predictionModels } = this.props;
         let { forPurchaseOnly } = this.state;
 
-        if (forPurchaseOnly) {
-            const forPurchasePMs = settings.forPurchase.map(line =>
-                line.substring(1, line.length - 1)
-            );
-            console.log({ forPurchasePMs })
-            pmPerfs = pmPerfs.filter(perf => 
-                forPurchasePMs.includes(perf.pmName)
-            );
+        const forPurchasePMs = settings.forPurchase.map(line =>
+            line.substring(1, line.length - 1)
+        );
+        const isForPurchase = perf => forPurchasePMs.includes(perf.pmName);
+        if (forPurchaseOnly) { 
+            pmPerfs = pmPerfs.filter(isForPurchase);
         }
         return (
             <div style={{ padding: '15px' }}>
@@ -44,7 +42,7 @@ class TodaysStrategies extends Component {
                     <tbody>
                         {
                             pmPerfs.map(perf => (
-                                <tr>
+                                <tr style={{ fontWeight: isForPurchase(perf) ? 'bold' : 'inherit' }}>
                                     <td><TrendPerc value={perf.avgTrend} /></td>
                                     <td><TrendPerc value={perf.percUp / 100} redAt={50} noPlus={true} round={true} /></td>
                                     <td>{perf.count}</td>
