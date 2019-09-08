@@ -707,6 +707,10 @@ module.exports = new (class RealtimeRunner {
 
 
 
+      ...require('../pms/manual'),
+
+
+
       ...singles.reduce((acc, collectionName) => ({
         ...acc,
         [collectionName]: [collectionName]
@@ -745,6 +749,8 @@ module.exports = new (class RealtimeRunner {
       }), {}),
 
       nowheresTopSSPREMARKET: ['nowheres', 'topSS', 'premarket'],
+
+
 
     })
   }

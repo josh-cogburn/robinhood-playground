@@ -92,5 +92,7 @@ module.exports = {
 
     stockInvest,
 
-    murphysAnalytics
+    murphysAnalytics,
+
+    ...require('./sep-2019')
 };
