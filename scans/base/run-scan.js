@@ -25,6 +25,20 @@ const getTickersBetween = async (min, max) => {
 };
 
 
+const sortAndCut = (arr, sortKey, num) => {
+  return arr
+    .filter(buy => get(buy, sortKey))
+    .sort((a, b) => {
+      // console.log({
+      //   b: get(b, sortKey),
+      //   a: get(a, sortKey)
+      // })
+      return get(b, sortKey) - get(a, sortKey);
+    })
+    .slice(0, num)
+};
+
+
 const runScan = async ({
   minPrice = 0.5,
   maxPrice = 8,
@@ -72,11 +86,14 @@ const runScan = async ({
         }
       };
     });
+  
+  const fourLettersOrLess = withProjectedVolume.filter(({ ticker }) => ticker.length <= 4);
+  const withoutLowVolume = sortAndCut(fourLettersOrLess, 'computed.projectedVolume', fourLettersOrLess.length * 3 / 4);
 
   const isPremarket = min < 0;
   const isAfterHours = min > 390;
   const irregularHours = isPremarket || isAfterHours;
-  const withTSO = withProjectedVolume
+  const withTSO = withoutLowVolume
     .map(buy => ({
       ...buy,
       computed: {
@@ -147,24 +164,6 @@ const runScan = async ({
     });
 
 
-  strlog({
-    before: withProjectedVolume.length,
-    after: fixed.length
-  });
-
-  const sortAndCut = (arr, sortKey, num) => {
-    return arr
-      .filter(buy => get(buy, sortKey))
-      .sort((a, b) => {
-        // console.log({
-        //   b: get(b, sortKey),
-        //   a: get(a, sortKey)
-        // })
-        return get(b, sortKey) - get(a, sortKey);
-      })
-      .slice(0, num)
-  };
-
   const topVolTo2Week = sortAndCut(fixed, 'computed.projectedVolumeTo2WeekAvg', COUNT / 3);
   // const topDollarVolume = sortAndCut(fixed, 'computed.dollarVolume', 30, COUNT / 3);
   const topVolTickers = sortAndCut(fixed, 'computed.projectedVolume', COUNT);
@@ -177,6 +176,10 @@ const runScan = async ({
   strlog({
 
     withProjectedVolume: withProjectedVolume.length,
+    fourLettersOrLess: fourLettersOrLess.length,
+    withoutLowVolume: withoutLowVolume.length, 
+    
+    filtered: filtered.length,
     fixed: fixed.length,
 
     topVolTickers: topVolTickers.length,
@@ -277,6 +280,9 @@ const finalize = array => {
       
       // high stSent, low movement
       const zScoreInverseTrend = (stSent - highestTrend).twoDec();
+
+      // high stSent, low dailyRSI
+      const zScoreHighSentLowRSI = stSent - dailyRSI;
       
 
       // high stSent, low movement, low dailyRSI
@@ -323,6 +329,7 @@ const finalize = array => {
         zScoreInverseTrend,
         zScoreInverseTrendMinusRSI,
         zScoreInverseTrendPlusVol,
+        zScoreHighSentLowRSI,
         zScoreMagic,
         zScoreHotAndCool,
         zScoreGoingBadLookingGood
