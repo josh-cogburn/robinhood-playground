@@ -1,7 +1,7 @@
-const runPennyScan = require('./base/run-scan');
+const runScan = require('./base/run-scan');
 
 module.exports = ({ minPrice, maxPrice } = {}) => 
-  runPennyScan({
+  runScan({
     minPrice,
     maxPrice,
     // minVolume: 32000,

@@ -82,7 +82,7 @@ module.exports = async () => {
 
   const picks = [];
   for (let scan of scans) {
-    const scanFn = require(`../penny-scans/${scan}`);
+    const scanFn = require(`../scans/${scan}`);
     console.log('running ', scan, 'PENNY SCAN');
     const response = await scanFn();
     const brokenDown = breakdowns(response);
@@ -113,7 +113,7 @@ module.exports = async () => {
   ];
 
   for (let scan of volIncreasing) {
-    const scanFn = require(`../penny-scans/${scan}`);
+    const scanFn = require(`../scans/${scan}`);
     console.log('running ', scan, 'PENNY SCAN');
     const response = await scanFn();
     response.forEach(pick => {
