@@ -5,7 +5,7 @@ module.exports = {
     purchaseAmt: 200,
     forPurchase: [
         '[sudden-drops]',
-        '[rsi-daily]',
+        // '[rsi-daily]',
         
 
         ...[ 'sep2019-rsi30',
