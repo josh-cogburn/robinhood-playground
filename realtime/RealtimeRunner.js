@@ -735,7 +735,7 @@ module.exports = new (class RealtimeRunner {
           'highestTrend',
           'zScoreInverseTrend',
           'zScoreVolume',
-          'sumZScore',
+          'zScoreSum',
           'zScoreInverseTrendPlusVol',
           'zScoreInverseTrendPlusVolTwo'
         ]
