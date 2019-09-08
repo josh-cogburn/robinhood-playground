@@ -707,7 +707,7 @@ module.exports = new (class RealtimeRunner {
 
 
 
-      ...require('../pms/manual'),
+      ...require('../pms/sep-2019'),
 
 
 
