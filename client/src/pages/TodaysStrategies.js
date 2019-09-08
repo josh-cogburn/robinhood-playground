@@ -44,7 +44,7 @@ class TodaysStrategies extends Component {
         const additionalFilterParts = additionalFilters.split(',');
         
         const matchesPm = (strat, pm) => {
-            return pms[pm] && pms[pm].every(part => strat.includes(`${part}-`) || strat.includes(`-${part}`));
+            return pms[pm] && pms[pm].every(part => strat === part || strat.includes(`${part}-`) || strat.includes(`-${part}`));
         }
 
       let showingPicks = (() => {
@@ -67,6 +67,7 @@ class TodaysStrategies extends Component {
                 ) || isRecommended
             );
           } else {
+              console.log({ pmFilter })
               return picks.filter(({ stratMin }) =>
                 matchesPm(stratMin, pmFilter)
               );
