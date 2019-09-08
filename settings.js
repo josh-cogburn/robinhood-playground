@@ -8,13 +8,16 @@ module.exports = {
         // '[rsi-daily]',
         
 
-        ...[ 'sep2019-rsi30',
-        'sep2019-rsiDaily',
-        'sep2019-rsi10',
-        'sep2019-pennyscans',
-        'sep2019-smoothKST',
-        'sep2019-ema',
-        'sep2019-macd' ].map(w => `[${w}]`)
+        ...[ 
+            'rsi30',
+            'rsiDaily',
+            'rsi10',
+            'pennyscans',
+            'smoothKST',
+            'ema',
+            'macd' 
+        ].map(w => `[sep2019-${w}]`)
+
     ],
     // forPurchaseVariation: '75Perc5Day-yesincludingblanks',
     // fallbackSellStrategy: 'limit8',
