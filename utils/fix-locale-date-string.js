@@ -71,6 +71,16 @@ _.mixin({
                 return _.has(obj, nPath) && _.get(obj[nPath], remainingPath);
             }
         }
+    },
+
+
+    prefixKeys: function (obj, prefix){
+        var b = {};
+        _.each(obj, function(value, key) {
+            const withPrefix = [prefix, key].join('');
+            b[withPrefix] = value;
+        });
+        return b;
     }
 });
   
