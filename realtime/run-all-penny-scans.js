@@ -35,7 +35,6 @@ const breakdowns = picks => {
     stTrendRatioFirst3,
     worstSsTrendRatio,
     worstSS,
-    highestTrend,
     
     ...`
       projectedVolume
