@@ -42,8 +42,8 @@ const breakdowns = picks => {
   const zScoreVolume = picks
     .sort((a, b) => b.zScoreVolume - a.zScoreVolume)
     .slice(0, 1);
-  const sumZScore = picks
-    .sort((a, b) => b.sumZScore - a.sumZScore)
+  const zScoreSum = picks
+    .sort((a, b) => b.zScoreSum - a.zScoreSum)
     .slice(0, 1);
   const zScoreInverseTrendPlusVol = picks
     .sort((a, b) => b.zScoreInverseTrendPlusVol - a.zScoreInverseTrendPlusVol)
@@ -65,7 +65,7 @@ const breakdowns = picks => {
     highestTrend,
     zScoreInverseTrend,
     zScoreVolume,
-    sumZScore,
+    zScoreSum,
     zScoreInverseTrendPlusVol,
     zScoreInverseTrendPlusVolTwo
   };
@@ -82,7 +82,7 @@ module.exports = async () => {
 
   const picks = [];
   for (let scan of scans) {
-    const scanFn = require(`../penny-scans/${scan}`);
+    const scanFn = require(`../scans/${scan}`);
     console.log('running ', scan, 'PENNY SCAN');
     const response = await scanFn();
     const brokenDown = breakdowns(response);
@@ -113,7 +113,7 @@ module.exports = async () => {
   ];
 
   for (let scan of volIncreasing) {
-    const scanFn = require(`../penny-scans/${scan}`);
+    const scanFn = require(`../scans/${scan}`);
     console.log('running ', scan, 'PENNY SCAN');
     const response = await scanFn();
     response.forEach(pick => {

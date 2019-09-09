@@ -7,7 +7,7 @@
     "percUp": 7142.857142857143
   },
   {
-    "pmName": "pennyscan-hot-st-sumZScore",
+    "pmName": "pennyscan-hot-st-zScoreSum",
     "weightedTrend": 5.224285714285714,
     "avgTrend": 5.224285714285714,
     "count": 7,
@@ -518,7 +518,7 @@
     "percUp": 4467.005076142133
   },
   {
-    "pmName": "pennyscan-unfiltered-sumZScore",
+    "pmName": "pennyscan-unfiltered-zScoreSum",
     "weightedTrend": -0.2671428571428573,
     "avgTrend": -0.2671428571428573,
     "count": 7,
@@ -833,7 +833,7 @@
     "percUp": 4285.714285714285
   },
   {
-    "pmName": "pennyscan-nowheres-sumZScore",
+    "pmName": "pennyscan-nowheres-zScoreSum",
     "weightedTrend": -1.4528571428571426,
     "avgTrend": -1.4528571428571426,
     "count": 7,
@@ -994,7 +994,7 @@
     "percUp": 2857.142857142857
   },
   {
-    "pmName": "pennyscan-droppers-sumZScore",
+    "pmName": "pennyscan-droppers-zScoreSum",
     "weightedTrend": -8.01142857142857,
     "avgTrend": -8.01142857142857,
     "count": 7,

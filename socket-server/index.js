@@ -23,12 +23,12 @@ const stratPerf = require('../analysis/strat-perf-for-real');
 const realtimeRunner = require('../realtime/RealtimeRunner');
 
 const pennyScans = {
-    nowheres: require('../penny-scans/nowheres'),
-    droppers: require('../penny-scans/droppers'),
-    hotSt: require('../penny-scans/hot-st'),
-    unfiltered: require('../penny-scans/run-penny-scan'),
-    'volume-increasing-5min': require('../penny-scans/volume-increasing-5min'),
-    'volume-increasing-10min': require('../penny-scans/volume-increasing-10min'),
+    nowheres: require('../scans/nowheres'),
+    droppers: require('../scans/droppers'),
+    hotSt: require('../scans/hot-st'),
+    unfiltered: require('../scans/unfiltered'),
+    'volume-increasing-5min': require('../scans/volume-increasing-5min'),
+    'volume-increasing-10min': require('../scans/volume-increasing-10min'),
 };
 
 let app = express();
