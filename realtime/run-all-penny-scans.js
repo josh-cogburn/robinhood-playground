@@ -9,21 +9,9 @@ const breakdowns = picks => {
     .slice(0, 8)
     .sort((a, b) => b.stSent - a.stSent)
     .slice(0, 1);
-  const highestTrend = picks
-    .sort((a, b) => b.highestTrend - a.highestTrend)
-    .slice(0, 1);
-  const singleTopDollarVolume = picks
-    .sort((a, b) => b.dollarVolume - a.dollarVolume)
-    .slice(0, 1);
-  const singleTopProjectedVolume = picks
-    .sort((a, b) => b.projectedVolume	 - a.projectedVolume)
-    .slice(0, 1);
   const ss180 = picks
     .sort((a, b) => b.stSent - a.stSent)
     .filter(pick => pick.stSent >= 180);
-  const topSS = picks
-    .sort((a, b) => b.stSent - a.stSent)
-    .slice(0, 1);
   const ssFirstTwo = picks
     .sort((a, b) => b.stSent - a.stSent)
     .slice(0, 2);
@@ -36,38 +24,43 @@ const breakdowns = picks => {
   const worstSS = picks
     .sort((a, b) => a.stSent - b.stSent)
     .slice(0, 2);
-  const zScoreInverseTrend = picks
-    .sort((a, b) => b.zScoreInverseTrend - a.zScoreInverseTrend)
-    .slice(0, 1);
-  const zScoreVolume = picks
-    .sort((a, b) => b.zScoreVolume - a.zScoreVolume)
-    .slice(0, 1);
-  const zScoreSum = picks
-    .sort((a, b) => b.zScoreSum - a.zScoreSum)
-    .slice(0, 1);
-  const zScoreInverseTrendPlusVol = picks
-    .sort((a, b) => b.zScoreInverseTrendPlusVol - a.zScoreInverseTrendPlusVol)
-    .slice(0, 1);
-  const zScoreInverseTrendPlusVolTwo = picks
-    .sort((a, b) => b.zScoreInverseTrendPlusVol - a.zScoreInverseTrendPlusVol)
-    .slice(0, 2);
+
+    
   return {
+
     singleTopVolumeSS,
     singlePercMaxVolSS,
-    singleTopDollarVolume,
-    singleTopProjectedVolume,
     ss180,
-    topSS,
     ssFirstTwo,
     stTrendRatioFirst3,
     worstSsTrendRatio,
     worstSS,
     highestTrend,
-    zScoreInverseTrend,
-    zScoreVolume,
-    zScoreSum,
-    zScoreInverseTrendPlusVol,
-    zScoreInverseTrendPlusVolTwo
+    
+    ...`
+      projectedVolume
+      dollarVolume
+      highestTrend
+      
+      zScoreVolume,
+      zScoreInverseTrend,
+      zScoreInverseTrendMinusRSI,
+      zScoreInverseTrendPlusVol,
+      zScoreHighSentLowRSI,
+      zScoreMagic,
+      zScoreHotAndCool,
+      zScoreGoingBadLookingGood
+    `
+        .split('\n')
+        .map(t => t.trim())
+        .filter(Boolean)
+        .reduce((acc, key) => ({
+          ...acc,
+          [key]: picks
+            .sort((a, b) => b[key] - a[key])
+            .slice(0, 1)
+        }), {})
+    
   };
 };
 

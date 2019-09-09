@@ -733,11 +733,15 @@ module.exports = new (class RealtimeRunner {
           'worstSsTrendRatio',
           'worstSS',
           'highestTrend',
-          'zScoreInverseTrend',
+          
           'zScoreVolume',
-          'zScoreSum',
+          'zScoreInverseTrend',
+          'zScoreInverseTrendMinusRSI',
           'zScoreInverseTrendPlusVol',
-          'zScoreInverseTrendPlusVolTwo'
+          'zScoreHighSentLowRSI',
+          'zScoreMagic',
+          'zScoreHotAndCool',
+          'zScoreGoingBadLookingGood'
         ]
       ).toArray().reduce((acc, arr) => ({
         ...acc,
