@@ -19,12 +19,11 @@ const data = {
 
   // PENNYSCANS
   pennyscans: `
-    pennyscan-hot-st-singleTopProjectedVolume-firstAlert-shouldWatchout-initial-5000
-    pennyscan-hot-st-singleTopProjectedVolume-firstAlert-shouldWatchout-lunch-5000
-    pennyscan-nowheres-singleTopProjectedVolume-firstAlert-notWatchout-dinner-5000
+    pennyscan-hot-st-projectedVolume-firstAlert-shouldWatchout-initial-5000
+    pennyscan-hot-st-projectedVolume-firstAlert-shouldWatchout-lunch-5000
+    pennyscan-nowheres-projectedVolume-firstAlert-notWatchout-dinner-5000
     pennyscan-nowheres-ssFirstTwo-firstAlert-notWatchout-dinner-5000
-    pennyscan-unfiltered-zScoreInverseTrendPlusVolTwo-firstAlert-notWatchout-initial-5000
-    pennyscan-hot-st-zScoreInverseTrendPlusVolTwo-firstAlert-shouldWatchout-initial-5000
+    pennyscan-hot-st-zScoreInverseTrendPlusVol-firstAlert-shouldWatchout-initial-5000
     pennyscan-unfiltered-zScoreInverseTrendPlusVol-firstAlert-notWatchout-dinner-5000
     pennyscan-nowheres-zScoreInverseTrendPlusVol-firstAlert-notWatchout-lunch-5000
     pennyscan-droppers-worstSS-firstAlert-notWatchout-initial-5000
@@ -32,7 +31,7 @@ const data = {
     pennyscan-droppers-worstSS-firstAlert-shouldWatchout-initial-5000
     pennyscan-nowheres-worstSS-firstAlert-notWatchout-dinner-5000
 
-    pennyscan-hot-st-singleTopProjectedVolume-firstAlert-notWatchout-dinner-5000
+    pennyscan-hot-st-projectedVolume-firstAlert-notWatchout-dinner-5000
     pennyscan-unfiltered-singleTopVolumeSS-firstAlert-notWatchout-lunch-5000
     pennyscan-droppers-worstSS-firstAlert-shouldWatchout-lunch-5000
   `,
