@@ -34,11 +34,12 @@ const additionalCron = [
     //     run: [-3],
     //     fn: alpacaSellAllStocks
     // },
-    // {
-    //     name: 'alpaca smart sells',
-    //     run: [5, 24, 45, 60, 100, 140, 180, 220, 280, 300],
-    //     fn: alpacaSmartSells
-    // },
+    {
+        name: 'alpaca smart sells',
+        run: [1],
+        // run: [5, 24, 45, 60, 100, 140, 180, 220, 280, 300],
+        fn: alpacaSmartSells
+    },
 
 
     // {
