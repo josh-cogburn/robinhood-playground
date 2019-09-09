@@ -9,8 +9,17 @@ module.exports = async (_, strategy) => {
   console.log('pms-hit', { strategy, pms }, settings.forPurchase);
 
   const matchesPm = pm => {
+
+    
     // console.log({ pm })
-    const match = pm => pms[pm] && pms[pm].every(part => strategy.includes(`${part}-`));
+    const match = pm => {
+      const arrayOfArrays = pms[pm];
+      return arrayOfArrays.some(parts => {
+          parts = Array.isArray(parts) ? parts : [parts];
+          return parts.every(part => strategy.includes(part));
+      });
+    }
+    
 
     if (pm === 'forPurchase') {
       let [forPurchasePms, forPurchaseStrats] = partition(
@@ -19,7 +28,7 @@ module.exports = async (_, strategy) => {
       );
 
       forPurchasePms = forPurchasePms.map(line => line.substring(1, line.length - 1));
-        // console.log({ forPurchasePms })
+        console.log({ forPurchasePms })
       return (
         forPurchaseStrats.includes(strategy) ||
         forPurchasePms.some(match)
