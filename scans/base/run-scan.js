@@ -2,7 +2,7 @@ const COUNT = 70;
 
 const lookupMultiple = require('../../utils/lookup-multiple');
 const addFundamentals = require('../../app-actions/add-fundamentals');
-const allStocks = require('../json/stock-data/allStocks');
+const allStocks = require('../../json/stock-data/allStocks');
 const { isTradeable } = require('../../utils/filter-by-tradeable');
 const getMultipleHistoricals = require('../../app-actions/get-multiple-historicals');
 const getMinutesFrom630 = require('../../utils/get-minutes-from-630');
@@ -279,20 +279,18 @@ const finalize = array => {
       
       
       // high stSent, low movement
-      const zScoreInverseTrend = (stSent - highestTrend).twoDec();
+      const zScoreInverseTrend = stSent - highestTrend;
 
       // high stSent, low dailyRSI
       const zScoreHighSentLowRSI = stSent - dailyRSI;
       
 
       // high stSent, low movement, low dailyRSI
-      const zScoreInverseTrendMinusRSI = (
-        (stSent * 1.4) - highestTrend - dailyRSI
-      ).twoDec();
+      const zScoreInverseTrendMinusRSI = (stSent * 1.4) - highestTrend - dailyRSI;
       
       
       // high stSent, low movement, high volume
-      const zScoreInverseTrendPlusVol = (zScoreInverseTrend + zScoreVolume).twoDec();
+      const zScoreInverseTrendPlusVol = zScoreInverseTrend + zScoreVolume;
 
       // high stSent, high volume, low movement, low dailyRSI
       const zScoreMagic = (() => {
@@ -325,14 +323,18 @@ const finalize = array => {
       return {
         ticker: buy.ticker,
         ...buy.computed,
-        zScoreVolume,
-        zScoreInverseTrend,
-        zScoreInverseTrendMinusRSI,
-        zScoreInverseTrendPlusVol,
-        zScoreHighSentLowRSI,
-        zScoreMagic,
-        zScoreHotAndCool,
-        zScoreGoingBadLookingGood
+
+        ...mapObject({
+          zScoreVolume,
+          zScoreInverseTrend,
+          zScoreInverseTrendMinusRSI,
+          zScoreInverseTrendPlusVol,
+          zScoreHighSentLowRSI,
+          zScoreMagic,
+          zScoreHotAndCool,
+          zScoreGoingBadLookingGood
+        }, n => n.twoDec())
+        
       };
     })
     .map(buy => ({
@@ -382,14 +384,16 @@ const addDailyRSI = withDailyHistoricals => {
       }) || [];
   };
 
-
+  strlog({
+    buys: withDailyHistoricals.map(buy => buy.dailyHistoricals)
+  })
   return withDailyHistoricals.map(buy => ({
     ...buy,
     computed: {
       ...buy.computed,
       dailyRSI: getRSI(
-        (buy.dailyHistoricals || []).map(hist => hist.close)
-      )
+        (buy.dailyHistoricals || []).map(hist => hist.close_price)
+      ).pop()
     }
   }));
 
