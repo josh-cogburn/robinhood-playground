@@ -168,7 +168,7 @@ class Scan extends Component {
         <h2>Scan</h2>
         Price range...<br/><br/>
         <InputRange
-          maxValue={80}
+          maxValue={260}
           minValue={0}
           step={0.5}
           // formatLabel={value => value.toFixed(2)}
