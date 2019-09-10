@@ -41,13 +41,13 @@ const breakdowns = picks => {
       dollarVolume
       highestTrend
       
-      zScoreVolume,
-      zScoreInverseTrend,
-      zScoreInverseTrendMinusRSI,
-      zScoreInverseTrendPlusVol,
-      zScoreHighSentLowRSI,
-      zScoreMagic,
-      zScoreHotAndCool,
+      zScoreVolume
+      zScoreInverseTrend
+      zScoreInverseTrendMinusRSI
+      zScoreInverseTrendPlusVol
+      zScoreHighSentLowRSI
+      zScoreMagic
+      zScoreHotAndCool
       zScoreGoingBadLookingGood
     `
         .split('\n')
