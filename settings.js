@@ -7,6 +7,8 @@ module.exports = {
         '[sudden-drops]',
         // '[rsi-daily]',
         
+        '[pennyscan-unfiltered-zScoreMagic]',
+        '[pennyscan-unfiltered-singleTopVolumeSS]',
 
         ...Object.keys(
             require('./pms/sep-2019')
