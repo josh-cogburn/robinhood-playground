@@ -1,8 +1,13 @@
 
 
 const { alpaca } = require('.');
+const getMinutesFrom630 = require('../utils/get-minutes-from-630');
 
 module.exports = async (_, ticker, quantity, price) => {
+
+    const min =getMinutesFrom630();
+    const extendedHours = min < 0 || min > 390;
+
     log('ALPACA LIMIT BUY');
     str({ ticker, quantity, price });
     const data = {
@@ -11,7 +16,13 @@ module.exports = async (_, ticker, quantity, price) => {
         side: 'buy',
         type: 'limit',
         limit_price: Number(price),
-        time_in_force: 'day',
+        ...extendedHours ? {
+            extended_hours: true,
+            time_in_force: 'day',
+        } : {
+            time_in_force: 'fok'
+        }
+        
     };
     log('data buy alpaca', data)
     const order = await alpaca.createOrder(data);

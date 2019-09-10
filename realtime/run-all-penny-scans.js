@@ -23,7 +23,7 @@ const breakdowns = picks => {
     .slice(0, 2);
   const worstSS = picks
     .sort((a, b) => a.stSent - b.stSent)
-    .slice(0, 2);
+    .slice(0, 1);
 
     
   return {

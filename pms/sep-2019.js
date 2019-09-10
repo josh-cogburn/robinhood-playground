@@ -36,6 +36,26 @@ const data = {
     pennyscan-droppers-worstSS-firstAlert-shouldWatchout-lunch-5000
   `,
 
+  morePennyScans: [
+
+    'pennyscan-hot-st-ssFirstTwo-firstAlert-shouldWatchout-initial-5000',
+    'pennyscan-nowheres-worstSsTrendRatio-firstAlert-shouldWatchout-initial-5000',
+    'pennyscan-unfiltered-worstSS-firstAlert-shouldWatchout-initial-5000',
+    'pennyscan-droppers-worstSsTrendRatio-firstAlert-shouldWatchout-dinner-5000',
+    'pennyscan-unfiltered-singleTopVolumeSS-firstAlert-shouldWatchout-lunch-5000',
+    'pennyscan-hot-st-ssFirstTwo-firstAlert-shouldWatchout-lunch-5000',
+    'pennyscan-droppers-singlePercMaxVolSS-firstAlert-shouldWatchout-lunch-5000',
+    'pennyscan-droppers-singleTopVolumeSS-firstAlert-shouldWatchout-lunch-5000',
+
+
+    'pennyscan-nowheres-worstSS-firstAlert-shouldWatchout-initial-5000',
+    'pennyscan-nowheres-worstSS-firstAlert-nowWatchout-initial-5000',
+    'pennyscan-nowheres-worstSS-firstAlert-shouldWatchout-lunch-5000',
+    'pennyscan-nowheres-worstSS-firstAlert-nowWatchout-lunch-5000',
+
+    'pennyscan-unfiltered-zScoreHotAndCool-firstAlert-shouldWatchout-initial-5000',
+  ],
+
   smoothKST: `
     smoothkst-fitty-10min-bearishSignal-under2-firstAlert-notWatchout-dinner-5000
     smoothkst-fitty-precededByRSI-10min-isSignalCross-under2-firstAlert-notWatchout-initial-5000
@@ -59,7 +79,7 @@ const data = {
 
 };
 
-const asArrays = mapObject(data, str => str.split('\n').map(line => line.trim()).filter(Boolean));
+const asArrays = mapObject(data, str => Array.isArray(str) ? str : str.split('\n').map(line => line.trim()).filter(Boolean));
 const prefixed = prefixKeys(asArrays, 'sep2019-');
 
 module.exports = prefixed;

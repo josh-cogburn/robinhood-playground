@@ -9,7 +9,9 @@ module.exports = {
         
         '[pennyscan-hot-st-singlePercMaxVolSS]',
         '[pennyscan-unfiltered-singleTopVolumeSS]',
-        '[pennyscan-droppers-zScoreGoingBadLookingGood]',
+        '[pennyscan-unfiltered-zScoreHotAndCool]',
+        '[pennyscan-unfiltered-zScoreHighSentLowRSI]',
+        '[rsi-daily]',
 
         ...Object.keys(
             require('./pms/sep-2019')

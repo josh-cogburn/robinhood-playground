@@ -630,8 +630,8 @@ module.exports = new (class RealtimeRunner {
     const minKey = (() => {
         if (min > 390) return 'afterhours';
         if (min > 200) return 'dinner';
-        if (min > 90) return 'lunch';
-        if (min > 35) return 'brunch';
+        if (min > 120) return 'lunch';
+        if (min > 45) return 'brunch';
         if (min > 0) return 'initial';
         return 'premarket';
     })();
@@ -721,27 +721,33 @@ module.exports = new (class RealtimeRunner {
           'droppers',
           'unfiltered'
         ],
-        [    
+        [
           'singleTopVolumeSS',
           'singlePercMaxVolSS',
-          'singleTopDollarVolume',
-          'singleTopProjectedVolume',
           'ss180',
-          'topSS',
           'ssFirstTwo',
           'stTrendRatioFirst3',
           'worstSsTrendRatio',
           'worstSS',
-          'highestTrend',
-          
-          'zScoreVolume',
-          'zScoreInverseTrend',
-          'zScoreInverseTrendMinusRSI',
-          'zScoreInverseTrendPlusVol',
-          'zScoreHighSentLowRSI',
-          'zScoreMagic',
-          'zScoreHotAndCool',
-          'zScoreGoingBadLookingGood'
+    
+          ...`
+            projectedVolume
+            dollarVolume
+            highestTrend
+            
+            zScoreVolume
+            zScoreInverseTrend
+            zScoreInverseTrendMinusRSI
+            zScoreInverseTrendPlusVol
+            zScoreHighSentLowRSI
+            zScoreMagic
+            zScoreHotAndCool
+            zScoreGoingBadLookingGood
+          `
+              .split('\n')
+              .map(t => t.trim())
+              .filter(Boolean)
+
         ]
       ).toArray().reduce((acc, arr) => ({
         ...acc,
