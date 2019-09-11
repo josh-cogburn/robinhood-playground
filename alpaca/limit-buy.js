@@ -20,7 +20,7 @@ module.exports = async (_, ticker, quantity, price) => {
             extended_hours: true,
             time_in_force: 'day',
         } : {
-            time_in_force: 'fok'
+            // time_in_force: 'fok'
         }
         
     };

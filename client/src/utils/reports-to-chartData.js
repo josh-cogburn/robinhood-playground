@@ -29,7 +29,7 @@ const fields = {
     'account balance': (d, i, array) =>  i === 0 ? 0 : getTrend(d.accountBalance, array[0].accountBalance),
     'alpaca balance': (d, i, array) => {
         const firstVal = array.find(b => b.alpacaBalance).alpacaBalance;
-        return i === 0 ? 0 : getTrend(d.alpacaBalance || firstVal, firstVal);
+        return i === 0 ? 0 : getTrend(d.alpacaBalance || firstVal, firstVal) * 10;
     },
     'russell2000': (d, i, array) =>  i === 0 ? 0 : getTrend(d.indexPrices.russell2000, array[0].indexPrices.russell2000),
     'SP500': (d, i, array) =>  i === 0 ? 0 : getTrend(d.indexPrices.sp500, array[0].indexPrices.sp500),
