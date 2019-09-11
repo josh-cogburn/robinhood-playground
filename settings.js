@@ -7,16 +7,20 @@ module.exports = {
         '[sudden-drops]',
         // '[rsi-daily]',
         
-        '[pennyscan-hot-st-singlePercMaxVolSS]',
-        '[pennyscan-unfiltered-singleTopVolumeSS]',
-        '[pennyscan-unfiltered-zScoreHotAndCool]',
-        '[pennyscan-unfiltered-zScoreHighSentLowRSI]',
-        '[pennyscan-unfiltered-zScoreMagic]',
+        // '[pennyscan-hot-st-singlePercMaxVolSS]',
+        // '[pennyscan-unfiltered-singleTopVolumeSS]',
+        // '[pennyscan-unfiltered-zScoreHotAndCool]',
+        // '[pennyscan-unfiltered-zScoreHighSentLowRSI]',
+        // '[pennyscan-unfiltered-zScoreMagic]',
         '[rsi-daily]',
 
-        ...Object.keys(
-            require('./pms/sep-2019')
-        ).map(v => `[${v}]`)
+        // ...Object.keys(
+        //     require('./pms/sep-2019')
+        // ).map(v => `[${v}]`)
+
+        '[pennyscan-highHit360]',
+        '[pennyscan-highHit360]',
+        '[pennyscan-highHit120]',
 
     ],
     // forPurchaseVariation: '75Perc5Day-yesincludingblanks',

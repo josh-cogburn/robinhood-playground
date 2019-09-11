@@ -688,7 +688,10 @@ module.exports = new (class RealtimeRunner {
       ...[5, 10, 30 , 'daily'],
       ...Object.keys(this.collections),
       
-      'volume-increasing'
+      'volume-increasing',
+
+      'pennyscan-highHit',
+      ...[30, 90, 120, 360].map(period => `pennyscan-highHit${period}`)
 
     ];
 
@@ -756,7 +759,7 @@ module.exports = new (class RealtimeRunner {
 
       nowheresTopSSPREMARKET: ['nowheres', 'topSS', 'premarket'],
 
-
+      
 
     });
 

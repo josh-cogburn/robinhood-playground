@@ -72,7 +72,7 @@ const scans = [
 
 module.exports = async () => {
 
-  const picks = [];
+  let picks = [];
   for (let scan of scans) {
     const scanFn = require(`../scans/${scan}`);
     console.log('running ', scan, 'PENNY SCAN');
@@ -124,6 +124,17 @@ module.exports = async () => {
     });
   }
 
+  const newHighs = await require('../scans/base/new-highs')();
+  picks = [
+    ...newHighs.map(({ ticker, highHit, ...rest }) => ({
+      ticker,
+      strategyName: 'pennyscan',
+      keys: {
+        [`highHit${highHit}`]: true,
+      },
+      data: rest
+    }))
+  ];
 
   return picks;
 

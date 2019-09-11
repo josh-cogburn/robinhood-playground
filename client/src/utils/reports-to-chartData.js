@@ -29,7 +29,7 @@ const fields = {
     'account balance': (d, i, array) =>  i === 0 ? 0 : getTrend(d.accountBalance, array[0].accountBalance),
     'alpaca balance': (d, i, array) => {
         const firstVal = array.find(b => b.alpacaBalance).alpacaBalance;
-        return i === 0 ? 0 : getTrend(d.alpacaBalance || firstVal, firstVal) * 10;
+        return i === 0 ? 0 : getTrend(d.alpacaBalance || firstVal, firstVal, true) * 100;
     },
     'russell2000': (d, i, array) =>  i === 0 ? 0 : getTrend(d.indexPrices.russell2000, array[0].indexPrices.russell2000),
     'SP500': (d, i, array) =>  i === 0 ? 0 : getTrend(d.indexPrices.sp500, array[0].indexPrices.sp500),
@@ -50,7 +50,7 @@ const process = fieldsToInclude => (dayReports, dataSlice = 0) => {
         // pointBorderWidth: 10,
         borderColor: key === 'account balance' || false ? 'black' : getColor(key),
         // borderCapStyle: 'butt',
-        borderWidth: key.includes('balance') ? 7 : 5,
+        borderWidth: key === 'account balance' ? 7 : 5,
         borderDashOffset: 0.0,
         borderJoinStyle: 'round',
         // pointBorderColor: key === 'account balance' ? 'black' : getColor(key),
