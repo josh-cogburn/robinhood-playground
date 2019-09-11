@@ -11,6 +11,7 @@ module.exports = {
         '[pennyscan-unfiltered-singleTopVolumeSS]',
         '[pennyscan-unfiltered-zScoreHotAndCool]',
         '[pennyscan-unfiltered-zScoreHighSentLowRSI]',
+        '[pennyscan-unfiltered-zScoreMagic]',
         '[rsi-daily]',
 
         ...Object.keys(

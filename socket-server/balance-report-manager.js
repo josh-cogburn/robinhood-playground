@@ -3,14 +3,13 @@ const STOP_MIN = 811;
 const TIMEOUT_SECONDS = 15;
 
 const BalanceReport = require('../models/BalanceReport');
-const getAccountBalance = require('../utils/get-account-balance');
-const getIndexes = require('../utils/get-indexes');
 
 const stratManager = require('./strat-manager');
 const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
 const getMinutesFrom630 = require('../utils/get-minutes-from-630');
-const getTrend = require('../utils/get-trend');
+
 const dayInProgress = require('../realtime/day-in-progress');
+const getBalanceReport = require('./get-balance-report');
 
 // inner
 let timeout;
@@ -67,25 +66,10 @@ const runAndSetTimeout = async () => {
     timeout = setTimeout(runAndSetTimeout, toSeconds * 1000);
 };
 
-let lastBalance;
 const getAndSaveBalanceReport = async (isRegularHours) => {
     // console.log('hereee');
-
-    let { accountBalance } = await getAccountBalance();
-    if (Math.abs(getTrend(accountBalance, lastBalance)) > 2.9) {
-        console.log('WOAH WOAH', {
-            accountBalance,
-            lastBalance
-        });
-        accountBalance = lastBalance;
-    }
-    lastBalance = accountBalance;
     try {
-        const report = {
-            accountBalance,
-            indexPrices: await getIndexes(),
-            isRegularHours
-        };
+        const report = await getBalanceReport(isRegularHours);
         const mongoDoc = await BalanceReport.create(report);
         // console.log(
         //     'mongodb',
@@ -111,5 +95,6 @@ module.exports = {
     init,
     start,
     stop,
-    getAllBalanceReports
+    getAllBalanceReports,
+    getAndSaveBalanceReport
 };
