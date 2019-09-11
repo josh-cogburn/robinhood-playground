@@ -5,7 +5,8 @@ const getMinutesFrom630 = require('../utils/get-minutes-from-630');
 
 module.exports = async (_, ticker, quantity, price) => {
 
-    const min =getMinutesFrom630();
+    const min = getMinutesFrom630();
+    // strlog({ min })
     const extendedHours = min < 0 || min > 390;
 
     log('ALPACA LIMIT BUY');
@@ -20,7 +21,7 @@ module.exports = async (_, ticker, quantity, price) => {
             extended_hours: true,
             time_in_force: 'day',
         } : {
-            // time_in_force: 'fok'
+            time_in_force: 'day'
         }
         
     };
