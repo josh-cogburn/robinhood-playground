@@ -48,7 +48,7 @@ class DayReports extends Component {
                     {
                         ...chartData.datasets[0],
                         label: 'diff',
-                        data: chartData.datasets[0].data.map((val, i) => val - chartData.datasets[1].data[i]),
+                        data: chartData.datasets[0].data.map((val, i) => val - chartData.datasets[2].data[i]),
                         borderWidth: 2,
                         borderColor: 'pink',
                     },
