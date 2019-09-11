@@ -6,7 +6,7 @@ const settings = require('../settings');
 module.exports = async (_, strategy) => {
   await require('../realtime/RealtimeRunner').init();
   const pms = require('../realtime/RealtimeRunner').getPms();
-  console.log('pms-hit', { strategy, pms }, settings.forPurchase);
+  // console.log('pms-hit', { strategy, pms }, settings.forPurchase);
 
   const matchesPm = pm => {
 
@@ -28,7 +28,7 @@ module.exports = async (_, strategy) => {
       );
 
       forPurchasePms = forPurchasePms.map(line => line.substring(1, line.length - 1));
-        console.log({ forPurchasePms })
+        // console.log({ forPurchasePms })
       return (
         forPurchaseStrats.includes(strategy) ||
         forPurchasePms.some(match)
