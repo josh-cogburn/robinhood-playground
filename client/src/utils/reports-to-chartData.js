@@ -1,6 +1,6 @@
 import getTrend from './get-trend';
 
-const colors = ['green', 'blue', 'violet', 'violet', 'violet', 'pink', 'orange', 'blue', 'green'];
+const colors = ['green', 'blue', 'violet', 'violet', 'violet', 'pink', 'purple', 'orange', 'blue', 'green'];
 // const colors = [
 //     'orange',
 //     'orange',
@@ -27,6 +27,10 @@ const fields = {
 
     // balanceReports
     'account balance': (d, i, array) =>  i === 0 ? 0 : getTrend(d.accountBalance, array[0].accountBalance),
+    'alpaca balance': (d, i, array) => {
+        const firstVal = array.find(b => b.alpacaBalance).alpacaBalance;
+        return i === 0 ? 0 : getTrend(d.alpacaBalance || firstVal, firstVal);
+    },
     'russell2000': (d, i, array) =>  i === 0 ? 0 : getTrend(d.indexPrices.russell2000, array[0].indexPrices.russell2000),
     'SP500': (d, i, array) =>  i === 0 ? 0 : getTrend(d.indexPrices.sp500, array[0].indexPrices.sp500),
     'nasdaq': (d, i, array) =>  i === 0 ? 0 : getTrend(d.indexPrices.nasdaq, array[0].indexPrices.nasdaq),
@@ -40,17 +44,17 @@ const process = fieldsToInclude => (dayReports, dataSlice = 0) => {
     const datasets = fieldsToInclude.map(key => ({
         label: key,
         fill: false,
-        lineTension: key === 'account balance' ? 0 : -1,
+        lineTension: key.includes('balance') ? 0 : -1,
         backgroundColor: 'rgba(75,192,192,0.1)',
-        pointBorderColor: key === 'account balance' || false ? 'black' : getColor(key),
+        pointBorderColor: key.includes('balance')|| false ? 'black' : getColor(key),
         // pointBorderWidth: 10,
         borderColor: key === 'account balance' || false ? 'black' : getColor(key),
         // borderCapStyle: 'butt',
-        borderWidth: key === 'account balance' ? 7 : 5,
+        borderWidth: key.includes('balance') ? 7 : 5,
         borderDashOffset: 0.0,
         borderJoinStyle: 'round',
         // pointBorderColor: key === 'account balance' ? 'black' : getColor(key),
-        pointBackgroundColor: key === 'account balance' || false ? 'black' : getColor(key),
+        pointBackgroundColor: key.includes('balance') || false ? 'black' : getColor(key),
         // pointBorderWidth: key === 'account balance' || false ? 6 : 5,
         // pointHoverRadius: 5,
         // pointHoverBackgroundColor: getColor(key),
@@ -68,7 +72,7 @@ const process = fieldsToInclude => (dayReports, dataSlice = 0) => {
 };
 
 export default {
-    balanceChart: process(['account balance', 'russell2000', 'SP500', 'nasdaq' ]),
+    balanceChart: process(['account balance', 'alpaca balance', 'russell2000', 'SP500', 'nasdaq']),
     unrealizedVsRealized: process(['unrealized return', 'realized return']),
     spyVsForPurchase: process(['forPurchase PM avg trend %', 'forPurchase PM weighted trend %']),
     pickToExecutionPerc: process(['pick to execution %']),
