@@ -117,7 +117,6 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
 
 
 module.exports = async (strategy, min, toPurchase, trendKey = '', { keys, data } = {}) => {
-    toPurchase = ['BPMX'];
     const isNotRegularHours = min < 0 || min > 390;
 
     const record = async (stocks, strategyName, tickerLookups) => {
