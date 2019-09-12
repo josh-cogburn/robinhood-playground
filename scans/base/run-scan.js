@@ -219,9 +219,9 @@ const runScan = async ({
 
 
 const addZScores = array => {
-  strlog({
-    array
-  })
+  // strlog({
+  //   array
+  // })
   const withZScores = array.map((buy, index, arr) => ({
     ...buy,
     zScores: [
@@ -243,9 +243,9 @@ const addZScores = array => {
     }), {})
   }));
 
-  strlog({
-    withZScores
-  })
+  // strlog({
+  //   withZScores
+  // })
 
   return withZScores;
 };
@@ -384,9 +384,9 @@ const addDailyRSI = withDailyHistoricals => {
       }) || [];
   };
 
-  strlog({
-    buys: withDailyHistoricals.map(buy => buy.dailyHistoricals)
-  })
+  // strlog({
+  //   buys: withDailyHistoricals.map(buy => buy.dailyHistoricals)
+  // })
   return withDailyHistoricals.map(buy => ({
     ...buy,
     computed: {

@@ -118,7 +118,7 @@ const stratManager = {
     newPick(data) {
 
         data.timestamp = Date.now();
-        this.tickerWatcher.addTickers(
+        this.tickerWatcher && this.tickerWatcher.addTickers(
             data.withPrices.map(o => o.ticker)
         );
         console.log('new pick', data);

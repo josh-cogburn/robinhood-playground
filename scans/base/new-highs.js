@@ -186,7 +186,19 @@ const runScan = async ({
     const { open } = buy.fundamentals;
     
     const highHit = Object.keys(buy.highs).slice().reverse().find(key => {
-      const isHit = val => getTrend(val, buy.highs[key]) > -1;
+      
+      const isHit = val => {
+        // if (buy.ticker === 'SIRI' && key ==='120') {
+        //   strlog({
+        //     val,
+        //     high: buy.highs[key],
+        //     trend: getTrend(val, buy.highs[key]),
+        //     trendMethod: getTrend(val, buy.highs[key]) > -1,
+        //     newMethod: val > buy.highs[key]
+        //   })
+        // }
+        return val > buy.highs[key];
+      }
       return isHit(currentPrice) && ([open, prevClose].some(val => !isHit(val)));
     });
     return {
@@ -248,31 +260,31 @@ const addDailyHistoricals = async trend => {
 };
 
 
-const { RSI } = require('technicalindicators');
-const addDailyRSI = withDailyHistoricals => {
+// const { RSI } = require('technicalindicators');
+// const addDailyRSI = withDailyHistoricals => {
 
-  const getRSI = values => {
-      return RSI.calculate({
-          values,
-          period: 14
-      }) || [];
-  };
+//   const getRSI = values => {
+//       return RSI.calculate({
+//           values,
+//           period: 14
+//       }) || [];
+//   };
 
-  strlog({
-    buys: withDailyHistoricals.map(buy => buy.dailyHistoricals)
-  })
-  return withDailyHistoricals.map(buy => ({
-    ...buy,
-    computed: {
-      ...buy.computed,
-      dailyRSI: getRSI(
-        (buy.dailyHistoricals || []).map(hist => hist.close_price)
-      ).pop()
-    }
-  }));
+//   strlog({
+//     buys: withDailyHistoricals.map(buy => buy.dailyHistoricals)
+//   })
+//   return withDailyHistoricals.map(buy => ({
+//     ...buy,
+//     computed: {
+//       ...buy.computed,
+//       dailyRSI: getRSI(
+//         (buy.dailyHistoricals || []).map(hist => hist.close_price)
+//       ).pop()
+//     }
+//   }));
 
 
-};
+// };
 
 
 module.exports = runScan;

@@ -13,7 +13,7 @@ const sellAllBasedOnPlayout = require('../app-actions/sell-all-based-on-playout'
 const sellAllStocks = require('../app-actions/sell-all-stocks');
 const smartSells = require('../app-actions/smart-sells');
 const alpacaSellAllStocks = require('../alpaca/sell-all-stocks');
-const alpacaSmartSells = require('../alpaca/smart-sells');
+// const alpacaSmartSells = require('../alpaca/smart-sells');
 const saveDayReport = require('../app-actions/save-day-report');
 const restartProcess = require('../app-actions/restart-process');
 const sendScreenshot = require('../app-actions/send-screenshot');
@@ -38,7 +38,7 @@ const additionalCron = [
         name: 'alpaca smart sells',
         run: [1],
         // run: [5, 24, 45, 60, 100, 140, 180, 220, 280, 300],
-        fn: () => alpacaSmartSells()
+        fn: () => alpacaSellAllStocks()
     },
 
 

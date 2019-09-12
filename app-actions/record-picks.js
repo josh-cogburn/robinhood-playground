@@ -11,7 +11,7 @@ const sendEmail = require('../utils/send-email');
 const tweeter = require('./tweeter');
 const calcEmailsFromStrategy = require('../utils/calc-emails-from-strategy');
 const stocktwits = require('../utils/stocktwits');
-const { disableMultipliers } = require('../settings');
+const { disableMultipliers, forPurchase } = require('../settings');
 const pmsHit = require('../utils/pms-hit');
 const { emails } = require('../config');
 
@@ -65,10 +65,15 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
     const stocksToBuy = withPrices.map(obj => obj.ticker);
     if (isRecommended) {
         console.log('strategy enabled: ', stratMin, 'purchasing');
+        const forPurchaseMultiplier = Math.min(1, forPurchase.filter(line => {
+            const pmName = line.substring(1, line.length - 1);
+            return hits.includes(pmName);
+        }).length);
+        console.log({ forPurchaseMultiplier});
         await purchaseStocks({
             stocksToBuy,
             strategy,
-            // multiplier: !disableMultipliers ? forPurchaseMultiplier : 1,
+            multiplier: !disableMultipliers ? forPurchaseMultiplier : 1,
             min,
             withPrices
         });
@@ -111,8 +116,8 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
 
 
 
-module.exports = async (strategy, min, toPurchase, trendKey = '', { keys, data }) => {
-
+module.exports = async (strategy, min, toPurchase, trendKey = '', { keys, data } = {}) => {
+    toPurchase = ['BPMX'];
     const isNotRegularHours = min < 0 || min > 390;
 
     const record = async (stocks, strategyName, tickerLookups) => {
@@ -134,6 +139,7 @@ module.exports = async (strategy, min, toPurchase, trendKey = '', { keys, data }
     };
 
     if (!Array.isArray(toPurchase)) {
+        console.log('obj', toPurchase)
         // its an object
         const allTickers = [...new Set(
             Object.keys(toPurchase)
@@ -153,7 +159,8 @@ module.exports = async (strategy, min, toPurchase, trendKey = '', { keys, data }
             await record(subsetToPurchase, stratName, tickerLookups);
         }
     } else {
-        console.log('no variety to purchase');
+        console.log('array', toPurchase)
+        console.log('no variety to purchase', );
         const tickerLookups = await lookupMultiple(toPurchase, true);
         const stratName = [strategy, trendKey].filter(Boolean).join('-');
         return record(toPurchase, stratName, tickerLookups);
