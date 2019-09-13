@@ -1,4 +1,4 @@
-const COUNT = 70;
+const COUNT = 3;
 const PERIODS = [30, 90, 120, 360];
 
 
@@ -10,7 +10,7 @@ const getMultipleHistoricals = require('../../app-actions/get-multiple-historica
 const getMinutesFrom630 = require('../../utils/get-minutes-from-630');
 const getTrend = require('../../utils/get-trend');
 const getStSent = require('../../utils/get-stocktwits-sentiment');
-const { uniq, get, mapObject } = require('underscore');
+const { uniq, get, mapObject, pick } = require('underscore');
 const { avgArray, zScore } = require('../../utils/array-math');
 
 const getTickersBetween = async (min, max) => {
@@ -92,7 +92,7 @@ const runScan = async ({
     });
   
   const fourLettersOrLess = withProjectedVolume.filter(({ ticker }) => ticker.length <= 4);
-  const withoutLowVolume = sortAndCut(fourLettersOrLess, 'computed.projectedVolume', fourLettersOrLess.length * 3 / 4);
+  const withoutLowVolume = sortAndCut(fourLettersOrLess, 'computed.projectedVolume', fourLettersOrLess.length * 8 / 9);
 
   const isPremarket = min < 0;
   const isAfterHours = min > 390;
@@ -160,73 +160,143 @@ const runScan = async ({
       }
     }))
     .filter(buy => {
-      if (buy.ticker === 'AMPY') {
-        strlog({ buy })
-      }
       console.log(buy.computed.projectedVolumeTo2WeekAvg, !!buy.computed.projectedVolumeTo2WeekAvg, !!buy.computed.projectedVolumeTo2WeekAvg && isFinite(buy.computed.projectedVolumeTo2WeekAvg))
       return !!buy.computed.projectedVolumeTo2WeekAvg && isFinite(buy.computed.projectedVolumeTo2WeekAvg);
     });
 
-  strlog('add daily historicals....')
+  strlog('add daily historicals....');
+  
   const withDailys = await addDailyHistoricals(fixed);
 
   strlog('finding new highs....')
-  const withHighs = withDailys.map(buy => ({
-    ...buy,
-    highs: PERIODS.reduce((acc, period) => ({
-      ...acc,
-      [period]: Math.max(
-        ...buy.dailyHistoricals.slice(0 - period).map(hist => hist.high_price)
-      )
-    }), {})
-  }));
 
-  const withHits = withHighs.map(buy => {
-    const { currentPrice, prevClose } = buy.quote;
-    const { open } = buy.fundamentals;
-    
-    const highHit = Object.keys(buy.highs).slice().reverse().find(key => {
-      
-      const isHit = val => {
-        // if (buy.ticker === 'SIRI' && key ==='120') {
+  // strlog({
+  //   withDailys: withDailys.map(b => b.ticker)
+  // })
+  // strlog({ withHighs });
+  const withStreakCounts = withDailys.map(buy => {
+    const { quote, fundamentals, dailyHistoricals } = buy;
+    const { currentPrice, prevClose } = quote;
+    const { open } = fundamentals;
+
+
+    const historicalsFormatted = [
+      {
+        currentPrice,
+        open,
+        prevClose,
+      },
+      ...dailyHistoricals.slice().reverse().map((hist, index, arr) => {
+        const prevHist = arr[index + 1];
+        return {
+          open: hist.open_price,
+          high: hist.high_price,
+          close: hist.close_price,
+          prevClose: (prevHist || {}).close_price
+        };
+      })
+    ];
+
+
+    // strlog({ ticker: buy.ticker });
+    // strlog({ historicalsFormatted })
+
+    const streakCounts = PERIODS.reduce((acc, period) => {
+
+      period = Number(period);
+      const streakCount = historicalsFormatted.findIndex((hist, index, arr) => {
+        const histSubset = arr.slice(index).slice(0, period);
+        
+        const {
+          currentPrice,
+          close,
+          open,
+          prevClose
+        } = histSubset.shift();
+        const high = Math.max(
+          ...histSubset.map(hist => hist.high)
+        );
+
+        const compareVal = currentPrice || close;
+        // strlog({
+        //   ticker: buy.ticker,
+        //   period,
+        //   index,
+        //   // histSubset: histSubset.length,
+        //   compareVal,
+        //   high
+        // })
+        const aboveHigh = val => val > high;
+        const breakingHigh = aboveHigh(compareVal) && ([open, prevClose].some(val => !aboveHigh(val)));
+        // if (buy.ticker === 'ARDX' && period === 360) {
         //   strlog({
-        //     val,
-        //     high: buy.highs[key],
-        //     trend: getTrend(val, buy.highs[key]),
-        //     trendMethod: getTrend(val, buy.highs[key]) > -1,
-        //     newMethod: val > buy.highs[key]
+        //     // streakCount,
+        //     compareVal,
+        //     high,
+        //     breakingHigh
         //   })
         // }
-        return val > buy.highs[key];
-      }
-      return isHit(currentPrice) && ([open, prevClose].some(val => !isHit(val)));
-    });
+        return !breakingHigh;
+      });
+
+      
+
+      return {
+        ...acc,
+        [period]: streakCount
+      };
+
+    }, {});
+
+    const biggestBreakPeriod = PERIODS
+      .slice()
+      .reverse()
+      .find(period => 
+        streakCounts[period] > 0
+      );
+
+    const biggestBreak = biggestBreakPeriod ? {
+      period: Number(biggestBreakPeriod),
+      streak: streakCounts[biggestBreakPeriod]
+    } : undefined;
+
     return {
       ...buy,
       computed: {
         ...buy.computed,
-        ...highHit && { highHit: Number(highHit) }
+        biggestBreak
       }
     }
   });
 
-  const hits = withHits.filter(buy => buy.computed.highHit);
-  strlog({ hits });
+  // strlog({
+  //   withHitCounts
+  // })
+
+  const breakingHighs = withStreakCounts.filter(buy => buy.computed.biggestBreak);
+
+
+
+  // strlog({ breakingHighs });
 
   PERIODS.forEach(period => {
     strlog({
-      [period]: hits.filter(buy => buy.computed.highHit === period).map(buy => buy.ticker)
+      [period]: breakingHighs
+        .filter(buy => buy.computed.biggestBreak.period === Number(period))
+        .map(buy => ({
+          ticker: buy.ticker,
+          streak: buy.computed.biggestBreak.streak
+        }))
     })
   });
 
-  return hits
+  return breakingHighs
     .map(buy => ({
       ticker: buy.ticker,
       currentPrice: buy.quote.currentPrice,
-      highHit: buy.computed.highHit,
-      ...buy.highs,
+      ...buy.computed.biggestBreak, // period & streak
     }))
-    .sort((a, b) => b.highHit - a.highHit);
+    .sort((a, b) => b.period - a.period);
 
 
 };
@@ -258,33 +328,5 @@ const addDailyHistoricals = async trend => {
   }))
 
 };
-
-
-// const { RSI } = require('technicalindicators');
-// const addDailyRSI = withDailyHistoricals => {
-
-//   const getRSI = values => {
-//       return RSI.calculate({
-//           values,
-//           period: 14
-//       }) || [];
-//   };
-
-//   strlog({
-//     buys: withDailyHistoricals.map(buy => buy.dailyHistoricals)
-//   })
-//   return withDailyHistoricals.map(buy => ({
-//     ...buy,
-//     computed: {
-//       ...buy.computed,
-//       dailyRSI: getRSI(
-//         (buy.dailyHistoricals || []).map(hist => hist.close_price)
-//       ).pop()
-//     }
-//   }));
-
-
-// };
-
 
 module.exports = runScan;

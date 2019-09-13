@@ -691,7 +691,8 @@ module.exports = new (class RealtimeRunner {
       'volume-increasing',
 
       'pennyscan-highHit',
-      ...[30, 90, 120, 360].map(period => `pennyscan-highHit${period}`)
+      ...[30, 90, 120, 360].map(period => `pennyscan-highHit${period}`),
+      
 
     ];
 
@@ -715,7 +716,10 @@ module.exports = new (class RealtimeRunner {
         [collectionName]: [collectionName]
       }), {}),
 
-
+      ...[1, 2, 3, 4].reduce((acc, streak) => ({
+        ...acc,
+        [`pennyscan-highHit-streak${streak}`]: ['highHit', `streak${streak}`]
+      }, {}),
 
       ...Combinatorics.cartesianProduct(
         [

@@ -127,13 +127,13 @@ module.exports = async () => {
   const newHighs = await require('../scans/base/new-highs')();
   picks = [
     ...picks,
-    ...newHighs.map(({ ticker, highHit, ...rest }) => ({
+    ...newHighs.map(({ ticker, period, streak }) => ({
       ticker,
       strategyName: 'pennyscan',
       keys: {
-        [`highHit${highHit}`]: true,
-      },
-      data: rest
+        [`highHit${period}`]: true,
+        [`streak${streak}`]: true,
+      }
     }))
   ];
 
