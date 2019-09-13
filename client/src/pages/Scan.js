@@ -22,8 +22,8 @@ class Scan extends Component {
     loading: {},
     stSent: {},
     priceRange: {
-      min: 0.5,
-      max: 7,
+      min: 4,
+      max: 10,
     },
   };
   shouldComponentUpdate(nextProps, nextState) {

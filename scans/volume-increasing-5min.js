@@ -24,7 +24,7 @@ const getTickersBetween = async (min, max) => {
 };
 
 
-module.exports = async ({ minPrice = 0.5, maxPrice = 8 } = {}) => {
+module.exports = async ({ minPrice = 4, maxPrice = 10 } = {}) => {
   const tickers = (await getTickersBetween(minPrice, maxPrice)).map(buy => ({
     ...buy,
     computed: {}

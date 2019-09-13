@@ -42,8 +42,8 @@ const sortAndCut = (arr, sortKey, num) => {
 
 
 const runScan = async ({
-  minPrice = 0.5,
-  maxPrice = 8,
+  minPrice = 4,
+  maxPrice = 10,
   minVolume = Number.NEGATIVE_INFINITY,
   includeStSent = true
 } = {}) => {
