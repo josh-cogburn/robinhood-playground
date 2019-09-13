@@ -719,7 +719,7 @@ module.exports = new (class RealtimeRunner {
       ...[1, 2, 3, 4].reduce((acc, streak) => ({
         ...acc,
         [`pennyscan-highHit-streak${streak}`]: ['highHit', `streak${streak}`]
-      }, {}),
+      }), {}),
 
       ...Combinatorics.cartesianProduct(
         [
