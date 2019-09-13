@@ -21,9 +21,9 @@ module.exports = {
         '[pennyscan-highHit360]',
         '[pennyscan-highHit360]',
         '[pennyscan-highHit360]',
-        '[pennyscan-highHit120]',
-        '[pennyscan-highHit120]',
-        '[pennyscan-highHit-streak1]',
+        // '[pennyscan-highHit120]',
+        // '[pennyscan-highHit120]',
+        // '[pennyscan-highHit-streak1]',
 
         'pennyscan-hot-st-worstSsTrendRatio-firstAlert-shouldWatchout-dinner-5000',
         'pennyscan-hot-st-zScoreHotAndCool-firstAlert-notWatchout-dinner-5000',
