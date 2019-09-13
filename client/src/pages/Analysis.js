@@ -38,34 +38,35 @@ class Analysis extends Component {
       console.log({
         stratAnalysis
       })
+      this.setState({ stratAnalysis: stratAnalysis.all });
 
-      const roundTo = numDec => num => Math.round(num * Math.pow(10, numDec)) / Math.pow(10, numDec);
-      const twoDec = roundTo(2);
-      const byStrat = Object.keys(stratAnalysis).reduce((acc, date) => {
-        const includeDate = true;
-        if (includeDate) {
-          stratAnalysis[date].forEach(stratPerf => {
-            const { stratMin, overallAvg } = stratPerf;
-            acc[stratMin] = [
-              ...acc[stratMin] || [],
-              twoDec(overallAvg)
-            ];
-          });
-        }
-        return acc;
-      }, {});
-      console.log({ byStrat })
-      const asArray = Object.keys(byStrat).map(stratMin => ({
-        stratMin,
-        avg: twoDec(avgArray(byStrat[stratMin])),
-        values: byStrat[stratMin],
-      }));
-      console.log({asArray})
-      const sorted = asArray
-        .filter(({ values }) => values.length > 1)
-        .sort((a, b) => b.avg - a.avg);
-      console.log({ sorted })
-      this.setState({ stratAnalysis: sorted });
+      // const roundTo = numDec => num => Math.round(num * Math.pow(10, numDec)) / Math.pow(10, numDec);
+      // const twoDec = roundTo(2);
+      // const byStrat = Object.keys(stratAnalysis).reduce((acc, date) => {
+      //   const includeDate = true;
+      //   if (includeDate) {
+      //     stratAnalysis[date].forEach(stratPerf => {
+      //       const { stratMin, overallAvg } = stratPerf;
+      //       acc[stratMin] = [
+      //         ...acc[stratMin] || [],
+      //         twoDec(overallAvg)
+      //       ];
+      //     });
+      //   }
+      //   return acc;
+      // }, {});
+      // console.log({ byStrat })
+      // const asArray = Object.keys(byStrat).map(stratMin => ({
+      //   stratMin,
+      //   avg: twoDec(avgArray(byStrat[stratMin])),
+      //   values: byStrat[stratMin],
+      // }));
+      // console.log({asArray})
+      // const sorted = asArray
+      //   .filter(({ values }) => values.length > 1)
+      //   .sort((a, b) => b.avg - a.avg);
+      // console.log({ sorted })
+      // this.setState({ stratAnalysis: sorted });
     });
     this.props.socket.emit('client:get-strat-analysis');
   }
@@ -107,29 +108,48 @@ class Analysis extends Component {
         <hr/>
         <h2>Strategies</h2>
         {
-          this.state.stratAnalysis && (
+          this.state.stratAnalysis && this.state.stratAnalysis.length && (
             <MDBDataTable data={{
-              columns: [
-                {
-                  label: 'StratMin',
-                  field: 'stratMin',
-                },
-                // {
-                //   label: 'Count',
-                //   field: 'count',
-                // },
-                {
-                  label: 'Average',
-                  field: 'avg',
-                },
-                {
-                  label: 'Values',
-                  field: 'values',
-                },
-              ],
+              columns: (() => {
+                const cols = ([
+                  'strategy',
+                  'count',
+                  'score',
+                  'avgMax',
+                  'maxs',
+                ] || Object.keys(this.state.stratAnalysis[0])).map(key => ({
+                  label: key,
+                  field: key
+                }));
+                console.log({ cols, rows: this.state.stratAnalysis })
+                return cols;
+              })(),
+              
+              
+              // [
+              //   {
+              //     label: 'StratMin',
+              //     field: 'stratMin',
+              //   },
+              //   // {
+              //   //   label: 'Count',
+              //   //   field: 'count',
+              //   // },
+              //   {
+              //     label: 'Average',
+              //     field: 'avg',
+              //   },
+              //   {
+              //     label: 'Values',
+              //     field: 'values',
+              //   },
+              // ],
               rows: this.state.stratAnalysis.map(row => ({
-                ...row,
-                values: row.values.join(', ')
+                strategy: row.strategy,
+                count: row.count,
+                score: row.score,
+                avgMax: row.playouts.onlyMax.avgTrend,
+                maxs: row.maxs.join(', '),
               }))
             }} />
           )

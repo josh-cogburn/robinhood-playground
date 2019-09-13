@@ -133,8 +133,8 @@ io.on('connection', async socket => {
 
     socket.on('client:get-strat-analysis', async cb => {
         console.log('get strat analysis');
-        const data = await stratPerf(6);
-        console.log('got strat analysis')
+        const data = await require('../analysis/spm-recent')();
+        console.log('got strat analysis');
         socket.emit('server:strat-analysis', data);
     });
 
