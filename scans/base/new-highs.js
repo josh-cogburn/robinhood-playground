@@ -217,7 +217,7 @@ const runScan = async ({
           ...histSubset.map(hist => hist.high)
         );
 
-        const compareVal = currentPrice || close;
+        const compareVal = currentPrice || high;
         // strlog({
         //   ticker: buy.ticker,
         //   period,
