@@ -20,7 +20,17 @@ module.exports = {
 
         '[pennyscan-highHit360]',
         '[pennyscan-highHit360]',
+        '[pennyscan-highHit360]',
         '[pennyscan-highHit120]',
+        '[pennyscan-highHit120]',
+        '[pennyscan-highHit-streak1]',
+
+        'pennyscan-hot-st-worstSsTrendRatio-firstAlert-shouldWatchout-dinner-5000',
+        'pennyscan-hot-st-zScoreHotAndCool-firstAlert-notWatchout-dinner-5000',
+        'pennyscan-hot-st-zScoreInverseTrendPlusVol-firstAlert-notWatchout-dinner-5000',
+        'pennyscan-hot-st-zScoreVolume-firstAlert-notWatchout-lunch-5000',
+        'pennyscan-hot-st-zScoreHotAndCool-firstAlert-notWatchout-dinner-5000',
+        ''
 
     ],
     // forPurchaseVariation: '75Perc5Day-yesincludingblanks',
