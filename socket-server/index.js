@@ -29,6 +29,7 @@ const pennyScans = {
     unfiltered: require('../scans/unfiltered'),
     'volume-increasing-5min': require('../scans/volume-increasing-5min'),
     'volume-increasing-10min': require('../scans/volume-increasing-10min'),
+    'new-highs': require('../scans/base/new-highs')
 };
 
 let app = express();
