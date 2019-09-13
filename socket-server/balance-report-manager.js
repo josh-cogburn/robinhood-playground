@@ -19,7 +19,7 @@ let onReport;
 
 const init = async (onReportFn) => {
     onReport = onReportFn;
-    const foundReports = [] //await BalanceReport.find().lean();
+    const foundReports = (await BalanceReport.find().lean()).filter(r => (new Date(r.time)).getDate() === (new Date()).getDate());
     // console.log('init balance reports', Object.keys(stratManager));
     console.log('foundReports', foundReports.length);
     allBalanceReports = foundReports;
