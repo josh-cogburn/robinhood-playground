@@ -28,15 +28,22 @@ class HashTable {
     }
 }
 
-module.exports = async (includeToday, daysBack = NUM_DAYS, minCount = 0, ignoreYesterday, maxCount = Number.POSITIVE_INFINITY, stratFilter = '') => {
+module.exports = async (includeToday, daysBack = NUM_DAYS, minCount = 0, skipDays, maxCount = Number.POSITIVE_INFINITY, stratFilter = '') => {
     console.log('includeToday', includeToday);
     console.log('days back', daysBack);
     console.log('mincount', minCount);
 
+    
+
     const paramTrue = val => val && val.toString() === 'true';
     let dates = await StratPerf.getUniqueDates();
 
-    if (paramTrue(ignoreYesterday)) dates.pop();
+    if (skipDays === 'true') { 
+        dates.pop();
+    } else if (skipDays) {
+        dates = dates.slice(0, dates.length - skipDays);
+    }
+    
     let threeMostRecent = dates.slice(0 - daysBack);
     console.log('selected days', threeMostRecent);
 

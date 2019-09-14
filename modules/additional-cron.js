@@ -153,7 +153,7 @@ const additionalCron = [
     {
         name: 'strat perf multiple',    // the big analyze all strategies function
         run: [520],
-        fn: () => stratPerfMultiple(52, 'next-day-330')
+        fn: () => stratPerfMultiple(25, 'fourth-day-9')
     },
 
     {

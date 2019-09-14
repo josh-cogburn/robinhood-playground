@@ -1,9 +1,10 @@
 const jsonMgr = require('../../utils/json-mgr');
 const getFilesSortedByDate = require('../../utils/get-files-sorted-by-date');
+const StratPerf = require('../../models/StratPerf');
 
-module.exports = async json => {
-
-    const mostRecentDay = (await getFilesSortedByDate('prediction-models'))[0];
-    jsonMgr.save(`./json/strat-perf-multiples/${mostRecentDay}.json`, json);
+module.exports = async (json, fileName) => {
+    
+    fileName = fileName || (await StratPerf.getUniqueDates()).pop();
+    jsonMgr.save(`./json/strat-perf-multiples/${fileName}.json`, json);
 
 };

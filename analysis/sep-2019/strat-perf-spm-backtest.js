@@ -1,0 +1,91 @@
+const fs = require('mz/fs');
+const { mapObject } = require('underscore');
+
+const stratPerfOverall = require('../strategy-perf-overall');
+const StratPerf = require('../../models/StratPerf');
+const getRecsFromFiveDayAndSPM = require('./get-recs-from-fiveday-and-spm');
+const { avgArray } = require('../../utils/array-math');
+
+const DAYS_TO_SKIP = 1;
+const DAYS_TO_CONSIDER = 8;
+
+
+const getSpmDates = async () => {
+  let files = await fs.readdir('./json/strat-perf-multiples');
+
+  let sortedFiles = files
+      .map(f => f.split('.')[0])
+      .sort((a, b) => new Date(b) - new Date(a));
+  return sortedFiles;
+  // return require(`../json/strat-perf-multiples/${sortedFiles[0]}`)
+};
+
+module.exports = async (
+  daysToConsider = DAYS_TO_CONSIDER, 
+  daysToSkip = DAYS_TO_SKIP
+) => {
+
+  let dates = await StratPerf.getUniqueDates();
+  dates = dates;
+  console.log({ dates });
+
+  const ofInterest = dates
+    .slice(0, dates.length - daysToSkip)
+    .slice(0 - daysToConsider);
+
+  console.log({ ofInterest });
+
+  const spmDates = await getSpmDates();
+  console.log({ spmDates })
+  for ([index, date] of ofInterest.reverse().entries()) {
+    const skipDays = index + daysToSkip + 1;
+    const prevFiveDay = (await stratPerfOverall(false, 5, 0, skipDays)).sortedByAvgTrend;
+    const prevDate = spmDates.find((val, i) => spmDates[i - 1] === date);
+    strlog({ prevDate });
+    const prevSPM = require(`../../json/strat-perf-multiples/${prevDate}`).all;
+    const bothRecs = await getRecsFromFiveDayAndSPM(
+      prevFiveDay,
+      prevSPM
+    );
+    const relatedStratPerf = await StratPerf.getByDate(date);
+
+    // strlog({ prevFiveDay })
+
+    const addPerfToRecs = recs => recs
+      .map(rec => ({
+        ...rec,
+        perfs: Object.keys(relatedStratPerf)
+          .map(period => relatedStratPerf[period]
+            .filter(({ strategyName, name }) => [strategyName, name].some(val => val === rec.strategy))
+            .map(perf => ({
+              ...perf,
+              period
+            }))
+          ).flatten()
+      }))
+      .map(rec => ({
+        ...rec,
+        avgTrend: avgArray(rec.perfs.map(perf => perf.avgTrend))
+      }));
+
+    strlog(
+      mapObject(
+        {
+          prevFiveDay: addPerfToRecs(prevFiveDay.slice(0, 25)),
+          prevSPM: addPerfToRecs(prevSPM.slice(0, 25)),
+          bothRecs: addPerfToRecs(bothRecs),
+        }, 
+        recsWithPerf => avgArray(
+          recsWithPerf
+            .map(rec => rec.avgTrend)
+            .filter(Boolean)
+        )
+      )
+    );
+
+
+    // const recsWithPerf = 
+    // // strlog({ date, recs, relatedStratPerf, recsWithPerf });
+    // strlog({ date, avgTrend: avgArray(recsWithPerf.map(rec => rec.avgTrend).filter(Boolean))  })
+  }
+};

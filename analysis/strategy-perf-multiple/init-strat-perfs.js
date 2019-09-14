@@ -4,12 +4,14 @@ const jsonMgr = require('../../utils/json-mgr');
 const { avgArray } = require('../../utils/array-math');
 const StratPerf = require('../../models/StratPerf');
 
-module.exports = async (daysBack) => {
+module.exports = async (daysBack, skipDays) => {
 
     console.log('initing strat-perfs')
 
     let dates = await StratPerf.getUniqueDates();
-    let datesOfInterest = dates.slice(0 - daysBack);
+    let datesOfInterest = dates
+        .slice(0, dates.length - skipDays)
+        .slice(0 - daysBack);
     console.log('selected days', datesOfInterest, dates);
 
     const stratObj = {};
@@ -21,7 +23,7 @@ module.exports = async (daysBack) => {
     console.log('loaded strats into memory');
 
     return {
-        days: dates,
+        days: datesOfInterest,
         stratObj
     };
 

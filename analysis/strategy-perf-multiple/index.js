@@ -6,7 +6,7 @@ const { analyzeRoundup } = require('./generate-breakdowns');
 const { isBreakdownKey } = require('../../utils/breakdown-key-compares');
 const saveToJson = require('./save-to-json');
 
-module.exports = async (daysBack = 2, ...strategiesArgs) => {
+module.exports = async (daysBack = 2, skipDays, ...strategiesArgs) => {
     console.log('days back', daysBack);
 
     let maxBreakdownKey = (() => {
@@ -19,7 +19,8 @@ module.exports = async (daysBack = 2, ...strategiesArgs) => {
         }
     })();
 
-    const { days, stratObj } = await initStratPerfs(daysBack);
+    const { days, stratObj } = await initStratPerfs(daysBack, skipDays);
+    console.log({ days })
     // console.log(JSON.stringify({ days, stratObj }, null, 2));
     let allStrategies = calcUniqStrategies(stratObj);
 
@@ -69,8 +70,8 @@ module.exports = async (daysBack = 2, ...strategiesArgs) => {
     }
 
     const analyzed = analyzeRoundup(allRoundup);
-    if (daysBack > 50 && !suppliedStrategies) {
-        await saveToJson(analyzed);
+    if (daysBack > 15 && !suppliedStrategies) {
+        await saveToJson(analyzed, days.pop());
     }
     return analyzed;
 
