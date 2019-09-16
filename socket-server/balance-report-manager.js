@@ -29,7 +29,7 @@ const init = async (onReportFn) => {
     const startAtDate = uniqDates[uniqDates.length - NUM_DAYS_TO_LOAD];
     foundReports = foundReports.slice(
         foundReports.findIndex(
-            r => getReportDate === startAtDate
+            r => getReportDate(r) === startAtDate
         )
     );
 
