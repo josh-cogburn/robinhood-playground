@@ -35,18 +35,41 @@ module.exports = async (
 
   console.log({ ofInterest });
 
+
+  const filterStrategies = ({ strategyName }) => strategyName.includes('pennyscan');
+
   const spmDates = await getSpmDates();
   console.log({ spmDates })
   for ([index, date] of ofInterest.reverse().entries()) {
     const skipDays = index + daysToSkip + 1;
-    const prevFiveDay = (await stratPerfOverall(false, 5, 0, skipDays)).sortedByAvgTrend;
     const prevDate = spmDates.find((val, i) => spmDates[i - 1] === date);
-    strlog({ prevDate });
-    const prevSPM = require(`../../json/strat-perf-multiples/${prevDate}`).all;
+    strlog({ date, prevDate });
+    const [
+      prevFiveDay,
+      prevSPM
+    ] = [
+
+      // five day
+      ((await stratPerfOverall(false, 5, 0, skipDays)).sortedByAvgTrend).map(rec => ({
+        ...rec,
+        strategyName: rec.name
+      })),
+
+      // spm
+      require(`../../json/strat-perf-multiples/${prevDate}`).all.map(rec => ({
+        ...rec,
+        strategyName: rec.strategy
+      }))
+
+    ].map(strategies => 
+      strategies.filter(filterStrategies)
+    );
+
     const bothRecs = await getRecsFromFiveDayAndSPM(
       prevFiveDay,
       prevSPM
     );
+    strlog({ bothRecs })
     const relatedStratPerf = await StratPerf.getByDate(date);
 
     // strlog({ prevFiveDay })
@@ -54,26 +77,30 @@ module.exports = async (
     const addPerfToRecs = recs => recs
       .map(rec => ({
         ...rec,
-        perfs: Object.keys(relatedStratPerf)
-          .map(period => relatedStratPerf[period]
-            .filter(({ strategyName, name }) => [strategyName, name].some(val => val === rec.strategy))
-            .map(perf => ({
-              ...perf,
-              period
-            }))
-          ).flatten()
+        perfs: Object.keys(relatedStratPerf).map(period => 
+
+            relatedStratPerf[period]
+              .filter(({ strategyName }) => 
+                strategyName === rec.strategyName
+              )
+              .map(perf => ({
+                ...perf,
+                period
+              }))
+
+        ).flatten()
       }))
       .map(rec => ({
         ...rec,
         avgTrend: avgArray(rec.perfs.map(perf => perf.avgTrend))
       }));
-
+    // strlog({ prevFiveDay })
     strlog(
       mapObject(
         {
-          prevFiveDay: addPerfToRecs(prevFiveDay.slice(0, 25)),
-          prevSPM: addPerfToRecs(prevSPM.slice(0, 25)),
-          bothRecs: addPerfToRecs(bothRecs),
+          prevFiveDay: addPerfToRecs(prevFiveDay.slice(0, 10)),
+          prevSPM: addPerfToRecs(prevSPM.slice(0, 10)),
+          bothRecs: addPerfToRecs(bothRecs.slice(0, 20)),
         }, 
         recsWithPerf => avgArray(
           recsWithPerf

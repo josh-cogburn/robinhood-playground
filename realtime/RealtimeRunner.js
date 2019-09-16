@@ -755,10 +755,17 @@ module.exports = new (class RealtimeRunner {
               .map(t => t.trim())
               .filter(Boolean)
 
+        ],
+        [
+          'initial',
+          'brunch',
+          'lunch',
+          'dinner'
         ]
       ).toArray().reduce((acc, arr) => ({
         ...acc,
-        [`pennyscan-${arr.join('-')}`]: ['pennyscan', ...arr]
+        [`pennyscan-${arr.join('-')}`]: ['pennyscan', ...arr],
+        [`pennyscan-${arr.slice(0, 2).join('-')}`]: ['pennyscan', ...arr.slice(0, 2)]
       }), {}),
 
       nowheresTopSSPREMARKET: ['nowheres', 'topSS', 'premarket'],

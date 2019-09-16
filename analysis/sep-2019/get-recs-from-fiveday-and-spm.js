@@ -1,81 +1,38 @@
 
 const { pick } = require('underscore');
-const stratManager = require('../../socket-server/strat-manager');
-const getTrend = require('../../utils/get-trend');
-const { avgArray } = require('../../utils/array-math');
 
+const getRecsFromFiveDayAndSPM = (fiveDay, spmAll) => {
 
-const getRecsFromFiveDayAndSPM = async (fiveDay, spmAll, addTodayTrend) => {
   const combined = spmAll
     .filter(s => ['premarket', 'afterhours'].every(w => !s.strategy.includes(w)))
+    // .filter(s => ['smoothkst', 'rsi', 'pennyscan' ,'macd', 'ema'].some(w => s.strategy.includes(w)))
     .map(s => ({
-      ...pick(s, ['strategy']),
+      // ...pick(s, ['strategy']),
+      strategyName: s.strategy,
+      // s,
       avgMax: s.playouts.onlyMax.avgTrend,
-      avgFiveDay: (fiveDay.find(o => o.name === s.strategy) || {}).avgTrend
+      // fiveDay: fiveDay.find(o => o.name === s.strategy),
+      ...pick(
+        fiveDay.find(o => o.name === s.strategy),
+        ['percUp', 'avgTrend', 'count']
+      )
     }))
-    .filter(s => s.avgMax && s.avgFiveDay)
-    .filter(s => s.avgMax > 1 && s.avgFiveDay > 1)
+    .filter(s => s.avgMax && s.avgTrend)
+    .filter(s => (
+      s.avgMax > 3 
+      // && s.avgTrend > 1 
+      && s.percUp > 0.5 
+      && s.count >= 2 
+      && s.count <= 10
+    ))
+    .filter(s => s.avgMax > s.avgTrend)
     .map(s => ({
       ...s,
-      mult: s.avgMax * s.avgFiveDay
+      mult: s.avgMax * s.avgTrend
     }))
     .sort((a, b) => b.mult - a.mult);
   
-  if (!addTodayTrend) {
-    return combined;
-  } else {
-
-    await stratManager.init();
-    const { picks, tickerWatcher: { relatedPrices } } = stratManager;
-
-    const withTodayTrend = combined.map(s => ({
-      ...s,
-      ...(() => {
-        const foundPicks = picks.filter(pick => pick.stratMin === s.strategy);
-        const withAvgTrend = foundPicks.map(({ withPrices }) => {
-          const withTrend = withPrices.map(pick => {
-            const { lastTradePrice } = relatedPrices[pick.ticker];
-            return {
-              ...pick,
-              lastTradePrice,
-              trend: getTrend(lastTradePrice, pick.price)
-            };
-          });
-          const avgTrend = avgArray(
-            withTrend.map(pick => pick.trend)
-          );
-          return { ...pick, avgTrend };
-        });
-        return { todayTrend: avgArray(withAvgTrend.map(pick => pick.avgTrend)), count: withAvgTrend.length };
-      })()
-    }));
-
-    const ofInterest = withTodayTrend.filter(s => s.todayTrend);;
-    
-    
-    strlog({
-      withTodayTrend: ofInterest
-    });
-
-
-    const analyze = what => [5, 10, 15, 20, 25, 30].reduce((acc, count) => ({
-      ...acc,
-      [count]: avgArray(what.slice(0, count).map(s => s.todayTrend).filter(Boolean))
-    }), {});
-
-
-    strlog({ 
-      ofInterest: analyze(ofInterest),
-      overall: analyze(withTodayTrend)
-    });
-
-    const goodOnAllFronts = ofInterest.filter(s => s.todayTrend > 0.4);
-
-    strlog({ goodOnAllFronts });
-
-    strlog({ goodOnAllFronts: goodOnAllFronts.map(s => s.strategy )})
-
-  }
+  return combined;
 };
 
 
