@@ -19,7 +19,7 @@ const jsonMgr = require('../utils/json-mgr');
 const getStSentiment = require('../utils/get-stocktwits-sentiment');
 const restartProcess = require('../app-actions/restart-process');
 const pmPerf = require('../analysis/pm-perf-for-real');
-const stratPerf = require('../analysis/strat-perf-for-real');
+// const stratPerf = require('../analysis/strat-perf-for-real');
 const realtimeRunner = require('../realtime/RealtimeRunner');
 
 const pennyScans = {
