@@ -78,9 +78,9 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
   
 
   const withTodayTrend = (await addTodayTrendToStrategies(asArray))
-    .filter(t => t.strategyName.includes('pennyscan'))
-    .filter(s => s.count >= 4)
-    .filter(s => s.todayCount <= 2 && s.todayCount);
+    .filter(t => t.strategyName.includes('unfiltered'))
+    .filter(s => s.count >= 3)
+    .filter(s => s.todayCount <= 3 && s.todayCount);
 
   strlog({
     withTodayTrend,

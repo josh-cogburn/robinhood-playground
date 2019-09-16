@@ -10,7 +10,7 @@ module.exports = {
         ...`
             pennyscan-nowheres-zScoreHighSentLowRSI-lunch
             pennyscan-nowheres-zScoreInverseTrendMinusRSI-lunch
-
+            
             pennyscan-droppers-zScoreInverseTrendMinusRSI-brunch
 
             pennyscan-droppers-zScoreInverseTrend-brunch
@@ -24,8 +24,8 @@ module.exports = {
 
 
 
-
-
+            pennyscan-unfiltered-zScoreGoingBadLookingGood-lunch
+            pennyscan-unfiltered-zScoreInverseTrendMinusRSI-initial
 
             sudden-drops-shouldWatchout
             sudden-drops-notWatchout

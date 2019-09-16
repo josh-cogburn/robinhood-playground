@@ -77,6 +77,13 @@ const data = {
     multi-hits-fitty-3count-under2-firstAlert-notWatchout-lunch-5000
   `,
 
+  sep15Unfiltered: `
+    pennyscan-unfiltered-singlePercMaxVolSS-firstAlert-notWatchout-lunch-5000
+    pennyscan-unfiltered-singlePercMaxVolSS-firstAlert-notWatchout-initial-5000
+    pennyscan-unfiltered-singlePercMaxVolSS-firstAlert-notWatchout-dinner-5000
+    pennyscan-unfiltered-stTrendRatioFirst3-firstAlert-notWatchout-brunch-5000
+  `,
+
 
   sep15: `
     pennyscan-nowheres-highestTrend-firstAlert-notWatchout-initial-5000
@@ -87,10 +94,7 @@ const data = {
     pennyscan-droppers-worstSsTrendRatio-firstAlert-shouldWatchout-initial-5000
     pennyscan-droppers-projectedVolume-firstAlert-notWatchout-dinner-5000
 
-    pennyscan-unfiltered-singlePercMaxVolSS-firstAlert-notWatchout-lunch-5000
-    pennyscan-unfiltered-singlePercMaxVolSS-firstAlert-notWatchout-initial-5000
-    pennyscan-unfiltered-singlePercMaxVolSS-firstAlert-notWatchout-dinner-5000
-    pennyscan-unfiltered-stTrendRatioFirst3-firstAlert-notWatchout-brunch-5000
+
 
     pennyscan-hot-st-zScoreInverseTrendPlusVol-firstAlert-notWatchout-dinner-500
     pennyscan-hot-st-zScoreHighSentLowRSI-firstAlert-notWatchout-dinner-500
