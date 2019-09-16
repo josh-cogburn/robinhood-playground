@@ -5,7 +5,8 @@ module.exports = {
     purchaseAmt: 20,
     forPurchase: [
         '[sudden-drops]',
-
+        '[sudden-drops]',
+        
 
         ...`
             pennyscan-nowheres-zScoreHighSentLowRSI-lunch
