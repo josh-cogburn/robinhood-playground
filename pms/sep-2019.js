@@ -75,7 +75,34 @@ const data = {
   multiHits: `
     multi-hits-fitty-4count-under2-notWatchout-lunch-5000
     multi-hits-fitty-3count-under2-firstAlert-notWatchout-lunch-5000
-  `
+  `,
+
+
+  sep15: `
+    pennyscan-nowheres-highestTrend-firstAlert-notWatchout-initial-5000
+    pennyscan-nowheres-zScoreVolume-firstAlert-notWatchout-dinner-5000
+    pennyscan-nowheres-zScoreHighSentLowRSI-firstAlert-notWatchout-lunch-500
+
+
+    pennyscan-droppers-worstSsTrendRatio-firstAlert-shouldWatchout-initial-5000
+    pennyscan-droppers-projectedVolume-firstAlert-notWatchout-dinner-5000
+
+    pennyscan-unfiltered-singlePercMaxVolSS-firstAlert-notWatchout-lunch-5000
+    pennyscan-unfiltered-singlePercMaxVolSS-firstAlert-notWatchout-initial-5000
+    pennyscan-unfiltered-singlePercMaxVolSS-firstAlert-notWatchout-dinner-5000
+    pennyscan-unfiltered-stTrendRatioFirst3-firstAlert-notWatchout-brunch-5000
+
+    pennyscan-hot-st-zScoreInverseTrendPlusVol-firstAlert-notWatchout-dinner-500
+    pennyscan-hot-st-zScoreHighSentLowRSI-firstAlert-notWatchout-dinner-500
+    pennyscan-hot-st-zScoreHotAndCool-firstAlert-notWatchout-dinner-5000
+    
+    
+    rsi-fitty-30min-rsilt15-under2-notWatchout-dinner-5000
+    ema-fitty-10min-bearishCross-under2-firstAlert-notWatchout-initial-5000
+    ema-fitty-10min-bearishCross-under2-firstAlert-shouldWatchout-brunch-500
+    kst-fitty-30min-bearishSignal-under2-firstAlert-shouldWatchout-brunch-500
+    macd-fitty-30min-bearishSignal-under2-firstAlert-shouldWatchout-brunch-5000
+  ` 
 
 };
 
