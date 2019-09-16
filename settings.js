@@ -1,7 +1,7 @@
 // TODO: flatten list of strategies with PMs for emailObj same way as forPurchase
 module.exports = {
     // important settings
-    sellAllStocksOnNthDay: 10,
+    sellAllStocksOnNthDay: 15,
     purchaseAmt: 20,
     forPurchase: [
         '[sudden-drops]',
@@ -36,7 +36,7 @@ module.exports = {
         .filter(Boolean)
         .map(t => `[${t}]`),
 
-        '[sep2019-sep15]',
+        // '[sep2019-sep15]',
 
 
 

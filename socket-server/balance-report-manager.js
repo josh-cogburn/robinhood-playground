@@ -1,3 +1,5 @@
+const NUM_DAYS_TO_LOAD = 2;
+
 const START_MIN = -210;//51;    // 3am
 const STOP_MIN = 811;
 const TIMEOUT_SECONDS = 15;
@@ -19,7 +21,18 @@ let onReport;
 
 const init = async (onReportFn) => {
     onReport = onReportFn;
-    const foundReports = (await BalanceReport.find().lean()).filter(r => (new Date(r.time)).getDate() === (new Date()).getDate());
+    let foundReports = await BalanceReport.find().lean();
+
+    const getReportDate = r => (new Date(r.time)).toLocaleDateString();
+
+    const uniqDates = foundReports.map(getReportDate).uniq();
+    const startAtDate = uniqDates[uniqDates.length - NUM_DAYS_TO_LOAD];
+    foundReports = foundReports.slice(
+        foundReports.findIndex(
+            r => getReportDate === startAtDate
+        )
+    );
+
     // console.log('init balance reports', Object.keys(stratManager));
     console.log('foundReports', foundReports.length);
     allBalanceReports = foundReports;

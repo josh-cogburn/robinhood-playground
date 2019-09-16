@@ -86,7 +86,7 @@ const stratManager = {
         await balanceReportManager.init(report => {
             // console.log('onReport', report, Object.keys(this));
             this.sendToAll('server:balance-report', { report });
-        });
+        }, this.curDate);
 
         console.log('initd strat manager');
     },
