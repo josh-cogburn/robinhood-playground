@@ -119,6 +119,15 @@ const data = {
     kst-fitty-30min-bearishSignal-under2-shouldWatchout-brunch-5000
     pennyscan-hot-st-zScoreMagic-firstAlert-notWatchout-dinner-5000
     
+  `,
+
+  sep17: `
+    pennyscan-hot-st-worstSS-firstAlert-notWatchout-brunch-5000
+    pennyscan-droppers-worstSsTrendRatio-firstAlert-shouldWatchout-dinner-5000
+
+    most-picked-fitty-10min-min160-under2-notWatchout-lunch-5000
+    smoothkst-fitty-10min-bearishSignal-under2-shouldWatchout-lunch-5000
+    
   `
 
 };
