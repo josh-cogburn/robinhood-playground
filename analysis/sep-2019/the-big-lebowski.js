@@ -23,15 +23,18 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
       .map(stratPerf => ({
         ...stratPerf,
         perfs: stratPerf.perfs.filter(({ period, avgTrend }) => {
-          const validPeriod = ['same-day', 'next-day-9'].some(v => period.includes(v));
+          const validPeriod = [
+            // 'same-day', 
+            'next-day-9'
+          ].some(v => period.includes(v));
           const validTrend = Math.abs(avgTrend) < 60;
           return validPeriod && validTrend;
         })
       }))
       .map(stratPerf => ({
         ...stratPerf,
-        percUp: percUp(stratPerf.perfs.map(perf => perf.avgTrend)),
-        overallAvg: avgArray(stratPerf.perfs.map(perf => perf.avgTrend)),
+        percUp: percUp(stratPerf.perfs.map(perf => perf.avgTrend).filter(Boolean)),
+        overallAvg: avgArray(stratPerf.perfs.map(perf => perf.avgTrend).filter(Boolean)),
         perfCount: stratPerf.perfs.length
       }));
     // strlog({
@@ -126,7 +129,7 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
 
       return {
         pm,
-        trends: stratTrends,
+        // trends: stratTrends,
         weightedAvg: avgArray(
           stratTrends
             .map(({ overallAvg, count }) => Array(count).fill(overallAvg))
@@ -168,7 +171,7 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
       .filter(s => s.trendPercUp > 50)
       .sort((a, b) => b.overallAvg - a.overallAvg),
     pms: successfulPms.filter(t => t.todayTrend > -0.5)
-  }, s => s.filter(t => t.todayTrend > -0.5).slice(0, 200)))
+  }, s => s.filter(t => t.todayTrend > -0.5 || t.todayTrend === undefined).slice(0, 200)))
 
   // strlog({ allStratPerfs })
   // strlog({ count: allStratPerfs.length })

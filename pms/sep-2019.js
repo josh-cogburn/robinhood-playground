@@ -87,7 +87,7 @@ const data = {
 
   sep15: `
     pennyscan-nowheres-highestTrend-firstAlert-notWatchout-initial-5000
-    pennyscan-nowheres-zScoreVolume-firstAlert-notWatchout-dinner-5000
+    // pennyscan-nowheres-zScoreVolume-firstAlert-notWatchout-dinner-5000
     pennyscan-nowheres-zScoreHighSentLowRSI-firstAlert-notWatchout-lunch-500
 
 
@@ -117,7 +117,8 @@ const data = {
     pennyscan-hot-st-zScoreHotAndCool-firstAlert-notWatchout-dinner-5000
     sma-fitty-10min-bearishCross-under2-firstAlert-notWatchout-lunch-5000
     kst-fitty-30min-bearishSignal-under2-shouldWatchout-brunch-5000
-
+    pennyscan-hot-st-zScoreMagic-firstAlert-notWatchout-dinner-5000
+    
   `
 
 };

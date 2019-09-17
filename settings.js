@@ -13,21 +13,22 @@ module.exports = {
 
         // keep an eye on
         // pennyscan-droppers-zScoreInverseTrendMinusRSI-brunch
+        // pennyscan-droppers-zScoreHighSentLowRSI-lunch
 
         ...`
             pennyscan-nowheres-zScoreHighSentLowRSI-lunch
             pennyscan-nowheres-zScoreInverseTrendMinusRSI-lunch
             
-            
+            pennyscan-unfiltered-singlePercMaxVolSS-lunch
 
             pennyscan-droppers-zScoreInverseTrend-brunch
-
-            pennyscan-droppers-zScoreHighSentLowRSI-lunch
             pennyscan-droppers-zScoreHotAndCool-lunch
             pennyscan-droppers-worstSS-dinner
             pennyscan-droppers-projectedVolume-dinner
 
             pennyscan-hot-st-worstSS-lunch
+            pennyscan-hot-st-dollarVolume-lunch
+            pennyscan-hot-st-zScoreMagic-dinner
 
             sudden-drops-shouldWatchout
             sudden-drops-notWatchout
@@ -43,7 +44,8 @@ module.exports = {
 
         // double POWER
         'pennyscan-volume-increasing-5min-firstAlert-notWatchout-dinner-5000',
-        
+        'pennyscan-hot-st-zScoreHotAndCool-firstAlert-notWatchout-dinner-5000',
+
 
 
     ],
