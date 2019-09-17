@@ -29,17 +29,17 @@ const getAllTickers = require('../rh-actions/get-all-tickers');
 const stratManager = require('../socket-server/strat-manager');
 
 const additionalCron = [
-    // {
-    //     name: 'alpacaSellAllStocks',
-    //     run: [-3],
-    //     fn: alpacaSellAllStocks
-    // },
     {
-        name: 'alpaca smart sells',
+        name: 'alpacaSellAllStocks',
         run: [1],
-        // run: [5, 24, 45, 60, 100, 140, 180, 220, 280, 300],
-        fn: () => alpacaSmartSells()
+        fn: () => alpacaSellAllStocks()
     },
+    // {
+    //     name: 'alpaca smart sells',
+    //     run: [1],
+    //     // run: [5, 24, 45, 60, 100, 140, 180, 220, 280, 300],
+    //     fn: () => alpacaSmartSells()
+    // },
 
 
     // {

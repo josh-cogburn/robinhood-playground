@@ -65,10 +65,17 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
     const stocksToBuy = withPrices.map(obj => obj.ticker);
     if (isRecommended) {
         console.log('strategy enabled: ', stratMin, 'purchasing');
-        const forPurchaseMultiplier = Math.min(1, forPurchase.filter(line => {
-            const pmName = line.substring(1, line.length - 1);
-            return hits.includes(pmName);
-        }).length);
+        const forPurchaseMultiplier = Math.min(
+            1, 
+            (
+                forPurchase.filter(line => {
+                    const stratMatch = line === stratMin;
+                    const pmName = line.substring(1, line.length - 1);
+                    const pmMatch = hits.includes(pmName);
+                    return stratMatch || pmMatch;
+                }).length
+            )
+        );
         console.log({ forPurchaseMultiplier});
         await purchaseStocks({
             stocksToBuy,

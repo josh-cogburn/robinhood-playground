@@ -2,17 +2,23 @@
 module.exports = {
     // important settings
     sellAllStocksOnNthDay: 15,
-    purchaseAmt: 20,
+    purchaseAmt: 10,
     forPurchase: [
         '[sudden-drops]',
         '[sudden-drops]',
         
+        '[sep2019-sep15]',
+        '[sep2019-sep16]',
+
+
+        // keep an eye on
+        // pennyscan-droppers-zScoreInverseTrendMinusRSI-brunch
 
         ...`
             pennyscan-nowheres-zScoreHighSentLowRSI-lunch
             pennyscan-nowheres-zScoreInverseTrendMinusRSI-lunch
             
-            pennyscan-droppers-zScoreInverseTrendMinusRSI-brunch
+            
 
             pennyscan-droppers-zScoreInverseTrend-brunch
 
@@ -23,11 +29,6 @@ module.exports = {
 
             pennyscan-hot-st-worstSS-lunch
 
-
-
-            pennyscan-unfiltered-zScoreGoingBadLookingGood-lunch
-            pennyscan-unfiltered-zScoreInverseTrendMinusRSI-initial
-
             sudden-drops-shouldWatchout
             sudden-drops-notWatchout
 
@@ -37,33 +38,12 @@ module.exports = {
         .filter(Boolean)
         .map(t => `[${t}]`),
 
-        // '[sep2019-sep15]',
 
 
 
-
-        // '[rsi-daily]',
+        // double POWER
+        'pennyscan-volume-increasing-5min-firstAlert-notWatchout-dinner-5000',
         
-        // '[pennyscan-hot-st-singlePercMaxVolSS]',
-        // '[pennyscan-unfiltered-singleTopVolumeSS]',
-        // '[pennyscan-unfiltered-zScoreHotAndCool]',
-        // '[pennyscan-unfiltered-zScoreHighSentLowRSI]',
-        // '[pennyscan-unfiltered-zScoreMagic]',
-        // '[rsi-daily]',
-
-        // ...Object.keys(
-        //     require('./pms/sep-2019')
-        // ).map(v => `[${v}]`)
-
-
-        // '[pennyscan-highHit360]',
-        // '[pennyscan-highHit360]',
-        // '[pennyscan-highHit360]',
-
-
-        // '[pennyscan-highHit120]',
-        // '[pennyscan-highHit120]',
-        // '[pennyscan-highHit-streak1]',
 
 
     ],

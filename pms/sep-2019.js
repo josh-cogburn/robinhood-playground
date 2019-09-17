@@ -106,7 +106,19 @@ const data = {
     ema-fitty-10min-bearishCross-under2-firstAlert-shouldWatchout-brunch-500
     kst-fitty-30min-bearishSignal-under2-firstAlert-shouldWatchout-brunch-500
     macd-fitty-30min-bearishSignal-under2-firstAlert-shouldWatchout-brunch-5000
-  ` 
+  ` ,
+
+  
+  sep16: `
+  
+    pennyscan-volume-increasing-5min-firstAlert-notWatchout-dinner-5000
+    ema-fitty-10min-bearishCross-under2-firstAlert-shouldWatchout-dinner-5000
+    pennyscan-unfiltered-singleTopVolumeSS-firstAlert-shouldWatchout-lunch-5000
+    pennyscan-hot-st-zScoreHotAndCool-firstAlert-notWatchout-dinner-5000
+    sma-fitty-10min-bearishCross-under2-firstAlert-notWatchout-lunch-5000
+    kst-fitty-30min-bearishSignal-under2-shouldWatchout-brunch-5000
+
+  `
 
 };
 

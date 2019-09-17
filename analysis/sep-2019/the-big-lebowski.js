@@ -1,5 +1,5 @@
 const StratPerf = require('../../models/StratPerf');
-const { mapObject } = require('underscore');
+const { mapObject, chain, sortBy, uniq } = require('underscore');
 const { avgArray, percUp } = require('../../utils/array-math');
 const stratManager = require('../../socket-server/strat-manager');
 const addTodayTrendToStrategies = require('./add-today-trend-to-strategies');
@@ -11,10 +11,11 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
 
 
   const allDates = await StratPerf.getUniqueDates();
-  strlog({ allDates });
+  const datesOfInterest = allDates.slice(0, allDates.length - skipDays).slice(0 - daysBack);
+  strlog({ allDates, datesOfInterest });
   
   const response = {};
-  for (let date of allDates.slice(0, allDates.length - skipDays).slice(0 - daysBack)) {
+  for (let date of datesOfInterest) {
     console.log({ date });
     const allStratPerfs = await StratPerf.find({ date }).lean();
     
@@ -22,7 +23,7 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
       .map(stratPerf => ({
         ...stratPerf,
         perfs: stratPerf.perfs.filter(({ period, avgTrend }) => {
-          const validPeriod = ['next'].some(v => period.includes(v));
+          const validPeriod = ['same-day', 'next-day-9'].some(v => period.includes(v));
           const validTrend = Math.abs(avgTrend) < 60;
           return validPeriod && validTrend;
         })
@@ -56,18 +57,24 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
     return acc;
   }, {});
 
-  const asArray = Object.keys(byStrategy)
-    .map(stratMin => ({
-      strategyName: stratMin,
-      overallAvg: avgArray(byStrategy[stratMin].map(v => v.overallAvg)),
-      percUp: avgArray(byStrategy[stratMin].map(v => v.percUp)),
-      count: byStrategy[stratMin].length,
-      perfCount: byStrategy[stratMin].map(v => v.perfCount).reduce((acc, val) => acc + val, 0)
-    }))
+  let asArray = Object.keys(byStrategy)
+    .map(stratMin => {
+      const trends = byStrategy[stratMin].map(v => v.overallAvg).filter(n => n !== null);
+      return {
+        strategyName: stratMin,
+        trends: trends.map(v => v.twoDec()),
+        overallAvg: avgArray(trends),
+        percUp: avgArray(byStrategy[stratMin].map(v => v.percUp)),
+        trendPercUp: percUp(trends),
+        trendCount: trends.length,
+        perfCount: byStrategy[stratMin].map(v => v.perfCount).reduce((acc, val) => acc + val, 0)
+      }
+      
+    })
     .filter(s => ['premarket', 'afterhours'].every(w => !s.strategyName.includes(w)))
     .sort((a, b) => b.overallAvg - a.overallAvg);
 
-
+  asArray = chain(asArray).sortBy('overallAvg').sortBy('percUp').value();
 
   if (!addTodayTrend) return asArray;
 
@@ -78,21 +85,28 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
   
 
   const withTodayTrend = (await addTodayTrendToStrategies(asArray))
-    .filter(t => t.strategyName.includes('unfiltered'))
-    .filter(s => s.count >= 3)
+    // .filter(t => t.strategyName.includes('pennyscan'))
+    // .filter(s => s.count >= 2)
     .filter(s => s.todayCount <= 3 && s.todayCount);
+
+
+  strlog('---------------------------');
+  strlog('STRATEGIES WITH TODAY TREND')
+  strlog('---------------------------')
+
+  const highestPercUp = withTodayTrend.sort((a, b) => b.percUp - a.percUp);
+  const mult = withTodayTrend
+    .map(s => ({
+      ...s,
+      mult: s.overallAvg * s.percUp
+    }))
+    .filter(s => s.mult)
+    .sort((a, b) => b.mult - a.mult);
 
   strlog({
     withTodayTrend,
-    highestPercUp: withTodayTrend.sort((a, b) => b.percUp - a.percUp).slice(0, 30),
-    multi: withTodayTrend
-      .map(s => ({
-        ...s,
-        mult: s.overallAvg * s.percUp
-      }))
-      .filter(s => s.mult)
-      .sort((a, b) => b.mult - a.mult)
-      .slice(0, 40)
+    highestPercUp: highestPercUp.slice(0, 30),
+    multi: mult.slice(0, 40)
   })
 
   const stratMatchesPm = (pm, strat) => {
@@ -112,7 +126,7 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
 
       return {
         pm,
-        // trends: stratTrends,
+        trends: stratTrends,
         weightedAvg: avgArray(
           stratTrends
             .map(({ overallAvg, count }) => Array(count).fill(overallAvg))
@@ -127,12 +141,34 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
     .filter(s => s.weightedAvg)
     .sort((a, b) => b.weightedAvg - a.weightedAvg);
 
-  const suggestedPms = organized
+  const successfulPms = organized
     // .filter(s => s.trends)
     .filter(s => s.count < 20 && s.count > 1);
 
+  strlog('---------------------------')
+  strlog("PMS WITH TODAY TREND")
+  strlog('---------------------------')
   
-  strlog({ suggestedPms })
+  
+  strlog({ successfulPms })
+
+
+
+  strlog('---------------------------')
+  strlog('RECOMMENDATIONS FOR TOMORROW')
+  strlog('---------------------------')
+
+  strlog(mapObject({
+    strategies: uniq(
+      [withTodayTrend, highestPercUp].flatten(),
+      s => s.strategyName
+    )
+      .filter(s => s.trends.every(t => t > -4))
+      .filter(s => s.trendCount >= 3)
+      .filter(s => s.trendPercUp > 50)
+      .sort((a, b) => b.overallAvg - a.overallAvg),
+    pms: successfulPms.filter(t => t.todayTrend > -0.5)
+  }, s => s.filter(t => t.todayTrend > -0.5).slice(0, 200)))
 
   // strlog({ allStratPerfs })
   // strlog({ count: allStratPerfs.length })
