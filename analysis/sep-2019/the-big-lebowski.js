@@ -90,7 +90,7 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
   const withTodayTrend = (await addTodayTrendToStrategies(asArray))
     // .filter(t => t.strategyName.includes('pennyscan'))
     // .filter(s => s.count >= 2)
-    .filter(s => s.todayCount <= 3 && s.todayCount);
+    // .filter(s => s.todayCount <= 3 && s.todayCount);
 
 
   strlog('---------------------------');
@@ -129,7 +129,7 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
 
       return {
         pm,
-        // trends: stratTrends,
+        trends: stratTrends.map(o => o.overallAvg),
         weightedAvg: avgArray(
           stratTrends
             .map(({ overallAvg, count }) => Array(count).fill(overallAvg))
@@ -146,7 +146,7 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
 
   const successfulPms = organized
     // .filter(s => s.trends)
-    .filter(s => s.count < 20 && s.count > 1);
+    // .filter(s => s.count < 20 && s.count > 1);
 
   strlog('---------------------------')
   strlog("PMS WITH TODAY TREND")
@@ -166,11 +166,11 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
       [withTodayTrend, highestPercUp].flatten(),
       s => s.strategyName
     )
-      .filter(s => s.trends.every(t => t > -4))
-      .filter(s => s.trendCount >= 3)
+      .filter(s => s.trends.every(t => t > -1.5))
+      .filter(s => s.trendCount >= 4)
       .filter(s => s.trendPercUp > 50)
       .sort((a, b) => b.overallAvg - a.overallAvg),
-    pms: successfulPms.filter(t => t.todayTrend > -0.5)
+    pms: successfulPms.filter(t => t.todayTrend > -0.2)
   }, s => s.filter(t => t.todayTrend > -0.5 || t.todayTrend === undefined).slice(0, 200)))
 
   // strlog({ allStratPerfs })
