@@ -270,8 +270,8 @@ const stratManager = {
                         return {};
                     }
                     // console.log('relPrices', relPrices, { stratObj });
-                    const { lastTradePrice, afterHoursPrice } = relPrices;
-                    const nowPrice = lastTradePrice;    // afterHoursPrice ||
+                    const { lastTradePrice, afterHoursPrice, currentPrice } = relPrices;
+                    const nowPrice = currentPrice;    // afterHoursPrice ||
                     // console.log('nowPrice', nowPrice)
                     return {
                         ticker: stratObj.ticker,
