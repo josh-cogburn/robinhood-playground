@@ -143,9 +143,9 @@ module.exports = async () => {
             includeStSent: false
         })).map(t => t.ticker),
 
-        twoToFour: (await runScan({
+        twoToFive: (await runScan({
             minPrice: 2,
-            maxPrice: 4,
+            maxPrice: 5,
             count: 100,
             includeStSent: false
         })).map(t => t.ticker),
