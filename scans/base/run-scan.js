@@ -44,7 +44,8 @@ const runScan = async ({
   maxPrice = 8,
   minVolume = Number.NEGATIVE_INFINITY,
   filterFn = () => true,
-  includeStSent = true
+  includeStSent = true,
+  count = COUNT
 } = {}) => {
   const tickers = (await getTickersBetween(minPrice, maxPrice)).map(buy => ({
     ...buy,
@@ -164,9 +165,9 @@ const runScan = async ({
     });
 
 
-  const topVolTo2Week = sortAndCut(fixed, 'computed.projectedVolumeTo2WeekAvg', COUNT / 3);
+  const topVolTo2Week = sortAndCut(fixed, 'computed.projectedVolumeTo2WeekAvg', count / 3);
   // const topDollarVolume = sortAndCut(fixed, 'computed.dollarVolume', 30, COUNT / 3);
-  const topVolTickers = sortAndCut(fixed, 'computed.projectedVolume', COUNT);
+  const topVolTickers = sortAndCut(fixed, 'computed.projectedVolume', count);
 
   const volumeTickers = uniq([
     ...topVolTo2Week,
@@ -190,7 +191,7 @@ const runScan = async ({
   
 
 
-  const theGoodStuff = volumeTickers.slice(0, COUNT);
+  const theGoodStuff = volumeTickers.slice(0, count);
   const withDailyHistoricals = await addDailyHistoricals(theGoodStuff);
   const withDailyRSI = addDailyRSI(withDailyHistoricals);
 

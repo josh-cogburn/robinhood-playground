@@ -9,7 +9,7 @@ const getRSI = values => {
 
 module.exports = {
     period: [10, 30, 'd'],
-    // collections: 'all',
+    collections: ['fitty', 'options', 'spy', 'twoToFour'],
     handler: async ({ ticker, allPrices }) => {
         const allCurrents = allPrices.map(obj => obj.currentPrice);
         const mostRecent = allCurrents[allCurrents.length - 1];

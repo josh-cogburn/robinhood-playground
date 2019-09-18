@@ -2,6 +2,7 @@ const getFinvizCollections = require('./get-finviz-collections');
 const getStockInvestCollections = require('./get-stockinvest-collections');
 const getRisk = require('../../rh-actions/get-risk');
 const addFundamentals = require('../../app-actions/add-fundamentals');
+const runScan = require('../../scans/base/run-scan');
 
 const allStocks = require('../../json/stock-data/allStocks');
 const lookupMultiple = require('../../utils/lookup-multiple');
@@ -135,7 +136,19 @@ module.exports = async () => {
         spy: ['SPY'],
         options: OPTIONSTICKERS,
         // currentPositions: (await getPositions()).map(pos => pos.ticker),
-        fitty: await getTickersBetween(0, 0.50),
+        fitty: (await runScan({
+            minPrice: 0,
+            maxPrice: 0.50,
+            count: 33,
+            includeStSent: false
+        })).map(t => t.ticker),
+
+        twoToFour: (await runScan({
+            minPrice: 2,
+            maxPrice: 4,
+            count: 100,
+            includeStSent: false
+        })).map(t => t.ticker),
         // upcoming: await getRhStocks('upcoming-earnings'),
         // rhtop100: await getRhStocks('100-most-popular'),
         // ...await getFinvizCollections(),
@@ -185,13 +198,13 @@ module.exports = async () => {
 
 
 
-    for (let key of ['fitty']) {
-        console.log('filtering', key);
-        response = {
-            ...response,
-            [key]: await filterForTheGood(response[key])
-        };
-    }
+    // for (let key of ['fitty']) {
+    //     console.log('filtering', key);
+    //     response = {
+    //         ...response,
+    //         [key]: await filterForTheGood(response[key])
+    //     };
+    // }
 
     strlog(mapObject(response, v => v.length));
     console.log(`only the good stuff: ${getTicks().length}`);

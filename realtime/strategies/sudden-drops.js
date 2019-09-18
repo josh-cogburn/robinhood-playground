@@ -3,7 +3,7 @@ const getTrend = require('../../utils/get-trend');
 
 module.exports = {
     period: [5, 10, 30],
-    // collections: 'all',
+    collections: ['fitty', 'options', 'spy', 'twoToFour'],
     handler: async ({ ticker, allPrices }) => {
         const allCurrents = allPrices.map(obj => obj.currentPrice);
         const mostRecent = allCurrents.pop();

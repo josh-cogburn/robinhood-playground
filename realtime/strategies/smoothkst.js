@@ -101,7 +101,7 @@ const getKST = (values, ticker) => {
 
 module.exports = {
     period: [10, 30, 'd'],
-    // collections: 'all',
+    collections: ['fitty', 'options', 'spy'],
     handler: async ({ ticker, allPrices }) => {
         const allCurrents = allPrices.map(obj => obj.currentPrice);
         const { kstSeries, isSignalCross, isZeroCross, isLow, bearishSignal, signalGoingUp } = getKST(allCurrents, ticker);
