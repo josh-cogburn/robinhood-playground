@@ -137,8 +137,8 @@ module.exports = async () => {
         options: OPTIONSTICKERS,
         // currentPositions: (await getPositions()).map(pos => pos.ticker),
         fitty: (await runScan({
-            minPrice: 0,
-            maxPrice: 0.50,
+            minPrice: 0.20,
+            maxPrice: 0.60,
             count: 33,
             includeStSent: false
         })).map(t => t.ticker),

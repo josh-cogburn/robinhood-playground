@@ -24,8 +24,8 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
         ...stratPerf,
         perfs: stratPerf.perfs.filter(({ period, avgTrend }) => {
           const validPeriod = [
-            'same-day', 
-            // 'next-day-9'
+            // 'same-day',
+            'next-day-9'
           ].some(v => period.includes(v));
           const validTrend = Math.abs(avgTrend) < 60;
           return validPeriod && validTrend;
@@ -88,7 +88,7 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
   
 
   const withTodayTrend = (await addTodayTrendToStrategies(asArray))
-    .filter(t => t.strategyName.includes('spy'))
+    // .filter(t => t.strategyName.includes('spy'))
     // .filter(s => s.count >= 2)
     // .filter(s => s.todayCount <= 3 && s.todayCount);
 
@@ -129,20 +129,21 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
 
       return {
         pm,
-        trends: stratTrends.map(o => o.overallAvg),
+        trends: stratTrends.map(o => o.trends).flatten(),
         weightedAvg: avgArray(
           stratTrends
             .map(({ overallAvg, count }) => Array(count).fill(overallAvg))
             .flatten()
             .filter(Boolean)
         ),
+        avgAllTrends: avgArray(stratTrends.map(o => o.trends).flatten()),
         count: stratTrends.length,
         todayTrend: (pmPerfs.find(({ pmName }) => pmName === pm) || {}).avgTrend
       };
 
     })
-    .filter(s => s.weightedAvg)
-    .sort((a, b) => b.weightedAvg - a.weightedAvg);
+    .filter(s => s.avgAllTrends)
+    .sort((a, b) => b.avgAllTrends - a.avgAllTrends);
 
   const successfulPms = organized
     // .filter(s => s.trends)

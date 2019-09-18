@@ -4,18 +4,20 @@ module.exports = {
     sellAllStocksOnNthDay: 15,
     purchaseAmt: 10,
     forPurchase: [
+        '[sudden-drops-majorJumpDinner]',
         '[sudden-drops-notWatchout]',
-        
+        '[sep2019-rsi10]',
         '[sep2019-sep15]',
         '[sep2019-sep16]',
         '[sep2019-sep17]',
-        '[sep2019-sep15Unfiltered]',
+        '[sep2019-sep18]',
+        '[sep2019-sma]',
         '[sep2019-sep15Unfiltered]',
 
 
         // keep an eye on
         // pennyscan-droppers-zScoreInverseTrendMinusRSI-brunch
-        // pennyscan-droppers-zScoreHighSentLowRSI-lunch
+        // 
 
         // sudden-drops-shouldWatchout
         // sudden-drops-notWatchout
@@ -24,6 +26,9 @@ module.exports = {
         // pennyscan-droppers-worstSS-dinner
         // pennyscan-unfiltered-singlePercMaxVolSS-lunch
         ...`
+            pennyscan-hot-st-worstSS-brunch
+            pennyscan-droppers-zScoreHighSentLowRSI-lunch
+            pennyscan-droppers-zScoreInverseTrendMinusRSI-brunch
             pennyscan-nowheres-zScoreInverseTrendMinusRSI-lunch
             pennyscan-droppers-zScoreInverseTrend-brunch
 
@@ -34,7 +39,11 @@ module.exports = {
 
             pennyscan-hot-st-worstSS-lunch
             pennyscan-hot-st-dollarVolume-lunch
-            pennyscan-hot-st-zScoreMagic-dinner
+
+            pennyscan-unfiltered-singlePercMaxVolSS-initial
+            pennyscan-nowheres-zScoreHotAndCool-brunch
+            pennyscan-hot-st-worstSsTrendRatio-brunch
+
             
         `.split('\n')
         .map(t => t.trim())

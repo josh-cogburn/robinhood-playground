@@ -7,13 +7,17 @@ module.exports = async (_, dontSell) => {
     log('selling' + positions.map(p => p.symbol));
     if (dontSell) return;
     for (let pos of positions) {
-        const order = await alpaca.createOrder({
-            symbol: pos.symbol, // any valid ticker symbol
-            qty: Number(pos.qty),
-            side: 'sell',
-            type: 'market',
-            time_in_force: 'day',
-        });
-        log(order)
+        try {
+            const order = await alpaca.createOrder({
+                symbol: pos.symbol, // any valid ticker symbol
+                qty: Number(pos.qty),
+                side: 'sell',
+                type: 'market',
+                time_in_force: 'day',
+            });
+            log(order)
+        } catch (e) {
+            strlog(e)
+        }
     }
 };

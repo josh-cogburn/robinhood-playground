@@ -461,9 +461,20 @@ module.exports = new (class RealtimeRunner {
 
   async runSingleStrategy(tickersAndAllPrices, strategy, period) {
     const picks = [];
-    const { strategyName, handler } = strategy;
+    const { strategyName, handler, collections } = strategy;
+    const filteredByCollections = collections && collections.length ? 
+      tickersAndAllPrices.filter(({ ticker }) => {
+        return Object.keys(collections).some(collection => {
+          return collections[collection].includes(ticker);
+        });
+      }) : tickersAndAllPrices;
+    strlog({
+      strategyName,
+      tickersAndAllPrices: tickersAndAllPrices.length,
+      filteredByCollections: filteredByCollections.length
+    });
     console.log(`running ${strategyName} against ${period} minute data...`);
-    for (let { ticker, allPrices } of tickersAndAllPrices) {
+    for (let { ticker, allPrices } of filteredByCollections) {
       const response = await handler({
         ticker,
         allPrices

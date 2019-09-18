@@ -132,7 +132,12 @@ const data = {
     sma-fitty-5min-bearishCross-under2-firstAlert-notWatchout-initial-5000
     rsi-fitty-30min-rsilt20-under2-notWatchout-lunch-5000
     pennyscan-hot-st-projectedVolume-firstAlert-notWatchout-dinner-5000
-    
+  `,
+
+  sep18: `
+    pennyscan-droppers-singlePercMaxVolSS-firstAlert-notWatchout-brunch-5000
+    pennyscan-droppers-singleTopVolumeSS-firstAlert-notWatchout-brunch-5000
+    stocktwits-fitty-mostBullish-under2-notWatchout-brunch-5000
   `
 
 };
