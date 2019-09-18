@@ -464,8 +464,8 @@ module.exports = new (class RealtimeRunner {
     const { strategyName, handler, collections } = strategy;
     const filteredByCollections = collections && collections.length ? 
       tickersAndAllPrices.filter(({ ticker }) => {
-        return Object.keys(collections).some(collection => {
-          return collections[collection].includes(ticker);
+        return Object.keys(this.collections).some(collection => {
+          return this.collections[collection].includes(ticker);
         });
       }) : tickersAndAllPrices;
     strlog({
