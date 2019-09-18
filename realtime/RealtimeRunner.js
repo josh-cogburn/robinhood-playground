@@ -607,9 +607,9 @@ module.exports = new (class RealtimeRunner {
       : (this.priceCaches[5][ticker] || []).slice(-1);
     price = (price || {}).currentPrice;
 
-    const collectionKey = Object.keys(this.collections).find(collection => 
+    const collectionKey = !strategyName.includes('pennyscan') ? Object.keys(this.collections).find(collection => 
       (this.collections[collection] || []).includes(ticker)
-    );
+    ) : undefined;
     const keyString = Object.keys(keys || {}).filter(key => keys[key]).join('-');
 
     const periodKey = (() => {

@@ -84,10 +84,10 @@ const data = {
     pennyscan-unfiltered-stTrendRatioFirst3-firstAlert-notWatchout-brunch-5000
   `,
 
-
+  // pennyscan-nowheres-zScoreVolume-firstAlert-notWatchout-dinner-5000
   sep15: `
     pennyscan-nowheres-highestTrend-firstAlert-notWatchout-initial-5000
-    // pennyscan-nowheres-zScoreVolume-firstAlert-notWatchout-dinner-5000
+    
     pennyscan-nowheres-zScoreHighSentLowRSI-firstAlert-notWatchout-lunch-500
 
 

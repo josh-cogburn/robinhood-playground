@@ -25,7 +25,7 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
         perfs: stratPerf.perfs.filter(({ period, avgTrend }) => {
           const validPeriod = [
             'same-day', 
-            'next-day-9'
+            // 'next-day-9'
           ].some(v => period.includes(v));
           const validTrend = Math.abs(avgTrend) < 60;
           return validPeriod && validTrend;
@@ -88,7 +88,7 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
   
 
   const withTodayTrend = (await addTodayTrendToStrategies(asArray))
-    .filter(t => t.strategyName.includes('brunch'))
+    .filter(t => t.strategyName.includes('spy'))
     // .filter(s => s.count >= 2)
     // .filter(s => s.todayCount <= 3 && s.todayCount);
 
