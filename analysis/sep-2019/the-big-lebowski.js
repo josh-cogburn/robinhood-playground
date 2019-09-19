@@ -25,7 +25,7 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
         perfs: stratPerf.perfs.filter(({ period, avgTrend }) => {
           const validPeriod =[
             'same-day',
-            'next-day-9'
+            // 'next-day-9'
           ].some(v => period.includes(v));
           const validTrend = Math.abs(avgTrend) < 60;
           return validPeriod && validTrend;
@@ -75,6 +75,7 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
       
     })
     .filter(s => ['premarket', 'afterhours'].every(w => !s.strategyName.includes(w)))
+    .filter(s => s.strategyName.includes('rsi') && s.strategyName.includes('spy'))
     .sort((a, b) => b.overallAvg - a.overallAvg);
 
   asArray = chain(asArray).sortBy('overallAvg').sortBy('percUp').value();
