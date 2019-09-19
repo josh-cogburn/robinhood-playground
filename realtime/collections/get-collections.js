@@ -144,6 +144,14 @@ module.exports = async () => {
             includeStSent: false,
             minVolume: 200000
         })).map(t => t.ticker),
+
+        fiveToTen: (await runScan({
+            minPrice: 5,
+            maxPrice: 10,
+            count: 200,
+            includeStSent: false,
+            minVolume: 200000
+        })).map(t => t.ticker),
         // upcoming: await getRhStocks('upcoming-earnings'),
         // rhtop100: await getRhStocks('100-most-popular'),
         // ...await getFinvizCollections(),
