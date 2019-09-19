@@ -140,7 +140,8 @@ const data = {
     stocktwits-fitty-mostBullish-under2-notWatchout-brunch-5000
     smoothkst-fitty-10min-bearishSignal-under2-notWatchout-initial-5000
     kst-fitty-30min-bearishSignal-under2-firstAlert-shouldWatchout-initial-5000
-    
+    pennyscan-hot-st-worstSS-brunch
+    pennyscan-highHit360-streak1-firstAlert-notWatchout-lunch-5000
   `
 
 };
