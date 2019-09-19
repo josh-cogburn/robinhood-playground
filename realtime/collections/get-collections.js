@@ -20,7 +20,9 @@ const OPTIONSTICKERS = [
     'GLD',
     // 'VXX',
 
-
+    'ROKU',
+    'AMD',
+    'SQ',
     'AAPL',
     // 'NFLX',
     'AMZN',
@@ -29,13 +31,9 @@ const OPTIONSTICKERS = [
 
 
     'F',
-    // 'FXC',
-    // 'RIG',
+    'CVS',
+    'SBUX',
     'BAC',
-    'S',
-    // 'NOK',
-    'AVYA',
-    // 'TXBA'
 
 
     'GM',
