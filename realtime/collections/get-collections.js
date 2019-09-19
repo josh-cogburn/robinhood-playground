@@ -133,14 +133,16 @@ module.exports = async () => {
             minPrice: 0.20,
             maxPrice: 0.60,
             count: 33,
-            includeStSent: false
+            includeStSent: false,
+            minVolume: 300000
         })).map(t => t.ticker),
 
         twoToFive: (await runScan({
             minPrice: 2,
             maxPrice: 5,
             count: 100,
-            includeStSent: false
+            includeStSent: false,
+            minVolume: 200000
         })).map(t => t.ticker),
         // upcoming: await getRhStocks('upcoming-earnings'),
         // rhtop100: await getRhStocks('100-most-popular'),

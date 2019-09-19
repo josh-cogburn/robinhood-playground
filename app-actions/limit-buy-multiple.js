@@ -1,5 +1,6 @@
 const simpleBuy = require('./simple-buy');
 const alpacaMarketBuy = require('../alpaca/market-buy');
+const alpacaLimitBuy = require('../alpaca/limit-buy');
 const mapLimit = require('promise-map-limit');
 const sendEmail = require('../utils/send-email');
 const lookup = require('../utils/lookup');
@@ -25,7 +26,7 @@ module.exports = async ({stocksToBuy, totalAmtToSpend, strategy, maxNumStocksToP
         try {
             const pickPrice = (withPrices.find(obj => obj.ticker === stock) || {}).price;
             const { askPrice } = await lookup(stock);
-            const buyPrice = Math.min(askPrice, pickPrice * 1.025);
+            const buyPrice = Math.min(askPrice, pickPrice * 1.05);
             log({
                 askPrice,
                 pickPrice,
@@ -33,7 +34,7 @@ module.exports = async ({stocksToBuy, totalAmtToSpend, strategy, maxNumStocksToP
             })
             // queue alpaca limit order 4% above pickPrice
             const quantity = Math.floor(perStock / buyPrice) || 1;
-            alpacaMarketBuy(stock, quantity);
+            alpacaLimitBuy(stock, quantity, buyPrice);
 
             // const response = await simpleBuy({
             //     ticker: stock,

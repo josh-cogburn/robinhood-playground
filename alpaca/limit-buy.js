@@ -3,7 +3,7 @@
 const { alpaca } = require('.');
 const getMinutesFrom630 = require('../utils/get-minutes-from-630');
 
-module.exports = async (_, ticker, quantity, price) => {
+module.exports = async (ticker, quantity, price) => {
 
     const min = getMinutesFrom630();
     // strlog({ min })
