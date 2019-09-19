@@ -2,12 +2,13 @@
 module.exports = {
     // important settings
     sellAllStocksOnNthDay: 15,
-    purchaseAmt: 150,
+    purchaseAmt: 120,
     forPurchase: [
         '[sudden-drops-majorJumpDinner]',
-        '[sudden-drops-majorJumpDinner]',
+        '[sudden-drops-dinner]',
         '[sudden-drops-notWatchout]',
         '[sudden-drops-notWatchout]',
+        '[sudden-drops-shouldWatchout]',
 
         
         // '[sep2019-rsi10]',

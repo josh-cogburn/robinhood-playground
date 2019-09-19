@@ -57,5 +57,8 @@ module.exports = {
 
         majorJumpLunch: ['majorJump', 'lunch'],
         majorJumpDinner: ['majorJump', 'dinner'],
+
+        dinner: 'dinner',
+        lunch: 'lunch'
     }
 };
