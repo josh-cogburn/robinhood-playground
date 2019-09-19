@@ -52,7 +52,7 @@ module.exports = {
         '10minute': '10min',
         '5minute': '5min',
 
-
+        'options': ['options'],
         '30minoptions': ['30min', 'options'],
         '10minoptions': ['10min', 'options'],
 
