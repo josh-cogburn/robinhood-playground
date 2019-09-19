@@ -2,7 +2,7 @@
 module.exports = {
     // important settings
     sellAllStocksOnNthDay: 15,
-    purchaseAmt: 40,
+    purchaseAmt: 150,
     forPurchase: [
         '[sudden-drops-majorJumpDinner]',
         '[sudden-drops-majorJumpDinner]',
