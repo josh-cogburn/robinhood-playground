@@ -5,13 +5,14 @@ module.exports = {
     purchaseAmt: 10,
     forPurchase: [
         '[sudden-drops-majorJumpDinner]',
+        '[sudden-drops-majorJumpDinner]',
+        '[sudden-drops-notWatchout]',
         '[sudden-drops-notWatchout]',
         '[sep2019-rsi10]',
         '[sep2019-sep15]',
         '[sep2019-sep16]',
         '[sep2019-sep17]',
         '[sep2019-sep18]',
-        '[sep2019-sma]',
         '[sep2019-sep15Unfiltered]',
 
 
@@ -43,7 +44,6 @@ module.exports = {
             pennyscan-unfiltered-singlePercMaxVolSS-initial
             pennyscan-nowheres-zScoreHotAndCool-brunch
             pennyscan-hot-st-worstSsTrendRatio-brunch
-
             
         `.split('\n')
         .map(t => t.trim())

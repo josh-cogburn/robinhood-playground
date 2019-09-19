@@ -23,8 +23,8 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
       .map(stratPerf => ({
         ...stratPerf,
         perfs: stratPerf.perfs.filter(({ period, avgTrend }) => {
-          const validPeriod = [
-            // 'same-day',
+          const validPeriod =[
+            'same-day',
             'next-day-9'
           ].some(v => period.includes(v));
           const validTrend = Math.abs(avgTrend) < 60;
@@ -117,7 +117,7 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
         parts = Array.isArray(parts) ? parts : [parts];
         return parts.every(part => strat.includes(part));
     });
-  }
+  };
 
   const pmPerfs = stratManager.calcPmPerfs();
   // strlog({ pmPerfs })
@@ -136,7 +136,7 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
             .flatten()
             .filter(Boolean)
         ),
-        avgAllTrends: avgArray(stratTrends.map(o => o.trends).flatten()),
+        avgAllTrends: avgArray(stratTrends.map(o => o.trends).flatten().filter(Boolean)),
         count: stratTrends.length,
         todayTrend: (pmPerfs.find(({ pmName }) => pmName === pm) || {}).avgTrend
       };
@@ -167,13 +167,15 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
       [withTodayTrend, highestPercUp].flatten(),
       s => s.strategyName
     )
-      .filter(s => s.trends.every(t => t > 0))
-      .filter(s => s.trendCount === 2)
+      // .filter(s => s.trends.every(t => t > 0))
+      .filter(s => s.trendCount > 2)
       // .filter(s => s.trendPercUp > 50)
+      .filter(s => s.todayCount === 1)
+      .filter(s => s.todayTrend > 0.5)
       .sort((a, b) => b.overallAvg - a.overallAvg),
-    pms: successfulPms.filter(t => t.todayTrend > -0.2)
+    pms: successfulPms
+      // .filter(t => t.todayTrend > -0.2)
   }, s => s
-    .filter(t => t.todayTrend > -0.5 || t.todayTrend === undefined)
     .slice(0, 200))
   )
 

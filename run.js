@@ -56,4 +56,5 @@ require('./utils/fix-locale-date-string');
     console.log(JSON.stringify(response, null, 2));
 
     mongoose.connection.close();
+    process.exit();
 })();
