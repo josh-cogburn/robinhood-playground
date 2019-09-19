@@ -26,7 +26,7 @@ module.exports = {
         fiveMinuteHistoricals = fiveMinuteHistoricals.map(o => o.close_price);
         const failedHistoricalCheck = fiveMinuteHistoricals.slice(0, -1).some(p => getTrend(p, mostRecent) < 5);
         if (failedHistoricalCheck) {
-          return console.log('failed historical check', ticker);
+          return console.log('failed historical check', ticker, mostRecent);
         }
 
         // big jump and passed historical check...
@@ -38,6 +38,7 @@ module.exports = {
                     const key = (() => {
                       if (trendFromMin > -8) return 'minorJump';
                       if (trendFromMin < -13) return 'majorJump';
+                      return 'mediumJump';
                     })();
                     return { [key]: true };
                 })()
