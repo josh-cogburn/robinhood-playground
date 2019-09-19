@@ -27,11 +27,6 @@ const OPTIONSTICKERS = [
     // 'NFLX',
     'AMZN',
     'GOLD',
-    'ABBV',
-
-
-    'F',
-    'CVS',
     'SBUX',
     'BAC',
 
