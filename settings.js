@@ -1,7 +1,7 @@
 // TODO: flatten list of strategies with PMs for emailObj same way as forPurchase
 module.exports = {
     // important settings
-    sellAllStocksOnNthDay: 10,
+    sellAllStocksOnNthDay: 8,
     purchaseAmt: 120,
     forPurchase: [
         '[sudden-drops-majorJumpDinner]',
