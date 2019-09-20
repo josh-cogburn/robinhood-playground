@@ -150,7 +150,7 @@ module.exports = async () => {
             maxPrice: 10,
             count: 300,
             includeStSent: false,
-            minVolume: 200000
+            minVolume: 150000
         })).map(t => t.ticker),
         // upcoming: await getRhStocks('upcoming-earnings'),
         // rhtop100: await getRhStocks('100-most-popular'),
