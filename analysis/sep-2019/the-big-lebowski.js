@@ -25,7 +25,7 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
         perfs: stratPerf.perfs.filter(({ period, avgTrend }) => {
           const validPeriod =[
             'same-day',
-            // 'next-day-9'
+            'next-day'
           ].some(v => period.includes(v));
           const validTrend = Math.abs(avgTrend) < 60;
           return validPeriod && validTrend;
@@ -75,14 +75,18 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
       
     })
     .filter(s => ['premarket', 'afterhours'].every(w => !s.strategyName.includes(w)))
-    .filter(s => s.strategyName.includes('rsi') && s.strategyName.includes('spy'))
+    // .filter(s => 
+    //   s.strategyName.includes('rsi') && 
+    //   s.strategyName.includes('10min') &&
+    //   s.strategyName.includes('lt15')
+    // )
     .sort((a, b) => b.overallAvg - a.overallAvg);
 
   asArray = chain(asArray).sortBy('overallAvg').sortBy('percUp').value();
 
   if (!addTodayTrend) return asArray;
 
-  await realtimeRunner.init();
+  await realtimeRunner.init(true);
   const pms = realtimeRunner.getPms();
 
   strlog({ pms, skipDays })
@@ -127,7 +131,6 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
 
       const stratTrends = asArray
         .filter(({ strategyName }) => stratMatchesPm(pms[pm], strategyName));
-
       return {
         pm,
         trends: stratTrends.map(o => o.trends).flatten(),
@@ -169,10 +172,10 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
       s => s.strategyName
     )
       // .filter(s => s.trends.every(t => t > 0))
-      .filter(s => s.trendCount > 2)
+      // .filter(s => s.trendCount > 2)
       // .filter(s => s.trendPercUp > 50)
-      .filter(s => s.todayCount === 1)
-      .filter(s => s.todayTrend > 0.5)
+      // .filter(s => s.todayCount === 1)
+      // .filter(s => s.todayTrend > 0.5)
       .sort((a, b) => b.overallAvg - a.overallAvg),
     pms: successfulPms
       // .filter(t => t.todayTrend > -0.2)

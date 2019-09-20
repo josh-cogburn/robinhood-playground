@@ -77,6 +77,21 @@ module.exports = {
 
         '10minlt5': ['10min', 'lt5'],
         '5minlt15': ['5min', 'lt15'],
+
+
+        ...[
+            'lt5,notWatchout,10min',
+            'lt10,notWatchout,10min',
+            'lt15,notWatchout,10min',
+        ].reduce((acc, str) => {
+            const split = str.split(',');
+            const key = split.join('-');
+            return {
+                ...acc,
+                [key]: split
+            };
+        }, {})
+
     },
 
     postRun: (newPicks, todaysPicks, periods) => {
