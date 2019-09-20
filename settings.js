@@ -1,31 +1,32 @@
 // TODO: flatten list of strategies with PMs for emailObj same way as forPurchase
 module.exports = {
     // important settings
-    sellAllStocksOnNthDay: 10,
+    sellAllStocksOnNthDay: 15,
     purchaseAmt: 120,
     forPurchase: [
         '[sudden-drops-majorJumpDinner]',
-        '[sudden-drops-dinner]',
         '[sudden-drops-notWatchout]',
         '[sudden-drops-notWatchout]',
         '[sudden-drops-notWatchout]',
         '[sudden-drops-notWatchout]',
         '[sudden-drops-notWatchout]',
+        '[sudden-drops-lunch]',
+        '[sudden-drops-lunch]',
+
         '[sep2019-rsi10]',
         '[sep2019-rsiDaily]',
+
         '[pennyscan-droppers-zScoreInverseTrend-brunch]',
         '[pennyscan-droppers-zScoreInverseTrend-brunch]',
-        '[pennyscan-droppers-zScoreHighSentLowRSI-lunch]',
-        '[pennyscan-droppers-zScoreHighSentLowRSI-lunch]',
-        '[pennyscan-unfiltered-singlePercMaxVolSS-initial]',
         '[pennyscan-droppers-zScoreInverseTrendMinusRSI-brunch]',
+        '[pennyscan-droppers-zScoreHighSentLowRSI-lunch]',
+        '[pennyscan-droppers-zScoreHighSentLowRSI-lunch]',
         '[pennyscan-droppers-zScoreHotAndCool-lunch]',
-        '[sudden-drops-lunch]',
-        '[sudden-drops-lunch]',
+        '[pennyscan-unfiltered-singlePercMaxVolSS-initial]',
 
 
-        '[rsi-lt10-rsi-notWatchout-10min]',
         '[rsi-lt5-notWatchout-10min]',
+        '[rsi-lt10-notWatchout-10min]',
         '[rsi-lt15-notWatchout-10min]',
         // '[sudden-drops-shouldWatchout]',
 

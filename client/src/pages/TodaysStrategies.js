@@ -37,20 +37,21 @@ class TodaysStrategies extends Component {
         }));
   }
   render() {
-      let { pmFilter, afterHoursEnabled, sortBy: sortByFilter, additionalFilters } = this.state;
-      let { picks, relatedPrices, predictionModels, pastData, curDate, pmPerfs, pms, settings, socket } = this.props;
-      const { fiveDay } = pastData || {};
+    let { pmFilter, afterHoursEnabled, sortBy: sortByFilter, additionalFilters } = this.state;
+    let { picks, relatedPrices, predictionModels, pastData, curDate, pmPerfs, pms, settings, socket } = this.props;
+    console.log({ pms }, 'hey')
+    const { fiveDay } = pastData || {};
 
-        const additionalFilterParts = additionalFilters.split(',');
-        
-        const matchesPm = (stratMin, pm) => {
-            const arrayOfArrays = pms[pm];
-            return arrayOfArrays.some(parts => {
-                parts = Array.isArray(parts) ? parts : [parts];
-                return parts.every(part => stratMin.includes(part));
-            });
-            // return pms[pm] && pms[pm].every(part => strat === part || strat.includes(`${part}-`) || strat.includes(`-${part}`));
-        }
+    const additionalFilterParts = additionalFilters.split(',');
+    
+    const matchesPm = (stratMin, pm) => {
+        const arrayOfArrays = pms[pm] || [];
+        return arrayOfArrays.some(parts => {
+            parts = Array.isArray(parts) ? parts : [parts];
+            return parts.every(part => stratMin.includes(part));
+        });
+        // return pms[pm] && pms[pm].every(part => strat === part || strat.includes(`${part}-`) || strat.includes(`-${part}`));
+    }
 
       let showingPicks = (() => {
           if (pmFilter === 'no filter') {
