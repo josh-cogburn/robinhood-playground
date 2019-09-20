@@ -130,7 +130,6 @@ const data = {
     rsi-fitty-10min-rsilt25-under2-firstAlert-shouldWatchout-brunch-5000
     pennyscan-nowheres-zScoreGoingBadLookingGood-firstAlert-shouldWatchout-lunch-5000
     sma-fitty-5min-bearishCross-under2-firstAlert-notWatchout-initial-5000
-    rsi-fitty-30min-rsilt20-under2-notWatchout-lunch-5000
     pennyscan-hot-st-projectedVolume-firstAlert-notWatchout-dinner-5000
   `,
 

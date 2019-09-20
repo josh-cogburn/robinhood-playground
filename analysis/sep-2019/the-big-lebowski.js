@@ -171,8 +171,8 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
       [withTodayTrend, highestPercUp].flatten(),
       s => s.strategyName
     )
-      // .filter(s => s.trends.every(t => t > 0))
-      // .filter(s => s.trendCount > 2)
+      .filter(s => s.trends.every(t => t > -3))
+      .filter(s => s.trendCount > 5)
       // .filter(s => s.trendPercUp > 50)
       // .filter(s => s.todayCount === 1)
       // .filter(s => s.todayTrend > 0.5)
