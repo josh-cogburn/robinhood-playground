@@ -111,9 +111,9 @@ const stratManager = {
         console.log('refreshing positions', (new Date().toLocaleTimeString()));
         const positions = await cachedPositions();
         this.positions = positions;
-        this.tickerWatcher.addTickers(
-            positions.map(pos => pos.ticker)
-        );
+        const positionTickers = Object.values(positions).flatten().map(pos => pos.ticker || pos.symbol);
+        strlog({ positionTickers });
+        this.tickerWatcher.addTickers(positionTickers);
     },
     newPick(data) {
 

@@ -12,7 +12,7 @@ module.exports = async (tickers, period, daysBack) => {
   const historicalMethods = {
     5: rhHistoricals,
     10: rhHistoricals,
-    30: tiingoHistoricals,
+    30: rhHistoricals,
     'd': dailyHistoricals
   };
   

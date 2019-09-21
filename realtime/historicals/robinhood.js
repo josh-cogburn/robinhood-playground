@@ -1,5 +1,6 @@
 const chunkApi = require('../../utils/chunk-api');
 const getTrend = require('../../utils/get-trend');
+const { uniq } = require('underscore');
 
 module.exports = async (tickers, period) => {
 
@@ -7,6 +8,19 @@ module.exports = async (tickers, period) => {
     period = Number(period);
 
     // console.log(tickers)
+
+    const extendedHistoricals = period === 30 ? [] : await chunkApi(
+      tickers,
+      async tickerStr => {
+        return (
+          await Robinhood.url(
+            `https://api.robinhood.com/quotes/historicals/?symbols=${tickerStr}&interval=${period}minute&bounds=extended`
+          )
+        ).results;
+      },
+      75
+    );
+
     const allHistoricals = await chunkApi(
         tickers,
         async tickerStr => {
@@ -37,15 +51,23 @@ module.exports = async (tickers, period) => {
         .map(hist => ({
           ...hist,
           currentPrice: hist.close_price,
-          timestamp: new Date(hist.begins_at).getTime() + (1000 * 60 * period)
-        }));
+          timestamp: new Date(hist.begins_at).getTime() + (1000 * 60 * period),
+        }))
+        // .map(hist => ({
+        //   ...hist,
+        //   dateStr: (new Date(hist.timestamp)).toLocaleString()
+        // }))
+        .sort((a, b) => a.timestamp - b.timestamp);
     };
       
     return allHistoricals
       .filter(obj => obj && obj.symbol && obj.historicals)
       .reduce((acc, { symbol, historicals }) => ({
         ...acc,
-        [symbol]: processHistoricals(historicals)
+        [symbol]: processHistoricals(uniq([
+          ...historicals,
+          ...(extendedHistoricals.find(hist => hist.symbol === symbol) || {}).historicals || []
+        ], s => s.begins_at))
       }), {});
 
 

@@ -43,6 +43,7 @@ const runScan = async ({
   minPrice = 0.5,
   maxPrice = 8,
   minVolume = Number.NEGATIVE_INFINITY,
+  maxVolume = Number.POSITIVE_INFINITY,
   filterFn = () => true,
   includeStSent = true,
   count = COUNT
@@ -121,7 +122,8 @@ const runScan = async ({
     
 
   const filtered = withTSO
-    .filter(buy => buy.computed.projectedVolume > minVolume)
+    .filter(buy => buy.computed.projectedVolume >= minVolume)
+    .filter(buy => buy.computed.projectedVolume <= maxVolume)
     .filter(buy => filterFn(buy.computed));
   
   // FIX MISSING 2 WEEK VOLUMES
