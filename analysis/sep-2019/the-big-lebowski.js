@@ -164,6 +164,7 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
       
       return {
         pm,
+        analyzedDates,
         overallAvg: avgArray(dateVals),
         percUp: percUp(dateVals),
         todayTrend: (pmPerfs.find(({ pmName }) => pmName === pm) || {}).avgTrend

@@ -1,93 +1,80 @@
 // TODO: flatten list of strategies with PMs for emailObj same way as forPurchase
+
+let expectedPickCount = 0;
+const pm = (str, multiplier = 1, groupName) => {
+
+    let totalCount = 0;
+    const lines = str.split('\n').map(line => line.trim()).filter(Boolean);
+    const onlyPms = lines.map(line => {
+        const [pm, count] = line.split(' ');
+        totalCount += Number(count || 1);
+        return pm;
+    });
+    const withMultiplier = totalCount * multiplier;
+    console.log({
+        groupName,
+        totalCount,
+        withMultiplier
+    });
+    expectedPickCount += withMultiplier;
+    return Array(multiplier).fill(onlyPms).flatten().map(pm => `[${pm}]`);
+};
+
+
 module.exports = {
     // important settings
     sellAllStocksOnNthDay: 8,
     purchaseAmt: 120,
     forPurchase: [
-        // '[sudden-drops-majorJumpDinner]',
-        // '[sudden-drops-notWatchout]',
-        // '[sudden-drops-notWatchout]',
-        // '[sudden-drops-notWatchout]',
-        '[sudden-drops-notWatchout]',
-        '[sudden-drops-notWatchout]',
-        '[sudden-drops-notWatchout]',
-        '[sudden-drops-notWatchout-majorJump]',
-        '[sudden-drops-shouldWatchout]',
-        // '[sudden-drops-lunch]',
-        // '[sudden-drops-lunch]',
 
-        // '[sep2019-rsi10]',
-        // '[sep2019-rsiDaily]',
-        // '[sep2019-sep17]',
+        // 2/5 sudden drops - TOTAL 42
+        ...pm(`
+            sudden-drops-notWatchout 15
+            sudden-drops-notWatchout 15
+            sudden-drops-notWatchout 15
+            sudden-drops-notWatchout-minorJump-brunch 2
+            sudden-drops-notWatchout-majorJump 1
+            sudden-drops-majorJump-dinner 1
+            sudden-drops-notWatchout-initial 6
+            sudden-drops-shouldWatchout 2
+        `, 2, 'sudden drops'),
 
-        // '[pennyscan-droppers-zScoreInverseTrend-brunch]',
-        // '[pennyscan-droppers-zScoreInverseTrend-brunch]',
-        // '[pennyscan-droppers-zScoreInverseTrendMinusRSI-brunch]',
-        // '[pennyscan-droppers-zScoreHighSentLowRSI-lunch]',
-        // '[pennyscan-droppers-zScoreHighSentLowRSI-lunch]',
-        // '[pennyscan-droppers-zScoreHotAndCool-lunch]',
-        // '[pennyscan-unfiltered-singlePercMaxVolSS-initial]',
-        // '[pennyscan-nowheres-zScoreInverseTrendMinusRSI-lunch]',
-        // '[pennyscan-droppers-zScoreMagic-brunch]',
-        // '[pennyscan-droppers-zScoreMagic-brunch]',
+        // 1/5 rsi - TOTAL 42
+        ...pm(`
+            rsi-10min-shouldWatchout-firstAlert-dinner 5
+            rsi-10min-shouldWatchout-firstAlert-dinner 5
+            rsi-10min-rsilt10-dinner 5
+            rsi-30min-shouldWatchout-rsilt15-dinner 2
+            rsi-30min-shouldWatchout-rsilt15-dinner 2
+            rsi-firstAlert-rsilt5-dinner 1
+            rsi-10min-notWatchout-rsilt10 16
+            rsi-10min-notWatchout-rsilt5 3
+            rsi-10min-notWatchout-rsilt5 3
+            rsi-10min-notWatchout-firstAlert-rsilt15 10
+        `, 1, 'RSI'),
+        // 1/5 other stuff - TOTAL 10
+        ...pm(`
+            pennyscan-droppers-zScoreInverseTrendPlusVol-dinner 1
+            pennyscan-unfiltered-projectedVolume-dinner 1
+            pennyscan-droppers-dollarVolume-dinner 1
+            sep2019-sep18 1
+            sep2019-sep18 1
+            sep2019-sep18 1
+            sep2019-sep18 1
+            sep2019-sep18 1
+            sep2019-sep18 1
+            sep2019-pennyscans 4
+        `, 3, 'other stuff'),
 
-
-        // '[rsi-lt5-notWatchout-10min]',
-        // '[rsi-lt5-notWatchout-10min]',
-        // '[rsi-lt10-notWatchout-10min]',
-        // '[rsi-lt10-notWatchout-10min]',
-        // '[rsi-lt15-notWatchout-10min]',
-
-        
-        // '[sep2019-rsi10]',
-        // '[sep2019-sep15]',
-        // '[sep2019-sep16]',
-        // '[sep2019-sep17]',
-        // '[sep2019-sep18]',
-        // '[sep2019-sep15Unfiltered]',
-
-
-        // keep an eye on
-        // pennyscan-droppers-zScoreInverseTrendMinusRSI-brunch
-        // 
-
-        // sudden-drops-shouldWatchout
-        // sudden-drops-notWatchout
-        // volume-increasing
-
-        // pennyscan-droppers-worstSS-dinner
-        // pennyscan-unfiltered-singlePercMaxVolSS-lunch
-        // ...`
-        //     pennyscan-hot-st-worstSS-brunch
-        //     pennyscan-droppers-zScoreHighSentLowRSI-lunch
-        //     pennyscan-droppers-zScoreInverseTrendMinusRSI-brunch
-        //     pennyscan-nowheres-zScoreInverseTrendMinusRSI-lunch
-        //     pennyscan-droppers-zScoreInverseTrend-brunch
-
-        //     pennyscan-droppers-zScoreHotAndCool-lunch
-        //     pennyscan-droppers-zScoreHotAndCool-lunch
-            
-        //     pennyscan-droppers-projectedVolume-dinner
-
-        //     pennyscan-hot-st-worstSS-lunch
-        //     pennyscan-hot-st-dollarVolume-lunch
-
-        //     pennyscan-unfiltered-singlePercMaxVolSS-initial
-        //     pennyscan-nowheres-zScoreHotAndCool-brunch
-        //     pennyscan-hot-st-worstSsTrendRatio-brunch
-            
-        // `.split('\n')
-        // .map(t => t.trim())
-        // .filter(Boolean)
-        // .map(t => `[${t}]`),
-
-
-
-
-        // double POWER
-        // 'pennyscan-volume-increasing-5min-firstAlert-notWatchout-dinner-5000',
-        // 'pennyscan-hot-st-zScoreHotAndCool-firstAlert-notWatchout-dinner-5000',
-
+        // rarities 1/5 - TOTAL 6
+        ...pm(`
+            multi-hits-5count-shouldWatchout-dinner
+            sep2019-rsiDaily
+            pennyscan-droppers-worstSsTrendRatio-brunch
+            sep2019-rsi10
+            pennyscan-hot-st-dollarVolume-lunch
+            pennyscan-unfiltered-dollarVolume-brunch
+        `, 2, 'rarities')
 
 
     ],
@@ -102,5 +89,6 @@ module.exports = {
             'UEPS',
             'MNGA'
         ]
-    }
+    },
+    expectedPickCount
 };

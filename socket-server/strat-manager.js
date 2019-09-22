@@ -87,9 +87,7 @@ const stratManager = {
             }, this.curDate);
 
 
-            this.pmsAnalyzed = (
-                await require('../analysis/sep-2019/the-big-lebowski')(14)
-            ).pmsAnalyzed;
+            this.pmsAnalyzed = await require('../analysis/sep-2019/all-pm-analysis')()
 
         }
         
