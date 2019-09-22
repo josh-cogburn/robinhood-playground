@@ -5,7 +5,14 @@ const mapLimit = require('promise-map-limit');
 const sendEmail = require('../utils/send-email');
 const lookup = require('../utils/lookup');
 
-module.exports = async ({stocksToBuy, totalAmtToSpend, strategy, maxNumStocksToPurchase, min, withPrices }) => {
+module.exports = async ({ 
+    stocksToBuy, 
+    totalAmtToSpend, 
+    strategy, 
+    maxNumStocksToPurchase, 
+    min, 
+    withPrices 
+}) => {
 
     // you cant attempt to purchase more stocks than you passed in
     // console.log(maxNumStocksToPurchase, 'numstockstopurchase', stocksToBuy.length);

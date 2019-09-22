@@ -1,3 +1,4 @@
+const Combinatorics = require('js-combinatorics');
 const getMultipleHistoricals = require('../../app-actions/get-multiple-historicals');
 const getTrend = require('../../utils/get-trend');
 
@@ -52,13 +53,38 @@ module.exports = {
         }
     },
     pms: {
-        shouldWatchout: 'shouldWatchout',
-        notWatchout: 'notWatchout',
 
-        majorJumpLunch: ['majorJump', 'lunch'],
-        majorJumpDinner: ['majorJump', 'dinner'],
 
-        dinner: 'dinner',
-        lunch: 'lunch'
+      ...Combinatorics.cartesianProduct(
+        [
+          'notWatchout',
+          'shouldWatchout',
+        ],
+        [
+          'majorJump',
+          'minorJump',
+          'mediumJump'
+        ],
+        [
+          'dinner',
+          'lunch',
+          'brunch',
+          'initial'
+        ]
+      ).toArray().reduce((acc, arr) => {
+
+        return {
+          ...acc,
+          ...Combinatorics.power(arr)
+            .toArray()
+            .filter(s => s && s.length)
+            .reduce((inner, combo) => ({
+              ...inner,
+              [combo.join('-')]: combo
+            }), {})
+        }
+
+      }, {})
+
     }
 };

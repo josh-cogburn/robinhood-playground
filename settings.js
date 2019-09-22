@@ -9,6 +9,10 @@ module.exports = {
         // '[sudden-drops-notWatchout]',
         // '[sudden-drops-notWatchout]',
         '[sudden-drops-notWatchout]',
+        '[sudden-drops-notWatchout]',
+        '[sudden-drops-notWatchout]',
+        '[sudden-drops-notWatchout-majorJump]',
+        '[sudden-drops-shouldWatchout]',
         // '[sudden-drops-lunch]',
         // '[sudden-drops-lunch]',
 
@@ -33,7 +37,6 @@ module.exports = {
         // '[rsi-lt10-notWatchout-10min]',
         // '[rsi-lt10-notWatchout-10min]',
         // '[rsi-lt15-notWatchout-10min]',
-        // '[sudden-drops-shouldWatchout]',
 
         
         // '[sep2019-rsi10]',

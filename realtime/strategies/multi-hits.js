@@ -1,3 +1,5 @@
+const Combinatorics = require('js-combinatorics');
+
 module.exports = {
 
   postRun: picks => {
@@ -27,6 +29,46 @@ module.exports = {
         }
       };
     });
+
+  },
+
+  pms: {
+
+    ...Combinatorics.cartesianProduct(
+      [
+          '2count',
+          '3count',
+          '4count',
+          '5count',
+          '6count'
+      ],
+      [
+          'notWatchout',
+          'shouldWatchout',
+      ],
+      [
+          'firstAlert'
+      ],
+      [
+          'dinner',
+          'lunch',
+          'brunch',
+          'initial'
+      ]
+    ).toArray().reduce((acc, arr) => {
+
+      return {
+        ...acc,
+        ...Combinatorics.power(arr)
+          .toArray()
+          .filter(s => s && s.length)
+          .reduce((inner, combo) => ({
+            ...inner,
+            [combo.join('-')]: combo
+          }), {})
+      }
+
+    }, {}),
 
   }
 }

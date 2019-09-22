@@ -2,13 +2,14 @@
 const jsonMgr = require('../utils/json-mgr');
 const { CronJob } = require('cron');
 const fs = require('mz/fs');
-const { uniq } = require('underscore');
+const { uniq, pick } = require('underscore');
 
 // mongo
 const Pick = require('../models/Pick');
 
 // predictions and past data
 const stratPerfOverall = require('../analysis/strategy-perf-overall');
+
 const createPredictionModels = require('./create-prediction-models');
 
 const getTrend = require('../utils/get-trend');
@@ -40,10 +41,13 @@ const stratManager = {
     predictionModels: {},
     pmPerfs: [],
     hasInit: false,
-    tickerWatcher: null,    // TickerWatcher instance
+    tickerWatcher: null,    // TickerWatcher instance,
+    pmsAnalyzed: {},
     
-    async init({ io, dateOverride } = {}) {
+    async init({ io, dateOverride, lowKey } = {}) {
         if (this.hasInit) return;
+        this.hasInit = true;
+
         this.Robinhood = global.Robinhood;
         this.io = io;
         this.tickerWatcher = new TickerWatcher({
@@ -56,37 +60,41 @@ const stratManager = {
 
         // init picks?
         console.log('init refresh')
-        try {
-            await this.refreshPastData();
-        } catch (e) {
-            console.log('error refreshing past', e);
-        }
+
         console.log('init picks')
         await this.initPicksAndPMs(dateOverride);
-
-        setInterval(() => this.refreshPositions(), 1000 * 60 * 15);
-        await this.refreshPositions();
 
         console.log('get prices');
         await this.tickerWatcher.start();
 
-        // console.log('send report init')
-        // try {
-            // await this.sendPMReport();
-        // } catch (e) {
-        //     console.log('error sending report', e);
-        // }
-        
 
         new CronJob(`40 7 * * 1-5`, () => this.newDay(), null, true);
 
-        this.hasInit = true;
+        
 
-        console.log('about to init balance report')
-        await balanceReportManager.init(report => {
-            // console.log('onReport', report, Object.keys(this));
-            this.sendToAll('server:balance-report', { report });
-        }, this.curDate);
+        if (!lowKey) {
+
+            try {
+                await this.refreshPastData();
+            } catch (e) {
+                console.log('error refreshing past', e);
+            }
+
+            console.log('about to init balance report')
+            await balanceReportManager.init(report => {
+                // console.log('onReport', report, Object.keys(this));
+                this.sendToAll('server:balance-report', { report });
+            }, this.curDate);
+
+
+            this.pmsAnalyzed = (
+                await require('../analysis/sep-2019/the-big-lebowski')(14)
+            ).pmsAnalyzed;
+
+        }
+        
+        setInterval(() => this.refreshPositions(), 1000 * 60 * 15);
+        await this.refreshPositions();
 
         console.log('initd strat manager');
     },
@@ -94,17 +102,19 @@ const stratManager = {
         const pms = require('../realtime/RealtimeRunner').getPms();
         // console.log('we;come', { pms });
         return {
-            curDate: this.curDate,
-            picks: this.picks,
+            ...pick(this, [
+                'curDate',
+                'picks',
+                'predictionModels',
+                'pmPerfs',
+                'pmsAnalyzed',
+                'positions'
+            ]),
             relatedPrices: this.tickerWatcher.relatedPrices,
-            pastData: this.pastData,
-            predictionModels: this.predictionModels,
             settings,
             cronString: regCronIncAfterSixThirty.toString(),
             balanceReports: balanceReportManager.getAllBalanceReports(),
-            pmPerfs: this.pmPerfs,
             pms,
-            positions: this.positions
         };
     },
     async refreshPositions() {

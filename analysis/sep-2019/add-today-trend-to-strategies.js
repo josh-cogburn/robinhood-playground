@@ -1,10 +1,10 @@
-const stratManager = require('../../socket-server/strat-manager');
 const getTrend = require('../../utils/get-trend');
 const { avgArray } = require('../../utils/array-math');
 
 module.exports = async (strategies) => {
 
-  await stratManager.init();
+  const stratManager = require('../../socket-server/strat-manager');
+  await stratManager.init({ lowKey: true });
   const { picks, tickerWatcher: { relatedPrices } } = stratManager;
   strlog({ strategies })
   const withTodayTrend = strategies.map(s => ({

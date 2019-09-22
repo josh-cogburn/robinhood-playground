@@ -1,4 +1,5 @@
 const { SMA } = require('technicalindicators');
+const Combinatorics = require('js-combinatorics');
 
 const calcSMA = (values, period) => 
   SMA.calculate({ values, period });
@@ -23,6 +24,41 @@ module.exports = {
         goldenCross: wasBelow && nowAbove
       }
     };
+  },
+  pms: {
+    ...Combinatorics.cartesianProduct(
+      [
+          '10min',
+          '30min',
+          'daily'
+      ],
+      [
+          'notWatchout',
+          'shouldWatchout',
+      ],
+      [
+          'firstAlert'
+      ],
+      [
+          'dinner',
+          'lunch',
+          'brunch',
+          'initial'
+      ]
+    ).toArray().reduce((acc, arr) => {
+
+      return {
+        ...acc,
+        ...Combinatorics.power(arr)
+          .toArray()
+          .filter(s => s && s.length)
+          .reduce((inner, combo) => ({
+            ...inner,
+            [combo.join('-')]: combo
+          }), {})
+      }
+
+    }, {}),
   }
 };
 

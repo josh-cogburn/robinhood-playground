@@ -1,3 +1,4 @@
+const Combinatorics = require('js-combinatorics');
 const { RSI } = require('technicalindicators');
 
 const getRSI = values => {
@@ -35,41 +36,83 @@ module.exports = {
     
     pms: {
         
-        // rsilt20: strat => [
-        //     'rsilt20',
-        //     'rsilt15',
-        //     'rsilt10',
-        // ].some(text => strat.includes(text)),
 
-        shouldWatchout: 'shouldWatchout',
-        '10minWatchout': ['shouldWatchout', '10min'],
-        notWatchout: 'notWatchout',
+        ...Combinatorics.cartesianProduct(
+            [
+                '10min',
+                '30min',
+                'daily'
+            ],
+            [
+                'notWatchout',
+                'shouldWatchout',
+            ],
+            [
+                'firstAlert'
+            ],
+            [
+                'rsilt5',
+                'rsilt10',
+                'rsilt15'
+            ],
+            [
+                'dinner',
+                'lunch',
+                'brunch',
+                'initial'
+            ]
+          ).toArray().reduce((acc, arr) => {
+    
+            return {
+              ...acc,
+              ...Combinatorics.power(arr)
+                .toArray()
+                .filter(s => s && s.length)
+                .reduce((inner, combo) => ({
+                  ...inner,
+                  [combo.join('-')]: combo
+                }), {})
+            }
+    
+          }, {}),
 
-        firstAlerts: 'firstAlert',
+          
 
-        'daily': 'daily',
-        '30minute': '30min',
-        '10minute': '10min',
-        '5minute': '5min',
+        // // rsilt20: strat => [
+        // //     'rsilt20',
+        // //     'rsilt15',
+        // //     'rsilt10',
+        // // ].some(text => strat.includes(text)),
 
-        'options': ['options'],
-        '30minoptions': ['30min', 'options'],
-        '10minoptions': ['10min', 'options'],
+        // shouldWatchout: 'shouldWatchout',
+        // '10minWatchout': ['shouldWatchout', '10min'],
+        // notWatchout: 'notWatchout',
 
-        lessthan5: 'rsilt5',
-        lessthan5fitty: ['rsilt5', 'fitty'],
-        lessthan5fitty10min: ['rsilt5', 'fitty', '10min'],
-        lessthan10fitty: ['rsilt10', 'fitty'],
+        // firstAlerts: 'firstAlert',
+
+        // 'daily': 'daily',
+        // '30minute': '30min',
+        // '10minute': '10min',
+        // '5minute': '5min',
+
+        // 'options': ['options'],
+        // '30minoptions': ['30min', 'options'],
+        // '10minoptions': ['10min', 'options'],
+
+        // lessthan5: 'rsilt5',
+        // lessthan5fitty: ['rsilt5', 'fitty'],
+        // lessthan5fitty10min: ['rsilt5', 'fitty', '10min'],
+        // lessthan10fitty: ['rsilt10', 'fitty'],
 
 
-        lessthan10: 'rsilt10',
-        lessthan15: 'rsilt15',
+        // lessthan10: 'rsilt10',
+        // lessthan15: 'rsilt15',
 
 
-        rhtopunder300: ['under300', 'rhtop'],
+        // rhtopunder300: ['under300', 'rhtop'],
 
-        top10030min: ['30min', 'top100'],
-        top100under20: ['30min', 'top100', 'under20'],
+        // top10030min: ['30min', 'top100'],
+        // top100under20: ['30min', 'top100', 'under20'],
 
 
 

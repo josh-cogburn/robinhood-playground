@@ -15,7 +15,7 @@ class TodaysStrategies extends Component {
     }
     toggleForPurchaseOnly = () => this.setState({ forPurchaseOnly: !this.state.forPurchaseOnly })
     render() {
-        let { pmPerfs, settings, predictionModels } = this.props;
+        let { pmPerfs, settings, predictionModels, pmsAnalyzed } = this.props;
         let { forPurchaseOnly } = this.state;
 
         const forPurchasePMs = settings.forPurchase.map(line =>
@@ -38,17 +38,24 @@ class TodaysStrategies extends Component {
                         <th>percUp</th>
                         <th>count</th>
                         <th>prediction model</th>
+                        <th>8-day avg</th>
+                        <th>8-day perc up</th>
                     </thead>
                     <tbody>
                         {
-                            pmPerfs.map(perf => (
-                                <tr style={{ fontWeight: isForPurchase(perf) ? 'bold' : 'inherit' }}>
-                                    <td><TrendPerc value={perf.avgTrend} /></td>
-                                    <td><TrendPerc value={perf.percUp / 100} redAt={50} noPlus={true} round={true} /></td>
-                                    <td>{perf.count}</td>
-                                    <td>{perf.pmName}</td>
-                                </tr>
-                            ))
+                            pmPerfs.map(perf => {
+                                const foundAnalyzed = pmsAnalyzed.find(pm => pm.pm === perf.pmName) || {};
+                                return (
+                                    <tr style={{ fontWeight: isForPurchase(perf) ? 'bold' : 'inherit' }}>
+                                        <td><TrendPerc value={perf.avgTrend} /></td>
+                                        <td><TrendPerc value={perf.percUp / 100} redAt={50} noPlus={true} round={true} /></td>
+                                        <td>{perf.count}</td>
+                                        <td>{perf.pmName}</td>
+                                        <td><TrendPerc value={foundAnalyzed.overallAvg} /></td>
+                                        <td><TrendPerc value={foundAnalyzed.percUp} redAt={50} noPlus={true} round={true} /></td>
+                                    </tr>
+                                );
+                            })
                         }
                     </tbody>
                 </table>

@@ -1,3 +1,4 @@
+const Combinatorics = require('js-combinatorics');
 const { MACD } = require('technicalindicators');
 //[fast = 5, slow = 8, signal = 3]
 const getMacd = (values, [fast = 12, slow = 26, signal = 9]) => {
@@ -111,6 +112,45 @@ module.exports = {
         return handleMACDConfig(config)(allCurrents);
     },
     pms: {
+
+        ...Combinatorics.cartesianProduct(
+            [
+                'isSignalCross',
+                'isZeroCross',
+                'bearishSignal',
+            ],
+            [
+                'notWatchout',
+                'shouldWatchout',
+            ],
+            [
+                'isLow'
+            ],
+            [
+                'firstAlert'
+            ],
+            [
+                'dinner',
+                'lunch',
+                'brunch',
+                'initial'
+            ]
+        ).toArray().reduce((acc, arr) => {
+
+            return {
+                ...acc,
+                ...Combinatorics.power(arr)
+                .toArray()
+                .filter(s => s && s.length)
+                .reduce((inner, combo) => ({
+                    ...inner,
+                    [combo.join('-')]: combo
+                }), {})
+            }
+
+        }, {}),
+
+
         signalCrosses: 'isSignalCross',
         zeroCrosses: 'isZeroCross',
         isLow: 'isLow',
