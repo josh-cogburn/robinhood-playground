@@ -47,11 +47,19 @@ module.exports = {
             rsi-30min-shouldWatchout-rsilt15-dinner 2
             rsi-30min-shouldWatchout-rsilt15-dinner 2
             rsi-firstAlert-rsilt5-dinner 1
+            rsi-30min-shouldWatchout-firstAlert-rsilt15-lunch 2
             rsi-10min-notWatchout-rsilt10 16
             rsi-10min-notWatchout-rsilt5 3
             rsi-10min-notWatchout-rsilt5 3
             rsi-10min-notWatchout-firstAlert-rsilt15 10
         `, 1, 'RSI'),
+
+        // september - TOTAL 25
+        ...pm(`
+            sep2019-sep17
+            sep2019-sep15
+        `, 1, 'sep 1517'),
+        
         // 1/5 other stuff - TOTAL 10
         ...pm(`
             pennyscan-droppers-zScoreInverseTrendPlusVol-dinner 1
@@ -90,5 +98,5 @@ module.exports = {
             'MNGA'
         ]
     },
-    expectedPickCount
+    expectedPickCount: expectedPickCount * 1.1
 };
