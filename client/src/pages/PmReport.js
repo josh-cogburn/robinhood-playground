@@ -60,7 +60,7 @@ const sum = arr => arr.filter(Boolean).reduce((acc, val) => acc + val, 0);
 const TrendTable = ({ trends }) => (
     <table>
         <thead>
-            <th width="63px">avgTrend</th>
+            <th>avgTrend</th>
             <th>percUp</th>
             <th>count</th>
             <th>prediction model</th>
