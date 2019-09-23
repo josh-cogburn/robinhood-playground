@@ -153,14 +153,15 @@ module.exports = async () => {
             minVolume: 150000
         })).map(t => t.ticker),
 
-        lowVolumeTrash: (await runScan({
-            minPrice: 1,
-            maxPrice: 10,
-            count: 120,
-            includeStSent: false,
-            minVolume: 20000,
-            maxVolume: 90000,
-        })).map(t => t.ticker),
+        // lowVolumeTrash: (await runScan({
+        //     minPrice: 1,
+        //     maxPrice: 10,
+        //     count: 120,
+        //     includeStSent: false,
+        //     minVolume: 20000,
+        //     maxVolume: 90000,
+        // })).map(t => t.ticker),
+        
         // upcoming: await getRhStocks('upcoming-earnings'),
         // rhtop100: await getRhStocks('100-most-popular'),
         // ...await getFinvizCollections(),

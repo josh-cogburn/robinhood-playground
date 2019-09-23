@@ -2,14 +2,14 @@ const chunkApi = require('../../utils/chunk-api');
 const getTrend = require('../../utils/get-trend');
 const { uniq } = require('underscore');
 
-module.exports = async (tickers, period) => {
+module.exports = async (tickers, period, daysBack, includeAfterHours = false) => {
 
     if (typeof tickers === 'string') tickers = [tickers];
     period = Number(period);
 
     // console.log(tickers)
 
-    const extendedHistoricals = period === 30 ? [] : await chunkApi(
+    const extendedHistoricals = !includeAfterHours || period === 30 ? [] : await chunkApi(
       tickers,
       async tickerStr => {
         return (
