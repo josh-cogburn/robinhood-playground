@@ -62,9 +62,12 @@ module.exports = {
         
         // 1/5 other stuff - TOTAL 10
         ...pm(`
+            pennyscan-droppers-projectedVolume-dinner 1
             pennyscan-droppers-zScoreInverseTrendPlusVol-dinner 1
             pennyscan-unfiltered-projectedVolume-dinner 1
             pennyscan-droppers-dollarVolume-dinner 1
+            pennyscan-droppers-worstSsTrendRatio-brunch 1
+            pennyscan-droppers-zScoreInverseTrendPlusVol-dinner 1
             sep2019-sep18 1
             sep2019-sep18 1
             sep2019-sep18 1
@@ -82,6 +85,7 @@ module.exports = {
             sep2019-rsi10
             pennyscan-hot-st-dollarVolume-lunch
             pennyscan-unfiltered-dollarVolume-brunch
+            pennyscan-droppers-zScoreHotAndCool-lunch
         `, 2, 'rarities')
 
 
