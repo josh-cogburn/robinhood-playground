@@ -33,7 +33,7 @@ module.exports = async ({
         try {
             const pickPrice = (withPrices.find(obj => obj.ticker === stock) || {}).price;
             const { askPrice } = await lookup(stock);
-            const buyPrice = Math.min(askPrice, pickPrice * 1.05);
+            const buyPrice = Math.min(askPrice, pickPrice) * 1.05;
             log({
                 askPrice,
                 pickPrice,

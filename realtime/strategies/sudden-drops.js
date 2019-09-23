@@ -6,7 +6,7 @@ module.exports = {
     period: [5, 10, 30],
     collections: ['fitty', 'options', 'spy', 'twoToFive', 'fiveToTen', 'lowVolumeTrash'],
     handler: async ({ ticker, allPrices }) => {
-        const allCurrents = allPrices.slice().map(obj => obj.currentPrice);
+        const allCurrents = allPrices.slice(-39).map(obj => obj.currentPrice);
         const mostRecent = allCurrents.pop();
         const min = Math.min(...allCurrents);
         const trendFromMin = getTrend(mostRecent, min);
