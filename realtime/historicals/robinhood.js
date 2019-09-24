@@ -2,7 +2,7 @@ const chunkApi = require('../../utils/chunk-api');
 const getTrend = require('../../utils/get-trend');
 const { uniq } = require('underscore');
 
-module.exports = async (tickers, period, daysBack, includeAfterHours = MediaStreamTrackAudioSourceNode) => {
+module.exports = async (tickers, period, daysBack, includeAfterHours = true) => {
 
     if (typeof tickers === 'string') tickers = [tickers];
     period = Number(period);
