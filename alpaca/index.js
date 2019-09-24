@@ -24,7 +24,12 @@ client.onOrderUpdate(data => {
       symbol,
     }
   } = data;
-  if (event === 'fill') {
+  const isFill = event === 'fill';
+  strlog({
+    isFill,
+    symbol
+  })
+  if (isFill) {
     newAvgDowner({
       ticker: symbol, 
       buyPrice: filled_avg_price 

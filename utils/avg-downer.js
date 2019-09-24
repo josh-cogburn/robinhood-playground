@@ -81,7 +81,7 @@ module.exports = class AvgDowner {
   }
   getMinKey() {
     if (!this.startTime) return null;
-    const msPast = Date.now() - this.startTime();
+    const msPast = Date.now() - this.startTime;
     const minPast = Math.floor(msPast / 60000);
     const minKeys = [1, 5, 10, 30, 60, 120];
     const foundMinKey = minKeys.find(min => minPast < min);
