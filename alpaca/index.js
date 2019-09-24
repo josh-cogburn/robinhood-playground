@@ -1,6 +1,7 @@
 const { alpaca: alpacaConfig } = require('../config');
 const Alpaca = require('@alpacahq/alpaca-trade-api');
 const alpaca = new Alpaca(alpacaConfig);
+const newAvgDowner = require('../utils/new-avg-downer');
 
 const client = alpaca.websocket
 client.onConnect(function() {
@@ -14,7 +15,16 @@ client.onStateChange(newState => {
   console.log(`State changed to ${newState}`)
 })
 client.onOrderUpdate(data => {
-  console.log(`Order updates: ${JSON.stringify(data)}`)
+  console.log(`Order updates: ${JSON.stringify(data)}`);
+  const {
+    filled_avg_price,
+    // filled_qty,
+    symbol,
+    status
+  } = data;
+  if (status === 'filled') {
+    newAvgDowner(symbol, filled_avg_price)
+  }
 })
 client.onAccountUpdate(data => {
   console.log(`Account updates: ${JSON.stringify(data)}`)

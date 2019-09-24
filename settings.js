@@ -27,8 +27,12 @@ module.exports = {
     purchaseAmt: 120,
     forPurchase: [
 
+        '[avg-downer]',
+        '[avg-downer]',
+
         // 2/5 sudden drops - TOTAL 42
         ...pm(`
+            sudden-drops-notWatchout 15
             sudden-drops-notWatchout 15
             sudden-drops-notWatchout 15
             sudden-drops-notWatchout 15
@@ -56,8 +60,9 @@ module.exports = {
 
         // september - TOTAL 25
         ...pm(`
-            sep2019-sep17
-            sep2019-sep15
+            sep2019-sep17 24
+            sep2019-sep15 8
+            sep2019-sep15 8
         `, 1, 'sep 1517'),
         
         // 1/5 other stuff - TOTAL 10
@@ -75,6 +80,7 @@ module.exports = {
             sep2019-sep18 1
             sep2019-sep18 1
             sep2019-pennyscans 4
+            multi-hits-3count-shouldWatchout-firstAlert-dinner 4
         `, 3, 'other stuff'),
 
         // rarities 1/5 - TOTAL 6

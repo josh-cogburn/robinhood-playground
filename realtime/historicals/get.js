@@ -7,7 +7,7 @@ const rhHistoricals = require('./robinhood');
 const tiingoHistoricals = require('./tiingo');
 const dailyHistoricals = require('./daily');
 
-module.exports = async (tickers, period, daysBack) => {
+module.exports = async (tickers, period, daysBack, includeAfterHours) => {
 
   const historicalMethods = {
     5: rhHistoricals,
@@ -26,7 +26,7 @@ module.exports = async (tickers, period, daysBack) => {
     );
 
   return removeClosures(
-    await historicalMethods[period](tickers, period, daysBack)
+    await historicalMethods[period](tickers, period, daysBack, includeAfterHours)
   );
 
 };

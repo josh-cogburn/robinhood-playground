@@ -700,6 +700,7 @@ module.exports = new (class RealtimeRunner {
       ...Object.keys(this.collections),
       
       'volume-increasing',
+      'avg-downer',
 
       'pennyscan-highHit',
       ...[30, 90, 120, 360].map(period => `pennyscan-highHit${period}`),
