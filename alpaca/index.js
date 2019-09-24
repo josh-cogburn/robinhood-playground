@@ -17,13 +17,15 @@ client.onStateChange(newState => {
 client.onOrderUpdate(data => {
   console.log(`Order updates: ${JSON.stringify(data)}`);
   const {
-    filled_avg_price,
-    // filled_qty,
-    symbol,
-    status
+    event,
+    order: {
+      filled_avg_price,
+      // filled_qty,
+      symbol,
+    }
   } = data;
-  if (status === 'filled') {
-    newAvgDowner({ 
+  if (event === 'fill') {
+    newAvgDowner({
       ticker: symbol, 
       buyPrice: filled_avg_price 
     })
