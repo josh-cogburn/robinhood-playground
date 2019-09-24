@@ -9,24 +9,24 @@ module.exports = async (tickers, period, daysBack, includeAfterHours = true) => 
 
     // console.log(tickers)
 
-    // const extendedHistoricals = !includeAfterHours || period === 30 ? [] : await chunkApi(
-    //   tickers,
-    //   async tickerStr => {
-    //     return (
-    //       await Robinhood.url(
-    //         `https://api.robinhood.com/quotes/historicals/?symbols=${tickerStr}&interval=${period}minute&`
-    //       )
-    //     ).results;
-    //   },
-    //   75
-    // );
+    const extendedHistoricals = !includeAfterHours || period === 30 ? [] : await chunkApi(
+      tickers,
+      async tickerStr => {
+        return (
+          await Robinhood.url(
+            `https://api.robinhood.com/quotes/historicals/?symbols=${tickerStr}&interval=${period}minute&`
+          )
+        ).results;
+      },
+      75
+    );
 
     const allHistoricals = await chunkApi(
         tickers,
         async tickerStr => {
           return (
             await Robinhood.url(
-              `https://api.robinhood.com/quotes/historicals/?symbols=${tickerStr}&interval=${period}minute&${includeAfterHours && period !== 30 ? `bounds=extended` : `span=week`}`
+              `https://api.robinhood.com/quotes/historicals/?symbols=${tickerStr}&interval=${period}minute&span=week`
             )
           ).results;
         },
@@ -38,6 +38,7 @@ module.exports = async (tickers, period, daysBack, includeAfterHours = true) => 
 
     const processHistoricals = historicals => {
       return historicals
+        .filter(hist => hist.volume)
         .map((hist, index, arr) => {
           const prevClose = (arr[index - 1] || {}).close_price;
           ['open_price', 'close_price', 'high_price', 'low_price'].forEach(key => {
@@ -66,7 +67,7 @@ module.exports = async (tickers, period, daysBack, includeAfterHours = true) => 
         ...acc,
         [symbol]: processHistoricals(uniq([
           ...historicals,
-          // ...(extendedHistoricals.find(hist => hist.symbol === symbol) || {}).historicals || []
+          ...(extendedHistoricals.find(hist => hist.symbol === symbol) || {}).historicals || []
         ], s => s.begins_at))
       }), {});
 
