@@ -27,11 +27,14 @@ module.exports = {
     purchaseAmt: 120,
     forPurchase: [
 
-        '[avg-downer]',
-        '[avg-downer]',
+        ...pm(`
+            avg-downer 3
+        `, 3, 'avg downers'),
 
         // 2/5 sudden drops - TOTAL 42
+
         ...pm(`
+            sudden-drops-notWatchout 15
             sudden-drops-notWatchout 15
             sudden-drops-notWatchout 15
             sudden-drops-notWatchout 15

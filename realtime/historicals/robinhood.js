@@ -2,31 +2,31 @@ const chunkApi = require('../../utils/chunk-api');
 const getTrend = require('../../utils/get-trend');
 const { uniq } = require('underscore');
 
-module.exports = async (tickers, period, daysBack, includeAfterHours = false) => {
+module.exports = async (tickers, period, daysBack, includeAfterHours = MediaStreamTrackAudioSourceNode) => {
 
     if (typeof tickers === 'string') tickers = [tickers];
     period = Number(period);
 
     // console.log(tickers)
 
-    const extendedHistoricals = !includeAfterHours || period === 30 ? [] : await chunkApi(
-      tickers,
-      async tickerStr => {
-        return (
-          await Robinhood.url(
-            `https://api.robinhood.com/quotes/historicals/?symbols=${tickerStr}&interval=${period}minute&bounds=extended`
-          )
-        ).results;
-      },
-      75
-    );
+    // const extendedHistoricals = !includeAfterHours || period === 30 ? [] : await chunkApi(
+    //   tickers,
+    //   async tickerStr => {
+    //     return (
+    //       await Robinhood.url(
+    //         `https://api.robinhood.com/quotes/historicals/?symbols=${tickerStr}&interval=${period}minute&`
+    //       )
+    //     ).results;
+    //   },
+    //   75
+    // );
 
     const allHistoricals = await chunkApi(
         tickers,
         async tickerStr => {
           return (
             await Robinhood.url(
-              `https://api.robinhood.com/quotes/historicals/?symbols=${tickerStr}&interval=${period}minute&span=week`
+              `https://api.robinhood.com/quotes/historicals/?symbols=${tickerStr}&interval=${period}minute${includeAfterHours ? `bounds=extended` : `span=week`}`
             )
           ).results;
         },
@@ -66,7 +66,7 @@ module.exports = async (tickers, period, daysBack, includeAfterHours = false) =>
         ...acc,
         [symbol]: processHistoricals(uniq([
           ...historicals,
-          ...(extendedHistoricals.find(hist => hist.symbol === symbol) || {}).historicals || []
+          // ...(extendedHistoricals.find(hist => hist.symbol === symbol) || {}).historicals || []
         ], s => s.begins_at))
       }), {});
 
