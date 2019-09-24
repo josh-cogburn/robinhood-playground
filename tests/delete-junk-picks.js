@@ -1,6 +1,6 @@
 const Pick = require('../models/Pick');
 
-const INCLUDE = ['lowVolumeTrash'];
+const INCLUDE = [];
 const DONT_INCLUDE = []//'rsi-', 'golden-cross-', 'sudden-drops-', 'pennyscan-'];
 
 

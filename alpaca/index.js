@@ -23,7 +23,10 @@ client.onOrderUpdate(data => {
     status
   } = data;
   if (status === 'filled') {
-    newAvgDowner(symbol, filled_avg_price)
+    newAvgDowner({ 
+      ticker: symbol, 
+      buyPrice: filled_avg_price 
+    })
   }
 })
 client.onAccountUpdate(data => {
