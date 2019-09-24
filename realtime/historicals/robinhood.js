@@ -26,7 +26,7 @@ module.exports = async (tickers, period, daysBack, includeAfterHours = true) => 
         async tickerStr => {
           return (
             await Robinhood.url(
-              `https://api.robinhood.com/quotes/historicals/?symbols=${tickerStr}&interval=${period}minute&${includeAfterHours ? `bounds=extended` : `span=week`}`
+              `https://api.robinhood.com/quotes/historicals/?symbols=${tickerStr}&interval=${period}minute&${includeAfterHours && period !== 30 ? `bounds=extended` : `span=week`}`
             )
           ).results;
         },
