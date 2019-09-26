@@ -42,9 +42,9 @@ module.exports = class AvgDowner {
     const lastPrice = avgDownPrices[avgDownPrices.length - 1] || buyPrice;
     const trendDown = getTrend(currentPrice, lastPrice);
 
-    console.log(`AVG-DOWNER: ${ticker} observed at ${askPrice} ... bought at ${buyPrice} ... trended ${trendDown}`);
+    console.log(`AVG-DOWNER: ${ticker} observed at ${currentPrice} ... bought at ${buyPrice} ... trended ${trendDown}`);
     if (trendDown < -2.5) {
-      this.avgDownPrices.push(askPrice);
+      this.avgDownPrices.push(currentPrice);
       await recordPicks('avg-downer', 5000, [ticker], null, { 
         keys: {
           [`${avgDownPrices.length}count`]: true,
