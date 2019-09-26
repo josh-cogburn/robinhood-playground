@@ -16,12 +16,12 @@ module.exports = {
         // })();
 
         // if (onlyToday.length < 5) return;
-        const lowVolCount = allPrices.filter(({ volume }) => volume < 1500).length;
+        const lowVolCount = allPrices.filter(({ volume }) => volume && volume < 1500).length;
         const lowVolWarning = lowVolCount / allPrices.length > 0.15;
 
-        const currentsToday = allPrices.slice(-45).map(({ currentPrice }) => currentPrice);
-        const mostRecent = currentsToday.pop();
-        const min = Math.min(...currentsToday);
+        const allCurrents = allPrices.slice(-22).map(({ currentPrice }) => currentPrice);
+        const mostRecent = allCurrents.pop();
+        const min = Math.min(...allCurrents);
         const trendFromMin = getTrend(mostRecent, min);
         const bigJump = trendFromMin < -5;
 
