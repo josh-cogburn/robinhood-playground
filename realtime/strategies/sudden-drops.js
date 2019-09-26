@@ -19,7 +19,7 @@ module.exports = {
         const lowVolCount = allPrices.filter(({ volume }) => volume < 1500).length;
         const lowVolWarning = lowVolCount / allPrices.length > 0.15;
 
-        const currentsToday = allPrices.map(({ currentPrice }) => currentPrice);
+        const currentsToday = allPrices.slice(-45).map(({ currentPrice }) => currentPrice);
         const mostRecent = currentsToday.pop();
         const min = Math.min(...currentsToday);
         const trendFromMin = getTrend(mostRecent, min);
@@ -42,6 +42,8 @@ module.exports = {
         if (failedHistoricalCheck) {
           return console.log('failed historical check', ticker, mostRecent);
         }
+
+        
 
         // big jump and passed historical check...
         if (allPrices.length >= 3) {

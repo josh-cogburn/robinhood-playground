@@ -11,8 +11,6 @@ const getRisk = async ({
     quote_data
 } = {}) => {
 
-    ticker = 'ECOR';
-    
     // console.log('evaluating risk ...', ticker);
     
     let dailyYear = yearHistoricals ? yearHistoricals : await (async () => {
