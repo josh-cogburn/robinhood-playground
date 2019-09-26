@@ -1,5 +1,5 @@
-const INITIAL_TIMEOUT = 15 * 1000;      // 15 seconds
-const END_AFTER = 2 * 1000 * 60 * 60;   // 2 hours
+const INITIAL_TIMEOUT = 10 * 1000;      // 10 seconds
+const END_AFTER = 2 * 1000 * 60 * 60;   // 2 hr
 
 const getMinutesFrom630 = require('./get-minutes-from-630');
 const lookup = require('./lookup');
@@ -33,13 +33,14 @@ module.exports = class AvgDowner {
       ticker,
       avgDownPrices,
       buyPrice,
+      strategy
     } = this;
 
     const l = await lookup(ticker);
     strlog({ l })
-    const { askPrice } = l;
+    const { currentPrice } = l;
     const lastPrice = avgDownPrices[avgDownPrices.length - 1] || buyPrice;
-    const trendDown = getTrend(askPrice, lastPrice);
+    const trendDown = getTrend(currentPrice, lastPrice);
 
     console.log(`AVG-DOWNER: ${ticker} observed at ${askPrice} ... bought at ${buyPrice} ... trended ${trendDown}`);
     if (trendDown < -2.5) {

@@ -5,6 +5,7 @@ import { avgArray, percUp, zScore } from '../utils/array-math';
 
 import Pick from '../components/Pick';
 import TrendPerc from '../components/TrendPerc';
+import { debounce } from 'underscore';
 
 const calcBgColor = perf => {
     // console.log({
@@ -95,13 +96,21 @@ class TodaysStrategies extends Component {
     constructor() {
         super();
         this.state = {
+            filter: '',
             forPurchaseOnly: true
         };
     }
-    toggleForPurchaseOnly = () => this.setState({ forPurchaseOnly: !this.state.forPurchaseOnly })
+    toggleForPurchaseOnly = () => this.setState({ forPurchaseOnly: !this.state.forPurchaseOnly });
+    updateFilter = debounce(filter => this.setState({ filter }), 500);
+    filterChange = event => {
+        console.log(event.target.value);
+        this.updateFilter(event.target.value);
+    };
     render() {
         let { pmPerfs, settings, predictionModels, pmsAnalyzed } = this.props;
-        let { forPurchaseOnly } = this.state;
+        let { forPurchaseOnly, filter } = this.state;
+
+        const pmMatchesFilter = pmName => filter.split(',').every(str => pmName.includes(str));
 
         const forPurchasePMs = settings.forPurchase.map(line =>
             line.substring(1, line.length - 1)
@@ -121,17 +130,19 @@ class TodaysStrategies extends Component {
             jsonPercUp: jsonAnalysis.percUp,
         });
 
-        pmPerfs = pmPerfs.map(({ avgTrend, percUp, pmName, count }) => {
-            const foundLebowski = pmsAnalyzed.find(pm => pm.pm === pmName) || {};
-            return {
-                ...flattenLebowski(foundLebowski),
-                pmName,
-                count,
-                avgTrend,
-                percUp,
-                isForPurchase: isForPurchase(pmName)
-            };
-        });
+        pmPerfs = pmPerfs
+            .filter(({ pmName }) => pmMatchesFilter(pmName))
+            .map(({ avgTrend, percUp, pmName, count }) => {
+                const foundLebowski = pmsAnalyzed.find(pm => pm.pm === pmName) || {};
+                return {
+                    ...flattenLebowski(foundLebowski),
+                    pmName,
+                    count,
+                    avgTrend,
+                    percUp,
+                    isForPurchase: isForPurchase(pmName)
+                };
+            });
 
 
         pmPerfs = pmPerfs
@@ -177,20 +188,23 @@ class TodaysStrategies extends Component {
                 
             });
 
-        const noHitTops = pmsAnalyzed.filter(pm => {
-            return !pmPerfs.find(pmPerf => pmPerf.pmName === pm.pm);
-        }).map(flattenLebowski);
+        const noHitTops = pmsAnalyzed
+            .filter(pm => pmMatchesFilter(pm.pm))
+            .filter(pm => {
+                return !pmPerfs.find(pmPerf => pmPerf.pmName === pm.pm);
+            }).map(flattenLebowski);
 
 
         if (forPurchaseOnly) { 
             pmPerfs = pmPerfs.filter(perf => isForPurchase(perf.pmName));
         }
 
-        console.log({ pmPerfs, noHitTops })
+        console.log({ pmPerfs, noHitTops, filter })
 
         return (
             <div style={{ padding: '15px' }}>
 
+                Filter: <input type="text" onChange={this.filterChange}/><br/>
                 <h2>Current PM Trends</h2>
                 <label>
                     <input type="checkbox" checked={forPurchaseOnly} onChange={this.toggleForPurchaseOnly} />

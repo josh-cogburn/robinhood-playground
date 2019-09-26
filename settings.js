@@ -29,20 +29,71 @@ module.exports = {
 
         ...pm(`
             avg-downer 3
-        `, 4, 'avg downers'),
+        `, 6, 'avg downers'),
 
         // 2/5 sudden drops - TOTAL 42
 
+
         ...pm(`
-            sudden-drops-notWatchout 15
-            sudden-drops-notWatchout 15
-            sudden-drops-notWatchout 15
-            sudden-drops-notWatchout-minorJump-brunch 2
-            sudden-drops-notWatchout-majorJump 1
+            sudden-drops-majorJump 5
+            sudden-drops-majorJump 5
+            sudden-drops-brunch 7
             sudden-drops-majorJump-dinner 1
-            sudden-drops-notWatchout-initial 6
-            sudden-drops-shouldWatchout 2
-        `, 2, 'sudden drops'),
+        `, 1, 'general sudden-drops'),  // 17
+
+        ...pm(`
+            sudden-drops-notWatchout-lunch 6
+            sudden-drops-notWatchout-majorJump 5
+            sudden-drops-notWatchout-majorJump 5
+            sudden-drops-notWatchout-majorJump 5
+            sudden-drops-notWatchout-minorJump-brunch 1
+            sudden-drops-notWatchout-minorJump-brunch 1
+            sudden-drops-notWatchout-minorJump-brunch 1
+            sudden-drops-notWatchout-minorJump-lunch 6
+        `, 1, 'sudden creme'),          // 30
+
+
+        ...pm(`
+            sudden-drops-shouldWatchout-brunch 4
+            sudden-drops-shouldWatchout-lunch 2
+            sudden-drops-shouldWatchout-dinner 2
+        `, 1, 'sudden drops should watchouts without initial'),
+                                        // 8
+        
+        
+        ...pm(`
+            rsi-10min-rsilt5-dinner 2
+            rsi-10min-rsilt15-brunch 5
+            rsi-rsilt10-dinner 2
+            rsi-10min-shouldWatchout-lunch 2
+            rsi-10min-firstAlert-rsilt15 3
+        `, 1, 'rsi'),
+                                        // 11
+
+        ...pm(`
+            pennyscan-unfiltered-worstSS-dinner
+        `, 1, 'penny scans'),
+                                        // 1
+
+        ...pm(`
+            macd-bearishSignal-shouldWatchout-firstAlert-dinner
+
+        `, 1, 'filter creme')
+
+
+
+
+
+        // ...pm(`
+        //     sudden-drops-notWatchout 15
+        //     sudden-drops-notWatchout 15
+        //     sudden-drops-notWatchout 15
+        //     sudden-drops-notWatchout-minorJump-brunch 2
+        //     sudden-drops-notWatchout-majorJump 1
+        //     sudden-drops-majorJump-dinner 1
+        //     sudden-drops-notWatchout-initial 6
+        //     sudden-drops-shouldWatchout 2
+        // `, 2, 'sudden drops'),
 
         // 1/5 rsi - TOTAL 42
         // ...pm(`
@@ -109,5 +160,5 @@ module.exports = {
             'MNGA'
         ]
     },
-    expectedPickCount: expectedPickCount * 1.1
+    expectedPickCount
 };

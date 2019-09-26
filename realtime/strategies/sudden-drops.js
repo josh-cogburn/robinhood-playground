@@ -3,12 +3,25 @@ const getMultipleHistoricals = require('../../app-actions/get-multiple-historica
 const getTrend = require('../../utils/get-trend');
 
 module.exports = {
-    period: [5, 10, 30],
+    period: [5, 10],
     collections: ['fitty', 'options', 'spy', 'twoToFive', 'fiveToTen', 'lowVolumeTrash'],
     handler: async ({ ticker, allPrices }) => {
-        const allCurrents = allPrices.slice(-20).map(obj => obj.currentPrice);
-        const mostRecent = allCurrents.pop();
-        const min = Math.min(...allCurrents);
+
+        // const onlyToday = (() => {
+        //   const todayDate = (new Date()).getDate();
+        //   return allPrices
+        //     .filter(({ timestamp }) => 
+        //       (new Date(timestamp)).getDate() === todayDate
+        //     );
+        // })();
+
+        // if (onlyToday.length < 5) return;
+        const lowVolCount = allPrices.filter(({ volume }) => volume < 1500).length;
+        const lowVolWarning = lowVolCount / allPrices.length > 0.15;
+
+        const currentsToday = allPrices.map(({ currentPrice }) => currentPrice);
+        const mostRecent = currentsToday.pop();
+        const min = Math.min(...currentsToday);
         const trendFromMin = getTrend(mostRecent, min);
         const bigJump = trendFromMin < -5;
 
@@ -43,6 +56,7 @@ module.exports = {
                     })();
                     return { [key]: true };
                 })(),
+                lowVolWarning,
                 // [failedHistoricalCheck]: failedHistoricalCheck
               },
               data: {
