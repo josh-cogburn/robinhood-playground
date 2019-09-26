@@ -4,7 +4,6 @@ const END_AFTER = 2 * 1000 * 60 * 60;   // 2 hr
 const getMinutesFrom630 = require('./get-minutes-from-630');
 const lookup = require('./lookup');
 const getTrend = require('./get-trend');
-const recordPicks = require('../app-actions/record-picks');
 
 module.exports = class AvgDowner {
   constructor({ 
@@ -45,6 +44,7 @@ module.exports = class AvgDowner {
     console.log(`AVG-DOWNER: ${ticker} observed at ${currentPrice} ... bought at ${buyPrice} ... trended ${trendDown}`);
     if (trendDown < -2.5) {
       this.avgDownPrices.push(currentPrice);
+      const recordPicks = require('../app-actions/record-picks');
       await recordPicks('avg-downer', 5000, [ticker], null, { 
         keys: {
           [`${avgDownPrices.length}count`]: true,
