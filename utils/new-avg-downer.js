@@ -5,17 +5,17 @@ module.exports = data => {
 
   const { 
     ticker, 
-    // buyPrice, 
+    buyPrice, 
     // initialTimeout = INITIAL_TIMEOUT, 
     // strategy,
   } = data;
 
   if (allAvgDowners[ticker]) {
-    allAvgDowners[ticker].stop();
-    allAvgDowners[ticker] = null;
+    allAvgDowners[ticker].avgDownPrices.push(buyPrice);
+  } else {
+    allAvgDowners[ticker] = new AvgDowner(data);
   }
 
-  allAvgDowners[ticker] = new AvgDowner(data);
 
 };
 
