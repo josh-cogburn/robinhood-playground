@@ -462,9 +462,23 @@ module.exports = new (class RealtimeRunner {
   async runSingleStrategy(tickersAndAllPrices, strategy, period) {
     const picks = [];
     const { strategyName, handler, collections } = strategy;
+    strlog({
+      collections,
+      mapped: collections.map(collection => {
+        return this.collections[collection]
+      })
+    })
     const filteredByCollections = collections && collections.length ? 
       tickersAndAllPrices.filter(({ ticker }) => {
         return collections.some(collection => {
+          if (!this.collections[collection]) {
+            strlog('bout to error!');
+            strlog({
+              collection,
+              ticker,
+              tickersInCollection: !this.collections[collection],
+            })
+          }
           return this.collections[collection].includes(ticker);
         });
       }) : tickersAndAllPrices;

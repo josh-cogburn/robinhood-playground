@@ -137,6 +137,14 @@ module.exports = async () => {
             minVolume: 300000
         })).map(t => t.ticker),
 
+        lowVolFitty: (await runScan({
+            minPrice: 0,
+            maxPrice: 0.60,
+            count: 33,
+            includeStSent: false,
+            maxVolume: 300000
+        })).map(t => t.ticker),
+
         zeroToOne: (await runScan({
             minPrice: 0,
             maxPrice: 1,
