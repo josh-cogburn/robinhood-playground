@@ -44,8 +44,10 @@ module.exports = class AvgDowner {
     console.log(`AVG-DOWNER: ${ticker} observed at ${currentPrice} ... bought at ${buyPrice} ... trended ${trendDown}`);
     if (trendDown < -2.5) {
       this.avgDownPrices.push(currentPrice);
-      const recordPicks = require('../app-actions/record-picks');
-      await recordPicks('avg-downer', 5000, [ticker], null, { 
+      const realtimeRunner = require('../realtime/RealtimeRunner');
+      await realtimeRunner.handlePick({
+        strategyName: 'avg-downer',
+        ticker,
         keys: {
           [`${avgDownPrices.length}count`]: true,
           [this.getMinKey()]: true
@@ -54,7 +56,7 @@ module.exports = class AvgDowner {
           trendDown,
           strategy
         }
-      });
+      }, true);
     }
 
     const shouldStopReason = this.shouldStop();

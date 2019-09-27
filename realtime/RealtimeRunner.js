@@ -595,7 +595,7 @@ module.exports = new (class RealtimeRunner {
     ]); // array of arrays
   }
 
-  async handlePick(pick) {
+  async handlePick(pick, minimalist) {
 
     let { ticker, keys, data, period, strategyName } = pick;
 
@@ -613,10 +613,6 @@ module.exports = new (class RealtimeRunner {
     }
 
 
-    let [price] = data && data.allPrices 
-      ? data.allPrices.slice(-1)
-      : (this.priceCaches[5][ticker] || []).slice(-1);
-    price = (price || {}).currentPrice;
 
     const collectionKey = !strategyName.includes('pennyscan') ? Object.keys(this.collections).find(collection => 
       (this.collections[collection] || []).includes(ticker)
@@ -627,14 +623,13 @@ module.exports = new (class RealtimeRunner {
       if (period === 'd') return 'daily';
       if (period) return `${period}min`;
     })();
-    const firstAlertkey = !this.todaysPicks.flatten().find(comparePick =>
-      comparePick.ticker === ticker
-        && comparePick.period === period
-        && comparePick.strategyName === strategyName
-    ) ? 'firstAlert' : '';
 
-    const { shouldWatchout } = await getRisk({ ticker });
-    const watchoutKey = shouldWatchout ? 'shouldWatchout' : 'notWatchout';
+
+    
+    let [price] = data && data.allPrices 
+      ? data.allPrices.slice(-1)
+      : (this.priceCaches[5][ticker] || []).slice(-1);
+    price = (price || {}).currentPrice;
     const priceKeys = [2, 8, 20, 80, 300, 1000, 5000];
     const priceKey = priceKeys.find(key => price < key);
     const min = getMinutesFrom630();
@@ -646,15 +641,43 @@ module.exports = new (class RealtimeRunner {
         if (min > 0) return 'initial';
         return 'premarket';
     })();
-    let fundamentals;
-    try {
-        fundamentals = (await addFundamentals([{ ticker }]))[0].fundamentals;
-    } catch (e) {}
-    const { volume, average_volume } = fundamentals || {};
-    const volumeKey = (() => {
-        if (volume > 1000000 || volume > average_volume * 3.5) return 'highVol';
-        if (volume < 10000) return 'lowVol';
-    })();
+
+    if (strategyName === 'sudden-drops' && min < 11) {
+      strategyName = 'overnight-drops';
+    }
+
+    
+
+    const firstAlertkey = !this.todaysPicks.flatten().find(comparePick =>
+      comparePick.ticker === ticker
+        && comparePick.period === period
+        && comparePick.strategyName === strategyName
+    ) ? 'firstAlert' : '';
+
+
+    let volumeKey, watchoutKey, stSent;
+
+    if (!minimalist) {
+
+      // volumeKey
+      let fundamentals;
+      try {
+          fundamentals = (await addFundamentals([{ ticker }]))[0].fundamentals;
+      } catch (e) {}
+      const { volume, average_volume } = fundamentals || {};
+      volumeKey = (() => {
+          if (volume > 1000000 || volume > average_volume * 3.5) return 'highVol';
+          if (volume < 10000) return 'lowVol';
+      })();
+  
+      // watchoutKey
+      const { shouldWatchout } = await getRisk({ ticker });
+      watchoutKey = shouldWatchout ? 'shouldWatchout' : 'notWatchout';
+
+      // stSent
+      stSent = await getStSentiment(ticker)
+    }
+
 
     // const strategyName = `ticker-watchers-under${priceKey}${watchoutKey}${jumpKey}${minKey}${historicalKey}`;
 
@@ -679,7 +702,7 @@ module.exports = new (class RealtimeRunner {
     data = {
       ...data,
       period,
-      stSent: await getStSentiment(ticker)
+      stSent
     };
     return recordPicks(pickName, 5000, [ticker], null, { keys, data });
   }
@@ -700,8 +723,6 @@ module.exports = new (class RealtimeRunner {
       ...Object.keys(this.collections),
       
       'volume-increasing',
-      'avg-downer',
-
       'pennyscan-highHit',
       ...[30, 90, 120, 360].map(period => `pennyscan-highHit${period}`),
       
@@ -720,6 +741,39 @@ module.exports = new (class RealtimeRunner {
         [strategyName]: [strategyName]
       })
     }), {
+
+      ...Combinatorics.cartesianProduct(
+        [
+          'notWatchout',
+          'shouldWatchout',
+        ],
+        [
+          'majorJump',
+          'minorJump',
+          'mediumJump'
+        ]
+      ).toArray().reduce((acc, arr) => {
+
+        return {
+          ...acc,
+          ...Combinatorics.power(arr)
+            .toArray()
+            .filter(s => s && s.length)
+            .reduce((inner, combo) => {
+
+              combo = [
+                'overnight-drops',
+                ...combo
+              ];
+              return {
+                ...inner,
+                [combo.join('-')]: combo
+              };
+              
+            }, {})
+        }
+
+      }, {}),
 
 
 
@@ -781,6 +835,38 @@ module.exports = new (class RealtimeRunner {
       }), {}),
 
       nowheresTopSSPREMARKET: ['nowheres', 'topSS', 'premarket'],
+
+
+      ...Combinatorics.cartesianProduct(
+        [
+          ...[1, 5, 10, 30, 60, 120].map(n => `under${n}min`),
+          'gt120min'
+        ],
+        [
+          ...Array(5).fill(1).map((v, i) => ++i).map(n => `${n}count`)
+        ]
+      ).toArray().reduce((acc, arr) => {
+
+        return {
+          ...acc,
+          ...Combinatorics.power(arr)
+            .toArray()
+            .filter(s => s && s.length)
+            .reduce((inner, combo) => {
+
+              combo = [
+                'avg-downer',
+                ...combo
+              ];
+              return {
+                ...inner,
+                [combo.join('-')]: combo
+              };
+              
+            }, {})
+        }
+
+      }, {})
 
       
 
