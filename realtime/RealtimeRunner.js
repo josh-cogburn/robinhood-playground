@@ -464,7 +464,7 @@ module.exports = new (class RealtimeRunner {
     const { strategyName, handler, collections } = strategy;
     strlog({
       collections,
-      mapped: collections.map(collection => {
+      mapped: (collections || []).map(collection => {
         return this.collections[collection]
       })
     })
