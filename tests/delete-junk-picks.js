@@ -7,7 +7,7 @@ const DONT_INCLUDE = []//'rsi-', 'golden-cross-', 'sudden-drops-', 'pennyscan-']
 
 module.exports = async () => {
   const todaysPicks = await Pick.find(
-      { date: '9-24-2019' },
+      { date: '9-27-2019' },
       { data: 0 }
   ).lean();
 

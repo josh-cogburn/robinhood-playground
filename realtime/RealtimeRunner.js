@@ -623,7 +623,7 @@ module.exports = new (class RealtimeRunner {
       .reduce((acc, key) => ({
         ...acc,
         [key]: keys[key]
-      }));
+      }, {}));
     const keyString = Object.keys(keys).join('-');
 
     const periodKey = (() => {

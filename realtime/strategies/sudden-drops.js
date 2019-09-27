@@ -19,7 +19,7 @@ module.exports = {
         const lowVolCount = allPrices.filter(({ volume }) => volume && volume < 1500).length;
         const lowVolWarning = lowVolCount / allPrices.length > 0.15;
 
-        const allCurrents = allPrices.slice(-22).map(({ currentPrice }) => currentPrice);
+        const allCurrents = allPrices.slice(-34).map(({ currentPrice }) => currentPrice);
         const mostRecent = allCurrents.pop();
         const min = Math.min(...allCurrents);
         const trendFromMin = getTrend(mostRecent, min);
