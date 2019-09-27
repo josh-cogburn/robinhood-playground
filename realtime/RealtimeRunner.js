@@ -619,10 +619,10 @@ module.exports = new (class RealtimeRunner {
     ) : undefined;
 
     keys = Object.keys(keys)    // remove falsy keys
-      .filter(key => keys[key])
-      .reduce((acc, key) => ({
+      .filter(keyKey => keys[keyKey])
+      .reduce((acc, keyKey) => ({
         ...acc,
-        [key]: keys[key]
+        [keyKey]: keys[keyKey]
       }, {}));
     const keyString = Object.keys(keys).join('-');
 
