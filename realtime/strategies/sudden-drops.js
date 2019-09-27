@@ -4,7 +4,7 @@ const getTrend = require('../../utils/get-trend');
 
 module.exports = {
     period: [5, 10],
-    collections: ['fitty', 'options', 'spy', 'twoToFive', 'fiveToTen', 'lowVolumeTrash'],
+    collections: ['fitty', 'options', 'spy', 'twoToFive', 'fiveToTen', 'lowVolumeTrash', 'zeroToOne', 'oneToTwo'],
     handler: async ({ ticker, allPrices }) => {
 
         // const onlyToday = (() => {

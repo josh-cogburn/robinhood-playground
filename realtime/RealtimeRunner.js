@@ -634,12 +634,12 @@ module.exports = new (class RealtimeRunner {
 
 
     
-    let [price] = data && data.allPrices 
-      ? data.allPrices.slice(-1)
-      : (this.priceCaches[5][ticker] || []).slice(-1);
-    price = (price || {}).currentPrice;
-    const priceKeys = [2, 8, 20, 80, 300, 1000, 5000];
-    const priceKey = priceKeys.find(key => price < key);
+    // let [price] = data && data.allPrices 
+    //   ? data.allPrices.slice(-1)
+    //   : (this.priceCaches[5][ticker] || []).slice(-1);
+    // price = (price || {}).currentPrice;
+    // const priceKeys = [2, 8, 20, 80, 300, 1000, 5000];
+    // const priceKey = priceKeys.find(key => price < key);
     const min = getMinutesFrom630();
     const minKey = (() => {
         if (min > 390) return 'afterhours';
@@ -694,7 +694,7 @@ module.exports = new (class RealtimeRunner {
         collectionKey,
         periodKey,
         keyString,
-        priceKey && `under${priceKey}`,
+        // priceKey && `under${priceKey}`,
         firstAlertkey,
         watchoutKey,
         minKey,
