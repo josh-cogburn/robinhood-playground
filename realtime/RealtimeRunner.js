@@ -617,7 +617,14 @@ module.exports = new (class RealtimeRunner {
     const collectionKey = !strategyName.includes('pennyscan') ? Object.keys(this.collections).find(collection => 
       (this.collections[collection] || []).includes(ticker)
     ) : undefined;
-    const keyString = Object.keys(keys || {}).filter(key => keys[key]).join('-');
+
+    keys = Object.keys(keys)    // remove falsy keys
+      .filter(key => keys[key])
+      .reduce((acc, key) => ({
+        ...acc,
+        [key]: keys[key]
+      }));
+    const keyString = Object.keys(keys).join('-');
 
     const periodKey = (() => {
       if (period === 'd') return 'daily';
@@ -713,6 +720,8 @@ module.exports = new (class RealtimeRunner {
     if (!this.hasInit) return {};
     
     const singles = [
+      'avg-downer',
+      
       ...[
         'initial',
         'brunch',
@@ -835,8 +844,7 @@ module.exports = new (class RealtimeRunner {
       }), {}),
 
       nowheresTopSSPREMARKET: ['nowheres', 'topSS', 'premarket'],
-
-
+      
       ...Combinatorics.cartesianProduct(
         [
           ...[1, 5, 10, 30, 60, 120].map(n => `under${n}min`),
@@ -844,6 +852,9 @@ module.exports = new (class RealtimeRunner {
         ],
         [
           ...Array(5).fill(1).map((v, i) => ++i).map(n => `${n}count`)
+        ],
+        [
+          'isBeforeClose'
         ]
       ).toArray().reduce((acc, arr) => {
 

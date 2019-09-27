@@ -26,7 +26,14 @@ module.exports = class AvgDowner {
     this.startTime = Date.now();
     this.observe();
   }
-  async observe() {
+  async observe(isBeforeClose) {
+
+    const shouldStopReason = this.shouldStop();
+    if (shouldStopReason) {
+      console.log(`stopping because ${shouldStopReason}`)
+      this.running = false;
+      return;
+    }
 
     const {
       ticker,
@@ -50,7 +57,8 @@ module.exports = class AvgDowner {
         ticker,
         keys: {
           [`${avgDownPrices.length}count`]: true,
-          [this.getMinKey()]: true
+          [this.getMinKey()]: true,
+          isBeforeClose
         },
         data: { 
           trendDown,
@@ -59,13 +67,7 @@ module.exports = class AvgDowner {
       }, true);
     }
 
-    const shouldStopReason = this.shouldStop();
-    if (shouldStopReason) {
-      console.log(`stopping because ${shouldStopReason}`)
-      this.running = false;
-    } else {
-      this.scheduleTimeout();
-    }
+    this.scheduleTimeout();
   }
   shouldStop() {
     return Object.entries({
