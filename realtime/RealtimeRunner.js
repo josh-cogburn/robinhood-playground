@@ -618,16 +618,13 @@ module.exports = new (class RealtimeRunner {
       (this.collections[collection] || []).includes(ticker)
     ) : undefined;
 
-    const anotherKeys = Object.keys(keys)    // remove falsy keys
-      .filter(keyKey => keys[keyKey])
-      .reduce((acc, keyKey) => ({
+    keys = Object.keys(keys)    // remove falsy keys
+      .filter(key => keys[key])
+      .reduce((acc, key) => ({
         ...acc,
-        [keyKey]: keys[keyKey]
-      }, {}));
-    strlog({
-      keys,
-      anotherKeys
-    })
+        [key]: keys[key]
+      }), {});
+
     const keyString = Object.keys(keys).join('-');
 
     const periodKey = (() => {
