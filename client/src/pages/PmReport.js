@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
+import ReactHintFactory from 'react-hint';
+import 'react-hint/css/index.css'
 
 import getTrend from '../utils/get-trend';
 import { avgArray, percUp, zScore } from '../utils/array-math';
 
 import Pick from '../components/Pick';
 import TrendPerc from '../components/TrendPerc';
-import { debounce } from 'underscore';
+import { debounce, mapObject } from 'underscore';
+
+const ReactHint = ReactHintFactory(React)
+
 
 const calcBgColor = perf => {
     // console.log({
@@ -58,8 +63,27 @@ console.log({ goodBad, basis, intensityOffset })
 
 const sum = arr => arr.filter(Boolean).reduce((acc, val) => acc + val, 0);
 
+
+const tooltipStr = (tickersWithTrend = {}) =>
+    Object.keys(tickersWithTrend)
+        .map(ticker => {
+            const { avgBuyPrice, nowPrice, trend } = tickersWithTrend[ticker];
+            return `${ticker}: ${avgBuyPrice} -> ${nowPrice} (${trend})`;
+        }).join('\n');
+
+const renderTooltip = (target) => {
+    const {tooltipStr} = target.dataset;
+    // console.log(target.dataset)
+    return (
+        <pre className={'react-hint__content'}>
+            {tooltipStr}
+        </pre>
+    );
+};
+
 const TrendTable = ({ trends }) => (
     <table>
+
         <thead>
             <th>avgTrend</th>
             <th>percUp</th>
@@ -78,7 +102,7 @@ const TrendTable = ({ trends }) => (
                             <td><TrendPerc value={perf.avgTrend} /></td>
                             <td><TrendPerc value={perf.percUp ? perf.percUp / 100 : undefined} redAt={50} noPlus={true} round={true} /></td>
                             <td>{perf.count}</td>
-                            <td>{perf.pmName}</td>
+                            <td {...perf.tickersWithTrend && { 'data-custom': true, 'data-tooltip-str': tooltipStr(perf.tickersWithTrend) } }><span>{perf.pmName}</span></td>
                             <td><TrendPerc value={perf.lebowskiAvg} /></td>
                             <td><TrendPerc value={perf.lebowskiPercUp} redAt={50} noPlus={true} round={true} /></td>
                             <td><TrendPerc value={perf.jsonAvg} /></td>
@@ -107,7 +131,7 @@ class TodaysStrategies extends Component {
         this.updateFilter(event.target.value);
     };
     render() {
-        let { pmPerfs, settings, predictionModels, pmsAnalyzed } = this.props;
+        let { pmPerfs, settings, predictionModels, pmsAnalyzed, pms, picks, relatedPrices } = this.props;
         let { forPurchaseOnly, filter } = this.state;
 
         const pmMatchesFilter = pmName => filter.split(',').every(str => pmName.includes(str));
@@ -186,8 +210,42 @@ class TodaysStrategies extends Component {
                 };
 
                 
-            });
-
+            })
+            .map(perf => ({
+                ...perf,
+                ...(() => {
+                    const matchesPm = (stratMin, pm) => {
+                        const arrayOfArrays = pms[pm] || [];
+                        return arrayOfArrays.some(parts => {
+                            parts = Array.isArray(parts) ? parts : [parts];
+                            return parts.every(part => stratMin.includes(part));
+                        });
+                        // return pms[pm] && pms[pm].every(part => strat === part || strat.includes(`${part}-`) || strat.includes(`-${part}`));
+                    };
+                    const matchingPicks = picks.filter(({ stratMin }) => matchesPm(stratMin, perf.pmName));;
+                    const byTicker = matchingPicks.reduce((acc, pick) => {
+                        pick.withPrices.forEach(({ ticker, price }) => {
+                            acc[ticker] = [
+                                ...acc[ticker] || [],
+                                price
+                            ];
+                        });
+                        return acc;
+                    }, {});
+                    const avgBuyPrices = mapObject(byTicker, arr => +avgArray(arr).toFixed(2));
+                    const tickersWithTrend = mapObject(avgBuyPrices, (avgBuyPrice, ticker) => ({
+                        avgBuyPrice,
+                        nowPrice: relatedPrices[ticker].lastTradePrice,
+                        trend: getTrend(relatedPrices[ticker].lastTradePrice, avgBuyPrice)
+                    }));
+                    return {
+                        matchingPicks,
+                        tickersWithTrend
+                    };
+                })()
+            }));
+        
+        console.log({ pmsAnalyzed })
         const noHitTops = pmsAnalyzed
             .filter(pm => pmMatchesFilter(pm.pm))
             .filter(pm => {
@@ -204,6 +262,17 @@ class TodaysStrategies extends Component {
         return (
             <div style={{ padding: '15px' }}>
 
+                <style>{`.react-hint__content { width: 300px; color: white; margin: 0 }`}</style>
+                    
+                <ReactHint persist
+                    attribute="data-custom"
+                    autoPosition events 
+                    // className="custom-hint"
+                    // events={{click: true}}
+                    onRenderContent={renderTooltip}
+                    // ref={(ref) => this.instance = ref} 
+                    />
+                    
                 Filter: <input type="text" onChange={this.filterChange}/><br/>
                 <h2>Current PM Trends</h2>
                 <label>
