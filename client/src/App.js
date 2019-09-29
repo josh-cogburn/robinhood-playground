@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './App.css';
 
+
+import ReactHintFactory from 'react-hint';
+import 'react-hint/css/index.css'
+
+
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
@@ -23,6 +28,19 @@ import socketIOClient from "socket.io-client";
 
 import ReactGA from 'react-ga';
 ReactGA.initialize('UA-131761952-1', { debug: false });
+
+
+const ReactHint = ReactHintFactory(React)
+
+const renderTooltip = (target) => {
+    const {tooltipStr} = target.dataset;
+    // console.log(target.dataset)
+    return (
+        <pre className={'react-hint__content'}>
+            {tooltipStr}
+        </pre>
+    );
+};
 
 function TabContainer(props) {
     return (
@@ -209,6 +227,18 @@ class App extends Component {
                         { pages.map(({ label }) => <Tab label={label} />) }
                     </Tabs>
                 </AppBar>
+
+
+                <style>{`.react-hint__content { width: 600px; color: white; margin: 0; }`}</style>
+                    
+                <ReactHint persist
+                    attribute="data-custom"
+                    autoPosition events 
+                    // className="custom-hint"
+                    // events={{click: true}}
+                    onRenderContent={renderTooltip}
+                    // ref={(ref) => this.instance = ref} 
+                />
 
 
                 { isLoading ? (

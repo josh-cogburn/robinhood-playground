@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import ReactHintFactory from 'react-hint';
-import 'react-hint/css/index.css'
 
 import getTrend from '../utils/get-trend';
 import { avgArray, percUp, zScore } from '../utils/array-math';
@@ -8,9 +6,6 @@ import { avgArray, percUp, zScore } from '../utils/array-math';
 import Pick from '../components/Pick';
 import TrendPerc from '../components/TrendPerc';
 import { debounce, mapObject } from 'underscore';
-
-const ReactHint = ReactHintFactory(React)
-
 
 const calcBgColor = perf => {
     // console.log({
@@ -71,15 +66,6 @@ const tooltipStr = (tickersWithTrend = {}) =>
             return `${ticker}: ${avgBuyPrice} -> ${nowPrice} (${trend})`;
         }).join('\n');
 
-const renderTooltip = (target) => {
-    const {tooltipStr} = target.dataset;
-    // console.log(target.dataset)
-    return (
-        <pre className={'react-hint__content'}>
-            {tooltipStr}
-        </pre>
-    );
-};
 
 const TrendTable = ({ trends }) => (
     <table>
@@ -262,16 +248,7 @@ class TodaysStrategies extends Component {
         return (
             <div style={{ padding: '15px' }}>
 
-                <style>{`.react-hint__content { width: 300px; color: white; margin: 0 }`}</style>
-                    
-                <ReactHint persist
-                    attribute="data-custom"
-                    autoPosition events 
-                    // className="custom-hint"
-                    // events={{click: true}}
-                    onRenderContent={renderTooltip}
-                    // ref={(ref) => this.instance = ref} 
-                    />
+                
                     
                 Filter: <input type="text" onChange={this.filterChange}/><br/>
                 <h2>Current PM Trends</h2>

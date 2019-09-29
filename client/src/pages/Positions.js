@@ -6,6 +6,13 @@ import { avgArray } from '../utils/array-math';
 import Pick from '../components/Pick';
 import TrendPerc from '../components/TrendPerc';
 
+const tooltipStr = ({ buyStrategies }) => 
+    Object.keys(buyStrategies || {})
+        .map(strategy => {
+            const count = buyStrategies[strategy];
+            return `${strategy} (${count})`;
+        }).join('\n');
+
 
 const PositionSection = ({ relatedPrices, positions, name, admin }) => {
 
@@ -16,16 +23,20 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
             pos.currentPrice = currentPrice;
             pos.returnDollars = +(pos.quantity * (pos.currentPrice - pos.average_buy_price)).toFixed(2);
             pos.returnPerc = getTrend(currentPrice, pos.average_buy_price);
-            pos.equity = pos.quantity * currentPrice;
+            pos.equity = (pos.quantity * currentPrice).toFixed(2);
         }
         console.log(pos);
         return pos;
     });
 
-    console.log({ name, positions })
+    console.log({ name, positions });
+    
     const toDisplay = {
         // 'days old': 'dayAge',
-        ticker: 'ticker',
+        ticker: pos => {
+            const tooltipText = tooltipStr(pos);
+            return <span {...tooltipText && { 'data-custom': true, 'data-tooltip-str': tooltipText }}>{pos.ticker}</span>
+        },
         ...!admin ? {
             'percent of total': pos => pos.percTotal + '%',
         } : {
