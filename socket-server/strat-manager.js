@@ -117,7 +117,10 @@ const stratManager = {
     },
     async refreshPositions() {
         console.log('refreshing positions', (new Date().toLocaleTimeString()));
-        const positions = await cachedPositions();
+        const positions = {
+            robinhood: await cachedPositions(),
+            alpaca: await getAlpacaPositions()
+        };
         this.positions = positions;
         const positionTickers = Object.values(positions).flatten().map(pos => pos.ticker || pos.symbol);
         strlog({ positionTickers });

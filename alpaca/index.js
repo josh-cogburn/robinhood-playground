@@ -3,12 +3,6 @@ const Alpaca = require('@alpacahq/alpaca-trade-api');
 const alpaca = new Alpaca(alpacaConfig);
 const newAvgDowner = require('../utils/new-avg-downer');
 const Holds = require('../models/Holds');
-const { throttle } = require('underscore')
-
-const throttledRefreshPositions = throttle(() => {
-  console.log('sending refresh positions to strat manager')
-  require('../socket-server/strat-manager').refreshPositions()
-}, 10000);
 
 const client = alpaca.websocket
 client.onConnect(function() {
@@ -47,7 +41,6 @@ client.onOrderUpdate(async data => {
       ticker: symbol
     });
   }
-  throttledRefreshPositions();
 
 })
 client.onAccountUpdate(data => {

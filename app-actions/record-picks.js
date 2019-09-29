@@ -15,6 +15,15 @@ const { disableMultipliers, forPurchase } = require('../settings');
 const pmsHit = require('../utils/pms-hit');
 const { emails } = require('../config');
 
+
+const { throttle } = require('underscore')
+const throttledRefreshPositions = throttle(() => {
+  console.log('sending refresh positions to strat manager')
+  require('../socket-server/strat-manager').refreshPositions()
+}, 10000);
+
+
+
 const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
 
     const stratMin = `${strategy}-${min}`;
@@ -85,6 +94,7 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
             withPrices,
             PickDoc
         });
+        throttledRefreshPositions();
         // if (withPrices.length === 1) {
         //     const [{ ticker }] = withPrices;
         //     await stocktwits.postBullish(ticker, stratMin);

@@ -43,7 +43,7 @@ module.exports = class AvgDowner {
     const l = await lookup(ticker);
     strlog({ l })
     const { currentPrice, askPrice } = l;
-    const observePrice = avgArray([currentPrice, askPrice ]);
+    const observePrice = avgArray([currentPrice, askPrice]);
     const avgBuy = avgArray(...buyPrices);
     const trendDown = getTrend(observePrice, avgBuy);
     strlog({

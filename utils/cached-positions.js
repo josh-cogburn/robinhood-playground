@@ -3,9 +3,6 @@ const getNonZero = require('../app-actions/detailed-non-zero');
 const getAlpacaPositions = require('../alpaca/get-positions');
 
 module.exports = cacheThis(
-    async () => ({
-        robinhood: await getNonZero(),
-        alpaca: await getAlpacaPositions()
-    }),
+    async () => await getNonZero(),
     10// 10 min
 );

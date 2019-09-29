@@ -6,6 +6,7 @@ const sendEmail = require('../utils/send-email');
 const lookup = require('../utils/lookup');
 const Holds = require('../models/Holds');
 
+
 module.exports = async ({ 
     stocksToBuy, 
     totalAmtToSpend, 
@@ -29,30 +30,49 @@ module.exports = async ({
 
 
     await mapLimit(stocksToBuy, 3, async ticker => {       // 3 buys at a time
+
         const perStock = totalAmtToSpend;
         // for now same amt each stock
         //amtToSpendLeft / (maxNumStocksToPurchase - numPurchased);
         console.log(perStock, 'purchasng ', ticker);
         try {
             const pickPrice = (withPrices.find(obj => obj.ticker === ticker) || {}).price;
-            const quantity = Math.floor(perStock / pickPrice) || 1;
-            
-            const orderResponse = await alpacaLimitBuy({
-                ticker,
-                quantity, 
-                pickPrice,
-            });
+            const quantity = Math.floor(perStock / pickPrice / 2) || 1;
 
-            strlog({ orderResponse })
 
-            if (orderResponse && orderResponse.filled_at) {
-                await Holds.registerAlpacaFill({
+            const responses = await Promise.all([
+                alpacaLimitBuy({
                     ticker,
-                    alpacaOrder: orderResponse,
-                    strategy,
-                    PickDoc
-                });
+                    quantity, 
+                    pickPrice,
+                }),
+                alpacaMarketBuy({
+                    ticker,
+                    quantity,
+                })
+            ]);
+
+            for (let response of responses) {
+                strlog({ response })
+                const {
+                    alpacaOrder,
+                    attemptNum
+                } = response || {};
+                if (alpacaOrder && alpacaOrder.filled_at) {
+                    await Holds.registerAlpacaFill({
+                        ticker,
+                        alpacaOrder,
+                        strategy,
+                        PickDoc,
+                        data: {
+                            attemptNum,
+                        }
+                    });
+                } else {
+                    console.log('failed to buy', ticker);
+                }
             }
+            
 
             // const response = await simpleBuy({
             //     ticker: stock,

@@ -10,7 +10,7 @@ module.exports = async () => {
     min: 5000,
     picks: [{
       ticker: 'HSGX',
-      price: 0.15
+      price: 0.17
     }],
     keys: {
       'blah-blah': true
@@ -35,7 +35,7 @@ module.exports = async () => {
       min: 5000,
       withPrices: [{
         ticker: 'HSGX',
-        price: 0.15
+        price: 0.17
       }],
       PickDoc
   });

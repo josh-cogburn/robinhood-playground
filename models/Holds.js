@@ -8,24 +8,26 @@ const schema = new Schema({
         fillPrice: Number,
         quantity: Number,
         strategy: String,
-        relatedPick: { type: Schema.Types.ObjectId, ref: 'picks' }
+        relatedPick: { type: Schema.Types.ObjectId, ref: 'picks' },
+        data: Schema.Types.Mixed
     }],
 });
 
-schema.statics.registerAlpacaFill = async function(data) {
+schema.statics.registerAlpacaFill = async function(fillData) {
     const {
         ticker,
         alpacaOrder,
         strategy,
         dateStr = (new Date()).toLocaleDateString().split('/').join('-'),
-        PickDoc
-    } = data;
+        PickDoc,
+    } = fillData;
     const newBuy = {
         date: dateStr,
         fillPrice: Number(alpacaOrder.filled_avg_price),
         quantity: Number(alpacaOrder.filled_qty),
         strategy,
-        relatedPick: PickDoc
+        relatedPick: PickDoc,
+        data: fillData.data
     };
     strlog({ newBuy })
     const HoldDoc = await this.updateOne(

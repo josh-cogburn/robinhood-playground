@@ -11,7 +11,7 @@ module.exports = data => {
   } = data;
 
   if (allAvgDowners[ticker]) {
-    allAvgDowners[ticker].avgDownPrices.push(buyPrice);
+    allAvgDowners[ticker].buyPrices.push(buyPrice);
   } else {
     allAvgDowners[ticker] = new AvgDowner(data);
   }
