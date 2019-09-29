@@ -4,7 +4,7 @@ const { expectedPickCount } = require('../settings');
 const { alpaca } = require('../alpaca');
 
 
-const purchaseStocks = async ({ stocksToBuy, strategy, multiplier = 1, min, withPrices } = {}, dontBuy) => {
+const purchaseStocks = async ({ stocksToBuy, strategy, multiplier = 1, min, withPrices, PickDoc } = {}, dontBuy) => {
 
     const { portfolio_value, buying_power } = await alpaca.getAccount();
     const purchaseAmt = Math.ceil(portfolio_value / expectedPickCount);
@@ -15,7 +15,8 @@ const purchaseStocks = async ({ stocksToBuy, strategy, multiplier = 1, min, with
         amountPerBuy,
         multiplier,
         totalAmtToSpend,
-        buying_power
+        buying_power,
+        strategy
     });
 
     if (dontBuy) return;
@@ -38,7 +39,9 @@ const purchaseStocks = async ({ stocksToBuy, strategy, multiplier = 1, min, with
         totalAmtToSpend,
         strategy,
         min,
-        withPrices
+        withPrices,
+        strategy,
+        PickDoc
     });
 };
 

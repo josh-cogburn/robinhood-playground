@@ -45,17 +45,17 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
         isRecommended
     };
 
-    const mongoResponse = await Pick.create(pickObj);
+    const PickDoc = await Pick.create(pickObj);
 
-    // strlog(mongoResponse);
+    // strlog(PickDoc);
 
     // for sockets
     stratManager.newPick({
         ...pickObj,
-        _id: mongoResponse._id,
+        _id: PickDoc._id,
         stratMin,
         withPrices,
-        timestamp: mongoResponse.timestamp,
+        timestamp: PickDoc.timestamp,
         keys,
     });
 
@@ -82,7 +82,8 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
             strategy,
             multiplier: !disableMultipliers ? forPurchaseMultiplier : 1,
             min,
-            withPrices
+            withPrices,
+            PickDoc
         });
         // if (withPrices.length === 1) {
         //     const [{ ticker }] = withPrices;
@@ -115,7 +116,7 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
     }
 
 
-    return mongoResponse._id;
+    return PickDoc._id;
 
 };
 

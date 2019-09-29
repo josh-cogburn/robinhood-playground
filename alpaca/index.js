@@ -2,6 +2,13 @@ const { alpaca: alpacaConfig } = require('../config');
 const Alpaca = require('@alpacahq/alpaca-trade-api');
 const alpaca = new Alpaca(alpacaConfig);
 const newAvgDowner = require('../utils/new-avg-downer');
+const Holds = require('../models/Holds');
+const { throttle } = require('underscore')
+
+const throttledRefreshPositions = throttle(() => {
+  console.log('sending refresh positions to strat manager')
+  require('../socket-server/strat-manager').refreshPositions()
+}, 10000);
 
 const client = alpaca.websocket
 client.onConnect(function() {
@@ -14,27 +21,34 @@ client.onDisconnect(() => {
 client.onStateChange(newState => {
   console.log(`State changed to ${newState}`)
 })
-client.onOrderUpdate(data => {
+client.onOrderUpdate(async data => {
   console.log(`Order updates: ${JSON.stringify(data)}`);
   const {
     event,
     order: {
       filled_avg_price,
       // filled_qty,
+      side,
       symbol,
     }
   } = data;
   const isFill = event === 'fill';
-  strlog({
-    isFill,
-    symbol
-  })
-  if (isFill) {
+  if (!isFill) {
+    return console.log('not a fill');
+  }
+
+  if (side === 'buy') {
     newAvgDowner({
       ticker: symbol, 
       buyPrice: filled_avg_price 
     })
+  } else {
+    await Holds.deleteOne({
+      ticker: symbol
+    });
   }
+  throttledRefreshPositions();
+
 })
 client.onAccountUpdate(data => {
   console.log(`Account updates: ${JSON.stringify(data)}`)

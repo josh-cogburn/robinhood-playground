@@ -4,6 +4,7 @@ const alpacaLimitBuy = require('../alpaca/limit-buy');
 const mapLimit = require('promise-map-limit');
 const sendEmail = require('../utils/send-email');
 const lookup = require('../utils/lookup');
+const Holds = require('../models/Holds');
 
 module.exports = async ({ 
     stocksToBuy, 
@@ -11,7 +12,8 @@ module.exports = async ({
     strategy, 
     maxNumStocksToPurchase, 
     min, 
-    withPrices 
+    withPrices,
+    PickDoc
 }) => {
 
     // you cant attempt to purchase more stocks than you passed in
@@ -25,23 +27,32 @@ module.exports = async ({
     let amtToSpendLeft = totalAmtToSpend;
     let failedStocks = [];
 
-    await mapLimit(stocksToBuy, 3, async stock => {       // 3 buys at a time
+
+    await mapLimit(stocksToBuy, 3, async ticker => {       // 3 buys at a time
         const perStock = totalAmtToSpend;
         // for now same amt each stock
         //amtToSpendLeft / (maxNumStocksToPurchase - numPurchased);
-        console.log(perStock, 'purchasng ', stock);
+        console.log(perStock, 'purchasng ', ticker);
         try {
-            const pickPrice = (withPrices.find(obj => obj.ticker === stock) || {}).price;
-            const { askPrice } = await lookup(stock);
-            const buyPrice = Math.min(askPrice, pickPrice) * 1.05;
-            log({
-                askPrice,
+            const pickPrice = (withPrices.find(obj => obj.ticker === ticker) || {}).price;
+            const quantity = Math.floor(perStock / pickPrice) || 1;
+            
+            const orderResponse = await alpacaLimitBuy({
+                ticker,
+                quantity, 
                 pickPrice,
-                buyPrice
-            })
-            // queue alpaca limit order 4% above pickPrice
-            const quantity = Math.floor(perStock / buyPrice) || 1;
-            alpacaLimitBuy(stock, quantity, buyPrice);
+            });
+
+            strlog({ orderResponse })
+
+            if (orderResponse && orderResponse.filled_at) {
+                await Holds.registerAlpacaFill({
+                    ticker,
+                    alpacaOrder: orderResponse,
+                    strategy,
+                    PickDoc
+                });
+            }
 
             // const response = await simpleBuy({
             //     ticker: stock,
@@ -57,8 +68,8 @@ module.exports = async ({
             numPurchased++;
         } catch (e) {
             // failed
-            failedStocks.push(stock);
-            console.log('failed purchase for ', stock);
+            failedStocks.push(ticker);
+            console.log('failed purchase for ', ticker, e);
         }
     });
 

@@ -232,7 +232,7 @@ class TodaysStrategies extends Component {
                         });
                         return acc;
                     }, {});
-                    const avgBuyPrices = mapObject(byTicker, arr => +avgArray(arr).toFixed(2));
+                    const avgBuyPrices = mapObject(byTicker, arr => +avgArray(arr).toFixed(3));
                     const tickersWithTrend = mapObject(avgBuyPrices, (avgBuyPrice, ticker) => ({
                         avgBuyPrice,
                         nowPrice: relatedPrices[ticker].lastTradePrice,

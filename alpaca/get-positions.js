@@ -1,7 +1,7 @@
 const { alpaca } = require('.');
 const getStSentiment = require('../utils/get-stocktwits-sentiment');
 const shouldSellPosition = require('../utils/should-sell-position');
-
+const Holds = require('../models/Holds');
 
 module.exports = async () => {
 
@@ -22,6 +22,20 @@ module.exports = async () => {
         shouldSell: shouldSellPosition(pos)
     }));
 
-    return withShouldSell;
+    const withHolds = (
+      await mapLimit(withShouldSell, 1, async pos => ({
+        ...pos,
+        hold: await Holds.findOne({ ticker: pos.ticker })
+      }))
+    )
+      .map(pos => ({
+        ...pos,
+        buyStrategies: !pos.hold ? [] : pos.hold.buys.map(buy => buy.strategy).reduce((acc, strategy) => ({
+          ...acc,
+          [strategy]: (acc[strategy] || 0) + 1
+        }), {})
+      }))
+
+    return withHolds;
 
 };
