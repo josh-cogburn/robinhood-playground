@@ -3,6 +3,9 @@ const { force: { keep }} = require('../settings');
 // const shouldYouSellThisStock = require('../analysis/should-you-sell-this-stock');
 const shouldSellPosition = require('../utils/should-sell-position');
 const getStSent = require('../utils/get-stocktwits-sentiment');
+const Holds = require('../models/Holds');
+const sendEmail = require('../utils/send-email');
+const limitSell = require('./limit-sell');
 
 module.exports = async (dontSell) => {
     console.log({ dontSell })
@@ -43,14 +46,27 @@ module.exports = async (dontSell) => {
         console.log('dont sell alpaca....returning!')
         return;
     };
-    for (let pos of toSell) {
-        const order = await alpaca.createOrder({
-            symbol: pos.symbol, // any valid ticker symbol
-            qty: Number(pos.qty),
-            side: 'sell',
-            type: 'market',
-            time_in_force: 'day',
-        });
-        log(order)
+    for (let { symbol, qty } of toSell) {
+
+        const response = await limitSell({ ticker: symbol, quantity: qty });
+        const {
+            alpacaOrder,
+            attemptNum
+        } = response || {};
+        if (alpacaOrder && alpacaOrder.filled_at) {
+            const deletedHold = await Holds.findOneAndDelete({
+                ticker: symbol
+            });
+            await sendEmail(
+                `wow sold ${symbol} in ${attemptNum} attempts`, 
+                JSON.stringify({
+                    alpacaOrder,
+                    attemptNum,
+                    deletedHold
+                }, null, 2)
+            );
+        } else {
+            await sendEmail(`unable to sell ${symbol}`);
+        }
     }
 };

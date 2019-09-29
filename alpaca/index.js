@@ -2,7 +2,6 @@ const { alpaca: alpacaConfig } = require('../config');
 const Alpaca = require('@alpacahq/alpaca-trade-api');
 const alpaca = new Alpaca(alpacaConfig);
 const newAvgDowner = require('../utils/new-avg-downer');
-const Holds = require('../models/Holds');
 
 const client = alpaca.websocket
 client.onConnect(function() {
@@ -36,10 +35,6 @@ client.onOrderUpdate(async data => {
       ticker: symbol, 
       buyPrice: filled_avg_price 
     })
-  } else {
-    await Holds.deleteOne({
-      ticker: symbol
-    });
   }
 
 })
