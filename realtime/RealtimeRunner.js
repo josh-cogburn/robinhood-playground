@@ -418,7 +418,7 @@ module.exports = new (class RealtimeRunner {
     const withHandlers = this.strategies
         .filter(strategy => strategy.handler)
         .filter(strategy => runAll || (strategy.period && strategy.period.includes('d')));
-    strlog({ withHandlers });
+    // strlog({ withHandlers });
     let picks = [];
     for (let strategy of withHandlers) {
 

@@ -17,7 +17,10 @@ const { avgArray, percUp } = require('../utils/array-math');
 const sendEmail = require('../utils/send-email');
 const getSettingsString = require('../utils/get-settings-string');
 const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
+
 const cachedPositions = require('../utils/cached-positions');
+const getAlpacaPositions = require('../alpaca/get-positions');
+
 const flatten = require('../utils/flatten-array');
 
 const marketClosures = require('../market-closures');
