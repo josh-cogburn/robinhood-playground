@@ -37,6 +37,8 @@ module.exports = {
         ...pm(`
             sudden-drops-notWatchout 10
             sudden-drops-notWatchout-majorJump 5
+            sudden-drops-notWatchout-majorJump 5
+            sudden-drops-notWatchout-majorJump 5
         `, 1, 'general sudden-drops'),  // 17
 
     ],

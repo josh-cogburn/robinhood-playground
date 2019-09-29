@@ -46,19 +46,18 @@ module.exports = async (dontSell) => {
         console.log('dont sell alpaca....returning!')
         return;
     };
-    for (let { symbol, qty } of toSell) {
-
-        const response = await limitSell({ ticker: symbol, quantity: qty });
+    for (let { ticker, qty } of toSell) {
+        const response = await limitSell({ ticker, quantity: qty });
         const {
             alpacaOrder,
             attemptNum
         } = response || {};
         if (alpacaOrder && alpacaOrder.filled_at) {
             const deletedHold = await Holds.findOneAndDelete({
-                ticker: symbol
+                ticker
             });
             await sendEmail(
-                `wow sold ${symbol} in ${attemptNum} attempts`, 
+                `wow sold ${ticker} in ${attemptNum} attempts`, 
                 JSON.stringify({
                     alpacaOrder,
                     attemptNum,
@@ -66,7 +65,7 @@ module.exports = async (dontSell) => {
                 }, null, 2)
             );
         } else {
-            await sendEmail(`unable to sell ${symbol}`);
+            await sendEmail(`unable to sell ${ticker}`);
         }
     }
 };
