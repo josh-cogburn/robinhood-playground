@@ -229,7 +229,7 @@ class App extends Component {
                 </AppBar>
 
 
-                <style>{`.react-hint__content { width: 600px; color: white; margin: 0; }`}</style>
+                <style>{`.react-hint__content { color: white; margin: 0; }`}</style>
                     
                 <ReactHint persist
                     attribute="data-custom"

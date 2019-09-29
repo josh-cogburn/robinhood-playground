@@ -249,6 +249,8 @@ class TodaysStrategies extends Component {
             <div style={{ padding: '15px' }}>
 
                 
+                <style>{`.react-hint__content { width: 300px }`}</style>
+                    
                     
                 Filter: <input type="text" onChange={this.filterChange}/><br/>
                 <h2>Current PM Trends</h2>

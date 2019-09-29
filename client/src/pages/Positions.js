@@ -119,6 +119,8 @@ class TodaysStrategies extends Component {
 
         return (
             <div style={{ padding: '15px' }}>
+
+                <style>{`.react-hint__content { width: 650px }`}</style>
                 
                 {
                     Object.entries(positions).map(([name, positions]) => (
