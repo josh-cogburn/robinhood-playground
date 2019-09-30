@@ -3,7 +3,7 @@ const { force: { keep }} = require('../settings');
 // const shouldYouSellThisStock = require('../analysis/should-you-sell-this-stock');
 const shouldSellPosition = require('../utils/should-sell-position');
 const getStSent = require('../utils/get-stocktwits-sentiment');
-const sellPosition = require('../sell-position');
+const sellPosition = require('./sell-position');
 
 module.exports = async (dontSell) => {
 
