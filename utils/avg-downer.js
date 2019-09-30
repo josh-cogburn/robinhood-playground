@@ -15,6 +15,7 @@ module.exports = class AvgDowner {
     Object.assign(this, {
       ticker,
       buyPrices: [buyPrice],
+      avgDownCount: 0,
       timeout: initialTimeout,
       strategy
     });
@@ -37,13 +38,14 @@ module.exports = class AvgDowner {
     const {
       ticker,
       buyPrices,
-      strategy
+      strategy,
+      avgDownCount
     } = this;
 
     const l = await lookup(ticker);
     strlog({ l })
     const { currentPrice, askPrice } = l;
-    const observePrice = avgArray([currentPrice, askPrice]);
+    const observePrice =  Math.max(currentPrice, askPrice);
     const avgBuy = avgArray(...buyPrices);
     const trendDown = getTrend(observePrice, avgBuy);
     strlog({
@@ -53,14 +55,15 @@ module.exports = class AvgDowner {
       askPrice,
       observePrice
     });
-    console.log(`AVG-DOWNER: ${ticker} observed at ${observePrice} ... avg buy at ${avgBuy} (${buyPrices.length} count)... trended ${trendDown}`);
-    if (trendDown < -2.5) {
+    console.log(`AVG-DOWNER: ${ticker} observed at ${observePrice} ... avg buy at ${avgBuy}, buy count ${buyPrices.length} and avg down count ${avgDownCount}... trended ${trendDown}`);
+    if (trendDown < -2.7) {
+      this.avgDownCount++;
       const realtimeRunner = require('../realtime/RealtimeRunner');
       await realtimeRunner.handlePick({
         strategyName: 'avg-downer',
         ticker,
         keys: {
-          [`${buyPrices.length}count`]: true,
+          [`${avgDownCount}count`]: true,
           [this.getMinKey()]: true,
           isBeforeClose
         },

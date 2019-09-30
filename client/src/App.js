@@ -112,7 +112,7 @@ class App extends Component {
 
     componentDidMount() {
         let { origin } = window.location;
-        const socketEndpoint = origin.includes('localhost') && true ? 'http://localhost:3000' : 'http://107.173.6.167:3000';
+        const socketEndpoint = origin.includes('localhost') && false ? 'http://localhost:3000' : 'http://107.173.6.167:3000';
         const socket = socketIOClient(socketEndpoint);
 
         const isForPurchase = strat => {
@@ -180,7 +180,7 @@ class App extends Component {
         ReactGA.pageview(window.location.pathname + 'index');
     }
 
-    handleChange = (event, value) => {
+    handlePageChange = (event, value) => {
         ReactGA.pageview(window.location.pathname + camelize(pages[value].label.replace(/'/g, '')));
         this.setState({ value });
     };
@@ -223,7 +223,7 @@ class App extends Component {
                             <a onClick={this.restartProcess}>♻️</a>
                         </Typography>
                     </Toolbar>
-                    <Tabs value={value} onChange={this.handleChange}>
+                    <Tabs value={value} onChange={this.handlePageChange}>
                         { pages.map(({ label }) => <Tab label={label} />) }
                     </Tabs>
                 </AppBar>
@@ -243,7 +243,7 @@ class App extends Component {
 
                 { isLoading ? (
                     <h1 style={{ textAlign: 'center' }}>loading</h1>
-                ) : <PageComponent {...this.state} />
+                ) : <PageComponent {...this.state} {...{ handlePageChange: this.handlePageChange }} />
                 }
 
                 <Popup position="right center" modal open={newPicksData}>

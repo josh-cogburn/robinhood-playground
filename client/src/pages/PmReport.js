@@ -67,7 +67,7 @@ const tooltipStr = (tickersWithTrend = {}) =>
         }).join('\n');
 
 
-const TrendTable = ({ trends }) => (
+const TrendTable = ({ trends, investigatePm }) => (
     <table>
 
         <thead>
@@ -88,7 +88,9 @@ const TrendTable = ({ trends }) => (
                             <td><TrendPerc value={perf.avgTrend} /></td>
                             <td><TrendPerc value={perf.percUp ? perf.percUp / 100 : undefined} redAt={50} noPlus={true} round={true} /></td>
                             <td>{perf.count}</td>
-                            <td {...perf.tickersWithTrend && { 'data-custom': true, 'data-tooltip-str': tooltipStr(perf.tickersWithTrend) } }><span>{perf.pmName}</span></td>
+                            <td {...perf.tickersWithTrend && { 'data-custom': true, 'data-tooltip-str': tooltipStr(perf.tickersWithTrend) } }>
+                                <a onClick={() => investigatePm(perf.pmName)}>{perf.pmName}</a>
+                            </td>
                             <td><TrendPerc value={perf.lebowskiAvg} /></td>
                             <td><TrendPerc value={perf.lebowskiPercUp} redAt={50} noPlus={true} round={true} /></td>
                             <td><TrendPerc value={perf.jsonAvg} /></td>
@@ -116,7 +118,17 @@ class TodaysStrategies extends Component {
         console.log(event.target.value);
         this.updateFilter(event.target.value);
     };
+    investigatePm = pmName => {
+        const { handlePageChange } = this.props;
+        window.localStorage.setItem('TodaysStrategies', JSON.stringify({
+            ...JSON.parse(window.localStorage.getItem('TodaysStrategies')),
+            pmFilter: pmName,
+            additionalFilters: ''
+        }));
+        handlePageChange(null, 2);
+    }
     render() {
+        const { investigatePm } = this;
         let { pmPerfs, settings, predictionModels, pmsAnalyzed, pms, picks, relatedPrices } = this.props;
         let { forPurchaseOnly, filter } = this.state;
 
@@ -258,12 +270,12 @@ class TodaysStrategies extends Component {
                     <input type="checkbox" checked={forPurchaseOnly} onChange={this.toggleForPurchaseOnly} />
                     forPurchase PM's only
                 </label>
-                <TrendTable trends={pmPerfs} />
+                <TrendTable trends={pmPerfs} investigatePm={investigatePm} />
 
                 <hr/>
 
                 <h2>Top Lebowski No Hits</h2>
-                <TrendTable trends={noHitTops} />
+                <TrendTable trends={noHitTops} investigatePm={investigatePm} />
 
                 
     {/* 
