@@ -231,11 +231,15 @@ class TodaysStrategies extends Component {
                         return acc;
                     }, {});
                     const avgBuyPrices = mapObject(byTicker, arr => +avgArray(arr).toFixed(3));
-                    const tickersWithTrend = mapObject(avgBuyPrices, (avgBuyPrice, ticker) => ({
-                        avgBuyPrice,
-                        nowPrice: relatedPrices[ticker].lastTradePrice,
-                        trend: getTrend(relatedPrices[ticker].lastTradePrice, avgBuyPrice)
-                    }));
+                    const tickersWithTrend = mapObject(avgBuyPrices, (avgBuyPrice, ticker) => {
+                        const { afterHoursPrice, lastTradePrice } = relatedPrices[ticker];
+                        const nowPrice = afterHoursPrice || lastTradePrice;
+                        return {
+                            avgBuyPrice,
+                            nowPrice,
+                            trend: getTrend(nowPrice, avgBuyPrice)
+                        };
+                    });
                     return {
                         matchingPicks,
                         tickersWithTrend
