@@ -1,0 +1,233 @@
+{
+  "alpacaOrder": {
+    "id": "eaae40f6-c3a2-4924-82eb-705326381b4c",
+    "client_order_id": "79e258f8-7cc7-463d-9f90-603442cbca79",
+    "created_at": "2019-09-30T14:03:00.567347Z",
+    "updated_at": "2019-09-30T14:03:00.609324Z",
+    "submitted_at": "2019-09-30T14:03:00.554788Z",
+    "filled_at": "2019-09-30T14:03:00.585396Z",
+    "expired_at": null,
+    "canceled_at": null,
+    "failed_at": null,
+    "replaced_at": null,
+    "replaced_by": null,
+    "replaces": null,
+    "asset_id": "162c893c-c085-4862-9311-e98633dda8e7",
+    "symbol": "VXRT",
+    "asset_class": "us_equity",
+    "qty": "2357",
+    "filled_qty": "2357",
+    "filled_avg_price": "0.31",
+    "order_type": "limit",
+    "type": "limit",
+    "side": "sell",
+    "time_in_force": "day",
+    "limit_price": "0.2998",
+    "stop_price": null,
+    "status": "filled",
+    "extended_hours": false
+  },
+  "attemptNum": 0,
+  "deletedHold": {
+    "_id": "5d9019edc1cd3cfd326293c9",
+    "ticker": "VXRT",
+    "__v": 0,
+    "buys": [
+      {
+        "_id": "5d9019ed5fd71d38e9c61f57",
+        "date": "9-28-2019",
+        "fillPrice": 0.299,
+        "quantity": 4,
+        "strategy": "avg-downer-fitty-1count-under1min-firstAlert-dinner",
+        "relatedPick": "5d8e56c455510947c0882771"
+      },
+      {
+        "_id": "5d9019ed5fd71d38e9c61f58",
+        "date": "9-28-2019",
+        "fillPrice": 0.299,
+        "quantity": 199,
+        "strategy": "avg-downer-fitty-1count-under1min-firstAlert-dinner",
+        "relatedPick": "5d8e56c055510947c088276b"
+      },
+      {
+        "_id": "5d9019ed5fd71d38e9c61f59",
+        "date": "9-28-2019",
+        "fillPrice": 0.299,
+        "quantity": 294,
+        "strategy": "avg-downer-fitty-1count-under1min-firstAlert-dinner",
+        "relatedPick": "5d8e56be55510947c0882765"
+      },
+      {
+        "_id": "5d9019ed5fd71d38e9c61f5a",
+        "date": "9-28-2019",
+        "fillPrice": 0.299,
+        "quantity": 294,
+        "strategy": "avg-downer-fitty-1count-under1min-firstAlert-dinner",
+        "relatedPick": "5d8e56bb55510947c088275f"
+      },
+      {
+        "_id": "5d9019ed5fd71d38e9c61f5b",
+        "date": "9-28-2019",
+        "fillPrice": 0.299,
+        "quantity": 294,
+        "strategy": "avg-downer-fitty-1count-under1min-firstAlert-dinner",
+        "relatedPick": "5d8e56b855510947c0882759"
+      },
+      {
+        "_id": "5d9019ed5fd71d38e9c61f5c",
+        "date": "9-28-2019",
+        "fillPrice": 0.299,
+        "quantity": 294,
+        "strategy": "avg-downer-fitty-1count-under1min-firstAlert-dinner",
+        "relatedPick": "5d8e56b555510947c0882753"
+      },
+      {
+        "_id": "5d9019ed5fd71d38e9c61f5d",
+        "date": "9-28-2019",
+        "fillPrice": 0.299,
+        "quantity": 294,
+        "strategy": "avg-downer-fitty-1count-under1min-firstAlert-dinner",
+        "relatedPick": "5d8e56b255510947c0882748"
+      },
+      {
+        "_id": "5d9019ee5fd71d38e9c61f5e",
+        "date": "9-28-2019",
+        "fillPrice": 0.299,
+        "quantity": 294,
+        "strategy": "avg-downer-fitty-1count-under1min-firstAlert-dinner",
+        "relatedPick": "5d8e56af55510947c0882742"
+      },
+      {
+        "_id": "5d9019ee5fd71d38e9c61f5f",
+        "date": "9-28-2019",
+        "fillPrice": 0.299,
+        "quantity": 294,
+        "strategy": "avg-downer-fitty-1count-under5min-firstAlert-dinner",
+        "relatedPick": "5d8e56aa55510947c0882734"
+      },
+      {
+        "_id": "5d9019ee5fd71d38e9c61f60",
+        "date": "9-28-2019",
+        "fillPrice": 0.3,
+        "quantity": 48,
+        "strategy": "macd-fitty-10min-bearishSignal-firstAlert-shouldWatchout-dinner",
+        "relatedPick": "5d8e560f55510947c0882617"
+      },
+      {
+        "_id": "5d9019ee5fd71d38e9c61f61",
+        "date": "9-28-2019",
+        "fillPrice": 0.3,
+        "quantity": 48,
+        "strategy": "macd-fitty-10min-bearishSignal-firstAlert-shouldWatchout-dinner",
+        "relatedPick": "5d8e55f755510947c08825ed"
+      }
+    ]
+  },
+  "currentPosition": {
+    "ticker": "VXRT",
+    "average_buy_price": "0.2990407297411964",
+    "quantity": "2357",
+    "stSent": 34,
+    "shouldSell": false,
+    "hold": {
+      "_id": "5d9019edc1cd3cfd326293c9",
+      "ticker": "VXRT",
+      "__v": 0,
+      "buys": [
+        {
+          "_id": "5d9019ed5fd71d38e9c61f57",
+          "date": "9-28-2019",
+          "fillPrice": 0.299,
+          "quantity": 4,
+          "strategy": "avg-downer-fitty-1count-under1min-firstAlert-dinner",
+          "relatedPick": "5d8e56c455510947c0882771"
+        },
+        {
+          "_id": "5d9019ed5fd71d38e9c61f58",
+          "date": "9-28-2019",
+          "fillPrice": 0.299,
+          "quantity": 199,
+          "strategy": "avg-downer-fitty-1count-under1min-firstAlert-dinner",
+          "relatedPick": "5d8e56c055510947c088276b"
+        },
+        {
+          "_id": "5d9019ed5fd71d38e9c61f59",
+          "date": "9-28-2019",
+          "fillPrice": 0.299,
+          "quantity": 294,
+          "strategy": "avg-downer-fitty-1count-under1min-firstAlert-dinner",
+          "relatedPick": "5d8e56be55510947c0882765"
+        },
+        {
+          "_id": "5d9019ed5fd71d38e9c61f5a",
+          "date": "9-28-2019",
+          "fillPrice": 0.299,
+          "quantity": 294,
+          "strategy": "avg-downer-fitty-1count-under1min-firstAlert-dinner",
+          "relatedPick": "5d8e56bb55510947c088275f"
+        },
+        {
+          "_id": "5d9019ed5fd71d38e9c61f5b",
+          "date": "9-28-2019",
+          "fillPrice": 0.299,
+          "quantity": 294,
+          "strategy": "avg-downer-fitty-1count-under1min-firstAlert-dinner",
+          "relatedPick": "5d8e56b855510947c0882759"
+        },
+        {
+          "_id": "5d9019ed5fd71d38e9c61f5c",
+          "date": "9-28-2019",
+          "fillPrice": 0.299,
+          "quantity": 294,
+          "strategy": "avg-downer-fitty-1count-under1min-firstAlert-dinner",
+          "relatedPick": "5d8e56b555510947c0882753"
+        },
+        {
+          "_id": "5d9019ed5fd71d38e9c61f5d",
+          "date": "9-28-2019",
+          "fillPrice": 0.299,
+          "quantity": 294,
+          "strategy": "avg-downer-fitty-1count-under1min-firstAlert-dinner",
+          "relatedPick": "5d8e56b255510947c0882748"
+        },
+        {
+          "_id": "5d9019ee5fd71d38e9c61f5e",
+          "date": "9-28-2019",
+          "fillPrice": 0.299,
+          "quantity": 294,
+          "strategy": "avg-downer-fitty-1count-under1min-firstAlert-dinner",
+          "relatedPick": "5d8e56af55510947c0882742"
+        },
+        {
+          "_id": "5d9019ee5fd71d38e9c61f5f",
+          "date": "9-28-2019",
+          "fillPrice": 0.299,
+          "quantity": 294,
+          "strategy": "avg-downer-fitty-1count-under5min-firstAlert-dinner",
+          "relatedPick": "5d8e56aa55510947c0882734"
+        },
+        {
+          "_id": "5d9019ee5fd71d38e9c61f60",
+          "date": "9-28-2019",
+          "fillPrice": 0.3,
+          "quantity": 48,
+          "strategy": "macd-fitty-10min-bearishSignal-firstAlert-shouldWatchout-dinner",
+          "relatedPick": "5d8e560f55510947c0882617"
+        },
+        {
+          "_id": "5d9019ee5fd71d38e9c61f61",
+          "date": "9-28-2019",
+          "fillPrice": 0.3,
+          "quantity": 48,
+          "strategy": "macd-fitty-10min-bearishSignal-firstAlert-shouldWatchout-dinner",
+          "relatedPick": "5d8e55f755510947c08825ed"
+        }
+      ]
+    },
+    "buyStrategies": {
+      "avg-downer-fitty-1count-under1min-firstAlert-dinner": 8,
+      "avg-downer-fitty-1count-under5min-firstAlert-dinner": 1,
+      "macd-fitty-10min-bearishSignal-firstAlert-shouldWatchout-dinner": 2
+    }
+  }
+}

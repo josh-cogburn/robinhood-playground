@@ -1,0 +1,41 @@
+{
+  "alpacaOrder": {
+    "id": "81b11b50-1346-4550-8c24-79e2e6f8a45f",
+    "client_order_id": "ca6140ea-8ae2-49e5-8b22-a6eee5f5d21f",
+    "created_at": "2019-09-30T14:04:47.065546Z",
+    "updated_at": "2019-09-30T14:04:47.142516Z",
+    "submitted_at": "2019-09-30T14:04:47.054611Z",
+    "filled_at": "2019-09-30T14:04:47.133411Z",
+    "expired_at": null,
+    "canceled_at": null,
+    "failed_at": null,
+    "replaced_at": null,
+    "replaced_by": null,
+    "replaces": null,
+    "asset_id": "16755553-da8e-4363-9469-b2f6680528f3",
+    "symbol": "NBSE",
+    "asset_class": "us_equity",
+    "qty": "4",
+    "filled_qty": "4",
+    "filled_avg_price": "5.16",
+    "order_type": "market",
+    "type": "market",
+    "side": "sell",
+    "time_in_force": "day",
+    "limit_price": null,
+    "stop_price": null,
+    "status": "filled",
+    "extended_hours": false
+  },
+  "attemptNum": "market",
+  "deletedHold": null,
+  "currentPosition": {
+    "ticker": "NBSE",
+    "average_buy_price": "5.295",
+    "quantity": "4",
+    "stSent": 0,
+    "shouldSell": false,
+    "hold": null,
+    "buyStrategies": []
+  }
+}

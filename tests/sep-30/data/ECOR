@@ -1,0 +1,120 @@
+{
+  "alpacaOrder": {
+    "id": "d1737067-a053-42be-9e19-4b52d3b09aac",
+    "client_order_id": "d989eb32-b838-4c7c-ba78-b88620bd69a6",
+    "created_at": "2019-09-30T14:06:14.662445Z",
+    "updated_at": "2019-09-30T14:06:14.756483Z",
+    "submitted_at": "2019-09-30T14:06:14.65046Z",
+    "filled_at": "2019-09-30T14:06:14.747482Z",
+    "expired_at": null,
+    "canceled_at": null,
+    "failed_at": null,
+    "replaced_at": null,
+    "replaced_by": null,
+    "replaces": null,
+    "asset_id": "a1d7a262-236a-475f-acaf-549c2fd82c96",
+    "symbol": "ECOR",
+    "asset_class": "us_equity",
+    "qty": "104",
+    "filled_qty": "104",
+    "filled_avg_price": "2.05",
+    "order_type": "market",
+    "type": "market",
+    "side": "sell",
+    "time_in_force": "day",
+    "limit_price": null,
+    "stop_price": null,
+    "status": "filled",
+    "extended_hours": false
+  },
+  "attemptNum": "market",
+  "deletedHold": {
+    "_id": "5d9019eec1cd3cfd326293d9",
+    "ticker": "ECOR",
+    "__v": 0,
+    "buys": [
+      {
+        "_id": "5d9019ee5fd71d38e9c61f65",
+        "date": "9-28-2019",
+        "fillPrice": 2.13,
+        "quantity": 26,
+        "strategy": "sudden-drops-twoToFive-10min-minorJump-lowVolWarning-under8-firstAlert-notWatchout-brunch",
+        "relatedPick": "5d8e22062482623d73bd15d7"
+      },
+      {
+        "_id": "5d9019ee5fd71d38e9c61f66",
+        "date": "9-28-2019",
+        "fillPrice": 2.13,
+        "quantity": 26,
+        "strategy": "sudden-drops-twoToFive-10min-minorJump-lowVolWarning-under8-firstAlert-notWatchout-brunch",
+        "relatedPick": "5d8e21ea2482623d73bd158f"
+      },
+      {
+        "_id": "5d9019ee5fd71d38e9c61f67",
+        "date": "9-28-2019",
+        "fillPrice": 2.13,
+        "quantity": 26,
+        "strategy": "sudden-drops-twoToFive-5min-minorJump-lowVolWarning-under8-firstAlert-notWatchout-brunch",
+        "relatedPick": "5d8e21c82482623d73bd1547"
+      },
+      {
+        "_id": "5d9019ee5fd71d38e9c61f68",
+        "date": "9-28-2019",
+        "fillPrice": 2.13,
+        "quantity": 26,
+        "strategy": "sudden-drops-twoToFive-5min-minorJump-lowVolWarning-under8-firstAlert-notWatchout-brunch",
+        "relatedPick": "5d8e21bd2482623d73bd1533"
+      }
+    ]
+  },
+  "currentPosition": {
+    "ticker": "ECOR",
+    "average_buy_price": "2.13",
+    "quantity": "104",
+    "stSent": 5,
+    "shouldSell": false,
+    "hold": {
+      "_id": "5d9019eec1cd3cfd326293d9",
+      "ticker": "ECOR",
+      "__v": 0,
+      "buys": [
+        {
+          "_id": "5d9019ee5fd71d38e9c61f65",
+          "date": "9-28-2019",
+          "fillPrice": 2.13,
+          "quantity": 26,
+          "strategy": "sudden-drops-twoToFive-10min-minorJump-lowVolWarning-under8-firstAlert-notWatchout-brunch",
+          "relatedPick": "5d8e22062482623d73bd15d7"
+        },
+        {
+          "_id": "5d9019ee5fd71d38e9c61f66",
+          "date": "9-28-2019",
+          "fillPrice": 2.13,
+          "quantity": 26,
+          "strategy": "sudden-drops-twoToFive-10min-minorJump-lowVolWarning-under8-firstAlert-notWatchout-brunch",
+          "relatedPick": "5d8e21ea2482623d73bd158f"
+        },
+        {
+          "_id": "5d9019ee5fd71d38e9c61f67",
+          "date": "9-28-2019",
+          "fillPrice": 2.13,
+          "quantity": 26,
+          "strategy": "sudden-drops-twoToFive-5min-minorJump-lowVolWarning-under8-firstAlert-notWatchout-brunch",
+          "relatedPick": "5d8e21c82482623d73bd1547"
+        },
+        {
+          "_id": "5d9019ee5fd71d38e9c61f68",
+          "date": "9-28-2019",
+          "fillPrice": 2.13,
+          "quantity": 26,
+          "strategy": "sudden-drops-twoToFive-5min-minorJump-lowVolWarning-under8-firstAlert-notWatchout-brunch",
+          "relatedPick": "5d8e21bd2482623d73bd1533"
+        }
+      ]
+    },
+    "buyStrategies": {
+      "sudden-drops-twoToFive-10min-minorJump-lowVolWarning-under8-firstAlert-notWatchout-brunch": 2,
+      "sudden-drops-twoToFive-5min-minorJump-lowVolWarning-under8-firstAlert-notWatchout-brunch": 2
+    }
+  }
+}

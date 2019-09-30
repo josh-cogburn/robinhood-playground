@@ -1,0 +1,41 @@
+{
+  "alpacaOrder": {
+    "id": "4ae9cdcb-1263-4510-8277-dcf569136360",
+    "client_order_id": "50d17417-4f7f-4124-98ff-3ee01c4e940b",
+    "created_at": "2019-09-30T14:03:26.067091Z",
+    "updated_at": "2019-09-30T14:03:30.832013Z",
+    "submitted_at": "2019-09-30T14:03:26.051608Z",
+    "filled_at": "2019-09-30T14:03:30.783825Z",
+    "expired_at": null,
+    "canceled_at": null,
+    "failed_at": null,
+    "replaced_at": null,
+    "replaced_by": null,
+    "replaces": null,
+    "asset_id": "cced93be-0b40-4037-9fbd-f265c6105945",
+    "symbol": "OCUL",
+    "asset_class": "us_equity",
+    "qty": "27",
+    "filled_qty": "27",
+    "filled_avg_price": "3.13",
+    "order_type": "limit",
+    "type": "limit",
+    "side": "sell",
+    "time_in_force": "day",
+    "limit_price": "3.13",
+    "stop_price": null,
+    "status": "filled",
+    "extended_hours": false
+  },
+  "attemptNum": 3,
+  "deletedHold": null,
+  "currentPosition": {
+    "ticker": "OCUL",
+    "average_buy_price": "3.16",
+    "quantity": "27",
+    "stSent": -31,
+    "shouldSell": false,
+    "hold": null,
+    "buyStrategies": []
+  }
+}

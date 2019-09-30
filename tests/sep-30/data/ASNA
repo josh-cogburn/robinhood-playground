@@ -1,0 +1,41 @@
+{
+  "alpacaOrder": {
+    "id": "a79670d3-06dd-4e26-9824-aac51819af91",
+    "client_order_id": "42435d80-4017-4956-81ac-32e3c96f0d2c",
+    "created_at": "2019-09-30T14:07:06.084517Z",
+    "updated_at": "2019-09-30T14:07:06.157027Z",
+    "submitted_at": "2019-09-30T14:07:06.072677Z",
+    "filled_at": "2019-09-30T14:07:06.151497Z",
+    "expired_at": null,
+    "canceled_at": null,
+    "failed_at": null,
+    "replaced_at": null,
+    "replaced_by": null,
+    "replaces": null,
+    "asset_id": "e7675c37-c47c-4047-a364-9ff08c034f00",
+    "symbol": "ASNA",
+    "asset_class": "us_equity",
+    "qty": "345",
+    "filled_qty": "345",
+    "filled_avg_price": "0.2476",
+    "order_type": "limit",
+    "type": "limit",
+    "side": "sell",
+    "time_in_force": "day",
+    "limit_price": "0.2472",
+    "stop_price": null,
+    "status": "filled",
+    "extended_hours": false
+  },
+  "attemptNum": 3,
+  "deletedHold": null,
+  "currentPosition": {
+    "ticker": "ASNA",
+    "average_buy_price": "0.255",
+    "quantity": "345",
+    "stSent": 107,
+    "shouldSell": false,
+    "hold": null,
+    "buyStrategies": []
+  }
+}

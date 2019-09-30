@@ -232,7 +232,8 @@ class TodaysStrategies extends Component {
                     }, {});
                     const avgBuyPrices = mapObject(byTicker, arr => +avgArray(arr).toFixed(3));
                     const tickersWithTrend = mapObject(avgBuyPrices, (avgBuyPrice, ticker) => {
-                        const { afterHoursPrice, lastTradePrice } = relatedPrices[ticker];
+                        if (!relatedPrices[ticker]) console.log("wtf", ticker);
+                        const { afterHoursPrice, lastTradePrice } = relatedPrices[ticker] || {};
                         const nowPrice = afterHoursPrice || lastTradePrice;
                         return {
                             avgBuyPrice,

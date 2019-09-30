@@ -1,0 +1,104 @@
+{
+  "alpacaOrder": {
+    "id": "4989a6ba-c895-41b7-8d04-1221c054a753",
+    "client_order_id": "7638b2b4-505a-4bf7-9f87-c1aa5e192e31",
+    "created_at": "2019-09-30T14:06:26.539103Z",
+    "updated_at": "2019-09-30T14:06:26.620121Z",
+    "submitted_at": "2019-09-30T14:06:26.513714Z",
+    "filled_at": "2019-09-30T14:06:26.608427Z",
+    "expired_at": null,
+    "canceled_at": null,
+    "failed_at": null,
+    "replaced_at": null,
+    "replaced_by": null,
+    "replaces": null,
+    "asset_id": "cd77430c-8890-451c-9b0b-a009e1d246a7",
+    "symbol": "DEST",
+    "asset_class": "us_equity",
+    "qty": "81",
+    "filled_qty": "81",
+    "filled_avg_price": "0.4225",
+    "order_type": "limit",
+    "type": "limit",
+    "side": "sell",
+    "time_in_force": "day",
+    "limit_price": "0.4178",
+    "stop_price": null,
+    "status": "filled",
+    "extended_hours": false
+  },
+  "attemptNum": 0,
+  "deletedHold": {
+    "_id": "5d9019eec1cd3cfd326293d5",
+    "ticker": "DEST",
+    "__v": 0,
+    "buys": [
+      {
+        "_id": "5d9019ee5fd71d38e9c61f62",
+        "date": "9-28-2019",
+        "fillPrice": 0.5278,
+        "quantity": 27,
+        "strategy": "macd-fitty-30min-bearishSignal-firstAlert-shouldWatchout-dinner",
+        "relatedPick": "5d8e569155510947c0882712"
+      },
+      {
+        "_id": "5d9019ee5fd71d38e9c61f63",
+        "date": "9-28-2019",
+        "fillPrice": 0.5279,
+        "quantity": 27,
+        "strategy": "macd-fitty-10min-bearishSignal-firstAlert-shouldWatchout-dinner",
+        "relatedPick": "5d8e530e55510947c0882563"
+      },
+      {
+        "_id": "5d9019ee5fd71d38e9c61f64",
+        "date": "9-28-2019",
+        "fillPrice": 0.5279,
+        "quantity": 27,
+        "strategy": "macd-fitty-10min-bearishSignal-firstAlert-shouldWatchout-dinner",
+        "relatedPick": "5d8e52f655510947c088252c"
+      }
+    ]
+  },
+  "currentPosition": {
+    "ticker": "DEST",
+    "average_buy_price": "0.5278666666666667",
+    "quantity": "81",
+    "stSent": 329,
+    "shouldSell": false,
+    "hold": {
+      "_id": "5d9019eec1cd3cfd326293d5",
+      "ticker": "DEST",
+      "__v": 0,
+      "buys": [
+        {
+          "_id": "5d9019ee5fd71d38e9c61f62",
+          "date": "9-28-2019",
+          "fillPrice": 0.5278,
+          "quantity": 27,
+          "strategy": "macd-fitty-30min-bearishSignal-firstAlert-shouldWatchout-dinner",
+          "relatedPick": "5d8e569155510947c0882712"
+        },
+        {
+          "_id": "5d9019ee5fd71d38e9c61f63",
+          "date": "9-28-2019",
+          "fillPrice": 0.5279,
+          "quantity": 27,
+          "strategy": "macd-fitty-10min-bearishSignal-firstAlert-shouldWatchout-dinner",
+          "relatedPick": "5d8e530e55510947c0882563"
+        },
+        {
+          "_id": "5d9019ee5fd71d38e9c61f64",
+          "date": "9-28-2019",
+          "fillPrice": 0.5279,
+          "quantity": 27,
+          "strategy": "macd-fitty-10min-bearishSignal-firstAlert-shouldWatchout-dinner",
+          "relatedPick": "5d8e52f655510947c088252c"
+        }
+      ]
+    },
+    "buyStrategies": {
+      "macd-fitty-30min-bearishSignal-firstAlert-shouldWatchout-dinner": 1,
+      "macd-fitty-10min-bearishSignal-firstAlert-shouldWatchout-dinner": 2
+    }
+  }
+}

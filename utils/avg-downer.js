@@ -48,7 +48,7 @@ module.exports = class AvgDowner {
     strlog({ l })
     const { currentPrice, askPrice } = l;
     const observePrice =  Math.max(currentPrice, askPrice);
-    const avgBuy = avgArray(...buyPrices);
+    const avgBuy = avgArray(buyPrices);
     const trendDown = getTrend(observePrice, avgBuy);
     strlog({
       buyPrices,

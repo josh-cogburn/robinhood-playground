@@ -1,0 +1,41 @@
+{
+  "alpacaOrder": {
+    "id": "2682536d-2bd4-4085-9ad8-1fc20e1c20e2",
+    "client_order_id": "4112b353-9a03-462e-97c6-e5fabff6932c",
+    "created_at": "2019-09-30T14:06:33.154675Z",
+    "updated_at": "2019-09-30T14:06:33.253752Z",
+    "submitted_at": "2019-09-30T14:06:33.142922Z",
+    "filled_at": "2019-09-30T14:06:33.246302Z",
+    "expired_at": null,
+    "canceled_at": null,
+    "failed_at": null,
+    "replaced_at": null,
+    "replaced_by": null,
+    "replaces": null,
+    "asset_id": "1bfecaf2-1feb-4365-bd86-7db604d2e9e4",
+    "symbol": "CRMD",
+    "asset_class": "us_equity",
+    "qty": "8",
+    "filled_qty": "8",
+    "filled_avg_price": "6.8",
+    "order_type": "limit",
+    "type": "limit",
+    "side": "sell",
+    "time_in_force": "day",
+    "limit_price": "6.78",
+    "stop_price": null,
+    "status": "filled",
+    "extended_hours": false
+  },
+  "attemptNum": 0,
+  "deletedHold": null,
+  "currentPosition": {
+    "ticker": "CRMD",
+    "average_buy_price": "6.3375",
+    "quantity": "8",
+    "stSent": 132,
+    "shouldSell": false,
+    "hold": null,
+    "buyStrategies": []
+  }
+}

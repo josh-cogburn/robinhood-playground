@@ -1,0 +1,88 @@
+{
+  "alpacaOrder": {
+    "id": "ae41958c-f355-40d3-815a-70088bb5271f",
+    "client_order_id": "f918f93f-f279-4ca1-b483-01fe1ce8c030",
+    "created_at": "2019-09-30T14:06:40.176711Z",
+    "updated_at": "2019-09-30T14:06:40.241786Z",
+    "submitted_at": "2019-09-30T14:06:40.150805Z",
+    "filled_at": "2019-09-30T14:06:40.233164Z",
+    "expired_at": null,
+    "canceled_at": null,
+    "failed_at": null,
+    "replaced_at": null,
+    "replaced_by": null,
+    "replaces": null,
+    "asset_id": "252e9b06-9d31-495b-a95c-ef0a61ebb65b",
+    "symbol": "BDSI",
+    "asset_class": "us_equity",
+    "qty": "12",
+    "filled_qty": "12",
+    "filled_avg_price": "4.3",
+    "order_type": "limit",
+    "type": "limit",
+    "side": "sell",
+    "time_in_force": "day",
+    "limit_price": "4.3",
+    "stop_price": null,
+    "status": "filled",
+    "extended_hours": false
+  },
+  "attemptNum": 0,
+  "deletedHold": {
+    "_id": "5d9019efc1cd3cfd326293de",
+    "ticker": "BDSI",
+    "__v": 0,
+    "buys": [
+      {
+        "_id": "5d9019ee5fd71d38e9c61f69",
+        "date": "9-28-2019",
+        "fillPrice": 4.33,
+        "quantity": 6,
+        "strategy": "rsi-twoToFive-10min-rsilt15-under8-firstAlert-notWatchout-brunch",
+        "relatedPick": "5d8e21fd2482623d73bd15c3"
+      },
+      {
+        "_id": "5d9019ef5fd71d38e9c61f6a",
+        "date": "9-28-2019",
+        "fillPrice": 4.33,
+        "quantity": 6,
+        "strategy": "rsi-twoToFive-10min-rsilt15-under8-firstAlert-notWatchout-brunch",
+        "relatedPick": "5d8e21e12482623d73bd157b"
+      }
+    ]
+  },
+  "currentPosition": {
+    "ticker": "BDSI",
+    "average_buy_price": "4.33",
+    "quantity": "12",
+    "stSent": 0,
+    "shouldSell": false,
+    "hold": {
+      "_id": "5d9019efc1cd3cfd326293de",
+      "ticker": "BDSI",
+      "__v": 0,
+      "buys": [
+        {
+          "_id": "5d9019ee5fd71d38e9c61f69",
+          "date": "9-28-2019",
+          "fillPrice": 4.33,
+          "quantity": 6,
+          "strategy": "rsi-twoToFive-10min-rsilt15-under8-firstAlert-notWatchout-brunch",
+          "relatedPick": "5d8e21fd2482623d73bd15c3"
+        },
+        {
+          "_id": "5d9019ef5fd71d38e9c61f6a",
+          "date": "9-28-2019",
+          "fillPrice": 4.33,
+          "quantity": 6,
+          "strategy": "rsi-twoToFive-10min-rsilt15-under8-firstAlert-notWatchout-brunch",
+          "relatedPick": "5d8e21e12482623d73bd157b"
+        }
+      ]
+    },
+    "buyStrategies": {
+      "rsi-twoToFive-10min-rsilt15-under8-firstAlert-notWatchout-brunch": 2
+    }
+  }
+}
+
