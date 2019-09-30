@@ -11,11 +11,12 @@ module.exports = class AvgDowner {
     buyPrice, 
     initialTimeout = INITIAL_TIMEOUT, 
     strategy,
+    avgDownCount = 0
   }) {
     Object.assign(this, {
       ticker,
       buyPrices: [buyPrice],
-      avgDownCount: 0,
+      avgDownCount,
       timeout: initialTimeout,
       strategy
     });

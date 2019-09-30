@@ -8,6 +8,9 @@ const sendEmail = require('../utils/send-email');
 const limitSell = require('./limit-sell');
 
 module.exports = async (dontSell) => {
+
+    const stratManager = require('../socket-server/strat-manager');
+
     console.log({ dontSell })
     let positions = (
         await alpaca.getPositions()
@@ -46,13 +49,14 @@ module.exports = async (dontSell) => {
         console.log('dont sell alpaca....returning!')
         return;
     };
-    for (let { ticker, qty } of toSell) {
+    await mapLimit(toSell, 3, async ({ ticker, qty }) => {
         const response = await limitSell({ ticker, quantity: qty });
         const {
             alpacaOrder,
             attemptNum
         } = response || {};
         if (alpacaOrder && alpacaOrder.filled_at) {
+            const currentPosition = stratManager.positions.alpaca.find(pos => pos.ticker === ticker);
             const deletedHold = await Holds.findOneAndDelete({
                 ticker
             });
@@ -61,11 +65,15 @@ module.exports = async (dontSell) => {
                 JSON.stringify({
                     alpacaOrder,
                     attemptNum,
-                    deletedHold
+                    deletedHold,
+                    currentPosition
                 }, null, 2)
             );
         } else {
             await sendEmail(`unable to sell ${ticker}`);
         }
-    }
+    });
+
+    console.log('done selling, sending refresh positions to strat manager');
+    stratManager.refreshPositions()
 };
