@@ -734,7 +734,8 @@ module.exports = new (class RealtimeRunner {
       period,
       stSent
     };
-    return recordPicks(pickName, 5000, [ticker], null, { keys, data });
+    recordPicks(pickName, 5000, [ticker], null, { keys, data });  // dont await?
+    return;
   }
 
 

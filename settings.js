@@ -27,19 +27,30 @@ module.exports = {
     purchaseAmt: 120,
     forPurchase: [
 
-        ...pm(`
-            avg-downer 3
-        `, 3, 'avg downers'),
-
         // 2/5 sudden drops - TOTAL 42
 
 
         ...pm(`
-            sudden-drops-notWatchout 10
+            avg-downer 3
+            avg-downer 3
+            sudden-drops-notWatchout 30
             sudden-drops-notWatchout-majorJump 5
             sudden-drops-notWatchout-majorJump 5
             sudden-drops-notWatchout-majorJump 5
+            sudden-drops-notWatchout-lunch 4
+            sudden-drops-notWatchout-lunch 4
         `, 1, 'general sudden-drops'),  // 17
+
+
+        ...pm(`
+            pennyscan-nowheres-singleTopVolumeSS-initial 1
+            pennyscan-nowheres-singleTopVolumeSS-initial 1
+            rsi-10min-rsilt10 4
+            rsi-shouldWatchout-firstAlert-rsilt15 6
+            rsi-10min-firstAlert-rsilt10-brunch 2
+            overnight-drops-majorJump 4
+            rsi-10min-notWatchout-firstAlert-rsilt10-brunch 2
+        `, 1, 'turnt')
 
     ],
     // forPurchaseVariation: '75Perc5Day-yesincludingblanks',
