@@ -1,20 +1,20 @@
 const Pick = require('../models/Pick');
 
-const INCLUDE = [];
-const DONT_INCLUDE = []//'rsi-', 'golden-cross-', 'sudden-drops-', 'pennyscan-'];
+const INCLUDE = ['baseline'];
+const DONT_INCLUDE = ['fitty'];
 
 
 
 module.exports = async () => {
   const todaysPicks = await Pick.find(
-      { date: '9-27-2019' },
+      { date: '9-30-2019' },
       { data: 0 }
   ).lean();
 
   strlog({ todaysPicks: todaysPicks.length})
   const junk = todaysPicks.filter(({ strategyName }) => {
     return INCLUDE.every(str => strategyName.includes(str))
-    // && DONT_INCLUDE.every(str => !strategyName.includes(str));
+    && DONT_INCLUDE.every(str => !strategyName.includes(str));
   });
 
   

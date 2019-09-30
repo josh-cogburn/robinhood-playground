@@ -1,9 +1,13 @@
 let i = 0;
 
 module.exports = {
-  
+  collections: [
+    // 'options',
+    'fitty',
+    // 'oneToTwo',
+  ],
   period: [
-    // 30
+    30
   ],
   handler: () => {
     i++;
