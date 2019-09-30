@@ -24,6 +24,11 @@ const getStrategies = require('./get-strategies');
 const pmsHit = require('../utils/pms-hit');
 const getStSentiment = require('../utils/get-stocktwits-sentiment');
 
+
+
+
+const riskCache = {};
+
 module.exports = new (class RealtimeRunner {
   
 
@@ -682,21 +687,23 @@ module.exports = new (class RealtimeRunner {
 
     if (!minimalist) {
 
-      // volumeKey
-      let fundamentals;
-      try {
-          fundamentals = (await addFundamentals([{ ticker }]))[0].fundamentals;
-      } catch (e) {}
-      const { volume, average_volume } = fundamentals || {};
-      volumeKey = (() => {
-          if (volume > 1000000 || volume > average_volume * 3.5) return 'highVol';
-          if (volume < 10000) return 'lowVol';
-      })();
+      // // volumeKey
+      // let fundamentals;
+      // try {
+      //     fundamentals = (await addFundamentals([{ ticker }]))[0].fundamentals;
+      // } catch (e) {}
+      // const { volume, average_volume } = fundamentals || {};
+      // volumeKey = (() => {
+      //     if (volume > 1000000 || volume > average_volume * 3.5) return 'highVol';
+      //     if (volume < 10000) return 'lowVol';
+      // })();
   
       // watchoutKey
-      const { shouldWatchout } = await getRisk({ ticker });
+      const risk = riskCache[ticker]  || await getRisk({ ticker });
+      riskCache[ticker] = risk;
+      const { shouldWatchout } = risk;
       watchoutKey = shouldWatchout ? 'shouldWatchout' : 'notWatchout';
-
+      
       // stSent
       stSent = await getStSentiment(ticker)
     }

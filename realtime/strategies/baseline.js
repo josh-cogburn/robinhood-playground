@@ -2,7 +2,9 @@ let i = 0;
 
 module.exports = {
   
-  period: [30],
+  period: [
+    // 30
+  ],
   handler: () => {
     i++;
     console.log('baseline', i);
