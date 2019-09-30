@@ -23,10 +23,6 @@ const createDataSet = dataSetProps => ({
 
 const padWithUndefined = (labels, data) => {
   const diff = labels.length - data.length;
-  console.log('ahhh', [
-    ...Array(diff).fill(undefined),
-    ...data
-  ])
   return [
     ...Array(diff).fill(undefined),
     ...data
@@ -76,16 +72,10 @@ export default [
     title: 'KST Series',
     dataProp: 'kstSeries',
     dataFn: ({ allPrices, kstSeries }) => {
-      console.log({
-        kstSeries
-      })
 
       const labels = allPrices.map(hist => (new Date(hist.timestamp).toLocaleString()));
       const getDataForProp = prop => kstSeries.filter(Boolean).map(obj => obj[prop]);
-      console.log(['kst', 'signal'].map(prop => ({
-        prop,
-        data: getDataForProp(prop)
-      })));
+
       return {
         labels,
         datasets: [
@@ -108,16 +98,10 @@ export default [
     title: 'MACD Series',
     dataProp: 'macdSeries',
     dataFn: ({ allPrices, macdSeries }) => {
-      console.log({
-        macdSeries
-      })
 
       const labels = allPrices.map(hist => (new Date(hist.timestamp).toLocaleString()));
       const getDataForProp = prop => macdSeries.filter(Boolean).map(obj => obj[prop]);
-      console.log(['MACD', 'signal'].map(prop => ({
-        prop,
-        data: getDataForProp(prop)
-      })));
+
       return {
         labels,
         datasets: [

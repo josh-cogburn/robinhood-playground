@@ -123,7 +123,6 @@ class App extends Component {
             return forPurchase.includes(strat);
         };
         const handlePick = data => {
-            console.log(data);
             this.setState({
                 picks: [data].concat(this.state.picks),
             });
@@ -158,20 +157,20 @@ class App extends Component {
             this.setState(data);
         });
         socket.on('server:related-prices', data => {
-            console.log({ relatedPrices: data });
+            // console.log({ relatedPrices: data });
             this.setState({ relatedPrices: data });
         });
         socket.on('server:pm-perfs', data => {
-            console.log({ pmPerfs: data });
+            // console.log({ pmPerfs: data });
             this.setState({ pmPerfs: data });
         });
         socket.emit('getDayReports', data => {
-            console.log({ data});
+            // console.log({ data});
             this.setState(data);
         });
         socket.on('server:balance-report', data => {
             // this.setState({ balance: data });
-            console.log(data, 'balcn');
+            // console.log(data, 'balcn');
             this.setState(({ balanceReports }) => ({
                 balanceReports: (balanceReports || []).concat(data.report)
             }));
@@ -188,7 +187,7 @@ class App extends Component {
     auth = () => {
         const rabbit = window.prompt('heyyyy there?');
         if (rabbit === 'j') {
-            console.log({ rabbit })
+            // console.log({ rabbit })
             this.setState({ admin: true }, () => console.log(this.state));
         }
     }
@@ -203,13 +202,7 @@ class App extends Component {
     render () {
         const { value, predictionModels, pms, balanceReports, newPicksData } = this.state;
         const isLoading = !balanceReports || !balanceReports.length;
-        console.log({
-            isLoading,
-            pms
-        })
-        // console.log({isLoading}, predictionModels.forPurchase)
         const PageComponent = pages[value].component;
-        console.log(value, pages[value], {PageComponent});
         return (
             <div className="App">
                 <AppBar position="static">
