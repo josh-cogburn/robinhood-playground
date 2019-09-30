@@ -4,6 +4,7 @@ const END_AFTER = 2 * 1000 * 60 * 60;   // 2 hr
 const getMinutesFrom630 = require('./get-minutes-from-630');
 const lookup = require('./lookup');
 const getTrend = require('./get-trend');
+const { avgArray } = require('./array-math');
 
 module.exports = class AvgDowner {
   constructor({ 

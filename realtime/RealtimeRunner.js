@@ -467,7 +467,8 @@ module.exports = new (class RealtimeRunner {
       mapped: (collections || []).map(collection => {
         return this.collections[collection]
       })
-    })
+    });
+
     const filteredByCollections = collections && collections.length ? 
       tickersAndAllPrices.filter(({ ticker }) => {
         return collections.some(collection => {
