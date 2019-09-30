@@ -3,13 +3,9 @@ const { force: { keep }} = require('../settings');
 // const shouldYouSellThisStock = require('../analysis/should-you-sell-this-stock');
 const shouldSellPosition = require('../utils/should-sell-position');
 const getStSent = require('../utils/get-stocktwits-sentiment');
-const Holds = require('../models/Holds');
-const sendEmail = require('../utils/send-email');
-const limitSell = require('./limit-sell');
+const sellPosition = require('../sell-position');
 
 module.exports = async (dontSell) => {
-
-    const stratManager = require('../socket-server/strat-manager');
 
     console.log({ dontSell })
     let positions = (
@@ -50,28 +46,10 @@ module.exports = async (dontSell) => {
         return;
     };
     await mapLimit(toSell, 3, async ({ ticker, qty }) => {
-        const response = await limitSell({ ticker, quantity: qty });
-        const {
-            alpacaOrder,
-            attemptNum
-        } = response || {};
-        if (alpacaOrder && alpacaOrder.filled_at) {
-            const currentPosition = stratManager.positions.alpaca.find(pos => pos.ticker === ticker);
-            const deletedHold = await Holds.findOneAndDelete({
-                ticker
-            });
-            await sendEmail(
-                `wow sold ${ticker} in ${attemptNum} attempts`, 
-                JSON.stringify({
-                    alpacaOrder,
-                    attemptNum,
-                    deletedHold,
-                    currentPosition
-                }, null, 2)
-            );
-        } else {
-            await sendEmail(`unable to sell ${ticker}`);
-        }
+        return sellPosition({
+            ticker,
+            quantity: qty
+        })
     });
 
     console.log('done selling, sending refresh positions to strat manager');

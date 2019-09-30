@@ -25,8 +25,8 @@ const calcLimitPrice = async ({ ticker, attemptNum, minPrice = Number.NEGATIVE_I
         askPrice,
         spread,
         attemptPercAbove,
-        aboveLow,
-        maxPrice,
+        belowHigh,
+        minPrice,
         finalPrice
     })
     return finalPrice;

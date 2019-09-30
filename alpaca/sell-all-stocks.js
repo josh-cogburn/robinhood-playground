@@ -1,5 +1,6 @@
 const { alpaca } = require('.');
 const { force: { keep }} = require('../settings');
+const sellPosition = require('./sell-position');
 
 module.exports = async (_, dontSell) => {
     let positions = await alpaca.getPositions();
@@ -8,14 +9,10 @@ module.exports = async (_, dontSell) => {
     if (dontSell) return;
     for (let pos of positions) {
         try {
-            const order = await alpaca.createOrder({
-                symbol: pos.symbol, // any valid ticker symbol
-                qty: Number(pos.qty),
-                side: 'sell',
-                type: 'market',
-                time_in_force: 'day',
+            await sellPosition({
+                ticker: pos.symbol,
+                quantity: pos.qty
             });
-            log(order)
         } catch (e) {
             strlog(e)
         }
