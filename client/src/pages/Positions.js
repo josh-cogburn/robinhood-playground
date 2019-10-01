@@ -42,7 +42,7 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
             'percent of total': pos => pos.percTotal + '%',
         } : {
             equity: 'equity',
-            'return $': pos => <TrendPerc value={pos.returnDollars} noPerc={true} />,
+            'return $': pos => <TrendPerc value={pos.returnDollars} dollar={true} />,
             'return %': pos => <TrendPerc value={pos.returnPerc} />,
         },
         // 'buy strategies': 'buyStrategy',
@@ -60,7 +60,7 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
     };
     totals = {
         ...totals,
-        returnPerc: totals.returnDollars / totals.equity,
+        returnPerc: totals.returnDollars / (totals.equity - totals.returnDollars) * 100,
     };
     totals = mapObject(totals, val => Number(val.toFixed(2)))
 
@@ -131,7 +131,7 @@ class TodaysStrategies extends Component {
             <div style={{ padding: '15px' }}>
 
                 <style>{`.react-hint__content { width: 840px }`}</style>
-                <style>{`table td, th { padding: 4px 15px }`}</style>
+                <style>{`table td, th { padding: 2px 15px }`}</style>
                 
                 {
                     Object.entries(positions).map(([name, positions]) => (

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Line } from 'react-chartjs-2';
 import reportsToChartData from '../utils/reports-to-chartData';
 import TrendPerc from '../components/TrendPerc';
+import getTrend from '../utils/get-trend';
+import { mapObject } from 'underscore';
 
 class DayReports extends Component {
     constructor() {
@@ -18,6 +20,25 @@ class DayReports extends Component {
         let { timeFilter } = this.state;
         if (!balanceReports || !balanceReports.length) return <b>LOADING</b>;
 
+
+        // filter balance reports
+        const lastReport = balanceReports[balanceReports.length - 1];
+        const d = new Date(lastReport.time);
+        const date = d.getDate();
+        const dataSlice = timeFilter === 'onlyToday' 
+            ? (() => {
+                const index = balanceReports.findIndex(r => 
+                    (new Date(r.time)).getDate() === date
+                );
+                firstOfDay = balanceReports[index];
+                return balanceReports.length - index
+            })() : 0;
+        balanceReports = balanceReports.slice(0-dataSlice);
+
+
+
+        // more code!
+
         let firstOfDay;
         const chartData = (() => {
             console.log({timeFilter})
@@ -26,22 +47,8 @@ class DayReports extends Component {
             }
             // nope not overall
             // data coming from balance reports
-                
-            const lastReport = balanceReports[balanceReports.length - 1];
-            const d = new Date(lastReport.time);
-            const date = d.getDate();
-
-            const dataSlice = timeFilter === 'onlyToday' 
-                ? (() => {
-                    const index = balanceReports.findIndex(r => 
-                        (new Date(r.time)).getDate() === date
-                    );
-                    firstOfDay = balanceReports[index];
-                    return balanceReports.length - index
-                })() : 0;
-
-            const chartData = reportsToChartData.balanceChart(balanceReports.slice(0-dataSlice));
-
+            
+            const chartData = reportsToChartData.balanceChart(balanceReports);
             const withDiff = {
                 ...chartData,
                 datasets: [
@@ -59,47 +66,68 @@ class DayReports extends Component {
             return withDiff
         })();
 
-        const { data } = chartData.datasets[1];
-        const curTrend = data[data.length - 1];
+
+        // stats!
+        const getStats = prop => {
+            const first = balanceReports[0][prop];
+            const last = balanceReports[balanceReports.length - 1][prop];
+            return {
+                absolute: last - first,
+                trend: getTrend(last, first)
+            };
+        };
+
+        const stats = mapObject({
+            robinhood: 'accountBalance',
+            alpaca: 'alpacaBalance'
+        }, getStats);
 
         const showingSince = firstOfDay ? firstOfDay : balanceReports[0];
         return (
-            <div style={{ padding: '30px 40px' }}>
-                {
-                    [
-                        'onlyToday',
-                        'ALL REPORTS',
-                        ...admin ? ['2019'] : []
-                    ].map(time => (
-                        <div>
-                        {
-                            (timeFilter === time)
-                                ? <span>{time}</span>
-                                : (
-                                    <a href='#' onClick={() => this.setTimeFilter(time)}>{time}</a>
-                                )
-                        }
-                        </div>
-                    ))
-                }
-                <br/>
-                <small>
-                    trend since {new Date(showingSince.time).toLocaleString()}:&nbsp;
-                    <b style={{ fontSize: '160%' }}><TrendPerc value={curTrend} /></b>
-                </small>
-                {/* <h2></h2> */}
-
-                
-                <Line 
-                    data={chartData} 
-                    options={{ animation: !!timeFilter === '2019' }} 
-                />
-                
-                
-                
-                {/* <pre>   
-                    {JSON.stringify(balanceReports, null, 2)}
-                </pre> */}
+            <div style={{ padding: '30px 60px 30px 10px' }}>
+                <table style={{ marginTop: '15px', width: '100%', textAlign: 'center' }}>
+                    <tr>
+                        <td>
+                            {
+                                [
+                                    'onlyToday',
+                                    'ALL REPORTS',
+                                    ...admin ? ['2019'] : []
+                                ].map(time => (
+                                    <div>
+                                    {
+                                        (timeFilter === time)
+                                            ? <span>{time}</span>
+                                            : (
+                                                <a href='#' onClick={() => this.setTimeFilter(time)}>{time}</a>
+                                            )
+                                    }
+                                    </div>
+                                ))
+                            }
+                        </td>
+                        <td style={{ fontSize: '80%', textAlign: 'right' }}>
+                            trend since {new Date(showingSince.time).toLocaleString()}<br/>
+                            {
+                                Object.keys(stats).map(stat => (
+                                    <div>
+                                        {stat}:&nbsp;
+                                        <b style={{ fontSize: '160%' }}>
+                                            <TrendPerc value={stats[stat].absolute} dollar={true}  />
+                                            (<TrendPerc value={stats[stat].trend} />)
+                                        </b>
+                                    </div>
+                                ))
+                            }
+                        </td>
+                    </tr>
+                </table>
+                <div>
+                    <Line 
+                        data={chartData} 
+                        options={{ animation: !!timeFilter === '2019' }} 
+                    />
+                </div>
             </div>
         )
     }
