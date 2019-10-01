@@ -5,11 +5,8 @@ const sendEmail = require('../utils/send-email');
 module.exports = async ({ ticker, quantity }) => {
 
     const stratManager = require('../socket-server/strat-manager');
-    const response = await limitSell({ ticker, quantity });
-    const {
-        alpacaOrder,
-        attemptNum
-    } = response || {};
+    const response = await limitSell({ ticker, quantity }) || {};
+    const { alpacaOrder } = response || {};
     if (alpacaOrder && alpacaOrder.filled_at) {
         const currentPosition = stratManager.positions.alpaca.find(pos => pos.ticker === ticker);
         const deletedHold = await Holds.findOneAndDelete({
@@ -17,7 +14,7 @@ module.exports = async ({ ticker, quantity }) => {
         });
         const data = {
             alpacaOrder,
-            attemptNum,
+            attemptNum: response.attemptNum,
             deletedHold,
             currentPosition
         };
