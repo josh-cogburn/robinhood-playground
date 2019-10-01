@@ -1,6 +1,10 @@
 const { alpaca } = require('.');
 
-module.exports = async ({ ticker, quantity }) => {
+module.exports = async ({ 
+    ticker, 
+    quantity,
+    timeoutSeconds = 60, 
+}) => {
     log('ALPACA MARKET SELL');
     str({ ticker, quantity });
     const data = {
@@ -20,9 +24,6 @@ module.exports = async ({ ticker, quantity }) => {
     if (!order || !order.id) {
         return null;
     }
-    await new Promise(resolve => setTimeout(resolve, 1000 * 10));
-    return {
-        alpacaOrder: await alpaca.getOrder(order.id),
-        attemptNum: 'market'
-    };
+    await new Promise(resolve => setTimeout(resolve, 1000 * timeoutSeconds));
+    return alpaca.getOrder(order.id);
 };

@@ -37,10 +37,15 @@ module.exports = async ({
         console.log(perStock, 'purchasng ', ticker);
         try {
             const pickPrice = (withPrices.find(obj => obj.ticker === ticker) || {}).price;
-            const quantity = Math.floor(perStock / pickPrice) || 1;
+            const quantity = Math.floor(perStock / pickPrice / 2) || 1;
 
 
             const responses = await Promise.all([
+                alpacaLimitBuy({
+                    ticker,
+                    quantity,
+                    limitPrice: pickPrice * 1.07,
+                }),
                 alpacaMarketBuy({
                     ticker,
                     quantity,
@@ -49,10 +54,7 @@ module.exports = async ({
 
             for (let response of responses) {
                 strlog({ response })
-                const {
-                    alpacaOrder,
-                    attemptNum
-                } = response || {};
+                const alpacaOrder = response || {};
                 if (alpacaOrder && alpacaOrder.filled_at) {
                     await Holds.registerAlpacaFill({
                         ticker,
@@ -60,7 +62,7 @@ module.exports = async ({
                         strategy,
                         PickDoc,
                         data: {
-                            attemptNum,
+                            // attemptNum,
                         }
                     });
                 } else {
