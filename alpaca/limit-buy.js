@@ -5,28 +5,31 @@ const getMinutesFrom630 = require('../utils/get-minutes-from-630');
 const lookup = require('../utils/lookup');
 const marketBuy = require('./market-buy');
 
-const ATTEMPT_TIMEOUTS = [5, 5, 5, 6, 6, 7, 8, 9, 10, 11];     // seconds
-const ATTEMPT_PERCS_ABOVE = [0, 20, 40, 60, 80, 100, 120, 140, 160, 180];  // percents
+const ATTEMPT_TIMEOUTS = [5, 6, 7, 8];     // seconds
+const ATTEMPT_PERCS = [-1, 0.5, 3.5, 5.5];  // percents
 const MAX_ATTEMPTS = ATTEMPT_TIMEOUTS.length;
 
 
 const calcLimitPrice = async ({ ticker, pickPrice, attemptNum }) => {
-    const attemptPercAbove = ATTEMPT_PERCS_ABOVE[attemptNum];
+    const attemptPercAbove = ATTEMPT_PERCS[attemptNum];
 
     const { bidPrice, askPrice, lastTrade } = await lookup(ticker);
-    const lowVal = Math.min(bidPrice, askPrice, lastTrade);
-    const highVal = Math.max(bidPrice, askPrice, lastTrade );
-    const spread = Math.max(highVal - lowVal, 0.02 * lastTrade);
+    // const lowVal = Math.min(bidPrice, askPrice, lastTrade);
+    const highVal = Math.max(bidPrice, askPrice, lastTrade);
     
-    const aboveLow = spread * attemptPercAbove / 100;
-    const maxPrice = Math.min(askPrice, pickPrice) * 1.07;
-    const finalPrice = Math.min(lowVal + aboveLow, maxPrice);
+    const aboveHigh = highVal * attemptPercAbove / 100;
+    const maxPrice = pickPrice * 1.07;
+    const finalPrice = Math.min(highVal + aboveHigh, maxPrice);
     strlog({
         bidPrice,
         askPrice,
-        spread,
+        lastTrade,
+
+        highVal,
+        aboveHigh,
+
+        attemptNum,
         attemptPercAbove,
-        aboveLow,
         maxPrice,
         finalPrice
     })
