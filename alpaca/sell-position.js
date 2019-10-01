@@ -25,7 +25,6 @@ module.exports = async ({ ticker, quantity }) => {
             filled_avg_price: sellPrice
         },
         currentPosition: {
-            quantity,
             average_buy_price: buyPrice,
             buyStrategies
         }

@@ -670,8 +670,9 @@ module.exports = new (class RealtimeRunner {
         return 'premarket';
     })();
 
-    if (strategyName === 'sudden-drops' && min < 11) {
+    if (strategyName === 'sudden-drops' && keys.isOvernight) {
       strategyName = 'overnight-drops';
+      delete keys.isOvernight;
     }
 
     

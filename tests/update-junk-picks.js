@@ -1,14 +1,13 @@
 const Pick = require('../models/Pick');
 
-const INCLUDE = [''];
+const INCLUDE = ['sudden-drops'];
 const DONT_INCLUDE = [];
 
-
+const { isOvernight } = require('../realtime/strategies/sudden-drops');
 
 module.exports = async () => {
   const todaysPicks = await Pick.find(
-      { date: '9-24-2019' },
-      { data: 0 }
+      { date: '10-1-2019' },
   ).lean();
 
 
@@ -23,17 +22,20 @@ module.exports = async () => {
     todaysPicks: todaysPicks.length,
     junk: junk.length,
     junk2: junk.slice(0, 50)
-  })
+  })  
 
-  for (let { _id, strategyName } of junk) {
-    // const newSn = strategyName.split('twoToFive-').join('');
-    // strlog({ _id, old: strategyName, newSn });
-    await Pick.update({
-      _id
-    }, {
-      isRecommended: false,
-      // strategyName: newSn
-    })
+  for (let { _id, strategyName, data } of junk) {
+    if (isOvernight(data.allPrices)) {
+      const newSn = 'overnight-drops' + strategyName.split('sudden-drops')[1];
+      strlog({ _id, old: strategyName, newSn });
+      await Pick.update({
+        _id
+      }, {
+        // isRecommended: false,
+        strategyName: newSn
+      })
+    }
+    
   }
 
   // strlog({

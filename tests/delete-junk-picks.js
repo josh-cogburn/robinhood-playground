@@ -1,13 +1,13 @@
 const Pick = require('../models/Pick');
 
-const INCLUDE = ['baseline'];
-const DONT_INCLUDE = ['fitty'];
+const INCLUDE = ['drops'];
+const DONT_INCLUDE = [];
 
 
 
 module.exports = async () => {
   const todaysPicks = await Pick.find(
-      { date: '9-30-2019' },
+      { date: '10-1-2019' },
       { data: 0 }
   ).lean();
 

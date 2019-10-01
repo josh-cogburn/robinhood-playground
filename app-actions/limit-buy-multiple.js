@@ -37,15 +37,10 @@ module.exports = async ({
         console.log(perStock, 'purchasng ', ticker);
         try {
             const pickPrice = (withPrices.find(obj => obj.ticker === ticker) || {}).price;
-            const quantity = Math.floor(perStock / pickPrice / 2) || 1;
+            const quantity = Math.floor(perStock / pickPrice) || 1;
 
 
             const responses = await Promise.all([
-                alpacaLimitBuy({
-                    ticker,
-                    quantity, 
-                    pickPrice,
-                }),
                 alpacaMarketBuy({
                     ticker,
                     quantity,

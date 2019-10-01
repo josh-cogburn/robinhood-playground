@@ -2,6 +2,15 @@ const Combinatorics = require('js-combinatorics');
 const getMultipleHistoricals = require('../../app-actions/get-multiple-historicals');
 const getTrend = require('../../utils/get-trend');
 
+const isOvernight = allPrices => {
+  const [secondToLast, last] = allPrices
+    .slice(-2)
+    .map(({ timestamp }) => (new Date(timestamp)).getDate());
+  console.log(secondToLast, last)
+  if (secondToLast !== last) return true;
+};
+
+
 module.exports = {
     period: [5, 10],
     collections: ['spy', 'options', 'fitty', 'lowVolFitty', 'zeroToOne', 'oneToTwo', 'twoToFive', 'fiveToTen'],
@@ -60,6 +69,7 @@ module.exports = {
                 })(),
                 lowVolWarning,
                 // [failedHistoricalCheck]: failedHistoricalCheck
+                isOvernight: isOvernight(allPrices)
               },
               data: {
                 // allCurrents,
@@ -104,5 +114,6 @@ module.exports = {
 
       }, {})
 
-    }
+    },
+    isOvernight
 };
