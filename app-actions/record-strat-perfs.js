@@ -103,7 +103,7 @@ module.exports = {
             const analyzed = await analyzeDay(pastDayDate);
             const period = `${key}-${min}`;
             console.log('done analyzing', pastDayDate, analyzed);
-            await StratPerf.bulkWrite(
+            analyzed.length && await StratPerf.bulkWrite(
                 analyzed.map(stratPerf => ({
                     updateOne: {
                         filter: {
