@@ -9,10 +9,13 @@ module.exports = async (_, dontSell) => {
     if (dontSell) return;
     for (let pos of positions) {
         try {
-            await sellPosition({
-                ticker: pos.symbol,
-                quantity: pos.qty
-            });
+            setTimeout(() => {
+                console.log('selling', pos.symbol);
+                sellPosition({
+                    ticker: pos.symbol,
+                    quantity: pos.qty
+                })
+            }, 1000 * Math.random() * 360);
         } catch (e) {
             strlog(e)
         }
