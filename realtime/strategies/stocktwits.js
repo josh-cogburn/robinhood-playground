@@ -8,6 +8,9 @@ module.exports = {
       return;
     }
     const allTickers = picks.map(pick => pick.ticker).uniq();
+    console.log({
+      stocktwitsPostRunCount: allTickers.length
+    });
     if (allTickers.length < 4) {
       console.log('not running stocktwits because allTickers length is less than 4');
       return;
