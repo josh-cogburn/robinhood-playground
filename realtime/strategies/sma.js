@@ -9,7 +9,7 @@ const getSMA = values => {
 
 module.exports = {
   period: [5, 10, 30],
-  collections: ['fitty', 'options', 'spy'],
+  collections: ['options', 'spy'],
 
   handler: async ({ ticker, allPrices }) => {
       const allCurrents = allPrices.map(obj => obj.currentPrice);

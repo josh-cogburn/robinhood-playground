@@ -8,6 +8,7 @@ const limitSell = async ({
     ticker, 
     quantity, 
     limitPrice,
+    timeoutSeconds = 15
     // limitNum
 }) => {
 
@@ -35,22 +36,16 @@ const limitSell = async ({
     } catch (e) {
         strlog({ e })
     }
-    
+
     await new Promise(resolve => setTimeout(resolve, 1000 * timeoutSeconds));
     order = order ? await alpaca.getOrder(attemptResponse.id) : {};
-  
-    if (order.filled_at) {
-        return order;
-    } else if (order.id) {
+
+    if (!order.filled_at) {
         await alpaca.cancelOrder(order.id);
+        order = fallbackToMarket ? await marketSell({ ticker, quantity }) : order;
     }
-  
-    if (fallbackToMarket) {
-      return marketSell({
-        ticker,
-        quantity
-      });
-    }
+
+    return order;
 
 };
 

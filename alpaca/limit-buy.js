@@ -39,19 +39,12 @@ const limitBuy = async ({
   await new Promise(resolve => setTimeout(resolve, 1000 * timeoutSeconds));
   order = order ? await alpaca.getOrder(attemptResponse.id) : {};
 
-  if (order.filled_at) {
-      return order;
-  } else if (order.id) {
-      await alpaca.cancelOrder(order.id);
+  if (!order.filled_at) {
+    await alpaca.cancelOrder(order.id);
+    order = fallbackToMarket ? await marketBuy({ ticker, quantity }) : order;
   }
 
-  if (fallbackToMarket) {
-    return marketBuy({
-      ticker,
-      quantity
-    });
-  }
-
+  return order;
 
 };
 

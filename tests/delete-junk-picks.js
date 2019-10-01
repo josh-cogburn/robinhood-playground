@@ -1,6 +1,6 @@
 const Pick = require('../models/Pick');
 
-const INCLUDE = ['drops'];
+const INCLUDE = ['kst'];
 const DONT_INCLUDE = [];
 
 

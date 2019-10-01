@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import getTrend from '../utils/get-trend';
 import { avgArray } from '../utils/array-math';
+import { mapObject } from 'underscore';
 
 import Pick from '../components/Pick';
 import TrendPerc from '../components/TrendPerc';
@@ -52,14 +53,21 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
         } : {}
     };
 
-    const totalInvested = positions.reduce((acc, pos) => acc + pos.equity, 0);
-    const totalReturnDollars = positions.reduce((acc, pos) => acc + pos.returnDollars, 0);
-    const totalReturnPerc = totalReturnDollars / totalInvested * 100;
+    const sumProp = prop => positions.reduce((acc, pos) => acc + Number(pos[prop]), 0);
+    let totals = {
+        equity: sumProp('equity'),
+        returnDollars: sumProp('returnDollars'),
+    };
+    totals = {
+        ...totals,
+        returnPerc: totals.returnDollars / totals.equity,
+    };
+    totals = mapObject(totals, val => Number(val.toFixed(2)))
 
     return (
         <div>
             <h2>{name}</h2>
-            <table>
+            <table >
                 <thead>
                     {
                         Object.keys(toDisplay).map(header => 
@@ -90,9 +98,11 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
                     {
                         admin && (
                             <tr>
-                                <td colspan="3">Totals</td>
-                                <td>{totalReturnDollars}</td>
-                                <td><TrendPerc value={totalReturnPerc} /></td>
+                                <td>Totals</td>
+                                <td>{totals.equity}</td>
+                                <td>{totals.returnDollars}</td>
+                                <td><TrendPerc value={totals.returnPerc} /></td>
+                                <td colspan="3"></td>
                             </tr>
                         )
                     }
@@ -121,6 +131,7 @@ class TodaysStrategies extends Component {
             <div style={{ padding: '15px' }}>
 
                 <style>{`.react-hint__content { width: 840px }`}</style>
+                <style>{`table td, th { padding: 4px 15px }`}</style>
                 
                 {
                     Object.entries(positions).map(([name, positions]) => (

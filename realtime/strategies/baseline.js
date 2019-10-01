@@ -3,7 +3,7 @@ let i = 0;
 module.exports = {
   collections: [
     // 'options',
-    'fitty',
+    'options',
     // 'oneToTwo',
   ],
   period: [
