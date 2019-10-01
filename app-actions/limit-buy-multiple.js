@@ -40,7 +40,7 @@ module.exports = async ({
             const quantity = Math.floor(perStock / pickPrice / 2) || 1;
 
 
-            const responses = await Promise.all([
+            const alpacaOrders = await Promise.all([
                 alpacaLimitBuy({
                     ticker,
                     quantity,
@@ -52,9 +52,8 @@ module.exports = async ({
                 })
             ]);
 
-            for (let response of responses) {
-                strlog({ response })
-                const alpacaOrder = response || {};
+            for (let alpacaOrder of alpacaOrders) {
+                strlog({ alpacaOrder })
                 if (alpacaOrder && alpacaOrder.filled_at) {
                     await Holds.registerAlpacaFill({
                         ticker,
