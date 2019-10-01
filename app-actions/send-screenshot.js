@@ -16,10 +16,10 @@ module.exports = async () => {
   });
   const page = await browser.newPage();
   const dims = {
-    width: 1000,
-    height: 500
+    width: 1680,
+    height: 900
   };
-  page.setViewport({ ...dims, deviceScaleFactor: 1});
+  page.setViewport({ ...dims, deviceScaleFactor: 2 });
   await page.goto('http://107.173.6.167:3000/');
   await page.waitFor(4000);
   await page.screenshot({
@@ -27,7 +27,7 @@ module.exports = async () => {
     quality: 100,
     clip: {
       x: 0,
-      y: 186,
+      y: 135,
       ...dims
     }
   });
