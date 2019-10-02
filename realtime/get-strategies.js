@@ -21,6 +21,7 @@ module.exports = async () => {
         // if (!isDir) {
         try {
             const moduleFile = require(`./strategies/${file}`);
+            if (moduleFile.disabled) continue;
             strategies.push({
                 ...moduleFile,
                 strategyName: file.split('.')[0]

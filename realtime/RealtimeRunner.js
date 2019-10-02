@@ -359,6 +359,17 @@ module.exports = new (class RealtimeRunner {
     }
 
   }
+  async penniesAndRecs() {
+
+    console.log('RUNNING DAILY', nowStr);
+    await this.runDaily();
+    
+    console.log('RUNNING PENNIES', nowStr);
+    await this.runPennies();
+  
+    console.log('SENDING RECS');
+    await sendRecs();
+  }
 
   async topOfHour() {
 
@@ -367,17 +378,9 @@ module.exports = new (class RealtimeRunner {
     await this.timedAsync(
       `ONCE AN HOUR ${nowStr}`,
       async () => {
-        console.log('RUNNING DAILY', nowStr);
-        await this.runDaily();
     
         console.log('COLLECTIONS AND HISTORICALS JUST BECAUSE', nowStr);
         await this.collectionsAndHistoricals();
-    
-        console.log('RUNNING PENNIES', nowStr);
-        await this.runPennies();
-    
-        console.log('SENDING RECS');
-        await sendRecs();
       }
     );
     

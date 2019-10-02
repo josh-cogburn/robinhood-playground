@@ -1,7 +1,7 @@
 const Combinatorics = require('js-combinatorics');
 
 module.exports = {
-
+  disabled: true,
   postRun: picks => {
 
     const uniqTickers = picks.map(pick => pick.ticker).uniq();

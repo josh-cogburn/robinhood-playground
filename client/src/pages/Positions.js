@@ -17,18 +17,20 @@ const tooltipStr = ({ buyStrategies }) =>
 
 const PositionSection = ({ relatedPrices, positions, name, admin }) => {
 
-    positions = positions.map(pos => {
-        const { currentPrice } = relatedPrices[pos.ticker] || {};
-        if (currentPrice) {
+    positions = positions
+        .map(pos => {
+            const { currentPrice } = relatedPrices[pos.ticker] || {};
+            if (currentPrice) {
+                console.log(pos);
+                pos.currentPrice = currentPrice;
+                pos.returnDollars = +(pos.quantity * (pos.currentPrice - pos.average_buy_price)).toFixed(2);
+                pos.returnPerc = getTrend(currentPrice, pos.average_buy_price);
+                pos.equity = (pos.quantity * currentPrice).toFixed(2);
+            }
             console.log(pos);
-            pos.currentPrice = currentPrice;
-            pos.returnDollars = +(pos.quantity * (pos.currentPrice - pos.average_buy_price)).toFixed(2);
-            pos.returnPerc = getTrend(currentPrice, pos.average_buy_price);
-            pos.equity = (pos.quantity * currentPrice).toFixed(2);
-        }
-        console.log(pos);
-        return pos;
-    });
+            return pos;
+        })
+        .sort((a, b) => b.equity - a.equity);
 
     console.log({ name, positions });
     

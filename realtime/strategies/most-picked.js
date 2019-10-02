@@ -2,6 +2,7 @@ const { sortBy } = require('underscore');
 const getMinutesFrom630 = require('../../utils/get-minutes-from-630');
 
 module.exports = {
+  disabled: true,
   postRun: (newPicks, todaysPicks, periods) => {
     if (!newPicks || !newPicks.length) return;
     const allPicks = [

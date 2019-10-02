@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Line } from 'react-chartjs-2';
 import InputRange from 'react-input-range';
+import Odometer from 'react-odometerjs';
+
+import './odometer.css';
 
 import reportsToChartData from '../utils/reports-to-chartData';
 import TrendPerc from '../components/TrendPerc';
@@ -133,6 +136,7 @@ class DayReports extends Component {
             const first = get(balanceReports[0], prop);
             const last = get(balanceReports[balanceReports.length - 1], prop);
             return {
+                current: last,
                 absolute: last - first,
                 trend: getTrend(last, first)
             };
@@ -184,12 +188,17 @@ class DayReports extends Component {
                                 ))
                             } */}
                         </td>
-                        <td style={{ fontSize: '80%', textAlign: 'right' }}>
+                        <td>
+                            <Odometer value={stats.alpaca.current} format="(,ddd).dd" />
+                        </td>
+                        <td style={{ fontSize: '80%', textAlign: 'right', paddingRight: '66px' }}>
                             trend since {new Date(showingSince.time).toLocaleString()}<br/>
                             {
                                 Object.keys(stats).map(stat => (
                                     <div>
-                                        {stat}:&nbsp;
+                                        <span data-custom data-tooltip-str={`$${stats[stat].current}`}>
+                                            {stat}
+                                        </span>&nbsp;
                                         <b style={{ fontSize: '160%' }}>
                                             <TrendPerc value={stats[stat].absolute} dollar={true}  />
                                             (<TrendPerc value={stats[stat].trend} />)
@@ -199,17 +208,20 @@ class DayReports extends Component {
                             }
                         </td>
                         <td style={{ fontSize: '80%', textAlign: 'center' }}>
-                            {
-                                Object.keys(indexStats).map(stat => (
-                                    <div>
-                                        {stat}:&nbsp;
-                                        <b style={{ fontSize: '100%' }}>
-                                            {/* <TrendPerc value={indexStats[stat].absolute} dollar={true}  /> */}
-                                            <TrendPerc value={indexStats[stat].trend} />
-                                        </b>
-                                    </div>
-                                ))
-                            }
+                            <div style={{ border: '1px solid black', padding: '7px' }}>
+                                <table style={{ marginRight: '-49px' }}>
+                                    {
+                                        Object.keys(indexStats).map(stat => (
+                                            <tr>
+                                                <td>{stat}</td>
+                                                <td>
+                                                    <TrendPerc value={indexStats[stat].trend} />
+                                                </td>
+                                            </tr>
+                                        ))
+                                    }
+                                </table>
+                            </div>
                         </td>
                     </tr>
                 </table>
