@@ -594,9 +594,9 @@ module.exports = new (class RealtimeRunner {
 
     // mongo and socket updates
     // for PICKS
-    for (let pick of picks) {
+    await mapLimit(pick, 5, async pick => {
       pick._id = await this.handlePick(pick);
-    }
+    });
 
     // run post run strategies
     const postRunPicks = await this.runPostRunStrategies(picks, periods);
@@ -604,9 +604,9 @@ module.exports = new (class RealtimeRunner {
     
     // mongo and socket updates
     // for POSTRUNPICKS
-    for (let pick of postRunPicks) {
-      await this.handlePick(pick);
-    }
+    await mapLimit(postRunPicks, 5, async pick => {
+      pick._id = await this.handlePick(pick);
+    });
 
     // add to todaysPicks
     this.todaysPicks.push([
