@@ -15,7 +15,7 @@ module.exports = async (_, dontSell) => {
                     ticker: pos.symbol,
                     quantity: pos.qty
                 })
-            }, 1000 * Math.random() * 360);
+            }, 1000 * Math.random() * 650);
         } catch (e) {
             strlog(e)
         }
