@@ -31,7 +31,7 @@ const stratManager = require('../socket-server/strat-manager');
 const additionalCron = [
     {
         name: 'alpacaSellAllStocks',
-        run: [8],
+        run: [0.5],
         fn: () => alpacaSellAllStocks()
     },
     // {

@@ -1,19 +1,17 @@
-const limitSell = require('./limit-sell');
+const attemptSell = require('./attempt-sell');
 const Holds = require('../models/Holds');
 const sendEmail = require('../utils/send-email');
 
 module.exports = async ({ ticker, quantity }) => {
 
     const stratManager = require('../socket-server/strat-manager');
-    const response = await limitSell({ ticker, quantity }) || {};
+    const response = await attemptSell({ ticker, quantity });
     const { alpacaOrder, attemptNum } = response || {};
     if (!alpacaOrder || alpacaOrder.filled_at) {
         return sendEmail(`unable to sell ${ticker}`);
     }
     const currentPosition = stratManager.positions.alpaca.find(pos => pos.ticker === ticker);
-    const deletedHold = await Holds.findOneAndDelete({
-        ticker
-    });
+    const deletedHold = await Holds.findOneAndDelete({ ticker });
     const data = {
         alpacaOrder,
         attemptNum,
