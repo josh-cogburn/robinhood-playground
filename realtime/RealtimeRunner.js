@@ -594,7 +594,7 @@ module.exports = new (class RealtimeRunner {
 
     // mongo and socket updates
     // for PICKS
-    await mapLimit(pick, 5, async pick => {
+    await mapLimit(picks, 5, async pick => {
       pick._id = await this.handlePick(pick);
     });
 

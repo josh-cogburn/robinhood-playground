@@ -5,7 +5,51 @@ import InputRange from 'react-input-range';
 import reportsToChartData from '../utils/reports-to-chartData';
 import TrendPerc from '../components/TrendPerc';
 import getTrend from '../utils/get-trend';
-import { mapObject } from 'underscore';
+import _, { mapObject } from 'underscore';
+
+function get(obj, path) {
+    var nPath, remainingPath;
+    if (!obj && !path) {
+        return undefined;
+    } else {
+        var paths;
+
+        if (!_.isEmpty(path.match(/^\[\d\]/))) {
+            paths = path.replace(/^[\[\]]/g, '').split(/\./);
+            nPath = _.first(paths[0].replace(/\]/, ''));
+        } else {
+            paths = path.split(/[\.\[]/);
+            nPath = _.first(paths);
+        }
+
+        remainingPath = _.reduce(_.rest(paths), function(result, item) {
+            if (!_.isEmpty(item)) {
+                if (item.match(/^\d\]/)) {
+                    item = "[" + item;
+            }
+                result.push(item);
+            }
+
+            return result;
+        }, []).join('.');
+
+        if (_.isEmpty(remainingPath)) {
+            return obj[nPath];
+        } else {
+            return _.has(obj, nPath) && get(obj[nPath], remainingPath);
+        }
+    }
+}
+
+console.log(
+    get(
+        {
+            a: 1,
+            b: { c: 3 }
+        },
+        'b.c'
+    )
+)
 
 class DayReports extends Component {
     constructor() {
@@ -86,8 +130,8 @@ class DayReports extends Component {
 
         // stats!
         const getStats = prop => {
-            const first = balanceReports[0][prop];
-            const last = balanceReports[balanceReports.length - 1][prop];
+            const first = get(balanceReports[0], prop);
+            const last = get(balanceReports[balanceReports.length - 1], prop);
             return {
                 absolute: last - first,
                 trend: getTrend(last, first)
@@ -99,6 +143,13 @@ class DayReports extends Component {
             robinhood: 'accountBalance',
         }, getStats);
 
+        const indexStats = mapObject({
+            nasdaq: 'indexPrices.nasdaq',
+            russell2000: 'indexPrices.russell2000',
+            sp500: 'indexPrices.sp500'
+        }, getStats)
+
+        console.log({ indexStats})
         const showingSince = firstOfDay ? firstOfDay : balanceReports[0];
         return (
             <div style={{ padding: '30px 60px 30px 10px' }}>
@@ -142,6 +193,19 @@ class DayReports extends Component {
                                         <b style={{ fontSize: '160%' }}>
                                             <TrendPerc value={stats[stat].absolute} dollar={true}  />
                                             (<TrendPerc value={stats[stat].trend} />)
+                                        </b>
+                                    </div>
+                                ))
+                            }
+                        </td>
+                        <td style={{ fontSize: '80%', textAlign: 'center' }}>
+                            {
+                                Object.keys(indexStats).map(stat => (
+                                    <div>
+                                        {stat}:&nbsp;
+                                        <b style={{ fontSize: '100%' }}>
+                                            {/* <TrendPerc value={indexStats[stat].absolute} dollar={true}  /> */}
+                                            <TrendPerc value={indexStats[stat].trend} />
                                         </b>
                                     </div>
                                 ))
