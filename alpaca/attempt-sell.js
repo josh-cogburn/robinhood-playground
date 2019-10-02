@@ -44,7 +44,8 @@ module.exports = async ({ ticker, quantity }) => {
         let attemptResponse = await limitSell({
             ticker, 
             quantity, 
-            limitPrice: attemptPrice
+            limitPrice: attemptPrice,
+            fallbackToMarket: false,
         });
         const attemptTimeout = ATTEMPT_TIMEOUTS[attemptNum];
         await new Promise(resolve => setTimeout(resolve, 1000 * attemptTimeout));

@@ -8,7 +8,8 @@ const limitSell = async ({
     ticker, 
     quantity, 
     limitPrice,
-    timeoutSeconds = 15
+    timeoutSeconds = 15,
+    fallbackToMarket = true
     // limitNum
 }) => {
 

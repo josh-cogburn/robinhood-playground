@@ -5,7 +5,7 @@ const Holds = require('../models/Holds');
 
 module.exports = async () => {
   const todayPicks = await Pick.find({
-    date: '9-27-2019',
+    date: '10-2-2019',
     isRecommended: true
   }, { data: 0 });
   strlog({
@@ -35,18 +35,18 @@ module.exports = async () => {
     foundPick: todayPicks.slice().reverse().find(pick => (new Date(pick.timestamp)).getTime() < (new Date(order.filled_at)).getTime())
   })));
 
-  // for (let ticker of Object.keys(matchedUp)) {
-  //   const matches = matchedUp[ticker].filter(match => match.foundPick);
-  //   for (let match of matches) {
-  //     await Holds.registerAlpacaFill({
-  //       ticker,
-  //       alpacaOrder: match.order,
-  //       strategy: match.foundPick.strategyName,
-  //       PickDoc: match.foundPick,
-  //       date: '9-27-2019'
-  //     })
-  //   }
-  // }
+  for (let ticker of Object.keys(matchedUp)) {
+    const matches = matchedUp[ticker].filter(match => match.foundPick);
+    for (let match of matches) {
+      await Holds.registerAlpacaFill({
+        ticker,
+        alpacaOrder: match.order,
+        strategy: match.foundPick.strategyName,
+        PickDoc: match.foundPick,
+        date: '10-2-2019'
+      })
+    }
+  }
 
   strlog({ matchedUp })
 }

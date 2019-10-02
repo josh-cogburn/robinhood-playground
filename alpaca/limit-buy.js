@@ -37,7 +37,7 @@ const limitBuy = async ({
   }
 
   await new Promise(resolve => setTimeout(resolve, 1000 * timeoutSeconds));
-  order = order ? await alpaca.getOrder(attemptResponse.id) : {};
+  order = order ? await alpaca.getOrder(order.id) : {};
 
   if (!order.filled_at) {
     await alpaca.cancelOrder(order.id);
