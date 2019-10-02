@@ -99,7 +99,7 @@ const stratManager = {
         await this.refreshPositions();
 
 
-        for (let pos of this.positions) {
+        for (let pos of this.positions.alpaca) {
             newAvgDowner({
                 ticker: pos.ticker,
                 buyPrice: average_buy_price,
