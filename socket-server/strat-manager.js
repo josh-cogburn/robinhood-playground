@@ -18,6 +18,7 @@ const sendEmail = require('../utils/send-email');
 const getSettingsString = require('../utils/get-settings-string');
 const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
 
+const newAvgDowner = require('../utils/new-avg-downer');
 const cachedPositions = require('../utils/cached-positions');
 const getAlpacaPositions = require('../alpaca/get-positions');
 
@@ -97,6 +98,14 @@ const stratManager = {
         setInterval(() => this.refreshPositions(), 1000 * 60 * 15);
         await this.refreshPositions();
 
+
+        for (let pos of this.positions) {
+            newAvgDowner({
+                ticker: pos.ticker,
+                buyPrice: average_buy_price,
+                initialTimeout: 1000 * 30 + 60 * Math.random()
+            })
+        }
         console.log('initd strat manager');
     },
     async getWelcomeData() {
