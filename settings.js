@@ -33,7 +33,16 @@ module.exports = {
         ...pm(`
             avg-downer 3
             avg-downer 3
-            sudden-drops-notWatchout 30
+            sudden-drops-notWatchout-initial 30
+            sudden-drops-notWatchout-brunch 14
+            sudden-drops-notWatchout-brunch 14
+            sudden-drops-notWatchout-lunch 8
+            sudden-drops-notWatchout-lunch 8
+            sudden-drops-notWatchout-lunch 8
+            sudden-drops-notWatchout-dinner 2
+            sudden-drops-notWatchout-dinner 2
+            sudden-drops-notWatchout-dinner 2
+            sudden-drops-notWatchout-dinner 2
             sudden-drops-notWatchout-majorJump 5
             sudden-drops-notWatchout-majorJump 5
             sudden-drops-notWatchout-majorJump 5

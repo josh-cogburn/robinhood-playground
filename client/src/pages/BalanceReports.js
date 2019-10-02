@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Line } from 'react-chartjs-2';
+import InputRange from 'react-input-range';
+
 import reportsToChartData from '../utils/reports-to-chartData';
 import TrendPerc from '../components/TrendPerc';
 import getTrend from '../utils/get-trend';
@@ -9,7 +11,8 @@ class DayReports extends Component {
     constructor() {
         super();
         this.state = {
-            timeFilter: 'onlyToday'
+            timeFilter: 'onlyToday',
+            numDaysToShow: 1
         };
     }
     componentDidMount() {
@@ -17,25 +20,39 @@ class DayReports extends Component {
     setTimeFilter = timeFilter => this.setState({ timeFilter });
     render () {
         let { balanceReports, dayReports, admin } = this.props;
-        let { timeFilter } = this.state;
+        let { timeFilter, numDaysToShow } = this.state;
         if (!balanceReports || !balanceReports.length) return <b>LOADING</b>;
 
 
         // filter balance reports
         const lastReport = balanceReports[balanceReports.length - 1];
         const d = new Date(lastReport.time);
-        const date = d.getDate();
-        const dataSlice = timeFilter === 'onlyToday' 
-            ? (() => {
-                const index = balanceReports.findIndex(r => 
-                    (new Date(r.time)).getDate() === date
-                );
-                firstOfDay = balanceReports[index];
-                return balanceReports.length - index
-            })() : 0;
-        balanceReports = balanceReports.slice(0-dataSlice);
 
+        const allDates = [...new Set(balanceReports.map(report => (new Date(report.time)).toLocaleDateString()))];
+        // const numDaysToShow = timeFilter === 'onlyToday' ? 1 : allDates.length;
 
+        const startIndex = (() => {
+            const startDate = allDates[allDates.length - numDaysToShow - 1];
+            const lastRegularReport = !startDate ? 0 : balanceReports.length - balanceReports.slice().reverse().findIndex(report =>
+                (new Date(report.time)).toLocaleDateString() === startDate && report.isRegularHours
+            );
+            return lastRegularReport;
+        })();
+
+        balanceReports = balanceReports.slice(startIndex);
+
+        // const numToShow = numDaysToShow === 1
+        //     ? (() => {
+        //         const index = balanceReports.slice().reverse().findIndex(r => 
+        //             (new Date(r.time)).getDate() !== date
+        //         );
+        //         console.log({ index})
+        //         firstOfDay = balanceReports[balanceReports.length - index];
+        //         return balanceReports.length - index
+        //     })() : 0;
+        // balanceReports = balanceReports.slice(0 - dataSlice);
+
+        console.log({ balanceReports})
 
         // more code!
 
@@ -78,17 +95,27 @@ class DayReports extends Component {
         };
 
         const stats = mapObject({
+            alpaca: 'alpacaBalance',
             robinhood: 'accountBalance',
-            alpaca: 'alpacaBalance'
         }, getStats);
 
         const showingSince = firstOfDay ? firstOfDay : balanceReports[0];
         return (
             <div style={{ padding: '30px 60px 30px 10px' }}>
-                <table style={{ marginTop: '15px', width: '100%', textAlign: 'center' }}>
+                <table style={{ marginBottom: '20px', width: '100%', textAlign: 'left' }}>
                     <tr>
-                        <td>
-                            {
+                        <td style={{ paddingLeft: '5em' }}>
+                            number of days to show... <a href="#" onClick={() => this.setState({ numDaysToShow: 1 })}>[reset]</a>
+                            <InputRange
+                                maxValue={7}
+                                minValue={1}
+                                step={1}
+                                // formatLabel={value => value.toFixed(2)}
+                                value={this.state.numDaysToShow}
+                                onChange={numDaysToShow => this.setState({ numDaysToShow })}
+                                // onChange={value => console.log(value)} 
+                            />
+                            {/* {
                                 [
                                     'onlyToday',
                                     'ALL REPORTS',
@@ -104,7 +131,7 @@ class DayReports extends Component {
                                     }
                                     </div>
                                 ))
-                            }
+                            } */}
                         </td>
                         <td style={{ fontSize: '80%', textAlign: 'right' }}>
                             trend since {new Date(showingSince.time).toLocaleString()}<br/>

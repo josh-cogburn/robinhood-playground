@@ -62,7 +62,10 @@ const process = fieldsToInclude => (dayReports, dataSlice = 0) => {
         // pointHoverBorderWidth: 2,
         pointRadius: 0,
         // pointHitRadius: 10,
-        data: dayReports.map(fields[key]).slice(0 - dataSlice)
+        data: dayReports.map(fields[key]).slice(0 - dataSlice),
+        ...key === 'account balance' && {
+            hidden: true,
+        }
     }));
     // console.log(datasets, Object.keys(fields))
     return {
