@@ -102,7 +102,7 @@ const stratManager = {
         for (let pos of this.positions.alpaca) {
             newAvgDowner({
                 ticker: pos.ticker,
-                buyPrice: average_buy_price,
+                buyPrice: pos.average_buy_price,
                 initialTimeout: 1000 * 30 + 60 * Math.random()
             })
         }
