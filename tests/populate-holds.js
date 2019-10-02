@@ -38,6 +38,7 @@ module.exports = async () => {
   for (let ticker of Object.keys(matchedUp)) {
     const matches = matchedUp[ticker].filter(match => match.foundPick);
     for (let match of matches) {
+      await Holds.findOneAndDelete({ ticker });
       await Holds.registerAlpacaFill({
         ticker,
         alpacaOrder: match.order,
