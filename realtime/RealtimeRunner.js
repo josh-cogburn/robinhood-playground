@@ -592,14 +592,18 @@ module.exports = new (class RealtimeRunner {
 
   async handlePicks(picks, periods) {
 
-    // prefetch st sent for all picks
-    await this.prefetchStSent(picks);
+    // prefetch st sent for all picks ---- DISABLED!
+    // await this.prefetchStSent(picks);
 
     // mongo and socket updates
     // for PICKS
-    await mapLimit(picks, 5, async pick => {
-      pick._id = await this.handlePick(pick);
-    });
+    await mapLimit(
+      picks.sort((a, b) => b.strategyName.includes('drops') - a.strategyName.includes('drops')),
+      5, 
+      async pick => {
+        pick._id = await this.handlePick(pick);
+      }
+    );
 
     // run post run strategies
     const postRunPicks = await this.runPostRunStrategies(picks, periods);
