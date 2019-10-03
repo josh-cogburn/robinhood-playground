@@ -42,8 +42,9 @@ const RealtimeRunner = require('./realtime/RealtimeRunner');
 mongoose.connect(mongoConnectionString, { useNewUrlParser: true });
 
 process.on('unhandledRejection', (reason, p) => {
-  console.log('Unhandled Rejection at: Promise', p, 'reason:', reason);
-  // application specific logging, throwing an error, or other logic here
+    console.log('we hit an error oh shit')
+    console.log('Unhandled Rejection at: Promise', p, 'reason:', reason);
+    // application specific logging, throwing an error, or other logic here
 });
 
 (async () => {

@@ -189,7 +189,10 @@ class DayReports extends Component {
                             } */}
                         </td>
                         <td>
-                            <Odometer value={stats.alpaca.current} format="(,ddd).dd" />
+                            <Odometer 
+                                value={stats.alpaca.current} 
+                                format="(,ddd).dd"
+                                />
                         </td>
                         <td style={{ fontSize: '80%', textAlign: 'right', paddingRight: '66px' }}>
                             trend since {new Date(showingSince.time).toLocaleString()}<br/>
