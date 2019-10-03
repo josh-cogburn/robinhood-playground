@@ -24,7 +24,7 @@ const pm = (str, multiplier = 1, groupName) => {
 module.exports = {
     // important settings
     sellAllStocksOnNthDay: 8,
-    purchaseAmt: 120,
+    purchaseAmt: 20,
     forPurchase: [
 
         // 2/5 sudden drops - TOTAL 42
@@ -33,9 +33,12 @@ module.exports = {
         ...pm(`
             avg-downer 3
             avg-downer 3
-            sudden-drops-notWatchout-initial 30
-            sudden-drops-notWatchout-brunch 14
-            sudden-drops-notWatchout-brunch 14
+            sudden-drops-notWatchout 20
+            sudden-drops-notWatchout 20
+            sudden-drops-notWatchout-initial 15
+            sudden-drops-notWatchout-initial 15
+            sudden-drops-notWatchout-brunch 5
+            sudden-drops-notWatchout-brunch 5
             sudden-drops-notWatchout-lunch 8
             sudden-drops-notWatchout-lunch 8
             sudden-drops-notWatchout-lunch 8
@@ -43,6 +46,13 @@ module.exports = {
             sudden-drops-notWatchout-dinner 2
             sudden-drops-notWatchout-dinner 2
             sudden-drops-notWatchout-dinner 2
+
+            sudden-drops-notWatchout-mediumJump 6
+            sudden-drops-notWatchout-mediumJump 6
+            sudden-drops-notWatchout-mediumJump 6
+            sudden-drops-notWatchout-mediumJump 6
+
+
             sudden-drops-notWatchout-majorJump 5
             sudden-drops-notWatchout-majorJump 5
             sudden-drops-notWatchout-majorJump 5
