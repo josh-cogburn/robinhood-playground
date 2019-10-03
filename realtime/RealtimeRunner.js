@@ -1,5 +1,5 @@
 const Combinatorics = require('js-combinatorics');
-const { mapObject } = require('underscore');
+const { mapObject, uniq } = require('underscore');
 
 const getCollections = require('./collections/get-collections');
 const dayInProgress = require('./day-in-progress');
@@ -493,8 +493,8 @@ module.exports = new (class RealtimeRunner {
       }) : tickersAndAllPrices;
     strlog({
       strategyName,
-      tickersAndAllPrices: tickersAndAllPrices.length,
-      filteredByCollections: filteredByCollections.length
+      tickersAndAllPrices: tickersAndAllPrices.map(t => t.ticker),
+      filteredByCollections: filteredByCollections.map(t => t.ticker)
     });
     console.log(`running ${strategyName} against ${period} minute data...`);
     for (let { ticker, allPrices } of filteredByCollections) {
@@ -551,9 +551,12 @@ module.exports = new (class RealtimeRunner {
       return picks;
     };
 
-    return (
-      await mapLimit(periods, 1, runAllStrategiesForPeriod)
-    ).flatten();
+    return uniq(
+      (
+        await mapLimit(periods, 1, runAllStrategiesForPeriod)
+      ).flatten(),
+      ({ ticker, strategyName }) => [ticker, strategyName].join()
+    );
 
   }
 
