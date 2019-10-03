@@ -19,7 +19,8 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
 
     positions = positions
         .map(pos => {
-            const { currentPrice } = relatedPrices[pos.ticker] || {};
+            const { afterHoursPrice, lastTradePrice } = relatedPrices[pos.ticker] || {};
+            const currentPrice = afterHoursPrice || lastTradePrice;
             if (currentPrice) {
                 console.log(pos);
                 pos.currentPrice = currentPrice;
