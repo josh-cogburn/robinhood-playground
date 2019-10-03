@@ -713,7 +713,7 @@ module.exports = new (class RealtimeRunner {
       watchoutKey = shouldWatchout ? 'shouldWatchout' : 'notWatchout';
       
       // stSent
-      stSent = await getStSentiment(ticker)
+      // stSent = await getStSentiment(ticker)
     }
 
 
@@ -740,7 +740,7 @@ module.exports = new (class RealtimeRunner {
     data = {
       ...data,
       period,
-      stSent
+      // stSent
     };
     recordPicks(pickName, 5000, [ticker], null, { keys, data });  // dont await?
     return;
