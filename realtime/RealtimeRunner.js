@@ -555,7 +555,7 @@ module.exports = new (class RealtimeRunner {
       (
         await mapLimit(periods, 1, runAllStrategiesForPeriod)
       ).flatten(),
-      ({ ticker, strategyName }) => [ticker, strategyName].join()
+      ({ ticker, strategyName, period }) => [ticker, strategyName, period].join()
     );
 
   }
