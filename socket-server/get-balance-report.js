@@ -18,7 +18,7 @@ module.exports = async (isRegularHours = true) => {
   const report = {
       accountBalance,
       indexPrices: await getIndexes(),
-      alpacaBalance: Number((await alpaca.getAccount()).equity),
+      alpacaBalance: Number((await alpaca.getAccount()).equity) || 1200,
       isRegularHours
   };
   return report;
