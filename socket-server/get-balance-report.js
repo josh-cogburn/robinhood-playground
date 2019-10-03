@@ -1,4 +1,5 @@
 const getAccountBalance = require('../utils/get-account-balance');
+const alpacaBalance = require('../alpaca/get-balance');
 const getIndexes = require('../utils/get-indexes');
 const getTrend = require('../utils/get-trend');
 const { alpaca } = require('../alpaca');
@@ -18,7 +19,7 @@ module.exports = async (isRegularHours = true) => {
   const report = {
       accountBalance,
       indexPrices: await getIndexes(),
-      alpacaBalance: Number((await alpaca.getAccount()).equity) || 1200,
+      alpacaBalance: await alpacaBalance(),
       isRegularHours
   };
   return report;
