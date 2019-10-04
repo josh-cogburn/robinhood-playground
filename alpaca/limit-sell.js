@@ -5,13 +5,13 @@ const marketSell = require('./market-sell');
 
 
 const limitSell = async ({
-    ticker, 
-    quantity, 
-    limitPrice,
+    ticker = 'NNVC', 
+    quantity = 518, 
+    limitPrice = 1.87,
     timeoutSeconds = 15,
     fallbackToMarket = true
     // limitNum
-}) => {
+}= {}) => {
 
     log('ALPACA LIMIT SELL');
     str({ ticker, quantity, limitPrice });
