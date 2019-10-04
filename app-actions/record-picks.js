@@ -69,7 +69,7 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
     });
 
     await Promise.all([
-        async () => {
+        (async () => {
 
             // forPurchase
             const stocksToBuy = withPrices.map(obj => obj.ticker);
@@ -103,8 +103,8 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
                 // tweeter.tweet(`BUY ${withPrices.map(({ ticker, price }) => `#${ticker} @ $${price}`).join(' and ')} - ${stratMin}`);
             }
 
-        },
-        async () => {
+        })(),
+        (async () => {
 
             // for email
             const emailsToSend = Object.keys(emails)
@@ -128,8 +128,8 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
                     email
                 );
             }
-            
-        }
+
+        })()
     ])
 
 
