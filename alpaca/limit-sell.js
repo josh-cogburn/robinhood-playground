@@ -1,5 +1,5 @@
 
-const getMinutesFrom630 = require('../utils/get-minutes-from-630');
+// const getMinutesFrom630 = require('../utils/get-minutes-from-630');
 const { alpaca } = require('.');
 const marketSell = require('./market-sell');
 
@@ -15,20 +15,20 @@ const limitSell = async ({
 
     log('ALPACA LIMIT SELL');
     str({ ticker, quantity, limitPrice });
-    const min = getMinutesFrom630();
-    const extendedHours = min < 0 || min > 390;
+    // const min = getMinutesFrom630();
+    // const extendedHours = min < 0 || min > 390;
     const data = {
         symbol: ticker, // any valid ticker symbol
         qty: Number(quantity),
         side: 'sell',
         type: 'limit',
         limit_price: Number(limitPrice),
-        ...extendedHours ? {
+        // ...extendedHours ? {
             extended_hours: true,
             time_in_force: 'day',
-        } : {
-            time_in_force: 'day'
-        }
+        // } : {
+        //     time_in_force: 'day'
+        // }
     };
     log('data sell alpaca', data)
     let order;

@@ -4,12 +4,12 @@ const { alpaca } = require('.');
 const marketBuy = require('./market-buy');
 
 const limitBuy = async ({
-  ticker,
-  limitPrice,
-  quantity,
+  ticker = 'NNVC',
+  limitPrice = 1.84,
+  quantity = 508,
   timeoutSeconds = 15,
   fallbackToMarket = true,
-}) => {
+} = {}) => {
   // queue alpaca limit order 4% above pickPrice
   log('ALPACA LIMIT BUY');
   str({ ticker, quantity, limitPrice });
