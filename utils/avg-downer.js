@@ -58,7 +58,7 @@ module.exports = class AvgDowner {
       observePrice
     });
     console.log(`AVG-DOWNER: ${ticker} observed at ${observePrice} ... avg buy at ${avgBuy}, buy count ${buyPrices.length} and avg down count ${avgDownCount}... trended ${trendDown}`);
-    if (trendDown < -2.7) {
+    if (trendDown < -4 {
       this.avgDownCount++;
       const realtimeRunner = require('../realtime/RealtimeRunner');
       await realtimeRunner.handlePick({
