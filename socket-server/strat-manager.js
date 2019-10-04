@@ -103,7 +103,7 @@ const stratManager = {
         for (let pos of this.positions.alpaca) {
             const foundHold = await Holds.findOne({ ticker: pos.ticker });
             if (foundHold && foundHold.buys.some(buy => buy.date === (new Date()).toLocaleDateString().split('/').join('-'))) {
-                console.log(`starting avg downer ${ticker} bc bought today`)
+                console.log(`starting avg downer ${pos.ticker} bc bought today`)
                 newAvgDowner({
                     ticker: pos.ticker,
                     buyPrice: pos.average_buy_price,
