@@ -22,11 +22,11 @@ module.exports = async ({ ticker, quantity }) => {
     const {
         alpacaOrder: {
             filled_avg_price: sellPrice
-        },
+        } = {},
         currentPosition: {
             average_buy_price: buyPrice,
             buyStrategies
-        }
+        } = {}
     } = data;
     const returnDollars = (sellPrice - buyPrice) * quantity;
     const returnPerc = getTrend(sellPrice, buyPrice);

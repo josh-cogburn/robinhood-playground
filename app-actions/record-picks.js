@@ -68,62 +68,70 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
         keys,
     });
 
+    await Promise.all([
+        async () => {
 
-    
-    // forPurchase
-    const stocksToBuy = withPrices.map(obj => obj.ticker);
-    if (isRecommended) {
-        console.log('strategy enabled: ', stratMin, 'purchasing');
-        const forPurchaseMultiplier = Math.max(
-            1,
-            (
-                forPurchase.filter(line => {
-                    const stratMatch = line === stratMin;
-                    const pmName = line.substring(1, line.length - 1);
-                    const pmMatch = hits.includes(pmName);
-                    return stratMatch || pmMatch;
-                }).length
-            )
-        );
-        console.log({ forPurchaseMultiplier});
-        await purchaseStocks({
-            stocksToBuy,
-            strategy,
-            multiplier: !disableMultipliers ? forPurchaseMultiplier : 1,
-            min,
-            withPrices,
-            PickDoc
-        });
-        throttledRefreshPositions();
-        // if (withPrices.length === 1) {
-        //     const [{ ticker }] = withPrices;
-        //     await stocktwits.postBullish(ticker, stratMin);
-        // }
-        // tweeter.tweet(`BUY ${withPrices.map(({ ticker, price }) => `#${ticker} @ $${price}`).join(' and ')} - ${stratMin}`);
-    }
+            // forPurchase
+            const stocksToBuy = withPrices.map(obj => obj.ticker);
+            if (isRecommended) {
+                console.log('strategy enabled: ', stratMin, 'purchasing');
+                const forPurchaseMultiplier = Math.max(
+                    1,
+                    (
+                        forPurchase.filter(line => {
+                            const stratMatch = line === stratMin;
+                            const pmName = line.substring(1, line.length - 1);
+                            const pmMatch = hits.includes(pmName);
+                            return stratMatch || pmMatch;
+                        }).length
+                    )
+                );
+                console.log({ forPurchaseMultiplier});
+                await purchaseStocks({
+                    stocksToBuy,
+                    strategy,
+                    multiplier: !disableMultipliers ? forPurchaseMultiplier : 1,
+                    min,
+                    withPrices,
+                    PickDoc
+                });
+                throttledRefreshPositions();
+                // if (withPrices.length === 1) {
+                //     const [{ ticker }] = withPrices;
+                //     await stocktwits.postBullish(ticker, stratMin);
+                // }
+                // tweeter.tweet(`BUY ${withPrices.map(({ ticker, price }) => `#${ticker} @ $${price}`).join(' and ')} - ${stratMin}`);
+            }
 
-    // for email
-    const emailsToSend = Object.keys(emails)
-        .reduce((acc, email) => {
-            const pms = emails[email];
-            const toSend = pms.filter(pm => 
-                hits.includes(pm)
-            );
-            return [
-                ...acc,
-                ...toSend.map(pm => ({
-                    pm,
+        },
+        async () => {
+
+            // for email
+            const emailsToSend = Object.keys(emails)
+                .reduce((acc, email) => {
+                    const pms = emails[email];
+                    const toSend = pms.filter(pm => 
+                        hits.includes(pm)
+                    );
+                    return [
+                        ...acc,
+                        ...toSend.map(pm => ({
+                            pm,
+                            email
+                        }))
+                    ]
+                }, []);
+            for (let { email, pm } of emailsToSend) {
+                await sendEmail(
+                    `robinhood-playground${pm ? `-${pm}` : ''}: ${stratMin}`,
+                    stocksToBuy.join(', '),
                     email
-                }))
-            ]
-        }, []);
-    for (let { email, pm } of emailsToSend) {
-        await sendEmail(
-            `robinhood-playground${pm ? `-${pm}` : ''}: ${stratMin}`,
-            stocksToBuy.join(', '),
-            email
-        );
-    }
+                );
+            }
+            
+        }
+    ])
+
 
 
     return PickDoc._id;
