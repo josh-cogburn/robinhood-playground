@@ -72,7 +72,6 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
         (async () => {
 
             // forPurchase
-            const stocksToBuy = withPrices.map(obj => obj.ticker);
             if (isRecommended) {
                 console.log('strategy enabled: ', stratMin, 'purchasing');
                 const forPurchaseMultiplier = Math.max(
@@ -88,7 +87,6 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
                 );
                 console.log({ forPurchaseMultiplier});
                 await purchaseStocks({
-                    stocksToBuy,
                     strategy,
                     multiplier: !disableMultipliers ? forPurchaseMultiplier : 1,
                     min,

@@ -8,8 +8,7 @@ const Holds = require('../models/Holds');
 const { alpaca } = require('../alpaca');
 const getBalance = require('../alpaca/get-balance');
 
-module.exports = async ({ 
-    stocksToBuy = ['NNVC', 'NVCN'],
+module.exports = async ({
     totalAmtToSpend, 
     strategy, 
     maxNumStocksToPurchase, 
@@ -18,6 +17,7 @@ module.exports = async ({
     PickDoc
 } = {}) => {
 
+    let stocksToBuy = withPrices.map(obj => obj.ticker);
     // you cant attempt to purchase more stocks than you passed in
     // console.log(maxNumStocksToPurchase, 'numstockstopurchase', stocksToBuy.length);
     maxNumStocksToPurchase = maxNumStocksToPurchase ? Math.min(stocksToBuy.length, maxNumStocksToPurchase) : stocksToBuy.length;

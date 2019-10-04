@@ -232,6 +232,7 @@ class DayReports extends Component {
                     <Line 
                         data={chartData} 
                         options={{ animation: !!timeFilter === '2019' }} 
+                        onHover={(...args) => console.log({ args })}
                     />
                 </div>
             </div>
