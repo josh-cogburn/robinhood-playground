@@ -21,21 +21,23 @@ module.exports = async (_, dontSell) => {
             ...pos,
             wouldBeDayTrade
         }
-    })
+    });
 
-    log('selling' + positions.filter(p => !p.wouldBeDayTrade).map(p => p.symbol));
+    positions = positions.filter(p => !p.wouldBeDayTrade && p.symbol !== 'NNVC');
+
+    log('selling' + positions.map(p => p.symbol));
     if (dontSell) return;
-    for (let pos of positions.filter(p => !p.wouldBeDayTrade)) {
+    for (let pos of positions) {
         console.log(pos.symbol)
         try {
             
-            // setTimeout(() => {
+            setTimeout(() => {
                 console.log('selling', pos.symbol);
                 sellPosition({
                     ticker: pos.symbol,
                     quantity: pos.qty
                 })
-            // }, 1000 * Math.random() * 650);
+            }, 1000 * Math.random() * 650);
         } catch (e) {
             strlog(e)
         }

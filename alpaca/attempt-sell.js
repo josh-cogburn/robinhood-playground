@@ -10,27 +10,27 @@ const ATTEMPT_PERCS = [-1, 0.5, 3, 5];  // percents
 const MAX_ATTEMPTS = ATTEMPT_TIMEOUTS.length;
 
 
-const calcLimitPrice = async ({ ticker, attemptNum, maxPrice = Number.POSITIVE_INFINITY }) => {
-    const attemptPercAbove = ATTEMPT_PERCS[attemptNum];
+const calcLimitPrice = async ({ ticker, attemptNum, minPrice = Number.NEGATIVE_INFINITY }) => {
+    const attemptPercBelow = ATTEMPT_PERCS[attemptNum];
 
     const { bidPrice, askPrice, lastTrade } = await lookup(ticker);
-    const lowVal = Math.min(bidPrice, askPrice, lastTrade);
-    // const highVal = Math.max(bidPrice, askPrice, lastTrade);
+    // const lowVal = Math.min(bidPrice, askPrice, lastTrade);
+    const highVal = Math.max(bidPrice, askPrice, lastTrade);
     // const spread = Math.max(highVal - lowVal, 0.02 * lastTrade);
-    maxPrice = Math.min(lastTrade * 1.07, maxPrice);
-    const aboveLow = lowVal * attemptPercAbove / 100;
-    const finalPrice = Math.min(lowVal + aboveLow, maxPrice);
+    minPrice = Math.min(lastTrade * 1.07, maxPrice);
+    const belowHigh = highVal * attemptPercAbove / 100;
+    const finalPrice = Math.max(highVal - belowHigh, minPrice);
     strlog({
         bidPrice,
         askPrice,
         lastTrade,
 
-        lowVal,
-        attemptPercAbove,
-        aboveLow,
-        maxPrice,
+        highVal,
+        attemptPercBelow,
+        belowHigh,
+        minPrice,
         finalPrice
-    })
+    });
     return finalPrice;
 };
 
@@ -43,13 +43,11 @@ module.exports = async ({ ticker, quantity }) => {
         const attemptPrice = await calcLimitPrice({ ticker, attemptNum });
         let attemptResponse = await limitSell({
             ticker, 
-            quantity, 
             limitPrice: attemptPrice,
+            quantity, 
+            timeoutSeconds: ATTEMPT_TIMEOUTS[attemptNum],
             fallbackToMarket: false,
-        });
-        const attemptTimeout = ATTEMPT_TIMEOUTS[attemptNum];
-        await new Promise(resolve => setTimeout(resolve, 1000 * attemptTimeout));
-        attemptResponse = attemptResponse ? await alpaca.getOrder(attemptResponse.id) : {};
+        }) || {};
         if (attemptResponse.filled_at) {
             return {
                 alpacaOrder: attemptResponse,

@@ -7,7 +7,7 @@ module.exports = async ({ ticker, quantity }) => {
     const stratManager = require('../socket-server/strat-manager');
     const response = await attemptSell({ ticker, quantity });
     const { alpacaOrder, attemptNum } = response || {};
-    if (!alpacaOrder || alpacaOrder.filled_at) {
+    if (!alpacaOrder || !alpacaOrder.filled_at) {
         return sendEmail(`unable to sell ${ticker}`);
     }
     const currentPosition = stratManager.positions.alpaca.find(pos => pos.ticker === ticker);
