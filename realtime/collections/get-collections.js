@@ -132,7 +132,7 @@ module.exports = async () => {
         fitty: (await runScan({
             minPrice: 0.20,
             maxPrice: 0.60,
-            count: 33,
+            count: 60,
             includeStSent: false,
             minVolume: 300000
         })).map(t => t.ticker),
