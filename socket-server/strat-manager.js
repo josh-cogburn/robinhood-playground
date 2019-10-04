@@ -6,6 +6,7 @@ const { uniq, pick } = require('underscore');
 
 // mongo
 const Pick = require('../models/Pick');
+const Holds = require('../models/Holds');
 
 // predictions and past data
 const stratPerfOverall = require('../analysis/strategy-perf-overall');
@@ -100,7 +101,7 @@ const stratManager = {
 
 
         for (let pos of this.positions.alpaca) {
-            const foundHold = Holds.findOne({ ticker: pos.ticker });
+            const foundHold = await Holds.findOne({ ticker: pos.ticker });
             if (foundHold && foundHold.buys.some(buy => buy.date === (new Date()).toLocaleDateString().split('/').join('-'))) {
                 console.log(`starting avg downer ${ticker} bc bought today`)
                 newAvgDowner({
