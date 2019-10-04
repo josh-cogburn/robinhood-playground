@@ -29,6 +29,11 @@ const getAllTickers = require('../rh-actions/get-all-tickers');
 const stratManager = require('../socket-server/strat-manager');
 
 const additionalCron = [
+    // {
+    //     name: 'alpacaPreMarketSells',
+    //     run: [-],
+    //     fn: () => alpacaSellAllStocks()
+    // },
     {
         name: 'alpacaSellAllStocks',
         run: [4],

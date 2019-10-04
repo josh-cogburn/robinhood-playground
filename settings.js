@@ -51,6 +51,7 @@ module.exports = {
             sudden-drops-notWatchout-mediumJump 6
             sudden-drops-notWatchout-mediumJump 6
             sudden-drops-notWatchout-mediumJump 6
+            sudden-drops-notWatchout-mediumJump 6
 
 
             sudden-drops-notWatchout-majorJump 5
@@ -62,8 +63,9 @@ module.exports = {
             sudden-drops-notWatchout-lunch 4
         `, 1, 'general sudden-drops'),  // 17
 
-        // overnight-drops-majorJump 4
+        // 
         ...pm(`
+            overnight-drops-notWatchout-mediumJump 4
             rsi-10min-rsilt10 4
             rsi-shouldWatchout-firstAlert-rsilt15 6
             rsi-10min-firstAlert-rsilt10-brunch 2
