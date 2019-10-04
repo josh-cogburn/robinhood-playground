@@ -18,7 +18,7 @@ const calcLimitPrice = async ({ ticker, attemptNum, minPrice = Number.NEGATIVE_I
     const highVal = Math.max(bidPrice, askPrice, lastTrade);
     // const spread = Math.max(highVal - lowVal, 0.02 * lastTrade);
     minPrice = Math.min(lastTrade * 1.07, minPrice);
-    const belowHigh = highVal * attemptPercAbove / 100;
+    const belowHigh = highVal * attemptPercBelow / 100;
     const finalPrice = Math.max(highVal - belowHigh, minPrice);
     strlog({
         bidPrice,
