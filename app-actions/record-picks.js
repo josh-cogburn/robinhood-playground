@@ -68,6 +68,7 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
         keys,
     });
 
+    var stocksToBuy = withPrices.map(t => t.ticker);
     await Promise.all([
         (async () => {
 

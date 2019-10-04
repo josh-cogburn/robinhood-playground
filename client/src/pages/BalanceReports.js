@@ -36,6 +36,8 @@ function get(obj, path) {
             return result;
         }, []).join('.');
 
+        if (!obj) return undefined;
+
         if (_.isEmpty(remainingPath)) {
             return obj[nPath];
         } else {
@@ -59,7 +61,8 @@ class DayReports extends Component {
         super();
         this.state = {
             timeFilter: 'onlyToday',
-            numDaysToShow: 1
+            numDaysToShow: 1,
+            hoverIndex: null
         };
     }
     componentDidMount() {
@@ -67,7 +70,7 @@ class DayReports extends Component {
     setTimeFilter = timeFilter => this.setState({ timeFilter });
     render () {
         let { balanceReports, dayReports, admin } = this.props;
-        let { timeFilter, numDaysToShow } = this.state;
+        let { timeFilter, numDaysToShow, hoverIndex } = this.state;
         if (!balanceReports || !balanceReports.length) return <b>LOADING</b>;
 
 
@@ -134,11 +137,12 @@ class DayReports extends Component {
         // stats!
         const getStats = prop => {
             const first = get(balanceReports[0], prop);
-            const last = get(balanceReports[balanceReports.length - 1], prop);
+            const compareIndex = hoverIndex ? hoverIndex : balanceReports.length - 1;
+            const compare = get(balanceReports[compareIndex], prop);
             return {
-                current: last,
-                absolute: last - first,
-                trend: getTrend(last, first)
+                current: compare,
+                absolute: compare - first,
+                trend: getTrend(compare, first)
             };
         };
 
@@ -231,8 +235,11 @@ class DayReports extends Component {
                 <div>
                     <Line 
                         data={chartData} 
-                        options={{ animation: !!timeFilter === '2019' }} 
-                        onHover={(...args) => console.log({ args })}
+                        options={{ 
+                            animation: !!timeFilter === '2019',
+                            onHover: (event, chartEls) => this.setState({ hoverIndex: get(chartEls[0], '_index') }) 
+                        }} 
+                        
                     />
                 </div>
             </div>
