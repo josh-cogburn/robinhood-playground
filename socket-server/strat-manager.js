@@ -100,11 +100,15 @@ const stratManager = {
 
 
         for (let pos of this.positions.alpaca) {
-            newAvgDowner({
-                ticker: pos.ticker,
-                buyPrice: pos.average_buy_price,
-                initialTimeout: 1000 * 30 + 60 * Math.random()
-            })
+            const foundHold = Holds.findOne({ ticker: pos.ticker });
+            if (foundHold && foundHold.buys.some(buy => buy.date === (new Date()).toLocaleDateString().split('/').join('-'))) {
+                console.log(`starting avg downer ${ticker} bc bought today`)
+                newAvgDowner({
+                    ticker: pos.ticker,
+                    buyPrice: pos.average_buy_price,
+                    initialTimeout: 1000 * 30 + 60 * Math.random()
+                })
+            }
         }
         console.log('initd strat manager');
     },
