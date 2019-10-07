@@ -36,7 +36,7 @@ const additionalCron = [
     // },
     {
         name: 'alpacaSellAllStocks',
-        run: [30],
+        run: [2, 6, 27, 58, 62, 85, 112, 150, 193, 222, 242, 270, 290],
         fn: () => alpacaSellAllStocks()
     },
     // {

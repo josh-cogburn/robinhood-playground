@@ -2,6 +2,7 @@ const { alpaca } = require('.');
 const { force: { keep }} = require('../settings');
 const sellPosition = require('./sell-position');
 const Holds = require('../models/Holds');
+const { mapObject, pick } = require('underscore');
 
 module.exports = async (_, dontSell) => {
     let positions = await alpaca.getPositions();
@@ -19,24 +20,29 @@ module.exports = async (_, dontSell) => {
         });
         return {
             ...pos,
-            wouldBeDayTrade
-        }
+            wouldBeDayTrade,
+            percChange: pos.unrealized_plpc * 100
+        };
     });
 
-    positions = positions.filter(p => !p.wouldBeDayTrade && p.symbol !== 'NNVC');
+    strlog(positions.map(pos => pick(pos, ['symbol', 'wouldBeDayTrade', 'percChange'])));
+
+    positions = positions.filter(p => 
+        !p.wouldBeDayTrade
+        && (
+            p.percChange > 6.3 || 
+            p.percChange < -3.6
+        )
+    );
 
     log('selling' + positions.map(p => p.symbol));
     if (dontSell) return;
     for (let pos of positions) {
         console.log(pos.symbol)
         try {
-            
             setTimeout(() => {
                 console.log('selling', pos.symbol);
-                sellPosition({
-                    ticker: pos.symbol,
-                    quantity: pos.qty
-                })
+                sellPosition(position)
             }, 1000 * Math.random() * 650);
         } catch (e) {
             strlog(e)

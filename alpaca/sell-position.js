@@ -3,7 +3,12 @@ const Holds = require('../models/Holds');
 const sendEmail = require('../utils/send-email');
 const getTrend = require('../utils/get-trend');
 
-module.exports = async ({ ticker, quantity }) => {
+module.exports = async position => {
+
+    const { 
+        symbol: ticker, 
+        qty: quantity 
+    } = position;
 
     const stratManager = require('../socket-server/strat-manager');
     const response = await attemptSell({ ticker, quantity });
@@ -40,7 +45,8 @@ module.exports = async ({ ticker, quantity }) => {
             attemptNum,
             buyStrategies,
             alpacaOrder,
-            deletedHold
+            deletedHold,
+            position
         }, null, 2)
     );
   
