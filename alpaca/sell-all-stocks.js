@@ -42,7 +42,7 @@ module.exports = async (_, dontSell) => {
         try {
             setTimeout(() => {
                 console.log('selling', pos.symbol);
-                sellPosition(position)
+                sellPosition(pos)
             }, 1000 * Math.random() * 650);
         } catch (e) {
             strlog(e)
