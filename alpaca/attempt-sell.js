@@ -60,6 +60,9 @@ module.exports = async ({ ticker, quantity }) => {
 
 
     console.log('unable to limit sell, falling back to market sell', ticker);
-    return marketSell({ ticker, quantity });
+    return {
+        alpacaOrder: await marketSell({ ticker, quantity }),
+        attemptNum: 'market'
+    };
 
 };
