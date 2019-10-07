@@ -5,9 +5,9 @@ const marketSell = require('./market-sell');
 
 
 const limitSell = async ({
-    ticker = 'NNVC', 
-    quantity = 518, 
-    limitPrice = 1.87,
+    ticker = 'HAIR', 
+    quantity = 1218, 
+    limitPrice = 0.51,
     timeoutSeconds = 15,
     fallbackToMarket = true
     // limitNum
