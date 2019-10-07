@@ -7,7 +7,7 @@ const isOvernight = allPrices => {
     .slice(-2)
     .map(({ timestamp }) => (new Date(timestamp)).getDate());
   console.log(secondToLast, last)
-  if (secondToLast !== last) return true;
+  return secondToLast !== last;
 };
 
 

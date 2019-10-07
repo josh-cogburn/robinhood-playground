@@ -4,9 +4,9 @@ const { alpaca } = require('.');
 const marketBuy = require('./market-buy');
 
 const limitBuy = async ({
-  ticker = 'NNVC',
-  limitPrice = 1.84,
-  quantity = 508,
+  ticker = 'HAIR',
+  limitPrice = 0.43,
+  quantity = 100,
   timeoutSeconds = 15,
   fallbackToMarket = true,
 } = {}) => {
@@ -21,12 +21,12 @@ const limitBuy = async ({
       side: 'buy',
       type: 'limit',
       limit_price: Number(limitPrice),
-      ...extendedHours ? {
+      // ...extendedHours ? {
           extended_hours: true,
           time_in_force: 'day',
-      } : {
-          time_in_force: 'day'
-      }
+      // } : {
+      //     time_in_force: 'day'
+      // }
   };
   log('data buy alpaca', data)
   let order;

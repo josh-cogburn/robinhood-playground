@@ -12,7 +12,7 @@ module.exports = async (daysBack, skipDays) => {
     let datesOfInterest = dates
         .slice(0, dates.length - skipDays)
         .slice(0 - daysBack);
-    console.log('selected days', datesOfInterest, dates);
+    console.log('selected days', { datesOfInterest, dates, daysBack, skipDays });
 
     const stratObj = {};
     for (let date of datesOfInterest) {
