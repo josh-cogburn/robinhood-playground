@@ -57,36 +57,36 @@ module.exports = async ({
                 alpacaLimitBuy({
                     ticker,
                     quantity,
-                    limitPrice: pickPrice * 1.06,
-                    timeoutSeconds: 60 * 4,
-                    fallbackToMarket: false
-                }),
-                alpacaLimitBuy({
-                    ticker,
-                    quantity,
-                    limitPrice: pickPrice * 1.03,
-                    timeoutSeconds: 60 * 10,
+                    limitPrice: pickPrice * 1.02,
+                    timeoutSeconds: 60 * 60,
                     fallbackToMarket: false
                 }),
                 alpacaLimitBuy({
                     ticker,
                     quantity,
                     limitPrice: pickPrice * 1.01,
-                    timeoutSeconds: 60 * 15,
+                    timeoutSeconds: 60 * 60,
                     fallbackToMarket: false
                 }),
                 alpacaLimitBuy({
                     ticker,
                     quantity,
-                    limitPrice: pickPrice * 1.00,
-                    timeoutSeconds: 60 * 20,
+                    limitPrice: pickPrice * 1,
+                    timeoutSeconds: 60 * 60,
                     fallbackToMarket: false
                 }),
                 alpacaLimitBuy({
                     ticker,
                     quantity,
                     limitPrice: pickPrice * 0.99,
-                    timeoutSeconds: 60 * 15,
+                    timeoutSeconds: 60 * 60,
+                    fallbackToMarket: false
+                }),
+                alpacaLimitBuy({
+                    ticker,
+                    quantity,
+                    limitPrice: pickPrice * 0.98,
+                    timeoutSeconds: 60 * 60,
                     fallbackToMarket: false
                 }),
                 alpacaMarketBuy({
