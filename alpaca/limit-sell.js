@@ -7,7 +7,7 @@ const marketSell = require('./market-sell');
 const limitSell = async ({
     ticker = 'VRML', 
     quantity = 574, 
-    limitPrice = 0.4273,
+    limitPrice = 0.38,
     timeoutSeconds = 15,
     fallbackToMarket = true
     // limitNum

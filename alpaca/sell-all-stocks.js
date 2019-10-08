@@ -25,8 +25,6 @@ module.exports = async (_, dontSell) => {
         };
     });
 
-    strlog(positions.map(pos => pick(pos, ['symbol', 'wouldBeDayTrade', 'percChange'])));
-
     positions = positions.filter(p => 
         !p.wouldBeDayTrade
         && (
@@ -34,6 +32,8 @@ module.exports = async (_, dontSell) => {
             p.percChange < -4.6
         )
     );
+
+    strlog(positions.map(pos => pick(pos, ['symbol', 'wouldBeDayTrade', 'percChange'])));
 
     log('selling' + positions.map(p => p.symbol));
     if (dontSell) return;
