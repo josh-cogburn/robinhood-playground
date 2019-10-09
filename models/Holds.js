@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
+const Pick = require('./Pick');
 
 const schema = new Schema({
     ticker: String,
@@ -14,19 +15,21 @@ const schema = new Schema({
 });
 
 schema.statics.registerAlpacaFill = async function(fillData) {
-    const {
+    let {
         ticker,
         alpacaOrder,
-        strategy,
         dateStr = (new Date()).toLocaleDateString().split('/').join('-'),
-        PickDoc,
+        relatedPick
     } = fillData;
+    relatedPick = relatedPick || await Pick.getRecentPickForTicker(ticker);
+    strlog({ relatedPick })
+    const strategy = relatedPick.strategyName;
     const newBuy = {
         date: dateStr,
         fillPrice: Number(alpacaOrder.filled_avg_price),
         quantity: Number(alpacaOrder.filled_qty),
         strategy,
-        relatedPick: PickDoc,
+        relatedPick,
         data: fillData.data
     };
     strlog({ newBuy })

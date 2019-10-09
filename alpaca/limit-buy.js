@@ -4,7 +4,7 @@ const { alpaca } = require('.');
 const marketBuy = require('./market-buy');
 
 const limitBuy = async ({
-  ticker = 'IMBI',
+  ticker = 'SCON',
   limitPrice = 0.481,
   quantity = 10,
   timeoutSeconds = 15,

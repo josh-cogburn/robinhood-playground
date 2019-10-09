@@ -14,7 +14,6 @@ module.exports = async ({
     maxNumStocksToPurchase, 
     min, 
     withPrices,
-    PickDoc
 } = {}) => {
 
     let stocksToBuy = withPrices.map(obj => obj.ticker);
@@ -95,22 +94,7 @@ module.exports = async ({
                 })
             ];
             await Promise.all(
-                attemptPromises.map(async attempt => {
-                    const alpacaOrder = await attempt;
-                    if (alpacaOrder && alpacaOrder.filled_at) {
-                        await Holds.registerAlpacaFill({
-                            ticker,
-                            alpacaOrder,
-                            strategy,
-                            PickDoc,
-                            data: {
-                                // attemptNum,
-                            }
-                        });
-                    } else {
-                        console.log('attempt promise not filled', ticker);
-                    }
-                })
+                attemptPromises
             );
 
 

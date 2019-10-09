@@ -3,6 +3,7 @@ const { force: { keep }} = require('../settings');
 const sellPosition = require('./sell-position');
 const Holds = require('../models/Holds');
 const { mapObject, pick } = require('underscore');
+const sendEmail = require('../utils/send-email');
 
 module.exports = async (_, dontSell) => {
     let positions = await alpaca.getPositions();
@@ -35,9 +36,13 @@ module.exports = async (_, dontSell) => {
 
     strlog(positions.map(pos => pick(pos, ['symbol', 'wouldBeDayTrade', 'percChange'])));
 
-    log('selling' + positions.map(p => p.symbol));
+    log('selling',positions);
     if (dontSell) return;
     for (let pos of positions) {
+        if (Number(pos.market_value) > 100) {
+            await sendEmail(`you should sell ${pos.symbol}`);
+            continue;
+        }
         console.log(pos.symbol)
         try {
             setTimeout(() => {

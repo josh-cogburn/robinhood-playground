@@ -28,5 +28,24 @@ schema.statics.getRecentRecommendations = async function() {
     }).lean();
 };
 
+schema.statics.getRecentPickForTicker = async function(ticker) {
+    const list = await this
+        .find(
+            {
+                date: (new Date()).toLocaleDateString().split('/').join('-'),
+                picks: {
+                    $elemMatch: {
+                        ticker
+                    }
+                },
+                isRecommended: true
+            },
+        )
+        .sort({ _id: -1 })
+        .limit(1)
+        .lean();
+    return list[0];
+}
+
 const Pick = mongoose.model('Pick', schema, 'picks');
 module.exports = Pick;

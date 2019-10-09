@@ -114,7 +114,6 @@ const stratManager = {
         console.log('initd strat manager');
     },
     async getWelcomeData() {
-        const pms = require('../realtime/RealtimeRunner').getPms();
         // console.log('we;come', { pms });
         return {
             ...pick(this, [
@@ -129,7 +128,8 @@ const stratManager = {
             settings,
             cronString: regCronIncAfterSixThirty.toString(),
             balanceReports: balanceReportManager.getAllBalanceReports(),
-            pms,
+            pms: require('../realtime/RealtimeRunner').getPms(),
+            collections: require('../realtime/RealtimeRunner').collections
         };
     },
     async refreshPositions() {

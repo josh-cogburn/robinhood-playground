@@ -2,6 +2,7 @@ const { alpaca: alpacaConfig } = require('../config');
 const Alpaca = require('@alpacahq/alpaca-trade-api');
 const alpaca = new Alpaca(alpacaConfig);
 const newAvgDowner = require('../utils/new-avg-downer');
+const Holds = require('../models/Holds');
 
 const client = alpaca.websocket
 client.onConnect(function() {
@@ -20,11 +21,13 @@ client.onOrderUpdate(async data => {
     event,
     order: {
       filled_avg_price,
-      // filled_qty,
+      filled_qty,
+      qty,
       side,
       symbol,
     }
   } = data;
+  const ticker = symbol;
   const isFill = event === 'fill';
   if (!isFill) {
     return console.log('not a fill');
@@ -32,9 +35,40 @@ client.onOrderUpdate(async data => {
 
   if (side === 'buy') {
     newAvgDowner({
-      ticker: symbol, 
+      ticker, 
       buyPrice: filled_avg_price 
-    })
+    });
+
+    await Holds.registerAlpacaFill({
+      ticker,
+      alpacaOrder,
+    });
+    
+  } else if (side === 'sell') {
+    
+    const stratManager = require('../socket-server/strat-manager');
+    const position = stratManager.positions.alpaca.find(pos => pos.ticker === ticker) || {};
+    const {
+        average_buy_price: buyPrice,
+        buyStrategies
+    } = position;
+    const deletedHold = await Holds.findOneAndDelete({ ticker });
+    const sellPrice = filled_avg_price;
+    const returnDollars = (sellPrice - buyPrice) * qty;
+    const returnPerc = getTrend(sellPrice, buyPrice);
+    await sendEmail(
+        `wow sold ${ticker} return... ${returnDollars} (${returnPerc}%)`, 
+        JSON.stringify({
+            ticker,
+            buyPrice,
+            sellPrice,
+            qty,
+            buyStrategies,
+            orderFill: data,
+            deletedHold,
+            position
+        }, null, 2)
+    );
   }
 
 })

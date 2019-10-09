@@ -4,7 +4,7 @@ let { expectedPickCount, purchaseAmt } = require('../settings');
 const { alpaca } = require('../alpaca');
 
 
-const purchaseStocks = async ({ strategy, multiplier = 1, min, withPrices, PickDoc } = {}, dontBuy) => {
+const purchaseStocks = async ({ strategy, multiplier = 1, min, withPrices } = {}, dontBuy) => {
 
     const account = await alpaca.getAccount();
     const { portfolio_value, buying_power } = account;
@@ -44,7 +44,6 @@ const purchaseStocks = async ({ strategy, multiplier = 1, min, withPrices, PickD
         min,
         withPrices,
         strategy,
-        PickDoc
     });
 };
 
