@@ -42,7 +42,7 @@ client.onOrderUpdate(async data => {
 
     await Holds.registerAlpacaFill({
       ticker,
-      alpacaOrder,
+      alpacaOrder: data.order,
     });
     
   } else if (side === 'sell') {
@@ -65,7 +65,7 @@ client.onOrderUpdate(async data => {
             sellPrice,
             qty,
             buyStrategies,
-            orderFill: data,
+            alpacaOrder: data.order,
             deletedHold,
             position
         }, null, 2)
