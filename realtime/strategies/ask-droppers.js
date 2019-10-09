@@ -28,7 +28,7 @@ module.exports = {
         const lowVolCount = allPrices.filter(({ volume }) => volume && volume < 1500).length;
         const lowVolWarning = lowVolCount / allPrices.length > 0.15;
 
-        const allAsks = allPrices.slice(-34).map(({ askPrice }) => currentPrice).filter(Boolean);
+        const allAsks = allPrices.slice(-34).map(({ askPrice }) => askPrice).filter(Boolean);
         const mostRecent = allAsks.pop();
         const min = Math.min(...allAsks);
         const trendFromMin = getTrend(mostRecent, min);
