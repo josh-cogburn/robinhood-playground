@@ -158,7 +158,7 @@ module.exports = async () => {
             maxPrice: 2,
             // count: 200,
             includeStSent: false,
-            minVolume: 100000
+            minVolume: 70000
         })).map(t => t.ticker),
 
         twoToFive: (await runScan({
