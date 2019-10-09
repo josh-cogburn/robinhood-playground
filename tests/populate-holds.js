@@ -4,13 +4,7 @@ const { mapObject } = require('underscore');
 const Holds = require('../models/Holds');
 
 module.exports = async () => {
-  const todayPicks = await Pick.find({
-    date: '10-2-2019',
-    isRecommended: true
-  }, { data: 0 });
-  strlog({
-    todayPicks
-  })
+
   const buys = (
     await alpaca.getOrders({
       status: 'all',
@@ -19,7 +13,7 @@ module.exports = async () => {
       // limit: 400,
       direction: 'desc'
     })
-  ).filter(order => order.side === 'buy');
+  ).filter(order => order.side === 'buy' && order.status === 'filled');
   const byTicker = {};
   buys.forEach(order => {
     const { symbol } = order;
@@ -30,24 +24,16 @@ module.exports = async () => {
   });
   strlog({ byTicker });
 
-  const matchedUp = mapObject(byTicker, orders => orders.map(order => ({
-    order,
-    foundPick: todayPicks.slice().reverse().find(pick => (new Date(pick.timestamp)).getTime() < (new Date(order.filled_at)).getTime())
-  })));
 
-  for (let ticker of Object.keys(matchedUp)) {
-    const matches = matchedUp[ticker].filter(match => match.foundPick);
-    for (let match of matches) {
-      await Holds.findOneAndDelete({ ticker });
+  for (let ticker of Object.keys(byTicker)) {
+    await Holds.findOneAndDelete({ ticker });
+    for (let order of byTicker[ticker]) {
       await Holds.registerAlpacaFill({
         ticker,
-        alpacaOrder: match.order,
-        strategy: match.foundPick.strategyName,
-        PickDoc: match.foundPick,
-        date: '10-2-2019'
+        alpacaOrder: order
       })
     }
   }
 
-  strlog({ matchedUp })
+  // strlog({ matchedUp })
 }

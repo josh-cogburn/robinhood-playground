@@ -1,10 +1,10 @@
 const { alpaca } = require('.');
 
 module.exports = async ({ 
-    ticker, 
-    quantity,
+    ticker = 'IMBI', 
+    quantity = 14,
     timeoutSeconds = 60, 
-}) => {
+} = {}) => {
     log('ALPACA MARKET SELL');
     str({ ticker, quantity });
     const data = {

@@ -32,7 +32,7 @@ schema.statics.getRecentPickForTicker = async function(ticker) {
     const list = await this
         .find(
             {
-                date: (new Date()).toLocaleDateString().split('/').join('-'),
+                // date: (new Date()).toLocaleDateString().split('/').join('-'),
                 picks: {
                     $elemMatch: {
                         ticker

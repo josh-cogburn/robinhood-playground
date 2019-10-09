@@ -18,14 +18,14 @@ schema.statics.registerAlpacaFill = async function(fillData) {
     let {
         ticker,
         alpacaOrder,
-        dateStr = (new Date()).toLocaleDateString().split('/').join('-'),
         relatedPick
     } = fillData;
     relatedPick = relatedPick || await Pick.getRecentPickForTicker(ticker);
+    if (!relatedPick) return console.log('cant find related pick', fillData)
     strlog({ relatedPick })
     const strategy = relatedPick.strategyName;
     const newBuy = {
-        date: dateStr,
+        date: (new Date(alpacaOrder.filled_at)).toLocaleDateString().split('/').join('-'),
         fillPrice: Number(alpacaOrder.filled_avg_price),
         quantity: Number(alpacaOrder.filled_qty),
         strategy,

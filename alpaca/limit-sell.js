@@ -5,9 +5,9 @@ const marketSell = require('./market-sell');
 
 
 const limitSell = async ({
-    ticker = 'SCON', 
-    quantity = 2218, 
-    limitPrice = 0.2623,
+    ticker = 'IMBI', 
+    quantity = 446, 
+    limitPrice = 0.519,
     timeoutSeconds = 15,
     fallbackToMarket = true
     // limitNum
