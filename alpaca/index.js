@@ -4,6 +4,7 @@ const alpaca = new Alpaca(alpacaConfig);
 const newAvgDowner = require('../utils/new-avg-downer');
 const Holds = require('../models/Holds');
 const getTrend = require('../utils/get-trend');
+const sendEmail = require('../utils/send-email');
 
 const client = alpaca.websocket
 client.onConnect(function() {
