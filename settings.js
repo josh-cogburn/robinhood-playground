@@ -70,6 +70,7 @@ module.exports = {
             rsi-shouldWatchout-firstAlert-rsilt15 6
             rsi-10min-firstAlert-rsilt10-brunch 2
             rsi-10min-notWatchout-firstAlert-rsilt10-brunch 2
+            ask-watchers-notWatchout-majorDrops
         `, 1, 'turnt')
 
     ],
