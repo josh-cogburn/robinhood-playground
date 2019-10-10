@@ -14,7 +14,10 @@ module.exports = async (_, strategy) => {
     // console.log({ pm })
     const match = pm => {
       const arrayOfArrays = pms[pm];
-      return arrayOfArrays.some(parts => {
+      if (!arrayOfArrays) {
+        console.log('whatpms', pm);
+      }
+      return (arrayOfArrays || []).some(parts => {
           parts = Array.isArray(parts) ? parts : [parts];
           return parts.every(part => strategy.includes(part));
       });
