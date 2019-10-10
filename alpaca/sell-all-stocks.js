@@ -32,7 +32,7 @@ module.exports = async (_, dontSell) => {
     positions = positions.filter(p => 
         !p.wouldBeDayTrade
         && (
-            p.percChange > 7.3 || 
+            p.percChange > 4.3 || 
             p.percChange < -4.6
         )
     );
