@@ -31,27 +31,22 @@ module.exports = async (_, dontSell) => {
 
     positions = positions.filter(p => 
         !p.wouldBeDayTrade
-        && (
-            p.percChange > 4.3 || 
-            p.percChange < -4.6
-        )
+        // && (
+        //     p.percChange > 4.3 || 
+        //     p.percChange < -4.6
+        // )
     );
 
     log('selling',positions);
     if (dontSell) return;
-    for (let pos of positions) {
-        if (Number(pos.market_value) > 100) {
-            await sendEmail(`you should sell ${pos.symbol}`);
-            continue;
-        }
-        console.log(pos.symbol)
-        try {
-            setTimeout(() => {
-                console.log('selling', pos.symbol);
-                sellPosition(pos)
-            }, 1000 * Math.random() * 650);
-        } catch (e) {
-            strlog(e)
-        }
-    }
+
+    await Promise.all(
+        positions.map(async pos => {
+            if (Number(pos.market_value) > 100) {
+                await sendEmail('', `you should sell ${pos.symbol}`, '5' + 102940361 + '@v' + 'text.com');
+            } else {
+                await sellPosition(pos)
+            }
+        })
+    );
 };

@@ -23,8 +23,7 @@ const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
 const getStrategies = require('./get-strategies');
 const pmsHit = require('../utils/pms-hit');
 const getStSentiment = require('../utils/get-stocktwits-sentiment');
-
-
+const getDownKey = require('../utils/get-down-key');
 
 
 const riskCache = {};
@@ -555,7 +554,7 @@ module.exports = new (class RealtimeRunner {
       (
         await mapLimit(periods, 1, runAllStrategiesForPeriod)
       ).flatten(),
-      ({ ticker, strategyName, period }) => [ticker, strategyName, period].join()
+      ({ ticker, strategyName }) => [ticker, strategyName].join()
     );
 
   }
@@ -642,7 +641,8 @@ module.exports = new (class RealtimeRunner {
       return null;
     }
 
-
+    const downKey = await getDownKey(ticker);
+    if (downKey) keys[downKey] = true;
 
     const collectionKey = !strategyName.includes('pennyscan') ? Object.keys(this.collections).find(collection => 
       (this.collections[collection] || []).includes(ticker)

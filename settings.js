@@ -65,12 +65,8 @@ module.exports = {
 
         // 
         ...pm(`
-            overnight-drops-notWatchout-mediumJump 4
-            rsi-10min-rsilt10 4
-            rsi-shouldWatchout-firstAlert-rsilt15 6
-            rsi-10min-firstAlert-rsilt10-brunch 2
-            rsi-10min-notWatchout-firstAlert-rsilt10-brunch 2
-            ask-watchers-notWatchout-majorDrops
+            overnight-drops-mediumJump 4
+            overnight-drops-mediumJump 4
         `, 1, 'turnt')
 
     ],

@@ -75,7 +75,7 @@ const process = fieldsToInclude => (dayReports, dataSlice = 0) => {
 };
 
 export default {
-    balanceChart: process(['account balance', 'alpaca balance', 'russell2000', 'SP500', 'nasdaq']),
+    balanceChart: process(['alpaca balance', 'russell2000', 'SP500', 'nasdaq']),
     unrealizedVsRealized: process(['unrealized return', 'realized return']),
     spyVsForPurchase: process(['forPurchase PM avg trend %', 'forPurchase PM weighted trend %']),
     pickToExecutionPerc: process(['pick to execution %']),

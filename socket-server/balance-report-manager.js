@@ -73,7 +73,7 @@ const runAndSetTimeout = async () => {
     console.log('runAndSetTimeout', { isRunning });
     if (!isRunning) return;
     const min = getMinutesFrom630();
-    const isRegularHours = min > -30 && min < 390;
+    const isRegularHours = min > 0 && min < 390;
     await getAndSaveBalanceReport(isRegularHours);
     const toSeconds = isRegularHours ? TIMEOUT_SECONDS : TIMEOUT_SECONDS * 12;
     timeout = setTimeout(runAndSetTimeout, toSeconds * 1000);

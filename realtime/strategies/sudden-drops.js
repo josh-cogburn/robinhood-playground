@@ -25,8 +25,13 @@ module.exports = {
         // })();
 
         // if (onlyToday.length < 5) return;
-        const lowVolCount = allPrices.filter(({ volume }) => volume && volume < 1500).length;
-        const lowVolWarning = lowVolCount / allPrices.length > 0.15;
+
+
+        // const lowVolCount = allPrices.filter(({ volume }) => volume && volume < 1500).length;
+        // const lowVolWarning = lowVolCount / allPrices.length > 0.15;
+
+
+
 
         const allCurrents = allPrices.slice(-34).map(({ currentPrice }) => currentPrice);
         const mostRecent = allCurrents.pop();
@@ -67,7 +72,7 @@ module.exports = {
                     })();
                     return { [key]: true };
                 })(),
-                lowVolWarning,
+                // lowVolWarning,
                 // [failedHistoricalCheck]: failedHistoricalCheck
                 isOvernight: isOvernight(allPrices)
               },
@@ -98,7 +103,14 @@ module.exports = {
           'lunch',
           'brunch',
           'initial'
-        ]
+        ],
+        [
+          10,
+          15,
+          20,
+          30,
+          40
+        ].map(num => `down${num}`)
       ).toArray().reduce((acc, arr) => {
 
         return {
