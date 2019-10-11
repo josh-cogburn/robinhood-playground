@@ -25,6 +25,7 @@ import Analysis from './pages/Analysis';
 import Scan from './pages/Scan';
 
 import socketIOClient from "socket.io-client";
+import { partition } from 'underscore';
 
 import ReactGA from 'react-ga';
 ReactGA.initialize('UA-131761952-1', { debug: false });
