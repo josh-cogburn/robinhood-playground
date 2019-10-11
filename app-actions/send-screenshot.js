@@ -9,7 +9,7 @@ module.exports = async (numDays = 1) => {
   const path = `./screenshots/${todaysDate}.jpg`;
 
   const browser = await puppeteer.launch({ 
-    headless: false,
+    headless: true,
     args: [
       '--no-sandbox', 
       '--disable-setuid-sandbox', 
