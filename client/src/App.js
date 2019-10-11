@@ -60,6 +60,36 @@ function camelize(str) {
     }).replace(/\s+/g, '');
 }
 
+
+const matchesPm = (stratMin, pm, pms) => {
+    const arrayOfArrays = pms[pm] || [];
+    return arrayOfArrays.some(parts => {
+        parts = Array.isArray(parts) ? parts : [parts];
+        return parts.every(part => stratMin.includes(part));
+    });
+    // return pms[pm] && pms[pm].every(part => strat === part || strat.includes(`${part}-`) || strat.includes(`-${part}`));
+}
+
+const isForPurchase = (stratMin, settings, pms) => {
+
+    let [forPurchasePms, forPurchaseStrats] = partition(
+        settings.forPurchase, 
+        line => (line.startsWith('[') && line.endsWith(']'))
+    );
+
+    forPurchasePms = forPurchasePms.map(line => line.substring(1, line.length - 1));
+    console.log({ forPurchasePms, forPurchaseStrats})
+
+    return (
+        forPurchaseStrats.includes(stratMin) ||
+        forPurchasePms.some(pm => 
+            matchesPm(stratMin, pm, pms)
+        )
+    );
+
+
+}
+
 const pages = [
     {
         label: 'Balance Trend',
@@ -115,18 +145,12 @@ class App extends Component {
         const socketEndpoint = origin.includes('localhost') && false ? 'http://localhost:3000' : 'http://107.173.6.167:3000';
         const socket = socketIOClient(socketEndpoint);
 
-        const isForPurchase = strat => {
-            const { predictionModels: { forPurchase } = {} } = this.state;
-            if (!forPurchase || !forPurchase.length) {
-                return false;
-            }
-            return forPurchase.includes(strat);
-        };
+        const { settings, pms } = this.state;
         const handlePick = data => {
             this.setState({
                 picks: [data].concat(this.state.picks),
             });
-            if (!isForPurchase(data.stratMin)) {
+            if (!isForPurchase(data.stratMin, settings, pms)) {
                 return;
             }
             this.setState({
