@@ -1,10 +1,11 @@
 const puppeteer = require('puppeteer');
 const getFilesSortedByDate = require('../utils/get-files-sorted-by-date');
 const sendEmail = require('../utils/send-email');
+const Pick = require('../models/Pick');
 
 module.exports = async () => {
 
-  const todaysDate = (await getFilesSortedByDate('prediction-models'))[0];
+  const todaysDate = (await Pick.getUniqueDates()).pop();
   const path = `./screenshots/${todaysDate}.jpg`;
 
   const browser = await puppeteer.launch({ 
