@@ -3,13 +3,13 @@ const getFilesSortedByDate = require('../utils/get-files-sorted-by-date');
 const sendEmail = require('../utils/send-email');
 const Pick = require('../models/Pick');
 
-module.exports = async () => {
+module.exports = async (numDays = 1) => {
 
   const todaysDate = (await Pick.getUniqueDates()).pop();
   const path = `./screenshots/${todaysDate}.jpg`;
 
   const browser = await puppeteer.launch({ 
-    headless: true,
+    headless: false,
     args: [
       '--no-sandbox', 
       '--disable-setuid-sandbox', 
@@ -21,8 +21,8 @@ module.exports = async () => {
     height: 900
   };
   page.setViewport({ ...dims, deviceScaleFactor: 2 });
-  await page.goto('http://107.173.6.167:3000/');
-  await page.waitFor(4000);
+  await page.goto(`http://107.173.6.167:3000/?${numDays}`);
+  await page.waitFor(7000);
   await page.screenshot({
     path,
     quality: 100,
@@ -32,6 +32,7 @@ module.exports = async () => {
       ...dims
     }
   });
+  await page.waitFor(12000);
   await browser.close();
   await sendEmail(`daily trend screenshot for ${todaysDate}`, '', undefined, [
     path

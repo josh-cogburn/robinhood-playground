@@ -205,7 +205,13 @@ class DayReports extends Component {
         const { balanceReports } = this.props;
         this.setState({
             afterHoursAnnotations: annotateBoxes(getAfterHoursBoxes(balanceReports))
-        })
+        });
+        const query = window.location.search.slice(1);
+        if (query) {
+            this.setState({
+                numDaysToShow: Number(query)
+            });
+        }
     }
     setTimeFilter = timeFilter => this.setState({ timeFilter });
     render () {

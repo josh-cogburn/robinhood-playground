@@ -71,10 +71,10 @@ const matchesPm = (stratMin, pm, pms) => {
     // return pms[pm] && pms[pm].every(part => strat === part || strat.includes(`${part}-`) || strat.includes(`-${part}`));
 }
 
-const isForPurchase = (stratMin, settings, pms) => {
+const isForPurchase = (stratMin, settings = {}, pms) => {
 
     let [forPurchasePms, forPurchaseStrats] = partition(
-        settings.forPurchase, 
+        settings.forPurchase || [],
         line => (line.startsWith('[') && line.endsWith(']'))
     );
 
