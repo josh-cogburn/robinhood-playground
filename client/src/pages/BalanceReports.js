@@ -58,19 +58,30 @@ console.log(
     )
 )
 
+const easternTimezone = (() => {
+    const est = new Date(new Date().toLocaleString("en-US", {timeZone: "America/New_York"}));
+    const estOffset = est.getTime() - Date.now();
+    console.log({ estOffset })
+    return time => {
+        return new Date(new Date(time).getTime() + estOffset);
+    };
+})();
 
 const isRegularHours = ({ time }) => {
-    const open = new Date(time);
-    open.setHours(8);
+
+    // console.log({ time })
+    const date = easternTimezone(time);
+    
+    const open = new Date(date.getTime());
+    open.setHours(9);
     open.setMinutes(30);
     open.setMilliseconds(0);
 
-    const close = new Date(time);
-    close.setHours(15);
+    const close = new Date(date.getTime());
+    close.setHours(16);
     close.setMinutes(0);
     close.setMilliseconds(0);
 
-    const date = new Date(time);
     return date.getTime() > open.getTime() && date.getTime() < close.getTime();
 };
 
@@ -250,7 +261,7 @@ class DayReports extends Component {
         //     })() : 0;
         // balanceReports = balanceReports.slice(0 - dataSlice);
 
-        // console.log({ balanceReports})   
+        console.log({ lines: getNewDayLines(balanceReports)})   
 
         // more code!
 
