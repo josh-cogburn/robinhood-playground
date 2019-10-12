@@ -71,7 +71,7 @@ io.on('connection', async socket => {
         socket.emit('server:current-prices', response);
     });
 
-    socket.on('lookup', (ticker, cb) => {
+    socket.on('lookup', async (ticker, cb) => {
         cb(await lookup(ticker));
     });
 
