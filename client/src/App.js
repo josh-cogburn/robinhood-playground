@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 import './App.css';
 
 
+import ReactModal from 'react-modal';
+import PickGraphs from './components/PickGraphs';
+
+
 import ReactHintFactory from 'react-hint';
 import 'react-hint/css/index.css'
 
@@ -80,7 +84,7 @@ const isForPurchase = (stratMin, settings = {}, pms) => {
     );
 
     forPurchasePms = forPurchasePms.map(line => line.substring(1, line.length - 1));
-    console.log({ forPurchasePms, forPurchaseStrats})
+    // console.log({ forPurchasePms, forPurchaseStrats})
 
     return (
         forPurchaseStrats.includes(stratMin) ||
@@ -1440,7 +1444,7 @@ class App extends Component {
         this.state.socket.emit('restartProcess', data => window.alert(data));
     }
     render () {
-        let { value, predictionModels, pms, balanceReports, newPicksData, positions, relatedPrices } = this.state;
+        let { value, predictionModels, pms, balanceReports, newPicksData, positions, relatedPrices, showingPick, socket } = this.state;
         const isLoading = !balanceReports || !balanceReports.length;
         const PageComponent = pages[value].component;
 
@@ -1452,13 +1456,13 @@ class App extends Component {
                   const { afterHoursPrice, lastTradePrice } = relatedPrices[pos.ticker] || {};
                   const currentPrice = afterHoursPrice || lastTradePrice;
                   if (currentPrice) {
-                      console.log(pos);
+                      // console.log(pos);
                       pos.currentPrice = currentPrice;
                       pos.returnDollars = +(pos.quantity * (pos.currentPrice - pos.average_buy_price)).toFixed(2);
                       pos.returnPerc = getTrend(currentPrice, pos.average_buy_price);
                       pos.equity = (pos.quantity * currentPrice).toFixed(2);
                   }
-                  console.log(pos);
+                  // console.log(pos);
                   return pos;
               })
               .sort((a, b) => b.equity - a.equity)
@@ -1503,6 +1507,7 @@ class App extends Component {
                       {...this.state} 
                       {...{ handlePageChange: this.handlePageChange }}
                       positions={positions}
+                      showPick={pick => this.setState({ showingPick: pick })}
                       />
                 }
 
@@ -1510,6 +1515,21 @@ class App extends Component {
                     <h2>ALERT ALERT NEW <b>PICK</b></h2>
                     <pre>{JSON.stringify(newPicksData, null, 2)}</pre>
                 </Popup>
+
+                <ReactModal isOpen={!!showingPick}>
+                    <button 
+                        onClick={() => this.setState({ showingPick: null })}
+                        style={{
+                            position: 'fixed',
+                            zoom: '250%',
+                            top: '1vh',
+                            left: '1vh',
+                        }}>
+                            Close Modal
+                    </button>
+                    <br/><br/>
+                    <PickGraphs pick={showingPick} socket={socket} positions={positions} />
+                </ReactModal>
 
                 {/* <TabContainer> */}
                     

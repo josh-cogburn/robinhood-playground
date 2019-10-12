@@ -41,7 +41,7 @@ const sortAndCut = (arr, sortKey, num) => {
 
 const runScan = async ({
   minPrice = 0.5,
-  maxPrice = 8,
+  maxPrice = 0.6,
   minVolume = Number.NEGATIVE_INFINITY,
   maxVolume = Number.POSITIVE_INFINITY,
   filterFn = () => true,
@@ -58,7 +58,9 @@ const runScan = async ({
   // .sort((a, b) => b.fundamentals.volume - a.fundamentals.volume)
   // .cutBottom();
 
-    
+  strlog({
+    withFundamentals
+  })
   
   const min = getMinutesFrom630();
   const percComplete = Math.max(Math.min(1, min / 390), 0.01);

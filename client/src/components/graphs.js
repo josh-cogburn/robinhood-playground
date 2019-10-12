@@ -32,10 +32,10 @@ const padWithUndefined = (labels, data) => {
 export default [
   {
     title: 'Current prices',
-    dataProp: 'allPrices',
-    dataFn: ({ allPrices }) => {
-      const labels = allPrices.map(hist => (new Date(hist.timestamp).toLocaleString()));
-      const data = allPrices.map(hist => hist.currentPrice);
+    dataProp: 'finalCurrents',
+    dataFn: ({ finalCurrents }) => {
+      const labels = finalCurrents.map(hist => (new Date(hist.timestamp).toLocaleString()));
+      const data = finalCurrents.map(hist => hist.currentPrice)
       return {
         labels,
         datasets: [

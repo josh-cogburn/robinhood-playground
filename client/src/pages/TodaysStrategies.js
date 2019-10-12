@@ -38,7 +38,7 @@ class TodaysStrategies extends Component {
   }
   render() {
     let { pmFilter, afterHoursEnabled, sortBy: sortByFilter, additionalFilters } = this.state;
-    let { picks, relatedPrices, predictionModels, pastData, curDate, pmPerfs, pms, settings, socket, positions } = this.props;
+    let { picks, relatedPrices, predictionModels, pastData, curDate, pmPerfs, pms, settings, socket, positions, showPick } = this.props;
     console.log({ pms }, 'hey')
     const { fiveDay } = pastData || {};
 
@@ -230,8 +230,7 @@ class TodaysStrategies extends Component {
                                 pick={pick}
                                 key={pick.stratMin}
                                 fiveDay={fiveDay ? fiveDay[pick.stratMin] : null}
-                                socket={socket}
-                                positions={positions}
+                                showPick={showPick}
                             />
                         </div>
                     ))
