@@ -142,6 +142,7 @@ const stratManager = {
         const positionTickers = Object.values(positions).flatten().map(pos => pos.ticker || pos.symbol);
         strlog({ positionTickers });
         this.tickerWatcher.addTickers(positionTickers);
+        this.sendToAll('server:data-update', { positions });
     },
     newPick(data) {
 
@@ -176,7 +177,7 @@ const stratManager = {
         this.tickerWatcher.clearTickers();
         await this.initPicksAndPMs();
         await this.tickerWatcher.lookupRelatedPrices();
-        this.sendToAll('server:welcome', await this.getWelcomeData());
+        this.sendToAll('server:data-update', await this.getWelcomeData());
     },
     async determineCurrentDay() {
         // calc current date

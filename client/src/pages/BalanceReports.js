@@ -335,8 +335,11 @@ class DayReports extends Component {
         const allDatas = chartData.datasets.map(dataset => dataset.data);
         const allValues = allDatas.reduce((acc, vals) => [...acc, ...vals], []);
         
-        const min = Math.min(...allValues);
-        const max = Math.max(...allValues);
+        const min = Math.floor(Math.min(...allValues));
+        const max = Math.ceil(Math.max(...allValues));
+
+        const stepSize = Math.ceil((max - min) / 13);
+        console.log({ stepSize, max, min })
         // console.log({ allValues,min,max })
         // let afterHoursAnnotations = annotateBoxes(afterHoursBoxes);
 
@@ -473,9 +476,9 @@ class DayReports extends Component {
                                     ticks: {
                                         // beginAtZero: true,
                                         // steps: 10,
-                                        stepSize: 1,
-                                        max: Math.ceil(max),
-                                        min: Math.floor(min),
+                                        stepSize,
+                                        max,
+                                        min
                                     }
                                 }]
                             }

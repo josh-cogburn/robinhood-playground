@@ -28,7 +28,7 @@ module.exports = async (numDays = 1) => {
     quality: 100,
     clip: {
       x: 0,
-      y: 135,
+      y: 125,
       ...dims
     }
   });

@@ -18,6 +18,8 @@ client.onStateChange(newState => {
   console.log(`State changed to ${newState}`)
 })
 client.onOrderUpdate(async data => {
+  const stratManager = require('../socket-server/strat-manager');
+
   console.log(`Order updates: ${JSON.stringify(data)}`);
   const {
     event,
@@ -45,10 +47,10 @@ client.onOrderUpdate(async data => {
       ticker,
       alpacaOrder: data.order,
     });
+
+    stratManager.refreshPositions();
     
   } else if (side === 'sell') {
-    
-    const stratManager = require('../socket-server/strat-manager');
     const position = stratManager.positions.alpaca.find(pos => pos.ticker === ticker) || {};
     const {
         average_buy_price: buyPrice,

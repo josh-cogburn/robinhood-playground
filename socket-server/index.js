@@ -62,7 +62,7 @@ app.use('/user-strategies', express['static'](prependFolder('user-strategies/bui
 
 io.on('connection', async socket => {
 
-    socket.emit('server:welcome', await stratManager.getWelcomeData());
+    socket.emit('server:data-update', await stratManager.getWelcomeData());
 
     socket.on('get-current-prices', async tickers => {
         const response = await lookupMultiple(tickers, true);
