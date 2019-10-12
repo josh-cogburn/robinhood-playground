@@ -14,6 +14,7 @@ const Pick = require('../models/Pick');
 
 const mapLimit = require('promise-map-limit');
 const lookupMultiple = require('../utils/lookup-multiple');
+const lookup = require('../utils/lookup');
 const getFilesSortedByDate = require('../utils/get-files-sorted-by-date');
 const jsonMgr = require('../utils/json-mgr');
 const getStSentiment = require('../utils/get-stocktwits-sentiment');
@@ -68,6 +69,10 @@ io.on('connection', async socket => {
         const response = await lookupMultiple(tickers, true);
         console.log('got current pricessss', response);
         socket.emit('server:current-prices', response);
+    });
+
+    socket.on('lookup', (ticker, cb) => {
+        cb(await lookup(ticker));
     });
 
     socket.on('getRecentTrends', async (cb) => {

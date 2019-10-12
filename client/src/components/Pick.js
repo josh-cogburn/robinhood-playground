@@ -15,13 +15,14 @@ class Pick extends Component {
     render() {
         
         const { showingDetails } = this.state;
-        const { pick, fiveDay, socket } = this.props;
+        const { pick, fiveDay, socket, positions } = this.props;
         // let percUpFontSize = fiveDay ? fiveDay.percUp * 100.4 : 100;
         // if (fiveDay && fiveDay.avgTrend > 1) percUpFontSize *= 1.9;
         // const style = { fontSize: Math.max(percUpFontSize, 39) + '%'};
 
 
         // pick.keys && console.log({ pick })
+
         
         return (
             <div className="pick">
@@ -77,7 +78,8 @@ class Pick extends Component {
                         }}>
                             Close Modal
                     </button>
-                    <PickGraphs pick={pick} socket={socket} />
+                    <br/><br/>
+                    <PickGraphs pick={pick} socket={socket} positions={positions} />
                 </ReactModal>
             </div>
         );

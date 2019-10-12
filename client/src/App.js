@@ -25,7 +25,8 @@ import Analysis from './pages/Analysis';
 import Scan from './pages/Scan';
 
 import socketIOClient from "socket.io-client";
-import { partition } from 'underscore';
+import { partition, mapObject } from 'underscore';
+import getTrend from './utils/get-trend';
 
 import ReactGA from 'react-ga';
 ReactGA.initialize('UA-131761952-1', { debug: false });
@@ -1439,9 +1440,32 @@ class App extends Component {
         this.state.socket.emit('restartProcess', data => window.alert(data));
     }
     render () {
-        const { value, predictionModels, pms, balanceReports, newPicksData } = this.state;
+        let { value, predictionModels, pms, balanceReports, newPicksData, positions, relatedPrices } = this.state;
         const isLoading = !balanceReports || !balanceReports.length;
         const PageComponent = pages[value].component;
+
+        if (positions) {
+          positions = mapObject(
+            positions,
+            positions => positions
+              .map(pos => {
+                  const { afterHoursPrice, lastTradePrice } = relatedPrices[pos.ticker] || {};
+                  const currentPrice = afterHoursPrice || lastTradePrice;
+                  if (currentPrice) {
+                      console.log(pos);
+                      pos.currentPrice = currentPrice;
+                      pos.returnDollars = +(pos.quantity * (pos.currentPrice - pos.average_buy_price)).toFixed(2);
+                      pos.returnPerc = getTrend(currentPrice, pos.average_buy_price);
+                      pos.equity = (pos.quantity * currentPrice).toFixed(2);
+                  }
+                  console.log(pos);
+                  return pos;
+              })
+              .sort((a, b) => b.equity - a.equity)
+          )
+        }
+        
+
         return (
             <div className="App">
                 <AppBar position="static">
@@ -1475,7 +1499,11 @@ class App extends Component {
 
                 { isLoading ? (
                     <h1 style={{ textAlign: 'center' }}>loading</h1>
-                ) : <PageComponent {...this.state} {...{ handlePageChange: this.handlePageChange }} />
+                ) : <PageComponent 
+                      {...this.state} 
+                      {...{ handlePageChange: this.handlePageChange }}
+                      positions={positions}
+                      />
                 }
 
                 <Popup position="right center" modal open={newPicksData}>
