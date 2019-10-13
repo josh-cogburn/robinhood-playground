@@ -31,11 +31,29 @@ const padWithUndefined = (labels, data) => {
 
 export default [
   {
+    title: 'Price observer',
+    dataProp: 'priceChain',
+    dataFn: ({ priceChain }) => {
+      const labels = priceChain.map(hist => (new Date(hist.timestamp).toLocaleString()));
+      const data = priceChain.map(hist => hist.currentPrice)
+      return {
+        labels,
+        datasets: [
+          createDataSet({
+            label: 'Current Price',
+            fill: true,
+            data
+          })
+        ]
+      };
+    }
+  },
+  {
     title: 'Current prices',
-    dataProp: 'finalCurrents',
-    dataFn: ({ finalCurrents }) => {
-      const labels = finalCurrents.map(hist => (new Date(hist.timestamp).toLocaleString()));
-      const data = finalCurrents.map(hist => hist.currentPrice)
+    dataProp: 'allPrices',
+    dataFn: ({ allPrices }) => {
+      const labels = allPrices.map(hist => (new Date(hist.timestamp).toLocaleString()));
+      const data = allPrices.map(hist => hist.currentPrice)
       return {
         labels,
         datasets: [

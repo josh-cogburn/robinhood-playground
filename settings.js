@@ -31,43 +31,16 @@ module.exports = {
 
 
         ...pm(`
-            avg-downer 3
-            avg-downer 3
-            sudden-drops-notWatchout 20
-            sudden-drops-notWatchout 20
-            sudden-drops-notWatchout-initial 15
-            sudden-drops-notWatchout-initial 15
-            sudden-drops-notWatchout-brunch 5
-            sudden-drops-notWatchout-brunch 5
-            sudden-drops-notWatchout-lunch 8
-            sudden-drops-notWatchout-lunch 8
-            sudden-drops-notWatchout-lunch 8
-            sudden-drops-notWatchout-dinner 2
-            sudden-drops-notWatchout-dinner 2
-            sudden-drops-notWatchout-dinner 2
-            sudden-drops-notWatchout-dinner 2
+            sudden-drops-notWatchout-down10 6
+            sudden-drops-notWatchout 10
+            sudden-drops-shouldWatchout 5
+        `, 1, 'simplicity'),  // 17
 
-            sudden-drops-notWatchout-mediumJump 6
-            sudden-drops-notWatchout-mediumJump 6
-            sudden-drops-notWatchout-mediumJump 6
-            sudden-drops-notWatchout-mediumJump 6
-            sudden-drops-notWatchout-mediumJump 6
-
-
-            sudden-drops-notWatchout-majorJump 5
-            sudden-drops-notWatchout-majorJump 5
-            sudden-drops-notWatchout-majorJump 5
-            sudden-drops-notWatchout-majorJump 5
-            sudden-drops-notWatchout-majorJump 5
-            sudden-drops-notWatchout-lunch 4
-            sudden-drops-notWatchout-lunch 4
-        `, 1, 'general sudden-drops'),  // 17
-
-        // 
         ...pm(`
-            overnight-drops-mediumJump 4
-            overnight-drops-mediumJump 4
-        `, 1, 'turnt')
+            overnight-drops-shouldWatchout-mediumJump 2
+            overnight-drops-shouldWatchout-majorJump 2
+            overnight-drops-notWatchout-majorJump 2
+        `, 1, 'overnight'),  // 17
 
     ],
     // forPurchaseVariation: '75Perc5Day-yesincludingblanks',

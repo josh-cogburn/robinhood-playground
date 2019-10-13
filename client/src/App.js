@@ -1531,7 +1531,7 @@ class App extends Component {
                             Close Modal
                     </button>
                     <br/><br/>
-                    {showingPick && showingPick.newPick && <h3>NEW PICK!! NEW PICK!! NEW PICK!!</h3>}
+                    {showingPick && showingPick.newPick && <h3>🚀🚀🚀🚀 NEW PICK!! NEW PICK!! NEW PICK!! 🚀🚀🚀🚀</h3>}
                     <PickGraphs pick={showingPick} socket={socket} positions={positions} />
                 </ReactModal>
 

@@ -38,14 +38,91 @@ const annotateBox = ({ bidPrice, askPrice }) => ({
 
   // Fill color
   backgroundColor: 'yellow',
+
 });
 
 
-const Graph = ({ title, data, dataProp, dataFn, }) => {
+const annotateLine = (val, label, color, xAdjust = 0, yAdjust = 0) => ({
+  type: 'line',
+
+  // optional drawTime to control layering, overrides global drawTime setting
+  drawTime: 'beforeDatasetsDraw',
+  id: `a-line-${label}`,
+
+  mode: 'horizontal',
+  scaleID: 'y-axis-0',
+  value: val,
+
+  // Top edge of the box in units along the y axis
+  // yMax: 20,
+
+  // Bottom edge of the box
+  // yMin:  2,
+
+  // Stroke color
+  // borderColor: 'red',
+
+  // Stroke width
+  borderColor: color,
+  borderWidth: 3,
+
+  label: {
+		// Background color of label, default below
+		backgroundColor: 'rgba(0,0,0,0.8)',
+
+		// Font family of text, inherits from global
+		fontFamily: "sans-serif",
+
+		// Font size of text, inherits from global
+		fontSize: 12,
+
+		// Font style of text, default below
+		fontStyle: "bold",
+
+		// Font color of text, default below
+		fontColor: "#fff",
+
+		// Padding of label to add left/right, default below
+		xPadding: 6,
+
+		// Padding of label to add top/bottom, default below
+		yPadding: 6,
+
+		// Radius of label rectangle, default below
+		cornerRadius: 6,
+
+		// Anchor position of label on line, can be one of: top, bottom, left, right, center. Default below.
+		position: "center",
+
+		// Adjustment along x-axis (left-right) of label relative to above number (can be negative)
+		// For horizontal lines positioned left or right, negative values move
+		// the label toward the edge, and positive values toward the center.
+		xAdjust,
+
+		// Adjustment along y-axis (top-bottom) of label relative to above number (can be negative)
+		// For vertical lines positioned top or bottom, negative values move
+		// the label toward the edge, and positive values toward the center.
+		yAdjust,
+
+		// Whether the label is enabled and should be displayed
+		enabled: true,
+
+		// Text to display in label - default is null. Provide an array to display values on a new line
+		content: `${label}: ${val}`
+	},
+});
+
+
+const Graph = ({ title, data, dataProp, dataFn, curQuote, pickPrice, avgBuyPrice }) => {
   const values = data[dataProp];
   if (!values) return null;
 
-  const annotations = title === 'Current prices' && data.curQuote ? [annotateBox(data.curQuote)] : [];
+  console.log({ avgBuyPrice })
+  const annotations = title === 'Price observer' && curQuote ? [
+    annotateBox(curQuote),
+    annotateLine(pickPrice, 'pickPrice', 'blue', 100, 20),
+    ...avgBuyPrice ? [annotateLine(avgBuyPrice, 'avgBuyPrice', 'orange', -100, -20)] : [],
+  ] : [];
   return (
     <div>
       <h2>{title}</h2>
@@ -64,6 +141,7 @@ const Graph = ({ title, data, dataProp, dataFn, }) => {
 
 export default class PickGraphs extends Component {
   state = {
+    oneMinuteHistoricals: [],
     quoteChain: []
   };
   loadDataForPick(pick) {
@@ -93,12 +171,16 @@ export default class PickGraphs extends Component {
 
     const ticker = pick.ticker || pick.withPrices[0].ticker;
 
-    socket.emit('historicals', ticker, 1, undefined, historicals => {
+    socket.emit('historicals', ticker, 5, 7, response => {
+      const historicals = response[ticker]
+        // .filter(
+        //   hist => hist.timestamp > Date.now() - 1000 * 60 * 60 * 24 * 2
+        // );
       this.setState({
-        oneMinuteHistoricals: historicals[ticker]
+        oneMinuteHistoricals: historicals
       });
       console.log({ historicals })
-    })
+    });
 
     let lookupTicker;
     (lookupTicker = () => {
@@ -121,7 +203,7 @@ export default class PickGraphs extends Component {
   render() {
     const { pick, socket, positions } = this.props;
     if (!pick) return null;
-    const { fetchedData, stScore, quote, quoteChain } = this.state;
+    const { fetchedData, stScore, quoteChain, oneMinuteHistoricals } = this.state;
     const [pickTrend] = pick.withTrend;
     let data = pick.data || fetchedData;
     if (!data) return null;
@@ -137,13 +219,12 @@ export default class PickGraphs extends Component {
     const curQuote = {
       ...quoteChain[quoteChain.length - 1],
       count: quoteChain.length
-    }
+    };
 
-    const finalCurrents = [
-      ...data.allPrices,
+    const priceChain = [
+      ...oneMinuteHistoricals,
       ...quoteChain
     ];
-
     return (
       <div>
         <h3>Strategy: {pick.strategyName || pick.stratMin}</h3>
@@ -157,7 +238,7 @@ export default class PickGraphs extends Component {
             : <button onClick={() => this.loadStScoreForPick(pick)}>Load Stocktwits Score</button>
         }
         {
-          position && (
+          Object.keys(position).length && (
             <h3>Position: {JSON.stringify(pickProp(position, ['average_buy_price', 'currentPrice', 'returnDollars', 'returnPerc', 'equity']))}</h3>
           )
         }
@@ -167,11 +248,14 @@ export default class PickGraphs extends Component {
             <div>
                 {
                   graphs.map(props => 
-                    <Graph {...props} data={{
-                      ...data,
-                      finalCurrents,
-                      curQuote
-                    }}  />
+                    <Graph {...props} 
+                      data={{
+                        ...data,
+                        priceChain,
+                      }}
+                      curQuote={curQuote}
+                      pickPrice={pick.withTrend[0].thenPrice} 
+                      avgBuyPrice={Number(position.average_buy_price)} />
                   )
                 }
             </div>
