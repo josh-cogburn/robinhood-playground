@@ -20,6 +20,8 @@ const jsonMgr = require('../utils/json-mgr');
 const getStSentiment = require('../utils/get-stocktwits-sentiment');
 const restartProcess = require('../app-actions/restart-process');
 const pmPerf = require('../analysis/pm-perf-for-real');
+const getHistoricals = require('../realtime/historicals/get');
+
 // const stratPerf = require('../analysis/strat-perf-for-real');
 const realtimeRunner = require('../realtime/RealtimeRunner');
 
@@ -73,6 +75,10 @@ io.on('connection', async socket => {
 
     socket.on('lookup', async (ticker, cb) => {
         cb(await lookup(ticker));
+    });
+
+    socket.on('historicals', async (ticker, period, cb) => {
+        cb(await getHistoricals(ticker, period, undefined, true));
     });
 
     socket.on('getRecentTrends', async (cb) => {

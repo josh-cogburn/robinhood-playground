@@ -45,7 +45,7 @@ const Graph = ({ title, data, dataProp, dataFn, }) => {
   const values = data[dataProp];
   if (!values) return null;
 
-  const annotations = title === 'Current prices' ? [annotateBox(data.curQuote)] : [];
+  const annotations = title === 'Current prices' && data.curQuote ? [annotateBox(data.curQuote)] : [];
   return (
     <div>
       <h2>{title}</h2>

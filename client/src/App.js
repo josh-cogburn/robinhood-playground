@@ -1374,13 +1374,16 @@ class App extends Component {
                 return;
             }
             this.setState({
-                newPicksData: data
+                showingPick: {
+                  ...data,
+                  newPick: true
+                }
             })
-            setTimeout(() => {
-                this.setState({
-                    newPicksData: null
-                });
-            }, 10000);
+            // setTimeout(() => {
+            //     this.setState({
+            //         newPicksData: null
+            //     });
+            // }, 10000);
         };
         socket.on('server:picks-data', handlePick);
         // setTimeout(() => {
@@ -1528,6 +1531,7 @@ class App extends Component {
                             Close Modal
                     </button>
                     <br/><br/>
+                    {showingPick && showingPick.newPick && <h3>NEW PICK!! NEW PICK!! NEW PICK!!</h3>}
                     <PickGraphs pick={showingPick} socket={socket} positions={positions} />
                 </ReactModal>
 
