@@ -82,6 +82,7 @@ module.exports = async (tickers, period, daysBack) => {
   period = Number(period);
 
   console.log(`tiingo historicals for ${tickers.length} tickers...`);
+  console.log({ tickers, period, daysBack })
 
   const asArray = await mapLimit(tickers, 10, async ticker => ({
     ticker,
