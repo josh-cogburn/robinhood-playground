@@ -85,7 +85,7 @@ export default class PickGraphs extends Component {
     });
   }
   componentDidMount() {
-    const { pick } = this.props;
+    const { pick, socket } = this.props;
     if (pick && !pick.data) {
       this.loadStScoreForPick(pick);
       setTimeout(() => this.loadDataForPick(pick), 500);
@@ -93,10 +93,17 @@ export default class PickGraphs extends Component {
 
     const ticker = pick.ticker || pick.withPrices[0].ticker;
 
+    socket.emit('historicals', ticker, 1, historicals => {
+      this.setState({
+        oneMinuteHistoricals: historicals
+      });
+      console.log({ historicals })
+    })
+
     let lookupTicker;
     (lookupTicker = () => {
       if (this.unmounted) return;
-      this.props.socket.emit('lookup', ticker, quote => {
+      socket.emit('lookup', ticker, quote => {
         this.setState(({ quoteChain }) => ({
           quoteChain: [...quoteChain, {
             ...quote,

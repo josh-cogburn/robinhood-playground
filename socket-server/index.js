@@ -77,8 +77,8 @@ io.on('connection', async socket => {
         cb(await lookup(ticker));
     });
 
-    socket.on('historicals', async (ticker, period, cb) => {
-        cb(await getHistoricals(ticker, period, undefined, true));
+    socket.on('historicals', async (ticker, period, daysBack, cb) => {
+        cb(await getHistoricals(ticker, period, daysBack, true));
     });
 
     socket.on('getRecentTrends', async (cb) => {
