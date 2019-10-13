@@ -93,9 +93,9 @@ export default class PickGraphs extends Component {
 
     const ticker = pick.ticker || pick.withPrices[0].ticker;
 
-    socket.emit('historicals', ticker, 1, historicals => {
+    socket.emit('historicals', ticker, 1, undefined, historicals => {
       this.setState({
-        oneMinuteHistoricals: historicals
+        oneMinuteHistoricals: historicals[ticker]
       });
       console.log({ historicals })
     })

@@ -10,7 +10,8 @@ const number = n => Number(n);
 const getHistoricals = async (ticker, period, daysBack = 7) => {
   console.log({
     ticker,
-    period
+    period,
+    daysBack
   })
   const sevenDaysDate = (new Date());
   sevenDaysDate.setDate(sevenDaysDate.getDate() - daysBack);
