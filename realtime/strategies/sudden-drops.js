@@ -13,7 +13,7 @@ const isOvernight = allPrices => {
 
 module.exports = {
     period: [5, 10],
-    collections: ['spy', 'options', 'fitty', 'lowVolFitty', 'zeroToOne', 'oneToTwo', 'twoToFive', 'fiveToTen'],
+    // collections: ['spy', 'options', 'fitty', 'lowVolFitty', 'zeroToOne', 'oneToTwo', 'twoToFive', 'fiveToTen'],
     handler: async ({ ticker, allPrices }) => {
 
         // const onlyToday = (() => {
@@ -111,7 +111,7 @@ module.exports = {
           30,
           40
         ].map(num => `down${num}`),
-        Object.keys(require('../RealtimeRunner').getPms())
+        Object.keys(require('../RealtimeRunner').collections)
       ).toArray().reduce((acc, arr) => {
 
         return {
