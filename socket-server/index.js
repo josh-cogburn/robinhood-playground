@@ -82,7 +82,7 @@ io.on('connection', async socket => {
         cb(await getHistoricals(ticker, period, daysBack, true));
     });
 
-    socket.on('slapTheAsk', async (ticker, quantity, cb) => {
+    socket.on('slapTheAsk', async (ticker, cb) => {
         const l = await lookup(ticker);
         const amt = 5;
         const quantity = Math.ceil(amt / l.currentPrice);
