@@ -111,7 +111,18 @@ module.exports = {
           30,
           40
         ].map(num => `down${num}`),
-        Object.keys(require('../RealtimeRunner').collections)
+        [ 
+          'spy',
+          'options',
+          'droppers',
+          'hotSt',
+          'fitty',
+          'lowVolFitty',
+          'zeroToOne',
+          'oneToTwo',
+          'twoToFive',
+          'fiveToTen' 
+        ]
       ).toArray().reduce((acc, arr) => {
 
         return {
