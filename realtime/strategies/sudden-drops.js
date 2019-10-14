@@ -111,18 +111,18 @@ module.exports = {
           30,
           40
         ].map(num => `down${num}`),
-        [ 
-          'spy',
-          'options',
-          'droppers',
-          'hotSt',
-          'fitty',
-          'lowVolFitty',
-          'zeroToOne',
-          'oneToTwo',
-          'twoToFive',
-          'fiveToTen' 
-        ]
+        // [ 
+        //   'spy',
+        //   'options',
+        //   'droppers',
+        //   'hotSt',
+        //   'fitty',
+        //   'lowVolFitty',
+        //   'zeroToOne',
+        //   'oneToTwo',
+        //   'twoToFive',
+        //   'fiveToTen' 
+        // ]
       ).toArray().reduce((acc, arr) => {
 
         return {
