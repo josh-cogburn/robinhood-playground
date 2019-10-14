@@ -3,6 +3,8 @@ const getStockInvestCollections = require('./get-stockinvest-collections');
 const getRisk = require('../../rh-actions/get-risk');
 const addFundamentals = require('../../app-actions/add-fundamentals');
 const runScan = require('../../scans/base/run-scan');
+const hotSt = require('../../scans/hot-st');
+const droppers = require('../../scans/droppers');
 
 const allStocks = require('../../json/stock-data/allStocks');
 const lookupMultiple = require('../../utils/lookup-multiple');
@@ -123,59 +125,85 @@ module.exports = async () => {
     strlog({
         // detailedNonZero,
         // d: detailedNonZero.getPositions
-    })
+    });
 
-    let response = {
+
+
+    let collections = {
         spy: ['SPY'],
         options: OPTIONSTICKERS,
-        // currentPositions: (await getPositions()).map(pos => pos.ticker),
-        fitty: (await runScan({
+    };
+
+    const scans = {
+        fitty: {
             minPrice: 0.20,
             maxPrice: 0.60,
             count: 60,
-            includeStSent: false,
             minVolume: 300000
-        })).map(t => t.ticker),
+        },
 
-        lowVolFitty: (await runScan({
+        lowVolFitty: {
             minPrice: 0,
             maxPrice: 0.60,
             count: 33,
-            includeStSent: false,
             maxVolume: 300000
-        })).map(t => t.ticker),
+        },
 
-        zeroToOne: (await runScan({
+        zeroToOne: {
             minPrice: 0,
             maxPrice: 1,
             count: 300,
-            includeStSent: false,
             minVolume: 200000
-        })).map(t => t.ticker),
+        },
 
-        oneToTwo: (await runScan({
+        oneToTwo: {
             minPrice: 1,
             maxPrice: 2,
-            // count: 200,
-            includeStSent: false,
             minVolume: 70000
-        })).map(t => t.ticker),
+        },
 
-        twoToFive: (await runScan({
+        twoToFive: {
             minPrice: 2,
             maxPrice: 5,
             count: 300,
-            includeStSent: false,
             minVolume: 200000
-        })).map(t => t.ticker),
+        },
 
-        fiveToTen: (await runScan({
+        fiveToTen: {
             minPrice: 5,
             maxPrice: 10,
             count: 300,
-            includeStSent: false,
             minVolume: 150000
-        })).map(t => t.ticker),
+        },
+
+    };
+
+    const getTicks = () => Object.values(collections).flatten().uniq();
+    for (let scanName of Object.keys(scans)) {
+        const scan = scans[scanName];
+        const response = (await runScan({
+            ...scan,
+            includeStSent: false,
+            excludeTickers: getTicks()
+        })).map(t => t.ticker);
+        collections[scanName] = response;
+    };
+
+    collections['droppers'] = await droppers({
+        minPrice: 0.1,
+        maxPrice: 5,
+        count: 25,
+        includeStSent: false,
+        excludeTickers: getTicks()
+    });
+
+    collections['hotSt'] = await hotSt({
+        minPrice: 0.1,
+        maxPrice: 5,
+        count: 25,
+        includeStSent: false,
+        excludeTickers: getTicks()
+    });
 
         // lowVolumeTrash: (await runScan({
         //     minPrice: 1,
@@ -190,10 +218,9 @@ module.exports = async () => {
         // rhtop100: await getRhStocks('100-most-popular'),
         // ...await getFinvizCollections(),
         // ...await getStockInvestCollections()
-    };
+    // };
 
     // remove any tickers that are not available on     const getTicks = () => Object.values(response).flatten().uniq();
-    const getTicks = () => Object.values(response).flatten().uniq();
     const originalTickers = getTicks();
     
     // const withRisk = await mapLimit(originalTickers, 13, async ticker => {
@@ -221,14 +248,14 @@ module.exports = async () => {
 
     strlog({ badTickers });
     
-    response = mapObject(
-        response, 
+    collections = mapObject(
+        collections, 
         tickers => (tickers || []).filter(ticker => 
             !badTickers.includes(ticker)
         )
     );
 
-    strlog(mapObject(response, v => v.length));
+    strlog(mapObject(collections, v => v.length));
     console.log(`without bad stock count: ${getTicks().length}`);
 
     // FILTER FOR ONLY THE "GOOD STUFF"
@@ -237,15 +264,15 @@ module.exports = async () => {
 
     // for (let key of ['fitty']) {
     //     console.log('filtering', key);
-    //     response = {
-    //         ...response,
-    //         [key]: await filterForTheGood(response[key])
+    //     collections = {
+    //         ...collections,
+    //         [key]: await filterForTheGood(collections[key])
     //     };
     // }
 
-    strlog(mapObject(response, v => v.length));
+    strlog(mapObject(collections, v => v.length));
     console.log(`only the good stuff: ${getTicks().length}`);
 
-    return response;
+    return collections;
 
 };

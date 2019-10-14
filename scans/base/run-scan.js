@@ -41,17 +41,19 @@ const sortAndCut = (arr, sortKey, num) => {
 
 const runScan = async ({
   minPrice = 0.5,
-  maxPrice = 0.6,
+  maxPrice = 8,
   minVolume = Number.NEGATIVE_INFINITY,
   maxVolume = Number.POSITIVE_INFINITY,
   filterFn = () => true,
   includeStSent = true,
-  count = COUNT
+  count = COUNT,
+  excludeTickers = [],
+  afterHoursReset = true
 } = {}) => {
   const tickers = (await getTickersBetween(minPrice, maxPrice)).map(buy => ({
     ...buy,
     computed: {}
-  }));
+  })).filter(({ ticker }) => !excludeTickers.includes(ticker));
 
   const withFundamentals = await addFundamentals(tickers);
 
@@ -104,11 +106,11 @@ const runScan = async ({
         ...buy.computed,
         tso: getTrend(
           buy.quote.currentPrice, 
-          !irregularHours ? buy.fundamentals.open : buy.quote.lastTradePrice
+          !irregularHours && afterHoursReset ? buy.fundamentals.open : buy.quote.lastTradePrice
         ),
         tsc: getTrend(
           buy.quote.currentPrice, 
-          !irregularHours ? buy.quote.prevClose : buy.quote.lastTradePrice
+          !irregularHours && afterHoursReset ? buy.quote.prevClose : buy.quote.lastTradePrice
         ),
         tsh: getTrend(buy.quote.currentPrice, buy.fundamentals.high)
       }

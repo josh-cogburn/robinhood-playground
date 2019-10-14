@@ -1,7 +1,7 @@
 const runScan = require('./base/run-scan');
 const getMinutesFrom630 = require('../utils/get-minutes-from-630');
 
-module.exports = ({ minPrice, maxPrice } = {}) => {
+module.exports = ({ minPrice, maxPrice, ...rest } = {}) => {
   const min = getMinutesFrom630();
   const irregularHours = min < 0 || min > 390;
   const limitUp = !irregularHours ? 5 : 2;
@@ -11,7 +11,8 @@ module.exports = ({ minPrice, maxPrice } = {}) => {
     maxPrice,
     filterFn: ({
       tso, tsc
-    }) => [tsc, tso].every(val => val > limitUp)
+    }) => [tsc, tso].every(val => val > limitUp),
+    ...rest
   });
 };
   
