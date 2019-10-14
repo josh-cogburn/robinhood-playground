@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Line } from 'react-chartjs-2';
 import graphs from './graphs';
 import { pick as pickProp } from 'underscore';
+import TrendPerc from './TrendPerc';
+import getTrend from '../utils/get-trend';
 
 import * as ChartAnnotation from 'chartjs-plugin-annotation';
 
@@ -162,6 +164,15 @@ export default class PickGraphs extends Component {
       });
     });
   }
+  slapTheAsk() {
+    const { pick, socket } = this.props;
+    const ticker = pick.ticker || pick.withPrices[0].ticker;
+    socket.emit('slapTheAsk', ticker, response => {
+      alert(`slapped ${ticker}`);
+      console.log(response);
+    });
+  }
+
   componentDidMount() {
     const { pick, socket } = this.props;
     if (pick && !pick.data) {
@@ -201,10 +212,13 @@ export default class PickGraphs extends Component {
     this.unmounted = true;
   }
   render() {
+    console.log(this.props)
     const { pick, socket, positions } = this.props;
     if (!pick) return null;
+    console.log("mde it")
     const { fetchedData, stScore, quoteChain, oneMinuteHistoricals } = this.state;
-    const [pickTrend] = pick.withTrend;
+    console.log("here")
+    const [{ price: pickPrice }] = pick.withPrices;
     let data = pick.data || fetchedData;
     if (!data) return null;
     const withData = {
@@ -231,18 +245,19 @@ export default class PickGraphs extends Component {
         <h3>Ticker: {ticker}</h3>
         { data && data.period && <h3>Period: {data.period}</h3> }
         <hr/>
-        <h3>{JSON.stringify(pickTrend)}</h3>
+        <h3>Pick Price: ${pickPrice}</h3>
         {
           stScore
             ? <h3>Stocktwits Sentiment: {JSON.stringify(stScore, null, 2)}</h3>
             : <button onClick={() => this.loadStScoreForPick(pick)}>Load Stocktwits Score</button>
         }
         {
-          Object.keys(position).length && (
+          !!Object.keys(position).length && (
             <h3>Position: {JSON.stringify(pickProp(position, ['average_buy_price', 'currentPrice', 'returnDollars', 'returnPerc', 'equity']))}</h3>
           )
         }
-        <h3>Quote: {JSON.stringify(pickProp(curQuote, ['currentPrice', 'askPrice', 'bidPrice', 'count']))}</h3>
+        <h3>Quote: {JSON.stringify(pickProp(curQuote, ['currentPrice', 'askPrice', 'bidPrice', 'count']))} <TrendPerc value={getTrend(curQuote.currentPrice, pickPrice)} /></h3>
+        <button onClick={this.slapTheAsk()}>SLAP THE ASK</button>
         {
           data ? (
             <div>
@@ -254,7 +269,7 @@ export default class PickGraphs extends Component {
                         priceChain,
                       }}
                       curQuote={curQuote}
-                      pickPrice={pick.withTrend[0].thenPrice} 
+                      pickPrice={pickPrice} 
                       avgBuyPrice={Number(position.average_buy_price)} />
                   )
                 }

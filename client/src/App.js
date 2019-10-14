@@ -66,6 +66,8 @@ function camelize(str) {
     }).replace(/\s+/g, '');
 }
 
+var notification = new Audio('slow-spring-board.mp3');
+
 
 const matchesPm = (stratMin, pm, pms) => {
     const arrayOfArrays = pms[pm] || [];
@@ -156,9 +158,11 @@ class App extends Component {
             this.setState({
                 picks: [data].concat(this.state.picks),
             });
-            if (!isForPurchase(data.stratMin, settings, pms)) {
+            if (!(data.isRecommended || isForPurchase(data.stratMin, settings, pms))) {
                 return;
             }
+            notification.play();
+            console.log({ data })
             this.setState({
                 showingPick: {
                   ...data,
@@ -188,6 +192,12 @@ class App extends Component {
         socket.on('server:data-update', data => {
             console.log(data, 'data-update')
             this.setState(data);
+            setTimeout(() => {
+                console.log('yo');
+                const pick = this.state.picks.filter(pick => pick.isRecommended)[0];
+                console.log(pick);
+                handlePick(pick)
+            }, 1000);
         });
         socket.on('server:related-prices', data => {
             // console.log({ relatedPrices: data });

@@ -21,6 +21,7 @@ const getStSentiment = require('../utils/get-stocktwits-sentiment');
 const restartProcess = require('../app-actions/restart-process');
 const pmPerf = require('../analysis/pm-perf-for-real');
 const getHistoricals = require('../realtime/historicals/get');
+const alpacaMarketBuy = require('../alpaca/market-buy');
 
 // const stratPerf = require('../analysis/strat-perf-for-real');
 const realtimeRunner = require('../realtime/RealtimeRunner');
@@ -79,6 +80,17 @@ io.on('connection', async socket => {
 
     socket.on('historicals', async (ticker, period, daysBack, cb) => {
         cb(await getHistoricals(ticker, period, daysBack, true));
+    });
+
+    socket.on('slapTheAsk', async (ticker, quantity, cb) => {
+        const l = await lookup(ticker);
+        const amt = 5;
+        const quantity = Math.ceil(amt / l.currentPrice);
+        cb(await alpacaMarketBuy({
+            ticker,
+            quantity,
+            timeoutSeconds: 10
+        }));
     });
 
     socket.on('getRecentTrends', async (cb) => {
