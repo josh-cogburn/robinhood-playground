@@ -110,7 +110,8 @@ module.exports = {
           20,
           30,
           40
-        ].map(num => `down${num}`)
+        ].map(num => `down${num}`),
+        Object.keys(require('../RealtimeRunner').getPms())
       ).toArray().reduce((acc, arr) => {
 
         return {
