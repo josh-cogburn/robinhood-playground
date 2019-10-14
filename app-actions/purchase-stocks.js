@@ -10,7 +10,7 @@ const purchaseStocks = async ({ strategy, multiplier = 1, min, withPrices } = {}
     const { portfolio_value, buying_power } = account;
     // strlog({ account })
     purchaseAmt = purchaseAmt || Math.ceil(portfolio_value / expectedPickCount);
-    const amountPerBuy = purchaseAmt * multiplier / 2;
+    const amountPerBuy = purchaseAmt * multiplier;
     strlog({
         purchaseAmt,
         multiplier,

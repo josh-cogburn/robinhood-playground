@@ -24,7 +24,7 @@ const pm = (str, multiplier = 1, groupName) => {
 module.exports = {
     // important settings
     sellAllStocksOnNthDay: 8,
-    purchaseAmt: 20,
+    purchaseAmt: 7,
     forPurchase: [
 
         // 2/5 sudden drops - TOTAL 42
@@ -34,6 +34,7 @@ module.exports = {
             sudden-drops-notWatchout-down10 6
             sudden-drops-notWatchout 10
             sudden-drops-shouldWatchout 5
+            sudden-drops-lunch 3
         `, 1, 'simplicity'),  // 17
 
         ...pm(`
