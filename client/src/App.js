@@ -192,12 +192,6 @@ class App extends Component {
         socket.on('server:data-update', data => {
             console.log(data, 'data-update')
             this.setState(data);
-            setTimeout(() => {
-                console.log('yo');
-                const pick = this.state.picks.filter(pick => pick.isRecommended)[0];
-                console.log(pick);
-                handlePick(pick)
-            }, 1000);
         });
         socket.on('server:related-prices', data => {
             // console.log({ relatedPrices: data });
