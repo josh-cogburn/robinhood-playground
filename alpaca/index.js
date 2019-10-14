@@ -47,8 +47,6 @@ client.onOrderUpdate(async data => {
       ticker,
       alpacaOrder: data.order,
     });
-
-    stratManager.refreshPositions();
     
   } else if (side === 'sell') {
     const position = stratManager.positions.alpaca.find(pos => pos.ticker === ticker) || {};
@@ -74,6 +72,8 @@ client.onOrderUpdate(async data => {
         }, null, 2)
     );
   }
+
+  stratManager.refreshPositions();
 
 })
 client.onAccountUpdate(data => {
