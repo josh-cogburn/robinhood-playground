@@ -22,7 +22,7 @@ module.exports = async ticker => {
   
   strlog({ downTrend, ticker });
 
-  const foundNum = NUMS.find(num => downTrend < 0 - num);
+  const foundNum = NUMS.reverse().find(num => downTrend < 0 - num);
 
   return foundNum ? `down${foundNum}` : undefined;
 };
