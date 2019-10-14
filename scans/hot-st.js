@@ -12,7 +12,7 @@ module.exports = ({ minPrice, maxPrice, ...rest } = {}) => {
     filterFn: ({
       tso, tsc
     }) => [tsc, tso].every(val => val > limitUp),
-    ...rest
+    ...rest,
   });
 };
   

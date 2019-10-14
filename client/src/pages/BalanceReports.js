@@ -261,7 +261,7 @@ class DayReports extends Component {
         //     })() : 0;
         // balanceReports = balanceReports.slice(0 - dataSlice);
 
-        console.log({ lines: getNewDayLines(balanceReports)})   
+        // console.log({ lines: getNewDayLines(balanceReports)})   
 
         // more code!
 
@@ -292,12 +292,6 @@ class DayReports extends Component {
             // };
             // return withDiff
         })();
-
-        console.log({ 
-            // labels: chartData.labels,
-            newDayLines: getNewDayLines(balanceReports),
-            // hits: getNewDayLines(balanceReports).map(hit => chartData.labels.includes(hit))
-        })
 
 
         // stats!
@@ -339,7 +333,7 @@ class DayReports extends Component {
         const max = Math.ceil(Math.max(...allValues));
 
         const stepSize = Math.ceil((max - min) / 13);
-        console.log({ stepSize, max, min })
+        
         // console.log({ allValues,min,max })
         // let afterHoursAnnotations = annotateBoxes(afterHoursBoxes);
 

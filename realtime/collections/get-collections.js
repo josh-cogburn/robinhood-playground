@@ -179,6 +179,26 @@ module.exports = async () => {
     };
 
     const getTicks = () => Object.values(collections).flatten().uniq();
+
+
+    collections['droppers'] = (await droppers({
+        minPrice: 0.1,
+        maxPrice: 8,
+        count: 25,
+        includeStSent: false,
+        excludeTickers: getTicks(),
+        afterHoursReset: false
+    })).map(t => t.ticker);;
+
+    collections['hotSt'] = (await hotSt({
+        minPrice: 0.1,
+        maxPrice: 5,
+        count: 25,
+        includeStSent: false,
+        excludeTickers: getTicks(),
+        afterHoursReset: false
+    })).map(t => t.ticker);
+    
     for (let scanName of Object.keys(scans)) {
         const scan = scans[scanName];
         const response = (await runScan({
@@ -189,21 +209,6 @@ module.exports = async () => {
         collections[scanName] = response;
     };
 
-    collections['droppers'] = await droppers({
-        minPrice: 0.1,
-        maxPrice: 5,
-        count: 25,
-        includeStSent: false,
-        excludeTickers: getTicks()
-    });
-
-    collections['hotSt'] = await hotSt({
-        minPrice: 0.1,
-        maxPrice: 5,
-        count: 25,
-        includeStSent: false,
-        excludeTickers: getTicks()
-    });
 
         // lowVolumeTrash: (await runScan({
         //     minPrice: 1,

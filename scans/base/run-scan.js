@@ -106,11 +106,11 @@ const runScan = async ({
         ...buy.computed,
         tso: getTrend(
           buy.quote.currentPrice, 
-          !irregularHours && afterHoursReset ? buy.fundamentals.open : buy.quote.lastTradePrice
+          irregularHours && afterHoursReset ? buy.quote.lastTradePrice : buy.fundamentals.open
         ),
         tsc: getTrend(
           buy.quote.currentPrice, 
-          !irregularHours && afterHoursReset ? buy.quote.prevClose : buy.quote.lastTradePrice
+          irregularHours && afterHoursReset ? buy.quote.lastTradePrice : buy.quote.prevClose
         ),
         tsh: getTrend(buy.quote.currentPrice, buy.fundamentals.high)
       }
