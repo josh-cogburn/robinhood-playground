@@ -13,6 +13,7 @@ const isOvernight = allPrices => {
 
 module.exports = {
     period: [5, 10],
+    disabled: true,
     collections: ['spy', 'options', 'fitty', 'lowVolFitty', 'zeroToOne', 'oneToTwo', 'twoToFive', 'fiveToTen'],
     handler: async ({ ticker, allPrices }) => {
 
