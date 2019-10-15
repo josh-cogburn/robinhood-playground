@@ -782,7 +782,11 @@ module.exports = new (class RealtimeRunner {
           strategyName
         ]
       }), {
-        [strategyName]: [strategyName]
+        [strategyName]: [strategyName],
+        ...Object.keys(this.collections).reduce((inner, collection) => ({
+          ...inner,
+          [`${strategyName}-${collection}`]: [strategyName, collection]
+        }), {})
       })
     }), {
 
