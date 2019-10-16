@@ -105,7 +105,7 @@ const handleMACDConfig = macdConfig => allCurrents => {
 
 module.exports = {
     period: [10, 30],
-    collections: ['options', 'spy'],
+    collections: ['options', 'spy', 'hotSt'],
     handler: ({ allPrices }) => {
         const allCurrents = allPrices.map(obj => obj.currentPrice);
         const config = [5, 8, 3];
