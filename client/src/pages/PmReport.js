@@ -217,6 +217,7 @@ class TodaysStrategies extends Component {
                         return arrayOfArrays.some(parts => {
                             parts = Array.isArray(parts) ? parts : [parts];
                             return parts.every(part => {
+                                part = part.toString();
                                 if (part.startsWith('!')) {
                                     return strategy.includes(part.slice(1));
                                 }

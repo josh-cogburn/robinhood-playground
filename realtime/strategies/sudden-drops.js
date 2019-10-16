@@ -89,7 +89,7 @@ module.exports = {
 
       notLunch: ['!lunch'],
       notLunchAndNotDown10: ['!lunch', '!down10'],
-      // notLunchOrNotDown10: [['!lunch'], ['!down10']],
+      notLunchOrNotDown10: [['!lunch'], ['!down10']],
 
       ...Combinatorics.cartesianProduct(
         [
