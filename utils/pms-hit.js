@@ -19,7 +19,12 @@ module.exports = async (_, strategy) => {
       }
       return (arrayOfArrays || []).some(parts => {
           parts = Array.isArray(parts) ? parts : [parts];
-          return parts.every(part => strategy.includes(part));
+          return parts.every(part => {
+            if (part.startsWith('!')) {
+              return strategy.includes(part.slice(1));
+            }
+            return strategy.includes(part);
+          });
       });
     }
     

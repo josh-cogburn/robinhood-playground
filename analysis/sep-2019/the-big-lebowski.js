@@ -126,7 +126,12 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
   const stratMatchesPm = (pm, strat) => {
     return pm.some(parts => {
         parts = Array.isArray(parts) ? parts : [parts];
-        return parts.every(part => strat.includes(part));
+        return parts.every(part => {
+          if (part.startsWith('!')) {
+            return strat.includes(part.slice(1));
+          }
+          return strat.includes(part);
+        });
     });
   };
 

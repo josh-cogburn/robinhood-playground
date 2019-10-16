@@ -216,7 +216,12 @@ class TodaysStrategies extends Component {
                         const arrayOfArrays = pms[pm] || [];
                         return arrayOfArrays.some(parts => {
                             parts = Array.isArray(parts) ? parts : [parts];
-                            return parts.every(part => stratMin.includes(part));
+                            return parts.every(part => {
+                                if (part.startsWith('!')) {
+                                    return strategy.includes(part.slice(1));
+                                }
+                                return strategy.includes(part);
+                            });
                         });
                         // return pms[pm] && pms[pm].every(part => strat === part || strat.includes(`${part}-`) || strat.includes(`-${part}`));
                     };

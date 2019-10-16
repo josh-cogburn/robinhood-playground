@@ -73,7 +73,12 @@ const matchesPm = (stratMin, pm, pms) => {
     const arrayOfArrays = pms[pm] || [];
     return arrayOfArrays.some(parts => {
         parts = Array.isArray(parts) ? parts : [parts];
-        return parts.every(part => stratMin.includes(part));
+        return parts.every(part => {
+            if (part.startsWith('!')) {
+                return stratMin.includes(part.slice(1));
+            }
+            return stratMin.includes(part);
+        });
     });
     // return pms[pm] && pms[pm].every(part => strat === part || strat.includes(`${part}-`) || strat.includes(`-${part}`));
 }
