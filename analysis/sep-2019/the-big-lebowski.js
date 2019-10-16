@@ -128,7 +128,6 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
         parts = Array.isArray(parts) ? parts : [parts];
         return parts.every(part => {
           part = part.toString();
-          strlog({ part, parts})
           if (part.startsWith('!')) {
             return strat.includes(part.slice(1));
           }
