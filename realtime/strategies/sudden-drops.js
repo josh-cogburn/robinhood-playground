@@ -111,6 +111,13 @@ module.exports = {
           30,
           40
         ].map(num => `down${num}`),
+        [
+          10,
+          15,
+          20,
+          30,
+          40
+        ].map(num => `avgh${num}`),
         // [ 
         //   'spy',
         //   'options',
