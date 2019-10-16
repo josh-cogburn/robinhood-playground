@@ -648,6 +648,11 @@ module.exports = new (class RealtimeRunner {
       (this.collections[collection] || []).includes(ticker)
     ) : undefined;
 
+    if (strategyName === 'sudden-drops' && keys.isOvernight) {
+      strategyName = 'overnight-drops';
+      delete keys.isOvernight;
+    }
+
     keys = Object.keys(keys)    // remove falsy keys
       .filter(key => keys[key])
       .reduce((acc, key) => ({
@@ -661,8 +666,6 @@ module.exports = new (class RealtimeRunner {
       if (period === 'd') return 'daily';
       if (period) return `${period}min`;
     })();
-
-
     
     // let [price] = data && data.allPrices 
     //   ? data.allPrices.slice(-1)
@@ -679,13 +682,6 @@ module.exports = new (class RealtimeRunner {
         if (min > 0) return 'initial';
         return 'premarket';
     })();
-
-    if (strategyName === 'sudden-drops' && keys.isOvernight) {
-      strategyName = 'overnight-drops';
-      delete keys.isOvernight;
-    }
-
-    
 
     const firstAlertkey = !this.todaysPicks.flatten().find(comparePick =>
       comparePick.ticker === ticker

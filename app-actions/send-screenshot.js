@@ -22,7 +22,7 @@ module.exports = async (numDays = 1) => {
   };
   page.setViewport({ ...dims, deviceScaleFactor: 2 });
   await page.goto(`http://107.173.6.167:3000/?${numDays}`);
-  await page.waitFor(7000);
+  await page.waitFor(12000);
   await page.screenshot({
     path,
     quality: 100,
@@ -32,7 +32,7 @@ module.exports = async (numDays = 1) => {
       ...dims
     }
   });
-  await page.waitFor(12000);
+  // await page.waitFor(12000);
   await browser.close();
   await sendEmail(`daily trend screenshot for ${todaysDate}`, '', undefined, [
     path
