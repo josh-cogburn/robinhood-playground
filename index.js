@@ -74,6 +74,7 @@ process.on('unhandledRejection', (reason, p) => {
     Robinhood = await login();
     global.Robinhood = Robinhood;
 
+    await RealtimeRunner.init(DISABLE_REALTIME);
     require('./socket-server');
     // console.log(await getUpStreak('AAPL', 3));
     // await up10days.trendFilter(require('/Users/johnmurphy/Development/my-stuff/robinhood-playground/json/stock-data/2018-1-22 12:53:02 (+380*).json'));
@@ -112,8 +113,6 @@ process.on('unhandledRejection', (reason, p) => {
     // const ratioToSpend = Math.max(0.3, getMinutesFrom630() / 390);
     const cashAvailable = Number(accounts.results[0].margin_balances.unallocated_margin_cash);
     console.log({cashAvailable});
-
-    await RealtimeRunner.init(DISABLE_REALTIME);
 
     // await sellAllStocks();
 
