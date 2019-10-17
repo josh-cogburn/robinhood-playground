@@ -325,7 +325,7 @@ const stratManager = {
                             if (part.startsWith('!')) {
                                 return !stratMin.includes(part.slice(1));
                             }
-                            return (new RegExp(`[^!]${part}`)).test(stratMin);
+                            return (new RegExp(`(?<!!)${part}`)).test(stratMin);
                         });
                     });
                 })

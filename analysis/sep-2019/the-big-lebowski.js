@@ -60,9 +60,9 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
   );
 
 
-  strlog({
-    byStrategy
-  });
+  // strlog({
+  //   byStrategy
+  // });
 
   let asArray = Object.entries(byStrategy).map(([strategyName, dateObj]) => {
     const trends = Object.values(dateObj).filter(Boolean);
@@ -74,7 +74,7 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
       percUp: percUp(trends)
     };
   });
-  strlog({asArray})
+  // strlog({asArray})
 
   asArray = asArray
     .filter(s => ['premarket', 'afterhours'].every(w => !s.strategyName.includes(w)))
@@ -85,10 +85,10 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
     // )
 
   asArray = chain(asArray).sortBy('overallAvg').sortBy('percUp').value();
-  strlog({ asArray })
+  // strlog({ asArray })
   if (!addTodayTrend) return asArray;
 
-  await realtimeRunner.init(true);
+  // await realtimeRunner.init(true);
   const pms = realtimeRunner.getPms();
 
   // strlog({ pms, skipDays })
@@ -131,7 +131,7 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
           if (part.startsWith('!')) {
             return !strat.includes(part.slice(1));
           }
-          return (new RegExp(`[^!]${part}`)).test(strat);
+          return (new RegExp(`(?<!!)${part}`)).test(strat);
         });
     });
   };
