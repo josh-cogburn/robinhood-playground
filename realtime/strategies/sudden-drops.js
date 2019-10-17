@@ -127,11 +127,11 @@ module.exports = {
           ].map(num => `avgh${num}`),
           '!avgh'
         ],
-        
-        // [
-        //   ...[120, 90, 60, 30].map(num => `straightDown${num}`),
-        //   '!straightDown',
-        // ],
+
+        [
+          ...[120, 90, 60, 30].map(num => `straightDown${num}`),
+          '!straightDown',
+        ],
 
         // [ 
         //   'spy',

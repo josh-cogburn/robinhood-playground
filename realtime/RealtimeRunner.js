@@ -752,6 +752,8 @@ module.exports = new (class RealtimeRunner {
   getPms() {
     if (!this.hasInit) return {};
     
+    // if (this.pms) return this.pms;
+
     const singles = [
       'avg-downer',
       
@@ -922,10 +924,12 @@ module.exports = new (class RealtimeRunner {
 
     // strlog({ mustIncludeAll });
 
-    return {
+    this.pms = {
       ...mapObject(mustIncludeAll, arr => [arr]),
       ...require('../pms/sep-2019'),
     };
+
+    return this.pms;
   }
 
 

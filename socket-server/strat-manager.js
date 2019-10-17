@@ -279,8 +279,10 @@ const stratManager = {
 
 
         const { relatedPrices } = this.tickerWatcher;
-        const realtimePms = require('../realtime/RealtimeRunner').getPms();
 
+        console.log('getting pms...')
+        const realtimePms = require('../realtime/RealtimeRunner').getPms();
+        console.log('now calcing pms')
         // console.log({ realtimePms})
         const pmPerfs = Object.keys(realtimePms).map(pmName => {
 
