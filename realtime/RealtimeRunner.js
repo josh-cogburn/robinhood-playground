@@ -711,7 +711,7 @@ module.exports = new (class RealtimeRunner {
       const risk = riskCache[ticker]  || await getRisk({ ticker });
       riskCache[ticker] = risk;
       const { shouldWatchout } = risk;
-      watchoutKey = shouldWatchout ? 'shouldWatchout' : 'notWatchout';
+      watchoutKey = shouldWatchout ? 'watchout' : '';
       
       // stSent
       // stSent = await getStSentiment(ticker)

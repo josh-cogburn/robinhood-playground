@@ -22,7 +22,7 @@ module.exports = async (_, strategy) => {
           return parts.every(part => {
             part = part.toString();
             if (part.startsWith('!')) {
-              return strategy.includes(part.slice(1));
+              return !strategy.includes(part.slice(1));
             }
             return strategy.includes(part);
           });

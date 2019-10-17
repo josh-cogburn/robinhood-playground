@@ -76,7 +76,7 @@ const matchesPm = (stratMin, pm, pms) => {
         return parts.every(part => {
             part = part.toString();
             if (part.startsWith('!')) {
-                return stratMin.includes(part.slice(1));
+                return !stratMin.includes(part.slice(1));
             }
             return stratMin.includes(part);
         });
@@ -156,7 +156,7 @@ class App extends Component {
 
     componentDidMount() {
         let { origin } = window.location;
-        const socketEndpoint = origin.includes('localhost') && false ? 'http://localhost:3000' : 'http://107.173.6.167:3000';
+        const socketEndpoint = origin.includes('localhost') && true ? 'http://localhost:3000' : 'http://107.173.6.167:3000';
         const socket = socketIOClient(socketEndpoint);
         
         const handlePick = data => {

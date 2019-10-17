@@ -33,7 +33,7 @@ const limitBuy = async ({
   try {
       order = await alpaca.createOrder(data);
   } catch (e) {
-      strlog({ e })
+      return null;
   }
 
   await new Promise(resolve => setTimeout(resolve, 1000 * timeoutSeconds));

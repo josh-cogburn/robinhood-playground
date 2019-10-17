@@ -89,12 +89,12 @@ module.exports = {
 
       notLunch: ['!lunch'],
       notLunchAndNotDown10: ['!lunch', '!down10'],
-      notLunchOrNotDown10: [['!lunch'], ['!down10']],
+      notLunchOrNotDown10: [[['!lunch'], ['!down10']]], // wowza
 
       ...Combinatorics.cartesianProduct(
         [
-          'notWatchout',
-          'shouldWatchout',
+          '!watchout',
+          'watchout',
         ],
         [
           'majorJump',
@@ -105,22 +105,32 @@ module.exports = {
           'dinner',
           'lunch',
           'brunch',
-          'initial'
+          'initial',
         ],
         [
-          10,
-          15,
-          20,
-          30,
-          40
-        ].map(num => `down${num}`),
+          ...[
+            10,
+            15,
+            20,
+            30,
+            40
+          ].map(num => `down${num}`),
+          '!down'
+        ],
         [
-          10,
-          15,
-          20,
-          30,
-          40
-        ].map(num => `avgh${num}`),
+          ...[
+            10,
+            15,
+            20,
+            30,
+            40
+          ].map(num => `avgh${num}`),
+          '!avgh'
+        ],
+        [
+          ...[120, 90, 60, 30].map(num => `straightDown${num}`),
+          '!straightDown',
+        ],
         // [ 
         //   'spy',
         //   'options',

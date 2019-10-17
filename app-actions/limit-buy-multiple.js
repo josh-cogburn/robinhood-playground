@@ -1,6 +1,9 @@
 const simpleBuy = require('./simple-buy');
+
 const alpacaMarketBuy = require('../alpaca/market-buy');
 const alpacaLimitBuy = require('../alpaca/limit-buy');
+const alpacaAttemptBuy = require('../alpaca/attempt-buy');
+
 const mapLimit = require('promise-map-limit');
 const sendEmail = require('../utils/send-email');
 const lookup = require('../utils/lookup');
@@ -10,7 +13,7 @@ const getBalance = require('../alpaca/get-balance');
 
 module.exports = async ({
     totalAmtToSpend, 
-    strategy, 
+    strategy,
     maxNumStocksToPurchase, 
     min, 
     withPrices,
@@ -50,52 +53,49 @@ module.exports = async ({
         console.log(perStock, 'purchasng ', ticker);
         try {
             const pickPrice = (withPrices.find(obj => obj.ticker === ticker) || {}).price;
-            const quantity = Math.round(perStock / pickPrice / 4) || 1;
+            const quantity = Math.round(perStock / pickPrice / 3) || 1;
 
-            const attemptPromises = [
-                alpacaLimitBuy({
+            const buyStyles = {
+                limit: alpacaLimitBuy({
                     ticker,
                     quantity,
-                    limitPrice: pickPrice * 1.02,
+                    limitPrice: pickPrice * 1.03,
                     timeoutSeconds: 60 * 5,
                     fallbackToMarket: false
                 }),
-                alpacaLimitBuy({
+                market: alpacaMarketBuy({
                     ticker,
                     quantity,
-                    limitPrice: pickPrice * 1.01,
-                    timeoutSeconds: 60 * 5,
-                    fallbackToMarket: false
                 }),
-                alpacaLimitBuy({
+                attempt: alpacaAttemptBuy({
                     ticker,
                     quantity,
-                    limitPrice: pickPrice * 1,
-                    timeoutSeconds: 60 * 5,
-                    fallbackToMarket: false
-                }),
-                alpacaLimitBuy({
-                    ticker,
-                    quantity,
-                    limitPrice: pickPrice * 0.99,
-                    timeoutSeconds: 60 * 5,
-                    fallbackToMarket: false
-                }),
-                alpacaLimitBuy({
-                    ticker,
-                    quantity,
-                    limitPrice: pickPrice * 0.98,
-                    timeoutSeconds: 60 * 5,
-                    fallbackToMarket: false
-                }),
-                alpacaMarketBuy({
-                    ticker,
-                    quantity,
+                    pickPrice
                 })
-            ];
-            await Promise.all(
-                attemptPromises
+            };
+            
+            const buyPromises = Object.entries(buyStyles).map(
+                async ([name, promise]) => {
+                    strlog({
+                        name,
+                        promise
+                    })
+                    const response = await promise;
+                    const order = response && response.alpacaOrder ? response.alpacaOrder : response;
+                    return {
+                        name,
+                        filledAt: (order || {}).filled_at
+                    };
+                }
             );
+
+        
+
+            const roundUp = await Promise.all(
+                buyPromises
+            );
+
+            await sendEmail(`roundup for ${ticker} buy`, JSON.stringify(roundUp, null, 2))
 
 
             numPurchased++;

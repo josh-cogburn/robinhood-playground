@@ -318,7 +318,13 @@ const stratManager = {
                     // console.log({ pmParts })
                     return arrayOfArrays.some(parts => {
                         parts = Array.isArray(parts) ? parts : [parts];
-                        return parts.every(part => stratMin.includes(part));
+                        return parts.every(part => {
+                            part = part.toString();
+                            if (part.startsWith('!')) {
+                                return !stratMin.includes(part.slice(1));
+                            }
+                            return stratMin.includes(part);
+                        });
                     });
                 })
                 .map(handlePick)

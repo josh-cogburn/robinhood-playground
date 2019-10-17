@@ -129,7 +129,7 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
         return parts.every(part => {
           part = part.toString();
           if (part.startsWith('!')) {
-            return strat.includes(part.slice(1));
+            return !strat.includes(part.slice(1));
           }
           return strat.includes(part);
         });
@@ -166,7 +166,7 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
       const dateVals = Object.values(analyzedDates).filter(Boolean);
 
 
-      console.log({ matchedStrategies, byDate });
+      // console.log({ matchedStrategies, byDate });
       
       return {
         pm,

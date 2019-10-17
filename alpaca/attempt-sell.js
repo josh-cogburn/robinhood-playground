@@ -5,7 +5,7 @@ const lookup = require('../utils/lookup');
 const limitSell = require('./limit-sell');
 const marketSell = require('./market-sell');
 
-const ATTEMPT_TIMEOUTS = [120, 120, 120, 120, 120, 120];     // seconds
+const ATTEMPT_TIMEOUTS = [60, 60, 60, 60, 60];     // seconds
 const ATTEMPT_PERCS = [-1, -0.5, 0.1, 0.5, 1];  // percents
 const MAX_ATTEMPTS = ATTEMPT_TIMEOUTS.length;
 
@@ -15,7 +15,7 @@ const calcLimitPrice = async ({ ticker, attemptNum, minPrice = Number.NEGATIVE_I
 
     const { bidPrice, askPrice, lastTrade } = await lookup(ticker);
     // const lowVal = Math.min(bidPrice, askPrice, lastTrade);
-    const highVal = Math.max(bidPrice, askPrice, lastTrade);
+    const highVal = lastTrade // Math.max(bidPrice, askPrice, lastTrade);
     // const spread = Math.max(highVal - lowVal, 0.02 * lastTrade);
     minPrice = Math.min(lastTrade * 1.07, minPrice);
     const belowHigh = highVal * attemptPercBelow / 100;

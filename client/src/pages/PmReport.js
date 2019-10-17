@@ -219,9 +219,9 @@ class TodaysStrategies extends Component {
                             return parts.every(part => {
                                 part = part.toString();
                                 if (part.startsWith('!')) {
-                                    return strategy.includes(part.slice(1));
+                                    return !stratMin.includes(part.slice(1));
                                 }
-                                return strategy.includes(part);
+                                return stratMin.includes(part);
                             });
                         });
                         // return pms[pm] && pms[pm].every(part => strat === part || strat.includes(`${part}-`) || strat.includes(`-${part}`));
