@@ -221,7 +221,7 @@ class TodaysStrategies extends Component {
                                 if (part.startsWith('!')) {
                                     return !stratMin.includes(part.slice(1));
                                 }
-                                return stratMin.includes(part);
+                                return (new RegExp(`[^!]${part}`)).test(stratMin);
                             });
                         });
                         // return pms[pm] && pms[pm].every(part => strat === part || strat.includes(`${part}-`) || strat.includes(`-${part}`));
