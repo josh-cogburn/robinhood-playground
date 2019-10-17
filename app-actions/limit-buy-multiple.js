@@ -84,7 +84,7 @@ module.exports = async ({
                     const order = response && response.alpacaOrder ? response.alpacaOrder : response;
                     return {
                         name,
-                        filledAt: (order || {}).filled_at
+                        fillPrice: (order || {}).filled_avg_price
                     };
                 }
             );

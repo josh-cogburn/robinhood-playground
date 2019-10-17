@@ -6,7 +6,7 @@ module.exports = async (strategies) => {
   const stratManager = require('../../socket-server/strat-manager');
   await stratManager.init({ lowKey: true });
   const { picks, tickerWatcher: { relatedPrices } } = stratManager;
-  strlog({ strategies })
+  // strlog({ strategies })
   const withTodayTrend = strategies.map(s => ({
     ...s,
     ...(() => {
