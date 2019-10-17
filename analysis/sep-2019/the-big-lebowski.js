@@ -91,7 +91,7 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
   await realtimeRunner.init(true);
   const pms = realtimeRunner.getPms();
 
-  strlog({ pms, skipDays })
+  // strlog({ pms, skipDays })
   
 
   const withTodayTrend = (await addTodayTrendToStrategies(asArray))
