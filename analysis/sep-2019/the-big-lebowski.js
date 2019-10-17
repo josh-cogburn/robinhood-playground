@@ -131,7 +131,7 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
           if (part.startsWith('!')) {
             return !strat.includes(part.slice(1));
           }
-          return strat.includes(part);
+          return new RegExp(`[^!]${part}`).test(strat);
         });
     });
   };
