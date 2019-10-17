@@ -752,7 +752,7 @@ module.exports = new (class RealtimeRunner {
   getPms() {
     if (!this.hasInit) return {};
     
-    // if (this.pms) return this.pms;
+    if (this.pms) return this.pms;
 
     const singles = [
       'avg-downer',
