@@ -115,6 +115,7 @@ module.exports = {
             30,
             40
           ].map(num => `down${num}`),
+          'down',
           '!down'
         ],
         [
@@ -125,11 +126,13 @@ module.exports = {
             30,
             40
           ].map(num => `avgh${num}`),
+          'avgh',
           '!avgh'
         ],
 
         [
           ...[120, 90, 60, 30].map(num => `straightDown${num}`),
+          'straightDown',
           '!straightDown',
         ],
 

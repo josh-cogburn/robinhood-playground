@@ -109,7 +109,8 @@ class TodaysStrategies extends Component {
         super();
         this.state = {
             filter: '',
-            forPurchaseOnly: true
+            forPurchaseOnly: true,
+            maxDash: '---'
         };
     }
     toggleForPurchaseOnly = () => this.setState({ forPurchaseOnly: !this.state.forPurchaseOnly });
@@ -130,7 +131,7 @@ class TodaysStrategies extends Component {
     render() {
         const { investigatePm } = this;
         let { pmPerfs, settings, predictionModels, pmsAnalyzed, pms, picks, relatedPrices } = this.props;
-        let { forPurchaseOnly, filter } = this.state;
+        let { forPurchaseOnly, filter, maxDash } = this.state;
 
         const pmMatchesFilter = pmName => filter.split(',').every(str => pmName.includes(str));
 
@@ -139,7 +140,7 @@ class TodaysStrategies extends Component {
         );
         const isForPurchase = pmName => forPurchasePMs.includes(pmName);
 
-        
+        maxDash = maxDash === '---' ? Number.POSITIVE_INFINITY : Number(maxDash);
         
         const flattenLebowski = ({
             jsonAnalysis = {},
@@ -152,7 +153,10 @@ class TodaysStrategies extends Component {
             jsonPercUp: jsonAnalysis.percUp,
         });
 
+
+
         pmPerfs = pmPerfs
+            .filter(({ pmName }) => pmName.split('-').length <= maxDash)
             .filter(({ pmName }) => pmMatchesFilter(pmName))
             .map(({ avgTrend, percUp, pmName, count }) => {
                 const foundLebowski = pmsAnalyzed.find(pm => pm.pm === pmName) || {};
@@ -256,6 +260,7 @@ class TodaysStrategies extends Component {
         
         console.log({ pmsAnalyzed })
         const noHitTops = pmsAnalyzed
+            .filter(({ pm }) => pm.split('-').length <= maxDash)
             .filter(pm => pmMatchesFilter(pm.pm))
             .filter(pm => {
                 return !pmPerfs.find(pmPerf => pmPerf.pmName === pm.pm);
@@ -276,6 +281,19 @@ class TodaysStrategies extends Component {
                     
                     
                 Filter: <input type="text" onChange={this.filterChange}/><br/>
+                MaxDash: 
+                <select onChange={evt => this.setState({ maxDash: evt.target.value })}>
+                    {
+                        [
+                            '---',
+                            ...Array(6).fill(0).map((v, i) => i)
+                        ].map(num => (
+                            <option value={num}>{num}</option>
+                        ))
+                    }
+                    
+                </select>
+
                 <h2>Current PM Trends</h2>
                 <label>
                     <input type="checkbox" checked={forPurchaseOnly} onChange={this.toggleForPurchaseOnly} />

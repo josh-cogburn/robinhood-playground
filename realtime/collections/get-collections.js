@@ -10,7 +10,10 @@ const allStocks = require('../../json/stock-data/allStocks');
 const lookupMultiple = require('../../utils/lookup-multiple');
 const { isTradeable } = require('../../utils/filter-by-tradeable');
 const { mapObject } = require('underscore');
-const { getPositions } = require('../../app-actions/detailed-non-zero');
+
+const getPositions = require('../../alpaca/get-positions');
+
+let holds = [];
 
 const OPTIONSTICKERS = [
 
@@ -121,12 +124,6 @@ module.exports = async () => {
         });
         return top100RHtrend.map(t => t.ticker);
     };
-
-    strlog({
-        // detailedNonZero,
-        // d: detailedNonZero.getPositions
-    });
-
 
 
     let collections = {
@@ -278,6 +275,14 @@ module.exports = async () => {
     strlog(mapObject(collections, v => v.length));
     console.log(`only the good stuff: ${getTicks().length}`);
 
-    return collections;
+    holds = [
+        ...holds,
+        (await getPositions()).map(pos => pos.symbol)
+    ].uniq();
+
+    return {
+        ...collections,
+        holds
+    };
 
 };
