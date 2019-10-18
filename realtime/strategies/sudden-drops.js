@@ -118,17 +118,17 @@ module.exports = {
           'down',
           '!down'
         ],
-        [
-          ...[
-            10,
-            15,
-            20,
-            30,
-            40
-          ].map(num => `avgh${num}`),
-          'avgh',
-          '!avgh'
-        ],
+        // [
+        //   ...[
+        //     10,
+        //     15,
+        //     20,
+        //     30,
+        //     40
+        //   ].map(num => `avgh${num}`),
+        //   'avgh',
+        //   '!avgh'
+        // ],
 
         [
           ...[120, 90, 60, 30].map(num => `straightDown${num}`),
