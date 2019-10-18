@@ -208,7 +208,13 @@ io.on('connection', async socket => {
 
 });
 
-server.listen(port, async () => {
-    stratManager.init({ io });
-    console.log('[INFO] Listening on *:' + port);
+
+module.exports = new Promise(resolve => {
+
+    server.listen(port, async () => {
+        await stratManager.init({ io });
+        console.log('[INFO] Listening on *:' + port);
+        resolve();
+    });
+    
 });
