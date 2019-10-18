@@ -88,7 +88,7 @@ module.exports = async (daysBack = 8, skipDays = 1, addTodayTrend = true) => {
   // strlog({ asArray })
   if (!addTodayTrend) return asArray;
 
-  // await realtimeRunner.init(true);
+  await realtimeRunner.init(true);
   const pms = realtimeRunner.getPms();
 
   // strlog({ pms, skipDays })

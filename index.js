@@ -74,9 +74,10 @@ process.on('unhandledRejection', (reason, p) => {
     Robinhood = await login();
     global.Robinhood = Robinhood;
 
-    await require('./socket-server');
 
     await RealtimeRunner.init(DISABLE_REALTIME);
+    await require('./socket-server');
+
     // console.log(await getUpStreak('AAPL', 3));
     // await up10days.trendFilter(require('/Users/johnmurphy/Development/my-stuff/robinhood-playground/json/stock-data/2018-1-22 12:53:02 (+380*).json'));
 
