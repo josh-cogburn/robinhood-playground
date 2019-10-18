@@ -766,9 +766,9 @@ module.exports = new (class RealtimeRunner {
       ...[5, 10, 30 , 'daily'],
       ...Object.keys(this.collections),
       
-      'volume-increasing',
-      'pennyscan-highHit',
-      ...[30, 90, 120, 360].map(period => `pennyscan-highHit${period}`),
+      // 'volume-increasing',
+      // 'pennyscan-highHit',
+      // ...[30, 90, 120, 360].map(period => `pennyscan-highHit${period}`),
       
 
     ];
@@ -792,8 +792,8 @@ module.exports = new (class RealtimeRunner {
 
       ...Combinatorics.cartesianProduct(
         [
-          'notWatchout',
-          'shouldWatchout',
+          'watchout',
+          '!watchout',
         ],
         [
           'majorJump',
@@ -830,59 +830,59 @@ module.exports = new (class RealtimeRunner {
         [collectionName]: [collectionName]
       }), {}),
 
-      ...[1, 2, 3, 4].reduce((acc, streak) => ({
-        ...acc,
-        [`pennyscan-highHit-streak${streak}`]: ['highHit', `streak${streak}`]
-      }), {}),
+      // ...[1, 2, 3, 4].reduce((acc, streak) => ({
+      //   ...acc,
+      //   [`pennyscan-highHit-streak${streak}`]: ['highHit', `streak${streak}`]
+      // }), {}),
 
-      ...Combinatorics.cartesianProduct(
-        [
-          'nowheres',
-          'hot-st',
-          'droppers',
-          'unfiltered'
-        ],
-        [
-          'singleTopVolumeSS',
-          'singlePercMaxVolSS',
-          'ss180',
-          'ssFirstTwo',
-          'stTrendRatioFirst3',
-          'worstSsTrendRatio',
-          'worstSS',
+      // ...Combinatorics.cartesianProduct(
+      //   [
+      //     'nowheres',
+      //     'hot-st',
+      //     'droppers',
+      //     'unfiltered'
+      //   ],
+      //   [
+      //     'singleTopVolumeSS',
+      //     'singlePercMaxVolSS',
+      //     'ss180',
+      //     'ssFirstTwo',
+      //     'stTrendRatioFirst3',
+      //     'worstSsTrendRatio',
+      //     'worstSS',
     
-          ...`
-            projectedVolume
-            dollarVolume
-            highestTrend
+      //     ...`
+      //       projectedVolume
+      //       dollarVolume
+      //       highestTrend
             
-            zScoreVolume
-            zScoreInverseTrend
-            zScoreInverseTrendMinusRSI
-            zScoreInverseTrendPlusVol
-            zScoreHighSentLowRSI
-            zScoreMagic
-            zScoreHotAndCool
-            zScoreGoingBadLookingGood
-          `
-              .split('\n')
-              .map(t => t.trim())
-              .filter(Boolean)
+      //       zScoreVolume
+      //       zScoreInverseTrend
+      //       zScoreInverseTrendMinusRSI
+      //       zScoreInverseTrendPlusVol
+      //       zScoreHighSentLowRSI
+      //       zScoreMagic
+      //       zScoreHotAndCool
+      //       zScoreGoingBadLookingGood
+      //     `
+      //         .split('\n')
+      //         .map(t => t.trim())
+      //         .filter(Boolean)
 
-        ],
-        [
-          'initial',
-          'brunch',
-          'lunch',
-          'dinner'
-        ]
-      ).toArray().reduce((acc, arr) => ({
-        ...acc,
-        [`pennyscan-${arr.join('-')}`]: ['pennyscan', ...arr],
-        [`pennyscan-${arr.slice(0, 2).join('-')}`]: ['pennyscan', ...arr.slice(0, 2)]
-      }), {}),
+      //   ],
+      //   [
+      //     'initial',
+      //     'brunch',
+      //     'lunch',
+      //     'dinner'
+      //   ]
+      // ).toArray().reduce((acc, arr) => ({
+      //   ...acc,
+      //   [`pennyscan-${arr.join('-')}`]: ['pennyscan', ...arr],
+      //   [`pennyscan-${arr.slice(0, 2).join('-')}`]: ['pennyscan', ...arr.slice(0, 2)]
+      // }), {}),
 
-      nowheresTopSSPREMARKET: ['nowheres', 'topSS', 'premarket'],
+      // nowheresTopSSPREMARKET: ['nowheres', 'topSS', 'premarket'],
       
       ...Combinatorics.cartesianProduct(
         [
@@ -926,7 +926,7 @@ module.exports = new (class RealtimeRunner {
 
     this.pms = {
       ...mapObject(mustIncludeAll, arr => [arr]),
-      ...require('../pms/sep-2019'),
+      // ...require('../pms/sep-2019'),
     };
 
     return this.pms;
