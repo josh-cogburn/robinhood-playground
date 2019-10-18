@@ -11,7 +11,7 @@ const lookupMultiple = require('../../utils/lookup-multiple');
 const { isTradeable } = require('../../utils/filter-by-tradeable');
 const { mapObject } = require('underscore');
 
-const getPositions = require('../../alpaca/get-positions');
+const { alpaca } = require('../../alpaca');
 
 let holds = [];
 
@@ -277,7 +277,7 @@ module.exports = async () => {
 
     holds = [
         ...holds,
-        ...(await getPositions()).map(pos => pos.symbol)
+        ...(await alpaca.getPositions()).map(pos => pos.symbol)
     ].uniq();
 
     return {
