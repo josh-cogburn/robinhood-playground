@@ -277,7 +277,7 @@ module.exports = async () => {
 
     holds = [
         ...holds,
-        (await getPositions()).map(pos => pos.symbol)
+        ...(await getPositions()).map(pos => pos.symbol)
     ].uniq();
 
     return {
