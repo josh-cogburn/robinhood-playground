@@ -39,13 +39,15 @@ module.exports = {
             sudden-drops-down20 3
             sudden-drops-down30 3
             sudden-drops-down40 3
+            sudden-drops-straightDown90 3
+            sudden-drops-majorJump 2
+            sudden-drops-down15-straightDown 2
+            sudden-drops-down10-straightDown 1
+            sudden-drops-mediumJump-down15 3
         `, 1, 'simplicity'),  // 17
 
         ...pm(`
-            overnight-drops-watchout-mediumJump 2
-            overnight-drops-watchout-majorJump 2
-            overnight-drops-watchout-mediumJump 2
-            overnight-drops-!watchout-majorJump 2
+            overnight-drops-!watchout-mediumJump 2
         `, 1, 'overnight'),  // 17
 
     ],
