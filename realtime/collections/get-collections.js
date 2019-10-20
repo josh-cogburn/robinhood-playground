@@ -280,6 +280,6 @@ module.exports = async () => {
     strlog(mapObject(collections, v => v.length));
     console.log(`only the good stuff: ${getTicks().length}`);
 
-    
+    return collections;
 
 };
