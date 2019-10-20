@@ -102,33 +102,38 @@ module.exports = async () => {
 
     console.log('get collections!');
 
-    const getTickersBetween = async (min, max) => {
-        const tickPrices = await lookupMultiple(allStocks.filter(isTradeable).map(o => o.symbol));
-        const tickers = Object.keys(tickPrices).filter(ticker => tickPrices[ticker] < max && tickPrices[ticker] > min);
-        // console.log({ kstTickers: tickers });
-        return tickers;
-    };
+    // const getTickersBetween = async (min, max) => {
+    //     const tickPrices = await lookupMultiple(allStocks.filter(isTradeable).map(o => o.symbol));
+    //     const tickers = Object.keys(tickPrices).filter(ticker => tickPrices[ticker] < max && tickPrices[ticker] > min);
+    //     // console.log({ kstTickers: tickers });
+    //     return tickers;
+    // };
 
-    const getRhStocks = async rhTag => {
-        console.log(`getting robinhood ${rhTag} stocks`);
-        const {
-            instruments: top100RHinstruments
-        } = await Robinhood.url(`https://api.robinhood.com/midlands/tags/tag/${rhTag}/`);
-        let top100RHtrend = await mapLimit(top100RHinstruments, 3, async instrumentUrl => {
-            const instrumentObj = await Robinhood.url(instrumentUrl);
-            return {
-                ...instrumentObj,
-                instrumentUrl,
-                ticker: instrumentObj.symbol
-            };
-        });
-        return top100RHtrend.map(t => t.ticker);
-    };
+    // const getRhStocks = async rhTag => {
+    //     console.log(`getting robinhood ${rhTag} stocks`);
+    //     const {
+    //         instruments: top100RHinstruments
+    //     } = await Robinhood.url(`https://api.robinhood.com/midlands/tags/tag/${rhTag}/`);
+    //     let top100RHtrend = await mapLimit(top100RHinstruments, 3, async instrumentUrl => {
+    //         const instrumentObj = await Robinhood.url(instrumentUrl);
+    //         return {
+    //             ...instrumentObj,
+    //             instrumentUrl,
+    //             ticker: instrumentObj.symbol
+    //         };
+    //     });
+    //     return top100RHtrend.map(t => t.ticker);
+    // };
 
-
+    holds = [
+        ...holds,
+        ...(await alpaca.getPositions()).map(pos => pos.symbol)
+    ].uniq();
+    
     let collections = {
-        spy: ['SPY'],
-        options: OPTIONSTICKERS,
+        holds
+        // spy: ['SPY'],
+        // options: OPTIONSTICKERS,
     };
 
     const scans = {
@@ -275,14 +280,6 @@ module.exports = async () => {
     strlog(mapObject(collections, v => v.length));
     console.log(`only the good stuff: ${getTicks().length}`);
 
-    holds = [
-        ...holds,
-        ...(await alpaca.getPositions()).map(pos => pos.symbol)
-    ].uniq();
-
-    return {
-        ...collections,
-        holds
-    };
+    
 
 };

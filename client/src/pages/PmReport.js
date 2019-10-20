@@ -133,7 +133,11 @@ class TodaysStrategies extends Component {
         let { pmPerfs, settings, predictionModels, pmsAnalyzed, pms, picks, relatedPrices } = this.props;
         let { forPurchaseOnly, filter, maxDash } = this.state;
 
-        const pmMatchesFilter = pmName => filter.split(',').every(str => pmName.includes(str));
+        const pmMatchesFilter = pmName => filter
+            .split(',')
+            .every(str => 
+                (new RegExp(`(?<!!)${str}`)).test(pmName)   // no ! prefix
+            );
 
         const forPurchasePMs = settings.forPurchase.map(line =>
             line.substring(1, line.length - 1)

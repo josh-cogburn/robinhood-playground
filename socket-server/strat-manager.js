@@ -1,4 +1,3 @@
-
 const jsonMgr = require('../utils/json-mgr');
 const { CronJob } = require('cron');
 const fs = require('mz/fs');
@@ -386,7 +385,7 @@ const stratManager = {
         console.log('saving to', todayPMpath);
         await jsonMgr.save(todayPMpath, newPMs);
         return newPMs;
-    },
+    },  
     async refreshPredictionModels() {
         console.log('refreshing prediction models');
         // set predictionmodels

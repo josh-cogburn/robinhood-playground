@@ -31,19 +31,11 @@ module.exports = {
 
 
         ...pm(`
-            sudden-drops-!watchout-down10 6
-            sudden-drops-!watchout 10
-            sudden-drops-watchout-down10 5
             sudden-drops-lunch 3
-            sudden-drops-down15 3
-            sudden-drops-down20 3
-            sudden-drops-down30 3
-            sudden-drops-down40 3
+            sudden-drops-lunch 3
             sudden-drops-straightDown90 3
-            sudden-drops-majorJump 2
-            sudden-drops-down15-straightDown 2
-            sudden-drops-down10-straightDown 1
-            sudden-drops-mediumJump-down15 3
+            sudden-drops-straightDown90 3
+            sudden-drops-watchout-down
         `, 1, 'simplicity'),  // 17
 
         ...pm(`

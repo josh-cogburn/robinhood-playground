@@ -6,6 +6,8 @@ const Holds = require('../models/Holds');
 const getTrend = require('../utils/get-trend');
 const sendEmail = require('../utils/send-email');
 
+strlog({alpaca})
+
 const client = alpaca.websocket
 client.onConnect(function() {
   console.log("Connected")

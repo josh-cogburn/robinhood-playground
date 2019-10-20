@@ -24,17 +24,17 @@ class TodaysStrategies extends Component {
       window.localStorage.setItem('TodaysStrategies', JSON.stringify(pick(this.state, ['pmFilter', 'sortBy', 'additionalFilters'])));
   }
   componentDidMount() {
-      this.setState(
-          JSON.parse(window.localStorage.getItem('TodaysStrategies'))
-      )
+    this.setState(
+        JSON.parse(window.localStorage.getItem('TodaysStrategies'))
+    )
   }
   setStateOfProp = prop => event => this.setState({ [prop]: event.target.value });
   toggleAfterHours = () => this.setState({ afterHoursEnabled: !this.state.afterHoursEnabled });
   addToFilter = ticker => {
-      console.log({ ticker}, 'click')
-      this.setState(({ additionalFilters }) => ({ 
-          additionalFilters: `${additionalFilters},${ticker}` 
-        }));
+    console.log({ ticker}, 'click')
+    this.setState(({ additionalFilters }) => ({ 
+        additionalFilters: `${additionalFilters},${ticker}` 
+    }));
   }
   render() {
     let { pmFilter, afterHoursEnabled, sortBy: sortByFilter, additionalFilters } = this.state;
@@ -87,7 +87,8 @@ class TodaysStrategies extends Component {
         //   const picks = pmFilter !== 'no filter' ? picks.filter(pick => pms[pmFilter].every(part => pick.stratMin.includes(`${part}-`))) : picks;
       })()
       .filter(pick => additionalFilterParts.every(part => 
-            pick.stratMin.includes(part) || pick.withPrices.some(({ ticker }) => ticker === part)
+            (new RegExp(`(?<!!)${part}`)).test(pick.stratMin)   // no ! prefix
+            || pick.withPrices.some(({ ticker }) => ticker === part)
         ));
 
       showingPicks = showingPicks.map(pick => {
