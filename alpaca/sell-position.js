@@ -16,7 +16,7 @@ module.exports = async position => {
 
     const response = await attemptSell({ 
         ticker, 
-        quantity: Math.ceil(quantity / 24 * 23),
+        quantity: Math.ceil(quantity / 24),
         // limitPrice: currentPrice * .995,
         // timeoutSeconds: 60,
         // fallbackToMarket: true
