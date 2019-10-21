@@ -21,6 +21,7 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
     
     const toDisplay = {
         // 'days old': 'dayAge',
+        daysOld: 'daysOld',
         ticker: pos => {
             const tooltipText = tooltipStr(pos);
             return <span {...tooltipText && { 'data-custom': true, 'data-tooltip-str': tooltipText }}>{pos.ticker}</span>
@@ -33,12 +34,11 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
             'return %': pos => <TrendPerc value={pos.returnPerc} />,
         },
         // 'buy strategies': 'buyStrategy',
+        wouldBeDayTrade: pos => JSON.stringify(pos.wouldBeDayTrade),
         stSent: 'stSent',
-        daysOld: 'daysOld',
-        wouldBeDayTrade: 'wouldBeDayTrade',
-        sellBracket: 'sellBracket',
-        upperLimit: 'upperLimit',
-        lowerLimit: 'lowerLimit',
+        sellBracket: ({ sellBracket, upperLimit, lowerLimit }) => (
+            <span>{sellBracket} ({lowerLimit} -> {upperLimit})</span>
+        ),
         ...admin ? {
             'avg': pos => Number(pos['average_buy_price']).toFixed(2),
             'current': 'currentPrice',
