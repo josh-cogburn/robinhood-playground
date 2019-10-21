@@ -54,9 +54,11 @@ client.onOrderUpdate(async data => {
     const position = stratManager.positions.alpaca.find(pos => pos.ticker === ticker) || {};
     const {
         average_buy_price: buyPrice,
-        buyStrategies
+        buyStrategies,
+        quantity: positionQuantity
     } = position;
-    const deletedHold = await Holds.findOneAndDelete({ ticker });
+    const closedPosition = Boolean(positionQuantity === filled_qty);
+    const deletedHold = closedPosition ? await Holds.findOneAndDelete({ ticker }) : null;
     const sellPrice = filled_avg_price;
     const returnDollars = (sellPrice - buyPrice) * qty;
     const returnPerc = getTrend(sellPrice, buyPrice);
@@ -69,6 +71,7 @@ client.onOrderUpdate(async data => {
             qty,
             buyStrategies,
             alpacaOrder: data.order,
+            closedPosition,
             deletedHold,
             position
         }, null, 2)

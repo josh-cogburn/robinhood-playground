@@ -7,8 +7,8 @@ const getTrend = require('../utils/get-trend');
 module.exports = async position => {
 
     const { 
-        symbol: ticker, 
-        qty: quantity 
+        ticker, 
+        quantity 
     } = position;
 
     
@@ -16,7 +16,7 @@ module.exports = async position => {
 
     const response = await attemptSell({ 
         ticker, 
-        quantity,
+        quantity: Math.ceil(quantity / 23 * 24),
         // limitPrice: currentPrice * .995,
         // timeoutSeconds: 60,
         // fallbackToMarket: true
@@ -24,7 +24,7 @@ module.exports = async position => {
 
     const { alpacaOrder, attemptNum } = response || {};
     console.log(`sold ${ticker} in ${attemptNum} attempts!!!`)
-    if (!alpacaOrder || !alpacaOrder.filled_at) {
+    if (!alpacaOrder || !alpacaOrder.filled_avg_price) {
         return sendEmail(`unable to sell ${ticker}`);
     }
     

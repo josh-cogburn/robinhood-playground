@@ -2,40 +2,51 @@ const { alpaca } = require('.');
 const getStSentiment = require('../utils/get-stocktwits-sentiment');
 const shouldSellPosition = require('../utils/should-sell-position');
 const Holds = require('../models/Holds');
-
+const Pick = require('../models/Pick')
 module.exports = async () => {
 
-  const positions = (await alpaca.getPositions())
-    .map(({ symbol, avg_entry_price, qty }) => ({
+  const uniqDates = (await Pick.getUniqueDates()).reverse();
+  const getDaysOld = date => uniqDates.indexOf(date);
+  strlog({ uniqDates })
+
+  let positions = (await alpaca.getPositions())
+    .map(({ symbol, avg_entry_price, qty, unrealized_plpc }) => ({
       ticker: symbol,
       average_buy_price: avg_entry_price,
-      quantity: qty
+      quantity: qty,
+      returnPerc: unrealized_plpc * 100
     }));
 
-    const withStSent = await mapLimit(positions, 3, async pos => ({
-        ...pos,
-        stSent: (await getStSentiment(pos.ticker) || {}).bullBearScore
-    }));
+  positions = await mapLimit(positions, 3, async position => {
+    const { ticker } = position;
+    const hold = await Holds.findOne({ ticker });
+    const buyStrategies = !hold ? [] : hold.buys.map(buy => buy.strategy).reduce((acc, strategy) => ({
+      ...acc,
+      [strategy]: (acc[strategy] || 0) + 1
+    }), {});
+    const lastBuyDate = hold.buys.map(buy => buy.date).pop();
+    const daysOld = getDaysOld(lastBuyDate);
 
-    const withShouldSell = withStSent.map(pos => ({
-        ...pos,
-        shouldSell: shouldSellPosition(pos)
-    }));
+    // strlog({ buys});
 
-    const withHolds = (
-      await mapLimit(withShouldSell, 1, async pos => ({
-        ...pos,
-        hold: await Holds.findOne({ ticker: pos.ticker })
-      }))
-    )
-      .map(pos => ({
-        ...pos,
-        buyStrategies: !pos.hold ? [] : pos.hold.buys.map(buy => buy.strategy).reduce((acc, strategy) => ({
-          ...acc,
-          [strategy]: (acc[strategy] || 0) + 1
-        }), {})
-      }))
+    const wouldBeDayTrade = Boolean(daysOld === 0);
+    return {
+      ...position,
+      hold,
+      buyStrategies,
+      wouldBeDayTrade,
+      daysOld,
+      stSent: (await getStSentiment(ticker) || {}).bullBearScore
+    };
+  });
 
-    return withHolds;
+  positions = positions.map(position => ({
+    ...position,
+    shouldSell: shouldSellPosition(position)
+  }));
+
+  strlog({ positions })
+
+  return positions;
 
 };

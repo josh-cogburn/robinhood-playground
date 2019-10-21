@@ -352,7 +352,7 @@ class DayReports extends Component {
                         <td style={{ paddingLeft: '5em' }}>
                             number of days to show... <a href="#" onClick={() => this.setState({ numDaysToShow: 1 })}>[reset]</a>
                             <InputRange
-                                maxValue={7}
+                                maxValue={16}
                                 minValue={1}
                                 step={1}
                                 // formatLabel={value => value.toFixed(2)}
