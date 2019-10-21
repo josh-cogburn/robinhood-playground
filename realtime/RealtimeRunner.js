@@ -487,7 +487,7 @@ module.exports = new (class RealtimeRunner {
               tickersInCollection: !this.collections[collection],
             })
           }
-          return this.collections[collection].includes(ticker);
+          return (this.collections[collection] || []).includes(ticker);
         });
       }) : tickersAndAllPrices;
     strlog({
