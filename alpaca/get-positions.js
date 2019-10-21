@@ -42,7 +42,7 @@ module.exports = async () => {
 
   positions = positions.map(position => ({
     ...position,
-    shouldSell: shouldSellPosition(position)
+    ...shouldSellPosition(position)
   }));
 
   strlog({ positions })

@@ -58,7 +58,7 @@ const getDetailedNonZero = async () => {
 
     const withShouldSell = withStSent.map(pos => ({
         ...pos,
-        shouldSell: shouldSellPosition(pos)
+        ...shouldSellPosition(pos)
     }));
 
     // console.log('made it', withTicks);

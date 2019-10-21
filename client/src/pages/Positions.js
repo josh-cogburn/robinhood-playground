@@ -34,6 +34,8 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
         },
         // 'buy strategies': 'buyStrategy',
         'stSent': 'stSent',
+        'daysOld': 'daysOld',
+        'wouldBeDayTrade': wouldBeDayTrade,
         ...admin ? {
             'avg': pos => Number(pos['average_buy_price']).toFixed(2),
             'current': 'currentPrice',

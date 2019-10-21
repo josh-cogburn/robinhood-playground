@@ -15,14 +15,19 @@ const shouldSell = position => {
   })();
 
   const [lowerLimit, upperLimit] = sellBrackets[sellBracket];
-  const shouldSellBool = Boolean(returnPerc >= upperLimit || returnPerc <= lowerLimit);
+  const shouldSell = Boolean(returnPerc >= upperLimit || returnPerc <= lowerLimit);
   strlog({
     ticker,
     sellBracket,
     returnPerc,
-    shouldSellBool
+    shouldSell
   })
-  return shouldSellBool;
+  return {
+    shouldSell,
+    sellBracket,
+    upperLimit,
+    lowerLimit
+  };
 };
 
 module.exports = shouldSell;
