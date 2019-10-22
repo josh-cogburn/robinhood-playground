@@ -1,4 +1,4 @@
-const INITIAL_TIMEOUT = 10 * 1000;      // 10 seconds
+const INITIAL_TIMEOUT = 16 * 1000;      // 10 seconds
 const END_AFTER = 2 * 1000 * 60 * 60;   // 2 hr
 
 const getMinutesFrom630 = require('./get-minutes-from-630');
@@ -90,8 +90,16 @@ module.exports = class AvgDowner {
   }
   scheduleTimeout() {
     console.log(`observing again in ${this.timeout / 1000} seconds (${(new Date(Date.now() + this.timeout).toLocaleTimeString())})`)
-    setTimeout(() => this.running && this.observe(), this.timeout);
-    this.timeout *= 2;
+    this.TO = setTimeout(() => this.running && this.observe(), this.timeout);
+    this.timeout = Math.min(this.timeout * 2, 1000 * 60 * 7);
+  }
+  newBuy(buyPrice) {
+    this.buyPrices.push(buyPrice);
+    this.timeout = INITIAL_TIMEOUT;
+    clearTimeout(this.TO);
+    this.TO = null;
+    this.running = true;
+    this.observe();
   }
   getMinKey() {
     if (!this.startTime) return null;
