@@ -8,6 +8,7 @@ const cacheThis = require('../../utils/cache-this');
 const number = n => Number(n);
 
 const getHistoricals = async (ticker, period, daysBack = 7) => {
+  daysBack = Number(daysBack)
   console.log({
     ticker,
     period,
@@ -17,7 +18,7 @@ const getHistoricals = async (ticker, period, daysBack = 7) => {
   sevenDaysDate.setDate(sevenDaysDate.getDate() - daysBack);
   const [month, day, year] = sevenDaysDate.toLocaleDateString().split('-');
   const formatted = [year, month, day].join('-');
-
+  strlog({ formatted })
   const requestOptions = {
     url: `https://api.tiingo.com/iex/${ticker}/prices?startDate=${formatted}&resampleFreq=${period}min&token=${token}&afterHours=true`,
     headers: {

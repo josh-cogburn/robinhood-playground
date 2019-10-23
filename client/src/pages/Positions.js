@@ -36,8 +36,8 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
         },
         // 'buy strategies': 'buyStrategy',
         stSent: 'stSent',
-        sellBracket: ({ sellBracket, upperLimit, lowerLimit }) => (
-            <span>{sellBracket} ({lowerLimit} -> {upperLimit})</span>
+        stBracket: ({ stBracket, upperLimit, lowerLimit }) => (
+            <span>{stBracket} ({lowerLimit} -> {upperLimit})</span>
         ),
         recommendation: 'recommendation',
         wouldBeDayTrade: pos => JSON.stringify(pos.wouldBeDayTrade),
