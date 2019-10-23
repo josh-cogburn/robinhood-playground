@@ -14,7 +14,7 @@ module.exports = async (position) => {
     } = position;
 
     const percToSell = (() => {
-        if (Math.abs(returnPerc) > 30) return 100;
+        // if (Math.abs(returnPerc) > 30) return 100;
         return (returnPerc ? 8 : 5) + daysOld;
     })();
 
