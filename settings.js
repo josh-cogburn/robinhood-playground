@@ -51,6 +51,8 @@ module.exports = {
         '[sudden-drops-!watchout-majorJump-!straightDown]',
         '[sudden-drops-mediumJump-down15]',
 
+        '[average-down-recommendation]'
+
     ],
     // forPurchaseVariation: '75Perc5Day-yesincludingblanks',
     // fallbackSellStrategy: 'limit8',

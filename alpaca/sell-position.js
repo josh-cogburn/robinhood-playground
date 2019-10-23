@@ -4,19 +4,27 @@ const Holds = require('../models/Holds');
 const sendEmail = require('../utils/send-email');
 const getTrend = require('../utils/get-trend');
 
-module.exports = async position => {
+module.exports = async (position) => {
 
     const { 
         ticker, 
-        quantity 
+        quantity,
+        returnPerc,
+        daysOld
     } = position;
+
+    const percToSell = (() => {
+        if (Math.abs(returnPerc) > 30) return 100;
+        return (returnPerc ? 8 : 5) + daysOld;
+    })();
+
 
     
     // const { currentPrice } = await lookup(ticker);
 
     const response = await attemptSell({ 
         ticker, 
-        quantity: Math.ceil(quantity / 24),
+        quantity: Math.ceil(quantity * (percToSell / 100)),
         // limitPrice: currentPrice * .995,
         // timeoutSeconds: 60,
         // fallbackToMarket: true

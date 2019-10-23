@@ -756,6 +756,7 @@ module.exports = new (class RealtimeRunner {
 
     const singles = [
       'avg-downer',
+      'average-down-recommendation',
       
       ...[
         'initial',

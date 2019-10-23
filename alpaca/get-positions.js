@@ -20,33 +20,61 @@ module.exports = async () => {
   positions = await mapLimit(positions, 3, async position => {
     const { ticker } = position;
     const hold = await Holds.findOne({ ticker });
-    const buyStrategies = !hold ? [] : hold.buys.map(buy => buy.strategy).reduce((acc, strategy) => ({
+    const { buys = [] } = hold;
+    const buyStrategies = buys.map(buy => buy.strategy).reduce((acc, strategy) => ({
       ...acc,
       [strategy]: (acc[strategy] || 0) + 1
     }), {});
-    const lastBuyDate = hold.buys.map(buy => buy.date).pop();
-    const daysOld = getDaysOld(lastBuyDate);
+
+
+    const [daysOld, mostRecentPurchase] = [
+      buys[0],
+      buys[arr.length - 1]
+    ].map(getDaysOld);
 
     // strlog({ buys});
 
-    const wouldBeDayTrade = Boolean(daysOld === 0);
+    const wouldBeDayTrade = Boolean(mostRecentPurchase === 0);
     return {
       ...position,
       hold,
       buyStrategies,
-      wouldBeDayTrade,
       daysOld,
+      mostRecentPurchase,
+      wouldBeDayTrade,
       stSent: (await getStSentiment(ticker) || {}).bullBearScore
     };
   });
 
-  positions = positions.map(position => ({
-    ...position,
-    ...shouldSellPosition(position)
-  }));
+  const getRecommendation = position => {
+    const { daysOld, returnPerc, shouldSell } = position;
 
-  strlog({ positions })
+    if (!shouldSell) {
+      return '---';
+    }
 
-  return positions;
+    if (returnPerc) {
+      return 'take profit';
+    }
+
+    return (daysOld <= 5)
+      ? 'average down'
+      : 'cut your losses' // :-(
+
+  };
+
+  const withRecommendations = positions
+    .map(position => ({
+      ...position,
+      ...shouldSellPosition(position)
+    }))
+    .map(position => ({
+      ...position,
+      recommendation: getRecommendation(position)
+    }));
+
+  
+
+  return withRecommendations;
 
 };
