@@ -56,16 +56,19 @@ module.exports = async ({
             const quantity = Math.round(perStock / pickPrice / 3) || 1;
 
             const buyStyles = {
-                limit: alpacaLimitBuy({
+                limit3: alpacaLimitBuy({
                     ticker,
                     quantity,
                     limitPrice: pickPrice * 1.03,
                     timeoutSeconds: 60 * 5,
                     fallbackToMarket: false
                 }),
-                market: alpacaMarketBuy({
+                limitEven: alpacaLimitBuy({
                     ticker,
                     quantity,
+                    limitPrice: pickPrice * 1.003,
+                    timeoutSeconds: 60 * 20,
+                    fallbackToMarket: false
                 }),
                 attempt: alpacaAttemptBuy({
                     ticker,

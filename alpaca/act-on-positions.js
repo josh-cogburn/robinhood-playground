@@ -17,7 +17,7 @@ module.exports = async (_, dontAct) => {
 
     await Promise.all(
         selling.map(async position => {
-            const { ticker, recommendation, daysOld } = position;
+            const { ticker, recommendation, daysOld, sellBracket } = position;
             if (recommendation === '---') {
                 return console.log(`${ticker} says ${recommendation}.  doing nothing.`);
             } else if (['take profit', 'cut your losses'].some(val => recommendation === val)) {
@@ -28,7 +28,8 @@ module.exports = async (_, dontAct) => {
                   strategyName: 'average-down-recommendation',
                   ticker,
                   keys: {
-                    daysOld
+                    [`${daysOld}daysOld`]: true,
+                    [sellBracket]: true,
                   },
                   data: { 
                     position
