@@ -12,7 +12,7 @@ const sellAllBasedOnPlayout = require('../app-actions/sell-all-based-on-playout'
 // const sellAllIfWentUp = require('../app-actions/sell-all-if-went-up');
 const sellAllStocks = require('../app-actions/sell-all-stocks');
 const smartSells = require('../app-actions/smart-sells');
-const alpacaSellAllStocks = require('../alpaca/sell-all-stocks');
+const alpacaActOnPositions = require('../alpaca/act-on-positions');
 const alpacaSmartSells = require('../alpaca/smart-sells');
 const saveDayReport = require('../app-actions/save-day-report');
 const restartProcess = require('../app-actions/restart-process');
@@ -37,7 +37,7 @@ const additionalCron = [
     {
         name: 'alpacaSellAllStocks',
         run: [0.5, 6, 27, 58, 62, 85, 112, 150, 193, 222, 242, 270, 290],
-        fn: () => alpacaSellAllStocks()
+        fn: () => alpacaActOnPositions()
     },
     // {
     //     name: 'alpaca smart sells',

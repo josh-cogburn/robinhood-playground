@@ -6,7 +6,10 @@ const Pick = require('../models/Pick')
 module.exports = async () => {
 
   const uniqDates = (await Pick.getUniqueDates()).reverse();
-  const getDaysOld = date => uniqDates.indexOf(date);
+  const getDaysOld = date => {
+    strlog({ date })
+    return uniqDates.indexOf(date);
+  }
   strlog({ uniqDates })
 
   let positions = (await alpaca.getPositions())
@@ -29,10 +32,10 @@ module.exports = async () => {
 
     const [daysOld, mostRecentPurchase] = [
       buys[0],
-      buys[arr.length - 1]
-    ].map(getDaysOld);
+      buys[buys.length - 1]
+    ].map(buy => getDaysOld(buy.date));
 
-    // strlog({ buys});
+    // strlog({ buys}); 
 
     const wouldBeDayTrade = Boolean(mostRecentPurchase === 0);
     return {
@@ -48,12 +51,11 @@ module.exports = async () => {
 
   const getRecommendation = position => {
     const { daysOld, returnPerc, shouldSell } = position;
-
     if (!shouldSell) {
       return '---';
     }
 
-    if (returnPerc) {
+    if (returnPerc > 0) {
       return 'take profit';
     }
 
