@@ -50,13 +50,13 @@ module.exports = async () => {
   });
 
   const getRecommendation = position => {
-    const { daysOld, returnPerc, shouldSell } = position;
+    const { daysOld, returnPerc, shouldSell, wouldBeDayTrade } = position;
     if (!shouldSell) {
       return '---';
     }
 
     if (returnPerc > 0) {
-      return 'take profit';
+      return wouldBeDayTrade ? 'possibly take profit' : 'take profit';
     }
 
     return (daysOld <= 5)
