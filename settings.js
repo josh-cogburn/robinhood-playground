@@ -55,7 +55,6 @@ module.exports = {
 
         // yes today trend high percUp
         '[sudden-drops-lowVolFitty]',
-        '[sudden-drops-dinner-!down-!straightDown]',
         '[sudden-drops-dinner-down15-straightDown]',
         '[sudden-drops-!watchout-minorJump-!down-!straightDown]',
         '[sudden-drops-mediumJump-dinner-down]',
