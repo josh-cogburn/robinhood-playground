@@ -28,18 +28,21 @@ module.exports = async ({
 
     // randomize the order
     stocksToBuy = stocksToBuy.sort(() => Math.random() > Math.random());
-    let amtToSpendLeft = totalAmtToSpend;
+    // let amtToSpendLeft = totalAmtToSpend;
     let failedStocks = [];
 
 
+    const perStock = strategy.includes('average-down-recommendation')
+        ? 6
+        : totalAmtToSpend;
+
     await mapLimit(stocksToBuy, 3, async ticker => {       // 3 buys at a time
 
-        const perStock = totalAmtToSpend;
-
+            
         // dont buy stocks if more than 40 percent of current balance!
-        let percOfBalance = 0;
+        let currentValue, percOfBalance = 0;
         try {
-            const currentValue = (await alpaca.getPosition(ticker)).market_value;
+            currentValue = (await alpaca.getPosition(ticker)).market_value;
             const balance = await getBalance();
             percOfBalance = currentValue / balance * 100;
         } catch (e) {}
