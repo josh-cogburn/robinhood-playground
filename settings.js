@@ -34,6 +34,24 @@ module.exports = {
         '[sudden-drops-lunch]',
         '[sudden-drops-majorJump]',
         '[sudden-drops-majorJump-straightDown]',
+        '[sudden-drops-mediumJump]',
+        '[sudden-drops-zeroToOne]',
+        '[sudden-drops-watchout-down]',
+        '[sudden-drops-down15-straightDown]',
+
+
+        // more
+        '[sudden-drops-dinner-down-straightDown30]',
+        '[sudden-drops-watchout-mediumJump-down]',
+        '[sudden-drops-watchout-minorJump-brunch-down]',
+        '[sudden-drops-watchout-down-!straightDown]',
+        '[sudden-drops-minorJump-lunch-down10-straightDown]',
+        '[sudden-drops-watchout-down15-straightDown30]',
+        '[sudden-drops-watchout-down30]',
+        '[sudden-drops-watchout-down10]',
+        '[sudden-drops-lunch-down20]',
+        '[sudden-drops-watchout-!straightDown]',
+        '[sudden-drops-watchout-minorJump]',
 
         // yes today trend high percUp
         '[sudden-drops-lowVolFitty]',
@@ -50,6 +68,8 @@ module.exports = {
         '[sudden-drops-mediumJump-brunch-!straightDown]',
         '[sudden-drops-!watchout-majorJump-!straightDown]',
         '[sudden-drops-mediumJump-down15]',
+        '[sudden-drops-mediumJump-down15]',
+        '[sudden-drops-watchout-mediumJump-initial]',
 
         '[average-down-recommendation]'
 
