@@ -12,7 +12,7 @@ const { alpaca } = require('../alpaca');
 const getBalance = require('../alpaca/get-balance');
 
 module.exports = async ({
-    totalAmtToSpend, 
+    totalAmtToSpend,
     strategy,
     maxNumStocksToPurchase, 
     min, 
@@ -33,7 +33,7 @@ module.exports = async ({
 
 
     const perStock = strategy.includes('average-down-recommendation')
-        ? 6
+        ? totalAmtToSpend / 2.7
         : totalAmtToSpend;
 
     await mapLimit(stocksToBuy, 3, async ticker => {       // 3 buys at a time
