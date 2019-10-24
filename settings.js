@@ -39,6 +39,13 @@ module.exports = {
         '[sudden-drops-watchout-down]',
         '[sudden-drops-down15-straightDown]',
 
+        // wednesday
+
+        '[sudden-drops-watchout-initial-down]',
+        '[sudden-drops-mediumJump-down]',
+        '[sudden-drops-majorJump-initial]',
+        '[sudden-drops-minorJump-brunch-down10]',
+
 
         // more
         '[sudden-drops-dinner-down-straightDown30]',
