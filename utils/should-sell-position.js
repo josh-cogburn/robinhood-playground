@@ -1,5 +1,5 @@
 const stBrackets = {
-  bullish: [-5, 14],    // stSent > 130
+  bullish: [-5, 13],    // stSent > 130
   neutral: [-7, 9],     // stSent > 70
   bearish: [-9, 7],     // stSent < 70
 };

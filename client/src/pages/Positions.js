@@ -42,7 +42,7 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
         recommendation: 'recommendation',
         wouldBeDayTrade: pos => JSON.stringify(pos.wouldBeDayTrade),
         ...admin ? {
-            'avg': pos => Number(pos['average_buy_price']).toFixed(2),
+            'avg': 'average_buy_price',
             'current': 'currentPrice',
         } : {}
     };
