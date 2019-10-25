@@ -4,7 +4,7 @@ const Holds = require('../models/Holds');
 const sendEmail = require('../utils/send-email');
 const getTrend = require('../utils/get-trend');
 
-module.exports = async (position) => {
+module.exports = async (position, percToSell) => {
 
     const { 
         ticker, 
@@ -13,7 +13,7 @@ module.exports = async (position) => {
         daysOld
     } = position;
 
-    const percToSell = (() => {
+    percToSell = percToSell || (() => {
         if (Math.abs(returnPerc) > 30) return 25;
         return (returnPerc ? 8 : 5) + daysOld;
     })();

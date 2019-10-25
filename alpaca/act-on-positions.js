@@ -7,7 +7,7 @@ const { mapObject, pick } = require('underscore');
 const getPositions = require('./get-positions');
 const sendEmail = require('../utils/send-email');
 
-module.exports = async (_, dontAct) => {
+module.exports = async (_, dontAct, sellAllStocks = false) => {
     let positions = await getPositions();
     positions = positions.filter(({ ticker }) => !keep.includes(ticker));
 
@@ -15,9 +15,17 @@ module.exports = async (_, dontAct) => {
         return strlog({ positions });
     }
 
+    if (sellAllStocks) {
+        return Promise.all(
+            positions
+                .filter(({ wouldBeDayTrade }) =>!wouldBeDayTrade)
+                .map(position => sellPosition(position, 100))
+        )
+    }
+
     await Promise.all(
         positions.map(async position => {
-            const { ticker, recommendation, daysOld, stBracket } = position;
+            const { ticker, recommendation, daysOld, stBracket, wouldBeDayTrade } = position;
             if (recommendation === '---') {
                 return console.log(`${ticker} says ${recommendation}.  doing nothing.`);
             } else if (['take profit', 'cut your losses'].some(val => recommendation === val)) {
