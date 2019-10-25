@@ -32,7 +32,11 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
         } : {
             equity: 'equity',
             'return $': pos => <TrendPerc value={pos.returnDollars} dollar={true} />,
-            'return %': pos => <TrendPerc value={pos.returnPerc} />,
+            'return %': ({ returnPerc, actualReturnPerc }) => (
+                <span {...actualReturnPerc && { 'data-custom': true, 'data-tooltip-str': actualReturnPerc }}>
+                    <TrendPerc value={returnPerc} />
+                </span>
+            ),
         },
         // 'buy strategies': 'buyStrategy',
         stSent: 'stSent',
@@ -42,7 +46,9 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
         recommendation: 'recommendation',
         wouldBeDayTrade: pos => JSON.stringify(pos.wouldBeDayTrade),
         ...admin ? {
-            'avg': 'average_buy_price',
+            'avg': ({ avgEntry, actualEntry }) => (
+                <span {...actualEntry && { 'data-custom': true, 'data-tooltip-str': actualEntry }}>{avgEntry}{actualEntry && '*'}</span>
+            ),
             'current': 'currentPrice',
         } : {}
     };

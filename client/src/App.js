@@ -257,8 +257,8 @@ class App extends Component {
                   if (currentPrice) {
                       // console.log(pos);
                       pos.currentPrice = currentPrice;
-                      pos.returnDollars = +(pos.quantity * (pos.currentPrice - pos.average_buy_price)).toFixed(2);
-                      pos.returnPerc = getTrend(currentPrice, pos.average_buy_price);
+                      pos.returnDollars = +(pos.quantity * (pos.currentPrice - pos.avgEntry)).toFixed(2);
+                      pos.returnPerc = getTrend(currentPrice, pos.avgEntry);
                       pos.equity = (pos.quantity * currentPrice).toFixed(2);
                   }
                   // console.log(pos);

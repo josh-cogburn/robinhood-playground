@@ -7,7 +7,7 @@ const Holds = require('../models/Holds');
 const Pick = require('../models/Pick');
 
 const checkForHugeDrop = position => {
-  let { current_price, avgEntry: actualEntry, hold: { buys } } = position;
+  let { current_price, returnPerc: actualReturnPerc, avgEntry: actualEntry, hold: { buys } } = position;
   const dropIndex = buys.slice().reverse().findIndex((buy, index, arr) => {
     const isBigDrop = arr[index + 1] && buy.fillPrice < arr[index + 1].fillPrice * .7;
     const isNotToday = buy.date !== (new Date()).toLocaleDateString().split('/').join('-');
@@ -21,7 +21,8 @@ const checkForHugeDrop = position => {
       dropIndex,
       avgEntry,
       returnPerc: getTrend(current_price, avgEntry),
-      actualEntry
+      actualEntry,
+      actualReturnPerc
     };
   }
 };
