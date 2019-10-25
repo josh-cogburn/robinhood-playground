@@ -140,7 +140,7 @@ const stratManager = {
         this.positions = positions;
         const positionTickers = Object.values(positions).flatten().map(pos => pos.ticker || pos.symbol);
         strlog({ positionTickers });
-        this.tickerWatcher && this.tickerWatcher.addTickers(positionTickers);
+        this.tickerWatcher.addTickers(positionTickers);
         this.sendToAll('server:data-update', { positions });
     },
     newPick(data) {

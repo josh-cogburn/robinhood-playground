@@ -88,13 +88,19 @@ module.exports = async () => {
       return '---';
     }
 
-    if (returnPerc > 0) {
-      return wouldBeDayTrade ? 'possibly take profit' : 'take profit';
-    }
+    const action = (returnPerc > 0) ? 'take profit' : 'cut your losses';
 
-    return (daysOld <= 5)
-      ? 'average down'
-      : 'cut your losses' // :-(
+    return wouldBeDayTrade ? `possibly ${action}` : action;
+
+    // if (returnPerc > 0) {
+    //   return wouldBeDayTrade ? 'possibly take profit' : 'take profit';
+    // }
+
+    // return 'cut your losses'
+
+    // return (daysOld === 0)
+    //   ? 'average down'
+    //   : 'cut your losses' // :-(
 
   };
 

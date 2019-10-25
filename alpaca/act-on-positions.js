@@ -5,7 +5,9 @@ const Holds = require('../models/Holds');
 const { mapObject, pick } = require('underscore');
 
 const getPositions = require('./get-positions');
+const alpacaMarketSell = require('./market-sell');
 const sendEmail = require('../utils/send-email');
+const stratManager = require('../socket-server/strat-manager');
 
 module.exports = async (_, dontAct, sellAllStocks = false) => {
     let positions = await getPositions();
@@ -16,10 +18,16 @@ module.exports = async (_, dontAct, sellAllStocks = false) => {
     }
 
     if (sellAllStocks) {
+        await stratManager.init({ lowKey: true });
         return Promise.all(
             positions
                 .filter(({ wouldBeDayTrade }) =>!wouldBeDayTrade)
-                .map(position => sellPosition(position, 100))
+                .map(({ ticker, quantity }) => 
+                    alpacaMarketSell({
+                        ticker,
+                        quantity
+                    }, 100)
+                )
         )
     }
 
