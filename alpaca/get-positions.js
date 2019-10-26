@@ -94,11 +94,12 @@ module.exports = async () => {
     // if (wouldBeDayTrade) return null;
     if (Math.abs(returnPerc) > 30) return 24;
 
-    const basePercent = daysOld + 1;
+    const dayVal = daysOld + 1;
+    const returnVal = Math.abs(returnPerc) / 4;
+    const basePercent = dayVal + returnVal;
     let shouldVal = 0;
     if (shouldSell) {
       shouldVal += returnPerc ? 7 : 4;
-      shouldVal += Math.abs(returnPerc) / 4;
     }
 
     const summed = basePercent + shouldVal;
