@@ -5,6 +5,7 @@ const { avgArray } = require('../utils/array-math');
 const getTrend = require('../utils/get-trend');
 const Holds = require('../models/Holds');
 const Pick = require('../models/Pick');
+const getMinutesFrom630 = require('../utils/get-minutes-from-630');
 
 const checkForHugeDrop = position => {
   let { current_price, returnPerc: actualReturnPerc, avgEntry: actualEntry, hold: { buys } } = position;
@@ -80,28 +81,50 @@ module.exports = async () => {
   positions = positions.map(position => ({
     ...position,
     ...checkForHugeDrop(position)
-  }))
+  }));
+
+  const ratioDayPast = getMinutesFrom630() / 360;
+  const getPercToSell = position => {
+    let { daysOld, returnPerc, shouldSell, wouldBeDayTrade, ticker, market_value } = position;
+    daysOld = daysOld + 1;
+
+    if (daysOld > 3 && market_value < 20) {
+      return 100;
+    }
+
+    // if (wouldBeDayTrade) return null;
+    if (Math.abs(returnPerc) > 30) return 24;
+
+    const basePercent = daysOld;
+    let shouldVal = 0;
+    if (shouldSell) {
+      shouldVal += returnPerc ? 8 : 5;
+    }
+
+    const summed = basePercent + shouldVal;
+    const halfSum = summed * .5;
+    const weightedByDayInProgress = halfSum + ratioDayPast * halfSum;
+
+    // strlog({
+    //   ticker,
+    //   wouldBeDayTrade,
+    //   basePercent,
+    //   shouldVal,
+    //   summed,
+    //   halfSum,
+    //   weightedByDayInProgress
+    // });
+
+    return +weightedByDayInProgress.toFixed(2);
+  };
 
   const getRecommendation = position => {
-    const { daysOld, returnPerc, shouldSell, wouldBeDayTrade } = position;
+    const { returnPerc, shouldSell, wouldBeDayTrade } = position;
     if (!shouldSell) {
       return '---';
     }
-
     const action = (returnPerc > 0) ? 'take profit' : 'cut your losses';
-
     return wouldBeDayTrade ? `possibly ${action}` : action;
-
-    // if (returnPerc > 0) {
-    //   return wouldBeDayTrade ? 'possibly take profit' : 'take profit';
-    // }
-
-    // return 'cut your losses'
-
-    // return (daysOld === 0)
-    //   ? 'average down'
-    //   : 'cut your losses' // :-(
-
   };
 
   const withRecommendations = positions
@@ -111,7 +134,8 @@ module.exports = async () => {
     }))
     .map(position => ({
       ...position,
-      recommendation: getRecommendation(position)
+      recommendation: getRecommendation(position),
+      percToSell: getPercToSell(position)
     }));
 
   

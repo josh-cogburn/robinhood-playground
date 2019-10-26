@@ -62,8 +62,11 @@ client.onOrderUpdate(async data => {
     const sellPrice = filled_avg_price;
     const returnDollars = (sellPrice - buyPrice) * qty;
     const returnPerc = getTrend(sellPrice, buyPrice);
-    await sendEmail(
-        `wow sold ${ticker} return... ${returnDollars} (${returnPerc}%)`, 
+
+
+    if (closedPosition || Math.abs(returnDollars) > 1) {
+      await sendEmail(
+        `wow ${closedPosition ? 'CLOSED' : 'SOLD'} ${ticker} return... ${returnDollars} (${returnPerc}%)`, 
         JSON.stringify({
             ticker,
             buyPrice,
@@ -75,7 +78,9 @@ client.onOrderUpdate(async data => {
             deletedHold,
             position
         }, null, 2)
-    );
+      );
+    }
+
   }
 
   stratManager.refreshPositions();

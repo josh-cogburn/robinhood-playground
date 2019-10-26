@@ -32,26 +32,30 @@ module.exports = async (_, dontAct, sellAllStocks = false) => {
     }
 
     await Promise.all(
-        positions.map(async position => {
-            const { ticker, recommendation, daysOld, stBracket, wouldBeDayTrade } = position;
-            if (recommendation === '---') {
-                return console.log(`${ticker} says ${recommendation}.  doing nothing.`);
-            } else if (['take profit', 'cut your losses'].some(val => recommendation === val)) {
+        positions
+            .filter(({ wouldBeDayTrade }) =>!wouldBeDayTrade)
+            .map(async position => {
+                const { ticker, recommendation, daysOld, stBracket, wouldBeDayTrade } = position;
+
+                // if (recommendation === 'average down') {
+                //     const realtimeRunner = require('../realtime/RealtimeRunner');
+                //     await realtimeRunner.handlePick({
+                //       strategyName: 'average-down-recommendation',
+                //       ticker,
+                //       keys: {
+                //         [`${daysOld}daysOld`]: true,
+                //         [stBracket]: true,
+                //       },
+                //       data: { 
+                //         position
+                //       }
+                //     }, true);
+                // }
+
+                if (wouldBeDayTrade) return;
                 return sellPosition(position);
-            } else if (recommendation === 'average down') {
-                const realtimeRunner = require('../realtime/RealtimeRunner');
-                await realtimeRunner.handlePick({
-                  strategyName: 'average-down-recommendation',
-                  ticker,
-                  keys: {
-                    [`${daysOld}daysOld`]: true,
-                    [stBracket]: true,
-                  },
-                  data: { 
-                    position
-                  }
-                }, true);
-            }
-        })
+                
+                
+            })
     );
 };

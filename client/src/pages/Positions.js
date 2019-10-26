@@ -44,6 +44,7 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
             <span>{stBracket} ({lowerLimit} -> {upperLimit})</span>
         ),
         recommendation: 'recommendation',
+        percToSell: 'percToSell',
         wouldBeDayTrade: pos => JSON.stringify(pos.wouldBeDayTrade),
         ...admin ? {
             'avg': ({ avgEntry, actualEntry }) => (
