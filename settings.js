@@ -24,7 +24,7 @@ let expectedPickCount = 0;
 module.exports = {
     // important settings
     sellAllStocksOnNthDay: 8,
-    purchaseAmt: 40,
+    purchaseAmt: 13,
     forPurchase: [
 
 
@@ -76,6 +76,21 @@ module.exports = {
         '[sudden-drops-mediumJump-down15]',
         '[sudden-drops-mediumJump-down15]',
         '[sudden-drops-watchout-mediumJump-initial]',
+
+        // spice added oct26
+
+        '[sudden-drops-!watchout-minorJump-lunch-!down-straightDown120]',
+        '[sudden-drops-!watchout-initial-down15]',
+        '[sudden-drops-!watchout-minorJump-initial-down15]',
+        '[sudden-drops-brunch-down10-straightDown]',
+        '[sudden-drops-watchout-majorJump-down]',
+        '[sudden-drops-watchout-dinner-down-!straightDown]',
+        '[sudden-drops-watchout-dinner-down15]',
+        '[sudden-drops-majorJump-down10]',
+        '[sudden-drops-!watchout-down15]',
+        '[sudden-drops-!watchout-majorJump-initial]',
+        '[sudden-drops-majorJump-initial-straightDown]',
+
 
         // '[average-down-recommendation]'
 
