@@ -86,7 +86,6 @@ module.exports = async () => {
   const ratioDayPast = getMinutesFrom630() / 360;
   const getPercToSell = position => {
     let { daysOld, returnPerc, shouldSell, wouldBeDayTrade, ticker, market_value } = position;
-    daysOld = daysOld + 1;
 
     if (daysOld > 3 && market_value < 20) {
       return 100;
@@ -95,7 +94,7 @@ module.exports = async () => {
     // if (wouldBeDayTrade) return null;
     if (Math.abs(returnPerc) > 30) return 24;
 
-    const basePercent = daysOld;
+    const basePercent = daysOld + 1;
     let shouldVal = 0;
     if (shouldSell) {
       shouldVal += returnPerc ? 8 : 5;
