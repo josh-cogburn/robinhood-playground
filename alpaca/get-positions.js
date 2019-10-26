@@ -97,7 +97,8 @@ module.exports = async () => {
     const basePercent = daysOld + 1;
     let shouldVal = 0;
     if (shouldSell) {
-      shouldVal += returnPerc ? 8 : 5;
+      shouldVal += returnPerc ? 7 : 4;
+      shouldVal += Math.abs(returnPerc) / 4;
     }
 
     const summed = basePercent + shouldVal;
