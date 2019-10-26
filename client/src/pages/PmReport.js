@@ -268,7 +268,12 @@ class TodaysStrategies extends Component {
             .filter(pm => pmMatchesFilter(pm.pm))
             .filter(pm => {
                 return !pmPerfs.find(pmPerf => pmPerf.pmName === pm.pm);
-            }).map(flattenLebowski);
+            })
+            .map(flattenLebowski)
+            .map(pm => ({
+                ...pm,
+                isForPurchase: isForPurchase(pm.pm)
+            }));
 
 
         if (forPurchaseOnly) { 

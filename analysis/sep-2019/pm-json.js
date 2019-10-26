@@ -18,12 +18,13 @@ module.exports = async (daysBack = 5, filterStr = '') => {
   const byPm = {};
   for (let file of filesOfInterest) {
     const json = require(`../../json/pm-perfs/${file}`);
-    json.forEach(({ pmName, avgTrend, percUp }) => {
+    json.forEach(({ pmName, avgTrend, percUp, count }) => {
       byPm[pmName] = {
         ...byPm[pmName],
         [file]: {
           avgTrend,
-          percUp: percUp / 100
+          percUp: percUp / 100,
+          count
         }
       };
     });
@@ -59,16 +60,23 @@ module.exports = async (daysBack = 5, filterStr = '') => {
 
   const analyzed = mapObject(
     byPm,
-    dateObj => ['avgTrend', 'percUp'].reduce((acc, key) => {
+    (dateObj, pm) => ['avgTrend', 'percUp', 'count'].reduce((acc, key) => {
 
       const trends = Object.values(dateObj);
-      const val = avgArray(
-        trends.map(t => t[key])
-      );
+      const vals = trends.map(t => t[key]);
+      const avg = avgArray(vals);
+
+      if (pm === 'sudden-drops-majorJump-down' && key === 'count') {
+        strlog({
+          trends,
+          vals,
+          avg
+        })
+      }
 
       return {
         ...acc,
-        [key]: val
+        [key]: avg
       };
 
     }, {})

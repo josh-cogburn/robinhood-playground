@@ -74,7 +74,6 @@ module.exports = {
         '[sudden-drops-mediumJump-brunch-!straightDown]',
         '[sudden-drops-!watchout-majorJump-!straightDown]',
         '[sudden-drops-mediumJump-down15]',
-        '[sudden-drops-mediumJump-down15]',
         '[sudden-drops-watchout-mediumJump-initial]',
 
         // spice added oct26
