@@ -66,7 +66,7 @@ module.exports = {
         '[sudden-drops-!watchout-minorJump-!down-!straightDown]',
         '[sudden-drops-mediumJump-dinner-down]',
         '[sudden-drops-minorJump-down10]',
-        '[sudden-drops-minorJump-!straightDown]',
+        // '[sudden-drops-minorJump-!straightDown]',
 
         // no today trend but 90% percUp
         '[sudden-drops-majorJump-down]',

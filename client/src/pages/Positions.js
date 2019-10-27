@@ -22,7 +22,7 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
     const toDisplay = {
         // 'days old': 'dayAge',
         daysOld: 'daysOld',
-        mostRecentPurchase: 'mostRecentPurchase',
+        bought: 'mostRecentPurchase',
         ticker: pos => {
             const tooltipText = tooltipStr(pos);
             return <span {...tooltipText && { 'data-custom': true, 'data-tooltip-str': tooltipText }}>{pos.ticker}</span>
@@ -45,7 +45,7 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
         ),
         recommendation: 'recommendation',
         percToSell: 'percToSell',
-        wouldBeDayTrade: pos => JSON.stringify(pos.wouldBeDayTrade),
+        wouldBeDayTrade: pos => pos.wouldBeDayTrade ? 'true' : '',
         ...admin ? {
             'avg': ({ avgEntry, actualEntry }) => (
                 <span {...actualEntry && { 'data-custom': true, 'data-tooltip-str': actualEntry }}>{avgEntry}{actualEntry && '*'}</span>

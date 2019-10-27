@@ -160,7 +160,7 @@ class TodaysStrategies extends Component {
 
 
         pmPerfs = pmPerfs
-            .filter(({ pmName }) => pmName.split('-').length <= maxDash)
+            .filter(({ pmName }) => pmName.split('-').length <= maxDash + 1)
             .filter(({ pmName }) => pmMatchesFilter(pmName))
             .map(({ avgTrend, percUp, pmName, count }) => {
                 const foundLebowski = pmsAnalyzed.find(pm => pm.pm === pmName) || {};
@@ -264,7 +264,7 @@ class TodaysStrategies extends Component {
         
         console.log({ pmsAnalyzed })
         let noHitTops = pmsAnalyzed
-            .filter(({ pm }) => pm.split('-').length <= maxDash)
+            .filter(({ pm }) => pm.split('-').length <= maxDash + 1)
             .filter(pm => pmMatchesFilter(pm.pm))
             .filter(pm => {
                 return !pmPerfs.find(pmPerf => pmPerf.pmName === pm.pm);

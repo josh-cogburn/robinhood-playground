@@ -152,7 +152,7 @@ const additionalCron = [
     {
         name: 'send day screenshot',
         run: [430],
-        fn: sendScreenshot
+        fn: () => sendScreenshot()
     },
 
     {
