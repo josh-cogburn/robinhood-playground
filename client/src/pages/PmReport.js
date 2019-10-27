@@ -263,7 +263,7 @@ class TodaysStrategies extends Component {
             }));
         
         console.log({ pmsAnalyzed })
-        const noHitTops = pmsAnalyzed
+        let noHitTops = pmsAnalyzed
             .filter(({ pm }) => pm.split('-').length <= maxDash)
             .filter(pm => pmMatchesFilter(pm.pm))
             .filter(pm => {
