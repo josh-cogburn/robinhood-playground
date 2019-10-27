@@ -107,6 +107,11 @@ module.exports = {
         '[overnight-drops-majorJump-down10]',
         '[sudden-drops-watchout-initial-down]',
 
+        // stars
+        '[sudden-drops-watchout-majorJump]',
+        '[sudden-drops-majorJump-initial-down-straightDown]',
+        '[sudden-drops-majorJump-initial-down-straightDown]',
+
 
         // '[average-down-recommendation]'
 

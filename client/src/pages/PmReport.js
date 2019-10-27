@@ -272,12 +272,13 @@ class TodaysStrategies extends Component {
             .map(flattenLebowski)
             .map(pm => ({
                 ...pm,
-                isForPurchase: isForPurchase(pm.pm)
+                isForPurchase: isForPurchase(pm.pmName)
             }));
 
 
         if (forPurchaseOnly) { 
-            pmPerfs = pmPerfs.filter(perf => isForPurchase(perf.pmName));
+            pmPerfs = pmPerfs.filter(perf => perf.isForPurchase);
+            noHitTops = noHitTops.filter(perf => perf.isForPurchase);
         }
 
         console.log({ pmPerfs, noHitTops, filter })
