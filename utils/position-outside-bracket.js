@@ -23,7 +23,7 @@ const positionWithBracket = position => {
     outsideBracket
   })
   return {
-    positionoutsideBracket,
+    outsideBracket,
     stBracket,
     upperLimit,
     lowerLimit
