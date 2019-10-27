@@ -83,8 +83,8 @@ module.exports = async () => {
     ...checkForHugeDrop(position)
   }));
 
-  const ratioDayPast = Math.min(getMinutesFrom630() / 360, 1);
-  // strlog({ ratioDayPast })
+  const ratioDayPast = Math.max(0.2, Math.min(getMinutesFrom630() / 360, 1));
+  strlog({ ratioDayPast })
   const getPercToSell = position => {
     let { daysOld, returnPerc, shouldSell, wouldBeDayTrade, ticker, market_value } = position;
 
@@ -107,15 +107,15 @@ module.exports = async () => {
     const halfSum = summed * .5;
     const weightedByDayInProgress = halfSum + ratioDayPast * halfSum;
 
-    // strlog({
-    //   ticker,
-    //   wouldBeDayTrade,
-    //   basePercent,
-    //   shouldVal,
-    //   summed,
-    //   halfSum,
-    //   weightedByDayInProgress
-    // });
+    strlog({
+      ticker,
+      wouldBeDayTrade,
+      basePercent,
+      shouldVal,
+      summed,
+      halfSum,
+      weightedByDayInProgress
+    });
 
     return +weightedByDayInProgress.toFixed(2);
   };
