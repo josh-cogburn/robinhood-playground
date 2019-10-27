@@ -80,7 +80,7 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
                     {
                         positions
                             .map(pos => (
-                                <tr style={{ background: pos.shouldSell ? Number(pos.returnDollars) > 0 ? 'rgba(0, 255, 0, 0.6)' : 'rgba(255,0,0, 0.6)' : 'inherit' }}>
+                                <tr style={{ background: pos.outsideBracket ? Number(pos.returnDollars) > 0 ? 'rgba(0, 255, 0, 0.6)' : 'rgba(255,0,0, 0.6)' : 'inherit' }}>
                                     {
                                         Object.keys(toDisplay).map(header => {
                                             const render = toDisplay[header];

@@ -1,6 +1,6 @@
 const { alpaca } = require('.');
 const getStSentiment = require('../utils/get-stocktwits-sentiment');
-const shouldSellPosition = require('../utils/should-sell-position');
+const positionOutsideBracket = require('../utils/position-outside-bracket');
 const { avgArray } = require('../utils/array-math');
 const getTrend = require('../utils/get-trend');
 const Holds = require('../models/Holds');
@@ -86,7 +86,7 @@ module.exports = async () => {
   const ratioDayPast = Math.max(0.2, Math.min(getMinutesFrom630() / 360, 1));
   strlog({ ratioDayPast })
   const getPercToSell = position => {
-    let { daysOld, returnPerc, shouldSell, wouldBeDayTrade, ticker, market_value } = position;
+    let { daysOld, returnPerc, outsideBracket, wouldBeDayTrade, ticker, market_value } = position;
 
     if (daysOld > 3 && market_value < 20) {
       return 100;
@@ -99,7 +99,7 @@ module.exports = async () => {
     const returnVal = Math.abs(returnPerc) / 4;
     const basePercent = dayVal + returnVal;
     let shouldVal = 0;
-    if (shouldSell) {
+    if (outsideBracket) {
       shouldVal += returnPerc ? 7 : 4;
     }
 
@@ -121,8 +121,8 @@ module.exports = async () => {
   };
 
   const getRecommendation = position => {
-    const { returnPerc, shouldSell, wouldBeDayTrade } = position;
-    if (!shouldSell) {
+    const { returnPerc, outsideBracket, wouldBeDayTrade } = position;
+    if (!outsideBracket) {
       return '---';
     }
     const action = (returnPerc > 0) ? 'take profit' : 'cut your losses';
@@ -132,7 +132,7 @@ module.exports = async () => {
   const withRecommendations = positions
     .map(position => ({
       ...position,
-      ...shouldSellPosition(position)
+      ...positionOutsideBracket(position)
     }))
     .map(position => ({
       ...position,

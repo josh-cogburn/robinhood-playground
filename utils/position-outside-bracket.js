@@ -4,7 +4,7 @@ const stBrackets = {
   bearish: [-9, 7],     // stSent < 70
 };
 
-const shouldSell = position => {
+const positionWithBracket = position => {
   // strlog({ position });
 
   const { returnPerc, stSent, ticker } = position;
@@ -15,19 +15,19 @@ const shouldSell = position => {
   })();
 
   const [lowerLimit, upperLimit] = stBrackets[stBracket];
-  const shouldSell = Boolean(returnPerc >= upperLimit || returnPerc <= lowerLimit);
+  const outsideBracket = Boolean(returnPerc >= upperLimit || returnPerc <= lowerLimit);
   strlog({
     ticker,
     stBracket,
     returnPerc,
-    shouldSell
+    outsideBracket
   })
   return {
-    shouldSell,
+    positionoutsideBracket,
     stBracket,
     upperLimit,
     lowerLimit
   };
 };
 
-module.exports = shouldSell;
+module.exports = positionWithBracket;

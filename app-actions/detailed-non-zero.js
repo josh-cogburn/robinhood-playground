@@ -3,7 +3,7 @@ const lookup = require('../utils/lookup');
 const addBuyDataToPositions = require('../app-actions/add-buy-data-to-positions');
 // const getAssociatedStrategies = require('./get-associated-strategies');
 const getStSentiment = require('../utils/get-stocktwits-sentiment');
-const shouldSellPosition = require('../utils/should-sell-position');
+const positionOutsideBracket = require('../utils/position-outside-bracket');
 
 
 const getPositions = async () => {
@@ -58,7 +58,7 @@ const getDetailedNonZero = async () => {
 
     const withShouldSell = withStSent.map(pos => ({
         ...pos,
-        ...shouldSellPosition(pos)
+        ...positionOutsideBracket(pos)
     }));
 
     // console.log('made it', withTicks);
