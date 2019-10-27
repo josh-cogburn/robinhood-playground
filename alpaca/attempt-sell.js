@@ -5,8 +5,8 @@ const lookup = require('../utils/lookup');
 const limitSell = require('./limit-sell');
 const marketSell = require('./market-sell');
 
-const ATTEMPT_TIMEOUTS = [360, 360, 360, 360, 360];     // seconds
-const ATTEMPT_PERCS = [-1, -0.5, 0.1, 0.5, 1];  // percents
+const ATTEMPT_TIMEOUTS = [360, 360, 360];     // seconds
+const ATTEMPT_PERCS = [-0.5, -0.25, 0.1];  // percents
 const MAX_ATTEMPTS = ATTEMPT_TIMEOUTS.length;
 
 

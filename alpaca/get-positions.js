@@ -84,6 +84,7 @@ module.exports = async () => {
   }));
 
   const ratioDayPast = Math.min(getMinutesFrom630() / 360, 1);
+  // strlog({ ratioDayPast })
   const getPercToSell = position => {
     let { daysOld, returnPerc, shouldSell, wouldBeDayTrade, ticker, market_value } = position;
 
