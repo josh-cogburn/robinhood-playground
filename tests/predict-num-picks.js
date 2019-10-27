@@ -7,7 +7,7 @@ const getExpectedCountForPm = pm => {
 
 module.exports = async () => {
 
-  const pmPerf = await pmJson(12);
+  const pmPerf = await pmJson(4);
 
   const forPurchasePms = forPurchase
     .filter(
