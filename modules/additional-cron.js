@@ -107,7 +107,7 @@ const additionalCron = [
     {
         name: 'record-strat-perfs, refresh past data',
         run: [9],
-        fn: async (min) => {
+        fn: async min => {
             await recordStratPerfs(min);
             await stratManager.refreshPastData();
         }

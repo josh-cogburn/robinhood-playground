@@ -53,9 +53,9 @@ client.onOrderUpdate(async data => {
   } else if (side === 'sell') {
     const position = stratManager.positions.alpaca.find(pos => pos.ticker === ticker) || {};
     const {
-        average_buy_price: buyPrice,
-        buyStrategies,
-        quantity: positionQuantity
+      avgEntry: buyPrice,
+      buyStrategies,
+      quantity: positionQuantity
     } = position;
     const closedPosition = Boolean(positionQuantity === filled_qty);
     const deletedHold = closedPosition ? await Holds.findOneAndDelete({ ticker }) : null;
