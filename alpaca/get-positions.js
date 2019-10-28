@@ -83,7 +83,7 @@ module.exports = async () => {
     ...checkForHugeDrop(position)
   }));
 
-  const ratioDayPast = Math.max(0.2, Math.min(getMinutesFrom630() / 360, 1));
+  const ratioDayPast = 0.2 || Math.max(0.2, Math.min(getMinutesFrom630() / 360, 1));
   strlog({ ratioDayPast })
   const getPercToSell = position => {
     let { daysOld, returnPerc, outsideBracket, wouldBeDayTrade, ticker, market_value } = position;
