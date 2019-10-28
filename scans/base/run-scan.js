@@ -125,10 +125,7 @@ const runScan = async ({
 
     
 
-  const filtered = withTSO
-    .filter(buy => buy.computed.projectedVolume >= minVolume)
-    .filter(buy => buy.computed.projectedVolume <= maxVolume)
-    .filter(buy => filterFn(buy.computed));
+  const filtered = withTSO.filter(buy => filterFn(buy.computed));
   
   // FIX MISSING 2 WEEK VOLUMES
   const missing2WeekAvg = filtered
@@ -165,6 +162,13 @@ const runScan = async ({
     .filter(buy => {
       // console.log(buy.computed.projectedVolumeTo2WeekAvg, !!buy.computed.projectedVolumeTo2WeekAvg, !!buy.computed.projectedVolumeTo2WeekAvg && isFinite(buy.computed.projectedVolumeTo2WeekAvg))
       return !!buy.computed.projectedVolumeTo2WeekAvg && isFinite(buy.computed.projectedVolumeTo2WeekAvg);
+    })
+    .filter(buy => {
+      const { average_volume_2_weeks } = buy.fundamentals;
+      const { projectedVolume } = buy.computed;
+      return [average_volume_2_weeks, projectedVolume].every(val =>
+        val >= minVolume && val <= maxVolume
+      )
     });
 
 

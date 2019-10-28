@@ -5,16 +5,16 @@ const stratPerfMultiple = require('../analysis/strategy-perf-multiple');
 // const getTrendAndSave = require('../app-actions/get-trend-and-save');
 // const logPortfolioValue = require('../app-actions/log-portfolio-value');
 const { default: recordStratPerfs } = require('../app-actions/record-strat-perfs');
-const doubleDown = require('../app-actions/double-down');
+// const doubleDown = require('../app-actions/double-down');
 
 // const sellAllOlderThanTwoDays = require('../app-actions/sell-all-older-than-two-days');
-const sellAllBasedOnPlayout = require('../app-actions/sell-all-based-on-playout');
+// const sellAllBasedOnPlayout = require('../app-actions/sell-all-based-on-playout');
 // const sellAllIfWentUp = require('../app-actions/sell-all-if-went-up');
-const sellAllStocks = require('../app-actions/sell-all-stocks');
-const smartSells = require('../app-actions/smart-sells');
+// const sellAllStocks = require('../app-actions/sell-all-stocks');
+// const smartSells = require('../app-actions/smart-sells');
 const alpacaActOnPositions = require('../alpaca/act-on-positions');
-const alpacaSmartSells = require('../alpaca/smart-sells');
-const saveDayReport = require('../app-actions/save-day-report');
+// const alpacaSmartSells = require('../alpaca/smart-sells');
+// const saveDayReport = require('../app-actions/save-day-report');
 const restartProcess = require('../app-actions/restart-process');
 const sendScreenshot = require('../app-actions/send-screenshot');
 
