@@ -31,7 +31,7 @@ module.exports = async (_, dontAct, sellAllStocks = false) => {
         )
     }
 
-    await Promise.all(
+    Promise.all(
         positions
             .filter(({ wouldBeDayTrade }) =>!wouldBeDayTrade)
             .map(async position => {

@@ -5,7 +5,7 @@ const lookup = require('../utils/lookup');
 const limitSell = require('./limit-sell');
 const marketSell = require('./market-sell');
 
-const ATTEMPT_TIMEOUTS = [360, 360, 360];     // seconds
+const ATTEMPT_TIMEOUTS = [360, 1360, 3600];     // seconds
 const ATTEMPT_PERCS = [-0.5, -0.25, 0.1];  // percents
 const MAX_ATTEMPTS = ATTEMPT_TIMEOUTS.length;
 
@@ -35,7 +35,7 @@ const calcLimitPrice = async ({ ticker, attemptNum, minPrice = Number.NEGATIVE_I
 };
 
 
-module.exports = async ({ ticker, quantity }) => {
+module.exports = async ({ ticker, quantity, fallbackToMarket }) => {
 
     // limit
     for (let attemptNum of Array(MAX_ATTEMPTS).fill(0).map((v, i) => i)) {
@@ -58,6 +58,7 @@ module.exports = async ({ ticker, quantity }) => {
         }
     }
 
+    if (!fallbackToMarket) return;
 
     console.log('unable to limit sell, falling back to market sell', ticker);
     return {
