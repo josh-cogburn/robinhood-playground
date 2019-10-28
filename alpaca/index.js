@@ -64,22 +64,21 @@ client.onOrderUpdate(async data => {
     const returnPerc = getTrend(sellPrice, buyPrice);
 
 
-    if (closedPosition || Math.abs(returnDollars) > 1) {
-      await sendEmail(
-        `wow ${closedPosition ? 'CLOSED' : 'SOLD'} ${ticker} return... ${returnDollars} (${returnPerc}%)`, 
-        JSON.stringify({
-            ticker,
-            buyPrice,
-            sellPrice,
-            qty,
-            buyStrategies,
-            alpacaOrder: data.order,
-            closedPosition,
-            deletedHold,
-            position
-        }, null, 2)
-      );
-    }
+    const action = (closedPosition || Math.abs(returnDollars) > 1) ? sendEmail : console.log;
+    await action(
+      `wow ${closedPosition ? 'CLOSED' : 'SOLD'} ${ticker} return... ${returnDollars} (${returnPerc}%)`, 
+      JSON.stringify({
+          ticker,
+          buyPrice,
+          sellPrice,
+          qty,
+          buyStrategies,
+          alpacaOrder: data.order,
+          closedPosition,
+          deletedHold,
+          position
+      }, null, 2)
+    );
 
   }
 

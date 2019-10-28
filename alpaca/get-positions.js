@@ -49,7 +49,10 @@ module.exports = async () => {
 
   positions = await mapLimit(positions, 3, async position => {
     const { ticker } = position;
-    const hold = await Holds.findOne({ ticker });
+    const hold = await Holds.findOne({ ticker }) || {};
+    if (!hold.buys) {
+      console.log('hey! no buys?', ticker);
+    }
     const { buys = [] } = hold;
 
 
