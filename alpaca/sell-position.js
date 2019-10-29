@@ -19,7 +19,7 @@ module.exports = async position => {
         quantity: Math.ceil(quantity * (percToSell / 100)),
         // limitPrice: currentPrice * .995,
         // timeoutSeconds: 60,
-        fallbackToMarket: false
+        fallbackToMarket: true
      });
 
     const { alpacaOrder, attemptNum } = response || {};
