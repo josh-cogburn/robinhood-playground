@@ -58,7 +58,7 @@ module.exports = async ({ ticker, quantity, fallbackToMarket }) => {
         }
     }
 
-    if (!fallbackToMarket) return;
+    if (!fallbackToMarket) return console.log(`UNABLE TO ATTEMPT SELL ${ticker} and not falling back to market`)
 
     console.log('unable to limit sell, falling back to market sell', ticker);
     return {
