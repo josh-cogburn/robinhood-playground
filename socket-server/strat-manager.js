@@ -105,7 +105,7 @@ const stratManager = {
                 console.log(`starting avg downer ${pos.ticker} bc bought today`)
                 newAvgDowner({
                     ticker: pos.ticker,
-                    buyPrice: pos.average_buy_price,
+                    buyPrice: pos.avgEntry,
                     initialTimeout: 1000 * 30 + 60 * Math.random()
                 })
             }

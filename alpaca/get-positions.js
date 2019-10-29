@@ -89,7 +89,15 @@ module.exports = async () => {
   const ratioDayPast = 0.2 || Math.max(0.2, Math.min(getMinutesFrom630() / 360, 1));
   strlog({ ratioDayPast })
   const getPercToSell = position => {
-    let { daysOld, returnPerc, outsideBracket, wouldBeDayTrade, ticker, market_value } = position;
+    let { 
+      daysOld, 
+      returnPerc, 
+      outsideBracket, 
+      wouldBeDayTrade, 
+      ticker, 
+      market_value, 
+      unrealized_intraday_plpc 
+    } = position;
 
     if (daysOld > 3 && market_value < 20) {
       return 100;
@@ -101,7 +109,7 @@ module.exports = async () => {
     const dayVal = daysOld + 1;
     const returnVal = Math.abs(returnPerc) / 4;
     const basePercent = dayVal + returnVal;
-    let shouldVal = 0;
+    let shouldVal = Math.abs(Number(unrealized_intraday_plpc)) * 100 / 2;
     if (outsideBracket) {
       shouldVal += returnPerc ? 7 : 4;
     }
