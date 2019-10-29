@@ -2,8 +2,8 @@ const mapLimit = require('promise-map-limit');
 const lookup = require('../utils/lookup');
 const addBuyDataToPositions = require('../app-actions/add-buy-data-to-positions');
 // const getAssociatedStrategies = require('./get-associated-strategies');
-const getStSentiment = require('../utils/get-stocktwits-sentiment');
-const positionOutsideBracket = require('../utils/position-outside-bracket');
+// const getStSentiment = require('../utils/get-stocktwits-sentiment');
+// const positionOutsideBracket = require('../utils/position-outside-bracket');
 
 
 const getPositions = async () => {
@@ -58,7 +58,7 @@ const getDetailedNonZero = async () => {
 
     const withShouldSell = withStSent.map(pos => ({
         ...pos,
-        ...positionOutsideBracket(pos)
+        // ...positionOutsideBracket(pos)
     }));
 
     // console.log('made it', withTicks);
