@@ -1,6 +1,5 @@
 const { alpaca } = require('.');
 const getStSentiment = require('../utils/get-stocktwits-sentiment');
-const positionOutsideBracket = require('../utils/position-outside-bracket');
 const { avgArray } = require('../utils/array-math');
 const getTrend = require('../utils/get-trend');
 const Holds = require('../models/Holds');
@@ -77,7 +76,7 @@ module.exports = async () => {
       daysOld,
       mostRecentPurchase,
       wouldBeDayTrade,
-      stSent: (await getStSentiment(ticker) || {}).bullBearScore
+      stSent: await getStSentiment(ticker) || {}
     };
   });
 
@@ -85,6 +84,17 @@ module.exports = async () => {
     ...position,
     ...checkForHugeDrop(position)
   }));
+
+  positions = positions.map(position => {
+    const { 
+      stSent: { upperLimit, lowerLimit },
+      returnPerc
+    } = position;
+    return {
+      ...position,
+      outsideBracket: Boolean(returnPerc >= upperLimit || returnPerc <= lowerLimit)
+    };
+  });
 
   const ratioDayPast = 0.2 || Math.max(0.2, Math.min(getMinutesFrom630() / 360, 1));
   strlog({ ratioDayPast })
@@ -141,10 +151,6 @@ module.exports = async () => {
   };
 
   const withRecommendations = positions
-    .map(position => ({
-      ...position,
-      ...positionOutsideBracket(position)
-    }))
     .map(position => ({
       ...position,
       recommendation: getRecommendation(position),

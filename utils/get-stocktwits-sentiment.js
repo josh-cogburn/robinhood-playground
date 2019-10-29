@@ -26,6 +26,26 @@ const stReq = cacheThis(
     },
     10
 );
+
+
+const stBrackets = {
+    bullish: [-5, 13],    // stSent > 130
+    neutral: [-7, 9],     // stSent > 70
+    bearish: [-9, 7],     // stSent < 70
+};
+const getStBracket = bullBearScore => {
+    const stBracket = (() => {
+        if (bullBearScore > 130) return 'bullish';
+        if (bullBearScore < 40) return 'bearish';
+        return 'neutral';
+    })();
+    const [lowerLimit, upperLimit] = stBrackets[stBracket];
+    return {
+        stBracket,
+        upperLimit,
+        lowerLimit
+    };
+};
     
 
 module.exports = async (ticker, detailed) => {
@@ -82,6 +102,7 @@ module.exports = async (ticker, detailed) => {
             totalCount,
             bearishCount: getSentiment('Bearish'),
             bullishCount: getSentiment('Bullish'),
+            ...getStBracket(bullBearScore)
         };
         console.log(`stSent ${ticker}`, response);
         return response;
@@ -158,7 +179,7 @@ module.exports = async (ticker, detailed) => {
     //     return returnObj;
 
     } catch (e) {
-        // console.error(e);
+        console.error(e);
         return {};
     }
     

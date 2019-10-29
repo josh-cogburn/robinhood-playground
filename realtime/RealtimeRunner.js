@@ -680,7 +680,7 @@ module.exports = new (class RealtimeRunner {
     ) ? 'firstAlert' : '';
 
 
-    let volumeKey, watchoutKey, stSent;
+    let volumeKey, watchoutKey, stSent = {};
 
     if (!minimalist) {
 
@@ -700,11 +700,13 @@ module.exports = new (class RealtimeRunner {
       riskCache[ticker] = risk;
       const { shouldWatchout } = risk;
       watchoutKey = shouldWatchout ? 'watchout' : '';
-      
-      // stSent
-      // stSent = await getStSentiment(ticker)
     }
 
+    const pms = await pmsHit(null, pickName);
+    if (pms && pms.length && pms.includes('forPurchase') && !minimalist) {
+      // await sendEmail(`NEW ${strategyName.toUpperCase()} ALERT ${pickName}: ${ticker}`, JSON.stringify(pick, null, 2));
+      stSent = await getStSentiment(ticker);
+    }
 
     // const strategyName = `ticker-watchers-under${priceKey}${watchoutKey}${jumpKey}${minKey}${historicalKey}`;
 
@@ -715,21 +717,19 @@ module.exports = new (class RealtimeRunner {
         keyString,
         // priceKey && `under${priceKey}`,
         firstAlertkey,
+        stSent.stBracket,
         watchoutKey,
         minKey,
         volumeKey
     ].filter(Boolean).join('-');
     console.log({pickName});
 
-    const pms = await pmsHit(null, pickName);
-    if (pms && pms.length && pms.includes('forPurchase')) {
-      // await sendEmail(`NEW ${strategyName.toUpperCase()} ALERT ${pickName}: ${ticker}`, JSON.stringify(pick, null, 2));
-    }
+    
     
     data = {
       ...data,
       period,
-      // stSent
+      stSent
     };
     recordPicks(pickName, 5000, [ticker], null, { keys, data });  // dont await?
     return;
