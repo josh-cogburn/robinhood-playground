@@ -2,7 +2,7 @@ const mapLimit = require('promise-map-limit');
 const lookup = require('../utils/lookup');
 const addBuyDataToPositions = require('../app-actions/add-buy-data-to-positions');
 // const getAssociatedStrategies = require('./get-associated-strategies');
-// const getStSentiment = require('../utils/get-stocktwits-sentiment');
+const getStSentiment = require('../utils/get-stocktwits-sentiment');
 // const positionOutsideBracket = require('../utils/position-outside-bracket');
 
 
