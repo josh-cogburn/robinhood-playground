@@ -478,7 +478,7 @@ module.exports = new (class RealtimeRunner {
 
     if (strategyName === 'sudden-drops') {
       strlog({
-        excludeCollections
+        excludeCollections,
       })
     }
 
@@ -494,7 +494,7 @@ module.exports = new (class RealtimeRunner {
             })
           }
           return (this.collections[collection] || []).includes(ticker);
-        }) && excludeCollections.every(collection => !this.collections[collection].includes(ticker));
+        }) && excludeCollections.every(collection => !(this.collections[collection] || []).includes(ticker));
       }) : tickersAndAllPrices;
     strlog({
       strategyName,

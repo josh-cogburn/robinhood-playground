@@ -14,7 +14,7 @@ const isOvernight = allPrices => {
 module.exports = {
     period: [5, 10],
     // collections: ['spy', 'options', 'fitty', 'lowVolFitty', 'zeroToOne', 'oneToTwo', 'twoToFive', 'fiveToTen'],
-    excludeCollections: ['holds', 'droppers'],
+    excludeCollections: ['holds'],
     handler: async ({ ticker, allPrices }) => {
 
         // const onlyToday = (() => {

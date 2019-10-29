@@ -4,7 +4,7 @@ const getRisk = require('../../rh-actions/get-risk');
 const addFundamentals = require('../../app-actions/add-fundamentals');
 const runScan = require('../../scans/base/run-scan');
 const hotSt = require('../../scans/hot-st');
-const droppers = require('../../scans/droppers');
+// const droppers = require('../../scans/droppers');
 
 const allStocks = require('../../json/stock-data/allStocks');
 const lookupMultiple = require('../../utils/lookup-multiple');
@@ -183,14 +183,14 @@ module.exports = async () => {
     const getTicks = () => Object.values(collections).flatten().uniq();
 
 
-    collections['droppers'] = (await droppers({
-        minPrice: 0.1,
-        maxPrice: 8,
-        count: 25,
-        includeStSent: false,
-        excludeTickers: getTicks(),
-        afterHoursReset: false
-    })).map(t => t.ticker);;
+    // collections['droppers'] = (await droppers({
+    //     minPrice: 0.1,
+    //     maxPrice: 8,
+    //     count: 25,
+    //     includeStSent: false,
+    //     excludeTickers: getTicks(),
+    //     afterHoursReset: false
+    // })).map(t => t.ticker);;
 
     collections['hotSt'] = (await hotSt({
         minPrice: 0.1,
