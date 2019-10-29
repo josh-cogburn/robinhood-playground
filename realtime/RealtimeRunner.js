@@ -583,7 +583,7 @@ module.exports = new (class RealtimeRunner {
   async handlePicks(picks, periods) {
 
     // prefetch st sent for all picks ---- DISABLED!
-    await this.prefetchStSent(picks);
+    // await this.prefetchStSent(picks);
 
     // mongo and socket updates
     // for PICKS
@@ -702,7 +702,9 @@ module.exports = new (class RealtimeRunner {
       watchoutKey = shouldWatchout ? 'watchout' : '';
       
       // stSent
-      stSent = await getStSentiment(ticker) || {};
+      if (strategyName.includes('drops')) {
+        stSent = await getStSentiment(ticker) || {};
+      }
     }
 
     // const pms = await pmsHit(null, pickName);
