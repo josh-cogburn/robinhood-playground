@@ -476,6 +476,12 @@ module.exports = new (class RealtimeRunner {
       })
     });
 
+    if (strategyName === 'sudden-drops') {
+      strlog({
+        excludeCollections
+      })
+    }
+
     const filteredByCollections = collections && collections.length ? 
       tickersAndAllPrices.filter(({ ticker }) => {
         return collections.some(collection => {
