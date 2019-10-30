@@ -109,7 +109,7 @@ module.exports = async () => {
       unrealized_intraday_plpc 
     } = position;
 
-    if (daysOld > 3 && market_value < 20) {
+    if (daysOld >= 3 && market_value < 30) {
       return 100;
     }
 
