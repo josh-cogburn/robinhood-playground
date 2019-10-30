@@ -61,10 +61,10 @@ module.exports = async () => {
     }), {});
 
 
-    const [daysOld, mostRecentPurchase] = [
+    const [daysOld, mostRecentPurchase] = buys.length >= 2 ? [
       buys[0],
       buys[buys.length - 1]
-    ].map(buy => getDaysOld(buy.date));
+    ].map(buy => getDaysOld(buy.date)) : [0, 0];
 
     // strlog({ buys}); 
 
