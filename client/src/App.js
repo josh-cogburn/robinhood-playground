@@ -251,20 +251,16 @@ class App extends Component {
           positions = mapObject(
             positions,
             positions => positions
-              .map(pos => {
-                  const { afterHoursPrice, lastTradePrice } = relatedPrices[pos.ticker] || {};
-                  const currentPrice = afterHoursPrice || lastTradePrice;
-                  if (currentPrice) {
-                      // console.log(pos);
-                      pos.currentPrice = currentPrice;
-                      pos.returnDollars = +(pos.quantity * (pos.currentPrice - pos.avgEntry)).toFixed(2);
-                      pos.returnPerc = getTrend(currentPrice, pos.avgEntry);
-                      pos.equity = (pos.quantity * currentPrice).toFixed(2);
-                  }
-                  // console.log(pos);
-                  return pos;
-              })
-              .sort((a, b) => b.equity - a.equity)
+                .map(pos => {
+                    const { afterHoursPrice, lastTradePrice } = relatedPrices[pos.ticker] || {};
+                    const currentPrice = afterHoursPrice || lastTradePrice || Number(pos.current_price);
+                    pos.currentPrice = currentPrice;
+                    pos.returnDollars = +(pos.quantity * (pos.currentPrice - pos.avgEntry)).toFixed(2);
+                    pos.returnPerc = getTrend(currentPrice, pos.avgEntry);
+                    pos.equity = (pos.quantity * currentPrice).toFixed(2);
+                    return pos;
+                })
+                .sort((a, b) => b.equity - a.equity)
           )
         }
         
