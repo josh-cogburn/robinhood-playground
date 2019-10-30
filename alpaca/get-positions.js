@@ -7,7 +7,7 @@ const Pick = require('../models/Pick');
 const getMinutesFrom630 = require('../utils/get-minutes-from-630');
 
 const checkForHugeDrop = position => {
-  let { current_price, returnPerc: actualReturnPerc, avgEntry: actualEntry, hold: { buys } } = position;
+  let { current_price, returnPerc: actualReturnPerc, avgEntry: actualEntry, hold: { buys = [] } } = position;
   const dropIndex = buys.slice().reverse().findIndex((buy, index, arr) => {
     const isBigDrop = arr[index + 1] && buy.fillPrice < arr[index + 1].fillPrice * .7;
     const isNotToday = buy.date !== (new Date()).toLocaleDateString().split('/').join('-');
