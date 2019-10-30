@@ -82,7 +82,7 @@ table th {
   to { transform: rotate(360deg); }
 }
 
-.noselect, *[data-custom] {
+.noselect {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */

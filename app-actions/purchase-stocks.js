@@ -7,7 +7,7 @@ const { alpaca } = require('../alpaca');
 const purchaseStocks = async ({ strategy, multiplier = 1, min, withPrices } = {}, dontBuy) => {
 
     const account = await alpaca.getAccount();
-    const { portfolio_value, buying_power } = account;
+    const { portfolio_value, cash } = account;
     // strlog({ account })
     purchaseAmt = purchaseAmt || Math.ceil(portfolio_value / expectedPickCount);
     const amountPerBuy = purchaseAmt * multiplier;
@@ -16,10 +16,10 @@ const purchaseStocks = async ({ strategy, multiplier = 1, min, withPrices } = {}
         multiplier,
         amountPerBuy,
     });
-    const totalAmtToSpend = Math.min(amountPerBuy, buying_power);
+    const totalAmtToSpend = Math.min(amountPerBuy, cash);
     strlog({
         totalAmtToSpend,
-        buying_power,
+        cash,
         strategy
     });
     
@@ -30,9 +30,9 @@ const purchaseStocks = async ({ strategy, multiplier = 1, min, withPrices } = {}
     
     // console.log('multiplier', multiplier, 'amountPerBuy', amountPerBuy, 'totalAmtToSpend', totalAmtToSpend);
 
-    // if (totalAmtToSpend < 10) {
-    //     return console.log('not purchasing less than $10 to spend', strategy);
-    // }
+    if (totalAmtToSpend < 10) {
+        return console.log('not purchasing less than $10 to spend', strategy);
+    }
 
 
     // console.log('actually purchasing', strategy, 'count', stocksToBuy.length);

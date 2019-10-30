@@ -94,17 +94,17 @@ module.exports = {
 
         // risky
         
-        '[sudden-drops-initial-down30]',
+        // '[sudden-drops-initial-down30]',
         '[sudden-drops-mediumJump-initial-down30]',
         '[sudden-drops-lunch-down20]',
         '[sudden-drops-!watchout-mediumJump-down20-straightDown30]',
         '[sudden-drops-mediumJump-initial-down15-!straightDown]',
-        '[overnight-drops-majorJump-!down]',
+        // '[overnight-drops-majorJump-!down]',
         '[sudden-drops-dinner-down15-straightDown30]',
-        '[overnight-drops-majorJump-!down]',
-        '[overnight-drops-majorJump-down10]',
+        // '[overnight-drops-majorJump-!down]',
+        // '[overnight-drops-majorJump-down10]',
         '[rsi-daily-shouldWatchout-firstAlert]',
-        '[overnight-drops-majorJump-down10]',
+        // '[overnight-drops-majorJump-down10]',
         '[sudden-drops-watchout-initial-down]',
 
         // stars
@@ -114,6 +114,12 @@ module.exports = {
 
 
         // '[average-down-recommendation]'
+
+
+        '[sudden-drops-brunch-down10-!straightDown]',
+        '[sudden-drops-brunch-down10-!straightDown]',
+        '[sudden-drops-watchout-minorJump-brunch-down10-!straightDown]',
+        '[sudden-drops-mediumJump-brunch-down10]',
 
     ],
     // forPurchaseVariation: '75Perc5Day-yesincludingblanks',
