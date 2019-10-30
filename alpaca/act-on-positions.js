@@ -25,7 +25,7 @@ module.exports = async (_, dontAct, sellAllStocks = false) => {
                 .map(({ ticker, quantity }) => 
                     alpacaMarketSell({
                         ticker,
-                        quantity
+                        quantity: quantity / 2
                     }, 100)
                 )
         )

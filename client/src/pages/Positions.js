@@ -39,8 +39,8 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
             ),
         },
         // 'buy strategies': 'buyStrategy',
-        bullBearScore: ({ stSent }) => stSent.bullBearScore,
-        stBracket: ({ stSent: { stBracket, upperLimit, lowerLimit} }) => (
+        bullBearScore: ({ stSent = {} }) => stSent.bullBearScore,
+        stBracket: ({ stSent: { stBracket, upperLimit, lowerLimit } = {} }) => (
             <span>{stBracket} ({lowerLimit} -> {upperLimit})</span>
         ),
         recommendation: 'recommendation',

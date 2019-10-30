@@ -205,7 +205,7 @@ module.exports = async () => {
         const scan = scans[scanName];
         const response = (await runScan({
             ...scan,
-            minVolume: 60000,
+            minVolume: 35000,
             includeStSent: false,
             excludeTickers: getTicks()
         })).map(t => t.ticker);
