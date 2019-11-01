@@ -7,7 +7,7 @@ module.exports = async () => {
     await theBigLebowski(14)
   ).pmsAnalyzed;
 
-  const pmJsonAnalysis = await pmJson(6);
+  const pmJsonAnalysis = await pmJson(10);
 
   strlog({ lebowskiPms, pmJsonAnalysis})
 
