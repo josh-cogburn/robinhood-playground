@@ -37,6 +37,12 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
                     <TrendPerc value={returnPerc} />
                 </span>
             ),
+            'today $': pos => <TrendPerc style={{ opacity: 0.55 }} value={pos.unrealized_intraday_pl} dollar={true} />,
+            'today %': ({ unrealized_intraday_plpc }) => (
+                // <span {...actualReturnPerc && { 'data-custom': true, 'data-tooltip-str': actualReturnPerc }}>
+                    <TrendPerc style={{ opacity: 0.55 }} value={unrealized_intraday_plpc * 100} />
+                // </span>
+            ),
         },
         // 'buy strategies': 'buyStrategy',
         bullBearScore: ({ stSent = {} }) => stSent.bullBearScore,
