@@ -49,7 +49,6 @@ module.exports = {
 
         // more
         '[sudden-drops-dinner-down-straightDown30]',
-        '[sudden-drops-watchout-mediumJump-down]',
         '[sudden-drops-watchout-minorJump-brunch-down]',
         '[sudden-drops-watchout-down-!straightDown]',
         '[sudden-drops-minorJump-lunch-down10-straightDown]',
@@ -82,7 +81,6 @@ module.exports = {
         '[sudden-drops-!watchout-initial-down15]',
         '[sudden-drops-!watchout-minorJump-initial-down15]',
         '[sudden-drops-brunch-down10-straightDown]',
-        '[sudden-drops-watchout-majorJump-down]',
         '[sudden-drops-watchout-dinner-down-!straightDown]',
         '[sudden-drops-watchout-dinner-down15]',
         '[sudden-drops-majorJump-down10]',
@@ -103,7 +101,7 @@ module.exports = {
         '[sudden-drops-dinner-down15-straightDown30]',
         // '[overnight-drops-majorJump-!down]',
         // '[overnight-drops-majorJump-down10]',
-        '[rsi-daily-shouldWatchout-firstAlert]',
+        // '[rsi-daily-shouldWatchout-firstAlert]',
         // '[overnight-drops-majorJump-down10]',
         '[sudden-drops-watchout-initial-down]',
 
