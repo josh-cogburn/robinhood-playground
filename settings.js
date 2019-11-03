@@ -160,6 +160,15 @@ module.exports = {
         '[sudden-drops-brunch-down30-!straightDown]',
         '[sudden-drops-brunch-down30-!straightDown]',
 
+
+        '[sudden-drops-down10-straightDown30]',
+        '[sudden-drops-!watchout-minorJump-lunch-straightDown]',
+        '[sudden-drops-watchout-majorJump-dinner-down]',
+        '[sudden-drops-down30-straightDown]',
+
+        '[avg-downer-under60min-2count]',
+        '[avg-downer-under60min-2count]',
+
     ],
     // forPurchaseVariation: '75Perc5Day-yesincludingblanks',
     // fallbackSellStrategy: 'limit8',
