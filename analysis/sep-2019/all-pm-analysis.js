@@ -4,10 +4,10 @@ const pmJson = require('./pm-json');
 module.exports = async () => {
 
   const lebowskiPms = (
-    await theBigLebowski(14)
+    await theBigLebowski(20)
   ).pmsAnalyzed;
 
-  const pmJsonAnalysis = await pmJson(10);
+  const pmJsonAnalysis = await pmJson(20);
 
   strlog({ lebowskiPms, pmJsonAnalysis})
 
