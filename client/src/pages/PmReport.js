@@ -79,6 +79,7 @@ const TrendTable = ({ trends, investigatePm }) => (
             <th>lebowski perc up</th>
             <th>json avg</th>
             <th>json perc up</th>
+            <th>json count</th>
             <th>star?</th>
         </thead>
         <tbody>
@@ -95,6 +96,7 @@ const TrendTable = ({ trends, investigatePm }) => (
                             <td><TrendPerc value={perf.lebowskiPercUp} redAt={50} noPlus={true} round={true} /></td>
                             <td><TrendPerc value={perf.jsonAvg} /></td>
                             <td><TrendPerc value={perf.jsonPercUp} redAt={50} noPlus={true} round={true} /></td>
+                            <td>{perf.jsonCount ? +perf.jsonCount.toFixed(2) : ''}</td>
                             <td>{perf.overallZScore > 2 && '🌠🌠🌠'}</td>  
                         </tr>
                 ))
@@ -155,6 +157,7 @@ class TodaysStrategies extends Component {
             lebowskiPercUp: lebowski.percUp,
             jsonAvg: jsonAnalysis.avgTrend,
             jsonPercUp: jsonAnalysis.percUp,
+            jsonCount: jsonAnalysis.count,
         });
 
 

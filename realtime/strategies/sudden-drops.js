@@ -119,6 +119,11 @@ module.exports = {
           'down',
           '!down'
         ],
+        [
+          'neautral',
+          'bullish',
+          'bearish'
+        ]
         // [
         //   ...[
         //     10,
