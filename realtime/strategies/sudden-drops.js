@@ -123,7 +123,7 @@ module.exports = {
           'neautral',
           'bullish',
           'bearish'
-        ]
+        ],
         // [
         //   ...[
         //     10,

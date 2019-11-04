@@ -169,6 +169,13 @@ module.exports = {
         '[avg-downer-under60min-2count]',
         '[avg-downer-under60min-2count]',
 
+
+        '[sudden-drops-watchout-mediumJump-initial-down]',
+        '[]',
+        '[]',
+        '[]',
+        '[]',
+
     ],
     // forPurchaseVariation: '75Perc5Day-yesincludingblanks',
     // fallbackSellStrategy: 'limit8',
