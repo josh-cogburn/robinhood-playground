@@ -10,7 +10,11 @@ const isOvernight = allPrices => {
   return secondToLast !== last;
 };
 
-
+const stSents = [
+  'neutral',
+  'bullish',
+  'bearish'
+];
 module.exports = {
     period: [5, 10],
     // collections: ['spy', 'options', 'fitty', 'lowVolFitty', 'zeroToOne', 'oneToTwo', 'twoToFive', 'fiveToTen'],
@@ -119,11 +123,6 @@ module.exports = {
           'down',
           '!down'
         ],
-        [
-          'neutral',
-          'bullish',
-          'bearish'
-        ],
         // [
         //   ...[
         //     10,
@@ -142,6 +141,7 @@ module.exports = {
           '!straightDown',
         ],
 
+        stSents,
         // [ 
         //   'spy',
         //   'options',
@@ -154,13 +154,18 @@ module.exports = {
         //   'twoToFive',
         //   'fiveToTen' 
         // ]
-      ).toArray().reduce((acc, arr) => {
+      )
+      .toArray()
+      .reduce((acc, arr) => {
 
         return {
           ...acc,
           ...Combinatorics.power(arr)
             .toArray()
             .filter(s => s && s.length)
+            .filter(array => {
+              return !array.some(val => stSents.includes(val)) || !array.length > 3;
+            })
             .reduce((inner, combo) => ({
               ...inner,
               [combo.join('-')]: combo
