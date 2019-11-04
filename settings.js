@@ -24,7 +24,7 @@ let expectedPickCount = 0;
 module.exports = {
     // important settings
     sellAllStocksOnNthDay: 8,
-    purchaseAmt: 11,
+    purchaseAmt: 9,
     forPurchase: [
 
 
@@ -171,10 +171,12 @@ module.exports = {
 
 
         '[sudden-drops-watchout-mediumJump-initial-down]',
-        '[]',
-        '[]',
-        '[]',
-        '[]',
+        '[sudden-drops-mediumJump-lunch-down20]',
+        '[sudden-drops-!watchout-lunch-straightDown]',
+        '[sudden-drops-watchout-majorJump-down-straightDown]',
+        '[sudden-drops-!watchout-minorJump-down10-straightDown30]',
+        '[sudden-drops-!watchout-dinner-straightDown30]',
+        '[sudden-drops-!watchout-dinner-down30-straightDown]',
 
     ],
     // forPurchaseVariation: '75Perc5Day-yesincludingblanks',
