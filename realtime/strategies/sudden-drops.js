@@ -164,7 +164,7 @@ module.exports = {
             .toArray()
             .filter(s => s && s.length)
             .filter(array => {
-              return !array.some(val => stSents.includes(val)) || !array.length > 3;
+              return array.length < 4 || array.every(val => !stSents.includes(val));
             })
             .reduce((inner, combo) => ({
               ...inner,
