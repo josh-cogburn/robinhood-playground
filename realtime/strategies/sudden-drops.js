@@ -120,7 +120,7 @@ module.exports = {
           '!down'
         ],
         [
-          'neautral',
+          'neutral',
           'bullish',
           'bearish'
         ],
