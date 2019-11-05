@@ -178,6 +178,16 @@ module.exports = {
         '[sudden-drops-!watchout-dinner-straightDown30]',
         '[sudden-drops-!watchout-dinner-down30-straightDown]',
 
+        '[sudden-drops-!watchout-majorJump-down]',
+        '[sudden-drops-brunch-down15-straightDown30]',
+        '[sudden-drops-minorJump-lunch]',
+        '[sudden-drops-down20-!straightDown-bearish]',
+        '[sudden-drops-mediumJump-down20-bearish]',
+        '[sudden-drops-!watchout-!straightDown-bearish]',
+        '[sudden-drops-minorJump-lunch]',
+        '[sudden-drops-watchout-mediumJump-initial-down15-!straightDown]',
+        '[sudden-drops-lunch-straightDown120]',
+
     ],
     // forPurchaseVariation: '75Perc5Day-yesincludingblanks',
     // fallbackSellStrategy: 'limit8',
