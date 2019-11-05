@@ -66,9 +66,9 @@ module.exports = async () => {
       buys[buys.length - 1]
     ].map(buy => getDaysOld(buy.date)) : [0, 0];
 
-    // strlog({ buys}); 
+    // strlog({ buys});
 
-    const wouldBeDayTrade = Boolean(mostRecentPurchase === 0);
+    const wouldBeDayTrade = ticker === 'KEG' || Boolean(mostRecentPurchase === 0);
     return {
       ...position,
       hold,
