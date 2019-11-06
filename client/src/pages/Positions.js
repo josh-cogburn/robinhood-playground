@@ -63,7 +63,7 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
         } : {}
     };
 
-    const dontCountTickers = ['DESTQ', 'KEG'];
+    const dontCountTickers = ['DESTQ', 'KEG', 'SNCA'];
 
     
     const getStatsForSegment = (filterFn = () => true) => {
