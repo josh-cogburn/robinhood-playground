@@ -156,7 +156,7 @@ module.exports = {
         '[sudden-drops-majorJump-dinner-!straightDown]',
         '[sudden-drops-majorJump-down15]',
         '[sudden-drops-initial-down15-straightDown120]',
-        '[overnight-drops-watchout-mediumJump-!down-straightDown]',
+        // '[overnight-drops-watchout-mediumJump-!down-straightDown]',
         '[sudden-drops-brunch-down30-!straightDown]',
         '[sudden-drops-brunch-down30-!straightDown]',
 
@@ -187,6 +187,19 @@ module.exports = {
         '[sudden-drops-minorJump-lunch]',
         '[sudden-drops-watchout-mediumJump-initial-down15-!straightDown]',
         '[sudden-drops-lunch-straightDown120]',
+
+        '[sudden-drops-mediumJump-lunch]',
+        '[sudden-drops-mediumJump-lunch-!straightDown]',
+        '[sudden-drops-mediumJump-lunch-!straightDown]',
+
+
+        '[sudden-drops-mediumJump-lunch-bearish]',
+        '[sudden-drops-brunch-bearish]',
+        '[sudden-drops-minorJump-straightDown30-bearish]',
+        '[sudden-drops-!watchout-!straightDown-neutral]',
+        '[sudden-drops-!watchout-down-neutral]',
+        '[sudden-drops-initial-!straightDown-neutral]',
+        '[sudden-drops-lunch-down10-bearish]',
 
     ],
     // forPurchaseVariation: '75Perc5Day-yesincludingblanks',
