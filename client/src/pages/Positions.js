@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import getTrend from '../utils/get-trend';
 import { avgArray } from '../utils/array-math';
-import { mapObject } from 'underscore';
+import { mapObject, uniq } from 'underscore';
 
 import Pick from '../components/Pick';
 import TrendPerc from '../components/TrendPerc';
@@ -13,6 +13,9 @@ const tooltipStr = ({ buyStrategies }) =>
             const count = buyStrategies[strategy];
             return `${strategy} (${count})`;
         }).join('\n');
+
+
+// const getByDateStats = 
 
 
 const PositionSection = ({ relatedPrices, positions, name, admin }) => {
@@ -60,16 +63,39 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
         } : {}
     };
 
-    const sumProp = prop => positions.reduce((acc, pos) => acc + Number(pos[prop]), 0);
-    let totals = {
-        equity: sumProp('equity'),
-        returnDollars: sumProp('returnDollars'),
+    const dontCountTickers = ['DESTQ', 'KEG'];
+
+    
+    const getStatsForSegment = (filterFn = () => true) => {
+        const sumProp = prop => positions
+            .filter(filterFn)
+            .filter(({ ticker }) => !dontCountTickers.includes(ticker))
+            .reduce((acc, pos) => acc + Number(pos[prop]), 0);
+        const statKeys = ['equity', 'returnDollars'];
+        let stats = statKeys.reduce((acc, key) => ({
+            ...acc,
+            [key]: sumProp(key)
+        }), {});
+        stats = {
+            ...stats,
+            returnPerc: stats.returnDollars / (stats.equity - stats.returnDollars) * 100,
+        };
+        return mapObject(stats, val => Number(val.toFixed(2)));
     };
-    totals = {
-        ...totals,
-        returnPerc: totals.returnDollars / (totals.equity - totals.returnDollars) * 100,
-    };
-    totals = mapObject(totals, val => Number(val.toFixed(2)))
+    let totals = getStatsForSegment();
+    
+
+    const uniqDaysOld = uniq(positions.map(position => position.daysOld));
+    const daysOldObject = uniqDaysOld.reduce((acc, daysOld) => ({
+        ...acc,
+        [daysOld]: getStatsForSegment(position => position.daysOld === daysOld) 
+    }), {});
+
+    const daysOldStats = Object.keys(daysOldObject).map(daysOld => ({
+        daysOld,
+        ...daysOldObject[daysOld]
+    }));
+    const daysOldKeys = Object.keys(daysOldStats[0]);
 
     return (
         <div>
@@ -115,6 +141,23 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
                     }
                 </tbody>
             </table>
+            <table>
+                <thead>{daysOldKeys.map(key => <th>{key}</th>)}</thead>
+                <tbody>
+                    { 
+                        daysOldStats.map(stat => 
+                            <tr>
+                                {
+                                    daysOldKeys.map(key => 
+                                        <td>{stat[key]}</td>
+                                    )
+                                }
+                            </tr>
+                        )
+                    }
+                </tbody>
+                <tr></tr>
+            </table>
             <br/>
         </div>
     );
@@ -150,6 +193,7 @@ class TodaysStrategies extends Component {
                         />
                     ))
                 }
+
 
             </div>
         );
