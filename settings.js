@@ -28,15 +28,27 @@ module.exports = {
     forPurchase: [
 
 
+        // DISABLING HIGH COUNTS
+
+        // '[sudden-drops-majorJump]',
+        // '[sudden-drops-watchout-initial-down]',
+        // '[sudden-drops-mediumJump]',
+        // '[sudden-drops-watchout-!straightDown]',
+        // '[sudden-drops-watchout-down-!straightDown]',
+        // '[sudden-drops-minorJump-down10]',
+        // '[sudden-drops-!watchout-minorJump-!down-!straightDown]',
+        // '[sudden-drops-twoToFive]',
+        // '[sudden-drops-watchout-minorJump]',
+        // '[sudden-drops-zeroToOne]',
+        // '[sudden-drops-watchout-down]',
+
+
         // baselines
 
         '[sudden-drops-lunch]',
         '[sudden-drops-lunch]',
-        '[sudden-drops-majorJump]',
+        
         '[sudden-drops-majorJump-straightDown]',
-        '[sudden-drops-mediumJump]',
-        '[sudden-drops-zeroToOne]',
-        '[sudden-drops-watchout-down]',
         '[sudden-drops-down15-straightDown]',
 
         // wednesday
@@ -50,21 +62,16 @@ module.exports = {
         // more
         '[sudden-drops-dinner-down-straightDown30]',
         '[sudden-drops-watchout-minorJump-brunch-down]',
-        '[sudden-drops-watchout-down-!straightDown]',
         '[sudden-drops-minorJump-lunch-down10-straightDown]',
         '[sudden-drops-watchout-down15-straightDown30]',
         '[sudden-drops-watchout-down30]',
         '[sudden-drops-watchout-down10]',
         '[sudden-drops-lunch-down20]',
-        '[sudden-drops-watchout-!straightDown]',
-        '[sudden-drops-watchout-minorJump]',
 
         // yes today trend high percUp
         '[sudden-drops-lowVolFitty]',
         '[sudden-drops-dinner-down15-straightDown]',
-        '[sudden-drops-!watchout-minorJump-!down-!straightDown]',
         '[sudden-drops-mediumJump-dinner-down]',
-        '[sudden-drops-minorJump-down10]',
         // '[sudden-drops-minorJump-!straightDown]',
 
         // no today trend but 90% percUp
@@ -87,7 +94,6 @@ module.exports = {
         '[sudden-drops-!watchout-down15]',
         '[sudden-drops-!watchout-majorJump-initial]',
         '[sudden-drops-majorJump-initial-straightDown]',
-        '[sudden-drops-twoToFive]',
 
 
         // risky
@@ -103,7 +109,6 @@ module.exports = {
         // '[overnight-drops-majorJump-down10]',
         // '[rsi-daily-shouldWatchout-firstAlert]',
         // '[overnight-drops-majorJump-down10]',
-        '[sudden-drops-watchout-initial-down]',
 
         // stars
         '[sudden-drops-watchout-majorJump]',
