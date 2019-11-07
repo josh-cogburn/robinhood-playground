@@ -47,6 +47,7 @@ module.exports = {
 
         '[sudden-drops-lunch]',
         '[sudden-drops-lunch]',
+        '[sudden-drops-lunch]',
         
         '[sudden-drops-majorJump-straightDown]',
         '[sudden-drops-down15-straightDown]',
