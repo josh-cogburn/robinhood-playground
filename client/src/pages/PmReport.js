@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import getTrend from '../utils/get-trend';
 import { avgArray, percUp, zScore } from '../utils/array-math';
-
+import InputRange from 'react-input-range';
 import Pick from '../components/Pick';
 import TrendPerc from '../components/TrendPerc';
 import { debounce, mapObject } from 'underscore';
@@ -67,6 +67,76 @@ const tooltipStr = (tickersWithTrend = {}) =>
         }).join('\n');
 
 
+class Settings extends React.Component {
+    state = {
+        filter: '',
+        forPurchaseOnly: true,
+        maxDash: '---',
+        minAvgTrend: -100,
+        minPercUp: 1
+    }
+    toggleForPurchaseOnly = () => this.setState({ forPurchaseOnly: !this.state.forPurchaseOnly });
+    updateFilter = filter => this.setState({ filter });
+    filterChange = event => {
+        console.log(event.target.value);
+        this.updateFilter(event.target.value);
+    };
+    debouncedUpdate = debounce(() => {
+        this.props.setSettings(this.state);
+    }, 1000)
+    render() {
+        this.debouncedUpdate();
+        return (
+            <div>
+                Filter: <input type="text" onChange={this.filterChange}/><br/>
+                MaxDash: 
+                <select onChange={evt => this.setState({ maxDash: evt.target.value })}>
+                    {
+                        [
+                            '---',
+                            ...Array(6).fill(0).map((v, i) => i)
+                        ].map(num => (
+                            <option value={num}>{num}</option>
+                        ))
+                    }
+                    
+                </select>
+                <br/>
+                <label>
+                    minimum percUp
+                    <InputRange
+                        maxValue={100}
+                        minValue={1}
+                        step={1}
+                        // formatLabel={value => value.toFixed(2)}
+                        value={this.state.minPercUp}
+                        onChange={minPercUp => debounce(this.setState({ minPercUp }), 500)}
+                        // onChange={value => console.log(value)} 
+                    />
+                </label>
+                <br/>
+                <label>
+                    minimum avgTrend
+                    <InputRange
+                        maxValue={20}
+                        minValue={-100}
+                        step={1}
+                        // formatLabel={value => value.toFixed(2)}
+                        value={this.state.minAvgTrend}
+                        onChange={debounce(minAvgTrend => this.setState({ minAvgTrend }), 500)}
+                        // onChange={value => console.log(value)} 
+                    />
+                </label>
+                <br/>
+                <label>
+                    <input type="checkbox" checked={this.state.forPurchaseOnly} onChange={this.toggleForPurchaseOnly} />
+                    forPurchase PM's only
+                </label>
+            </div>
+        )
+    }
+}
+
 const TrendTable = ({ trends, investigatePm }) => (
     <table>
 
@@ -106,21 +176,202 @@ const TrendTable = ({ trends, investigatePm }) => (
 );
 
 
+
+
+const processData = (props, state) => {
+
+
+    let {
+        pmPerfs,
+        settings,
+        // predictionModels,
+        pmsAnalyzed,
+        pms,
+        picks,
+        relatedPrices
+    } = props;
+
+
+    let { 
+        forPurchaseOnly, 
+        filter, 
+        maxDash,
+        minAvgTrend,
+        minPercUp
+    } = state; 
+
+
+
+    const pmMatchesFilter = pmName => filter
+        .split(',')
+        .every(str => 
+            (new RegExp(`(?<!!)${str}`)).test(pmName)   // no ! prefix
+        );
+
+    const forPurchasePMs = settings.forPurchase.map(line =>
+        line.substring(1, line.length - 1)
+    );
+    const isForPurchase = pmName => forPurchasePMs.includes(pmName);
+
+    maxDash = maxDash === '---' ? Number.POSITIVE_INFINITY : Number(maxDash);
+
+    const flattenLebowski = ({
+        jsonAnalysis = {},
+        ...lebowski
+    }) => ({
+        pmName: lebowski.pm,
+        lebowskiAvg: lebowski.overallAvg,
+        lebowskiPercUp: lebowski.percUp,
+        jsonAvg: jsonAnalysis.avgTrend,
+        jsonPercUp: jsonAnalysis.percUp,
+        jsonCount: jsonAnalysis.count,
+    });
+
+    const passesAvgTrendAndPercUp = ({ lebowskiAvg, jsonAvg, lebowskiPercUp, jsonPercUp }) => {
+        const avgTrend = avgArray([lebowskiAvg, jsonAvg].filter(Boolean));
+        const avgPercUp = avgArray([lebowskiPercUp, jsonPercUp].filter(Boolean));
+        return avgTrend > minAvgTrend && avgPercUp > minPercUp;
+    };
+
+
+    pmPerfs = pmPerfs
+        .filter(({ pmName }) => pmName.split('-').length <= maxDash + 1)
+        .filter(({ pmName }) => pmMatchesFilter(pmName))
+        .map(({ avgTrend, percUp, pmName, count }) => {
+            const foundLebowski = pmsAnalyzed.find(pm => pm.pm === pmName) || {};
+            return {
+                ...flattenLebowski(foundLebowski),
+                pmName,
+                count,
+                avgTrend,
+                percUp,
+                isForPurchase: isForPurchase(pmName)
+            };
+        })
+        .filter(passesAvgTrendAndPercUp);
+
+
+    pmPerfs = pmPerfs
+        .map((perf, index, arr) => ({
+            ...perf,
+            zScores: Object.keys(perf).reduce((acc, key) => ({
+                ...acc,
+                [key]: zScore(
+                    arr.map(o => o[key]).filter(Boolean),
+                    perf[key]
+                )
+            }), {})
+        }))
+        .map((perf, index, arr) => {
+
+            const overallScores = [
+                'lebowskiAvg',
+                'jsonAvg'
+            ];
+
+            const sumKeys = obj => sum(
+                Object.keys(obj.zScores)
+                    .filter(key => overallScores.includes(key))
+                    .map(key => obj.zScores[key])
+            );
+
+            return {
+                ...perf,
+                overallZScore: zScore(
+                    arr.map(
+                        sumKeys
+                    ),
+                    sumKeys(perf)
+                ),
+                // secondaryZScore: zScore(
+                //     arr.map(
+                //         obj => sum(Object.values(obj.zScores).slice(1)),
+                //     ),
+                //     sum(Object.values(perf.zScores).slice(1)),
+                // )
+            };
+
+            
+        })
+        .map(perf => ({
+            ...perf,
+            ...(() => {
+                const matchesPm = (stratMin, pm) => {
+                    const arrayOfArrays = pms[pm] || [];
+                    return arrayOfArrays.some(parts => {
+                        parts = Array.isArray(parts) ? parts : [parts];
+                        return parts.every(part => {
+                            part = part.toString();
+                            if (part.startsWith('!')) {
+                                return !stratMin.includes(part.slice(1));
+                            }
+                            return (new RegExp(`(?<!!)${part}`)).test(stratMin);
+                        });
+                    });
+                    // return pms[pm] && pms[pm].every(part => strat === part || strat.includes(`${part}-`) || strat.includes(`-${part}`));
+                };
+                const matchingPicks = picks.filter(({ stratMin }) => matchesPm(stratMin, perf.pmName));;
+                const byTicker = matchingPicks.reduce((acc, pick) => {
+                    pick.withPrices.forEach(({ ticker, price }) => {
+                        acc[ticker] = [
+                            ...acc[ticker] || [],
+                            price
+                        ];
+                    });
+                    return acc;
+                }, {});
+                const avgBuyPrices = mapObject(byTicker, arr => +avgArray(arr).toFixed(3));
+                const tickersWithTrend = mapObject(avgBuyPrices, (avgBuyPrice, ticker) => {
+                    if (!relatedPrices[ticker]) console.log("wtf", ticker, perf.pmName);
+                    const { afterHoursPrice, lastTradePrice } = relatedPrices[ticker] || {};
+                    const nowPrice = afterHoursPrice || lastTradePrice;
+                    return {
+                        avgBuyPrice,
+                        nowPrice,
+                        trend: getTrend(nowPrice, avgBuyPrice)
+                    };
+                });
+                return {
+                    matchingPicks,
+                    tickersWithTrend
+                };
+            })()
+        }));
+
+    console.log({ pmsAnalyzed })
+    let noHitTops = pmsAnalyzed
+        .filter(pm => {
+            return !pmPerfs.find(pmPerf => pmPerf.pmName === pm.pm);
+        })
+        .filter(({ pm }) => pm.split('-').length <= maxDash + 1)
+        .filter(pm => pmMatchesFilter(pm.pm))
+        .map(flattenLebowski)
+        .filter(passesAvgTrendAndPercUp)
+        .map(pm => ({
+            ...pm,
+            isForPurchase: isForPurchase(pm.pmName)
+        }));
+
+
+    if (forPurchaseOnly) { 
+        pmPerfs = pmPerfs.filter(perf => perf.isForPurchase);
+        noHitTops = noHitTops.filter(perf => perf.isForPurchase);
+    }
+
+    return {
+        pmPerfs,
+        noHitTops
+    };
+};
+
+
 class TodaysStrategies extends Component {
     constructor() {
         super();
         this.state = {
-            filter: '',
-            forPurchaseOnly: true,
-            maxDash: '---'
+            settings: {}
         };
     }
-    toggleForPurchaseOnly = () => this.setState({ forPurchaseOnly: !this.state.forPurchaseOnly });
-    updateFilter = debounce(filter => this.setState({ filter }), 500);
-    filterChange = event => {
-        console.log(event.target.value);
-        this.updateFilter(event.target.value);
-    };
     investigatePm = pmName => {
         const { handlePageChange } = this.props;
         window.localStorage.setItem('TodaysStrategies', JSON.stringify({
@@ -132,186 +383,27 @@ class TodaysStrategies extends Component {
     }
     render() {
         const { investigatePm } = this;
-        let { pmPerfs, settings, predictionModels, pmsAnalyzed, pms, picks, relatedPrices } = this.props;
-        let { forPurchaseOnly, filter, maxDash } = this.state;
-
-        const pmMatchesFilter = pmName => filter
-            .split(',')
-            .every(str => 
-                (new RegExp(`(?<!!)${str}`)).test(pmName)   // no ! prefix
-            );
-
-        const forPurchasePMs = settings.forPurchase.map(line =>
-            line.substring(1, line.length - 1)
-        );
-        const isForPurchase = pmName => forPurchasePMs.includes(pmName);
-
-        maxDash = maxDash === '---' ? Number.POSITIVE_INFINITY : Number(maxDash);
-        
-        const flattenLebowski = ({
-            jsonAnalysis = {},
-            ...lebowski
-        }) => ({
-            pmName: lebowski.pm,
-            lebowskiAvg: lebowski.overallAvg,
-            lebowskiPercUp: lebowski.percUp,
-            jsonAvg: jsonAnalysis.avgTrend,
-            jsonPercUp: jsonAnalysis.percUp,
-            jsonCount: jsonAnalysis.count,
-        });
+        // let { pmPerfs, settings, predictionModels, pmsAnalyzed, pms, picks, relatedPrices } = this.props;
+        // let { forPurchaseOnly } = this.state.settings;
 
 
+        let {
+            pmPerfs,
+            noHitTops
+        } = processData(this.props, this.state.settings);
 
-        pmPerfs = pmPerfs
-            .filter(({ pmName }) => pmName.split('-').length <= maxDash + 1)
-            .filter(({ pmName }) => pmMatchesFilter(pmName))
-            .map(({ avgTrend, percUp, pmName, count }) => {
-                const foundLebowski = pmsAnalyzed.find(pm => pm.pm === pmName) || {};
-                return {
-                    ...flattenLebowski(foundLebowski),
-                    pmName,
-                    count,
-                    avgTrend,
-                    percUp,
-                    isForPurchase: isForPurchase(pmName)
-                };
-            });
-
-
-        pmPerfs = pmPerfs
-            .map((perf, index, arr) => ({
-                ...perf,
-                zScores: Object.keys(perf).reduce((acc, key) => ({
-                    ...acc,
-                    [key]: zScore(
-                        arr.map(o => o[key]).filter(Boolean),
-                        perf[key]
-                    )
-                }), {})
-            }))
-            .map((perf, index, arr) => {
-
-                const overallScores = [
-                    'lebowskiAvg',
-                    'jsonAvg'
-                ];
-
-                const sumKeys = obj => sum(
-                    Object.keys(obj.zScores)
-                        .filter(key => overallScores.includes(key))
-                        .map(key => obj.zScores[key])
-                );
-
-                return {
-                    ...perf,
-                    overallZScore: zScore(
-                        arr.map(
-                            sumKeys
-                        ),
-                        sumKeys(perf)
-                    ),
-                    // secondaryZScore: zScore(
-                    //     arr.map(
-                    //         obj => sum(Object.values(obj.zScores).slice(1)),
-                    //     ),
-                    //     sum(Object.values(perf.zScores).slice(1)),
-                    // )
-                };
-
-                
-            })
-            .map(perf => ({
-                ...perf,
-                ...(() => {
-                    const matchesPm = (stratMin, pm) => {
-                        const arrayOfArrays = pms[pm] || [];
-                        return arrayOfArrays.some(parts => {
-                            parts = Array.isArray(parts) ? parts : [parts];
-                            return parts.every(part => {
-                                part = part.toString();
-                                if (part.startsWith('!')) {
-                                    return !stratMin.includes(part.slice(1));
-                                }
-                                return (new RegExp(`(?<!!)${part}`)).test(stratMin);
-                            });
-                        });
-                        // return pms[pm] && pms[pm].every(part => strat === part || strat.includes(`${part}-`) || strat.includes(`-${part}`));
-                    };
-                    const matchingPicks = picks.filter(({ stratMin }) => matchesPm(stratMin, perf.pmName));;
-                    const byTicker = matchingPicks.reduce((acc, pick) => {
-                        pick.withPrices.forEach(({ ticker, price }) => {
-                            acc[ticker] = [
-                                ...acc[ticker] || [],
-                                price
-                            ];
-                        });
-                        return acc;
-                    }, {});
-                    const avgBuyPrices = mapObject(byTicker, arr => +avgArray(arr).toFixed(3));
-                    const tickersWithTrend = mapObject(avgBuyPrices, (avgBuyPrice, ticker) => {
-                        if (!relatedPrices[ticker]) console.log("wtf", ticker, perf.pmName);
-                        const { afterHoursPrice, lastTradePrice } = relatedPrices[ticker] || {};
-                        const nowPrice = afterHoursPrice || lastTradePrice;
-                        return {
-                            avgBuyPrice,
-                            nowPrice,
-                            trend: getTrend(nowPrice, avgBuyPrice)
-                        };
-                    });
-                    return {
-                        matchingPicks,
-                        tickersWithTrend
-                    };
-                })()
-            }));
-        
-        console.log({ pmsAnalyzed })
-        let noHitTops = pmsAnalyzed
-            .filter(({ pm }) => pm.split('-').length <= maxDash + 1)
-            .filter(pm => pmMatchesFilter(pm.pm))
-            .filter(pm => {
-                return !pmPerfs.find(pmPerf => pmPerf.pmName === pm.pm);
-            })
-            .map(flattenLebowski)
-            .map(pm => ({
-                ...pm,
-                isForPurchase: isForPurchase(pm.pmName)
-            }));
-
-
-        if (forPurchaseOnly) { 
-            pmPerfs = pmPerfs.filter(perf => perf.isForPurchase);
-            noHitTops = noHitTops.filter(perf => perf.isForPurchase);
-        }
-
-        console.log({ pmPerfs, noHitTops, filter })
+        // console.log({ pmPerfs, noHitTops, filter })
 
         return (
             <div style={{ padding: '15px' }}>
 
                 
                 <style>{`.react-hint__content { width: 300px }`}</style>
-                    
-                    
-                Filter: <input type="text" onChange={this.filterChange}/><br/>
-                MaxDash: 
-                <select onChange={evt => this.setState({ maxDash: evt.target.value })}>
-                    {
-                        [
-                            '---',
-                            ...Array(6).fill(0).map((v, i) => i)
-                        ].map(num => (
-                            <option value={num}>{num}</option>
-                        ))
-                    }
-                    
-                </select>
+                <Settings setSettings={settings => this.setState({ settings })}/>
+
+                <hr/>
 
                 <h2>Current PM Trends</h2>
-                <label>
-                    <input type="checkbox" checked={forPurchaseOnly} onChange={this.toggleForPurchaseOnly} />
-                    forPurchase PM's only
-                </label>
                 <TrendTable trends={pmPerfs} investigatePm={investigatePm} />
 
                 <hr/>
