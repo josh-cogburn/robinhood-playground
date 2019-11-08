@@ -14,7 +14,7 @@ module.exports = async (strategies) => {
       const withAvgTrend = foundPicks.map(outsidePick => {
         const { withPrices } = outsidePick;
         const withTrend = withPrices.map(pick => {
-          const { lastTradePrice } = relatedPrices[pick.ticker];
+          const { lastTradePrice } = relatedPrices[pick.ticker] || {};
           return {
             ...pick,
             lastTradePrice,
