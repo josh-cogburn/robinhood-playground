@@ -68,7 +68,12 @@ module.exports = async () => {
 
     // strlog({ buys});
 
-    const wouldBeDayTrade = ticker === 'KEG' || Boolean(mostRecentPurchase === 0);
+    const DONTSELL = [
+      'KEG',
+      'TCON'
+    ];
+
+    const wouldBeDayTrade = DONTSELL.includes(DONTSELL)|| Boolean(mostRecentPurchase === 0);
     return {
       ...position,
       hold,
