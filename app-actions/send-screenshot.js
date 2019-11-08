@@ -45,7 +45,7 @@ const sendScreenshot = async numDays => {
 module.exports = async (numDays = 1) => {
 
   await sendScreenshot(numDays);
-  if ((new Date()).getDay() === 4 && numDays === 1) {
+  if ((new Date()).getDay() === 5 && numDays === 1) {
     await sendScreenshot(5);
   }
   

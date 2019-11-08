@@ -108,6 +108,7 @@ class Settings extends React.Component {
                         maxValue={100}
                         minValue={1}
                         step={1}
+                        style={{ display: 'inline-block' }}
                         // formatLabel={value => value.toFixed(2)}
                         value={this.state.minPercUp}
                         onChange={minPercUp => debounce(this.setState({ minPercUp }), 500)}
@@ -121,6 +122,7 @@ class Settings extends React.Component {
                         maxValue={20}
                         minValue={-100}
                         step={1}
+                        style={{ display: 'inline-block' }}
                         // formatLabel={value => value.toFixed(2)}
                         value={this.state.minAvgTrend}
                         onChange={debounce(minAvgTrend => this.setState({ minAvgTrend }), 500)}
@@ -230,7 +232,7 @@ const processData = (props, state) => {
     const passesAvgTrendAndPercUp = ({ lebowskiAvg, jsonAvg, lebowskiPercUp, jsonPercUp }) => {
         const avgTrend = avgArray([lebowskiAvg, jsonAvg].filter(Boolean));
         const avgPercUp = avgArray([lebowskiPercUp, jsonPercUp].filter(Boolean));
-        return avgTrend > minAvgTrend && avgPercUp > minPercUp;
+        return avgTrend >= minAvgTrend && avgPercUp >= minPercUp;
     };
 
 
