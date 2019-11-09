@@ -64,19 +64,13 @@ module.exports = async (daysBack = 5, filterStr = '') => {
 
       const trends = Object.values(dateObj);
       const vals = trends.map(t => t[key]);
-      const avg = avgArray(vals);
-
-      if (pm === 'sudden-drops-majorJump-down' && key === 'count') {
-        strlog({
-          trends,
-          vals,
-          avg
-        })
-      }
+      const analysisVal = key === 'count'
+        ? vals.reduce((acc, val) => acc + val, 0) / daysBack
+        : avgArray(vals);
 
       return {
         ...acc,
-        [key]: avg
+        [key]: analysisVal
       };
 
     }, {})
