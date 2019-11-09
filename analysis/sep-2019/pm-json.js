@@ -56,16 +56,22 @@ module.exports = async (daysBack = 5, filterStr = '') => {
       return b.metric - a.metric;
     });
 
-  strlog({fire});
-
+  strlog({byPm});
+  
   const analyzed = mapObject(
     byPm,
     (dateObj, pm) => ['avgTrend', 'percUp', 'count'].reduce((acc, key) => {
 
+      const firstDate = Object.keys(dateObj)[0];
+      const numDaysSince = sortedFiles.length - sortedFiles.indexOf(firstDate);
+      console.log({
+        firstDate,
+        numDaysSince
+      })
       const trends = Object.values(dateObj);
       const vals = trends.map(t => t[key]);
       const analysisVal = key === 'count'
-        ? vals.reduce((acc, val) => acc + val, 0) / daysBack
+        ? vals.reduce((acc, val) => acc + val, 0) / numDaysSince
         : avgArray(vals);
 
       return {
