@@ -79,7 +79,9 @@ module.exports = async (daysBack = 5, filterStr = '') => {
         [key]: analysisVal
       };
 
-    }, {})
+    }, {
+      daysCount: Object.keys(dateObj)
+    })
   )
 
   strlog({ analyzed });

@@ -46,13 +46,6 @@ const calcBgColor = perf => {
     // intensityOffset += extraBoost;
 
     let intensity = basis ? MIN_OPACITY + intensityOffset : MAX_OPACITY - intensityOffset;
-
-    if (perf.pmName === 'rsi-shouldWatchout-firstAlert-rsilt5-dinner') {
-console.log({ goodBad, basis, intensityOffset })
-    console.log({ intensity})
-    }
-    
-
     return `rgba(${color},${intensity})`;
 };
 
@@ -152,6 +145,7 @@ const TrendTable = ({ trends, investigatePm }) => (
             <th>json avg</th>
             <th>json perc up</th>
             <th>json count</th>
+            <th>json dayCount</th>
             <th>star?</th>
         </thead>
         <tbody>
@@ -169,6 +163,7 @@ const TrendTable = ({ trends, investigatePm }) => (
                             <td><TrendPerc value={perf.jsonAvg} /></td>
                             <td><TrendPerc value={perf.jsonPercUp} redAt={50} noPlus={true} round={true} /></td>
                             <td>{perf.jsonCount ? +perf.jsonCount.toFixed(2) : ''}</td>
+                            <td>{perf.jsonDayCount}</td>
                             <td>{perf.overallZScore > 2 && '🌠🌠🌠'}</td>  
                         </tr>
                 ))
@@ -227,6 +222,7 @@ const processData = (props, state) => {
         jsonAvg: jsonAnalysis.avgTrend,
         jsonPercUp: jsonAnalysis.percUp,
         jsonCount: jsonAnalysis.count,
+        jsonDayCount: jsonAnalysis.dayCount,
     });
 
     const passesAvgTrendAndPercUp = ({ lebowskiAvg, jsonAvg, lebowskiPercUp, jsonPercUp }) => {
