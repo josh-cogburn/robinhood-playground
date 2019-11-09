@@ -80,7 +80,7 @@ module.exports = async (daysBack = 5, filterStr = '') => {
       };
 
     }, {
-      daysCount: Object.keys(dateObj)
+      daysCount: Object.keys(dateObj).length
     })
   )
 
