@@ -11,10 +11,15 @@ module.exports = async () => {
 
   strlog({ lebowskiPms, pmJsonAnalysis})
 
-  return lebowskiPms.map(pmPerf => ({
-    ...pmPerf,
-    jsonAnalysis: pmJsonAnalysis[pmPerf.pm]
-  }))
+  return lebowskiPms
+    .map(pmPerf => ({
+      ...pmPerf,
+      jsonAnalysis: pmJsonAnalysis[pmPerf.pm]
+    }))
+    .map(pmPerf => ({
+      ...pmPerf,
+      min: Math.min(...Object.values(pmPerf.analyzedDates))
+    }))
 
 
 };

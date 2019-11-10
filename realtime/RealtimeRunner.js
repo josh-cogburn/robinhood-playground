@@ -101,14 +101,14 @@ module.exports = new (class RealtimeRunner {
       this.strategies.push(strategy);
     });
 
-    await this.collectionsAndHistoricals();
-
     if (disabled) {
       this.hasInit = true;
       return console.log('nope DISABLED');
     }
 
     console.log('INITING REALTIME RUNNER'); 
+
+    await this.collectionsAndHistoricals();
 
     const START_MIN = 5;
     regCronIncAfterSixThirty({

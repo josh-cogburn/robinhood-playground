@@ -146,6 +146,7 @@ const TrendTable = ({ trends, investigatePm }) => (
             <th>json perc up</th>
             <th>json count</th>
             <th>json daysCount</th>
+            <th>minValue</th>
             <th>star?</th>
         </thead>
         <tbody>
@@ -164,6 +165,7 @@ const TrendTable = ({ trends, investigatePm }) => (
                             <td><TrendPerc value={perf.jsonPercUp} redAt={50} noPlus={true} round={true} /></td>
                             <td>{perf.jsonCount ? +perf.jsonCount.toFixed(2) : ''}</td>
                             <td>{perf.jsonDaysCount}</td>
+                            <td><TrendPerc value={perf.min} /></td>
                             <td>{perf.overallZScore > 2 && '🌠🌠🌠'}</td>  
                         </tr>
                 ))
