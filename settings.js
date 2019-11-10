@@ -27,38 +27,102 @@ module.exports = {
     purchaseAmt: 9,
     forPurchase: [
 
+        ...`
+        // WITH TODAYTREND
+
+        // common
+        sudden-drops-majorJump-down20
+        sudden-drops-down30-straightDown60
+        sudden-drops-initial-down30-straightDown
+
+        // big dash
+        sudden-drops-!watchout-majorJump-initial
+        sudden-drops-watchout-dinner-down-!straightDown
+        sudden-drops-!watchout-brunch-down30-!straightDown
+
+
+        // sentiment
+        sudden-drops-down20-bullish
+        sudden-drops-down10-neutral
+        sudden-drops-dinner-neutral
+        sudden-drops-brunch-bullish
+
+
+        // NO TODAYTREND
+
+        sudden-drops-watchout-minorJump-brunch-down10
+        sudden-drops-down15-straightDown120
+        sudden-drops-lunch-down20
+        sudden-drops-majorJump-down10
+
+
+        // sentiment
+        sudden-drops-dinner-bullish
+        sudden-drops-initial-down20-bullish
+        sudden-drops-down10-straightDown-bullish
+        sudden-drops-down10-straightDown-bullish
+        sudden-drops-brunch-down15-bullish
+        sudden-drops-brunch-down10-bullish
+        sudden-drops-lunch-down10-bullish
+        sudden-drops-straightDown120-bullish
+
+        sudden-drops-mediumJump-straightDown30-neutral
+        sudden-drops-watchout-down10-neutral
+        sudden-drops-initial-down20-neutral
+        sudden-drops-mediumJump-down10-neutral
+        sudden-drops-!down-straightDown60-neutral
+
+        `
+            .split('\n')
+            .map(line => line.trim())
+            .filter(Boolean)
+            .filter(line => !line.startsWith('//'))
+            .map(pm => `[${pm}]`)
+
+
+
+
+
 
 
         // bullish
-        '[sudden-drops-down20-bullish]',
-        '[sudden-drops-straightDown120-bullish]',
-        '[sudden-drops-brunch-bullish]',
-        '[sudden-drops-down10-straightDown-bullish]',
+        // '[sudden-drops-down20-bullish]',
+        // '[sudden-drops-straightDown120-bullish]',
+        // '[sudden-drops-brunch-bullish]',
+        // '[sudden-drops-down10-straightDown-bullish]',
 
-        // neutral
-        '[sudden-drops-dinner-neutral]',
-        '[sudden-drops-straightDown90-neutral]',
-        '[sudden-drops-straightDown60-neutral]',
-        '[sudden-drops-mediumJump-down10-neutral]',
-        '[sudden-drops-down10-straightDown-neutral]',
-        '[sudden-drops-mediumJump-straightDown-neutral]',
-        '[sudden-drops-dinner-neutral]',
-        '[sudden-drops-down10-neutral]',
+        // // neutral
+        // '[sudden-drops-dinner-neutral]',
+        // '[sudden-drops-straightDown90-neutral]',
+        // '[sudden-drops-straightDown60-neutral]',
+        // '[sudden-drops-mediumJump-down10-neutral]',
+        // '[sudden-drops-down10-straightDown-neutral]',
+        // '[sudden-drops-mediumJump-straightDown-neutral]',
+        // '[sudden-drops-dinner-neutral]',
+        // '[sudden-drops-down10-neutral]',
 
-        // bearish
-        '[sudden-drops-watchout-down10-bearish]',
+        // // bearish
+        // '[sudden-drops-watchout-down10-bearish]',
 
-        // 
+        // // 
 
-        '[sudden-drops-majorJump-straightDown60]',
-        '[sudden-drops-!watchout-mediumJump-dinner-straightDown30]',
-        '[sudden-drops-!watchout-minorJump-lunch-straightDown]',
-        '[sudden-drops-brunch-down10-straightDown]',
-        '[sudden-drops-!watchout-minorJump-lunch-straightDown90]',
-        '[sudden-drops-!watchout-lunch-straightDown]',
-        '[sudden-drops-brunch-down10-straightDown]',
-        '[sudden-drops-watchout-lunch-down20]',
-        '[sudden-drops-lunch-straightDown90]',
+        // '[sudden-drops-majorJump-straightDown60]',
+        // '[sudden-drops-!watchout-mediumJump-dinner-straightDown30]',
+        // '[sudden-drops-!watchout-minorJump-lunch-straightDown]',
+        // '[sudden-drops-brunch-down10-straightDown]',
+        // '[sudden-drops-!watchout-minorJump-lunch-straightDown90]',
+        // '[sudden-drops-!watchout-lunch-straightDown]',
+        // '[sudden-drops-brunch-down10-straightDown]',
+        // '[sudden-drops-watchout-lunch-down20]',
+        // '[sudden-drops-lunch-straightDown90]',
+
+
+
+
+
+
+
+
 
 
 

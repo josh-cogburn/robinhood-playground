@@ -7,7 +7,7 @@ module.exports = async () => {
       const {
         overallAvg: lebAvg,
         percUp: lebPercUp,
-        jsonAnalysis: { daysCount, avgTrend, percUp }
+        jsonAnalysis: { daysCount, avgTrend, percUp } = {}
       } = perf;
       return [
         // lebowski perfs,
