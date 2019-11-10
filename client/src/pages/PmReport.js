@@ -145,7 +145,7 @@ const TrendTable = ({ trends, investigatePm }) => (
             <th>json avg</th>
             <th>json perc up</th>
             <th>json count</th>
-            <th>json dayCount</th>
+            <th>json daysCount</th>
             <th>star?</th>
         </thead>
         <tbody>
@@ -163,7 +163,7 @@ const TrendTable = ({ trends, investigatePm }) => (
                             <td><TrendPerc value={perf.jsonAvg} /></td>
                             <td><TrendPerc value={perf.jsonPercUp} redAt={50} noPlus={true} round={true} /></td>
                             <td>{perf.jsonCount ? +perf.jsonCount.toFixed(2) : ''}</td>
-                            <td>{perf.jsonDayCount}</td>
+                            <td>{perf.jsonDaysCount}</td>
                             <td>{perf.overallZScore > 2 && '🌠🌠🌠'}</td>  
                         </tr>
                 ))
@@ -222,7 +222,7 @@ const processData = (props, state) => {
         jsonAvg: jsonAnalysis.avgTrend,
         jsonPercUp: jsonAnalysis.percUp,
         jsonCount: jsonAnalysis.count,
-        jsonDayCount: jsonAnalysis.dayCount,
+        jsonDaysCount: jsonAnalysis.daysCount,
     });
 
     const passesAvgTrendAndPercUp = ({ lebowskiAvg, jsonAvg, lebowskiPercUp, jsonPercUp }) => {
