@@ -10,7 +10,7 @@ const getPositions = async () => {
     const { results: allPositions } = await Robinhood.nonzero_positions();
     const formattedPositions = allPositions.map(pos => ({
         ...pos,
-        average_buy_price: Number(pos.average_buy_price),
+        avgEntry: Number(pos.average_buy_price),
         quantity: Number(pos.quantity)
     }));
     const atLeastOneShare = formattedPositions.filter(pos => pos.quantity);
@@ -53,7 +53,7 @@ const getDetailedNonZero = async () => {
 
     const withStSent = await mapLimit(withPercTotal, 3, async pos => ({
         ...pos,
-        stSent: (await getStSentiment(pos.ticker) || {}).bullBearScore
+        stSent: await getStSentiment(pos.ticker) || {}
     }));
 
     const withShouldSell = withStSent.map(pos => ({

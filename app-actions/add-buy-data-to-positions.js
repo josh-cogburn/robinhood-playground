@@ -68,7 +68,7 @@ const addBuyDateToPositions = async nonzero => {
 
     let withAge = withBuys.map(pos => ({
         ...pos,
-        dayAge: calcDayAgeFromPosition(pos)
+        daysOld: calcDayAgeFromPosition(pos)
     }));
 
     return withAge;
