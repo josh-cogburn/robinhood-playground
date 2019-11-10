@@ -225,6 +225,7 @@ const processData = (props, state) => {
         jsonPercUp: jsonAnalysis.percUp,
         jsonCount: jsonAnalysis.count,
         jsonDaysCount: jsonAnalysis.daysCount,
+        min: lebowski.min
     });
 
     const passesAvgTrendAndPercUp = ({ lebowskiAvg, jsonAvg, lebowskiPercUp, jsonPercUp }) => {
