@@ -61,6 +61,18 @@ module.exports = {
             sudden-drops-brunch-bullish
 
 
+            // from pm page
+            sudden-drops-watchout-minorJump-dinner-down-!straightDown
+            sudden-drops-hotSt
+            sudden-drops-majorJump-!down-!straightDown
+            sudden-drops-watchout-dinner-down15-!straightDown
+            sudden-drops-!watchout-majorJump-initial-!straightDown
+            sudden-drops-minorJump-brunch-bullish
+            sudden-drops-mediumJump-down20-straightDown30
+            sudden-drops-watchout-mediumJump-down10
+            sudden-drops-dinner-straightDown60-neutral
+
+
 
 
         // NO TODAYTREND
