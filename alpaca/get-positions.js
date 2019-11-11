@@ -73,7 +73,7 @@ module.exports = async () => {
       'TCON'
     ];
 
-    const wouldBeDayTrade = DONTSELL.includes(DONTSELL)|| Boolean(mostRecentPurchase === 0);
+    const wouldBeDayTrade = DONTSELL.includes(ticker)|| Boolean(mostRecentPurchase === 0);
     return {
       ...position,
       hold,
