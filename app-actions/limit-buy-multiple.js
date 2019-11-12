@@ -64,19 +64,20 @@ module.exports = async ({
                     quantity,
                     limitPrice: pickPrice * 1.03,
                     timeoutSeconds: 60 * 2,
-                    fallbackToMarket: true
+                    fallbackToMarket: false
                 }),
                 limitEven: alpacaLimitBuy({
                     ticker,
                     quantity,
                     limitPrice: pickPrice * 1.003,
                     timeoutSeconds: 60 * 5,
-                    fallbackToMarket: true
+                    fallbackToMarket: false
                 }),
                 attempt: alpacaAttemptBuy({
                     ticker,
                     quantity,
-                    pickPrice
+                    pickPrice,
+                    fallbackToMarket: false
                 })
             };
             

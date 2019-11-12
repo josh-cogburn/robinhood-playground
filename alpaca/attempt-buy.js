@@ -35,7 +35,7 @@ const calcLimitPrice = async ({ ticker, pickPrice, attemptNum }) => {
     return finalPrice;
 };
 
-module.exports = async ({ ticker, quantity, pickPrice, strategy }) => {
+module.exports = async ({ ticker, quantity, pickPrice, strategy, fallbackToMarket }) => {
 
     // limit
     for (let attemptNum of Array(MAX_ATTEMPTS).fill(0).map((v, i) => i)) {
@@ -59,6 +59,7 @@ module.exports = async ({ ticker, quantity, pickPrice, strategy }) => {
         }
     }
 
+    if (!fallbackToMarket) return console.log(`UNABLE TO ATTEMPT BUY ${ticker} and not falling back to market`)
 
     console.log('unable to limit buy, falling back to market buy', ticker);
     return {
