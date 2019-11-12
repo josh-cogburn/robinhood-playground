@@ -72,6 +72,14 @@ module.exports = {
             sudden-drops-watchout-mediumJump-down10
             sudden-drops-dinner-straightDown60-neutral
 
+            // tuesday
+
+            sudden-drops-watchout-mediumJump-initial-down10-!straightDown
+            sudden-drops-!watchout-mediumJump-dinner
+            sudden-drops-minorJump-lunch-down10-straightDown90
+            sudden-drops-watchout-down10-straightDown
+            sudden-drops-!watchout-majorJump-bearish
+
 
 
 
