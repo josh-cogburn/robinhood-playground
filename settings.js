@@ -79,7 +79,8 @@ module.exports = {
             sudden-drops-minorJump-lunch-down10-straightDown90
             sudden-drops-watchout-down10-straightDown
             sudden-drops-!watchout-majorJump-bearish
-
+            sudden-drops-watchout-lunch-neutral
+            sudden-drops-lunch-down10-straightDown90
 
 
 
