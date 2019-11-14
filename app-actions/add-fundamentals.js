@@ -33,6 +33,8 @@ module.exports = async (trend) => {
         10
     );
 
+    strlog({ fundamentals})
+
     fundamentals
         .map(data => {
             [ 

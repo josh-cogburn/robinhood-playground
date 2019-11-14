@@ -24,6 +24,14 @@ const getTickersBetween = async (min, max) => {
   }));
 };
 
+const addQuotesToTickers = async tickers => {
+  const tickQuotes = await lookupMultiple(tickers, true);
+  return tickers.map(ticker => ({
+    ticker,
+    quote: tickQuotes[ticker]
+  }));
+};
+
 
 const sortAndCut = (arr, sortKey, num) => {
   return arr
@@ -40,17 +48,24 @@ const sortAndCut = (arr, sortKey, num) => {
 
 
 const runScan = async ({
+
+  // ticker filters
   minPrice = 0.5,
   maxPrice = 8,
   minVolume = Number.NEGATIVE_INFINITY,
   maxVolume = Number.POSITIVE_INFINITY,
+  tickers,
+
   filterFn = () => true,
+  minDailyRSI = Number.NEGATIVE_INFINITY,
   includeStSent = true,
   count = COUNT,
   excludeTickers = [],
   afterHoursReset = true
 } = {}) => {
-  const tickers = (await getTickersBetween(minPrice, maxPrice)).map(buy => ({
+
+  tickers = tickers ? await addQuotesToTickers(tickers) : await getTickersBetween(minPrice, maxPrice);
+  tickers = tickers.map(buy => ({
     ...buy,
     computed: {}
   })).filter(({ ticker }) => !excludeTickers.includes(ticker));
@@ -198,9 +213,11 @@ const runScan = async ({
   
 
 
-  const theGoodStuff = volumeTickers.slice(0, count);
+  let theGoodStuff = volumeTickers.slice(0, count);
   const withDailyHistoricals = await addDailyHistoricals(theGoodStuff);
-  const withDailyRSI = addDailyRSI(withDailyHistoricals);
+  const withDailyRSI = addDailyRSI(withDailyHistoricals)
+  
+  theGoodStuff = withDailyRSI.filter(({ computed: { dailyRSI } }) => dailyRSI >= minDailyRSI);
 
     
   console.log({

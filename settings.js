@@ -28,85 +28,132 @@ module.exports = {
     forPurchase: [
 
         ...`
+
+
+
+
+        // only !watchout 's
+
+        sudden-drops-!watchout-majorJump
+        sudden-drops-!watchout-majorJump
+        
+        sudden-drops-!watchout-majorJump-down
+        sudden-drops-!watchout-majorJump-!straightDown
+        
+        sudden-drops-!watchout-down15-neutral
+        sudden-drops-!watchout-down10-neutral
+        sudden-drops-!watchout-down-neutral
+
+        sudden-drops-!watchout-brunch-bullish
+        sudden-drops-!watchout-down-neutral
+
+
+
+        sudden-drops-!watchout-minorJump-initial-down10-straightDown60
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         // WITH TODAYTREND
 
 
-            // wow solid min values!
-            // THE TRUE GOLD
-            sudden-drops-!watchout-majorJump-initial-down
-            sudden-drops-!watchout-majorJump-initial-down
-            sudden-drops-minorJump-brunch-down10-!straightDown
-            sudden-drops-minorJump-brunch-down10-!straightDown
-            sudden-drops-watchout-dinner-down-!straightDown
-            sudden-drops-watchout-dinner-down-!straightDown
-            sudden-drops-watchout-initial-down10-straightDown
-            sudden-drops-watchout-initial-down10-straightDown
+        //     // wow solid min values!
+        //     // THE TRUE GOLD
+        //     sudden-drops-!watchout-majorJump-initial-down
+        //     sudden-drops-!watchout-majorJump-initial-down
+        //     sudden-drops-minorJump-brunch-down10-!straightDown
+        //     sudden-drops-minorJump-brunch-down10-!straightDown
+        //     sudden-drops-watchout-dinner-down-!straightDown
+        //     sudden-drops-watchout-dinner-down-!straightDown
+        //     sudden-drops-watchout-initial-down10-straightDown
+        //     sudden-drops-watchout-initial-down10-straightDown
 
 
-            // common
-            sudden-drops-majorJump-down20
-            sudden-drops-down30-straightDown60
-            sudden-drops-initial-down30-straightDown
+        //     // common
+        //     sudden-drops-majorJump-down20
+        //     sudden-drops-down30-straightDown60
+        //     sudden-drops-initial-down30-straightDown
 
-            // big dash
-            sudden-drops-!watchout-majorJump-initial
-            sudden-drops-watchout-dinner-down-!straightDown
-            sudden-drops-!watchout-brunch-down30-!straightDown
-
-
-            // sentiment
-            sudden-drops-down20-bullish
-            sudden-drops-down10-neutral
-            sudden-drops-dinner-neutral
-            sudden-drops-brunch-bullish
+        //     // big dash
+        //     sudden-drops-!watchout-majorJump-initial
+        //     sudden-drops-watchout-dinner-down-!straightDown
+        //     sudden-drops-!watchout-brunch-down30-!straightDown
 
 
-            // from pm page
-            sudden-drops-watchout-minorJump-dinner-down-!straightDown
-            sudden-drops-hotSt
-            sudden-drops-majorJump-!down-!straightDown
-            sudden-drops-watchout-dinner-down15-!straightDown
-            sudden-drops-!watchout-majorJump-initial-!straightDown
-            sudden-drops-minorJump-brunch-bullish
-            sudden-drops-mediumJump-down20-straightDown30
-            sudden-drops-watchout-mediumJump-down10
-            sudden-drops-dinner-straightDown60-neutral
-
-            // tuesday
-
-            sudden-drops-watchout-mediumJump-initial-down10-!straightDown
-            sudden-drops-!watchout-mediumJump-dinner
-            sudden-drops-minorJump-lunch-down10-straightDown90
-            sudden-drops-watchout-down10-straightDown
-            sudden-drops-!watchout-majorJump-bearish
-            sudden-drops-watchout-lunch-neutral
-            sudden-drops-lunch-down10-straightDown90
+        //     // sentiment
+        //     sudden-drops-down20-bullish
+        //     sudden-drops-down10-neutral
+        //     sudden-drops-dinner-neutral
+        //     sudden-drops-brunch-bullish
 
 
+        //     // from pm page
+        //     sudden-drops-watchout-minorJump-dinner-down-!straightDown
+        //     sudden-drops-hotSt
+        //     sudden-drops-majorJump-!down-!straightDown
+        //     sudden-drops-watchout-dinner-down15-!straightDown
+        //     sudden-drops-!watchout-majorJump-initial-!straightDown
+        //     sudden-drops-minorJump-brunch-bullish
+        //     sudden-drops-mediumJump-down20-straightDown30
+        //     sudden-drops-watchout-mediumJump-down10
+        //     sudden-drops-dinner-straightDown60-neutral
 
-        // NO TODAYTREND
+        //     // tuesday
 
-            sudden-drops-watchout-minorJump-brunch-down10
-            sudden-drops-down15-straightDown120
-            sudden-drops-lunch-down20
-            sudden-drops-majorJump-down10
+        //     sudden-drops-watchout-mediumJump-initial-down10-!straightDown
+        //     sudden-drops-!watchout-mediumJump-dinner
+        //     sudden-drops-minorJump-lunch-down10-straightDown90
+        //     sudden-drops-watchout-down10-straightDown
+        //     sudden-drops-!watchout-majorJump-bearish
+        //     sudden-drops-watchout-lunch-neutral
+        //     sudden-drops-lunch-down10-straightDown90
+
+        //     // wednesday
+        //     sudden-drops-mediumJump-lunch-down20-straightDown
+        //     sudden-drops-mediumJump-lunch-down20
+        //     sudden-drops-watchout-down10-straightDown30
+        //     sudden-drops-mediumJump-!down-straightDown
+        //     sudden-drops-lunch-straightDown60
+        //     sudden-drops-watchout-brunch-down10-straightDown30
+        //     sudden-drops-down15-neutral
 
 
-            // sentiment
-            sudden-drops-dinner-bullish
-            sudden-drops-initial-down20-bullish
-            sudden-drops-down10-straightDown-bullish
-            sudden-drops-down10-straightDown-bullish
-            sudden-drops-brunch-down15-bullish
-            sudden-drops-brunch-down10-bullish
-            sudden-drops-lunch-down10-bullish
-            sudden-drops-straightDown120-bullish
+        // // NO TODAYTREND
 
-            sudden-drops-mediumJump-straightDown30-neutral
-            sudden-drops-watchout-down10-neutral
-            sudden-drops-initial-down20-neutral
-            sudden-drops-mediumJump-down10-neutral
-            sudden-drops-!down-straightDown60-neutral
+        //     sudden-drops-watchout-minorJump-brunch-down10
+        //     sudden-drops-down15-straightDown120
+        //     sudden-drops-lunch-down20
+        //     sudden-drops-majorJump-down10
+
+
+        //     // sentiment
+        //     sudden-drops-dinner-bullish
+        //     sudden-drops-initial-down20-bullish
+        //     sudden-drops-down10-straightDown-bullish
+        //     sudden-drops-down10-straightDown-bullish
+        //     sudden-drops-brunch-down15-bullish
+        //     sudden-drops-brunch-down10-bullish
+        //     sudden-drops-lunch-down10-bullish
+        //     sudden-drops-straightDown120-bullish
+
+        //     sudden-drops-mediumJump-straightDown30-neutral
+        //     sudden-drops-watchout-down10-neutral
+        //     sudden-drops-initial-down20-neutral
+        //     sudden-drops-mediumJump-down10-neutral
+        //     sudden-drops-!down-straightDown60-neutral
 
 
 
