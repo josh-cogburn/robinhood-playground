@@ -36,6 +36,7 @@ module.exports = {
 
         sudden-drops-!watchout-majorJump
         sudden-drops-!watchout-majorJump
+        sudden-drops-!watchout-majorJump
         
         sudden-drops-!watchout-majorJump-down
         sudden-drops-!watchout-majorJump-!straightDown
@@ -64,6 +65,23 @@ module.exports = {
         overnight-drops-!watchout-majorJump-!down
         sudden-drops-!watchout-majorJump-initial
         sudden-drops-!watchout-straightDown60-neutral
+
+
+
+
+        sudden-drops-!watchout-brunch-down10-straightDown60
+        sudden-drops-!watchout-dinner-down15-!straightDown
+        sudden-drops-!watchout-dinner-down15
+        sudden-drops-!watchout-minorJump-down15-straightDown30
+        sudden-drops-!watchout-mediumJump-brunch-!down
+        sudden-drops-!watchout-majorJump-dinner-down20
+        overnight-drops-!watchout-initial-down15-straightDown120
+        sudden-drops-!watchout-initial-down15-straightDown120
+        sudden-drops-!watchout-majorJump-down10
+        sudden-drops-!watchout-down30-straightDown60
+        sudden-drops-!watchout-majorJump-down10-straightDown
+        sudden-drops-!watchout-dinner-bullish
+        
 
 
 
