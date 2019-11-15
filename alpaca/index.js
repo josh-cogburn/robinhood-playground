@@ -58,7 +58,14 @@ client.onOrderUpdate(async data => {
       quantity: positionQuantity
     } = position;
     const closedPosition = Boolean(positionQuantity === filled_qty);
-    const deletedHold = closedPosition ? await Holds.findOneAndDelete({ ticker }) : null;
+
+    const theHold = await Holds.registerSell(
+      ticker,
+      filled_avg_price,
+      filled_qty
+    );
+    
+    const deletedHold = closedPosition ? (await theHold.closePosition()).toObject() : null;
     const sellPrice = filled_avg_price;
     const returnDollars = (sellPrice - buyPrice) * qty;
     const returnPerc = getTrend(sellPrice, buyPrice);
