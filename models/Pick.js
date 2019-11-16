@@ -12,7 +12,8 @@ const schema = new Schema({
     }],
     data: Schema.Types.Mixed,
     keys: Schema.Types.Mixed,
-    isRecommended: Schema.Types.Boolean
+    isRecommended: Schema.Types.Boolean,
+    pmsHit: [String]
 });
 
 schema.statics.getUniqueDates = async function() {

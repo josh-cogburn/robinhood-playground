@@ -107,13 +107,18 @@ module.exports = {
         sudden-drops-!watchout-mediumJump-lunch-!straightDown
         sudden-drops-!watchout-brunch-down30
         sudden-drops-!watchout-brunch-down30
-
+        
+        sudden-drops-!watchout-majorJump-down20
+        sudden-drops-!watchout-majorJump-down20
+        sudden-drops-!watchout-mediumJump-down20-straightDown30
+        sudden-drops-!watchout-mediumJump-down20-straightDown30
 
 
         /// not !watchout
         sudden-drops-hotSt
         sudden-drops-lunch-down20
         sudden-drops-majorJump-down20
+        sudden-drops-down20-bullish
         
 
 
