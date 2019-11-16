@@ -40,8 +40,9 @@ module.exports = {
         
         sudden-drops-!watchout-majorJump-down
         sudden-drops-!watchout-majorJump-!straightDown
+        sudden-drops-!watchout-majorJump-down10-!straightDown
         sudden-drops-!watchout-dinner-straightDown60
-
+        
         sudden-drops-!watchout-majorJump-neutral
         sudden-drops-!watchout-majorJump-bullish
         
@@ -90,15 +91,30 @@ module.exports = {
         sudden-drops-!watchout-down20-bullish
         sudden-drops-!watchout-lunch-neutral
         sudden-drops-!watchout-brunch-neutral
+        sudden-drops-!watchout-dinner-neutral
         sudden-drops-!watchout-straightDown120-bullish
         
 
+        sudden-drops-!watchout-lunch-down-straightDown30
+        sudden-drops-!watchout-lunch-down10-straightDown
+        sudden-drops-!watchout-mediumJump-initial-down10-!straightDown
+
+        // creme found using new filters
+        sudden-drops-!watchout-majorJump-down-straightDown
+        sudden-drops-!watchout-majorJump-down-straightDown
+        sudden-drops-!watchout-mediumJump-!down-straightDown
+        sudden-drops-!watchout-mediumJump-!down-straightDown
+        sudden-drops-!watchout-mediumJump-lunch-!straightDown
+        sudden-drops-!watchout-brunch-down30
+        sudden-drops-!watchout-brunch-down30
 
 
 
-
-
-
+        /// not !watchout
+        sudden-drops-hotSt
+        sudden-drops-lunch-down20
+        sudden-drops-majorJump-down20
+        
 
 
 

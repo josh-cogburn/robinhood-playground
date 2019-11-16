@@ -1,0 +1,20 @@
+.settings {
+  /* color: blue; */
+}
+
+.settings > * {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  /* margin: 20px 0; */
+}
+
+.settings label {
+  width: 300px;
+  padding-right: 30px;
+}
+
+.settings .input-range {
+  margin: 30px 0;
+}

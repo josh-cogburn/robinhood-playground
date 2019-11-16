@@ -6,6 +6,7 @@ import InputRange from 'react-input-range';
 import Pick from '../components/Pick';
 import TrendPerc from '../components/TrendPerc';
 import { debounce, mapObject } from 'underscore';
+import './PmReport.css';
 
 const calcBgColor = perf => {
     // console.log({
@@ -66,7 +67,9 @@ class Settings extends React.Component {
         forPurchaseOnly: true,
         maxDash: '---',
         minAvgTrend: -100,
-        minPercUp: 1
+        minPercUp: 1,
+        minDaysCount: 0,
+        minMinVal: -30
     }
     toggleForPurchaseOnly = () => this.setState({ forPurchaseOnly: !this.state.forPurchaseOnly });
     updateFilter = filter => this.setState({ filter });
@@ -80,10 +83,14 @@ class Settings extends React.Component {
     render() {
         this.debouncedUpdate();
         return (
-            <div>
-                Filter: <input type="text" onChange={this.filterChange}/><br/>
-                MaxDash: 
-                <select onChange={evt => this.setState({ maxDash: evt.target.value })}>
+            <div className="settings">
+                <div>
+                    <label>Filter:</label>
+                    <input type="text" onChange={this.filterChange}/>
+                </div>
+                <div>
+                    <label>MaxDash:</label>
+                    <select onChange={evt => this.setState({ maxDash: evt.target.value })}>
                     {
                         [
                             '---',
@@ -92,11 +99,10 @@ class Settings extends React.Component {
                             <option value={num}>{num}</option>
                         ))
                     }
-                    
-                </select>
-                <br/>
-                <label>
-                    minimum percUp
+                    </select>
+                </div>
+                <div>
+                    <label>minimum percUp</label>
                     <InputRange
                         maxValue={100}
                         minValue={1}
@@ -107,10 +113,9 @@ class Settings extends React.Component {
                         onChange={minPercUp => debounce(this.setState({ minPercUp }), 500)}
                         // onChange={value => console.log(value)} 
                     />
-                </label>
-                <br/>
-                <label>
-                    minimum avgTrend
+                </div>
+                <div>
+                    <label>minimum avgTrend</label>
                     <InputRange
                         maxValue={20}
                         minValue={-100}
@@ -121,8 +126,33 @@ class Settings extends React.Component {
                         onChange={debounce(minAvgTrend => this.setState({ minAvgTrend }), 500)}
                         // onChange={value => console.log(value)} 
                     />
-                </label>
-                <br/>
+                </div>
+                <div>
+                    <label>minimum daysCount</label>
+                    <InputRange
+                        maxValue={20}
+                        minValue={0}
+                        step={1}
+                        style={{ display: 'inline-block' }}
+                        // formatLabel={value => value.toFixed(2)}
+                        value={this.state.minDaysCount}
+                        onChange={debounce(minDaysCount => this.setState({ minDaysCount }), 500)}
+                        // onChange={value => console.log(value)} 
+                    />
+                </div>
+                <div>
+                    <label>minimum minVal</label>
+                    <InputRange
+                        maxValue={10}
+                        minValue={-30}
+                        step={1}
+                        style={{ display: 'inline-block' }}
+                        // formatLabel={value => value.toFixed(2)}
+                        value={this.state.minMinVal}
+                        onChange={debounce(minMinVal => this.setState({ minMinVal }), 500)}
+                        // onChange={value => console.log(value)} 
+                    />
+                </div>
                 <label>
                     <input type="checkbox" checked={this.state.forPurchaseOnly} onChange={this.toggleForPurchaseOnly} />
                     forPurchase PM's only
@@ -196,7 +226,9 @@ const processData = (props, state) => {
         filter, 
         maxDash,
         minAvgTrend,
-        minPercUp
+        minPercUp,
+        minDaysCount,
+        minMinVal
     } = state; 
 
 
@@ -228,12 +260,23 @@ const processData = (props, state) => {
         min: lebowski.min
     });
 
-    const passesAvgTrendAndPercUp = ({ lebowskiAvg, jsonAvg, lebowskiPercUp, jsonPercUp }) => {
+    const passesAvgTrendAndPercUp = ({ 
+        lebowskiAvg, 
+        jsonAvg, 
+        lebowskiPercUp, 
+        jsonPercUp, 
+        jsonDaysCount,
+        min
+    }) => {
         const avgTrend = avgArray([lebowskiAvg, jsonAvg].filter(Boolean));
         const avgPercUp = avgArray([lebowskiPercUp, jsonPercUp].filter(Boolean));
-        return avgTrend >= minAvgTrend && avgPercUp >= minPercUp;
+        return [
+            avgTrend >= minAvgTrend,
+            avgPercUp >= minPercUp,
+            jsonDaysCount >= minDaysCount,
+            min >= minMinVal
+        ].every(Boolean);
     };
-
 
     pmPerfs = pmPerfs
         .filter(({ pmName }) => pmName.split('-').length <= maxDash + 1)
