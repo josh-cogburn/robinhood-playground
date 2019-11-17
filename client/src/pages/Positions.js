@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import getTrend from '../utils/get-trend';
-import { avgArray } from '../utils/array-math';
+import { avgArray, sumArray } from '../utils/array-math';
 import { mapObject, uniq } from 'underscore';
 
 import Pick from '../components/Pick';
@@ -21,6 +21,40 @@ const tooltipStr = ({ buyStrategies }) =>
 const PositionSection = ({ relatedPrices, positions, name, admin }) => {
 
     console.log({ name, positions });
+
+
+    positions = positions.map(position => {
+        const { avgEntry, hold: { sells = [], buys = [] } = {}} = position;
+
+        const numSharesSold = sumArray(
+            buys.map(buy => buy.quantity)
+        );
+        const individualize = array => {
+            const grouped = array.map(({ quantity, fillPrice }) => 
+                (new Array(quantity)).fill(fillPrice)
+            );
+            // flatten
+            return grouped.reduce((acc, arr) => [...acc, ...arr], []);
+        };
+
+        const allSells = individualize(sells);
+        // const allBuys = individualize(buys);
+        const sumSells = sumArray(allSells);
+
+        console.log({ allSells });
+        const avgSellPrice = avgArray(
+            allSells
+        );
+        const sellReturnPerc = getTrend(avgSellPrice, avgEntry);
+        const sellReturnDollars = ((numSharesSold + 100) / 100) * sellReturnPerc;
+        return {
+            ...position,
+            avgSellPrice,
+            sellReturnPerc,
+            sellReturnDollars
+        };
+    });
+
     
     const toDisplay = {
         // 'days old': 'dayAge',
@@ -57,9 +91,16 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
         wouldBeDayTrade: pos => pos.wouldBeDayTrade ? 'true' : '',
         ...admin ? {
             'avg': ({ avgEntry, actualEntry }) => (
-                <span {...actualEntry && { 'data-custom': true, 'data-tooltip-str': actualEntry }}>{avgEntry}{actualEntry && '*'}</span>
+                <span {...actualEntry && { 'data-custom': true, 'data-tooltip-str': actualEntry }}>{Number(avgEntry).toFixed(2)}{actualEntry && '*'}</span>
             ),
             'current': 'currentPrice',
+            'avgSellPrice': ({ avgSellPrice }) => !isNaN(avgSellPrice) ? +avgSellPrice.toFixed(2) : '---',
+            'sellReturnPerc': ({ sellReturnPerc }) => !isNaN(sellReturnPerc) ? (
+                <TrendPerc value={sellReturnPerc} />
+            ) : '---',
+            'sellReturnDollars': ({ sellReturnDollars }) => !isNaN(sellReturnDollars) ? (
+                <TrendPerc value={sellReturnDollars} dollar={true} />
+            ) : '---'
         } : {}
     };
 
