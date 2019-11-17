@@ -119,6 +119,14 @@ module.exports = {
         sudden-drops-lunch-down20
         sudden-drops-majorJump-down20
         sudden-drops-down20-bullish
+
+
+
+        // fine a couple watchouts
+        sudden-drops-watchout-brunch-down10
+        sudden-drops-watchout-dinner-down-!straightDown
+        sudden-drops-watchout-initial-down10-straightDown
+        
         
 
 
