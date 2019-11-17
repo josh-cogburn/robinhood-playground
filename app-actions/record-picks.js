@@ -30,7 +30,22 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
     const hits = await pmsHit(null, stratMin);
     const isRecommended = hits.includes('forPurchase'); // because forPurchase === isRecommended now!
 
-    if (!strategy.includes('cheapest-picks')) withPrices = withPrices.slice(0, 3);  // take only 3 picks
+
+    const multiplier = isRecommended ? Math.max(
+        1,
+        (
+            forPurchase.filter(line => {
+                const stratMatch = line === stratMin;
+                const pmName = line.substring(1, line.length - 1);
+                const pmMatch = hits.includes(pmName);
+                return stratMatch || pmMatch;
+            }).length
+        )
+    ) : null;
+
+    console.log({ multiplier});
+
+
 
     withPrices = withPrices.filter(tickerPrice => !!tickerPrice);
     if (!withPrices.length) {
@@ -53,7 +68,8 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
         data,
         isRecommended,
         ...isRecommended && {
-            pmsHit: hits
+            pmsHit: hits,
+            multiplier
         }
     };
 
@@ -78,21 +94,10 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
             // forPurchase
             if (isRecommended) {
                 console.log('strategy enabled: ', stratMin, 'purchasing');
-                const forPurchaseMultiplier = Math.max(
-                    1,
-                    (
-                        forPurchase.filter(line => {
-                            const stratMatch = line === stratMin;
-                            const pmName = line.substring(1, line.length - 1);
-                            const pmMatch = hits.includes(pmName);
-                            return stratMatch || pmMatch;
-                        }).length
-                    )
-                );
-                console.log({ forPurchaseMultiplier});
+                
                 await purchaseStocks({
                     strategy,
-                    multiplier: !disableMultipliers ? forPurchaseMultiplier : 1,
+                    multiplier: !disableMultipliers ? multiplier : 1,
                     min,
                     withPrices,
                     PickDoc
