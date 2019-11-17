@@ -18,7 +18,7 @@ module.exports = async () => {
     }))
     .map(pmPerf => ({
       ...pmPerf,
-      min: Math.min(...Object.values(pmPerf.analyzedDates))
+      min: Math.min(...Object.values(pmPerf.analyzedDates).filter(Boolean))
     }))
 
 
