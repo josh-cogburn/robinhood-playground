@@ -120,10 +120,10 @@ const pages = [
         label: "Strategies",
         component: TodaysStrategies,
     },
-    {
-        label: 'Analysis',
-        component: Analysis,
-    },
+    // {
+    //     label: 'Analysis',
+    //     component: Analysis,
+    // },
     {
         label: 'Scan',
         component: Scan
