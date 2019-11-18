@@ -30,20 +30,19 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
     const hits = await pmsHit(null, stratMin);
     const isRecommended = hits.includes('forPurchase'); // because forPurchase === isRecommended now!
 
+    const forPurchasePms = isRecommended ? forPurchase.filter(line => {
+        const stratMatch = line === stratMin;
+        const pmName = line.substring(1, line.length - 1);
+        const pmMatch = hits.includes(pmName);
+        return stratMatch || pmMatch;   // this doesnt make sense
+    }) : null;
 
     const multiplier = isRecommended ? Math.max(
         1,
-        (
-            forPurchase.filter(line => {
-                const stratMatch = line === stratMin;
-                const pmName = line.substring(1, line.length - 1);
-                const pmMatch = hits.includes(pmName);
-                return stratMatch || pmMatch;
-            }).length
-        )
+        forPurchasePms.length
     ) : null;
 
-    console.log({ multiplier});
+    console.log({ forPurchasePms, multiplier});
 
 
 
@@ -68,7 +67,7 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
         data,
         isRecommended,
         ...isRecommended && {
-            pmsHit: hits,
+            pmsHit: forPurchasePms.uniq(),
             multiplier
         }
     };
