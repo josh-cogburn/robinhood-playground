@@ -15,7 +15,7 @@ module.exports = async pms => {
       .filter(Boolean)
       .filter(({ jsonAnalysis: { daysCount } = {} }) => daysCount >= 3);
 
-  if (pmAnalysis.length <= 2) return 0;
+  if (pmAnalysis.length < 2) return 0;
 
   const avgChecks = {
     overallAvg: values => avgArray(values) > 2,
