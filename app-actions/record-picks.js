@@ -2,6 +2,7 @@
 // const jsonMgr = require('../utils/json-mgr');
 // const lookup = require('../utils/lookup');
 // const mapLimit = require('promise-map-limit');
+const getAdditionalMultipliers = require('./get-additional-multipliers');
 const lookupMultiple = require('../utils/lookup-multiple');
 const stratManager = require('../socket-server/strat-manager');
 const Pick = require('../models/Pick');
@@ -30,20 +31,31 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
     const hits = await pmsHit(null, stratMin);
     const isRecommended = hits.includes('forPurchase'); // because forPurchase === isRecommended now!
 
-    const forPurchasePms = isRecommended ? forPurchase.filter(line => {
+    let forPurchasePms = isRecommended ? forPurchase.filter(line => {
         const stratMatch = line === stratMin;
         const pmName = line.substring(1, line.length - 1);
         const pmMatch = hits.includes(pmName);
         return stratMatch || pmMatch;   // this doesnt make sense
     }) : null;
 
-    const multiplier = isRecommended ? Math.max(
+    const forPurchaseMultiplier = isRecommended ? Math.max(
         1,
         forPurchasePms.length
     ) : null;
 
-    console.log({ forPurchasePms, multiplier});
+    forPurchasePms = forPurchasePms.uniq();
 
+    const additionalMultipliers = await getAdditionalMultipliers(forPurchasePms);
+    const actualAddThis = Math.min(8, forPurchaseMultiplier * (additionalMultipliers / 3));
+    const multiplier = forPurchaseMultiplier + actualAddThis;
+
+    console.log({ 
+        forPurchasePms, 
+        multiplier, 
+        forPurchaseMultiplier, 
+        additionalMultipliers, 
+        actualAddThis 
+    });
 
 
     withPrices = withPrices.filter(tickerPrice => !!tickerPrice);
@@ -67,8 +79,14 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
         data,
         isRecommended,
         ...isRecommended && {
-            pmsHit: forPurchasePms.uniq(),
-            multiplier
+
+            pmsHit: forPurchasePms,
+
+            multiplier,
+            forPurchaseMultiplier,
+            additionalMultipliers,
+            actualAddThis
+
         }
     };
 

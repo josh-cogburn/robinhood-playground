@@ -75,6 +75,7 @@ const stratManager = {
         new CronJob(`40 7 * * 1-5`, () => this.newDay(), null, true);
 
         
+        this.pmsAnalyzed = await require('../analysis/sep-2019/all-pm-analysis')()
 
         if (!lowKey) {
 
@@ -91,7 +92,17 @@ const stratManager = {
             }, this.curDate);
 
 
-            this.pmsAnalyzed = await require('../analysis/sep-2019/all-pm-analysis')()
+            for (let pos of this.positions.alpaca) {
+                const foundHold = await Holds.findOne({ ticker: pos.ticker });
+                if (foundHold && foundHold.buys.some(buy => buy.date === (new Date()).toLocaleDateString().split('/').join('-'))) {
+                    console.log(`starting avg downer ${pos.ticker} bc bought today`)
+                    newAvgDowner({
+                        ticker: pos.ticker,
+                        buyPrice: pos.avgEntry,
+                        initialTimeout: 1000 * 30 + 60 * Math.random()
+                    })
+                }
+            }
 
         }
         
@@ -99,17 +110,6 @@ const stratManager = {
         await this.refreshPositions();
 
 
-        for (let pos of this.positions.alpaca) {
-            const foundHold = await Holds.findOne({ ticker: pos.ticker });
-            if (foundHold && foundHold.buys.some(buy => buy.date === (new Date()).toLocaleDateString().split('/').join('-'))) {
-                console.log(`starting avg downer ${pos.ticker} bc bought today`)
-                newAvgDowner({
-                    ticker: pos.ticker,
-                    buyPrice: pos.avgEntry,
-                    initialTimeout: 1000 * 30 + 60 * Math.random()
-                })
-            }
-        }
         console.log('initd strat manager');
     },
     async getWelcomeData() {

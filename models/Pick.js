@@ -13,8 +13,14 @@ const schema = new Schema({
     data: Schema.Types.Mixed,
     keys: Schema.Types.Mixed,
     isRecommended: Schema.Types.Boolean,
+
     pmsHit: [String],
-    multiplier: Number
+
+    // multipliers
+    multiplier: Number,
+    forPurchaseMultiplier: Number,
+    additionalMultipliers: Number,
+    actualAddThis: Number
 });
 
 schema.statics.getUniqueDates = async function() {
