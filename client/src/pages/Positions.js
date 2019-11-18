@@ -24,10 +24,10 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
 
 
     positions = positions.map(position => {
-        const { avgEntry, hold: { sells = [], buys = [] } = {}} = position;
+        const { ticker, avgEntry, hold: { sells = [], buys = [] } = {}} = position;
 
         const numSharesSold = sumArray(
-            buys.map(buy => buy.quantity)
+            sells.map(buy => buy.quantity)
         );
         const individualize = array => {
             const grouped = array.map(({ quantity, fillPrice }) => 
@@ -41,12 +41,16 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
         // const allBuys = individualize(buys);
         const sumSells = sumArray(allSells);
 
-        console.log({ allSells });
+        // console.log({ allSells });
         const avgSellPrice = avgArray(
             allSells
         );
         const sellReturnPerc = getTrend(avgSellPrice, avgEntry);
-        const sellReturnDollars = ((numSharesSold + 100) / 100) * sellReturnPerc;
+        const sellReturnDollars = (numSharesSold / 100) * sellReturnPerc;
+        console.log({
+            numSharesSold,
+            ticker
+        })
         return {
             ...position,
             avgSellPrice,
