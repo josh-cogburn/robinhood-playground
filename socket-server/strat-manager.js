@@ -91,24 +91,22 @@ const stratManager = {
                 this.sendToAll('server:balance-report', { report });
             }, this.curDate);
 
-
-            for (let pos of this.positions.alpaca) {
-                const foundHold = await Holds.findOne({ ticker: pos.ticker });
-                if (foundHold && foundHold.buys.some(buy => buy.date === (new Date()).toLocaleDateString().split('/').join('-'))) {
-                    console.log(`starting avg downer ${pos.ticker} bc bought today`)
-                    newAvgDowner({
-                        ticker: pos.ticker,
-                        buyPrice: pos.avgEntry,
-                        initialTimeout: 1000 * 30 + 60 * Math.random()
-                    })
-                }
-            }
-
         }
         
         setInterval(() => this.refreshPositions(), 1000 * 60 * 15);
         await this.refreshPositions();
 
+        for (let pos of this.positions.alpaca) {
+            const foundHold = await Holds.findOne({ ticker: pos.ticker });
+            if (foundHold && foundHold.buys.some(buy => buy.date === (new Date()).toLocaleDateString().split('/').join('-'))) {
+                console.log(`starting avg downer ${pos.ticker} bc bought today`)
+                newAvgDowner({
+                    ticker: pos.ticker,
+                    buyPrice: pos.avgEntry,
+                    initialTimeout: 1000 * 30 + 60 * Math.random()
+                })
+            }
+        }
 
         console.log('initd strat manager');
     },
