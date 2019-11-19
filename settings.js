@@ -23,8 +23,9 @@ let expectedPickCount = 0;
 
 module.exports = {
     // important settings
-    sellAllStocksOnNthDay: 8,
-    purchaseAmt: 30,
+    // sellAllStocksOnNthDay: 8,
+    disableMultipliers: true,
+    purchaseAmt: 60,
     forPurchase: [
 
         ...`
@@ -501,7 +502,6 @@ module.exports = {
     ],
     // forPurchaseVariation: '75Perc5Day-yesincludingblanks',
     // fallbackSellStrategy: 'limit8',
-    disableMultipliers: false,
     force: {
         sell: [
         ],
