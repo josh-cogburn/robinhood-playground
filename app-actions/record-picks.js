@@ -35,7 +35,7 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
         ? forPurchase
             .filter(line => line.startsWith('['))
             .map(line => line.substring(1, line.length - 1))
-            .filter(pm => hits.includes(pmName)) 
+            .filter(pm => hits.includes(pm)) 
         : null;
 
     const forPurchaseMultiplier = isRecommended ? Math.max(
