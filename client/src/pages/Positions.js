@@ -46,7 +46,7 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
             allSells
         );
         const sellReturnPerc = getTrend(avgSellPrice, avgEntry);
-        const sellReturnDollars = (numSharesSold / 100) * sellReturnPerc;
+        const sellReturnDollars = (numSharesSold / 100) * sellReturnPerc * avgSellPrice;
         console.log({
             numSharesSold,
             ticker

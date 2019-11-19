@@ -24,7 +24,7 @@ let expectedPickCount = 0;
 module.exports = {
     // important settings
     sellAllStocksOnNthDay: 8,
-    purchaseAmt: 14,
+    purchaseAmt: 30,
     forPurchase: [
 
         ...`
@@ -63,6 +63,8 @@ module.exports = {
 
 
         sudden-drops-!watchout-majorJump-initial
+        
+
         sudden-drops-!watchout-majorJump-dinner-down20
         sudden-drops-!watchout-majorJump-down10-straightDown
         sudden-drops-!watchout-majorJump-down-straightDown
