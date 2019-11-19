@@ -20,15 +20,23 @@ module.exports = async pms => {
   const avgChecks = {
     overallAvg: values => avgArray(values) > 2,
     percUp: values => avgArray(values) > 87,
-    min: values => Math.min(...values.filter(Boolean)) > 1
+    min: values => Math.min(...values.filter(Boolean)) > 1,
   };
 
   const trueFalseAvgChecks = mapObject(avgChecks, (checkFn, prop) => {
     return checkFn(pmAnalysis.map(pmPerf => pmPerf[prop]));
   });
 
-  const trueCount = Object.values(trueFalseAvgChecks).filter(Boolean).length;
-  strlog({ pmAnalysis, avgChecks, trueFalseAvgChecks, trueCount })
+  const avgCheckCount = Object.values(trueFalseAvgChecks).filter(Boolean).length;
+  strlog({ pmAnalysis, avgChecks, trueFalseAvgChecks, avgCheckCount })
 
-  return trueCount
+
+  // const sentimentObj = {
+  //   bullish: 2,
+  //   neutral: 1
+  // };
+
+  // const sentimentCount = 
+
+  return avgCheckCount;
 };
