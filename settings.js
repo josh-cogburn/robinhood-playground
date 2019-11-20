@@ -162,7 +162,8 @@ module.exports = {
         sudden-drops-brunch-down30
         sudden-drops-minorJump-brunch-down10-!straightDown
         sudden-drops-brunch-down10-bullish
-
+        sudden-drops-mediumJump-down-straightDown30
+        
 
 
         // fine a couple watchouts
