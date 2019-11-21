@@ -11,6 +11,65 @@ const Holds = require('../models/Holds');
 const { alpaca } = require('../alpaca');
 const getBalance = require('../alpaca/get-balance');
 
+
+
+const sprayBuy = async ({
+    ticker,
+    quantity,
+    pickPrice
+}) => {
+
+    const individualQuantity = Math.round(quantity / 3) || 1;
+
+    const buyStyles = {
+        limit3: alpacaLimitBuy({
+            ticker,
+            quantity: individualQuantity,
+            limitPrice: pickPrice * 1.03,
+            timeoutSeconds: 60 * 2,
+            fallbackToMarket: false
+        }),
+        limit1: alpacaLimitBuy({
+            ticker,
+            quantity: individualQuantity,
+            limitPrice: pickPrice * 1.013,
+            timeoutSeconds: 60 * 5,
+            fallbackToMarket: false
+        }),
+        attempt: alpacaAttemptBuy({
+            ticker,
+            quantity: individualQuantity,
+            pickPrice,
+            fallbackToMarket: false
+        })
+    };
+    
+    const buyPromises = Object.entries(buyStyles).map(
+        async ([name, promise]) => {
+            strlog({
+                name,
+                promise
+            })
+            const response = await promise;
+            const order = response && response.alpacaOrder ? response.alpacaOrder : response;
+            return {
+                name,
+                fillPrice: (order || {}).filled_avg_price
+            };
+        }
+    );
+
+
+    const roundUp = await Promise.all(
+        buyPromises
+    );
+
+    await sendEmail(`roundup for ${ticker} buy`, JSON.stringify(roundUp, null, 2))
+
+};
+
+
+
 module.exports = async ({
     totalAmtToSpend,
     strategy,
@@ -56,54 +115,21 @@ module.exports = async ({
         console.log(perStock, 'purchasng ', ticker);
         try {
             const pickPrice = (withPrices.find(obj => obj.ticker === ticker) || {}).price;
-            const quantity = Math.round(perStock / pickPrice / 3) || 1;
+            const totalQuantity = Math.round(perStock / pickPrice) || 1;
 
-            const buyStyles = {
-                limit3: alpacaLimitBuy({
+            const waitAmts = [0, 10, 20, 30];
+            const perSpray = Math.round(totalQuantity / waitAmts.length) || 1;
+
+            await Promise.all(waitAmts.map(waitAmt => async () => {
+                console.log(`waiting ${waitAmt} seconds and then spraying ${perSpray} quantity`);
+                await new Promise(resolve => setTimeout(resolve, waitAmt * 1000));
+                await sprayBuy({
                     ticker,
-                    quantity,
-                    limitPrice: pickPrice * 1.03,
-                    timeoutSeconds: 60 * 2,
-                    fallbackToMarket: false
-                }),
-                limitEven: alpacaLimitBuy({
-                    ticker,
-                    quantity,
-                    limitPrice: pickPrice * 1.003,
-                    timeoutSeconds: 60 * 5,
-                    fallbackToMarket: false
-                }),
-                attempt: alpacaAttemptBuy({
-                    ticker,
-                    quantity,
-                    pickPrice,
-                    fallbackToMarket: false
-                })
-            };
+                    quantity: perSpray,
+                    pickPrice
+                });
+            }));
             
-            const buyPromises = Object.entries(buyStyles).map(
-                async ([name, promise]) => {
-                    strlog({
-                        name,
-                        promise
-                    })
-                    const response = await promise;
-                    const order = response && response.alpacaOrder ? response.alpacaOrder : response;
-                    return {
-                        name,
-                        fillPrice: (order || {}).filled_avg_price
-                    };
-                }
-            );
-
-        
-
-            const roundUp = await Promise.all(
-                buyPromises
-            );
-
-            await sendEmail(`roundup for ${ticker} buy`, JSON.stringify(roundUp, null, 2))
-
 
             numPurchased++;
         } catch (e) {
