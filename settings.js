@@ -25,7 +25,7 @@ module.exports = {
     // important settings
     // sellAllStocksOnNthDay: 8,
     disableMultipliers: true,
-    purchaseAmt: 60,
+    purchaseAmt: 50,
     forPurchase: [
 
         ...`
@@ -76,6 +76,7 @@ module.exports = {
         sudden-drops-!watchout-majorJump-down20
         sudden-drops-!watchout-majorJump-down20
 
+
         // more majorJumps
         sudden-drops-majorJump-down20
         sudden-drops-majorJump-bullish
@@ -92,6 +93,8 @@ module.exports = {
         // only !watchout 's
         sudden-drops-!watchout-dinner-straightDown60
         
+        sudden-drops-!watchout-lunch-straightDown30
+        sudden-drops-!watchout-lunch-!down
         
         
         sudden-drops-!watchout-down15-neutral
@@ -163,7 +166,7 @@ module.exports = {
         sudden-drops-minorJump-brunch-down10-!straightDown
         sudden-drops-brunch-down10-bullish
         sudden-drops-mediumJump-down-straightDown30
-        
+
 
 
         // fine a couple watchouts
