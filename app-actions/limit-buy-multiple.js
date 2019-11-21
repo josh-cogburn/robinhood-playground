@@ -119,16 +119,20 @@ module.exports = async ({
 
             const waitAmts = [0, 10, 20, 30];
             const perSpray = Math.round(totalQuantity / waitAmts.length) || 1;
-
-            await Promise.all(waitAmts.map(waitAmt => async () => {
-                console.log(`waiting ${waitAmt} seconds and then spraying ${perSpray} quantity`);
-                await new Promise(resolve => setTimeout(resolve, waitAmt * 1000));
-                await sprayBuy({
-                    ticker,
-                    quantity: perSpray,
-                    pickPrice
-                });
-            }));
+            console.log('before sprays', { totalQuantity, perSpray });
+            await Promise.all(
+                waitAmts.map(
+                    async waitAmt => {
+                        console.log(`waiting ${waitAmt} seconds and then spraying ${perSpray} quantity`);
+                        await new Promise(resolve => setTimeout(resolve, waitAmt * 1000));
+                        await sprayBuy({
+                            ticker,
+                            quantity: perSpray,
+                            pickPrice
+                        });
+                    }
+                )
+            );
             
 
             numPurchased++;
