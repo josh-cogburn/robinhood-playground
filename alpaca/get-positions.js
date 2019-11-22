@@ -119,6 +119,7 @@ module.exports = async () => {
     }
 
     // if (wouldBeDayTrade) return null;
+    if (getMinutesFrom630() < 20 && returnPerc > 20) return 50;
     if (Math.abs(returnPerc) > 30) return 24;
 
     const dayVal = daysOld + 1;

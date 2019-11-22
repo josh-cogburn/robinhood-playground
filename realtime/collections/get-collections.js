@@ -201,7 +201,7 @@ module.exports = async () => {
         const scan = scans[scanName];
         const response = (await runScan({
             minVolume: 60000,
-            count: 80,
+            count: 130,
             ...scan,
             includeStSent: false,
             excludeTickers: getTicks(),
