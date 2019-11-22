@@ -114,7 +114,7 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
                 
                 await purchaseStocks({
                     strategy,
-                    multiplier: !disableMultipliers ? multiplier : 1,
+                    multiplier: !disableMultipliers ? Math.min(multiplier, 2.5): 1,
                     min,
                     withPrices,
                     PickDoc
