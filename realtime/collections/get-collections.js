@@ -193,15 +193,15 @@ module.exports = async () => {
         maxPrice: 12,
         count: 180,
         includeStSent: false,
-        // excludeTickers: getTicks(),
-        afterHoursReset: true
+        excludeTickers: getTicks(),
+        afterHoursReset: false
     })).map(t => t.ticker);
     
     for (let scanName of Object.keys(scans)) {
         const scan = scans[scanName];
         const response = (await runScan({
             minVolume: 60000,
-            count: 40,
+            count: 65,
             ...scan,
             includeStSent: false,
             excludeTickers: getTicks(),
