@@ -30,7 +30,14 @@ const checkForHugeDrop = position => {
 
 module.exports = async () => {
 
-  const uniqDates = (await Pick.getUniqueDates()).reverse();
+  const uniqDates = [
+    (new Date()).toLocaleDateString().split('/').join('-'),
+    ...(await Pick.getUniqueDates()).reverse()
+  ].uniq();
+
+  console.log({
+    uniqDates
+  })
   const getDaysOld = date => {
     return uniqDates.indexOf(date);
   };
