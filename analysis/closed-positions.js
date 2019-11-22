@@ -32,7 +32,7 @@ const analyzePositions = async collection => {
     const avgEntry = avgArray(allBuys);
     const totalBuyAmt = sumArray(allBuys);
     const sellReturnPerc = getTrend(avgSellPrice, avgEntry);
-    const sellReturnDollars = (numSharesSold / 100) * sellReturnPerc * avgSellPrice;
+    const sellReturnDollars = (numSharesSold / 100) * sellReturnPerc * avgEntry;
     // console.log({
     //     numSharesSold,
     //     ticker
@@ -91,6 +91,10 @@ const analyzeOpen = async open => {
   })
   return withPositions
     // .filter(({ position }) => position)
+    .map(position => {
+      console.log(position);
+      return position;
+    })
     .map(position => {
       const { 
         market_value: marketValue, 
