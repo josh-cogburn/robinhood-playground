@@ -70,9 +70,10 @@ schema.statics.registerSell = async function(ticker, fillPrice, quantity) {
 // methods
 schema.methods.closePosition = async function() {
     const data = this.toObject();
-    const closedPosition = await ClosedPosition.create(data);
+    console.log('closing', data);
+    const closedPosition = await require('./ClosedPositions').create(data);
     await this.remove();
-    console.log('closed position', data.ticker);
+    console.log('closed position', data.ticker, data);
     return closedPosition;
 };
 
