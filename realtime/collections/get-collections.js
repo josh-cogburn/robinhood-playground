@@ -190,11 +190,11 @@ module.exports = async () => {
 
     collections['hotSt'] = (await hotSt({
         minPrice: 0.1,
-        maxPrice: 8,
+        maxPrice: 12,
         count: 180,
         includeStSent: false,
-        excludeTickers: getTicks(),
-        afterHoursReset: false
+        // excludeTickers: getTicks(),
+        afterHoursReset: true
     })).map(t => t.ticker);
     
     for (let scanName of Object.keys(scans)) {
