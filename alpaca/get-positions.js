@@ -126,7 +126,7 @@ module.exports = async () => {
     const basePercent = dayVal + returnVal;
     let shouldVal = Math.abs(Number(unrealized_intraday_plpc)) * 100 / 1.4;
     if (outsideBracket) {
-      shouldVal += 7//returnPerc ? 7 : 4;
+      shouldVal += returnPerc ? 4 : 7;
     }
 
     const summed = basePercent + shouldVal;

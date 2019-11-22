@@ -36,7 +36,7 @@ const additionalCron = [
     // },
     {
         name: 'alpacaSellAllStocks',
-        run: [0.5, 6, 27, 58, 85, 112, 150, 193, 222, 242, 270, 290, 310, 340, 360, 380],
+        run: [0.5, 14, 58, 85, 112, 150, 193, 230, 270, 290, 330, 360, 380],
         fn: () => alpacaActOnPositions()
     },
     // {

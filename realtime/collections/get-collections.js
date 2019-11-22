@@ -140,21 +140,18 @@ module.exports = async () => {
         fitty: {
             minPrice: 0.20,
             maxPrice: 0.60,
-            count: 60,
             minVolume: 300000
         },
 
         lowVolFitty: {
             minPrice: 0,
             maxPrice: 0.60,
-            count: 33,
             maxVolume: 300000
         },
 
         zeroToOne: {
             minPrice: 0,
             maxPrice: 1,
-            count: 300,
             minVolume: 200000
         },
 
@@ -167,14 +164,13 @@ module.exports = async () => {
         twoToFive: {
             minPrice: 2,
             maxPrice: 5,
-            count: 300,
             minVolume: 200000
         },
 
         fiveToTen: {
             minPrice: 5,
             maxPrice: 10,
-            count: 300,
+            count: 60,
             minVolume: 150000
         },
 
@@ -194,8 +190,8 @@ module.exports = async () => {
 
     collections['hotSt'] = (await hotSt({
         minPrice: 0.1,
-        maxPrice: 6,
-        count: 55,
+        maxPrice: 8,
+        count: 180,
         includeStSent: false,
         excludeTickers: getTicks(),
         afterHoursReset: false
@@ -204,8 +200,9 @@ module.exports = async () => {
     for (let scanName of Object.keys(scans)) {
         const scan = scans[scanName];
         const response = (await runScan({
-            ...scan,
             minVolume: 60000,
+            count: 40,
+            ...scan,
             includeStSent: false,
             excludeTickers: getTicks(),
             // minDailyRSI: 45

@@ -24,8 +24,8 @@ let expectedPickCount = 0;
 module.exports = {
     // important settings
     // sellAllStocksOnNthDay: 8,
-    disableMultipliers: true,
-    purchaseAmt: 50,
+    disableMultipliers: false,
+    purchaseAmt: 12,
     forPurchase: [
 
         ...`
@@ -156,6 +156,11 @@ module.exports = {
 
         /// not !watchout
         sudden-drops-hotSt
+        sudden-drops-hotSt
+        sudden-drops-hotSt
+        sudden-drops-hotSt
+        sudden-drops-hotSt
+
         sudden-drops-lunch-down20
         sudden-drops-lunch-!down
         sudden-drops-lunch-straightDown120
