@@ -1,7 +1,10 @@
-const avgArray = arr => {
-    const sum = arr.reduce((acc, val) => acc + val, 0);
-    return sum / arr.length;
-};
+const sumArray = arr => {
+    return arr.reduce((acc, val) => acc + val, 0);
+  };
+  
+  const avgArray = arr => {
+    return sumArray(arr) / arr.length;
+  };
 
 const percUp = arr => arr.filter(v => v > 0).length / arr.length * 100;
 
@@ -23,6 +26,7 @@ const zScore = (arr, val) => {
 };
 
 module.exports = {
+    sumArray,
     avgArray,
     percUp,
     hundredResult,

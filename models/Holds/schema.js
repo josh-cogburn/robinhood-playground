@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
-const Pick = require('./Pick');
+
+const Pick = require('../Pick');
 
 const schema = new Schema({
     ticker: String,
@@ -75,6 +76,4 @@ schema.methods.closePosition = async function() {
     return closedPosition;
 };
 
-const Hold = mongoose.model('Hold', schema, 'holds');
-const ClosedPosition = mongoose.model('ClosedPositions', schema, 'closedPositions');
-module.exports = Hold;
+module.exports = schema;
