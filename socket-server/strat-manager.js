@@ -6,6 +6,7 @@ const { uniq, pick } = require('underscore');
 // mongo
 const Pick = require('../models/Pick');
 const Holds = require('../models/Holds');
+const DateAnalysis = require('../models/DateAnalysis');
 
 // predictions and past data
 const stratPerfOverall = require('../analysis/strategy-perf-overall');
@@ -127,7 +128,8 @@ const stratManager = {
             cronString: regCronIncAfterSixThirty.toString(),
             balanceReports: balanceReportManager.getAllBalanceReports(),
             pms: require('../realtime/RealtimeRunner').getPms(),
-            collections: require('../realtime/RealtimeRunner').collections
+            collections: require('../realtime/RealtimeRunner').collections,
+            dateAnalysis: await DateAnalysis.find({}).sort({ date: -1 }).lean()
         };
     },
     async refreshPositions() {

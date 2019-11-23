@@ -1,6 +1,8 @@
 const ClosedPosition = require('../models/Holds/ClosedPositions');
-const Hold = require('../models/Holds');;
-const Pick = require('../models/Pick');;
+const DateAnalysis = require('../models/DateAnalysis');
+const Hold = require('../models/Holds');
+const Pick = require('../models/Pick');
+
 const { sumArray, avgArray } = require('../utils/array-math');
 const getTrend = require('../utils/get-trend');
 const cTable = require('console.table');
@@ -111,6 +113,18 @@ const analyzeOpen = async open => {
     .sort((a, b) => b.netImpact - a.netImpact);
 };
 
+
+const saveDateAnalysis = async byDateAnalysis => {
+  for (let { date, ...dateAnalysis } of byDateAnalysis) {
+    await DateAnalysis.findOneAndUpdate(
+      { date }, 
+      dateAnalysis, 
+      { upsert: true }
+    );
+    console.log(`updated analysis for ${date}`);
+  }
+};
+
 module.exports = async () => {
 
 
@@ -148,22 +162,20 @@ module.exports = async () => {
   }));;
 
   const allDates = combined.map(pos => pos.date);
+  
   const byDate = groupBy(combined, 'date');
-  strlog({
-    byDate,
-
-  })
-  Object.keys(byDate).forEach(date => {
+  const byDateAnalysis = Object.keys(byDate).map(date => {
     const datePositions = byDate[date];
     const totalBought = sumArray(datePositions.map(pos => pos.totalBuyAmt));
     const totalImpact = sumArray(datePositions.map(pos => pos.netImpact));
-    strlog({
+    return {
       date,
       totalBought,
-      percChange: (totalImpact / totalBought * 100).toFixed(2),
+      percChange: +(totalImpact / totalBought * 100).toFixed(2),
       avgImpactPerc: avgArray(datePositions.map(pos => pos.impactPerc)),
       totalImpact
-    })
-    console.table(byDate[date]);
+    }
   });
+  
+  await saveDateAnalysis(byDateAnalysis);
 }

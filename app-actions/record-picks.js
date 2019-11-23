@@ -49,7 +49,7 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
     const actualAddThis = Math.min(8, forPurchaseMultiplier * (additionalMultipliers / 3));
     const multiplier = Math.max(3, forPurchaseMultiplier + actualAddThis);
 
-    console.log({ 
+    console.log({
         forPurchasePms, 
         multiplier, 
         forPurchaseMultiplier, 
@@ -114,7 +114,7 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
                 
                 await purchaseStocks({
                     strategy,
-                    multiplier: !disableMultipliers ? multiplier: 1,
+                    multiplier: !disableMultipliers ? forPurchaseMultiplier: 1,
                     min,
                     withPrices,
                     PickDoc
