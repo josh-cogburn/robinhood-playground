@@ -6,7 +6,7 @@ const schema = new Schema({
     closed: Boolean,
     totalBought: Number,
     percChange: Number,
-    avgImpactPerc: Number,
+    avgDayImpact: Number,
     totalImpact: Number,
     avgPickReturn: Number,
     totalPicks: Number

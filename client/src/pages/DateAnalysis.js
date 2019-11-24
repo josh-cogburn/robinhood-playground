@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import { Line } from 'react-chartjs-2';
 import TrendPerc from '../components/TrendPerc';
 
+const colors = [
+  'rgba(75,192,192,1)',
+  'rgba(192,70,20,1)',
+  'rgba(0,200,80,1)'
+]
 const LineChart = ({ dateAnalysis, props }) => {
   return (
     <Line data={{
@@ -12,18 +17,18 @@ const LineChart = ({ dateAnalysis, props }) => {
           label: prop,
           fill: false,
           lineTension: 0.1,
-          backgroundColor: i ? 'rgba(75,192,192,1)' : 'rgba(192,70,20,1)',
-          borderColor: i ? 'rgba(75,192,192,1)' : 'rgba(192,70,20,1)',
+          backgroundColor: colors[i],
+          borderColor: colors[i],
           borderCapStyle: 'butt',
           borderDash: [],
           borderDashOffset: 0.0,
           borderJoinStyle: 'miter',
-          pointBorderColor: i ? 'rgba(75,192,192,1)' : 'rgba(192,70,20,1)',
+          pointBorderColor: colors[i],
           pointBackgroundColor: '#fff',
           pointBorderWidth: 1,
           pointHoverRadius: 5,
-          pointHoverBackgroundColor: i ? 'rgba(75,192,192,1)' : 'rgba(192,70,20,1)',
-          pointHoverBorderColor: i ? 'rgba(75,192,192,1)' : 'rgba(192,70,20,1)',
+          pointHoverBackgroundColor: colors[i],
+          pointHoverBorderColor: colors[i],
           pointHoverBorderWidth: 2,
           pointRadius: 1,
           pointHitRadius: 10,
@@ -43,16 +48,16 @@ class DateAnalysis extends Component {
 
         <h1>Overall</h1>
         <div style={{ display: 'flex' }}>
-          { Object.entries(overallAnalysis).map(([name, {totalBought, percChange, avgImpactPerc, totalImpact, avgPickReturn, totalPicks}]) => (
+          { Object.entries(overallAnalysis).map(([name, {totalBought, percChange, avgDayImpact, totalImpact, avgPickReturn, totalPicks}]) => (
             <div>
               <h2>{name}</h2>
               <ul>
                 <li>Total Bought: ${totalBought.toFixed(2)}</li>
                 <li>Total Impact: <TrendPerc value={totalImpact} dollar={true} /></li>
                 <li>Percent Change: <TrendPerc value={percChange} /></li>
-                <li>Avg Impact Perc: <TrendPerc value={avgImpactPerc} /></li>
-                <li>Avg Pick Perc: <TrendPerc value={avgPickReturn} /></li>
-                <li>Avg Impact Perc: {totalPicks}</li>
+                <li>Avg Day Impact Perc: <TrendPerc value={avgDayImpact} /></li>
+                <li>Avg Pick Impact Perc: <TrendPerc value={avgPickReturn} /></li>
+                <li>Pick Count: {totalPicks}</li>
               </ul>
             </div>
           ))}
