@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { MDBDataTable } from 'mdbreact';
 
 import getTrend from '../utils/get-trend';
 import { avgArray, sumArray } from '../utils/array-math';
@@ -209,7 +210,7 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
     
 
 
-class TodaysStrategies extends Component {
+class Positions extends Component {
     render() {
 
         let { 
@@ -218,7 +219,8 @@ class TodaysStrategies extends Component {
             // predictionModels, 
             // admin, 
             positions, 
-            relatedPrices 
+            relatedPrices,
+            analyzedClosed
         } = this.props;
 
         return (
@@ -237,11 +239,22 @@ class TodaysStrategies extends Component {
                         />
                     ))
                 }
-
+                {
+                    analyzedClosed && analyzedClosed.length && (
+                        <div>
+                            <h2>Closed Positions</h2>
+                            <MDBDataTable data={{
+                                columns: Object.keys(analyzedClosed[0]).map((label, i) => ({ label, field: label })),
+                                rows: analyzedClosed
+                            }} />
+                        </div>
+                    )
+                }
+                
 
             </div>
         );
     }
 }
 
-export default TodaysStrategies;
+export default Positions;

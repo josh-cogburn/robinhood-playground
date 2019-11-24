@@ -122,7 +122,8 @@ const stratManager = {
                 'pmPerfs',
                 'pmsAnalyzed',
                 'positions',
-                'pastData'
+                'pastData',
+                'analyzedClosed'
             ]),
             relatedPrices: this.tickerWatcher.relatedPrices,
             settings,
