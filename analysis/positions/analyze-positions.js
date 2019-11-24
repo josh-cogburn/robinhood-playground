@@ -1,4 +1,5 @@
 const Pick = require('../../models/Pick');
+const { uniq } = require('underscore');
 
 const { sumArray, avgArray } = require('../../utils/array-math');
 const getTrend = require('../../utils/get-trend');
@@ -28,7 +29,14 @@ const analyzePositions = async collection => {
     const avgEntry = avgArray(allBuys);
     const totalBuyAmt = sumArray(allBuys);
     const sellReturnPerc = getTrend(avgSellPrice, avgEntry);
-    const numPicks = buys.map(buy => buy.relatedPick).uniq().length;
+
+    let uniqPickIds = buys.map(buy => buy.relatedPick.toString()).uniq();
+    uniqPickIds = uniq(uniqPickIds);
+    strlog({
+      ticker,
+      uniqPickIds
+    })
+    const numPicks = uniqPickIds.length;
     const sellReturnDollars = (numSharesSold / 100) * sellReturnPerc * avgEntry;
     // console.log({
     //     numSharesSold,

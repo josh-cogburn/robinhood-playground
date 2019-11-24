@@ -10,9 +10,10 @@ const analyzeGroup = analyzedPositions => {
     totalImpact,
     avgPickReturn: avgArray(
       analyzedPositions.map(pos => 
-        (new Array(pos.numPicks)).fill(pos.sellReturnPerc)
+        (new Array(pos.numPicks)).fill(pos.sellReturnPerc || pos.netImpact / pos.totalBuyAmt)
       ).flatten()
-    )
+    ),
+    totalPicks: sumArray(analyzedPositions.map(pos => pos.numPicks))
   }
 };
 

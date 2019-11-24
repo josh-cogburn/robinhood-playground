@@ -8,7 +8,8 @@ const schema = new Schema({
     percChange: Number,
     avgImpactPerc: Number,
     totalImpact: Number,
-    avgPickReturn: Number
+    avgPickReturn: Number,
+    totalPicks: Number
 });
 
 const DateAnalysis = mongoose.model('DateAnalysis', schema, 'dateAnalysis');

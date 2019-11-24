@@ -43,7 +43,7 @@ class DateAnalysis extends Component {
 
         <h1>Overall</h1>
         <div style={{ display: 'flex' }}>
-          { Object.entries(overallAnalysis).map(([name, {totalBought, percChange, avgImpactPerc, totalImpact}]) => (
+          { Object.entries(overallAnalysis).map(([name, {totalBought, percChange, avgImpactPerc, totalImpact, avgPickReturn, totalPicks}]) => (
             <div>
               <h2>{name}</h2>
               <ul>
@@ -51,20 +51,21 @@ class DateAnalysis extends Component {
                 <li>Total Impact: <TrendPerc value={totalImpact} dollar={true} /></li>
                 <li>Percent Change: <TrendPerc value={percChange} /></li>
                 <li>Avg Impact Perc: <TrendPerc value={avgImpactPerc} /></li>
+                <li>Avg Pick Perc: <TrendPerc value={avgPickReturn} /></li>
+                <li>Avg Impact Perc: {totalPicks}</li>
               </ul>
             </div>
           ))}
         </div>
 
         <h1>avgImpactPerc vs percChange</h1>
-        <LineChart {...{ dateAnalysis, props: ['avgImpactPerc', 'percChange'] }} />
+        <LineChart {...{ dateAnalysis, props: ['avgImpactPerc', 'percChange', 'avgPickReturn'] }} />
 
         <h1>totalBought</h1>
-        <LineChart {...{ dateAnalysis, props: ['totalBought'] }} />
+        <LineChart {...{ dateAnalysis, props: ['totalBought', 'totalImpact'] }} />
 
-        <h1>totalImpact</h1>
-        <LineChart {...{ dateAnalysis, props: ['totalImpact'] }} />
-        
+        <h1>pickCount</h1>
+        <LineChart {...{ dateAnalysis, props: ['totalPicks'] }} />
         
       </div>
     )
