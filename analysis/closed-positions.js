@@ -1,5 +1,4 @@
 const fs = require('mz/fs');
-const cTable = require('console.table');
 const { groupBy } = require('underscore');
 
 const ClosedPosition = require('../models/Holds/ClosedPositions');

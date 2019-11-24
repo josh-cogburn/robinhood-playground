@@ -1,0 +1,20 @@
+{
+  "allPositions": {
+    "totalBought": 15147.290976001554,
+    "percChange": -1.96,
+    "avgImpactPerc": 0.5937777777777776,
+    "totalImpact": -296.84524734794036
+  },
+  "withoutKEG": {
+    "totalBought": 10020.308275999902,
+    "percChange": 3.82,
+    "avgImpactPerc": 0.9086363636363632,
+    "totalImpact": 383.2028626520597
+  },
+  "lastFive": {
+    "totalBought": 6731.447193999938,
+    "percChange": 3.05,
+    "avgImpactPerc": 0.19304347826086943,
+    "totalImpact": 204.9895882308772
+  }
+}

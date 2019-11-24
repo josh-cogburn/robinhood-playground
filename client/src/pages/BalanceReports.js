@@ -248,7 +248,9 @@ class DayReports extends Component {
 
         balanceReports = balanceReports.slice(startIndex);
 
-        balanceReports = pruneByDays(balanceReports, numDaysToShow);
+        const smallDevice = window.innerWidth < 600;
+        const numDaysToPrune = numDaysToShow * (smallDevice ? 4 : 1);
+        balanceReports = pruneByDays(balanceReports, numDaysToPrune);
 
         // const numToShow = numDaysToShow === 1
         //     ? (() => {
@@ -347,6 +349,7 @@ class DayReports extends Component {
         // console.log(getNewDayLines(balanceReports))
         return (
             <div style={{ height: '100%', padding: '1em' }}>
+                {numDaysToPrune}
                 <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between'}}>
                     <div style={{ paddingLeft: '5em' }}>
                         number of days to show... <a href="#" onClick={() => this.setState({ numDaysToShow: 1 })}>[reset]</a>
@@ -417,7 +420,7 @@ class DayReports extends Component {
                         </div>
                     </div>
                 </div>
-                <div style={{ height: '100%' }}>
+                <div style={{ height: '100%' }} className='wider-container'>
                     <Line 
                         data={chartData} 
                         plugins={[ChartAnnotation]}
@@ -430,7 +433,7 @@ class DayReports extends Component {
                             // plugins: {
                                 annotation: {
                                     // enabled: true,
-                                    annotations: [
+                                    annotations: smallDevice & numDaysToShow > 5 ? [] : [
                                         // {
                                         //     drawTime: "beforeDatasetsDraw",
                                         //     // id: "hline",

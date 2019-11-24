@@ -201,7 +201,6 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
                         )
                     }
                 </tbody>
-                <tr></tr>
             </table>
             <br/>
         </div>

@@ -34,6 +34,7 @@ const TickerWatcher = require('./ticker-watcher');
 
 const balanceReportManager = require('./balance-report-manager');
 const settings = require('../settings');
+const getAnalyzedClosed = require('../analysis/positions/get-closed');
 
 // const RealtimeRunner = ;
 
@@ -143,7 +144,10 @@ const stratManager = {
         const positionTickers = Object.values(positions).flatten().map(pos => pos.ticker || pos.symbol);
         strlog({ positionTickers });
         this.tickerWatcher.addTickers(positionTickers);
-        this.sendToAll('server:data-update', { positions });
+
+        const analyzedClosed = await getAnalyzedClosed();
+        this.analyzedClosed = analyzedClosed;
+        this.sendToAll('server:data-update', { positions, analyzedClosed });
     },
     newPick(data) {
 
