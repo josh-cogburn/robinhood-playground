@@ -167,8 +167,6 @@ module.exports = async () => {
     impactPerc: +(position.netImpact / position.totalBuyAmt * 100).toFixed(2)
   }));;
 
-  // const allDates = combined.map(pos => pos.date);
-  
   const byDate = groupBy(combined, 'date');
   const byDateAnalysis = Object.keys(byDate).map(date => {
     const datePositions = byDate[date];
@@ -178,9 +176,13 @@ module.exports = async () => {
     };
   });
 
+  const allDates = combined.map(pos => pos.date).uniq();
+  const lastFive = allDates.slice(-5);
+  
   const overall = {
     allPositions: analyzeGroup(combined),
     withoutKEG: analyzeGroup(combined.filter(({ ticker }) => ticker !== 'KEG')),
+    lastFive: analyzeGroup(combined.filter(({ date }) => lastFive.includes(date))),
   };
   
   await saveDateAnalysis(byDateAnalysis);
