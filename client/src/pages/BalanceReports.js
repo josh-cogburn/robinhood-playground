@@ -248,9 +248,12 @@ class DayReports extends Component {
 
         balanceReports = balanceReports.slice(startIndex);
 
+        const numReports = balanceReports.length;
         const smallDevice = window.innerWidth < 600;
-        const numDaysToPrune = numDaysToShow * (smallDevice ? 4 : 1);
+        const numDaysToPrune = smallDevice ? Math.ceil(numReports / 350) : numDaysToShow - 1;
+        
         balanceReports = pruneByDays(balanceReports, numDaysToPrune);
+        console.log({ numReports, smallDevice, numDaysToPrune, afterCount: balanceReports.length })
 
         // const numToShow = numDaysToShow === 1
         //     ? (() => {

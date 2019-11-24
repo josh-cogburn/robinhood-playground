@@ -10,11 +10,11 @@
     margin-right: -60px;
     width: 150%;
   }
+  .wider-container {
+    width: 112%;
+  }
 }
 
-.wider-container {
-  width: '112%';
-}
 
 
 .App-logo {

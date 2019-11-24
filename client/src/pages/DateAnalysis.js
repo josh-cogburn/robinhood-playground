@@ -3,16 +3,16 @@ import { Line } from 'react-chartjs-2';
 import TrendPerc from '../components/TrendPerc';
 
 const colors = [
+  'black',
   'rgba(75,192,192,1)',
   'rgba(192,70,20,1)',
-  'rgba(0,200,80,1)'
+  'rgba(0,200,80,1)',
 ]
 const LineChart = ({ dateAnalysis, props }) => {
   return (
     <Line data={{
       labels: dateAnalysis.map(({ date }) => date),
-      datasets: Object.keys(dateAnalysis[0])
-        .filter(key => props.includes(key))
+      datasets: props
         .map((prop, i) => ({
           label: prop,
           fill: false,
@@ -47,7 +47,7 @@ class DateAnalysis extends Component {
       <div>
 
         <h1>Overall</h1>
-        <div style={{ display: 'flex' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap' }}>
           { Object.entries(overallAnalysis).map(([name, analysis]) => {
             const {
               totalBought, 
@@ -77,13 +77,13 @@ class DateAnalysis extends Component {
           })}
         </div>
 
-        <h1>avgImpactPerc vs percChange</h1>
-        <LineChart {...{ dateAnalysis, props: ['avgImpactPerc', 'percChange', 'avgPickReturn', 'avgMultiplierReturn'] }} />
+        <h1>percentages</h1>
+        <LineChart {...{ dateAnalysis, props: ['percChange', 'avgPositionImpactPerc', 'avgPickImpactPerc', 'avgMultiplierImpactPerc'] }} />
 
-        <h1>totalBought</h1>
+        <h1>dollars</h1>
         <LineChart {...{ dateAnalysis, props: ['totalBought', 'totalImpact'] }} />
 
-        <h1>pickCount</h1>
+        <h1>counts</h1>
         <LineChart {...{ dateAnalysis, props: ['totalPicks', 'totalMultipliers'] }} />
         
       </div>
