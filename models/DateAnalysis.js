@@ -9,7 +9,9 @@ const schema = new Schema({
     avgDayImpact: Number,
     totalImpact: Number,
     avgPickReturn: Number,
-    totalPicks: Number
+    avgMultiplierReturn: Number,
+    totalPicks: Number,
+    totalMultipliers: Number,
 });
 
 const DateAnalysis = mongoose.model('DateAnalysis', schema, 'dateAnalysis');

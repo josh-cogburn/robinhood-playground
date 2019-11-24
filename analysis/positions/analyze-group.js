@@ -13,7 +13,13 @@ const analyzeGroup = analyzedPositions => {
         (new Array(pos.numPicks)).fill(pos.sellReturnPerc || pos.netImpact / pos.totalBuyAmt * 100)
       ).flatten()
     ),
-    totalPicks: sumArray(analyzedPositions.map(pos => pos.numPicks))
+    avgMultiplierReturn: avgArray(
+      analyzedPositions.map(pos => 
+        (new Array(Math.round(pos.numMultipliers))).fill(pos.sellReturnPerc || pos.netImpact / pos.totalBuyAmt * 100)
+      ).flatten()
+    ),
+    totalPicks: sumArray(analyzedPositions.map(pos => pos.numPicks)),
+    totalMultipliers: sumArray(analyzedPositions.map(pos => pos.numMultipliers)),
   }
 };
 

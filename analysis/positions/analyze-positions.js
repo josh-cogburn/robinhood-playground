@@ -32,28 +32,23 @@ const analyzePositions = async collection => {
 
     let uniqPickIds = buys.map(buy => buy.relatedPick.toString()).uniq();
     uniqPickIds = uniq(uniqPickIds);
+    const numPicks = uniqPickIds.length;
+
+    const relatedPicks = await mapLimit(uniqPickIds, 1, pickId => 
+      Pick.findOne({ _id: pickId }).lean()
+    );
+    const numMultipliers = sumArray(
+      relatedPicks.map(pick => pick.multiplier || 1)
+    );
     strlog({
       ticker,
-      uniqPickIds
+      uniqPickIds,
+      numMultipliers
     })
-    const numPicks = uniqPickIds.length;
     const sellReturnDollars = (numSharesSold / 100) * sellReturnPerc * avgEntry;
-    // console.log({
-    //     numSharesSold,
-    //     ticker
-    // })
-    
-    const relatedPickId = buys[0].relatedPick;
-    strlog({ relatedPickId, ticker })
-    const relatedPick = await Pick.findOne({ _id: relatedPickId }).lean();
-    if (ticker === 'KEG') {
-      strlog({
-        buys
-      })
-    }
-    const date = (new Date(relatedPick.timestamp)).toLocaleDateString();
-    const { pmsHit } = relatedPick;
-    const interestingWords = (pmsHit || []).map(pm => pm.split('-')).flatten().uniq();
+    const date = (new Date(relatedPicks[0].timestamp)).toLocaleDateString();
+    const allPmsHit = relatedPicks.map(pick => pick.pmsHit).flatten().filter(Boolean).uniq();
+    const interestingWords = (allPmsHit || []).map(pm => pm.split('-')).flatten().uniq();
     return {
         // ...position,
         ticker,
@@ -64,6 +59,7 @@ const analyzePositions = async collection => {
         sellReturnDollars,
         date,
         numPicks,
+        numMultipliers,
         interestingWords
     };
   });
