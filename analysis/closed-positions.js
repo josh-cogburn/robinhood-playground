@@ -1,3 +1,7 @@
+const fs = require('mz/fs');
+const cTable = require('console.table');
+const { groupBy } = require('underscore');
+
 const ClosedPosition = require('../models/Holds/ClosedPositions');
 const DateAnalysis = require('../models/DateAnalysis');
 const Hold = require('../models/Holds');
@@ -5,9 +9,7 @@ const Pick = require('../models/Pick');
 
 const { sumArray, avgArray } = require('../utils/array-math');
 const getTrend = require('../utils/get-trend');
-const cTable = require('console.table');
 const { alpaca } = require('../alpaca/');
-const { groupBy } = require('underscore');
 
 const analyzePositions = async collection => {
   return mapLimit(collection, 1, async position => {
@@ -128,15 +130,19 @@ const saveDateAnalysis = async byDateAnalysis => {
 module.exports = async () => {
 
 
-  let open = await analyzePositions(await Hold.find({}).lean());
+  let open = await Hold.find({}).lean();
+  open = await analyzePositions(open);
   open = await analyzeOpen(open);
 
-  const closed = await analyzePositions(await ClosedPosition.find({}).lean());
+  let closed = await ClosedPosition.find({}).lean();
+  closed = await analyzePositions(closed);
+
   strlog({
     open,
     closed
   })
-  console.log("OPEN")
+
+  console.log("OPEN");
   console.table(
     open.sort((a, b) => new Date(b.date) - new Date(a.date))
   );
@@ -161,21 +167,38 @@ module.exports = async () => {
     impactPerc: +(position.netImpact / position.totalBuyAmt * 100).toFixed(2)
   }));;
 
-  const allDates = combined.map(pos => pos.date);
+  // const allDates = combined.map(pos => pos.date);
   
   const byDate = groupBy(combined, 'date');
   const byDateAnalysis = Object.keys(byDate).map(date => {
     const datePositions = byDate[date];
-    const totalBought = sumArray(datePositions.map(pos => pos.totalBuyAmt));
-    const totalImpact = sumArray(datePositions.map(pos => pos.netImpact));
     return {
       date,
-      totalBought,
-      percChange: +(totalImpact / totalBought * 100).toFixed(2),
-      avgImpactPerc: avgArray(datePositions.map(pos => pos.impactPerc)),
-      totalImpact
-    }
+      ...analyzeGroup(datePositions)
+    };
   });
+
+  const overall = {
+    allPositions: analyzeGroup(combined),
+    withoutKEG: analyzeGroup(combined.filter(({ ticker }) => ticker !== 'KEG')),
+  };
   
   await saveDateAnalysis(byDateAnalysis);
+  await fs.writeFile('./json/overall-analysis.json', JSON.stringify(overall, null, 2));
+
+  return {
+    byDateAnalysis,
+    overall
+  };
 }
+
+const analyzeGroup = positions => {
+  const totalBought = sumArray(positions.map(pos => pos.totalBuyAmt));
+  const totalImpact = sumArray(positions.map(pos => pos.netImpact));
+  return {
+    totalBought,
+    percChange: +(totalImpact / totalBought * 100).toFixed(2),
+    avgImpactPerc: avgArray(positions.map(pos => pos.impactPerc)),
+    totalImpact
+  }
+};

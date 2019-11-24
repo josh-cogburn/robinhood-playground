@@ -129,7 +129,8 @@ const stratManager = {
             balanceReports: balanceReportManager.getAllBalanceReports(),
             pms: require('../realtime/RealtimeRunner').getPms(),
             collections: require('../realtime/RealtimeRunner').collections,
-            dateAnalysis: await DateAnalysis.find({}).sort({ date: -1 }).lean()
+            dateAnalysis: await DateAnalysis.find({}).sort({ date: -1 }).lean(),
+            overallAnalysis: require('../json/overall-analysis.json')
         };
     },
     async refreshPositions() {

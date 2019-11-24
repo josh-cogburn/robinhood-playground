@@ -33,6 +33,7 @@ import { partition, mapObject } from 'underscore';
 import getTrend from './utils/get-trend';
 
 import ReactGA from 'react-ga';
+import DateAnalysis from './pages/DateAnalysis';
 ReactGA.initialize('UA-131761952-1', { debug: false });
 
 
@@ -127,6 +128,10 @@ const pages = [
     {
         label: 'Scan',
         component: Scan
+    },
+    {
+        label: 'Date Analysis',
+        component: DateAnalysis
     },
     {
         label: 'Positions',
