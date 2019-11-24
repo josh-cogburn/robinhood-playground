@@ -48,29 +48,43 @@ class DateAnalysis extends Component {
 
         <h1>Overall</h1>
         <div style={{ display: 'flex' }}>
-          { Object.entries(overallAnalysis).map(([name, {totalBought, percChange, avgDayImpact, totalImpact, avgPickReturn, totalPicks}]) => (
-            <div>
-              <h2>{name}</h2>
-              <ul>
-                <li>Total Bought: ${totalBought.toFixed(2)}</li>
-                <li>Total Impact: <TrendPerc value={totalImpact} dollar={true} /></li>
-                <li>Percent Change: <TrendPerc value={percChange} /></li>
-                <li>Avg Day Impact Perc: <TrendPerc value={avgDayImpact} /></li>
-                <li>Avg Pick Impact Perc: <TrendPerc value={avgPickReturn} /></li>
-                <li>Pick Count: {totalPicks}</li>
-              </ul>
-            </div>
-          ))}
+          { Object.entries(overallAnalysis).map(([name, analysis]) => {
+            const {
+              totalBought, 
+              percChange, 
+              avgPositionImpactPerc, 
+              totalImpact, 
+              avgPickImpactPerc, 
+              avgMultiplierImpactPerc,
+              totalPicks,
+              totalMultipliers,
+            } = analysis;
+            return (
+              <div>
+                <h2>{name}</h2>
+                <ul>
+                  <li>Total Bought: ${totalBought.toFixed(2)}</li>
+                  <li>Total Impact: <TrendPerc value={totalImpact} dollar={true} /></li>
+                  <li>Percent Change: <TrendPerc value={percChange} /></li>
+                  <li>Avg Position Impact Perc: <TrendPerc value={avgPositionImpactPerc} /></li>
+                  <li>Avg Pick Impact Perc: <TrendPerc value={avgPickImpactPerc} /></li>
+                  <li>Avg Multiplier Impact Perc: <TrendPerc value={avgMultiplierImpactPerc} /></li>
+                  <li>Pick Count: {totalPicks}</li>
+                  <li>Multiplier Count: {totalMultipliers}</li>
+                </ul>
+              </div>
+            );
+          })}
         </div>
 
         <h1>avgImpactPerc vs percChange</h1>
-        <LineChart {...{ dateAnalysis, props: ['avgImpactPerc', 'percChange', 'avgPickReturn'] }} />
+        <LineChart {...{ dateAnalysis, props: ['avgImpactPerc', 'percChange', 'avgPickReturn', 'avgMultiplierReturn'] }} />
 
         <h1>totalBought</h1>
         <LineChart {...{ dateAnalysis, props: ['totalBought', 'totalImpact'] }} />
 
         <h1>pickCount</h1>
-        <LineChart {...{ dateAnalysis, props: ['totalPicks'] }} />
+        <LineChart {...{ dateAnalysis, props: ['totalPicks', 'totalMultipliers'] }} />
         
       </div>
     )

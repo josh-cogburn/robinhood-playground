@@ -4,20 +4,23 @@ const analyzeGroup = analyzedPositions => {
   const totalBought = sumArray(analyzedPositions.map(pos => pos.totalBuyAmt));
   const totalImpact = sumArray(analyzedPositions.map(pos => pos.netImpact));
   return {
+    // dollars
     totalBought,
-    percChange: +(totalImpact / totalBought * 100).toFixed(2),
-    avgDayImpact: avgArray(analyzedPositions.map(pos => pos.impactPerc)),
     totalImpact,
-    avgPickReturn: avgArray(
+    // percentages
+    percChange: +(totalImpact / totalBought * 100).toFixed(2),
+    avgPositionImpactPerc: avgArray(analyzedPositions.map(pos => pos.impactPerc)),
+    avgPickImpactPerc: avgArray(
       analyzedPositions.map(pos => 
         (new Array(pos.numPicks)).fill(pos.sellReturnPerc || pos.netImpact / pos.totalBuyAmt * 100)
       ).flatten()
     ),
-    avgMultiplierReturn: avgArray(
+    avgMultiplierImpactPerc: avgArray(
       analyzedPositions.map(pos => 
         (new Array(Math.round(pos.numMultipliers))).fill(pos.sellReturnPerc || pos.netImpact / pos.totalBuyAmt * 100)
       ).flatten()
     ),
+    // counts
     totalPicks: sumArray(analyzedPositions.map(pos => pos.numPicks)),
     totalMultipliers: sumArray(analyzedPositions.map(pos => pos.numMultipliers)),
   }

@@ -27,6 +27,7 @@ const getAllTickers = require('../rh-actions/get-all-tickers');
 
 // socket-server
 const stratManager = require('../socket-server/strat-manager');
+const saveByDateAnalysis = require('../analysis/positions/save-bydate-analysis');
 
 const additionalCron = [
     // {
@@ -34,6 +35,11 @@ const additionalCron = [
     //     run: [-],
     //     fn: () => alpacaSellAllStocks()
     // },
+    {
+        name: 'saveByDateAnalysis',
+        run: [-30, 30, 130, 230, 330, 400, 600],
+        fn: () => saveByDateAnalysis()
+    },
     {
         name: 'alpacaSellAllStocks',
         run: [-25, -15, -5, 0.5, 14, 58, 85, 112, 150, 193, 230, 270, 290, 330, 360, 380, 420, 440],

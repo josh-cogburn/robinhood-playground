@@ -4,12 +4,18 @@ const { Schema } = mongoose;
 const schema = new Schema({
     date: { type: String, index: true },
     closed: Boolean,
+
+    // dollars
     totalBought: Number,
-    percChange: Number,
-    avgDayImpact: Number,
     totalImpact: Number,
-    avgPickReturn: Number,
-    avgMultiplierReturn: Number,
+
+    // percentages
+    percChange: Number,
+    avgPositionImpactPerc: Number,
+    avgPickImpactPerc: Number,
+    avgMultiplierImpactPerc: Number,
+
+    // counts
     totalPicks: Number,
     totalMultipliers: Number,
 });
