@@ -346,80 +346,78 @@ class DayReports extends Component {
         // console.log({ afterHoursAnnotations, chartData })
         // console.log(getNewDayLines(balanceReports))
         return (
-            <div style={{ padding: '30px 60px 30px 10px' }}>
-                <table style={{ marginBottom: '20px', width: '100%', textAlign: 'left' }}>
-                    <tr>
-                        <td style={{ paddingLeft: '5em' }}>
-                            number of days to show... <a href="#" onClick={() => this.setState({ numDaysToShow: 1 })}>[reset]</a>
-                            <InputRange
-                                maxValue={allDates.length}
-                                minValue={1}
-                                step={1}
-                                // formatLabel={value => value.toFixed(2)}
-                                value={this.state.numDaysToShow}
-                                onChange={numDaysToShow => this.setState({ numDaysToShow })}
-                                // onChange={value => console.log(value)} 
+            <div style={{ height: '100%', padding: '1em' }}>
+                <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between'}}>
+                    <div style={{ paddingLeft: '5em' }}>
+                        number of days to show... <a href="#" onClick={() => this.setState({ numDaysToShow: 1 })}>[reset]</a>
+                        <InputRange
+                            maxValue={allDates.length}
+                            minValue={1}
+                            step={1}
+                            // formatLabel={value => value.toFixed(2)}
+                            value={this.state.numDaysToShow}
+                            onChange={numDaysToShow => this.setState({ numDaysToShow })}
+                            // onChange={value => console.log(value)} 
+                        />
+                        {/* {
+                            [
+                                'onlyToday',
+                                'ALL REPORTS',
+                                ...admin ? ['2019'] : []
+                            ].map(time => (
+                                <div>
+                                {
+                                    (timeFilter === time)
+                                        ? <span>{time}</span>
+                                        : (
+                                            <a href='#' onClick={() => this.setTimeFilter(time)}>{time}</a>
+                                        )
+                                }
+                                </div>
+                            ))
+                        } */}
+                    </div>
+                    <div>
+                        <Odometer 
+                            value={stats.alpaca.current} 
+                            format="(,ddd).dd"
+                            duration={500}
                             />
-                            {/* {
-                                [
-                                    'onlyToday',
-                                    'ALL REPORTS',
-                                    ...admin ? ['2019'] : []
-                                ].map(time => (
-                                    <div>
-                                    {
-                                        (timeFilter === time)
-                                            ? <span>{time}</span>
-                                            : (
-                                                <a href='#' onClick={() => this.setTimeFilter(time)}>{time}</a>
-                                            )
-                                    }
-                                    </div>
-                                ))
-                            } */}
-                        </td>
-                        <td>
-                            <Odometer 
-                                value={stats.alpaca.current} 
-                                format="(,ddd).dd"
-                                duration={500}
-                                />
-                        </td>
-                        <td style={{ fontSize: '80%', textAlign: 'right', paddingRight: '66px' }}>
-                            trend since {new Date(showingSince.time).toLocaleString()}<br/>
-                            {
-                                Object.keys(stats).map(stat => (
-                                    <div>
-                                        <span data-custom data-tooltip-str={`$${stats[stat].current}`}>
-                                            {stat}
-                                        </span>&nbsp;
-                                        <b style={{ fontSize: '160%' }}>
-                                            <TrendPerc value={stats[stat].absolute} dollar={true}  />
-                                            (<TrendPerc value={stats[stat].trend} />)
-                                        </b>
-                                    </div>
-                                ))
-                            }
-                        </td>
-                        <td style={{ fontSize: '80%', textAlign: 'center' }}>
-                            <div style={{ border: '1px solid black', padding: '7px' }}>
-                                <table style={{ marginRight: '-49px' }}>
-                                    {
-                                        Object.keys(indexStats).map(stat => (
-                                            <tr>
-                                                <td>{stat}</td>
-                                                <td>
-                                                    <TrendPerc value={indexStats[stat].trend} />
-                                                </td>
-                                            </tr>
-                                        ))
-                                    }
-                                </table>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-                <div>
+                    </div>
+                    <div style={{ fontSize: '80%', textAlign: 'right'  }}>
+                        trend since {new Date(showingSince.time).toLocaleString()}<br/>
+                        {
+                            Object.keys(stats).map(stat => (
+                                <div>
+                                    <span data-custom data-tooltip-str={`$${stats[stat].current}`}>
+                                        {stat}
+                                    </span>&nbsp;
+                                    <b style={{ fontSize: '160%' }}>
+                                        <TrendPerc value={stats[stat].absolute} dollar={true}  />
+                                        (<TrendPerc value={stats[stat].trend} />)
+                                    </b>
+                                </div>
+                            ))
+                        }
+                    </div>
+                    <div style={{ fontSize: '80%', textAlign: 'center' }}>
+                        <div style={{ border: '1px solid black', padding: '7px' }}>
+                            <table style={{ marginRight: '0' }}>
+                                {
+                                    Object.keys(indexStats).map(stat => (
+                                        <tr>
+                                            <td>{stat}</td>
+                                            <td>
+                                                <TrendPerc value={indexStats[stat].trend} />
+                                            </td>
+                                        </tr>
+                                    ))
+                                }
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div style={{ height: '100%' }}>
                     <Line 
                         data={chartData} 
                         plugins={[ChartAnnotation]}
@@ -427,7 +425,8 @@ class DayReports extends Component {
                             events: ['mousemove', 'mouseout', 'click', 'touchstart', 'touchmove'],
                             animation: !!timeFilter === '2019',
                             onHover: (event, chartEls) => this.setState({ hoverIndex: get(chartEls[0], '_index') }),
-                            responsive: true,
+                            // responsive: true,
+                            maintainAspectRatio : false,
                             // plugins: {
                                 annotation: {
                                     // enabled: true,
@@ -461,7 +460,8 @@ class DayReports extends Component {
                                     // type: 'time',
                                     ticks: {
                                         autoSkip: true,
-                                        maxTicksLimit: 20
+                                        maxTicksLimit: 20,
+                                        display: true,
                                     },
                                     distribution: 'series',
                                 }],

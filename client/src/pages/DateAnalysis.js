@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Line } from 'react-chartjs-2';
+import TrendPerc from '../components/TrendPerc';
 
 const LineChart = ({ dateAnalysis, props }) => {
   return (
@@ -34,11 +35,27 @@ const LineChart = ({ dateAnalysis, props }) => {
 
 class DateAnalysis extends Component {
   render() {
-    let { dateAnalysis } = this.props;
+    let { dateAnalysis, overallAnalysis } = this.props;
     console.log({dateAnalysis});
     dateAnalysis = [...dateAnalysis].reverse().slice(1);
     return (
       <div>
+
+        <h1>Overall</h1>
+        <div style={{ display: 'flex' }}>
+          { Object.entries(overallAnalysis).map(([name, {totalBought, percChange, avgImpactPerc, totalImpact}]) => (
+            <div>
+              <h2>{name}</h2>
+              <ul>
+                <li>Total Bought: ${totalBought.toFixed(2)}</li>
+                <li>Total Impact: <TrendPerc value={totalImpact} dollar={true} /></li>
+                <li>Percent Change: <TrendPerc value={percChange} /></li>
+                <li>Avg Impact Perc: <TrendPerc value={avgImpactPerc} /></li>
+              </ul>
+            </div>
+          ))}
+        </div>
+
         <h1>avgImpactPerc vs percChange</h1>
         <LineChart {...{ dateAnalysis, props: ['avgImpactPerc', 'percChange'] }} />
 

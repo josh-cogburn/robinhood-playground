@@ -1,3 +1,7 @@
+canvas {
+  height: 100% !important;
+}
+
 .odometer.odometer-auto-theme, .odometer.odometer-theme-plaza {
   display: inline-block;
   vertical-align: middle;

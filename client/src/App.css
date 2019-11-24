@@ -1,6 +1,17 @@
 .App {
   text-align: left;
+  height: 100vh;
 }
+
+
+@media only screen and (max-width: 600px) {
+  canvas {
+    margin-left: -30px;
+    width: 150%;
+  }
+}
+
+
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
