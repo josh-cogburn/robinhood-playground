@@ -256,7 +256,7 @@ class Positions extends Component {
                             <h2>Closed Positions</h2>
                             <MDBDataTable data={{
                                 columns: Object.keys(analyzedClosed[0]).map((label, i) => ({ label, field: label })),
-                                rows: [...analyzedClosed].reverse()
+                                rows: [...analyzedClosed].sort((a, b) => (new Date(b.date)).getTime() - (new Date(a.date)).getTime())
                             }} />
                         </div>
                     )

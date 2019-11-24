@@ -46,14 +46,16 @@ module.exports = async () => {
   const combined = [
     ...open,
     ...closed
-  ].map(position => ({
-    ...position,
-    netImpact: position.netImpact || position.sellReturnDollars
-  }))
-  .map(position => ({
-    ...position,
-    impactPerc: +(position.netImpact / position.totalBuyAmt * 100).toFixed(2)
-  }));;
+  ]
+    .sort((a, b) => (new Date(b.date)).getTime() - (new Date(a.date)).getTime())
+    .map(position => ({
+      ...position,
+      netImpact: position.netImpact || position.sellReturnDollars
+    }))
+    .map(position => ({
+      ...position,
+      impactPerc: +(position.netImpact / position.totalBuyAmt * 100).toFixed(2)
+    }));;
 
   const byDate = groupBy(combined, 'date');
   const byDateAnalysis = Object.keys(byDate).map(date => {
@@ -65,7 +67,8 @@ module.exports = async () => {
   });
 
   const allDates = combined.map(pos => pos.date).uniq();
-  const lastFive = allDates.slice(-5);
+  const lastFive = allDates.slice(0, 5);
+  strlog({ allDates, lastFive })
   
   const overall = {
     allPositions: analyzeGroup(combined),

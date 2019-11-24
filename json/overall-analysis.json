@@ -2,25 +2,25 @@
   "allPositions": {
     "totalBought": 15147.290976001554,
     "percChange": -1.96,
-    "avgDayImpact": 0.5937777777777776,
-    "totalImpact": -296.84524734794036,
-    "avgPickReturn": 1.8736567809159739,
+    "avgDayImpact": 0.593777777777778,
+    "totalImpact": -296.8452473479403,
+    "avgPickReturn": 1.8736567809159719,
     "totalPicks": 64
   },
   "withoutKEG": {
     "totalBought": 10020.308275999902,
     "percChange": 3.82,
-    "avgDayImpact": 0.9086363636363632,
-    "totalImpact": 383.2028626520597,
-    "avgPickReturn": 2.8828405633054586,
+    "avgDayImpact": 0.9086363636363637,
+    "totalImpact": 383.20286265205965,
+    "avgPickReturn": 2.882840563305459,
     "totalPicks": 60
   },
   "lastFive": {
-    "totalBought": 6731.447193999938,
-    "percChange": 3.05,
-    "avgDayImpact": 0.19304347826086943,
-    "totalImpact": 204.9895882308772,
-    "avgPickReturn": -0.1475862068965521,
-    "totalPicks": 29
+    "totalBought": 5858.095281999963,
+    "percChange": 4.01,
+    "avgDayImpact": 0.18200000000000016,
+    "totalImpact": 234.6427519622903,
+    "avgPickReturn": 3.5002675332904505,
+    "totalPicks": 39
   }
 }
