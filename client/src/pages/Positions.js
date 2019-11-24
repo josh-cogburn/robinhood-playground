@@ -223,6 +223,17 @@ class Positions extends Component {
             analyzedClosed
         } = this.props;
 
+        analyzedClosed = analyzedClosed.map(position => ({
+            ...position,
+            interestingWords: uniq(position.interestingWords).join(' ')
+        }))
+        .map(position => {
+            ['avgEntry', 'avgSellPrice', 'sellReturnDollars'].forEach(key => {
+                position[key] = position[key].toFixed(2);
+            });
+            return position;
+        });
+
         return (
             <div style={{ padding: '15px' }}>
 
@@ -245,7 +256,7 @@ class Positions extends Component {
                             <h2>Closed Positions</h2>
                             <MDBDataTable data={{
                                 columns: Object.keys(analyzedClosed[0]).map((label, i) => ({ label, field: label })),
-                                rows: analyzedClosed
+                                rows: [...analyzedClosed].reverse()
                             }} />
                         </div>
                     )

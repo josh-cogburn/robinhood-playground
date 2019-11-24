@@ -6,8 +6,13 @@ const analyzeGroup = analyzedPositions => {
   return {
     totalBought,
     percChange: +(totalImpact / totalBought * 100).toFixed(2),
-    avgImpactPerc: avgArray(analyzedPositions.map(pos => pos.impactPerc)),
-    totalImpact
+    avgDayImpact: avgArray(analyzedPositions.map(pos => pos.impactPerc)),
+    totalImpact,
+    avgPickReturn: avgArray(
+      analyzedPositions.map(pos => 
+        (new Array(pos.numPicks)).fill(pos.sellReturnPerc)
+      ).flatten()
+    )
   }
 };
 

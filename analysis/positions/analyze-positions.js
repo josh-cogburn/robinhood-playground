@@ -28,6 +28,7 @@ const analyzePositions = async collection => {
     const avgEntry = avgArray(allBuys);
     const totalBuyAmt = sumArray(allBuys);
     const sellReturnPerc = getTrend(avgSellPrice, avgEntry);
+    const numPicks = buys.map(buy => buy.relatedPick).uniq().length;
     const sellReturnDollars = (numSharesSold / 100) * sellReturnPerc * avgEntry;
     // console.log({
     //     numSharesSold,
@@ -54,6 +55,7 @@ const analyzePositions = async collection => {
         sellReturnPerc,
         sellReturnDollars,
         date,
+        numPicks,
         interestingWords
     };
   });
