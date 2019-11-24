@@ -130,7 +130,7 @@ const stratManager = {
             pms: require('../realtime/RealtimeRunner').getPms(),
             collections: require('../realtime/RealtimeRunner').collections,
             dateAnalysis: await DateAnalysis.find({}).sort({ date: -1 }).lean(),
-            overallAnalysis: require('../json/overall-analysis.json')
+            overallAnalysis: JSON.parse(await fs.readFile('./json/overall-analysis.json'))
         };
     },
     async refreshPositions() {
