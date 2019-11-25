@@ -250,7 +250,7 @@ class DayReports extends Component {
 
         const numReports = balanceReports.length;
         const smallDevice = window.innerWidth < 600;
-        const numDaysToPrune = smallDevice ? Math.ceil(numReports / 350) : numDaysToShow - 1;
+        const numDaysToPrune = smallDevice ? Math.ceil(numReports / 350) : numDaysToShow;
         
         balanceReports = pruneByDays(balanceReports, numDaysToPrune);
         console.log({ numReports, smallDevice, numDaysToPrune, afterCount: balanceReports.length })
