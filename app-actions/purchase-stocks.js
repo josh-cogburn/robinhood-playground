@@ -1,6 +1,6 @@
 const limitBuyMultiple = require('./limit-buy-multiple');
 const getMinutesFrom630 = require('../utils/get-minutes-from-630');
-let { expectedPickCount, purchaseAmt } = require('../settings');
+let { expectedPickCount, purchaseAmt, disableCashCheck } = require('../settings');
 const { alpaca } = require('../alpaca');
 
 
@@ -16,7 +16,7 @@ const purchaseStocks = async ({ strategy, multiplier = 1, min, withPrices } = {}
         multiplier,
         amountPerBuy,
     });
-    const totalAmtToSpend = Math.min(amountPerBuy, cash);
+    const totalAmtToSpend = disableCashCheck ? amountPerBuy : Math.min(amountPerBuy, cash);
     strlog({
         totalAmtToSpend,
         cash,
