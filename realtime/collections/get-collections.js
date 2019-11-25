@@ -152,7 +152,7 @@ module.exports = async () => {
         zeroToOne: {
             minPrice: 0,
             maxPrice: 1,
-            minVolume: 200000
+            minVolume: 200000,
         },
 
         oneToTwo: {
@@ -164,14 +164,16 @@ module.exports = async () => {
         twoToFive: {
             minPrice: 2,
             maxPrice: 5,
-            minVolume: 200000
+            minVolume: 200000,
+            count: 300,
         },
 
         fiveToTen: {
             minPrice: 5,
             maxPrice: 10,
             count: 60,
-            minVolume: 150000
+            minVolume: 150000,
+            count: 300,
         },
 
     };
@@ -201,7 +203,7 @@ module.exports = async () => {
         const scan = scans[scanName];
         const response = (await runScan({
             minVolume: 60000,
-            count: 130,
+            count: 260,
             ...scan,
             includeStSent: false,
             excludeTickers: getTicks(),
