@@ -2,8 +2,7 @@ const fs = require('mz/fs');
 const cTable = require('console.table');
 const { groupBy } = require('underscore');
 
-const getOpen = require('./get-open');
-const getClosed = require('./get-closed');
+const getAllPositions = require('./all');
 const analyzeGroup = require('./analyze-group');
 const DateAnalysis = require('../../models/DateAnalysis');
 
@@ -22,42 +21,9 @@ const saveDateAnalysis = async byDateAnalysis => {
 
 module.exports = async () => {
 
-  let closed = await getClosed();
-  let open = await getOpen();
+  const allPositions = await getAllPositions();
 
-  strlog({
-    open,
-    closed
-  })
-
-  console.log("OPEN");
-  console.table(
-    open.sort((a, b) => new Date(b.date) - new Date(a.date))
-  );
-
-  console.log("CLOSED")
-  console.table(
-    closed
-      .sort((a, b) => Math.abs(b.sellReturnDollars) - Math.abs(a.sellReturnDollars))
-      .sort((a, b) => new Date(b.date) - new Date(a.date))
-  );
-
-
-  const combined = [
-    ...open,
-    ...closed
-  ]
-    .sort((a, b) => (new Date(b.date)).getTime() - (new Date(a.date)).getTime())
-    .map(position => ({
-      ...position,
-      netImpact: position.netImpact || position.sellReturnDollars
-    }))
-    .map(position => ({
-      ...position,
-      impactPerc: +(position.netImpact / position.totalBuyAmt * 100).toFixed(2)
-    }));;
-
-  const byDate = groupBy(combined, 'date');
+  const byDate = groupBy(allPositions, 'date');
   const byDateAnalysis = Object.keys(byDate).map(date => {
     const datePositions = byDate[date];
     return {
@@ -66,14 +32,14 @@ module.exports = async () => {
     };
   });
 
-  const allDates = combined.map(pos => pos.date).uniq();
+  const allDates = allPositions.map(pos => pos.date).uniq();
   const lastFive = allDates.slice(0, 5);
   strlog({ allDates, lastFive })
   
   const overall = {
-    allPositions: analyzeGroup(combined),
-    withoutKEG: analyzeGroup(combined.filter(({ ticker }) => ticker !== 'KEG')),
-    lastFive: analyzeGroup(combined.filter(({ date }) => lastFive.includes(date))),
+    allPositions: analyzeGroup(allPositions),
+    withoutKEG: analyzeGroup(allPositions.filter(({ ticker }) => ticker !== 'KEG')),
+    lastFive: analyzeGroup(allPositions.filter(({ date }) => lastFive.includes(date))),
   };
   
   await saveDateAnalysis(byDateAnalysis);

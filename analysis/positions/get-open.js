@@ -24,22 +24,17 @@ const analyzeOpen = async open => {
     }).remove()
   })
   return withPositions
-    // .filter(({ position }) => position)
     .map(position => {
-      console.log(position);
-      return position;
-    })
-    .map(position => {
-      const { 
-        market_value: marketValue, 
-        unrealized_pl: unrealizedPl 
+      const {
+        market_value: marketValue,
+        unrealized_pl: unrealizedPl
       } = position.position || {};
       delete position.position;
       return {
         ...position,
         marketValue,
+        unrealizedPl: Number(unrealizedPl),
         netImpact: Number(position.sellReturnDollars || 0) + Number(unrealizedPl),
-        // isStale: !position.position
       };
     })
     .sort((a, b) => b.netImpact - a.netImpact);
