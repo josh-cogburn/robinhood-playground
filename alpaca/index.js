@@ -21,7 +21,7 @@ client.onStateChange(newState => {
 })
 client.onOrderUpdate(async data => {
   const stratManager = require('../socket-server/strat-manager');
-
+  let closedPosition = false;
   console.log(`Order updates: ${JSON.stringify(data)}`);
   const {
     event,
@@ -57,7 +57,7 @@ client.onOrderUpdate(async data => {
       buyStrategies,
       quantity: positionQuantity
     } = position;
-    const closedPosition = Boolean(positionQuantity === filled_qty);
+    closedPosition = Boolean(positionQuantity === filled_qty);
 
     const theHold = await Holds.registerSell(
       ticker,
@@ -89,7 +89,7 @@ client.onOrderUpdate(async data => {
 
   }
 
-  stratManager.refreshPositions();
+  stratManager.refreshPositions(closedPosition);
 
 })
 client.onAccountUpdate(data => {

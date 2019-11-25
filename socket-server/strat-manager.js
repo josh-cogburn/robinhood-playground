@@ -96,7 +96,7 @@ const stratManager = {
         }
         
         setInterval(() => this.refreshPositions(), 1000 * 60 * 15);
-        await this.refreshPositions();
+        await this.refreshPositions(true);
 
         for (let pos of this.positions.alpaca) {
             const foundHold = await Holds.findOne({ ticker: pos.ticker });
@@ -135,7 +135,7 @@ const stratManager = {
             overallAnalysis: JSON.parse(await fs.readFile('./json/overall-analysis.json'))
         };
     },
-    async refreshPositions() {
+    async refreshPositions(refreshClosed) {
         console.log('refreshing positions', (new Date().toLocaleTimeString()));
         const positions = {
             robinhood: await cachedPositions(),
@@ -146,9 +146,15 @@ const stratManager = {
         strlog({ positionTickers });
         this.tickerWatcher.addTickers(positionTickers);
 
-        const analyzedClosed = await getAnalyzedClosed();
-        this.analyzedClosed = analyzedClosed;
-        this.sendToAll('server:data-update', { positions, analyzedClosed });
+        if (refreshClosed) {
+            const analyzedClosed = await getAnalyzedClosed();
+            this.analyzedClosed = analyzedClosed;
+        }
+        
+        this.sendToAll('server:data-update', { 
+            positions, 
+            analyzedClosed: this.analyzedClosed 
+        });
     },
     newPick(data) {
 
