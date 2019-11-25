@@ -82,6 +82,8 @@ module.exports = {
         sudden-drops-majorJump-down20
         sudden-drops-majorJump-bullish
         sudden-drops-majorJump-straightDown60
+        sudden-drops-majorJump-straightDown60
+        sudden-drops-majorJump-straightDown60
 
 
 
