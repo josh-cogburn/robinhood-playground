@@ -38,5 +38,7 @@ module.exports = async pms => {
 
   // const sentimentCount = 
 
-  return avgCheckCount;
+  const sentCount = Number(['bullish', 'neutral'].some(key => pms.some(pm => pm.includes(key))));
+
+  return avgCheckCount + sentCount;
 };
