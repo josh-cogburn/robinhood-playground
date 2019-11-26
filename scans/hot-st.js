@@ -4,14 +4,14 @@ const getMinutesFrom630 = require('../utils/get-minutes-from-630');
 module.exports = ({ minPrice, maxPrice, ...rest } = {}) => {
   const min = getMinutesFrom630();
   const irregularHours = min < 0 || min > 390;
-  const limitUp = !irregularHours ? 5 : 3;
+  const limitUp = !irregularHours ? 7 : 5;
   return runScan({
     // minVolume: 80000,
     minPrice,
     maxPrice,
     filterFn: ({
       tso, tsc
-    }) => [tsc, tso].every(val => val > limitUp),
+    }) => [tsc, tso].some(val => val > limitUp),
     ...rest,
   });
 };

@@ -206,7 +206,8 @@ class DayReports extends Component {
             timeFilter: 'onlyToday',
             numDaysToShow: 1,
             hoverIndex: null,
-            afterHoursAnnotations: []
+            afterHoursAnnotations: [],
+            fuzzFactor: 1
         };
     }
     componentDidMount() {
@@ -227,7 +228,7 @@ class DayReports extends Component {
     setTimeFilter = timeFilter => this.setState({ timeFilter });
     render () {
         let { balanceReports, dayReports, admin } = this.props;
-        let { timeFilter, numDaysToShow, hoverIndex, afterHoursAnnotations } = this.state;
+        let { timeFilter, numDaysToShow, hoverIndex, fuzzFactor, afterHoursAnnotations } = this.state;
         if (!balanceReports || !balanceReports.length) return <b>LOADING</b>;
 
 
@@ -250,9 +251,9 @@ class DayReports extends Component {
 
         const numReports = balanceReports.length;
         const smallDevice = window.innerWidth < 600;
-        const numDaysToPrune = smallDevice ? Math.ceil(numReports / 350) : numDaysToShow;
-        
+        let numDaysToPrune = smallDevice ? Math.ceil(numReports / 350) : numDaysToShow;
         balanceReports = pruneByDays(balanceReports, numDaysToPrune);
+        balanceReports = pruneByDays(balanceReports, fuzzFactor);
         console.log({ numReports, smallDevice, numDaysToPrune, afterCount: balanceReports.length })
 
         // const numToShow = numDaysToShow === 1
@@ -363,6 +364,35 @@ class DayReports extends Component {
                             // formatLabel={value => value.toFixed(2)}
                             value={this.state.numDaysToShow}
                             onChange={numDaysToShow => this.setState({ numDaysToShow })}
+                            // onChange={value => console.log(value)} 
+                        />
+                        {/* {
+                            [
+                                'onlyToday',
+                                'ALL REPORTS',
+                                ...admin ? ['2019'] : []
+                            ].map(time => (
+                                <div>
+                                {
+                                    (timeFilter === time)
+                                        ? <span>{time}</span>
+                                        : (
+                                            <a href='#' onClick={() => this.setTimeFilter(time)}>{time}</a>
+                                        )
+                                }
+                                </div>
+                            ))
+                        } */}
+                    </div>
+                    <div style={{ paddingLeft: '5em' }}>
+                        fuzz factor
+                        <InputRange
+                            maxValue={10}
+                            minValue={1}
+                            step={1}
+                            // formatLabel={value => value.toFixed(2)}
+                            value={this.state.fuzzFactor}
+                            onChange={fuzzFactor => this.setState({ fuzzFactor })}
                             // onChange={value => console.log(value)} 
                         />
                         {/* {
