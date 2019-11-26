@@ -48,7 +48,11 @@ const analyzePositions = async collection => {
     const sellReturnDollars = (numSharesSold / 100) * sellReturnPerc * avgEntry;
     const date = (new Date(relatedPicks[0].timestamp)).toLocaleDateString();
     const allPmsHit = relatedPicks.map(pick => pick.pmsHit).flatten().filter(Boolean).uniq();
-    const interestingWords = (allPmsHit || []).map(pm => pm.split('-')).flatten().uniq();
+    const allStrategiesHit = relatedPicks.map(pick => pick.strategyName).filter(Boolean).uniq();
+    const interestingWords = ([
+      ...allPmsHit,
+      ...allStrategiesHit
+    ]).map(pm => pm.split('-')).flatten().uniq();
     return {
         // ...position,
         ticker,

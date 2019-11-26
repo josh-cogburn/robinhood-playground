@@ -118,7 +118,8 @@ module.exports = async () => {
       wouldBeDayTrade, 
       ticker, 
       market_value, 
-      unrealized_intraday_plpc 
+      unrealized_intraday_plpc,
+      stSent: { stBracket }
     } = position;
 
     if (daysOld >= 3 && market_value < 30) {

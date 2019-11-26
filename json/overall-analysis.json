@@ -1,29 +1,52 @@
 {
   "allPositions": {
-    "totalBought": 15147.290976001554,
-    "percChange": -1.96,
-    "avgDayImpact": 0.593777777777778,
-    "totalImpact": -296.8452473479403,
-    "avgPickReturn": 1.8736567809159719,
-    "avgMultiplierReturn": 13.32599422033856,
-    "totalPicks": 64
+    "totalBought": 17316.705108000056,
+    "totalImpact": 914.8942711076182,
+    "percChange": 5.28,
+    "avgPositionImpactPerc": 1.7750000000000004,
+    "avgPickImpactPerc": 3.6395839246137514,
+    "avgMultiplierImpactPerc": 11.842155521592428,
+    "totalPicks": 75,
+    "totalMultipliers": 233.66666666666663
   },
   "withoutKEG": {
-    "totalBought": 10020.308275999902,
-    "percChange": 3.82,
-    "avgDayImpact": 0.9086363636363637,
-    "totalImpact": 383.20286265205965,
-    "avgPickReturn": 2.882840563305459,
-    "avgMultiplierReturn": 13.966719381188314,
-    "totalPicks": 60
+    "totalBought": 17316.705108000056,
+    "totalImpact": 914.8942711076182,
+    "percChange": 5.28,
+    "avgPositionImpactPerc": 1.7750000000000004,
+    "avgPickImpactPerc": 3.6395839246137514,
+    "avgMultiplierImpactPerc": 11.842155521592428,
+    "totalPicks": 75,
+    "totalMultipliers": 233.66666666666663
   },
   "lastFive": {
-    "totalBought": 5858.095281999963,
-    "percChange": 4.01,
-    "avgDayImpact": 0.18200000000000016,
-    "totalImpact": 234.6427519622903,
-    "avgPickReturn": 3.5002675332904505,
-    "avgMultiplierReturn": 15.73803736053283,
-    "totalPicks": 39
+    "totalBought": 9856.272734000127,
+    "totalImpact": 736.3920638434076,
+    "percChange": 7.47,
+    "avgPositionImpactPerc": 4.664166666666667,
+    "avgPickImpactPerc": 8.488022065167534,
+    "avgMultiplierImpactPerc": 15.519570367574778,
+    "totalPicks": 36,
+    "totalMultipliers": 181.66666666666663
+  },
+  "yesterday": {
+    "totalBought": 2131.421531999995,
+    "totalImpact": -82.62938645460635,
+    "percChange": -3.88,
+    "avgPositionImpactPerc": -5.296,
+    "avgPickImpactPerc": -5.0216666666666665,
+    "avgMultiplierImpactPerc": -4.667727272727273,
+    "totalPicks": 6,
+    "totalMultipliers": 22
+  },
+  "today": {
+    "totalBought": 5808.193600000134,
+    "totalImpact": 520.8320753599942,
+    "percChange": 8.97,
+    "avgPositionImpactPerc": 9.026250000000001,
+    "avgPickImpactPerc": 5.8648995288359425,
+    "avgMultiplierImpactPerc": 8.337546594396526,
+    "totalPicks": 12,
+    "totalMultipliers": 48
   }
 }
