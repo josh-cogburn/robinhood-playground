@@ -3,8 +3,6 @@ const { avgArray } = require('../utils/array-math');
 
 module.exports = async pms => {
 
-  if (pms.some(pm => pm.includes('watchout'))) return -2;
-
   const stratManager = require('../socket-server/strat-manager');
   await stratManager.init({ lowKey: true });
   const { pmsAnalyzed } = stratManager;
