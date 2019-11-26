@@ -3,6 +3,8 @@ const { avgArray } = require('../utils/array-math');
 
 module.exports = async pms => {
 
+  if (pms.some(pm => pm.includes('watchout'))) return -2;
+
   const stratManager = require('../socket-server/strat-manager');
   await stratManager.init({ lowKey: true });
   const { pmsAnalyzed } = stratManager;
@@ -15,7 +17,6 @@ module.exports = async pms => {
       .filter(Boolean)
       .filter(({ jsonAnalysis: { daysCount } = {} }) => daysCount >= 3);
   
-  if (pmAnalysis.some(pm => pm.includes('watchout'))) return -2;
   if (pmAnalysis.length < 2) return 0;
 
   const avgChecks = {
