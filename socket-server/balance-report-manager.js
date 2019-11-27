@@ -26,7 +26,7 @@ const init = async (onReportFn) => {
     const getReportDate = r => (new Date(r.time)).toLocaleDateString();
 
     const uniqDates = foundReports.map(getReportDate).uniq();
-    const startAtDate = uniqDates[uniqDates.length - NUM_DAYS_TO_LOAD];
+    const startAtDate = uniqDates[uniqDates.length - Math.min(uniqDates.length, NUM_DAYS_TO_LOAD)];
     foundReports = foundReports.slice(
         foundReports.findIndex(
             r => getReportDate(r) === startAtDate
