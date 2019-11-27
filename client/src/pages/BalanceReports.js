@@ -10,7 +10,7 @@ import './odometer.css';
 import reportsToChartData from '../utils/reports-to-chartData';
 import TrendPerc from '../components/TrendPerc';
 import getTrend from '../utils/get-trend';
-import _, { mapObject, throttle } from 'underscore';
+import _, { mapObject, throttle, } from 'underscore';
 
 function get(obj, path) {
     var nPath, remainingPath;
@@ -335,8 +335,8 @@ class DayReports extends Component {
         const allDatas = chartData.datasets.map(dataset => dataset.data);
         const allValues = allDatas.reduce((acc, vals) => [...acc, ...vals], []);
         
-        const min = Math.floor(Math.min(...allValues));
-        const max = Math.ceil(Math.max(...allValues));
+        const min = Math.floor(_.min(allValues));
+        const max = Math.ceil(_.max(allValues));
 
         const stepSize = Math.ceil((max - min) / 13);
         

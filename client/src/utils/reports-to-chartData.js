@@ -1,6 +1,6 @@
 import getTrend from './get-trend';
 
-const colors = ['green', 'blue', 'violet', 'violet', 'violet', 'pink', 'purple', 'orange', 'blue', 'green'];
+const colors = ['green', 'blue', 'violet', 'violet', 'violet', 'pink', 'black', 'orange', 'blue', 'green'];
 // const colors = [
 //     'orange',
 //     'orange',
@@ -16,6 +16,8 @@ const colors = ['green', 'blue', 'violet', 'violet', 'violet', 'pink', 'purple',
 //     'orange',
 //     'orange'
 // ]
+
+const showAccountBalance = window.location.href.includes('balance');
 
 const fields = {
     // dayReports
@@ -52,7 +54,7 @@ const process = fieldsToInclude => (dayReports, dataSlice = 0) => {
         backgroundColor: 'rgba(75,192,192,0.1)',
         pointBorderColor: key.includes('balance')|| false ? 'black' : getColor(key),
         // pointBorderWidth: 10,
-        borderColor: key === 'account balance' || false ? 'black' : getColor(key),
+        borderColor: key === 'account balance' || false ? 'purple' : getColor(key),
         // borderCapStyle: 'butt',
         borderWidth: 5,
         borderDashOffset: 0.0,
@@ -67,9 +69,6 @@ const process = fieldsToInclude => (dayReports, dataSlice = 0) => {
         pointRadius: 0,
         // pointHitRadius: 10,
         data: dayReports.map(fields[key]).slice(0 - dataSlice),
-        // ...key === 'account balance' && {
-        //     hidden: true,
-        // }
     }));
     // console.log(datasets, Object.keys(fields))
     return {
@@ -79,7 +78,11 @@ const process = fieldsToInclude => (dayReports, dataSlice = 0) => {
 };
 
 export default {
-    balanceChart: process(['alpaca balance', 'account balance', 'russell2000', 'SP500', 'nasdaq']),
+    balanceChart: process([
+        'alpaca balance', 
+        ...showAccountBalance ? ['account balance'] : [],
+        'russell2000', 'SP500', 'nasdaq'
+    ]),
     unrealizedVsRealized: process(['unrealized return', 'realized return']),
     spyVsForPurchase: process(['forPurchase PM avg trend %', 'forPurchase PM weighted trend %']),
     pickToExecutionPerc: process(['pick to execution %']),
