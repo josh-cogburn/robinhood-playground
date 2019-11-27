@@ -1,4 +1,4 @@
-const NUM_DAYS_TO_LOAD = 20;
+const NUM_DAYS_TO_LOAD = 60;
 
 const START_MIN = -210;//51;    // 3am
 const STOP_MIN = 811;
