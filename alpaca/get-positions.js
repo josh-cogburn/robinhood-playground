@@ -149,7 +149,9 @@ module.exports = async () => {
 
     const halfSum = summed * .5;
     const weightedByDayInProgress = halfSum + ratioDayPast * halfSum;
-    const randomized = weightedByDayInProgress + (Math.random() * 3) - 1.5;
+
+    const RAND_VARY_PERC = 3;
+    const randomized = weightedByDayInProgress + (Math.random() * RAND_VARY_PERC) - (RAND_VARY_PERC / 2);
 
     strlog({
       ticker,
