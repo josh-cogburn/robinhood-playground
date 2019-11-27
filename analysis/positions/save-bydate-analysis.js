@@ -8,6 +8,10 @@ const DateAnalysis = require('../../models/DateAnalysis');
 
 const saveDateAnalysis = async byDateAnalysis => {
   for (let { date, ...dateAnalysis } of byDateAnalysis) {
+    console.log({
+      date,
+      dateAnalysis
+    })
     await DateAnalysis.findOneAndUpdate(
       { date }, 
       dateAnalysis, 
