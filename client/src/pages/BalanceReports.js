@@ -190,7 +190,7 @@ const pruneByDays = (balanceReports, numDays) => {
     const pruneEvery = (numDays - 1) * 3 || 1;
     balanceReports.forEach((report, index) => {
         inc++;
-        if (inc % pruneEvery === 0 || index === balanceReports.length - 1) {
+        if (inc % pruneEvery === 0 || index === 0 || index === balanceReports.length - 1) {
             response.push(report);
         }
     })
