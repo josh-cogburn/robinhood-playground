@@ -129,18 +129,27 @@ module.exports = async () => {
     // if (wouldBeDayTrade) return null;
     if (getMinutesFrom630() < 20 && returnPerc > 20) return 50;
     if (Math.abs(returnPerc) > 30) return 24;
-
+    // basePerc = dayVal + returnVal
     const dayVal = (daysOld + 1) * 3;
-    const returnVal = Math.abs(returnPerc) / 4;
+    const returnVal = Math.abs(returnPerc) / 3;
     const basePercent = dayVal + returnVal;
+    // shouldVal is based on intraday pl
     let shouldVal = Math.abs(Number(unrealized_intraday_plpc)) * 100 / 1.4;
     if (outsideBracket) {
       shouldVal += returnPerc ? 4 : 7;
     }
+    // subtract perc if looking good?
+    const stBracketNumbers = {
+      bullish: 2,
+      neutral: 1
+    };
+    const stOffset = stBracketNumbers[stBracket] || 0;
 
-    const summed = basePercent + shouldVal;
+    const summed = basePercent + shouldVal - stOffset;
+
     const halfSum = summed * .5;
     const weightedByDayInProgress = halfSum + ratioDayPast * halfSum;
+    const randomized = weightedByDayInProgress + (Math.random() * 3) - 1.5;
 
     strlog({
       ticker,
@@ -149,10 +158,11 @@ module.exports = async () => {
       shouldVal,
       summed,
       halfSum,
-      weightedByDayInProgress
+      weightedByDayInProgress,
+      randomized,
     });
 
-    return +weightedByDayInProgress.toFixed(2);
+    return +randomized.toFixed(2);
   };
 
   const getRecommendation = position => {

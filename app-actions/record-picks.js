@@ -47,7 +47,8 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
 
     const additionalMultipliers = await getAdditionalMultipliers(forPurchasePms);
     const watchoutOffset = strategy.includes('watchout') ? -3 : 0;
-    const actualAddThis = additionalMultipliers + watchoutOffset;
+    const avgDownerOffset = strategy.includes('avg-downer') ? 3 : 0;
+    const actualAddThis = additionalMultipliers + watchoutOffset + avgDownerOffset;
     const multiplier = Math.max(1, forPurchaseMultiplier + actualAddThis);
 
     console.log({
