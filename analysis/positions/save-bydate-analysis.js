@@ -67,6 +67,10 @@ module.exports = async () => {
     notWatchoutMajorJumpNotStraightDowner: position => notWatchout(position) && majorJump(position) && notStraightDowner(position),
     straightDowner: ({ interestingWords }) => interestingWords.some(val => val.startsWith('straightDown')),
     notStraightDowner,
+    straightDowner: ({ interestingWords }) => interestingWords.some(val => val.startsWith('straightDown')),
+    firstAlert: ({ interestingWords }) => !interestingWords.includes('firstAlert'),
+    avgh: ({ interestingWords }) => interestingWords.some(val => val.startsWith('avgh')),
+    notAvgh: ({ interestingWords }) => !interestingWords.some(val => val.startsWith('avgh')),
 
   }, (filterFn = () => true) => 
     analyzeGroup(
