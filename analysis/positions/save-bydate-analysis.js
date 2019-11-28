@@ -68,7 +68,8 @@ module.exports = async () => {
     straightDowner: ({ interestingWords }) => interestingWords.some(val => val.startsWith('straightDown')),
     notStraightDowner,
     straightDowner: ({ interestingWords }) => interestingWords.some(val => val.startsWith('straightDown')),
-    firstAlert: ({ interestingWords }) => !interestingWords.includes('firstAlert'),
+    firstAlert: ({ interestingWords }) => interestingWords.includes('firstAlert'),
+    notFirstAlert: ({ interestingWords }) => !interestingWords.includes('firstAlert'),
     avgh: ({ interestingWords }) => interestingWords.some(val => val.startsWith('avgh')),
     notAvgh: ({ interestingWords }) => !interestingWords.some(val => val.startsWith('avgh')),
 
