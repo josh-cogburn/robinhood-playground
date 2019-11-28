@@ -115,7 +115,7 @@ class Closed extends Component {
                   <th>Avg Position Impact Perc </th>
                   <th>Avg Pick Impact Perc</th>
                   <th>Avg Multiplier Impact Perc</th>
-                  {/* <th>PercUp</th> */}
+                  <th>PercUp</th>
                   <th>Position Count</th>
                   <th>Pick Count</th>
                   <th>Multiplier Count</th>
@@ -130,7 +130,7 @@ class Closed extends Component {
                     totalImpact, 
                     avgPickImpactPerc, 
                     avgMultiplierImpactPerc,
-                    // percUp,
+                    percUp,
                     totalPositions,
                     totalPicks,
                     totalMultipliers,
@@ -144,7 +144,7 @@ class Closed extends Component {
                       <td><TrendPerc value={avgPositionImpactPerc} /></td>
                       <td><TrendPerc value={avgPickImpactPerc} /></td>
                       <td><TrendPerc value={avgMultiplierImpactPerc} /></td>
-                      {/* <td><TrendPerc value={percUp} redAt={50} /></td> */}
+                      <td><TrendPerc value={percUp} redAt={50} /></td>
                       <td>{totalPositions}</td>
                       <td>{totalPicks}</td>
                       <td>{totalMultipliers.toFixed(1)}</td>

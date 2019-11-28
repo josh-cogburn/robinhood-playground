@@ -8,12 +8,12 @@ const subsetOffsets = {
   // lastFive: ({ date }) => lastFive.includes(date),
   // yesterday: ({ date }) => allDates[1] === date,
   // today: ({ date }) => allDates[0] === date,
-  watchout: -6,
+  watchout: -7,
   notWatchout: 1,
 
   bullish: -1,
   neutral: 0,
-  bearish: 1,
+  bearish: 2,
 
   majorJump: 2,
   mediumJump: 1,
@@ -39,14 +39,14 @@ const subsetOffsets = {
   // collections
   // zeroToOne: ({ interestingWords }) => interestingWords.includes('zeroToOne'),
   oneToTwo: 2,
-  fitty: -2,
+  fitty: -3,
   // fiveToTen: ({ interestingWords }) => interestingWords.includes('fiveToTen'),
 
   // minKey
   // initial: ({ interestingWords }) => interestingWords.includes('initial'),
-  brunch: 1,
-  lunch: 3,
-  dinner: 2,
+  brunch: 0,
+  lunch: 2,
+  dinner: 0,
   afterhours: -500,
 
   // combos

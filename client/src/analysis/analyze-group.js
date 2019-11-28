@@ -24,9 +24,9 @@ const analyzeGroup = analyzedPositions => {
         (new Array(Math.round(pos.numMultipliers))).fill(pos.impactPerc)
       ).flatten()
     ),
-    // percUp: percUp(
-    //   analyzedPositions.map(pos => pos.netImpact)
-    // ),
+    percUp: percUp(
+      analyzedPositions.map(pos => pos.netImpact)
+    ),
     // counts
     totalPositions: forConsideration.length,
     totalPicks: sumArray(forConsideration.map(pos => pos.numPicks)),
