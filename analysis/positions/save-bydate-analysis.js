@@ -72,6 +72,19 @@ module.exports = async () => {
     notFirstAlert: ({ interestingWords }) => !interestingWords.includes('firstAlert'),
     avgh: ({ interestingWords }) => interestingWords.some(val => val.startsWith('avgh')),
     notAvgh: ({ interestingWords }) => !interestingWords.some(val => val.startsWith('avgh')),
+    hotSt: ({ interestingWords }) => interestingWords.includes('hotSt'),
+    notHotSt: ({ interestingWords }) => !interestingWords.includes('hotSt'),
+    // collections
+    zeroToOne: ({ interestingWords }) => interestingWords.includes('zeroToOne'),
+    oneToTwo: ({ interestingWords }) => interestingWords.includes('oneToTwo'),
+    fitty: ({ interestingWords }) => interestingWords.includes('fitty'),
+    fiveToTen: ({ interestingWords }) => interestingWords.includes('fiveToTen'),
+
+    // minKey
+    initial: ({ interestingWords }) => interestingWords.includes('initial'),
+    brunch: ({ interestingWords }) => interestingWords.includes('brunch'),
+    lunch: ({ interestingWords }) => interestingWords.includes('lunch'),
+    afterhours: ({ interestingWords }) => interestingWords.includes('afterhours'),
 
   }, (filterFn = () => true) => 
     analyzeGroup(
