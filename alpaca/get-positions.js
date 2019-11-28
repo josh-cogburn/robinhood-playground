@@ -51,7 +51,7 @@ module.exports = async () => {
     avgEntry: avg_entry_price,
     quantity: qty,
     returnPerc: unrealized_plpc * 100,
-    unrealizedPl: unrealized_pl,
+    unrealizedPl: Number(unrealized_pl),
     ...rest
   }));
 
