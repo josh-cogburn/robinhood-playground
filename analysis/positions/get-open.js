@@ -40,9 +40,11 @@ const addUnrealizedPl = async positions => {
 };
 
 
-module.exports = async positions => {
+module.exports = async () => {
   return mapLimit(
-    await addUnrealizedPl(positions),
+    await addUnrealizedPl(
+      await Hold.find({}).lean()
+    ),
     2,
     analyzePosition
   );

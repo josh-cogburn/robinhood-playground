@@ -38,6 +38,6 @@ module.exports = async () => {
 
   return {
     byDateAnalysis,
-    overall
+    overallAnalysis
   };
 };
