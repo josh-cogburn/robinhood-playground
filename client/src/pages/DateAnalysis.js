@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Line } from 'react-chartjs-2';
 import TrendPerc from '../components/TrendPerc';
-
+import getByDateAnalysis from '../analysis/get-bydate-analysis';
+import getOverallAnalysis from '../analysis/get-overall-analysis';
 const colors = [
   'black',
   'rgba(75,192,192,1)',
@@ -40,7 +41,17 @@ const LineChart = ({ dateAnalysis, props }) => {
 
 class DateAnalysis extends Component {
   render() {
-    let { dateAnalysis, overallAnalysis } = this.props;
+    let { positions: { alpaca: open}, analyzedClosed: closed } = this.props;
+
+    const allPositions = [
+      ...open,
+      ...closed
+    ]
+      .sort((a, b) => (new Date(b.date)).getTime() - (new Date(a.date)).getTime());
+    console.log({ allPositions })
+    let [dateAnalysis, overallAnalysis] = [getByDateAnalysis, getOverallAnalysis]
+      .map(fn => fn(allPositions));
+
     console.log({dateAnalysis});
     dateAnalysis = [...dateAnalysis].reverse().slice(1);
     return (

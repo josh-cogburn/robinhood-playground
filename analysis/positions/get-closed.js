@@ -3,6 +3,9 @@ const analyzePosition = require('./analyze-position');
 
 module.exports = async () => {
   let closed = await ClosedPosition.find({}).lean();
-  closed = await mapLimit(closed, 1, analyzePosition);
+  closed = await mapLimit(closed, 1, async position => ({
+    ...position,
+    ...await analyzePosition(position);
+  }));
   return closed;
 };

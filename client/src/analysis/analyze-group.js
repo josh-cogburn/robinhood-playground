@@ -1,5 +1,7 @@
-const { sumArray, avgArray, percUp } = require('../../utils/array-math');
-
+const { sumArray, avgArray, percUp } = require('../utils/array-math');
+Array.prototype.flatten = function() {
+  return [].concat(...this);
+};
 const analyzeGroup = analyzedPositions => {
   console.log({ analyzedPositions })
   const forConsideration = analyzedPositions.filter(position => (position.buys || []).length);
