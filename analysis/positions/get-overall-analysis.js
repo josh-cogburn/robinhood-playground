@@ -60,7 +60,7 @@ module.exports = positions => {
 
   }, (filterFn = () => true) => 
     analyzeGroup(
-      allPositions.filter(filterFn)
+      positions.filter(filterFn)
     )
   );
 
