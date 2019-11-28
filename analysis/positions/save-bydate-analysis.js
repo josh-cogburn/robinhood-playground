@@ -58,7 +58,7 @@ module.exports = async () => {
     multipleMultipliers: ({ numMultipliers }) => numMultipliers > 1,
     singlePick: ({ numPicks }) => numPicks === 1,
     multiplePicks: ({ numPicks }) => numPicks > 1,
-  }, filterFn => 
+  }, (filterFn = () => true) => 
     analyzeGroup(
       allPositions.filter(filterFn)
     )
