@@ -50,7 +50,7 @@ const analyzePositions = async collection => {
     const allPmsHit = relatedPicks.map(pick => pick.pmsHit).flatten().filter(Boolean).uniq();
     const allStrategiesHit = relatedPicks.map(pick => pick.strategyName).filter(Boolean).uniq();
     const interestingWords = ([
-      // ...allPmsHit,
+      ...allPmsHit,
       ...allStrategiesHit
     ]).map(pm => pm.split('-')).flatten().uniq();
     return {
