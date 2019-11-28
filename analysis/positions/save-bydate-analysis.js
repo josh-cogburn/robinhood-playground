@@ -42,6 +42,7 @@ module.exports = async () => {
   
   const notWatchout = ({ interestingWords }) => interestingWords.includes('!watchout');
   const majorJump = ({ interestingWords }) => interestingWords.includes('majorJump');
+  const bearish = ({ interestingWords }) => interestingWords.includes('bearish');
 
   const overall = mapObject({
     allPositions: undefined,
@@ -53,7 +54,7 @@ module.exports = async () => {
     notWatchout,
     bullish: ({ interestingWords }) => interestingWords.includes('bullish'),
     neutral: ({ interestingWords }) => interestingWords.includes('neutral'),
-    bearish: ({ interestingWords }) => interestingWords.includes('bearish'),
+    bearish,
     majorJump,
     mediumJump: ({ interestingWords }) => interestingWords.includes('mediumJump'),
     minorJump: ({ interestingWords }) => interestingWords.includes('minorJump'),
@@ -61,7 +62,8 @@ module.exports = async () => {
     multipleMultipliers: ({ numMultipliers }) => numMultipliers > 1,
     singlePick: ({ numPicks }) => numPicks === 1,
     multiplePicks: ({ numPicks }) => numPicks > 1,
-    notWatchoutMajorJump: position => notWatchout(position) && majorJump(position)
+    notWatchoutMajorJump: position => notWatchout(position) && majorJump(position),
+    notWatchoutMajorJumpBearish: position => notWatchout(position) && majorJump(position) && bearish(position)
   }, (filterFn = () => true) => 
     analyzeGroup(
       allPositions.filter(filterFn)
