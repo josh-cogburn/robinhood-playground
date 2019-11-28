@@ -45,6 +45,10 @@ module.exports = async () => {
   const bearish = ({ interestingWords }) => interestingWords.includes('bearish');
   const notStraightDowner = ({ interestingWords }) => interestingWords.includes('!straightDown');
 
+
+  const lunch = ({ interestingWords }) => interestingWords.includes('lunch');
+  const oneToTwo = ({ interestingWords }) => interestingWords.includes('oneToTwo');
+
   const overall = mapObject({
     allPositions: undefined,
     withoutKEG: ({ ticker }) => ticker !== 'KEG',
@@ -76,15 +80,18 @@ module.exports = async () => {
     notHotSt: ({ interestingWords }) => !interestingWords.includes('hotSt'),
     // collections
     zeroToOne: ({ interestingWords }) => interestingWords.includes('zeroToOne'),
-    oneToTwo: ({ interestingWords }) => interestingWords.includes('oneToTwo'),
+    oneToTwo,
     fitty: ({ interestingWords }) => interestingWords.includes('fitty'),
     fiveToTen: ({ interestingWords }) => interestingWords.includes('fiveToTen'),
 
     // minKey
     initial: ({ interestingWords }) => interestingWords.includes('initial'),
     brunch: ({ interestingWords }) => interestingWords.includes('brunch'),
-    lunch: ({ interestingWords }) => interestingWords.includes('lunch'),
+    lunch,
     afterhours: ({ interestingWords }) => interestingWords.includes('afterhours'),
+
+    // combos
+    oneToTwoAndLunch: p => lunch(p) && oneToTwo(p),
 
   }, (filterFn = () => true) => 
     analyzeGroup(
