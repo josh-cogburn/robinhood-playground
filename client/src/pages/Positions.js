@@ -157,7 +157,7 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
                     }
                 </tbody>
             </table>
-            <table>
+            {/* <table>
                 <thead>{daysOldKeys.map(key => <th>{key}</th>)}</thead>
                 <tbody>
                     { 
@@ -172,7 +172,7 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
                         )
                     }
                 </tbody>
-            </table>
+            </table> */}
             <br/>
         </div>
     );

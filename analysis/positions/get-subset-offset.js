@@ -23,11 +23,11 @@ const subsetOffsets = {
   // multipleMultipliers: ({ numMultipliers }) => numMultipliers > 1,
   singlePick: -0.5,
   // multiplePicks: ({ numPicks }) => numPicks > 1,
-  notWatchoutMajorJump: 1,
+  notWatchoutMajorJump: 2,
   // notWatchoutMajorJumpNotStraightDowner: 1,
 
   straightDowner: 1,
-  straightDown60: 1,
+  straightDown60: 3,
   // notStraightDowner: 1,
   // straightDowner: ({ interestingWords }) => interestingWords.some(val => val.startsWith('straightDown')),
   // firstAlert: ({ interestingWords }) => interestingWords.includes('firstAlert'),
@@ -56,11 +56,17 @@ const subsetOffsets = {
 
 
 module.exports = interestingWords => {
+  interestingWords = 'sudden drops !watchout brunch bullish mediumJump !down hotSt 5min avgh10 spread3 firstAlert'.split(' ');
   const fakePosition = { interestingWords };
   const subsets = getSubsets([fakePosition]);
-  const passedSubsets = mapObject(subsets, filterFn => !!filterFn(fakePosition));
-  const withOffsets = mapObject(passedSubsets, (val, key) => val ? subsetOffsets[key] : 0);
-  strlog({withOffsets})
+  const withOffsets = mapObject(
+    subsets, 
+    (filterFn, key) => 
+      filterFn(fakePosition) 
+        ? subsetOffsets[key] 
+        : 0
+  );
+  strlog({interestingWords, withOffsets})
   const totals = Object.values(withOffsets);
   return sumArray(totals.filter(Boolean));
 };

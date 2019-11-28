@@ -219,7 +219,7 @@ class DayReports extends Component {
             afterHoursAnnotations: annotateBoxes(getAfterHoursBoxes(balanceReports))
         });
         const query = window.location.search.slice(1);
-        if (query) {
+        if (query && !isNaN(query)) {
             this.setState({
                 numDaysToShow: Number(query)
             });
