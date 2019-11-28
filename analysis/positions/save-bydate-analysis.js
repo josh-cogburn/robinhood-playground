@@ -46,6 +46,9 @@ module.exports = async () => {
     lastFive: analyzeGroup(allPositions.filter(({ date }) => lastFive.includes(date))),
     yesterday: analyzeGroup(allPositions.filter(({ date }) => allDates[1] === date)),
     today: analyzeGroup(allPositions.filter(({ date }) => allDates[0] === date)),
+    watchout: analyzeGroup(allPositions.filter(({ interestingWords }) => interestingWords.includes('watchout'))),
+    notWatchout: analyzeGroup(allPositions.filter(({ interestingWords }) => interestingWords.includes('!watchout'))),
+    bullish: analyzeGroup(allPositions.filter(({ interestingWords }) => interestingWords.includes('bullish')))
   };
   
   await saveDateAnalysis(byDateAnalysis);
