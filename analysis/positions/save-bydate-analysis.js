@@ -48,7 +48,9 @@ module.exports = async () => {
     today: analyzeGroup(allPositions.filter(({ date }) => allDates[0] === date)),
     watchout: analyzeGroup(allPositions.filter(({ interestingWords }) => interestingWords.includes('watchout'))),
     notWatchout: analyzeGroup(allPositions.filter(({ interestingWords }) => interestingWords.includes('!watchout'))),
-    bullish: analyzeGroup(allPositions.filter(({ interestingWords }) => interestingWords.includes('bullish')))
+    bullish: analyzeGroup(allPositions.filter(({ interestingWords }) => interestingWords.includes('bullish'))),
+    neutral: analyzeGroup(allPositions.filter(({ interestingWords }) => interestingWords.includes('neutral'))),
+    bearish: analyzeGroup(allPositions.filter(({ interestingWords }) => interestingWords.includes('bearish'))),
   };
   
   await saveDateAnalysis(byDateAnalysis);
