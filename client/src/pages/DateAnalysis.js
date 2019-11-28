@@ -49,63 +49,14 @@ class DateAnalysis extends Component {
     ]
       .sort((a, b) => (new Date(b.date)).getTime() - (new Date(a.date)).getTime());
     console.log({ allPositions })
-    let [dateAnalysis, overallAnalysis] = [getByDateAnalysis, getOverallAnalysis]
-      .map(fn => fn(allPositions));
+
+    let dateAnalysis = getByDateAnalysis(allPositions);
 
     console.log({dateAnalysis});
     dateAnalysis = [...dateAnalysis].reverse().slice(1);
     return (
       <div>
 
-        <h1>Overall</h1>
-        <table style={{ width: '100%', margin: '0 1%', textAlign: 'center' }}>
-          <thead>
-            <tr>
-              <th>Subset</th>
-              <th>Total Bought</th>
-              <th>Total Impact</th>
-              <th>Percent Change</th>
-              <th>Avg Position Impact Perc </th>
-              <th>Avg Pick Impact Perc</th>
-              <th>Avg Multiplier Impact Perc</th>
-              {/* <th>PercUp</th> */}
-              <th>Position Count</th>
-              <th>Pick Count</th>
-              <th>Multiplier Count</th>
-            </tr>
-          </thead>
-          <tbody>
-            { Object.entries(overallAnalysis).map(([name, analysis]) => {
-              const {
-                totalBought, 
-                percChange, 
-                avgPositionImpactPerc, 
-                totalImpact, 
-                avgPickImpactPerc, 
-                avgMultiplierImpactPerc,
-                // percUp,
-                totalPositions,
-                totalPicks,
-                totalMultipliers,
-              } = analysis;
-              return (
-                <tr>
-                  <td>{name}</td>
-                  <td>${totalBought.toFixed(2)}</td>
-                  <td><TrendPerc value={totalImpact} dollar={true} /></td>
-                  <td><TrendPerc value={percChange} /></td>
-                  <td><TrendPerc value={avgPositionImpactPerc} /></td>
-                  <td><TrendPerc value={avgPickImpactPerc} /></td>
-                  <td><TrendPerc value={avgMultiplierImpactPerc} /></td>
-                  {/* <td><TrendPerc value={percUp} redAt={50} /></td> */}
-                  <td>{totalPositions}</td>
-                  <td>{totalPicks}</td>
-                  <td>{totalMultipliers.toFixed(1)}</td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
 
         <h1>percentages</h1>
         <LineChart {...{ dateAnalysis, props: ['percChange', 'avgPositionImpactPerc', 'avgPickImpactPerc', 'avgMultiplierImpactPerc'] }} />

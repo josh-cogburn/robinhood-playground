@@ -4,7 +4,7 @@ const { partition } = require('underscore');
 const settings = require('../settings');
 
 module.exports = async (_, strategy) => {
-  await require('../realtime/RealtimeRunner').init();
+  await require('../realtime/RealtimeRunner').init(true);
   const pms = require('../realtime/RealtimeRunner').getPms();
   // console.log('pms-hit', { strategy, pms }, settings.forPurchase);
 

@@ -30,14 +30,13 @@ module.exports = async () => {
   const allPositions = await getAllPositions();
 
   const byDateAnalysis = getByDateAnalysis(allPositions);
-  const overallAnalysis = getOverallAnalysis(allPositions);
+  // const overallAnalysis = getOverallAnalysis(allPositions);
   
   
   await saveDateAnalysis(byDateAnalysis);
-  await fs.writeFile('./json/overall-analysis.json', JSON.stringify(overallAnalysis, null, 2));
 
   return {
     byDateAnalysis,
-    overallAnalysis
+    // overallAnalysis
   };
 };

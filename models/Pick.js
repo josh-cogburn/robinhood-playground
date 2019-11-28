@@ -19,8 +19,8 @@ const schema = new Schema({
     // multipliers
     multiplier: Number,
     forPurchaseMultiplier: Number,
-    additionalMultipliers: Number,
-    actualAddThis: Number
+    pmAnalysisMultiplier: Number,
+    subsetOffsetMultiplier: Number,
 });
 
 schema.statics.getUniqueDates = async function() {

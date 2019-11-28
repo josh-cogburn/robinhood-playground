@@ -27,6 +27,7 @@ import Settings from './pages/Settings';
 import Cron from './pages/Cron';
 import Analysis from './pages/Analysis';
 import Scan from './pages/Scan';
+import Closed from './pages/Closed';
 
 import socketIOClient from "socket.io-client";
 import { partition, mapObject } from 'underscore';
@@ -132,6 +133,10 @@ const pages = [
     {
         label: 'Date Analysis',
         component: DateAnalysis
+    },
+    {
+        label: 'Closed',
+        component: Closed
     },
     {
         label: 'Positions',

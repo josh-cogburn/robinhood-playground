@@ -3,7 +3,7 @@ import { MDBDataTable } from 'mdbreact';
 
 import getTrend from '../utils/get-trend';
 import { avgArray, sumArray } from '../utils/array-math';
-import { mapObject, uniq } from 'underscore';
+import { mapObject, uniq, pick } from 'underscore';
 
 import Pick from '../components/Pick';
 import TrendPerc from '../components/TrendPerc';
@@ -87,14 +87,14 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
             .filter(filterFn)
             .filter(({ ticker }) => !dontCountTickers.includes(ticker))
             .reduce((acc, pos) => acc + Number(pos[prop]), 0);
-        const statKeys = ['equity', 'returnDollars'];
+        const statKeys = ['totalBuyAmt', 'netImpact'];
         let stats = statKeys.reduce((acc, key) => ({
             ...acc,
             [key]: sumProp(key)
         }), {});
         stats = {
             ...stats,
-            returnPerc: stats.returnDollars / (stats.equity - stats.returnDollars) * 100,
+            returnPerc: stats.netImpact / (stats.totalBuyAmt - stats.netImpact) * 100,
         };
         return mapObject(stats, val => Number(val.toFixed(2)));
     };
@@ -149,7 +149,7 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
                             <tr>
                                 <td>Totals</td>
                                 <td>{totals.equity}</td>
-                                <td>{totals.returnDollars}</td>
+                                <td>{totals.netImpact}</td>
                                 <td><TrendPerc value={totals.returnPerc} /></td>
                                 <td colspan="3"></td>
                             </tr>
@@ -190,19 +190,8 @@ class Positions extends Component {
             // admin, 
             positions, 
             relatedPrices,
-            analyzedClosed
         } = this.props;
 
-        analyzedClosed = analyzedClosed.map(position => ({
-            ...position,
-            interestingWords: uniq(position.interestingWords).join(' ')
-        }))
-        .map(position => {
-            ['avgEntry', 'avgSellPrice', 'sellReturnDollars'].forEach(key => {
-                position[key] = position[key].toFixed(2);
-            });
-            return position;
-        });
 
         return (
             <div style={{ padding: '15px' }}>
@@ -220,17 +209,7 @@ class Positions extends Component {
                         />
                     ))
                 }
-                {
-                    analyzedClosed && analyzedClosed.length && (
-                        <div>
-                            <h2>Closed Positions</h2>
-                            <MDBDataTable data={{
-                                columns: Object.keys(analyzedClosed[0]).map((label, i) => ({ label, field: label })),
-                                rows: [...analyzedClosed].sort((a, b) => (new Date(b.date)).getTime() - (new Date(a.date)).getTime())
-                            }} />
-                        </div>
-                    )
-                }
+                
                 
 
             </div>

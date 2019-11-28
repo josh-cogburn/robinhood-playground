@@ -15,7 +15,22 @@
   }
 }
 
-
+.split-vertical {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 80vh;
+}
+.split-vertical > div:nth-child(1) {
+  max-height: 25vh;
+}
+.split-vertical > * {
+  /* flex: 0 0 50%; */
+  flex: 1;
+  border: 1px solid black;
+  /* max-height: 48vh; */
+  overflow-y: scroll;
+}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;

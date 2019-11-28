@@ -45,18 +45,28 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
 
     forPurchasePms = forPurchasePms.uniq();
 
-    const additionalMultipliers = await getAdditionalMultipliers(forPurchasePms);
-    const watchoutOffset = strategy.includes('watchout') ? -3 : 0;
-    const avgDownerOffset = strategy.includes('avg-downer') ? 3 : 0;
-    const actualAddThis = additionalMultipliers + watchoutOffset + avgDownerOffset;
-    const multiplier = Math.max(1, forPurchaseMultiplier + actualAddThis);
+    const stocksToBuy = withPrices.map(t => t.ticker);
+    
+    
+
+    const {
+        pmAnalysisMultiplier,
+        subsetOffsetMultiplier
+    } = await getAdditionalMultipliers(
+        forPurchasePms, 
+        strategy, 
+        stocksToBuy
+    );
+    
+    let multiplier = forPurchaseMultiplier + pmAnalysisMultiplier + subsetOffsetMultiplier;
+    multiplier = Math.max(1, multiplier);
 
     console.log({
         forPurchasePms, 
         multiplier, 
         forPurchaseMultiplier, 
-        additionalMultipliers, 
-        actualAddThis 
+        pmAnalysisMultiplier, 
+        subsetOffsetMultiplier 
     });
 
 
@@ -86,8 +96,8 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
 
             multiplier,
             forPurchaseMultiplier,
-            additionalMultipliers,
-            actualAddThis
+            pmAnalysisMultiplier,
+            subsetOffsetMultiplier
 
         }
     };
@@ -106,7 +116,7 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
         keys,
     });
 
-    var stocksToBuy = withPrices.map(t => t.ticker);
+    
     await Promise.all([
         (async () => {
 

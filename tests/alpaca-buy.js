@@ -9,7 +9,7 @@ module.exports = async () => {
     strategyName: 'testing-blah-blah',
     min: 5000,
     picks: [{
-      ticker: 'ESTR',
+      ticker: 'FFHL',
       price: 0.23
     }],
     keys: {
@@ -29,12 +29,12 @@ module.exports = async () => {
 
 
   await purchaseStocks({
-      stocksToBuy: ['ESTR'],
+      stocksToBuy: ['FFHL'],
       strategy: 'testing-blah-blah2',
       multiplier: 1,
       min: 5000,
       withPrices: [{
-        ticker: 'ESTR',
+        ticker: 'FFHL',
         price: 0.23
       }],
       PickDoc
