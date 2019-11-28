@@ -1,6 +1,6 @@
 const { alpaca } = require('../../alpaca/');
 const Hold = require('../../models/Holds');
-const analyzePositions = require('./analyze-positions');
+const analyzePositions = require('./analyze-position');
 
 const analyzeOpen = async open => {
   
@@ -44,7 +44,7 @@ const analyzeOpen = async open => {
 
 module.exports = async () => {
   let open = await Hold.find({}).lean();
-  open = await analyzePositions(open);
+  open = await mapLimit(open, 1, analyzePosition);
   open = await analyzeOpen(open);
   return open;
 };

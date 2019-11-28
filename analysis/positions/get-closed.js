@@ -1,8 +1,8 @@
 const ClosedPosition = require('../../models/Holds/ClosedPositions');
-const analyzePositions = require('./analyze-positions');
+const analyzePosition = require('./analyze-position');
 
 module.exports = async () => {
   let closed = await ClosedPosition.find({}).lean();
-  closed = await analyzePositions(closed);
+  closed = await mapLimit(closed, 1, analyzePosition);
   return closed;
 };

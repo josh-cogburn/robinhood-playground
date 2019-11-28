@@ -5,9 +5,10 @@ const getTrend = require('../utils/get-trend');
 const Holds = require('../models/Holds');
 const Pick = require('../models/Pick');
 const getMinutesFrom630 = require('../utils/get-minutes-from-630');
+const analyzePosition = require('../analysis/positions/analyze-position');
 
 const checkForHugeDrop = position => {
-  let { current_price, returnPerc: actualReturnPerc, avgEntry: actualEntry, hold: { buys = [] } } = position;
+  let { current_price, returnPerc: actualReturnPerc, avgEntry: actualEntry, buys = [] } = position;
   const dropIndex = buys.slice().reverse().findIndex((buy, index, arr) => {
     const isBigDrop = arr[index + 1] && buy.fillPrice < arr[index + 1].fillPrice * .7;
     const isNotToday = buy.date !== (new Date()).toLocaleDateString().split('/').join('-');
@@ -45,17 +46,18 @@ module.exports = async () => {
   
   let positions = (await alpaca.getPositions());
   strlog({ positions })
-  positions = positions.map(({ symbol, avg_entry_price, qty, unrealized_plpc, ...rest }) => ({
+  positions = positions.map(({ symbol, avg_entry_price, qty, unrealized_pl, unrealized_plpc, ...rest }) => ({
     ticker: symbol,
     avgEntry: avg_entry_price,
     quantity: qty,
     returnPerc: unrealized_plpc * 100,
+    unrealizedPl: unrealized_pl,
     ...rest
   }));
 
   positions = await mapLimit(positions, 3, async position => {
     const { ticker } = position;
-    const hold = await Holds.findOne({ ticker }) || {};
+    const hold = await Holds.findOne({ ticker }).lean() || {};
     if (!hold.buys) {
       console.log('hey! no buys?', ticker);
     }
@@ -83,7 +85,7 @@ module.exports = async () => {
     const wouldBeDayTrade = DONTSELL.includes(ticker)|| Boolean(mostRecentPurchase === 0);
     return {
       ...position,
-      hold,
+      ...hold,
       buyStrategies,
       daysOld,
       mostRecentPurchase,
@@ -110,6 +112,16 @@ module.exports = async () => {
 
   const ratioDayPast = 0.2 || Math.max(0.2, Math.min(getMinutesFrom630() / 360, 1));
   strlog({ ratioDayPast })
+
+
+  const withAnalysis = await mapLimit(positions, 2, async position => 
+    position.buys ? {
+      ...position,
+      ...await analyzePosition(position)
+    } : position
+  );
+
+
   const getPercToSell = position => {
     let { 
       daysOld, 
@@ -176,12 +188,13 @@ module.exports = async () => {
     return wouldBeDayTrade ? `possibly ${action}` : action;
   };
 
-  const withRecommendations = positions
+  const withRecommendations = withAnalysis
     .map(position => ({
       ...position,
       recommendation: getRecommendation(position),
       percToSell: getPercToSell(position)
     }));
+
 
   
 
