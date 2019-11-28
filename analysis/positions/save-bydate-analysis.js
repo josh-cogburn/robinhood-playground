@@ -41,24 +41,28 @@ module.exports = async () => {
   strlog({ allDates, lastFive })
   
   const overall = mapObject({
-    allPositions: allPositions,
-    withoutKEG: allPositions.filter(({ ticker }) => ticker !== 'KEG'),
-    lastFive: allPositions.filter(({ date }) => lastFive.includes(date)),
-    yesterday: allPositions.filter(({ date }) => allDates[1] === date),
-    today: allPositions.filter(({ date }) => allDates[0] === date),
-    watchout: allPositions.filter(({ interestingWords }) => interestingWords.includes('watchout')),
-    notWatchout: allPositions.filter(({ interestingWords }) => interestingWords.includes('!watchout')),
-    bullish: allPositions.filter(({ interestingWords }) => interestingWords.includes('bullish')),
-    neutral: allPositions.filter(({ interestingWords }) => interestingWords.includes('neutral')),
-    bearish: allPositions.filter(({ interestingWords }) => interestingWords.includes('bearish')),
-    majorJump: allPositions.filter(({ interestingWords }) => interestingWords.includes('majorJump')),
-    mediumJump: allPositions.filter(({ interestingWords }) => interestingWords.includes('mediumJump')),
-    minorJump: allPositions.filter(({ interestingWords }) => interestingWords.includes('minorJump')),
-    singleMultiplier: allPositions.filter(({ numMultipliers }) => numMultipliers === 1),
-    multipleMultipliers: allPositions.filter(({ numMultipliers }) => numMultipliers > 1),
-    singlePick: allPositions.filter(({ numPicks }) => numPicks === 1),
-    multiplePicks: allPositions.filter(({ numPicks }) => numPicks > 1),
-  }, mapObject);
+    allPositions: undefined,
+    withoutKEG: ({ ticker }) => ticker !== 'KEG',
+    lastFive: ({ date }) => lastFive.includes(date),
+    yesterday: ({ date }) => allDates[1] === date,
+    today: ({ date }) => allDates[0] === date,
+    watchout: ({ interestingWords }) => interestingWords.includes('watchout'),
+    notWatchout: ({ interestingWords }) => interestingWords.includes('!watchout'),
+    bullish: ({ interestingWords }) => interestingWords.includes('bullish'),
+    neutral: ({ interestingWords }) => interestingWords.includes('neutral'),
+    bearish: ({ interestingWords }) => interestingWords.includes('bearish'),
+    majorJump: ({ interestingWords }) => interestingWords.includes('majorJump'),
+    mediumJump: ({ interestingWords }) => interestingWords.includes('mediumJump'),
+    minorJump: ({ interestingWords }) => interestingWords.includes('minorJump'),
+    singleMultiplier: ({ numMultipliers }) => numMultipliers === 1,
+    multipleMultipliers: ({ numMultipliers }) => numMultipliers > 1,
+    singlePick: ({ numPicks }) => numPicks === 1,
+    multiplePicks: ({ numPicks }) => numPicks > 1,
+  }, filterFn => 
+    analyzeGroup(
+      allPositions.filter(filterFn)
+    )
+  );
   
   await saveDateAnalysis(byDateAnalysis);
   await fs.writeFile('./json/overall-analysis.json', JSON.stringify(overall, null, 2));
