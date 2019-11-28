@@ -1,6 +1,7 @@
+// const alpacaGetPositions = require('../../alpaca/get-positions');
 const { alpaca } = require('../../alpaca/');
 const Hold = require('../../models/Holds');
-const analyzePositions = require('./analyze-position');
+const analyzePosition = require('./analyze-position');
 
 const analyzeOpen = async open => {
   
@@ -48,3 +49,6 @@ module.exports = async () => {
   open = await analyzeOpen(open);
   return open;
 };
+
+
+// module.exports = alpacaGetPositions;
