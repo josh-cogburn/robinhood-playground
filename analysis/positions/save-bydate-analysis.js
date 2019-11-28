@@ -63,7 +63,9 @@ module.exports = async () => {
     singlePick: ({ numPicks }) => numPicks === 1,
     multiplePicks: ({ numPicks }) => numPicks > 1,
     notWatchoutMajorJump: position => notWatchout(position) && majorJump(position),
-    notWatchoutMajorJumpBearish: position => notWatchout(position) && majorJump(position) && bearish(position)
+    notWatchoutMajorJumpBearish: position => notWatchout(position) && majorJump(position) && bearish(position),
+    straightDowner: ({ interestingWords }) => interestingWords.some(val => val.startsWith('straightDown')),
+    notStraightDowner: ({ interestingWords }) => interestingWords.includes('!straightDown'),
   }, (filterFn = () => true) => 
     analyzeGroup(
       allPositions.filter(filterFn)
