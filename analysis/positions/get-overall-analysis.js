@@ -1,3 +1,4 @@
+const { groupBy, mapObject } = require('underscore');
 const analyzeGroup = require('./analyze-group');
 
 module.exports = positions => {
