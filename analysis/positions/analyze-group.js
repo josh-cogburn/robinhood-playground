@@ -20,9 +20,9 @@ const analyzeGroup = analyzedPositions => {
         (new Array(Math.round(pos.numMultipliers))).fill(pos.sellReturnPerc || pos.netImpact / pos.totalBuyAmt * 100)
       ).flatten()
     ),
-    percUp: percUp(
-      analyzedPositions.map(pos => pos.netImpact)
-    ),
+    // percUp: percUp(
+    //   analyzedPositions.map(pos => pos.netImpact)
+    // ),
     // counts
     totalPicks: sumArray(analyzedPositions.map(pos => pos.numPicks)),
     totalMultipliers: sumArray(analyzedPositions.map(pos => pos.numMultipliers)),

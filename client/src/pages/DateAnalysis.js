@@ -57,7 +57,7 @@ class DateAnalysis extends Component {
               <th>Avg Position Impact Perc </th>
               <th>Avg Pick Impact Perc</th>
               <th>Avg Multiplier Impact Perc</th>
-              <th>PercUp</th>
+              {/* <th>PercUp</th> */}
               <th>Pick Count</th>
               <th>Multiplier Count</th>
             </tr>
@@ -71,7 +71,7 @@ class DateAnalysis extends Component {
                 totalImpact, 
                 avgPickImpactPerc, 
                 avgMultiplierImpactPerc,
-                percUp,
+                // percUp,
                 totalPicks,
                 totalMultipliers,
               } = analysis;
@@ -84,7 +84,7 @@ class DateAnalysis extends Component {
                   <td><TrendPerc value={avgPositionImpactPerc} /></td>
                   <td><TrendPerc value={avgPickImpactPerc} /></td>
                   <td><TrendPerc value={avgMultiplierImpactPerc} /></td>
-                  <td><TrendPerc value={percUp} /></td>
+                  {/* <td><TrendPerc value={percUp} redAt={50} /></td> */}
                   <td>{totalPicks}</td>
                   <td>{totalMultipliers}</td>
                 </tr>
