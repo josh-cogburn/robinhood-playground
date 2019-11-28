@@ -1,7 +1,7 @@
 const recordPicks = require('../app-actions/record-picks');
 
 module.exports = async Robinhood => {
-    await recordPicks('low-float-high-volume-floatTimesfloatToVolume-trendgt20', 3000, [
+    await recordPicks('watchout-blah-blah', 3000, [
         'FFHL'
     ]);
 };
