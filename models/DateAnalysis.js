@@ -16,6 +16,7 @@ const schema = new Schema({
     avgMultiplierImpactPerc: Number,
 
     // counts
+    totalPositions: Number,
     totalPicks: Number,
     totalMultipliers: Number,
 });

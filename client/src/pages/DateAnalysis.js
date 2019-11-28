@@ -58,6 +58,7 @@ class DateAnalysis extends Component {
               <th>Avg Pick Impact Perc</th>
               <th>Avg Multiplier Impact Perc</th>
               {/* <th>PercUp</th> */}
+              <th>Position Count</th>
               <th>Pick Count</th>
               <th>Multiplier Count</th>
             </tr>
@@ -102,7 +103,7 @@ class DateAnalysis extends Component {
         <LineChart {...{ dateAnalysis, props: ['totalBought', 'totalImpact'] }} />
 
         <h1>counts</h1>
-        <LineChart {...{ dateAnalysis, props: ['totalPicks', 'totalMultipliers'] }} />
+        <LineChart {...{ dateAnalysis, props: ['totalPositions', 'totalPicks', 'totalMultipliers'] }} />
         
       </div>
     )
