@@ -1,4 +1,4 @@
-const { sumArray, avgArray } = require('../../utils/array-math');
+const { sumArray, avgArray, percUp } = require('../../utils/array-math');
 
 const analyzeGroup = analyzedPositions => {
   const totalBought = sumArray(analyzedPositions.map(pos => pos.totalBuyAmt));
@@ -19,6 +19,9 @@ const analyzeGroup = analyzedPositions => {
       analyzedPositions.map(pos => 
         (new Array(Math.round(pos.numMultipliers))).fill(pos.sellReturnPerc || pos.netImpact / pos.totalBuyAmt * 100)
       ).flatten()
+    ),
+    percUp: percUp(
+      analyzedPositions.map(pos => pos.netImpact)
     ),
     // counts
     totalPicks: sumArray(analyzedPositions.map(pos => pos.numPicks)),
