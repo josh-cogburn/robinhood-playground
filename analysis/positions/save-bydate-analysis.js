@@ -40,6 +40,9 @@ module.exports = async () => {
   const lastFive = allDates.slice(0, 5);
   strlog({ allDates, lastFive })
   
+  const notWatchout = ({ interestingWords }) => interestingWords.includes('!watchout');
+  const majorJump = ({ interestingWords }) => interestingWords.includes('majorJump');
+
   const overall = mapObject({
     allPositions: undefined,
     withoutKEG: ({ ticker }) => ticker !== 'KEG',
@@ -47,17 +50,18 @@ module.exports = async () => {
     yesterday: ({ date }) => allDates[1] === date,
     today: ({ date }) => allDates[0] === date,
     watchout: ({ interestingWords }) => interestingWords.includes('watchout'),
-    notWatchout: ({ interestingWords }) => interestingWords.includes('!watchout'),
+    notWatchout,
     bullish: ({ interestingWords }) => interestingWords.includes('bullish'),
     neutral: ({ interestingWords }) => interestingWords.includes('neutral'),
     bearish: ({ interestingWords }) => interestingWords.includes('bearish'),
-    majorJump: ({ interestingWords }) => interestingWords.includes('majorJump'),
+    majorJump,
     mediumJump: ({ interestingWords }) => interestingWords.includes('mediumJump'),
     minorJump: ({ interestingWords }) => interestingWords.includes('minorJump'),
     singleMultiplier: ({ numMultipliers }) => numMultipliers === 1,
     multipleMultipliers: ({ numMultipliers }) => numMultipliers > 1,
     singlePick: ({ numPicks }) => numPicks === 1,
     multiplePicks: ({ numPicks }) => numPicks > 1,
+    notWatchoutMajorJump: position => notWatchout(position) && majorJump(position)
   }, (filterFn = () => true) => 
     analyzeGroup(
       allPositions.filter(filterFn)
