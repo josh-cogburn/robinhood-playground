@@ -24,6 +24,7 @@ const analyzeGroup = analyzedPositions => {
     //   analyzedPositions.map(pos => pos.netImpact)
     // ),
     // counts
+    totalPositions: analyzedPositions.length,
     totalPicks: sumArray(analyzedPositions.map(pos => pos.numPicks)),
     totalMultipliers: sumArray(analyzedPositions.map(pos => pos.numMultipliers)),
   }
