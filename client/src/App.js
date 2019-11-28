@@ -260,9 +260,12 @@ class App extends Component {
                     const { afterHoursPrice, lastTradePrice } = relatedPrices[pos.ticker] || {};
                     const currentPrice = afterHoursPrice || lastTradePrice || Number(pos.current_price);
                     pos.currentPrice = currentPrice;
-                    pos.returnDollars = +(pos.quantity * (pos.currentPrice - pos.avgEntry)).toFixed(2);
-                    pos.returnPerc = getTrend(currentPrice, pos.avgEntry);
+                    pos.unrealizedPl = +(pos.quantity * (pos.currentPrice - pos.avgEntry)).toFixed(2);
+                    pos.unrealizedPlPc = getTrend(currentPrice, pos.avgEntry);
                     pos.equity = (pos.quantity * currentPrice).toFixed(2);
+                    const netImpact = Number(pos.sellReturnDollars || 0) + pos.unrealizedPl;
+                    pos.netImpact = netImpact;
+                    pos.impactPerc = +(netImpact / pos.totalBuyAmt * 100).toFixed(2);
                     return pos;
                 })
                 .sort((a, b) => b.equity - a.equity)

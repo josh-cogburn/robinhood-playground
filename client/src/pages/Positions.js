@@ -23,43 +23,6 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
 
     console.log({ name, positions });
 
-
-    positions = positions.map(position => {
-        const { ticker, avgEntry, hold: { sells = [], buys = [] } = {}} = position;
-
-        const numSharesSold = sumArray(
-            sells.map(buy => buy.quantity)
-        );
-        const individualize = array => {
-            const grouped = array.map(({ quantity, fillPrice }) => 
-                (new Array(quantity)).fill(fillPrice)
-            );
-            // flatten
-            return grouped.reduce((acc, arr) => [...acc, ...arr], []);
-        };
-
-        const allSells = individualize(sells);
-        // const allBuys = individualize(buys);
-        const sumSells = sumArray(allSells);
-
-        // console.log({ allSells });
-        const avgSellPrice = avgArray(
-            allSells
-        );
-        const sellReturnPerc = getTrend(avgSellPrice, avgEntry);
-        const sellReturnDollars = (numSharesSold / 100) * sellReturnPerc * avgSellPrice;
-        console.log({
-            numSharesSold,
-            ticker
-        })
-        return {
-            ...position,
-            avgSellPrice,
-            sellReturnPerc,
-            sellReturnDollars
-        };
-    });
-
     
     const toDisplay = {
         // 'days old': 'dayAge',
@@ -73,10 +36,10 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
             'percent of total': pos => pos.percTotal + '%',
         } : {
             equity: 'equity',
-            'return $': pos => <TrendPerc value={pos.returnDollars} dollar={true} />,
-            'return %': ({ returnPerc, actualReturnPerc }) => (
+            'unrealizedPl $': pos => <TrendPerc value={pos.unrealizedPl} dollar={true} />,
+            'unrealizedPlPc %': ({ unrealizedPlPc, actualReturnPerc }) => (
                 <span {...actualReturnPerc && { 'data-custom': true, 'data-tooltip-str': actualReturnPerc }}>
-                    <TrendPerc value={returnPerc} />
+                    <TrendPerc value={unrealizedPlPc} />
                 </span>
             ),
             'today $': pos => <TrendPerc style={{ opacity: 0.55 }} value={pos.unrealized_intraday_pl} dollar={true} />,
@@ -99,12 +62,19 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
                 <span {...actualEntry && { 'data-custom': true, 'data-tooltip-str': actualEntry }}>{Number(avgEntry).toFixed(2)}{actualEntry && '*'}</span>
             ),
             'current': 'currentPrice',
-            'avgSellPrice': ({ avgSellPrice }) => !isNaN(avgSellPrice) ? +avgSellPrice.toFixed(2) : '---',
-            'sellReturnPerc': ({ sellReturnPerc }) => !isNaN(sellReturnPerc) ? (
+            'avgSellPrice': ({ avgSellPrice }) => avgSellPrice && !isNaN(avgSellPrice) ? +avgSellPrice.toFixed(2) : '---',
+            
+            'sellReturnDollars': ({ sellReturnDollars }) => sellReturnDollars && !isNaN(sellReturnDollars) ? (
+                <TrendPerc value={sellReturnDollars} dollar={true} />
+            ) : '---',
+            'sellReturnPerc': ({ sellReturnPerc }) => sellReturnPerc && !isNaN(sellReturnPerc) ? (
                 <TrendPerc value={sellReturnPerc} />
             ) : '---',
-            'sellReturnDollars': ({ sellReturnDollars }) => !isNaN(sellReturnDollars) ? (
-                <TrendPerc value={sellReturnDollars} dollar={true} />
+            'netImpact': ({ netImpact }) => netImpact && !isNaN(netImpact) ? (
+                <TrendPerc value={netImpact} dollar={true} />
+            ) : '---',
+            'impactPerc': ({ impactPerc }) => impactPerc && !isNaN(impactPerc) ? (
+                <TrendPerc value={impactPerc} />
             ) : '---'
         } : {}
     };
@@ -158,7 +128,7 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
                     {
                         positions
                             .map(pos => (
-                                <tr style={{ background: pos.outsideBracket ? Number(pos.returnDollars) > 0 ? 'rgba(0, 255, 0, 0.6)' : 'rgba(255,0,0, 0.6)' : 'inherit' }}>
+                                <tr style={{ background: pos.outsideBracket ? Number(pos.unrealizedPlPc) > 0 ? 'rgba(0, 255, 0, 0.6)' : 'rgba(255,0,0, 0.6)' : 'inherit' }}>
                                     {
                                         Object.keys(toDisplay).map(header => {
                                             const render = toDisplay[header];
