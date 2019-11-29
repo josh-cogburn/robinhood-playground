@@ -115,14 +115,16 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
             if (isRecommended) {
                 console.log('strategy enabled: ', stratMin, 'purchasing');
                 
-                await purchaseStocks({
-                    strategy,
-                    multiplier: !disableMultipliers ? multiplier: 1,
-                    min,
-                    withPrices,
-                    PickDoc
-                });
-                throttledRefreshPositions();
+                // await purchaseStocks({
+                //     strategy,
+                //     multiplier: !disableMultipliers ? multiplier: 1,
+                //     min,
+                //     withPrices,
+                //     PickDoc
+                // });
+                // throttledRefreshPositions();
+
+
                 // if (withPrices.length === 1) {
                 //     const [{ ticker }] = withPrices;
                 //     await stocktwits.postBullish(ticker, stratMin);
