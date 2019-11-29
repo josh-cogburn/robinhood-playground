@@ -21,6 +21,7 @@ const schema = new Schema({
     forPurchaseMultiplier: Number,
     pmAnalysisMultiplier: Number,
     subsetOffsetMultiplier: Number,
+    interestingWords: [String],
 });
 
 schema.statics.getUniqueDates = async function() {

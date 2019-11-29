@@ -51,7 +51,8 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
 
     const {
         pmAnalysisMultiplier,
-        subsetOffsetMultiplier
+        subsetOffsetMultiplier,
+        interestingWords
     } = await getAdditionalMultipliers(
         forPurchasePms, 
         strategy, 
@@ -66,7 +67,8 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
         multiplier, 
         forPurchaseMultiplier, 
         pmAnalysisMultiplier, 
-        subsetOffsetMultiplier 
+        subsetOffsetMultiplier,
+        interestingWords
     });
 
 
@@ -97,7 +99,8 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
             multiplier,
             forPurchaseMultiplier,
             pmAnalysisMultiplier,
-            subsetOffsetMultiplier
+            subsetOffsetMultiplier,
+            interestingWords
 
         }
     };

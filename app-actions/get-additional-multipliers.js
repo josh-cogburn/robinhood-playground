@@ -76,6 +76,7 @@ module.exports = async (pms, strategy, stocksToBuy) => {
 
   return {
     pmAnalysisMultiplier,
-    subsetOffsetMultiplier
+    subsetOffsetMultiplier,
+    interestingWords
   };
 };
