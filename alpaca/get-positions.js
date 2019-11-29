@@ -152,12 +152,12 @@ module.exports = async () => {
     }
     // subtract perc if looking good?
     const stBracketNumbers = {
-      bullish: 2,
-      neutral: 1
+      bullish: 0.6,
+      neutral: 0.8
     };
-    const stOffset = stBracketNumbers[stBracket] || 0;
-
-    const summed = basePercent + shouldVal - stOffset;
+    const stOffset = stBracketNumbers[stBracket] || 1;
+    // slow down if perc to sell is bullish
+    const summed = (basePercent + shouldVal) * stOffset;
 
     const halfSum = summed * .5;
     const weightedByDayInProgress = halfSum + ratioDayPast * halfSum;
