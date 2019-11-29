@@ -152,7 +152,7 @@ module.exports = async () => {
     }
     // subtract perc if looking good?
     const stBracketNumbers = {
-      bullish: 0.6,
+      bullish: 0.5,
       neutral: 0.8
     };
     const stOffset = stBracketNumbers[stBracket] || 1;
