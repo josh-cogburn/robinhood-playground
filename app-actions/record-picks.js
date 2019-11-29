@@ -31,47 +31,43 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
     const hits = await pmsHit(null, stratMin);
     const isRecommended = hits.includes('forPurchase'); // because forPurchase === isRecommended now!
 
-    let forPurchasePms = isRecommended 
-        ? forPurchase
-            .filter(line => line.startsWith('['))
-            .map(line => line.substring(1, line.length - 1))
-            .filter(pm => hits.includes(pm)) 
-        : [];
-
-    const forPurchaseMultiplier = isRecommended ? Math.max(
-        1,
-        forPurchasePms.length
-    ) : null;
-
-    forPurchasePms = forPurchasePms.uniq();
-
     const stocksToBuy = withPrices.map(t => t.ticker);
     
+    let forPurchaseData = {};
+    if (isRecommended) {
+        let forPurchasePms = forPurchase
+            .filter(line => line.startsWith('['))
+            .map(line => line.substring(1, line.length - 1))
+            .filter(pm => hits.includes(pm));
+        const forPurchaseMultiplier = forPurchasePms.length;
+        forPurchasePms = forPurchasePms.uniq();
+        const {
+            pmAnalysisMultiplier,
+            subsetOffsetMultiplier,
+            interestingWords
+        } = await getAdditionalMultipliers(
+            forPurchasePms, 
+            strategy, 
+            stocksToBuy
+        );
+        let multiplier = forPurchaseMultiplier + pmAnalysisMultiplier + subsetOffsetMultiplier;
+        multiplier = Math.max(0.2, multiplier);
+        
+        forPurchaseData = {
+            forPurchasePms, 
+            multiplier, 
+            forPurchaseMultiplier, 
+            pmAnalysisMultiplier, 
+            subsetOffsetMultiplier,
+            interestingWords
+        };
+
+        console.log(forPurchaseData);
+
+    }
+
+
     
-
-    const {
-        pmAnalysisMultiplier,
-        subsetOffsetMultiplier,
-        interestingWords
-    } = await getAdditionalMultipliers(
-        forPurchasePms, 
-        strategy, 
-        stocksToBuy
-    );
-    
-    let multiplier = forPurchaseMultiplier + pmAnalysisMultiplier + subsetOffsetMultiplier;
-    multiplier = Math.max(0.2, multiplier);
-
-    console.log({
-        forPurchasePms, 
-        multiplier, 
-        forPurchaseMultiplier, 
-        pmAnalysisMultiplier, 
-        subsetOffsetMultiplier,
-        interestingWords
-    });
-
-
     withPrices = withPrices.filter(tickerPrice => !!tickerPrice);
     if (!withPrices.length) {
         return console.log(`no stocks found for ${stratMin}`)
@@ -92,17 +88,7 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
         keys,
         data,
         isRecommended,
-        ...isRecommended && {
-
-            pmsHit: forPurchasePms,
-
-            multiplier,
-            forPurchaseMultiplier,
-            pmAnalysisMultiplier,
-            subsetOffsetMultiplier,
-            interestingWords
-
-        }
+        ...isRecommended && forPurchaseData
     };
 
     const PickDoc = await Pick.create(pickObj);
