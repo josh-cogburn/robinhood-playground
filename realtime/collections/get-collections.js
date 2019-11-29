@@ -193,7 +193,7 @@ module.exports = async () => {
     collections['hotSt'] = (await hotSt({
         minPrice: 0.1,
         maxPrice: 12,
-        count: 180,
+        count: 80,
         includeStSent: false,
         excludeTickers: getTicks(),
         afterHoursReset: false
