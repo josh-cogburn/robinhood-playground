@@ -34,6 +34,7 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
     const stocksToBuy = withPrices.map(t => t.ticker);
     
     let forPurchaseData = {};
+    let multiplier = 0;
     if (isRecommended) {
         let forPurchasePms = forPurchase
             .filter(line => line.startsWith('['))
@@ -50,7 +51,8 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
             strategy, 
             stocksToBuy
         );
-        let multiplier = forPurchaseMultiplier + pmAnalysisMultiplier + subsetOffsetMultiplier;
+        
+        multiplier = forPurchaseMultiplier + pmAnalysisMultiplier + subsetOffsetMultiplier;
         multiplier = Math.max(0.2, multiplier);
         
         forPurchaseData = {
