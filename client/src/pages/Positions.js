@@ -57,6 +57,8 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
         recommendation: 'recommendation',
         percToSell: 'percToSell',
         wouldBeDayTrade: pos => pos.wouldBeDayTrade ? 'true' : '',
+        numPicks: 'numPicks',
+        numMultipliers: 'numMultipliers',
         ...admin ? {
             'avg': ({ avgEntry, actualEntry }) => (
                 <span {...actualEntry && { 'data-custom': true, 'data-tooltip-str': actualEntry }}>{Number(avgEntry).toFixed(2)}{actualEntry && '*'}</span>

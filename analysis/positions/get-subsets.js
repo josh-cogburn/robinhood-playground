@@ -1,4 +1,4 @@
-const notWatchout = ({ interestingWords }) => interestingWords.includes('!watchout');
+const notWatchout = ({ interestingWords }) => !interestingWords.includes('watchout');
 const majorJump = ({ interestingWords }) => interestingWords.includes('majorJump');
 const bearish = ({ interestingWords }) => interestingWords.includes('bearish');
 const notStraightDowner = ({ interestingWords }) => interestingWords.every(word => !word.startsWith('straightDown'));
@@ -58,5 +58,12 @@ module.exports = positions => {
     oneToTwoAndLunch: p => lunch(p) && oneToTwo(p),
     overnightDrops: ({ interestingWords }) => interestingWords.includes('overnight'),
   
+    // spread
+    spread1: ({ interestingWords }) => interestingWords.includes('spread1'),
+    spread2: ({ interestingWords }) => interestingWords.includes('spread2'),
+    spread3: ({ interestingWords }) => interestingWords.includes('spread3'),
+    spread4: ({ interestingWords }) => interestingWords.includes('spread4'),
+    spread5: ({ interestingWords }) => interestingWords.includes('spread5'),
+    spread6: ({ interestingWords }) => interestingWords.includes('spread6'),
   };
 };

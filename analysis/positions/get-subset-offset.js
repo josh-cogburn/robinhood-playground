@@ -1,6 +1,7 @@
 const getSubsets = require('./get-subsets');
 const { mapObject } = require('underscore');
 const { sumArray } = require('../../utils/array-math');
+const sendEmail = require('../../utils/send-email');
 
 const subsetOffsets = {
   // allPositions: () => true,
@@ -21,7 +22,7 @@ const subsetOffsets = {
 
   singleMultiplier: -1,
   // multipleMultipliers: ({ numMultipliers }) => numMultipliers > 1,
-  singlePick: -0.5,
+  singlePick: -1,
   // multiplePicks: ({ numPicks }) => numPicks > 1,
   notWatchoutMajorJump: 2,
   // notWatchoutMajorJumpNotStraightDowner: 1,
@@ -51,22 +52,33 @@ const subsetOffsets = {
 
   // combos
   oneToTwoAndLunch: 1,
-  overnightDrops: -500
+  overnightDrops: -500,
+
+  spread1: 3,
+  spread2: -1,
+  spread3: 0,
+  spread4: 0,
+  spread5: 0,
+  spread6: 0,
 };
 
 
-module.exports = interestingWords => {
-  interestingWords = 'sudden drops !watchout brunch bullish mediumJump !down hotSt 5min avgh10 spread3 firstAlert'.split(' ');
-  const fakePosition = { interestingWords };
-  const subsets = getSubsets([fakePosition]);
+module.exports = async position => {
+  // interestingWords = 'sudden drops !watchout brunch bullish mediumJump !down hotSt 5min avgh10 spread3 firstAlert'.split(' ');
+  // const position = { interestingWords };
+
+  const subsets = getSubsets([position]);
   const withOffsets = mapObject(
     subsets, 
     (filterFn, key) => 
-      filterFn(fakePosition) 
+      filterFn(position) 
         ? subsetOffsets[key] 
         : 0
   );
-  strlog({interestingWords, withOffsets})
+  const { ticker, interestingWords } = position;
+  const data = {ticker, interestingWords, withOffsets};
+  strlog(data)
   const totals = Object.values(withOffsets);
+  await sendEmail(`subset offset report for ${ticker}`, JSON.stringify({ data }, null, 2));
   return sumArray(totals.filter(Boolean));
 };

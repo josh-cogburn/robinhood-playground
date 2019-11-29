@@ -1,5 +1,5 @@
 const { mapObject } = require('underscore');
-const { avgArray } = require('../utils/array-math');
+const { avgArray, sumArray } = require('../utils/array-math');
 const getSubsetOffset = require('../analysis/positions/get-subset-offset');
 
 const calcPmAnalysisMultiplier = (pms, pmsAnalyzed) => {
@@ -42,18 +42,37 @@ module.exports = async (pms, strategy, stocksToBuy) => {
   
   const pmAnalysisMultiplier = calcPmAnalysisMultiplier(pms, pmsAnalyzed);
 
-  const existingInterestingWords = stocksToBuy.map(ticker => 
+
+  const existingPositions = stocksToBuy.map(ticker => 
     alpaca.find(pos => pos.ticker === ticker)
-  ).filter(Boolean).map(position => position.interestingWords).flatten();
+  ).filter(Boolean);
+
+  const existingInterestingWords = existingPositions
+    .map(position => position.interestingWords)
+    .flatten();
+  
+  const newInterestingWords = [
+    ...pms,
+    strategy
+  ].map(str => str.split('-')).flatten();
   const interestingWords = [
     ...existingInterestingWords,
-    ...[
-      ...pms,
-      strategy
-    ].map(str => str.split('-')).flatten()
+    ...newInterestingWords
   ].uniq();
-  console.log({ existingInterestingWords, interestingWords });
-  const subsetOffsetMultiplier = getSubsetOffset(interestingWords);
+  console.log({ existingInterestingWords, newInterestingWords, interestingWords });
+
+  const fakePosition = { 
+    ticker: stocksToBuy,
+    interestingWords,
+    numPicks: sumArray(
+      existingPositions.map(position => position.numPicks)
+    ) + 1,
+    numMultipliers: sumArray(
+      existingPositions.map(position => position.numMultipliers)
+    ) + 1
+  };
+
+  const subsetOffsetMultiplier = await getSubsetOffset(fakePosition);
 
   return {
     pmAnalysisMultiplier,
