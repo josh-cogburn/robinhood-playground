@@ -26,7 +26,7 @@ module.exports = {
     // sellAllStocksOnNthDay: 8,
     disableCashCheck: true,
     disableMultipliers: false,
-    purchaseAmt: 120,
+    purchaseAmt: 200,
     forPurchase: [
 
         ...`
@@ -170,9 +170,6 @@ module.exports = {
         
 
         /// not !watchout
-        sudden-drops-hotSt
-        sudden-drops-hotSt
-        sudden-drops-hotSt
         sudden-drops-hotSt
         sudden-drops-hotSt
 

@@ -10,14 +10,14 @@ const subsetOffsets = {
   // yesterday: ({ date }) => allDates[1] === date,
   // today: ({ date }) => allDates[0] === date,
   watchout: -7,
-  notWatchout: 1,
+  notWatchout: 3,
 
   bullish: -1,
   neutral: 0,
   bearish: 2,
 
-  majorJump: 2,
-  mediumJump: 1,
+  majorJump: 4,
+  mediumJump: 2,
   minorJump: 0,
 
   singleMultiplier: -1,
