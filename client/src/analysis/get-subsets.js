@@ -45,6 +45,7 @@ export default positions => {
     zeroToOne: ({ interestingWords }) => interestingWords.includes('zeroToOne'),
     oneToTwo,
     fitty: ({ interestingWords }) => interestingWords.includes('fitty'),
+    lowVolFitty: ({ interestingWords }) => interestingWords.includes('lowVolFitty'),
     fiveToTen: ({ interestingWords }) => interestingWords.includes('fiveToTen'),
   
     // minKey
