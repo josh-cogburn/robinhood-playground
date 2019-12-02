@@ -9,6 +9,11 @@ const oneToTwo = ({ interestingWords }) => interestingWords.includes('oneToTwo')
 
 
 export default positions => {
+
+  const allWords = positions.map(pos => pos.interestingWords).flatten().uniq();
+  console.log({ allWords})
+
+
   const allDates = positions.map(pos => pos.date).uniq().filter(Boolean);
   const lastFive = allDates.slice(0, 5);
   return {
@@ -32,7 +37,9 @@ export default positions => {
     notWatchoutMajorJump: position => notWatchout(position) && majorJump(position),
     // notWatchoutMajorJumpNotStraightDowner: position => notWatchout(position) && majorJump(position) && notStraightDowner(position),
     straightDowner: ({ interestingWords }) => interestingWords.some(val => val.startsWith('straightDown')),
+    straightDown30: ({ interestingWords }) => interestingWords.some(val => val.startsWith('straightDown30')),
     straightDown60: ({ interestingWords }) => interestingWords.some(val => val.startsWith('straightDown60')),
+    straightDown120: ({ interestingWords }) => interestingWords.some(val => val.startsWith('straightDown120')),
     notStraightDowner,
     straightDowner: ({ interestingWords }) => interestingWords.some(val => val.startsWith('straightDown')),
     firstAlert: ({ interestingWords }) => interestingWords.includes('firstAlert'),
@@ -66,5 +73,17 @@ export default positions => {
     spread4: ({ interestingWords }) => interestingWords.includes('spread4'),
     spread5: ({ interestingWords }) => interestingWords.includes('spread5'),
     spread6: ({ interestingWords }) => interestingWords.includes('spread6'),
+
+    // downs
+    down10: ({ interestingWords }) => interestingWords.includes('down10'),
+    down15: ({ interestingWords }) => interestingWords.includes('down15'),
+    down20: ({ interestingWords }) => interestingWords.includes('down20'),
+    down30: ({ interestingWords }) => interestingWords.includes('down30'),
+    down40: ({ interestingWords }) => interestingWords.includes('down40'),
+    notDown: ({ interestingWords }) => interestingWords.includes('!down'),
+
+    down40: ({ interestingWords }) => interestingWords.includes('down40'),
+    down40: ({ interestingWords }) => interestingWords.includes('down40'),
+
   };
 };

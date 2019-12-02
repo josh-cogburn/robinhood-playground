@@ -56,10 +56,11 @@ const subsetOffsets = {
 
   spread1: 3,
   spread2: -1,
-  spread3: 0,
-  spread4: 0,
+  spread3: -1,
+  spread4: 1,
   spread5: 0,
   spread6: 0,
+
 };
 
 
