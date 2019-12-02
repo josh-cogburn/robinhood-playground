@@ -29,7 +29,7 @@ class Pick extends Component {
                 </button>
                 <b><TrendPerc value={pick.avgTrend} /></b>
                 <strong>{' ' + pick.stratMin}</strong><br/>
-                <small>{new Date(pick.timestamp).toLocaleString()}</small> | <b>{pick.multiplier}</b> ({pick.forPurchaseMultiplier})
+                <small>{new Date(pick.timestamp).toLocaleString()}</small> | <b>{pick.multiplier}</b> = {pick.forPurchaseMultiplier} + {pick.pmAnalysisMultiplier} + {pick.subsetOffsetMultiplier}
                 <hr/>
                 {fiveDay && (
                   <i>

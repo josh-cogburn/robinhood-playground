@@ -140,38 +140,38 @@ module.exports = async () => {
         fitty: {
             minPrice: 0.20,
             maxPrice: 0.60,
-            minVolume: 300000
+            minVolume: 200000
         },
 
         lowVolFitty: {
             minPrice: 0,
             maxPrice: 0.60,
-            maxVolume: 300000
+            maxVolume: 200000
         },
 
         zeroToOne: {
             minPrice: 0,
             maxPrice: 1,
-            minVolume: 200000,
+            minVolume: 120000,
         },
 
         oneToTwo: {
             minPrice: 1,
             maxPrice: 2,
-            minVolume: 70000
+            minVolume: 45000
         },
 
         twoToFive: {
             minPrice: 2,
             maxPrice: 5,
-            minVolume: 200000,
+            minVolume: 150000,
             count: 300,
         },
 
         fiveToTen: {
             minPrice: 5,
             maxPrice: 10,
-            minVolume: 150000,
+            minVolume: 100000,
             count: 300,
         },
 
