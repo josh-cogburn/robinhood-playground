@@ -40,7 +40,7 @@ const subsetOffsets = {
   // collections
   // zeroToOne: ({ interestingWords }) => interestingWords.includes('zeroToOne'),
   oneToTwo: 2,
-  fitty: -5,
+  fitty: -4,
   // fiveToTen: ({ interestingWords }) => interestingWords.includes('fiveToTen'),
 
   // minKey
