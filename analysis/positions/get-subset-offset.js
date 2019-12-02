@@ -10,7 +10,7 @@ const subsetOffsets = {
   // yesterday: ({ date }) => allDates[1] === date,
   // today: ({ date }) => allDates[0] === date,
   watchout: -7,
-  notWatchout: 2,
+  notWatchout: 3,
 
   bullish: -1,
   neutral: 0,
@@ -20,9 +20,9 @@ const subsetOffsets = {
   mediumJump: 2,
   minorJump: 0,
 
-  singleMultiplier: -1,
+  singleMultiplier: -0.5,
   // multipleMultipliers: ({ numMultipliers }) => numMultipliers > 1,
-  singlePick: -1,
+  singlePick: -0.5,
   // multiplePicks: ({ numPicks }) => numPicks > 1,
   notWatchoutMajorJump: 2,
   // notWatchoutMajorJumpNotStraightDowner: 1,
@@ -32,9 +32,9 @@ const subsetOffsets = {
   // notStraightDowner: 1,
   // straightDowner: ({ interestingWords }) => interestingWords.some(val => val.startsWith('straightDown')),
   // firstAlert: ({ interestingWords }) => interestingWords.includes('firstAlert'),
-  notFirstAlert: -4,
+  notFirstAlert: -2,
   // avgh: ({ interestingWords }) => interestingWords.some(val => val.startsWith('avgh')),
-  notAvgh: -5,
+  notAvgh: -2,
   hotSt: -1,
   // notHotSt: ({ interestingWords }) => !interestingWords.includes('hotSt'),
   // collections
