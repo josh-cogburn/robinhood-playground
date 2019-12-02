@@ -201,7 +201,7 @@ module.exports = async () => {
     for (let scanName of Object.keys(scans)) {
         const scan = scans[scanName];
         const response = (await runScan({
-            minVolume: 60000,
+            minVolume: 50000,
             count: 260,
             ...scan,
             includeStSent: false,

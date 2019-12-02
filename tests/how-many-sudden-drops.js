@@ -6,7 +6,7 @@ module.exports = async () => {
     Pick.find(
       { 
         date,
-        strategyName: /.*sudden-drops.*/i
+        strategyName: /.*drops.*/i
       },
       { data: 0 }
     ).lean();
