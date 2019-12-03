@@ -27,6 +27,11 @@ const throttledRefreshPositions = throttle(() => {
 
 const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
 
+    withPrices = withPrices.filter(tickerPrice => !!tickerPrice);
+    if (!withPrices.length) {
+        return console.log(`no stocks found for ${stratMin}`)
+    }
+    
     const stratMin = `${strategy}-${min}`;
     const hits = await pmsHit(null, stratMin);
     const isRecommended = hits.includes('forPurchase'); // because forPurchase === isRecommended now!
@@ -66,13 +71,6 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
 
         console.log(forPurchaseData);
 
-    }
-
-
-    
-    withPrices = withPrices.filter(tickerPrice => !!tickerPrice);
-    if (!withPrices.length) {
-        return console.log(`no stocks found for ${stratMin}`)
     }
 
     // console.log('recording', stratMin, 'strategy');
