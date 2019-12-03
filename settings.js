@@ -26,7 +26,7 @@ module.exports = {
     // sellAllStocksOnNthDay: 8,
     disableCashCheck: true,
     disableMultipliers: false,
-    purchaseAmt: 130,
+    purchaseAmt: 50,
     forPurchase: [
 
         ...`
