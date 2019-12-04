@@ -37,8 +37,8 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
 
 
     // completely disable watchouts
-    const passesWatchoutCheck = !disableWatchouts || !strategy.includes('watchout');
-    const isRecommended = hits.includes('forPurchase') && passesWatchoutCheck; 
+    // const passesWatchoutCheck = !disableWatchouts || !strategy.includes('watchout');
+    const isRecommended = hits.includes('forPurchase')// && passesWatchoutCheck; 
 
     const stocksToBuy = withPrices.map(t => t.ticker);
     
