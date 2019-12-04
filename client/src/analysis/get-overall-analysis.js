@@ -6,16 +6,20 @@ Array.prototype.uniq = function() {
 };
 
 export default positions => {
-  const overall = mapObject(getSubsets(positions), (filterFn = () => true) => 
-    analyzeGroup(
-      positions.filter(pos => {
+  const subsets = getSubsets(positions);
+  const overall = mapObject(subsets, (subsetFn = () => true, subsetName) => {
+    const withoutASLN = positions.filter(({ ticker }) => ticker !== 'ASLN');
+    return analyzeGroup(
+      withoutASLN.filter(pos => {
         try {
-          return filterFn(pos);
+          return subsetFn(pos);
         } catch (e) {
           return false;
         }
       })
-    )
+    );
+  }
+    
   );
 
   return overall;
