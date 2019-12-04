@@ -19,6 +19,7 @@ export default positions => {
   return {
     allPositions: () => true,
     withoutKEG: ({ ticker }) => ticker !== 'KEG',
+    withoutASLN: ({ ticker }) => ticker !== 'ASLN',
     lastFive: ({ date }) => lastFive.includes(date),
     yesterday: ({ date }) => allDates[1] === date,
     today: ({ date }) => allDates[0] === date,

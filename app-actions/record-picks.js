@@ -12,7 +12,7 @@ const sendEmail = require('../utils/send-email');
 const tweeter = require('./tweeter');
 const calcEmailsFromStrategy = require('../utils/calc-emails-from-strategy');
 const stocktwits = require('../utils/stocktwits');
-const { disableMultipliers, forPurchase } = require('../settings');
+const { disableMultipliers, disableWatchouts, forPurchase } = require('../settings');
 const pmsHit = require('../utils/pms-hit');
 const { emails } = require('../config');
 
@@ -34,7 +34,11 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
     
     const stratMin = `${strategy}-${min}`;
     const hits = await pmsHit(null, stratMin);
-    const isRecommended = hits.includes('forPurchase'); // because forPurchase === isRecommended now!
+
+
+    // completely disable watchouts
+    const passesWatchoutCheck = !disableWatchouts || !strategy.includes('watchout');
+    const isRecommended = hits.includes('forPurchase') && passesWatchoutCheck; 
 
     const stocksToBuy = withPrices.map(t => t.ticker);
     
