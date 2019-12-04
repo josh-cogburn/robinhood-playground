@@ -62,7 +62,7 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
         );
         
         multiplier = forPurchaseMultiplier + pmAnalysisMultiplier + subsetOffsetMultiplier;
-        multiplier = Math.max(0.2, multiplier);
+        multiplier = Math.max(1, multiplier);
         
         forPurchaseData = {
             forPurchasePms, 
