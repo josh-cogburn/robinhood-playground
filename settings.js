@@ -24,7 +24,7 @@ let expectedPickCount = 0;
 module.exports = {
     // important settings
     // sellAllStocksOnNthDay: 8,
-    purchaseAmt: 20,
+    purchaseAmt: 50,
     disableCashCheck: true,
     disableMultipliers: false,
     disableWatchouts: true,
@@ -183,6 +183,14 @@ module.exports = {
         sudden-drops-!watchout-majorJump-dinner-straightDown
         sudden-drops-!watchout-minorJump-lunch-!down-straightDown
 
+        sudden-drops-!watchout-mediumJump-down10-!straightDown
+        sudden-drops-!watchout-straightDown60-bullish
+        sudden-drops-!watchout-dinner-down-straightDown120
+        sudden-drops-!watchout-dinner-down20
+        sudden-drops-!watchout-majorJump-brunch
+        sudden-drops-!watchout-dinner-down
+        sudden-drops-!watchout-dinner
+        
         
         
 
@@ -206,6 +214,10 @@ module.exports = {
         sudden-drops-mediumJump-straightDown30
         sudden-drops-down10-straightDown-bullish
         overnight-drops-watchout-minorJump-down-!straightDown
+
+        sudden-drops-straightDown60
+        sudden-drops-mediumJump-down15-bullish
+
         
         
 
