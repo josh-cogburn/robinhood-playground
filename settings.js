@@ -28,9 +28,25 @@ module.exports = {
     disableCashCheck: true,
     disableMultipliers: false,
     disableWatchouts: true,
+
     forPurchase: [
 
         ...`
+
+        // avg downers
+        avg-downer
+        avg-downer-1count
+        avg-downer-2count
+        avg-downer-2count
+        avg-downer-3count
+        avg-downer-3count
+        avg-downer-3count
+        avg-downer-4count
+        avg-downer-4count
+        avg-downer-4count
+        avg-downer-5count
+        avg-downer-5count
+        avg-downer-5count
 
 
         // the !watchout majorJump GOLD

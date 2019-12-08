@@ -38,7 +38,7 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
 
     // completely disable watchouts
     // const passesWatchoutCheck = !disableWatchouts || !strategy.includes('watchout');
-    const isRecommended = hits.includes('forPurchase')// && passesWatchoutCheck; 
+    let isRecommended = hits.includes('forPurchase')// && passesWatchoutCheck; 
 
     const stocksToBuy = withPrices.map(t => t.ticker);
     
@@ -62,7 +62,6 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
         );
         
         multiplier = forPurchaseMultiplier + pmAnalysisMultiplier + subsetOffsetMultiplier;
-        multiplier = Math.max(1, multiplier);
         
         forPurchaseData = {
             forPurchasePms, 
@@ -83,6 +82,15 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
 
     // save to mongo
     console.log(`saving ${strategy} to mongo`);
+
+    if (multiplier < 1) {
+        await sendEmail('multiplier < 1, not recommending', JSON.stringify({
+            ticker,
+            strategy,
+            withPrices
+        }, null, 2));
+        isRecommended = false;
+    }
 
     const pickObj = {
         date: dateStr, 

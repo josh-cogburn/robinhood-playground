@@ -40,61 +40,61 @@ const OPTIONSTICKERS = [
 ];
 
 
-const filterForTheGood = async tickers => {
+// const filterForTheGood = async tickers => {
 
-    const withFundamentals = await addFundamentals(
-        tickers
-            .filter(ticker => !OPTIONSTICKERS.includes(ticker))
-            .map(ticker => ({ ticker }))
-    );
+//     const withFundamentals = await addFundamentals(
+//         tickers
+//             .filter(ticker => !OPTIONSTICKERS.includes(ticker))
+//             .map(ticker => ({ ticker }))
+//     );
 
-    console.log({ withFundamentals: withFundamentals.length})
+//     console.log({ withFundamentals: withFundamentals.length})
 
-    const topVol = withFundamentals
-        .sort((a, b) => b.fundamentals.volume - a.fundamentals.volume)
-        .cutBottom();
+//     const topVol = withFundamentals
+//         .sort((a, b) => b.fundamentals.volume - a.fundamentals.volume)
+//         .cutBottom();
 
-    console.log({ topVol: topVol.length})
+//     console.log({ topVol: topVol.length})
     
-    const withVolToAvg = topVol
-        .map(obj => ({
-            ...obj,
-            volToAvg: obj.fundamentals.volume / obj.fundamentals.average_volume
-        }))
-        .filter(obj => obj.volToAvg)
-        .sort((a, b) => b.volToAvg - a.volToAvg)
-        .cutBottom();
+//     const withVolToAvg = topVol
+//         .map(obj => ({
+//             ...obj,
+//             volToAvg: obj.fundamentals.volume / obj.fundamentals.average_volume
+//         }))
+//         .filter(obj => obj.volToAvg)
+//         .sort((a, b) => b.volToAvg - a.volToAvg)
+//         .cutBottom();
 
-    console.log({ withVolToAvg: withVolToAvg.length});
+//     console.log({ withVolToAvg: withVolToAvg.length});
     
-    // const sortedByMarketCap = withVolToAvg
-    //     .sort((a, b) => b.fundamentals.market_cap - a.fundamentals.market_cap)
-    //     .cutBottom();
+//     // const sortedByMarketCap = withVolToAvg
+//     //     .sort((a, b) => b.fundamentals.market_cap - a.fundamentals.market_cap)
+//     //     .cutBottom();
 
-    // strlog({sortedByMarketCap: sortedByMarketCap.length});
+//     // strlog({sortedByMarketCap: sortedByMarketCap.length});
 
 
 
-    let i = 0;
-    const withRisk = await mapLimit(withVolToAvg, 5, async obj => {
-        const response = {
-            ...obj,
-            ...await getRisk({ ticker: obj.ticker })
-        };
-        console.log(++i, '/', withVolToAvg.length );
-        return response;
-    });
+//     let i = 0;
+//     const withRisk = await mapLimit(withVolToAvg, 5, async obj => {
+//         const response = {
+//             ...obj,
+//             ...await getRisk({ ticker: obj.ticker })
+//         };
+//         console.log(++i, '/', withVolToAvg.length );
+//         return response;
+//     });
 
-    const sortedBySumMostRecent = withRisk
-        // .filter(obj => obj.sumMostRecent > 0)
-        .sort((a, b) => b.sumMostRecent - a.sumMostRecent)
-        .cutBottom();
+//     const sortedBySumMostRecent = withRisk
+//         // .filter(obj => obj.sumMostRecent > 0)
+//         .sort((a, b) => b.sumMostRecent - a.sumMostRecent)
+//         .cutBottom();
 
-    console.log({ sortedBySumMostRecent: sortedBySumMostRecent.length})
+//     console.log({ sortedBySumMostRecent: sortedBySumMostRecent.length})
 
-    const theGoodStuff = sortedBySumMostRecent.map(obj => obj.ticker);
-    return theGoodStuff;
-}
+//     const theGoodStuff = sortedBySumMostRecent.map(obj => obj.ticker);
+//     return theGoodStuff;
+// }
 
 
 
@@ -189,6 +189,7 @@ module.exports = async () => {
     //     afterHoursReset: false
     // })).map(t => t.ticker);;
 
+    console.log('get hotSt')
     collections['hotSt'] = (await hotSt({
         minPrice: 0.1,
         maxPrice: 12,
@@ -198,7 +199,9 @@ module.exports = async () => {
         afterHoursReset: false
     })).map(t => t.ticker);
     
+    console.log("other scans")
     for (let scanName of Object.keys(scans)) {
+        console.log("scanName", scanName)
         const scan = scans[scanName];
         const response = (await runScan({
             minVolume: 50000,
@@ -279,6 +282,29 @@ module.exports = async () => {
 
     strlog(mapObject(collections, v => v.length));
     console.log(`only the good stuff: ${getTicks().length}`);
+
+
+    // const withWatchout = await mapLimit(getTicks(), 5, async ticker => {
+    //     const risk = await getRisk({ ticker });
+    //     console.log('with', ticker, risk)
+    //     return {
+    //         ticker,
+    //         shouldWatchout: risk.shouldWatchout
+    //     };
+    // });
+
+    // const onlyWatchout = withWatchout
+    //     .filter(({ shouldWatchout }) => shouldWatchout)
+    //     .map(({ ticker }) => ticker);
+
+    // collections = mapObject(
+    //     collections, 
+    //     tickers => (tickers || []).filter(ticker => 
+    //         !onlyWatchout.includes(ticker)
+    //     )
+    // );
+
+    // collections.shouldWatchout = onlyWatchout;
 
     return collections;
 

@@ -1,13 +1,16 @@
 const notWatchout = ({ interestingWords }) => !interestingWords.includes('watchout');
-const majorJump = ({ interestingWords }) => interestingWords.includes('majorJump');
 const bearish = ({ interestingWords }) => interestingWords.includes('bearish');
 const notStraightDowner = ({ interestingWords }) => interestingWords.every(word => !word.startsWith('straightDown'));
+
+const minorJump = ({ interestingWords }) => interestingWords.includes('minorJump');
+const mediumJump = ({ interestingWords }) => interestingWords.includes('mediumJump');
+const majorJump = ({ interestingWords }) => interestingWords.includes('majorJump');
 
 
 const lunch = ({ interestingWords }) => interestingWords.includes('lunch');
 const oneToTwo = ({ interestingWords }) => interestingWords.includes('oneToTwo');
 
-
+const spread1 = ({ interestingWords }) => interestingWords.includes('spread1');
 export default positions => {
 
   const allWords = positions.map(pos => pos.interestingWords).flatten().uniq();
@@ -29,8 +32,11 @@ export default positions => {
     neutral: ({ interestingWords }) => interestingWords.includes('neutral'),
     bearish,
     majorJump,
-    mediumJump: ({ interestingWords }) => interestingWords.includes('mediumJump'),
-    minorJump: ({ interestingWords }) => interestingWords.includes('minorJump'),
+    mediumJump,
+    minorJump,
+    medOrMajJump: p => mediumJump(p) || majorJump(p),
+    onlyMinorJump: p => minorJump(p) && !mediumJump(p) && !majorJump(p),
+    onlyMinorJumpNotSpread1: p => minorJump(p) && !mediumJump(p) && !majorJump(p) && !spread1(p),
     singleMultiplier: ({ numMultipliers }) => numMultipliers === 1,
     multipleMultipliers: ({ numMultipliers }) => numMultipliers > 1,
     singlePick: ({ numPicks }) => numPicks === 1,
@@ -68,7 +74,7 @@ export default positions => {
     overnightDrops: ({ interestingWords }) => interestingWords.includes('overnight'),
     
     // spread
-    spread1: ({ interestingWords }) => interestingWords.includes('spread1'),
+    spread1,
     spread2: ({ interestingWords }) => interestingWords.includes('spread2'),
     spread3: ({ interestingWords }) => interestingWords.includes('spread3'),
     spread4: ({ interestingWords }) => interestingWords.includes('spread4'),

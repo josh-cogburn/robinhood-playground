@@ -699,7 +699,7 @@ module.exports = new (class RealtimeRunner {
       const risk = riskCache[ticker]  || await getRisk({ ticker });
       riskCache[ticker] = risk;
       const { shouldWatchout } = risk;
-      watchoutKey = shouldWatchout ? 'watchout' : '';
+      watchoutKey = shouldWatchout ? 'watchout' : 'notWatchout';
       
       // stSent
       if (strategyName.includes('drops')) {

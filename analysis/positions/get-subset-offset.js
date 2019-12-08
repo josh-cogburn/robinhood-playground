@@ -2,6 +2,7 @@ const getSubsets = require('./get-subsets');
 const { mapObject } = require('underscore');
 const { sumArray } = require('../../utils/array-math');
 const sendEmail = require('../../utils/send-email');
+const { avoidSubsets = [] } = require('../../settings');
 
 const subsetOffsets = {
   // allPositions: () => true,
@@ -9,7 +10,7 @@ const subsetOffsets = {
   // lastFive: ({ date }) => lastFive.includes(date),
   // yesterday: ({ date }) => allDates[1] === date,
   // today: ({ date }) => allDates[0] === date,
-  watchout: -4,
+  watchout: Number.NEGATIVE_INFINITY,
   notWatchout: 4,
 
   bullish: -1,
@@ -32,9 +33,9 @@ const subsetOffsets = {
   // notStraightDowner: 1,
   // straightDowner: ({ interestingWords }) => interestingWords.some(val => val.startsWith('straightDown')),
   // firstAlert: ({ interestingWords }) => interestingWords.includes('firstAlert'),
-  notFirstAlert: -2,
+  notFirstAlert: Number.NEGATIVE_INFINITY,
   // avgh: ({ interestingWords }) => interestingWords.some(val => val.startsWith('avgh')),
-  notAvgh: -2,
+  notAvgh: Number.NEGATIVE_INFINITY,
   hotSt: -1,
   // notHotSt: ({ interestingWords }) => !interestingWords.includes('hotSt'),
   // collections
@@ -48,11 +49,11 @@ const subsetOffsets = {
   brunch: 0,
   lunch: 2,
   dinner: 0,
-  afterhours: -500,
+  afterhours: Number.NEGATIVE_INFINITY,
 
   // combos
   oneToTwoAndLunch: 1,
-  overnightDrops: -500,
+  overnightDrops: Number.NEGATIVE_INFINITY,
 
   spread1: 3,
   spread2: -1,
@@ -74,11 +75,12 @@ module.exports = async position => {
     (filterFn, key) => 
       filterFn(position) 
         ? subsetOffsets[key] 
-        : 0
+        : undefined
   );
   const { ticker, interestingWords } = position;
   const data = {ticker, interestingWords, withOffsets};
   strlog(data)
+
   const totals = Object.values(withOffsets);
   await sendEmail(`subset offset report for ${ticker}`, JSON.stringify({ data }, null, 2));
   return sumArray(totals.filter(Boolean));

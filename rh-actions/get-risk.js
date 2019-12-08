@@ -63,12 +63,12 @@ const getRisk = async ({
     );
     const dayTooVolatile = dayVolatility > 35;
 
-    // console.log(ticker, {
-    //     downJumpped,
-    //     last4UpJumpped,
-    //     dayVolatility,
-    //     dayTooVolatile
-    // });
+    console.log(ticker, {
+        downJumpped,
+        last4UpJumpped,
+        dayVolatility,
+        dayTooVolatile
+    });
     const shouldWatchout = last4UpJumpped || dayTooVolatile || last4TooVolatile;
 
     return {
