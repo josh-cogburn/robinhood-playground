@@ -13,7 +13,7 @@ const subsetOffsets = {
   watchout: Number.NEGATIVE_INFINITY,
   notWatchout: 4,
 
-  bullish: -1,
+  bullish: -3,
   neutral: 0,
   bearish: 2,
 
@@ -58,11 +58,15 @@ const subsetOffsets = {
   overnightDrops: Number.NEGATIVE_INFINITY,
 
   spread1: 3,
-  spread2: -2,
+  spread2: -3,
   spread3: -2,
   spread4: 1,
   spread5: 0,
   spread6: 0,
+
+  down15: 1,
+  down20: 1,
+  down40: 1,
 
 
 
