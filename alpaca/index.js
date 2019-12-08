@@ -40,15 +40,18 @@ client.onOrderUpdate(async data => {
   }
 
   if (side === 'buy') {
-    newAvgDowner({
-      ticker, 
-      buyPrice: filled_avg_price 
-    });
 
-    await Holds.registerAlpacaFill({
+    const hold = await Holds.registerAlpacaFill({
       ticker,
       alpacaOrder: data.order,
     });
+
+    if (hold.numMultipliers > 0) {
+      newAvgDowner({
+        ticker, 
+        buyPrice: filled_avg_price,
+      });
+    }
     
   } else if (side === 'sell') {
     const position = stratManager.positions.alpaca.find(pos => pos.ticker === ticker) || {};

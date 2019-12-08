@@ -20,6 +20,7 @@ const subsetOffsets = {
   majorJump: 4,
   mediumJump: 2,
   minorJump: 0,
+  onlyMinorJumpNotSpread1: Number.NEGATIVE_INFINITY,
 
   singleMultiplier: -0.5,
   // multipleMultipliers: ({ numMultipliers }) => numMultipliers > 1,
@@ -30,14 +31,15 @@ const subsetOffsets = {
 
   straightDowner: 1,
   straightDown60: 4,
-  // notStraightDowner: 1,
+  straightDown120: -3,
+  notStraightDowner: 4,
   // straightDowner: ({ interestingWords }) => interestingWords.some(val => val.startsWith('straightDown')),
   // firstAlert: ({ interestingWords }) => interestingWords.includes('firstAlert'),
   notFirstAlert: Number.NEGATIVE_INFINITY,
   // avgh: ({ interestingWords }) => interestingWords.some(val => val.startsWith('avgh')),
   notAvgh: Number.NEGATIVE_INFINITY,
   hotSt: -1,
-  // notHotSt: ({ interestingWords }) => !interestingWords.includes('hotSt'),
+  // notHotSt: 1,
   // collections
   // zeroToOne: ({ interestingWords }) => interestingWords.includes('zeroToOne'),
   oneToTwo: 2,
@@ -48,7 +50,7 @@ const subsetOffsets = {
   // initial: ({ interestingWords }) => interestingWords.includes('initial'),
   brunch: 0,
   lunch: 2,
-  dinner: 0,
+  dinner: 2,
   afterhours: Number.NEGATIVE_INFINITY,
 
   // combos
@@ -56,11 +58,13 @@ const subsetOffsets = {
   overnightDrops: Number.NEGATIVE_INFINITY,
 
   spread1: 3,
-  spread2: -1,
-  spread3: -1,
+  spread2: -2,
+  spread3: -2,
   spread4: 1,
   spread5: 0,
   spread6: 0,
+
+
 
 };
 

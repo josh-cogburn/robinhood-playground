@@ -99,13 +99,12 @@ const stratManager = {
         await this.refreshPositions(true);
 
         for (let pos of this.positions.alpaca) {
-            const foundHold = await Holds.findOne({ ticker: pos.ticker });
-            if (foundHold && foundHold.buys.some(buy => buy.date === (new Date()).toLocaleDateString().split('/').join('-'))) {
-                console.log(`starting avg downer ${pos.ticker} bc bought today`)
+            if (pos.wouldBeDayTrade && pos.numMultipliers > 0) {
+                console.log(`starting avg downer ${pos.ticker} bc bought today and positive multipliers`)
                 newAvgDowner({
                     ticker: pos.ticker,
                     buyPrice: pos.avgEntry,
-                    initialTimeout: 1000 * 30 + 60 * Math.random()
+                    strategyName: Object.keys(pos.buyStrategies)[0]
                 })
             }
         }

@@ -91,7 +91,7 @@ module.exports = class AvgDowner {
   scheduleTimeout() {
     console.log(`observing again in ${this.timeout / 1000} seconds (${(new Date(Date.now() + this.timeout).toLocaleTimeString())})`)
     this.TO = setTimeout(() => this.running && this.observe(), this.timeout);
-    this.timeout = Math.min(this.timeout * 2, 1000 * 60 * 7);
+    this.timeout = Math.min(this.timeout * 2, 1000 * 60 * 6);
   }
   newBuy(buyPrice) {
     this.buyPrices.push(buyPrice);

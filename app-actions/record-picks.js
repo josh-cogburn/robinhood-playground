@@ -83,15 +83,6 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
     // save to mongo
     console.log(`saving ${strategy} to mongo`);
 
-    if (multiplier < 1) {
-        await sendEmail('multiplier < 1, not recommending', JSON.stringify({
-            ticker,
-            strategy,
-            withPrices
-        }, null, 2));
-        isRecommended = false;
-    }
-
     const pickObj = {
         date: dateStr, 
         strategyName: strategy,
@@ -123,8 +114,17 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
 
             // forPurchase
             if (isRecommended) {
-                console.log('strategy enabled: ', stratMin, 'purchasing');
-                
+                console.log('strategy enabled: ', stratMin, 'purchasing', stocksToBuy, multiplier);
+
+                if (multiplier < 1) {
+                    await sendEmail('multiplier < 1', JSON.stringify({
+                        ticker,
+                        strategy,
+                        withPrices
+                    }, null, 2));
+                    multiplier = 1;
+                }
+
                 await purchaseStocks({
                     strategy,
                     multiplier: !disableMultipliers ? multiplier: 1,

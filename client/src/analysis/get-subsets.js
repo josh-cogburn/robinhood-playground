@@ -89,8 +89,5 @@ export default positions => {
     down40: ({ interestingWords }) => interestingWords.includes('down40'),
     notDown: ({ interestingWords }) => interestingWords.includes('!down'),
 
-    down40: ({ interestingWords }) => interestingWords.includes('down40'),
-    down40: ({ interestingWords }) => interestingWords.includes('down40'),
-
   };
 };

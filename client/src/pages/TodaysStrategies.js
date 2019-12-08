@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import getTrend from '../utils/get-trend';
-import { avgArray, percUp } from '../utils/array-math';
+import { avgArray, percUp, sumArray } from '../utils/array-math';
 
 import Pick from '../components/Pick';
 import TrendPerc from '../components/TrendPerc';
@@ -73,10 +73,13 @@ class TodaysStrategies extends Component {
             console.log({ forPurchasePms, forPurchaseStrats})
 
             return picks.filter(({ stratMin, isRecommended }) => 
-                forPurchaseStrats.includes(stratMin) ||
-                forPurchasePms.some(pm => 
-                    matchesPm(stratMin, pm)
-                ) || isRecommended
+                // (
+                //     forPurchaseStrats.includes(stratMin) ||
+                //     forPurchasePms.some(pm => 
+                //         matchesPm(stratMin, pm)
+                //     )
+                //  ) && 
+                 isRecommended
             );
           } else {
               console.log({ pmFilter })
@@ -133,6 +136,7 @@ class TodaysStrategies extends Component {
         .map(pick => pick.withTrend)
         .reduce((acc, val) => [...acc, ...val], []);
 
+        console.log({ showingPicks })
         const byTicker = mapObject(
             allWithTrends
                 .filter(Boolean)
@@ -143,9 +147,14 @@ class TodaysStrategies extends Component {
                     ];
                     return acc;
                 }, {}),
-            trends => ({
+            (trends, ticker) => ({
                 trends,
-                count: trends.length,
+                pickCount: trends.length,
+                multiplierCount: sumArray(
+                    showingPicks
+                        .filter(pick => pick.picks.some(p => p.ticker === ticker))
+                        .map(pick => pick.multiplier)
+                ),
                 avgTrend: avgArray(trends),
             })
         );
@@ -214,14 +223,16 @@ class TodaysStrategies extends Component {
                 </thead>
                 <thead>
                     <th>ticker</th>
-                    <th>count</th>
+                    <th>pickCount</th>
+                    <th>multiplierCount</th>
                     <th>avgTrend</th>
                 </thead>
                 <tbody>
                     {byTickerSorted.map(ticker => (
                         <tr>
                             <td><a onClick={() => this.addToFilter(ticker)}>{ticker}</a></td>
-                            <td>{byTicker[ticker].count}</td>
+                            <td>{byTicker[ticker].pickCount}</td>
+                            <td>{byTicker[ticker].multiplierCount}</td>
                             <td><TrendPerc value={byTicker[ticker].avgTrend}/></td>
                         </tr>
                     ))}
