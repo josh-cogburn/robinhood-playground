@@ -1,0 +1,4104 @@
+[
+  {
+    "pmName": "sudden-drops-!watchout-majorJump-neutral",
+    "weightedTrend": 42.17,
+    "avgTrend": 42.17,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!down-!straightDown-neutral",
+    "weightedTrend": 42.17,
+    "avgTrend": 42.17,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-majorJump-!down-!straightDown",
+    "weightedTrend": 42.17,
+    "avgTrend": 42.17,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-!down-!straightDown",
+    "weightedTrend": 42.17,
+    "avgTrend": 42.17,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!down-!straightDown",
+    "weightedTrend": 42.17,
+    "avgTrend": 42.17,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-majorJump-!straightDown-neutral",
+    "weightedTrend": 42.17,
+    "avgTrend": 42.17,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-!straightDown-neutral",
+    "weightedTrend": 42.17,
+    "avgTrend": 42.17,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-majorJump-!down",
+    "weightedTrend": 42.17,
+    "avgTrend": 42.17,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-majorJump-neutral",
+    "weightedTrend": 42.17,
+    "avgTrend": 42.17,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-majorJump-!down-!straightDown",
+    "weightedTrend": 42.17,
+    "avgTrend": 42.17,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-majorJump-!down",
+    "weightedTrend": 42.17,
+    "avgTrend": 42.17,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-majorJump-!down-neutral",
+    "weightedTrend": 42.17,
+    "avgTrend": 42.17,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-neutral",
+    "weightedTrend": 23.675,
+    "avgTrend": 23.675,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!down-neutral",
+    "weightedTrend": 23.675,
+    "avgTrend": 23.675,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-!down-neutral",
+    "weightedTrend": 23.675,
+    "avgTrend": 23.675,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-!down",
+    "weightedTrend": 19.853333333333335,
+    "avgTrend": 19.853333333333335,
+    "count": 3,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!down",
+    "weightedTrend": 19.853333333333335,
+    "avgTrend": 19.853333333333335,
+    "count": 3,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!straightDown-neutral",
+    "weightedTrend": 14.846666666666666,
+    "avgTrend": 14.846666666666666,
+    "count": 3,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-neutral",
+    "weightedTrend": 12.43,
+    "avgTrend": 12.43,
+    "count": 4,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-minorJump-lunch-!down-straightDown",
+    "weightedTrend": 12.21,
+    "avgTrend": 12.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!down-straightDown30-bearish",
+    "weightedTrend": 12.21,
+    "avgTrend": 12.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-minorJump-lunch-straightDown",
+    "weightedTrend": 12.21,
+    "avgTrend": 12.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-minorJump-lunch-straightDown",
+    "weightedTrend": 12.21,
+    "avgTrend": 12.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-minorJump-lunch-!down-straightDown",
+    "weightedTrend": 12.21,
+    "avgTrend": 12.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-!down-straightDown30",
+    "weightedTrend": 12.21,
+    "avgTrend": 12.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-minorJump-straightDown",
+    "weightedTrend": 12.21,
+    "avgTrend": 12.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-minorJump-straightDown",
+    "weightedTrend": 12.21,
+    "avgTrend": 12.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-minorJump-!down-straightDown",
+    "weightedTrend": 12.21,
+    "avgTrend": 12.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-minorJump-straightDown-bearish",
+    "weightedTrend": 12.21,
+    "avgTrend": 12.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-minorJump-!down-straightDown",
+    "weightedTrend": 12.21,
+    "avgTrend": 12.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-lunch-!down-straightDown",
+    "weightedTrend": 12.21,
+    "avgTrend": 12.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-minorJump-lunch-!down-straightDown30",
+    "weightedTrend": 12.21,
+    "avgTrend": 12.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-minorJump-lunch-!down-straightDown30",
+    "weightedTrend": 12.21,
+    "avgTrend": 12.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-lunch-!down-straightDown30",
+    "weightedTrend": 12.21,
+    "avgTrend": 12.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-lunch-!down-straightDown30",
+    "weightedTrend": 12.21,
+    "avgTrend": 12.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-minorJump-!down-straightDown30",
+    "weightedTrend": 12.21,
+    "avgTrend": 12.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-minorJump-!down-straightDown30",
+    "weightedTrend": 12.21,
+    "avgTrend": 12.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!down-straightDown-bearish",
+    "weightedTrend": 12.21,
+    "avgTrend": 12.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!down-straightDown30",
+    "weightedTrend": 12.21,
+    "avgTrend": 12.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-minorJump-lunch-straightDown30",
+    "weightedTrend": 12.21,
+    "avgTrend": 12.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-minorJump-lunch-straightDown30",
+    "weightedTrend": 12.21,
+    "avgTrend": 12.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-lunch-!down-straightDown",
+    "weightedTrend": 12.21,
+    "avgTrend": 12.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-minorJump-!down",
+    "weightedTrend": 12.21,
+    "avgTrend": 12.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-minorJump-!down",
+    "weightedTrend": 12.21,
+    "avgTrend": 12.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-minorJump-straightDown30",
+    "weightedTrend": 12.21,
+    "avgTrend": 12.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-minorJump-straightDown30-bearish",
+    "weightedTrend": 12.21,
+    "avgTrend": 12.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-minorJump-straightDown30",
+    "weightedTrend": 12.21,
+    "avgTrend": 12.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-lunch-!down",
+    "weightedTrend": 12.21,
+    "avgTrend": 12.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-lunch-!down",
+    "weightedTrend": 12.21,
+    "avgTrend": 12.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-minorJump-lunch-!down",
+    "weightedTrend": 12.21,
+    "avgTrend": 12.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-minorJump-lunch-!down",
+    "weightedTrend": 12.21,
+    "avgTrend": 12.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-lunch-!down-bearish",
+    "weightedTrend": 12.21,
+    "avgTrend": 12.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-minorJump-!down-bearish",
+    "weightedTrend": 12.21,
+    "avgTrend": 12.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-!down-bearish",
+    "weightedTrend": 12.21,
+    "avgTrend": 12.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!down-bearish",
+    "weightedTrend": 12.21,
+    "avgTrend": 12.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!down-straightDown",
+    "weightedTrend": 8.695,
+    "avgTrend": 8.695,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-!down-straightDown",
+    "weightedTrend": 8.695,
+    "avgTrend": 8.695,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-lunch-straightDown",
+    "weightedTrend": 8.635,
+    "avgTrend": 8.635,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-lunch-straightDown-bearish",
+    "weightedTrend": 8.635,
+    "avgTrend": 8.635,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-lunch-straightDown",
+    "weightedTrend": 8.635,
+    "avgTrend": 8.635,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-lunch-straightDown30",
+    "weightedTrend": 8.635,
+    "avgTrend": 8.635,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-lunch-straightDown30",
+    "weightedTrend": 8.635,
+    "avgTrend": 8.635,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-lunch-straightDown30-bearish",
+    "weightedTrend": 8.635,
+    "avgTrend": 8.635,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-zeroToOne",
+    "weightedTrend": 7.125,
+    "avgTrend": 7.125,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "zeroToOne",
+    "weightedTrend": 7.125,
+    "avgTrend": 7.125,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-majorJump-!straightDown",
+    "weightedTrend": 6.0200000000000005,
+    "avgTrend": 6.0200000000000005,
+    "count": 3,
+    "percUp": 3333.333333333333
+  },
+  {
+    "pmName": "sudden-drops-!watchout-majorJump-!straightDown",
+    "weightedTrend": 6.0200000000000005,
+    "avgTrend": 6.0200000000000005,
+    "count": 3,
+    "percUp": 3333.333333333333
+  },
+  {
+    "pmName": "sudden-drops-straightDown30-bearish",
+    "weightedTrend": 5.7525,
+    "avgTrend": 5.7525,
+    "count": 4,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-straightDown30-bearish",
+    "weightedTrend": 5.7525,
+    "avgTrend": 5.7525,
+    "count": 4,
+    "percUp": 10000
+  },
+  {
+    "pmName": "30",
+    "weightedTrend": 5.7525,
+    "avgTrend": 5.7525,
+    "count": 4,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-straightDown-bearish",
+    "weightedTrend": 5.7525,
+    "avgTrend": 5.7525,
+    "count": 4,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-straightDown30",
+    "weightedTrend": 5.7525,
+    "avgTrend": 5.7525,
+    "count": 4,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-straightDown30",
+    "weightedTrend": 5.7525,
+    "avgTrend": 5.7525,
+    "count": 4,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-straightDown",
+    "weightedTrend": 5.638,
+    "avgTrend": 5.638,
+    "count": 5,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-straightDown-neutral",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-mediumJump-initial-!down-straightDown120",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-initial-!down-straightDown120",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-straightDown120",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-straightDown120",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-mediumJump-!down-straightDown120",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-!down-straightDown",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-initial",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-initial",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-initial-straightDown120",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-initial-straightDown120",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-initial-neutral",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-initial-neutral",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-initial-straightDown120-neutral",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-initial",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-mediumJump-initial",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-initial-straightDown120",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-mediumJump-initial-straightDown120",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-initial-neutral",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "initial",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-mediumJump-!down-straightDown",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-mediumJump-initial-!down",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-initial-!down",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-initial-!down-neutral",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-initial-!down-straightDown120",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-initial-!down-straightDown120",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-initial-!down",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-initial-!down",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-initial-!down-straightDown",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-straightDown120-neutral",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-straightDown120-neutral",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-initial-!down-straightDown",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-!down-neutral",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-initial-!down-straightDown",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-!down-straightDown120",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-mediumJump-!down",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-!down",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-straightDown120",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-mediumJump-straightDown120",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!down-straightDown120-neutral",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-neutral",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-mediumJump-neutral",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-straightDown120-neutral",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-!down-straightDown120",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!down-straightDown120",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-mediumJump-initial-!down-straightDown",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-mediumJump-initial-straightDown",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-initial-straightDown",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-initial-straightDown-neutral",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-straightDown-neutral",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-initial-straightDown",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-initial-straightDown",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!down-straightDown-neutral",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-straightDown-neutral",
+    "weightedTrend": 5.18,
+    "avgTrend": 5.18,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-straightDown",
+    "weightedTrend": 5.119999999999999,
+    "avgTrend": 5.119999999999999,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-mediumJump-straightDown",
+    "weightedTrend": 5.119999999999999,
+    "avgTrend": 5.119999999999999,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-lunch-straightDown30",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-lunch-down-straightDown",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-lunch-down-straightDown",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-straightDown30-bearish",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-lunch-down10",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-mediumJump-down10-straightDown30",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-down10-straightDown30",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-mediumJump-down-straightDown",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-down-straightDown",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-straightDown-bearish",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-mediumJump-straightDown30",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-straightDown30",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-lunch-down10",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-down10-straightDown30-bearish",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-lowVolFitty",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-down10-straightDown-bearish",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-down10-straightDown30",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-down10-straightDown30",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-lunch-down-straightDown30",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-mediumJump-lunch-down-straightDown30",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-mediumJump-down10",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-down10",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-down10-straightDown",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-down10-straightDown",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-mediumJump-lunch-down10-straightDown30",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-lunch-down-straightDown",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-lunch-down10",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-down-straightDown30",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-mediumJump-down-straightDown30",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-mediumJump-lunch-down10",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-down10-straightDown",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-mediumJump-down10-straightDown",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-lunch-down-straightDown30",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-lunch-down10-straightDown30",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-mediumJump-lunch-straightDown30",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-down10-bearish",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-down10-bearish",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-down10-bearish",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-lunch-down10-bearish",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-lunch-down10-straightDown30",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-down10",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "lowVolFitty",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-lunch-down-straightDown30",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-mediumJump-lunch-down-straightDown",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-mediumJump-lunch-down10-straightDown",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-lunch-down10-straightDown",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-mediumJump-lunch-straightDown",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-lunch-straightDown",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-lunch-down10-straightDown",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-lunch-down10-straightDown",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-lunch-down10-straightDown30",
+    "weightedTrend": 5.06,
+    "avgTrend": 5.06,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-down10",
+    "weightedTrend": 5.029999999999999,
+    "avgTrend": 5.029999999999999,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-dinner-down10",
+    "weightedTrend": 5,
+    "avgTrend": 5,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-down10",
+    "weightedTrend": 5,
+    "avgTrend": 5,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-dinner-down10",
+    "weightedTrend": 5,
+    "avgTrend": 5,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-down-!straightDown-bullish",
+    "weightedTrend": 5,
+    "avgTrend": 5,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-minorJump-!straightDown-bullish",
+    "weightedTrend": 5,
+    "avgTrend": 5,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-!straightDown-bullish",
+    "weightedTrend": 5,
+    "avgTrend": 5,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-down10-!straightDown-bullish",
+    "weightedTrend": 5,
+    "avgTrend": 5,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-dinner-!straightDown-bullish",
+    "weightedTrend": 5,
+    "avgTrend": 5,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!straightDown-bullish",
+    "weightedTrend": 5,
+    "avgTrend": 5,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-dinner-down10-!straightDown",
+    "weightedTrend": 5,
+    "avgTrend": 5,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-minorJump-down10",
+    "weightedTrend": 5,
+    "avgTrend": 5,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-minorJump-dinner-down10",
+    "weightedTrend": 5,
+    "avgTrend": 5,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-minorJump-down-bullish",
+    "weightedTrend": 5,
+    "avgTrend": 5,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-down-bullish",
+    "weightedTrend": 5,
+    "avgTrend": 5,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-minorJump-dinner-down10-!straightDown",
+    "weightedTrend": 5,
+    "avgTrend": 5,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-minorJump-down10-!straightDown",
+    "weightedTrend": 5,
+    "avgTrend": 5,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-minorJump-down10",
+    "weightedTrend": 5,
+    "avgTrend": 5,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-down10-!straightDown",
+    "weightedTrend": 5,
+    "avgTrend": 5,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-minorJump-dinner-down10-!straightDown",
+    "weightedTrend": 5,
+    "avgTrend": 5,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-minorJump-down10-!straightDown",
+    "weightedTrend": 5,
+    "avgTrend": 5,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-bullish",
+    "weightedTrend": 5,
+    "avgTrend": 5,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-dinner-bullish",
+    "weightedTrend": 5,
+    "avgTrend": 5,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-dinner-down10-!straightDown",
+    "weightedTrend": 5,
+    "avgTrend": 5,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-down10-!straightDown",
+    "weightedTrend": 5,
+    "avgTrend": 5,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-down10-bullish",
+    "weightedTrend": 5,
+    "avgTrend": 5,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-dinner-down10-bullish",
+    "weightedTrend": 5,
+    "avgTrend": 5,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-bullish",
+    "weightedTrend": 5,
+    "avgTrend": 5,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-dinner-bullish",
+    "weightedTrend": 5,
+    "avgTrend": 5,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-down10-bullish",
+    "weightedTrend": 5,
+    "avgTrend": 5,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-minorJump-bullish",
+    "weightedTrend": 5,
+    "avgTrend": 5,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-minorJump-dinner-bullish",
+    "weightedTrend": 5,
+    "avgTrend": 5,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-minorJump-down10-bullish",
+    "weightedTrend": 5,
+    "avgTrend": 5,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-minorJump-bullish",
+    "weightedTrend": 5,
+    "avgTrend": 5,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-down-bullish",
+    "weightedTrend": 5,
+    "avgTrend": 5,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-dinner-down-bullish",
+    "weightedTrend": 5,
+    "avgTrend": 5,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-minorJump-dinner-down10",
+    "weightedTrend": 5,
+    "avgTrend": 5,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-majorJump",
+    "weightedTrend": 4.760000000000001,
+    "avgTrend": 4.760000000000001,
+    "count": 5,
+    "percUp": 6000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-down-straightDown",
+    "weightedTrend": 3.6,
+    "avgTrend": 3.6,
+    "count": 3,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-down-straightDown30",
+    "weightedTrend": 3.6,
+    "avgTrend": 3.6,
+    "count": 3,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-down-straightDown30",
+    "weightedTrend": 3.6,
+    "avgTrend": 3.6,
+    "count": 3,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-down-straightDown30-bearish",
+    "weightedTrend": 3.6,
+    "avgTrend": 3.6,
+    "count": 3,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-majorJump-down20-straightDown30",
+    "weightedTrend": 3.53,
+    "avgTrend": 3.53,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-dinner-down20",
+    "weightedTrend": 3.53,
+    "avgTrend": 3.53,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-majorJump-dinner-down20",
+    "weightedTrend": 3.53,
+    "avgTrend": 3.53,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-dinner-down20-bearish",
+    "weightedTrend": 3.53,
+    "avgTrend": 3.53,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-down20-straightDown",
+    "weightedTrend": 3.53,
+    "avgTrend": 3.53,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-majorJump-down20-straightDown",
+    "weightedTrend": 3.53,
+    "avgTrend": 3.53,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-dinner-down20-straightDown",
+    "weightedTrend": 3.53,
+    "avgTrend": 3.53,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-down20-straightDown30",
+    "weightedTrend": 3.53,
+    "avgTrend": 3.53,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-down20-straightDown30",
+    "weightedTrend": 3.53,
+    "avgTrend": 3.53,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-down20-straightDown30-bearish",
+    "weightedTrend": 3.53,
+    "avgTrend": 3.53,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-majorJump-down20-straightDown30",
+    "weightedTrend": 3.53,
+    "avgTrend": 3.53,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-dinner-down20-straightDown30",
+    "weightedTrend": 3.53,
+    "avgTrend": 3.53,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-dinner-down20-straightDown30",
+    "weightedTrend": 3.53,
+    "avgTrend": 3.53,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-majorJump-dinner-down20-straightDown30",
+    "weightedTrend": 3.53,
+    "avgTrend": 3.53,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-majorJump-dinner-down20-straightDown30",
+    "weightedTrend": 3.53,
+    "avgTrend": 3.53,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-dinner-down20-straightDown",
+    "weightedTrend": 3.53,
+    "avgTrend": 3.53,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-majorJump-dinner-down20-straightDown",
+    "weightedTrend": 3.53,
+    "avgTrend": 3.53,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-majorJump-dinner-down20-straightDown",
+    "weightedTrend": 3.53,
+    "avgTrend": 3.53,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-majorJump-dinner-down20",
+    "weightedTrend": 3.53,
+    "avgTrend": 3.53,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-majorJump-straightDown30-bearish",
+    "weightedTrend": 2.87,
+    "avgTrend": 2.87,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-dinner-straightDown30-bearish",
+    "weightedTrend": 2.87,
+    "avgTrend": 2.87,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-majorJump-straightDown30",
+    "weightedTrend": 2.87,
+    "avgTrend": 2.87,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-majorJump-straightDown30",
+    "weightedTrend": 2.87,
+    "avgTrend": 2.87,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-dinner-straightDown30",
+    "weightedTrend": 2.87,
+    "avgTrend": 2.87,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-dinner-straightDown30",
+    "weightedTrend": 2.87,
+    "avgTrend": 2.87,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-majorJump-dinner-straightDown30",
+    "weightedTrend": 2.87,
+    "avgTrend": 2.87,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-majorJump-dinner-straightDown30",
+    "weightedTrend": 2.87,
+    "avgTrend": 2.87,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-dinner-straightDown",
+    "weightedTrend": 2.87,
+    "avgTrend": 2.87,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-dinner-down-straightDown",
+    "weightedTrend": 2.87,
+    "avgTrend": 2.87,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-dinner-straightDown-bearish",
+    "weightedTrend": 2.87,
+    "avgTrend": 2.87,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-majorJump-down-straightDown",
+    "weightedTrend": 2.87,
+    "avgTrend": 2.87,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-majorJump-dinner-down-straightDown",
+    "weightedTrend": 2.87,
+    "avgTrend": 2.87,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-dinner-down-straightDown",
+    "weightedTrend": 2.87,
+    "avgTrend": 2.87,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-majorJump-dinner-straightDown",
+    "weightedTrend": 2.87,
+    "avgTrend": 2.87,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-majorJump-dinner-straightDown",
+    "weightedTrend": 2.87,
+    "avgTrend": 2.87,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-dinner-straightDown",
+    "weightedTrend": 2.87,
+    "avgTrend": 2.87,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-majorJump-dinner-down-straightDown30",
+    "weightedTrend": 2.87,
+    "avgTrend": 2.87,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-majorJump-dinner-down-straightDown30",
+    "weightedTrend": 2.87,
+    "avgTrend": 2.87,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-dinner-down-straightDown30",
+    "weightedTrend": 2.87,
+    "avgTrend": 2.87,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-dinner-down-straightDown30",
+    "weightedTrend": 2.87,
+    "avgTrend": 2.87,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-majorJump-down-straightDown30",
+    "weightedTrend": 2.87,
+    "avgTrend": 2.87,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-majorJump-down-straightDown30",
+    "weightedTrend": 2.87,
+    "avgTrend": 2.87,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-majorJump-straightDown",
+    "weightedTrend": 2.87,
+    "avgTrend": 2.87,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-majorJump-dinner-down-straightDown",
+    "weightedTrend": 2.87,
+    "avgTrend": 2.87,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "twoToFive",
+    "weightedTrend": 2.59,
+    "avgTrend": 2.59,
+    "count": 2,
+    "percUp": 5000
+  },
+  {
+    "pmName": "sudden-drops-twoToFive",
+    "weightedTrend": 2.59,
+    "avgTrend": 2.59,
+    "count": 2,
+    "percUp": 5000
+  },
+  {
+    "pmName": "sudden-drops-minorJump-dinner-down",
+    "weightedTrend": 2.4566666666666666,
+    "avgTrend": 2.4566666666666666,
+    "count": 3,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-minorJump-dinner-!straightDown",
+    "weightedTrend": 2.4566666666666666,
+    "avgTrend": 2.4566666666666666,
+    "count": 3,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-minorJump-!straightDown",
+    "weightedTrend": 2.4566666666666666,
+    "avgTrend": 2.4566666666666666,
+    "count": 3,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-minorJump-dinner",
+    "weightedTrend": 2.4566666666666666,
+    "avgTrend": 2.4566666666666666,
+    "count": 3,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-minorJump",
+    "weightedTrend": 2.4566666666666666,
+    "avgTrend": 2.4566666666666666,
+    "count": 3,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-dinner",
+    "weightedTrend": 2.4566666666666666,
+    "avgTrend": 2.4566666666666666,
+    "count": 3,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-dinner-down",
+    "weightedTrend": 2.4566666666666666,
+    "avgTrend": 2.4566666666666666,
+    "count": 3,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-minorJump-dinner-!straightDown",
+    "weightedTrend": 2.4566666666666666,
+    "avgTrend": 2.4566666666666666,
+    "count": 3,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-!straightDown",
+    "weightedTrend": 2.4566666666666666,
+    "avgTrend": 2.4566666666666666,
+    "count": 3,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-minorJump-down",
+    "weightedTrend": 2.4566666666666666,
+    "avgTrend": 2.4566666666666666,
+    "count": 3,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-minorJump-dinner",
+    "weightedTrend": 2.4566666666666666,
+    "avgTrend": 2.4566666666666666,
+    "count": 3,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-down-!straightDown",
+    "weightedTrend": 2.4566666666666666,
+    "avgTrend": 2.4566666666666666,
+    "count": 3,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-dinner-down-!straightDown",
+    "weightedTrend": 2.4566666666666666,
+    "avgTrend": 2.4566666666666666,
+    "count": 3,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-dinner-!straightDown",
+    "weightedTrend": 2.4566666666666666,
+    "avgTrend": 2.4566666666666666,
+    "count": 3,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-minorJump-dinner-down",
+    "weightedTrend": 2.4566666666666666,
+    "avgTrend": 2.4566666666666666,
+    "count": 3,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-minorJump-dinner-down-!straightDown",
+    "weightedTrend": 2.4566666666666666,
+    "avgTrend": 2.4566666666666666,
+    "count": 3,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-minorJump-down-!straightDown",
+    "weightedTrend": 2.4566666666666666,
+    "avgTrend": 2.4566666666666666,
+    "count": 3,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-minorJump-dinner-down-!straightDown",
+    "weightedTrend": 2.4566666666666666,
+    "avgTrend": 2.4566666666666666,
+    "count": 3,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-majorJump-dinner-down40-straightDown30",
+    "weightedTrend": 2.21,
+    "avgTrend": 2.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-down40-straightDown30",
+    "weightedTrend": 2.21,
+    "avgTrend": 2.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-down40-straightDown30",
+    "weightedTrend": 2.21,
+    "avgTrend": 2.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-majorJump-down40",
+    "weightedTrend": 2.21,
+    "avgTrend": 2.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-down40-straightDown30-bearish",
+    "weightedTrend": 2.21,
+    "avgTrend": 2.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-down40",
+    "weightedTrend": 2.21,
+    "avgTrend": 2.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-dinner-down40-straightDown30",
+    "weightedTrend": 2.21,
+    "avgTrend": 2.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-majorJump-dinner-down40-straightDown",
+    "weightedTrend": 2.21,
+    "avgTrend": 2.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-majorJump-dinner-down40-straightDown",
+    "weightedTrend": 2.21,
+    "avgTrend": 2.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-dinner-down40-straightDown",
+    "weightedTrend": 2.21,
+    "avgTrend": 2.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-dinner-down40-straightDown",
+    "weightedTrend": 2.21,
+    "avgTrend": 2.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-majorJump-down40-straightDown",
+    "weightedTrend": 2.21,
+    "avgTrend": 2.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-down40-straightDown-bearish",
+    "weightedTrend": 2.21,
+    "avgTrend": 2.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-majorJump-down40-straightDown",
+    "weightedTrend": 2.21,
+    "avgTrend": 2.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-down40-straightDown",
+    "weightedTrend": 2.21,
+    "avgTrend": 2.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-down40-straightDown",
+    "weightedTrend": 2.21,
+    "avgTrend": 2.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-dinner-down40-straightDown30",
+    "weightedTrend": 2.21,
+    "avgTrend": 2.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-majorJump-down40",
+    "weightedTrend": 2.21,
+    "avgTrend": 2.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-dinner-down40",
+    "weightedTrend": 2.21,
+    "avgTrend": 2.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-dinner-down40-bearish",
+    "weightedTrend": 2.21,
+    "avgTrend": 2.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-dinner-down40",
+    "weightedTrend": 2.21,
+    "avgTrend": 2.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-down40",
+    "weightedTrend": 2.21,
+    "avgTrend": 2.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-majorJump-dinner-down40",
+    "weightedTrend": 2.21,
+    "avgTrend": 2.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-majorJump-down40-straightDown30",
+    "weightedTrend": 2.21,
+    "avgTrend": 2.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-majorJump-down40-straightDown30",
+    "weightedTrend": 2.21,
+    "avgTrend": 2.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-majorJump-down40-bearish",
+    "weightedTrend": 2.21,
+    "avgTrend": 2.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-majorJump-dinner-down40",
+    "weightedTrend": 2.21,
+    "avgTrend": 2.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-down40-bearish",
+    "weightedTrend": 2.21,
+    "avgTrend": 2.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-majorJump-dinner-down40-straightDown30",
+    "weightedTrend": 2.21,
+    "avgTrend": 2.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-down40-bearish",
+    "weightedTrend": 2.21,
+    "avgTrend": 2.21,
+    "count": 1,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-dinner-down",
+    "weightedTrend": 2.185,
+    "avgTrend": 2.185,
+    "count": 6,
+    "percUp": 8333.333333333334
+  },
+  {
+    "pmName": "dinner",
+    "weightedTrend": 2.185,
+    "avgTrend": 2.185,
+    "count": 6,
+    "percUp": 8333.333333333334
+  },
+  {
+    "pmName": "sudden-drops-dinner",
+    "weightedTrend": 2.185,
+    "avgTrend": 2.185,
+    "count": 6,
+    "percUp": 8333.333333333334
+  },
+  {
+    "pmName": "sudden-drops-notLunch",
+    "weightedTrend": 2.1236363636363635,
+    "avgTrend": 2.1236363636363635,
+    "count": 11,
+    "percUp": 6363.636363636363
+  },
+  {
+    "pmName": "sudden-drops-dinner-down20",
+    "weightedTrend": 1.9666666666666668,
+    "avgTrend": 1.9666666666666668,
+    "count": 3,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-majorJump-dinner",
+    "weightedTrend": 1.9133333333333333,
+    "avgTrend": 1.9133333333333333,
+    "count": 3,
+    "percUp": 6666.666666666666
+  },
+  {
+    "pmName": "sudden-drops-majorJump-dinner-bearish",
+    "weightedTrend": 1.9133333333333333,
+    "avgTrend": 1.9133333333333333,
+    "count": 3,
+    "percUp": 6666.666666666666
+  },
+  {
+    "pmName": "sudden-drops-!watchout-dinner-bearish",
+    "weightedTrend": 1.9133333333333333,
+    "avgTrend": 1.9133333333333333,
+    "count": 3,
+    "percUp": 6666.666666666666
+  },
+  {
+    "pmName": "sudden-drops-dinner-bearish",
+    "weightedTrend": 1.9133333333333333,
+    "avgTrend": 1.9133333333333333,
+    "count": 3,
+    "percUp": 6666.666666666666
+  },
+  {
+    "pmName": "sudden-drops-!watchout-dinner-down",
+    "weightedTrend": 1.9133333333333333,
+    "avgTrend": 1.9133333333333333,
+    "count": 3,
+    "percUp": 6666.666666666666
+  },
+  {
+    "pmName": "sudden-drops-majorJump-dinner-down",
+    "weightedTrend": 1.9133333333333333,
+    "avgTrend": 1.9133333333333333,
+    "count": 3,
+    "percUp": 6666.666666666666
+  },
+  {
+    "pmName": "sudden-drops-!watchout-majorJump-dinner-down",
+    "weightedTrend": 1.9133333333333333,
+    "avgTrend": 1.9133333333333333,
+    "count": 3,
+    "percUp": 6666.666666666666
+  },
+  {
+    "pmName": "sudden-drops-!watchout-dinner",
+    "weightedTrend": 1.9133333333333333,
+    "avgTrend": 1.9133333333333333,
+    "count": 3,
+    "percUp": 6666.666666666666
+  },
+  {
+    "pmName": "sudden-drops-dinner-down-bearish",
+    "weightedTrend": 1.9133333333333333,
+    "avgTrend": 1.9133333333333333,
+    "count": 3,
+    "percUp": 6666.666666666666
+  },
+  {
+    "pmName": "sudden-drops-!watchout-majorJump-dinner",
+    "weightedTrend": 1.9133333333333333,
+    "avgTrend": 1.9133333333333333,
+    "count": 3,
+    "percUp": 6666.666666666666
+  },
+  {
+    "pmName": "sudden-drops-dinner-!straightDown",
+    "weightedTrend": 1.8425,
+    "avgTrend": 1.8425,
+    "count": 4,
+    "percUp": 7500
+  },
+  {
+    "pmName": "sudden-drops-dinner-down-!straightDown",
+    "weightedTrend": 1.8425,
+    "avgTrend": 1.8425,
+    "count": 4,
+    "percUp": 7500
+  },
+  {
+    "pmName": "sudden-drops-notLunchAndNotDown10",
+    "weightedTrend": 1.8359999999999999,
+    "avgTrend": 1.8359999999999999,
+    "count": 10,
+    "percUp": 6000
+  },
+  {
+    "pmName": "sudden-drops-!watchout",
+    "weightedTrend": 1.5910000000000004,
+    "avgTrend": 1.5910000000000004,
+    "count": 10,
+    "percUp": 6000
+  },
+  {
+    "pmName": "sudden-drops-watchout-dinner-neutral",
+    "weightedTrend": 1.185,
+    "avgTrend": 1.185,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-!straightDown-neutral",
+    "weightedTrend": 1.185,
+    "avgTrend": 1.185,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-minorJump-down20",
+    "weightedTrend": 1.185,
+    "avgTrend": 1.185,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-minorJump-dinner-down20",
+    "weightedTrend": 1.185,
+    "avgTrend": 1.185,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-down20-neutral",
+    "weightedTrend": 1.185,
+    "avgTrend": 1.185,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-dinner-neutral",
+    "weightedTrend": 1.185,
+    "avgTrend": 1.185,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-down-!straightDown-neutral",
+    "weightedTrend": 1.185,
+    "avgTrend": 1.185,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-dinner-down20",
+    "weightedTrend": 1.185,
+    "avgTrend": 1.185,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-minorJump-dinner-down20-!straightDown",
+    "weightedTrend": 1.185,
+    "avgTrend": 1.185,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-minorJump-down20-!straightDown",
+    "weightedTrend": 1.185,
+    "avgTrend": 1.185,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-minorJump-dinner-down20-!straightDown",
+    "weightedTrend": 1.185,
+    "avgTrend": 1.185,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-dinner-down20-!straightDown",
+    "weightedTrend": 1.185,
+    "avgTrend": 1.185,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-down20-!straightDown",
+    "weightedTrend": 1.185,
+    "avgTrend": 1.185,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-down20-!straightDown-neutral",
+    "weightedTrend": 1.185,
+    "avgTrend": 1.185,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-minorJump-down-neutral",
+    "weightedTrend": 1.185,
+    "avgTrend": 1.185,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-dinner-down20-!straightDown",
+    "weightedTrend": 1.185,
+    "avgTrend": 1.185,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-down-neutral",
+    "weightedTrend": 1.185,
+    "avgTrend": 1.185,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-minorJump-neutral",
+    "weightedTrend": 1.185,
+    "avgTrend": 1.185,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-dinner-down-neutral",
+    "weightedTrend": 1.185,
+    "avgTrend": 1.185,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-down-neutral",
+    "weightedTrend": 1.185,
+    "avgTrend": 1.185,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-dinner-down20-neutral",
+    "weightedTrend": 1.185,
+    "avgTrend": 1.185,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-minorJump-dinner-neutral",
+    "weightedTrend": 1.185,
+    "avgTrend": 1.185,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-down20-neutral",
+    "weightedTrend": 1.185,
+    "avgTrend": 1.185,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-minorJump-down20-neutral",
+    "weightedTrend": 1.185,
+    "avgTrend": 1.185,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-neutral",
+    "weightedTrend": 1.185,
+    "avgTrend": 1.185,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-dinner-!straightDown-neutral",
+    "weightedTrend": 1.185,
+    "avgTrend": 1.185,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-minorJump-!straightDown-neutral",
+    "weightedTrend": 1.185,
+    "avgTrend": 1.185,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-watchout-minorJump-neutral",
+    "weightedTrend": 1.185,
+    "avgTrend": 1.185,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-minorJump-dinner-down20",
+    "weightedTrend": 1.185,
+    "avgTrend": 1.185,
+    "count": 2,
+    "percUp": 10000
+  },
+  {
+    "pmName": "sudden-drops-minorJump",
+    "weightedTrend": -0.04599999999999956,
+    "avgTrend": -0.04599999999999956,
+    "count": 5,
+    "percUp": 8000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump",
+    "weightedTrend": -0.09666666666666697,
+    "avgTrend": -0.09666666666666697,
+    "count": 3,
+    "percUp": 6666.666666666666
+  },
+  {
+    "pmName": "sudden-drops-!watchout-mediumJump",
+    "weightedTrend": -0.09666666666666697,
+    "avgTrend": -0.09666666666666697,
+    "count": 3,
+    "percUp": 6666.666666666666
+  },
+  {
+    "pmName": "sudden-drops-!straightDown",
+    "weightedTrend": -0.6137500000000005,
+    "avgTrend": -0.6137500000000005,
+    "count": 8,
+    "percUp": 5000
+  },
+  {
+    "pmName": "sudden-drops",
+    "weightedTrend": -0.8637500000000005,
+    "avgTrend": -0.8637500000000005,
+    "count": 16,
+    "percUp": 5625
+  },
+  {
+    "pmName": "5",
+    "weightedTrend": -0.8637500000000005,
+    "avgTrend": -0.8637500000000005,
+    "count": 16,
+    "percUp": 5625
+  },
+  {
+    "pmName": "sudden-drops-notLunchOrNotDown10",
+    "weightedTrend": -0.8637500000000005,
+    "avgTrend": -0.8637500000000005,
+    "count": 16,
+    "percUp": 5625
+  },
+  {
+    "pmName": "sudden-drops-oneToTwo",
+    "weightedTrend": -1.0899999999999999,
+    "avgTrend": -1.0899999999999999,
+    "count": 6,
+    "percUp": 5000
+  },
+  {
+    "pmName": "oneToTwo",
+    "weightedTrend": -1.0899999999999999,
+    "avgTrend": -1.0899999999999999,
+    "count": 6,
+    "percUp": 5000
+  },
+  {
+    "pmName": "sudden-drops-straightDown",
+    "weightedTrend": -1.1137500000000005,
+    "avgTrend": -1.1137500000000005,
+    "count": 8,
+    "percUp": 6250
+  },
+  {
+    "pmName": "sudden-drops-majorJump",
+    "weightedTrend": -1.6624999999999996,
+    "avgTrend": -1.6624999999999996,
+    "count": 8,
+    "percUp": 3750
+  },
+  {
+    "pmName": "sudden-drops-straightDown-bearish",
+    "weightedTrend": -2.0128571428571425,
+    "avgTrend": -2.0128571428571425,
+    "count": 7,
+    "percUp": 5714.285714285714
+  },
+  {
+    "pmName": "sudden-drops-!watchout-!straightDown",
+    "weightedTrend": -2.4560000000000004,
+    "avgTrend": -2.4560000000000004,
+    "count": 5,
+    "percUp": 2000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-down",
+    "weightedTrend": -2.735,
+    "avgTrend": -2.735,
+    "count": 2,
+    "percUp": 5000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-lunch-bearish",
+    "weightedTrend": -2.735,
+    "avgTrend": -2.735,
+    "count": 2,
+    "percUp": 5000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-bearish",
+    "weightedTrend": -2.735,
+    "avgTrend": -2.735,
+    "count": 2,
+    "percUp": 5000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-mediumJump-bearish",
+    "weightedTrend": -2.735,
+    "avgTrend": -2.735,
+    "count": 2,
+    "percUp": 5000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-down-bearish",
+    "weightedTrend": -2.735,
+    "avgTrend": -2.735,
+    "count": 2,
+    "percUp": 5000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-lunch-down",
+    "weightedTrend": -2.735,
+    "avgTrend": -2.735,
+    "count": 2,
+    "percUp": 5000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-mediumJump-lunch-down",
+    "weightedTrend": -2.735,
+    "avgTrend": -2.735,
+    "count": 2,
+    "percUp": 5000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-mediumJump-lunch",
+    "weightedTrend": -2.735,
+    "avgTrend": -2.735,
+    "count": 2,
+    "percUp": 5000
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-lunch",
+    "weightedTrend": -2.735,
+    "avgTrend": -2.735,
+    "count": 2,
+    "percUp": 5000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-mediumJump-down",
+    "weightedTrend": -2.735,
+    "avgTrend": -2.735,
+    "count": 2,
+    "percUp": 5000
+  },
+  {
+    "pmName": "sudden-drops-minorJump-down-!straightDown",
+    "weightedTrend": -3.11,
+    "avgTrend": -3.11,
+    "count": 4,
+    "percUp": 7500
+  },
+  {
+    "pmName": "sudden-drops-minorJump-down",
+    "weightedTrend": -3.11,
+    "avgTrend": -3.11,
+    "count": 4,
+    "percUp": 7500
+  },
+  {
+    "pmName": "sudden-drops-minorJump-!straightDown",
+    "weightedTrend": -3.11,
+    "avgTrend": -3.11,
+    "count": 4,
+    "percUp": 7500
+  },
+  {
+    "pmName": "10",
+    "weightedTrend": -3.7326666666666672,
+    "avgTrend": -3.7326666666666672,
+    "count": 15,
+    "percUp": 5333.333333333334
+  },
+  {
+    "pmName": "sudden-drops-!watchout-minorJump-bearish",
+    "weightedTrend": -3.799999999999999,
+    "avgTrend": -3.799999999999999,
+    "count": 2,
+    "percUp": 5000
+  },
+  {
+    "pmName": "sudden-drops-minorJump-bearish",
+    "weightedTrend": -3.799999999999999,
+    "avgTrend": -3.799999999999999,
+    "count": 2,
+    "percUp": 5000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-minorJump",
+    "weightedTrend": -3.799999999999999,
+    "avgTrend": -3.799999999999999,
+    "count": 2,
+    "percUp": 5000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-minorJump-lunch",
+    "weightedTrend": -3.799999999999999,
+    "avgTrend": -3.799999999999999,
+    "count": 2,
+    "percUp": 5000
+  },
+  {
+    "pmName": "sudden-drops-minorJump-lunch-bearish",
+    "weightedTrend": -3.799999999999999,
+    "avgTrend": -3.799999999999999,
+    "count": 2,
+    "percUp": 5000
+  },
+  {
+    "pmName": "sudden-drops-minorJump-lunch",
+    "weightedTrend": -3.799999999999999,
+    "avgTrend": -3.799999999999999,
+    "count": 2,
+    "percUp": 5000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-bearish",
+    "weightedTrend": -3.9299999999999997,
+    "avgTrend": -3.9299999999999997,
+    "count": 8,
+    "percUp": 5000
+  },
+  {
+    "pmName": "sudden-drops-down-straightDown",
+    "weightedTrend": -4.383333333333333,
+    "avgTrend": -4.383333333333333,
+    "count": 6,
+    "percUp": 5000
+  },
+  {
+    "pmName": "sudden-drops-down-straightDown-bearish",
+    "weightedTrend": -4.383333333333333,
+    "avgTrend": -4.383333333333333,
+    "count": 6,
+    "percUp": 5000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-majorJump-bearish",
+    "weightedTrend": -4.592499999999999,
+    "avgTrend": -4.592499999999999,
+    "count": 4,
+    "percUp": 5000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-majorJump-down",
+    "weightedTrend": -4.592499999999999,
+    "avgTrend": -4.592499999999999,
+    "count": 4,
+    "percUp": 5000
+  },
+  {
+    "pmName": "sudden-drops-watchout",
+    "weightedTrend": -4.955000000000001,
+    "avgTrend": -4.955000000000001,
+    "count": 6,
+    "percUp": 5000
+  },
+  {
+    "pmName": "sudden-drops-watchout-down",
+    "weightedTrend": -4.955000000000001,
+    "avgTrend": -4.955000000000001,
+    "count": 6,
+    "percUp": 5000
+  },
+  {
+    "pmName": "sudden-drops-down",
+    "weightedTrend": -5.644615384615384,
+    "avgTrend": -5.644615384615384,
+    "count": 13,
+    "percUp": 4615.384615384615
+  },
+  {
+    "pmName": "sudden-drops-minorJump-down20-!straightDown",
+    "weightedTrend": -5.8133333333333335,
+    "avgTrend": -5.8133333333333335,
+    "count": 3,
+    "percUp": 6666.666666666666
+  },
+  {
+    "pmName": "sudden-drops-minorJump-down20",
+    "weightedTrend": -5.8133333333333335,
+    "avgTrend": -5.8133333333333335,
+    "count": 3,
+    "percUp": 6666.666666666666
+  },
+  {
+    "pmName": "sudden-drops-bearish",
+    "weightedTrend": -6.230909090909091,
+    "avgTrend": -6.230909090909091,
+    "count": 11,
+    "percUp": 3636.3636363636365
+  },
+  {
+    "pmName": "sudden-drops-!watchout-down-bearish",
+    "weightedTrend": -6.235714285714286,
+    "avgTrend": -6.235714285714286,
+    "count": 7,
+    "percUp": 4285.714285714285
+  },
+  {
+    "pmName": "sudden-drops-!watchout-down",
+    "weightedTrend": -6.235714285714286,
+    "avgTrend": -6.235714285714286,
+    "count": 7,
+    "percUp": 4285.714285714285
+  },
+  {
+    "pmName": "sudden-drops-majorJump-down-straightDown",
+    "weightedTrend": -6.272,
+    "avgTrend": -6.272,
+    "count": 5,
+    "percUp": 4000
+  },
+  {
+    "pmName": "sudden-drops-majorJump-straightDown-bearish",
+    "weightedTrend": -6.272,
+    "avgTrend": -6.272,
+    "count": 5,
+    "percUp": 4000
+  },
+  {
+    "pmName": "sudden-drops-majorJump-straightDown",
+    "weightedTrend": -6.272,
+    "avgTrend": -6.272,
+    "count": 5,
+    "percUp": 4000
+  },
+  {
+    "pmName": "sudden-drops-fitty",
+    "weightedTrend": -6.354000000000001,
+    "avgTrend": -6.354000000000001,
+    "count": 5,
+    "percUp": 4000
+  },
+  {
+    "pmName": "fitty",
+    "weightedTrend": -6.354000000000001,
+    "avgTrend": -6.354000000000001,
+    "count": 5,
+    "percUp": 4000
+  },
+  {
+    "pmName": "sudden-drops-down-!straightDown",
+    "weightedTrend": -6.725714285714287,
+    "avgTrend": -6.725714285714287,
+    "count": 7,
+    "percUp": 4285.714285714285
+  },
+  {
+    "pmName": "sudden-drops-watchout-down20",
+    "weightedTrend": -6.946000000000001,
+    "avgTrend": -6.946000000000001,
+    "count": 5,
+    "percUp": 4000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-lunch",
+    "weightedTrend": -7.436,
+    "avgTrend": -7.436,
+    "count": 5,
+    "percUp": 4000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-lunch-bearish",
+    "weightedTrend": -7.436,
+    "avgTrend": -7.436,
+    "count": 5,
+    "percUp": 4000
+  },
+  {
+    "pmName": "lunch",
+    "weightedTrend": -7.436,
+    "avgTrend": -7.436,
+    "count": 5,
+    "percUp": 4000
+  },
+  {
+    "pmName": "sudden-drops-lunch",
+    "weightedTrend": -7.436,
+    "avgTrend": -7.436,
+    "count": 5,
+    "percUp": 4000
+  },
+  {
+    "pmName": "sudden-drops-lunch-bearish",
+    "weightedTrend": -7.436,
+    "avgTrend": -7.436,
+    "count": 5,
+    "percUp": 4000
+  },
+  {
+    "pmName": "sudden-drops-majorJump-bearish",
+    "weightedTrend": -7.924285714285714,
+    "avgTrend": -7.924285714285714,
+    "count": 7,
+    "percUp": 2857.142857142857
+  },
+  {
+    "pmName": "sudden-drops-majorJump-down-bearish",
+    "weightedTrend": -7.924285714285714,
+    "avgTrend": -7.924285714285714,
+    "count": 7,
+    "percUp": 2857.142857142857
+  },
+  {
+    "pmName": "sudden-drops-majorJump-down",
+    "weightedTrend": -7.924285714285714,
+    "avgTrend": -7.924285714285714,
+    "count": 7,
+    "percUp": 2857.142857142857
+  },
+  {
+    "pmName": "sudden-drops-down-bearish",
+    "weightedTrend": -8.075,
+    "avgTrend": -8.075,
+    "count": 10,
+    "percUp": 3000
+  },
+  {
+    "pmName": "sudden-drops-down20-straightDown-bearish",
+    "weightedTrend": -8.3925,
+    "avgTrend": -8.3925,
+    "count": 4,
+    "percUp": 2500
+  },
+  {
+    "pmName": "sudden-drops-down20-straightDown",
+    "weightedTrend": -8.3925,
+    "avgTrend": -8.3925,
+    "count": 4,
+    "percUp": 2500
+  },
+  {
+    "pmName": "sudden-drops-majorJump-down20-straightDown",
+    "weightedTrend": -8.3925,
+    "avgTrend": -8.3925,
+    "count": 4,
+    "percUp": 2500
+  },
+  {
+    "pmName": "sudden-drops-down20",
+    "weightedTrend": -9.516666666666666,
+    "avgTrend": -9.516666666666666,
+    "count": 9,
+    "percUp": 3333.333333333333
+  },
+  {
+    "pmName": "sudden-drops-!watchout-majorJump-down20",
+    "weightedTrend": -10.29,
+    "avgTrend": -10.29,
+    "count": 2,
+    "percUp": 5000
+  },
+  {
+    "pmName": "sudden-drops-down20-!straightDown",
+    "weightedTrend": -10.416,
+    "avgTrend": -10.416,
+    "count": 5,
+    "percUp": 4000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-mediumJump-down20-!straightDown",
+    "weightedTrend": -10.53,
+    "avgTrend": -10.53,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-!watchout-mediumJump-lunch-down-!straightDown",
+    "weightedTrend": -10.53,
+    "avgTrend": -10.53,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-lunch-down-!straightDown",
+    "weightedTrend": -10.53,
+    "avgTrend": -10.53,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-lunch-!straightDown",
+    "weightedTrend": -10.53,
+    "avgTrend": -10.53,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-lunch-down20-!straightDown",
+    "weightedTrend": -10.53,
+    "avgTrend": -10.53,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-!watchout-mediumJump-!straightDown",
+    "weightedTrend": -10.53,
+    "avgTrend": -10.53,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-!straightDown",
+    "weightedTrend": -10.53,
+    "avgTrend": -10.53,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-!straightDown-bearish",
+    "weightedTrend": -10.53,
+    "avgTrend": -10.53,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-!watchout-mediumJump-lunch-!straightDown",
+    "weightedTrend": -10.53,
+    "avgTrend": -10.53,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-!watchout-mediumJump-down20",
+    "weightedTrend": -10.53,
+    "avgTrend": -10.53,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-down20-!straightDown",
+    "weightedTrend": -10.53,
+    "avgTrend": -10.53,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-!watchout-mediumJump-down-!straightDown",
+    "weightedTrend": -10.53,
+    "avgTrend": -10.53,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-!watchout-mediumJump-lunch-down20-!straightDown",
+    "weightedTrend": -10.53,
+    "avgTrend": -10.53,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-down20",
+    "weightedTrend": -10.53,
+    "avgTrend": -10.53,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-!watchout-mediumJump-lunch-down20",
+    "weightedTrend": -10.53,
+    "avgTrend": -10.53,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-lunch-down20",
+    "weightedTrend": -10.53,
+    "avgTrend": -10.53,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-down-!straightDown",
+    "weightedTrend": -10.53,
+    "avgTrend": -10.53,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-mediumJump-down20-bearish",
+    "weightedTrend": -10.53,
+    "avgTrend": -10.53,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-majorJump-down20",
+    "weightedTrend": -11.536,
+    "avgTrend": -11.536,
+    "count": 5,
+    "percUp": 2000
+  },
+  {
+    "pmName": "sudden-drops-majorJump-down20-bearish",
+    "weightedTrend": -11.536,
+    "avgTrend": -11.536,
+    "count": 5,
+    "percUp": 2000
+  },
+  {
+    "pmName": "sudden-drops-!watchout-majorJump-down-!straightDown",
+    "weightedTrend": -12.055,
+    "avgTrend": -12.055,
+    "count": 2,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-majorJump-down-!straightDown",
+    "weightedTrend": -12.055,
+    "avgTrend": -12.055,
+    "count": 2,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-majorJump-!straightDown-bearish",
+    "weightedTrend": -12.055,
+    "avgTrend": -12.055,
+    "count": 2,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-lunch-down-bearish",
+    "weightedTrend": -12.3475,
+    "avgTrend": -12.3475,
+    "count": 4,
+    "percUp": 2500
+  },
+  {
+    "pmName": "sudden-drops-!watchout-lunch-down",
+    "weightedTrend": -12.3475,
+    "avgTrend": -12.3475,
+    "count": 4,
+    "percUp": 2500
+  },
+  {
+    "pmName": "sudden-drops-lunch-down",
+    "weightedTrend": -12.3475,
+    "avgTrend": -12.3475,
+    "count": 4,
+    "percUp": 2500
+  },
+  {
+    "pmName": "sudden-drops-brunch-down20-straightDown90",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-majorJump-down20-straightDown90",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-brunch-down20-straightDown",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-majorJump-down20-straightDown",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-down20-straightDown",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "brunch",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-brunch-down-straightDown",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-brunch",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-majorJump-down-straightDown",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-down-straightDown",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-brunch-down",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-brunch-straightDown-bearish",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-majorJump-brunch-straightDown",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-majorJump-brunch",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-down-straightDown90-bearish",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-down20-straightDown90-bearish",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-brunch-straightDown90-bearish",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-brunch-straightDown",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-majorJump-brunch-straightDown",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-brunch-straightDown",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-brunch-down-straightDown",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-straightDown90-bearish",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-majorJump-straightDown",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-majorJump-down",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-straightDown",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-down20-straightDown90",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-majorJump-down20-straightDown90",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-down20-straightDown90",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-majorJump-brunch-straightDown90",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-majorJump-brunch-down20",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-brunch-down20",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-majorJump-brunch-down20",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-brunch-down20",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-majorJump-brunch-down-straightDown",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-straightDown-bearish",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-majorJump-straightDown90-bearish",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-brunch-straightDown90",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-majorJump-brunch-straightDown90",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-brunch-straightDown90",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-majorJump-brunch-down-straightDown",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-straightDown90-bearish",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-brunch",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-majorJump-brunch",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-majorJump-brunch-down20-straightDown",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-brunch-down-bearish",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-bearish",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-majorJump-bearish",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-majorJump-brunch-down-straightDown90",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-brunch-down-straightDown90",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-majorJump-brunch-down-straightDown90",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-brunch-down-straightDown90",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-majorJump-down-straightDown90",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-majorJump",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-brunch-down20-straightDown",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-majorJump-brunch-down20-straightDown",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-down-straightDown90",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-majorJump-down-straightDown90",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-down-straightDown90",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-brunch-bearish",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-majorJump-brunch-bearish",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-brunch-bearish",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-majorJump-brunch-down20-straightDown90",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-down-bearish",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-majorJump-straightDown90",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-straightDown90",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-down20-bearish",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-majorJump-straightDown90",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-straightDown90",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-brunch-down20-straightDown90",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-brunch-down20-bearish",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-majorJump-brunch-down20-straightDown90",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-majorJump-down20",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-majorJump-brunch-down",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-watchout-brunch-down",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-majorJump-brunch-down",
+    "weightedTrend": -12.366666666666667,
+    "avgTrend": -12.366666666666667,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-down20-bearish",
+    "weightedTrend": -12.574285714285713,
+    "avgTrend": -12.574285714285713,
+    "count": 7,
+    "percUp": 1428.5714285714284
+  },
+  {
+    "pmName": "sudden-drops-!watchout-down20-bearish",
+    "weightedTrend": -12.73,
+    "avgTrend": -12.73,
+    "count": 4,
+    "percUp": 2500
+  },
+  {
+    "pmName": "sudden-drops-!watchout-down20",
+    "weightedTrend": -12.73,
+    "avgTrend": -12.73,
+    "count": 4,
+    "percUp": 2500
+  },
+  {
+    "pmName": "sudden-drops-down-!straightDown-bearish",
+    "weightedTrend": -13.6125,
+    "avgTrend": -13.6125,
+    "count": 4,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-!watchout-!straightDown-bearish",
+    "weightedTrend": -13.6125,
+    "avgTrend": -13.6125,
+    "count": 4,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-!straightDown-bearish",
+    "weightedTrend": -13.6125,
+    "avgTrend": -13.6125,
+    "count": 4,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-!watchout-down-!straightDown",
+    "weightedTrend": -13.6125,
+    "avgTrend": -13.6125,
+    "count": 4,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-lunch-down20",
+    "weightedTrend": -18.150000000000002,
+    "avgTrend": -18.150000000000002,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-lunch-down20-bearish",
+    "weightedTrend": -18.150000000000002,
+    "avgTrend": -18.150000000000002,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-!watchout-lunch-down20",
+    "weightedTrend": -18.150000000000002,
+    "avgTrend": -18.150000000000002,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-lunch-!straightDown-bearish",
+    "weightedTrend": -18.150000000000002,
+    "avgTrend": -18.150000000000002,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-down20-!straightDown-bearish",
+    "weightedTrend": -18.150000000000002,
+    "avgTrend": -18.150000000000002,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-!watchout-lunch-!straightDown",
+    "weightedTrend": -18.150000000000002,
+    "avgTrend": -18.150000000000002,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-!watchout-down20-!straightDown",
+    "weightedTrend": -18.150000000000002,
+    "avgTrend": -18.150000000000002,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-lunch-down20-!straightDown",
+    "weightedTrend": -18.150000000000002,
+    "avgTrend": -18.150000000000002,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-!watchout-lunch-down20-!straightDown",
+    "weightedTrend": -18.150000000000002,
+    "avgTrend": -18.150000000000002,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-lunch-!straightDown",
+    "weightedTrend": -18.150000000000002,
+    "avgTrend": -18.150000000000002,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-!watchout-lunch-down-!straightDown",
+    "weightedTrend": -18.150000000000002,
+    "avgTrend": -18.150000000000002,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-lunch-down-!straightDown",
+    "weightedTrend": -18.150000000000002,
+    "avgTrend": -18.150000000000002,
+    "count": 3,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-!watchout-minorJump-lunch-down",
+    "weightedTrend": -19.81,
+    "avgTrend": -19.81,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-minorJump-lunch-down-!straightDown",
+    "weightedTrend": -19.81,
+    "avgTrend": -19.81,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-!watchout-minorJump-down20",
+    "weightedTrend": -19.81,
+    "avgTrend": -19.81,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-minorJump-down-bearish",
+    "weightedTrend": -19.81,
+    "avgTrend": -19.81,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-minorJump-lunch-down",
+    "weightedTrend": -19.81,
+    "avgTrend": -19.81,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-!watchout-minorJump-!straightDown",
+    "weightedTrend": -19.81,
+    "avgTrend": -19.81,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-minorJump-!straightDown-bearish",
+    "weightedTrend": -19.81,
+    "avgTrend": -19.81,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-minorJump-down20-bearish",
+    "weightedTrend": -19.81,
+    "avgTrend": -19.81,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-!watchout-minorJump-down-!straightDown",
+    "weightedTrend": -19.81,
+    "avgTrend": -19.81,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-minorJump-lunch-down20",
+    "weightedTrend": -19.81,
+    "avgTrend": -19.81,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-!watchout-minorJump-lunch-down20-!straightDown",
+    "weightedTrend": -19.81,
+    "avgTrend": -19.81,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-minorJump-lunch-down20-!straightDown",
+    "weightedTrend": -19.81,
+    "avgTrend": -19.81,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-minorJump-lunch-!straightDown",
+    "weightedTrend": -19.81,
+    "avgTrend": -19.81,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-!watchout-minorJump-lunch-!straightDown",
+    "weightedTrend": -19.81,
+    "avgTrend": -19.81,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-!watchout-minorJump-lunch-down20",
+    "weightedTrend": -19.81,
+    "avgTrend": -19.81,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-!watchout-minorJump-down",
+    "weightedTrend": -19.81,
+    "avgTrend": -19.81,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-!watchout-minorJump-lunch-down-!straightDown",
+    "weightedTrend": -19.81,
+    "avgTrend": -19.81,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-!watchout-minorJump-down20-!straightDown",
+    "weightedTrend": -19.81,
+    "avgTrend": -19.81,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-!watchout-majorJump-down20-!straightDown",
+    "weightedTrend": -24.11,
+    "avgTrend": -24.11,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-majorJump-lunch-down",
+    "weightedTrend": -24.11,
+    "avgTrend": -24.11,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-majorJump-lunch-down20-!straightDown",
+    "weightedTrend": -24.11,
+    "avgTrend": -24.11,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-!watchout-majorJump-lunch-down20-!straightDown",
+    "weightedTrend": -24.11,
+    "avgTrend": -24.11,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-!watchout-majorJump-lunch-!straightDown",
+    "weightedTrend": -24.11,
+    "avgTrend": -24.11,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-majorJump-lunch-!straightDown",
+    "weightedTrend": -24.11,
+    "avgTrend": -24.11,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-!watchout-majorJump-lunch-down",
+    "weightedTrend": -24.11,
+    "avgTrend": -24.11,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-majorJump-down20-!straightDown",
+    "weightedTrend": -24.11,
+    "avgTrend": -24.11,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-majorJump-lunch-down20",
+    "weightedTrend": -24.11,
+    "avgTrend": -24.11,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-majorJump-lunch-bearish",
+    "weightedTrend": -24.11,
+    "avgTrend": -24.11,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-majorJump-lunch",
+    "weightedTrend": -24.11,
+    "avgTrend": -24.11,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-!watchout-majorJump-lunch",
+    "weightedTrend": -24.11,
+    "avgTrend": -24.11,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-majorJump-lunch-down-!straightDown",
+    "weightedTrend": -24.11,
+    "avgTrend": -24.11,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-!watchout-majorJump-lunch-down-!straightDown",
+    "weightedTrend": -24.11,
+    "avgTrend": -24.11,
+    "count": 1,
+    "percUp": 0
+  },
+  {
+    "pmName": "sudden-drops-!watchout-majorJump-lunch-down20",
+    "weightedTrend": -24.11,
+    "avgTrend": -24.11,
+    "count": 1,
+    "percUp": 0
+  }
+]
