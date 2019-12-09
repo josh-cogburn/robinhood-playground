@@ -115,7 +115,7 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
 
                 if (multiplier < 1) {
                     await sendEmail('multiplier < 1', JSON.stringify({
-                        ticker,
+                        stocksToBuy,
                         strategy,
                         withPrices
                     }, null, 2));
