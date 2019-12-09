@@ -59,6 +59,7 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
         );
         
         multiplier = forPurchaseMultiplier + pmAnalysisMultiplier + subsetOffsetMultiplier;
+        multiplier = Math.max(1, multiplier);
         
         forPurchaseData = {
             forPurchasePms, 
@@ -112,15 +113,6 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
             // forPurchase
             if (isRecommended) {
                 console.log('strategy enabled: ', stratMin, 'purchasing', stocksToBuy, multiplier);
-
-                if (multiplier < 1) {
-                    await sendEmail('multiplier < 1', JSON.stringify({
-                        stocksToBuy,
-                        strategy,
-                        withPrices
-                    }, null, 2));
-                    multiplier = 1;
-                }
 
                 await purchaseStocks({
                     strategy,
