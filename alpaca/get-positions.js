@@ -143,11 +143,11 @@ module.exports = async () => {
     if (getMinutesFrom630() < 20 && returnPerc > 20) return 50;
     if (Math.abs(returnPerc) > 30) return 24;
     // basePerc = dayVal + returnVal
-    const dayVal = (daysOld + 1) * 3;
+    const dayVal = (daysOld + 1) * 4;
     const returnVal = Math.abs(returnPerc) / 3;
     const basePercent = dayVal + returnVal;
     // shouldVal is based on intraday pl
-    let shouldVal = Math.abs(Number(unrealized_intraday_plpc)) * 100 / 1.4;
+    let shouldVal = Math.abs(Number(unrealized_intraday_plpc)) * 100;
     if (outsideBracket) {
       shouldVal += returnPerc ? 4 : 7;
     }
