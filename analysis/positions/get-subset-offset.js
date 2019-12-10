@@ -10,7 +10,7 @@ const subsetOffsets = {
   // lastFive: ({ date }) => lastFive.includes(date),
   // yesterday: ({ date }) => allDates[1] === date,
   // today: ({ date }) => allDates[0] === date,
-  watchout: Number.NEGATIVE_INFINITY,
+  watchout: -6,
   notWatchout: 4,
 
   bullish: -3,
