@@ -24,7 +24,7 @@ let expectedPickCount = 0;
 module.exports = {
     // important settings
     // sellAllStocksOnNthDay: 8,
-    purchaseAmt: 30,
+    purchaseAmt: 12,
     disableCashCheck: true,
     disableMultipliers: true,
 

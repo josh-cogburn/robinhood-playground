@@ -10,7 +10,7 @@ const subsetOffsets = {
   // lastFive: ({ date }) => lastFive.includes(date),
   // yesterday: ({ date }) => allDates[1] === date,
   // today: ({ date }) => allDates[0] === date,
-  watchout: -8,
+  watchout: -7,
   notWatchout: 4,
 
   bullish: -3,
@@ -35,7 +35,7 @@ const subsetOffsets = {
   notStraightDowner: 4,
   // straightDowner: ({ interestingWords }) => interestingWords.some(val => val.startsWith('straightDown')),
   // firstAlert: ({ interestingWords }) => interestingWords.includes('firstAlert'),
-  notFirstAlert: -2,
+  notFirstAlert: -4,
   // avgh: ({ interestingWords }) => interestingWords.some(val => val.startsWith('avgh')),
   notAvgh: -3,
   hotSt: -1,
