@@ -92,7 +92,7 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
         keys,
         data,
         isRecommended,
-        ...isRecommended && forPurchaseData
+        ...forPurchaseData
     };
 
     const PickDoc = await Pick.create(pickObj);
