@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import { Line } from 'react-chartjs-2';
-import TrendPerc from '../components/TrendPerc';
 import { pick } from 'underscore';
+import { WithContext as ReactTags } from 'react-tag-input';
+
+import TrendPerc from '../components/TrendPerc';
 import getByDateAnalysis from '../analysis/get-bydate-analysis';
 import getOverallAnalysis from '../analysis/get-overall-analysis';
 import getSubsets from '../analysis/get-subsets';
 
 import { MDBDataTable } from 'mdbreact';
+
+import './Closed.css';
 
 
 const colors = [
@@ -45,13 +49,31 @@ const LineChart = ({ dateAnalysis, props }) => {
   );
 };
 
+
+const KeyCodes = {
+  comma: 188,
+  enter: 13,
+};
+ 
+const delimiters = [KeyCodes.comma, KeyCodes.enter];
+
 class Closed extends Component {
   state = {
-    currentSubset: 'allPositions'
+    currentSubset: 'allPositions',
+    tags: []
   };
+  handleDelete = i => {
+    const { tags } = this.state;
+    this.setState({
+     tags: tags.filter((tag, index) => index !== i),
+    });
+  }
+  handleAddition = tag => {
+    this.setState(state => ({ tags: [...state.tags, tag] }));
+  }
   render() {
     let { positions: { alpaca: open}, analyzedClosed: closed } = this.props;
-    const { currentSubset } = this.state;
+    const { currentSubset, tags, suggestions } = this.state;
     const allPositions = [
       ...open.map(position => ({
         ...position,
@@ -62,13 +84,20 @@ class Closed extends Component {
       .filter(position => position.date)
       .sort((a, b) => (new Date(b.date)).getTime() - (new Date(a.date)).getTime());
 
-    let overallAnalysis = getOverallAnalysis(allPositions);
+    const subsets = getSubsets(allPositions);
+    const filteredPositions = allPositions.filter(position => {
+      return tags.every(({ text: subsetName }) => {
+        console.log({ subsetName });
+        return subsets[subsetName](position)
+      });
+    });
+
+    let overallAnalysis = getOverallAnalysis(filteredPositions);
     console.log({ currentSubset })
 
-    const subsets = getSubsets(allPositions);
     console.log({ subsets }, Object.keys(subsets));
     const subsetFilterFn = subsets[currentSubset];
-    const filtered = allPositions
+    const filtered = filteredPositions
       .filter(position => subsetFilterFn(position))
       .map(position => ({
           ...position,
@@ -102,24 +131,30 @@ class Closed extends Component {
 
         <h1>Position Analysis</h1>
 
+        <ReactTags 
+          tags={tags}
+          suggestions={Object.keys(overallAnalysis).map(subset => ({ id: subset, text: subset }))}
+          handleDelete={this.handleDelete}
+          handleAddition={this.handleAddition}
+          // handleDrag={this.handleDrag}
+          delimiters={delimiters} />
+
         <div className="split-vertical">
           <div>
 
-            <table style={{ width: '100%', margin: '0 1%', textAlign: 'center' }}>
+            <table style={{ width: '100%', padding: '0 1%', textAlign: 'center' }}>
               <thead>
-                <tr>
-                  <th>Subset</th>
-                  <th>Total Bought</th>
-                  <th>Total Impact</th>
-                  <th>Percent Change</th>
-                  <th>Avg Multiplier Impact Perc</th>
-                  <th>Avg Pick Impact Perc</th>
-                  <th>Avg Position Impact Perc </th>
-                  <th>PercUp</th>
-                  <th>Position Count</th>
-                  <th>Pick Count</th>
-                  <th>Multiplier Count</th>
-                </tr>
+                <th>Subset</th>
+                <th>Total Bought</th>
+                <th>Total Impact</th>
+                <th>Percent Change</th>
+                <th>Avg Multiplier Impact Perc</th>
+                <th>Avg Pick Impact Perc</th>
+                <th>Avg Position Impact Perc </th>
+                <th>PercUp</th>
+                <th>Position Count</th>
+                <th>Pick Count</th>
+                <th>Multiplier Count</th>
               </thead>
               <tbody>
                 { Object.entries(overallAnalysis).map(([name, analysis]) => {

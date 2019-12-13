@@ -231,6 +231,9 @@ class DayReports extends Component {
         let { timeFilter, numDaysToShow, hoverIndex, fuzzFactor, afterHoursAnnotations } = this.state;
         if (!balanceReports || !balanceReports.length) return <b>LOADING</b>;
 
+        console.log({ balanceReports })
+
+        balanceReports = balanceReports.filter(r => r.indexPrices);
 
         // filter balance reports
         const lastReport = balanceReports[balanceReports.length - 1];
