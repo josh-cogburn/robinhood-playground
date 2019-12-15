@@ -10,10 +10,13 @@ const analyzePosition = async position => {
   strlog({
     position
   })
-
+  const numSharesBought = sumArray(
+    buys.map(buy => buy.quantity)
+);
   const numSharesSold = sumArray(
       sells.map(buy => buy.quantity)
   );
+  const percentSharesSold = numSharesSold / numSharesBought;
   const individualize = array => {
       const grouped = array.map(({ quantity, fillPrice }) => 
           (new Array(quantity)).fill(fillPrice)
@@ -66,6 +69,7 @@ const analyzePosition = async position => {
       date,
       numPicks,
       numMultipliers,
+      percentSharesSold,
       interestingWords
   };
 };

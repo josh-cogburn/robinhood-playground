@@ -149,7 +149,7 @@ module.exports = async () => {
     // shouldVal is based on intraday pl
     let shouldVal = Math.abs(Number(unrealized_intraday_plpc)) * 100;
     if (outsideBracket) {
-      shouldVal += returnPerc ? 4 : 7;
+      shouldVal += returnPerc ? 4 : 28;
     }
     // subtract perc if looking good?
     const stBracketNumbers = {
