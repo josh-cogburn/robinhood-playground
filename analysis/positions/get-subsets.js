@@ -7,9 +7,14 @@ const minorJump = ({ interestingWords }) => interestingWords.includes('minorJump
 const mediumJump = ({ interestingWords }) => interestingWords.includes('mediumJump');
 const majorJump = ({ interestingWords }) => interestingWords.includes('majorJump');
 
+const bullish = ({ interestingWords }) => interestingWords.includes('bullish');
 
 const lunch = ({ interestingWords }) => interestingWords.includes('lunch');
 const oneToTwo = ({ interestingWords }) => interestingWords.includes('oneToTwo');
+
+const straightDown60 = ({ interestingWords }) => interestingWords.some(val => val.startsWith('straightDown60'));
+const straightDown120 = ({ interestingWords }) => interestingWords.some(val => val.startsWith('straightDown120'));
+const bigDowner = p => straightDown60(p) || straightDown120(p);
 
 const spread1 = ({ interestingWords }) => interestingWords.includes('spread1');
 
@@ -31,15 +36,17 @@ module.exports = positions => {
     watchout,
     notWatchout,
     watchoutMajorJump: p => watchout(p) && majorJump(p),
-    bullish: ({ interestingWords }) => interestingWords.includes('bullish'),
+    bullish,
     neutral: ({ interestingWords }) => interestingWords.includes('neutral'),
     bearish,
+    bullishMajorJump: p => bullish(p) && majorJump(p),
     majorJump,
     mediumJump,
     minorJump,
     medOrMajJump: p => mediumJump(p) || majorJump(p),
     onlyMinorJump: p => minorJump(p) && !mediumJump(p) && !majorJump(p),
-    onlyMinorJumpNotSpread1: p => minorJump(p) && !mediumJump(p) && !majorJump(p) && !spread1(p),
+    onlyMinorJumpSpread1: p => minorJump(p) && !mediumJump(p) && !majorJump(p) && spread1(p),
+    onlyMinorJumpBigDowner: p => minorJump(p) && !mediumJump(p) && !majorJump(p) && bigDowner(p),
     singleMultiplier: ({ numMultipliers }) => numMultipliers === 1,
     multipleMultipliers: ({ numMultipliers }) => numMultipliers > 1,
     singlePick: ({ numPicks }) => numPicks === 1,
@@ -48,8 +55,9 @@ module.exports = positions => {
     // notWatchoutMajorJumpNotStraightDowner: position => notWatchout(position) && majorJump(position) && notStraightDowner(position),
     straightDowner: ({ interestingWords }) => interestingWords.some(val => val.startsWith('straightDown')),
     straightDown30: ({ interestingWords }) => interestingWords.some(val => val.startsWith('straightDown30')),
-    straightDown60: ({ interestingWords }) => interestingWords.some(val => val.startsWith('straightDown60')),
-    straightDown120: ({ interestingWords }) => interestingWords.some(val => val.startsWith('straightDown120')),
+    straightDown60,
+    straightDown120,
+    bigDowner,
     notStraightDowner,
     straightDowner: ({ interestingWords }) => interestingWords.some(val => val.startsWith('straightDown')),
     firstAlert: ({ interestingWords }) => interestingWords.includes('firstAlert'),

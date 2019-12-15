@@ -32,10 +32,10 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
             const tooltipText = (pos.interestingWords || []).join(' ');
             return <span {...tooltipText && { 'data-custom': true, 'data-tooltip-str': tooltipText }}>{pos.ticker}</span>
         },
-        percentSold: pos => {
-            console.log({ pos });
-            return 'haha';
-        },
+        
+        percentSharesSold: ({ percentSharesSold }) => (
+            <TrendPerc value={percentSharesSold * 100} />
+        ),
         ...!admin ? {
             'percent of total': pos => pos.percTotal + '%',
         } : {

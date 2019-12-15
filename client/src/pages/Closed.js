@@ -56,11 +56,11 @@ const KeyCodes = {
 };
  
 const delimiters = [KeyCodes.comma, KeyCodes.enter];
-const createTag = text => ({ text });
+const createTag = text => ({ text, id: text });
 class Closed extends Component {
   state = {
     currentSubset: 'allPositions',
-    tags: ['noAfterhours', 'withoutASLN'].map(createTag)
+    tags: ['notAfterhours', 'withoutASLN'].map(createTag)
   };
   handleDelete = i => {
     const { tags } = this.state;

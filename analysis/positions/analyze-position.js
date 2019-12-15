@@ -42,10 +42,14 @@ const analyzePosition = async position => {
   const numMultipliers = sumArray(
     relatedPicks.map(pick => pick.multiplier || 1)
   );
+  const avgPickPrice = avgArray(
+    relatedPicks.map(pick => pick.picks[0].price).filter(Boolean)
+  );
   strlog({
     ticker,
     uniqPickIds,
-    numMultipliers
+    numMultipliers,
+    avgPickPrice
   })
   const sellReturnDollars = (numSharesSold / 100) * sellReturnPerc * avgEntry;
   const date = (new Date(relatedPicks[0].timestamp)).toLocaleDateString();
@@ -61,6 +65,7 @@ const analyzePosition = async position => {
       // ...position,s
       totalBuyAmt,
       avgEntry,
+      avgPickPrice,
       avgSellPrice,
       sellReturnPerc,
       sellReturnDollars,
