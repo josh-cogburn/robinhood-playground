@@ -3,7 +3,7 @@ Array.prototype.flatten = function() {
   return [].concat(...this);
 };
 const analyzeGroup = analyzedPositions => {
-  console.log({ analyzedPositions })
+  // console.log({ analyzedPositions })
   const forConsideration = analyzedPositions.filter(position => (position.buys || []).length);
   const totalBought = sumArray(forConsideration.map(pos => pos.totalBuyAmt));
   const totalImpact = sumArray(forConsideration.map(pos => pos.netImpact));

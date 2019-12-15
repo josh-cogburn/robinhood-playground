@@ -1,3 +1,4 @@
+const watchout = ({ interestingWords }) => interestingWords.includes('watchout');
 const notWatchout = ({ interestingWords }) => !interestingWords.includes('watchout');
 const bearish = ({ interestingWords }) => interestingWords.includes('bearish');
 const notStraightDowner = ({ interestingWords }) => interestingWords.every(word => !word.startsWith('straightDown'));
@@ -27,8 +28,9 @@ module.exports = positions => {
     lastFive: ({ date }) => lastFive.includes(date),
     yesterday: ({ date }) => allDates[1] === date,
     today: ({ date }) => allDates[0] === date,
-    watchout: ({ interestingWords }) => interestingWords.includes('watchout'),
+    watchout,
     notWatchout,
+    watchoutMajorJump: p => watchout(p) && majorJump(p),
     bullish: ({ interestingWords }) => interestingWords.includes('bullish'),
     neutral: ({ interestingWords }) => interestingWords.includes('neutral'),
     bearish,

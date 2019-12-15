@@ -48,20 +48,20 @@ const getStBracket = bullBearScore => {
 };
     
 
-module.exports = async (ticker, detailed) => {
+module.exports = async (ticker, detailed, maxId) => {
     try {
         ticker = ticker.toUpperCase();
         // console.log({ ticker, detailed }, 'getting stocktwits sent')
-        let { messages } = await stReq(`https://api.stocktwits.com/api/2/streams/symbol/${ticker}.json?filter=top`);
-        
+        let { messages } = await stReq(`https://api.stocktwits.com/api/2/streams/symbol/${ticker}.json?filter=top${maxId ? `&max=${maxId}`: ''}`);
+        strlog({messages})
+        const includesPhrase = str => JSON.stringify(messages.map(m => m.body)).includes(str);
+
         const dates = await Pick.getUniqueDates();
         const twoDaysAgo = dates[dates.length - 2];
         const twoDaysAgoTS = (new Date(twoDaysAgo)).getTime();
         const filterMessagesFromTimestamp = timestamp => 
             messages.filter(o => (new Date(o.created_at)).getTime() > timestamp);
         messages = filterMessagesFromTimestamp(twoDaysAgoTS);
-
-        
         const withSentiment = messages.filter(o => o.entities.sentiment && o.entities.sentiment.basic);
 
         // console.log(withSentiment.length);
@@ -102,7 +102,12 @@ module.exports = async (ticker, detailed) => {
             totalCount,
             bearishCount: getSentiment('Bearish'),
             bullishCount: getSentiment('Bullish'),
-            ...getStBracket(bullBearScore)
+            ...getStBracket(bullBearScore),
+
+            wordFlags: ['split', 'reverse split', 'halt', 'rocket'].filter(includesPhrase),
+            ...detailed && {
+                messages
+            }
         };
         console.log(`stSent ${ticker}`, response);
         return response;

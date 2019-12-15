@@ -12,7 +12,11 @@ const sendEmail = require('../utils/send-email');
 const tweeter = require('./tweeter');
 const calcEmailsFromStrategy = require('../utils/calc-emails-from-strategy');
 const stocktwits = require('../utils/stocktwits');
-const { disableMultipliers, forPurchase } = require('../settings');
+const { 
+    disableMultipliers, 
+    forPurchase, 
+    multiplierThreshold 
+} = require('../settings');
 const pmsHit = require('../utils/pms-hit');
 const { emails } = require('../config');
 
@@ -59,7 +63,7 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
         );
         
         multiplier = forPurchaseMultiplier + pmAnalysisMultiplier + subsetOffsetMultiplier;
-        if (multiplier <= -6) {
+        if (multiplier <= multiplierThreshold) {
             isRecommended = false;
         }
         multiplier = Math.max(1, multiplier);
@@ -152,10 +156,16 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
                         }))
                     ]
                 }, []);
+            
             for (let { email, pm } of emailsToSend) {
+                const subject = stocksToBuy.join(', ');
+                const body = [
+                    isRecommended ? '' : 'notrec',
+                    ...forPurchaseData.interestingWords
+                ].join(' ');
                 await sendEmail(
-                    `robinhood-playground${pm ? `-${pm}` : ''}: ${stratMin}`,
-                    stocksToBuy.join(', '),
+                    subject,
+                    body,
                     email
                 );
             }

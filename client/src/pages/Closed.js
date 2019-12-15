@@ -56,11 +56,11 @@ const KeyCodes = {
 };
  
 const delimiters = [KeyCodes.comma, KeyCodes.enter];
-
+const createTag = text => ({ text });
 class Closed extends Component {
   state = {
     currentSubset: 'allPositions',
-    tags: []
+    tags: ['noAfterhours', 'withoutASLN'].map(createTag)
   };
   handleDelete = i => {
     const { tags } = this.state;
@@ -92,10 +92,10 @@ class Closed extends Component {
       });
     });
 
-    let overallAnalysis = getOverallAnalysis(filteredPositions);
-    console.log({ currentSubset })
+    let overallAnalysis = getOverallAnalysis(filteredPositions, subsets);
+    // console.log({ currentSubset })
 
-    console.log({ subsets }, Object.keys(subsets));
+    // console.log({ subsets }, Object.keys(subsets));
     const subsetFilterFn = subsets[currentSubset];
     const filtered = filteredPositions
       .filter(position => subsetFilterFn(position))
@@ -196,7 +196,7 @@ class Closed extends Component {
               <h1>current subset: {currentSubset}</h1>
               {/* <pre>{JSON.stringify(filtered, null, 2)}</pre> */}
               <MDBDataTable data={{
-                  columns: Object.keys(filtered[0]).map((label, i) => ({ label, field: label })),
+                  columns: Object.keys(filtered[0] || {}).map((label, i) => ({ label, field: label })),
                   rows: [...filtered].sort((a, b) => (new Date(b.date)).getTime() - (new Date(a.date)).getTime())
               }} />
 

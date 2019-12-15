@@ -21,6 +21,7 @@ export default positions => {
   const lastFive = allDates.slice(0, 5);
   return {
     allPositions: () => true,
+    noAfterhours: ({ interestingWords }) => !interestingWords.includes('afterhours'),
     withoutKEG: ({ ticker }) => ticker !== 'KEG',
     withoutASLN: ({ ticker }) => ticker !== 'ASLN',
     lastFive: ({ date }) => lastFive.includes(date),

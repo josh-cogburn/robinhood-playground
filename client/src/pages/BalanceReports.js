@@ -343,7 +343,7 @@ class DayReports extends Component {
 
         const stepSize = Math.ceil((max - min) / 13);
         
-        // console.log({ allValues,min,max })
+        console.log({ d: chartData.datasets, allDatas, allValues,min,max, stepSize })
         // let afterHoursAnnotations = annotateBoxes(afterHoursBoxes);
 
         // const expected = [["10/2/2019, 5:00:01 AM","10/2/2019, 8:29:49 AM"],["10/2/2019, 3:00:08 PM","10/3/2019, 8:29:48 AM"],["10/3/2019, 3:00:13 PM","10/4/2019, 8:29:54 AM"],["10/4/2019, 3:00:15 PM","10/7/2019, 8:29:54 AM"],["10/7/2019, 3:00:15 PM","10/8/2019, 8:29:48 AM"],["10/8/2019, 3:00:04 PM","10/9/2019, 8:29:47 AM"],["10/9/2019, 3:00:16 PM","10/10/2019, 8:29:59 AM"]];
@@ -463,7 +463,7 @@ class DayReports extends Component {
                         options={{
                             events: ['mousemove', 'mouseout', 'click', 'touchstart', 'touchmove'],
                             animation: !!timeFilter === '2019',
-                            onHover: (event, chartEls) => this.setState({ hoverIndex: get(chartEls[0], '_index') }),
+                            // onHover: (event, chartEls) => this.setState({ hoverIndex: get(chartEls[0], '_index') }),
                             // responsive: true,
                             maintainAspectRatio : false,
                             // plugins: {
