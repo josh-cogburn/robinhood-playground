@@ -131,8 +131,8 @@ module.exports = async () => {
     ].uniq();
     
     let collections = {
-        holds
-        // spy: ['SPY'],
+        holds,
+        spy: ['SPY'],
         // options: OPTIONSTICKERS,
     };
 
