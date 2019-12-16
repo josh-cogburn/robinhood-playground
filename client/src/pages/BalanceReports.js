@@ -231,7 +231,7 @@ class DayReports extends Component {
         let { timeFilter, numDaysToShow, hoverIndex, fuzzFactor, afterHoursAnnotations } = this.state;
         if (!balanceReports || !balanceReports.length) return <b>LOADING</b>;
 
-        console.log({ balanceReports })
+        // console.log({ balanceReports })
 
         balanceReports = balanceReports.filter(r => r.indexPrices);
 
@@ -257,7 +257,7 @@ class DayReports extends Component {
         let numDaysToPrune = smallDevice ? Math.ceil(numReports / 350) : numDaysToShow;
         balanceReports = pruneByDays(balanceReports, numDaysToPrune);
         balanceReports = pruneByDays(balanceReports, fuzzFactor);
-        console.log({ numReports, smallDevice, numDaysToPrune, afterCount: balanceReports.length })
+        // console.log({ numReports, smallDevice, numDaysToPrune, afterCount: balanceReports.length })
 
         // const numToShow = numDaysToShow === 1
         //     ? (() => {
@@ -343,7 +343,7 @@ class DayReports extends Component {
 
         const stepSize = Math.ceil((max - min) / 13);
         
-        console.log({ d: chartData.datasets, allDatas, allValues,min,max, stepSize })
+        // console.log({ d: chartData.datasets, allDatas, allValues,min,max, stepSize })
         // let afterHoursAnnotations = annotateBoxes(afterHoursBoxes);
 
         // const expected = [["10/2/2019, 5:00:01 AM","10/2/2019, 8:29:49 AM"],["10/2/2019, 3:00:08 PM","10/3/2019, 8:29:48 AM"],["10/3/2019, 3:00:13 PM","10/4/2019, 8:29:54 AM"],["10/4/2019, 3:00:15 PM","10/7/2019, 8:29:54 AM"],["10/7/2019, 3:00:15 PM","10/8/2019, 8:29:48 AM"],["10/8/2019, 3:00:04 PM","10/9/2019, 8:29:47 AM"],["10/9/2019, 3:00:16 PM","10/10/2019, 8:29:59 AM"]];

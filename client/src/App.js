@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './App.css';
+import './pages/Closed.css';
 
+import { WithContext as ReactTags } from 'react-tag-input';
 
 import ReactModal from 'react-modal';
 import PickGraphs from './components/PickGraphs';
+
+
+import getByDateAnalysis from './analysis/get-bydate-analysis';
+import getOverallAnalysis from './analysis/get-overall-analysis';
+import getSubsets from './analysis/get-subsets';
 
 
 import ReactHintFactory from 'react-hint';
@@ -84,7 +91,7 @@ const matchesPm = (stratMin, pm, pms) => {
         });
     });
     // return pms[pm] && pms[pm].every(part => strat === part || strat.includes(`${part}-`) || strat.includes(`-${part}`));
-}
+};
 
 const isForPurchase = (stratMin, settings = {}, pms) => {
 
@@ -104,7 +111,7 @@ const isForPurchase = (stratMin, settings = {}, pms) => {
     );
 
 
-}
+};
 
 const pages = [
     {
@@ -158,11 +165,32 @@ const pages = [
 
 
 
+const KeyCodes = {
+    comma: 188,
+    enter: 13,
+  };
+   
+const delimiters = [KeyCodes.comma, KeyCodes.enter];
+const createTag = text => ({ text, id: text });
+
 class App extends Component {
     state = {
         value: 0,
-        socket: null
+        socket: null,
+        tags: ['notAfterhours', 'withoutASLN'].map(createTag),
     };
+
+    handleDelete = i => {
+        const { tags } = this.state;
+        this.setState({
+            tags: tags.filter((tag, index) => index !== i),
+        });
+    }
+    handleAddition = tag => {
+        const { tags = [] } = this.state;
+        const newTags = [...tags, tag];
+        this.setState({ tags: newTags });
+    }
 
     componentDidMount() {
         let { origin } = window.location;
@@ -257,9 +285,8 @@ class App extends Component {
         const isLoading = !balanceReports || !balanceReports.length;
         const PageComponent = pages[value].component;
 
-        if (positions) {
-          positions = mapObject(
-            positions,
+        positions = mapObject(
+            positions || {},
             positions => positions
                 .map(pos => {
                     const { afterHoursPrice, lastTradePrice } = relatedPrices[pos.ticker] || {};
@@ -274,10 +301,54 @@ class App extends Component {
                     return pos;
                 })
                 .sort((a, b) => b.equity - a.equity)
-          )
-        }
-        
+        );
 
+
+        // position analysis
+
+        let { 
+            // positions: { alpaca: open = [] } = {}, 
+            // analyzedClosed: closed = [], 
+            tags 
+        } = this.state;
+        const open = positions.alpaca || [];
+        const closed = this.state.analyzedClosed || [];
+        const allPositions = [
+            ...open.map(pos => ({
+                ...pos,
+                isOpen: true
+            })),
+            ...closed
+        ]
+        .map(({ interestingWords, ...rest }) => ({
+            ...rest,
+            interestingWords: interestingWords || []
+        }))
+        .sort((a, b) => (new Date(b.date)).getTime() - (new Date(a.date)).getTime());
+        
+        console.log({ allPositions });
+        const subsets = getSubsets(allPositions);
+        const filteredPositions = allPositions.filter(position => {
+            return tags.every(({ text: subsetName }) => {
+                return subsets[subsetName](position);
+            });
+        });
+
+        let dateAnalysis = getByDateAnalysis(filteredPositions);
+        let overallAnalysis = getOverallAnalysis(filteredPositions, subsets);
+        const suggestions = Object.keys(overallAnalysis).map(subset => ({ id: subset, text: subset }));
+        const passToPages = {
+            ...this.state,
+            handlePageChange: this.handlePageChange, 
+            // position analysis
+            allPositions,
+            filteredPositions,
+            dateAnalysis, 
+            overallAnalysis,
+            suggestions,
+            subsets
+        };
+        
         return (
             <div className="App">
                 <AppBar position="static">
@@ -290,6 +361,13 @@ class App extends Component {
                             <a onClick={this.pullGit}>⬇️</a>&nbsp;
                             <a onClick={this.restartProcess}>♻️</a>
                         </Typography>
+                        <ReactTags
+                            tags={tags}
+                            suggestions={suggestions}
+                            handleDelete={this.handleDelete}
+                            handleAddition={this.handleAddition}
+                            // handleDrag={this.handleDrag}
+                            delimiters={delimiters} />
                     </Toolbar>
                     <Tabs value={value} onChange={this.handlePageChange}>
                         { pages.map(({ label }) => <Tab label={label} />) }
@@ -312,8 +390,7 @@ class App extends Component {
                 { isLoading ? (
                     <h1 style={{ textAlign: 'center' }}>loading</h1>
                 ) : <PageComponent 
-                      {...this.state} 
-                      {...{ handlePageChange: this.handlePageChange }}
+                      {...passToPages}
                       positions={positions}
                       showPick={pick => this.setState({ showingPick: pick })}
                       />

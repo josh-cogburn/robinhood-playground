@@ -33,9 +33,16 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
             return <span {...tooltipText && { 'data-custom': true, 'data-tooltip-str': tooltipText }}>{pos.ticker}</span>
         },
         
-        percentSharesSold: ({ percentSharesSold }) => (
-            <TrendPerc value={percentSharesSold * 100} />
-        ),
+        percentSharesSold: ({ percentSharesSold }) => 
+            !percentSharesSold ? '' : (
+                <TrendPerc 
+                    value={percentSharesSold * 100}
+                    round={true}
+                    noPlus={true}
+                    style={{ color: 'black' }}
+                />
+            )
+        ,
         ...!admin ? {
             'percent of total': pos => pos.percTotal + '%',
         } : {

@@ -72,30 +72,15 @@ class Closed extends Component {
     this.setState(state => ({ tags: [...state.tags, tag] }));
   }
   render() {
-    let { positions: { alpaca: open}, analyzedClosed: closed } = this.props;
-    const { currentSubset, tags, suggestions } = this.state;
-    const allPositions = [
-      ...open.map(position => ({
-        ...position,
-        isOpen: true
-      })),
-      ...closed
-    ]
-      .filter(position => position.date)
-      .sort((a, b) => (new Date(b.date)).getTime() - (new Date(a.date)).getTime());
+    let { positions: { alpaca: open}, analyzedClosed: closed, subsets, suggestions, overallAnalysis, allPositions, filteredPositions } = this.props;
+    const { currentSubset, tags } = this.state;
+    
 
-    const subsets = getSubsets(allPositions);
-    const filteredPositions = allPositions.filter(position => {
-      return tags.every(({ text: subsetName }) => {
-        console.log({ subsetName });
-        return subsets[subsetName](position)
-      });
-    });
+    console.log({
+      filteredPositions,
+      allPositions,
+    })
 
-    let overallAnalysis = getOverallAnalysis(filteredPositions, subsets);
-    // console.log({ currentSubset })
-
-    // console.log({ subsets }, Object.keys(subsets));
     const subsetFilterFn = subsets[currentSubset];
     const filtered = filteredPositions
       .filter(position => subsetFilterFn(position))
@@ -104,14 +89,25 @@ class Closed extends Component {
           interestingWords: position.interestingWords.join(' ')
       }))
       .map(position => {
+          // console.log({ position }, Object.keys(position))
           ['avgEntry', 'avgSellPrice', 'netImpact', 'totalBuyAmt'].forEach(key => {
-              position[key] = position[key] ? position[key].toFixed(2) : '---';
+            if (position === undefined) {
+              console.log('returning');
+              return;
+            }
+            // if (!position[key]) {
+            //   console.log('no key', position, key)
+            // }
+            // if (!position[key].toFixed) {
+            //   console.log(position, key)
+            // }
+            position[key] = !!position[key] && position[key].toFixed ? position[key].toFixed(2) : '---';
           });
           return position;
       })
       .map(position => ({
-        ...position,
-        isOpen: position.isOpen ? 'open' : ''
+          ...position,
+          isOpen: position.isOpen ? 'open' : ''
       }))
       .map(position => pick(position, [
           'ticker',

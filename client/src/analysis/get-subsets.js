@@ -22,7 +22,7 @@ const spread1 = ({ interestingWords }) => interestingWords.includes('spread1');
 module.exports = positions => {
 
   const allWords = positions.map(pos => pos.interestingWords).flatten().uniq();
-  console.log({ allWords})
+  // console.log({ allWords})
 
 
   const allDates = positions.map(pos => pos.date).uniq().filter(Boolean);

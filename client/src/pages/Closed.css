@@ -13,6 +13,7 @@
 /* REACT TAGS */
 div.ReactTags__tags {
   position: relative;
+  color: black;
 }
 
 /* Styles for the input */

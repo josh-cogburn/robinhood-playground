@@ -94,6 +94,29 @@ module.exports = {
         sudden-drops-!watchout-majorJump-down20
         sudden-drops-!watchout-majorJump-down20
 
+        // HEY DONT FORGET ABOUT THE QUALITY MEDIUMJUMPS NOW!
+
+        sudden-drops-mediumJump-lunch
+        sudden-drops-mediumJump-lunch
+        sudden-drops-mediumJump-straightDown60
+        sudden-drops-mediumJump-straightDown90
+        sudden-drops-mediumJump-brunch
+        sudden-drops-mediumJump-down10-bearish
+        sudden-drops-mediumJump-!straightDown-bullish
+        overnight-drops-mediumJump-!down-straightDown60,
+        sudden-drops-mediumJump-brunch-!straightDown
+        sudden-drops-!watchout-mediumJump-down10
+        sudden-drops-mediumJump-!down
+        overnight-drops-!watchout-mediumJump-initial-!down-straightDown60
+        overnight-drops-!watchout-mediumJump-initial-straightDown60
+        sudden-drops-watchout-mediumJump-brunch-down15-!straightDown
+        sudden-drops-mediumJump-brunch-down-!straightDown
+        sudden-drops-!watchout-mediumJump-brunch-down10-!straightDown
+        sudden-drops-mediumJump-brunch-down10-!straightDown
+        sudden-drops-mediumJump-brunch-!down-!straightDown
+        sudden-drops-mediumJump-brunch-!down-!straightDown
+
+
 
         // more majorJumps
         sudden-drops-majorJump-down20
