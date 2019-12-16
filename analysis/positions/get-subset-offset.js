@@ -35,7 +35,7 @@ const subsetOffsets = {
   straightDowner: 1,
   straightDown60: 4,
   straightDown120: -3,
-  notStraightDowner: 4,
+  notStraightDowner: 7,
   // straightDowner: ({ interestingWords }) => interestingWords.some(val => val.startsWith('straightDown')),
   // firstAlert: ({ interestingWords }) => interestingWords.includes('firstAlert'),
   notFirstAlert: -5,
@@ -57,7 +57,7 @@ const subsetOffsets = {
   afterhours: Number.NEGATIVE_INFINITY,
 
   // combos
-  oneToTwoAndLunch: 2,
+  oneToTwoAndLunch: 5,
   overnightDrops: -1,
 
   spread1: 3,
