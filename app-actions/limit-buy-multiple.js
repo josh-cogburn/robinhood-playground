@@ -41,7 +41,14 @@ const sprayBuy = async ({
             quantity: individualQuantity,
             pickPrice,
             fallbackToMarket: false
-        })
+        }),
+        limit98: alpacaLimitBuy({
+            ticker,
+            quantity: individualQuantity,
+            limitPrice: pickPrice * .98,
+            timeoutSeconds: 60 * 16,
+            fallbackToMarket: false
+        }),
     };
     
     const buyPromises = Object.entries(buyStyles).map(
