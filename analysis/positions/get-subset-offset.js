@@ -58,7 +58,7 @@ const subsetOffsets = {
 
   // combos
   oneToTwoAndLunch: 2,
-  overnightDrops: Number.NEGATIVE_INFINITY,
+  overnightDrops: -1,
 
   spread1: 3,
   spread2: -3,
