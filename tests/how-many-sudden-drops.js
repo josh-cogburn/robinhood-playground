@@ -6,7 +6,7 @@ module.exports = async () => {
     Pick.find(
       { 
         date,
-        strategyName: /.*drops.*/i
+        strategyName: /.*sudden.*drops.*mediumJump.*/i
       },
       { data: 0 }
     ).lean();
@@ -14,7 +14,7 @@ module.exports = async () => {
   const allDates = await Pick.getUniqueDates();
   strlog({ allDates })
   const byDate = await mapLimit(
-    allDates.slice(-50),
+    allDates.slice(-10),
     1,
     async date => {
       const picks = await getPicksForDate(date);
