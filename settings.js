@@ -270,7 +270,6 @@ module.exports = {
 
         // overnighters
         overnight-drops-mediumJump-straightDown60
-        overnight-drops-mediumJump
         overnight-drops-mediumJump-straightDown60
 
         overnight-drops-minorJump-down10-!straightDown
