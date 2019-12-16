@@ -96,6 +96,8 @@ module.exports = {
 
         // HEY DONT FORGET ABOUT THE QUALITY MEDIUMJUMPS NOW!
 
+        sudden-drops-mediumJump
+
         sudden-drops-mediumJump-lunch
         sudden-drops-mediumJump-lunch
         sudden-drops-mediumJump-straightDown60
