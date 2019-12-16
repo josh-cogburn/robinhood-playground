@@ -26,7 +26,7 @@ const sprayBuy = async ({
             ticker,
             quantity: individualQuantity,
             limitPrice: pickPrice * 1.03,
-            timeoutSeconds: 60 * 2,
+            timeoutSeconds: 60 * 1,
             fallbackToMarket: true
         }),
         limit1: alpacaLimitBuy({
@@ -44,15 +44,22 @@ const sprayBuy = async ({
         }),
         limit995: alpacaLimitBuy({
             ticker,
-            quantity: individualQuantity,
+            quantity: Math.round(individualQuantity * 1.2),
             limitPrice: pickPrice * .995,
             timeoutSeconds: 60 * 12,
             fallbackToMarket: false
         }),
-        limit98: alpacaLimitBuy({
+        limit96: alpacaLimitBuy({
             ticker,
-            quantity: individualQuantity,
-            limitPrice: pickPrice * .98,
+            quantity: Math.round(individualQuantity * 1.4),
+            limitPrice: pickPrice * .96,
+            timeoutSeconds: 60 * 12,
+            fallbackToMarket: false
+        }),
+        limit95: alpacaLimitBuy({
+            ticker,
+            quantity: Math.round(individualQuantity * 1.6),
+            limitPrice: pickPrice * .95,
             timeoutSeconds: 60 * 12,
             fallbackToMarket: false
         }),
