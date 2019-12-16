@@ -71,6 +71,7 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
         numPicks: 'numPicks',
         numMultipliers: 'numMultipliers',
         ...admin ? {
+            'avgPickPrice': 'avgPickPrice',
             'avg': ({ avgEntry, actualEntry }) => (
                 <span {...actualEntry && { 'data-custom': true, 'data-tooltip-str': actualEntry }}>{Number(avgEntry).toFixed(2)}{actualEntry && '*'}</span>
             ),
