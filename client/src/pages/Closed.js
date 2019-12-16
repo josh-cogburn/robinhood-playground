@@ -60,20 +60,23 @@ const createTag = text => ({ text, id: text });
 class Closed extends Component {
   state = {
     currentSubset: 'allPositions',
-    tags: ['notAfterhours', 'withoutASLN'].map(createTag)
+    // tags: ['notAfterhours', 'withoutASLN'].map(createTag)
   };
-  handleDelete = i => {
-    const { tags } = this.state;
-    this.setState({
-     tags: tags.filter((tag, index) => index !== i),
-    });
-  }
-  handleAddition = tag => {
-    this.setState(state => ({ tags: [...state.tags, tag] }));
-  }
+  // handleDelete = i => {
+  //   const { tags } = this.state;
+  //   this.setState({
+  //    tags: tags.filter((tag, index) => index !== i),
+  //   });
+  // }
+  // handleAddition = tag => {
+  //   this.setState(state => ({ tags: [...state.tags, tag] }));
+  // }
   render() {
     let { positions: { alpaca: open}, analyzedClosed: closed, subsets, suggestions, overallAnalysis, allPositions, filteredPositions } = this.props;
-    const { currentSubset, tags } = this.state;
+    const { 
+      currentSubset, 
+      // tags 
+    } = this.state;
     
 
     console.log({
@@ -127,13 +130,13 @@ class Closed extends Component {
 
         <h1>Position Analysis</h1>
 
-        <ReactTags 
+        {/* <ReactTags 
           tags={tags}
           suggestions={Object.keys(overallAnalysis).map(subset => ({ id: subset, text: subset }))}
           handleDelete={this.handleDelete}
           handleAddition={this.handleAddition}
           // handleDrag={this.handleDrag}
-          delimiters={delimiters} />
+          delimiters={delimiters} /> */}
 
         <div className="split-vertical">
           <div>

@@ -7,6 +7,11 @@ const analyzeGroup = analyzedPositions => {
   const forConsideration = analyzedPositions.filter(position => (position.buys || []).length);
   const totalBought = sumArray(forConsideration.map(pos => pos.totalBuyAmt));
   const totalImpact = sumArray(forConsideration.map(pos => pos.netImpact));
+  const weightAvg = selector => avgArray(
+    forConsideration.map(pos => 
+      (new Array(Math.round(Math.max(Number(selector(pos)), 1)))).fill(pos.impactPerc)
+    ).flatten()
+  );
   return {
     // dollars
     totalBought,
@@ -14,16 +19,8 @@ const analyzeGroup = analyzedPositions => {
     // percentages
     percChange: +(totalImpact / totalBought * 100).toFixed(2),
     avgPositionImpactPerc: avgArray(forConsideration.map(pos => pos.impactPerc)),
-    avgPickImpactPerc: avgArray(
-      forConsideration.map(pos => 
-        (new Array(pos.numPicks)).fill(pos.impactPerc)
-      ).flatten()
-    ),
-    avgMultiplierImpactPerc: avgArray(
-      forConsideration.map(pos => 
-        (new Array(Math.max(pos.numMultipliers || pos.numPicks), 1)).fill(pos.impactPerc)
-      ).flatten()
-    ),
+    avgPickImpactPerc: weightAvg(({ numPicks }) => numPicks),
+    avgMultiplierImpactPerc: weightAvg(({ numPicks, numMultipliers }) => numMultipliers || numPicks),
     percUp: percUp(
       analyzedPositions.map(pos => pos.netImpact)
     ),
