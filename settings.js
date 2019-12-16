@@ -129,6 +129,12 @@ module.exports = {
         sudden-drops-majorJump-down15
 
 
+        // what why havent these been chosen majorJumps
+        sudden-drops-majorJump-!down
+        sudden-drops-majorJump-!down-!straightDown
+
+
+
         // f yeah avg-downers!
         avg-downer-under10min-2count
         avg-downer-under10min-3count
