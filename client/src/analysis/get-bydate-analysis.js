@@ -10,5 +10,5 @@ module.exports = positions => {
       ...analyzeGroup(datePositions)
     };
   });
-  return byDateAnalysis;
+  return byDateAnalysis.reverse();
 };
