@@ -61,7 +61,7 @@ const runScan = async ({
   includeStSent = true,
   count = COUNT,
   excludeTickers = [],
-  afterHoursReset = true
+  afterHoursReset = false
 } = {}) => {
 
   tickers = tickers ? await addQuotesToTickers(tickers) : await getTickersBetween(minPrice, maxPrice);
