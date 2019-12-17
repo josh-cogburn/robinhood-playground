@@ -722,6 +722,7 @@ module.exports = new (class RealtimeRunner {
         // priceKey && `under${priceKey}`,
         firstAlertkey,
         stSent.stBracket,
+        ...stSent.wordFlags || [],
         watchoutKey,
         minKey,
         volumeKey
