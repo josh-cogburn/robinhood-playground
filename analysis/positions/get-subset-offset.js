@@ -52,7 +52,7 @@ const subsetOffsets = {
   // minKey
   initial: -3,
   brunch: -3,
-  lunch: 3,
+  lunch: 4,
   dinner: 3,
   afterhours: Number.NEGATIVE_INFINITY,
 
