@@ -14,7 +14,7 @@ const subsetOffsets = {
   notWatchout: 3,
   watchoutMajorJump: 6,
 
-  bullish: -7,
+  bullish: -1,
   neutral: 0,
   bearish: 2,
 
