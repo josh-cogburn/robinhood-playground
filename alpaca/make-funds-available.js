@@ -15,7 +15,7 @@ module.exports = async amt => {
   const totalAvailableToSell = sumArray(positions.map(p => Number(p.market_value)));
 
 
-  const percToSell = Math.min(100, Math.round((amt * 1.2) / totalAvailableToSell * 100));
+  const percToSell = Math.min(100, Math.round((amt * 1.3) / totalAvailableToSell * 100));
   console.log({ amt, totalAvailableToSell, percToSell })
   await stratManager.init({ lowKey: true });
   return Promise.all(
@@ -23,7 +23,7 @@ module.exports = async amt => {
           alpacaMarketSell({
               ticker,
               quantity: Math.ceil(quantity * percToSell / 100),
-              timeoutSeconds: 15,
+              timeoutSeconds: 7,
           })
       )
   );
