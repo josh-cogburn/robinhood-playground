@@ -25,7 +25,7 @@ module.exports = {
     // important settings
     // sellAllStocksOnNthDay: 8,
     // purchaseAmt: 13,
-    expectedPickCount: 100,
+    expectedPickCount: 70,
     multiplierThreshold: -6, // wont recommend picks below this multiplier count even if they are a forPurchase pick
     disableCashCheck: true,
     disableMultipliers: false,
