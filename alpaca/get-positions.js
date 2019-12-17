@@ -29,7 +29,9 @@ const checkForHugeDrop = position => {
 };
 
 
-module.exports = async () => {
+module.exports = async (
+  skipStSent = false
+) => {
 
   const uniqDates = [
     (new Date()).toLocaleDateString().split('/').join('-'),
@@ -91,7 +93,9 @@ module.exports = async () => {
       daysOld,
       mostRecentPurchase,
       wouldBeDayTrade,
-      stSent: await getStSentiment(ticker) || {}
+      ...!skipStSent && {
+        stSent: await getStSentiment(ticker) || {}
+      }
     };
   });
 
@@ -102,7 +106,7 @@ module.exports = async () => {
 
   positions = positions.map(position => {
     const { 
-      stSent: { upperLimit, lowerLimit },
+      stSent: { upperLimit, lowerLimit } = {},
       returnPerc
     } = position;
     return {
@@ -132,7 +136,7 @@ module.exports = async () => {
       ticker, 
       market_value, 
       unrealized_intraday_plpc,
-      stSent: { stBracket }
+      stSent: { stBracket } = {}
     } = position;
 
     if (daysOld >= 3 && market_value < 30) {

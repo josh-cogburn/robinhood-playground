@@ -9,6 +9,7 @@ const majorJump = ({ interestingWords }) => interestingWords.includes('majorJump
 
 const bullish = ({ interestingWords }) => interestingWords.includes('bullish');
 
+const overnightDrops = ({ interestingWords }) => interestingWords.includes('overnight');
 const lunch = ({ interestingWords }) => interestingWords.includes('lunch');
 const afterhours = ({ interestingWords }) => interestingWords.includes('afterhours');
 const oneToTwo = ({ interestingWords }) => interestingWords.includes('oneToTwo');
@@ -30,6 +31,7 @@ module.exports = positions => {
   return {
     allPositions: () => true,
     notAfterhours: p => !afterhours(p),
+    notOJ: p => !overnightDrops(p),
     withoutKEG: ({ ticker }) => ticker !== 'KEG',
     withoutASLN: ({ ticker }) => ticker !== 'ASLN',
     lastFive: ({ date }) => lastFive.includes(date),
@@ -84,7 +86,7 @@ module.exports = positions => {
   
     // combos
     oneToTwoAndLunch: p => lunch(p) && oneToTwo(p),
-    overnightDrops: ({ interestingWords }) => interestingWords.includes('overnight'),
+    overnightDrops,
     
     // spread
     spread1,

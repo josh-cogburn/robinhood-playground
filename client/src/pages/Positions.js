@@ -62,8 +62,10 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
         },
         // 'buy strategies': 'buyStrategy',
         bullBearScore: ({ stSent = {} }) => stSent.bullBearScore,
-        stBracket: ({ stSent: { stBracket, upperLimit, lowerLimit } = {} }) => (
-            <span>{stBracket} ({lowerLimit} -> {upperLimit})</span>
+        stBracket: ({ stSent: { stBracket, upperLimit, lowerLimit, wordFlags = [] } = {} }) => (
+            <span {...wordFlags.length && { 'data-custom': true, 'data-tooltip-str': wordFlags.join(' ') }}>
+                <span>{stBracket} ({lowerLimit} -> {upperLimit})</span>
+            </span>
         ),
         recommendation: 'recommendation',
         percToSell: 'percToSell',
