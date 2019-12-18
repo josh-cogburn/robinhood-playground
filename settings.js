@@ -22,6 +22,7 @@ let expectedPickCount = 0;
 
 
 module.exports = {
+    stWordFlags: ['split', 'reverse split', 'halt', 'rocket', 'offering'],
     // important settings
     // sellAllStocksOnNthDay: 8,
     // purchaseAmt: 13,
@@ -622,9 +623,7 @@ module.exports = {
         sell: [
         ],
         keep: [
-            'ACIU',
-            'UEPS',
-            'MNGA'
+            'ADMS',
         ]
     },
     // expectedPickCount

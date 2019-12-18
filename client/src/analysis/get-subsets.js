@@ -20,6 +20,8 @@ const bigDowner = p => straightDown60(p) || straightDown120(p);
 
 const spread1 = ({ interestingWords }) => interestingWords.includes('spread1');
 
+const wordFlags = ['split', 'reverse split', 'halt', 'rocket', 'offering'];
+
 module.exports = positions => {
 
   const allWords = positions.map(pos => pos.interestingWords).flatten().uniq();
@@ -104,5 +106,13 @@ module.exports = positions => {
     down40: ({ interestingWords }) => interestingWords.includes('down40'),
     notDown: ({ interestingWords }) => interestingWords.includes('!down'),
 
+
+    // words
+
+    ...wordFlags.reduce((acc, word) => ({
+      ...acc,
+      [word]: ({ interestingWords }) => interestingWords.includes(word)
+    }), {})
+    
   };
 };

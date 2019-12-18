@@ -6,6 +6,7 @@ const Holds = require('../models/Holds');
 const Pick = require('../models/Pick');
 const getMinutesFrom630 = require('../utils/get-minutes-from-630');
 const analyzePosition = require('../analysis/positions/analyze-position');
+const { force: { keep }} = require('../settings');
 
 const checkForHugeDrop = position => {
   let { current_price, returnPerc: actualReturnPerc, avgEntry: actualEntry, buys = [] } = position;
@@ -32,6 +33,8 @@ const checkForHugeDrop = position => {
 module.exports = async (
   skipStSent = false
 ) => {
+
+  const min = getMinutesFrom630();
 
   const uniqDates = [
     (new Date()).toLocaleDateString().split('/').join('-'),
@@ -115,7 +118,7 @@ module.exports = async (
     };
   });
 
-  const ratioDayPast = 0.2 || Math.max(0.2, Math.min(getMinutesFrom630() / 360, 1));
+  const ratioDayPast = 0.2 || Math.max(0.2, Math.min(min / 360, 1));
   strlog({ ratioDayPast })
 
 
@@ -128,6 +131,7 @@ module.exports = async (
 
 
   const getPercToSell = position => {
+
     let { 
       daysOld, 
       returnPerc, 
@@ -139,23 +143,33 @@ module.exports = async (
       stSent: { stBracket } = {}
     } = position;
 
+    if (keep.includes(ticker)) {
+      return 0;
+    }
+
     if (daysOld >= 3 && market_value < 30) {
       return 100;
     }
 
-    if (Number(unrealized_intraday_plpc) < 0) {
+    if (min > -1 && Number(unrealized_intraday_plpc) < -2) {
       return 80;
     }
 
     // if (wouldBeDayTrade) return null;
-    if (getMinutesFrom630() < 20 && returnPerc > 20) return 50;
+    if (min < 20 && returnPerc > 20) return 50;
     if (Math.abs(returnPerc) > 30) return 24;
     // basePerc = dayVal + returnVal
     const dayVal = (daysOld + 1) * 4;
     const returnVal = Math.abs(returnPerc) / 3;
     const basePercent = dayVal + returnVal;
+
     // shouldVal is based on intraday pl
-    let shouldVal = Math.abs(Number(unrealized_intraday_plpc)) * 100;
+    const intraDayPl = Number(unrealized_intraday_plpc);
+    const weightedIntraday = intraDayPl < 0 
+      ? intraDayPl * 2  // cut losses quickly let winners run
+      : intraDayPl;
+
+    let shouldVal = Math.abs(weightedIntraday) * 100;
     if (outsideBracket) {
       shouldVal += returnPerc ? 4 : 28;
     }
