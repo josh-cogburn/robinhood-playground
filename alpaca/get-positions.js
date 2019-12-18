@@ -143,6 +143,10 @@ module.exports = async (
       return 100;
     }
 
+    if (Number(unrealized_intraday_plpc) < 0) {
+      return 80;
+    }
+
     // if (wouldBeDayTrade) return null;
     if (getMinutesFrom630() < 20 && returnPerc > 20) return 50;
     if (Math.abs(returnPerc) > 30) return 24;
