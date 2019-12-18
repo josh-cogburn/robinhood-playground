@@ -104,7 +104,7 @@ module.exports = async (ticker, detailed, maxId) => {
             bullishCount: getSentiment('Bullish'),
             ...getStBracket(bullBearScore),
 
-            wordFlags: ['split', 'reverse split', 'halt', 'rocket'].filter(includesPhrase),
+            wordFlags: ['split', 'reverse split', 'halt', 'rocket', 'offering'].filter(includesPhrase),
             ...detailed && {
                 messages
             }
