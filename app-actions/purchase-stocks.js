@@ -25,7 +25,7 @@ const purchaseStocks = async ({ strategy, multiplier = 1, min, withPrices } = {}
     });
 
     if (totalAmtToSpend > cash) {
-        const fundsNeeded = cash - totalAmtToSpend;
+        const fundsNeeded = totalAmtToSpend - cash;
         await makeFundsAvailable(fundsNeeded);
         const afterCash = (await alpaca.getAccount()).cash;
         await sendEmail('funds made available', JSON.stringify({ before: cash, fundsNeeded, after: afterCash }, null, 2));
