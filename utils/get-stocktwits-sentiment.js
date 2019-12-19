@@ -54,11 +54,11 @@ module.exports = async (ticker, detailed, maxId) => {
         ticker = ticker.toUpperCase();
         // console.log({ ticker, detailed }, 'getting stocktwits sent')
         let { messages } = await stReq(`https://api.stocktwits.com/api/2/streams/symbol/${ticker}.json?filter=top${maxId ? `&max=${maxId}`: ''}`);
-        // strlog({messages})
+        strlog({messages})
         const includesPhrase = str => JSON.stringify(messages.map(m => m.body)).includes(str);
 
         const dates = await Pick.getUniqueDates();
-        const twoDaysAgo = dates[dates.length - 2];
+        const twoDaysAgo = dates[dates.length - 2]  || Date.now() - 1000 * 60 * 60 * 24 * 2;
         const twoDaysAgoTS = (new Date(twoDaysAgo)).getTime();
         const filterMessagesFromTimestamp = timestamp => 
             messages.filter(o => (new Date(o.created_at)).getTime() > timestamp);

@@ -25,15 +25,15 @@ module.exports = async () => {
   strlog({ byTicker });
 
 
-  for (let ticker of Object.keys(byTicker)) {
-    await Holds.findOneAndDelete({ ticker });
-    for (let order of byTicker[ticker]) {
-      await Holds.registerAlpacaFill({
-        ticker,
-        alpacaOrder: order
-      })
-    }
-  }
+  // for (let ticker of Object.keys(byTicker)) {
+  //   await Holds.findOneAndDelete({ ticker });
+  //   for (let order of byTicker[ticker]) {
+  //     await Holds.registerAlpacaFill({
+  //       ticker,
+  //       alpacaOrder: order
+  //     })
+  //   }
+  // }
 
   // strlog({ matchedUp })
 }
