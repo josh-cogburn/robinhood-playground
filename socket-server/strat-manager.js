@@ -98,16 +98,16 @@ const stratManager = {
         setInterval(() => this.refreshPositions(), 1000 * 60 * 15);
         await this.refreshPositions(true);
 
-        for (let pos of this.positions.alpaca) {
-            if (pos.wouldBeDayTrade && pos.numMultipliers > 0) {
-                console.log(`starting avg downer ${pos.ticker} bc bought today and positive multipliers`)
-                newAvgDowner({
-                    ticker: pos.ticker,
-                    buyPrice: pos.avgEntry,
-                    strategyName: Object.keys(pos.buyStrategies)[0]
-                })
-            }
-        }
+        // for (let pos of this.positions.alpaca) {
+        //     if (pos.wouldBeDayTrade && pos.numMultipliers > 0) {
+        //         console.log(`starting avg downer ${pos.ticker} bc bought today and positive multipliers`)
+        //         newAvgDowner({
+        //             ticker: pos.ticker,
+        //             buyPrice: pos.avgEntry,
+        //             strategyName: Object.keys(pos.buyStrategies)[0]
+        //         })
+        //     }
+        // }
 
         console.log('initd strat manager');
     },
