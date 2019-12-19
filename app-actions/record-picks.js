@@ -160,7 +160,8 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
             for (let { email, pm } of emailsToSend) {
                 const subject = stocksToBuy.join(', ');
                 const body = [
-                    isRecommended ? '' : 'notrec',
+                    isRecommended ? multiplier : 'notrec',
+                    (withPrices[0] || {}).price,
                     ...forPurchaseData.interestingWords
                 ].join(' ');
                 await sendEmail(
