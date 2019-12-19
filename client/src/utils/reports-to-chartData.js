@@ -50,7 +50,7 @@ const process = fieldsToInclude => (dayReports, dataSlice = 0) => {
     const datasets = fieldsToInclude.map(key => ({
         label: key,
         fill: false,
-        lineTension: key.includes('balance') ? 0 : -1,
+        lineTension: key.includes('balance') ? 0 : 0,
         backgroundColor: 'rgba(75,192,192,0.1)',
         pointBorderColor: key.includes('balance')|| false ? 'black' : getColor(key),
         // pointBorderWidth: 10,
