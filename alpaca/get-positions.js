@@ -151,8 +151,12 @@ module.exports = async (
       return 100;
     }
 
-    if (min > -1 && Number(unrealized_intraday_plpc) < -2) {
+    if (min > 0 && Number(unrealized_intraday_plpc) < -2) {
       return 80;
+    }
+
+    if (Math.abs(returnPerc) < 3.5) {
+      return 0;
     }
 
     // if (wouldBeDayTrade) return null;
