@@ -24,7 +24,7 @@ const sendScreenshot = async numDays => {
     height: 900
   };
   page.setViewport({ ...dims, deviceScaleFactor: 2 });
-  await page.goto(`http://107.173.6.167:3000/?${numDays}`);
+  await page.goto(`http://23.237.87.144:3000/?${numDays}`);
   await page.waitFor(12000);
   await page.screenshot({
     path,

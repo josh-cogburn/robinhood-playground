@@ -194,7 +194,7 @@ class App extends Component {
 
     componentDidMount() {
         let { origin } = window.location;
-        const socketEndpoint = origin.includes('localhost') && false ? 'http://localhost:3000' : 'http://107.173.6.167:3000';
+        const socketEndpoint = origin.includes('localhost') && true ? 'http://localhost:3000' : 'http://23.237.87.144:3000';
         const socket = socketIOClient(socketEndpoint);
         
         const handlePick = data => {
