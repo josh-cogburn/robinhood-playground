@@ -248,7 +248,7 @@ class DayReports extends Component {
                 (new Date(report.time)).toLocaleDateString() === startDate && isRegularHours(report)
             );
 
-            console.log({ allDates, startDate, lastRegularReport })
+            // console.log({ allDates, startDate, lastRegularReport })
             return lastRegularReport;
         })();
 
@@ -330,7 +330,7 @@ class DayReports extends Component {
 
         // console.log({ indexStats})
         const showingSince = firstOfDay ? firstOfDay : balanceReports[0];
-        console.log({ showingSince, firstOfDay, balanceReports })
+        // console.log({ showingSince, firstOfDay, balanceReports })
         // const afterHoursBoxes = getAfterHoursBoxes(balanceReports);
 
         // console.log({

@@ -251,7 +251,7 @@ class App extends Component {
         });
         socket.on('server:balance-report', data => {
             // this.setState({ balance: data });
-            // console.log(data, 'balcn');
+            console.log(data, 'balcn');
             this.setState(({ balanceReports }) => ({
                 balanceReports: (balanceReports || []).concat(data.report)
             }));

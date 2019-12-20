@@ -75,7 +75,7 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
         ...admin ? {
             'avgPickPrice': 'avgPickPrice',
             'avg': ({ avgEntry, actualEntry }) => (
-                <span {...actualEntry && { 'data-custom': true, 'data-tooltip-str': actualEntry }}>{Number(avgEntry).toFixed(2)}{actualEntry && '*'}</span>
+                <span {...actualEntry && { 'data-custom': true, 'data-tooltip-str': actualEntry }}>{Number(avgEntry).toFixed(4)}{actualEntry && '*'}</span>
             ),
             'current': 'currentPrice',
             'avgSellPrice': ({ avgSellPrice }) => avgSellPrice && !isNaN(avgSellPrice) ? +avgSellPrice.toFixed(2) : '---',
