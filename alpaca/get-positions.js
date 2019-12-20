@@ -63,7 +63,7 @@ module.exports = async (
     ticker: symbol,
     avgEntry: avg_entry_price,
     quantity: qty,
-    returnPerc: unrealized_plpc * 100s,
+    returnPerc: unrealized_plpc * 100,
     unrealizedPl: Number(unrealized_pl),
     currentPrice: Number(current_price),
     ...rest
