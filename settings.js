@@ -54,6 +54,12 @@ module.exports = {
         avg-downer-5count
         avg-downer-5count
 
+        // all majorJumps
+
+
+        sudden-drops-majorJump
+        sudden-drops-majorJump
+
 
         // the !watchout majorJump GOLD
 
