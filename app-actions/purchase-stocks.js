@@ -1,5 +1,5 @@
 const limitBuyMultiple = require('./limit-buy-multiple');
-const getMinutesFrom630 = require('../utils/get-minutes-from-630');
+const MinutesFromOpen = require('../utils/get-minutes-from-open');
 let { expectedPickCount, purchaseAmt, disableCashCheck } = require('../settings');
 const { alpaca } = require('../alpaca');
 const makeFundsAvailable = require('../alpaca/make-funds-available');

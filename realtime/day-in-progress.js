@@ -1,4 +1,4 @@
-const getMinutesFrom630 = require('../utils/get-minutes-from-630');
+const MinutesFromOpen = require('../utils/get-minutes-from-open');
 const marketClosures = require('../market-closures');
 const formatDate = date => date.toLocaleDateString().split('/').join('-');
 
@@ -7,7 +7,7 @@ const STOP_MIN = 390;
 
 module.exports = (startMin = START_MIN, stopMin = STOP_MIN) => {
   // if between start and end times then start() on init
-  const min = getMinutesFrom630();
+  const min = MinutesFromOpen();
   console.log({ min })
   const isBetweenMinutes = Boolean(min > startMin && min < stopMin);
   const isWeekday = [0, 6].every(day => (new Date()).getDay() !== day);

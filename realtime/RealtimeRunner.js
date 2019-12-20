@@ -16,7 +16,7 @@ const restartProcess = require('../app-actions/restart-process');
 const getRisk = require('../rh-actions/get-risk');
 
 // utils
-const getMinutesFrom630 = require('../utils/get-minutes-from-630');
+const MinutesFromOpen = require('../utils/get-minutes-from-open');
 const lookupMultiple = require('../utils/lookup-multiple');
 const sendEmail = require('../utils/send-email');
 const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
@@ -663,7 +663,7 @@ module.exports = new (class RealtimeRunner {
     // price = (price || {}).currentPrice;
     // const priceKeys = [2, 8, 20, 80, 300, 1000, 5000];
     // const priceKey = priceKeys.find(key => price < key);
-    const min = getMinutesFrom630();
+    const min = MinutesFromOpen();
     const minKey = (() => {
         if (min > 390) return 'afterhours';
         if (min > 200) return 'dinner';

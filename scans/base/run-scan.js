@@ -5,7 +5,7 @@ const addFundamentals = require('../../app-actions/add-fundamentals');
 const allStocks = require('../../json/stock-data/allStocks');
 const { isTradeable } = require('../../utils/filter-by-tradeable');
 const getMultipleHistoricals = require('../../app-actions/get-multiple-historicals');
-const getMinutesFrom630 = require('../../utils/get-minutes-from-630');
+const MinutesFromOpen = require('../../utils/get-minutes-from-open');
 const getTrend = require('../../utils/get-trend');
 const getStSent = require('../../utils/get-stocktwits-sentiment');
 const { uniq, get, mapObject } = require('underscore');
@@ -79,7 +79,7 @@ const runScan = async ({
     withFundamentals
   })
   
-  const min = getMinutesFrom630();
+  const min = MinutesFromOpen();
   const percComplete = Math.max(Math.min(1, min / 390), 0.01);
   // console.log({
   //   min,

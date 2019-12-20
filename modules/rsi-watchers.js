@@ -12,7 +12,7 @@ const addFundamentals = require('../app-actions/add-fundamentals');
 const getRisk = require('../rh-actions/get-risk');
 
 // utils
-const getMinutesFrom630 = require('../utils/get-minutes-from-630');
+const MinutesFromOpen = require('../utils/get-minutes-from-open');
 const lookupMultiple = require('../utils/lookup-multiple');
 const getTrend = require('../utils/get-trend');
 const { isTradeable } = require('../utils/filter-by-tradeable');
@@ -161,7 +161,7 @@ module.exports = {
                 const watchoutKey = shouldWatchout ? 'shouldWatchout' : 'notWatchout';
                 const priceKeys = [10, 15, 20, 1000];
                 const priceKey = priceKeys.find(key => price < key);
-                const min = getMinutesFrom630();
+                const min = MinutesFromOpen();
                 const minKey = (() => {
                     if (min > 390) return 'afterhours';
                     if (min > 200) return 'dinner';

@@ -8,7 +8,7 @@ const BalanceReport = require('../models/BalanceReport');
 
 const stratManager = require('./strat-manager');
 const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
-const getMinutesFrom630 = require('../utils/get-minutes-from-630');
+const MinutesFromOpen = require('../utils/get-minutes-from-open');
 
 const dayInProgress = require('../realtime/day-in-progress');
 const getBalanceReport = require('./get-balance-report');
@@ -48,7 +48,7 @@ const init = async (onReportFn) => {
     });
 
     // if between start and end times then start() on init
-    const min = getMinutesFrom630();
+    const min = MinutesFromOpen();
     console.log({ currentMin: min });
     if (dayInProgress(START_MIN, STOP_MIN)) {
         console.log('starting because day in progress');
@@ -72,7 +72,7 @@ const start = async () => {
 const runAndSetTimeout = async () => {
     console.log('runAndSetTimeout', { isRunning });
     if (!isRunning) return;
-    const min = getMinutesFrom630();
+    const min = MinutesFromOpen();
     const shortTimeout = min > -30 && min < 390;
     await getAndSaveBalanceReport();
     const toSeconds = shortTimeout ? TIMEOUT_SECONDS : TIMEOUT_SECONDS * 12;
@@ -81,7 +81,7 @@ const runAndSetTimeout = async () => {
 
 const getAndSaveBalanceReport = async () => {
 
-    const min = getMinutesFrom630();
+    const min = MinutesFromOpen();
     const isRegularHours = min > 0 && min < 390;
 
     // console.log('hereee');

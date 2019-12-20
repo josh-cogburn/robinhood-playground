@@ -1,6 +1,6 @@
 const getTrendSinceOpen = require('../rh-actions/get-trend-since-open');
 const jsonMgr = require('../utils/json-mgr');
-const getMinutesFrom630 = require('../utils/get-minutes-from-630');
+const MinutesFromOpen = require('../utils/get-minutes-from-open');
 
 const getAllTickers = require('../rh-actions/get-all-tickers');
 const { isTradeable } = require('../utils/filter-by-tradeable.js');
@@ -8,7 +8,7 @@ const blacklist = require('../blacklist');
 
 const getTrendAndSave = async (min) => {
 
-    min = min || getMinutesFrom630();
+    min = min || MinutesFromOpen();
 
     // step 1 - get all tickers
     try {
