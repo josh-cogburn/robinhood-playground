@@ -194,8 +194,8 @@ module.exports = async () => {
 }
 
 const analyzeGroup = positions => {
-  const totalBought = sumArray(positions.map(pos => pos.totalBuyAmt));
-  const totalImpact = sumArray(positions.map(pos => pos.netImpact));
+  const totalBought = sumArray(positions.map(pos => pos.totalBuyAmt)) || 0;
+  const totalImpact = sumArray(positions.map(pos => pos.netImpact)) || 0;
   return {
     totalBought,
     percChange: +(totalImpact / totalBought * 100).toFixed(2),
