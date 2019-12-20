@@ -247,6 +247,8 @@ class DayReports extends Component {
             const lastRegularReport = !startDate ? 0 : balanceReports.length - balanceReports.slice().reverse().findIndex(report =>
                 (new Date(report.time)).toLocaleDateString() === startDate && report.isRegularHours
             );
+
+            console.log({ startDate, lastRegularReport })
             return lastRegularReport;
         })();
 
@@ -328,7 +330,7 @@ class DayReports extends Component {
 
         // console.log({ indexStats})
         const showingSince = firstOfDay ? firstOfDay : balanceReports[0];
-
+        console.log({ showingSince, firstOfDay, balanceReports })
         // const afterHoursBoxes = getAfterHoursBoxes(balanceReports);
 
         // console.log({
@@ -424,7 +426,7 @@ class DayReports extends Component {
                             />
                     </div>
                     <div style={{ fontSize: '80%', textAlign: 'right'  }}>
-                        trend since {new Date(showingSince.time).toLocaleString()}<br/>
+                        trend since {new Date((showingSince || {}).time).toLocaleString()}<br/>
                         {
                             Object.keys(stats).map(stat => (
                                 <div>
