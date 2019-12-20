@@ -23,6 +23,9 @@ let expectedPickCount = 0;
 
 module.exports = {
     stWordFlags: ['split', 'reverse split', 'halt', 'rocket', 'offering'],
+    sellBelow: {
+        ADMS: 3.65
+    },
     // important settings
     // sellAllStocksOnNthDay: 8,
     purchaseAmt: 6,
@@ -624,7 +627,7 @@ module.exports = {
         sell: [
         ],
         keep: [
-            'ADMS',
+            // 'ADMS',
         ]
     },
     // expectedPickCount

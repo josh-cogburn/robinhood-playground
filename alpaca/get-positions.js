@@ -6,10 +6,10 @@ const Holds = require('../models/Holds');
 const Pick = require('../models/Pick');
 const getMinutesFrom630 = require('../utils/get-minutes-from-630');
 const analyzePosition = require('../analysis/positions/analyze-position');
-const { force: { keep }} = require('../settings');
+const { sellBelow, force: { keep }} = require('../settings');
 
 const checkForHugeDrop = position => {
-  let { current_price, returnPerc: actualReturnPerc, avgEntry: actualEntry, buys = [] } = position;
+  let { currentPrice, returnPerc: actualReturnPerc, avgEntry: actualEntry, buys = [] } = position;
   const dropIndex = buys.slice().reverse().findIndex((buy, index, arr) => {
     const isBigDrop = arr[index + 1] && buy.fillPrice < arr[index + 1].fillPrice * .7;
     const isNotToday = buy.date !== (new Date()).toLocaleDateString().split('/').join('-');
@@ -22,9 +22,9 @@ const checkForHugeDrop = position => {
     return {
       dropIndex,
       avgEntry,
-      returnPerc: getTrend(current_price, avgEntry),
+      returnPerc: getTrend(currentPrice, avgEntry),
       actualEntry,
-      actualReturnPerc
+      actualReturnPerc,
     };
   }
 };
@@ -51,12 +51,21 @@ module.exports = async (
   
   let positions = (await alpaca.getPositions());
   strlog({ positions })
-  positions = positions.map(({ symbol, avg_entry_price, qty, unrealized_pl, unrealized_plpc, ...rest }) => ({
+  positions = positions.map(({ 
+    symbol, 
+    avg_entry_price, 
+    qty, 
+    unrealized_pl, 
+    unrealized_plpc, 
+    current_price,
+    ...rest 
+  }) => ({
     ticker: symbol,
     avgEntry: avg_entry_price,
     quantity: qty,
-    returnPerc: unrealized_plpc * 100,
+    returnPerc: unrealized_plpc * 100s,
     unrealizedPl: Number(unrealized_pl),
+    currentPrice: Number(current_price),
     ...rest
   }));
 
@@ -129,6 +138,19 @@ module.exports = async (
     } : position
   );
 
+  const calcNotSelling = ({ ticker, currentPrice }) => {
+    const options = { 
+      [`is above sellBelow`]: currentPrice > sellBelow[ticker],  // nothing greater than undefined,
+      onKeeperList: keep.includes(ticker)
+    };
+    return (
+      Object.entries(options)
+        .filter(([_, isTrue]) => isTrue)
+        .shift() 
+      || [false]
+    ) [0];
+  };
+
 
   const getPercToSell = position => {
 
@@ -140,12 +162,11 @@ module.exports = async (
       ticker, 
       market_value, 
       unrealized_intraday_plpc,
+      notSelling,
       stSent: { stBracket } = {}
     } = position;
 
-    if (keep.includes(ticker)) {
-      return 0;
-    }
+    if (notSelling) return 0;
 
     if (daysOld >= 3 && market_value < 30) {
       return 100;
@@ -215,12 +236,16 @@ module.exports = async (
     return wouldBeDayTrade ? `possibly ${action}` : action;
   };
 
-  const withRecommendations = withAnalysis
-    .map(position => ({
-      ...position,
-      recommendation: getRecommendation(position),
-      percToSell: getPercToSell(position)
-    }));
+  const withNotSelling = withAnalysis.map(position => ({
+    ...position,
+    notSelling: calcNotSelling(position)
+  }));
+
+  const withRecommendations = withNotSelling.map(position => ({
+    ...position,
+    recommendation: getRecommendation(position),
+    percToSell: getPercToSell(position)
+  }));
 
 
   
