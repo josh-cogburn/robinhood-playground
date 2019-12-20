@@ -25,8 +25,8 @@ module.exports = {
     stWordFlags: ['split', 'reverse split', 'halt', 'rocket', 'offering'],
     // important settings
     // sellAllStocksOnNthDay: 8,
-    // purchaseAmt: 13,
-    expectedPickCount: 70,
+    purchaseAmt: 5,
+    // expectedPickCount: 70,
     multiplierThreshold: -6, // wont recommend picks below this multiplier count even if they are a forPurchase pick
     disableCashCheck: true,
     disableMultipliers: false,
