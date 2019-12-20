@@ -245,10 +245,10 @@ class DayReports extends Component {
         const startIndex = (() => {
             const startDate = allDates[allDates.length - numDaysToShow - 1];
             const lastRegularReport = !startDate ? 0 : balanceReports.length - balanceReports.slice().reverse().findIndex(report =>
-                (new Date(report.time)).toLocaleDateString() === startDate && report.isRegularHours
+                (new Date(report.time)).toLocaleDateString() === startDate && isRegularHours(report)
             );
 
-            console.log({ startDate, lastRegularReport })
+            console.log({ allDates, startDate, lastRegularReport })
             return lastRegularReport;
         })();
 
