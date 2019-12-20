@@ -2,6 +2,7 @@ const { alpaca } = require('.');
 const { force: { keep }} = require('../settings');
 const getPositions = require('./get-positions');
 const { sumArray } = require('../utils/array-math');
+const { makeKeeperFundsAvailable } = require('../settings');
 const alpacaMarketSell = require('./market-sell');
 const stratManager = require('../socket-server/strat-manager');
 
@@ -9,7 +10,9 @@ module.exports = async amt => {
 
 
   let positions = await getPositions(true);
-  positions = positions.filter(({ ticker }) => !keep.includes(ticker));
+  if (!makeKeeperFundsAvailable) {
+    positions = positions.filter(({ ticker }) => !keep.includes(ticker));
+  }
   const notDTs = positions.filter(({ wouldBeDayTrade }) =>!wouldBeDayTrade);
 
   const totalAvailableToSell = sumArray(positions.map(p => Number(p.market_value)));
