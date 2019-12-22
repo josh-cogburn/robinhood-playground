@@ -1,5 +1,5 @@
 
-// const MinutesFromOpen = require('../utils/get-minutes-from-open');
+// const getMinutesFromOpen = require('../utils/get-minutes-from-open');
 const { alpaca } = require('.');
 const marketSell = require('./market-sell');
 
@@ -15,7 +15,7 @@ const limitSell = async ({
 
     log('ALPACA LIMIT SELL');
     str({ ticker, quantity, limitPrice });
-    // const min = MinutesFromOpen();
+    // const min = getMinutesFromOpen();
     // const extendedHours = min < 0 || min > 390;
     const data = {
         symbol: ticker, // any valid ticker symbol

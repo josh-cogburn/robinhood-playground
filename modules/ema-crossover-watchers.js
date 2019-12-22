@@ -15,7 +15,7 @@ const { SMA, EMA } = require('technicalindicators');
 const getTrend = require('../utils/get-trend');
 const { avgArray } = require('../utils/array-math');
 const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
-const MinutesFromOpen = require('../utils/get-minutes-from-open');
+const getMinutesFromOpen = require('../utils/get-minutes-from-open');
 const sendEmail = require('../utils/send-email');
 
 const addTrendWithHistoricals = async (trend, interval, span) => {
@@ -99,7 +99,7 @@ module.exports = {
             onPick: async pick => {
                 console.log('onPick');
                 const { ticker } = pick;
-                const min = MinutesFromOpen();
+                const min = getMinutesFromOpen();
                 const minKey = (() => {
                     if (min > 390) return 'afterhours';
                     if (min > 200) return 'dinner';

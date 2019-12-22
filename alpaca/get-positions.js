@@ -4,7 +4,7 @@ const { avgArray } = require('../utils/array-math');
 const getTrend = require('../utils/get-trend');
 const Holds = require('../models/Holds');
 const Pick = require('../models/Pick');
-const MinutesFromOpen = require('../utils/get-minutes-from-open');
+const getMinutesFromOpen = require('../utils/get-minutes-from-open');
 const analyzePosition = require('../analysis/positions/analyze-position');
 const { sellBelow, force: { keep }} = require('../settings');
 
@@ -34,7 +34,7 @@ module.exports = async (
   skipStSent = false
 ) => {
 
-  const min = MinutesFromOpen();
+  const min = getMinutesFromOpen();
 
   const uniqDates = [
     (new Date()).toLocaleDateString().split('/').join('-'),

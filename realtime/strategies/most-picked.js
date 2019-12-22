@@ -1,5 +1,5 @@
 const { sortBy } = require('underscore');
-const MinutesFromOpen = require('../../utils/get-minutes-from-open');
+const getMinutesFromOpen = require('../../utils/get-minutes-from-open');
 
 module.exports = {
   disabled: true,
@@ -28,7 +28,7 @@ module.exports = {
       const sorted = sortBy(withCount, ({ matches }) => matches.length).reverse();
       const top = sorted[0];
       if (top) {
-        const min = MinutesFromOpen();
+        const min = getMinutesFromOpen();
         return {
           ticker: top.ticker,
           ...period && { period },

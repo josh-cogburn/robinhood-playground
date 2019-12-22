@@ -1,5 +1,5 @@
 
-const MinutesFromOpen = require('../utils/get-minutes-from-open');
+const getMinutesFromOpen = require('../utils/get-minutes-from-open');
 const { alpaca } = require('.');
 const marketBuy = require('./market-buy');
 
@@ -13,7 +13,7 @@ const limitBuy = async ({
   // queue alpaca limit order 4% above pickPrice
   log('ALPACA LIMIT BUY');
   str({ ticker, quantity, limitPrice });
-  const min = MinutesFromOpen();
+  const min = getMinutesFromOpen();
   const extendedHours = min < 0 || min > 390;
   const data = {
       symbol: ticker, // any valid ticker symbol

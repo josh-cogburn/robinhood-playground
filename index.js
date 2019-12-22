@@ -112,7 +112,7 @@ process.on('unhandledRejection', (reason, p) => {
 
 
     const accounts = await Robinhood.accounts();
-    // const ratioToSpend = Math.max(0.3, MinutesFromOpen() / 390);
+    // const ratioToSpend = Math.max(0.3, getMinutesFromOpen() / 390);
     const cashAvailable = Number(accounts.results[0].margin_balances.unallocated_margin_cash);
     console.log({cashAvailable});
 

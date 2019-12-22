@@ -1,7 +1,7 @@
 const INITIAL_TIMEOUT = 16 * 1000;      // 10 seconds
 const END_AFTER = 2 * 1000 * 60 * 60;   // 2 hr
 
-const MinutesFromOpen = require('./get-minutes-from-open');
+const getMinutesFromOpen = require('./get-minutes-from-open');
 const lookup = require('./lookup');
 const getTrend = require('./get-trend');
 const { avgArray } = require('./array-math');
@@ -82,7 +82,7 @@ module.exports = class AvgDowner {
     return Object.entries({
       notRunning: !this.running,
       hitEndAfter: this.timeout > END_AFTER,
-      marketClosed: MinutesFromOpen() > 390
+      marketClosed: getMinutesFromOpen() > 390
     }).filter(([reason, boolean]) => boolean).map(([ reason ]) => reason).shift();
   }
   stop() {
