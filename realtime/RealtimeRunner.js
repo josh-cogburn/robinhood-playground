@@ -487,7 +487,8 @@ module.exports = new (class RealtimeRunner {
     for (let { ticker, allPrices } of filteredByCollections) {
       const response = await handler({
         ticker,
-        allPrices
+        allPrices,
+        collections: collections.filter(collection => (this.collections[collection] || []).includes(ticker))
       });
       if (response && Object.keys(response.keys || {}).filter(key => !!response.keys[key]).length) {
         picks.push({

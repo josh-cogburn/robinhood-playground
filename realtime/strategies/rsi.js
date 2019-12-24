@@ -10,8 +10,8 @@ const getRSI = values => {
 
 module.exports = {
     period: [10, 30, 'd'],
-    collections: ['fitty', 'twoToFive', 'hotSt', 'spy'],
-    handler: async ({ ticker, allPrices }) => {
+    collections: ['fitty', 'twoToFive', 'hotSt', 'spy', 'holds'],
+    handler: async ({ ticker, allPrices, collections }) => {
         const allCurrents = allPrices.map(obj => obj.currentPrice);
         const mostRecent = allCurrents[allCurrents.length - 1];
         const rsiSeries = getRSI(allCurrents);
@@ -19,14 +19,25 @@ module.exports = {
         console.log({ rsi })
         return {
             keys: {
-                ...rsi < 25 && (rsiKey = () => {
+                ...(lessThanKey = () => {
                     const num = [
                         5, 10, 15, 20, 25,
                         ...ticker === 'SPY' ? [30, 35, 40] : []
                     ].find(val => rsi < val);
                     const key = num ? `rsilt${num}` : null;
-                    return { [key]: true };
-                })()
+                    if (key) {
+                        return { [key]: true };
+                    }
+                })(),
+                ...collections.includes('holds') && (greaterThanKey = () => {
+                    const num = [
+                        60, 70, 80, 90
+                    ].find(val => rsi > val);
+                    const key = num ? `rsigt${num}` : null;
+                    if (key) {
+                        return { [key]: true };
+                    }
+                })(),
             },
             data: {
                 // allCurrents,

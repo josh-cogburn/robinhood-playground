@@ -22,6 +22,11 @@ module.exports = async (trend) => {
         !tickersInCacheAndNotExpired.includes(ticker)
     );
 
+    strlog({
+        trend,
+        tickersToLookup
+    })
+
     console.log('adding fundamentals')
     let fundamentals = await chunkApi(
         tickersToLookup,

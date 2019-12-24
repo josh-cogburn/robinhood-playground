@@ -71,6 +71,8 @@ const subsetOffsets = {
   down20: 2,
   down40: 2,
 
+  tenMinMinors: -10
+
 
 
 };
