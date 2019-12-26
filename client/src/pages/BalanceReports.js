@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Line } from 'react-chartjs-2';
 import InputRange from 'react-input-range';
+import Ticker from 'react-ticker';
 import * as Chart from 'chart.js';
 import Odometer from 'react-odometerjs';
 import * as ChartAnnotation from 'chartjs-plugin-annotation';
@@ -358,14 +359,20 @@ class DayReports extends Component {
         // console.log(getNewDayLines(balanceReports))
         return (
             <div style={{ height: '100%', padding: '1em' }}>
-                <div style={{}}>
-                     {
-                        ['movers', 'moverVolume', 'nowhereVolume'].reduce((acc, name) => [
-                            ...acc,
-                            `${name}: ${collections[name].join(', ')}`
-                        ], [`updated: ${(new Date(lastCollectionRefresh)).toLocaleString()}`]).join(' ------------ ')
+                <Ticker speed={7}>
+                    {
+                        () => (
+                            <div>
+                                {
+                                    ['movers', 'moverVolume', 'nowhereVolume'].reduce((acc, name) => [
+                                        ...acc,
+                                        `${name}: ${collections[name].join(', ')}`
+                                    ], [' ', `updated: ${(new Date(lastCollectionRefresh)).toLocaleString()}`]).join(' ------------ ')
+                                }
+                            </div>
+                        )
                     }
-                </div>
+                </Ticker>
                 <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between'}}>
                     <div style={{ paddingLeft: '5em' }}>
                         number of days to show... <a href="#" onClick={() => this.setState({ numDaysToShow: 1 })}>[reset]</a>

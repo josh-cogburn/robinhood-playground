@@ -115,9 +115,13 @@ const isForPurchase = (stratMin, settings = {}, pms) => {
 
 const pages = [
     {
-        label: 'Balance Trend',
+        label: 'Home',
         component: BalanceReports,
         // render: state => 
+    },
+    {
+        label: 'Positions',
+        component: Positions,
     },
     {
         label: "Strategies",
@@ -133,10 +137,6 @@ const pages = [
     //     label: 'Analysis',
     //     component: Analysis,
     // },
-    {
-        label: 'Positions',
-        component: Positions,
-    },
     {
         label: 'Closed',
         component: Closed
@@ -177,7 +177,7 @@ class App extends Component {
     state = {
         value: 0,
         socket: null,
-        tags: ['notAfterhours', 'withoutASLN'].map(createTag),
+        tags: [],//['notAfterhours', 'withoutASLN'].map(createTag),
     };
 
     handleDelete = i => {

@@ -22,7 +22,7 @@ const analyzeGroup = analyzedPositions => {
     avgPickImpactPerc: weightAvg(({ numPicks }) => numPicks),
     avgMultiplierImpactPerc: weightAvg(({ numPicks, numMultipliers }) => numMultipliers || numPicks),
     percUp: percUp(
-      analyzedPositions.map(pos => pos.netImpact)
+      forConsideration.map(pos => pos.netImpact)
     ),
     // counts
     totalPositions: forConsideration.length,
