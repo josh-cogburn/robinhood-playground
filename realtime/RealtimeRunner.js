@@ -38,6 +38,7 @@ module.exports = new (class RealtimeRunner {
       strategies: [],
       priceCaches: {},
       collections: {},
+      lastCollectionRefresh: null,
       runCount: 0,
       todaysPicks: [],
       interval: null,
@@ -45,8 +46,17 @@ module.exports = new (class RealtimeRunner {
     });
   }
 
+  getWelcomeData() {
+    return {
+      pms: this.getPms(),
+      collections: this.collections,
+      lastCollectionRefresh: this.lastCollectionRefresh
+    };
+  }
+
   async refreshCollections() {
     this.collections = await getCollections();
+    this.lastCollectionRefresh = Date.now();
   }
 
   getAllTickers() {

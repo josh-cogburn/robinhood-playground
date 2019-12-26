@@ -120,34 +120,34 @@ const pages = [
         // render: state => 
     },
     {
+        label: "Strategies",
+        component: TodaysStrategies,
+    },
+    {
         label: "PM's",
         component: PmReport,
         render: state  => <PmReport {...state} />
     },
     
-    {
-        label: "Strategies",
-        component: TodaysStrategies,
-    },
     // {
     //     label: 'Analysis',
     //     component: Analysis,
     // },
     {
-        label: 'Scan',
-        component: Scan
-    },
-    {
-        label: 'Date Analysis',
-        component: DateAnalysis
+        label: 'Positions',
+        component: Positions,
     },
     {
         label: 'Closed',
         component: Closed
     },
     {
-        label: 'Positions',
-        component: Positions,
+        label: 'Date Analysis',
+        component: DateAnalysis
+    },
+    {
+        label: 'Scan',
+        component: Scan
     },
     // {
     //     label: 'Day Reports',
