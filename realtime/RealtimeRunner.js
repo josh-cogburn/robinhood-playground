@@ -1,5 +1,5 @@
 const Combinatorics = require('js-combinatorics');
-const { mapObject, uniq } = require('underscore');
+const { mapObject, uniq, pick } = require('underscore');
 
 const getCollections = require('./collections/get-collections');
 const dayInProgress = require('./day-in-progress');
@@ -57,6 +57,10 @@ module.exports = new (class RealtimeRunner {
   async refreshCollections() {
     this.collections = await getCollections();
     this.lastCollectionRefresh = Date.now();
+    require('../socket-server/strat-manager').sendToAll(
+      'server:data-update',
+      pick(this, ['collections', 'lastCollectionRefresh'])
+    );
   }
 
   getAllTickers() {
@@ -135,7 +139,7 @@ module.exports = new (class RealtimeRunner {
 
     regCronIncAfterSixThirty({
         name: 'RealtimeRunner: collectionsAndHistoricals',
-        run: [2],
+        run: [-45, -25, -15, -8, 2, 8, 16, 27, 45, 60],
         fn: () => this.collectionsAndHistoricals()
     });
 
