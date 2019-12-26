@@ -502,7 +502,7 @@ module.exports = new (class RealtimeRunner {
       const response = await handler({
         ticker,
         allPrices,
-        collections: collections.filter(collection => (this.collections[collection] || []).includes(ticker))
+        collections: this.getCollectionForTicker(ticker)
       });
       if (response && Object.keys(response.keys || {}).filter(key => !!response.keys[key]).length) {
         picks.push({
@@ -627,6 +627,12 @@ module.exports = new (class RealtimeRunner {
     ]); // array of arrays
   }
 
+  getCollectionForTicker(ticker) {
+    return Object.keys(this.collections).find(collection => 
+      (this.collections[collection] || []).includes(ticker)
+    );
+  }
+
   async handlePick(pick, minimalist) {
 
     let { ticker, keys, data, period, strategyName } = pick;
@@ -649,9 +655,7 @@ module.exports = new (class RealtimeRunner {
       ...await getDownKeys(ticker)
     };
 
-    const collectionKey = !strategyName.includes('pennyscan') ? Object.keys(this.collections).find(collection => 
-      (this.collections[collection] || []).includes(ticker)
-    ) : undefined;
+    const collectionKey = !strategyName.includes('pennyscan') ? this.getCollectionForTicker(ticker) : undefined;
 
     if (strategyName === 'sudden-drops' && keys.isOvernight) {
       strategyName = 'overnight-drops';
