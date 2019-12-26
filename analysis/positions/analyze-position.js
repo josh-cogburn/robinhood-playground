@@ -32,7 +32,7 @@ const analyzePosition = async position => {
   const avgSellPrice = avgArray(allSells);
   const sellReturnPerc = getTrend(avgSellPrice, avgEntry);
 
-  let uniqPickIds = buys.map(buy => buy.relatedPick.toString()).uniq();
+  let uniqPickIds = buys.map(buy => (buy.relatedPick || '').toString()).uniq();
   uniqPickIds = uniq(uniqPickIds);
   const numPicks = uniqPickIds.length;
 
