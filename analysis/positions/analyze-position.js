@@ -12,7 +12,7 @@ const analyzePosition = async position => {
   })
   const numSharesBought = sumArray(
     buys.map(buy => buy.quantity)
-);
+  );
   const numSharesSold = sumArray(
       sells.map(buy => buy.quantity)
   );
@@ -52,7 +52,7 @@ const analyzePosition = async position => {
     avgPickPrice
   })
   const sellReturnDollars = (numSharesSold / 100) * sellReturnPerc * avgEntry;
-  const date = (new Date(relatedPicks[0].timestamp)).toLocaleDateString();
+  const date = (  relatedPicks[0] || {}).date;
   const allPmsHit = relatedPicks.map(pick => pick.pmsHit).flatten().filter(Boolean).uniq();
   const allStrategiesHit = relatedPicks.map(pick => pick.strategyName).filter(Boolean).uniq();
   const interestingWords = ([
