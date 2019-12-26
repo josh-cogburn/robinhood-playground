@@ -58,6 +58,7 @@ const runScan = async ({
 
   filterFn = () => true,
   minDailyRSI = Number.NEGATIVE_INFINITY,
+  maxDailyRSI = Number.POSITIVE_INFINITY,
   includeStSent = true,
   count = COUNT,
   excludeTickers = [],
@@ -217,7 +218,7 @@ const runScan = async ({
   const withDailyHistoricals = await addDailyHistoricals(theGoodStuff);
   const withDailyRSI = addDailyRSI(withDailyHistoricals)
   
-  theGoodStuff = withDailyRSI.filter(({ computed: { dailyRSI } }) => dailyRSI >= minDailyRSI);
+  theGoodStuff = withDailyRSI.filter(({ computed: { dailyRSI } }) => dailyRSI >= minDailyRSI && dailyRSI <= maxDailyRSI);
 
     
   console.log({

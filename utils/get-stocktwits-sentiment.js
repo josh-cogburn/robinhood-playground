@@ -54,7 +54,7 @@ module.exports = async (ticker, detailed, maxId) => {
         ticker = ticker.toUpperCase();
         // console.log({ ticker, detailed }, 'getting stocktwits sent')
         let { messages } = await stReq(`https://api.stocktwits.com/api/2/streams/symbol/${ticker}.json?filter=top${maxId ? `&max=${maxId}`: ''}`);
-        strlog({messages})
+        // strlog({messages})
         const includesPhrase = str => JSON.stringify(messages.map(m => m.body)).includes(str);
 
         const dates = await Pick.getUniqueDates();
@@ -85,8 +85,8 @@ module.exports = async (ticker, detailed, maxId) => {
             points: getPoints(o.entities.sentiment.basic, o.min)
         }));
 
-        console.log('withMin', withMin.map(o => o.min));
-        console.log('points', withPoints.map(o => o.points));
+        // console.log('withMin', withMin.map(o => o.min));
+        // console.log('points', withPoints.map(o => o.points));
         const total = withPoints.reduce((acc, { points }) => acc + points, 0);
         const totalCount = messages.length;
 

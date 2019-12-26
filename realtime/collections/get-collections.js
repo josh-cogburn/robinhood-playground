@@ -4,6 +4,7 @@ const getRisk = require('../../rh-actions/get-risk');
 const addFundamentals = require('../../app-actions/add-fundamentals');
 const runScan = require('../../scans/base/run-scan');
 const hotSt = require('../../scans/hot-st');
+const nowheres = require('../../scans/nowheres');
 // const droppers = require('../../scans/droppers');
 
 const allStocks = require('../../json/stock-data/allStocks');
@@ -96,8 +97,6 @@ const OPTIONSTICKERS = [
 //     return theGoodStuff;
 // }
 
-
-
 module.exports = async () => {
 
     console.log('get collections!');
@@ -130,11 +129,14 @@ module.exports = async () => {
         ...(await alpaca.getPositions()).map(pos => pos.symbol)
     ].uniq();
     
-    let collections = {
-        holds,
-        spy: ['SPY'],
-        // options: OPTIONSTICKERS,
-    };
+    let collections = mapObject(
+        {
+            holds,
+            spy: ['SPY'],
+            // options: OPTIONSTICKERS,
+        }, 
+        arr => arr.map(ticker => ({ ticker }))
+    );
 
     const scans = {
         fitty: {
@@ -177,7 +179,7 @@ module.exports = async () => {
 
     };
 
-    const getTicks = () => Object.values(collections).flatten().uniq();
+    const getTicks = () => Object.values(collections).flatten().map(t => t.ticker).uniq();
 
 
     // collections['droppers'] = (await droppers({
@@ -190,30 +192,65 @@ module.exports = async () => {
     // })).map(t => t.ticker);;
 
     console.log('get hotSt')
-    collections['hotSt'] = (await hotSt({
+
+    collections.hotSt = await hotSt({
         minPrice: 0.1,
         maxPrice: 12,
         count: 80,
         includeStSent: false,
         excludeTickers: getTicks(),
         afterHoursReset: false
-    })).map(t => t.ticker);
-    
+    });
+
+    collections.nowheres = await nowheres({
+        minPrice: 0.1,
+        maxPrice: 12,
+        count: 50,
+        includeStSent: false,
+        excludeTickers: getTicks(),
+        afterHoursReset: false
+    });
+
     console.log("other scans")
     for (let scanName of Object.keys(scans)) {
         console.log("scanName", scanName)
         const scan = scans[scanName];
-        const response = (await runScan({
+        collections[scanName] = await runScan({
             minVolume: 50000,
             count: 260,
             ...scan,
             includeStSent: false,
             excludeTickers: getTicks(),
             // minDailyRSI: 45
-        })).map(t => t.ticker);
-        collections[scanName] = response;
+        });
     };
+    // strlog({ hey: collections.hotSt });
+    collections.movers = collections.hotSt
+        .filter(t => t.computed.dailyRSI < 60)
+        // .filter(t => t.computed.projectedVolumeTo2WeekAvg > 1.3)
+        .sort((a, b) => b.computed.tso - a.computed.tso)
+        .slice(0, 5);
 
+    collections.moverVolume = collections.hotSt
+        .sort((a, b) => b.computed.projectedVolumeTo2WeekAvg - a.computed.projectedVolumeTo2WeekAvg)
+        .filter(t => !collections.movers.map(t => t.ticker).includes(t.ticker))
+        .slice(0, 5);
+
+    collections.nowhereVolume = collections.nowheres
+        .sort((a, b) => b.computed.projectedVolumeTo2WeekAvg - a.computed.projectedVolumeTo2WeekAvg)
+        .slice(0, 5);
+
+    // collections.movers = collections.hotSt
+    //     .filter(t => t.computed.dailyRSI < 70)
+    //     .sort((a, b) => b.computed.tso - a.computed.tso)
+    //     .slice(0, 3);
+
+
+    
+    collections = mapObject(
+        collections, 
+        collection => collection.map(t => t.ticker)
+    );
 
         // lowVolumeTrash: (await runScan({
         //     minPrice: 1,
@@ -249,12 +286,13 @@ module.exports = async () => {
 
     // ONLY TRADEABLE TICKERS
 
-    const badTickers = originalTickers.filter(ticker => 
-        !allStocks.find(stock => stock.symbol === ticker)
-    );
-
-    badTickers.push("BRK.B");
-    badTickers.push("GOOGL");
+    const badTickers = [
+        ...originalTickers.filter(ticker => 
+            !allStocks.find(stock => stock.symbol === ticker)
+        ),
+        'BRK.B',
+        'GOOGL',
+    ];
 
     strlog({ badTickers });
     
