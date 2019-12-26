@@ -227,7 +227,7 @@ class DayReports extends Component {
     }
     setTimeFilter = timeFilter => this.setState({ timeFilter });
     render () {
-        let { balanceReports, dayReports, admin } = this.props;
+        let { balanceReports, dayReports, admin, collections } = this.props;
         let { timeFilter, numDaysToShow, hoverIndex, fuzzFactor, afterHoursAnnotations } = this.state;
         if (!balanceReports || !balanceReports.length) return <b>LOADING</b>;
 
@@ -358,7 +358,14 @@ class DayReports extends Component {
         // console.log(getNewDayLines(balanceReports))
         return (
             <div style={{ height: '100%', padding: '1em' }}>
-                {numDaysToPrune}
+                <div style={{}}>
+                    {
+                        ['movers', 'moverVolume', 'nowhereVolume'].reduce((acc, name) => [
+                            ...acc,
+                            `${name}: ${collections[name].join(', ')}`
+                        ], []).join(' ------------ ')
+                    }
+                </div>
                 <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between'}}>
                     <div style={{ paddingLeft: '5em' }}>
                         number of days to show... <a href="#" onClick={() => this.setState({ numDaysToShow: 1 })}>[reset]</a>

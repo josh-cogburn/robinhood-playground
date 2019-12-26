@@ -232,11 +232,13 @@ module.exports = async () => {
         .slice(0, 5);
 
     collections.moverVolume = collections.hotSt
+        .filter(t => t.computed.dailyRSI < 60)
         .sort((a, b) => b.computed.projectedVolumeTo2WeekAvg - a.computed.projectedVolumeTo2WeekAvg)
         .filter(t => !collections.movers.map(t => t.ticker).includes(t.ticker))
         .slice(0, 5);
 
     collections.nowhereVolume = collections.nowheres
+        .filter(t => t.computed.dailyRSI < 60)
         .sort((a, b) => b.computed.projectedVolumeTo2WeekAvg - a.computed.projectedVolumeTo2WeekAvg)
         .slice(0, 5);
 
