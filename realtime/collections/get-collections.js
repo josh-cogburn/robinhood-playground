@@ -300,8 +300,8 @@ module.exports = async () => {
 
 
     /// AFTER HOURS?
-
-    if (getMinutesFromOpen() > 330) {
+    const min = getMinutesFromOpen();
+    if (min > 330 || min < 0) {
         collections.afterHoursGainers = (
             await runScan({
                 minVolume: 50000,
