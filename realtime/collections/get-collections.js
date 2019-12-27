@@ -10,7 +10,7 @@ const nowheres = require('../../scans/nowheres');
 const allStocks = require('../../json/stock-data/allStocks');
 const lookupMultiple = require('../../utils/lookup-multiple');
 const { isTradeable } = require('../../utils/filter-by-tradeable');
-const { mapObject } = require('underscore');
+const { mapObject, uniq } = require('underscore');
 
 const { alpaca } = require('../../alpaca');
 
@@ -96,6 +96,52 @@ const OPTIONSTICKERS = [
 //     const theGoodStuff = sortedBySumMostRecent.map(obj => obj.ticker);
 //     return theGoodStuff;
 // }
+
+
+const deriveCollections = allScanResults => {
+    strlog({ allScanResults })
+    const derivedCollections = {
+        movers: results => results
+            .filter(t => t.computed.dailyRSI < 70)
+            .sort((a, b) => b.computed.tso - a.computed.tso)
+            .slice(0, 5),
+
+        chillMovers: results => results
+            .filter(t => t.computed.dailyRSI < 50)
+            // .filter(t => t.computed.projectedVolumeTo2WeekAvg > 1.3)
+            .sort((a, b) => b.computed.tso - a.computed.tso)
+            .slice(0, 5),
+
+        chillMoverVolume: results => results
+            .filter(t => t.computed.dailyRSI < 50)
+            .sort((a, b) => b.computed.projectedVolumeTo2WeekAvg - a.computed.projectedVolumeTo2WeekAvg)
+            .filter(t => !collections.movers.map(t => t.ticker).includes(t.ticker))
+            .slice(0, 5),
+
+        realChillMovers: results => results
+            .filter(t => t.computed.dailyRSI < 40)
+            .filter(t => !collections.movers.map(t => t.ticker).includes(t.ticker))
+            // .sort((a, b) => b.computed.projectedVolumeTo2WeekAvg - a.computed.projectedVolumeTo2WeekAvg)
+            .sort((a, b) => b.computed.tso - a.computed.tso)
+            .slice(0, 5),
+
+        nowhereVolume: results => results
+            .filter(t => t.computed.tso > -2 && t.computed.tso < 2 && t.computed.tsc > -4 && t.computed.tsc < 4)
+            .filter(t => t.computed.dailyRSI < 60)
+            .sort((a, b) => b.computed.projectedVolumeTo2WeekAvg - a.computed.projectedVolumeTo2WeekAvg)
+            .slice(0, 5)
+    };
+
+    let unusedResults = [...allScanResults];
+    return mapObject(
+        derivedCollections,
+        fn => {
+            const response = fn(unusedResults);
+            unusedResults = unusedResults.filter(t => !response.includes(t.ticker));    // no repeats
+        }
+    );
+};
+
 
 module.exports = async () => {
 
@@ -233,22 +279,16 @@ module.exports = async () => {
 
 
     // strlog({ hey: collections.hotSt });
-    collections.chillMovers = collections.hotSt
-        .filter(t => t.computed.dailyRSI < 50)
-        // .filter(t => t.computed.projectedVolumeTo2WeekAvg > 1.3)
-        .sort((a, b) => b.computed.tso - a.computed.tso)
-        .slice(0, 5);
 
-    collections.chillMoverVolume = collections.hotSt
-        .filter(t => t.computed.dailyRSI < 50)
-        .sort((a, b) => b.computed.projectedVolumeTo2WeekAvg - a.computed.projectedVolumeTo2WeekAvg)
-        .filter(t => !collections.movers.map(t => t.ticker).includes(t.ticker))
-        .slice(0, 5);
+    const allScanResults = uniq(
+        Object.values(collections).flatten().filter(t => t.computed),
+        result => result.ticker
+    );
+    collections = {
+        ...collections,
+        ...deriveCollections(allScanResults)
+    };
 
-    collections.nowhereVolume = collections.nowheres
-        .filter(t => t.computed.dailyRSI < 60)
-        .sort((a, b) => b.computed.projectedVolumeTo2WeekAvg - a.computed.projectedVolumeTo2WeekAvg)
-        .slice(0, 5);
 
     // collections.movers = collections.hotSt
     //     .filter(t => t.computed.dailyRSI < 70)
