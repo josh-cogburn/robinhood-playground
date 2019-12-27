@@ -7,6 +7,7 @@ const hotSt = require('../../scans/hot-st');
 const nowheres = require('../../scans/nowheres');
 // const droppers = require('../../scans/droppers');
 
+const getMinutesFromOpen = require('../../utils/get-minutes-from-open');
 const allStocks = require('../../json/stock-data/allStocks');
 const lookupMultiple = require('../../utils/lookup-multiple');
 const { isTradeable } = require('../../utils/filter-by-tradeable');
@@ -279,10 +280,29 @@ module.exports = async () => {
             ...scan,
             includeStSent: false,
             excludeTickers: getTicks(),
+            afterHoursReset: false
             // minDailyRSI: 45
         });
     };
 
+
+    /// AFTER HOURS?
+
+    if (getMinutesFromOpen() > 330) {
+        collections.afterHoursGainers = (
+            await runScan({
+                minVolume: 50000,
+                minPrice: 2,
+                maxPrice: 5,
+                count: 70,
+                includeStSent: false,
+                afterHoursReset: true
+                // minDailyRSI: 45
+            })
+        )
+            .sort((a, b) => b.computed.trendSinceOpen - a.computed.trendSinceOpen)
+            .slice(0, 5);
+    }
 
 
 

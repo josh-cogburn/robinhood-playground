@@ -33,6 +33,9 @@ module.exports = positions => {
   return {
     allPositions: () => true,
     notAfterhours: p => !afterhours(p),
+
+    notManual: ({ interestingWords }) => !interestingWords.includes('manual'),
+    onlyManual: ({ interestingWords }) => interestingWords.includes('manual'),
     notOJ: p => !overnightDrops(p),
     withoutKEG: ({ ticker }) => ticker !== 'KEG',
     withoutASLN: ({ ticker }) => ticker !== 'ASLN',

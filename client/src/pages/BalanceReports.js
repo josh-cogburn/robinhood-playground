@@ -364,7 +364,7 @@ class DayReports extends Component {
                         () => (
                             <div>
                                 {
-                                    ['movers', 'moverVolume', 'nowhereVolume'].reduce((acc, name) => [
+                                    Object.keys(collections).slice(10).reduce((acc, name) => [
                                         ...acc,
                                         `${name}: ${collections[name].join(', ')}`
                                     ], [' ', `updated: ${(new Date(lastCollectionRefresh)).toLocaleString()}`]).join(' ------------ ')
