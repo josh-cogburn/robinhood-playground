@@ -147,9 +147,13 @@ const deriveCollections = allScanResults => {
     ];
     return mapObject(
         derivedCollections,
-        fn => {
+        (fn, something) => {
+            strlog({
+                something,
+                count: unusedResults.length
+            })
             const response = fn(unusedResults);
-            unusedResults = unusedResults.filter(t => !response.includes(t.ticker));    // no repeats
+            unusedResults = unusedResults.filter(t => !response.map(t => t.ticker).includes(t.ticker));    // no repeats
             return response;
         }
     );
