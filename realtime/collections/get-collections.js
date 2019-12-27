@@ -101,45 +101,54 @@ const OPTIONSTICKERS = [
 
 const deriveCollections = allScanResults => {
     // strlog({ allScanResults })
+
+    const getMovers = results => results
+        .sort((a, b) => b.computed.tso - a.computed.tso)
+        .slice(0, 5);
+    
+    const getVolume = results => results
+        .sort((a, b) => b.computed.projectedVolumeTo2WeekAvg - a.computed.projectedVolumeTo2WeekAvg)
+        .slice(0, 5);
+
+    const getMoverVolume = results => getVolume(
+        results
+            .sort((a, b) => b.computed.tsc - a.computed.tsc)
+            .slice(0, 50)
+    );
+
     const derivedCollections = {
-        movers: results => results
-            .filter(t => t.computed.dailyRSI < 70)
-            .sort((a, b) => b.computed.tso - a.computed.tso)
-            .slice(0, 5),
+        movers: results => getMovers(
+            results.filter(t => t.computed.dailyRSI < 70)
+        ),
 
-        chillMovers: results => results
-            .filter(t => t.computed.dailyRSI < 50)
-            // .filter(t => t.computed.projectedVolumeTo2WeekAvg > 1.3)
-            .sort((a, b) => b.computed.tso - a.computed.tso)
-            .slice(0, 5),
+        chillMovers: results => getMovers(
+            results.filter(t => t.computed.dailyRSI < 50)
+        ),
 
-        chillMoverVolume: results => results
-            .filter(t => t.computed.dailyRSI < 50)
-            .sort((a, b) => b.computed.projectedVolumeTo2WeekAvg - a.computed.projectedVolumeTo2WeekAvg)
-            .slice(0, 5),
+        chillMoverVolume: results => getMoverVolume(
+            results.filter(t => t.computed.dailyRSI < 50)
+        ),
 
-        realChillMovers: results => results
-            .filter(t => t.computed.dailyRSI < 40)
-            // .sort((a, b) => b.computed.projectedVolumeTo2WeekAvg - a.computed.projectedVolumeTo2WeekAvg)
-            .sort((a, b) => b.computed.tso - a.computed.tso)
-            .slice(0, 5),
+        realChillMovers: results => getMovers(
+            results.filter(t => t.computed.dailyRSI < 40)
+        ),
         
-        realChillMoverVolume: results => results
-            .filter(t => t.computed.dailyRSI < 50)
-            .sort((a, b) => b.computed.projectedVolumeTo2WeekAvg - a.computed.projectedVolumeTo2WeekAvg)
-            .slice(0, 5),
+        realChillMoverVolume: results => getMoverVolume(
+            results.filter(t => t.computed.dailyRSI < 40)
+        ),
 
-        nowhereVolume: results => results
-            .filter(t => t.computed.tso > -2 && t.computed.tso < 2 && t.computed.tsc > -4 && t.computed.tsc < 4)
-            .filter(t => t.computed.dailyRSI < 60)
-            .sort((a, b) => b.computed.projectedVolumeTo2WeekAvg - a.computed.projectedVolumeTo2WeekAvg)
-            .slice(0, 5),
+        nowhereVolume: results => getVolume(
+            results
+                .filter(t => t.computed.dailyRSI < 60)
+                .filter(t => t.computed.tso > -1 && t.computed.tso < 3 && t.computed.tsc > -1 && t.computed.tsc < 3)
+        ),
 
-        slightUpVolume: results => results
-            .filter(t => t.computed.tso > 1 && t.computed.tsc > 1 && t.computed.tsc < 6)
-            .filter(t => t.computed.dailyRSI < 50)
-            .sort((a, b) => b.computed.projectedVolumeTo2WeekAvg - a.computed.projectedVolumeTo2WeekAvg)
-            .slice(0, 5),
+        slightUpVolume: results => getVolume(
+            results
+                .filter(t => t.computed.dailyRSI < 50)
+                .filter(t => t.computed.tso > 1 && t.computed.tsc > 1 && t.computed.tsc < 6)
+        ),
+
     };
 
     let unusedResults = [
