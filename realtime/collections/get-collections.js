@@ -224,15 +224,23 @@ module.exports = async () => {
             // minDailyRSI: 45
         });
     };
+
+
+
+
+    /// CALCULATE THE STUFF BASED ON THE OTHER STUFF PLEASE!
+
+
+
     // strlog({ hey: collections.hotSt });
-    collections.movers = collections.hotSt
-        .filter(t => t.computed.dailyRSI < 60)
+    collections.chillMovers = collections.hotSt
+        .filter(t => t.computed.dailyRSI < 50)
         // .filter(t => t.computed.projectedVolumeTo2WeekAvg > 1.3)
         .sort((a, b) => b.computed.tso - a.computed.tso)
         .slice(0, 5);
 
-    collections.moverVolume = collections.hotSt
-        .filter(t => t.computed.dailyRSI < 60)
+    collections.chillMoverVolume = collections.hotSt
+        .filter(t => t.computed.dailyRSI < 50)
         .sort((a, b) => b.computed.projectedVolumeTo2WeekAvg - a.computed.projectedVolumeTo2WeekAvg)
         .filter(t => !collections.movers.map(t => t.ticker).includes(t.ticker))
         .slice(0, 5);

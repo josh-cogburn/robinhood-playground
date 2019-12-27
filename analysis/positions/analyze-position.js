@@ -52,7 +52,12 @@ const analyzePosition = async position => {
     avgPickPrice
   })
   const sellReturnDollars = (numSharesSold / 100) * sellReturnPerc * avgEntry;
-  const date = (relatedPicks[0] || allBuys[0] || {}).date;
+  const date = (relatedPicks[0] || buys[0] || {}).date;
+  strlog({
+    date,
+    zeroPick: relatedPicks[0],
+    zeroBuy: buys[0],
+  })
   const allPmsHit = relatedPicks.map(pick => pick.pmsHit).flatten().filter(Boolean).uniq();
   const allStrategiesHit = relatedPicks.map(pick => pick.strategyName).filter(Boolean).uniq();
   const buyStrategies = buys.map(buy => buy.strategy).uniq();
