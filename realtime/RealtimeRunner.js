@@ -80,20 +80,20 @@ module.exports = new (class RealtimeRunner {
         ], []);
 
       strlog({ derivedPicks });
-      await mapLimit(derivedPicks, 5, this.handlePick);
-      
+      await mapLimit(derivedPicks, 5, pick => this.handlePick(pick));
+      this.todaysPicks.push(derivedPicks);
+      console.log('done recording');
     }
 
-
-    const collections = mapObject(
+    this.collections = mapObject(
       {
         ...baseCollections,
         ...derivedCollections
       },
       collection => collection.map(t => t.ticker)
     );  // only tickers.... for now!
-    
     this.lastCollectionRefresh = Date.now();
+
     require('../socket-server/strat-manager').sendToAll(
       'server:data-update',
       pick(this, ['collections', 'lastCollectionRefresh'])
