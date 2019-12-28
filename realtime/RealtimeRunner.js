@@ -2,6 +2,7 @@ const Combinatorics = require('js-combinatorics');
 const { mapObject, uniq, pick } = require('underscore');
 
 const getCollections = require('./collections/get-collections');
+const deriveCollections = require('./collections/derive-collections');
 const dayInProgress = require('./day-in-progress');
 const getHistoricals = require('./historicals/get');
 const daily = require('./historicals/daily');
@@ -55,12 +56,49 @@ module.exports = new (class RealtimeRunner {
   }
 
   async refreshCollections() {
-    this.collections = await getCollections();
+    const baseCollections = await getCollections();
+    const derivedCollections = deriveCollections(baseCollections);
+
+    const tenCount = Math.round(getMinutesFromOpen() / 10);
+    strlog({ tenCount, derivedCollections })
+    if (!this.currentlyRunning) {
+      console.log('Im not going to record the derived collections right now because its just a weird time alright.');
+    } else {
+
+      const derivedPicks = Object.keys(derivedCollections)
+        .reduce((acc, collectionName) => [
+          ...acc,
+          ...derivedCollections[collectionName].map((result, index) => ({
+            ticker: result.ticker,
+            strategyName: 'dercollects',
+            keys: {
+              [collectionName]: true,
+              [`index${index}`]: true,
+              [`tenMinCount${tenCount}`]: true
+            }
+          }))
+        ], []);
+
+      strlog({ derivedPicks });
+      await mapLimit(derivedPicks, 5, this.handlePick);
+      
+    }
+
+
+    const collections = mapObject(
+      {
+        ...baseCollections,
+        ...derivedCollections
+      },
+      collection => collection.map(t => t.ticker)
+    );  // only tickers.... for now!
+    
     this.lastCollectionRefresh = Date.now();
     require('../socket-server/strat-manager').sendToAll(
       'server:data-update',
       pick(this, ['collections', 'lastCollectionRefresh'])
     );
+
   }
 
   getAllTickers() {

@@ -99,75 +99,6 @@ const OPTIONSTICKERS = [
 // }
 
 
-const deriveCollections = allScanResults => {
-    // strlog({ allScanResults })
-
-    const getMovers = results => results
-        .sort((a, b) => b.computed.tso - a.computed.tso)
-        .slice(0, 5);
-    
-    const getVolume = results => results
-        .sort((a, b) => b.computed.projectedVolumeTo2WeekAvg - a.computed.projectedVolumeTo2WeekAvg)
-        .slice(0, 5);
-
-    const getMoverVolume = results => getVolume(
-        results
-            .sort((a, b) => b.computed.tsc - a.computed.tsc)
-            .slice(0, 50)
-    );
-
-    const derivedCollections = {
-        movers: results => getMovers(
-            results.filter(t => t.computed.dailyRSI < 70)
-        ),
-
-        chillMovers: results => getMovers(
-            results.filter(t => t.computed.dailyRSI < 50)
-        ),
-
-        chillMoverVolume: results => getMoverVolume(
-            results.filter(t => t.computed.dailyRSI < 50)
-        ),
-
-        realChillMovers: results => getMovers(
-            results.filter(t => t.computed.dailyRSI < 40)
-        ),
-        
-        realChillMoverVolume: results => getMoverVolume(
-            results.filter(t => t.computed.dailyRSI < 40)
-        ),
-
-        nowhereVolume: results => getVolume(
-            results
-                .filter(t => t.computed.dailyRSI < 60)
-                .filter(t => t.computed.tso > -1 && t.computed.tso < 3 && t.computed.tsc > -1 && t.computed.tsc < 3)
-        ),
-
-        slightUpVolume: results => getVolume(
-            results
-                .filter(t => t.computed.dailyRSI < 50)
-                .filter(t => t.computed.tso > 1 && t.computed.tsc > 1 && t.computed.tsc < 6)
-        ),
-
-    };
-
-    let unusedResults = [
-        ...allScanResults.filter(t => t.computed.projectedVolume > 80000)
-    ];
-    return mapObject(
-        derivedCollections,
-        (fn, something) => {
-            strlog({
-                something,
-                count: unusedResults.length
-            })
-            const response = fn(unusedResults);
-            unusedResults = unusedResults.filter(t => !response.map(t => t.ticker).includes(t.ticker));    // no repeats
-            return response;
-        }
-    );
-};
-
 
 module.exports = async () => {
 
@@ -251,7 +182,8 @@ module.exports = async () => {
 
     };
 
-    const getTicks = () => Object.values(collections).flatten().map(t => t.ticker).uniq();
+    const getTicks = () => 
+        Object.values(collections).flatten().map(t => t.ticker).uniq();
 
 
     // collections['droppers'] = (await droppers({
@@ -299,7 +231,7 @@ module.exports = async () => {
     };
 
 
-    /// AFTER HOURS?
+    /// AFTER HOURS || PRE MARKET ?
     const min = getMinutesFromOpen();
     if (min > 330 || min < 0) {
         collections.afterHoursGainers = (
@@ -313,7 +245,7 @@ module.exports = async () => {
                 // minDailyRSI: 45
             })
         )
-            .sort((a, b) => b.computed.trendSinceOpen - a.computed.trendSinceOpen)
+            .sort((a, b) => b.computed.tsc - a.computed.tsc)
             .slice(0, 5);
     }
 
@@ -325,16 +257,6 @@ module.exports = async () => {
 
     // strlog({ hey: collections.hotSt });
 
-    const allScanResults = uniq(
-        Object.values(collections).flatten().filter(t => t.computed),
-        result => result.ticker
-    );
-    collections = {
-        ...collections,
-        ...deriveCollections(allScanResults)
-    };
-
-
     // collections.movers = collections.hotSt
     //     .filter(t => t.computed.dailyRSI < 70)
     //     .sort((a, b) => b.computed.tso - a.computed.tso)
@@ -342,10 +264,6 @@ module.exports = async () => {
 
 
     
-    collections = mapObject(
-        collections, 
-        collection => collection.map(t => t.ticker)
-    );
 
         // lowVolumeTrash: (await runScan({
         //     minPrice: 1,
@@ -362,56 +280,6 @@ module.exports = async () => {
         // ...await getStockInvestCollections()
     // };
 
-    // remove any tickers that are not available on     const getTicks = () => Object.values(response).flatten().uniq();
-    const originalTickers = getTicks();
-    
-    // const withRisk = await mapLimit(originalTickers, 13, async ticker => {
-    //     const obj = {
-    //         ticker,
-    //         ...await getRisk({ticker})
-    //     };
-    //     console.log(obj);
-    //     return obj;
-    // });
-
-    // strlog({withRisk});
-
-    console.log(`all ticker stock count: ${originalTickers.length}`);
-
-
-    // ONLY TRADEABLE TICKERS
-
-    const badTickers = [
-        ...originalTickers.filter(ticker => 
-            !allStocks.find(stock => stock.symbol === ticker)
-        ),
-        'BRK.B',
-        'GOOGL',
-    ];
-
-    strlog({ badTickers });
-    
-    collections = mapObject(
-        collections, 
-        tickers => (tickers || []).filter(ticker => 
-            !badTickers.includes(ticker)
-        )
-    );
-
-    strlog(mapObject(collections, v => v.length));
-    console.log(`without bad stock count: ${getTicks().length}`);
-
-    // FILTER FOR ONLY THE "GOOD STUFF"
-
-
-
-    // for (let key of ['fitty']) {
-    //     console.log('filtering', key);
-    //     collections = {
-    //         ...collections,
-    //         [key]: await filterForTheGood(collections[key])
-    //     };
-    // }
 
     strlog(mapObject(collections, v => v.length));
     console.log(`only the good stuff: ${getTicks().length}`);
