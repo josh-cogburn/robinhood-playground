@@ -10,6 +10,7 @@ const getTrend = require('../../utils/get-trend');
 const getStSent = require('../../utils/get-stocktwits-sentiment');
 const { uniq, get, mapObject } = require('underscore');
 const { avgArray, zScore } = require('../../utils/array-math');
+const dayInProgress = require('../../realtime/day-in-progress');
 
 const getTickersBetween = async (min, max) => {
   const tickQuotes = await lookupMultiple(allStocks.filter(isTradeable).map(o => o.symbol), true);
@@ -112,9 +113,7 @@ const runScan = async ({
   const fourLettersOrLess = withProjectedVolume.filter(({ ticker }) => ticker.length <= 4);
   const withoutLowVolume = sortAndCut(fourLettersOrLess, 'computed.projectedVolume', fourLettersOrLess.length * 3 / 4);
 
-  const isPremarket = min < 0;
-  const isAfterHours = min > 390;
-  const irregularHours = isPremarket || isAfterHours;
+  const irregularHours = !dayInProgress();
   const withTSO = withoutLowVolume
     .map(buy => ({
       ...buy,
