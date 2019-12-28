@@ -62,7 +62,13 @@ const deriveCollections = collections => {
         slightUpVolume: results => getUnusualVolume(
             results
                 .filter(t => t.computed.dailyRSI < 50)
-                .filter(t => t.computed.tso > 1 && t.computed.tsc > 1 && t.computed.tsc < 6)
+                .filter(t => t.computed.tso > 1 && t.computed.tsc > 1 && t.computed.tsc < 3)
+        ),
+
+        slightDownVolume: results => getUnusualVolume(
+            results
+                .filter(t => t.computed.dailyRSI < 50)
+                .filter(t => t.computed.tsc < 1 && t.computed.tsc > -3)
         ),
 
     };
