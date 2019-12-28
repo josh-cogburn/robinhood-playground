@@ -6,6 +6,7 @@ const runScan = require('../../scans/base/run-scan');
 const hotSt = require('../../scans/hot-st');
 const nowheres = require('../../scans/nowheres');
 // const droppers = require('../../scans/droppers');
+const dayInProgress = require('../day-in-progress');
 
 const getMinutesFromOpen = require('../../utils/get-minutes-from-open');
 const allStocks = require('../../json/stock-data/allStocks');
@@ -233,7 +234,7 @@ module.exports = async () => {
 
     /// AFTER HOURS || PRE MARKET ?
     const min = getMinutesFromOpen();
-    if (min > 330 || min < 0) {
+    if (!dayInProgress()) {
         collections.afterHoursGainers = (
             await runScan({
                 minVolume: 50000,
