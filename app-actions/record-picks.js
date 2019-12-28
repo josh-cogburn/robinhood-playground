@@ -62,7 +62,7 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
             stocksToBuy
         );
         
-        multiplier = forPurchaseMultiplier + pmAnalysisMultiplier + subsetOffsetMultiplier;
+        multiplier = (forPurchaseMultiplier + pmAnalysisMultiplier) * 1.5 + subsetOffsetMultiplier;
         if (multiplier <= multiplierThreshold) {
             isRecommended = false;
         }

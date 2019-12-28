@@ -31,7 +31,7 @@ module.exports = {
     // purchaseAmt: 6,
     makeKeeperFundsAvailable: true,
     expectedPickCount: 60,
-    multiplierThreshold: -6, // wont recommend picks below this multiplier count even if they are a forPurchase pick
+    multiplierThreshold: -3, // wont recommend picks below this multiplier count even if they are a forPurchase pick
     disableCashCheck: true,
     disableMultipliers: false,
 
