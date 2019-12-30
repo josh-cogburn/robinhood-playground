@@ -1,8 +1,7 @@
 const Combinatorics = require('js-combinatorics');
 const { mapObject, uniq, pick } = require('underscore');
 
-const getCollections = require('./collections/get-collections');
-const deriveCollections = require('./collections/derive-collections');
+const getCollections = require('./collections/');
 const dayInProgress = require('./day-in-progress');
 const getHistoricals = require('./historicals/get');
 const daily = require('./historicals/daily');
@@ -56,8 +55,11 @@ module.exports = new (class RealtimeRunner {
   }
 
   async refreshCollections() {
-    const baseCollections = await getCollections();
-    const derivedCollections = deriveCollections(baseCollections);
+
+    const {
+      baseCollections,
+      derivedCollections
+    } = getCollections(true);
 
     let tenCount = Math.round(getMinutesFromOpen() / 10);
     tenCount = tenCount < 0 ? `Neg${Math.abs(tenCount)}` : tenCount;
@@ -72,7 +74,7 @@ module.exports = new (class RealtimeRunner {
           ...acc,
           ...derivedCollections[collectionName].map((result, index) => ({
             ticker: result.ticker,
-            strategyName: 'dercollects',
+            strategyName: 'derived',
             keys: {
               [collectionName]: true,
               [`index${index}`]: true,

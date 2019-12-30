@@ -8,7 +8,7 @@ const deriveCollections = collections => {
         result => result.ticker
     );
 
-    // strlog({ allScanResults })
+    strlog({ allScanResults })
 
     const getMovers = results => results
         .sort((a, b) => b.computed.tso - a.computed.tso)
@@ -21,43 +21,44 @@ const deriveCollections = collections => {
     const getMoverVolume = results => getUnusualVolume(
         results
             .sort((a, b) => b.computed.tsc - a.computed.tsc)
-            .slice(0, 50)
+            .slice(0, results.length / 2)
     );
 
-    const derivedCollections = {
+    const getNowhereVolume = results => getUnusualVolume(
+        results
+            .filter(t => t.computed.tso > -1 && t.computed.tso < 3 && t.computed.tsc > -1 && t.computed.tsc < 3)
+    );
 
+    const rsiPerms = {
+        realChill: 40,
+        chill: 70,
+        unfiltered: Number.POSITIVE_INFINITY
+    };
 
-        nowhereVolume: results => getUnusualVolume(
-            results
-                .filter(t => t.computed.dailyRSI < 50)
-                .filter(t => t.computed.tso > -1 && t.computed.tso < 3 && t.computed.tsc > -1 && t.computed.tsc < 3)
-        ),
+    const outputVariations = {
+        NowhereVolume: getNowhereVolume,
+        MoverVolume: getMoverVolume,
+        Movers: getMovers
+    };
 
-        realChillMovers: results => getMovers(
-            results.filter(t => t.computed.dailyRSI < 40)
-        ),
+    const permute = rsiPermName =>
+        Object.keys(outputVariations).reduce((acc, variationName) => ({
+            ...acc,
+            [`${rsiPermName}${variationName}`]: results => {
+                const fn = outputVariations[variationName];
+                const filteredByRSI = results.filter(t => 
+                    t.computed.dailyRSI < rsiPerms[rsiPermName]
+                );
+                return fn(filteredByRSI);
+            }
+        }), {});
 
-        realChillMoverVolume: results => getMoverVolume(
-            results.filter(t => t.computed.dailyRSI < 40)
-        ),
-
-        chillMovers: results => getMovers(
-            results.filter(t => t.computed.dailyRSI < 50)
-        ),
-
-        chillMoverVolume: results => getMoverVolume(
-            results.filter(t => t.computed.dailyRSI < 50)
-        ),
-
-        movers: results => getMovers(
-            results.filter(t => t.computed.dailyRSI < 80)
-        ),
-
-        movers: results => getMovers(
-            results.filter(t => t.computed.dailyRSI < 80)
-        ),
-
-
+    const derivedCollections = Object.keys(rsiPerms).reduce((acc, rsiPermName) => {
+        return {
+            ...acc,
+            ...permute(rsiPermName)
+        }
+    }, {
 
         slightUpVolume: results => getUnusualVolume(
             results
@@ -71,18 +72,14 @@ const deriveCollections = collections => {
                 .filter(t => t.computed.tsc < 1 && t.computed.tsc > -3)
         ),
 
-    };
+    });
 
     let unusedResults = [
         ...allScanResults.filter(t => t.computed.projectedVolume > 70000)
     ];
     return mapObject(
         derivedCollections,
-        (fn, something) => {
-            strlog({
-                something,
-                count: unusedResults.length
-            })
+        fn => {
             const response = fn(unusedResults);
             unusedResults = unusedResults.filter(t => !response.map(t => t.ticker).includes(t.ticker));    // no repeats
             return response;
