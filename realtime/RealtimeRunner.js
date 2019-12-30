@@ -1035,7 +1035,7 @@ module.exports = new (class RealtimeRunner {
             .reduce((inner, combo) => {
 
               combo = [
-                'derived ',
+                'derived',
                 ...combo
               ];
               return {
