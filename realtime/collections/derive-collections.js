@@ -1,7 +1,7 @@
 const { uniq, mapObject } = require('underscore');
+const COUNT = 3; // per derivation
 
 const deriveCollections = collections => {
-
 
     const allScanResults = uniq(
         Object.values(collections).flatten().filter(t => t.computed),
@@ -10,35 +10,39 @@ const deriveCollections = collections => {
 
     strlog({ allScanResults })
 
-    const getMovers = results => results
-        .sort((a, b) => b.computed.tso - a.computed.tso)
-        .slice(0, 5);
-
-    const getUnusualVolume = results => results
-        .sort((a, b) => b.computed.projectedVolumeTo2WeekAvg - a.computed.projectedVolumeTo2WeekAvg)
-        .slice(0, 5);
-
-    const getMoverVolume = results => getUnusualVolume(
-        results
-            .sort((a, b) => b.computed.tsc - a.computed.tsc)
-            .slice(0, results.length / 2)
-    );
-
-    const getNowhereVolume = results => getUnusualVolume(
-        results
-            .filter(t => t.computed.tso > -1 && t.computed.tso < 3 && t.computed.tsc > -1 && t.computed.tsc < 3)
-    );
-
     const rsiPerms = {
         realChill: 40,
         chill: 70,
         unfiltered: Number.POSITIVE_INFINITY
     };
 
+    const getUnusualVolume = results => results
+        .sort((a, b) => b.computed.projectedVolumeTo2WeekAvg - a.computed.projectedVolumeTo2WeekAvg)
+        .slice(0, COUNT);
+
     const outputVariations = {
-        NowhereVolume: getNowhereVolume,
-        MoverVolume: getMoverVolume,
-        Movers: getMovers
+        NowhereVolume: results => getUnusualVolume(
+            results
+                .filter(t => t.computed.tso > -1 && t.computed.tso < 3 && t.computed.tsc > -1 && t.computed.tsc < 3)
+        ),
+        MoverVolume: results => getUnusualVolume(
+            results
+                .sort((a, b) => b.computed.tsc - a.computed.tsc)
+                .slice(0, results.length / 2)
+        ),
+        SlightlyUpVolume: results => getUnusualVolume(
+            results
+                .filter(t => t.computed.dailyRSI < 50)
+                .filter(t => t.computed.tso > 1 && t.computed.tsc > 1 && t.computed.tsc < 3)
+        ),
+        SlightDownVolume: results => getUnusualVolume(
+            results
+                .filter(t => t.computed.dailyRSI < 50)
+                .filter(t => t.computed.tsc < 1 && t.computed.tsc > -3)
+        ),
+        Movers: results => results
+            .sort((a, b) => b.computed.tso - a.computed.tso)
+            .slice(0, COUNT),
     };
 
     const permute = rsiPermName =>
@@ -53,26 +57,11 @@ const deriveCollections = collections => {
             }
         }), {});
 
-    const derivedCollections = Object.keys(rsiPerms).reduce((acc, rsiPermName) => {
-        return {
+    const derivedCollections = Object.keys(rsiPerms)
+        .reduce((acc, rsiPermName) => ({
             ...acc,
             ...permute(rsiPermName)
-        }
-    }, {
-
-        slightUpVolume: results => getUnusualVolume(
-            results
-                .filter(t => t.computed.dailyRSI < 50)
-                .filter(t => t.computed.tso > 1 && t.computed.tsc > 1 && t.computed.tsc < 3)
-        ),
-
-        slightDownVolume: results => getUnusualVolume(
-            results
-                .filter(t => t.computed.dailyRSI < 50)
-                .filter(t => t.computed.tsc < 1 && t.computed.tsc > -3)
-        ),
-
-    });
+        }), {});
 
     let unusedResults = [
         ...allScanResults.filter(t => t.computed.projectedVolume > 70000)
