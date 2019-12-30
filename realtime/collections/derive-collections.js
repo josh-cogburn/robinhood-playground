@@ -1,5 +1,5 @@
 const { uniq, mapObject } = require('underscore');
-const COUNT = 3; // per derivation
+const COUNT = 4; // per derivation
 
 const deriveCollections = collections => {
 
