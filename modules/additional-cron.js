@@ -41,7 +41,7 @@ const additionalCron = [
         fn: () => saveByDateAnalysis()
     },
     {
-        name: 'alpacaSellAllStocks',
+        name: 'alpacaActOnPositions',
         run: [-25, -15, -5, 0.5, 14, 58, 100, 150, 200, 300, 360, 400, 440],
         fn: () => alpacaActOnPositions()
     },

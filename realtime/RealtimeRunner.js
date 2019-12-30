@@ -844,6 +844,15 @@ module.exports = new (class RealtimeRunner {
       })
     }), {
 
+      ...singles.reduce((acc, collectionName) => ({
+        ...acc,
+        [collectionName]: [collectionName]
+      }), {}),
+
+
+
+      // OVERNIGHT DROPS
+
       ...Combinatorics.cartesianProduct(
         [
           '!watchout',
@@ -912,11 +921,7 @@ module.exports = new (class RealtimeRunner {
       }, {}),
 
 
-
-      ...singles.reduce((acc, collectionName) => ({
-        ...acc,
-        [collectionName]: [collectionName]
-      }), {}),
+      // PENNY SCANS!
 
       // ...[1, 2, 3, 4].reduce((acc, streak) => ({
       //   ...acc,
@@ -971,7 +976,10 @@ module.exports = new (class RealtimeRunner {
       // }), {}),
 
       // nowheresTopSSPREMARKET: ['nowheres', 'topSS', 'premarket'],
-      
+
+
+
+      // AVG DOWNER
       ...Combinatorics.cartesianProduct(
         [
           ...[1, 5, 10, 30, 60, 120].map(n => `under${n}min`),
@@ -1004,11 +1012,53 @@ module.exports = new (class RealtimeRunner {
             }, {})
         }
 
-      }, {})
+      }, {}),
+
+
+      // DERIVED!
+      ...Combinatorics.cartesianProduct(
+        ["realChillNowhereVolume", "realChillMoverVolume", "realChillSlightlyUpVolume", "realChillSlightDownVolume", "realChillMovers", "chillNowhereVolume", "chillMoverVolume", "chillSlightlyUpVolume", "chillSlightDownVolume", "chillMovers", "unfilteredNowhereVolume", "unfilteredMoverVolume", "unfilteredSlightlyUpVolume", "unfilteredSlightDownVolume", "unfilteredMovers"],
+        [
+          ...Array(5).fill(1).map((v, i) => ++i).map(n => `index${n}`)
+        ],
+        [
+          ...[1, 2, 3, 5, 6, 9, 15, 21, 27, 33, 39, 40].map(n => `tenMinCount${n}`)
+        ],
+        ['notWatchout', 'watchout']
+      ).toArray().reduce((acc, arr) => {
+
+        return {
+          ...acc,
+          ...Combinatorics.power(arr)
+            .toArray()
+            .filter(s => s && s.length)
+            .reduce((inner, combo) => {
+
+              combo = [
+                'derived ',
+                ...combo
+              ];
+              return {
+                ...inner,
+                [combo.join('-')]: combo
+              };
+              
+            }, {})
+        }
+
+      }, {}),
+
+
+
+      // done
 
       
 
     });
+
+
+
+    
 
     // strlog({ mustIncludeAll });
 
