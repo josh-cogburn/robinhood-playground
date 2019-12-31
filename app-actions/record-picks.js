@@ -62,7 +62,7 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
             stocksToBuy
         );
         
-        multiplier = Math.round(
+        multiplier = stratMin.includes('derived') ? 1 : Math.round(
             forPurchaseMultiplier + pmAnalysisMultiplier + subsetOffsetMultiplier
         );
         
