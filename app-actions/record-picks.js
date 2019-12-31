@@ -53,20 +53,22 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
         const forPurchaseMultiplier = forPurchasePms.length;
         forPurchasePms = forPurchasePms.uniq();
 
-        multiplier = stratMin.includes('derived') ? 1 : await (async () => {
-            const {
-                pmAnalysisMultiplier,
-                subsetOffsetMultiplier,
-                interestingWords
-            } = await getAdditionalMultipliers(
-                forPurchasePms, 
-                strategy, 
-                stocksToBuy
-            );
-            return Math.round(
-                forPurchaseMultiplier + pmAnalysisMultiplier + subsetOffsetMultiplier
-            );
-        })();
+        const {
+            pmAnalysisMultiplier,
+            subsetOffsetMultiplier,
+            interestingWords
+        } = await getAdditionalMultipliers(
+            forPurchasePms, 
+            strategy, 
+            stocksToBuy
+        );
+        multiplier = Math.round(
+            forPurchaseMultiplier + pmAnalysisMultiplier + subsetOffsetMultiplier
+        );
+
+        if (stratMin.includes('derived')) {
+            multiplier = 1;
+        }
         
         if (multiplier <= multiplierThreshold) {
             isRecommended = false;
