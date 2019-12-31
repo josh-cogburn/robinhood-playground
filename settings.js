@@ -48,6 +48,7 @@ module.exports = {
 
 
         derived-chillMoverVolume-watchout
+        derived-chillMoverVolume-index0
         derived-chillMoverVolume-tenMinCount5
         derived-chillMoverVolume-tenMinCount6
         derived-chillMoverVolume-tenMinCount1
@@ -58,6 +59,18 @@ module.exports = {
         derived-unfilteredMovers-tenMinCount27
         derived-tenMinCount27-watchout
         derived-unfilteredMoverVolume-tenMinCount1
+
+
+        derived-unfilteredMovers-index0-tenMinCount9
+        derived-unfilteredMovers-index0-tenMinCount15	
+        derived-unfilteredMovers-index0-tenMinCount27
+        derived-unfilteredMovers-index0-tenMinCount40
+        derived-index0-tenMinCount27-watchout
+        derived-index0-tenMinCount6-watchout
+        derived-index2-tenMinCount9-watchout
+        derived-index0-tenMinCount33-watchout
+        derived-chillMoverVolume-index0-tenMinCount21
+        derived-unfilteredMovers-index1-tenMinCount5
 
 
 
