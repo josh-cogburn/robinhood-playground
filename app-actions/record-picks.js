@@ -77,16 +77,16 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
         
         console.log(forPurchaseData);
 
+        forPurchaseData = {
+            forPurchasePms, 
+            multiplier, 
+            forPurchaseMultiplier, 
+            pmAnalysisMultiplier, 
+            subsetOffsetMultiplier,
+            interestingWords
+        };
+        
     }
-
-    forPurchaseData = {
-        forPurchasePms, 
-        multiplier, 
-        forPurchaseMultiplier, 
-        pmAnalysisMultiplier, 
-        subsetOffsetMultiplier,
-        interestingWords
-    };
 
     // console.log('recording', stratMin, 'strategy');
     const dateStr = stratManager.curDate;
