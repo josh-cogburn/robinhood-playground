@@ -57,7 +57,7 @@ module.exports = {
         derived-unfilteredMovers-tenMinCount5
         derived-unfilteredMovers-tenMinCount27
         derived-tenMinCount27-watchout
-
+        derived-unfilteredMoverVolume-tenMinCount1
 
 
 
