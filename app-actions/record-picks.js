@@ -171,7 +171,7 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
                 const body = [
                     isRecommended ? multiplier : 'notrec',
                     (withPrices[0] || {}).price,
-                    ...forPurchaseData.interestingWords
+                    ...forPurchaseData.interestingWords || []
                 ].join(' ');
                 await sendEmail(
                     subject,
