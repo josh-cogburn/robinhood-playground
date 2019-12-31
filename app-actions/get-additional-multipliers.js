@@ -38,7 +38,9 @@ module.exports = async (pms, strategy, stocksToBuy) => {
   console.log('get additional multipliers')
   const stratManager = require('../socket-server/strat-manager');
   await stratManager.init({ lowKey: true });
-  const { pmsAnalyzed, positions: { alpaca } } = stratManager;
+  const { pmsAnalyzed, positions: { alpaca } = {} } = stratManager;
+  
+  if (alpaca === undefined) return {};
   
   const pmAnalysisMultiplier = calcPmAnalysisMultiplier(pms, pmsAnalyzed);
 
