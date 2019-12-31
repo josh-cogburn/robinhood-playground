@@ -95,6 +95,6 @@ module.exports = async position => {
   strlog(data)
 
   const totals = Object.values(withOffsets);
-  await sendEmail(`subset offset report for ${ticker}`, JSON.stringify({ data }, null, 2));
+  // await sendEmail(`subset offset report for ${ticker}`, JSON.stringify({ data }, null, 2));
   return sumArray(totals.filter(Boolean));
 };
