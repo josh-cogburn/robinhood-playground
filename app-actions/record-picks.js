@@ -52,19 +52,21 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
             .filter(pm => hits.includes(pm));
         const forPurchaseMultiplier = forPurchasePms.length;
         forPurchasePms = forPurchasePms.uniq();
-        const {
-            pmAnalysisMultiplier,
-            subsetOffsetMultiplier,
-            interestingWords
-        } = await getAdditionalMultipliers(
-            forPurchasePms, 
-            strategy, 
-            stocksToBuy
-        );
-        
-        multiplier = stratMin.includes('derived') ? 1 : Math.round(
-            forPurchaseMultiplier + pmAnalysisMultiplier + subsetOffsetMultiplier
-        );
+
+        multiplier = stratMin.includes('derived') ? 1 : await (async () => {
+            const {
+                pmAnalysisMultiplier,
+                subsetOffsetMultiplier,
+                interestingWords
+            } = await getAdditionalMultipliers(
+                forPurchasePms, 
+                strategy, 
+                stocksToBuy
+            );
+            return Math.round(
+                forPurchaseMultiplier + pmAnalysisMultiplier + subsetOffsetMultiplier
+            );
+        })();
         
         if (multiplier <= multiplierThreshold) {
             isRecommended = false;
