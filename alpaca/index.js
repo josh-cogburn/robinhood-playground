@@ -46,16 +46,10 @@ client.onOrderUpdate(async data => {
       alpacaOrder: data.order,
     });
 
-    strlog({
-      holdInAlpaca: hold
+    newAvgDowner({
+      ticker, 
+      buyPrice: filled_avg_price,
     });
-    if (hold.numMultipliers > 0) {
-      console.log('step 1 - the hold has positive multipliers');
-      newAvgDowner({
-        ticker, 
-        buyPrice: filled_avg_price,
-      });
-    }
     
   } else if (side === 'sell') {
     const position = stratManager.positions.alpaca.find(pos => pos.ticker === ticker) || {};

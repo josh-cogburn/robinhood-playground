@@ -38,9 +38,9 @@ const purchaseStocks = async ({ strategy, multiplier = 1, min, withPrices } = {}
     
     // console.log('multiplier', multiplier, 'amountPerBuy', amountPerBuy, 'totalAmtToSpend', totalAmtToSpend);
 
-    if (totalAmtToSpend < 10) {
-        return console.log('not purchasing less than $10 to spend', strategy);
-    }
+    // if (totalAmtToSpend < 10) {
+    //     return console.log('not purchasing less than $10 to spend', strategy);
+    // }
 
 
     // console.log('actually purchasing', strategy, 'count', stocksToBuy.length);

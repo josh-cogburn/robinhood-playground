@@ -172,7 +172,7 @@ module.exports = async (
       return 100;
     }
 
-    if (min > 0 && Number(unrealized_intraday_plpc) * 100 < -8) {
+    if (min > 250 && Number(unrealized_intraday_plpc) * 100 < -12) {
       return 80;
     }
 
