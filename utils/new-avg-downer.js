@@ -9,7 +9,8 @@ module.exports = data => {
     // initialTimeout = INITIAL_TIMEOUT, 
     // strategy,
   } = data;
-
+  
+  console.log('step 2 - new avg downer fo sho!')
   if (allAvgDowners[ticker]) {
     allAvgDowners[ticker].newBuy(buyPrice);
   } else {

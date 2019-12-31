@@ -787,7 +787,7 @@ module.exports = new (class RealtimeRunner {
         watchoutKey,
         minKey,
         volumeKey
-    ].filter(Boolean).join('-');
+    ].filter(Boolean).uniq().join('-');
     console.log({pickName});
 
     
@@ -1019,7 +1019,7 @@ module.exports = new (class RealtimeRunner {
       ...Combinatorics.cartesianProduct(
         ["realChillNowhereVolume", "realChillMoverVolume", "realChillSlightlyUpVolume", "realChillSlightDownVolume", "realChillMovers", "chillNowhereVolume", "chillMoverVolume", "chillSlightlyUpVolume", "chillSlightDownVolume", "chillMovers", "unfilteredNowhereVolume", "unfilteredMoverVolume", "unfilteredSlightlyUpVolume", "unfilteredSlightDownVolume", "unfilteredMovers"],
         [
-          ...Array(5).fill(1).map((v, i) => ++i).map(n => `index${n}`)
+          ...Array(5).fill(1).map((v, i) => i).map(n => `index${n}`)
         ],
         [
           ...[1, 2, 3, 5, 6, 9, 15, 21, 27, 33, 39, 40].map(n => `tenMinCount${n}`)

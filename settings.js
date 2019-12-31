@@ -22,7 +22,7 @@ let expectedPickCount = 0;
 
 
 module.exports = {
-    stWordFlags: ['split', 'reverse split', 'halt', 'rocket', 'offering'],
+    wordFlags: ['split', 'reverse split', 'halt', 'rocket', 'offering', 'delist'],
     sellBelow: {
         ADMS: 3.65
     },
@@ -30,14 +30,36 @@ module.exports = {
     // sellAllStocksOnNthDay: 8,
     // purchaseAmt: 6,
     makeKeeperFundsAvailable: true,
-    expectedPickCount: 60,
+    expectedPickCount: 340,
     multiplierThreshold: -3, // wont recommend picks below this multiplier count even if they are a forPurchase pick
     disableCashCheck: true,
     disableMultipliers: false,
 
     forPurchase: [
 
+
+        
+
         ...`
+
+
+
+        // LETS GET SEAN SPICEY
+
+
+        derived-chillMoverVolume-watchout
+        derived-chillMoverVolume-tenMinCount5
+        derived-chillMoverVolume-tenMinCount6
+        derived-chillMoverVolume-tenMinCount1
+        derived-chillMoverVolume-tenMinCount9
+        derived-realChillMovers-tenMinCount9
+        derived-unfilteredMovers-tenMinCount3
+        derived-unfilteredMovers-tenMinCount5
+        derived-unfilteredMovers-tenMinCount27
+        derived-tenMinCount27-watchout
+
+
+
 
         // avg downers
         avg-downer

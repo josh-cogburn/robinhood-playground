@@ -10,9 +10,9 @@ const subsetOffsets = {
   // lastFive: ({ date }) => lastFive.includes(date),
   // yesterday: ({ date }) => allDates[1] === date,
   // today: ({ date }) => allDates[0] === date,
-  watchout: -6,
-  notWatchout: 3,
-  watchoutMajorJump: 6,
+  watchout: -3,
+  notWatchout: 2,
+  watchoutMajorJump: 1,
 
   bullish: -1,
   neutral: 0,
@@ -23,7 +23,7 @@ const subsetOffsets = {
   majorJump: 7,
   mediumJump: 2,
   minorJump: -4,
-  onlyMinorJump: -9,
+  onlyMinorJump: -5,
 
   singleMultiplier: -0.5,
   // multipleMultipliers: ({ numMultipliers }) => numMultipliers > 1,
@@ -50,8 +50,8 @@ const subsetOffsets = {
   // fiveToTen: ({ interestingWords }) => interestingWords.includes('fiveToTen'),
 
   // minKey
-  initial: -3,
-  brunch: -3,
+  initial: -1,
+  brunch: 1,
   lunch: 4,
   dinner: 3,
   afterhours: Number.NEGATIVE_INFINITY,
@@ -61,8 +61,8 @@ const subsetOffsets = {
   overnightDrops: -1,
 
   spread1: 3,
-  spread2: -3,
-  spread3: -2,
+  spread2: -2,
+  spread3: -1,
   spread4: 2,
   spread5: 0,
   spread6: 3,

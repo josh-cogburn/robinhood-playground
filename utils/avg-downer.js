@@ -21,6 +21,7 @@ module.exports = class AvgDowner {
       timeout: initialTimeout,
       strategy
     });
+    console.log('hey whats up from here')
     this.start();
   }
   start() {

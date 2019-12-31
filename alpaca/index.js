@@ -46,7 +46,11 @@ client.onOrderUpdate(async data => {
       alpacaOrder: data.order,
     });
 
+    strlog({
+      holdInAlpaca: hold
+    });
     if (hold.numMultipliers > 0) {
+      console.log('step 1 - the hold has positive multipliers');
       newAvgDowner({
         ticker, 
         buyPrice: filled_avg_price,

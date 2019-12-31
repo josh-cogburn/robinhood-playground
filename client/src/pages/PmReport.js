@@ -266,8 +266,22 @@ const processData = (props, state) => {
         lebowskiPercUp, 
         jsonPercUp, 
         jsonDaysCount,
-        min
+        min,
+        pmName
     }) => {
+
+        if (pmName.includes('derived')) {
+            console.log({
+                lebowskiAvg, 
+                jsonAvg, 
+                lebowskiPercUp, 
+                jsonPercUp, 
+                jsonDaysCount,
+                min,
+                pmName
+            });
+            return true;
+        }
         const avgTrend = avgArray([lebowskiAvg, jsonAvg].filter(Boolean));
         const avgPercUp = avgArray([lebowskiPercUp, jsonPercUp].filter(Boolean));
         return [
@@ -281,7 +295,8 @@ const processData = (props, state) => {
     pmPerfs = pmPerfs
         .filter(({ pmName }) => pmName.split('-').length <= maxDash + 1)
         .filter(({ pmName }) => pmMatchesFilter(pmName))
-        .map(({ avgTrend, percUp, pmName, count }) => {
+        .map(obj => {
+            const { avgTrend, percUp, pmName, count } = obj;
             const foundLebowski = pmsAnalyzed.find(pm => pm.pm === pmName) || {};
             return {
                 ...flattenLebowski(foundLebowski),

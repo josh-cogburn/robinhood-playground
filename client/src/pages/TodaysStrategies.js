@@ -154,6 +154,7 @@ class TodaysStrategies extends Component {
                     showingPicks
                         .filter(pick => pick.picks.some(p => p.ticker === ticker))
                         .map(pick => pick.multiplier)
+                        .filter(Boolean)
                 ),
                 avgTrend: avgArray(trends),
             })
@@ -232,7 +233,7 @@ class TodaysStrategies extends Component {
                         <tr>
                             <td><a onClick={() => this.addToFilter(ticker)}>{ticker}</a></td>
                             <td>{byTicker[ticker].pickCount}</td>
-                            <td>{byTicker[ticker].multiplierCount}</td>
+                            <td>{byTicker[ticker].multiplierCount || ''}</td>
                             <td><TrendPerc value={byTicker[ticker].avgTrend}/></td>
                         </tr>
                     ))}

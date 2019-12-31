@@ -3,7 +3,7 @@ const { getProxy } = require('./stocktwits');
 const { avgArray } = require('./array-math');
 const cacheThis = require('./cache-this');
 const Pick = require('../models/Pick');
-const { stWordFlags } = require('../settings');
+const { wordFlags } = require('../settings');
 
 let fetchCount = 0;
 
@@ -105,7 +105,7 @@ module.exports = async (ticker, detailed, maxId) => {
             bullishCount: getSentiment('Bullish'),
             ...getStBracket(bullBearScore),
 
-            wordFlags: stWordFlags.filter(includesPhrase),
+            wordFlags: wordFlags.filter(includesPhrase),
             ...detailed && {
                 messages
             }
