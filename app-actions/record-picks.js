@@ -68,8 +68,10 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
         
         if (multiplier <= multiplierThreshold) {
             isRecommended = false;
+        } else {
+            const minimumMult = stratMin.includes('sudden') ? 4 : 1;
+            multiplier = Math.max(minimumMult, multiplier);
         }
-        multiplier = Math.max(1, multiplier);
         
         console.log(forPurchaseData);
 
