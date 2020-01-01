@@ -31,8 +31,12 @@ module.exports = positions => {
   const allDates = positions.map(pos => pos.date).uniq().filter(Boolean);
   const lastFive = allDates.slice(0, 5);
   return {
+    only2020: p => (new Date(p.date)).getTime() >= (new Date('12-30-2019')).getTime(),
     allPositions: () => true,
     notAfterhours: p => !afterhours(p),
+
+    suddenDrops: ({ interestingWords }) => interestingWords.includes('sudden'),
+    derived: ({ interestingWords }) => interestingWords.includes('derived'),
 
     notManual: ({ interestingWords }) => !interestingWords.includes('manual'),
     onlyManual: ({ interestingWords }) => interestingWords.includes('manual'),

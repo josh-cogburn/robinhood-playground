@@ -177,7 +177,7 @@ class App extends Component {
     state = {
         value: 0,
         socket: null,
-        tags: [],//['notAfterhours', 'withoutASLN'].map(createTag),
+        tags: ['notManual'].map(createTag),
     };
 
     handleDelete = i => {
