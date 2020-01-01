@@ -61,6 +61,9 @@ const init = async (onReportFn) => {
 };
 
 const start = async () => {
+    if (!dayInProgress(START_MIN - 1, STOP_MIN)) {
+        return console.log('not starting because day is not in progress.  market closed today?');
+    }
     if (isRunning) {
         return console.log('balance report manager already running');
     }
