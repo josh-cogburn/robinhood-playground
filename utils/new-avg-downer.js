@@ -1,22 +1,19 @@
-const allAvgDowners = {};
-const AvgDowner = require('./avg-downer');
+const allPositionWatchers = {};
+const PositionWatcher = require('./PositionWatcher');
 
 module.exports = data => {
 
   const { 
     ticker, 
-    buyPrice, 
-    // initialTimeout = INITIAL_TIMEOUT, 
-    // strategy,
+    buyPrice,
   } = data;
   
-  console.log('step 2 - new avg downer fo sho!')
-  if (allAvgDowners[ticker]) {
-    allAvgDowners[ticker].newBuy(buyPrice);
+  console.log('step 2 - new position watcher fo sho!')
+  if (allPositionWatchers[ticker]) {
+    allPositionWatchers[ticker].newBuy(buyPrice);
   } else {
-    allAvgDowners[ticker] = new AvgDowner(data);
+    allPositionWatchers[ticker] = new PositionWatcher(data);
   }
-
 
 };
 
@@ -24,11 +21,11 @@ module.exports = data => {
 // observe all right before close
 const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
 regCronIncAfterSixThirty({
-  name: `final before close observe all avg downers`,
+  name: `final before close observe all position watchers`,
   run: [387],
   fn: async (min) => {
-    for (let avgDowner of Object.values(allAvgDowners)) {
-      await avgDowner.observe(true);
+    for (let positionWatcher of Object.values(allPositionWatchers)) {
+      await positionWatcher.observe(true);
     }
   }
 });

@@ -5,21 +5,21 @@ const getMinutesFromOpen = require('./get-minutes-from-open');
 const lookup = require('./lookup');
 const getTrend = require('./get-trend');
 const { avgArray } = require('./array-math');
+const alpacaLimitSell = require('../alpaca/limit-sell');
+const { alpaca } = require('../alpaca');
+const sendEmail = require('./send-email');
 
-module.exports = class AvgDowner {
+module.exports = class PositionWatcher {
   constructor({ 
-    ticker, 
-    buyPrice, 
-    initialTimeout = INITIAL_TIMEOUT, 
-    strategy,
-    avgDownCount = 0
+    ticker,
+    initialTimeout = INITIAL_TIMEOUT,
+    avgDownCount = 0,
   }) {
     Object.assign(this, {
       ticker,
-      buyPrices: [buyPrice],
       avgDownCount,
       timeout: initialTimeout,
-      strategy
+      pendingSale: false
     });
     console.log('hey whats up from here')
     this.start();
@@ -28,6 +28,11 @@ module.exports = class AvgDowner {
     this.running = true;
     this.startTime = Date.now();
     this.observe();
+  }
+  getRelatedPosition() {
+    const { ticker } = this;
+    const stratManager = require('../socket-server/strat-manager');
+    return stratManager.positions.alpaca.find(pos => pos.ticker === ticker) || {};
   }
   async observe(isBeforeClose) {
 
@@ -40,26 +45,30 @@ module.exports = class AvgDowner {
 
     const {
       ticker,
-      buyPrices,
-      strategy,
-      avgDownCount
+      avgDownCount,
+      pendingSale
     } = this;
 
+    const {
+      avgEntry,
+      market_value,
+      quantity
+    } = this.getRelatedPosition();
+
     const l = await lookup(ticker);
-    strlog({ l })
+    strlog({ ticker, l })
     const { currentPrice, askPrice } = l;
     const observePrice =  Math.max(currentPrice, askPrice);
-    const avgBuy = avgArray(buyPrices.map(Number));
-    const trendDown = getTrend(observePrice, avgBuy);
+    const trendPerc = getTrend(observePrice, avgEntry);
+
     strlog({
-      buyPrices,
       avgBuy,
       currentPrice,
       askPrice,
       observePrice
     });
-    console.log(`AVG-DOWNER: ${ticker} observed at ${observePrice} ... avg buy at ${avgBuy}, buy count ${buyPrices.length} and avg down count ${avgDownCount}... trended ${trendDown}`);
-    if (trendDown < -4) {
+    console.log(`AVG-DOWNER: ${ticker} observed at ${observePrice} ... avg buy at ${avgEntry}, and avg down count ${avgDownCount}... trended ${trendPerc}`);
+    if (trendPerc < -4) {
       this.avgDownCount++;
       const realtimeRunner = require('../realtime/RealtimeRunner');
       await realtimeRunner.handlePick({
@@ -70,11 +79,30 @@ module.exports = class AvgDowner {
           [this.getMinKey()]: true,
           isBeforeClose
         },
-        data: { 
-          trendDown,
-          strategy
+        data: {
+          trendPerc,
         }
       }, true);
+    } else if (!pendingSale && trendPerc > 15) {
+      const account = await alpaca.getAccount();
+      const { portfolio_value, daytrade_count } = account;
+      if (Number(market_value) > Number(portfolio_value) * 0.5) {
+        if (daytrade_count <= 2) {
+          await sendEmail(`Selling ${ticker} using a daytrade can we get 20% up?`);
+          alpacaLimitSell({
+            ticker,
+            quantity: Number(quantity),
+            limitPrice: avgEntry * 1.2,
+            timeoutSeconds: 60 * 20,
+            fallbackToMarket: false
+          });
+          this.pendingSale = true;
+        } else {
+          await sendEmail(`You are at three daytrades but you might want to check out ${ticker}`);
+        }
+      }
+      
+
     }
 
     this.scheduleTimeout();
@@ -94,8 +122,7 @@ module.exports = class AvgDowner {
     this.TO = setTimeout(() => this.running && this.observe(), this.timeout);
     this.timeout = Math.min(this.timeout * 2, 1000 * 60 * 6);
   }
-  newBuy(buyPrice) {
-    this.buyPrices.push(buyPrice);
+  newBuy() {
     this.timeout = INITIAL_TIMEOUT;
     clearTimeout(this.TO);
     this.TO = null;
