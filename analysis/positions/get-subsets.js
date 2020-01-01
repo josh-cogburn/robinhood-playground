@@ -17,6 +17,7 @@ const straightDown120 = ({ interestingWords }) => interestingWords.some(val => v
 const bigDowner = p => straightDown60(p) || straightDown120(p);
 
 const spread1 = ({ interestingWords }) => interestingWords.includes('spread1');
+const { wordFlags } = require('../../settings');
 
 module.exports = positions => {
 
@@ -104,6 +105,13 @@ module.exports = positions => {
       ['10min', 'minorJump'].every(word => interestingWords.includes(word)) &&
       ['mediumJump', 'majorJump'].every(word => !interestingWords.includes(word))
     ),  
+
+    // words
+
+    ...wordFlags.reduce((acc, word) => ({
+      ...acc,
+      [word]: ({ interestingWords }) => interestingWords.includes(word)
+    }), {})
     
   };
 };

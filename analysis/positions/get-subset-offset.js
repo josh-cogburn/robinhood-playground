@@ -71,10 +71,12 @@ const subsetOffsets = {
   down20: 2,
   down40: 2,
 
-  tenMinMinors: -10
+  tenMinMinors: -10,
 
-
-
+  halt: -5,
+  rocket: 2,
+  delist: -3,
+  
 };
 
 
