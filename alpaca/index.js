@@ -1,10 +1,11 @@
 const { alpaca: alpacaConfig } = require('../config');
 const Alpaca = require('@alpacahq/alpaca-trade-api');
 const alpaca = new Alpaca(alpacaConfig);
-const newAvgDowner = require('../utils/new-avg-downer');
+const positionManager = require('../utils/position-manager');
 const Holds = require('../models/Holds');
 const getTrend = require('../utils/get-trend');
 const sendEmail = require('../utils/send-email');
+const cancelAllOrders = require('./cancel-all-orders');
 
 strlog({alpaca})
 
@@ -46,7 +47,7 @@ client.onOrderUpdate(async data => {
       alpacaOrder: data.order,
     });
 
-    newAvgDowner({
+    positionManager.create({
       ticker, 
       buyPrice: filled_avg_price,
     });
@@ -71,6 +72,10 @@ client.onOrderUpdate(async data => {
     const returnDollars = (sellPrice - buyPrice) * qty;
     const returnPerc = getTrend(sellPrice, buyPrice);
 
+    if (closedPosition) {
+      positionManager.delete(ticker);  // stop watching
+      await cancelAllOrders(ticker);
+    }
 
     const action = (closedPosition || Math.abs(returnDollars) > 1) ? sendEmail : console.log;
     await action(

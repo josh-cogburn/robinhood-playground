@@ -19,7 +19,7 @@ const sendEmail = require('../utils/send-email');
 const getSettingsString = require('../utils/get-settings-string');
 const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
 
-const newAvgDowner = require('../utils/new-avg-downer');
+const positionManager = require('../utils/position-manager');
 const cachedPositions = require('../utils/cached-positions');
 const getAlpacaPositions = require('../alpaca/get-positions');
 
@@ -98,16 +98,14 @@ const stratManager = {
         setInterval(() => this.refreshPositions(), 1000 * 60 * 15);
         await this.refreshPositions(true);
 
-        // for (let pos of this.positions.alpaca) {
-        //     if (pos.wouldBeDayTrade && pos.numMultipliers > 0) {
-        //         console.log(`starting avg downer ${pos.ticker} bc bought today and positive multipliers`)
-        //         newAvgDowner({
-        //             ticker: pos.ticker,
-        //             buyPrice: pos.avgEntry,
-        //             strategyName: Object.keys(pos.buyStrategies)[0]
-        //         })
-        //     }
-        // }
+        for (let pos of this.positions.alpaca) {
+            if (pos.wouldBeDayTrade && pos.numMultipliers > 0) {
+                console.log(`starting avg downer ${pos.ticker} bc bought today and positive multipliers`)
+                positionManager.create({
+                    ticker: pos.ticker,
+                });
+            }
+        }
 
         console.log('initd strat manager');
     },
