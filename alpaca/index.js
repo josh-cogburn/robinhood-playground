@@ -1,13 +1,11 @@
 const { alpaca: alpacaConfig } = require('../config');
 const Alpaca = require('@alpacahq/alpaca-trade-api');
 const alpaca = new Alpaca(alpacaConfig);
-const { watchThis, stopWatching } = require('../utils/position-manager');
 const Holds = require('../models/Holds');
 const getTrend = require('../utils/get-trend');
 const sendEmail = require('../utils/send-email');
 const cancelAllOrders = require('./cancel-all-orders');
 
-strlog({alpaca})
 
 const client = alpaca.websocket
 client.onConnect(function() {
@@ -21,7 +19,10 @@ client.onStateChange(newState => {
   console.log(`State changed to ${newState}`)
 })
 client.onOrderUpdate(async data => {
+  // ugh annoying
   const stratManager = require('../socket-server/strat-manager');
+  const { watchThis, stopWatching } = require('../utils/position-manager');
+
   let closedPosition = false;
   console.log(`Order updates: ${JSON.stringify(data)}`);
   const {
