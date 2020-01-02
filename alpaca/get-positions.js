@@ -9,13 +9,19 @@ const analyzePosition = require('../analysis/positions/analyze-position');
 const { sellBelow = {}, force: { keep }} = require('../settings');
 
 const checkForHugeDrop = position => {
-  let { currentPrice, returnPerc: actualReturnPerc, avgEntry: actualEntry, buys = [] } = position;
+  let { currentPrice, returnPerc: actualReturnPerc, avgEntry: actualEntry, buys = [], ticker } = position;
   const dropIndex = buys.slice().reverse().findIndex((buy, index, arr) => {
     const isBigDrop = arr[index + 1] && buy.fillPrice < arr[index + 1].fillPrice * .7;
     const isNotToday = buy.date !== (new Date()).toLocaleDateString().split('/').join('-');
 		return isBigDrop && isNotToday;
   });
   if (dropIndex !== -1) {
+    if (ticker === 'FCEL') {
+      strlog({
+        ticker,
+        dropIndex,
+      })
+    }
     const avgEntry = avgArray(
       buys.slice(dropIndex).map(buy => buy.fillPrice)
     );
