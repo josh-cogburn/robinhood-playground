@@ -109,6 +109,8 @@ module.exports = class PositionWatcher {
         } else {
           await sendEmail(`You are at three daytrades but you might want to take a look at ${ticker}`);
         }
+      } else {
+        await sendEmail(`It's not a big deal (small amt) but you might want to check out ${ticker}`);
       }
       
 
