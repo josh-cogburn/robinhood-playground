@@ -6,7 +6,7 @@ const Holds = require('../models/Holds');
 const Pick = require('../models/Pick');
 const getMinutesFromOpen = require('../utils/get-minutes-from-open');
 const analyzePosition = require('../analysis/positions/analyze-position');
-const { sellBelow, force: { keep }} = require('../settings');
+const { sellBelow = {}, force: { keep }} = require('../settings');
 
 const checkForHugeDrop = position => {
   let { currentPrice, returnPerc: actualReturnPerc, avgEntry: actualEntry, buys = [] } = position;
