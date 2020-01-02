@@ -367,7 +367,12 @@ class App extends Component {
         const { component: PageComponent } = thing;
         return (
             <div className="App">
-                <AppBar position="static">
+                <AppBar 
+                    position="static"
+                    style={{
+                        minWidth: '1000px'
+                    }}
+                >
                     <Toolbar>
                         <Typography variant="title" color="inherit">
                             chiefsmurph's stock <a href="#" onClick={this.auth} style={{ color: 'orange' }}>picks</a><br/>

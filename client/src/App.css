@@ -1,8 +1,12 @@
 .App {
   text-align: left;
   height: 100vh;
+  overflow: scroll;
 }
-
+/* 
+.MuiAppBar-root-1 {
+  min-width: 1000px;
+} */
 
 @media only screen and (max-width: 600px) {
   canvas {
