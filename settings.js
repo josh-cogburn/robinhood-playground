@@ -31,7 +31,7 @@ module.exports = {
     // sellAllStocksOnNthDay: 8,
     // purchaseAmt: 6,
     makeKeeperFundsAvailable: true,
-    expectedPickCount: 160,
+    expectedPickCount: 200,
     multiplierThreshold: -3, // wont recommend picks below this multiplier count even if they are a forPurchase pick
     disableCashCheck: true,
     disableMultipliers: false,
@@ -61,6 +61,12 @@ module.exports = {
         derived-unfilteredMovers-index0-tenMinCount15
         derived-unfilteredMovers-index0-tenMinCount3
         derived-unfilteredMovers-index0
+        derived-realChillMovers-index0-tenMinCount5
+        derived-realChillMovers-index0-tenMinCount2
+        derived-realChillMovers-index0-tenMinCount2
+        derived-chillSlightDownVolume-index0-tenMinCount6
+        derived-unfilteredSlightlyUpVolume-tenMinCount1-watchout
+        derived-chillMoverVolume-index0-watchout,
 
 
 
