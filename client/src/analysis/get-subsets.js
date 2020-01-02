@@ -31,7 +31,7 @@ module.exports = positions => {
   const allDates = positions.map(pos => pos.date).uniq().filter(Boolean);
   const lastFive = allDates.slice(0, 5);
   return {
-    only2020: p => (new Date(p.date)).getTime() >= (new Date('12-30-2019')).getTime(),
+    only2020: p => (new Date(p.date)).getTime() >= (new Date('1-1-2020')).getTime(),
     allPositions: () => true,
     notAfterhours: p => !afterhours(p),
 
