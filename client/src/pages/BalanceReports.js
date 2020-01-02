@@ -359,7 +359,7 @@ class DayReports extends Component {
         // console.log(getNewDayLines(balanceReports))
         return (
             <div style={{ height: '100%', padding: '1em' }}>
-                <Ticker speed={7}>
+                {/* <Ticker speed={7}>
                     {
                         () => (
                             <div>
@@ -372,7 +372,7 @@ class DayReports extends Component {
                             </div>
                         )
                     }
-                </Ticker>
+                </Ticker> */}
                 <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between'}}>
                     <div style={{ paddingLeft: '5em' }}>
                         number of days to show... <a href="#" onClick={() => this.setState({ numDaysToShow: 1 })}>[reset]</a>

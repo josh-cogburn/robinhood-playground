@@ -22,15 +22,16 @@ let expectedPickCount = 0;
 
 
 module.exports = {
-    wordFlags: ['split', 'reverse split', 'halt', 'rocket', 'offering', 'delist'],
-    sellBelow: {
-        ADMS: 3.65
-    },
     // important settings
+
+    wordFlags: ['split', 'reverse split', 'halt', 'rocket', 'offering', 'delist', 'breakthrough'],
+    // sellBelow: {
+    //     ADMS: 3.65
+    // },
     // sellAllStocksOnNthDay: 8,
     // purchaseAmt: 6,
     makeKeeperFundsAvailable: true,
-    expectedPickCount: 340,
+    expectedPickCount: 150,
     multiplierThreshold: -3, // wont recommend picks below this multiplier count even if they are a forPurchase pick
     disableCashCheck: true,
     disableMultipliers: false,
@@ -47,30 +48,30 @@ module.exports = {
         // LETS GET SEAN SPICEY
 
 
-        derived-chillMoverVolume-watchout
-        derived-chillMoverVolume-index0
-        derived-chillMoverVolume-tenMinCount5
-        derived-chillMoverVolume-tenMinCount6
-        derived-chillMoverVolume-tenMinCount1
-        derived-chillMoverVolume-tenMinCount9
-        derived-realChillMovers-tenMinCount9
-        derived-unfilteredMovers-tenMinCount3
-        derived-unfilteredMovers-tenMinCount5
-        derived-unfilteredMovers-tenMinCount27
-        derived-tenMinCount27-watchout
-        derived-unfilteredMoverVolume-tenMinCount1
+        // derived-chillMoverVolume-watchout
+        // derived-chillMoverVolume-index0
+        // derived-chillMoverVolume-tenMinCount5
+        // derived-chillMoverVolume-tenMinCount6
+        // derived-chillMoverVolume-tenMinCount1
+        // derived-chillMoverVolume-tenMinCount9
+        // derived-realChillMovers-tenMinCount9
+        // derived-unfilteredMovers-tenMinCount3
+        // derived-unfilteredMovers-tenMinCount5
+        // derived-unfilteredMovers-tenMinCount27
+        // derived-tenMinCount27-watchout
+        // derived-unfilteredMoverVolume-tenMinCount1
 
 
-        derived-unfilteredMovers-index0-tenMinCount9
-        derived-unfilteredMovers-index0-tenMinCount15	
-        derived-unfilteredMovers-index0-tenMinCount27
-        derived-unfilteredMovers-index0-tenMinCount40
-        derived-index0-tenMinCount27-watchout
-        derived-index0-tenMinCount6-watchout
-        derived-index2-tenMinCount9-watchout
-        derived-index0-tenMinCount33-watchout
-        derived-chillMoverVolume-index0-tenMinCount21
-        derived-unfilteredMovers-index1-tenMinCount5
+        // derived-unfilteredMovers-index0-tenMinCount9
+        // derived-unfilteredMovers-index0-tenMinCount15	
+        // derived-unfilteredMovers-index0-tenMinCount27
+        // derived-unfilteredMovers-index0-tenMinCount40
+        // derived-index0-tenMinCount27-watchout
+        // derived-index0-tenMinCount6-watchout
+        // derived-index2-tenMinCount9-watchout
+        // derived-index0-tenMinCount33-watchout
+        // derived-chillMoverVolume-index0-tenMinCount21
+        // derived-unfilteredMovers-index1-tenMinCount5
 
 
 

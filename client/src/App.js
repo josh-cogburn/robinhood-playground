@@ -35,6 +35,7 @@ import Cron from './pages/Cron';
 import Analysis from './pages/Analysis';
 import Scan from './pages/Scan';
 import Closed from './pages/Closed';
+import Derived from './pages/Derived';
 
 import socketIOClient from "socket.io-client";
 import { partition, mapObject } from 'underscore';
@@ -120,10 +121,6 @@ const pages = [
         // render: state => 
     },
     {
-        label: 'Positions',
-        component: Positions,
-    },
-    {
         label: "Strategies",
         component: TodaysStrategies,
     },
@@ -133,6 +130,10 @@ const pages = [
         render: state  => <PmReport {...state} />
     },
     
+    {
+        label: 'Positions',
+        component: Positions,
+    },
     // {
     //     label: 'Analysis',
     //     component: Analysis,
@@ -144,6 +145,10 @@ const pages = [
     {
         label: 'Date Analysis',
         component: DateAnalysis
+    },
+    {
+        label: 'Derived',
+        component: Derived
     },
     {
         label: 'Scan',
@@ -369,7 +374,7 @@ class App extends Component {
                             // handleDrag={this.handleDrag}
                             delimiters={delimiters} />
                     </Toolbar>
-                    <Tabs value={value} onChange={this.handlePageChange}>
+                    <Tabs value={value} onChange={this.handlePageChange} scrollButtons="auto">
                         { pages.map(({ label }) => <Tab label={label} />) }
                     </Tabs>
                 </AppBar>
