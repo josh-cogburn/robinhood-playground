@@ -264,8 +264,10 @@ module.exports = new (class RealtimeRunner {
 
   stop() {
     this.currentlyRunning = false;
-    this.intervals.forEach(clearInterval);
-    this.intervals = [];
+    if (this.intervals) {
+      this.intervals.forEach(clearInterval);
+      this.intervals = [];
+    }
   }
 
   logLastTimestamps() {
