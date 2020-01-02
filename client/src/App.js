@@ -370,7 +370,7 @@ class App extends Component {
                 <AppBar 
                     position="static"
                     style={{
-                        minWidth: '1000px'
+                        minWidth: admin ? '1000px' : ''
                     }}
                 >
                     <Toolbar>
