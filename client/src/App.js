@@ -88,7 +88,7 @@ const matchesPm = (stratMin, pm, pms) => {
             if (part.startsWith('!')) {
                 return !stratMin.includes(part.slice(1));
             }
-            return (new RegExp(`(?<!!)${part}`)).test(stratMin);
+            return (new RegExp(`(?<!!)${part}-`)).test(stratMin);
         });
     });
     // return pms[pm] && pms[pm].every(part => strat === part || strat.includes(`${part}-`) || strat.includes(`-${part}`));

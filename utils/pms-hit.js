@@ -24,7 +24,7 @@ module.exports = async (_, strategy) => {
             if (part.startsWith('!')) {
               return !strategy.includes(part.slice(1));
             }
-            return (new RegExp(`(?<!!)${part}`)).test(strategy);
+            return (new RegExp(`(?<!!)${part}-`)).test(strategy);
           });
       });
     }

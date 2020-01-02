@@ -31,7 +31,7 @@ module.exports = {
     // sellAllStocksOnNthDay: 8,
     // purchaseAmt: 6,
     makeKeeperFundsAvailable: true,
-    expectedPickCount: 120,
+    expectedPickCount: 160,
     multiplierThreshold: -3, // wont recommend picks below this multiplier count even if they are a forPurchase pick
     disableCashCheck: true,
     disableMultipliers: false,
@@ -42,6 +42,25 @@ module.exports = {
         
 
         ...`
+
+
+        // the mature picks
+        sudden-drops-brunch-straightDown120
+        sudden-drops-brunch-straightDown120
+        sudden-drops-brunch-straightDown120
+        sudden-drops-brunch-straightDown120-bearish
+        sudden-drops-brunch-straightDown120-bearish
+        sudden-drops-brunch-straightDown120-bearish
+
+
+        // HAHA LOL JK IMMATURE PICKS 2020!!
+        derived-unfilteredMovers-index0-tenMinCount33
+        derived-unfilteredMovers-index0-tenMinCount3
+        derived-realChillMoverVolume-index2-tenMinCount3
+        derived-realChillMoverVolume-index2-tenMinCount21
+        derived-unfilteredMovers-index0-tenMinCount15
+        derived-unfilteredMovers-index0-tenMinCount3
+        derived-unfilteredMovers-index0
 
 
 
@@ -77,6 +96,9 @@ module.exports = {
 
         // avg downers
         avg-downer
+        avg-downer-under1min
+        avg-downer-under1min
+        avg-downer-under1min
         avg-downer-1count
         avg-downer-2count
         avg-downer-2count

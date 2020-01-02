@@ -236,7 +236,7 @@ const processData = (props, state) => {
     const pmMatchesFilter = pmName => filter
         .split(',')
         .every(str => 
-            (new RegExp(`(?<!!)${str}`)).test(pmName)   // no ! prefix
+            (new RegExp(`(?<!!)${str}-`)).test(pmName)   // no ! prefix
         );
 
     const forPurchasePMs = settings.forPurchase.map(line =>
@@ -270,7 +270,7 @@ const processData = (props, state) => {
         pmName
     }) => {
 
-        if (pmName.includes('derived')) {
+        if (!jsonDaysCount) {
             console.log({
                 lebowskiAvg, 
                 jsonAvg, 
@@ -364,7 +364,7 @@ const processData = (props, state) => {
                             if (part.startsWith('!')) {
                                 return !stratMin.includes(part.slice(1));
                             }
-                            return (new RegExp(`(?<!!)${part}`)).test(stratMin);
+                            return (new RegExp(`(?<!!)${part}-`)).test(stratMin);
                         });
                     });
                     // return pms[pm] && pms[pm].every(part => strat === part || strat.includes(`${part}-`) || strat.includes(`-${part}`));

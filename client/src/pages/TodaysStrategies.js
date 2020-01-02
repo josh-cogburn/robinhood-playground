@@ -53,7 +53,7 @@ class TodaysStrategies extends Component {
                 if (part.startsWith('!')) {
                     return !stratMin.includes(part.slice(1));
                 }
-                return (new RegExp(`(?<!!)${part}`)).test(stratMin);
+                return (new RegExp(`(?<!!)${part}-`)).test(stratMin);
             });
         });
         // return pms[pm] && pms[pm].every(part => strat === part || strat.includes(`${part}-`) || strat.includes(`-${part}`));
@@ -90,7 +90,7 @@ class TodaysStrategies extends Component {
         //   const picks = pmFilter !== 'no filter' ? picks.filter(pick => pms[pmFilter].every(part => pick.stratMin.includes(`${part}-`))) : picks;
       })()
       .filter(pick => additionalFilterParts.every(part => 
-            (new RegExp(`(?<!!)${part}`)).test(pick.stratMin)   // no ! prefix
+            (new RegExp(`(?<!!)${part}-`)).test(pick.stratMin)   // no ! prefix
             || pick.withPrices.some(({ ticker }) => ticker === part)
         ));
 
