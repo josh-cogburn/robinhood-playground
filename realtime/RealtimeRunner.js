@@ -856,7 +856,7 @@ module.exports = new (class RealtimeRunner {
 
       ...singles.reduce((acc, collectionName) => ({
         ...acc,
-        [collectionName]: [collectionName]
+        [collectionName]: collectionName.split('-')
       }), {}),
 
 
