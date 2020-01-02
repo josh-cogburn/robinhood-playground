@@ -62,7 +62,8 @@ module.exports = class PositionWatcher {
     const trendPerc = getTrend(observePrice, avgEntry);
 
     strlog({
-      avgBuy,
+      ticker,
+      avgEntry,
       currentPrice,
       askPrice,
       observePrice

@@ -103,6 +103,7 @@ const stratManager = {
                 console.log(`starting avg downer ${pos.ticker} bc bought today and positive multipliers`)
                 watchThis({
                     ticker: pos.ticker,
+                    initialTimeout: 6000 + Math.random() * 60000
                 });
             }
         }
