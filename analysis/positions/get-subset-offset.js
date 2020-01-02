@@ -10,9 +10,9 @@ const subsetOffsets = {
   // lastFive: ({ date }) => lastFive.includes(date),
   // yesterday: ({ date }) => allDates[1] === date,
   // today: ({ date }) => allDates[0] === date,
-  watchout: -3,
-  notWatchout: 2,
-  watchoutMajorJump: 1,
+  watchout: -2,
+  notWatchout: 1,
+  watchoutMajorJump: 2,
 
   bullish: -1,
   neutral: 0,
@@ -20,8 +20,8 @@ const subsetOffsets = {
 
   bullishMajorJump: 4,
 
-  majorJump: 7,
-  mediumJump: 2,
+  majorJump: 10,
+  mediumJump: 5,
   minorJump: -4,
   onlyMinorJump: -5,
 
