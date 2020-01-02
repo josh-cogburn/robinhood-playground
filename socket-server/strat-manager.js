@@ -251,7 +251,7 @@ const stratManager = {
         const picks = dbPicks
             .filter(pick => pick.timestamp)
             // .filter(pick => !pick.strategyName.includes('afterhours'))
-            .filter(pick => !pick.strategyName.includes('premarket'))
+            // .filter(pick => !pick.strategyName.includes('premarket'))
             .map(pick => ({
                 ...pick,
                 stratMin: `${pick.strategyName}-${pick.min}`,
