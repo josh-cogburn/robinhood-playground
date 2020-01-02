@@ -10,7 +10,7 @@ const words = {
   unfiltered: 'any daily RSI is allowed',
 
   Volume: 'volume considerably above their average',
-  Nowhere: 'moved much in the last 24 hours',
+  Nowhere: 'have not made a strong move in either direction in the last 24 hours',
   Mover: 'the biggest gainers',
   SlightlyUpVolume: 'moved in a slightly bullish direction on the day',
   SlightDownVolume: 'moved in a slightly bearish direction on the day',
