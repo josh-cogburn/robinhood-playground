@@ -66,7 +66,7 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
             forPurchaseMultiplier + pmAnalysisMultiplier + subsetOffsetMultiplier
         );
 
-        if (stratMin.includes('derived')) {
+        if (interestingWords.includes('derived')) {
             multiplier = 1;
         }
         
