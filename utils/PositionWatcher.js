@@ -69,7 +69,8 @@ module.exports = class PositionWatcher {
       avgEntry,
       currentPrice,
       askPrice,
-      observePrice
+      observePwrice,
+      lowestAvgDownPrice
     });
     console.log(`AVG-DOWNER: ${ticker} observed at ${observePrice} ... avg buy at ${avgEntry}, and avg down count ${avgDownCount}... trended ${trendPerc}`);
     if (trendPerc < -4) {
