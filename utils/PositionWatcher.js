@@ -89,16 +89,25 @@ module.exports = class PositionWatcher {
       if (Number(market_value) > Number(portfolio_value) * 0.5) {
         if (daytrade_count <= 2) {
           await sendEmail(`Selling ${ticker} using a daytrade can we get 20% up?`);
+          const firstChunk = Math.round(Number(quantity) / 2);
+          const secondChunk = Number(quantity) - firstChunk;
           alpacaLimitSell({
             ticker,
-            quantity: Number(quantity),
+            quantity: firstChunk,
             limitPrice: avgEntry * 1.2,
+            timeoutSeconds: 60 * 20,
+            fallbackToMarket: false
+          });
+          alpacaLimitSell({
+            ticker,
+            quantity: secondChunk,
+            limitPrice: avgEntry * 1.25,
             timeoutSeconds: 60 * 20,
             fallbackToMarket: false
           });
           this.pendingSale = true;
         } else {
-          await sendEmail(`You are at three daytrades but you might want to check out ${ticker}`);
+          await sendEmail(`You are at three daytrades but you might want to take a look at ${ticker}`);
         }
       }
       
