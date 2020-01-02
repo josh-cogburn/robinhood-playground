@@ -2,7 +2,7 @@ const allPositionWatchers = {};
 const PositionWatcher = require('./PositionWatcher');
 
 module.exports = {
-  create: data => {
+  watchThis: data => {
 
     const { 
       ticker, 
@@ -18,7 +18,7 @@ module.exports = {
   
   },
 
-  delete: ticker => {
+  stopWatching: ticker => {
     if (!allPositionWatchers[ticker]) return;
     allPositionWatchers[ticker].stop();
     allPositionWatchers[ticker] = null;

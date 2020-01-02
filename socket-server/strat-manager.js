@@ -19,7 +19,7 @@ const sendEmail = require('../utils/send-email');
 const getSettingsString = require('../utils/get-settings-string');
 const regCronIncAfterSixThirty = require('../utils/reg-cron-after-630');
 
-const positionManager = require('../utils/position-manager');
+const { watchThis } = require('../utils/position-manager');
 const cachedPositions = require('../utils/cached-positions');
 const getAlpacaPositions = require('../alpaca/get-positions');
 
@@ -101,7 +101,7 @@ const stratManager = {
         for (let pos of this.positions.alpaca) {
             if (pos.wouldBeDayTrade && pos.numMultipliers > 0) {
                 console.log(`starting avg downer ${pos.ticker} bc bought today and positive multipliers`)
-                positionManager.create({
+                watchThis({
                     ticker: pos.ticker,
                 });
             }

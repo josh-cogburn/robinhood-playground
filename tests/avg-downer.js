@@ -1,7 +1,7 @@
-const AvgDowner = require('../utils/avg-downer');
+const positionManager = require('../utils/position-manager');
 
 module.exports = async () => {
-  return new Promise(resolve => {
-    new AvgDowner('AAPL', 225.72);
-  });
+  positionManager.create({
+    ticker: 'AAPL'
+  })
 };
