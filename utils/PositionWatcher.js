@@ -19,7 +19,8 @@ module.exports = class PositionWatcher {
       ticker,
       avgDownCount,
       timeout: initialTimeout,
-      pendingSale: false
+      pendingSale: false,
+      avgDownPrices: []
     });
     console.log('hey whats up from here')
     this.start();
@@ -32,7 +33,7 @@ module.exports = class PositionWatcher {
   getRelatedPosition() {
     const { ticker } = this;
     const stratManager = require('../socket-server/strat-manager');
-    return stratManager.positions.alpaca.find(pos => pos.ticker === ticker) || {};
+    return (stratManager.positions.alpaca || []).find(pos => pos.ticker === ticker) || {};
   }
   async observe(isBeforeClose) {
 
@@ -59,7 +60,9 @@ module.exports = class PositionWatcher {
     strlog({ ticker, l })
     const { currentPrice, askPrice } = l;
     const observePrice =  Math.max(currentPrice, askPrice);
-    const trendPerc = getTrend(observePrice, avgEntry);
+    const lowestAvgDownPrice = Math.min(...this.avgDownPrices);
+    const comparePrice = Math.min(lowestAvgDownPrice, observePrice);
+    const trendPerc = getTrend(comparePrice, avgEntry);
 
     strlog({
       ticker,
@@ -84,6 +87,7 @@ module.exports = class PositionWatcher {
           trendPerc,
         }
       }, true);
+      this.avgDownPrices.push(currentPrice)
     } else if (!pendingSale && trendPerc >= 15) {
       const account = await alpaca.getAccount();
       const { portfolio_value, daytrade_count } = account;
