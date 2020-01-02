@@ -123,7 +123,36 @@ module.exports = {
 
         sudden-drops-majorJump
         sudden-drops-majorJump
-
+        sudden-drops-majorJump-initial
+        sudden-drops-lunch-down15
+        sudden-drops-dinner-down20
+        sudden-drops-watchout-down20
+        sudden-drops-majorJump-down40
+        sudden-drops-!watchout-down15
+        sudden-drops-down15-bearish
+        sudden-drops-down20
+        sudden-drops-watchout-majorJump
+        sudden-drops-majorJump-!straightDown
+        sudden-drops-!watchout-straightDown90
+        sudden-drops-!watchout-down15
+        sudden-drops-minorJump-brunch-straightDown120
+        sudden-drops-watchout-majorJump
+        sudden-drops-majorJump-!straightDown
+        sudden-drops-watchout-majorJump-!straightDown
+        sudden-drops-lunch-down15
+        sudden-drops-majorJump-down15-!straightDown
+        sudden-drops-majorJump-initial-!straightDown
+        sudden-drops-mediumJump-lunch-down15
+        sudden-drops-lunch-down15-!straightDown
+        sudden-drops-watchout-dinner-down20
+        sudden-drops-majorJump-down20-bearish
+        sudden-drops-down20-straightDown30-bearish
+        sudden-drops-watchout-majorJump-down40
+        sudden-drops-watchout-initial-down10
+        sudden-drops-down15-straightDown90-bullish
+        sudden-drops-initial-down10-bullish
+        sudden-drops-!watchout-minorJump-dinner
+        sudden-drops-dinner-straightDown120
 
         // the !watchout majorJump GOLD
 
