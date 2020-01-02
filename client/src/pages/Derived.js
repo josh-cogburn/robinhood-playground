@@ -19,21 +19,39 @@ const words = {
 
 class Derived extends Component {
   state = {
-    selectedCollection: undefined
+    selectedCollection: undefined,
+    widgetWidth: 800
   }
   collectionChange = (evt) => {
     this.setState({
       selectedCollection: evt.target.value
     });
   }
+  calcWidgetWidth() {
+    const { innerWidth } = window;
+    const widgetWidth = Math.min(800, innerWidth - 30);
+    this.setState({
+      widgetWidth,
+      widgetHeight: widgetWidth * .75
+    });
+  }
+  componentWillMount() {
+    this.calcWidgetWidth();
+  }
+  componentDidMount() {
+    window.addEventListener('resize', () => {
+      console.log('resize');
+      this.calcWidgetWidth();
+    });
+  }
   render() {
     const { collections, lastCollectionRefresh } = this.props;
-    const derivedCollections = Object.keys(collections).slice(10);
-    const { selectedCollection = derivedCollections[0] } = this.state;
-    const derived = derivedCollections.map(collectionName => ({
-      collectionName,
-      tickers: collections[collectionName]
-    }));
+    const derivedCollections = Object.keys(collections).slice(10).reverse();
+    const { selectedCollection = derivedCollections[0], widgetWidth, widgetHeight } = this.state;
+    // const derived = derivedCollections.map(collectionName => ({
+    //   collectionName,
+    //   tickers: collections[collectionName]
+    // }));
     console.log({ derivedCollections, selectedCollection})
     const showingTickers = collections[selectedCollection];
     return (
@@ -44,7 +62,7 @@ class Derived extends Component {
             <option value={key}>{key}</option>
           ))}
         </select>
-        <pre>
+        <pre style={{ whiteSpace: 'pre-wrap' }}>
           {
             Object.keys(words)
               .filter(word => selectedCollection.includes(word))
@@ -60,8 +78,8 @@ class Derived extends Component {
                   symbol={ticker} 
                   range='5d' 
                   style='8' 
-                  width={800}
-                  height={500} 
+                  width={widgetWidth}
+                  height={widgetHeight} 
                 />
               </div>
             ))

@@ -127,7 +127,7 @@ const pages = [
     {
         label: "PM's",
         component: PmReport,
-        render: state  => <PmReport {...state} />
+        render: state  => <PmReport {...state} />,
     },
     
     {
@@ -140,19 +140,21 @@ const pages = [
     // },
     {
         label: 'Closed',
-        component: Closed
+        component: Closed,
     },
     {
         label: 'Date Analysis',
-        component: DateAnalysis
+        component: DateAnalysis,
     },
     {
-        label: 'Derived',
-        component: Derived
+        label: 'Stocks To Watch',
+        component: Derived,
+        allowPublic: true,
     },
     {
         label: 'Scan',
-        component: Scan
+        component: Scan,
+        allowPublic: true,
     },
     // {
     //     label: 'Day Reports',
@@ -286,9 +288,9 @@ class App extends Component {
         this.state.socket.emit('restartProcess', data => window.alert(data));
     }
     render () {
-        let { value, predictionModels, pms, balanceReports, newPicksData, positions, relatedPrices, showingPick, socket } = this.state;
+        let { value, predictionModels, pms, balanceReports, newPicksData, positions, relatedPrices, showingPick, socket, admin } = this.state;
         const isLoading = !balanceReports || !balanceReports.length;
-        const PageComponent = pages[value].component;
+
 
         positions = mapObject(
             positions || {},
@@ -353,29 +355,44 @@ class App extends Component {
             suggestions,
             subsets
         };
-        
+
+        const tabs = pages
+            .filter(({ allowPublic }) => allowPublic || admin)
+            .map(({ label }) => label);
+
+
+        const showingPage = value || 0;
+        const thing = pages.find(page => page.label === tabs[showingPage]);
+        console.log({ thing });
+        const { component: PageComponent } = thing;
         return (
             <div className="App">
                 <AppBar position="static">
                     <Toolbar>
                         <Typography variant="title" color="inherit">
-                            robinhood-playground from the <a href="#" onClick={this.auth}>new</a> server<br/>
-                            <a href="https://github.com/chiefsmurph/robinhood-playground" target='_blank' style={{ color: 'darkorange', fontSize: '80%'}}>
+                            chiefsmurph's stock <a href="#" onClick={this.auth} style={{ color: 'orange' }}>picks</a><br/>
+                            {/* <a href="https://github.com/chiefsmurph/robinhood-playground" target='_blank' style={{ color: 'darkorange', fontSize: '80%'}}>
                                 https://github.com/chiefsmurph/robinhood-playground
-                            </a>
-                            <a onClick={this.pullGit}>⬇️</a>&nbsp;
-                            <a onClick={this.restartProcess}>♻️</a>
+                            </a> */}
                         </Typography>
-                        <ReactTags
-                            tags={tags}
-                            suggestions={suggestions}
-                            handleDelete={this.handleDelete}
-                            handleAddition={this.handleAddition}
-                            // handleDrag={this.handleDrag}
-                            delimiters={delimiters} />
+                        {
+                            admin && (
+                                <div>
+                                    <a onClick={this.pullGit}>⬇️</a>&nbsp;
+                                    <a onClick={this.restartProcess}>♻️</a>
+                                    <ReactTags
+                                        tags={tags}
+                                        suggestions={suggestions}
+                                        handleDelete={this.handleDelete}
+                                        handleAddition={this.handleAddition}
+                                        // handleDrag={this.handleDrag}
+                                        delimiters={delimiters} />
+                                </div>
+                            )
+                        }
                     </Toolbar>
                     <Tabs value={value} onChange={this.handlePageChange} scrollButtons="auto">
-                        { pages.map(({ label }) => <Tab label={label} />) }
+                        { tabs.map(label => <Tab label={label} />) }
                     </Tabs>
                 </AppBar>
 
