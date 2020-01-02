@@ -812,6 +812,12 @@ module.exports = new (class RealtimeRunner {
     if (this.pms) return this.pms;
 
     const singles = [
+      'spy-10min-rsilt30',
+      'spy-10min-rsilt25',
+      'spy-10min-rsilt20',
+      'spy-10min-rsilt15',
+      'spy-10min-rsilt10',
+
       'avg-downer',
       'average-down-recommendation',
       
