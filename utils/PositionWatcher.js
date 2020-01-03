@@ -75,7 +75,7 @@ module.exports = class PositionWatcher {
       prices,
       lowestPrice,
     });
-    console.log(`AVG-DOWNER: ${ticker} observed at ${observePrice} ... avg buy at ${avgEntry}, and avg down count ${avgDownCount}... trended ${trendPerc}`);
+    console.log(`AVG-DOWNER: ${ticker} observed at ${currentPrice} ... avg buy at ${avgEntry}, and avg down count ${avgDownCount}... trended ${trendPerc}`);
     if (trendPerc < -3.25) {
       this.avgDownCount++;
       const realtimeRunner = require('../realtime/RealtimeRunner');
@@ -91,7 +91,7 @@ module.exports = class PositionWatcher {
           trendPerc,
         }
       }, true);
-      this.avgDownPrices.push(observePrice);
+      this.avgDownPrices.push(currentPrice);
     } else if (!pendingSale && trendPerc >= 15) {
       const account = await alpaca.getAccount();
       const { portfolio_value, daytrade_count } = account;
