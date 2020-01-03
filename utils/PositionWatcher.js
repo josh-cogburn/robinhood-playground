@@ -59,18 +59,21 @@ module.exports = class PositionWatcher {
     const l = await lookup(ticker);
     strlog({ ticker, l })
     const { currentPrice, askPrice } = l;
-    const observePrice =  Math.max(currentPrice, askPrice);
-    const lowestAvgDownPrice = Math.min(...this.avgDownPrices);
-    const comparePrice = Math.min(lowestAvgDownPrice, observePrice);
-    const trendPerc = getTrend(comparePrice, avgEntry);
+    const prices = [
+      ...this.avgDownPrices,
+      currentPrice, 
+      askPrice
+    ];
+    const lowestPrice = Math.min(...prices);
+    const trendPerc = getTrend(lowestPrice, avgEntry);
 
     strlog({
       ticker,
       avgEntry,
       currentPrice,
       askPrice,
-      observePwrice,
-      lowestAvgDownPrice
+      prices,
+      lowestPrice,
     });
     console.log(`AVG-DOWNER: ${ticker} observed at ${observePrice} ... avg buy at ${avgEntry}, and avg down count ${avgDownCount}... trended ${trendPerc}`);
     if (trendPerc < -3.25) {
