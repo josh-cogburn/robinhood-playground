@@ -29,6 +29,10 @@ module.exports = positions => {
   const lastFive = allDates.slice(0, 5);
   return {
     allPositions: () => true,
+
+    suddenDrops: ({ interestingWords }) => interestingWords.includes('sudden'),
+    derived: ({ interestingWords }) => interestingWords.includes('derived'),
+    
     withoutKEG: ({ ticker }) => ticker !== 'KEG',
     withoutASLN: ({ ticker }) => ticker !== 'ASLN',
     lastFive: ({ date }) => lastFive.includes(date),

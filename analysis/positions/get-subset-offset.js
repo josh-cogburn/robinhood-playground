@@ -10,6 +10,9 @@ const subsetOffsets = {
   // lastFive: ({ date }) => lastFive.includes(date),
   // yesterday: ({ date }) => allDates[1] === date,
   // today: ({ date }) => allDates[0] === date,
+
+  suddenDrops: 5,
+  
   watchout: -2,
   notWatchout: 1,
   watchoutMajorJump: 2,

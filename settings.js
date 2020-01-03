@@ -31,7 +31,7 @@ module.exports = {
     // sellAllStocksOnNthDay: 8,
     // purchaseAmt: 6,
     makeKeeperFundsAvailable: true,
-    expectedPickCount: 240,
+    expectedPickCount: 300,
     multiplierThreshold: -5, // wont recommend picks below this multiplier count even if they are a forPurchase pick
     disableCashCheck: true,
     disableMultipliers: false,
@@ -78,6 +78,12 @@ module.exports = {
         derived-unfilteredSlightDownVolume-tenMinCountNeg1-watchout
         derived-chillMovers-index2-tenMinCountNeg2
         derived-chillMoverVolume-index0-tenMinCount15-watchout
+
+        derived-unfilteredMovers-tenMinCount3-watchout
+        derived-unfilteredMovers-tenMinCount3-watchout
+        derived-index0-tenMinCount0-watchout
+        derived-chillMoverVolume-index3-tenMinCount2
+        derived-chillMoverVolume-index3-tenMinCount2
 
         // LETS GET SEAN SPICEY
 

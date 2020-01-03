@@ -88,7 +88,7 @@ module.exports = class PositionWatcher {
           trendPerc,
         }
       }, true);
-      this.avgDownPrices.push(currentPrice)
+      this.avgDownPrices.push(observePrice);
     } else if (!pendingSale && trendPerc >= 15) {
       const account = await alpaca.getAccount();
       const { portfolio_value, daytrade_count } = account;
