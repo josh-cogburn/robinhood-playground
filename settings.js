@@ -84,6 +84,9 @@ module.exports = {
         derived-index0-tenMinCount0-watchout
         derived-chillMoverVolume-index3-tenMinCount2
         derived-chillMoverVolume-index3-tenMinCount2
+        derived-realChillMovers-index0-tenMinCount15
+        derived-realChillMoverVolume-index2-tenMinCount15
+        derived-chillMovers-tenMinCount27-watchout
 
         // LETS GET SEAN SPICEY
 
@@ -102,11 +105,11 @@ module.exports = {
         // derived-unfilteredMoverVolume-tenMinCount1
 
 
-        // derived-unfilteredMovers-index0-tenMinCount9
+        derived-unfilteredMovers-index0-tenMinCount9
         // derived-unfilteredMovers-index0-tenMinCount15	
         // derived-unfilteredMovers-index0-tenMinCount27
         // derived-unfilteredMovers-index0-tenMinCount40
-        // derived-index0-tenMinCount27-watchout
+        derived-index0-tenMinCount27-watchout
         // derived-index0-tenMinCount6-watchout
         // derived-index2-tenMinCount9-watchout
         // derived-index0-tenMinCount33-watchout
