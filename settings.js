@@ -73,14 +73,18 @@ module.exports = {
         derived-realChillSlightDownVolume-index0-tenMinCount5
         derived-chillMoverVolume-index0-tenMinCount5
 
-
+        derived-tenMinCount0-watchout
+        derived-chillSlightlyUpVolume-tenMinCount0-watchout
+        derived-unfilteredSlightDownVolume-tenMinCountNeg1-watchout
+        derived-chillMovers-index2-tenMinCountNeg2
+        derived-chillMoverVolume-index0-tenMinCount15-watchout
 
         // LETS GET SEAN SPICEY
 
 
         // derived-chillMoverVolume-watchout
         // derived-chillMoverVolume-index0
-        // derived-chillMoverVolume-tenMinCount5
+        derived-chillMoverVolume-tenMinCount5-watchout
         // derived-chillMoverVolume-tenMinCount6
         // derived-chillMoverVolume-tenMinCount1
         // derived-chillMoverVolume-tenMinCount9

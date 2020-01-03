@@ -236,7 +236,7 @@ const processData = (props, state) => {
     const pmMatchesFilter = pmName => filter
         .split(',')
         .every(str => 
-            (new RegExp(`(?<!!)${str}-`)).test(pmName)   // no ! prefix
+            (new RegExp(`(?<!!)${str}`)).test(pmName)   // no ! prefix
         );
 
     const forPurchasePMs = settings.forPurchase.map(line =>
