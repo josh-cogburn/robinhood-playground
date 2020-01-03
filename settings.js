@@ -54,46 +54,46 @@ module.exports = {
 
 
         // HAHA LOL JK IMMATURE PICKS 2020!!
-        derived-unfilteredMovers-index0-tenMinCount33
-        derived-unfilteredMovers-index0-tenMinCount3
-        derived-realChillMoverVolume-index2-tenMinCount3
-        derived-realChillMoverVolume-index2-tenMinCount21
-        derived-unfilteredMovers-index0-tenMinCount15
-        derived-unfilteredMovers-index0-tenMinCount3
-        derived-unfilteredMovers-index0
-        derived-realChillMovers-index0-tenMinCount5
-        derived-realChillMovers-index0-tenMinCount2
-        derived-realChillMovers-index0-tenMinCount2
-        derived-chillSlightDownVolume-index0-tenMinCount6
-        derived-unfilteredSlightlyUpVolume-tenMinCount1-watchout
-        derived-chillMoverVolume-index0-watchout
-        derived-unfilteredMovers-index0-tenMinCount6
-        derived-unfilteredMovers-index0-tenMinCount5
-        derived-chillSlightDownVolume-index0-tenMinCount5
-        derived-realChillSlightDownVolume-index0-tenMinCount5
-        derived-chillMoverVolume-index0-tenMinCount5
+        // derived-unfilteredMovers-index0-tenMinCount33
+        // derived-unfilteredMovers-index0-tenMinCount3
+        // derived-realChillMoverVolume-index2-tenMinCount3
+        // derived-realChillMoverVolume-index2-tenMinCount21
+        // derived-unfilteredMovers-index0-tenMinCount15
+        // derived-unfilteredMovers-index0-tenMinCount3
+        // derived-unfilteredMovers-index0
+        // derived-realChillMovers-index0-tenMinCount5
+        // derived-realChillMovers-index0-tenMinCount2
+        // derived-realChillMovers-index0-tenMinCount2
+        // derived-chillSlightDownVolume-index0-tenMinCount6
+        // derived-unfilteredSlightlyUpVolume-tenMinCount1-watchout
+        // derived-chillMoverVolume-index0-watchout
+        // derived-unfilteredMovers-index0-tenMinCount6
+        // derived-unfilteredMovers-index0-tenMinCount5
+        // derived-chillSlightDownVolume-index0-tenMinCount5
+        // derived-realChillSlightDownVolume-index0-tenMinCount5
+        // derived-chillMoverVolume-index0-tenMinCount5
 
-        derived-tenMinCount0-watchout
-        derived-chillSlightlyUpVolume-tenMinCount0-watchout
-        derived-unfilteredSlightDownVolume-tenMinCountNeg1-watchout
-        derived-chillMovers-index2-tenMinCountNeg2
-        derived-chillMoverVolume-index0-tenMinCount15-watchout
+        // derived-tenMinCount0-watchout
+        // derived-chillSlightlyUpVolume-tenMinCount0-watchout
+        // derived-unfilteredSlightDownVolume-tenMinCountNeg1-watchout
+        // derived-chillMovers-index2-tenMinCountNeg2
+        // derived-chillMoverVolume-index0-tenMinCount15-watchout
 
-        derived-unfilteredMovers-tenMinCount3-watchout
-        derived-unfilteredMovers-tenMinCount3-watchout
-        derived-index0-tenMinCount0-watchout
-        derived-chillMoverVolume-index3-tenMinCount2
-        derived-chillMoverVolume-index3-tenMinCount2
-        derived-realChillMovers-index0-tenMinCount15
-        derived-realChillMoverVolume-index2-tenMinCount15
-        derived-chillMovers-tenMinCount27-watchout
+        // derived-unfilteredMovers-tenMinCount3-watchout
+        // derived-unfilteredMovers-tenMinCount3-watchout
+        // derived-index0-tenMinCount0-watchout
+        // derived-chillMoverVolume-index3-tenMinCount2
+        // derived-chillMoverVolume-index3-tenMinCount2
+        // derived-realChillMovers-index0-tenMinCount15
+        // derived-realChillMoverVolume-index2-tenMinCount15
+        // derived-chillMovers-tenMinCount27-watchout
 
         // LETS GET SEAN SPICEY
 
 
         // derived-chillMoverVolume-watchout
         // derived-chillMoverVolume-index0
-        derived-chillMoverVolume-tenMinCount5-watchout
+        // derived-chillMoverVolume-tenMinCount5-watchout
         // derived-chillMoverVolume-tenMinCount6
         // derived-chillMoverVolume-tenMinCount1
         // derived-chillMoverVolume-tenMinCount9
@@ -105,11 +105,11 @@ module.exports = {
         // derived-unfilteredMoverVolume-tenMinCount1
 
 
-        derived-unfilteredMovers-index0-tenMinCount9
+        // derived-unfilteredMovers-index0-tenMinCount9
         // derived-unfilteredMovers-index0-tenMinCount15	
         // derived-unfilteredMovers-index0-tenMinCount27
         // derived-unfilteredMovers-index0-tenMinCount40
-        derived-index0-tenMinCount27-watchout
+        // derived-index0-tenMinCount27-watchout
         // derived-index0-tenMinCount6-watchout
         // derived-index2-tenMinCount9-watchout
         // derived-index0-tenMinCount33-watchout

@@ -185,6 +185,10 @@ module.exports = async (
     if (Math.abs(returnPerc) < 3.5) {
       return 0;
     }
+    
+    if (min < 50 && returnPerc < 0) {
+      return 0;
+    }
 
     // if (wouldBeDayTrade) return null;
     if (min < 20 && returnPerc > 20) return 50;
