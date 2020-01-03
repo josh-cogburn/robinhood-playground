@@ -36,9 +36,9 @@ const analyzePosition = async position => {
   uniqPickIds = uniq(uniqPickIds);
   const numPicks = uniqPickIds.length;
 
-  const relatedPicks = await mapLimit(uniqPickIds.filter(Boolean), 1, pickId => 
+  const relatedPicks = (await mapLimit(uniqPickIds.filter(Boolean), 1, pickId => 
     Pick.findOne({ _id: pickId }).lean()
-  );
+  )).filter(Boolean);
   const numMultipliers = sumArray(
     relatedPicks.map(pick => pick.multiplier || 1)
   );

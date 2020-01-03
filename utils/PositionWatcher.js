@@ -61,7 +61,7 @@ module.exports = class PositionWatcher {
     const { currentPrice, askPrice } = l;
     const prices = [
       ...this.avgDownPrices,
-      currentPrice, 
+      currentPrice,
       askPrice
     ];
     const lowestPrice = Math.min(...prices);
