@@ -1032,7 +1032,7 @@ module.exports = new (class RealtimeRunner {
           ...Array(5).fill(1).map((v, i) => i).map(n => `index${n}`)
         ],
         [
-          ...[1, 2, 3, 5, 6, 9, 15, 21, 27, 33, 39, 40, 'Neg3', 'Neg2', 'Neg1'].map(n => `tenMinCount${n}`)
+          ...[0, 1, 2, 3, 5, 6, 9, 15, 21, 27, 33, 39, 40, 'Neg3', 'Neg2', 'Neg1'].map(n => `tenMinCount${n}`)
         ],
         ['notWatchout', 'watchout']
       ).toArray().reduce((acc, arr) => {
