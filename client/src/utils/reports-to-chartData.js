@@ -31,7 +31,7 @@ const fields = {
     'account balance': (d, i, array) => {
         if (i === 0) return 0;
         if (!d.accountBalance || !array[0].accountBalance) return 0;
-        return getTrend(d.accountBalance, array[0].accountBalance);
+        return getTrend(d.accountBalance, 1466 || array[0].accountBalance);
     },
     'alpaca balance': (d, i, array) => {
         const firstVal = array.find(b => b.alpacaBalance).alpacaBalance;
