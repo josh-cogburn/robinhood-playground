@@ -60,12 +60,12 @@ module.exports = class PositionWatcher {
     strlog({ ticker, l })
     const { currentPrice, askPrice } = l;
     const prices = [
-      ...this.avgDownPrices,
       currentPrice,
       askPrice
     ];
     const lowestPrice = Math.min(...prices);
-    const trendPerc = getTrend(lowestPrice, avgEntry);
+    const comparePrice = Math.min(avgEntry, ...this.avgDownPrices);
+    const trendPerc = getTrend(lowestPrice, comparePrice);
 
     strlog({
       ticker,
