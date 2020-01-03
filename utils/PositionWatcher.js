@@ -73,7 +73,7 @@ module.exports = class PositionWatcher {
       lowestAvgDownPrice
     });
     console.log(`AVG-DOWNER: ${ticker} observed at ${observePrice} ... avg buy at ${avgEntry}, and avg down count ${avgDownCount}... trended ${trendPerc}`);
-    if (trendPerc < -4) {
+    if (trendPerc < -3.25) {
       this.avgDownCount++;
       const realtimeRunner = require('../realtime/RealtimeRunner');
       await realtimeRunner.handlePick({
