@@ -1,0 +1,14 @@
+.stock-info {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid lightgray;
+  border-top: 0;
+  font-size: 80%;
+  padding: 10px 0;
+}
+
+.stock-info h4 {
+  text-decoration: underline;
+  font-variant: small-caps;
+  font-size: 110%;
+}

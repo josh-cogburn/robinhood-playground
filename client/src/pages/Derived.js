@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import TradingViewWidget from 'react-tradingview-widget';
 
+import './Derived.css';
+
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
 
 const words = {
 
@@ -45,20 +50,20 @@ class Derived extends Component {
     });
   }
   render() {
-    const { collections, lastCollectionRefresh } = this.props;
-    const derivedCollections = Object.keys(collections).slice(10).reverse();
-    const { selectedCollection = derivedCollections[0], widgetWidth, widgetHeight } = this.state;
+    const { derivedCollections, lastCollectionRefresh } = this.props;
+    const derivedCollectionNames = Object.keys(derivedCollections).reverse();
+    const { selectedCollection = derivedCollectionNames[0], widgetWidth, widgetHeight } = this.state;
     // const derived = derivedCollections.map(collectionName => ({
     //   collectionName,
     //   tickers: collections[collectionName]
     // }));
-    console.log({ derivedCollections, selectedCollection})
-    const showingTickers = collections[selectedCollection];
+    console.log({ derivedCollectionNames, selectedCollection})
+    const showingResults = derivedCollections[selectedCollection];
     return (
       <div style={{ textAlign: 'center', padding: '1em' }}>
-        <h3>{`updated: ${(new Date(lastCollectionRefresh)).toLocaleString()}`}</h3>
+        <h4>{`updated: ${(new Date(lastCollectionRefresh)).toLocaleString()}`}</h4>
         <select onChange={this.collectionChange} style={{ margin: '10px 0' }}>
-          {derivedCollections.map(key => (
+          {derivedCollectionNames.map(key => (
             <option value={key}>{key}</option>
           ))}
         </select>
@@ -72,15 +77,58 @@ class Derived extends Component {
         </pre>
         <div style={{ display: 'flex', flexFlow: 'wrap', justifyContent: 'space-around' }}>
           {
-            showingTickers.map(ticker => (
+            showingResults.map(result => (
               <div style={{ margin: '10px' }}>
                 <TradingViewWidget 
-                  symbol={ticker} 
+                  symbol={result.ticker} 
                   range='5d' 
                   style='8' 
                   width={widgetWidth}
                   height={widgetHeight} 
                 />
+                <div className='stock-info'>
+                  <div>
+                    <h4>Volume</h4>
+                    <table>
+                      <tr>
+                        <td>actual</td>
+                        <td>{numberWithCommas(result.computed.actualVolume)}</td>
+                      </tr>
+                      <tr>
+                        <td>projected by eod</td>
+                        <td>{numberWithCommas(Math.round(result.computed.projectedVolume))}</td>
+                      </tr>
+                      <tr>
+                        <td>projected to two-week avg</td>
+                        <td>{result.computed.projectedVolumeTo2WeekAvg}</td>
+                      </tr>
+                      <tr>
+                        <td>today's estimated dollar</td>
+                        <td>${numberWithCommas(result.computed.dollarVolume)}</td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div>
+                    <h4>Trends</h4>
+                    <table>
+                      <tr>
+                        <td>since open</td>
+                        <td>{result.computed.tso}</td>
+                      </tr>
+                      <tr>
+                        <td>since close</td>
+                        <td>{result.computed.tsc}</td>
+                      </tr>
+                      <tr>
+                        <td>since high of day</td>
+                        <td>{result.computed.tsh}</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                {/* <pre>
+                  {JSON.stringify(result.computed, null, 2)}
+                </pre> */}
               </div>
             ))
           }
