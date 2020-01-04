@@ -104,7 +104,7 @@ class Closed extends Component {
             // if (!position[key].toFixed) {
             //   console.log(position, key)
             // }
-            position[key] = !!position[key] && position[key].toFixed ? position[key].toFixed(2) : '---';
+            position[key] = !!position[key] && Number(position[key]).toFixed ? Number(position[key]).toFixed(2) : '---';
           });
           return position;
       })
@@ -125,6 +125,7 @@ class Closed extends Component {
           'numMultipliers',
           'interestingWords'
       ]));
+    console.log({ filtered })
     return (
       <div>
 
