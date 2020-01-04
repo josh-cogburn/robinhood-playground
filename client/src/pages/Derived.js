@@ -7,6 +7,12 @@ function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
+const getShortDescription = description => 
+  description.substring(
+    0,
+    description.indexOf('.', 35) + 1
+  );
+
 const words = {
 
   // daily RSI
@@ -78,7 +84,7 @@ class Derived extends Component {
         <div style={{ display: 'flex', flexFlow: 'wrap', justifyContent: 'space-around' }}>
           {
             showingResults.map(result => (
-              <div style={{ margin: '10px' }}>
+              <div style={{ margin: '10px', width: widgetWidth + 'px' }}>
                 <TradingViewWidget 
                   symbol={result.ticker} 
                   range='5d' 
@@ -126,8 +132,11 @@ class Derived extends Component {
                     </table>
                   </div>
                 </div>
+                <div className='stock-description'>
+                  {getShortDescription(result.fundamentals.description)}
+                </div>
                 {/* <pre>
-                  {JSON.stringify(result.computed, null, 2)}
+                  {JSON.stringify(result, null, 2)}
                 </pre> */}
               </div>
             ))

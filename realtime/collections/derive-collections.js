@@ -1,7 +1,9 @@
 const { uniq, mapObject } = require('underscore');
 const COUNT = 4; // per derivation
+const dayInProgress = require('../day-in-progress');
+const runScan = require('../../scans/base/run-scan');
 
-const deriveCollections = collections => {
+const deriveCollections = async collections => {
 
     const allScanResults = uniq(
         Object.values(collections).flatten().filter(t => t.computed),
@@ -66,7 +68,7 @@ const deriveCollections = collections => {
     let unusedResults = [
         ...allScanResults.filter(t => t.computed.projectedVolume > 70000)
     ];
-    return mapObject(
+    const response = mapObject(
         derivedCollections,
         fn => {
             const response = fn(unusedResults);
@@ -74,6 +76,26 @@ const deriveCollections = collections => {
             return response;
         }
     );
+
+    /// AFTER HOURS || PRE MARKET ?
+    if (!dayInProgress()) {
+        response.afterHoursGainers = (
+            await runScan({
+                minVolume: 50000,
+                minPrice: 2,
+                maxPrice: 5,
+                count: 70,
+                includeStSent: false,
+                afterHoursReset: true
+                // minDailyRSI: 45
+            })
+        )
+            .sort((a, b) => b.computed.tsc - a.computed.tsc)
+            .slice(0, 5);
+    }
+
+    return response;
+
 };
 
 

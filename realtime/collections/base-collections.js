@@ -6,7 +6,6 @@ const runScan = require('../../scans/base/run-scan');
 const hotSt = require('../../scans/hot-st');
 const nowheres = require('../../scans/nowheres');
 // const droppers = require('../../scans/droppers');
-const dayInProgress = require('../day-in-progress');
 
 const getMinutesFromOpen = require('../../utils/get-minutes-from-open');
 const allStocks = require('../../json/stock-data/allStocks');
@@ -230,25 +229,6 @@ module.exports = async () => {
             // minDailyRSI: 45
         });
     };
-
-
-    /// AFTER HOURS || PRE MARKET ?
-    const min = getMinutesFromOpen();
-    if (!dayInProgress()) {
-        collections.afterHoursGainers = (
-            await runScan({
-                minVolume: 50000,
-                minPrice: 2,
-                maxPrice: 5,
-                count: 70,
-                includeStSent: false,
-                afterHoursReset: true
-                // minDailyRSI: 45
-            })
-        )
-            .sort((a, b) => b.computed.tsc - a.computed.tsc)
-            .slice(0, 5);
-    }
 
 
 

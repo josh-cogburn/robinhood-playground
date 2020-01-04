@@ -1,3 +1,9 @@
+.stock-description {
+  border: 1px solid lightgray;
+  border-top: 0;
+  padding: 7px;
+  font-size: 30%;
+}
 .stock-info {
   display: flex;
   justify-content: space-around;
