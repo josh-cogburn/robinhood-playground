@@ -50,8 +50,7 @@ module.exports = new (class RealtimeRunner {
   getWelcomeData() {
     return {
       pms: this.getPms(),
-      collections: this.collections,
-      lastCollectionRefresh: this.lastCollectionRefresh
+      ...pick(this, ['collections', 'derivedCollections', 'lastCollectionRefresh'])
     };
   }
 
@@ -90,18 +89,13 @@ module.exports = new (class RealtimeRunner {
       console.log('done recording');
     }
 
-    this.collections = mapObject(
-      {
-        ...baseCollections,
-        ...derivedCollections
-      },
-      collection => collection.map(t => t.ticker)
-    );  // only tickers.... for now!
+    this.collections = mapObject(baseCollections, collection => collection.map(t => t.ticker))
+    this.derivedCollections = derivedCollections;
     this.lastCollectionRefresh = Date.now();
 
     require('../socket-server/strat-manager').sendToAll(
       'server:data-update',
-      pick(this, ['collections', 'lastCollectionRefresh'])
+      pick(this, ['collections', 'derivedCollections', 'lastCollectionRefresh'])
     );
 
   }
