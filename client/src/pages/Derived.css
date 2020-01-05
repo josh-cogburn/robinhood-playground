@@ -2,7 +2,8 @@
   border: 1px solid lightgray;
   border-top: 0;
   padding: 7px;
-  font-size: 30%;
+  font-size: 80%;
+  font-style: italic;
 }
 .stock-info {
   display: flex;
