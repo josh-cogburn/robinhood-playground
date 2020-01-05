@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TradingViewWidget from 'react-tradingview-widget';
+import TrendPerc from '../components/TrendPerc';
 
 import './Derived.css';
 
@@ -106,7 +107,13 @@ class Derived extends Component {
                       </tr>
                       <tr>
                         <td>projected to two-week avg</td>
-                        <td>{result.computed.projectedVolumeTo2WeekAvg}</td>
+                        <td>
+                          <TrendPerc 
+                            value={result.computed.projectedVolumeTo2WeekAvg} 
+                            redAt={100}
+                            noPlus={true} 
+                            round={true} />
+                        </td>
                       </tr>
                       <tr>
                         <td>today's estimated dollar</td>
@@ -119,15 +126,15 @@ class Derived extends Component {
                     <table>
                       <tr>
                         <td>since open</td>
-                        <td>{result.computed.tso}</td>
+                        <td><TrendPerc value={result.computed.tso} /></td>
                       </tr>
                       <tr>
                         <td>since close</td>
-                        <td>{result.computed.tsc}</td>
+                        <td><TrendPerc value={result.computed.tsc} /></td>
                       </tr>
                       <tr>
                         <td>since high of day</td>
-                        <td>{result.computed.tsh}</td>
+                        <td><TrendPerc value={result.computed.tsh} /></td>
                       </tr>
                     </table>
                   </div>
