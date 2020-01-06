@@ -26,8 +26,6 @@ const addDetails = async response => {
     );
 };
 
-const addGoogleNews = 
-
 const deriveCollections = async collections => {
 
     const allScanResults = uniq(
