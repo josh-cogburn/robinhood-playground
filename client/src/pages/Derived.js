@@ -140,6 +140,25 @@ class Derived extends Component {
                   </div>
                 </div>
                 <div className='stock-description'>
+                  <span style={{ float: 'left' }}>StockTwits Sentiment:</span>
+                  <table>
+                    <thead>
+                      <th>Bullish</th>
+                      <th>Bearish</th>
+                      <th>Score</th>
+                      <th>Bracket</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>{result.stSent.bullishCount}</td>
+                        <td>{result.stSent.bearishCount}</td>
+                        <td>{result.stSent.bullBearScore}</td>
+                        <td>{result.stSent.stBracket}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div className='stock-description'>
                   {getShortDescription(result.fundamentals.description)}
                 </div>
                 {/* <pre>

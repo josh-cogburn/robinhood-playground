@@ -20,8 +20,8 @@ const addDetails = async response => {
     return mapObject(
         response,
         results => results.map(result => ({
+            ...withStSents.find(r => r.ticker === result.ticker),
             ...result,
-            stSent: withStSents.find(r => r.ticker === result.ticker).stSent
         }))
     );
 };
