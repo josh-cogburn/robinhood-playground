@@ -66,9 +66,11 @@ module.exports = async (trend) => {
                 // 'industry',
                 // 'num_employees',
                 // 'year_founded' 
-            ].forEach(key => {
-                data[key] = Number(data[key].toString());
-            });
+            ]
+                .filter(key => data[key])
+                .forEach(key => {
+                    data[key] = Number(data[key]);
+                });
             return data;
         })
         .forEach((data, i) => {
