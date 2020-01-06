@@ -85,7 +85,10 @@ class Derived extends Component {
         <div style={{ display: 'flex', flexFlow: 'wrap', justifyContent: 'space-around' }}>
           {
             showingResults.map(result => (
-              <div style={{ margin: '10px', width: widgetWidth + 'px' }}>
+              <div className="stock-result" style={{ margin: '10px', width: widgetWidth + 'px' }}>
+                <div className='stock-description'>
+                  {getShortDescription(result.fundamentals.description)}
+                </div>
                 <TradingViewWidget 
                   symbol={result.ticker} 
                   range='5d' 
@@ -140,17 +143,20 @@ class Derived extends Component {
                   </div>
                 </div>
                 {
-                  result.googleNews.newsInTheLast24Hrs.length && (
-                    <div className='stock-description'>
+                  result.googleNews.recentNews.length > 0 && (
+                    <div className='stock-section stock-news'>
                       {
-                        result.googleNews.newsInTheLast24Hrs.map(item => (
-                          <a href={item.url} target="blank">{item.title}</a>
+                        result.googleNews.recentNews.map(item => (
+                          <li>
+                            <small>{(new Date(item.created)).toLocaleDateString()}</small>
+                            <a href={item.url} target="blank">{item.title}</a>
+                          </li>
                         ))
                       }
                     </div>
                   )
                 }
-                <div className='stock-description'>
+                <div className='stock-section'>
                   <span style={{ float: 'left' }}>Recent StockTwits Sentiment:</span>
                   <table width="100%">
                     <thead>
@@ -168,9 +174,6 @@ class Derived extends Component {
                       </tr>
                     </tbody>
                   </table>
-                </div>
-                <div className='stock-description'>
-                  {getShortDescription(result.fundamentals.description)}
                 </div>
                 {/* <pre>
                   {JSON.stringify(result, null, 2)}

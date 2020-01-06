@@ -1,9 +1,27 @@
+.stock-result {
+  font-size: 80%;
+}
 .stock-description {
+  border: 1px solid lightgray;
+  border-bottom: 0;
+  padding: 7px;
+}
+.stock-section {
   border: 1px solid lightgray;
   border-top: 0;
   padding: 7px;
-  font-size: 80%;
   font-style: italic;
+}
+
+.stock-news {
+  justify-content: left;
+  text-align: left;
+}
+.stock-news li {
+  display: inline-block;
+}
+.stock-news small {
+  margin-right: 10px;
 }
 .stock-info {
   display: flex;
