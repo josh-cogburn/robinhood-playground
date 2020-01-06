@@ -1062,14 +1062,20 @@ module.exports = new (class RealtimeRunner {
 
 
 
-    
+    const onlyShort = obj => 
+      Object.keys(obj)
+        .filter(key => key.split('-').length < 4)
+        .reduce((acc, key) => ({
+          ...acc,
+          [key]: obj[key]
+        }), {});
 
     // strlog({ mustIncludeAll });
 
-    this.pms = {
+    this.pms = onlyShort({
       ...mapObject(mustIncludeAll, arr => [arr]),
       // ...require('../pms/sep-2019'),
-    };
+    });
 
     return this.pms;
   }
