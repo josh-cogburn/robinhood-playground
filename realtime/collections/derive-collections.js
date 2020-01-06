@@ -3,6 +3,31 @@ const COUNT = 4; // per derivation
 const dayInProgress = require('../day-in-progress');
 const runScan = require('../../scans/base/run-scan');
 
+
+const getStSent = require('../../utils/get-stocktwits-sentiment');
+const queryGoogleNews = require('../../utils/query-google-news');
+
+const addDetails = async response => {
+    const uniqTickers = Object.values(response).flatten().map(result => result.ticker).uniq();
+    const withStSents = await mapLimit(uniqTickers, 3, async ticker => ({
+        ticker,
+        stSent: await getStSent(ticker),
+        googleNews: await queryGoogleNews(ticker)
+    }));
+
+    strlog({uniqTickers});
+
+    return mapObject(
+        response,
+        results => results.map(result => ({
+            ...result,
+            stSent: withStSents.find(r => r.ticker === result.ticker).stSent
+        }))
+    );
+};
+
+const addGoogleNews = 
+
 const deriveCollections = async collections => {
 
     const allScanResults = uniq(
@@ -94,7 +119,7 @@ const deriveCollections = async collections => {
             .slice(0, 5);
     }
 
-    return response;
+    return addDetails(response);
 
 };
 

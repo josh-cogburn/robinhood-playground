@@ -24,7 +24,7 @@ const getStrategies = require('./get-strategies');
 const pmsHit = require('../utils/pms-hit');
 const getStSentiment = require('../utils/get-stocktwits-sentiment');
 const getDownKeys = require('../utils/get-down-keys');
-const googleNewsWordflags = require('../utils/google-news-wordflags');
+const queryGoogleNews = require('../utils/query-google-news');
 
 
 const riskCache = {};
@@ -781,7 +781,7 @@ module.exports = new (class RealtimeRunner {
         firstAlertkey,
         stSent.stBracket,
         ...stSent.wordFlags || [],
-        ...strategyName.includes('sudden-drops') ? await googleNewsWordflags(ticker) : [],
+        ...strategyName.includes('sudden-drops') ? (await queryGoogleNews(ticker) || {}).wordFlags : [],
         watchoutKey,
         minKey,
         volumeKey
