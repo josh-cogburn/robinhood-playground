@@ -3,16 +3,18 @@ const { wordFlags } = require('../settings');
 
 const cacheThis = require('./cache-this');
 
-module.exports = cacheThis(async query => {
-  const { items } = await googleNewsAPI.getNews(googleNewsAPI.SEARCH, query, "en-US");
-  const twentyFourHrsMs = 1000 * 60 * 60 * 24;
-  const last24Hours = items.filter(result => result.created > Date.now() - twentyFourHrsMs);
+module.exports = cacheThis(async ticker => {
+  const { items } = await googleNewsAPI.getNews(googleNewsAPI.SEARCH, ticker, "en-US");
+  const twentyFourHrsMs = 1000 * 60 * 60 * 48;
+  const recentNews = items
+    .filter(result => result.created > Date.now() - twentyFourHrsMs)
+    .filter(result => result.title.includes(ticker.toUpperCase()));
 
-  strlog({ last24Hours });
-  const str = JSON.stringify(last24Hours).toLowerCase();
+  strlog({ recentNews });
+  const str = JSON.stringify(recentNews).toLowerCase();
 
   return {
-    newsInTheLast24Hrs: last24Hours,
+    recentNews,
     wordFlags: wordFlags
       .filter(word => str.includes(word))
       .map(word => ['gnews', word].join(''))

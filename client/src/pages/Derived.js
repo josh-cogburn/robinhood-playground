@@ -139,9 +139,20 @@ class Derived extends Component {
                     </table>
                   </div>
                 </div>
+                {
+                  result.googleNews.newsInTheLast24Hrs.length && (
+                    <div className='stock-description'>
+                      {
+                        result.googleNews.newsInTheLast24Hrs.map(item => (
+                          <a href={item.url} target="blank">{item.title}</a>
+                        ))
+                      }
+                    </div>
+                  )
+                }
                 <div className='stock-description'>
-                  <span style={{ float: 'left' }}>StockTwits Sentiment:</span>
-                  <table>
+                  <span style={{ float: 'left' }}>Recent StockTwits Sentiment:</span>
+                  <table width="100%">
                     <thead>
                       <th>Bullish</th>
                       <th>Bearish</th>
