@@ -8,13 +8,13 @@ let lastBalance;
 
 module.exports = async (isRegularHours = true) => {
   let { accountBalance } = await getAccountBalance();
-  if (Math.abs(getTrend(accountBalance, lastBalance)) > 4.9) {
-      console.log('WOAH WOAH', {
-          accountBalance,
-          lastBalance
-      });
-      accountBalance = lastBalance;
-  }
+//   if (Math.abs(getTrend(accountBalance, lastBalance)) > 4.9) {
+//       console.log('WOAH WOAH', {
+//           accountBalance,
+//           lastBalance
+//       });
+//       accountBalance = lastBalance;
+//   }
   lastBalance = accountBalance;
   const report = {
       accountBalance,
