@@ -95,7 +95,7 @@ module.exports = class PositionWatcher {
     } else if (!pendingSale && trendPerc >= 15) {
       const account = await alpaca.getAccount();
       const { portfolio_value, daytrade_count } = account;
-      if (Number(market_value) > Number(portfolio_value) * 0.5) {
+      if (Number(market_value) > Number(portfolio_value) * 0.29) {
         if (daytrade_count <= 2) {
           await sendEmail(`Selling ${ticker} using a daytrade can we get 20% & 25% up?`);
           const firstChunk = Math.round(Number(quantity) / 2);
