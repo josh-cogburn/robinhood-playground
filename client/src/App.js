@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import './App.css';
 import './pages/Closed.css';
 
+import { ClipLoader } from "react-spinners";
 import { WithContext as ReactTags } from 'react-tag-input';
 
 import ReactModal from 'react-modal';
@@ -201,7 +202,7 @@ class App extends Component {
 
     componentDidMount() {
         let { origin } = window.location;
-        const socketEndpoint = origin.includes('localhost') && false ? 'http://localhost:3000' : 'http://23.237.87.144:3000';
+        const socketEndpoint = origin.includes('localhost') && false ? 'http://localhost:3000' : 'http://23.237.87.144:3001';
         const socket = socketIOClient(socketEndpoint);
         
         const handlePick = data => {
@@ -288,8 +289,8 @@ class App extends Component {
         this.state.socket.emit('restartProcess', data => window.alert(data));
     }
     render () {
-        let { value, predictionModels, pms, balanceReports, newPicksData, positions, relatedPrices, showingPick, socket, admin } = this.state;
-        const isLoading = !balanceReports || !balanceReports.length;
+        let { value, derivedCollections, predictionModels, pms, balanceReports, newPicksData, positions, relatedPrices, showingPick, socket, admin } = this.state;
+        const isLoading = !derivedCollections;
 
 
         positions = mapObject(
@@ -396,9 +397,11 @@ class App extends Component {
                             )
                         }
                     </Toolbar>
-                    <Tabs value={value} onChange={this.handlePageChange} scrollButtons="auto">
-                        { tabs.map(label => <Tab label={label} />) }
-                    </Tabs>
+                    { admin && (
+                        <Tabs value={value} onChange={this.handlePageChange} scrollButtons="auto">
+                            { tabs.map(label => <Tab label={label} />) }
+                        </Tabs>
+                    )}
                 </AppBar>
 
 
@@ -415,7 +418,16 @@ class App extends Component {
 
 
                 { isLoading ? (
-                    <h1 style={{ textAlign: 'center' }}>loading</h1>
+                    <div style={{ justifyContent: 'center', alignItems: 'center', display: 'flex', height: '70vh' }}>
+                        <ClipLoader
+                            // css={override}
+                            size={150}
+                            //size={"150px"} this also works
+                            color={"#123abc"}
+                            loading={true}
+                        />
+                    </div>
+                    // <h1 style={{ textAlign: 'center' }}>loading</h1>
                 ) : <PageComponent 
                       {...passToPages}
                       positions={positions}
