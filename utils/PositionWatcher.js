@@ -20,7 +20,8 @@ module.exports = class PositionWatcher {
       avgDownCount,
       timeout: initialTimeout,
       pendingSale: false,
-      avgDownPrices: []
+      avgDownPrices: [],
+      lastAvgDown: null
     });
     console.log('hey whats up from here')
     this.start();
@@ -64,19 +65,21 @@ module.exports = class PositionWatcher {
       askPrice
     ];
     const lowestPrice = Math.min(...prices);
-    const comparePrice = Math.min(avgEntry, ...this.avgDownPrices);
-    const trendPerc = getTrend(lowestPrice, comparePrice);
+    const lowestAvgDownPrice = Math.min(...this.avgDownPrices);
+    const trendToLowestAvg = getTrend(lowestPrice, lowestAvgDownPrice);
+    const returnPerc = getTrend(lowestPrice, avgEntry);
 
     strlog({
       ticker,
       avgEntry,
-      currentPrice,
-      askPrice,
       prices,
+
       lowestPrice,
+      trendToLowestAvg,
+      returnPerc
     });
-    console.log(`AVG-DOWNER: ${ticker} observed at ${currentPrice} ... avg buy at ${avgEntry}, and avg down count ${avgDownCount}... trended ${trendPerc}`);
-    if (trendPerc < -3.25) {
+    console.log(`AVG-DOWNER: ${ticker} observed at ${currentPrice} ... avg buy at ${avgEntry} (${returnPerc}), lowest avg down price ${lowestAvgDownPrice} (${trendToLowestAvg}), and avg down count ${avgDownCount}`);
+    if ([trendToLowestAvg, returnPerc].every(trend => !trend || trend < -3.25)) {
       this.avgDownCount++;
       const realtimeRunner = require('../realtime/RealtimeRunner');
       await realtimeRunner.handlePick({
@@ -92,7 +95,8 @@ module.exports = class PositionWatcher {
         }
       }, true);
       this.avgDownPrices.push(currentPrice);
-    } else if (!pendingSale && trendPerc >= 15) {
+      this.lastAvgDown = Date.now();
+    } else if (!pendingSale && returnPerc >= 15) {
       const account = await alpaca.getAccount();
       const { portfolio_value, daytrade_count } = account;
       if (Number(market_value) > Number(portfolio_value) * 0.29) {
