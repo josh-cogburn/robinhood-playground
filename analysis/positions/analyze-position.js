@@ -5,7 +5,7 @@ const { sumArray, avgArray } = require('../../utils/array-math');
 const getTrend = require('../../utils/get-trend');
 
 const analyzePosition = async position => {
-  const { ticker, sells = [], buys = [], unrealizedPl, avgEntry } = position;
+  let { ticker, sells = [], buys = [], unrealizedPl, avgEntry } = position;
 
   strlog({
     position
@@ -29,6 +29,7 @@ const analyzePosition = async position => {
   const totalBuyAmt = sumArray(allBuys);
 
   const allSells = individualize(sells);
+  avgEntry = avgEntry || avgArray(allBuys);
   const avgSellPrice = avgArray(allSells);
   const sellReturnPerc = getTrend(avgSellPrice, avgEntry);
 
