@@ -56,6 +56,8 @@ module.exports = class PositionWatcher {
       market_value,
       quantity
     } = this.getRelatedPosition();
+    
+    if (!avgEntry) return this.scheduleTimeout();
 
     const l = await lookup(ticker);
     strlog({ ticker, l })
