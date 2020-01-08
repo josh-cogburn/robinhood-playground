@@ -91,7 +91,8 @@ module.exports = class PositionWatcher {
           isBeforeClose
         },
         data: {
-          trendPerc,
+          returnPerc
+          trendToLowestAvg,
         }
       }, true);
       this.avgDownPrices.push(currentPrice);
