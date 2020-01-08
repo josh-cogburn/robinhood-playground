@@ -91,7 +91,7 @@ module.exports = class PositionWatcher {
           isBeforeClose
         },
         data: {
-          returnPerc
+          returnPerc,
           trendToLowestAvg,
         }
       }, true);
