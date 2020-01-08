@@ -29,7 +29,7 @@ module.exports = class PositionWatcher {
   start() {
     this.running = true;
     this.startTime = Date.now();
-    this.observe();
+    this.scheduleTimeout();
   }
   getRelatedPosition() {
     const { ticker } = this;
