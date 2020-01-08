@@ -76,7 +76,7 @@ const subsetOffsets = {
 
   tenMinMinors: -10,
 
-  halt: -5,
+  halt: -9,
   rocket: 2,
   delist: -3,
   
