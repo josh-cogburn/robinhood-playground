@@ -66,6 +66,9 @@ module.exports = class PositionWatcher {
       currentPrice,
       askPrice
     ];
+    const isSame = Boolean(JSON.stringify(prices) === JSON.stringify(this.prices));
+    this.lastPrices = prices;
+
     const lowestPrice = Math.min(...prices);
     const lowestAvgDownPrice = Math.min(...this.avgDownPrices);
     const trendToLowestAvg = getTrend(lowestPrice, lowestAvgDownPrice);
@@ -80,9 +83,14 @@ module.exports = class PositionWatcher {
       trendToLowestAvg,
       returnPerc
     });
-    console.log(`AVG-DOWNER: ${ticker} observed at ${currentPrice} ... avg buy at ${avgEntry} (${returnPerc}), lowest avg down price ${lowestAvgDownPrice} (${trendToLowestAvg}), and avg down count ${avgDownCount}`);
-    const notRushed = !this.lastAvgDown || Date.now() > this.lastAvgDown + 1000 * 60 * 10;
-    if ([trendToLowestAvg, returnPerc].every(trend => !trend || trend < -3.25) && notRushed) {
+    console.log(`AVG-DOWNER: ${ticker} observed at ${currentPrice} ... avg buy at ${avgEntry} (${returnPerc}), lowest avg down price ${lowestAvgDownPrice} (${trendToLowestAvg}), and avg down count ${avgDownCount}, skipChecks ${skipChecks}`);
+    const isRushed = this.lastAvgDown && Date.now() < this.lastAvgDown + 1000 * 60 * 5;
+    const skipChecks = isRushed && isSame;
+    if (skipChecks) {
+      return this.scheduleTimeout();
+    }
+
+    if ([trendToLowestAvg, returnPerc].every(trend => !trend || trend < -3.25)) {
       this.avgDownCount++;
       const realtimeRunner = require('../realtime/RealtimeRunner');
       await realtimeRunner.handlePick({
