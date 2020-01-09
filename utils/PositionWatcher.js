@@ -83,9 +83,12 @@ module.exports = class PositionWatcher {
       trendToLowestAvg,
       returnPerc
     });
-    console.log(`AVG-DOWNER: ${ticker} observed at ${currentPrice} ... avg buy at ${avgEntry} (${returnPerc}), lowest avg down price ${lowestAvgDownPrice} (${trendToLowestAvg}), and avg down count ${avgDownCount}, skipChecks ${skipChecks}`);
+
     const isRushed = this.lastAvgDown && Date.now() < this.lastAvgDown + 1000 * 60 * 5;
     const skipChecks = isRushed && isSame;
+    
+    console.log(`AVG-DOWNER: ${ticker} observed at ${currentPrice} ... avg buy at ${avgEntry} (${returnPerc}), lowest avg down price ${lowestAvgDownPrice} (${trendToLowestAvg}), and avg down count ${avgDownCount}, skipChecks ${skipChecks}`);
+    
     if (skipChecks) {
       return this.scheduleTimeout();
     }
