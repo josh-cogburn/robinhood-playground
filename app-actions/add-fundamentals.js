@@ -32,8 +32,9 @@ module.exports = async (trend) => {
         tickersToLookup,
         async tickerStr => {
             // console.log('tickerstr', tickerStr);
-            const { results } = await Robinhood.url(`https://api.robinhood.com/fundamentals/?symbols=${tickerStr}`);
-            return results;
+            const response = await Robinhood.url(`https://api.robinhood.com/fundamentals/?symbols=${tickerStr}`);
+            strlog({ response })
+            return response.results;
         },
         10
     );
