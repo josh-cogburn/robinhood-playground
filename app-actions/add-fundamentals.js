@@ -20,7 +20,7 @@ module.exports = async (trend) => {
 
     const tickersToLookup = allTickers.filter(ticker => 
         !tickersInCacheAndNotExpired.includes(ticker)
-    );
+    ).filter(t => t !== 'FGP');
 
     strlog({
         trend,
