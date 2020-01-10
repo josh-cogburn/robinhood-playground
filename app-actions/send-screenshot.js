@@ -12,7 +12,7 @@ const sendScreenshot = async numDays => {
   const path = `./screenshots/${screenshotName}.jpg`;
 
   const browser = await puppeteer.launch({ 
-    headless: true,
+    headless: false,
     args: [
       '--no-sandbox', 
       '--disable-setuid-sandbox', 
@@ -24,7 +24,14 @@ const sendScreenshot = async numDays => {
     height: 900
   };
   page.setViewport({ ...dims, deviceScaleFactor: 2 });
-  await page.goto(`http://23.237.87.144:3000/?${numDays}`);
+
+  await page.on('dialog', async dialog => {
+    console.log('DIALOGGG');
+    dialog.accept('j');
+  });
+  await page.goto(`http://23.237.87.144:3000/?p=3000&numDays=${numDays}`);
+  await page.waitFor(12000);
+  await page.click("a");
   await page.waitFor(12000);
   await page.screenshot({
     path,
