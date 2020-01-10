@@ -84,7 +84,7 @@ module.exports = class PositionWatcher {
       returnPerc
     });
 
-    const baseTime = avgDownCount * .75;
+    const baseTime = (avgDownCount + 0.2) * .75;
     const minNeededToPass = isSame ?  baseTime : baseTime * 2;
     const isRushed = this.lastAvgDown && Date.now() < this.lastAvgDown + 1000 * 60 * minNeededToPass;
     const skipChecks = isRushed;
