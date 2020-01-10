@@ -21,12 +21,11 @@ const sendScreenshot = async numDays => {
   const page = await browser.newPage();
   const dims = {
     width: 1680,
-    height: 855
+    height: 840
   };
   page.setViewport({ ...dims, deviceScaleFactor: 2 });
 
   await page.on('dialog', async dialog => {
-    console.log('DIALOGGG');
     dialog.accept('j');
   });
   await page.goto(`http://23.237.87.144:3000/?p=3000&numDays=${numDays}`);
@@ -38,7 +37,7 @@ const sendScreenshot = async numDays => {
     quality: 100,
     clip: {
       x: 0,
-      y: 100,
+      y: 107,
       ...dims
     }
   });
