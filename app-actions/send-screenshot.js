@@ -21,7 +21,7 @@ const sendScreenshot = async numDays => {
   const page = await browser.newPage();
   const dims = {
     width: 1680,
-    height: 900
+    height: 855
   };
   page.setViewport({ ...dims, deviceScaleFactor: 2 });
 
@@ -38,7 +38,7 @@ const sendScreenshot = async numDays => {
     quality: 100,
     clip: {
       x: 0,
-      y: 125,
+      y: 100,
       ...dims
     }
   });
