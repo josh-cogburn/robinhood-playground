@@ -53,6 +53,9 @@ const deriveCollections = async collections => {
         .slice(0, COUNT);
 
     const outputVariations = {
+        Movers: results => results
+            .sort((a, b) => b.computed.tso - a.computed.tso)
+            .slice(0, COUNT),
         NowhereVolume: results => getUnusualVolume(
             results
                 .filter(t => t.computed.tso > -1 && t.computed.tso < 3 && t.computed.tsc > -1 && t.computed.tsc < 3)
@@ -72,9 +75,6 @@ const deriveCollections = async collections => {
                 .filter(t => t.computed.dailyRSI < 50)
                 .filter(t => t.computed.tsc < 1 && t.computed.tsc > -3)
         ),
-        Movers: results => results
-            .sort((a, b) => b.computed.tso - a.computed.tso)
-            .slice(0, COUNT),
     };
 
     const permute = rsiPermName =>

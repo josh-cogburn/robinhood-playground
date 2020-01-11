@@ -119,8 +119,13 @@ class Derived extends Component {
                         <td>{numberWithCommas(result.recentVolume.avgOverallVolume)}</td>
                       </tr>
                       <tr>
-                        <td>today's estimated dollar</td>
-                        <td>${numberWithCommas(result.computed.dollarVolume)}</td>
+                        <td>recent trend</td>
+                        <td>
+                          <TrendPerc 
+                              value={result.recentVolume.recentTrend}
+                              // round={true}
+                               />
+                        </td>
                       </tr>
                     </table>
                   </div>
@@ -139,7 +144,7 @@ class Derived extends Component {
                         <td>projected to two-week avg</td>
                         <td>
                           <TrendPerc 
-                            value={result.computed.projectedVolumeTo2WeekAvg} 
+                            value={result.computed.projectedVolumeTo2WeekAvg * 100} 
                             redAt={100}
                             noPlus={true} 
                             round={true} />

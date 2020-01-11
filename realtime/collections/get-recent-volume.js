@@ -1,5 +1,6 @@
 const getMultipleHistoricals = require('../../app-actions/get-multiple-historicals');
 const { avgArray } = require('../../utils/array-math');
+const getTrend = require('../../utils/get-trend');
 
 module.exports = async (tickers = []) => {
 
@@ -16,11 +17,13 @@ module.exports = async (tickers = []) => {
 
   const withRatio = withHistoricals.map(obj => {
     const { ticker, historicals } = obj;
+    const recentHistoricals = historicals.slice(-2);
+    const recentTrend = getTrend(recentHistoricals[0].open_price, recentHistoricals[1].close_price);
     const [
       avgRecentVolume,
       avgOverallVolume
     ] = [
-      historicals.slice(-2),
+      recentHistoricals,
       historicals
     ].map(hists => avgArray(hists.map(hist => hist.volume)));
 
@@ -29,7 +32,8 @@ module.exports = async (tickers = []) => {
       ticker,
       avgRecentVolume,
       avgOverallVolume,
-      ratio: avgRecentVolume / avgOverallVolume
+      ratio: avgRecentVolume / avgOverallVolume,
+      recentTrend
     };
   });
 
