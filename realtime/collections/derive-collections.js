@@ -17,11 +17,6 @@ const addDetails = async response => {
     }));
 
     const recentVolumeLookups = await getRecentVolume(uniqTickers);
-    const tickersWithDetails = uniqTickers.map(ticker => ({
-        ticker,
-        ...withStSents.find(r => r.ticker === ticker),
-        recentVolume: recentVolumeLookups[ticker]
-    }));
 
     strlog({uniqTickers});
 
@@ -29,7 +24,8 @@ const addDetails = async response => {
         response,
         results => results.map(result => ({
             ...result,
-            ...tickersWithDetails.find(r => r.ticker === result.ticker)
+            ...tickersWithDetails.find(r => r.ticker === result.ticker),
+            recentVolume: recentVolumeLookups[ticker]
         }))
     );
 
@@ -49,7 +45,7 @@ const addDetails = async response => {
                 [key]: Object.entries(recentVolumeLookups)
                     .filter(r => r[1][prop])
                     .sort((a, b) => b[1][prop] - a[1][prop])
-                    .map(result => tickersWithDetails.find(r => r.ticker === result[0]))
+                    .map(result => Object.values(withDetails).flatten().find(r => r.ticker === result[0]))
                     .slice(0, 7)
             };
 
