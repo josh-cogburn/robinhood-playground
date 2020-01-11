@@ -1,5 +1,5 @@
 const getMultipleHistoricals = require('../../app-actions/get-multiple-historicals');
-const { avgArray } = require('../../breakdown-key-compares');
+const { avgArray } = require('../../utils/array-math');
 
 module.exports = async (tickers = []) => {
 
