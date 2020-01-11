@@ -6,6 +6,7 @@ const runScan = require('../../scans/base/run-scan');
 
 const getStSent = require('../../utils/get-stocktwits-sentiment');
 const queryGoogleNews = require('../../utils/query-google-news');
+const getRecentVolume = require('./get-recent-volume');
 const getRecentVolumeCollections = require('./get-recent-volume-collections');
 
 const addDetails = async response => {
@@ -29,7 +30,7 @@ const addDetails = async response => {
         }))
     );
 
-    return withRecentVolumeCollections
+    return recentVolumeLookups
 };
 
 const deriveCollections = async collections => {
