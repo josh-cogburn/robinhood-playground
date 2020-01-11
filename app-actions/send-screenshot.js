@@ -4,11 +4,10 @@ const sendEmail = require('../utils/send-email');
 const Pick = require('../models/Pick');
 
 
-const sendScreenshot = async numDays => {
+const sendScreenshot = async (numDays, queryString = '') => {
   
   const todaysDate = (await Pick.getUniqueDates()).pop();
-  const screenshotName = `${todaysDate}${numDays !== 1 ? `-${numDays}day` : ''}`;
-
+  const screenshotName = `${todaysDate}${numDays !== 1 ? `-${numDays}day` : ''}${queryString ? '-' + queryString : ''}`;
   const path = `./screenshots/${screenshotName}.jpg`;
 
   const browser = await puppeteer.launch({ 
@@ -28,7 +27,7 @@ const sendScreenshot = async numDays => {
   await page.on('dialog', async dialog => {
     dialog.accept('j');
   });
-  await page.goto(`http://23.237.87.144:3000/?p=3000&numDays=${numDays}`);
+  await page.goto(`http://23.237.87.144:3000/?p=3000&numDays=${numDays}&${queryString}`);
   await page.waitFor(12000);
   await page.click("a");
   await page.waitFor(12000);
@@ -50,9 +49,14 @@ const sendScreenshot = async numDays => {
 
 module.exports = async (numDays = 1) => {
 
-  await sendScreenshot(numDays);
-  if ((new Date()).getDay() === 5 && numDays === 1) {
-    await sendScreenshot(5);
+  const days = [
+    1,
+    (new Date()).getDay() === 5 && numDays === 1 ? 5 : []
+  ];
+
+  for (let day of days) {
+    await sendScreenshot(day);
+    await sendScreenshot(day, 'balance');
   }
   
 }
