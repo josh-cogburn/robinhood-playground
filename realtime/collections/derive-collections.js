@@ -25,7 +25,7 @@ const addDetails = async response => {
         results => results.map(result => ({
             ...result,
             ...withStSents.find(r => r.ticker === result.ticker),
-            recentVolume: recentVolumeLookups[ticker]
+            recentVolume: recentVolumeLookups[result.ticker]
         }))
     );
 
