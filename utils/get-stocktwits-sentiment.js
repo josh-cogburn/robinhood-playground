@@ -17,6 +17,7 @@ const stReq = cacheThis(
             });
             return JSON.parse(res);
         } catch (e) {
+            strlog({ e })
             console.error(JSON.parse(e.response.body).response.status);
             throw JSON.parse(e.response.body).response;
         } finally {
@@ -34,10 +35,14 @@ const stBrackets = {
     neutral: [-9, 9],     // stSent > 70
     bearish: [-7, 7],     // stSent < 70
 };
-const getStBracket = bullBearScore => {
+const getStBracket = ({ bullishCount, bearishCount, totalCount }) => {
+
+    if (totalCount < 15) return 'neutral';
+
+    const ratio = bullishCount / (bullishCount + bearishCount);
     const stBracket = (() => {
-        if (bullBearScore > 130) return 'bullish';
-        if (bullBearScore < 40) return 'bearish';
+        if (ratio > 0.78) return 'bullish';
+        if (ratio < 0.5) return 'bearish';
         return 'neutral';
     })();
     const [lowerLimit, upperLimit] = stBrackets[stBracket];
@@ -98,18 +103,21 @@ module.exports = async (ticker, detailed, maxId) => {
 
 
         const getSentiment = s => messages.filter(o => o.entities.sentiment && o.entities.sentiment.basic === s).length;
-        const response = {
+        let response = {
             bullBearScore,
             totalCount,
             bearishCount: getSentiment('Bearish'),
             bullishCount: getSentiment('Bullish'),
-            ...getStBracket(bullBearScore),
 
             wordFlags: wordFlags.filter(includesPhrase),
             ...detailed && {
                 messages
             }
         };
+        response = {
+            ...response,
+            ...getStBracket(response),
+        }
         console.log(`stSent ${ticker}`, response);
         return response;
 
