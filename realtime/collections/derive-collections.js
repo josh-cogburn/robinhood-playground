@@ -6,7 +6,7 @@ const runScan = require('../../scans/base/run-scan');
 
 const getStSent = require('../../utils/get-stocktwits-sentiment');
 const queryGoogleNews = require('../../utils/query-google-news');
-const getRecentVolume = require('./get-recent-volume');
+const getRecentVolumeCollections = require('./get-recent-volume-collections');
 
 const addDetails = async response => {
     const uniqTickers = Object.values(response).flatten().map(result => result.ticker).uniq();
@@ -18,7 +18,7 @@ const addDetails = async response => {
 
     const recentVolumeLookups = await getRecentVolume(uniqTickers);
 
-    strlog({uniqTickers});
+    strlog({ uniqTickers });
 
     const withDetails = mapObject(
         response,
@@ -28,29 +28,6 @@ const addDetails = async response => {
             recentVolume: recentVolumeLookups[result.ticker]
         }))
     );
-
-
-    const recentVolumeCollections = {
-        mostRecentVolume: 'avgRecentVolume',
-        highestRecentVolumeRatio: 'ratio'
-    };
-
-    const withRecentVolumeCollections = {
-        ...withDetails,
-        ...Object.keys(recentVolumeCollections).reduce((acc, key) => {
-
-            const prop = recentVolumeCollections[key];
-            return {
-                ...acc,
-                [key]: Object.entries(recentVolumeLookups)
-                    .filter(r => r[1][prop])
-                    .sort((a, b) => b[1][prop] - a[1][prop])
-                    .map(result => Object.values(withDetails).flatten().find(r => r.ticker === result[0]))
-                    .slice(0, 7)
-            };
-
-        }, {})
-    }
 
     return withRecentVolumeCollections
 };
@@ -120,7 +97,8 @@ const deriveCollections = async collections => {
     let unusedResults = [
         ...allScanResults.filter(t => t.computed.projectedVolume > 70000)
     ];
-    const response = mapObject(
+
+    let response = mapObject(
         derivedCollections,
         fn => {
             const response = fn(unusedResults);
@@ -128,6 +106,11 @@ const deriveCollections = async collections => {
             return response;
         }
     );
+
+    response = {
+        ...response,
+        ...await getRecentVolumeCollections()
+    };
 
     /// AFTER HOURS || PRE MARKET ?
     if (!dayInProgress()) {
