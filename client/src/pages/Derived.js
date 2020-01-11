@@ -5,7 +5,7 @@ import TrendPerc from '../components/TrendPerc';
 import './Derived.css';
 
 function numberWithCommas(x) {
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  return Math.round(x).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 const getShortDescription = description => 
@@ -98,7 +98,28 @@ class Derived extends Component {
                 />
                 <div className='stock-info'>
                   <div>
-                    <h4>Volume</h4>
+                    <h4>20 Minute Volume</h4>
+                    <table>
+                      <tr>
+                        <td>ratio</td>
+                        <td>{result.recentVolume.ratio}</td>
+                      </tr>
+                      <tr>
+                        <td>recent volume</td>
+                        <td>{numberWithCommas(result.recentVolume.avgRecentVolume)}</td>
+                      </tr>
+                      <tr>
+                        <td>avg volume overall</td>
+                        <td>{numberWithCommas(result.recentVolume.avgOverallVolume)}</td>
+                      </tr>
+                      <tr>
+                        <td>today's estimated dollar</td>
+                        <td>${numberWithCommas(result.computed.dollarVolume)}</td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div>
+                    <h4>Daily Volume</h4>
                     <table>
                       <tr>
                         <td>actual</td>

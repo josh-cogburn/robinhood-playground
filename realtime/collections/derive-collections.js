@@ -17,17 +17,46 @@ const addDetails = async response => {
     }));
 
     const recentVolumeLookups = await getRecentVolume(uniqTickers);
+    const tickersWithDetails = uniqTickers.map(ticker => ({
+        ticker,
+        ...withStSents.find(r => r.ticker === ticker),
+        recentVolume: recentVolumeLookups[ticker]
+    }));
 
     strlog({uniqTickers});
 
-    return mapObject(
+    const withDetails = mapObject(
         response,
         results => results.map(result => ({
-            ...withStSents.find(r => r.ticker === result.ticker),
             ...result,
-            recentVolume: recentVolumeLookups[result.ticker]
+            ...tickersWithDetails.find(r => r.ticker === result.ticker)
         }))
     );
+
+
+    const recentVolumeCollections = {
+        mostRecentVolume: 'avgRecentVolume',
+        highestRecentVolumeRatio: 'ratio'
+    };
+
+    const withRecentVolumeCollections = {
+        ...withDetails,
+        ...Object.keys(recentVolumeCollections).reduce((acc, key) => {
+
+            const prop = recentVolumeCollections[key];
+            return {
+                ...acc,
+                [key]: Object.entries(recentVolumeLookups)
+                    .filter(r => r[1][prop])
+                    .sort((a, b) => b[1][prop] - b[0][prop])
+                    .map(result => tickersWithDetails.find(r => r.ticker === result[0]))
+                    .slice(0, 7)
+            };
+
+        }, {})
+    }
+
+    return withRecentVolumeCollections
 };
 
 const deriveCollections = async collections => {
