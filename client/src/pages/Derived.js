@@ -102,7 +102,13 @@ class Derived extends Component {
                     <table>
                       <tr>
                         <td>ratio</td>
-                        <td>{result.recentVolume.ratio}</td>
+                        <td>
+                          <TrendPerc 
+                              value={result.recentVolume.ratio * 100} 
+                              redAt={100}
+                              noPlus={true} 
+                              round={true} />
+                        </td>
                       </tr>
                       <tr>
                         <td>recent volume</td>
