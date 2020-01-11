@@ -48,7 +48,7 @@ const addDetails = async response => {
                 ...acc,
                 [key]: Object.entries(recentVolumeLookups)
                     .filter(r => r[1][prop])
-                    .sort((a, b) => b[1][prop] - b[0][prop])
+                    .sort((a, b) => b[1][prop] - a[1][prop])
                     .map(result => tickersWithDetails.find(r => r.ticker === result[0]))
                     .slice(0, 7)
             };
