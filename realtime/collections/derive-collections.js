@@ -30,7 +30,7 @@ const addDetails = async response => {
         }))
     );
 
-    return recentVolumeLookups
+    return withDetails
 };
 
 const deriveCollections = async collections => {
