@@ -127,7 +127,7 @@ const deriveCollections = async collections => {
             })
         )
             .sort((a, b) => b.computed.tsc - a.computed.tsc)
-            // .slice(0, 5s);
+            .slice(0, 5);
     }
 
     return addDetails(response);
