@@ -6,6 +6,7 @@ const runScan = require('../../scans/base/run-scan');
 
 const getStSent = require('../../utils/get-stocktwits-sentiment');
 const queryGoogleNews = require('../../utils/query-google-news');
+const getRecentVolume = require('./get-recent-volume');
 
 const addDetails = async response => {
     const uniqTickers = Object.values(response).flatten().map(result => result.ticker).uniq();
@@ -15,6 +16,8 @@ const addDetails = async response => {
         googleNews: await queryGoogleNews(ticker)
     }));
 
+    const recentVolumeLookups = await getRecentVolume(uniqTickers);
+
     strlog({uniqTickers});
 
     return mapObject(
@@ -22,6 +25,7 @@ const addDetails = async response => {
         results => results.map(result => ({
             ...withStSents.find(r => r.ticker === result.ticker),
             ...result,
+            recentVolume: recentVolumeLookups[result.ticker]
         }))
     );
 };
