@@ -35,13 +35,11 @@ const stBrackets = {
     neutral: [-9, 9],     // stSent > 70
     bearish: [-7, 7],     // stSent < 70
 };
+
 const getStBracket = ({ bullishCount, bearishCount, totalCount }) => {
-
-    if (totalCount < 15) return 'neutral';
-
     const ratio = bullishCount / (bullishCount + bearishCount);
     const stBracket = (() => {
-        if (ratio > 0.78) return 'bullish';
+        if (ratio > 0.78 && totalCount > 18) return 'bullish';
         if (ratio < 0.5) return 'bearish';
         return 'neutral';
     })();

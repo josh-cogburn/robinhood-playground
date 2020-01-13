@@ -182,7 +182,7 @@ class Closed extends Component {
                       <td><TrendPerc value={percUp} redAt={50} /></td>
                       <td>{totalPositions}</td>
                       <td>{totalPicks}</td>
-                      <td>{totalMultipliers.toFixed(1)}</td>
+                      <td>{totalMultipliers}</td>
                     </tr>
                   );
                 })}
