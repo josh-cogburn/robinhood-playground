@@ -178,7 +178,7 @@ module.exports = new (class RealtimeRunner {
         name: 'RealtimeRunner: collectionsAndHistoricals',
         run: [-147, -137, -127, -117, -97, -67, -47, -25, -15, -8, 2, 8, 16, 27, 45, 60, 397, 415, 430, 445, 470, 500, 600, 700],
         fn: () => this.collectionsAndHistoricals()
-    })5;
+    });
 
     regCronIncAfterSixThirty({
         name: 'RealtimeRunner: stop',
