@@ -22,7 +22,7 @@ module.exports = async () => {
   const withRecentVolume = scan
     .map(result => ({
       ...result,
-      recentVolume: recentVolumeLookups[result.ticker]
+      recentVolume: recentVolumeLookups[result.ticker],
     }))
     .sort((a, b) => b.recentVolume.ratio - a.recentVolume.ratio);
 
@@ -37,7 +37,8 @@ module.exports = async () => {
 
   const recentVolumeCollections = {
       derivedMostRecentVolume: 'avgRecentVolume',
-      derivedHighestRecentVolumeRatio: 'ratio'
+      derivedHighestRecentVolumeRatio: 'ratio',
+      highestRecentDollarVolume: 'recentDollarVolume'
   };
 
   return Object.keys(recentVolumeCollections)
