@@ -33,6 +33,21 @@ const addDetails = async response => {
     return withDetails
 };
 
+const addHighestSt = async withDetails => {
+    const highestSt = uniq(
+        Object.values(withDetails).flatten(),
+        result => result.ticker
+    )
+        .filter(result => result.stSent.bullBearScore)
+        .sort((a, b) => b.stSent.bullBearScore - a.stSent.bullBearScore)
+        .slice(0, 3);
+
+    return {
+        ...withDetails,
+        highestSt
+    };
+};
+
 const deriveCollections = async collections => {
 
     const allScanResults = uniq(
@@ -115,6 +130,7 @@ const deriveCollections = async collections => {
 
     /// AFTER HOURS || PRE MARKET ?
     if (!dayInProgress()) {
+        // this scan is BAD (useless) for a lot of reasons
         response.afterHoursGainers = (
             await runScan({
                 minVolume: 50000,
@@ -131,18 +147,7 @@ const deriveCollections = async collections => {
     }
 
     const withDetails = await addDetails(response);
-    const highestSt = uniq(
-        Object.values(withDetails).flatten(),
-        result => result.ticker
-    )
-        .filter(result => result.stSent.bullBearScore)
-        .sort((a, b) => b.stSent.bullBearScore - a.stSent.bullBearScore)
-        .slice(0, 3);
-
-    const withHighestSt = {
-        ...withDetails,
-        highestSt
-    };
+    const withHighestSt = await addHighestSt(withDetails);
 
     return withHighestSt;
 
