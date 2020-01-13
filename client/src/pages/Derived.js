@@ -148,7 +148,7 @@ class Derived extends Component {
                         <td>projected to two-week avg</td>
                         <td>
                           <TrendPerc 
-                            value={result.computed.projectedVolumeTo2WeekAvg * 100} 
+                            value={result.computed.projectedVolumeTo2WeekAvg}
                             redAt={100}
                             noPlus={true} 
                             round={true} />
