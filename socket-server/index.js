@@ -121,6 +121,13 @@ io.on('connection', async socket => {
     socket.on('getPickData', async (id, cb) => {
         const pickData = await Pick.findById(id, { data: 1 });
         if (pickData) {
+            if (!pickData.data) {
+                console.log('uh oh problem getting pick data for ', id);
+                strlog({
+                    id,
+                    pickData
+                });
+            }
             console.log('sending ', pickData.data);
             cb(pickData.data);
         }
