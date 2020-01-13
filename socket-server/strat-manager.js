@@ -74,7 +74,7 @@ const stratManager = {
         await this.tickerWatcher.start();
 
 
-        new CronJob(`40 7 * * 1-5`, () => this.newDay(), null, true);
+        new CronJob(`59 6 * * 1-5`, () => this.newDay(), null, true);
 
         
         this.pmsAnalyzed = await require('../analysis/sep-2019/all-pm-analysis')()
@@ -192,8 +192,8 @@ const stratManager = {
         // calc current date
         const now = new Date();
         const compareDate = new Date();
-        compareDate.setHours(7);
-        compareDate.setMinutes(40);
+        compareDate.setHours(6);
+        compareDate.setMinutes(59);
         if (compareDate - now > 0) {
             now.setDate(now.getDate() - 1);
         }
