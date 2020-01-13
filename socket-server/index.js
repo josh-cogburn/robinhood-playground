@@ -66,6 +66,8 @@ app.use('/user-strategies', express['static'](prependFolder('user-strategies/bui
 
 io.on('connection', async socket => {
 
+    console.log('new connection');
+    
     socket.emit('server:data-update', await stratManager.getWelcomeData());
 
     socket.on('get-current-prices', async tickers => {
