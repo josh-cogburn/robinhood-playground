@@ -36,8 +36,8 @@ module.exports = async () => {
 
 
   const recentVolumeCollections = {
-      derivedMostRecentVolume: 'avgRecentVolume',
-      derivedHighestRecentVolumeRatio: 'ratio',
+      mostRecentVolume: 'avgRecentVolume',
+      highestRecentVolumeRatio: 'ratio',
       highestRecentDollarVolume: 'recentDollarVolume'
   };
 
