@@ -127,6 +127,10 @@ class Derived extends Component {
                                />
                         </td>
                       </tr>
+                      <tr>
+                        <td>recent dollar volume</td>
+                        <td>${numberWithCommas(result.recentVolume.recentDollarVolume)}</td>
+                      </tr>
                     </table>
                   </div>
                   <div>
