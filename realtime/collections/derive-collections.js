@@ -130,7 +130,21 @@ const deriveCollections = async collections => {
             .slice(0, 5);
     }
 
-    return addDetails(response);
+    const withDetails = await addDetails(response);
+    const highestSt = uniq(
+        Object.values(withDetails).flatten(),
+        result => result.ticker
+    )
+        .filter(result => result.stSent.bullBearScore)
+        .sort((a, b) => b.stSent.bullBearScore - a.stSent.bullBearScore)
+        .slice(0, 3);
+
+    const withHighestSt = {
+        ...withDetails,
+        highestSt
+    };
+
+    return withHighestSt;
 
 };
 
