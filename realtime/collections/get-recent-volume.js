@@ -17,7 +17,7 @@ module.exports = async (tickers = ['AAPL']) => {
 
   const withRatio = withHistoricals.map(obj => {
     const { ticker, historicals } = obj;
-    const recentHistoricals = historicals.slice(-2);
+    const recentHistoricals = historicals.slice(-3);
 
     const recentDollarVolume = avgArray(
       recentHistoricals

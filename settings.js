@@ -246,6 +246,11 @@ module.exports = {
         sudden-drops-mediumJump-brunch-!down-!straightDown
         sudden-drops-mediumJump-brunch-!down-!straightDown
 
+        sudden-drops-zeroToOne
+        sudden-drops-zeroToOne
+
+        
+
 
 
         // more majorJumps
@@ -519,6 +524,7 @@ module.exports = {
 
 
         rsi-rsilt5-initial
+        rsi-rsilt10-initial
         rsi-10min-rsilt10
         sudden-drops-lunch
         stocktwits-holds
