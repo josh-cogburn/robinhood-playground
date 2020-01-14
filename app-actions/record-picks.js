@@ -66,9 +66,11 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
             forPurchaseMultiplier + pmAnalysisMultiplier + subsetOffsetMultiplier
         );
 
-        if (interestingWords.includes('derived')) {
+        const stoppedAt1 = ['derived', 'rsi'];
+        if (stoppedAt1.some(word => interestingWords.includes(word))) {
             multiplier = 1;
         }
+        
         
         const qualitySuddenDrop = stratMin.includes('sudden') && multiplier >= multiplierThreshold;
         const minimumMult = qualitySuddenDrop ? 4 : 1;

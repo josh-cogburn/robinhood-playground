@@ -11,7 +11,7 @@ const subsetOffsets = {
   // yesterday: ({ date }) => allDates[1] === date,
   // today: ({ date }) => allDates[0] === date,
 
-  suddenDrops: 5,
+  suddenDrops: 7,
   
   watchout: -2,
   notWatchout: 1,
