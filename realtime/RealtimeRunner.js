@@ -1058,7 +1058,7 @@ module.exports = new (class RealtimeRunner {
 
     const onlyShort = obj => 
       Object.keys(obj)
-        .filter(key => key.split('-').length < 5)
+        .filter(key => key.split('-').length < 4)
         .reduce((acc, key) => ({
           ...acc,
           [key]: obj[key]
