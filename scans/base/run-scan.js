@@ -53,6 +53,7 @@ const runScan = async ({
   // ticker filters
   minPrice = 0.5,
   maxPrice = 8,
+  minDollarVolume = Number.NEGATIVE_INFINITY,
   minVolume = Number.NEGATIVE_INFINITY,
   maxVolume = Number.POSITIVE_INFINITY,
   tickers,
@@ -180,10 +181,12 @@ const runScan = async ({
     })
     .filter(buy => {
       const { average_volume_2_weeks } = buy.fundamentals;
-      const { projectedVolume } = buy.computed;
-      return [average_volume_2_weeks, projectedVolume].every(val =>
+      const { projectedVolume, dollarVolume } = buy.computed;
+      const passesVolumeCheck = [average_volume_2_weeks, projectedVolume].every(val =>
         val >= minVolume && val <= maxVolume
-      )
+      );
+      const passesDollarVolumeCheck = dollarVolume > minDollarVolume;
+      return passesVolumeCheck && passesDollarVolumeCheck;
     });
 
 

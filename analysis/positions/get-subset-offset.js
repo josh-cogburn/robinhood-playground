@@ -47,7 +47,7 @@ const subsetOffsets = {
   hotSt: -1,
   // notHotSt: 1,
   // collections
-  zeroToOne: -2,
+  zeroToOne: 2,
   oneToTwo: 2,
   fitty: -4,
   // fiveToTen: ({ interestingWords }) => interestingWords.includes('fiveToTen'),
