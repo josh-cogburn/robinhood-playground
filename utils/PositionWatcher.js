@@ -8,6 +8,7 @@ const getTrend = require('./get-trend');
 const alpacaLimitSell = require('../alpaca/limit-sell');
 const { alpaca } = require('../alpaca');
 const sendEmail = require('./send-email');
+const { disableDayTrades } = require('../settings');
 
 module.exports = class PositionWatcher {
   constructor({ 
@@ -113,7 +114,7 @@ module.exports = class PositionWatcher {
       }, true);
       this.avgDownPrices.push(currentPrice);
       this.lastAvgDown = Date.now();
-    } else if (!pendingSale && returnPerc >= 15) {
+    } else if (!pendingSale && returnPerc >= 15 && !disableDayTrades) {
       const account = await alpaca.getAccount();
       const { portfolio_value, daytrade_count } = account;
       if (Number(market_value) > Number(portfolio_value) * 0.29) {
@@ -142,8 +143,6 @@ module.exports = class PositionWatcher {
       } else {
         await sendEmail(`It's not a big deal (small amt) but you might want to check out ${ticker}`);
       }
-      
-
     }
 
     this.scheduleTimeout();
