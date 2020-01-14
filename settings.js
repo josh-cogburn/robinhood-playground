@@ -31,7 +31,7 @@ module.exports = {
     // sellAllStocksOnNthDay: 8,
     // purchaseAmt: 6,
     makeKeeperFundsAvailable: true,
-    expectedPickCount: 450,
+    expectedPickCount: 500,
     multiplierThreshold: -5, // wont recommend picks below this multiplier count even if they are a forPurchase pick
     disableCashCheck: true,
     disableMultipliers: false,
@@ -123,6 +123,11 @@ module.exports = {
         avg-downer-under1min
         avg-downer-under1min
         avg-downer-under1min
+        avg-downer-under10min
+        avg-downer-under10min
+        avg-downer-under10min
+
+
         avg-downer-1count
         avg-downer-2count
         avg-downer-2count
@@ -497,6 +502,11 @@ module.exports = {
         //     sudden-drops-mediumJump-down10-neutral
         //     sudden-drops-!down-straightDown60-neutral
 
+
+        rsi-rsilt5-initial
+        rsi-10min-rsilt10
+        sudden-drops-lunch
+        stocktwits-holds
 
 
         `
