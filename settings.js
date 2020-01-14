@@ -31,7 +31,7 @@ module.exports = {
     // sellAllStocksOnNthDay: 8,
     // purchaseAmt: 6,
     makeKeeperFundsAvailable: true,
-    expectedPickCount: 500,
+    expectedPickCount: 600,
     multiplierThreshold: -5, // wont recommend picks below this multiplier count even if they are a forPurchase pick
     disableCashCheck: true,
     disableMultipliers: false,
@@ -266,6 +266,21 @@ module.exports = {
         // f yeah avg-downers!
         avg-downer-under10min-2count
         avg-downer-under10min-3count
+        avg-downer-under120min
+        avg-downer-under120min
+        avg-downer-under120min
+        avg-downer-under120min
+        avg-downer-under120min
+
+        avg-downer-under5min
+        avg-downer-under5min
+        avg-downer-under5min
+        
+
+        avg-downer-isBeforeClose
+        avg-downer-isBeforeClose
+        avg-downer-isBeforeClose
+
 
 
 
@@ -509,6 +524,7 @@ module.exports = {
         stocktwits-holds
         derived-chillSlightlyUpVolume-watchout
         derived-unfilteredSlightlyUpVolume-watchout
+        
 
 
         `
