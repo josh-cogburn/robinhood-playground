@@ -35,10 +35,10 @@ const subsetOffsets = {
   // notWatchoutMajorJump: 2,
   // notWatchoutMajorJumpNotStraightDowner: 1,
 
-  straightDowner: 0,
+  straightDowner: -3,
   // straightDown60: 4,
   straightDown120: -3,
-  notStraightDowner: 5,
+  notStraightDowner: 3,
   // straightDowner: ({ interestingWords }) => interestingWords.some(val => val.startsWith('straightDown')),
   // firstAlert: ({ interestingWords }) => interestingWords.includes('firstAlert'),
   notFirstAlert: 0,
