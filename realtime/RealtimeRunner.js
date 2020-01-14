@@ -1015,12 +1015,12 @@ module.exports = new (class RealtimeRunner {
 
       // DERIVED!
       ...Combinatorics.cartesianProduct(
-        ["realChillNowhereVolume", "realChillMoverVolume", "realChillSlightlyUpVolume", "realChillSlightDownVolume", "realChillMovers", "chillNowhereVolume", "chillMoverVolume", "chillSlightlyUpVolume", "chillSlightDownVolume", "chillMovers", "unfilteredNowhereVolume", "unfilteredMoverVolume", "unfilteredSlightlyUpVolume", "unfilteredSlightDownVolume", "unfilteredMovers"],
+        ["realChillNowhereVolume", "realChillMoverVolume", "realChillSlightlyUpVolume", "realChillSlightDownVolume", "realChillMovers", "chillNowhereVolume", "chillMoverVolume", "chillSlightlyUpVolume", "chillSlightDownVolume", "chillMovers", "unfilteredNowhereVolume", "unfilteredMoverVolume", "unfilteredSlightlyUpVolume", "unfilteredSlightDownVolume", "unfilteredMovers", "highestSt", "highestRecentDollarVolume", "highestRecentVolume", "highestRecentVolumeRatio"],
         [
           ...Array(5).fill(1).map((v, i) => i).map(n => `index${n}`)
         ],
         [
-          ...[0, 1, 2, 3, 5, 6, 9, 15, 21, 27, 33, 39, 40, 'Neg3', 'Neg2', 'Neg1'].map(n => `tenMinCount${n}`)
+          ...[0, 1, 2, 3, 5, 6, 9, 15, 21, 27, 33, 39, 40, 'Neg3', 'Neg2', 'Neg1', 'Neg13', 'Neg11', 'Neg6', 'Neg4'].map(n => `tenMinCount${n}`)
         ],
         ['notWatchout', 'watchout']
       ).toArray().reduce((acc, arr) => {
@@ -1058,7 +1058,7 @@ module.exports = new (class RealtimeRunner {
 
     const onlyShort = obj => 
       Object.keys(obj)
-        .filter(key => key.split('-').length < 4)
+        .filter(key => key.split('-').length < 5)
         .reduce((acc, key) => ({
           ...acc,
           [key]: obj[key]
