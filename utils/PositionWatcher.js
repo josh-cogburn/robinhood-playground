@@ -89,14 +89,15 @@ module.exports = class PositionWatcher {
     const minNeededToPass = isSame ?  baseTime : baseTime * 2;
     const isRushed = this.lastAvgDown && Date.now() < this.lastAvgDown + 1000 * 60 * minNeededToPass;
     const skipChecks = isRushed;
-    
-    console.log(`AVG-DOWNER: ${ticker} observed at ${currentPrice} ... avg buy at ${avgEntry} (${returnPerc}), lowest avg down price ${lowestAvgDownPrice} (${trendToLowestAvg}), and avg down count ${avgDownCount}, skipChecks ${skipChecks}`);
+    const shouldAvgDown = [trendToLowestAvg, returnPerc].every(trend => !trend || trend < -3.5);
+
+    console.log(`AVG-DOWNER: ${ticker} observed at ${currentPrice} ... avg buy at ${avgEntry} (${returnPerc}), lowest avg down price ${lowestAvgDownPrice} (${trendToLowestAvg}), and avg down count ${avgDownCount}, skipChecks ${skipChecks}, shouldAvgDown ${shouldAvgDown}`);
     
     if (skipChecks) {
       return this.scheduleTimeout();
     }
 
-    if ([trendToLowestAvg, returnPerc].every(trend => !trend || trend < -3.25)) {
+    if (shouldAvgDown) {
       this.avgDownCount++;
       const realtimeRunner = require('../realtime/RealtimeRunner');
       await realtimeRunner.handlePick({

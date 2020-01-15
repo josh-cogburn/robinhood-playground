@@ -6,7 +6,7 @@ const Holds = require('../models/Holds');
 const Pick = require('../models/Pick');
 const getMinutesFromOpen = require('../utils/get-minutes-from-open');
 const analyzePosition = require('../analysis/positions/analyze-position');
-const { sellBelow = {}, force: { keep }} = require('../settings');
+const { sellBelow = {}, sellAbove = {}, force: { keep }} = require('../settings');
 
 const checkForHugeDrop = position => {
   let { currentPrice, returnPerc: actualReturnPerc, avgEntry: actualEntry, buys = [], ticker } = position;
@@ -103,7 +103,7 @@ module.exports = async (
       'ASLN'
     ];
 
-    const wouldBeDayTrade = DONTSELL.includes(ticker)|| Boolean(mostRecentPurchase === 0);
+    const wouldBeDayTrade = DONTSELL.includes(ticker) || Boolean(mostRecentPurchase === 0);
     return {
       ...position,
       ...hold,
@@ -147,6 +147,7 @@ module.exports = async (
   const calcNotSelling = ({ ticker, currentPrice }) => {
     const options = { 
       [`is above sellBelow`]: currentPrice > sellBelow[ticker],  // nothing greater than undefined,
+      [`is below sellAbove`]: currentPrice > sellAbove[ticker],   // false if undefined
       onKeeperList: keep.includes(ticker)
     };
     return (

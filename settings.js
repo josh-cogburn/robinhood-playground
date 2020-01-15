@@ -28,6 +28,11 @@ module.exports = {
     // sellBelow: {
     //     ADMS: 3.65
     // },
+
+    sellAbove: {
+        SAVA: 7.90
+    },
+    
     // sellAllStocksOnNthDay: 8,
     // purchaseAmt: 6,
     makeKeeperFundsAvailable: true,
