@@ -30,6 +30,7 @@ module.exports = {
     // },
 
     sellAbove: {
+        YTEN: 1000000,
         // SAVA: 7.90
     },
     
