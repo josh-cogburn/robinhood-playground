@@ -145,13 +145,6 @@ module.exports = async (
   );
 
   const calcNotSelling = ({ ticker, currentPrice }) => {
-    if (ticker === 'SAVA') {
-      strlog({
-        hey: 'haha',
-        currentPrice,
-        a: sellAbove[ticker]
-      })
-    }
     const options = { 
       [`is above sellBelow`]: currentPrice > sellBelow[ticker],  // nothing greater than undefined,
       [`is below sellAbove`]: currentPrice < sellAbove[ticker],   // false if undefined
