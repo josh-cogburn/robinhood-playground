@@ -31,14 +31,20 @@ module.exports = async (tickers = ['AAPL']) => {
         )
     );
 
-    const recentTrend = getTrend(recentHistoricals[0].open_price, recentHistoricals[1].close_price);
+    const recentTrend = getTrend(
+      (recentHistoricals[0] || {}).open_price, 
+      (recentHistoricals[1] || {}).close_price
+    );
+    
     const [
       avgRecentVolume,
       avgOverallVolume
     ] = [
       recentHistoricals,
       historicals
-    ].map(hists => avgArray(hists.map(hist => hist.volume)));
+    ].map(hists => avgArray(
+      hists.map(hist => hist.volume)
+    ));
 
     return {
       // ...obj,

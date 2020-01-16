@@ -30,7 +30,7 @@ module.exports = {
     // },
 
     sellAbove: {
-        SAVA: 7.90
+        // SAVA: 7.90
     },
     
     // sellAllStocksOnNthDay: 8,
