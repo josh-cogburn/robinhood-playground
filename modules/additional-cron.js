@@ -42,7 +42,7 @@ const additionalCron = [
     },
     {
         name: 'alpacaActOnPositions',
-        run: [-20, 1, 45, 100, 150, 200, 300, 360, 400, 440],
+        run: [-45, -20, 4, 45, 100, 150, 200, 300, 360, 400, 440],
         fn: () => alpacaActOnPositions()
     },
     // {
