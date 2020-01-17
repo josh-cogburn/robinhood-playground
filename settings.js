@@ -30,14 +30,14 @@ module.exports = {
     // },
 
     sellAbove: {
-        YTEN: 1000000,
+        // YTEN: 1000000,
         // SAVA: 7.90
     },
     
     // sellAllStocksOnNthDay: 8,
     // purchaseAmt: 6,
     makeKeeperFundsAvailable: false,
-    expectedPickCount: 475,
+    expectedPickCount: 350,
     multiplierThreshold: -5, // wont recommend picks below this multiplier count even if they are a forPurchase pick
     
     disableDayTrades: false,
