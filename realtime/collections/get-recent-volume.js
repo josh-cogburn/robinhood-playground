@@ -7,7 +7,7 @@ module.exports = async (tickers = ['AAPL']) => {
 
   let allHistoricals = await getMultipleHistoricals(
       tickers,
-      `interval=10minute&bounds=extended`
+      `interval=30minute&bounds=extended`
   );
 
   let withHistoricals = tickers.map((ticker, i) => ({

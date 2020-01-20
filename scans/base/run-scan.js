@@ -56,6 +56,7 @@ const runScan = async ({
   minDollarVolume = Number.NEGATIVE_INFINITY,
   minVolume = Number.NEGATIVE_INFINITY,
   maxVolume = Number.POSITIVE_INFINITY,
+
   tickers,
 
   filterFn = () => true,

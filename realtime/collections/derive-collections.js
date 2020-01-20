@@ -8,6 +8,7 @@ const getStSent = require('../../utils/get-stocktwits-sentiment');
 const queryGoogleNews = require('../../utils/query-google-news');
 const getRecentVolume = require('./get-recent-volume');
 const getRecentVolumeCollections = require('./get-recent-volume-collections');
+const getOptionsCollections = require('./get-options-collections');
 
 const addDetails = async response => {
     const uniqTickers = Object.values(response).flatten().map(result => result.ticker).uniq();
@@ -125,7 +126,8 @@ const deriveCollections = async collections => {
 
     response = {
         ...response,
-        ...await getRecentVolumeCollections()
+        ...await getRecentVolumeCollections(),
+        ...await getOptionsCollections()
     };
 
     /// AFTER HOURS || PRE MARKET ?
