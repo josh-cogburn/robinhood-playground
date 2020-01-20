@@ -25,10 +25,15 @@ module.exports = {
     // important settings
 
     wordFlags: ['split', 'reverse split', 'halt', 'rocket', 'offering', 'delist', 'breakthrough'],
+
+    continueDownForDays: 3,
+
+    // selling
+
+
     // sellBelow: {
     //     ADMS: 3.65
     // },
-
     sellAbove: {
         // YTEN: 1000000,
         // SAVA: 7.90
@@ -50,6 +55,9 @@ module.exports = {
         
 
         ...`
+
+
+        continue-down
 
 
         // the mature picks

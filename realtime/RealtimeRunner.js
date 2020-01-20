@@ -808,6 +808,7 @@ module.exports = new (class RealtimeRunner {
 
       'avg-downer',
       'average-down-recommendation',
+      'continue-down',
       
       ...[
         'initial',
