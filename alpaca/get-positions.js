@@ -6,7 +6,7 @@ const Holds = require('../models/Holds');
 const Pick = require('../models/Pick');
 const getMinutesFromOpen = require('../utils/get-minutes-from-open');
 const analyzePosition = require('../analysis/positions/analyze-position');
-const { sellBelow = {}, sellAbove = {}, force: { keep }} = require('../settings');
+const { sellBelow = {}, sellAbove = {}, force: { keep }, continueDownForDays } = require('../settings');
 
 const checkForHugeDrop = position => {
   let { currentPrice, returnPerc: actualReturnPerc, avgEntry: actualEntry, buys = [], ticker } = position;
@@ -183,11 +183,16 @@ module.exports = async (
       return 35;
     }
 
-    if (Math.abs(returnPerc) < 5) {
+    if (Math.abs(returnPerc) < 7) {
       return 0;
     }
     
-    if (min < 50 && returnPerc < -4) {
+    // synonymous with prev
+    // if (min < 50 && returnPerc < -4) {
+    //   return 0;
+    // }
+
+    if (returnPerc < 7 && daysOld <= continueDownForDays * 2) {
       return 0;
     }
 
