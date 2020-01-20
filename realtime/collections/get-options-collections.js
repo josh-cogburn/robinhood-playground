@@ -8,7 +8,7 @@ const getBarChartOptions = async () => {
   try {
       console.log('scraping barchart for options tickers....');
       browser = await puppeteer.launch({ 
-        headless: false,
+        headless: true,
         args: [
           '--no-sandbox', 
           '--disable-setuid-sandbox', 
