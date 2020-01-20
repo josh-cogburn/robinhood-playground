@@ -8,7 +8,7 @@ function numberWithCommas(x) {
   return Math.round(x).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-const getShortDescription = description => 
+const getShortDescription = (description = '') => 
   description.substring(
     0,
     description.indexOf('.', 35) + 1
@@ -84,7 +84,13 @@ class Derived extends Component {
         </pre>
         <div style={{ display: 'flex', flexFlow: 'wrap', justifyContent: 'space-around' }}>
           {
-            showingResults.map(result => (
+            showingResults
+            .map(result => ({
+              ...result,
+              computed: result.computed || {},
+              fundamentals: result.fundamentals || {}
+            }))
+            .map(result => (
               <div className="stock-result" style={{ margin: '10px', width: widgetWidth + 'px' }}>
                 <div className='stock-description'>
                   {getShortDescription(result.fundamentals.description)}
