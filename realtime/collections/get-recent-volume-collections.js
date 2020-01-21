@@ -49,7 +49,12 @@ module.exports = async () => {
             [key]: withRecentVolume
                 .filter(result => result.recentVolume[prop])
                 .sort((a, b) => b.recentVolume[prop] - a.recentVolume[prop])
-                .slice(0, 7)
+                .slice(0, 7),
+            [`${key}Up`]: withRecentVolume
+              .filter(result => result.recentVolume[prop])
+              .filter(result => result.recentVolume.recentTrend > 0.2)
+              .sort((a, b) => b.recentVolume[prop] - a.recentVolume[prop])
+              .slice(0, 7)
         };
     }, {});
 

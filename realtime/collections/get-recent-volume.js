@@ -7,7 +7,7 @@ module.exports = async (tickers = ['AAPL']) => {
 
   let allHistoricals = await getMultipleHistoricals(
       tickers,
-      `interval=10minute&bounds=extended`
+      `interval=10minute&span=week`
   );
 
   let withHistoricals = tickers.map((ticker, i) => ({
@@ -16,8 +16,15 @@ module.exports = async (tickers = ['AAPL']) => {
   }));
 
   const withRatio = withHistoricals.map(obj => {
-    const { ticker, historicals } = obj;
+    let { ticker, historicals } = obj;
+    historicals = historicals.filter(hist => hist.volume);
+
     const recentHistoricals = historicals.slice(-6);
+
+    console.log({
+      recentHistoricals: recentHistoricals.length,
+      historicals: historicals.length
+    })
 
     const recentDollarVolume = avgArray(
       recentHistoricals
