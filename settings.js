@@ -544,8 +544,8 @@ module.exports = {
         rsi-10min-rsilt10
         sudden-drops-lunch
         stocktwits-holds
-        derived-chillSlightlyUpVolume-watchout
-        derived-unfilteredSlightlyUpVolume-watchout
+        // derived-chillSlightlyUpVolume-watchout
+        // derived-unfilteredSlightlyUpVolume-watchout
         
 
 
