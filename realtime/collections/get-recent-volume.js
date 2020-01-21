@@ -22,7 +22,7 @@ module.exports = async (tickers = ['AAPL']) => {
     const recentHistoricals = historicals.slice(-6);
 
     console.log({
-      recentHistoricals: recentHistoricals.length,
+      recentHistoricals,
       historicals: historicals.length
     })
 
@@ -40,7 +40,7 @@ module.exports = async (tickers = ['AAPL']) => {
 
     const recentTrend = getTrend(
       (recentHistoricals[0] || {}).open_price, 
-      (recentHistoricals[1] || {}).close_price
+      (recentHistoricals[recentHistoricals.length - 1] || {}).close_price
     );
     
     const [
