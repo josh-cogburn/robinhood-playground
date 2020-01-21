@@ -179,11 +179,11 @@ module.exports = async (
       return 100;
     }
 
-    if (min > 150 && Number(unrealized_intraday_plpc) * 100 < -6 && Number(unrealized_intraday_plpc) * 100 > -30) {
-      return 35;
-    }
+    // if (min > 150 && Number(unrealized_intraday_plpc) * 100 < -6 && Number(unrealized_intraday_plpc) * 100 > -30) {
+    //   return 35;
+    // }
 
-    if (Math.abs(returnPerc) < 7) {
+    if (Math.abs(returnPerc) < 5) {
       return 0;
     }
     
