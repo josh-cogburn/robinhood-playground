@@ -54,6 +54,12 @@ module.exports = async () => {
               .filter(result => result.recentVolume[prop])
               .filter(result => result.recentVolume.recentTrend > 0.2)
               .sort((a, b) => b.recentVolume[prop] - a.recentVolume[prop])
+              .slice(0, 7),
+            [`${key}UpUp`]: withRecentVolume
+              .filter(result => result.recentVolume[prop])
+              .filter(result => result.recentVolume.recentTrend > 0.2)
+              .filter(result => result.computed.tso && result.computed.tsc)
+              .sort((a, b) => b.recentVolume[prop] - a.recentVolume[prop])
               .slice(0, 7)
         };
     }, {});
