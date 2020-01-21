@@ -131,22 +131,22 @@ const deriveCollections = async collections => {
     };
 
     /// AFTER HOURS || PRE MARKET ?
-    if (!dayInProgress()) {
-        // this scan is BAD (useless) for a lot of reasons
-        response.afterHoursGainers = (
-            await runScan({
-                minVolume: 50000,
-                minPrice: 2,
-                maxPrice: 5,
-                count: 70,
-                includeStSent: false,
-                afterHoursReset: true
-                // minDailyRSI: 45
-            })
-        )
-            .sort((a, b) => b.computed.tsc - a.computed.tsc)
-            .slice(0, 5);
-    }
+    // if (!dayInProgress()) {
+    //     // this scan is BAD (useless) for a lot of reasons
+    //     response.afterHoursGainers = (
+    //         await runScan({
+    //             minVolume: 50000,
+    //             minPrice: 2,
+    //             maxPrice: 5,
+    //             count: 70,
+    //             includeStSent: false,
+    //             afterHoursReset: true
+    //             // minDailyRSI: 45
+    //         })
+    //     )
+    //         .sort((a, b) => b.computed.tsc - a.computed.tsc)
+    //         .slice(0, 5);
+    // }
 
     const withDetails = await addDetails(response);
     const withHighestSt = await addHighestSt(withDetails);
