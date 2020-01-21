@@ -45,6 +45,7 @@ module.exports = async (trend) => {
         .map(data => {
             [ 
                 'open',
+                'close',
                 'high',
                 'low',
                 'volume',

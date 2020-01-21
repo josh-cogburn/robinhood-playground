@@ -94,8 +94,8 @@ const runScan = async ({
       const projectedVolume = buy.fundamentals.volume / percComplete;
       const avgPrice = avgArray([
         buy.fundamentals.open,
+        buy.fundamentals.close,
         buy.fundamentals.low,
-        buy.fundamentals.high,
         buy.fundamentals.high,
         buy.quote.currentPrice
       ]);
@@ -123,11 +123,13 @@ const runScan = async ({
         ...buy.computed,
         tso: getTrend(
           buy.quote.currentPrice, 
-          irregularHours && afterHoursReset ? buy.quote.lastTradePrice : buy.fundamentals.open
+          //irregularHours && afterHoursReset ? buy.quote.lastTradePrice : 
+          buy.fundamentals.open
         ),
         tsc: getTrend(
           buy.quote.currentPrice, 
-          irregularHours && afterHoursReset ? buy.quote.lastTradePrice : buy.quote.prevClose
+          //irregularHours && afterHoursReset ? buy.quote.lastTradePrice : 
+          buy.quote.prevClose
         ),
         tsh: getTrend(buy.quote.currentPrice, buy.fundamentals.high)
       }
