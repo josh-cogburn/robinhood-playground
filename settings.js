@@ -46,7 +46,7 @@ module.exports = {
     multiplierThreshold: -5, // wont recommend picks below this multiplier count even if they are a forPurchase pick
     
     disableDayTrades: false,
-    disableCashCheck: true,
+    disableCashCheck: false,
     disableMultipliers: false,
 
     forPurchase: [
