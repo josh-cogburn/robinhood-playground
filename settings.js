@@ -539,9 +539,9 @@ module.exports = {
         //     sudden-drops-!down-straightDown60-neutral
 
 
-        rsi-rsilt5-initial
-        rsi-rsilt10-initial
-        rsi-10min-rsilt10
+        // rsi-rsilt5-initial
+        // rsi-rsilt10-initial
+        // rsi-10min-rsilt10
         sudden-drops-lunch
         stocktwits-holds
         // derived-chillSlightlyUpVolume-watchout

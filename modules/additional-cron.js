@@ -38,7 +38,7 @@ const additionalCron = [
     // },
     {
         name: 'alpacaContinueDown',
-        run: [0],
+        run: [1],
         fn: () => setTimeout(() => alpacaContinueDown(), 3000)
     },
 

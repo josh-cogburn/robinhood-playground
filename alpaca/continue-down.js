@@ -5,8 +5,9 @@ module.exports = async () => {
   const positions = await getPositions();
   const ofInterest = positions.filter(({ daysOld }) => daysOld <= continueDownForDays);
   const belowPercent = ofInterest.filter(({ returnPerc }) => returnPerc < 0);
-  for (let position of belowPercent) {
-    const { daysOld, outsideBracket } = position;
+  const hasDecentMultipliers = belowPercent.filter(({ numMultipliers }) => numMultipliers > 3);
+  for (let position of hasDecentMultipliers) {
+    const { ticker, daysOld, outsideBracket } = position;
     require('../realtime/RealtimeRunner').handlePick({
       strategyName: 'continue-down',
       ticker,
