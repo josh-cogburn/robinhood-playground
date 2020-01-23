@@ -13,7 +13,7 @@ const subsetOffsets = {
 
   suddenDrops: 7,
   
-  watchout: -2,
+  watchout: -1,
   notWatchout: 1,
   watchoutMajorJump: 2,
 
@@ -23,9 +23,9 @@ const subsetOffsets = {
 
   bullishMajorJump: 4,
 
-  majorJump: 10,
-  mediumJump: 5,
-  minorJump: -4,
+  majorJump: 3,
+  mediumJump: 2,
+  minorJump: -1,
   onlyMinorJump: -5,
 
   singleMultiplier: -0.5,
