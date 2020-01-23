@@ -3,8 +3,9 @@ const { continueDownForDays } = require('../settings');
 
 module.exports = async () => {
   const positions = await getPositions();
-  const ofInterest = positions.filter(({ daysOld }) => daysOld <= continueDownForDays);
-  const belowPercent = ofInterest.filter(({ returnPerc }) => returnPerc < 0);
+  const underDaysOld = positions.filter(({ daysOld }) => daysOld <= continueDownForDays);
+  const suddenDrops = underDaysOld.filter(({ interestingWords = [] }) => interestingWords.includes('sudden'));
+  const belowPercent = suddenDrops.filter(({ returnPerc }) => returnPerc < 0);
   const hasDecentMultipliers = belowPercent.filter(({ numMultipliers }) => numMultipliers > 3);
   for (let position of hasDecentMultipliers) {
     const { ticker, daysOld, outsideBracket } = position;
