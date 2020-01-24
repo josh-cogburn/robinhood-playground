@@ -8,7 +8,7 @@ module.exports = async () => {
   const belowPercent = suddenDrops.filter(({ returnPerc }) => returnPerc < 0);
   const hasDecentMultipliers = belowPercent.filter(({ numMultipliers }) => numMultipliers > 3);
   for (let position of hasDecentMultipliers) {
-    const { ticker, daysOld, outsideBracket } = position;
+    const { ticker, daysOld, outsideBracket, returnPerc } = position;
     require('../realtime/RealtimeRunner').handlePick({
       strategyName: 'continue-down',
       ticker,
