@@ -23,9 +23,9 @@ const subsetOffsets = {
 
   bullishMajorJump: 4,
 
-  majorJump: 3,
+  majorJump: 2,
   mediumJump: 2,
-  minorJump: -1,
+  minorJump: 2,
   onlyMinorJump: -5,
 
   singleMultiplier: -0.5,
@@ -40,7 +40,7 @@ const subsetOffsets = {
   // straightDown120: -1,
   notStraightDowner: 6,
   // straightDowner: ({ interestingWords }) => interestingWords.some(val => val.startsWith('straightDown')),
-  // firstAlert: ({ interestingWords }) => interestingWords.includes('firstAlert'),
+  firstAlert: 1,
   notFirstAlert: 0,
   // avgh: ({ interestingWords }) => interestingWords.some(val => val.startsWith('avgh')),
   notAvgh: -1,
@@ -53,10 +53,10 @@ const subsetOffsets = {
   // fiveToTen: ({ interestingWords }) => interestingWords.includes('fiveToTen'),
 
   // minKey
-  initial: -1,
-  brunch: 1,
-  lunch: 4,
-  dinner: 3,
+  initial: 2,
+  brunch: 2,
+  lunch: 1,
+  dinner: 1,
   afterhours: Number.NEGATIVE_INFINITY,
 
   // combos
@@ -64,15 +64,15 @@ const subsetOffsets = {
   overnightDrops: -1,
 
   spread1: 3,
-  spread2: -2,
-  spread3: -1,
-  spread4: 2,
-  spread5: 0,
-  spread6: 3,
+  spread2: -1,
+  spread3: 1,
+  spread4: 1,
+  spread5: 1,
+  spread6: 0,
 
   down10: 1,
   down20: 2,
-  down40: 2,
+  down40: 4,
 
   tenMinMinors: -10,
 
