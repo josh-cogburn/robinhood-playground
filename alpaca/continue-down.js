@@ -9,6 +9,7 @@ module.exports = async () => {
   const hasDecentMultipliers = belowPercent.filter(({ numMultipliers }) => numMultipliers > 3);
   for (let position of hasDecentMultipliers) {
     const { ticker, daysOld, outsideBracket, returnPerc } = position;
+    console.log('continue down', ticker);
     require('../realtime/RealtimeRunner').handlePick({
       strategyName: 'continue-down',
       ticker,
