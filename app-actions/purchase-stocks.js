@@ -17,6 +17,11 @@ const purchaseStocks = async ({ strategy, multiplier = 1, min, withPrices } = {}
         multiplier,
         amountPerBuy,
     });
+
+    if (!disableCashCheck && amountPerBuy * 1.3 > Number(cash)) {
+        return console.log('YOU ARE OUT OF MONEY');
+    }
+
     const totalAmtToSpend = disableCashCheck ? amountPerBuy : Math.min(amountPerBuy, cash);
     strlog({
         totalAmtToSpend,
@@ -24,8 +29,8 @@ const purchaseStocks = async ({ strategy, multiplier = 1, min, withPrices } = {}
         strategy
     });
 
-    if (totalAmtToSpend > cash) {
-        const fundsNeeded = totalAmtToSpend - cash;
+    if (totalAmtToSpend * 1.3 > cash) {
+        const fundsNeeded = (totalAmtToSpend * 1.3) - cash;
         await makeFundsAvailable(fundsNeeded);
         const afterCash = (await alpaca.getAccount()).cash;
         await sendEmail('funds made available', JSON.stringify({ before: cash, fundsNeeded, after: afterCash }, null, 2));

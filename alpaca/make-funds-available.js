@@ -8,7 +8,6 @@ const stratManager = require('../socket-server/strat-manager');
 
 module.exports = async amt => {
 
-
   let positions = await getPositions(true);
   if (!makeKeeperFundsAvailable) {
     positions = positions.filter(({ notSelling }) => !notSelling);
