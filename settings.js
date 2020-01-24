@@ -60,6 +60,15 @@ module.exports = {
         continue-down
 
 
+        overnight-drops-down40
+        overnight-drops-down40
+        overnight-drops-down40
+        overnight-drops-down40
+        overnight-drops-down40
+        overnight-drops-down40
+        overnight-drops-down40
+        overnight-drops-down40
+
         // the mature picks
         sudden-drops-brunch-straightDown120
         sudden-drops-brunch-straightDown120
