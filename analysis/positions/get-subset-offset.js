@@ -11,40 +11,45 @@ const subsetOffsets = {
   // yesterday: ({ date }) => allDates[1] === date,
   // today: ({ date }) => allDates[0] === date,
 
-  suddenDrops: 7,
+  suddenDrops: 3,
   
-  watchout: -1,
-  notWatchout: 1,
-  watchoutMajorJump: 2,
+  // watchout: -5,
+  // notWatchout: 3,
+  // watchoutMajorJump: 2,
 
-  bullish: 1,
-  neutral: 0,
-  bearish: 0,
+  // bullish: 1,
+  // neutral: 0,
+  // bearish: 0,
 
-  bullishMajorJump: 4,
+  // bullishMajorJump: 4,
 
   majorJump: 2,
   mediumJump: 2,
   minorJump: 2,
-  onlyMinorJump: -5,
+  // onlyMinorJump: -5,
 
-  singleMultiplier: -0.5,
+  // singleMultiplier: -0.5,
   // multipleMultipliers: ({ numMultipliers }) => numMultipliers > 1,
-  singlePick: -0.5,
+  // singlePick: -0.5,
   // multiplePicks: ({ numPicks }) => numPicks > 1,
   // notWatchoutMajorJump: 2,
   // notWatchoutMajorJumpNotStraightDowner: 1,
 
-  straightDowner: -5,
+  straightDowner: -2,
   // straightDown30: 2,
-  // straightDown120: -1,
-  notStraightDowner: 4,
+  // straightDown120: 4,
+  // notStraightDowner: 3,
   // straightDowner: ({ interestingWords }) => interestingWords.some(val => val.startsWith('straightDown')),
+
+  straightDownerWatchout: 5,
+  notStraightDownerNotWatchout: 15,
+
+  
   firstAlert: 1,
-  notFirstAlert: 0,
-  // avgh: ({ interestingWords }) => interestingWords.some(val => val.startsWith('avgh')),
+  // notFirstAlert: 0,
+  avgh: 1,
   notAvgh: -1,
-  hotSt: -1,
+  // hotSt: -1,
   // notHotSt: 1,
   // collections
   zeroToOne: 2,
@@ -63,7 +68,7 @@ const subsetOffsets = {
   oneToTwoAndLunch: 5,
   overnightDrops: -1,
 
-  spread1: 3,
+  spread1: 4,
   spread2: -1,
   spread3: 1,
   spread4: 1,
@@ -79,6 +84,11 @@ const subsetOffsets = {
   halt: -9,
   rocket: 2,
   delist: -3,
+
+  avgDowner: 2,
+  avgDowner3: 3,
+  avgDowner6: 3,
+  avgDownerUnder120Min: 5
   
 };
 
@@ -102,4 +112,4 @@ module.exports = async position => {
   const totals = Object.values(withOffsets);
   // await sendEmail(`subset offset report for ${ticker}`, JSON.stringify({ data }, null, 2));
   return sumArray(totals.filter(Boolean));
-};
+}

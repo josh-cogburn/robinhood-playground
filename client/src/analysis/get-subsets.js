@@ -14,6 +14,7 @@ const lunch = ({ interestingWords }) => interestingWords.includes('lunch');
 const afterhours = ({ interestingWords }) => interestingWords.includes('afterhours');
 const oneToTwo = ({ interestingWords }) => interestingWords.includes('oneToTwo');
 
+const straightDowner = ({ interestingWords }) => interestingWords.some(val => val.startsWith('straightDown'));
 const straightDown60 = ({ interestingWords }) => interestingWords.some(val => val.startsWith('straightDown60'));
 const straightDown120 = ({ interestingWords }) => interestingWords.some(val => val.startsWith('straightDown120'));
 const bigDowner = p => straightDown60(p) || straightDown120(p);
@@ -28,7 +29,12 @@ module.exports = positions => {
   // console.log({ allWords})
 
 
-  const allDates = positions.map(pos => pos.date).uniq().filter(Boolean);
+  const allDates = positions
+    .map(pos => pos.date)
+    .uniq()
+    .filter(Boolean)
+    .sort((a, b) => (new Date(b)).getTime() - (new Date(a)).getTime());
+  console.log({ allDates })
   const lastFive = allDates.slice(0, 5);
   return {
     only2020: p => (new Date(p.date)).getTime() >= (new Date('1-1-2020')).getTime(),
@@ -72,7 +78,10 @@ module.exports = positions => {
     straightDown120,
     bigDowner,
     notStraightDowner,
-    straightDowner: ({ interestingWords }) => interestingWords.some(val => val.startsWith('straightDown')),
+    
+    straightDownerWatchout: p => straightDowner(p) && watchout(p),
+    notStraightDownerNotWatchout: p => notStraightDowner(p) && notWatchout(p),
+
     firstAlert: ({ interestingWords }) => interestingWords.includes('firstAlert'),
     notFirstAlert: ({ interestingWords }) => !interestingWords.includes('firstAlert'),
     avgh: ({ interestingWords }) => interestingWords.some(val => val.startsWith('avgh')),
@@ -124,7 +133,29 @@ module.exports = positions => {
     ...wordFlags.reduce((acc, word) => ({
       ...acc,
       [word]: ({ interestingWords }) => interestingWords.includes(word)
-    }), {})
+    }), {}),
+
+
+    // avg downers
+    avgDowner: ({ interestingWords }) => interestingWords.includes('avg'),
+    avgDowner0: ({ interestingWords }) => interestingWords.includes('0count'),
+    avgDowner1: ({ interestingWords }) => interestingWords.includes('1count'),
+    avgDowner2: ({ interestingWords }) => interestingWords.includes('2count'),
+    avgDowner3: ({ interestingWords }) => interestingWords.includes('3count'),
+    avgDowner4: ({ interestingWords }) => interestingWords.includes('4count'),
+    avgDowner5: ({ interestingWords }) => interestingWords.includes('5count'),
+    avgDowner6: ({ interestingWords }) => interestingWords.includes('6count'),
+
+
+    avgDownerBeforeClose: ({ interestingWords }) => interestingWords.includes('isBeforeClose'),
+    avgDownerUnder1Min: ({ interestingWords }) => interestingWords.includes('under1min'),
+    avgDownerUnder5Min: ({ interestingWords }) => interestingWords.includes('under5min'),
+    avgDownerUnder30Min: ({ interestingWords }) => interestingWords.includes('under30min'),
+    avgDownerUnder60Min: ({ interestingWords }) => interestingWords.includes('under60min'),
+    avgDownerUnder120Min: ({ interestingWords }) => interestingWords.includes('under120min'),
+
+
+
     
   };
 };
