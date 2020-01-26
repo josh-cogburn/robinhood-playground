@@ -1016,7 +1016,16 @@ module.exports = new (class RealtimeRunner {
 
       // DERIVED!
       ...Combinatorics.cartesianProduct(
-        ["realChillNowhereVolume", "realChillMoverVolume", "realChillSlightlyUpVolume", "realChillSlightDownVolume", "realChillMovers", "chillNowhereVolume", "chillMoverVolume", "chillSlightlyUpVolume", "chillSlightDownVolume", "chillMovers", "unfilteredNowhereVolume", "unfilteredMoverVolume", "unfilteredSlightlyUpVolume", "unfilteredSlightDownVolume", "unfilteredMovers", "highestSt", "highestRecentDollarVolume", "highestRecentVolume", "highestRecentVolumeRatio"],
+        [
+          "realChillNowhereVolume", "realChillMoverVolume", "realChillSlightlyUpVolume", "realChillSlightDownVolume", "realChillMovers", "chillNowhereVolume", "chillMoverVolume", "chillSlightlyUpVolume", "chillSlightDownVolume", "chillMovers", "unfilteredNowhereVolume", "unfilteredMoverVolume", "unfilteredSlightlyUpVolume", "unfilteredSlightDownVolume", "unfilteredMovers", "highestSt",
+          ...["highestRecentDollarVolume", "highestRecentVolume", "highestRecentVolumeRatio"]
+            .reduce((acc, val) => [
+              ...acc,
+              val,
+              val + 'Up',
+              val + 'UpUp'
+            ], []),
+        ],
         [
           ...Array(5).fill(1).map((v, i) => i).map(n => `index${n}`)
         ],
