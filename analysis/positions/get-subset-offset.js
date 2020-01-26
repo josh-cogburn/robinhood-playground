@@ -17,9 +17,9 @@ const subsetOffsets = {
   // notWatchout: 3,
   // watchoutMajorJump: 2,
 
-  // bullish: 1,
-  // neutral: 0,
-  // bearish: 0,
+  bullish: 2,
+  neutral: 1,
+  bearish: 0,
 
   // bullishMajorJump: 4,
 
@@ -38,11 +38,11 @@ const subsetOffsets = {
   straightDowner: -2,
   // straightDown30: 2,
   // straightDown120: 4,
-  // notStraightDowner: 3,
+  notStraightDowner: 5,
   // straightDowner: ({ interestingWords }) => interestingWords.some(val => val.startsWith('straightDown')),
 
   straightDownerWatchout: 5,
-  notStraightDownerNotWatchout: 20,
+  notStraightDownerNotWatchout: 15,
 
   
   firstAlert: 1,
@@ -86,6 +86,7 @@ const subsetOffsets = {
   delist: -3,
 
   avgDowner: 2,
+  avgDowner2: 1,
   avgDowner3: 3,
   avgDowner6: 3,
   avgDownerUnder120Min: 5
