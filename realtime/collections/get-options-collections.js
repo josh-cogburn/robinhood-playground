@@ -36,7 +36,28 @@ const getBarChartOptions = async () => {
 module.exports = async () => {
 
 
-  const optionsTickers = await getBarChartOptions();
+  const optionsTickers = [
+    'MSFT',
+    'AAPL',
+    'AMD',
+    'GOOG',
+    'TSLA',
+    'NFLX',
+    'SPY',
+    'QQQ',
+    'GE',
+    'NIO',
+    'FB',
+    'TWTR',
+    'SQ',
+    'JPM',
+    'INTC',
+    'SNAP',
+    'AMZN',
+    'BYND',
+    'ROKU'
+  ];
+  //await getBarChartOptions();
   
 
   const scan = await runScan({

@@ -127,7 +127,7 @@ const deriveCollections = async collections => {
     response = {
         ...response,
         ...await getRecentVolumeCollections(),
-        // ...await getOptionsCollections()
+        ...await getOptionsCollections()
     };
 
     /// AFTER HOURS || PRE MARKET ?
