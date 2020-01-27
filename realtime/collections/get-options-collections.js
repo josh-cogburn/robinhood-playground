@@ -2,6 +2,7 @@ const runScan = require('../../scans/base/run-scan');
 const getRecentVolume = require('./get-recent-volume');
 const puppeteer = require('puppeteer');
 
+const makeUpUpPerms = require('./make-up-up-perms');
 
 const getBarChartOptions = async () => {
   let browser, page;
@@ -87,23 +88,16 @@ module.exports = async () => {
   // });
 
 
-  const recentVolumeCollections = {
+  const optionsCollections = {
       optionsHighestRecentVolume: 'avgRecentVolume',
       optionsHighestRecentVolumeRatio: 'ratio',
       optionsHighestRecentDollarVolume: 'recentDollarVolume'
   };
 
-  return Object.keys(recentVolumeCollections)
-    .reduce((acc, key) => {
-        const prop = recentVolumeCollections[key];
-        return {
-            ...acc,
-            [key]: withRecentVolume
-                .filter(result => result.recentVolume[prop])
-                .sort((a, b) => b.recentVolume[prop] - a.recentVolume[prop])
-                .slice(0, 7)
-        };
-    }, {});
+  return makeUpUpPerms(
+    withRecentVolume,
+    optionsCollections
+  );
 
 
 

@@ -1,5 +1,6 @@
 const runScan = require('../../scans/base/run-scan');
 const getRecentVolume = require('./get-recent-volume');
+const makeUpUpPerms = require('./make-up-up-perms');
 
 module.exports = async () => {
 
@@ -41,28 +42,10 @@ module.exports = async () => {
       highestRecentDollarVolume: 'recentDollarVolume'
   };
 
-  return Object.keys(recentVolumeCollections)
-    .reduce((acc, key) => {
-        const prop = recentVolumeCollections[key];
-        return {
-            ...acc,
-            [key]: withRecentVolume
-                .filter(result => result.recentVolume[prop])
-                .sort((a, b) => b.recentVolume[prop] - a.recentVolume[prop])
-                .slice(0, 7),
-            [`${key}Up`]: withRecentVolume
-              .filter(result => result.recentVolume[prop])
-              .filter(result => result.recentVolume.recentTrend > 0.2)
-              .sort((a, b) => b.recentVolume[prop] - a.recentVolume[prop])
-              .slice(0, 7),
-            [`${key}UpUp`]: withRecentVolume
-              .filter(result => result.recentVolume[prop])
-              .filter(result => result.recentVolume.recentTrend > 0.2)
-              .filter(result => result.computed.tso > 0.2 && result.computed.tsc > 0.2)
-              .sort((a, b) => b.recentVolume[prop] - a.recentVolume[prop])
-              .slice(0, 7)
-        };
-    }, {});
+  return makeUpUpPerms(
+    withRecentVolume,
+    recentVolumeCollections
+  );
 
 
 

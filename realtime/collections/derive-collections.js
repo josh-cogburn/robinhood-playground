@@ -3,7 +3,6 @@ const COUNT = 4; // per derivation
 const dayInProgress = require('../day-in-progress');
 const runScan = require('../../scans/base/run-scan');
 
-
 const getStSent = require('../../utils/get-stocktwits-sentiment');
 const queryGoogleNews = require('../../utils/query-google-news');
 const getRecentVolume = require('./get-recent-volume');
