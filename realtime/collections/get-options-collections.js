@@ -55,7 +55,9 @@ module.exports = async () => {
     'SNAP',
     'AMZN',
     'BYND',
-    'ROKU'
+    'ROKU',
+    'GLD',
+    'GOLD'
   ];
   //await getBarChartOptions();
   
