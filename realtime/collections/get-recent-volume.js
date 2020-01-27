@@ -19,11 +19,13 @@ module.exports = async (tickers = ['AAPL']) => {
     let { ticker, historicals } = obj;
     historicals = historicals.filter(hist => hist.volume);
 
-    const recentHistoricals = historicals.slice(-6);
+    const recentCount = Math.floor(historicals.length / 11);    
+    const recentHistoricals = historicals.slice(0 - recentCount);
 
     console.log({
       recentHistoricals,
-      historicals: historicals.length
+      historicals: historicals.length,
+      recentCount
     })
 
     const recentDollarVolume = avgArray(
