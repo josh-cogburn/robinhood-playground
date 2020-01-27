@@ -72,7 +72,7 @@ module.exports = new (class RealtimeRunner {
       const derivedPicks = Object.keys(derivedCollections)
         .reduce((acc, collectionName) => [
           ...acc,
-          ...derivedCollections[collectionName].map((result, index) => ({
+          ...derivedCollections[collectionName].slice(0, 1).map((result, index) => ({
             ticker: result.ticker,
             strategyName: 'derived',
             keys: {

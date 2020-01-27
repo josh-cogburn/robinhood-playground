@@ -100,7 +100,8 @@ module.exports = async (
     const DONTSELL = [
       'KEG',
       'TCON',
-      'ASLN'
+      'ASLN',
+      'SFET'
     ];
 
     const wouldBeDayTrade = DONTSELL.includes(ticker) || Boolean(mostRecentPurchase === 0);
