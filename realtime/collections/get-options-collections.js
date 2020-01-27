@@ -63,9 +63,9 @@ module.exports = async () => {
   
 
   const scan = await runScan({
-    tickers: optionsTickers
+    tickers: optionsTickers,
+    includeStSent: false,
   });
-
   const allTickers = scan.map(result => result.ticker).uniq();
   
   const recentVolumeLookups = await getRecentVolume(allTickers);
@@ -78,7 +78,6 @@ module.exports = async () => {
       recentVolume: recentVolumeLookups[result.ticker],
     }))
     .sort((a, b) => b.recentVolume.ratio - a.recentVolume.ratio);
-
 
   // strlog({
   //   topRatio: withRecentVolume.map(({ ticker, recentVolume }) => ({
