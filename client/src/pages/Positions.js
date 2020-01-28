@@ -127,7 +127,7 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
         daysOld,
         ...daysOldObject[daysOld]
     }));
-    const daysOldKeys = Object.keys(daysOldStats[0]);
+    // const daysOldKeys = Object.keys(daysOldStats[0]);
 
     return (
         <div>
