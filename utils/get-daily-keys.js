@@ -19,7 +19,17 @@ module.exports = cacheThis(async ticker => {
 
   let historicals = await getHistoricals([ticker], 5, undefined, true);
   historicals = historicals[ticker];
-  strlog({ historicals })
+  strlog({ historicals });
+
+
+  const avgDollarVolume = avgArray(
+    historicals.map(hist=> 
+      hist.close_price * hist.volume,
+    )
+  );
+  
+  strlog({ avgDollarVolume });
+
   const highs = historicals
     .filter(hist => 
       (new Date()).toLocaleDateString() !== new Date(hist.timestamp).toLocaleDateString()
@@ -50,8 +60,9 @@ module.exports = cacheThis(async ticker => {
 
   obj = {
     ...obj,
-    spread: getTrend(askPrice, bidPrice)
-  }
+    spread: getTrend(askPrice, bidPrice),
+    avgDollarVolume,
+  };
 
   const withAnalysis = historicals.map((hist, index, arr) => ({
     ...hist,
@@ -72,7 +83,8 @@ module.exports = cacheThis(async ticker => {
     spread: spread => [1, 2, 3, 4, 5, 6].find(num => {
       strlog({ num, spread})
       return spread < num
-    })
+    }),
+    avgDollarVolume: dollarVolume => [20000, 10000, 3500].find(num => dollarVolume > num)
   }, (fn, key) => fn(obj[key]));
   
 
@@ -80,7 +92,7 @@ module.exports = cacheThis(async ticker => {
 
   obj = Object.entries(obj)
     .filter(([key, val]) => val)
-    .reduce((acc, [key, val]) => ({ ...acc, [`${key}${val}`]: true }), {})
+    .reduce((acc, [key, val]) => ({ ...acc, [`${key}${val}`]: true }), { })
 
   
   return obj;

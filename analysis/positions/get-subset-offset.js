@@ -24,7 +24,7 @@ const subsetOffsets = {
 
   majorJump: 2,
   mediumJump: 2,
-  minorJump: 2,
+  minorJump: 0,
   // onlyMinorJump: -5,
 
   // singleMultiplier: -0.5,
