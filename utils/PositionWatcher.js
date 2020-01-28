@@ -150,10 +150,11 @@ module.exports = class PositionWatcher {
     this.scheduleTimeout();
   }
   shouldStop() {
+    const min = getMinutesFromOpen();
     return Object.entries({
       notRunning: !this.running,
       hitEndAfter: this.timeout > END_AFTER,
-      marketClosed: getMinutesFromOpen() > 550
+      marketClosed: min > 550 || min < -100
     }).filter(([reason, boolean]) => boolean).map(([ reason ]) => reason).shift();
   }
   stop() {
