@@ -1,7 +1,6 @@
 const getSubsets = require('./get-subsets');
 const { mapObject } = require('underscore');
 const { sumArray } = require('../../utils/array-math');
-const sendEmail = require('../../utils/send-email');
 const { avoidSubsets = [] } = require('../../settings');
 
 const subsetOffsets = {
@@ -94,7 +93,7 @@ const subsetOffsets = {
 };
 
 
-module.exports = async position => {
+module.exports = position => {
   // interestingWords = 'sudden drops !watchout brunch bullish mediumJump !down hotSt 5min avgh10 spread3 firstAlert'.split(' ');
   // const position = { interestingWords };
 
@@ -111,6 +110,5 @@ module.exports = async position => {
   strlog(data)
 
   const totals = Object.values(withOffsets);
-  // await sendEmail(`subset offset report for ${ticker}`, JSON.stringify({ data }, null, 2));
   return sumArray(totals.filter(Boolean));
 }
