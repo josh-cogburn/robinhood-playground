@@ -11,7 +11,7 @@ const sendScreenshot = async (numDays, queryString = '') => {
   const path = `./screenshots/${screenshotName}.jpg`;
 
   const browser = await puppeteer.launch({ 
-    headless: true,
+    headless: false,
     args: [
       '--no-sandbox', 
       '--disable-setuid-sandbox', 
@@ -27,7 +27,7 @@ const sendScreenshot = async (numDays, queryString = '') => {
   await page.on('dialog', async dialog => {
     dialog.accept('j');
   });
-  await page.goto(`http://23.237.87.144:3000/?p=3000&numDays=${numDays}&${queryString}`);
+  await page.goto(`http://chiefsmurph.com/stocks/?p=3000&numDays=${numDays}&${queryString}`);
   await page.waitFor(12000);
   await page.click("a");
   await page.waitFor(12000);
