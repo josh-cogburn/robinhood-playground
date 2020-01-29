@@ -199,7 +199,7 @@ module.exports = async (
     if (Math.abs(returnPerc) > 30) return 24;
 
 
-    if (returnPerc < 7 && daysOld <= continueDownForDays * 2) {
+    if (daysOld <= continueDownForDays * 2 && returnPerc < 3 + daysOld * 2) {
       return 0;
     }
 

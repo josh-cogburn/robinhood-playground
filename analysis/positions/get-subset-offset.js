@@ -34,7 +34,7 @@ const subsetOffsets = {
   // notWatchoutMajorJump: 2,
   // notWatchoutMajorJumpNotStraightDowner: 1,
 
-  straightDowner: -2,
+  // straightDowner: 0,
   // straightDown30: 2,
   // straightDown120: 4,
   notStraightDowner: 5,
@@ -53,7 +53,7 @@ const subsetOffsets = {
   // collections
   zeroToOne: 2,
   oneToTwo: 2,
-  fitty: -4,
+  // fitty: -4,
   // fiveToTen: ({ interestingWords }) => interestingWords.includes('fiveToTen'),
 
   // minKey
@@ -81,7 +81,7 @@ const subsetOffsets = {
   tenMinMinors: -10,
 
   halt: -9,
-  rocket: 2,
+  rocket: 3,
   delist: -3,
 
   avgDowner: 2,
