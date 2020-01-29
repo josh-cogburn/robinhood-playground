@@ -37,6 +37,7 @@ module.exports = {
     sellAbove: {
         // YTEN: 1000000,
         // SAVA: 7.90
+        TRPX: 0.7
     },
     
     // sellAllStocksOnNthDay: 8,
