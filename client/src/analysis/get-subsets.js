@@ -10,6 +10,7 @@ const majorJump = ({ interestingWords }) => interestingWords.includes('majorJump
 const bullish = ({ interestingWords }) => interestingWords.includes('bullish');
 
 const overnightDrops = ({ interestingWords }) => interestingWords.includes('overnight');
+const initial = ({ interestingWords }) => interestingWords.includes('initial');
 const lunch = ({ interestingWords }) => interestingWords.includes('lunch');
 const afterhours = ({ interestingWords }) => interestingWords.includes('afterhours');
 const oneToTwo = ({ interestingWords }) => interestingWords.includes('oneToTwo');
@@ -96,11 +97,13 @@ module.exports = positions => {
     fiveToTen: ({ interestingWords }) => interestingWords.includes('fiveToTen'),
   
     // minKey
-    initial: ({ interestingWords }) => interestingWords.includes('initial'),
+    initial,
     brunch: ({ interestingWords }) => interestingWords.includes('brunch'),
     lunch,
     dinner: ({ interestingWords }) => interestingWords.includes('dinner'),
     afterhours,
+
+    initialNotWatchout: p => initial(p) && notWatchout(p),
   
     // combos
     oneToTwoAndLunch: p => lunch(p) && oneToTwo(p),

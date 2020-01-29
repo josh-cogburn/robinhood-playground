@@ -24,7 +24,7 @@ const subsetOffsets = {
 
   majorJump: 2,
   mediumJump: 2,
-  minorJump: 0,
+  minorJump: -8,
   // onlyMinorJump: -5,
 
   // singleMultiplier: -0.5,
@@ -57,11 +57,13 @@ const subsetOffsets = {
   // fiveToTen: ({ interestingWords }) => interestingWords.includes('fiveToTen'),
 
   // minKey
-  initial: 2,
+  initial: -5,
   brunch: 2,
   lunch: 1,
   dinner: 1,
   afterhours: Number.NEGATIVE_INFINITY,
+
+  initialNotWatchout: 5,
 
   // combos
   oneToTwoAndLunch: 5,

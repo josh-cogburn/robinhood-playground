@@ -249,7 +249,6 @@ class DayReports extends Component {
             const lastRegularReport = !startDate ? 0 : balanceReports.length - balanceReports.slice().reverse().findIndex(report =>
                 (new Date(report.time)).toLocaleDateString() === startDate && isRegularHours(report)
             );
-
             // console.log({ allDates, startDate, lastRegularReport })
             return lastRegularReport;
         })();
@@ -261,6 +260,7 @@ class DayReports extends Component {
         let numDaysToPrune = smallDevice ? Math.ceil(numReports / 350) : numDaysToShow;
         balanceReports = pruneByDays(balanceReports, numDaysToPrune);
         balanceReports = pruneByDays(balanceReports, fuzzFactor);
+        
         // console.log({ numReports, smallDevice, numDaysToPrune, afterCount: balanceReports.length })
 
         // const numToShow = numDaysToShow === 1
@@ -321,7 +321,7 @@ class DayReports extends Component {
 
         const stats = mapObject({
             alpaca: 'alpacaBalance',
-            robinhood: 'accountBalance',
+            ...showAccountBalance && { robinhood: 'accountBalance' },
         }, getStats);
 
         const indexStats = mapObject({
@@ -358,6 +358,8 @@ class DayReports extends Component {
         // })
         // console.log({ afterHoursAnnotations, chartData })
         // console.log(getNewDayLines(balanceReports))
+
+        const showAccountBalance = window.location.href.includes('balance');
         return (
             <div style={{ height: '100%', padding: '1em' }}>
                 {/* <Ticker speed={7}>
