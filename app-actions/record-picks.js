@@ -72,10 +72,12 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
         }
         
         
-        if (multiplier < multiplierThreshold) {
-            isRecommended = false;
-        }
+        // if (multiplier < multiplierThreshold) {
+        //     isRecommended = false;
+        // }
 
+        multiplier = Math.max(multiplier, 5);
+        
         forPurchaseData = {
             forPurchasePms, 
             multiplier, 
