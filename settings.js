@@ -41,7 +41,7 @@ module.exports = {
     },
     
     // sellAllStocksOnNthDay: 8,
-    purchaseAmt: 2,
+    purchaseAmt: 1,
     makeKeeperFundsAvailable: false,
     // expectedPickCount: 200,
     multiplierThreshold: 4, // wont recommend picks below this multiplier count even if they are a forPurchase pick
@@ -58,7 +58,7 @@ module.exports = {
         ...`
 
         // WOAH NELLY!!
-        // sudden-drops
+        sudden-drops
         sudden-drops-mediumJump
 
         continue-down
