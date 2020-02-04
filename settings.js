@@ -26,7 +26,7 @@ module.exports = {
 
     wordFlags: ['split', 'reverse split', 'halt', 'rocket', 'offering', 'delist', 'breakthrough'],
 
-    continueDownForDays: 2,
+    continueDownForDays: 0,
 
     // selling
 
@@ -37,7 +37,7 @@ module.exports = {
     sellAbove: {
         // YTEN: 1000000,
         // SAVA: 7.90
-        TRPX: 0.64
+        // TRPX: 0.64
     },
     
     // sellAllStocksOnNthDay: 8,
