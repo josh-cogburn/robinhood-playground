@@ -52,6 +52,11 @@ const additionalCron = [
         run: [-45, -20, 4, 45, 100, 150, 200, 300, 360, 400, 440],
         fn: () => alpacaActOnPositions()
     },
+    {
+        name: 'alpacaMostLow',
+        run: [16, 80, 170, 250, 370],
+        fn: () => alpacaActOnPositions()
+    },
     // {
     //     name: 'alpaca smart sells',
     //     run: [1],
