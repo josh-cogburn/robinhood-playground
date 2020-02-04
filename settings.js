@@ -62,7 +62,7 @@ module.exports = {
         sudden-drops-mediumJump
 
         continue-down
-
+        most-low
 
         overnight-drops-down40
         overnight-drops-down40
