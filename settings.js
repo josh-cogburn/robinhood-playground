@@ -26,7 +26,7 @@ module.exports = {
 
     wordFlags: ['split', 'reverse split', 'halt', 'rocket', 'offering', 'delist', 'breakthrough'],
 
-    continueDownForDays: 0,
+    continueDownForDays: 1,
 
     // selling
 
