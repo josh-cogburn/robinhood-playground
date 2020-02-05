@@ -19,6 +19,7 @@ const sprayBuy = async ({
     pickPrice
 }) => {
 
+    const totalDollars = quantity * pickPrice;
     const individualQuantity = Math.round(quantity / 3) || 1;
 
     const buyStyles = {
@@ -65,20 +66,22 @@ const sprayBuy = async ({
         }),
     };
     
-    const buyPromises = Object.entries(buyStyles).map(
-        async ([name, promise]) => {
-            strlog({
-                name,
-                promise
-            })
-            const response = await promise;
-            const order = response && response.alpacaOrder ? response.alpacaOrder : response;
-            return {
-                name,
-                fillPrice: (order || {}).filled_avg_price
-            };
-        }
-    );
+    const buyPromises = Object.entries(buyStyles)
+        .slice(0, Math.floor(totalDollars / 4))
+        .map(
+            async ([name, promise]) => {
+                strlog({
+                    name,
+                    promise
+                })
+                const response = await promise;
+                const order = response && response.alpacaOrder ? response.alpacaOrder : response;
+                return {
+                    name,
+                    fillPrice: (order || {}).filled_avg_price
+                };
+            }
+        );
 
 
     const roundUp = await Promise.all(
@@ -138,7 +141,7 @@ module.exports = async ({
             const pickPrice = (withPrices.find(obj => obj.ticker === ticker) || {}).price;
             const totalQuantity = Math.round(perStock / pickPrice) || 1;
 
-            const waitAmts = [1, 7, 17];
+            const waitAmts = [1, 7, 17].slice(0, Math.floor(perStock / 6));
             const perSpray = Math.round(totalQuantity / waitAmts.length) || 1;
             console.log('before sprays', { totalQuantity, perSpray });
             await Promise.all(

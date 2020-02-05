@@ -58,7 +58,7 @@ module.exports = {
         ...`
 
         // WOAH NELLY!!
-        // sudden-drops
+        sudden-drops
         sudden-drops-mediumJump
 
         continue-down
