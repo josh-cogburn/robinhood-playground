@@ -176,6 +176,10 @@ module.exports = async (
 
     if (notSelling) return 0;
 
+    if (returnPerc > 220) {
+      return 0;
+    }
+
     if (daysOld >= 3 && market_value < 30) {
       return 100;
     }
