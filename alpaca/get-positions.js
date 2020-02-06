@@ -200,7 +200,7 @@ module.exports = async (
 
 
     if (daysOld <= continueDownForDays * 2 && returnPerc < 3 + daysOld * 2) {
-      return 0;
+      return 1;
     }
 
 
