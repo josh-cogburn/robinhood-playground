@@ -55,7 +55,7 @@ const additionalCron = [
     },
     {
         name: 'alpacaMostLow',
-        run: [16, 80, 170, 250, 370, 389],
+        run: [16, 80, 170, 250, 310, 370, 389],
         fn: () => alpacaMostLow()
     },
     // {
