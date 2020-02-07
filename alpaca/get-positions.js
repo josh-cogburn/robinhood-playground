@@ -199,13 +199,13 @@ module.exports = async (
 
 
     // if (wouldBeDayTrade) return null;
-    if (min < 20 && returnPerc > 20) return 50;
+    if (min < 20 && returnPerc > 12) return 40;
     if (Math.abs(returnPerc) > 30) return 24;
 
 
-    if (daysOld <= continueDownForDays * 2 && returnPerc < 3 + daysOld * 2) {
-      return 1;
-    }
+    // if (daysOld <= continueDownForDays * 2 && returnPerc < 3 + daysOld * 2) {
+    //   return 0;
+    // }
 
 
     // basePerc = dayVal + returnVal

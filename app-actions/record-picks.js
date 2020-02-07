@@ -76,7 +76,7 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
         //     isRecommended = false;
         // }
 
-        multiplier = Math.max(multiplier, 2);
+        multiplier = Math.max(multiplier, 1);
         
         forPurchaseData = {
             forPurchasePms, 

@@ -5,8 +5,8 @@ module.exports = async () => {
   const positions = await getPositions();
   const underDaysOld = positions.filter(({ daysOld }) => daysOld <= continueDownForDays);
   const suddenDrops = underDaysOld.filter(({ interestingWords = [] }) => interestingWords.includes('sudden'));
-  // const belowPercent = suddenDrops.filter(({ returnPerc }) => returnPerc < 0);
-  const hasDecentMultipliers = suddenDrops.filter(({ numMultipliers }) => numMultipliers > 3);
+  const belowPercent = suddenDrops.filter(({ returnPerc }) => returnPerc < -7);
+  const hasDecentMultipliers = belowPercent.filter(({ numMultipliers }) => numMultipliers > 3);
   for (let position of hasDecentMultipliers) {
     const { ticker, daysOld, outsideBracket, returnPerc } = position;
     console.log('continue down', ticker);

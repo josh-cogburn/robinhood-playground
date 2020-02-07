@@ -90,8 +90,11 @@ const subsetOffsets = {
   avgDowner2: 1,
   avgDowner3: 3,
   avgDowner6: 3,
-  avgDownerUnder120Min: 5
+  avgDownerUnder120Min: 5,
   
+  'reverse split': -3,
+  split: -3,
+
 };
 
 
