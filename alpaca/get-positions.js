@@ -176,7 +176,7 @@ module.exports = async (
 
     if (notSelling) return 0;
 
-    if (returnPerc > 220) {
+    if (returnPerc > 200) {
       return 0;
     }
 
@@ -188,7 +188,7 @@ module.exports = async (
     //   return 35;
     // }
 
-    if (Math.abs(returnPerc) < 5) {
+    if (Math.abs(returnPerc) < 4) {
       return 0;
     }
     
