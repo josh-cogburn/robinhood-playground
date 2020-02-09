@@ -52,7 +52,7 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
             .filter(pm => hits.includes(pm));
         const forPurchaseMultiplier = forPurchasePms.length;
         forPurchasePms = forPurchasePms.uniq();
-
+ 
         const {
             pmAnalysisMultiplier,
             subsetOffsetMultiplier,
@@ -65,6 +65,10 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
         multiplier = Math.round(
             forPurchaseMultiplier + pmAnalysisMultiplier + subsetOffsetMultiplier
         );
+
+        if (interestingWords.includes('split')) {
+            isRecommended = false;
+        }
 
         const stoppedAt1 = ['derived', 'rsi'];
         if (stoppedAt1.some(word => interestingWords.includes(word))) {
