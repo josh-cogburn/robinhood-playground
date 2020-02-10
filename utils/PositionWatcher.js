@@ -56,7 +56,8 @@ module.exports = class PositionWatcher {
       avgEntry,
       market_value,
       quantity,
-      buys
+      buys,
+      returnPerc,
     } = this.getRelatedPosition();
     
     if (!avgEntry) return this.scheduleTimeout();
@@ -118,7 +119,7 @@ module.exports = class PositionWatcher {
         },
         data: {
           returnPerc,
-          trendToLowestAvg,
+          // trendToLowestAvg,
         }
       }, true);
       await sendEmail(`avging down`, logLine);
