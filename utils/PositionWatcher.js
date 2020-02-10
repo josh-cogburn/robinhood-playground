@@ -98,7 +98,7 @@ module.exports = class PositionWatcher {
 
     const askToLowestFill = getTrend(askPrice, lowestFill);
     const shouldAvgDown = Boolean(askToLowestFill < -3);
-    const logLine = `AVG-DOWNER: ${ticker} observed at ${currentPrice} / ${askPrice} ... and avg down count ${avgDownCount}, skipChecks ${skipChecks}, lowestFill ${lowestFill}, askToLowestFill ${askToLowestFill}%, shouldAvgDown ${shouldAvgDown}`;
+    const logLine = `AVG-DOWNER: ${ticker} observed at ${currentPrice} / ${askPrice} ... and avg down count ${avgDownCount}, lowestFill ${lowestFill}, askToLowestFill ${askToLowestFill}%, shouldAvgDown ${shouldAvgDown}`;
     console.log(logLine);
     
     // if (skipChecks) {
