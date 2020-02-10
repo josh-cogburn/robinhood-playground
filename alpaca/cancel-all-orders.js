@@ -1,6 +1,5 @@
-const { alpaca } = require('.');
-
 module.exports = async ticker => {
+    const { alpaca } = require('.');
     const orders = await alpaca.getOrders({
         status: 'open'
     });
