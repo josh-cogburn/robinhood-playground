@@ -55,47 +55,55 @@ module.exports = class PositionWatcher {
     const {
       avgEntry,
       market_value,
-      quantity
+      quantity,
+      buys
     } = this.getRelatedPosition();
     
     if (!avgEntry) return this.scheduleTimeout();
 
+    const lowestFill = Math.min(
+      ...buys.map(buy => buy.fillPrice)
+    );
+
     const l = await lookup(ticker);
     strlog({ ticker, l })
     const { currentPrice, askPrice } = l;
-    const prices = [
-      currentPrice,
-      askPrice
-    ];
-    const isSame = Boolean(JSON.stringify(prices) === JSON.stringify(this.prices));
-    this.lastPrices = prices;
+    // const prices = [
+    //   currentPrice,
+    //   askPrice
+    // ];
+    // const isSame = Boolean(JSON.stringify(prices) === JSON.stringify(this.prices));
+    // this.lastPrices = prices;
 
-    const lowestPrice = Math.min(...prices);
-    const lowestAvgDownPrice = Math.min(...this.avgDownPrices);
-    const trendToLowestAvg = getTrend(lowestPrice, lowestAvgDownPrice);
-    const returnPerc = getTrend(lowestPrice, avgEntry);
+    // const lowestPrice = Math.min(...prices);
+    // const lowestAvgDownPrice = Math.min(...this.avgDownPrices);
+    // const trendToLowestAvg = getTrend(lowestPrice, lowestAvgDownPrice);
+    // const returnPerc = getTrend(lowestPrice, avgEntry);
 
-    strlog({
-      ticker,
-      avgEntry,
-      prices,
+    // strlog({
+    //   ticker,
+    //   avgEntry,
+    //   prices,
 
-      lowestPrice,
-      trendToLowestAvg,
-      returnPerc
-    });
+    //   lowestPrice,
+    //   trendToLowestAvg,
+    //   returnPerc
+    // });
 
-    const baseTime = (avgDownCount + 0.2) * .75;
-    const minNeededToPass = isSame ?  baseTime : baseTime * 2;
-    const isRushed = this.lastAvgDown && Date.now() < this.lastAvgDown + 1000 * 60 * minNeededToPass;
-    const skipChecks = isRushed;
-    const shouldAvgDown = [trendToLowestAvg, returnPerc].every(trend => isNaN(trend) || trend < -3.7);
+    // const baseTime = (avgDownCount + 0.2) * .75;
+    // const minNeededToPass = isSame ?  baseTime : baseTime * 2;
+    // const isRushed = this.lastAvgDown && Date.now() < this.lastAvgDown + 1000 * 60 * minNeededToPass;
+    // const skipChecks = isRushed;
+    // const shouldAvgDown = [trendToLowestAvg, returnPerc].every(trend => isNaN(trend) || trend < -3.7);
 
-    console.log(`AVG-DOWNER: ${ticker} observed at ${currentPrice} ... avg buy at ${avgEntry} (${returnPerc}), lowest avg down price ${lowestAvgDownPrice} (${trendToLowestAvg}), and avg down count ${avgDownCount}, skipChecks ${skipChecks}, shouldAvgDown ${shouldAvgDown}`);
+    const askToLowestFill = getTrend(askPrice, lowestFill);
+    const shouldAvgDown = Boolean(askToLowestFill < -3);
+    const logLine = `AVG-DOWNER: ${ticker} observed at ${currentPrice} / ${askPrice} ... and avg down count ${avgDownCount}, skipChecks ${skipChecks}, lowestFill ${lowestFill}, askToLowestFill ${askToLowestFill}%, shouldAvgDown ${shouldAvgDown}`;
+    console.log(logLine);
     
-    if (skipChecks) {
-      return this.scheduleTimeout();
-    }
+    // if (skipChecks) {
+    //   return this.scheduleTimeout();
+    // }
 
     if (shouldAvgDown) {
       this.avgDownCount++;
@@ -113,6 +121,7 @@ module.exports = class PositionWatcher {
           trendToLowestAvg,
         }
       }, true);
+      await sendEmail(`avging down`, logLine);
       this.avgDownPrices.push(currentPrice);
       this.lastAvgDown = Date.now();
     } else if (!pendingSale && returnPerc >= 12 && !disableDayTrades) {
