@@ -40,8 +40,10 @@ module.exports = async (trend) => {
     );
 
     strlog({ fundamentals})
+    
+    try {
 
-    fundamentals
+        fundamentals
         .map(data => {
             [ 
                 'open',
@@ -82,6 +84,9 @@ module.exports = async (trend) => {
                 data
             };
         });
+    } catch (e) {
+        console.log('error with tickersToLookup',e, tickersToLookup);
+    }
 
     let withFundamentals = trend.map(obj => ({
         ...obj,
