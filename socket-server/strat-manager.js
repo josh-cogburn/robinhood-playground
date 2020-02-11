@@ -99,7 +99,7 @@ const stratManager = {
         await this.refreshPositions(true);
 
         for (let pos of this.positions.alpaca) {
-            if (pos.wouldBeDayTrade && pos.numMultipliers > 0 && pos.daysOld <= 1) {
+            if (pos.daysOld <= settings.continueDownForDays) {
                 console.log(`starting avg downer ${pos.ticker} bc bought today and positive multipliers`)
                 watchThis({
                     ticker: pos.ticker,

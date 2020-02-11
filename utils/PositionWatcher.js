@@ -69,12 +69,12 @@ module.exports = class PositionWatcher {
     const l = await lookup(ticker);
     strlog({ ticker, l })
     const { currentPrice, askPrice } = l;
-    // const prices = [
-    //   currentPrice,
-    //   askPrice
-    // ];
-    // const isSame = Boolean(JSON.stringify(prices) === JSON.stringify(this.prices));
-    // this.lastPrices = prices;
+    const prices = [
+      currentPrice,
+      askPrice
+    ];
+    const isSame = Boolean(JSON.stringify(prices) === JSON.stringify(this.prices));
+    this.lastPrices = prices;
 
     // const lowestPrice = Math.min(...prices);
     const lowestAvgDownPrice = Math.min(...this.avgDownPrices);
@@ -90,21 +90,21 @@ module.exports = class PositionWatcher {
     //   returnPerc
     // });
 
-    // const baseTime = (avgDownCount + 0.2) * .75;
-    // const minNeededToPass = isSame ?  baseTime : baseTime * 2;
-    // const isRushed = this.lastAvgDown && Date.now() < this.lastAvgDown + 1000 * 60 * minNeededToPass;
-    // const skipChecks = isRushed;
+    const baseTime = (avgDownCount + 0.2) * .75;
+    const minNeededToPass = isSame ?  baseTime : baseTime * 2;
+    const isRushed = this.lastAvgDown && Date.now() < this.lastAvgDown + 1000 * 60 * minNeededToPass;
+    const skipChecks = isRushed;
     // const shouldAvgDown = [trendToLowestAvg, returnPerc].every(trend => isNaN(trend) || trend < -3.7);
     
     const askToLowestAvgDown = getTrend(askPrice, lowestAvgDownPrice);
     const askToLowestFill = getTrend(askPrice, lowestFill);
     const shouldAvgDown = [askToLowestAvgDown, askToLowestFill].every(trend => isNaN(trend) || trend < -2.5);
-    const logLine = `AVG-DOWNER: ${ticker} observed at ${currentPrice} / ${askPrice} ... and avg down count ${avgDownCount}, askToLowestAvgDown ${askToLowestAvgDown}, lowestFill ${lowestFill}, askToLowestFill ${askToLowestFill}%, shouldAvgDown ${shouldAvgDown}`;
+    const logLine = `AVG-DOWNER: ${ticker} observed at ${currentPrice} / ${askPrice} ...isRushed ${isRushed}, and avg down count ${avgDownCount}, askToLowestAvgDown ${askToLowestAvgDown}, lowestFill ${lowestFill}, askToLowestFill ${askToLowestFill}%, shouldAvgDown ${shouldAvgDown}`;
     console.log(logLine);
     
-    // if (skipChecks) {
-    //   return this.scheduleTimeout();
-    // }
+    if (skipChecks) {
+      return this.scheduleTimeout();
+    }
 
     if (shouldAvgDown) {
       this.avgDownCount++;
