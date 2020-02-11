@@ -48,14 +48,16 @@ const additionalCron = [
         run: [-30, 30, 130, 230, 330, 400, 600],
         fn: () => saveByDateAnalysis()
     },
+
     {
         name: 'alpacaActOnPositions',
         run: [-45, -20, 4, 45, 100, 150, 200, 300, 360, 400, 440],
         fn: () => alpacaActOnPositions()
     },
+
     {
         name: 'alpacaMostLow',
-        run: [16, 80, 170, 250, 310, 370, 389],
+        run: [16, 389],
         fn: () => alpacaMostLow()
     },
     // {
