@@ -171,7 +171,8 @@ module.exports = async (
       market_value, 
       unrealized_intraday_plpc,
       notSelling,
-      stSent: { stBracket } = {}
+      stSent: { stBracket } = {},
+      sells = []
     } = position;
 
     if (notSelling) return 0;
@@ -182,6 +183,10 @@ module.exports = async (
 
     if (daysOld >= 3 && market_value < 30) {
       return 100;
+    }
+
+    if (sells.length === 0 && min < 0) {
+      return 0;
     }
 
     // if (min > 150 && Number(unrealized_intraday_plpc) * 100 < -6 && Number(unrealized_intraday_plpc) * 100 > -30) {
