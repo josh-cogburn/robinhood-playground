@@ -91,7 +91,7 @@ module.exports = async (trend) => {
 
     let withFundamentals = trend.map(obj => ({
         ...obj,
-        fundamentals: fundamentalCache[obj.ticker].data
+        fundamentals: (fundamentalCache[obj.ticker] || {}).data
     }));
 
     return withFundamentals;

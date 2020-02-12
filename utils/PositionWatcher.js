@@ -9,6 +9,9 @@ const alpacaLimitSell = require('../alpaca/limit-sell');
 const { alpaca } = require('../alpaca');
 const sendEmail = require('./send-email');
 const { disableDayTrades } = require('../settings');
+const { get } = require('underscore');
+
+const Pick = require('../models/Pick');
 
 module.exports = class PositionWatcher {
   constructor({ 
@@ -66,6 +69,14 @@ module.exports = class PositionWatcher {
       ...buys.map(buy => buy.fillPrice)
     );
 
+    const { picks: recentPicks = [] } = await Pick.getRecentPickForTicker(ticker);
+    const mostRecentPrice = (recentPicks[0] || {}).price;
+
+    strlog({
+      recentPicks,
+      mostRecentPrice
+    });
+
     const l = await lookup(ticker);
     strlog({ ticker, l })
     const { currentPrice, askPrice } = l;
@@ -98,8 +109,9 @@ module.exports = class PositionWatcher {
     
     const askToLowestAvgDown = getTrend(askPrice, lowestAvgDownPrice);
     const askToLowestFill = getTrend(askPrice, lowestFill);
-    const shouldAvgDown = [askToLowestAvgDown, askToLowestFill].every(trend => isNaN(trend) || trend < -2.5);
-    const logLine = `AVG-DOWNER: ${ticker} observed at ${currentPrice} / ${askPrice} ...isRushed ${isRushed}, and avg down count ${avgDownCount}, askToLowestAvgDown ${askToLowestAvgDown}, lowestFill ${lowestFill}, askToLowestFill ${askToLowestFill}%, shouldAvgDown ${shouldAvgDown}`;
+    const askToRecentPickPrice = getTrend(askPrice, mostRecentPrice);
+    const shouldAvgDown = [askToLowestAvgDown, askToLowestFill, askToRecentPickPrice].every(trend => isNaN(trend) || trend < -2.2s);
+    const logLine = `AVG-DOWNER: ${ticker} observed at ${currentPrice} / ${askPrice} ...isRushed ${isRushed}, and avg down count ${avgDownCount}, askToLowestAvgDown ${askToLowestAvgDown}, mostRecentPrice ${mostRecentPrice}, askToRecentPickPrice ${askToRecentPickPrice}, lowestFill ${lowestFill}, askToLowestFill ${askToLowestFill}%, shouldAvgDown ${shouldAvgDown}`;
     console.log(logLine);
     
     if (skipChecks) {
