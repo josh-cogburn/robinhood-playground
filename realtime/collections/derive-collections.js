@@ -55,7 +55,7 @@ const deriveCollections = async collections => {
         result => result.ticker
     );
 
-    strlog({ allScanResults })
+    // strlog({ allScanResults })
 
     const rsiPerms = {
         realChill: 40,

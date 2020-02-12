@@ -4,6 +4,7 @@ const makeUpUpPerms = require('./make-up-up-perms');
 
 module.exports = async () => {
 
+  console.log('getting recent volume collections');
   const scan = await runScan({
     minVolume: 50000,
     minPrice: 0.1,

@@ -79,9 +79,9 @@ const runScan = async ({
   // .sort((a, b) => b.fundamentals.volume - a.fundamentals.volume)
   // .cutBottom();
 
-  strlog({
-    withFundamentals
-  })
+  // strlog({
+  //   withFundamentals
+  // })
   
   const min = getMinutesFromOpen();
   const percComplete = Math.max(Math.min(1, min / 390), 0.01);
@@ -141,9 +141,9 @@ const runScan = async ({
       }
     }));
 
-  strlog({
-    withTSO
-  })
+  // strlog({
+  //   withTSO
+  // })
 
   const filtered = withTSO.filter(buy => filterFn(buy.computed));
   
@@ -152,9 +152,9 @@ const runScan = async ({
     .filter(buy => !buy.fundamentals.average_volume_2_weeks)
     .map(({ ticker }) => ticker);
   
-  strlog({
-    missing2WeekAvg
-  });
+  // strlog({
+  //   missing2WeekAvg
+  // });
 
   const missingDailyHistoricals = await getDailyHistoricals(missing2WeekAvg);
 

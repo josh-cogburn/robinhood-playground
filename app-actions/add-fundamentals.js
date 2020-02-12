@@ -33,13 +33,13 @@ module.exports = async (trend) => {
         async tickerStr => {
             // console.log('tickerstr', tickerStr);
             const response = await Robinhood.url(`https://api.robinhood.com/fundamentals/?symbols=${tickerStr}`);
-            strlog({ response })
+            // strlog({ response })
             return response.results;
         },
         10
     );
 
-    strlog({ fundamentals})
+    // strlog({ fundamentals})
     
     try {
 

@@ -259,18 +259,15 @@ module.exports = new (class RealtimeRunner {
   }
 
   logLastTimestamps() {
-
     [5, 10, 30].forEach(period => {
       const curPriceCache = this.priceCaches[period];
       const firstTicker = Object.keys(curPriceCache)[0];
       const last5timestamps = curPriceCache[firstTicker]
         .slice(-5)
         .map(quote => new Date(quote.timestamp).toLocaleString());
-    
       console.log(`${period}min period, last 5 timestamps...${last5timestamps}`);
-      
     });
-  }
+  } 
   async addNewQuote(priceCachesToUpdate = Object.keys(this.priceCaches)) {
 
     console.log('getting new quotes...');
