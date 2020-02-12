@@ -110,7 +110,7 @@ module.exports = class PositionWatcher {
     const askToLowestAvgDown = getTrend(askPrice, lowestAvgDownPrice);
     const askToLowestFill = getTrend(askPrice, lowestFill);
     const askToRecentPickPrice = getTrend(askPrice, mostRecentPrice);
-    const shouldAvgDown = [askToLowestAvgDown, askToLowestFill, askToRecentPickPrice].every(trend => isNaN(trend) || trend < -2.2s);
+    const shouldAvgDown = [askToLowestAvgDown, askToLowestFill, askToRecentPickPrice].every(trend => isNaN(trend) || trend < -2.2);
     const logLine = `AVG-DOWNER: ${ticker} observed at ${currentPrice} / ${askPrice} ...isRushed ${isRushed}, and avg down count ${avgDownCount}, askToLowestAvgDown ${askToLowestAvgDown}, mostRecentPrice ${mostRecentPrice}, askToRecentPickPrice ${askToRecentPickPrice}, lowestFill ${lowestFill}, askToLowestFill ${askToLowestFill}%, shouldAvgDown ${shouldAvgDown}`;
     console.log(logLine);
     
