@@ -557,7 +557,7 @@ module.exports = {
         // rsi-rsilt10-initial
         // rsi-10min-rsilt10
         sudden-drops-lunch
-        stocktwits-holds
+        // stocktwits-holds
         // derived-chillSlightlyUpVolume-watchout
         // derived-unfilteredSlightlyUpVolume-watchout
         
