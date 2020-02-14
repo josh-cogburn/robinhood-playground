@@ -116,7 +116,7 @@ module.exports = async (ticker, detailed, maxId) => {
             ...response,
             ...getStBracket(response),
         }
-        console.log(`stSent ${ticker}`, response);
+        console.log(`stSent ${ticker}`, response.bullBearScore);
         return response;
 
         

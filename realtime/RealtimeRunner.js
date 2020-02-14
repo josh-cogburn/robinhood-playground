@@ -60,7 +60,8 @@ module.exports = new (class RealtimeRunner {
       baseCollections,
       derivedCollections
     } = await getCollections(true);
-
+    console.log('got the collections');
+    
     let tenCount = Math.round(getMinutesFromOpen() / 10);
     tenCount = tenCount < 0 ? `Neg${Math.abs(tenCount)}` : tenCount;
 

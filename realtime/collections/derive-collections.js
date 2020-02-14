@@ -11,11 +11,20 @@ const getOptionsCollections = require('./get-options-collections');
 
 const addDetails = async response => {
     const uniqTickers = Object.values(response).flatten().map(result => result.ticker).uniq();
-    const withStSents = await mapLimit(uniqTickers, 3, async ticker => ({
-        ticker,
-        stSent: await getStSent(ticker),
-        googleNews: await queryGoogleNews(ticker)
-    }));
+    strlog({ uniqTickers})
+    let i = 1;
+    const withStSents = await mapLimit(uniqTickers, 3, async ticker => {
+        const stSent = await getStSent(ticker);
+        const googleNews = await queryGoogleNews(ticker);
+        console.log(`done with ${i} / ${uniqTickers.length}`);
+        i++;
+        return {
+            ticker,
+            stSent,
+            googleNews
+        };
+    });
+    console.log('now we are here');
 
     const recentVolumeLookups = await getRecentVolume(uniqTickers);
 
@@ -147,9 +156,11 @@ const deriveCollections = async collections => {
     //         .slice(0, 5);
     // }
 
+    console.log('about to add details...');
     const withDetails = await addDetails(response);
+    console.log('done adding details')
     const withHighestSt = await addHighestSt(withDetails);
-
+    console.log('done adding highest st sent')
     return withHighestSt;
 
 };

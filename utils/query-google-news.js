@@ -11,9 +11,10 @@ module.exports = cacheThis(async ticker => {
     .filter(result => result.title.includes(ticker.toUpperCase()))
     .sort((a, b) => b.created - a.created);
 
-  strlog({ recentNews });
+  // strlog({ recentNews });
   const str = JSON.stringify(recentNews).toLowerCase();
 
+  console.log(`found ${recentNews.length} recent news articles for ${ticker}`);
   return {
     recentNews: recentNews.slice(0, 3),
     wordFlags: wordFlags

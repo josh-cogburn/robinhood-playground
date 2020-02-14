@@ -23,7 +23,7 @@ module.exports = async (tickers = ['AAPL']) => {
     const recentHistoricals = historicals.slice(0 - recentCount);
 
     console.log({
-      recentHistoricals,
+      // recentHistoricals,
       historicals: historicals.length,
       recentCount
     })
