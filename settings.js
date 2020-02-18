@@ -37,7 +37,7 @@ module.exports = {
     sellAbove: {
         // YTEN: 1000000,
         // SAVA: 7.90
-        YAYO: 0.435,
+        // YAYO: 0.435,
         // TRPX: 0.64
     },
     
