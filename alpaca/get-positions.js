@@ -185,7 +185,7 @@ module.exports = async (
       return 100;
     }
 
-    if (sells.length === 0 && min < 0) {
+    if (sells.length === 0 && min < 0 && min > -200) {
       return 0;
     }
 
