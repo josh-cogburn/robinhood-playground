@@ -65,7 +65,7 @@ module.exports = new (class RealtimeRunner {
     let tenCount = Math.round(getMinutesFromOpen() / 10);
     tenCount = tenCount < 0 ? `Neg${Math.abs(tenCount)}` : tenCount;
 
-    strlog({ tenCount, derivedCollections })
+    // strlog({ tenCount, derivedCollections })
     if (!this.hasInit) {
       console.log('Im not going to record the derived collections right now because its just a weird time alright.');
     } else {

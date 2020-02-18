@@ -16,12 +16,12 @@ const checkForHugeDrop = position => {
 		return isBigDrop && isNotToday;
   });
   if (dropIndex !== -1) {
-    if (ticker === 'FCEL') {
-      strlog({
-        ticker,
-        dropIndex,
-      })
-    }
+    // if (ticker === 'FCEL') {
+    //   strlog({
+    //     ticker,
+    //     dropIndex,
+    //   })
+    // }
     const avgEntry = avgArray(
       buys.slice(dropIndex).map(buy => buy.fillPrice)
     );
@@ -53,10 +53,10 @@ module.exports = async (
   const getDaysOld = date => {
     return uniqDates.indexOf(date);
   };
-  strlog({ uniqDates })
+  // strlog({ uniqDates })
   
   let positions = (await alpaca.getPositions());
-  strlog({ positions })
+  // strlog({ positions })
   positions = positions.map(({ 
     symbol, 
     avg_entry_price, 
@@ -135,7 +135,7 @@ module.exports = async (
   });
 
   const ratioDayPast = 0.2 || Math.max(0.2, Math.min(min / 360, 1));
-  strlog({ ratioDayPast })
+  // strlog({ ratioDayPast })
 
 
   const withAnalysis = await mapLimit(positions, 2, async position => 
@@ -243,16 +243,16 @@ module.exports = async (
     const RAND_VARY_PERC = 3;
     const randomized = weightedByDayInProgress + (Math.random() * RAND_VARY_PERC) - (RAND_VARY_PERC / 2);
 
-    strlog({
-      ticker,
-      wouldBeDayTrade,
-      basePercent,
-      shouldVal,
-      summed,
-      halfSum,
-      weightedByDayInProgress,
-      randomized,
-    });
+    // strlog({
+    //   ticker,
+    //   wouldBeDayTrade,
+    //   basePercent,
+    //   shouldVal,
+    //   summed,
+    //   halfSum,
+    //   weightedByDayInProgress,
+    //   randomized,
+    // });
 
     return +randomized.toFixed(2);
   };

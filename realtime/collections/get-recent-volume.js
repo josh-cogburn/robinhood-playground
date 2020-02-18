@@ -4,6 +4,7 @@ const getTrend = require('../../utils/get-trend');
 
 module.exports = async (tickers = ['AAPL']) => {
 
+  console.log(`getting recent volume for ${tickers.length} tickers`);
 
   let allHistoricals = await getMultipleHistoricals(
       tickers,
@@ -22,11 +23,11 @@ module.exports = async (tickers = ['AAPL']) => {
     const recentCount = Math.floor(historicals.length / 11);    
     const recentHistoricals = historicals.slice(0 - recentCount);
 
-    console.log({
-      // recentHistoricals,
-      historicals: historicals.length,
-      recentCount
-    })
+    // console.log({
+    //   // recentHistoricals,
+    //   historicals: historicals.length,
+    //   recentCount
+    // })
 
     const recentDollarVolume = avgArray(
       recentHistoricals
