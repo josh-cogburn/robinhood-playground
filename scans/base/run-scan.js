@@ -74,14 +74,15 @@ const runScan = async ({
     computed: {}
   })).filter(({ ticker }) => !excludeTickers.includes(ticker));
 
-  const withFundamentals = await addFundamentals(tickers);
+  const withFundamentals = (await addFundamentals(tickers)).filter(buy => buy.fundamentals);
 
   // .sort((a, b) => b.fundamentals.volume - a.fundamentals.volume)
   // .cutBottom();
 
-  // strlog({
-  //   withFundamentals
-  // })
+  strlog({
+    tickers: tickers.length,
+    withFundamentals: withFundamentals.length
+  })
   
   const min = getMinutesFromOpen();
   const percComplete = Math.max(Math.min(1, min / 390), 0.01);
