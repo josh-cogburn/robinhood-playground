@@ -193,7 +193,7 @@ module.exports = async (
     //   return 35;
     // }
 
-    if (Math.abs(returnPerc) < 4) {
+    if (Math.abs(returnPerc) < 2.5) {
       return 0;
     }
     
