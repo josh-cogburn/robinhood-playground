@@ -24,8 +24,8 @@ const subsetOffsets = {
 
   majorJump: 0,
   mediumJump: 2,
-  minorJump: -8,
-  // onlyMinorJump: -5,
+  minorJump: -3,
+  onlyMinorJump: -3,
 
   // singleMultiplier: -0.5,
   // multipleMultipliers: ({ numMultipliers }) => numMultipliers > 1,
