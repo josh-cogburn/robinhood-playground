@@ -74,6 +74,12 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
         if (stoppedAt1.some(word => interestingWords.includes(word))) {
             multiplier = 1;
         }
+
+        const onlyMinor = interestingWords.includes('minorJump') && !interestingWords.includes('mediumJump') || !interestingWords.includes('majorJump');
+        if (onlyMinor) {
+            multiplier = Math.min(10, multiplier);
+            multiplier = Math.max(3, multiplier);
+        }
         
         
         // if (multiplier < multiplierThreshold) {
