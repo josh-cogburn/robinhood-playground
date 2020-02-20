@@ -14,19 +14,19 @@ const addDetails = async response => {
     strlog({ uniqTickers})
     let i = 0;
     const withStSents = [];
-    for (let ticker of uniqTickers) {
+    const withStSents = await mapLimit(uniqTickers, 5, async ticker => {
         const [stSent, googleNews] = await Promise.all([
             getStSent(ticker),
             queryGoogleNews(ticker)
         ]);
         i++;
         console.log(`done with ${i} / ${uniqTickers.length}`);
-        withStSents.push({
+        return {
             ticker,
             stSent,
             googleNews
-        });
-    }
+        };
+    });
     console.log('now we are here');
 
     const recentVolumeLookups = await getRecentVolume(uniqTickers);
