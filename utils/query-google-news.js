@@ -20,11 +20,18 @@ const promiseTimeout = function(ms, promise){
   ])
 }
 
-module.exports = cacheThis(async ticker => {  
-  const { items = [] } = await promiseTimeout(3000, googleNewsAPI.getNews(googleNewsAPI.SEARCH, ticker, "en-US").catch(e => {
-    console.log('error', e);
-    return {};
-  }));
+module.exports = cacheThis(async ticker => { 
+  let items; 
+  try {
+    const news = await promiseTimeout(3000, googleNewsAPI.getNews(googleNewsAPI.SEARCH, ticker, "en-US").catch(e => {
+      console.log('error', e);
+      return {};
+    }));
+    items = news.items || [];
+  } catch (e) {
+    items = [];
+  }
+  
   const twentyFourHrsMs = 1000 * 60 * 60 * 48;
   const recentNews = items
     .filter(result => result.created > Date.now() - twentyFourHrsMs)
