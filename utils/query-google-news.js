@@ -3,11 +3,28 @@ const { wordFlags } = require('../settings');
 
 const cacheThis = require('./cache-this');
 
+const promiseTimeout = function(ms, promise){
+
+  // Create a promise that rejects in <ms> milliseconds
+  let timeout = new Promise((resolve, reject) => {
+    let id = setTimeout(() => {
+      clearTimeout(id);
+      reject('Timed out in '+ ms + 'ms.')
+    }, ms)
+  })
+
+  // Returns a race between our timeout and the passed in promise
+  return Promise.race([
+    promise,
+    timeout
+  ])
+}
+
 module.exports = cacheThis(async ticker => {  
-  const { items = [] } = await googleNewsAPI.getNews(googleNewsAPI.SEARCH, ticker, "en-US").catch(e => {
+  const { items = [] } = promiseTimeout(3000, await googleNewsAPI.getNews(googleNewsAPI.SEARCH, ticker, "en-US").catch(e => {
     console.log('error', e);
     return {};
-  });
+  }));
   const twentyFourHrsMs = 1000 * 60 * 60 * 48;
   const recentNews = items
     .filter(result => result.created > Date.now() - twentyFourHrsMs)
