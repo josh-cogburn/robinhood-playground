@@ -13,9 +13,11 @@ const addDetails = async response => {
     const uniqTickers = Object.values(response).flatten().map(result => result.ticker).uniq();
     strlog({ uniqTickers})
     let i = 1;
-    const withStSents = await mapLimit(uniqTickers, 3, async ticker => {
-        const stSent = await getStSent(ticker);
-        const googleNews = await queryGoogleNews(ticker);
+    const withStSents = await mapLimit(uniqTickers, 5, async ticker => {
+        const [stSent, googleNews] = await Promise.all([
+            getStSent(ticker),
+            queryGoogleNews(ticker)
+        ]);
         console.log(`done with ${i} / ${uniqTickers.length}`);
         i++;
         return {
