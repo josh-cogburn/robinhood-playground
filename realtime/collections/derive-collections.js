@@ -13,7 +13,6 @@ const addDetails = async response => {
     const uniqTickers = Object.values(response).flatten().map(result => result.ticker).uniq();
     strlog({ uniqTickers})
     let i = 0;
-    const withStSents = [];
     const withStSents = await mapLimit(uniqTickers, 5, async ticker => {
         const [stSent, googleNews] = await Promise.all([
             getStSent(ticker),
