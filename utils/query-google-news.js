@@ -21,7 +21,7 @@ const promiseTimeout = function(ms, promise){
 }
 
 module.exports = cacheThis(async ticker => {  
-  const { items = [] } = await promiseTimeout(3000, await googleNewsAPI.getNews(googleNewsAPI.SEARCH, ticker, "en-US").catch(e => {
+  const { items = [] } = await promiseTimeout(3000, googleNewsAPI.getNews(googleNewsAPI.SEARCH, ticker, "en-US").catch(e => {
     console.log('error', e);
     return {};
   }));

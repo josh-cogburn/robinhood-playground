@@ -83,7 +83,7 @@ module.exports = cacheThis(async ticker => {
     spread: spread => [1, 2, 3, 4, 5, 6].find(num => {
       strlog({ num, spread})
       return spread < num
-    }),
+    }) || 'gt6',
     avgDollarVolume: dollarVolume => [20000, 10000, 3500].find(num => dollarVolume > num)
   }, (fn, key) => fn(obj[key]));
   
