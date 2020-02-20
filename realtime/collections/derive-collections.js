@@ -12,20 +12,21 @@ const getOptionsCollections = require('./get-options-collections');
 const addDetails = async response => {
     const uniqTickers = Object.values(response).flatten().map(result => result.ticker).uniq();
     strlog({ uniqTickers})
-    let i = 1;
-    const withStSents = await mapLimit(uniqTickers, 5, async ticker => {
+    let i = 0;
+    const withStSents = [];
+    for (let ticker of uniqTickers) {
         const [stSent, googleNews] = await Promise.all([
             getStSent(ticker),
             queryGoogleNews(ticker)
         ]);
-        console.log(`done with ${i} / ${uniqTickers.length}`);
         i++;
-        return {
+        console.log(`done with ${i} / ${uniqTickers.length}`);
+        withStSents.push({
             ticker,
             stSent,
             googleNews
-        };
-    });
+        });
+    }
     console.log('now we are here');
 
     const recentVolumeLookups = await getRecentVolume(uniqTickers);
