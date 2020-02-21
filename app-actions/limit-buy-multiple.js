@@ -79,7 +79,8 @@ const sprayBuy = async ({
                 const order = response && response.alpacaOrder ? response.alpacaOrder : response;
                 return {
                     name,
-                    fillPrice: (order || {}).filled_avg_price
+                    fillPrice: (order || {}).filled_avg_price,
+                    ...response
                 };
             }
         );
