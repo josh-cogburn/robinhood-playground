@@ -86,7 +86,9 @@ const subsetOffsets = {
   rocket: 3,
   delist: -3,
 
-  avgDowner: 2,
+  avgDowner: 7,
+  avgDowner0: 1,
+  avgDowner1: 1,
   avgDowner2: 1,
   avgDowner3: 3,
   avgDowner6: 3,
