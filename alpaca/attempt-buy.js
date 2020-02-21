@@ -3,21 +3,21 @@ const lookup = require('../utils/lookup');
 const limitBuy = require('./limit-buy');
 const marketBuy = require('./market-buy');
 
-const ATTEMPT_TIMEOUTS = [6, 7, 8, 9, 10, 9, 8];     // seconds
-const ATTEMPT_PERCS = [-1, -0.6, -0.34, 0, 0.3, 0.5, 1];  // percents
+const ATTEMPT_TIMEOUTS = [20, 20, 20, 20, 20, 20, 20, 20, 20];     // seconds
+const ATTEMPT_PERCS = [-1, -0.6, -0.34, 0, 0.3, 0.5, 1, 1.5, 2];  // percents
 const MAX_ATTEMPTS = ATTEMPT_TIMEOUTS.length;
 
-
+const { avgArray } = require('../utils/array-math');
 
 const calcLimitPrice = async ({ ticker, pickPrice, attemptNum }) => {
     const attemptPercAbove = ATTEMPT_PERCS[attemptNum];
 
     const { bidPrice, askPrice, lastTrade } = await lookup(ticker);
     // const lowVal = Math.min(bidPrice, askPrice, lastTrade);
-    const highVal = lastTrade // Math.max(bidPrice, askPrice, lastTrade);
+    const highVal = avgArray([bidPrice, lastTrade].filter(Boolean));// Math.max(bidPrice, askPrice, lastTrade);
     
     const aboveHigh = highVal * attemptPercAbove / 100;
-    const maxPrice = pickPrice * 1.042;
+    const maxPrice = Math.min(pickPrice * 1.042, bidPrice * 1.03);
     const finalPrice = Math.min(highVal + aboveHigh, maxPrice);
     strlog({
         bidPrice,

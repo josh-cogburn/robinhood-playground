@@ -2,9 +2,9 @@ const sumArray = arr => {
     return arr.reduce((acc, val) => acc + val, 0);
   };
   
-  const avgArray = arr => {
-    return sumArray(arr) / arr.length;
-  };
+const avgArray = arr => {
+return sumArray(arr) / arr.length;
+};
 
 const percUp = arr => arr.filter(v => v > 0).length / arr.length * 100;
 

@@ -144,7 +144,11 @@ module.exports = async ({
             const pickPrice = (withPrices.find(obj => obj.ticker === ticker) || {}).price;
             const totalQuantity = Math.round(perStock / pickPrice) || 1;
 
-            const waitAmts = [1, 6, 14].slice(0, Math.floor(perStock / 6));
+            const waitAmts = [
+                1, 
+                45, 
+                150
+            ].slice(0, Math.floor(perStock / 6));
             const perSpray = Math.round(totalQuantity / waitAmts.length) || 1;
             console.log('before sprays', { totalQuantity, perSpray });
             const sprayResponses = await Promise.all(

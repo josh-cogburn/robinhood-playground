@@ -41,7 +41,12 @@ const limitBuy = async ({
 
   if (!order.filled_at) {
     await alpaca.cancelOrder(order.id);
-    order = fallbackToMarket ? await marketBuy({ ticker, quantity }) : order;
+    order = fallbackToMarket 
+      ? {
+        alpacaOrder: await marketBuy({ ticker, quantity }),
+        marketFallback: true
+      }
+      : order;
   }
 
   return order;
