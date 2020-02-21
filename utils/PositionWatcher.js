@@ -58,7 +58,7 @@ module.exports = class PositionWatcher {
       market_value,
       quantity,
       buys,
-      returnPerc,
+      // returnPerc,
       numAvgDowners,
     } = this.getRelatedPosition();
     
