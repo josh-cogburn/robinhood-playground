@@ -67,6 +67,7 @@ const analyzePosition = async position => {
     ...allStrategiesHit,
     ...buyStrategies,
   ]).map(dashDel => dashDel.split('-')).flatten().uniq();
+  const numAvgDowners = relatedPicks.filter(pick => pick.interestingWords.includes('downer')).length;
 
   const netImpact = Number(sellReturnDollars || 0) + Number(unrealizedPl || 0);
   return {
@@ -83,7 +84,8 @@ const analyzePosition = async position => {
       numPicks,
       numMultipliers,
       percentSharesSold,
-      interestingWords
+      interestingWords,
+      numAvgDowners
   };
 };
 

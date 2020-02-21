@@ -97,6 +97,11 @@ const stratManager = {
         setInterval(() => this.refreshPositions(), 1000 * 60 * 15);
         await this.refreshPositions(true);
 
+        this.resetPositionWatchers();
+
+        console.log('initd strat manager');
+    },
+    resetPositionWatchers() {
         for (let pos of this.positions.alpaca) {
             if (pos.daysOld <= settings.continueDownForDays) {
                 console.log(`starting avg downer ${pos.ticker} bc bought today and positive multipliers`)
@@ -106,8 +111,6 @@ const stratManager = {
                 });
             }
         }
-
-        console.log('initd strat manager');
     },
     async getWelcomeData() {
         // console.log('we;come', { pms });

@@ -17,14 +17,13 @@ module.exports = class PositionWatcher {
   constructor({ 
     ticker,
     initialTimeout = INITIAL_TIMEOUT,
-    avgDownCount = 0,
   }) {
     Object.assign(this, {
       ticker,
-      avgDownCount,
+      initialTimeout,
       timeout: initialTimeout,
       pendingSale: false,
-      avgDownPrices: [],
+      // avgDownPrices: [],
       lastAvgDown: null
     });
     console.log('hey whats up from here')
@@ -51,7 +50,6 @@ module.exports = class PositionWatcher {
 
     const {
       ticker,
-      avgDownCount,
       pendingSale
     } = this;
 
@@ -61,6 +59,7 @@ module.exports = class PositionWatcher {
       quantity,
       buys,
       returnPerc,
+      numAvgDowners,
     } = this.getRelatedPosition();
     
     if (!avgEntry) return this.scheduleTimeout();
@@ -88,7 +87,7 @@ module.exports = class PositionWatcher {
     this.lastPrices = prices;
 
     // const lowestPrice = Math.min(...prices);
-    const lowestAvgDownPrice = Math.min(...this.avgDownPrices);
+    // const lowestAvgDownPrice = Math.min(...this.avgDownPrices);
     // const returnPerc = getTrend(lowestPrice, avgEntry);
 
     // strlog({
@@ -101,17 +100,21 @@ module.exports = class PositionWatcher {
     //   returnPerc
     // });
 
-    const baseTime = (avgDownCount + 0.2) * .75;
+    const baseTime = (numAvgDowners + 0.2) * .75;
     const minNeededToPass = isSame ?  baseTime : baseTime * 2;
     const isRushed = this.lastAvgDown && Date.now() < this.lastAvgDown + 1000 * 60 * minNeededToPass;
     const skipChecks = isRushed;
     // const shouldAvgDown = [trendToLowestAvg, returnPerc].every(trend => isNaN(trend) || trend < -3.7);
     
-    const askToLowestAvgDown = getTrend(askPrice, lowestAvgDownPrice);
+    // const askToLowestAvgDown = getTrend(askPrice, lowestAvgDownPrice);
     const askToLowestFill = getTrend(askPrice, lowestFill);
     const askToRecentPickPrice = getTrend(askPrice, mostRecentPrice);
-    const shouldAvgDown = [askToLowestAvgDown, askToLowestFill, askToRecentPickPrice].every(trend => isNaN(trend) || trend < -2);
-    const logLine = `AVG-DOWNER: ${ticker} observed at ${currentPrice} / ${askPrice} ...isRushed ${isRushed}, and avg down count ${avgDownCount}, askToLowestAvgDown ${askToLowestAvgDown}, mostRecentPrice ${mostRecentPrice}, askToRecentPickPrice ${askToRecentPickPrice}, lowestFill ${lowestFill}, askToLowestFill ${askToLowestFill}%, shouldAvgDown ${shouldAvgDown}`;
+    const shouldAvgDown = [
+      // askToLowestAvgDown, 
+      askToLowestFill, 
+      askToRecentPickPrice
+    ].every(trend => isNaN(trend) || trend < -2);
+    const logLine = `AVG-DOWNER: ${ticker} observed at ${currentPrice} / ${askPrice} ...isRushed ${isRushed}, and numAvgDowners ${numAvgDowners}, mostRecentPrice ${mostRecentPrice}, askToRecentPickPrice ${askToRecentPickPrice}, lowestFill ${lowestFill}, askToLowestFill ${askToLowestFill}%, shouldAvgDown ${shouldAvgDown}`;
     console.log(logLine);
     
     if (skipChecks) {
@@ -119,13 +122,12 @@ module.exports = class PositionWatcher {
     }
 
     if (shouldAvgDown) {
-      this.avgDownCount++;
       const realtimeRunner = require('../realtime/RealtimeRunner');
       await realtimeRunner.handlePick({
         strategyName: 'avg-downer',
         ticker,
         keys: {
-          [`${avgDownCount}count`]: true,
+          [`${numAvgDowners}count`]: true,
           [this.getMinKey()]: true,
           isBeforeClose
         },
@@ -135,7 +137,7 @@ module.exports = class PositionWatcher {
         }
       }, true);
       await sendEmail(`avging down`, logLine);
-      this.avgDownPrices.push(currentPrice);
+      // this.avgDownPrices.push(currentPrice);
       this.lastAvgDown = Date.now();
     } else if (!pendingSale && returnPerc >= 12 && !disableDayTrades) {
       const account = await alpaca.getAccount();
@@ -185,7 +187,14 @@ module.exports = class PositionWatcher {
   scheduleTimeout() {
     console.log(`observing again in ${this.timeout / 1000} seconds (${(new Date(Date.now() + this.timeout).toLocaleTimeString())})`)
     this.TO = setTimeout(() => this.running && this.observe(), this.timeout);
-    this.timeout = Math.min(this.timeout * 2, 1000 * 60 * 6);
+    const changeSlightly = (num, variancePercent = 20) => {
+      const posOrNeg = Math.random() > 0.5 ? 1 : -1;
+      const varianceValue = Math.random() * variancePercent;
+      const actualPercChange = posOrNeg * varianceValue;
+      const multiplier = actualPercChange / 100 + 1;
+      return num * multiplier;
+    };
+    this.timeout = Math.min(changeSlightly(this.timeout * 2), 1000 * 60 * 6);
   }
   newBuy() {
     this.timeout = INITIAL_TIMEOUT;
