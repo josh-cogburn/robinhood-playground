@@ -38,9 +38,11 @@ const calcLimitPrice = async ({ ticker, pickPrice, attemptNum }) => {
 module.exports = async ({ ticker, quantity, pickPrice, strategy, fallbackToMarket }) => {
 
     // limit
+    const attemptedPrices = [];
     for (let attemptNum of Array(MAX_ATTEMPTS).fill(0).map((v, i) => i)) {
         strlog({ attemptNum })
         const attemptPrice = await calcLimitPrice({ ticker, pickPrice, attemptNum });
+        attemptedPrices.push(attemptPrice);
         strlog({
             attemptPrice
         })
@@ -54,7 +56,8 @@ module.exports = async ({ ticker, quantity, pickPrice, strategy, fallbackToMarke
         if (attemptResponse.filled_at) {
             return {
                 alpacaOrder: attemptResponse,
-                attemptNum
+                attemptNum,
+                attemptedPrices
             };
         }
     }
@@ -64,7 +67,8 @@ module.exports = async ({ ticker, quantity, pickPrice, strategy, fallbackToMarke
     console.log('unable to limit buy, falling back to market buy', ticker);
     return {
         alpacaOrder: await marketBuy({ ticker, quantity }),
-        attemptNum: 'market'
+        attemptNum: 'market',
+        attemptedPrices
     };
 
 };

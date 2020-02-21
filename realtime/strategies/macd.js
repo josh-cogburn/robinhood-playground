@@ -104,6 +104,7 @@ const handleMACDConfig = macdConfig => allCurrents => {
 
 
 module.exports = {
+    disabled: true,
     period: [10, 30],
     collections: ['hotSt', 'holds'],
     handler: ({ allPrices }) => {

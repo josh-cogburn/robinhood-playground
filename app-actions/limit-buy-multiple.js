@@ -66,8 +66,9 @@ const sprayBuy = async ({
         }),
     };
     
+    const sliceCount = Math.floor(totalDollars / 4);
     const buyPromises = Object.entries(buyStyles)
-        .slice(0, Math.floor(totalDollars / 4))
+        .slice(0, sliceCount)
         .map(
             async ([name, promise]) => {
                 strlog({
@@ -88,7 +89,9 @@ const sprayBuy = async ({
         buyPromises
     );
 
-    await sendEmail(`roundup for ${ticker} buy`, JSON.stringify(roundUp, null, 2))
+    return {roundUp, totalDollars, individualQuantity, sliceCount};
+
+    // await sendEmail(`roundup for ${ticker} buy`, JSON.stringify({roundUp, totalDollars, individualQuantity, sliceCount}, null, 2))
 
 };
 
@@ -141,24 +144,27 @@ module.exports = async ({
             const pickPrice = (withPrices.find(obj => obj.ticker === ticker) || {}).price;
             const totalQuantity = Math.round(perStock / pickPrice) || 1;
 
-            const waitAmts = [1, 7, 17].slice(0, Math.floor(perStock / 6));
+            const waitAmts = [1, 6, 14].slice(0, Math.floor(perStock / 6));
             const perSpray = Math.round(totalQuantity / waitAmts.length) || 1;
             console.log('before sprays', { totalQuantity, perSpray });
-            await Promise.all(
+            const sprayResponses = await Promise.all(
                 waitAmts.map(
                     async waitAmt => {
                         console.log(`waiting ${waitAmt} seconds and then spraying ${perSpray} quantity`);
                         await new Promise(resolve => setTimeout(resolve, waitAmt * 1000));
-                        await sprayBuy({
-                            ticker,
-                            quantity: perSpray,
-                            pickPrice
-                        });
+                        return {
+                            ...await sprayBuy({
+                                ticker,
+                                quantity: perSpray,
+                                pickPrice
+                            }),
+                            waitAmt
+                        };
                     }
                 )
             );
             
-
+            await sendEmail(`roundup for buying ${ticker}`, JSON.stringify(sprayResponses, null, 2));
             numPurchased++;
         } catch (e) {
             // failed
