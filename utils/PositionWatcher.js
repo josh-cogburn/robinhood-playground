@@ -115,7 +115,7 @@ module.exports = class PositionWatcher {
       // askToLowestAvgDown, 
       askToLowestFill, 
       askToRecentPickPrice
-    ].every(trend => trendLowerThanPerc(trend, -1)) && trendLowerThanPerc(askPrice, -2);
+    ].every(trend => trendLowerThanPerc(trend, -0.5)) && trendLowerThanPerc(askPrice, -2);
     const logLine = `AVG-DOWNER: ${ticker} observed at ${currentPrice} / ${askPrice} ...isRushed ${isRushed}, and numAvgDowners ${numAvgDowners}, mostRecentPrice ${mostRecentPrice}, askToRecentPickPrice ${askToRecentPickPrice}, lowestFill ${lowestFill}, askToLowestFill ${askToLowestFill}%, shouldAvgDown ${shouldAvgDown}`;
     console.log(logLine);
     
