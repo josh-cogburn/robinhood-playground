@@ -102,23 +102,34 @@ module.exports = class PositionWatcher {
 
     const baseTime = (numAvgDowners + 0.2) * .75;
     const minNeededToPass = isSame ?  baseTime : baseTime * 2;
-    const isRushed = this.lastAvgDown && Date.now() < this.lastAvgDown + 1000 * 60 * minNeededToPass;
-    const skipChecks = isRushed;
+
+
+    const minSinceLastAvgDown = this.lastAvgDown ? Math.round((Date.now() - this.lastAvgDown) * 1000 * 60): undefined;
+    // const isRushed = Boolean(msSinceLastAvgDown < 1000 * 60 * minNeededToPass);
+    // const skipChecks = isRushed;
+
+
     // const shouldAvgDown = [trendToLowestAvg, returnPerc].every(trend => isNaN(trend) || trend < -3.7);
     
     // const askToLowestAvgDown = getTrend(askPrice, lowestAvgDownPrice);
     const askToLowestFill = getTrend(askPrice, lowestFill);
     const askToRecentPickPrice = getTrend(askPrice, mostRecentPrice);
 
-    const trendLowerThanPerc = (t, perc) => isNaN(t) || t < perc;
 
-
-    const shouldAvgDownWhen = [
+    let shouldAvgDownWhen = [
       [-1, -12],
       [-2, -7],
       [-3, -4]
     ];
 
+    const quickAvgDown = Boolean(minSinceLastAvgDown <= 6);
+    if (quickAvgDown) {
+      shouldAvgDownWhen = shouldAvgDownWhen.map(limits =>
+        limits.map(n => n / 2)
+      );
+    }
+
+    const trendLowerThanPerc = (t, perc) => isNaN(t) || t < perc;
     const passesCheck = ([fillPickLimit, returnLimit]) => [
       // askToLowestAvgDown, 
       askToLowestFill, 
@@ -129,7 +140,7 @@ module.exports = class PositionWatcher {
     const shouldAvgDown = Boolean(hitAvgDownWhen);
 
 
-    const logLine = `AVG-DOWNER: ${ticker} observed at ${currentPrice} / ${askPrice} ...isRushed ${isRushed}, and numAvgDowners ${numAvgDowners}, mostRecentPrice ${mostRecentPrice}, askToRecentPickPrice ${askToRecentPickPrice}, lowestFill ${lowestFill}, askToLowestFill ${askToLowestFill}%, returnPerc ${returnPerc}%, shouldAvgDown ${shouldAvgDown}, hitAvgDownWhen ${hitAvgDownWhen}`;
+    const logLine = `AVG-DOWNER: ${ticker} observed at ${currentPrice} / ${askPrice} ...numAvgDowners ${numAvgDowners}, mostRecentPrice ${mostRecentPrice}, askToRecentPickPrice ${askToRecentPickPrice}, lowestFill ${lowestFill}, askToLowestFill ${askToLowestFill}%, returnPerc ${returnPerc}%, shouldAvgDown ${shouldAvgDown}, hitAvgDownWhen ${hitAvgDownWhen}, quickAvgDown ${quickAvgDown}`;
     console.log(logLine);
     
     if (skipChecks) {
@@ -144,10 +155,12 @@ module.exports = class PositionWatcher {
         keys: {
           [`${numAvgDowners}count`]: true,
           [this.getMinKey()]: true,
-          isBeforeClose
+          isBeforeClose,
+          quickAvgDown,
         },
         data: {
           returnPerc,
+          minSinceLastAvgDown,
           // trendToLowestAvg,
         }
       }, true);
