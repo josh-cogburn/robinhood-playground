@@ -175,7 +175,7 @@ module.exports = async (
       sells = []
     } = position;
 
-    if (notSelling) return 0;
+    if (notSelling || wouldBeDayTrade) return 0;
 
     if (returnPerc > 200) {
       return 0;
