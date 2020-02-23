@@ -111,12 +111,25 @@ module.exports = class PositionWatcher {
     const askToRecentPickPrice = getTrend(askPrice, mostRecentPrice);
 
     const trendLowerThanPerc = (t, perc) => isNaN(t) || t < perc;
-    const shouldAvgDown = [
+
+
+    const shouldAvgDownWhen = [
+      [-1, -12],
+      [-2, -7],
+      [-3, -4]
+    ];
+
+    const passesCheck = ([fillPickLimit, returnLimit]) => [
       // askToLowestAvgDown, 
       askToLowestFill, 
       askToRecentPickPrice
-    ].every(trend => trendLowerThanPerc(trend, -0.5)) && trendLowerThanPerc(returnPerc, -2);
-    const logLine = `AVG-DOWNER: ${ticker} observed at ${currentPrice} / ${askPrice} ...isRushed ${isRushed}, and numAvgDowners ${numAvgDowners}, mostRecentPrice ${mostRecentPrice}, askToRecentPickPrice ${askToRecentPickPrice}, lowestFill ${lowestFill}, askToLowestFill ${askToLowestFill}%, returnPerc ${returnPerc}%, shouldAvgDown ${shouldAvgDown}`;
+    ].every(trend => trendLowerThanPerc(trend, fillPickLimit)) && trendLowerThanPerc(returnPerc, returnLimit);
+
+    const hitAvgDownWhen = shouldAvgDownWhen.find(passesCheck);
+    const shouldAvgDown = Boolean(hitAvgDownWhen);
+
+
+    const logLine = `AVG-DOWNER: ${ticker} observed at ${currentPrice} / ${askPrice} ...isRushed ${isRushed}, and numAvgDowners ${numAvgDowners}, mostRecentPrice ${mostRecentPrice}, askToRecentPickPrice ${askToRecentPickPrice}, lowestFill ${lowestFill}, askToLowestFill ${askToLowestFill}%, returnPerc ${returnPerc}%, shouldAvgDown ${shouldAvgDown}, hitAvgDownWhen ${hitAvgDownWhen}`;
     console.log(logLine);
     
     if (skipChecks) {
