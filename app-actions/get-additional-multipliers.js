@@ -49,6 +49,15 @@ module.exports = async (pms, strategy, stocksToBuy) => {
     alpaca.find(pos => pos.ticker === ticker)
   ).filter(Boolean);
 
+
+  const avgMultiplierPerPick = Math.round(
+    avgArray(
+      existingPositions
+        .map(position => position.avgMultiplierPerPick)
+        .flatten()
+    )
+  );
+
   const existingInterestingWords = existingPositions
     .map(position => position.interestingWords)
     .flatten();
@@ -74,7 +83,7 @@ module.exports = async (pms, strategy, stocksToBuy) => {
     ) + 1
   };
 
-  const subsetOffsetMultiplier = await getSubsetOffset(fakePosition);
+  const subsetOffsetMultiplier = strategy.includes('avg-downer') ? avgMultiplierPerPick + 2 : await getSubsetOffset(fakePosition);
 
   return {
     pmAnalysisMultiplier,
