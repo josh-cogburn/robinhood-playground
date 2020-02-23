@@ -43,7 +43,7 @@ const analyzePosition = async position => {
   const numMultipliers = sumArray(
     relatedPicks.map(pick => pick.multiplier || 1)
   );
-  const avgMultiplierPerPick = Math.round(numMultipliers / numPicks);
+  const avgMultipliersPerPick = Math.round(numMultipliers / numPicks);
   const avgPickPrice = avgArray(
     relatedPicks.map(pick => pick.picks[0].price).filter(Boolean)
   );
@@ -84,7 +84,7 @@ const analyzePosition = async position => {
       date,
       numPicks,
       numMultipliers,
-      avgMultiplierPerPick,
+      avgMultipliersPerPick,
       percentSharesSold,
       interestingWords,
       numAvgDowners

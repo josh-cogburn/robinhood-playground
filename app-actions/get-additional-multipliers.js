@@ -50,10 +50,10 @@ module.exports = async (pms, strategy, stocksToBuy) => {
   ).filter(Boolean);
 
 
-  const avgMultiplierPerPick = Math.round(
+  const avgMultipliersPerPick = Math.round(
     avgArray(
       existingPositions
-        .map(position => position.avgMultiplierPerPick)
+        .map(position => position.avgMultipliersPerPick)
         .flatten()
     )
   );
@@ -83,7 +83,7 @@ module.exports = async (pms, strategy, stocksToBuy) => {
     ) + 1
   };
 
-  const subsetOffsetMultiplier = strategy.includes('avg-downer') ? avgMultiplierPerPick + 2 : await getSubsetOffset(fakePosition);
+  const subsetOffsetMultiplier = strategy.includes('avg-downer') ? avgMultipliersPerPick + 2 : await getSubsetOffset(fakePosition);
 
   return {
     pmAnalysisMultiplier,
