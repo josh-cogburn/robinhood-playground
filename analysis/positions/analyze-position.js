@@ -6,10 +6,10 @@ const getTrend = require('../../utils/get-trend');
 
 const analyzePosition = async position => {
   let { ticker, sells = [], buys = [], unrealizedPl, avgEntry } = position;
-
-  strlog({
-    position
-  })
+  console.log(`analyzing ${ticker}...`);
+  // strlog({
+  //   position
+  // })
   const numSharesBought = sumArray(
     buys.map(buy => buy.quantity)
   );
@@ -47,19 +47,19 @@ const analyzePosition = async position => {
   const avgPickPrice = avgArray(
     relatedPicks.map(pick => pick.picks[0].price).filter(Boolean)
   );
-  strlog({
-    ticker,
-    uniqPickIds,
-    numMultipliers,
-    avgPickPrice
-  })
+  // strlog({
+  //   ticker,
+  //   uniqPickIds,
+  //   numMultipliers,
+  //   avgPickPrice
+  // })
   const sellReturnDollars = (numSharesSold / 100) * sellReturnPerc * avgEntry;
   const date = (relatedPicks[0] || buys[0] || {}).date;
-  strlog({
-    date,
-    zeroPick: relatedPicks[0],
-    zeroBuy: buys[0],
-  })
+  // strlog({
+  //   date,
+  //   zeroPick: relatedPicks[0],
+  //   zeroBuy: buys[0],
+  // })
   const allPmsHit = relatedPicks.map(pick => pick.pmsHit).flatten().filter(Boolean).uniq();
   const allStrategiesHit = relatedPicks.map(pick => pick.strategyName).filter(Boolean).uniq();
   const buyStrategies = buys.map(buy => buy.strategy).uniq();
