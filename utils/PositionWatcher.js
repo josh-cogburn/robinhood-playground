@@ -143,9 +143,9 @@ module.exports = class PositionWatcher {
     const logLine = `AVG-DOWNER: ${ticker} observed at ${currentPrice} / ${askPrice} ...numAvgDowners ${numAvgDowners}, mostRecentPrice ${mostRecentPrice}, askToRecentPickPrice ${askToRecentPickPrice}, lowestFill ${lowestFill}, askToLowestFill ${askToLowestFill}%, returnPerc ${returnPerc}%, shouldAvgDown ${shouldAvgDown}, hitAvgDownWhen ${hitAvgDownWhen}, quickAvgDown ${quickAvgDown}`;
     console.log(logLine);
     
-    if (skipChecks) {
-      return this.scheduleTimeout();
-    }
+    // if (skipChecks) {
+    //   return this.scheduleTimeout();
+    // }
 
     if (shouldAvgDown) {
       const realtimeRunner = require('../realtime/RealtimeRunner');

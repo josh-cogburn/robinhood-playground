@@ -319,10 +319,14 @@ class DayReports extends Component {
             };
         };
 
+
+        const showAccountBalance = window.location.href.includes('balance');
         const stats = mapObject({
             alpaca: 'alpacaBalance',
             ...showAccountBalance && { robinhood: 'accountBalance' },
         }, getStats);
+
+        console.log({ showAccountBalance, stats })
 
         const indexStats = mapObject({
             nasdaq: 'indexPrices.nasdaq',
@@ -359,7 +363,6 @@ class DayReports extends Component {
         // console.log({ afterHoursAnnotations, chartData })
         // console.log(getNewDayLines(balanceReports))
 
-        const showAccountBalance = window.location.href.includes('balance');
         return (
             <div style={{ height: '100%', padding: '1em' }}>
                 {/* <Ticker speed={7}>
