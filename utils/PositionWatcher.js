@@ -60,6 +60,7 @@ module.exports = class PositionWatcher {
       buys,
       // returnPerc,
       numAvgDowners,
+      daysOld
     } = this.getRelatedPosition();
     
     if (!avgEntry) return this.scheduleTimeout();
@@ -153,6 +154,7 @@ module.exports = class PositionWatcher {
         strategyName: 'avg-downer',
         ticker,
         keys: {
+          [`${daysOld}daysOld`]: Boolean(daysOld),  // only >= 1
           [`${numAvgDowners}count`]: true,
           [this.getMinKey()]: true,
           isBeforeClose,

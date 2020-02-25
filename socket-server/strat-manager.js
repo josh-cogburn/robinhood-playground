@@ -75,6 +75,7 @@ const stratManager = {
 
 
         new CronJob(`59 6 * * 1-5`, () => this.newDay(), null, true);
+        new CronJob(`30 9 * * 1-5`, () => setTimeout(() => this.resetPositionWatchers(), 15000), null, true);
 
         
         this.pmsAnalyzed = await require('../analysis/sep-2019/all-pm-analysis')()
@@ -104,7 +105,7 @@ const stratManager = {
     resetPositionWatchers() {
         for (let pos of this.positions.alpaca) {
             if (pos.daysOld <= settings.continueDownForDays) {
-                console.log(`starting avg downer ${pos.ticker} bc bought today and positive multipliers`)
+                console.log(`starting avg downer ${pos.ticker} bc less than continueDownForDays days old`)
                 watchThis({
                     ticker: pos.ticker,
                     initialTimeout: 6000 + Math.random() * 60000
