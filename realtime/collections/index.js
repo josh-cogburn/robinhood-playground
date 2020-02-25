@@ -6,7 +6,7 @@ module.exports = async dontMerge => {
   console.log('getting base collections....')
   const baseCollections = await getBaseCollections();
   console.log('getting derived collections....')
-  const derivedCollections = await deriveCollections(baseCollections);
+  const derivedCollections = {}; //await deriveCollections(baseCollections);
   const merged = {
     ...baseCollections,
     ...derivedCollections
