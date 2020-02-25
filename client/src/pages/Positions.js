@@ -64,7 +64,8 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
         bullBearScore: ({ stSent = {} }) => stSent.bullBearScore,
         stBracket: ({ stSent: { stBracket, upperLimit, lowerLimit, wordFlags = [] } = {} }) => (
             <span {...wordFlags.length && { 'data-custom': true, 'data-tooltip-str': wordFlags.join(' ') }}>
-                <span>{stBracket} ({lowerLimit} -> {upperLimit})</span>
+                <span>{stBracket}</span>    
+                {/* ({lowerLimit} -> {upperLimit}) */}
             </span>
         ),
         recommendation: 'recommendation',

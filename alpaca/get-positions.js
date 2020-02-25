@@ -185,7 +185,7 @@ module.exports = async (
       return 100;
     }
 
-    if (sells.length === 0 && min < 0 && min > -200) {
+    if (sells.length === 0 && min < 0 && min > -200 && returnPerc < 30) {
       return 0;
     }
 
