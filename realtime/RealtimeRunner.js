@@ -1014,46 +1014,46 @@ module.exports = new (class RealtimeRunner {
 
 
       // DERIVED!
-      ...Combinatorics.cartesianProduct(
-        [
-          "realChillNowhereVolume", "realChillMoverVolume", "realChillSlightlyUpVolume", "realChillSlightDownVolume", "realChillMovers", "chillNowhereVolume", "chillMoverVolume", "chillSlightlyUpVolume", "chillSlightDownVolume", "chillMovers", "unfilteredNowhereVolume", "unfilteredMoverVolume", "unfilteredSlightlyUpVolume", "unfilteredSlightDownVolume", "unfilteredMovers", "highestSt",
-          ...["highestRecentDollarVolume", "highestRecentVolume", "highestRecentVolumeRatio"]
-            .reduce((acc, val) => [
-              ...acc,
-              val,
-              val + 'Up',
-              val + 'UpUp'
-            ], []),
-        ],
-        [
-          ...Array(5).fill(1).map((v, i) => i).map(n => `index${n}`)
-        ],
-        [
-          ...[0, 1, 2, 3, 5, 6, 9, 15, 21, 27, 33, 39, 40, 'Neg3', 'Neg2', 'Neg1', 'Neg13', 'Neg11', 'Neg6', 'Neg4'].map(n => `tenMinCount${n}`)
-        ],
-        ['notWatchout', 'watchout']
-      ).toArray().reduce((acc, arr) => {
+      // ...Combinatorics.cartesianProduct(
+      //   [
+      //     "realChillNowhereVolume", "realChillMoverVolume", "realChillSlightlyUpVolume", "realChillSlightDownVolume", "realChillMovers", "chillNowhereVolume", "chillMoverVolume", "chillSlightlyUpVolume", "chillSlightDownVolume", "chillMovers", "unfilteredNowhereVolume", "unfilteredMoverVolume", "unfilteredSlightlyUpVolume", "unfilteredSlightDownVolume", "unfilteredMovers", "highestSt",
+      //     ...["highestRecentDollarVolume", "highestRecentVolume", "highestRecentVolumeRatio"]
+      //       .reduce((acc, val) => [
+      //         ...acc,
+      //         val,
+      //         val + 'Up',
+      //         val + 'UpUp'
+      //       ], []),
+      //   ],
+      //   [
+      //     ...Array(5).fill(1).map((v, i) => i).map(n => `index${n}`)
+      //   ],
+      //   [
+      //     ...[0, 1, 2, 3, 5, 6, 9, 15, 21, 27, 33, 39, 40, 'Neg3', 'Neg2', 'Neg1', 'Neg13', 'Neg11', 'Neg6', 'Neg4'].map(n => `tenMinCount${n}`)
+      //   ],
+      //   ['notWatchout', 'watchout']
+      // ).toArray().reduce((acc, arr) => {
 
-        return {
-          ...acc,
-          ...Combinatorics.power(arr)
-            .toArray()
-            .filter(s => s && s.length)
-            .reduce((inner, combo) => {
+      //   return {
+      //     ...acc,
+      //     ...Combinatorics.power(arr)
+      //       .toArray()
+      //       .filter(s => s && s.length)
+      //       .reduce((inner, combo) => {
 
-              combo = [
-                'derived',
-                ...combo
-              ];
-              return {
-                ...inner,
-                [combo.join('-')]: combo
-              };
+      //         combo = [
+      //           'derived',
+      //           ...combo
+      //         ];
+      //         return {
+      //           ...inner,
+      //           [combo.join('-')]: combo
+      //         };
               
-            }, {})
-        }
+      //       }, {})
+      //   }
 
-      }, {}),
+      // }, {}),
 
 
 

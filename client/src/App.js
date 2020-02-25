@@ -147,11 +147,11 @@ const pages = [
         label: 'Date Analysis',
         component: DateAnalysis,
     },
-    {
-        label: 'Stocks To Watch',
-        component: Derived,
-        allowPublic: true,
-    },
+    // {
+    //     label: 'Stocks To Watch',
+    //     component: Derived,
+    //     allowPublic: true,
+    // },
     {
         label: 'Scan',
         component: Scan,
