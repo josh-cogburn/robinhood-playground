@@ -15,7 +15,8 @@ const stocktwits = require('../utils/stocktwits');
 const { 
     disableMultipliers, 
     forPurchase, 
-    multiplierThreshold 
+    multiplierThreshold,
+    disableOnlyMinors
 } = require('../settings');
 const pmsHit = require('../utils/pms-hit');
 const { emails } = require('../config');
@@ -65,8 +66,9 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
         multiplier = Math.round(
             forPurchaseMultiplier + pmAnalysisMultiplier + subsetOffsetMultiplier
         );
-
-        if (interestingWords.includes('split')) {
+        
+        const badWords = ['split', 'offering', 'bankrupt'];
+        if (badWords.some(w => strategy.includes(w))) {
             isRecommended = false;
         }
 
@@ -77,9 +79,12 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
 
         const onlyMinor = interestingWords.includes('minorJump') && !interestingWords.includes('mediumJump') && !interestingWords.includes('majorJump');
         if (onlyMinor) {
-            multiplier = Math.max(6, multiplier);   // min of 3
+            multiplier = Math.max(3, multiplier);   // min of 3
             if (!interestingWords.includes('downer')) {
-                multiplier = Math.min(9, multiplier);  // max of 10 ... if not avg downer
+                multiplier = Math.min(5, multiplier);  // max of 10 ... if not avg downer
+            }
+            if (disableOnlyMinors) {
+                isRecommended = false;
             }
         }
         
