@@ -29,7 +29,7 @@ const purchaseStocks = async ({ strategy, multiplier = 1, min, withPrices } = {}
         strategy
     });
 
-    if (totalAmtToSpend * 1.3 > cash) {
+    if (totalAmtToSpend * 1.3 > buying_power) {
         const fundsNeeded = (totalAmtToSpend * 1.3) - buying_power;
         await makeFundsAvailable(fundsNeeded);
         const afterCash = (await alpaca.getAccount()).buying_power;
