@@ -1,6 +1,6 @@
 const limitBuyMultiple = require('./limit-buy-multiple');
 const getMinutesFromOpen = require('../utils/get-minutes-from-open');
-let { expectedPickCount, purchaseAmt, disableCashCheck } = require('../settings');
+let { expectedPickCount, purchaseAmt, disableMakeFundsAvailable } = require('../settings');
 const { alpaca } = require('../alpaca');
 const makeFundsAvailable = require('../alpaca/make-funds-available');
 const sendEmail = require('../utils/send-email');
@@ -18,11 +18,12 @@ const purchaseStocks = async ({ strategy, multiplier = 1, min, withPrices } = {}
         amountPerBuy,
     });
 
-    if (!disableCashCheck && amountPerBuy * 1.3 > Number(buying_power)) {
+
+    if (disableMakeFundsAvailable && amountPerBuy * 1.3 > Number(buying_power)) {
         return console.log('YOU ARE OUT OF MONEY');
     }
 
-    const totalAmtToSpend = disableCashCheck ? amountPerBuy : Math.min(amountPerBuy, buying_power);
+    const totalAmtToSpend = amountPerBuy;//disableCashCheck ?  : Math.min(amountPerBuy, buying_power);
     strlog({
         totalAmtToSpend,
         buying_power,
