@@ -214,7 +214,7 @@ class App extends Component {
             this.setState({
                 picks: [data].concat(this.state.picks),
             });
-            if (!(data.isRecommended || isForPurchase(data.stratMin, settings, pms))) {
+            if (!(data.isRecommended && isForPurchase(data.stratMin, settings, pms))) {
                 return;
             }
             notification.play();
