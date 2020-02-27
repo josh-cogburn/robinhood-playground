@@ -50,7 +50,7 @@ module.exports = {
     disableDayTrades: true,
     disableMakeFundsAvailable: false,
     disableMultipliers: false,
-    disableOnlyMinors: false,
+    disableOnlyMinors: true,
 
     forPurchase: [
 
