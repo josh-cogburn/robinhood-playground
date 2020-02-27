@@ -43,7 +43,7 @@ module.exports = async amt => {
   console.log({ amt, totalAvailableToSell, percToSell })
   await stratManager.init({ lowKey: true });
   return Promise.all(
-    notActiveBuys.map(({ ticker, quantity }) => console.log({ ticker, quantity})
+    notActiveBuys.map(({ ticker, quantity }) =>
           alpacaMarketSell({
               ticker,
               quantity: Math.ceil(quantity * percToSell / 100),
