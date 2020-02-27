@@ -24,6 +24,7 @@ require('./utils/fix-locale-date-string');
     const restArgs = process.argv.slice(3)
         .map(arg => arg === 'true' ? true : arg)
         .map(arg => arg === 'false' ? false : arg)
+        .map(arg => arg === 'undefined' ? undefined : arg)
         // .map(arg => arg.includes(',') && arg.split(','));
 
     strlog({
