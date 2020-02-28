@@ -23,11 +23,15 @@ const sprayBuy = async ({
     const individualQuantity = Math.round(quantity / 3) || 1;
 
     const buyStyles = {
+        market: alpacaMarketBuy({
+            ticker,
+            quantity: Math.ceil(individualQuantity / 1.5)
+        }),
         limit2: alpacaLimitBuy({
             ticker,
             quantity: individualQuantity,
             limitPrice: pickPrice * 1.023,
-            timeoutSeconds: 60 * 3,
+            timeoutSeconds: 60 * 1,
             fallbackToMarket: true
         }),
         attempt: alpacaAttemptBuy({
@@ -147,8 +151,8 @@ module.exports = async ({
 
             const waitAmts = [
                 1, 
-                45, 
-                150
+                15, 
+                // 150
             ].slice(0, Math.floor(perStock / 6));
             const perSpray = Math.round(totalQuantity / waitAmts.length) || 1;
             console.log('before sprays', { totalQuantity, perSpray });
