@@ -20,7 +20,7 @@ const limitBuy = async ({
       qty: Number(quantity),
       side: 'buy',
       type: 'limit',
-      limit_price: Number(limitPrice),
+      limit_price: Number(limitPrice.toFixed(2)),
       // ...extendedHours ? {
           extended_hours: true,
           time_in_force: 'day',
