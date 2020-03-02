@@ -17,7 +17,6 @@ const {
     forPurchase, 
     multiplierThreshold,
     disableOnlyMinors,
-    overallOffset
 } = require('../settings');
 const pmsHit = require('../utils/pms-hit');
 const { emails } = require('../config');
@@ -67,8 +66,6 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
         multiplier = Math.round(
             forPurchaseMultiplier + pmAnalysisMultiplier + subsetOffsetMultiplier
         );
-
-        multiplier = multiplier + overallOffset;
         
         const badWords = ['split', 'offering', 'bankrupt', 'afterhours'];
         if (badWords.some(w => strategy.includes(w))) {

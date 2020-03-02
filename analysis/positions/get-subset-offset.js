@@ -1,7 +1,7 @@
 const getSubsets = require('./get-subsets');
 const { mapObject } = require('underscore');
 const { sumArray } = require('../../utils/array-math');
-const { avoidSubsets = [] } = require('../../settings');
+const { avoidSubsets = [], overallOffset } = require('../../settings');
 
 const subsetOffsets = {
   // allPositions: () => true,
@@ -117,5 +117,5 @@ module.exports = position => {
   strlog(data)
 
   const totals = Object.values(withOffsets);
-  return sumArray(totals.filter(Boolean));
+  return sumArray(totals.filter(Boolean)) + overallOffset;
 }
