@@ -111,10 +111,10 @@ process.on('unhandledRejection', (reason, p) => {
     console.log(regCronIncAfterSixThirty.toString());
 
 
-    const accounts = await Robinhood.accounts();
-    // const ratioToSpend = Math.max(0.3, getMinutesFromOpen() / 390);
-    const cashAvailable = Number(accounts.results[0].margin_balances.unallocated_margin_cash);
-    console.log({cashAvailable});
+    // const accounts = await Robinhood.accounts();
+    // // const ratioToSpend = Math.max(0.3, getMinutesFromOpen() / 390);
+    // const cashAvailable = Number(accounts.results[0].margin_balances.unallocated_margin_cash);
+    // console.log({cashAvailable});
 
     // await sellAllStocks();
 
