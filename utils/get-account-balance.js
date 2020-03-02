@@ -23,7 +23,7 @@ module.exports = async (includeTrend, todaysDate) => {
 
     const accountBalance = null//extended_hours_equity || equity;
 
-    console.log({ waccountBalance });
+    console.log({ accountBalance });
     let returnObj = { accountBalance };
 
     if (includeTrend && false) {
