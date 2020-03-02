@@ -17,16 +17,16 @@ module.exports = async (includeTrend, todaysDate) => {
         return vl;
     };
 
-    const [ account ] = (await Robinhood.accounts()).results;
-    const portfolio = await Robinhood.url(account.portfolio);
-    const { equity, extended_hours_equity } = portfolio;
+    // const [ account ] = (await Robinhood.accounts()).results;
+    // const portfolio = await Robinhood.url(account.portfolio);
+    // const { equity, extended_hours_equity } = portfolio;
 
-    const accountBalance = extended_hours_equity || equity;
+    const accountBalance = null//extended_hours_equity || equity;
 
-    console.log({ equity, accountBalance });
+    console.log({ waccountBalance });
     let returnObj = { accountBalance };
 
-    if (includeTrend) {
+    if (includeTrend && false) {
         const uniqDates = await DayReport.getUniqueDates();
         const todayIndex = uniqDates.findIndex(t => t === todaysDate);
         const prevDateIndex = todayIndex === -1 ? uniqDates.length - 1 : todayIndex - 1;
