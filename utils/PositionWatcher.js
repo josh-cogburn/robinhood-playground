@@ -118,17 +118,17 @@ module.exports = class PositionWatcher {
 
 
     let shouldAvgDownWhen = [
-      [-1, -12],
-      [-2, -7],
-      [-3, -4]
+      [-2, -12],
+      [-3, -7],
+      [-4, -4]
     ];
 
-    const quickAvgDown = Boolean(minSinceLastAvgDown <= 6);
-    if (quickAvgDown) {
-      shouldAvgDownWhen = shouldAvgDownWhen.map(limits =>
-        limits.map(n => n / 2)
-      );
-    }
+    // const quickAvgDown = Boolean(minSinceLastAvgDown <= 6);
+    // if (quickAvgDown) {
+    //   shouldAvgDownWhen = shouldAvgDownWhen.map(limits =>
+    //     limits.map(n => n / 2)
+    //   );
+    // }
 
     const trendLowerThanPerc = (t, perc) => isNaN(t) || t < perc;
     const passesCheck = ([fillPickLimit, returnLimit]) => [
@@ -141,7 +141,7 @@ module.exports = class PositionWatcher {
     const shouldAvgDown = Boolean(hitAvgDownWhen);
 
 
-    const logLine = `AVG-DOWNER: ${ticker} observed at ${currentPrice} / ${askPrice} ...numAvgDowners ${numAvgDowners}, mostRecentPrice ${mostRecentPrice}, askToRecentPickPrice ${askToRecentPickPrice}, lowestFill ${lowestFill}, askToLowestFill ${askToLowestFill}%, returnPerc ${returnPerc}%, shouldAvgDown ${shouldAvgDown}, hitAvgDownWhen ${hitAvgDownWhen}, quickAvgDown ${quickAvgDown}`;
+    const logLine = `AVG-DOWNER: ${ticker} observed at ${currentPrice} / ${askPrice} ...numAvgDowners ${numAvgDowners}, mostRecentPrice ${mostRecentPrice}, askToRecentPickPrice ${askToRecentPickPrice}, lowestFill ${lowestFill}, askToLowestFill ${askToLowestFill}%, returnPerc ${returnPerc}%, shouldAvgDown ${shouldAvgDown}, hitAvgDownWhen ${hitAvgDownWhen}`;
     console.log(logLine);
     
     // if (skipChecks) {
@@ -158,7 +158,7 @@ module.exports = class PositionWatcher {
           [`${numAvgDowners}count`]: true,
           [this.getMinKey()]: true,
           isBeforeClose,
-          quickAvgDown,
+          // quickAvgDown,
         },
         data: {
           returnPerc,
