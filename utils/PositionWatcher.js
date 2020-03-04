@@ -13,6 +13,9 @@ const { get } = require('underscore');
 
 const Pick = require('../models/Pick');
 
+
+const randomString = () => Math.random().toString(36).substring(7);
+
 module.exports = class PositionWatcher {
   constructor({ 
     ticker,
@@ -24,7 +27,8 @@ module.exports = class PositionWatcher {
       timeout: initialTimeout,
       pendingSale: false,
       // avgDownPrices: [],
-      lastAvgDown: null
+      lastAvgDown: null,
+      id: randomString()
     });
     console.log('hey whats up from here')
     this.start();
@@ -50,7 +54,8 @@ module.exports = class PositionWatcher {
 
     const {
       ticker,
-      pendingSale
+      pendingSale,
+      id
     } = this;
 
     const {
@@ -141,7 +146,7 @@ module.exports = class PositionWatcher {
     const shouldAvgDown = Boolean(hitAvgDownWhen);
 
 
-    const logLine = `AVG-DOWNER: ${ticker} observed at ${currentPrice} / ${askPrice} ...numAvgDowners ${numAvgDowners}, mostRecentPrice ${mostRecentPrice}, askToRecentPickPrice ${askToRecentPickPrice}, lowestFill ${lowestFill}, askToLowestFill ${askToLowestFill}%, returnPerc ${returnPerc}%, shouldAvgDown ${shouldAvgDown}, hitAvgDownWhen ${hitAvgDownWhen}`;
+    const logLine = `AVG-DOWNER: ${ticker} (${id}) observed at ${currentPrice} / ${askPrice} ...numAvgDowners ${numAvgDowners}, mostRecentPrice ${mostRecentPrice}, askToRecentPickPrice ${askToRecentPickPrice}, lowestFill ${lowestFill}, askToLowestFill ${askToLowestFill}%, returnPerc ${returnPerc}%, shouldAvgDown ${shouldAvgDown}, hitAvgDownWhen ${hitAvgDownWhen}`;
     console.log(logLine);
     
     // if (skipChecks) {

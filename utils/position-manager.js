@@ -9,10 +9,11 @@ module.exports = {
       buyPrice,
     } = data;
     
-    console.log('step 2 - new position watcher fo sho!')
     if (allPositionWatchers[ticker]) {
+      console.log(`already watching ${ticker} doh!`);
       allPositionWatchers[ticker].newBuy();
     } else {
+      console.log(`completely new position watcher - ${ticker}`);
       allPositionWatchers[ticker] = new PositionWatcher(data);
     }
   },
