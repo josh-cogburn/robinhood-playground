@@ -68,7 +68,7 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
         );
         
         const badWords = ['split', 'offering', 'bankrupt', 'afterhours'];
-        if (badWords.some(w => strategy.includes(w))) {
+        if (badWords.some(w => strategy.includes(w)) && !strategy.includes('downer')) {
             isRecommended = false;
         }
 

@@ -125,7 +125,7 @@ module.exports = class PositionWatcher {
     let shouldAvgDownWhen = [
       [-2, -12],
       [-3, -7],
-      [-4, -4]
+      [-3 -4]
     ];
 
     // const quickAvgDown = Boolean(minSinceLastAvgDown <= 6);
