@@ -37,11 +37,11 @@ const additionalCron = [
     //     run: [-],
     //     fn: () => alpacaSellAllStocks()
     // },
-    {
-        name: 'alpacaContinueDown',
-        run: [1],
-        fn: () => setTimeout(() => alpacaContinueDown(), 3000)
-    },
+    // {
+    //     name: 'alpacaContinueDown',
+    //     run: [1],
+    //     fn: () => setTimeout(() => alpacaContinueDown(), 3000)
+    // },
 
     {
         name: 'saveByDateAnalysis',
@@ -55,14 +55,14 @@ const additionalCron = [
         fn: () => alpacaActOnPositions()
     },
 
-    {
-        name: 'alpacaMostLow',
-        run: [
-            //16,
-            389
-        ],
-        fn: () => alpacaMostLow()
-    },
+    // {
+    //     name: 'alpacaMostLow',
+    //     run: [
+    //         //16,
+    //         389
+    //     ],
+    //     fn: () => alpacaMostLow()
+    // },
     // {
     //     name: 'alpaca smart sells',
     //     run: [1],
