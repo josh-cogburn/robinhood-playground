@@ -74,7 +74,7 @@ module.exports = class PositionWatcher {
       ...buys.map(buy => buy.fillPrice)
     );
 
-    const { picks: recentPicks = [] } = await Pick.getRecentPickForTicker(ticker);
+    const { picks: recentPicks = [] } = (await Pick.getRecentPickForTicker(ticker)) || {};
     const mostRecentPrice = (recentPicks[0] || {}).price;
 
     strlog({
