@@ -40,7 +40,7 @@ module.exports = {
         // YAYO: 0.35,
         // TRPX: 0.64
         RTTR: 0.47,
-        TRIB: 1.08,
+        TRIB: 1.18,
         IBIO: 2.83
     },
     
