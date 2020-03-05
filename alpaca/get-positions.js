@@ -102,7 +102,7 @@ module.exports = async (
       'TCON',
       'ASLN',
       'SFET',
-      'IBIO'
+      // 'IBIO'
     ];
 
     const wouldBeDayTrade = DONTSELL.includes(ticker) || Boolean(mostRecentPurchase === 0);
