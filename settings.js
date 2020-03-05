@@ -39,6 +39,7 @@ module.exports = {
         // SAVA: 7.90
         // YAYO: 0.35,
         // TRPX: 0.64
+        RTTR: 0.5
     },
     
     // sellAllStocksOnNthDay: 8,
