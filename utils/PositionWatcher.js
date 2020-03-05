@@ -90,11 +90,12 @@ module.exports = class PositionWatcher {
       askPrice
     ];
     const isSame = Boolean(JSON.stringify(prices) === JSON.stringify(this.prices));
+    const comparePrice = Math.max(...prices);
     this.lastPrices = prices;
 
     // const lowestPrice = Math.min(...prices);
     // const lowestAvgDownPrice = Math.min(...this.avgDownPrices);
-    const returnPerc = getTrend(askPrice, avgEntry);
+    const returnPerc = getTrend(comparePrice, avgEntry);
 
     // strlog({
     //   ticker,
@@ -118,8 +119,8 @@ module.exports = class PositionWatcher {
     // const shouldAvgDown = [trendToLowestAvg, returnPerc].every(trend => isNaN(trend) || trend < -3.7);
     
     // const askToLowestAvgDown = getTrend(askPrice, lowestAvgDownPrice);
-    const askToLowestFill = getTrend(askPrice, lowestFill);
-    const askToRecentPickPrice = getTrend(askPrice, mostRecentPrice);
+    const lowestFillTrend = getTrend(comparePrice, lowestFill);
+    const recentPickTrend = getTrend(comparePrice, mostRecentPrice);
 
 
     let shouldAvgDownWhen = [
@@ -138,15 +139,15 @@ module.exports = class PositionWatcher {
     const trendLowerThanPerc = (t, perc) => isNaN(t) || t < perc;
     const passesCheck = ([fillPickLimit, returnLimit]) => [
       // askToLowestAvgDown, 
-      askToLowestFill, 
-      askToRecentPickPrice
+      lowestFillTrend, 
+      recentPickTrend
     ].every(trend => trendLowerThanPerc(trend, fillPickLimit)) && trendLowerThanPerc(returnPerc, returnLimit);
 
     const hitAvgDownWhen = shouldAvgDownWhen.find(passesCheck);
     const shouldAvgDown = Boolean(hitAvgDownWhen);
 
 
-    const logLine = `AVG-DOWNER: ${ticker} (${id}) observed at ${currentPrice} / ${askPrice} ...numAvgDowners ${numAvgDowners}, mostRecentPrice ${mostRecentPrice}, askToRecentPickPrice ${askToRecentPickPrice}, lowestFill ${lowestFill}, askToLowestFill ${askToLowestFill}%, returnPerc ${returnPerc}%, shouldAvgDown ${shouldAvgDown}, hitAvgDownWhen ${hitAvgDownWhen}`;
+    const logLine = `AVG-DOWNER: ${ticker} (${id}) observed at ${currentPrice} / ${askPrice} ...numAvgDowners ${numAvgDowners}, mostRecentPrice ${mostRecentPrice}, recentPickTrend ${recentPickTrend}, lowestFill ${lowestFill}, lowestFillTrend ${lowestFillTrend}%, returnPerc ${returnPerc}%, shouldAvgDown ${shouldAvgDown}, hitAvgDownWhen ${hitAvgDownWhen}`;
     console.log(logLine);
     
     // if (skipChecks) {
