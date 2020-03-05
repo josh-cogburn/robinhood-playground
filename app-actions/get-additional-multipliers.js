@@ -83,7 +83,9 @@ module.exports = async (pms, strategy, stocksToBuy) => {
     ) + 1
   };
 
-  const subsetOffsetMultiplier = strategy.includes('avg-downer') ? avgMultipliersPerPick + 2 : await getSubsetOffset(fakePosition);
+  const subsetOffsetMultiplier = strategy.includes('avg-downer') 
+    ? Math.round(avgMultipliersPerPick * 1.06) 
+    : await getSubsetOffset(fakePosition);
 
   return {
     pmAnalysisMultiplier,
