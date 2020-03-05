@@ -46,7 +46,7 @@ module.exports = {
     makeKeeperFundsAvailable: false,
     // expectedPickCount: 200,
     multiplierThreshold: 4, // wont recommend picks below this multiplier count even if they are a forPurchase pick
-    overallOffset: -12,
+    overallOffset: 0,
     
     disableDayTrades: true,
     disableMakeFundsAvailable: false,
