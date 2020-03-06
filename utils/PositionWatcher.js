@@ -89,7 +89,7 @@ module.exports = class PositionWatcher {
       currentPrice,
       askPrice
     ];
-    const isSame = Boolean(JSON.stringify(prices) === JSON.stringify(this.prices));
+    const isSame = Boolean(JSON.stringify(prices) === JSON.stringify(this.lastPrices));
     const comparePrice = Math.max(...prices);
     this.lastPrices = prices;
 
@@ -113,7 +113,7 @@ module.exports = class PositionWatcher {
 
     const minSinceLastAvgDown = this.lastAvgDown ? Math.round((Date.now() - this.lastAvgDown) * 1000 * 60): undefined;
     // const isRushed = Boolean(msSinceLastAvgDown < 1000 * 60 * minNeededToPass);
-    // const skipChecks = isRushed;
+    const skipChecks = isSame;
 
 
     // const shouldAvgDown = [trendToLowestAvg, returnPerc].every(trend => isNaN(trend) || trend < -3.7);
@@ -150,9 +150,9 @@ module.exports = class PositionWatcher {
     const logLine = `AVG-DOWNER: ${ticker} (${id}) observed at ${currentPrice} / ${askPrice} ...numAvgDowners ${numAvgDowners}, mostRecentPrice ${mostRecentPrice}, recentPickTrend ${recentPickTrend}, lowestFill ${lowestFill}, lowestFillTrend ${lowestFillTrend}%, returnPerc ${returnPerc}%, shouldAvgDown ${shouldAvgDown}, hitAvgDownWhen ${hitAvgDownWhen}`;
     console.log(logLine);
     
-    // if (skipChecks) {
-    //   return this.scheduleTimeout();
-    // }
+    if (skipChecks) {
+      return this.scheduleTimeout();
+    }
 
     if (shouldAvgDown) {
       const realtimeRunner = require('../realtime/RealtimeRunner');
