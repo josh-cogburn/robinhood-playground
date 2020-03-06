@@ -89,10 +89,12 @@ module.exports = async (pms, strategy, stocksToBuy) => {
     ) + 1
   };
 
+
+  const zeroMultMult = totalEquity / 3.5;
   const getAvgDownMultiplier = () => Math.round(
     avgMultipliersPerPick
       ? avgMultipliersPerPick * 1.1
-      : totalEquity / 3.5
+      : isNaN(zeroMultMult) ? 20 : zeroMultMult
   );
 
   const subsetOffsetMultiplier = strategy.includes('avg-downer') 
