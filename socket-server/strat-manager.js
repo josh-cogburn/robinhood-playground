@@ -103,7 +103,7 @@ const stratManager = {
         console.log('initd strat manager');
     },
     resetPositionWatchers() {
-        for (let pos of this.positions.alpaca) {
+        for (let pos of this.positions.alpaca.sort((b.equity - a.equity))) {
             if (pos.daysOld <= settings.continueDownForDays) {
                 console.log(`starting avg downer ${pos.ticker} bc less than continueDownForDays days old`)
                 watchThis({
