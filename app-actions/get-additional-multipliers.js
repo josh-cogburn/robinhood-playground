@@ -2,6 +2,8 @@ const { mapObject } = require('underscore');
 const { avgArray, sumArray } = require('../utils/array-math');
 const getSubsetOffset = require('../analysis/positions/get-subset-offset');
 
+const { alpaca: alpacaModule }= require('../alpaca/index');
+
 const calcPmAnalysisMultiplier = (pms, pmsAnalyzed) => {
 
   const pmAnalysis = pms
@@ -97,9 +99,19 @@ module.exports = async (pms, strategy, stocksToBuy) => {
       : isNaN(zeroMultMult) ? 20 : zeroMultMult
   );
 
-  const subsetOffsetMultiplier = strategy.includes('avg-downer') 
+  let subsetOffsetMultiplier = strategy.includes('avg-downer') 
     ? getAvgDownMultiplier()
     : await getSubsetOffset(fakePosition);
+
+  
+  if (strategy.includes('majorJump')) {
+    const account = await alpacaModule.getAccount();
+    const { daytrade_count } = account;
+    if (daytrade_count === 3) {
+      subsetOffsetMultiplier = Math.round(subsetOffsetMultipliers / 4);
+      interestingWords.push('dtmajcapped');
+    }
+  }
 
   return {
     pmAnalysisMultiplier,
