@@ -58,6 +58,12 @@ module.exports = async (pms, strategy, stocksToBuy) => {
     )
   );
 
+  const totalEquity = sumArray(
+    existingPositions
+        .map(position => Number(position.equity))
+        .flatten()
+  );
+
   const existingInterestingWords = existingPositions
     .map(position => position.interestingWords)
     .flatten();
@@ -83,8 +89,14 @@ module.exports = async (pms, strategy, stocksToBuy) => {
     ) + 1
   };
 
+  const getAvgDownMultiplier = () => Math.round(
+    avgMultipliersPerPick
+      ? avgMultipliersPerPick * 1.1
+      : totalEquity / 3.5
+  );
+
   const subsetOffsetMultiplier = strategy.includes('avg-downer') 
-    ? Math.round(avgMultipliersPerPick * 1.1) 
+    ? getAvgDownMultiplier()
     : await getSubsetOffset(fakePosition);
 
   return {
