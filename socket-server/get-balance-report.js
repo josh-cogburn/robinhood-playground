@@ -7,7 +7,7 @@ const { alpaca } = require('../alpaca');
 let lastBalance;
 
 module.exports = async (isRegularHours = true) => {
-  let { accountBalance } = await getAccountBalance();
+  // let { accountBalance } = await getAccountBalance();
 //   if (Math.abs(getTrend(accountBalance, lastBalance)) > 4.9) {
 //       console.log('WOAH WOAH', {
 //           accountBalance,
@@ -15,12 +15,28 @@ module.exports = async (isRegularHours = true) => {
 //       });
 //       accountBalance = lastBalance;
 //   }
-  lastBalance = accountBalance;
+
+  const account = await alpaca.getAccount();
+  console.log('Current Account:', account);
+  const { equity, buying_power, daytrade_count } = account;
+  
+  // lastBalance = accountBalance;
   const report = {
-      accountBalance,
+      accountBalance: null,
       indexPrices: await getIndexes(),
-      alpacaBalance: await alpacaBalance(),
-      isRegularHours
+      alpacaBalance: Number(equity),
+      isRegularHours,
   };
-  return report;
+  const additionalAccountInfo = {
+    buyingPower: +Number(buying_power).toFixed(2),
+    daytradeCount: daytrade_count,
+  };
+  strlog({
+    report,
+    additionalAccountInfo
+  });
+  return {
+    report,
+    additionalAccountInfo
+  };
 };

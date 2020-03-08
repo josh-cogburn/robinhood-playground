@@ -32,6 +32,7 @@ const getToday = () => formatDate(new Date());
 
 const TickerWatcher = require('./ticker-watcher');
 
+const getBalanceReport = require('./get-balance-report');
 const balanceReportManager = require('./balance-report-manager');
 const settings = require('../settings');
 const getAnalyzedClosed = require('../analysis/positions/get-closed');
@@ -89,8 +90,8 @@ const stratManager = {
             }
 
             console.log('about to init balance report')
-            await balanceReportManager.init(report => {
-                this.sendToAll('server:balance-report', { report });
+            await balanceReportManager.init((report, additionalAccountInfo) => {
+                this.sendToAll('server:balance-report', { report, additionalAccountInfo });
             }, this.curDate);
 
         }
@@ -134,6 +135,7 @@ const stratManager = {
             dateAnalysis: await DateAnalysis.find({}).sort({ date: -1 }).lean(),
             overallAnalysis: JSON.parse(await fs.readFile('./json/overall-analysis.json')),
             ...require('../realtime/RealtimeRunner').getWelcomeData(),
+            additionalAccountInfo: (await getBalanceReport()).additionalAccountInfo
         };
     },
     async refreshPositions(refreshClosed) {

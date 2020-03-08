@@ -229,7 +229,7 @@ class DayReports extends Component {
     }
     setTimeFilter = timeFilter => this.setState({ timeFilter });
     render () {
-        let { balanceReports, dayReports, admin, collections, lastCollectionRefresh } = this.props;
+        let { balanceReports, dayReports, admin, collections, lastCollectionRefresh, additionalAccountInfo: { buyingPower, daytradeCount } } = this.props;
         let { timeFilter, numDaysToShow, hoverIndex, fuzzFactor, afterHoursAnnotations } = this.state;
         if (!balanceReports || !balanceReports.length) return <b>LOADING</b>;
 
@@ -362,7 +362,7 @@ class DayReports extends Component {
         // })
         // console.log({ afterHoursAnnotations, chartData })
         // console.log(getNewDayLines(balanceReports))
-
+        console.log('hi', (new Array(allDates.length)).map((_, i) => i))
         return (
             <div style={{ height: '100%', padding: '1em' }}>
                 {/* <Ticker speed={7}>
@@ -380,9 +380,22 @@ class DayReports extends Component {
                     }
                 </Ticker> */}
                 <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between'}}>
-                    <div style={{ paddingLeft: '5em' }}>
-                        number of days to show... <a href="#" onClick={() => this.setState({ numDaysToShow: 1 })}>[reset]</a>
-                        <InputRange
+                    <div style={{ paddingLeft: '0.5em' }}>
+                        <div>
+                            number of days to show... 
+                            <select onChange={event => this.setState({ numDaysToShow: Number(event.target.value) })} value={numDaysToShow.toString()}>
+                                {
+                                    [...Array(allDates.length).keys()].map(i => ++i).map(num => (
+                                        <option value={num}>{num}</option>
+                                    ))
+                                }
+                            </select>
+                            <br/>
+                            <a href="#" onClick={() => this.setState({ numDaysToShow: 1 })}>[reset]</a>
+                        </div>
+                        
+
+                        {/* <InputRange
                             maxValue={allDates.length}
                             minValue={1}
                             step={1}
@@ -390,7 +403,7 @@ class DayReports extends Component {
                             value={this.state.numDaysToShow}
                             onChange={numDaysToShow => this.setState({ numDaysToShow })}
                             // onChange={value => console.log(value)} 
-                        />
+                        /> */}
                         {/* {
                             [
                                 'onlyToday',
@@ -408,6 +421,10 @@ class DayReports extends Component {
                                 </div>
                             ))
                         } */}
+                    </div>
+                    <div>
+                        Buying Power: ${buyingPower}<br/>
+                        Daytrade Count: {daytradeCount}
                     </div>
                     <div style={{ paddingLeft: '5em' }}>
                         fuzz factor

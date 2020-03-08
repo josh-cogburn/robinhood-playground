@@ -267,8 +267,8 @@ module.exports = new (class RealtimeRunner {
     }
   }
 
-  async logLastTimestamps() {
-    [5, 10, 30].forEach(period => {
+  logLastTimestamps() {
+    [5, 10, 30].forEach(async period => {
       const curPriceCache = this.priceCaches[period];
       if (!curPriceCache) {
         // we have a serious problem

@@ -89,14 +89,14 @@ const getAndSaveBalanceReport = async () => {
 
     // console.log('hereee');
     try {
-        const report = await getBalanceReport(isRegularHours);
+        const { report, additionalAccountInfo } = await getBalanceReport(isRegularHours);
         const mongoDoc = await BalanceReport.create(report);
         // console.log(
         //     'mongodb',
         //     mongoDoc
         // );
         allBalanceReports.push(mongoDoc);
-        onReport(mongoDoc);
+        onReport(report, additionalAccountInfo);
     } catch (e) {
         console.error(e);
     }
