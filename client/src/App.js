@@ -206,7 +206,7 @@ class App extends Component {
         const urlParams = new URLSearchParams(window.location.search);
         const port = urlParams.get('p') || 3001;
 
-        const socketEndpoint = origin.includes('localhost') && false ? 'http://localhost:3000' : `http://23.237.87.144:${port}`;
+        const socketEndpoint = origin.includes('localhost') && true ? 'http://localhost:3000' : `http://23.237.87.144:${port}`;
         const socket = socketIOClient(socketEndpoint);
         
         const handlePick = data => {
@@ -261,11 +261,11 @@ class App extends Component {
             // console.log({ data});
             this.setState(data);
         });
-        socket.on('server:balance-report', data => {
-            // this.setState({ balance: data });
-            console.log(data, 'balcn');
+        socket.on('server:balance-report', ({ report, additionalAccountInfo }) => {
+            console.log('received balance report')
             this.setState(({ balanceReports }) => ({
-                balanceReports: (balanceReports || []).concat(data.report)
+                balanceReports: (balanceReports || []).concat(report),
+                additionalAccountInfo
             }));
         });
         this.setState({ socket });

@@ -1,6 +1,7 @@
 const { credentials } = require('../config');
-const retryPromise = require('../utils/retry-promise');
+// const retryPromise = require('../utils/retry-promise');
 const cacheThis = require('../utils/cache-this');
+const retry = require('async-retry')
 
 module.exports = () => {
     return new Promise((resolve) => {
@@ -11,7 +12,7 @@ module.exports = () => {
             Object.keys(Robinhood).forEach(key => {
                 console.log('key', key);
                 const origFn = Robinhood[key];
-                Robinhood[key] = retryPromise((...callArgs) => {
+                Robinhood[key] = (...callArgs) => retry(() => {
                     return new Promise((resolve, reject) => {
                         origFn.apply(null, [...callArgs, (error, response, body) => {
                             return (error || !body) ? reject(error) : resolve(body);
