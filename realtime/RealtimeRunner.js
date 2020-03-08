@@ -66,29 +66,35 @@ module.exports = new (class RealtimeRunner {
     tenCount = tenCount < 0 ? `Neg${Math.abs(tenCount)}` : tenCount;
 
     // strlog({ tenCount, derivedCollections })
-    if (!this.hasInit) {
-      console.log('Im not going to record the derived collections right now because its just a weird time alright.');
-    } else {
 
-      const derivedPicks = Object.keys(derivedCollections)
-        .reduce((acc, collectionName) => [
-          ...acc,
-          ...derivedCollections[collectionName].slice(0, 1).map((result, index) => ({
-            ticker: result.ticker,
-            strategyName: 'derived',
-            keys: {
-              [collectionName]: true,
-              [`index${index}`]: true,
-              [`tenMinCount${tenCount}`]: true
-            }
-          }))
-        ], []);
 
-      strlog({ derivedPicks });
-      await mapLimit(derivedPicks, 5, pick => this.handlePick(pick));
-      this.todaysPicks.push(derivedPicks);
-      console.log('done recording');
-    }
+    // this is for recording "derived" collection picks and we are not even fetching those for the time being
+
+
+    // DISABLED
+    // if (!this.hasInit) {
+    //   console.log('Im not going to record the derived collections right now because its just a weird time alright.');
+    // } else {
+
+    //   const derivedPicks = Object.keys(derivedCollections)
+    //     .reduce((acc, collectionName) => [
+    //       ...acc,
+    //       ...derivedCollections[collectionName].slice(0, 1).map((result, index) => ({
+    //         ticker: result.ticker,
+    //         strategyName: 'derived',
+    //         keys: {
+    //           [collectionName]: true,
+    //           [`index${index}`]: true,
+    //           [`tenMinCount${tenCount}`]: true
+    //         }
+    //       }))
+    //     ], []);
+
+    //   strlog({ derivedPicks });
+    //   await mapLimit(derivedPicks, 5, pick => this.handlePick(pick));
+    //   this.todaysPicks.push(derivedPicks);
+    //   console.log('done recording');
+    // }
 
     this.collections = mapObject(baseCollections, collection => collection.map(t => t.ticker))
     this.derivedCollections = derivedCollections;
@@ -211,10 +217,12 @@ module.exports = new (class RealtimeRunner {
     // const allStratPeriods = this.strategies.map(strategy => strategy.period).flatten().uniq();
 
     for (let period of [5, 10, 30]) {
+      console.log(`starting refreshing ${period} period cache...`);
       this.priceCaches = {
         ...this.priceCaches,
         [period]: await getHistoricals(allTickers, period, 14)
       }
+      console.log(`done refreshing ${period} period cache...`);
     }
     strlog({ 
       allTickers, 
@@ -259,16 +267,21 @@ module.exports = new (class RealtimeRunner {
     }
   }
 
-  logLastTimestamps() {
+  async logLastTimestamps() {
     [5, 10, 30].forEach(period => {
       const curPriceCache = this.priceCaches[period];
+      if (!curPriceCache) {
+        // we have a serious problem
+        await sendEmail('price caches got messed up!!! ahhh!!');
+        return restartProcess();
+      }
       const firstTicker = Object.keys(curPriceCache)[0];
       const last5timestamps = curPriceCache[firstTicker]
         .slice(-5)
         .map(quote => new Date(quote.timestamp).toLocaleString());
       console.log(`${period}min period, last 5 timestamps...${last5timestamps}`);
     });
-  } 
+  }
   async addNewQuote(priceCachesToUpdate = Object.keys(this.priceCaches)) {
 
     console.log('getting new quotes...');

@@ -17,8 +17,10 @@ module.exports = async (tickers, apiFn, num) => {
     const chunks = splitIntoChunks(tickers, num);
     let i = 0;
     let nestedArray = await mapLimit(chunks, 3, collection => {
-        console.log(++i, '/', chunks.length);
-        return apiFn(collection.join(','));
+        console.log('starting', chunks);
+        const part = await apiFn(collection.join(','));
+        console.log('finished', ++i, '/', chunks.length);
+        return part;
     });
     return flatten(nestedArray);
 };

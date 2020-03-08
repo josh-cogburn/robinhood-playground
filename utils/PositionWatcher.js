@@ -83,7 +83,7 @@ module.exports = class PositionWatcher {
     });
 
     const l = await lookup(ticker);
-    strlog({ ticker, l })
+    // strlog({ ticker, l })
     const { currentPrice, askPrice } = l;
     const prices = [
       currentPrice,

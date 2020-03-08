@@ -4,8 +4,12 @@ const { uniq } = require('underscore');
 
 module.exports = async (tickers, period, daysBack, includeAfterHours = true) => {
 
+
     if (typeof tickers === 'string') tickers = [tickers];
     period = Number(period);
+
+
+    console.log(`robinhood historicals for ${tickers.length} tickers... period: ${period}...`);
 
     // console.log(tickers)
 
@@ -21,6 +25,8 @@ module.exports = async (tickers, period, daysBack, includeAfterHours = true) => 
       75
     );
 
+    await new Promise(resolve => setTimeout(resolve, 2000));  // let it breath
+
     const allHistoricals = await chunkApi(
         tickers,
         async tickerStr => {
@@ -33,7 +39,6 @@ module.exports = async (tickers, period, daysBack, includeAfterHours = true) => 
         75
     );
 
-    console.log(`robinhood historicals for ${tickers.length} tickers... period: ${period}...`);
     // strlog({ allHistoricals })
 
     const processHistoricals = historicals => {
