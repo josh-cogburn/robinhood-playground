@@ -16,7 +16,7 @@ function flatten(array) {
 module.exports = async (tickers, apiFn, num) => {
     const chunks = splitIntoChunks(tickers, num);
     let i = 0;
-    let nestedArray = await mapLimit(chunks, 3, collection => {
+    let nestedArray = await mapLimit(chunks, 3, async collection => {
         console.log('starting', chunks);
         const part = await apiFn(collection.join(','));
         console.log('finished', ++i, '/', chunks.length);
