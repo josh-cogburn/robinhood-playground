@@ -9,7 +9,7 @@ const sendScreenshot = async (numDays, queryString = '') => {
   const path = `./screenshots/${screenshotName}.jpg`;
 
   const browser = await puppeteer.launch({ 
-    headless: false,
+    headless: true,
     args: [
       '--no-sandbox', 
       '--disable-setuid-sandbox', 
