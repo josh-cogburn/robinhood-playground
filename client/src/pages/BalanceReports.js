@@ -478,7 +478,7 @@ class DayReports extends Component {
                             ))
                         }
                     </div>
-                    <div style={{ fontSize: '80%', textAlign: 'center' }}>
+                    <div style={{ fontSize: '86%', textAlign: 'center' }}>
                         <div style={{ border: '1px solid black', padding: '7px' }}>
                             <table style={{ marginRight: '0' }}>
                                 {
@@ -495,7 +495,7 @@ class DayReports extends Component {
                         </div>
                     </div>
                 </div>
-                <div style={{ height: '100%' }} className='wider-container'>
+                <div style={{ height: '90%' }} className='wider-container'>
                     <Line 
                         data={chartData} 
                         plugins={[ChartAnnotation]}
