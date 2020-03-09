@@ -36,7 +36,8 @@ module.exports = async (trend) => {
             // strlog({ response })
             return response.results;
         },
-        10
+        10,
+        'robinhood fundamentals'
     );
 
     // strlog({ fundamentals})

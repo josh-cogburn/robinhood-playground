@@ -12,7 +12,8 @@ const lookupMultiple = async (tickersToLookup, detailedQuote) => {
             const { results } = await Robinhood.url(url);
             return results;
         },
-        1630
+        1630,
+        'robinhood quotes'
     );
     // console.log(quotes, 'quotes')
     const tickerLookups = {};

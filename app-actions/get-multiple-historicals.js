@@ -12,7 +12,8 @@ module.exports = cacheThis(
                 const { results } = await Robinhood.url(`https://api.robinhood.com/quotes/historicals/?symbols=${tickerStr}&${qs}`);
                 return results;
             },
-            75
+            75,
+            'robinhood quotes'
         );
 
         // console.log({ tickers, allHistoricals });

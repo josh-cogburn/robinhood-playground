@@ -44,7 +44,8 @@ module.exports = async () => {
             const { results } = await Robinhood.url(`https://api.robinhood.com/quotes/?symbols=${tickerStr}`);
             return results;
         },
-        1630
+        1630,
+        'robinhood quotes'
     );
 
     quotes.forEach(quote => {

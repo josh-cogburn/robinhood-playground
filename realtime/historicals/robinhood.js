@@ -22,7 +22,8 @@ module.exports = async (tickers, period, daysBack, includeAfterHours = true) => 
           )
         ).results;
       },
-      75
+      75,
+      `robinhood historicals ${period}minute extended (not)`
     );
 
     await new Promise(resolve => setTimeout(resolve, 2000));  // let it breath
@@ -36,7 +37,8 @@ module.exports = async (tickers, period, daysBack, includeAfterHours = true) => 
             )
           ).results;
         },
-        75
+        75,
+        `robinhood historicals ${period}minute week`
     );
 
     // strlog({ allHistoricals })
