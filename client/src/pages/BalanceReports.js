@@ -209,7 +209,7 @@ class DayReports extends Component {
             numDaysToShow: 1,
             hoverIndex: null,
             afterHoursAnnotations: [],
-            fuzzFactor: 2
+            fuzzFactor: 1
         };
     }
     componentDidMount() {
