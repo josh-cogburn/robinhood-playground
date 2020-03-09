@@ -203,7 +203,7 @@ module.exports = class PositionWatcher {
           console.log('You are doing great')
         }
       } else {
-        await sendEmail(`It's not a big deal (small amt) but you might want to check out ${ticker}`);
+        // await sendEmail(`It's not a big deal (small amt) but you might want to check out ${ticker}`);
       }
     }
 
