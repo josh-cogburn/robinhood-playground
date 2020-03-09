@@ -175,25 +175,25 @@ module.exports = class PositionWatcher {
       await sendEmail(`avging down`, logLine);
       // this.avgDownPrices.push(currentPrice);
       this.lastAvgDown = Date.now();
-    } else if (!pendingSale && returnPerc >= 12 && !disableDayTrades) {
+    } else if (!pendingSale && returnPerc >= 11 && !disableDayTrades) {
       const account = await alpaca.getAccount();
       const { portfolio_value, daytrade_count } = account;
       if (Number(market_value) > Number(portfolio_value) * 0.29) {
         if (daytrade_count <= 2) {
-          await sendEmail(`Selling ${ticker} using a daytrade can we get 20% & 25% up?`);
+          await sendEmail(`Selling ${ticker} using a daytrade can we get 14% & 17% up?`);
           const firstChunk = Math.round(Number(quantity) / 2.2);
           const secondChunk = firstChunk;//Number(quantity) - firstChunk;
           alpacaLimitSell({
             ticker,
             quantity: firstChunk,
-            limitPrice: avgEntry * 1.15,
+            limitPrice: avgEntry * 1.14,
             timeoutSeconds: 60 * 20,
             fallbackToMarket: false
           });
           alpacaLimitSell({
             ticker,
             quantity: secondChunk,
-            limitPrice: avgEntry * 1.20,
+            limitPrice: avgEntry * 1.17,
             timeoutSeconds: 60 * 20,
             fallbackToMarket: false
           });

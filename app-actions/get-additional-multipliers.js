@@ -108,7 +108,7 @@ module.exports = async (pms, strategy, stocksToBuy) => {
     const account = await alpacaModule.getAccount();
     const { daytrade_count } = account;
     if (daytrade_count === 3) {
-      subsetOffsetMultiplier = Math.round(subsetOffsetMultipliers / 4);
+      subsetOffsetMultiplier = Math.round(subsetOffsetMultipliers / 2);
       interestingWords.push('dtmajcapped');
     }
   }

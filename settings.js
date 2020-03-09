@@ -39,9 +39,9 @@ module.exports = {
         // SAVA: 7.90
         // YAYO: 0.35,
         // TRPX: 0.64
-        RTTR: 0.5,
-        TRIB: 1.21,
-        IBIO: 2.4
+        // RTTR: 0.5,
+        // TRIB: 1.21,
+        // IBIO: 2.4
     },
     
     // sellAllStocksOnNthDay: 8,
@@ -49,9 +49,9 @@ module.exports = {
     makeKeeperFundsAvailable: false,
     // expectedPickCount: 200,
     multiplierThreshold: 4, // wont recommend picks below this multiplier count even if they are a forPurchase pick
-    overallOffset: 30,
+    overallOffset: 0,
     
-    disableDayTrades: true,
+    disableDayTrades: false,
     disableMakeFundsAvailable: false,
     disableMultipliers: false,
     disableOnlyMinors: true,
