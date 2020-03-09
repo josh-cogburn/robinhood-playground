@@ -22,10 +22,10 @@ module.exports = async (trend) => {
         !tickersInCacheAndNotExpired.includes(ticker)
     ).filter(t => t !== 'FGP');
 
-    strlog({
-        trend,
-        tickersToLookup
-    })
+    // strlog({
+    //     trend,
+    //     tickersToLookup
+    // })
 
     console.log('adding fundamentals')
     let fundamentals = await chunkApi(
