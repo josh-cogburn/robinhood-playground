@@ -96,7 +96,7 @@ const getAndSaveBalanceReport = async () => {
         //     mongoDoc
         // );
         allBalanceReports.push(mongoDoc);
-        onReport(report, additionalAccountInfo);
+        onReport(mongoDoc, additionalAccountInfo);
     } catch (e) {
         console.error(e);
     }
