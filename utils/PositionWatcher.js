@@ -43,7 +43,7 @@ module.exports = class PositionWatcher {
     const stratManager = require('../socket-server/strat-manager');
     return (stratManager.positions.alpaca || []).find(pos => pos.ticker === ticker) || {};
   }
-  async observe(isBeforeClose) {
+  async observe(isBeforeClose, buyPrice) {
 
     const shouldStopReason = this.shouldStop();
     if (shouldStopReason) {
@@ -71,7 +71,8 @@ module.exports = class PositionWatcher {
     if (!avgEntry) return this.scheduleTimeout();
 
     const lowestFill = Math.min(
-      ...buys.map(buy => buy.fillPrice)
+      ...buys.map(buy => buy.fillPrice),
+      buyPrice || Number.POSITIVE_INFINITY
     );
 
     const { picks: recentPicks = [] } = (await Pick.getRecentPickForTicker(ticker)) || {};
@@ -232,12 +233,12 @@ module.exports = class PositionWatcher {
     };
     this.timeout = Math.min(changeSlightly(this.timeout * 2), 1000 * 60 * 6);
   }
-  newBuy() {
+  newBuy(buyPrice) {
     this.timeout = INITIAL_TIMEOUT;
     clearTimeout(this.TO);
     this.TO = null;
     this.running = true;
-    this.observe();
+    this.observe(buyPrice);
   }
   getMinKey() {
     if (!this.startTime) return null;

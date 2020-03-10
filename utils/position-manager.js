@@ -11,7 +11,7 @@ module.exports = {
     
     if (allPositionWatchers[ticker]) {
       console.log(`already watching ${ticker} doh!`);
-      allPositionWatchers[ticker].newBuy();
+      allPositionWatchers[ticker].newBuy(buyPrice);
     } else {
       console.log(`completely new position watcher - ${ticker}`);
       allPositionWatchers[ticker] = new PositionWatcher(data);
