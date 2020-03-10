@@ -39,7 +39,7 @@ module.exports = async amt => {
   const totalAvailableToSell = sumArray(notActiveBuys.map(p => Number(p.market_value)));
 
 
-  const percToSell = Math.min(100, Math.round((amt * 1.3) / totalAvailableToSell * 100));
+  const percToSell = Math.max(5, Math.min(100, Math.round((amt * 1.3) / totalAvailableToSell * 100)));
   console.log({ amt, totalAvailableToSell, percToSell })
   await stratManager.init({ lowKey: true });
   return Promise.all(
