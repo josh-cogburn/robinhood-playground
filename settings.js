@@ -41,7 +41,8 @@ module.exports = {
         // TRPX: 0.64
         // RTTR: 0.5,
         // TRIB: 1.21,
-        // IBIO: 2.4
+        // IBIO: 2.4,
+        XAIR: 6.4
     },
     
     // sellAllStocksOnNthDay: 8,
