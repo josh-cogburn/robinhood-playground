@@ -47,7 +47,7 @@ schema.statics.getRecentPickForTicker = async function(ticker) {
                         ticker
                     }
                 },
-                strategyName: /.*(sudden.*drops|rsi).*/i,
+                strategyName: /.*(sudden.*drops|rsi|downer).*/i,
                 // isRecommended: true
             },
         )
