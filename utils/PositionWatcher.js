@@ -238,7 +238,7 @@ module.exports = class PositionWatcher {
     clearTimeout(this.TO);
     this.TO = null;
     this.running = true;
-    this.observe(buyPrice);
+    this.observe(false, buyPrice);
   }
   getMinKey() {
     if (!this.startTime) return null;
