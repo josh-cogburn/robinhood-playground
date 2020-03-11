@@ -22,7 +22,7 @@ const subsetOffsets = {
 
   // bullishMajorJump: 4,
 
-  majorJump: 0,
+  majorJump: -2,
   mediumJump: 4,
   minorJump: -3,
   onlyMinorJump: -3,
