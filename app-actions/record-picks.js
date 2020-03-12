@@ -17,7 +17,8 @@ const {
     forPurchase, 
     multiplierThreshold,
     disableOnlyMinors,
-    maxMultiplier = Number.POSITIVE_INFINITY
+    maxMultiplier = Number.POSITIVE_INFINITY,
+    overallMultiplierMultiplier = 1
 } = require('../settings');
 const pmsHit = require('../utils/pms-hit');
 const { emails } = require('../config');
@@ -93,9 +94,10 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
         // if (multiplier < multiplierThreshold) {
         //     isRecommended = false;
         // }
-
+        
         multiplier = Math.max(multiplier, 1);           // MIN
         if (!interestingWords.includes('downer')) {     // MAX (ONLY FOR NON DOWNERS)
+            multiplier = Math.round(multiplier * overallMultiplierMultiplier);
             multiplier = Math.min(multiplier, maxMultiplier);
         }
         

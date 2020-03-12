@@ -26,7 +26,7 @@ module.exports = {
 
     wordFlags: ['split', 'reverse split', 'halt', 'rocket', 'offering', 'delist', 'breakthrough', 'bankrupt', 'bankruptcy'],
 
-    continueDownForDays: 3,
+    continueDownForDays: 0,
 
     // selling
 
@@ -42,7 +42,7 @@ module.exports = {
         // RTTR: 0.5,
         // TRIB: 1.21,
         // IBIO: 2.4,
-        XAIR: 6.4
+        // XAIR: 6.4
     },
     
     // sellAllStocksOnNthDay: 8,
@@ -51,7 +51,9 @@ module.exports = {
     // expectedPickCount: 200,
     multiplierThreshold: 4, // wont recommend picks below this multiplier count even if they are a forPurchase pick
     overallOffset: 0,
-    maxMultiplier: 10,
+
+    overallMultiplierMultiplier: 0.5,
+    // maxMultiplier: 10,
 
     disableDayTrades: false,
     disableMakeFundsAvailable: false,
