@@ -57,9 +57,9 @@ const subsetOffsets = {
   // fiveToTen: ({ interestingWords }) => interestingWords.includes('fiveToTen'),
 
   // minKey
-  initial: -5,
+  initial: -8,
   brunch: 2,
-  lunch: 1,
+  lunch: 5,
   dinner: 1,
   afterhours: Number.NEGATIVE_INFINITY,
 

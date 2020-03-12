@@ -364,6 +364,9 @@ class DayReports extends Component {
         // console.log({ afterHoursAnnotations, chartData })
         // console.log(getNewDayLines(balanceReports))
         // console.log('hi', (new Array(allDates.length)).map((_, i) => i))
+
+
+        const lowKey = window.location.href.includes('lowKey');
         return (
             <div style={{ height: '100%', padding: '1em' }}>
                 {/* <Ticker speed={7}>
@@ -456,7 +459,7 @@ class DayReports extends Component {
                             ))
                         } */}
                     </div>
-                    <div>
+                    <div style={{ display: lowKey ? 'none' : 'block' }}>
                         <Odometer 
                             value={stats.alpaca.current} 
                             format="(,ddd).dd"
@@ -472,8 +475,18 @@ class DayReports extends Component {
                                         {stat}
                                     </span>&nbsp;
                                     <b style={{ fontSize: '160%' }}>
-                                        <TrendPerc value={stats[stat].absolute} dollar={true}  />
-                                        (<TrendPerc value={stats[stat].trend} />)
+                                        {
+                                            lowKey
+                                                ? (
+                                                    <TrendPerc value={stats[stat].trend} />
+                                                ) : (
+                                                    <div>
+                                                        <TrendPerc value={stats[stat].absolute} dollar={true}  />
+                                                        (<TrendPerc value={stats[stat].trend} />)
+                                                    </div>
+                                                )
+                                        }
+                                        
                                     </b>
                                 </div>
                             ))

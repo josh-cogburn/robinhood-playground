@@ -19,7 +19,7 @@ const tooltipStr = ({ buyStrategies }) =>
 // const getByDateStats = 
 
 
-const PositionSection = ({ relatedPrices, positions, name, admin }) => {
+const PositionSection = ({ relatedPrices, positions, name, admin, lowKey }) => {
 
     console.log({ name, positions });
 
@@ -33,27 +33,21 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
             return <span {...tooltipText && { 'data-custom': true, 'data-tooltip-str': tooltipText }}>{pos.ticker}</span>
         },
         
-        percentSharesSold: ({ percentSharesSold }) => 
-            !percentSharesSold ? '' : (
-                <TrendPerc 
-                    value={percentSharesSold * 100}
-                    round={true}
-                    noPlus={true}
-                    style={{ color: 'black' }}
-                />
-            )
-        ,
         ...!admin ? {
             'percent of total': pos => pos.percTotal + '%',
         } : {
-            equity: 'equity',
-            'unrealizedPl $': pos => <TrendPerc value={pos.unrealizedPl} dollar={true} />,
+            ...!lowKey && {
+                equity: 'equity',
+                'unrealizedPl $': pos => <TrendPerc value={pos.unrealizedPl} dollar={true} />,
+            },
             'unrealizedPlPc %': ({ unrealizedPlPc, actualReturnPerc }) => (
                 <span {...actualReturnPerc && { 'data-custom': true, 'data-tooltip-str': actualReturnPerc }}>
                     <TrendPerc value={unrealizedPlPc} />
                 </span>
             ),
-            'today $': pos => <TrendPerc style={{ opacity: 0.55 }} value={pos.unrealized_intraday_pl} dollar={true} />,
+            ...!lowKey && {
+                'today $': pos => <TrendPerc style={{ opacity: 0.55 }} value={pos.unrealized_intraday_pl} dollar={true} />,
+            },
             'today %': ({ unrealized_intraday_plpc }) => (
                 // <span {...actualReturnPerc && { 'data-custom': true, 'data-tooltip-str': actualReturnPerc }}>
                     <TrendPerc style={{ opacity: 0.55 }} value={unrealized_intraday_plpc * 100} />
@@ -88,6 +82,18 @@ const PositionSection = ({ relatedPrices, positions, name, admin }) => {
             'sellReturnPerc': ({ sellReturnPerc }) => sellReturnPerc && !isNaN(sellReturnPerc) ? (
                 <TrendPerc value={sellReturnPerc} />
             ) : '---',
+
+            percentSharesSold: ({ percentSharesSold }) => 
+                !percentSharesSold ? '' : (
+                    <TrendPerc 
+                        value={percentSharesSold * 100}
+                        round={true}
+                        noPlus={true}
+                        style={{ color: 'black' }}
+                    />
+                )
+            ,
+
             'netImpact': ({ netImpact }) => netImpact && !isNaN(netImpact) ? (
                 <TrendPerc value={netImpact} dollar={true} />
             ) : '---',
@@ -224,6 +230,7 @@ class Positions extends Component {
                             positions={positions}
                             name={name}
                             admin={true}
+                            lowKey={window.location.href.includes('lowKey')}
                         />
                     ))
                 }
