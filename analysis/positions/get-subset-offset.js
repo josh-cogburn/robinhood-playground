@@ -95,6 +95,7 @@ const subsetOffsets = {
   avgDownerUnder120Min: 5,
   
   'reverse split': -3,
+  coronavirus: 3,
   split: -3,
 
 };
