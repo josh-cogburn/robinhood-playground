@@ -1,3 +1,5 @@
+const sendEmail = require('../utils/send-email');
+
 module.exports = async (ticker, side) => {
     console.log({ ticker, side})
     const { alpaca } = require('.');
@@ -12,7 +14,12 @@ module.exports = async (ticker, side) => {
             (order.side === side || side === undefined)
         );
     });
-    str({ matchingOrders })
+    str({ matchingOrders });
+
+    if (matchingOrders.length && ticker && side ==- 'sell') {
+        await sendEmail(`prevented daytrade on ${ticker} canceled sells`)
+    }
+
     for (let order of matchingOrders) {
         log(await alpaca.cancelOrder(order.id));
     }

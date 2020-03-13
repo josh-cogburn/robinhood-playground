@@ -3,6 +3,7 @@ const simpleBuy = require('./simple-buy');
 const alpacaMarketBuy = require('../alpaca/market-buy');
 const alpacaLimitBuy = require('../alpaca/limit-buy');
 const alpacaAttemptBuy = require('../alpaca/attempt-buy');
+const alpacaCancelAllOrders = require('../alpaca/cancel-all-orders');
 
 const mapLimit = require('promise-map-limit');
 const sendEmail = require('../utils/send-email');
@@ -146,6 +147,16 @@ module.exports = async ({
         //amtToSpendLeft / (maxNumStocksToPurchase - numPurchased);
         console.log(perStock, 'purchasng ', ticker);
         try {
+
+
+
+            // prevent day trades!!
+            await alpacaCancelAllOrders(ticker, 'sell');
+
+
+
+
+
             const pickPrice = (withPrices.find(obj => obj.ticker === ticker) || {}).price;
             const totalQuantity = Math.round(perStock / pickPrice) || 1;
 

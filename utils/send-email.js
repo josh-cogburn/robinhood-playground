@@ -8,7 +8,6 @@ const send = gmailSend({
 
 module.exports = (subject, text = '', to = credentials.username, files = []) => 
   new Promise((resolve, reject) => {
-    return resolve();
     // console.log('disabled')
     //   return resolve();
       console.log(`sending email...to ${to}...`);
