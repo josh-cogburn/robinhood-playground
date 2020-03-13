@@ -14,7 +14,7 @@ module.exports = async () => {
   const allDates = await Pick.getUniqueDates();
   strlog({ allDates })
   const byDate = await mapLimit(
-    allDates.slice(-10),
+    allDates.slice(-30),
     1,
     async date => {
       const picks = await getPicksForDate(date);
@@ -30,7 +30,9 @@ module.exports = async () => {
   return byDate.map(({ date, picks }) => ({
     date,
     numPicks: picks.filter(pick => !pick.strategyName.includes('average')).length,
-    numRecommended: picks.filter(pick => pick.isRecommended).length
+    numRecommended: picks.filter(pick => pick.isRecommended).length,
+    numNotInitial: picks.filter(pick => !pick.strategyName.includes('initial')).length,
+    // picks
   }));
 
 
