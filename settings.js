@@ -52,7 +52,7 @@ module.exports = {
     multiplierThreshold: 4, // wont recommend picks below this multiplier count even if they are a forPurchase pick
     overallOffset: 0,
 
-    overallMultiplierMultiplier: 0.65,
+    overallMultiplierMultiplier: 0.4,
     // maxMultiplier: 10,
 
     disableDayTrades: false,
