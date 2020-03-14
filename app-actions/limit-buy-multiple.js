@@ -13,8 +13,12 @@ const { alpaca } = require('../alpaca');
 const getBalance = require('../alpaca/get-balance');
 
 
+const getFillPriceFromResponse = response => {
+    const order = response && response.alpacaOrder ? response.alpacaOrder : response;
+    return (order || {}).filled_avg_price;
+};
 
-const sprayBuy = async ({
+const eclecticBuy = async ({
     ticker,
     quantity,
     pickPrice
@@ -81,10 +85,9 @@ const sprayBuy = async ({
                     promise
                 })
                 const response = await promise;
-                const order = response && response.alpacaOrder ? response.alpacaOrder : response;
                 return {
                     name,
-                    fillPrice: (order || {}).filled_avg_price,
+                    fillPrice: getFillPriceFromResponse(response),
                     ...response
                 };
             }
@@ -95,10 +98,68 @@ const sprayBuy = async ({
         buyPromises
     );
 
-    return {roundUp, totalDollars, individualQuantity, sliceCount};
+    return { roundUp, totalDollars, individualQuantity, sliceCount };
 
     // await sendEmail(`roundup for ${ticker} buy`, JSON.stringify({roundUp, totalDollars, individualQuantity, sliceCount}, null, 2))
 
+};
+
+
+// const waitedSprayBuy = async ({
+//     ticker,
+//     quantity,
+//     pickPrice
+// }) => {
+//     const totalDollars = quantity * pickPrice;
+//     const waitAmts = [
+//         1, 
+//         15, 
+//         // 150
+//     ].slice(0, Math.floor(totalDollars / 6));
+//     const perSpray = Math.round(quantity / waitAmts.length) || 1;
+//     console.log('before sprays', { quantity, totalDollars });
+//     const sprayResponses = await Promise.all(
+//         waitAmts.map(
+//             async waitAmt => {
+//                 console.log(`waiting ${waitAmt} seconds and then spraying ${perSpray} quantity`);
+//                 await new Promise(resolve => setTimeout(resolve, waitAmt * 1000));
+//                 return {
+//                     ...await sprayBuy({
+//                         ticker,
+//                         quantity: perSpray,
+//                         pickPrice
+//                     }),
+//                     waitAmt
+//                 };
+//             }
+//         )
+//     );
+    
+//     return sprayResponses;
+// };
+
+const simpleLimitBuy = async ({
+    ticker,
+    quantity,
+    pickPrice
+}) => {
+    const response = await alpacaLimitBuy({
+        ticker,
+        quantity,
+        limitPrice: pickPrice * 0.985,
+        timeoutSeconds: 60 * 30,
+        fallbackToMarket: false
+    });
+    return {
+        totalDollars: quantity * pickPrice,
+        roundUp: [
+            {
+                name: 'simpleLimitBuy985',
+                fillPrice: getFillPriceFromResponse(response),
+                ...response
+            }
+        ]
+    };
 };
 
 
@@ -154,37 +215,21 @@ module.exports = async ({
             await alpacaCancelAllOrders(ticker, 'sell');
 
 
-
-
-
             const pickPrice = (withPrices.find(obj => obj.ticker === ticker) || {}).price;
             const totalQuantity = Math.round(perStock / pickPrice) || 1;
 
-            const waitAmts = [
-                1, 
-                15, 
-                // 150
-            ].slice(0, Math.floor(perStock / 6));
-            const perSpray = Math.round(totalQuantity / waitAmts.length) || 1;
-            console.log('before sprays', { totalQuantity, perSpray });
-            const sprayResponses = await Promise.all(
-                waitAmts.map(
-                    async waitAmt => {
-                        console.log(`waiting ${waitAmt} seconds and then spraying ${perSpray} quantity`);
-                        await new Promise(resolve => setTimeout(resolve, waitAmt * 1000));
-                        return {
-                            ...await sprayBuy({
-                                ticker,
-                                quantity: perSpray,
-                                pickPrice
-                            }),
-                            waitAmt
-                        };
-                    }
-                )
-            );
+            const buyStock = strategy.includes('sudden') ? simpleLimitBuy : eclecticBuy;
+            const response = await buyStock({
+                ticker,
+                pickPrice,
+                quantity: totalQuantity
+            });
             
-            await sendEmail(`roundup for buying ${ticker}`, JSON.stringify(sprayResponses, null, 2));
+            await sendEmail(`roundup for buying ${ticker}`, JSON.stringify({
+                ticker,
+                strategy,
+                response
+            }, null, 2));
             numPurchased++;
         } catch (e) {
             // failed

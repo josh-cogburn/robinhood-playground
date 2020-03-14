@@ -74,16 +74,16 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
             isRecommended = false;
         }
 
-        const stoppedAt1 = ['derived', 'rsi'];
-        if (stoppedAt1.some(word => interestingWords.includes(word))) {
-            multiplier = 1;
-        }
+        // const stoppedAt1 = ['derived', 'rsi'];
+        // if (stoppedAt1.some(word => interestingWords.includes(word))) {
+        //     multiplier = 1;
+        // }
 
         const onlyMinor = interestingWords.includes('minorJump') && !interestingWords.includes('mediumJump') && !interestingWords.includes('majorJump');
         if (onlyMinor) {
-            multiplier = Math.max(3, multiplier);   // min of 3
+            multiplier = Math.max(3, multiplier);   // min
             if (!interestingWords.includes('downer')) {
-                multiplier = Math.min(5, multiplier);  // max of 10 ... if not avg downer
+                multiplier = Math.min(5, multiplier);  // max ... if not avg downer
             }
             if (disableOnlyMinors) {
                 isRecommended = false;

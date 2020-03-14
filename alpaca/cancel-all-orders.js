@@ -16,11 +16,12 @@ module.exports = async (ticker, side) => {
     });
     str({ matchingOrders });
 
-    if (matchingOrders.length && ticker && side ==- 'sell') {
-        await sendEmail(`prevented daytrade on ${ticker} canceled sells`)
-    }
-
     for (let order of matchingOrders) {
         log(await alpaca.cancelOrder(order.id));
     }
+
+    if (matchingOrders.length && ticker && side === 'buy') {
+        await sendEmail(`prevented daytrade on ${ticker} canceled buys`);
+    }
+
 };

@@ -37,7 +37,7 @@ const subsetOffsets = {
   // straightDowner: 0,
   // straightDown30: 2,
   // straightDown120: 4,
-  notStraightDowner: 5,
+  notStraightDowner: 9,
   // straightDowner: ({ interestingWords }) => interestingWords.some(val => val.startsWith('straightDown')),
 
   straightDownerWatchout: 5,

@@ -3,6 +3,7 @@ const lookup = require('../utils/lookup');
 const Holds = require('../models/Holds');
 const sendEmail = require('../utils/send-email');
 const getTrend = require('../utils/get-trend');
+const alpacaCancelAllOrders = require('./cancel-all-orders');
 
 module.exports = async position => {
 
@@ -11,6 +12,8 @@ module.exports = async position => {
         quantity,
         percToSell
     } = position;
+
+    await alpacaCancelAllOrders(ticker, 'buy');
     
     // const { currentPrice } = await lookup(ticker);
 

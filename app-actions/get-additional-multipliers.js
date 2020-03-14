@@ -95,7 +95,7 @@ module.exports = async (pms, strategy, stocksToBuy) => {
   const zeroMultMult = totalEquity / 3.5;
   const getAvgDownMultiplier = () => Math.round(
     avgMultipliersPerPick
-      ? avgMultipliersPerPick * 1.1
+      ? avgMultipliersPerPick * 1.15
       : isNaN(zeroMultMult) ? 20 : zeroMultMult
   );
 

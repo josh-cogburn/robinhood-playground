@@ -5,7 +5,7 @@ const { sumArray } = require('../utils/array-math');
 const { makeKeeperFundsAvailable } = require('../settings');
 const alpacaMarketSell = require('./market-sell');
 const stratManager = require('../socket-server/strat-manager');
-
+const alpacaCancelAllOrders = require('./cancel-all-orders');
 
 const getBuyTickers = async () => {
   const orders = await alpaca.getOrders({
@@ -43,13 +43,16 @@ module.exports = async amt => {
   console.log({ amt, totalAvailableToSell, percToSell })
   await stratManager.init({ lowKey: true });
   return Promise.all(
-    notActiveBuys.map(({ ticker, quantity }) =>
-          alpacaMarketSell({
-              ticker,
-              quantity: Math.ceil(quantity * percToSell / 100),
-              timeoutSeconds: 7,
-          })
-      )
+    notActiveBuys.map(({ ticker, quantity }) => async () => {
+
+      await alpacaCancelAllOrders(ticker, 'buy');
+      return alpacaMarketSell({
+        ticker,
+        quantity: Math.ceil(quantity * percToSell / 100),
+        timeoutSeconds: 7,
+      });
+      
+    })
   );
 
   // const totalValue = 
