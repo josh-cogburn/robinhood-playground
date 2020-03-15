@@ -20,8 +20,8 @@ module.exports = async (ticker, side) => {
         log(await alpaca.cancelOrder(order.id));
     }
 
-    if (matchingOrders.length && ticker && side === 'buy') {
-        await sendEmail(`prevented daytrade on ${ticker} canceled buys`);
+    if (matchingOrders.length && ticker && side) {
+        await sendEmail(`canceled ${matchingOrders.length} orders on ${ticker} canceled ${side}s`);
     }
 
 };

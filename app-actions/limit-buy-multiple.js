@@ -18,13 +18,44 @@ const getFillPriceFromResponse = response => {
     return (order || {}).filled_avg_price;
 };
 
+const executeBuys = async (buyStyles, totalDollars) => {
+
+    const sliceCount = Math.floor(totalDollars / 4);
+    const buyPromises = Object.entries(buyStyles)
+        .slice(0, sliceCount)
+        .map(
+            async ([name, promise]) => {
+                strlog({
+                    name,
+                    promise
+                })
+                const response = await promise;
+                return {
+                    name,
+                    fillPrice: getFillPriceFromResponse(response),
+                    ...response
+                };
+            }
+        );
+
+    const roundUp = await Promise.all(buyPromises);
+
+    return { 
+        roundUp, 
+        totalDollars,
+        sliceCount 
+    };
+    
+};
+
+
+
 const eclecticBuy = async ({
     ticker,
     quantity,
     pickPrice
 }) => {
 
-    const totalDollars = quantity * pickPrice;
     const individualQuantity = Math.round(quantity / 3) || 1;
 
     const buyStyles = {
@@ -74,34 +105,12 @@ const eclecticBuy = async ({
         //     fallbackToMarket: false
         // }),
     };
+
+    return {
+        ...await executeBuys(buyStyles, pickPrice * quantity),
+        individualQuantity
+    };
     
-    const sliceCount = Math.floor(totalDollars / 4);
-    const buyPromises = Object.entries(buyStyles)
-        .slice(0, sliceCount)
-        .map(
-            async ([name, promise]) => {
-                strlog({
-                    name,
-                    promise
-                })
-                const response = await promise;
-                return {
-                    name,
-                    fillPrice: getFillPriceFromResponse(response),
-                    ...response
-                };
-            }
-        );
-
-
-    const roundUp = await Promise.all(
-        buyPromises
-    );
-
-    return { roundUp, totalDollars, individualQuantity, sliceCount };
-
-    // await sendEmail(`roundup for ${ticker} buy`, JSON.stringify({roundUp, totalDollars, individualQuantity, sliceCount}, null, 2))
-
 };
 
 
@@ -143,23 +152,30 @@ const simpleLimitBuy = async ({
     quantity,
     pickPrice
 }) => {
-    const response = await alpacaLimitBuy({
-        ticker,
-        quantity,
-        limitPrice: pickPrice * 0.985,
-        timeoutSeconds: 60 * 30,
-        fallbackToMarket: false
-    });
-    return {
-        totalDollars: quantity * pickPrice,
-        roundUp: [
-            {
-                name: 'simpleLimitBuy985',
-                fillPrice: getFillPriceFromResponse(response),
-                ...response
-            }
-        ]
+    const individualQuantity = Math.round(quantity / 2) || 1;
+
+    const buyStyles = {
+        simpleLimitBuy995: alpacaLimitBuy({
+            ticker,
+            quantity: individualQuantity,
+            limitPrice: pickPrice * 0.995,
+            timeoutSeconds: 60 * 30,
+            fallbackToMarket: false
+        }),
+        simpleLimitBuy985: alpacaLimitBuy({
+            ticker,
+            quantity: individualQuantity,
+            limitPrice: pickPrice * 0.985,
+            timeoutSeconds: 60 * 30,
+            fallbackToMarket: false
+        }),
     };
+
+    return {
+        ...await executeBuys(buyStyles, pickPrice * quantity),
+        individualQuantity
+    };
+
 };
 
 
