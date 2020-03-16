@@ -53,7 +53,7 @@ module.exports = {
     overallOffset: 0,
 
     overallMultiplierMultiplier: 0.35,
-    avgDownerMultiplier: 1.6,
+    avgDownerMultiplier: 1.7,
     
     // maxMultiplier: 10,
 
