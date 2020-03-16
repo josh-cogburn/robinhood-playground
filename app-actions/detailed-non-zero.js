@@ -7,7 +7,6 @@ const getStSentiment = require('../utils/get-stocktwits-sentiment');
 
 
 const getPositions = async () => {
-    return [];
     const { results: allPositions } = await Robinhood.nonzero_positions();
     const formattedPositions = allPositions.map(pos => ({
         ...pos,
