@@ -25,6 +25,8 @@ const getBuyTickers = async () => {
 
 module.exports = async amt => {
 
+
+  console.log(`making funds available: ${amt}`);
   let positions = await getPositions(true);
   if (!makeKeeperFundsAvailable) {
     positions = positions.filter(({ notSelling }) => !notSelling);
@@ -44,7 +46,7 @@ module.exports = async amt => {
   await stratManager.init({ lowKey: true });
   return Promise.all(
     notActiveBuys.map(({ ticker, quantity }) => async () => {
-
+      console.log(`about to sell ${ticker} ... ${quantity} shares`);
       await alpacaCancelAllOrders(ticker, 'buy');
       return alpacaMarketSell({
         ticker,
