@@ -98,7 +98,7 @@ process.on('unhandledRejection', (reason, p) => {
         .map(stock => stock.symbol);
 
     await cancelAllOrders();
-    // await alpacaCancelAllOrders();
+    await alpacaCancelAllOrders();
 
     try {
         await logPortfolioValue();
