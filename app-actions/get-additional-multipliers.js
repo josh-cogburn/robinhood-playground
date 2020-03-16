@@ -3,6 +3,7 @@ const { avgArray, sumArray } = require('../utils/array-math');
 const getSubsetOffset = require('../analysis/positions/get-subset-offset');
 
 const { alpaca: alpacaModule }= require('../alpaca/index');
+const { avgDownerMultiplier } = require('../settings');
 
 const calcPmAnalysisMultiplier = (pms, pmsAnalyzed) => {
 
@@ -95,7 +96,7 @@ module.exports = async (pms, strategy, stocksToBuy) => {
   const zeroMultMult = totalEquity / 3.5;
   const getAvgDownMultiplier = () => Math.round(
     avgMultipliersPerPick
-      ? avgMultipliersPerPick * 1.15
+      ? avgMultipliersPerPick * avgDownerMultiplier
       : isNaN(zeroMultMult) ? 20 : zeroMultMult
   );
 
