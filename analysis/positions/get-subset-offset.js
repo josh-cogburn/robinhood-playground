@@ -22,8 +22,8 @@ const subsetOffsets = {
 
   // bullishMajorJump: 4,
 
-  majorJump: -2,
-  mediumJump: 4,
+  majorJump: 7,
+  mediumJump: 0,
   minorJump: -3,
   onlyMinorJump: -3,
 
@@ -34,7 +34,7 @@ const subsetOffsets = {
   // notWatchoutMajorJump: 2,
   // notWatchoutMajorJumpNotStraightDowner: 1,
 
-  // straightDowner: 0,
+  straightDowner: -10,
   // straightDown30: 2,
   // straightDown120: 4,
   notStraightDowner: 9,
