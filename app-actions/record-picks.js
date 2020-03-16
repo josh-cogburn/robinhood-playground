@@ -59,7 +59,7 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
         const {
             pmAnalysisMultiplier,
             subsetOffsetMultiplier,
-            interestingWords
+            interestingWords = []
         } = await getAdditionalMultipliers(
             forPurchasePms, 
             strategy, 
