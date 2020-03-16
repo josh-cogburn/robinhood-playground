@@ -72,7 +72,7 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
         strlog({
             forPurchaseMultiplier,
             pmAnalysisMultiplier,
-            subsetOffsetMultipliers
+            subsetOffsetMultiplier
         });
 
         if (isNaN(multiplier)) {
