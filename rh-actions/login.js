@@ -12,13 +12,13 @@ module.exports = () => {
             Object.keys(Robinhood).forEach(key => {
                 console.log('key', key);
                 const origFn = Robinhood[key];
-                Robinhood[key] = (...callArgs) => retry(() => {
+                Robinhood[key] = (...callArgs) => {
                     return new Promise((resolve, reject) => {
                         origFn.apply(null, [...callArgs, (error, response, body) => {
                             return (error || !body) ? reject(error) : resolve(body);
                         }]);
                     });
-                });
+                };
             });
 
             console.log('Robinhood initialized');
