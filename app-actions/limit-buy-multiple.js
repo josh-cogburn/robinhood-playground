@@ -159,14 +159,14 @@ const simpleLimitBuy = async ({
             ticker,
             quantity: individualQuantity,
             limitPrice: pickPrice * 0.995,
-            timeoutSeconds: 60 * 20,
+            timeoutSeconds: 60 * 30,
             fallbackToMarket: false
         }),
         simpleLimitBuy985: alpacaLimitBuy({
             ticker,
             quantity: individualQuantity,
             limitPrice: pickPrice * 0.985,
-            timeoutSeconds: 60 * 20,
+            timeoutSeconds: 60 * 30,
             fallbackToMarket: false
         }),
     };
