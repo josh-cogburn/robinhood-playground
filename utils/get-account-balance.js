@@ -17,13 +17,13 @@ module.exports = async (includeTrend, todaysDate) => {
         return vl;
     };
 
-    // const [ account ] = (await Robinhood.accounts()).results;
-    // const portfolio = await Robinhood.url(account.portfolio);
-    // const { equity, extended_hours_equity } = portfolio;
+    const [ account ] = (await Robinhood.accounts()).results;
+    const portfolio = await Robinhood.url(account.portfolio);
+    const { equity, extended_hours_equity } = portfolio;
 
-    const accountBalance = null//extended_hours_equity || equity;
+    const accountBalance = extended_hours_equity || equity;
 
-    console.log({ accountBalance });
+    // console.log({ accountBalance });
     let returnObj = { accountBalance };
 
     if (includeTrend && false) {

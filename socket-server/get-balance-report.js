@@ -8,7 +8,7 @@ const sendEmail = require('../utils/send-email');
 let lastDtCount;
 
 module.exports = async (isRegularHours = true) => {
-  // let { accountBalance } = await getAccountBalance();
+  let { accountBalance } = await getAccountBalance();
 //   if (Math.abs(getTrend(accountBalance, lastBalance)) > 4.9) {
 //       console.log('WOAH WOAH', {
 //           accountBalance,
@@ -23,7 +23,7 @@ module.exports = async (isRegularHours = true) => {
   
   // lastBalance = accountBalance;
   const report = {
-      accountBalance: null,
+      accountBalance,
       indexPrices: await getIndexes(),
       alpacaBalance: Number(equity),
       isRegularHours,
