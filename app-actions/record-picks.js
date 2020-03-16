@@ -68,6 +68,16 @@ const saveToFile = async (strategy, min, withPrices, { keys, data }) => {
         multiplier = Math.round(
             forPurchaseMultiplier + pmAnalysisMultiplier + subsetOffsetMultiplier
         );
+
+        strlog({
+            forPurchaseMultiplier,
+            pmAnalysisMultiplier,
+            subsetOffsetMultipliers
+        });
+
+        if (isNaN(multiplier)) {
+            multiplier = 6;
+        }
         
         const badWords = ['split', 'offering', 'bankrupt', 'afterhours'];
         if (badWords.some(w => strategy.includes(w)) && !strategy.includes('downer')) {
