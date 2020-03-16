@@ -75,6 +75,11 @@ process.on('unhandledRejection', (reason, p) => {
     global.Robinhood = Robinhood;
 
 
+
+    await cancelAllOrders();
+    await alpacaCancelAllOrders();
+
+
     await RealtimeRunner.init(DISABLE_REALTIME);
     await require('./socket-server');
 
@@ -96,9 +101,6 @@ process.on('unhandledRejection', (reason, p) => {
     allTickers = allTickers
         .filter(stock => stock.tradeable)
         .map(stock => stock.symbol);
-
-    await cancelAllOrders();
-    await alpacaCancelAllOrders();
 
     try {
         await logPortfolioValue();
